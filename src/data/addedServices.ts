@@ -32,13 +32,11 @@ export const addedServices: ServiceItem[] = [',
 			"Integrates with leading help desks and CRMs. Analytics show deflection rate, CSAT impact, and cost savings."
 		],',
 		features: [,
-			'Multilingual chat widget with secure human handoffRAG over your docs, product guides, and tickets',
-			'Zendesk/Freshdesk/Intercom/Salesforce integrationsGuardrails, escalation, and tone controls',
+			'Multilingual chat widget with secure human handoffRAG over your docs, product guides, and ticketsZendesk/Freshdesk/Intercom/Salesforce integrationsGuardrails, escalation, and tone controls',
 			'Full analytics dashboard and export'
 		],',
 		benefits: [,
-			'Reduce first-response time by 60-80%Increase CSAT and resolution accuracy',
-			'Lower support costs with safe automation'
+			'Reduce first-response time by 60-80%Increase CSAT and resolution accuracyLower support costs with safe automation'
 		],',
 		pricing: [,
 			{ name: 'Starter', price: '$299/mo', includes: ['3k conversations/mo3 data sourcesEmail support'] },
@@ -61,8 +59,7 @@ export const addedServices: ServiceItem[] = [',
 			"Built-in e-signature and CRM/payment integrations accelerate close."
 		],',
 		features: [,
-			'Templating with variables and conditionsOCR, redlining, clause library',
-			'Integrated e-signature and audit trailHubSpot/Salesforce/Stripe integrations''
+			'Templating with variables and conditionsOCR, redlining, clause libraryIntegrated e-signature and audit trailHubSpot/Salesforce/Stripe integrations''
 		],
 		benefits: ['Shorter sales cyclesFewer manual errorsUnified contract analytics'],',
 		pricing: [,
@@ -80,7 +77,7 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"Monitor on-page edits, schema, internal links, and performance to correlate changes with ranking and traffic."'
 		],
-		features: ['Daily diffsCore Web Vitals and uptime alertsSlack notifications'],',',
+		features: ['Daily diffsCore Web Vitals and uptime alertsSlack notifications'],,
 		benefits: ['Catch regressions earlyProve ROI of SEO changesAutomate status reporting'],',
 		pricing: [,
 			{ name: 'Starter', price: '$99/mo', includes: ['1 siteDaily diffsEmail alerts'] },
@@ -96,7 +93,7 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"REST API and batch CSV enrichment with caching and GDPR-compliant processing."'
 		],
-		features: ['Real-time enrichmentCaching and batch modesGDPR-compliant processing'],',',
+		features: ['Real-time enrichmentCaching and batch modesGDPR-compliant processing'],,
 		benefits: ['Higher conversion with better targetingCleaner CRM dataFaster SDR workflows'],
 		pricing: { model: 'PAYG', from: '$0.05/record', notes: 'Volume discounts available' },
 		links: { landing: 'https://ziontechgroup.com/services/lead-enrichment-api' };
@@ -109,8 +106,8 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"Connect Google Drive, Confluence, or SharePoint, enable hybrid search with safety guardrails and observability."'
 		],
-		features: ['Data connectorsHybrid vector + keyword searchSafety guardrails', 'Drift/hallucination monitoring'],
-		benefits: ['Trusted answersLower context costsContinuous quality tracking'],',',
+		features: ['Data connectorsHybrid vector + keyword searchSafety guardrailsDrift/hallucination monitoring'],
+		benefits: ['Trusted answersLower context costsContinuous quality tracking'],,
 		pricing: { model: 'Project + Retainer', from: '$15,000+', notes: '$3k–$12k/mo retainers' },
 		links: { landing: 'https://ziontechgroup.com/services/rag-knowledge-base', contact: 'mailto:kleber@ziontechgroup.com' };
 	},',
@@ -122,7 +119,7 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"Dataset curation, labeling, eval harness, A/B testing, and prompt optimization with cost-aware deployment."'
 		],
-		features: ['Dataset curation/labelingEval harness and A/B testingOptimized serving on GPU/CPU'],',',
+		features: ['Dataset curation/labelingEval harness and A/B testingOptimized serving on GPU/CPU'],,
 		benefits: ['Higher task accuracyReduced latency and costReliable measurements'],
 		pricing: { model: 'Project + Retainer', from: '$20,000+', notes: '$5k–$20k/mo retainers' },
 		links: { landing: 'https://ziontechgroup.com/services/fine-tuning-and-evals' };
@@ -135,7 +132,7 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"Design and deploy safe agents with tool use, guardrails, approvals, and integrations with CRM, ticketing, and billing."'
 		],
-		features: ['Governance and approval chainsMulti-tool orchestrationCRM/ticketing/billing integrations'],',',
+		features: ['Governance and approval chainsMulti-tool orchestrationCRM/ticketing/billing integrations'],,
 		benefits: ['Automate repetitive workReduce errorsAuditability by design'],
 		pricing: { model: 'Project + Retainer', from: '$18,000+', notes: '$4k–$15k/mo retainers' },
 		links: { landing: 'https://ziontechgroup.com/services/ai-agent-automation' };
@@ -148,7 +145,7 @@ export const addedServices: ServiceItem[] = [',
 		description: [,
 			"Cost audits, reserved instance strategy, autoscaling policies, and FinOps dashboards with monthly reviews."'
 		],
-		features: ['Rightsizing and RIsAutoscaling policiesFinOps dashboards'],',',
+		features: ['Rightsizing and RIsAutoscaling policiesFinOps dashboards'],,
 		benefits: ['Immediate savingsBetter visibilityNo security regressions'],
 		pricing: { model: 'Fee + Savings Share', from: '$5,000 engagement', notes: '20% of realized savings' },
 		links: { landing: 'https://ziontechgroup.com/services/cloud-cost-optimization' };
@@ -159,7 +156,7 @@ export const addedServices: ServiceItem[] = [',
 		category: 'IT Services',
 		tagline: 'GitOps, observability, and 24/7 SRE for your clusters.',
 		description: ['Hardened clusters with CIS benchmarks, zero trust networking, and progressive delivery.'],
-		features: ['GitOps and progressive deliveryObservability stack24/7 SRE on-call'],',',
+		features: ['GitOps and progressive deliveryObservability stack24/7 SRE on-call'],,
 		benefits: ['Fewer incidentsFaster deploymentsStronger security'],
 		pricing: { model: 'Monthly', from: '$4,000/mo', notes: 'Custom SLAs available' },
 		links: { landing: 'https://ziontechgroup.com/services/managed-kubernetes' };
@@ -170,7 +167,7 @@ export const addedServices: ServiceItem[] = [',
 		category: 'IT Services',
 		tagline: 'Modern ELT, lakehouse, and metrics with governance.',
 		description: ['Build resilient pipelines, a governed lakehouse, and a semantic layer with BI dashboards.'],
-		features: ['ELT pipelinesLakehouse and semantic layerMetrics catalog and BI'],',',
+		features: ['ELT pipelinesLakehouse and semantic layerMetrics catalog and BI'],,
 		benefits: ['Trusted metricsSelf-serve analyticsSLA-backed data quality'],
 		pricing: { model: 'Project', from: '$25,000+', notes: '' },
 		links: { landing: 'https://ziontechgroup.com/services/data-engineering-analytics' };
@@ -181,7 +178,7 @@ export const addedServices: ServiceItem[] = [',
 		category: 'IT Services',
 		tagline: 'Application and cloud security with remediation roadmap.',
 		description: ['Automated and manual testing with clear findings, risk ratings, and prioritized fixes.'],
-		features: ['App and cloud reviewsManual penetration testingQuick-win remediation plan'],',',
+		features: ['App and cloud reviewsManual penetration testingQuick-win remediation plan'],,
 		benefits: ['Reduce riskMeet compliance needsActionable fixes'],
 		pricing: { model: 'Fixed price', from: '$8,000+', notes: 'Scope-dependent' },
 		links: { landing: 'https://ziontechgroup.com/services/security-assessments-and-pentest' };
@@ -197,8 +194,7 @@ export const addedServices: ServiceItem[] = [',
 			"Includes SEO optimization, brand voice consistency, and multi-platform distribution automation."
 		],
 		features: [,
-			'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword researchBrand voice training and consistencyMulti-platform publishing automation',
-			'Content performance analyticsA/B testing and optimizationPlagiarism detection and originality scoringMulti-language support (50+ languages)'
+			'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword researchBrand voice training and consistencyMulti-platform publishing automationContent performance analyticsA/B testing and optimizationPlagiarism detection and originality scoringMulti-language support (50+ languages)'
 		],
 		benefits: [,
 			'Reduce content creation time by 80%Increase engagement rates by 45%Improve SEO rankings significantlyMaintain consistent brand voice across all channels'
@@ -224,8 +220,7 @@ export const addedServices: ServiceItem[] = [',
 			"Uses machine learning to predict optimal email timing, subject lines, and content for maximum open and conversion rates."
 		],
 		features: [,
-			'Behavioral trigger automationAI-powered subject line optimizationSend time optimizationDynamic content personalization',
-			'A/B testing with AI insightsDeliverability optimizationUnsubscribe prediction and preventionCross-channel campaign coordination'
+			'Behavioral trigger automationAI-powered subject line optimizationSend time optimizationDynamic content personalizationA/B testing with AI insightsDeliverability optimizationUnsubscribe prediction and preventionCross-channel campaign coordination'
 		],
 		benefits: [,
 			'Increase open rates by 60%Boost conversion rates by 40%Reduce unsubscribe rates by 50%Save 20+ hours per week on email management'
@@ -250,8 +245,7 @@ export const addedServices: ServiceItem[] = [',
 			"Provides real-time insights, automated reporting, and intelligent recommendations for project success."
 		],
 		features: [,
-			'AI-powered risk predictionAutomated task assignmentResource optimization algorithmsReal-time project health monitoring',
-			'Predictive timeline adjustmentsTeam performance analyticsAutomated status reportingIntegration with 50+ tools'
+			'AI-powered risk predictionAutomated task assignmentResource optimization algorithmsReal-time project health monitoringPredictive timeline adjustmentsTeam performance analyticsAutomated status reportingIntegration with 50+ tools'
 		],
 		benefits: [,
 			'Reduce project delays by 35%Improve team productivity by 45%Increase project success rate by 60%Save 15+ hours per week on project management'
@@ -277,8 +271,7 @@ export const addedServices: ServiceItem[] = [',
 			"Uses advanced machine learning algorithms to identify patterns, detect anomalies, and forecast financial performance."
 		],
 		features: [,
-			'Real-time financial data analysisPredictive financial modelingAnomaly detection and fraud preventionMarket trend analysis',
-			'Cash flow forecastingInvestment opportunity identificationRisk assessment and mitigationAutomated financial reporting'
+			'Real-time financial data analysisPredictive financial modelingAnomaly detection and fraud preventionMarket trend analysisCash flow forecastingInvestment opportunity identificationRisk assessment and mitigationAutomated financial reporting'
 		],
 		benefits: [,
 			'Improve financial decision accuracy by 70%Reduce financial risks by 50%Increase profit margins by 25%Save 20+ hours per week on financial analysis'
@@ -304,8 +297,7 @@ export const addedServices: ServiceItem[] = [',
 			"Uses quantum algorithms to find optimal solutions for NP-hard problems that are intractable for classical computers."
 		],
 		features: [,
-			'Quantum annealing optimizationQuantum machine learning algorithmsHybrid quantum-classical workflowsReal-time quantum circuit optimization',
-			'Quantum error correctionMulti-objective optimizationQuantum simulation capabilitiesClassical fallback algorithms'
+			'Quantum annealing optimizationQuantum machine learning algorithmsHybrid quantum-classical workflowsReal-time quantum circuit optimizationQuantum error correctionMulti-objective optimizationQuantum simulation capabilitiesClassical fallback algorithms'
 		],
 		benefits: [,
 			'Solve problems 1000x faster than classical computersFind optimal solutions for complex logisticsReduce operational costs by 30-50%Enable breakthrough discoveries in research'
@@ -331,8 +323,7 @@ export const addedServices: ServiceItem[] = [',
 			"Supports multiple consensus mechanisms, smart contracts, and provides enterprise-grade security and compliance."
 		],
 		features: [,
-			'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deploymentEnterprise-grade security and complianceScalable consensus mechanisms',
-			'Interoperability solutionsTokenization platformDeFi protocol integrationRegulatory compliance tools'
+			'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deploymentEnterprise-grade security and complianceScalable consensus mechanismsInteroperability solutionsTokenization platformDeFi protocol integrationRegulatory compliance tools'
 		],
 		benefits: [,
 			'Reduce transaction costs by 60%Increase transparency and trustEnable new business modelsImprove supply chain traceability'
@@ -358,8 +349,7 @@ export const addedServices: ServiceItem[] = [',
 			"Provides low-latency inference, offline capabilities, and seamless cloud synchronization."
 		],
 		features: [,
-			'Edge AI model deploymentReal-time inference processingOffline operation capabilitiesCloud-edge synchronization',
-			'Device management and monitoringModel versioning and updatesData preprocessing pipelinesSecurity and encryption'
+			'Edge AI model deploymentReal-time inference processingOffline operation capabilitiesCloud-edge synchronizationDevice management and monitoringModel versioning and updatesData preprocessing pipelinesSecurity and encryption'
 		],
 		benefits: [,
 			'Reduce latency by 90%Enable offline AI processingReduce bandwidth costs by 70%Improve data privacy and security'
@@ -385,8 +375,7 @@ export const addedServices: ServiceItem[] = [',
 			"Uses machine learning to identify and prevent advanced persistent threats, zero-day attacks, and insider threats."
 		],
 		features: [,
-			'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analytics',
-			'Vulnerability assessmentCompliance reportingSecurity orchestrationThreat intelligence integration'
+			'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analyticsVulnerability assessmentCompliance reportingSecurity orchestrationThreat intelligence integration'
 		],
 		benefits: [,
 			'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksEnsure compliance with security standards'

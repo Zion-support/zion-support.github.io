@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu;
   X;
-  ChevronDown,
+  ChevronDown;
   Phone,
   Mail,
   Facebook,

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import {;
 ;
 const servicesDropdown = [;
-  {,
+  {;
     "icon": Brain,
     "title": 'AI & Machine Learning',
     "description": 'Intelligent solutions for business automation',

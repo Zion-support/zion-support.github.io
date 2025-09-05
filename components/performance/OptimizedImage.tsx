@@ -1,6 +1,6 @@
 import React from 'react';
   alt: string;
-  width?: number,
+  width?: number;
   height?: number,
   priority?: boolean,
   className?: string,

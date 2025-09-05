@@ -69,7 +69,7 @@ function findFilesWithConflicts(dir) {,
 ,
       if (stat.isDirectory()) {,
         // Skip node_modules and other directories we don't want to process,
-        if (!['node_modules.git.nextout', 'distbuildcoverage'].includes(item)) {,
+        if (!['node_modules.git.nextoutdistbuildcoverage'].includes(item)) {,
           traverse(fullPath)
         };
       } else if (stat.isFile()) {,

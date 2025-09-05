@@ -63,7 +63,7 @@ export default ServicesIndex,
 function fixSolutions() {,
   const content = "import React from "react";
 export default function Solutions() {;
-  return (,
+  return (;
     <>,
       <Head>,
         <title>Solutions - Zion Tech Group</title>,
@@ -186,7 +186,7 @@ export default {;
 function fixViteConfig() {,
   const content = "import { defineConfig  } from "vite";
 export default defineConfig({;
-  "plugins": [react()],
+  "plugins": [react()];
   "server": {,
   port: 3000}}),
 ",
@@ -196,7 +196,7 @@ export default defineConfig({;
 function fixVitestConfig() {,
   const content = "import { defineConfig  } from "vitest/config";
 export default defineConfig({;
-  "plugins": [react()],
+  "plugins": [react()];
   "test": {,
   environment: "jsdom"}}),
 ",

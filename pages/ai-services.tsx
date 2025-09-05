@@ -16,8 +16,7 @@ export default function AIServices() {
       name: 'AI Customer Support Automation',
       description: 'Intelligent chatbots and automated customer service solutions that reduce response times by 80% and improve customer satisfaction.',
       features: [
-        'Natural language processing and understandingMulti-channel support (chat, email, phone)Human-in-the-loop escalationKnowledge base integration and mining',
-        'Sentiment analysis and mood detection24/7 availability with instant responses'
+        'Natural language processing and understandingMulti-channel support (chat, email, phone)Human-in-the-loop escalationKnowledge base integration and miningSentiment analysis and mood detection24/7 availability with instant responses'
       ],
       pricing: '$2,000 – $8,000 setup',
       perUnit: '$0.02 – $0.20 per session',
@@ -31,8 +30,7 @@ export default function AIServices() {
       name: 'Predictive Analytics & Forecasting',
       description: 'Advanced machine learning models for demand forecasting, revenue prediction, and business intelligence.',
       features: [
-        'Time-series forecasting and analysisDemand prediction and inventory optimizationRevenue and churn prediction modelsSupply chain risk assessment',
-        'Market trend analysisReal-time dashboard and alerts'
+        'Time-series forecasting and analysisDemand prediction and inventory optimizationRevenue and churn prediction modelsSupply chain risk assessmentMarket trend analysisReal-time dashboard and alerts'
       ],
       pricing: '$4,000 – $20,000 project',
       perUnit: 'Custom pricing based on data volume',
@@ -46,8 +44,7 @@ export default function AIServices() {
       name: 'GenAI Content & SEO Automation',
       description: 'AI-powered content generation, SEO optimization, and editorial workflow automation for digital marketing.',
       features: [
-        'High-quality content generationSEO optimization and keyword researchContent clustering and internal linkingEditorial calendar automation',
-        'Brand voice consistencyPerformance tracking and optimization'
+        'High-quality content generationSEO optimization and keyword researchContent clustering and internal linkingEditorial calendar automationBrand voice consistencyPerformance tracking and optimization'
       ],
       pricing: '$1,000 – $6,000/month',
       perUnit: '$0.10 – $1.00 per article',
@@ -61,8 +58,7 @@ export default function AIServices() {
       name: 'Computer Vision & Image Recognition',
       description: 'Advanced computer vision solutions for object detection, facial recognition, and visual content analysis.',
       features: [
-        'Custom object detection and classificationFacial recognition and biometric authenticationOCR and document text extractionReal-time image processing',
-        'Quality control and defect detectionVisual search and recommendation'
+        'Custom object detection and classificationFacial recognition and biometric authenticationOCR and document text extractionReal-time image processingQuality control and defect detectionVisual search and recommendation'
       ],
       pricing: '$5,000 – $25,000 setup',
       perUnit: '$0.01 – $0.10 per image',
@@ -76,8 +72,7 @@ export default function AIServices() {
       name: 'Natural Language Processing Engine',
       description: 'Comprehensive NLP solutions for text analysis, sentiment detection, and language understanding.',
       features: [
-        'Text analysis and sentiment detectionEntity extraction and classificationLanguage translation and localizationDocument summarization',
-        'Intent recognition and classificationCustom model training and fine-tuning'
+        'Text analysis and sentiment detectionEntity extraction and classificationLanguage translation and localizationDocument summarizationIntent recognition and classificationCustom model training and fine-tuning'
       ],
       pricing: '$3,000 – $15,000 setup',
       perUnit: '$0.001 – $0.01 per request',
@@ -91,8 +86,7 @@ export default function AIServices() {
       name: 'AI-Powered Fraud Detection',
       description: 'Real-time fraud detection and risk assessment using advanced machine learning algorithms.',
       features: [
-        'Real-time transaction fraud scoringBehavioral anomaly detectionMachine learning model trainingRisk assessment and decision automation',
-        'Pattern recognition and analysisContinuous learning and adaptation'
+        'Real-time transaction fraud scoringBehavioral anomaly detectionMachine learning model trainingRisk assessment and decision automationPattern recognition and analysisContinuous learning and adaptation'
       ],
       pricing: '$8,000 – $40,000 setup',
       perUnit: '$0.05 – $0.50 per transaction',
@@ -106,8 +100,7 @@ export default function AIServices() {
       name: 'Voice AI & Speech Recognition',
       description: 'Advanced voice processing solutions including speech-to-text, voice synthesis, and conversational AI.',
       features: [
-        'High-accuracy speech-to-text conversionNatural language understandingVoice biometric authenticationConversational AI and chatbots',
-        'Multi-language voice supportReal-time voice processing'
+        'High-accuracy speech-to-text conversionNatural language understandingVoice biometric authenticationConversational AI and chatbotsMulti-language voice supportReal-time voice processing'
       ],
       pricing: '$6,000 – $30,000 setup',
       perUnit: '$0.02 – $0.20 per minute',
@@ -121,8 +114,7 @@ export default function AIServices() {
       name: 'Recommendation Engine',
       description: 'Personalized recommendation systems that increase engagement and conversion rates.',
       features: [
-        'Personalized product recommendationsContent suggestion algorithmsUser behavior analysisA/B testing and optimization',
-        'Real-time recommendation updatesMulti-channel recommendation delivery'
+        'Personalized product recommendationsContent suggestion algorithmsUser behavior analysisA/B testing and optimizationReal-time recommendation updatesMulti-channel recommendation delivery'
       ],
       pricing: '$4,000 – $20,000 setup',
       perUnit: '$0.01 – $0.10 per recommendation',
@@ -136,8 +128,7 @@ export default function AIServices() {
       name: 'Autonomous AI Agents',
       description: 'Self-operating AI agents that can perform complex tasks and make decisions autonomously.',
       features: [
-        'Multi-step task automationDecision-making capabilitiesNatural language interactionTool and API integration',
-        'Learning and adaptationError handling and recovery'
+        'Multi-step task automationDecision-making capabilitiesNatural language interactionTool and API integrationLearning and adaptationError handling and recovery'
       ],
       pricing: '$10,000 – $50,000 setup',
       perUnit: '$0.50 – $5.00 per task',
@@ -151,8 +142,7 @@ export default function AIServices() {
       name: 'AI-Powered Healthcare Diagnostics',
       description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning algorithms.',
       features: [
-        'Medical image analysis and interpretationDisease detection and classificationTreatment recommendation systemsPatient risk assessment',
-        'Drug interaction analysisClinical decision support'
+        'Medical image analysis and interpretationDisease detection and classificationTreatment recommendation systemsPatient risk assessmentDrug interaction analysisClinical decision support'
       ],
       pricing: '$15,000 – $75,000 setup',
       perUnit: '$5.00 – $50.00 per analysis',
@@ -166,8 +156,7 @@ export default function AIServices() {
       name: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
       features: [
-        'Real-time threat detection and analysisBehavioral anomaly detectionAutomated incident responseThreat intelligence integration',
-        'Predictive security analyticsZero-day attack detection'
+        'Real-time threat detection and analysisBehavioral anomaly detectionAutomated incident responseThreat intelligence integrationPredictive security analyticsZero-day attack detection'
       ],
       pricing: '$12,000 – $60,000 setup',
       perUnit: '$0.10 – $1.00 per event',
@@ -181,8 +170,7 @@ export default function AIServices() {
       name: 'Smart Manufacturing Quality Control',
       description: 'AI-powered quality control and predictive maintenance for manufacturing operations.',
       features: [
-        'Real-time quality inspectionPredictive maintenance schedulingDefect detection and classificationProduction optimization',
-        'Supply chain monitoringEquipment performance analysis'
+        'Real-time quality inspectionPredictive maintenance schedulingDefect detection and classificationProduction optimizationSupply chain monitoringEquipment performance analysis'
       ],
       pricing: '$20,000 – $100,000 setup',
       perUnit: '$0.05 – $0.50 per inspection',
@@ -196,8 +184,7 @@ export default function AIServices() {
       name: 'AI-Powered Smart City Solutions',
       description: 'Intelligent urban management systems for traffic, energy, and public services optimization.',
       features: [
-        'Traffic flow optimizationEnergy consumption managementPublic safety monitoringEnvironmental monitoring',
-        'Resource allocation optimizationCitizen service automation'
+        'Traffic flow optimizationEnergy consumption managementPublic safety monitoringEnvironmental monitoringResource allocation optimizationCitizen service automation'
       ],
       pricing: '$50,000 – $250,000 setup',
       perUnit: 'Custom pricing based on city size',
@@ -211,8 +198,7 @@ export default function AIServices() {
       name: 'Intelligent Process Mining & Optimization',
       description: 'AI-driven process analysis and optimization for business operations and workflows.',
       features: [
-        'Process discovery and mappingBottleneck identificationProcess optimization recommendationsCompliance monitoring',
-        'Performance analyticsAutomated process improvement'
+        'Process discovery and mappingBottleneck identificationProcess optimization recommendationsCompliance monitoringPerformance analyticsAutomated process improvement'
       ],
       pricing: '$8,000 – $40,000 setup',
       perUnit: '$0.20 – $2.00 per process',
@@ -226,8 +212,7 @@ export default function AIServices() {
       name: 'AI Legal Document Analysis',
       description: 'Intelligent legal document review, contract analysis, and compliance monitoring.',
       features: [
-        'Contract analysis and risk assessmentLegal document summarizationCompliance monitoring and alertsLegal research automation',
-        'Document classification and organizationLitigation support and discovery'
+        'Contract analysis and risk assessmentLegal document summarizationCompliance monitoring and alertsLegal research automationDocument classification and organizationLitigation support and discovery'
       ],
       pricing: '$10,000 – $50,000 setup',
       perUnit: '$0.50 – $5.00 per document',
@@ -241,8 +226,7 @@ export default function AIServices() {
       name: 'AI-Powered Search & Discovery',
       description: 'Intelligent search engines with semantic understanding and personalized results.',
       features: [
-        'Semantic search and understandingPersonalized search resultsNatural language queriesMulti-modal search capabilities',
-        'Real-time search optimizationContext-aware recommendations'
+        'Semantic search and understandingPersonalized search resultsNatural language queriesMulti-modal search capabilitiesReal-time search optimizationContext-aware recommendations'
       ],
       pricing: '$5,000 – $25,000 setup',
       perUnit: '$0.01 – $0.10 per search',
@@ -256,8 +240,7 @@ export default function AIServices() {
       name: 'AI-Powered Financial Trading',
       description: 'Automated trading systems with machine learning algorithms for market analysis and execution.',
       features: [
-        'Market analysis and predictionAutomated trading executionRisk management and portfolio optimizationReal-time market monitoring',
-        'Algorithmic trading strategiesPerformance analytics and reporting'
+        'Market analysis and predictionAutomated trading executionRisk management and portfolio optimizationReal-time market monitoringAlgorithmic trading strategiesPerformance analytics and reporting'
       ],
       pricing: '$25,000 – $125,000 setup',
       perUnit: 'Performance-based fees',
@@ -271,8 +254,7 @@ export default function AIServices() {
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for customer service, sales, and communication optimization.',
       features: [
-        'Voice emotion and sentiment analysisCall quality assessmentCustomer satisfaction predictionSales conversation optimization',
-        'Voice biometric authenticationReal-time coaching and feedback'
+        'Voice emotion and sentiment analysisCall quality assessmentCustomer satisfaction predictionSales conversation optimizationVoice biometric authenticationReal-time coaching and feedback'
       ],
       pricing: '$6,000 – $30,000 setup',
       perUnit: '$0.05 – $0.50 per minute',
@@ -286,8 +268,7 @@ export default function AIServices() {
       name: 'Advanced Computer Vision Analytics',
       description: 'Deep learning computer vision for complex visual analysis and real-time processing.',
       features: [
-        'Object detection and trackingFacial recognition and analysisScene understanding and classificationReal-time video processing',
-        'Custom model trainingEdge deployment optimization'
+        'Object detection and trackingFacial recognition and analysisScene understanding and classificationReal-time video processingCustom model trainingEdge deployment optimization'
       ],
       pricing: '$8,000 – $40,000 setup',
       perUnit: '$0.05 – $0.50 per image',
@@ -301,8 +282,7 @@ export default function AIServices() {
       name: 'Intelligent Data Processing Pipeline',
       description: 'AI-powered data ingestion, cleaning, and transformation with automated quality assurance.',
       features: [
-        'Automated data ingestion and validationIntelligent data cleaning and deduplicationSchema detection and mappingData quality scoring and monitoring',
-        'Automated transformation rulesReal-time data processing'
+        'Automated data ingestion and validationIntelligent data cleaning and deduplicationSchema detection and mappingData quality scoring and monitoringAutomated transformation rulesReal-time data processing'
       ],
       pricing: '$5,000 – $25,000 setup',
       perUnit: '$0.001 – $0.01 per record',
@@ -316,8 +296,7 @@ export default function AIServices() {
       name: 'Advanced Predictive Analytics',
       description: 'Sophisticated machine learning models for complex business forecasting and optimization.',
       features: [
-        'Multi-variate time series forecastingCausal inference and impact analysisScenario modeling and simulationAutomated feature engineering',
-        'Model ensemble and optimizationReal-time prediction updates'
+        'Multi-variate time series forecastingCausal inference and impact analysisScenario modeling and simulationAutomated feature engineeringModel ensemble and optimizationReal-time prediction updates'
       ],
       pricing: '$6,000 – $30,000 setup',
       perUnit: 'Custom pricing based on complexity',
@@ -331,8 +310,7 @@ export default function AIServices() {
       name: 'AI-Powered Cybersecurity Intelligence',
       description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
       features: [
-        'Behavioral anomaly detectionThreat intelligence and correlationAutomated incident responseZero-day attack detection',
-        'Security orchestration and automationContinuous threat monitoring'
+        'Behavioral anomaly detectionThreat intelligence and correlationAutomated incident responseZero-day attack detectionSecurity orchestration and automationContinuous threat monitoring'
       ],
       pricing: '$10,000 – $60,000 setup',
       perUnit: '$0.10 – $1.00 per event',
@@ -346,8 +324,7 @@ export default function AIServices() {
       name: 'Conversational AI Platform',
       description: 'Advanced conversational AI with context awareness and multi-modal interaction.',
       features: [
-        'Context-aware conversationsMulti-modal interaction (voice, text, image)Emotion recognition and responseKnowledge graph integration',
-        'Multi-language supportConversation analytics and optimization'
+        'Context-aware conversationsMulti-modal interaction (voice, text, image)Emotion recognition and responseKnowledge graph integrationMulti-language supportConversation analytics and optimization'
       ],
       pricing: '$8,000 – $40,000 setup',
       perUnit: '$0.02 – $0.20 per interaction',
@@ -361,8 +338,7 @@ export default function AIServices() {
       name: 'Intelligent Document Intelligence',
       description: 'Advanced document processing with understanding, extraction, and automated workflows.',
       features: [
-        'Document understanding and classificationIntelligent data extractionDocument comparison and analysisAutomated workflow routing',
-        'Compliance checking and validationMulti-format document support'
+        'Document understanding and classificationIntelligent data extractionDocument comparison and analysisAutomated workflow routingCompliance checking and validationMulti-format document support'
       ],
       pricing: '$4,000 – $20,000 setup',
       perUnit: '$0.01 – $0.10 per document',
@@ -376,8 +352,7 @@ export default function AIServices() {
       name: 'Intelligent Search & Discovery Engine',
       description: 'AI-powered search with semantic understanding, personalization, and intelligent suggestions.',
       features: [
-        'Semantic search and understandingPersonalized search resultsIntelligent query suggestionsMulti-modal search capabilities',
-        'Search analytics and optimizationReal-time search indexing'
+        'Semantic search and understandingPersonalized search resultsIntelligent query suggestionsMulti-modal search capabilitiesSearch analytics and optimizationReal-time search indexing'
       ],
       pricing: '$3,000 – $15,000 setup',
       perUnit: '$0.001 – $0.01 per search',
@@ -391,8 +366,7 @@ export default function AIServices() {
       name: 'AI-Powered Process Optimization',
       description: 'Intelligent process mining and optimization using AI to identify bottlenecks and improvements.',
       features: [
-        'Process discovery and mappingBottleneck identification and analysisAutomated process optimizationPerformance prediction and simulation',
-        'Resource allocation optimizationContinuous process improvement'
+        'Process discovery and mappingBottleneck identification and analysisAutomated process optimizationPerformance prediction and simulationResource allocation optimizationContinuous process improvement'
       ],
       pricing: '$5,000 – $25,000 setup',
       perUnit: '$0.05 – $0.50 per process',
@@ -406,8 +380,7 @@ export default function AIServices() {
       name: 'AI-Powered Healthcare Diagnostics',
       description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning and computer vision.',
       features: [
-        'Medical image analysis and interpretationDisease detection and classificationTreatment recommendation systemsPatient risk assessment',
-        'Drug interaction analysisClinical decision support'
+        'Medical image analysis and interpretationDisease detection and classificationTreatment recommendation systemsPatient risk assessmentDrug interaction analysisClinical decision support'
       ],
       pricing: '$15,000 – $100,000 setup',
       perUnit: '$0.50 – $5.00 per analysis',
@@ -421,8 +394,7 @@ export default function AIServices() {
       name: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
       features: [
-        'Real-time threat detection and analysisBehavioral anomaly identificationAutomated incident responseThreat intelligence correlation',
-        'Zero-day attack detectionSecurity orchestration and automation'
+        'Real-time threat detection and analysisBehavioral anomaly identificationAutomated incident responseThreat intelligence correlationZero-day attack detectionSecurity orchestration and automation'
       ],
       pricing: '$10,000 – $60,000 setup',
       perUnit: '$0.10 – $1.00 per event',
@@ -436,8 +408,7 @@ export default function AIServices() {
       name: 'Smart Manufacturing Quality Control',
       description: 'AI-powered quality control and defect detection for manufacturing processes.',
       features: [
-        'Real-time defect detectionQuality prediction and optimizationProcess monitoring and controlPredictive maintenance integration',
-        'Supply chain quality trackingAutomated quality reporting'
+        'Real-time defect detectionQuality prediction and optimizationProcess monitoring and controlPredictive maintenance integrationSupply chain quality trackingAutomated quality reporting'
       ],
       pricing: '$8,000 – $50,000 setup',
       perUnit: '$0.01 – $0.10 per inspection',
@@ -451,8 +422,7 @@ export default function AIServices() {
       name: 'AI-Powered Smart City Solutions',
       description: 'Intelligent urban management with traffic optimization, energy efficiency, and public safety.',
       features: [
-        'Traffic flow optimizationEnergy consumption monitoringPublic safety monitoringEnvironmental quality tracking',
-        'Infrastructure maintenance predictionCitizen service optimization'
+        'Traffic flow optimizationEnergy consumption monitoringPublic safety monitoringEnvironmental quality trackingInfrastructure maintenance predictionCitizen service optimization'
       ],
       pricing: '$20,000 – $200,000 setup',
       perUnit: 'Custom pricing based on city size',
@@ -466,8 +436,7 @@ export default function AIServices() {
       name: 'Intelligent Process Mining & Optimization',
       description: 'AI-driven process analysis and optimization for business operations and workflows.',
       features: [
-        'Process discovery and mappingBottleneck identification and analysisProcess optimization recommendationsCompliance monitoring and reporting',
-        'Resource utilization analysisAutomated process improvement'
+        'Process discovery and mappingBottleneck identification and analysisProcess optimization recommendationsCompliance monitoring and reportingResource utilization analysisAutomated process improvement'
       ],
       pricing: '$5,000 – $30,000 setup',
       perUnit: '$0.001 – $0.01 per process instance',
@@ -481,8 +450,7 @@ export default function AIServices() {
       name: 'AI-Powered Voice Analytics Platform',
       description: 'Advanced voice analysis for customer service, sales, and communication optimization.',
       features: [
-        'Voice emotion and sentiment analysisCall quality and performance metricsCustomer satisfaction predictionSales opportunity identification',
-        'Agent performance optimizationReal-time coaching recommendations'
+        'Voice emotion and sentiment analysisCall quality and performance metricsCustomer satisfaction predictionSales opportunity identificationAgent performance optimizationReal-time coaching recommendations'
       ],
       pricing: '$3,000 – $20,000 setup',
       perUnit: '$0.05 – $0.50 per minute',
@@ -496,8 +464,7 @@ export default function AIServices() {
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Machine learning-driven drug discovery and development with molecular analysis.',
       features: [
-        'Molecular structure analysisDrug-target interaction predictionSide effect prediction and analysisClinical trial optimization',
-        'Drug repurposing identificationBiomarker discovery and validation'
+        'Molecular structure analysisDrug-target interaction predictionSide effect prediction and analysisClinical trial optimizationDrug repurposing identificationBiomarker discovery and validation'
       ],
       pricing: '$50,000 – $500,000 setup',
       perUnit: 'Custom pricing based on project scope',
@@ -511,8 +478,7 @@ export default function AIServices() {
       name: 'AI-Powered Agricultural Intelligence',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
       features: [
-        'Crop health monitoring and analysisYield prediction and optimizationPest and disease detectionIrrigation and fertilizer optimization',
-        'Weather impact analysisFarm management automation'
+        'Crop health monitoring and analysisYield prediction and optimizationPest and disease detectionIrrigation and fertilizer optimizationWeather impact analysisFarm management automation'
       ],
       pricing: '$5,000 – $40,000 setup',
       perUnit: '$0.01 – $0.10 per acre',
@@ -526,8 +492,7 @@ export default function AIServices() {
       name: 'AI-Powered Financial Risk Assessment',
       description: 'Advanced financial risk modeling and assessment using machine learning and big data.',
       features: [
-        'Credit risk assessment and scoringMarket risk analysis and predictionOperational risk identificationFraud detection and prevention',
-        'Regulatory compliance monitoringStress testing and scenario analysis'
+        'Credit risk assessment and scoringMarket risk analysis and predictionOperational risk identificationFraud detection and preventionRegulatory compliance monitoringStress testing and scenario analysis'
       ],
       pricing: '$15,000 – $100,000 setup',
       perUnit: '$0.01 – $0.10 per assessment',
@@ -541,8 +506,7 @@ export default function AIServices() {
       name: 'AI-Powered Energy Trading Platform',
       description: 'Intelligent energy trading with price prediction, demand forecasting, and optimization.',
       features: [
-        'Energy price prediction and analysisDemand forecasting and optimizationTrading strategy optimizationRisk management and hedging',
-        'Market analysis and insightsAutomated trading execution'
+        'Energy price prediction and analysisDemand forecasting and optimizationTrading strategy optimizationRisk management and hedgingMarket analysis and insightsAutomated trading execution'
       ],
       pricing: '$10,000 – $80,000 setup',
       perUnit: '0.1% – 1% of trading volume',
@@ -556,8 +520,7 @@ export default function AIServices() {
       name: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and analysis with contract insights and risk assessment.',
       features: [
-        'Contract analysis and risk assessmentLegal document classificationCompliance checking and monitoringCase law research and analysis',
-        'Document summarization and insightsLegal precedent identification'
+        'Contract analysis and risk assessmentLegal document classificationCompliance checking and monitoringCase law research and analysisDocument summarization and insightsLegal precedent identification'
       ],
       pricing: '$5,000 – $40,000 setup',
       perUnit: '$0.10 – $1.00 per document',
@@ -571,8 +534,7 @@ export default function AIServices() {
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
-        'Multi-modal content generation (text, image, video, audio)Brand voice and style consistency trainingContent optimization for SEO and engagementAutomated content scheduling and distribution',
-        'A/B testing and performance analyticsCopyright and plagiarism detection'
+        'Multi-modal content generation (text, image, video, audio)Brand voice and style consistency trainingContent optimization for SEO and engagementAutomated content scheduling and distributionA/B testing and performance analyticsCopyright and plagiarism detection'
       ],
       pricing: '$2,000 – $15,000 setup',
       perUnit: '$0.05 – $0.50 per content piece',
@@ -586,8 +548,7 @@ export default function AIServices() {
       name: 'AI-Powered Quality Assurance',
       description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
-        'Real-time defect detection and classificationPredictive quality analytics and forecastingAutomated compliance monitoring and reportingRoot cause analysis and recommendations',
-        'Integration with manufacturing systemsCustom quality metrics and thresholds'
+        'Real-time defect detection and classificationPredictive quality analytics and forecastingAutomated compliance monitoring and reportingRoot cause analysis and recommendationsIntegration with manufacturing systemsCustom quality metrics and thresholds'
       ],
       pricing: '$10,000 – $75,000 setup',
       perUnit: '$0.01 – $0.10 per inspection',
@@ -601,8 +562,7 @@ export default function AIServices() {
       name: 'AI Financial Risk Management',
       description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
-        'Real-time fraud detection and preventionCredit risk assessment and scoringMarket risk analysis and portfolio optimizationRegulatory compliance monitoring',
-        'Anomaly detection and alert systemsAutomated reporting and documentation'
+        'Real-time fraud detection and preventionCredit risk assessment and scoringMarket risk analysis and portfolio optimizationRegulatory compliance monitoringAnomaly detection and alert systemsAutomated reporting and documentation'
       ],
       pricing: '$15,000 – $100,000 setup',
       perUnit: '$0.02 – $0.20 per transaction',
@@ -616,8 +576,7 @@ export default function AIServices() {
       name: 'AI Voice Analytics & Sentiment Analysis',
       description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
       features: [
-        'Real-time voice emotion and sentiment analysisSpeaker identification and verificationConversation analytics and insightsMulti-language support and translation',
-        'Voice biometric authenticationCall center optimization and training'
+        'Real-time voice emotion and sentiment analysisSpeaker identification and verificationConversation analytics and insightsMulti-language support and translationVoice biometric authenticationCall center optimization and training'
       ],
       pricing: '$5,000 – $30,000 setup',
       perUnit: '$0.01 – $0.05 per minute',
@@ -631,8 +590,7 @@ export default function AIServices() {
       name: 'AI Data Intelligence Platform',
       description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
-        'Automated data discovery and catalogingData quality assessment and cleaningIntelligent data enrichment and augmentationAutomated data lineage and governance',
-        'Predictive data analytics and insightsNatural language data querying'
+        'Automated data discovery and catalogingData quality assessment and cleaningIntelligent data enrichment and augmentationAutomated data lineage and governancePredictive data analytics and insightsNatural language data querying'
       ],
       pricing: '$8,000 – $50,000 setup',
       perUnit: '$0.10 – $1.00 per GB processed',
@@ -646,8 +604,7 @@ export default function AIServices() {
       name: 'AI Cybersecurity Threat Intelligence',
       description: 'Advanced AI-powered cybersecurity system that provides real-time threat detection, incident response, and security intelligence.',
       features: [
-        'Real-time threat detection and analysisAutomated incident response and remediationBehavioral analytics and anomaly detectionThreat intelligence and attribution',
-        'Security orchestration and automationCompliance monitoring and reporting'
+        'Real-time threat detection and analysisAutomated incident response and remediationBehavioral analytics and anomaly detectionThreat intelligence and attributionSecurity orchestration and automationCompliance monitoring and reporting'
       ],
       pricing: '$12,000 – $80,000 setup',
       perUnit: '$0.05 – $0.25 per event',
@@ -661,8 +618,7 @@ export default function AIServices() {
       name: 'AI Talent Acquisition & HR Analytics',
       description: 'Intelligent HR platform that automates recruitment, employee analytics, and workforce optimization using advanced AI algorithms.',
       features: [
-        'Automated resume screening and candidate matchingPredictive analytics for employee retentionSkills gap analysis and training recommendationsPerformance prediction and optimization',
-        'Bias detection and fairness monitoringWorkforce planning and optimization'
+        'Automated resume screening and candidate matchingPredictive analytics for employee retentionSkills gap analysis and training recommendationsPerformance prediction and optimizationBias detection and fairness monitoringWorkforce planning and optimization'
       ],
       pricing: '$6,000 – $40,000 setup',
       perUnit: '$0.50 – $5.00 per candidate',
@@ -676,8 +632,7 @@ export default function AIServices() {
       name: 'AI Code Generation & Optimization',
       description: 'Advanced AI system that generates, optimizes, and maintains code while ensuring quality, security, and performance standards.',
       features: [
-        'Automated code generation from specificationsCode optimization and performance tuningSecurity vulnerability detection and fixingAutomated testing and quality assurance',
-        'Code documentation and maintenanceLegacy code modernization and refactoring'
+        'Automated code generation from specificationsCode optimization and performance tuningSecurity vulnerability detection and fixingAutomated testing and quality assuranceCode documentation and maintenanceLegacy code modernization and refactoring'
       ],
       pricing: '$10,000 – $60,000 setup',
       perUnit: '$0.10 – $1.00 per line of code',
@@ -691,8 +646,7 @@ export default function AIServices() {
       name: 'AI Search & Recommendation Engine',
       description: 'Intelligent search and recommendation system that provides personalized results, content discovery, and user experience optimization.',
       features: [
-        'Semantic search and natural language processingPersonalized recommendation algorithmsReal-time content indexing and rankingUser behavior analysis and optimization',
-        'Multi-modal search (text, image, voice)A/B testing and performance optimization'
+        'Semantic search and natural language processingPersonalized recommendation algorithmsReal-time content indexing and rankingUser behavior analysis and optimizationMulti-modal search (text, image, voice)A/B testing and performance optimization'
       ],
       pricing: '$5,000 – $35,000 setup',
       perUnit: '$0.01 – $0.10 per search',

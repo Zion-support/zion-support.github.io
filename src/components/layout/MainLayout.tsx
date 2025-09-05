@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 ;
-interface LayoutProps {,
+interface LayoutProps {;
   children: React.ReactNode,
   title?: string,
   description?: string,

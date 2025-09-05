@@ -1,7 +1,7 @@
 import React from 'react';
 ;
 interface SkeletonLoaderProps {;
-  lines?: number,
+  lines?: number;
   className?: string
 };
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({,

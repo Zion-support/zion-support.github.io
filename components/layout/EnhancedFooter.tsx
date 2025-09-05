@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const EnhancedFooter: React.FC = () => {,
+const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear(),
 ,
   const services = [,

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 ;
-const __filename = fileURLToPath(import.meta.url),
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename),
 ,
 // Function to fix structural issues,
@@ -61,8 +61,7 @@ function processFile(filePath) {,
 };
 // Process the specific files that have errors,
 const errorFiles = [,
-  'pages/about.tsxpages/accessibility.tsxpages/ai-services.tsxpages/api.tsx',
-  'pages/blog.tsx'
+  'pages/about.tsxpages/accessibility.tsxpages/ai-services.tsxpages/api.tsxpages/blog.tsx'
 ],
 ,
 console.log(`Processing ${errorFiles.length} files with structural issues`),

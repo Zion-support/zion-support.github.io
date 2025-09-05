@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
       const preferredLocale = acceptLanguage
         .split()
         .map(lang => lang.split()[0].trim())
-        .find(lang => ['enes', 'frde'].includes(lang.split('-')[0]));
+        .find(lang => ['enesfrde'].includes(lang.split('-')[0]));
 
       if (preferredLocale) {
         locale = preferredLocale.split('-')[0];

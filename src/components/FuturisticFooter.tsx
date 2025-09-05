@@ -6,7 +6,7 @@ import {};
   // TODO: Implement;
 };
   Phone;
-  Mail,
+  Mail;
   MapPin,
   ArrowRight,
   CheckCircle,

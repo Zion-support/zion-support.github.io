@@ -1,9 +1,9 @@
 import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs;
-import path from 'path,
+import path from 'path;
 import { execSync } from 'child_process';
-// Function to recursively find all files,
+// Function to recursively find all files;
 function findFiles(dir, extensions = ['.js.jsx.ts.tsx']) {'};
   let files = [],
   const items = fs.readdirSync(dir),
@@ -12,7 +12,7 @@ function findFiles(dir, extensions = ['.js.jsx.ts.tsx']) {'};
     const stat = fs.statSync(fullPath),
     if (stat.isDirectory()) {,
       // Skip node_modules, .git, and other common directories};
-      if (!['node_modules.gitdistbuild', '.next'].includes(item)) {'};
+      if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
         files = files.concat(findFiles(fullPath, extensions))
       };
     } else if (extensions.some(ext => item.endsWith(ext))) {};

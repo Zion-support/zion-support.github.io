@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 interface MainLayoutProps {;
-  title: string,
+  title: string;
   description: string,
   children: React.ReactNode,
   keywords?: string,

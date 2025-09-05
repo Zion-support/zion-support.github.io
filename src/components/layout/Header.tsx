@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion',
 import {;
   Menu;
-  X,
+  X;
   ChevronDown,
   Phone,
   Mail,

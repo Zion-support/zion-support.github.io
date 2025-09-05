@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Layout from '../pages/components/Layout';
 import {;
   Brain;
-  Cloud,
+  Cloud;
   Shield,
   BarChart3,
   CheckCircle,
@@ -61,7 +61,7 @@ const allServices = [,
     category: 'AI & ML',
     href: '/ai-services',
     color: 'purple',
-    services: ['Machine LearningComputer VisionNLPPredictive Analytics', 'AI Chatbots']
+    services: ['Machine LearningComputer VisionNLPPredictive AnalyticsAI Chatbots']
   },
   {,
     id: 2,
@@ -71,7 +71,7 @@ const allServices = [,
     category: 'Information Technology',
     href: '/it-services',
     color: 'green',
-    services: ['Cloud MigrationCybersecurityDevOpsDatabase Management', 'IT Support']
+    services: ['Cloud MigrationCybersecurityDevOpsDatabase ManagementIT Support']
   },
   {,
     id: 3,
@@ -81,7 +81,7 @@ const allServices = [,
     category: 'Software as a Service',
     href: '/micro-saas',
     color: 'blue',
-    services: ['Analytics DashboardDocument ProcessingCustomer ExperienceInventory Management', 'Project Management']
+    services: ['Analytics DashboardDocument ProcessingCustomer ExperienceInventory ManagementProject Management']
   };
 ],
 ,

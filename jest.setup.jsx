@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-interface Jest.setupProps {,
+interface Jest.setupProps {;
   // Add props here as needed
 };
 export default function Jest.setup({ }: Jest.setupProps) {,

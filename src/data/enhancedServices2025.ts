@@ -1,6 +1,6 @@
 import React from 'react';
 export interface ServiceTier {;
-  name: string,
+  name: string;
   price: string,
   includes: string[],
   features: string[]
@@ -62,8 +62,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Includes SEO optimization, brand voice consistency, and multi-platform distribution automation."
     ],
     features: [,
-      'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword researchBrand voice training and consistencyMulti-platform publishing automation',
-      'Content performance analyticsA/B testing and optimizationPlagiarism detection and originality scoringMulti-language support (50+ languages)'
+      'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword researchBrand voice training and consistencyMulti-platform publishing automationContent performance analyticsA/B testing and optimizationPlagiarism detection and originality scoringMulti-language support (50+ languages)'
     ],
     benefits: [,
       'Reduce content creation time by 80%Increase engagement rates by 45%Improve SEO rankings significantlyMaintain consistent brand voice across all channels'
@@ -101,7 +100,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     useCases: ['Blog content automationSocial media managementEmail marketing campaignsSEO content strategy'],
     technicalSpecs: {,
       technology: ['GPT-4Claude-3Custom NLP modelsReact/Node.js'],
-      integrations: ['WordPressHubSpotMailchimpHootsuite', 'Google Analytics'],
+      integrations: ['WordPressHubSpotMailchimpHootsuiteGoogle Analytics'],
       apiEndpoints: 25,
       uptime: '99.9%',
       security: ['SOC 2GDPR compliantEnd-to-end encryption']
@@ -112,7 +111,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '2-4 weeks',
     supportLevel: 'Premium',
-    tags: ['AIContentMarketingSEO', 'Automation']
+    tags: ['AIContentMarketingSEOAutomation']
   },
   // AI-Powered Email Automation,
   {,
@@ -126,8 +125,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses machine learning to predict optimal email timing, subject lines, and content for maximum open and conversion rates."
     ],
     features: [,
-      'Behavioral trigger automationAI-powered subject line optimizationSend time optimizationDynamic content personalization',
-      'A/B testing with AI insightsDeliverability optimizationUnsubscribe prediction and preventionCross-channel campaign coordination'
+      'Behavioral trigger automationAI-powered subject line optimizationSend time optimizationDynamic content personalizationA/B testing with AI insightsDeliverability optimizationUnsubscribe prediction and preventionCross-channel campaign coordination'
     ],
     benefits: [,
       'Increase open rates by 60%Boost conversion rates by 40%Reduce unsubscribe rates by 50%Save 20+ hours per week on email management'
@@ -164,7 +162,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     useCases: ['Lead nurturingCustomer onboardingRetention campaignsSales follow-up'],
     technicalSpecs: {,
       technology: ['Machine LearningNLPPredictive AnalyticsPython/Node.js'],
-      integrations: ['SalesforceHubSpotMailchimpKlaviyo', 'Zapier'],
+      integrations: ['SalesforceHubSpotMailchimpKlaviyoZapier'],
       apiEndpoints: 15,
       uptime: '99.9%',
       security: ['SOC 2GDPR compliantData encryption']
@@ -175,7 +173,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '2-3 weeks',
     supportLevel: 'Premium',
-    tags: ['AIEmailMarketingAutomation', 'Personalization']
+    tags: ['AIEmailMarketingAutomationPersonalization']
   },
   // AI-Powered Project Management,
   {,
@@ -189,8 +187,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Provides real-time insights, automated reporting, and intelligent recommendations for project success."
     ],
     features: [,
-      'AI-powered risk predictionAutomated task assignmentResource optimization algorithmsReal-time project health monitoring',
-      'Predictive timeline adjustmentsTeam performance analyticsAutomated status reportingIntegration with 50+ tools'
+      'AI-powered risk predictionAutomated task assignmentResource optimization algorithmsReal-time project health monitoringPredictive timeline adjustmentsTeam performance analyticsAutomated status reportingIntegration with 50+ tools'
     ],
     benefits: [,
       'Reduce project delays by 35%Improve team productivity by 45%Increase project success rate by 60%Save 15+ hours per week on project management'
@@ -227,7 +224,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     useCases: ['Software developmentMarketing campaignsEvent planningProduct launches'],
     technicalSpecs: {,
       technology: ['Machine LearningPredictive AnalyticsReact/Node.jsPostgreSQL'],
-      integrations: ['SlackJiraAsanaTrello', 'Microsoft Teams'],
+      integrations: ['SlackJiraAsanaTrelloMicrosoft Teams'],
       apiEndpoints: 30,
       uptime: '99.9%',
       security: ['SOC 2GDPR compliantRole-based access']
@@ -238,7 +235,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '3-4 weeks',
     supportLevel: 'Enterprise',
-    tags: ['AIProject ManagementProductivityAnalytics', 'Automation']
+    tags: ['AIProject ManagementProductivityAnalyticsAutomation']
   },
   // AI-Powered Financial Analytics,
   {,
@@ -252,8 +249,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses advanced machine learning algorithms to identify patterns, detect anomalies, and forecast financial performance."
     ],
     features: [,
-      'Real-time financial data analysisPredictive financial modelingAnomaly detection and fraud preventionMarket trend analysis',
-      'Cash flow forecastingInvestment opportunity identificationRisk assessment and mitigationAutomated financial reporting'
+      'Real-time financial data analysisPredictive financial modelingAnomaly detection and fraud preventionMarket trend analysisCash flow forecastingInvestment opportunity identificationRisk assessment and mitigationAutomated financial reporting'
     ],
     benefits: [,
       'Improve financial decision accuracy by 70%Reduce financial risks by 50%Increase profit margins by 25%Save 20+ hours per week on financial analysis'
@@ -290,7 +286,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     useCases: ['Financial planningInvestment analysisRisk managementCompliance reporting'],
     technicalSpecs: {,
       technology: ['Machine LearningDeep LearningPython/RTensorFlow'],
-      integrations: ['QuickBooksXeroSAPOracle', 'Bloomberg API'],
+      integrations: ['QuickBooksXeroSAPOracleBloomberg API'],
       apiEndpoints: 20,
       uptime: '99.9%',
       security: ['SOC 2PCI DSSGDPR compliantBank-level encryption']
@@ -301,7 +297,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '4-6 weeks',
     supportLevel: 'Enterprise',
-    tags: ['AIFinanceAnalyticsForecasting', 'Risk Management']
+    tags: ['AIFinanceAnalyticsForecastingRisk Management']
   },
   // Quantum Computing Services,
   {,
@@ -315,8 +311,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses quantum algorithms to find optimal solutions for NP-hard problems that are intractable for classical computers."
     ],
     features: [,
-      'Quantum annealing optimizationQuantum machine learning algorithmsHybrid quantum-classical workflowsReal-time quantum circuit optimization',
-      'Quantum error correctionMulti-objective optimizationQuantum simulation capabilitiesClassical fallback algorithms'
+      'Quantum annealing optimizationQuantum machine learning algorithmsHybrid quantum-classical workflowsReal-time quantum circuit optimizationQuantum error correctionMulti-objective optimizationQuantum simulation capabilitiesClassical fallback algorithms'
     ],
     benefits: [,
       'Solve problems 1000x faster than classical computersFind optimal solutions for complex logisticsReduce operational costs by 30-50%Enable breakthrough discoveries in research'
@@ -364,7 +359,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'Enterprise',
-    tags: ['QuantumOptimizationAIResearch', 'Advanced Computing']
+    tags: ['QuantumOptimizationAIResearchAdvanced Computing']
   },
   // Blockchain & DeFi Services,
   {,
@@ -378,8 +373,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Supports multiple consensus mechanisms, smart contracts, and provides enterprise-grade security and compliance."
     ],
     features: [,
-      'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deploymentEnterprise-grade security and complianceScalable consensus mechanisms',
-      'Interoperability solutionsTokenization platformDeFi protocol integrationRegulatory compliance tools'
+      'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deploymentEnterprise-grade security and complianceScalable consensus mechanismsInteroperability solutionsTokenization platformDeFi protocol integrationRegulatory compliance tools'
     ],
     benefits: [,
       'Reduce transaction costs by 60%Increase transparency and trustEnable new business modelsImprove supply chain traceability'
@@ -415,8 +409,8 @@ export const enhancedServices2025: ServiceItem[] = [,
     targetAudience: ['Financial institutionsSupply chain companiesHealthcareGovernment'],
     useCases: ['Supply chain trackingDigital identityTokenizationSmart contracts'],
     technicalSpecs: {,
-      technology: ['EthereumHyperledger FabricCordaSolidity', 'Web3.js'],
-      integrations: ['AWSAzureGoogle CloudOracle', 'SAP'],
+      technology: ['EthereumHyperledger FabricCordaSolidityWeb3.js'],
+      integrations: ['AWSAzureGoogle CloudOracleSAP'],
       apiEndpoints: 50,
       uptime: '99.9%',
       security: ['Multi-signatureHardware security modulesZero-knowledge proofs']
@@ -427,7 +421,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'Enterprise',
-    tags: ['BlockchainDeFiSmart ContractsEnterprise', 'Security']
+    tags: ['BlockchainDeFiSmart ContractsEnterpriseSecurity']
   },
   // IoT & Edge Computing,
   {,
@@ -441,8 +435,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Provides low-latency inference, offline capabilities, and seamless cloud synchronization."
     ],
     features: [,
-      'Edge AI model deploymentReal-time inference processingOffline operation capabilitiesCloud-edge synchronization',
-      'Device management and monitoringModel versioning and updatesData preprocessing pipelinesSecurity and encryption'
+      'Edge AI model deploymentReal-time inference processingOffline operation capabilitiesCloud-edge synchronizationDevice management and monitoringModel versioning and updatesData preprocessing pipelinesSecurity and encryption'
     ],
     benefits: [,
       'Reduce latency by 90%Enable offline AI processingReduce bandwidth costs by 70%Improve data privacy and security'
@@ -478,8 +471,8 @@ export const enhancedServices2025: ServiceItem[] = [,
     targetAudience: ['ManufacturingHealthcareRetailSmart cities'],
     useCases: ['Predictive maintenanceReal-time monitoringAutonomous systemsSmart sensors'],
     technicalSpecs: {,
-      technology: ['TensorFlow LiteONNXDockerKubernetes', 'MQTT'],
-      integrations: ['AWS IoTAzure IoTGoogle Cloud IoTInfluxDB', 'Grafana'],
+      technology: ['TensorFlow LiteONNXDockerKubernetesMQTT'],
+      integrations: ['AWS IoTAzure IoTGoogle Cloud IoTInfluxDBGrafana'],
       apiEndpoints: 20,
       uptime: '99.9%',
       security: ['TLS encryptionDevice authenticationSecure boot']
@@ -490,7 +483,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '4-6 weeks',
     supportLevel: 'Premium',
-    tags: ['IoTEdge ComputingAIReal-time', 'Automation']
+    tags: ['IoTEdge ComputingAIReal-timeAutomation']
   },
   // Cybersecurity Services,
   {,
@@ -504,8 +497,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses machine learning to identify and prevent advanced persistent threats, zero-day attacks, and insider threats."
     ],
     features: [,
-      'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analytics',
-      'Vulnerability assessmentCompliance reportingSecurity orchestrationThreat intelligence integration'
+      'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analyticsVulnerability assessmentCompliance reportingSecurity orchestrationThreat intelligence integration'
     ],
     benefits: [,
       'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksEnsure compliance with security standards'
@@ -541,8 +533,8 @@ export const enhancedServices2025: ServiceItem[] = [,
     targetAudience: ['EnterprisesGovernmentHealthcareFinancial services'],
     useCases: ['Threat detectionIncident responseComplianceRisk assessment'],
     technicalSpecs: {,
-      technology: ['Machine LearningDeep LearningSIEMSOAR', 'Python/Go'],
-      integrations: ['SplunkQRadarCrowdStrikePalo Alto', 'Cisco'],
+      technology: ['Machine LearningDeep LearningSIEMSOARPython/Go'],
+      integrations: ['SplunkQRadarCrowdStrikePalo AltoCisco'],
       apiEndpoints: 40,
       uptime: '99.9%',
       security: ['SOC 2ISO 27001FedRAMPZero-trust architecture']
@@ -553,7 +545,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,
     estimatedDelivery: '3-4 weeks',
     supportLevel: 'Enterprise',
-    tags: ['CybersecurityAIThreat DetectionCompliance', 'Security']
+    tags: ['CybersecurityAIThreat DetectionComplianceSecurity']
   };
 ],
 ,

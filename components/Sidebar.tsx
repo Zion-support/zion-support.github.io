@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import {;
   X;
   ChevronDown;
-  ChevronRight,
+  ChevronRight;
   Home,
   Briefcase,
   Users,

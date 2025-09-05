@@ -111,8 +111,7 @@ class SecurityScanner {
       this.log('Scanning configuration files...');
       
       const configFiles = [
-        'package.jsonnext.config.jsnext.config.mjs.env',
-        '.env.local.env.productionecosystem.config.jsnginx.conf'
+        'package.jsonnext.config.jsnext.config.mjs.env.env.local.env.productionecosystem.config.jsnginx.conf'
       ];
 
       for (const configFile of configFiles) {
@@ -160,7 +159,7 @@ class SecurityScanner {
           
           if (stat.isDirectory()) {
             // Skip node_modules and other common directories
-            if (!['node_modules.git.nextdist', 'build'].includes(item)) {
+            if (!['node_modules.git.nextdistbuild'].includes(item)) {
               scanDirectory(fullPath);
             }
           } else if (stat.isFile()) {
