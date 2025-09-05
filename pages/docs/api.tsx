@@ -77,42 +77,43 @@ const codeExamples = [
   {
     language: 'JavaScript',
     title: 'Fetch Services',
-    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {`})
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
   method: 'GET',
-  headers: {}
+  headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  };
+  }
+};
 });
 
 const data = await response.json();
 ``
   },
-  {}
+  {
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests;`
+    code: `import requests
 url = 'https://ziontechgroup.com/api/v1/contact'
-headers = {}
+headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-};
-data = {}
+}
+data = {
     'name': 'John Doe',
     'email': 'john@example.com',
     'message': 'Interested in AI services',
     'company': 'Tech Corp'
-};
-response = requests.post(url, json=data, headers=headers);
+}
+response = requests.post(url, json=data, headers=headers)
 print(response.json())``
   },
-  {}
+  {
     language: 'cURL',
     title: 'Get System Status',
     code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json""
-  };
+  -H "Content-Type: application/json"`
+  }
 ];
 
 const sdkLibraries = []

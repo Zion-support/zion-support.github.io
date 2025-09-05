@@ -116,7 +116,7 @@ const navigation = [
         icon: CpuIcon,
         description: 'Next-generation quantum computing solutions'
       }
-    ];
+    ]
   },
   {
     name: 'Solutions',
@@ -135,31 +135,31 @@ const navigation = [
         icon: Heart,
         description: 'Healthcare technology and compliance solutions'
       },
-      {}
+      {
         name: 'Finance',
         href: '/solutions/finance',
         icon: DollarSign,
         description: 'Financial services and fintech solutions'
       },
-      {}
+      {
         name: 'Retail',
         href: '/solutions/retail',
         icon: ShoppingCart,
         description: 'E-commerce and retail technology solutions'
       },
-      {}
+      {
         name: 'Education',
         href: '/solutions/education',
         icon: GraduationCap,
         description: 'Educational technology and learning platforms'
       },
-      {}
+      {
         name: 'Government',
         href: '/solutions/government',
         icon: Shield,
         description: 'Government and public sector solutions'
       },
-      {}
+      {
         name: 'Startup',
         href: '/solutions/startup',
         icon: Rocket,

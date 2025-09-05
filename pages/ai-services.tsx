@@ -495,7 +495,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$5,000 - $25,000 setup',
     category: 'Food Safety AI'
   },
-  {}
+  {
     title: 'AI-Powered Traffic Optimization',
     description: 'Smart traffic management system with real-time optimization and congestion reduction.',
     icon: Car,
@@ -503,7 +503,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$50,000 - $250,000 setup',
     category: 'Smart Transportation'
   },
-  {}
+  {
     title: 'AI-Powered Energy Trading',
     description: 'Automated energy trading and grid optimization using AI and machine learning.',
     icon: Zap,
@@ -511,7 +511,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$25,000 - $125,000 setup',
     category: 'Energy AI'
   },
-  {}
+  {
     title: 'AI-Powered Insurance Risk Assessment',
     description: 'Automated insurance risk assessment and pricing using AI and big data analysis.',
     icon: Shield,
