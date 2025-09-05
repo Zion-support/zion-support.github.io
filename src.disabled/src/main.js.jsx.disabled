@@ -23,7 +23,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // ;
 // import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
 // import { NotificationProvider } from "./context/notifications/NotificationContext";
->>>>>>> origin/merge-pr-10625
 // Import analytics provider
 // ;
 // ;
@@ -40,11 +39,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import { ViewModeProvider } from "./context/ViewModeContext";
 // Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({
-
     defaultOptions: {
-
         queries: {
-
             retry: 1,
             refetchOnWindowFocus: false}}});
 const renderApp() {
@@ -54,16 +50,12 @@ const renderApp() {
         )
     );
     if (rootElement?.hasChildNodes()) {
-
         hydrateRoot(rootElement, app)}
     else if (rootElement) {
-
         createRoot(rootElement).render(app)}
 };
 function displayFatalError(message) {
-
     if (rootElement) {
-
         rootElement.innerHTML = `"
       <div style="padding:20px;text-align:center;font-family:sans-serif;">
         <h1>Application Error</h1>
@@ -73,11 +65,9 @@ function displayFatalError(message) {
 try {
     renderApp()}
 catch (error) {
-
     // console.error('Global error caught in main.tsx:', error);
     displayFatalError(error.message)}
 window.addEventListener('error', (e) => {
-
     // console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message)});
 // Render the app with proper provider structure
