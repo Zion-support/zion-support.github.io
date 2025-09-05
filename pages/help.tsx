@@ -14,7 +14,8 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  ArrowRight
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

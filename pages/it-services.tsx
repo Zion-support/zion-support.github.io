@@ -36,7 +36,9 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket,
+  MessageSquare,
+  Mail
 } from 'lucide-react';
 
 const itServices = [
@@ -381,6 +383,96 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup, optimization, and integration services for enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Optimization', 'Hybrid Classical-Quantum Systems', 'Quantum Security'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for IoT and real-time applications.',
+    icon: Network,
+    features: ['Edge Node Deployment', 'Data Processing', 'Latency Optimization', 'Edge Security'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network design, deployment, and optimization services.',
+    icon: Wifi,
+    features: ['Network Planning', 'Infrastructure Deployment', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain setup, smart contract development, and DApp integration.',
+    icon: Lock,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'DApp Integration', 'Security Auditing'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI Infrastructure & ML Ops',
+    description: 'Complete AI/ML infrastructure setup with MLOps pipelines and model deployment.',
+    icon: Brain,
+    features: ['ML Pipeline Setup', 'Model Deployment', 'Data Pipeline', 'Monitoring & Maintenance'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'IoT Platform & Device Management',
+    description: 'Comprehensive IoT platform development and device management solutions.',
+    icon: HardDrive,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Security & Compliance'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'IoT Solutions',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity and access management.',
+    icon: Shield,
+    features: ['Identity Management', 'Access Controls', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$80,000 - $400,000/project',
+    category: 'Zero Trust Security',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Migration',
+    description: 'Seamless migration to hybrid cloud environments with multi-cloud management.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Data Transfer', 'Application Modernization', 'Multi-cloud Management'],
+    pricing: '$150,000 - $750,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning and business continuity solutions.',
+    icon: Settings,
+    features: ['Recovery Planning', 'Backup Solutions', 'Failover Systems', 'Testing & Validation'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Sustainable IT infrastructure and energy-efficient computing solutions.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Green IT',
+    popular: true
   }
 ];
 
@@ -704,30 +796,134 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
-                  <motion.div
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Our certified IT professionals are ready to help you build, secure, and optimize your technology infrastructure. From cloud migration to cybersecurity, we deliver enterprise-grade solutions that drive business growth and operational efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">IT Infrastructure Assessment</h3>
+              <p className="text-gray-600 mb-4">Get a comprehensive evaluation of your current IT infrastructure with recommendations for improvement.</p>
+              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+                Call: +1 302 464 0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Our IT Team</h3>
+              <p className="text-gray-600 mb-4">Send us your IT requirements and we'll provide a detailed technical proposal and implementation plan.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our IT Center</h3>
+              <p className="text-gray-600 mb-4">Schedule a visit to our state-of-the-art IT operations center in Delaware.</p>
+              <address className="text-green-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Why Choose Our IT Services?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">1000+</div>
+                <div className="text-sm">IT Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">99.9%</div>
+                <div className="text-sm">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
+                <div className="text-sm">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
+                <div className="text-sm">Client Rating</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
+            </div>
+          </motion.div>
+        </div>
+      </section>
                   </div>
   );
 }

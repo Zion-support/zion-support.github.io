@@ -424,6 +424,87 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system using machine learning to identify and neutralize cyber threats.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Incident Forensics'],
+    pricing: '$599 - $3,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation with automated testing, deployment, and monitoring.',
+    icon: Code,
+    features: ['Visual Builder', 'Auto Testing', 'Gas Optimization', 'Multi-chain Support'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Advisor',
+    description: 'Intelligent personal finance management with investment recommendations and budgeting insights.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Advice', 'Budget Planning', 'Goal Setting'],
+    pricing: '$9 - $49/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Real-Time Collaboration Whiteboard',
+    description: 'Advanced digital whiteboard with AI-powered assistance for brainstorming and project planning.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Suggestions', 'Template Library', 'Export Options'],
+    pricing: '$19 - $99/month',
+    category: 'Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security Gateway',
+    description: 'Advanced email protection against phishing, malware, and advanced persistent threats.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'URL Analysis', 'Quarantine Management'],
+    pricing: '$2 - $8 per user/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Home IoT Management Platform',
+    description: 'Centralized IoT device management with automation, monitoring, and energy optimization.',
+    icon: Home,
+    features: ['Device Management', 'Automation Rules', 'Energy Monitoring', 'Security Controls'],
+    pricing: '$29 - $149/month',
+    category: 'IoT & Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Quality Monitor',
+    description: 'Continuous code quality monitoring with automated suggestions and technical debt tracking.',
+    icon: Code,
+    features: ['Quality Metrics', 'Technical Debt Tracking', 'Automated Suggestions', 'Team Analytics'],
+    pricing: '$99 - $599/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Blockchain DeFi Analytics Dashboard',
+    description: 'Comprehensive DeFi protocol analytics with yield farming optimization and risk assessment.',
+    icon: TrendingUp,
+    features: ['Yield Optimization', 'Risk Assessment', 'Portfolio Tracking', 'Protocol Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'DeFi Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation API',
+    description: 'Advanced content moderation for text, images, and videos with custom rule configuration.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.01 - $0.05 per request',
+    category: 'Content Safety',
+    popular: true
   }
 ];
 
