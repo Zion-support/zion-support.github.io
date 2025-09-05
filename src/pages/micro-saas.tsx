@@ -22,346 +22,473 @@ import {
   Rocket,
   Code,
   Layers,
-  Bot,
-  FileText,
-  TrendingUp,
-  PenTool,
-  Share2,
+  Phone,
   Mail,
-  MessageSquare,
-  Clock
+  MapPin
 } from 'lucide-react';
 
 const microSaasServices = [
   {
-    title: "AI-Powered Project Management",
-    description: "Intelligent project management platform with AI-driven insights, resource optimization, and predictive analytics",
-    icon: Target,
+    title: "AI-Powered Business Intelligence Dashboard",
+    description: "Real-time analytics platform with AI-driven insights and predictive analytics for data-driven decision making",
+    icon: BarChart3,
     features: [
-      "AI Task Prioritization",
-      "Resource Allocation Optimization",
-      "Risk Prediction & Mitigation",
-      "Automated Progress Tracking",
-      "Smart Deadline Management",
-      "Team Performance Analytics"
+      "Real-time Data Visualization",
+      "AI-Powered Insights",
+      "Predictive Analytics",
+      "Custom Dashboards",
+      "Automated Reporting",
+      "Multi-source Data Integration"
     ],
     color: "from-blue-500 to-cyan-500",
     benefits: [
-      "30% faster project delivery",
-      "Reduced project overruns",
-      "Better resource utilization",
-      "Improved team productivity"
+      "50% faster decision making",
+      "Real-time insights",
+      "Predictive capabilities",
+      "Customizable dashboards"
     ],
-    pricing: "Starting at $29/month per user",
-    marketRate: "$25-50/user/month"
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Customer Support Automation",
-    description: "Advanced AI chatbot system with natural language processing, sentiment analysis, and seamless human handoff",
-    icon: Bot,
+    title: "Smart Customer Relationship Management",
+    description: "AI-enhanced CRM platform with automated lead scoring, customer segmentation, and sales forecasting",
+    icon: Users,
     features: [
-      "Multi-language Support",
-      "Sentiment Analysis",
-      "Intent Recognition",
-      "Knowledge Base Integration",
-      "Live Chat Handoff",
+      "AI Lead Scoring",
+      "Customer Segmentation",
+      "Sales Forecasting",
+      "Automated Follow-ups",
+      "Pipeline Management",
       "Performance Analytics"
     ],
     color: "from-green-500 to-emerald-500",
     benefits: [
-      "80% reduction in support tickets",
-      "24/7 customer availability",
-      "Consistent service quality",
-      "Reduced support costs"
+      "40% increase in conversions",
+      "Automated lead qualification",
+      "Better customer insights",
+      "Streamlined sales process"
     ],
-    pricing: "Starting at $99/month for up to 1,000 conversations",
-    marketRate: "$50-200/month"
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Financial Analytics Dashboard",
-    description: "Comprehensive financial intelligence platform with AI-powered forecasting, expense tracking, and investment insights",
-    icon: BarChart3,
+    title: "Intelligent Project Management Suite",
+    description: "AI-powered project management with automated task assignment, resource optimization, and risk prediction",
+    icon: Target,
     features: [
-      "AI Financial Forecasting",
-      "Expense Categorization",
-      "Investment Analysis",
-      "Cash Flow Optimization",
-      "Tax Preparation Assistance",
-      "Financial Goal Tracking"
+      "AI Task Assignment",
+      "Resource Optimization",
+      "Risk Prediction",
+      "Time Tracking",
+      "Collaboration Tools",
+      "Progress Analytics"
     ],
     color: "from-purple-500 to-pink-500",
     benefits: [
-      "Better financial visibility",
-      "Improved decision making",
-      "Automated expense tracking",
-      "Tax optimization"
+      "30% faster project delivery",
+      "Optimized resource allocation",
+      "Proactive risk management",
+      "Improved team collaboration"
     ],
-    pricing: "Starting at $49/month for small businesses",
-    marketRate: "$30-100/month"
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Marketing Automation Suite",
-    description: "Complete marketing automation platform with AI-driven content creation, email campaigns, and customer segmentation",
-    icon: Lightbulb,
+    title: "Automated Marketing Platform",
+    description: "Comprehensive marketing automation with AI-powered campaign optimization and customer journey mapping",
+    icon: Rocket,
     features: [
-      "AI Content Generation",
-      "Email Campaign Automation",
-      "Customer Segmentation",
-      "A/B Testing Optimization",
+      "AI Campaign Optimization",
+      "Customer Journey Mapping",
+      "Email Automation",
       "Social Media Management",
+      "A/B Testing",
       "ROI Analytics"
     ],
     color: "from-orange-500 to-red-500",
     benefits: [
-      "3x higher engagement rates",
-      "Automated content creation",
-      "Better customer targeting",
-      "Improved conversion rates"
+      "60% higher engagement rates",
+      "Automated campaign optimization",
+      "Personalized customer journeys",
+      "Measurable ROI"
     ],
-    pricing: "Starting at $79/month for up to 10,000 contacts",
-    marketRate: "$50-300/month"
+    pricing: "Starting at $249/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered HR Management",
-    description: "Intelligent human resources platform with AI recruitment, performance analytics, and employee engagement tools",
-    icon: Users,
-    features: [
-      "AI Resume Screening",
-      "Candidate Matching",
-      "Performance Analytics",
-      "Employee Engagement Tracking",
-      "Skills Gap Analysis",
-      "Retention Prediction"
-    ],
-    color: "from-indigo-500 to-purple-500",
-    benefits: [
-      "50% faster hiring process",
-      "Better candidate matching",
-      "Reduced turnover rates",
-      "Improved employee satisfaction"
-    ],
-    pricing: "Starting at $39/month per employee",
-    marketRate: "$20-80/employee/month"
-  },
-  {
-    title: "AI Inventory Management System",
-    description: "Smart inventory optimization platform with demand forecasting, automated reordering, and waste reduction",
+    title: "Smart Inventory Management System",
+    description: "AI-powered inventory optimization with demand forecasting, automated reordering, and waste reduction",
     icon: Database,
     features: [
       "Demand Forecasting",
       "Automated Reordering",
-      "Waste Reduction Analytics",
-      "Supplier Performance Tracking",
+      "Waste Reduction",
       "Multi-location Management",
+      "Supplier Integration",
       "Cost Optimization"
     ],
-    color: "from-teal-500 to-cyan-500",
+    color: "from-yellow-500 to-orange-500",
     benefits: [
-      "20% reduction in inventory costs",
+      "25% reduction in inventory costs",
       "Eliminated stockouts",
       "Reduced waste",
-      "Improved cash flow"
+      "Optimized supplier relationships"
     ],
-    pricing: "Starting at $59/month for up to 1,000 SKUs",
-    marketRate: "$30-150/month"
+    pricing: "Starting at $229/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Document Processing Platform",
-    description: "Intelligent document management system with OCR, data extraction, and automated workflow processing",
-    icon: FileText,
+    title: "AI-Powered HR Management Platform",
+    description: "Intelligent HR solution with automated recruitment, performance analytics, and employee engagement tracking",
+    icon: Users,
     features: [
-      "OCR Text Recognition",
-      "Data Extraction",
-      "Document Classification",
-      "Automated Workflows",
-      "Version Control",
-      "Compliance Tracking"
-    ],
-    color: "from-amber-500 to-orange-500",
-    benefits: [
-      "90% faster document processing",
-      "Reduced manual errors",
-      "Better compliance",
-      "Improved efficiency"
-    ],
-    pricing: "Starting at $89/month for up to 1,000 documents",
-    marketRate: "$50-200/month"
-  },
-  {
-    title: "AI Sales Intelligence Platform",
-    description: "Advanced sales analytics and lead scoring platform with AI-powered insights and pipeline optimization",
-    icon: TrendingUp,
-    features: [
-      "Lead Scoring AI",
-      "Sales Forecasting",
-      "Pipeline Analytics",
-      "Customer Behavior Analysis",
-      "Sales Coaching Insights",
-      "Revenue Optimization"
-    ],
-    color: "from-emerald-500 to-green-500",
-    benefits: [
-      "25% increase in conversion rates",
-      "Better lead qualification",
-      "Improved sales forecasting",
-      "Higher revenue per rep"
-    ],
-    pricing: "Starting at $69/month per sales rep",
-    marketRate: "$40-120/rep/month"
-  },
-  {
-    title: "AI Content Creation Studio",
-    description: "Comprehensive content creation platform with AI writing, image generation, and multi-channel publishing",
-    icon: PenTool,
-    features: [
-      "AI Writing Assistant",
-      "Image Generation",
-      "Content Optimization",
-      "Multi-channel Publishing",
-      "SEO Optimization",
-      "Brand Voice Consistency"
-    ],
-    color: "from-rose-500 to-pink-500",
-    benefits: [
-      "10x faster content creation",
-      "Consistent brand voice",
-      "SEO-optimized content",
-      "Multi-platform publishing"
-    ],
-    pricing: "Starting at $49/month for unlimited content",
-    marketRate: "$30-100/month"
-  },
-  {
-    title: "AI Compliance Monitoring System",
-    description: "Automated compliance tracking and reporting platform with real-time monitoring and audit preparation",
-    icon: Shield,
-    features: [
-      "Real-time Compliance Monitoring",
-      "Automated Reporting",
-      "Risk Assessment",
-      "Audit Trail Management",
-      "Policy Updates",
-      "Training Management"
-    ],
-    color: "from-red-500 to-rose-500",
-    benefits: [
-      "Reduced compliance risks",
-      "Automated reporting",
-      "Better audit preparation",
-      "Cost savings on compliance"
-    ],
-    pricing: "Starting at $199/month for enterprise compliance",
-    marketRate: "$100-500/month"
-  },
-  {
-    title: "AI Social Media Management",
-    description: "Intelligent social media platform with AI content scheduling, engagement optimization, and performance analytics",
-    icon: Share2,
-    features: [
-      "AI Content Scheduling",
-      "Engagement Optimization",
-      "Hashtag Research",
-      "Competitor Analysis",
+      "AI Resume Screening",
       "Performance Analytics",
-      "Multi-platform Management"
+      "Employee Engagement",
+      "Skills Gap Analysis",
+      "Retention Prediction",
+      "Compliance Management"
     ],
-    color: "from-violet-500 to-purple-500",
+    color: "from-indigo-500 to-purple-500",
     benefits: [
-      "3x higher engagement",
-      "Automated posting",
-      "Better content strategy",
-      "Time savings"
+      "80% faster recruitment",
+      "Data-driven performance insights",
+      "Improved employee retention",
+      "Automated compliance"
     ],
-    pricing: "Starting at $39/month for up to 5 social accounts",
-    marketRate: "$25-100/month"
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Email Marketing Platform",
-    description: "Advanced email marketing automation with AI personalization, send time optimization, and advanced analytics",
-    icon: Mail,
+    title: "Smart Financial Management Suite",
+    description: "AI-powered financial platform with automated bookkeeping, expense tracking, and financial forecasting",
+    icon: BarChart3,
     features: [
-      "AI Personalization",
-      "Send Time Optimization",
-      "Subject Line Testing",
-      "Segmentation AI",
-      "Deliverability Optimization",
-      "Advanced Analytics"
-    ],
-    color: "from-blue-500 to-indigo-500",
-    benefits: [
-      "40% higher open rates",
-      "Better personalization",
-      "Improved deliverability",
-      "Higher conversion rates"
-    ],
-    pricing: "Starting at $29/month for up to 2,500 subscribers",
-    marketRate: "$15-50/month"
-  },
-  {
-    title: "AI Website Analytics & Optimization",
-    description: "Intelligent website analytics platform with AI insights, user behavior analysis, and automated optimization",
-    icon: Globe,
-    features: [
-      "AI User Behavior Analysis",
-      "Conversion Optimization",
-      "Heatmap Analytics",
-      "A/B Testing Automation",
-      "Performance Monitoring",
-      "SEO Recommendations"
+      "Automated Bookkeeping",
+      "Expense Categorization",
+      "Financial Forecasting",
+      "Invoice Management",
+      "Tax Preparation",
+      "Cash Flow Analysis"
     ],
     color: "from-cyan-500 to-blue-500",
     benefits: [
-      "25% increase in conversions",
-      "Better user experience",
-      "Automated optimization",
-      "Data-driven insights"
+      "90% time savings on bookkeeping",
+      "Accurate financial forecasting",
+      "Automated tax preparation",
+      "Better cash flow management"
     ],
-    pricing: "Starting at $49/month for up to 100,000 page views",
-    marketRate: "$30-150/month"
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Customer Feedback Analysis",
-    description: "Advanced feedback analysis platform with sentiment analysis, trend identification, and actionable insights",
+    title: "Intelligent Document Management",
+    description: "AI-powered document processing with automated classification, extraction, and workflow management",
+    icon: Layers,
+    features: [
+      "AI Document Classification",
+      "Automated Data Extraction",
+      "Workflow Automation",
+      "Version Control",
+      "Search & Retrieval",
+      "Compliance Tracking"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "95% faster document processing",
+      "Automated data extraction",
+      "Improved compliance",
+      "Enhanced searchability"
+    ],
+    pricing: "Starting at $149/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart E-commerce Platform",
+    description: "AI-enhanced e-commerce solution with personalized recommendations, dynamic pricing, and automated customer service",
+    icon: Globe,
+    features: [
+      "AI Product Recommendations",
+      "Dynamic Pricing",
+      "Automated Customer Service",
+      "Inventory Optimization",
+      "Fraud Detection",
+      "Analytics Dashboard"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "35% increase in sales",
+      "Personalized shopping experience",
+      "Automated customer support",
+      "Optimized pricing strategy"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Learning Management System",
+    description: "Intelligent learning platform with personalized content delivery, progress tracking, and skill assessment",
+    icon: Lightbulb,
+    features: [
+      "Personalized Learning Paths",
+      "Progress Tracking",
+      "Skill Assessment",
+      "Content Recommendation",
+      "Gamification",
+      "Analytics & Reporting"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "40% faster learning outcomes",
+      "Personalized education",
+      "Engaging learning experience",
+      "Measurable skill development"
+    ],
+    pricing: "Starting at $219/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Supply Chain Management",
+    description: "AI-powered supply chain optimization with demand forecasting, route optimization, and supplier management",
+    icon: Settings,
+    features: [
+      "Demand Forecasting",
+      "Route Optimization",
+      "Supplier Management",
+      "Risk Assessment",
+      "Cost Optimization",
+      "Real-time Tracking"
+    ],
+    color: "from-amber-500 to-yellow-500",
+    benefits: [
+      "30% cost reduction",
+      "Optimized logistics",
+      "Proactive risk management",
+      "Improved supplier relationships"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Content Management System",
+    description: "AI-powered CMS with automated content generation, SEO optimization, and multi-channel publishing",
+    icon: Code,
+    features: [
+      "AI Content Generation",
+      "SEO Optimization",
+      "Multi-channel Publishing",
+      "Content Personalization",
+      "Performance Analytics",
+      "Workflow Automation"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "70% faster content creation",
+      "Improved SEO performance",
+      "Personalized content delivery",
+      "Streamlined publishing workflow"
+    ],
+    pricing: "Starting at $189/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Cybersecurity Monitoring",
+    description: "Real-time threat detection and response system with automated security incident management",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Automated Incident Response",
+      "Vulnerability Assessment",
+      "Compliance Monitoring",
+      "Security Analytics",
+      "24/7 Monitoring"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "99.9% threat detection accuracy",
+      "Automated response to threats",
+      "Reduced security incidents",
+      "Compliance assurance"
+    ],
+    pricing: "Starting at $449/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Energy Management Platform",
+    description: "AI-driven energy optimization for buildings and facilities with predictive maintenance and cost reduction",
+    icon: Zap,
+    features: [
+      "Energy Consumption Analytics",
+      "Predictive Maintenance",
+      "Cost Optimization",
+      "Carbon Footprint Tracking",
+      "Smart Grid Integration",
+      "Automated Controls"
+    ],
+    color: "from-green-500 to-lime-500",
+    benefits: [
+      "35% energy cost reduction",
+      "Predictive maintenance alerts",
+      "Reduced carbon footprint",
+      "Automated energy optimization"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Legal Document Analysis",
+    description: "Intelligent contract review and legal document analysis with risk assessment and compliance checking",
+    icon: Layers,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Checking",
+      "Document Comparison",
+      "Legal Research",
+      "Automated Summaries"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "90% faster contract review",
+      "Reduced legal risks",
+      "Automated compliance checking",
+      "Improved accuracy"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Fleet Management System",
+    description: "AI-powered fleet optimization with route planning, fuel efficiency, and predictive maintenance",
+    icon: Settings,
+    features: [
+      "Route Optimization",
+      "Fuel Efficiency Tracking",
+      "Predictive Maintenance",
+      "Driver Behavior Analysis",
+      "Cost Management",
+      "Real-time Monitoring"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "25% fuel cost reduction",
+      "Optimized routes",
+      "Reduced maintenance costs",
+      "Improved driver safety"
+    ],
+    pricing: "Starting at $349/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Healthcare Analytics",
+    description: "Comprehensive healthcare data analysis with patient insights, treatment optimization, and outcome prediction",
+    icon: Target,
+    features: [
+      "Patient Data Analysis",
+      "Treatment Optimization",
+      "Outcome Prediction",
+      "Risk Stratification",
+      "Clinical Decision Support",
+      "Population Health Analytics"
+    ],
+    color: "from-emerald-500 to-cyan-500",
+    benefits: [
+      "Improved patient outcomes",
+      "Optimized treatment plans",
+      "Reduced healthcare costs",
+      "Better clinical decisions"
+    ],
+    pricing: "Starting at $599/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Real Estate Management",
+    description: "AI-powered property management with tenant screening, maintenance prediction, and market analysis",
+    icon: Globe,
+    features: [
+      "Tenant Screening",
+      "Maintenance Prediction",
+      "Market Analysis",
+      "Rent Optimization",
+      "Property Valuation",
+      "Investment Analytics"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "40% reduction in vacancies",
+      "Predictive maintenance",
+      "Optimized rental income",
+      "Better investment decisions"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Social Media Intelligence",
+    description: "Comprehensive social media monitoring and analysis with sentiment tracking and influencer identification",
+    icon: Users,
+    features: [
+      "Sentiment Analysis",
+      "Influencer Identification",
+      "Trend Monitoring",
+      "Brand Mention Tracking",
+      "Competitor Analysis",
+      "Campaign Performance"
+    ],
+    color: "from-pink-500 to-purple-500",
+    benefits: [
+      "Real-time brand monitoring",
+      "Improved social strategy",
+      "Better influencer partnerships",
+      "Enhanced brand reputation"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Quality Assurance Platform",
+    description: "AI-powered quality control with automated testing, defect prediction, and process optimization",
+    icon: CheckCircle,
+    features: [
+      "Automated Testing",
+      "Defect Prediction",
+      "Process Optimization",
+      "Quality Metrics",
+      "Compliance Monitoring",
+      "Continuous Improvement"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "95% defect detection rate",
+      "Reduced testing time",
+      "Improved product quality",
+      "Automated compliance"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Customer Feedback Analysis",
+    description: "Intelligent analysis of customer feedback with sentiment analysis, trend identification, and action recommendations",
     icon: MessageSquare,
     features: [
       "Sentiment Analysis",
       "Trend Identification",
-      "Feedback Categorization",
-      "Actionable Insights",
-      "Multi-channel Collection",
-      "Real-time Monitoring"
+      "Action Recommendations",
+      "Multi-channel Feedback",
+      "Competitor Comparison",
+      "ROI Tracking"
     ],
-    color: "from-lime-500 to-green-500",
+    color: "from-violet-500 to-purple-500",
     benefits: [
-      "Better customer understanding",
-      "Faster issue resolution",
-      "Improved products/services",
-      "Higher customer satisfaction"
+      "Real-time feedback insights",
+      "Improved customer satisfaction",
+      "Data-driven improvements",
+      "Competitive advantage"
     ],
-    pricing: "Starting at $39/month for up to 1,000 feedback items",
-    marketRate: "$25-100/month"
-  },
-  {
-    title: "AI Time Tracking & Productivity",
-    description: "Intelligent time management platform with AI productivity insights, distraction blocking, and work optimization",
-    icon: Clock,
-    features: [
-      "AI Productivity Analysis",
-      "Distraction Blocking",
-      "Work Pattern Recognition",
-      "Focus Time Optimization",
-      "Team Productivity Insights",
-      "Goal Tracking"
-    ],
-    color: "from-yellow-500 to-amber-500",
-    benefits: [
-      "30% productivity increase",
-      "Better focus management",
-      "Work-life balance",
-      "Team performance insights"
-    ],
-    pricing: "Starting at $19/month per user",
-    marketRate: "$10-40/user/month"
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 
@@ -564,7 +691,7 @@ export default function MicroSaasPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -615,22 +742,35 @@ export default function MicroSaasPage() {
 
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-600">Our Pricing:</span>
+                      <span className="text-sm font-medium text-gray-600">Pricing:</span>
                       <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-600">Market Rate:</span>
-                      <span className="text-sm text-gray-500">{service.marketRate}</span>
+                      <span className="text-sm font-medium text-gray-600">Contact:</span>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        {service.contact}
+                      </a>
                     </div>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Get Started
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="flex gap-3">
+                    <Link
+                      href="/contact"
+                      className={`flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <a
+                      href={`mailto:${service.contact}?subject=Inquiry about ${service.title}`}
+                      className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold"
+                    >
+                      Contact
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -845,6 +985,80 @@ export default function MicroSaasPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Ready to build your micro SAAS solution? Contact our experts for a personalized consultation and custom development.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our development team</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+              >
+                +1 (302) 464-0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your project requirements</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-green-600 hover:text-green-800 font-semibold text-lg"
+              >
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-4">Our headquarters location</p>
+              <p className="text-purple-600 font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

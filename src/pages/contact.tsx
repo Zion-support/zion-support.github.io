@@ -63,7 +63,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Office',
-      details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
+      details: ['364 E Main St STE 1008', 'Middletown, DE 19709'],
       description: 'Visit our headquarters'
     },
     {
