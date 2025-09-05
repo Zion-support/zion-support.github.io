@@ -68,6 +68,39 @@ export default function Layout({
         {/* Performance hints */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": description,
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-0123",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              }
+            })
+          }}
+        />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </Head>
       
       <div className="min-h-screen bg-gray-50 flex flex-col">

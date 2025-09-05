@@ -10,8 +10,21 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+  
+  // Turbopack configuration
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
+  
+  // Server external packages
+  serverExternalPackages: ['sharp'],
   
   // Image optimization
   images: {
@@ -28,14 +41,43 @@ const nextConfig = {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
+          },
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            name: 'react',
+            chunks: 'all',
+            priority: 20,
+          },
+          framer: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: 'framer',
+            chunks: 'all',
+            priority: 15,
           },
         },
       };
+    }
+    
+    // Add compression plugin for production
+    if (!dev && !isServer) {
+      config.plugins.push(
+        new webpack.optimize.ModuleConcatenationPlugin()
+      );
     }
     
     return config;
