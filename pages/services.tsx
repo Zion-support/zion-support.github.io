@@ -4,16 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } from 'lucide-react';
 
-<<<<<<< HEAD
-const services = [{
-    title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
-    icon: Brain,
-    href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
-    pricing: "Starting at $1,000/month",
-    count: "20+ Services",
-=======
+
 const services = [
   {
     title: "AI Services",
@@ -23,55 +14,39 @@ const services = [
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation", "Autonomous Systems", "Quantum Computing", "Neural Interfaces"],
     pricing: "Starting at $1,000/month",
     count: "40+ Services",
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     popular: true
   },
   {
     title: "IT Services", 
-<<<<<<< HEAD
-    description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
-    icon: Network,
-    href: "/it-services",
-    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
-    pricing: "Starting at $120/hour",
-    count: "20+ Services",
-=======
+
     description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, edge computing, and digital transformation.",
     icon: Network,
     href: "/it-services",
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration", "Edge Computing", "5G Networks", "AI Infrastructure", "Blockchain"],
     pricing: "Starting at $120/hour",
     count: "35+ Services",
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     popular: true
   },
   {
     title: "Micro SaaS",
-<<<<<<< HEAD
-    description: "Scalable software as a service solutions designed for specific business needs and rapid deployment.",
-    icon: Cloud,
-    href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
-    pricing: "Starting at $29/month",
-    count: "25+ Products",
-=======
+
     description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative functionality.",
     icon: Cloud,
     href: "/micro-saas",
     features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     popular: true
   }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
+
 const benefits = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     icon: CheckCircle,
     title: "Expert Team",
     description: "50+ certified professionals with years of experience"
@@ -104,16 +79,7 @@ export default function ServicesPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-                  <div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                  <motion.div
-=======
+
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
@@ -121,40 +87,20 @@ export default function ServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-                  <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
               Our{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Services
               </span>
-<<<<<<< HEAD
-                  </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Comprehensive technology solutions designed to transform your business and drive innovation.</p>
-                  </motion.div>
-                  </div>
-                  </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-12 md:mb-16
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }} ">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Offer</h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-=======
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive technology solutions designed to transform your business and drive innovation.
@@ -177,7 +123,7 @@ export default function ServicesPage() {
               What We Offer
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
               We provide end-to-end technology solutions tailored to your business needs. From AI-powered automation to robust IT infrastructure and scalable SaaS applications.
             </p>
                   </motion.div>
@@ -187,36 +133,28 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative
-=======
+
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  whileHover={{ y: -5 }} ">
-                  {service.popular && ( <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-=======
+
                   whileHover={{ y: -5 }}
                 >
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                         Most Popular
                       </span>
                   </div>
                   )}
                   <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
-<<<<<<< HEAD
-                  <IconComponent className="w-12 h-12" />
-=======
+
                     <IconComponent className="w-12 h-12" />
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                   </div>
                   <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-bold text-gray-900">
@@ -230,13 +168,10 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-6">
-<<<<<<< HEAD
-                  <h4 className="font-semibold text-gray-900 mb-3">Key "Features": </h4>
-                  <ul className="space-y-2">
-=======
+
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -272,15 +207,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We deliver exceptional results through our expertise, proven track record, and commitment to excellence.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {benefits.map((benefit, index) => {
-=======
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us?
             </h2>
@@ -291,7 +218,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
               const IconComponent = benefit.icon;
               return (
                 <motion.div
@@ -320,25 +247,20 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-<<<<<<< HEAD
-                  <div className="container mx-auto px-4 text-center">
-                  <motion.div
-=======
+
         <div className="container mx-auto px-4 text-center">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-=======
+
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?
             </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our services can help transform your business and drive growth.
             </p>

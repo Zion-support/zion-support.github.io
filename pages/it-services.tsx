@@ -33,15 +33,14 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket,
+  Sprout
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const itServices = [{
-=======
+
 const itServices = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -213,181 +212,7 @@ const itServices = [
     category: 'Compliance'
   },
   {
-<<<<<<< HEAD
-    title: 'AI-Powered IT Operations (AIOps)',
-    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
-    icon: Cpu,
-    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
-    pricing: '$15,000 - $75,000/setup',
-    category: 'AIOps',
-    popular: true
-  },
-  {
-    title: 'Zero Trust Security Architecture',
-    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
-    icon: Lock,
-    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'Zero Trust',
-    popular: true
-  },
-  {
-    title: 'Edge Computing Infrastructure',
-    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
-    icon: Network,
-    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
-    pricing: '$20,000 - $100,000/project',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: 'Quantum-Safe Cryptography Implementation',
-    description: 'Migration to quantum-resistant cryptographic algorithms and security protocols.',
-    icon: Shield,
-    features: ['Algorithm Migration', 'Key Management', 'Compliance Testing', 'Future-proofing'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: '5G Network Infrastructure',
-    description: '5G network design, implementation, and optimization for enterprise applications.',
-    icon: Wifi,
-    features: ['5G Core Design', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
-    pricing: '$50,000 - $500,000/project',
-    category: '5G Networks',
-    popular: true
-  },
-  {
-    title: 'Blockchain Infrastructure Services',
-    description: 'Enterprise blockchain solutions including private networks, smart contracts, and DApps.',
-    icon: Server,
-    features: ['Private Blockchain Networks', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
-    pricing: '$40,000 - $300,000/project',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'IoT Security & Management Platform',
-    description: 'Comprehensive IoT security and device management for connected environments.',
-    icon: Smartphone,
-    features: ['Device Authentication', 'Firmware Updates', 'Threat Detection', 'Compliance Monitoring'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'IoT Security',
-    popular: true
-  },
-  {
-    title: 'Hybrid Cloud Orchestration',
-    description: 'Seamless orchestration and management across multiple cloud and on-premises environments.',
-    icon: Cloud,
-    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Hybrid Cloud',
-    popular: true
-  },
-  {
-    title: 'AI Model Infrastructure & MLOps',
-    description: 'Complete infrastructure for AI model deployment, monitoring, and lifecycle management.',
-    icon: Brain,
-    features: ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'MLOps',
-    popular: true
-  },
-  {
-    title: 'Green IT & Sustainability Solutions',
-    description: 'Sustainable IT practices including energy optimization and carbon footprint reduction.',
-    icon: Sprout,
-    features: ['Energy Monitoring', 'Carbon Tracking', 'Efficient Cooling', 'Renewable Energy Integration'],
-    pricing: '$15,000 - $80,000/project',
-    category: 'Green IT',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Infrastructure',
-    description: 'Digital twin technology implementation for physical assets and processes.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
-    pricing: '$40,000 - $250,000/project',
-    category: 'Digital Twins',
-    popular: true
-  },
-  {
-    title: 'AR/VR Infrastructure & Development',
-    description: 'Augmented and virtual reality infrastructure setup and application development.',
-    icon: Eye,
-    features: ['VR/AR Hardware Setup', 'Content Development', 'Spatial Computing', 'User Experience Design'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'AR/VR',
-    popular: true
-  },
-  {
-    title: 'Robotic Process Automation (RPA)',
-    description: 'Implementation of RPA solutions for business process automation and optimization.',
-    icon: Bot,
-    features: ['Process Analysis', 'Bot Development', 'Workflow Automation', 'Performance Monitoring'],
-    pricing: '$10,000 - $60,000/project',
-    category: 'RPA',
-    popular: true
-  },
-  {
-    title: 'Data Mesh Architecture Implementation',
-    description: 'Modern data architecture using data mesh principles for decentralized data management.',
-    icon: Database,
-    features: ['Domain-driven Design', 'Data Product Development', 'Federated Governance', 'Self-service Analytics'],
-    pricing: '$50,000 - $300,000/project',
-    category: 'Data Architecture',
-    popular: true
-  },
-  {
-    title: 'Serverless Architecture Design',
-    description: 'Serverless computing solutions for scalable and cost-effective application deployment.',
-    icon: Cloud,
-    features: ['Function-as-a-Service', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
-    pricing: '$15,000 - $80,000/project',
-    category: 'Serverless',
-    popular: true
-  },
-  {
-    title: 'API Gateway & Management Platform',
-    description: 'Comprehensive API management including security, monitoring, and developer portal.',
-    icon: Network,
-    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Developer Portal'],
-    pricing: '$10,000 - $50,000/setup',
-    category: 'API Management',
-    popular: true
-  },
-  {
-    title: 'Microservices Architecture Migration',
-    description: 'Migration from monolithic to microservices architecture with container orchestration.',
-    icon: Server,
-    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring Setup'],
-    pricing: '$40,000 - $250,000/project',
-    category: 'Microservices',
-    popular: true
-  },
-  {
-    title: 'IT Service Management (ITSM) Platform',
-    description: 'Comprehensive ITSM solution with ITIL best practices and automation.',
-    icon: Settings,
-    features: ['Incident Management', 'Change Management', 'Service Catalog', 'Knowledge Management'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'ITSM',
-    popular: true
-  },
-  {
-    title: 'Cyber Threat Intelligence Platform',
-    description: 'Advanced threat intelligence and security information management system.',
-    icon: Shield,
-    features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
-    pricing: '$30,000 - $150,000/setup',
-    category: 'Threat Intelligence',
-    popular: true
-  }
-];
 
-const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
-=======
     title: 'Edge Computing Solutions',
     description: 'Edge computing infrastructure and deployment for low-latency applications.',
     icon: Cpu,
@@ -652,12 +477,183 @@ const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS,
     features: ['Service Catalog', 'Incident Management', 'Change Management', 'Knowledge Base'],
     pricing: '$20,000 - $120,000/project',
     category: 'ITSM'
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Cpu,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Migration to quantum-resistant cryptographic algorithms and security protocols.',
+    icon: Shield,
+    features: ['Algorithm Migration', 'Key Management', 'Compliance Testing', 'Future-proofing'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: '5G Network Infrastructure',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Core Design', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions including private networks, smart contracts, and DApps.',
+    icon: Server,
+    features: ['Private Blockchain Networks', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
+    pricing: '$80,000 - $600,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management Platform',
+    description: 'Comprehensive IoT security and device management for connected environments.',
+    icon: Smartphone,
+    features: ['Device Authentication', 'Firmware Updates', 'Threat Detection', 'Compliance Monitoring'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Orchestration',
+    description: 'Seamless orchestration and management across multiple cloud and on-premises environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'AI Model Infrastructure & MLOps',
+    description: 'Complete infrastructure for AI model deployment, monitoring, and lifecycle management.',
+    icon: Brain,
+    features: ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
+    pricing: '$40,000 - $200,000/setup',
+    category: 'MLOps',
+    popular: true
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Sustainable IT practices including energy optimization and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Green IT',
+    popular: true
+  },
+  {
+    title: 'Advanced Threat Intelligence Platform',
+    description: 'Comprehensive threat intelligence and security analytics platform.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
+    pricing: '$60,000 - $300,000/setup',
+    category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture Implementation',
+    description: 'Complete microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'API Gateway', 'Service Mesh', 'Container Orchestration'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Comprehensive data lake implementation with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Ingestion', 'Data Processing', 'Analytics Engine', 'ML Pipeline'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Data Analytics',
+    popular: true
+  },
+  {
+    title: 'API Management & Gateway Services',
+    description: 'Complete API management platform with security, monitoring, and developer portal.',
+    icon: Network,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Developer Portal'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery and business continuity planning and implementation.',
+    icon: Shield,
+    features: ['Backup Strategy', 'Recovery Testing', 'RTO/RPO Optimization', 'Business Continuity'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'IT Governance & Compliance Framework',
+    description: 'Complete IT governance framework with compliance management and risk assessment.',
+    icon: Building,
+    features: ['Governance Framework', 'Compliance Management', 'Risk Assessment', 'Policy Development'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'IT Governance',
+    popular: true
+  },
+  {
+    title: 'Advanced Network Security Implementation',
+    description: 'Next-generation network security with AI-powered threat detection and response.',
+    icon: Lock,
+    features: ['AI Threat Detection', 'Network Segmentation', 'Intrusion Prevention', 'Security Analytics'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Network Security',
+    popular: true
+  },
+  {
+    title: 'Cloud-Native Application Development',
+    description: 'Complete cloud-native application development with modern DevOps practices.',
+    icon: Code,
+    features: ['Cloud-Native Design', 'CI/CD Pipeline', 'Containerization', 'Serverless Architecture'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Cloud Development',
+    popular: true
+  },
+  {
+    title: 'IT Infrastructure Automation',
+    description: 'Complete IT infrastructure automation with Infrastructure as Code and self-healing systems.',
+    icon: Settings,
+    features: ['Infrastructure as Code', 'Automated Provisioning', 'Self-healing Systems', 'Configuration Management'],
+    pricing: '$40,000 - $250,000/setup',
+    category: 'Infrastructure Automation',
+    popular: true
   }
 ];
 
 const technologies = [
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
@@ -665,12 +661,10 @@ const technologies = [
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
+
 const benefits = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -696,12 +690,10 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
-const supportLevels = [{
-=======
+
 const supportLevels = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -732,16 +724,7 @@ export default function ITServicesPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-                  <div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                  <motion.div
-=======
+
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
@@ -749,34 +732,22 @@ export default function ITServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center mb-6">
-                  <Server className="h-16 w-16 text-green-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">
-=======
+
             <div className="flex items-center justify-center mb-6">
               <Server className="h-16 w-16 text-green-400 mr-4" />
               <h1 className="text-4xl md:text-6xl font-bold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                 IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
-<<<<<<< HEAD
-                  </h1>
-                  </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-=======
+
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -784,7 +755,7 @@ export default function ITServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                 Get IT Consultation
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
@@ -805,11 +776,9 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-=======
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
               Our IT Solutions
             </h2>
                   <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -822,23 +791,14 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
-=======
+
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  whileHover={{ y: -5 }} ">
-                  <div className="flex items-center justify-between mb-4">
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
-                  </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
-=======
+
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -846,7 +806,7 @@ export default function ITServicesPage() {
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                       {service.category}
                     </span>
                   </div>
@@ -857,13 +817,10 @@ export default function ITServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-4">
-<<<<<<< HEAD
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-=======
+
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
@@ -899,13 +856,11 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>
-=======
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Technologies We Work With
             </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
@@ -916,18 +871,14 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-=======
+
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
@@ -954,13 +905,11 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
-=======
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our IT Services?
             </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Proven expertise and measurable results for your technology infrastructure.
             </p>
@@ -1006,13 +955,11 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>
-=======
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Support Levels
             </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the support level that best fits your business needs.
             </p>
@@ -1050,11 +997,9 @@ export default function ITServicesPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-<<<<<<< HEAD
-                      ? 'bg-green-600 hover: bg-green-700 text-white'
-=======
+
                       ? 'bg-green-600 hover:bg-green-700 text-white'
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -1069,26 +1014,16 @@ export default function ITServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<<<<<<< HEAD
-                  <div className="container mx-auto px-4 text-center">
-                  <motion.div
-=======
+
         <div className="container mx-auto px-4 text-center">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you build a robust, secure, and scalable IT environment.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-=======
+
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Optimize Your IT Infrastructure?
             </h2>
@@ -1097,7 +1032,6 @@ export default function ITServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 Get IT Assessment
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
@@ -1107,6 +1041,57 @@ export default function ITServicesPage() {
                   </motion.div>
                   </div>
                   </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our IT experts for a comprehensive assessment and discover how our cutting-edge IT solutions can optimize your business operations and security.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📞</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+                <p className="text-green-100">+1 302 464 0950</p>
+                <p className="text-sm text-green-200">Available 24/7</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">✉️</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+                <p className="text-green-100">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-green-200">Quick response guaranteed</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📍</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+                <p className="text-green-100">364 E Main St STE 1008</p>
+                <p className="text-sm text-green-200">Middletown, DE 19709</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get Free IT Consultation
+              </Link>
+              <Link href="https://ziontechgroup.com" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                Visit Our Website
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
                   </div>
   );
 }

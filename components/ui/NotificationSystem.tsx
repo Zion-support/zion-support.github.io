@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-interface Notification {
-<<<<<<< HEAD
-  id: string;
-=======
-  id:string;
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
   type: 'success' | 'error' | 'warning' | 'info';
   message: string;
   title?: string;
@@ -55,10 +47,6 @@ const "NotificationSystem": React.FC<NotificationSystemProps> = ({
               <button
                 onClick={() => onDismiss(notification.id)}
                 className="ml-4 text-gray-400 hover:text-gray-600"
-<<<<<<< HEAD
-=======
-              >
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
