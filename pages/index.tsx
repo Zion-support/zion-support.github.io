@@ -179,38 +179,11 @@ export default function HomePage() {
               })}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-        </section>
-
-        {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
         </section>
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
@@ -225,21 +198,7 @@ export default function HomePage() {
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
-=======
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
-                Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
-              </p>
-            </motion.div>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
+            </div>
           </div>
         </section>
 
@@ -311,8 +270,7 @@ export default function HomePage() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
@@ -344,12 +302,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-=======
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
       </div>
     </Layout>
   );
