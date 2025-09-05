@@ -49,7 +49,10 @@ import {
   Bell,
   Home,
   BookOpen,
-  Database
+  Database,
+  Truck,
+  PenTool,
+  Scale
 } from 'lucide-react';
 
 const aiServices = [
@@ -98,17 +101,185 @@ const aiServices = [
     features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Real-time Processing'],
     pricing: '$2,500 - $10,000/month',
     category: 'Computer Vision',
+    popular: true,
     link: 'https://computervision.ziontechgroup.com'
   },
   {
-    title: 'Voice Recognition System',
-    description: 'Advanced speech-to-text and voice command processing for applications.',
+    title: 'Natural Language Processing (NLP) Engine',
+    description: 'Advanced text analysis, sentiment analysis, and language understanding capabilities.',
+    icon: FileText,
+    features: ['Sentiment Analysis', 'Text Classification', 'Language Translation', 'Named Entity Recognition'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'NLP',
+    link: 'https://nlpengine.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection and prevention using machine learning algorithms.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Security',
+    popular: true,
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Document Search',
+    description: 'AI-powered semantic search across documents with natural language queries.',
+    icon: Search,
+    features: ['Semantic Search', 'Natural Language Queries', 'Document Indexing', 'Relevance Ranking'],
+    pricing: '$999 - $4,999/month',
+    category: 'Search',
+    link: 'https://docsearch.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Generator',
+    description: 'Automated content creation for blogs, social media, and marketing materials.',
+    icon: PenTool,
+    features: ['Blog Writing', 'Social Media Posts', 'Marketing Copy', 'SEO Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Content Creation',
+    link: 'https://contentgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Maintenance AI',
+    description: 'Machine learning models for equipment maintenance prediction and optimization.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'IoT & Maintenance',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation system for products, content, and services.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-based Filtering', 'Hybrid Approaches', 'Real-time Updates'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Recommendations',
+    popular: true,
+    link: 'https://recommendationai.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Recognition & Processing',
+    description: 'Advanced speech-to-text, voice commands, and audio analysis capabilities.',
     icon: Mic,
-    features: ['Speech-to-Text', 'Voice Commands', 'Multi-language Support', 'Noise Cancellation'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Speech Processing',
+    features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Audio Analysis'],
+    pricing: '$999 - $4,999/month',
+    category: 'Voice AI',
     link: 'https://voicerecognition.ziontechgroup.com'
   },
+  {
+    title: 'AI-Powered Data Analytics',
+    description: 'Intelligent data analysis and insights generation using machine learning.',
+    icon: BarChart3,
+    features: ['Pattern Recognition', 'Anomaly Detection', 'Trend Analysis', 'Automated Insights'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Analytics',
+    link: 'https://dataanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Process Automation',
+    description: 'AI-driven automation of complex business processes and workflows.',
+    icon: Zap,
+    features: ['Process Mining', 'Workflow Automation', 'Decision Making', 'Exception Handling'],
+    pricing: '$3,500 - $17,500/month',
+    category: 'Automation',
+    link: 'https://processautomation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Insights',
+    description: 'Deep customer behavior analysis and personalized engagement strategies.',
+    icon: Users,
+    features: ['Behavior Analysis', 'Persona Creation', 'Engagement Optimization', 'Churn Prediction'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Customer Intelligence',
+    popular: true,
+    link: 'https://customerinsights.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Machine Learning',
+    description: 'Next-generation quantum computing applications for machine learning problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Neural Networks'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Quantum AI',
+    link: 'https://quantumml.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Supply Chain',
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Financial Analysis',
+    description: 'AI-driven financial modeling, risk assessment, and investment analysis.',
+    icon: DollarSign,
+    features: ['Financial Modeling', 'Risk Assessment', 'Portfolio Optimization', 'Market Analysis'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'FinTech',
+    link: 'https://financialai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Healthcare Diagnostics',
+    description: 'Medical image analysis, diagnosis assistance, and treatment recommendations.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnosis Support', 'Treatment Planning', 'Drug Discovery'],
+    pricing: '$7,500 - $37,500/month',
+    category: 'Healthcare',
+    popular: true,
+    link: 'https://healthcareai.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Cybersecurity AI',
+    description: 'AI-powered threat detection, vulnerability assessment, and security automation.',
+    icon: Shield,
+    features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Security Automation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Cybersecurity',
+    link: 'https://cybersecurityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal document analysis, case law research, and contract review.',
+    icon: Scale,
+    features: ['Document Analysis', 'Case Law Research', 'Contract Review', 'Legal Precedent'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Legal Tech',
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Energy Management',
+    description: 'AI-driven energy consumption optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Energy Forecasting', 'Consumption Optimization', 'Grid Management', 'Renewable Integration'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Energy',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Real Estate Analysis',
+    description: 'Property valuation, market analysis, and investment recommendations using AI.',
+    icon: Home,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Real Estate',
+    link: 'https://realestateai.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Manufacturing AI',
+    description: 'AI-driven manufacturing optimization, quality control, and predictive maintenance.',
+    icon: Settings,
+    features: ['Quality Control', 'Production Optimization', 'Predictive Maintenance', 'Supply Chain'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Manufacturing',
+    popular: true,
+    link: 'https://manufacturingai.ziontechgroup.com'
+  }
   {
     title: 'Quantum AI Optimization Engine',
     description: 'Quantum-enhanced AI algorithms for complex optimization problems.',
