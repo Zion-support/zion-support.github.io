@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/PartnersSection.js.jsx.backup
-<<<<<<< HEAD
-const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
-=======
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
->>>>>>> main
-=======
-const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/summit/PartnersSection.jsx
