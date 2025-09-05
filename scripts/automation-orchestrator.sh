@@ -159,7 +159,7 @@ main() {
     local command=${1:-"all"}
     
     echo "🤖 Zion Tech Group Automation Orchestrator"
-    echo "=========================================="
+    echo ""
     
     case $command in
         "health")

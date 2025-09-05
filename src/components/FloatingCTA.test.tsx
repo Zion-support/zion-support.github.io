@@ -9,6 +9,6 @@ export default function FloatingCTA.test() {return (
           Professional FloatingCTA.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

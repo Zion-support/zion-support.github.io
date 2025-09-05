@@ -1,31 +1,29 @@
-#!/usr/bin/env node
-
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"console.log(" Starting comprehensive merge conflict fix.");function fixMergeConflicts(content) { let fixed = content; let changes = 0; / Remove merge conflict markers and keep the HEAD version''"
+=======
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
-console.log('🔧 Starting comprehensive merge conflict fix...');
+
 
 function fixMergeConflicts(content) {
-  let fixed = conte;n;t;
-  let changes = ;0;
+  let fixed = content;
+  let changes = 0;
 
   // Remove merge conflict markers and keep the HEAD version
-  const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
   
   fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
     changes++;
-    return headContent.trim();});
+    return headContent.trim()});
 
   // Remove any remaining conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
-  fixed = fixed.replace(/=======\n?/g, '');
-  fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
-  return { content: fixed, changes ;}}
+  return { "content": fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -35,17 +33,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-  }
-      console.log(`✅ Fixed ${result.changes} conflicts in: ${filePath}`);
-      return result.changes;}
-    return 0;} catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;}
+      fs.writeFileSync(filePath, result.content, 'utf8')}
+      
+      return result.changes}
+    return 0} catch (error) {
+    
+    return 0}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -67,18 +64,32 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);
 let totalChanges = ;0;
 
-console.log(`📁 Found ${files.length} files to process...`);
+
 
 for (const file of files) {
   totalChanges += processFile(file)}
 
-console.log(`\n🎉 Merge conflict fixing completed!`);
-console.log(`📊 Total conflicts fixed: ${totalChanges}`);
+
+=======
+console.log(' Starting comprehensive merge conflict fix...')
+  fixed = fixed.replace(/\n?/g, '')
+  fixed = fixed.replace(/\n?/g, '')
+  fixed = fixed.replace(/[a-f0-9]+\n?/g, '')
+    const content = fs.readFileSync(filePath, 'utf8')
+      fs.writeFileSync(filePath, result.content, 'utf8')
+      fs.writeFileSync(filePath, result.content, 'utf8')
+      if (&& !item.startsWith('.') && item !== 'node_modules'
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')
+    && !item.startsWith('.') && item !== 'node_modules'
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')
+const files = findTsxFiles('.;')
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> main
+>>>>>>> main

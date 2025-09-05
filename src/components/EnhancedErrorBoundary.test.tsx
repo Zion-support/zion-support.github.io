@@ -9,6 +9,6 @@ export default function EnhancedErrorBoundary.test() {return (
           Professional EnhancedErrorBoundary.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

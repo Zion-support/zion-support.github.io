@@ -9,6 +9,6 @@ export default function TechnologyStackSection.test() {return (
           Professional TechnologyStackSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>
