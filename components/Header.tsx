@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {
-  Menu,
-  X,
-  Search,
-  Sun,
-  Moon,
-  User,
-  Phone,
-  Mail,
+import { motion } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Sun, 
+  Moon, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock,
   ChevronDown,
   Zap,
   Brain,
@@ -21,75 +23,94 @@ import {
   DollarSign
 } from 'lucide-react';
 
-const navigation = [{
+const navigation = [
+  {
     name: 'Services',
     href: '/services',
-    icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+      { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
+      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure and DevOps' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence and analytics' }
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: Shield,
-    children: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
-      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
-      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+      { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+      { name: 'Finance', href: '/solutions/finance', description: 'Financial technology solutions' },
+      { name: 'Retail', href: '/solutions/retail', description: 'Retail and e-commerce solutions' },
+      { name: 'Education', href: '/solutions/education', description: 'Educational technology solutions' },
+      { name: 'Government', href: '/solutions/government', description: 'Government and public sector solutions' }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare technology' },
+      { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
+      { name: 'Education', href: '/industries/education', description: 'Educational institutions' },
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing and industrial' },
+      { name: 'Retail', href: '/industries/retail', description: 'Retail and e-commerce' },
+      { name: 'Government', href: '/industries/government', description: 'Government agencies' }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: FileText,
-    children: [{ name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories and projects' },
+      { name: 'White Papers', href: '/white-papers', description: 'In-depth research and analysis' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational webinars and demos' },
+      { name: 'Help Center', href: '/help', description: 'Support and documentation' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
     ]
   },
-  {
-    name: 'About',
-    href: '/about',
-    icon: Users
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' }
 ];
 
-const $1 = {
+const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
+interface HeaderProps {
+  className?: string;
+  onMenuClick?: () => void;
+}
+
+export default function Header({ className = '', onMenuClick }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<string | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setIsSearchOpen(false);
+      setSearchQuery('');
     }
   };
-
   const $1 = [
     {
       label: 'Home',
@@ -163,7 +184,11 @@ const $1 = {
       ]
     },
   ];
-
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -178,6 +203,13 @@ const $1 = {
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 <span>+1 (555) 123-4567</span>
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-blue-400" />
+                <span>{contactInfo.phone}</span>
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
@@ -193,7 +225,6 @@ const $1 = {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -205,7 +236,6 @@ const $1 = {
             >
               <Menu className="w-6 h-6 text-gray-700" />
             </button>
-
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -213,7 +243,7 @@ const $1 = {
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
-
+cursor/fix-lint-push-and-merge-to-main-f3c1
 {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -228,7 +258,6 @@ const $1 = {
                   <span>{item.name}</span>
                   {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
-
                 {/* Dropdown Menu */}
                 {item.children && (
                   <AnimatePresence>
@@ -264,8 +293,57 @@ const $1 = {
                 )}
               </div>
             ))}
-
             {/* CTA Button */}
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                    onMouseEnter={() => setIsDropdownOpen(item.name)}
+                    onMouseLeave={() => setIsDropdownOpen(null)}
+                  >
+                    <span>{item.name}</span>
+                    {item.children && <ChevronDown className="w-4 h-4" />}
+                  </Link>
+                  {/* Dropdown Menu */}
+                  {item.children && isDropdownOpen === item.name && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
+                      onMouseEnter={() => setIsDropdownOpen(item.name)}
+                      onMouseLeave={() => setIsDropdownOpen(null)}
+                    >
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.href}
+                          className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                        >
+                          <div className="font-medium">{child.name}</div>
+                          <div className="text-sm text-gray-500">{child.description}</div>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </div>
+              ))}
+            </nav>
+            {/* Search and CTA */}
+            <div className="flex items-center space-x-4">
+              {/* Search Button */}
+              <button
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+              {/* CTA Button */}
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -282,7 +360,7 @@ const $1 = {
               </button>
             </div>
           </div>
-
+cursor/fix-lint-push-and-merge-to-main-f3c1
 {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -298,7 +376,6 @@ const $1 = {
               Free Consultation
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -306,8 +383,10 @@ const $1 = {
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+cursor/website-audit-and-update-with-deployment-76dc
         </div>
-
+      </div>
+cursor/fix-lint-push-and-merge-to-main-f3c1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -352,7 +431,6 @@ const $1 = {
                     )}
                   </div>
                 ))}
-                
                 {/* Mobile CTA Buttons */}
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
@@ -389,6 +467,53 @@ const $1 = {
           </div>
         )}
       </div>
+      {/* Search Overlay */}
+      {isSearchOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-20"
+          onClick={() => setIsSearchOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <form onSubmit={handleSearch} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <Search className="w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search services, solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="flex-1 border-none outline-none text-lg"
+                  autoFocus
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsSearchOpen(false)}
+                  className="p-1 hover:bg-gray-100 rounded"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Search
+              </button>
+            </form>
+          </motion.div>
+        </motion.div>
+      )}
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
     </header>
   );
 }

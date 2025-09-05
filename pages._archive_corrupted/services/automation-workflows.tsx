@@ -1,0 +1,5 @@
+import React from 'react'
+import Link from 'next/link'
+import { Workflow, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react'
+export default function AutomationWorkflows() { return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-teal-50 to-cyan-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-cyan-600 text-white w-fit"> <Workflow className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">Automation Workflows</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> We automate repetitive processes across your stack (CRM,ERP,billing,support) using Zapier/Make/Pipedream and custom Node/Python services. Reduce manual tasks and errors while improving time-to-value. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"
+cursor/fix-lint-push-and-merge-to-main-f3c1

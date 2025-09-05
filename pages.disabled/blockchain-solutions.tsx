@@ -1,0 +1,5 @@
+import React from 'react'
+import Head from 'next/head'
+import { ArrowRight, Users, Award, Shield } from 'lucide-react'
+import Layout from '../components/Layout'
+cursor/fix-lint-push-and-merge-to-main-f3c1

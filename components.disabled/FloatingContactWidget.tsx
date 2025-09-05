@@ -1,0 +1,17 @@
+import React, { useState } from 'react'
+import { MessageCircle, X, Mail, Phone, Calendar, Send } from 'lucide-react'
+      "icon"
+      "label"
+      "value"
+      "action"
+      "icon"
+      "label"
+      "value"
+      "action"
+      "icon"
+      "label"
+      "value"
+      "action"
+                    <Icon className="w-5 h-5 text-blue-600"
+              <Send className="w-4 h-4"
+cursor/fix-lint-push-and-merge-to-main-f3c1

@@ -29,7 +29,6 @@ interface ProductLike {
   currency?: string
   tags?: string[]
 }
-
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;

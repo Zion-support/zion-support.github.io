@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
@@ -21,8 +21,6 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
     <>
       <Head>
@@ -91,15 +89,12 @@ telephone: "+1-302-464-0950",
         />
       </Head>
       
-      <div className="min-h-screen flex">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <div className="min-h-screen bg-slate-50">
+        <AppHeader />
+        <main className="flex-1">
+          {children}
+        </main>
+        <FuturisticFooter />
       </div>
     </>
   );

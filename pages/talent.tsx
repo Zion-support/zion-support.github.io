@@ -1,8 +1,9 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const jobOpenings = [{
     id: 1,
@@ -135,7 +136,7 @@ const values = ["Innovation and creativity",
 
 export default function TalentPage() {
   return (
-    <MainLayout 
+    <Layout
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -166,7 +167,7 @@ export default function TalentPage() {
                   </div>
                   </section>
 
-        {/* Why Work With Us Section */}
+        {/* Benefits Section */}
         <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
                   <motion.div
@@ -209,7 +210,7 @@ export default function TalentPage() {
                   </div>
                   </section>
 
-        {/* Our Values Section */}
+        {/* Values Section */}
         <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
                   <motion.div
@@ -302,6 +303,9 @@ export default function TalentPage() {
                   <p className="text-gray-600 mb-6">
                     {job.description}
                   </p>
+                  <p className="text-gray-600 mb-6">
+                    {job.description}
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
@@ -348,6 +352,13 @@ export default function TalentPage() {
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
               </Link>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
                   </motion.div>
                   </div>
                   </section>
