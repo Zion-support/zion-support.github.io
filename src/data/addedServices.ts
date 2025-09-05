@@ -46,7 +46,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [',',
 			{ name: 'Starter', price: '$299/mo', includes: ['3k conversations/mo', '3 data sources', 'Email support'] },',',
 			{ name: 'Growth', price: '$799/mo', includes: ['15k conversations/mo', '10 data sources', 'Priority support'] },',',
-			{ name: 'Enterprise', price: 'Custom', includes: ['SSO & SLA', 'Unlimited data sources', 'Private cloud'] };
+			{ name: 'Enterprise', price: 'Custom', includes: ['SSO & SLA', 'Unlimited data sources', 'Private cloud'] }
 		],',
 		links: {',',
 			landing: 'https://ziontechgroup.com/services/ai-customer-support-copilot',',',
@@ -220,7 +220,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Starter', price: '$199/mo', includes: ['10k words/month', '5 social platforms', 'Basic analytics'] },;
 			{ name: 'Professional', price: '$499/mo', includes: ['50k words/month', 'Unlimited platforms', 'Advanced analytics'] },;
-			{ name: 'Enterprise', price: '$1,299/mo', includes: ['Unlimited words', 'Custom integrations', 'Dedicated support'] };
+			{ name: 'Enterprise', price: '$1,299/mo', includes: ['Unlimited words', 'Custom integrations', 'Dedicated support'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-content-studio-pro',;
@@ -256,7 +256,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Starter', price: '$149/mo', includes: ['10k contacts', '5 campaigns', 'Basic analytics'] },;
 			{ name: 'Growth', price: '$399/mo', includes: ['50k contacts', 'Unlimited campaigns', 'Advanced analytics'] },;
-			{ name: 'Enterprise', price: '$999/mo', includes: ['Unlimited contacts', 'Custom integrations', 'Dedicated support'] };
+			{ name: 'Enterprise', price: '$999/mo', includes: ['Unlimited contacts', 'Custom integrations', 'Dedicated support'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-email-orchestrator',;
@@ -291,7 +291,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Team', price: '$299/mo', includes: ['10 team members', '5 projects', 'Basic AI features'] },;
 			{ name: 'Business', price: '$699/mo', includes: ['50 team members', 'Unlimited projects', 'Advanced AI features'] },;
-			{ name: 'Enterprise', price: '$1,499/mo', includes: ['Unlimited members', 'Custom integrations', 'Dedicated support'] };
+			{ name: 'Enterprise', price: '$1,499/mo', includes: ['Unlimited members', 'Custom integrations', 'Dedicated support'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-project-orchestrator',;
@@ -327,7 +327,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Professional', price: '$799/mo', includes: ['Basic analytics', 'Monthly reports', 'Email support'] },;
 			{ name: 'Business', price: '$1,999/mo', includes: ['Advanced analytics', 'Weekly reports', 'Priority support'] },;
-			{ name: 'Enterprise', price: '$4,999/mo', includes: ['Full analytics suite', 'Real-time reports', 'Dedicated support'] };
+			{ name: 'Enterprise', price: '$4,999/mo', includes: ['Full analytics suite', 'Real-time reports', 'Dedicated support'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-financial-analytics-pro',;
@@ -363,7 +363,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Research', price: '$2,999/mo', includes: ['10 quantum hours/month', 'Basic algorithms', 'Email support'] },;
 			{ name: 'Business', price: '$7,999/mo', includes: ['50 quantum hours/month', 'Advanced algorithms', 'Priority support'] },;
-			{ name: 'Enterprise', price: 'Custom', includes: ['Unlimited quantum hours', 'Custom solutions', 'Dedicated team'] };
+			{ name: 'Enterprise', price: 'Custom', includes: ['Unlimited quantum hours', 'Custom solutions', 'Dedicated team'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/quantum-optimization-suite',;
@@ -399,7 +399,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Starter', price: '$1,999/mo', includes: ['Basic blockchain setup', 'Standard support', 'Email support'] },;
 			{ name: 'Professional', price: '$4,999/mo', includes: ['Advanced features', 'Priority support', 'Custom development'] },;
-			{ name: 'Enterprise', price: '$12,999/mo', includes: ['Full platform access', 'Dedicated support', 'Custom solutions'] };
+			{ name: 'Enterprise', price: '$12,999/mo', includes: ['Full platform access', 'Dedicated support', 'Custom solutions'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',;
@@ -435,7 +435,7 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Edge Starter', price: '$499/mo', includes: ['5 edge devices', 'Basic AI models', 'Email support'] },;
 			{ name: 'Edge Professional', price: '$1,299/mo', includes: ['25 edge devices', 'Advanced AI models', 'Priority support'] },;
-			{ name: 'Edge Enterprise', price: '$2,999/mo', includes: ['Unlimited devices', 'Custom solutions', 'Dedicated support'] };
+			{ name: 'Edge Enterprise', price: '$2,999/mo', includes: ['Unlimited devices', 'Custom solutions', 'Dedicated support'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-edge-computing-platform',;
@@ -471,13 +471,13 @@ export const addedServices: ServiceItem[] = [',
 		pricing: [,
 			{ name: 'Essential', price: '$999/mo', includes: ['Basic threat detection', 'Email support', 'Standard monitoring'] },;
 			{ name: 'Professional', price: '$2,499/mo', includes: ['Advanced threat detection', 'Priority support', 'Custom rules'] },;
-			{ name: 'Enterprise', price: '$5,999/mo', includes: ['Full security suite', 'Dedicated support', 'Custom solutions'] };
+			{ name: 'Enterprise', price: '$5,999/mo', includes: ['Full security suite', 'Dedicated support', 'Custom solutions'] }
 		],;
 		links: {,
 			landing: 'https://ziontechgroup.com/services/ai-cybersecurity-suite',;
 			contact: 'mailto:kleber@ziontechgroup.com',
 		,};
-	};
+	}
 ],
 ',
 ',',

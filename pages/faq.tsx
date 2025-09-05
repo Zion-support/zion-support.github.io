@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function FAQ() {
   const contact = {
@@ -10,8 +10,8 @@ export default function FAQ() {
   }
   const faqs = [
     {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
+      question: "What services does Zion Tech Group offer ? ",
+      answer : "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
     },
     {
       question: "How do I get started with your services?",
@@ -49,7 +49,7 @@ export default function FAQ() {
       question: "Do you work with small businesses?",
       answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
-  ];
+  ]
 
   return (
     <>
@@ -109,7 +109,7 @@ export default function FAQ() {
               <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
               </Link>
             </div>
@@ -117,5 +117,5 @@ export default function FAQ() {
         </section>
       </main>
     </>
-  );
+  )
 }

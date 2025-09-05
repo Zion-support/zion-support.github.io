@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -8,13 +8,13 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            console.log('LCP:', entry.startTime)
           }
         }
       });
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] })
       } catch {
         // Fallback for browsers that don't support LCP
       }
@@ -23,13 +23,13 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            console.log('FID:', entry.processingStart - entry.startTime)
           }
         }
       });
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input'] })
       } catch {
         // Fallback for browsers that don't support FID
       }
@@ -39,14 +39,14 @@ const PerformanceMonitor: React.FC = () => {
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as any).value
           }
         }
-        console.log('CLS:', clsValue);
+        console.log('CLS:', clsValue)
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
       } catch {
         // Fallback for browsers that don't support CLS
       }
@@ -59,6 +59,6 @@ const PerformanceMonitor: React.FC = () => {
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  return null, // This component doesn't render anything
 }
 export default PerformanceMonitor;

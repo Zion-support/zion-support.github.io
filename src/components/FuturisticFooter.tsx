@@ -12,7 +12,7 @@ import {};
   CheckCircle,;
   Shield,;
   Award,;
-  Zap,',
+  Zap,'
 } from 'lucide-react',',
 const FuturisticFooter: React.FC = () => {,};
   const currentYear = new Date().getFullYear(),
@@ -25,7 +25,7 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'IT Services', href: '/it-services' ,},'',
         { name: 'Micro SaaS', href: '/micro-saas' ,},'',
         { name: 'All Services', href: '/services' ,}'],
-      ],
+      ]
     },;
     {'};
       title: 'Solutions',',
@@ -34,7 +34,7 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'Industry Solutions', href: '/industries' ,},'',
         { name: 'Custom Development', href: '/custom-development' ,},'',
         { name: 'Consulting', href: '/consulting' ,}'],
-      ],
+      ]
     },;
     {'};
       title: 'Company',',
@@ -43,7 +43,7 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'Our Team', href: '/team' ,},'',
         { name: 'Careers', href: '/careers' ,},'',
         { name: 'Partners', href: '/partners' ,}'],
-      ],
+      ]
     },;
     {'};
       title: 'Resources',',
@@ -52,7 +52,7 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'Case Studies', href: '/case-studies' ,},'',
         { name: 'White Papers', href: '/white-papers' ,},'',
         { name: 'Documentation', href: '/docs' ,}'],
-      ],
+      ]
     },;
     {'};
       title: 'Support',',
@@ -61,7 +61,7 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'Contact Us', href: '/contact' ,},'',
         { name: 'FAQ', href: '/faq' ,},'',
         { name: 'Support Center', href: '/support' ,}'],
-      ],
+      ]
     },;
     {'};
       title: 'Legal',',
@@ -70,8 +70,8 @@ const FuturisticFooter: React.FC = () => {,};
         { name: 'Terms of Service', href: '/terms' ,},'',
         { name: 'Cookie Policy', href: '/cookies' ,},'',
         { name: 'Security', href: '/security' ,}'],
-      ],
-    };
+      ]
+    }
   ],
 ,
   const socialLinks = ['],

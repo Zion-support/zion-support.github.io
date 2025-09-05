@@ -82,20 +82,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Starter',;
         price: '$199/mo',;
         includes: ['10k words/month', '5 social platforms', 'Basic analytics'],;
-        features: ['Content generation', 'SEO optimization', 'Email support'],
+        features: ['Content generation', 'SEO optimization', 'Email support']
       },;
       {,
         name: 'Professional',;
         price: '$499/mo',;
         includes: ['50k words/month', 'Unlimited platforms', 'Advanced analytics'],;
-        features: ['All Starter features', 'Brand voice training', 'A/B testing', 'Priority support'],
+        features: ['All Starter features', 'Brand voice training', 'A/B testing', 'Priority support']
       },;
       {,
         name: 'Enterprise',;
         price: '$1,299/mo',;
         includes: ['Unlimited words', 'Custom integrations', 'Dedicated support'],;
-        features: ['All Professional features', 'Custom AI models', 'White-label options', 'SLA guarantee'],
-      };
+        features: ['All Professional features', 'Custom AI models', 'White-label options', 'SLA guarantee']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-content-studio-pro',;
@@ -113,7 +113,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Google Analytics'],;
       apiEndpoints: 25,;
       uptime: '99.9%',;
-      security: ['SOC 2', 'GDPR compliant', 'End-to-end encryption'],
+      security: ['SOC 2', 'GDPR compliant', 'End-to-end encryption']
     },;
     competitors: ['Jasper AI', 'Copy.ai', 'Writesonic'],;
     marketSize: '$4.2B content marketing market',;
@@ -121,7 +121,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '2-4 weeks',;
     supportLevel: 'Premium',;
-    tags: ['AI', 'Content', 'Marketing', 'SEO', 'Automation'],
+    tags: ['AI', 'Content', 'Marketing', 'SEO', 'Automation']
   },;
   // AI-Powered Email Automation,
   {,
@@ -155,20 +155,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Starter',;
         price: '$149/mo',;
         includes: ['10k contacts', '5 campaigns', 'Basic analytics'],;
-        features: ['Email automation', 'Basic personalization', 'Email support'],
+        features: ['Email automation', 'Basic personalization', 'Email support']
       },;
       {,
         name: 'Growth',;
         price: '$399/mo',;
         includes: ['50k contacts', 'Unlimited campaigns', 'Advanced analytics'],;
-        features: ['All Starter features', 'AI optimization', 'A/B testing', 'Priority support'],
+        features: ['All Starter features', 'AI optimization', 'A/B testing', 'Priority support']
       },;
       {,
         name: 'Enterprise',;
         price: '$999/mo',;
         includes: ['Unlimited contacts', 'Custom integrations', 'Dedicated support'],;
-        features: ['All Growth features', 'Custom AI models', 'White-label options', 'SLA guarantee'],
-      };
+        features: ['All Growth features', 'Custom AI models', 'White-label options', 'SLA guarantee']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-email-orchestrator',;
@@ -185,7 +185,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Klaviyo', 'Zapier'],;
       apiEndpoints: 15,;
       uptime: '99.9%',;
-      security: ['SOC 2', 'GDPR compliant', 'Data encryption'],
+      security: ['SOC 2', 'GDPR compliant', 'Data encryption']
     },;
     competitors: ['Klaviyo', 'ActiveCampaign', 'ConvertKit'],;
     marketSize: '$7.5B email marketing market',;
@@ -193,7 +193,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '2-3 weeks',;
     supportLevel: 'Premium',;
-    tags: ['AI', 'Email', 'Marketing', 'Automation', 'Personalization'],
+    tags: ['AI', 'Email', 'Marketing', 'Automation', 'Personalization']
   },;
   // AI-Powered Project Management,
   {,
@@ -227,20 +227,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Team',;
         price: '$299/mo',;
         includes: ['10 team members', '5 projects', 'Basic AI features'],;
-        features: ['Project tracking', 'Basic AI insights', 'Email support'],
+        features: ['Project tracking', 'Basic AI insights', 'Email support']
       },;
       {,
         name: 'Business',;
         price: '$699/mo',;
         includes: ['50 team members', 'Unlimited projects', 'Advanced AI features'],;
-        features: ['All Team features', 'Risk prediction', 'Resource optimization', 'Priority support'],
+        features: ['All Team features', 'Risk prediction', 'Resource optimization', 'Priority support']
       },;
       {,
         name: 'Enterprise',;
         price: '$1,499/mo',;
         includes: ['Unlimited members', 'Custom integrations', 'Dedicated support'],;
-        features: ['All Business features', 'Custom AI models', 'White-label options', 'SLA guarantee'],
-      };
+        features: ['All Business features', 'Custom AI models', 'White-label options', 'SLA guarantee']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-project-orchestrator',;
@@ -257,7 +257,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['Slack', 'Jira', 'Asana', 'Trello', 'Microsoft Teams'],;
       apiEndpoints: 30,;
       uptime: '99.9%',;
-      security: ['SOC 2', 'GDPR compliant', 'Role-based access'],
+      security: ['SOC 2', 'GDPR compliant', 'Role-based access']
     },;
     competitors: ['Monday.com', 'Asana', 'Wrike'],;
     marketSize: '$6.8B project management market',;
@@ -265,7 +265,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '3-4 weeks',;
     supportLevel: 'Enterprise',;
-    tags: ['AI', 'Project Management', 'Productivity', 'Analytics', 'Automation'],
+    tags: ['AI', 'Project Management', 'Productivity', 'Analytics', 'Automation']
   },;
   // AI-Powered Financial Analytics,
   {,
@@ -299,20 +299,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Professional',;
         price: '$799/mo',;
         includes: ['Basic analytics', 'Monthly reports', 'Email support'],;
-        features: ['Financial analysis', 'Basic forecasting', 'Standard integrations'],
+        features: ['Financial analysis', 'Basic forecasting', 'Standard integrations']
       },;
       {,
         name: 'Business',;
         price: '$1,999/mo',;
         includes: ['Advanced analytics', 'Weekly reports', 'Priority support'],;
-        features: ['All Professional features', 'Predictive modeling', 'Risk assessment', 'Custom dashboards'],
+        features: ['All Professional features', 'Predictive modeling', 'Risk assessment', 'Custom dashboards']
       },;
       {,
         name: 'Enterprise',;
         price: '$4,999/mo',;
         includes: ['Full analytics suite', 'Real-time reports', 'Dedicated support'],;
-        features: ['All Business features', 'Custom AI models', 'White-label options', 'SLA guarantee'],
-      };
+        features: ['All Business features', 'Custom AI models', 'White-label options', 'SLA guarantee']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-financial-analytics-pro',;
@@ -329,7 +329,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['QuickBooks', 'Xero', 'SAP', 'Oracle', 'Bloomberg API'],;
       apiEndpoints: 20,;
       uptime: '99.9%',;
-      security: ['SOC 2', 'PCI DSS', 'GDPR compliant', 'Bank-level encryption'],
+      security: ['SOC 2', 'PCI DSS', 'GDPR compliant', 'Bank-level encryption']
     },;
     competitors: ['Palantir', 'Tableau', 'Power BI'],;
     marketSize: '$12.3B financial analytics market',;
@@ -337,7 +337,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '4-6 weeks',;
     supportLevel: 'Enterprise',;
-    tags: ['AI', 'Finance', 'Analytics', 'Forecasting', 'Risk Management'],
+    tags: ['AI', 'Finance', 'Analytics', 'Forecasting', 'Risk Management']
   },;
   // Quantum Computing Services,
   {,
@@ -371,20 +371,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Research',;
         price: '$2,999/mo',;
         includes: ['10 quantum hours/month', 'Basic algorithms', 'Email support'],;
-        features: ['Quantum optimization', 'Basic algorithms', 'Standard support'],
+        features: ['Quantum optimization', 'Basic algorithms', 'Standard support']
       },;
       {,
         name: 'Business',;
         price: '$7,999/mo',;
         includes: ['50 quantum hours/month', 'Advanced algorithms', 'Priority support'],;
-        features: ['All Research features', 'Custom algorithms', 'Dedicated support', 'SLA guarantee'],
+        features: ['All Research features', 'Custom algorithms', 'Dedicated support', 'SLA guarantee']
       },;
       {,
         name: 'Enterprise',;
         price: 'Custom',;
         includes: ['Unlimited quantum hours', 'Custom solutions', 'Dedicated team'],;
-        features: ['All Business features', 'Custom quantum circuits', 'White-label options', '24/7 support'],
-      };
+        features: ['All Business features', 'Custom quantum circuits', 'White-label options', '24/7 support']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/quantum-optimization-suite',;
@@ -401,7 +401,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'IonQ'],;
       apiEndpoints: 10,;
       uptime: '99.5%',;
-      security: ['Quantum-safe encryption', 'Zero-knowledge proofs', 'Secure multi-party computation'],
+      security: ['Quantum-safe encryption', 'Zero-knowledge proofs', 'Secure multi-party computation']
     },;
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti'],;
     marketSize: '$1.2B quantum computing market',;
@@ -409,7 +409,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '6-8 weeks',;
     supportLevel: 'Enterprise',;
-    tags: ['Quantum', 'Optimization', 'AI', 'Research', 'Advanced Computing'],
+    tags: ['Quantum', 'Optimization', 'AI', 'Research', 'Advanced Computing']
   },;
   // Blockchain & DeFi Services,
   {,
@@ -443,20 +443,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Starter',;
         price: '$1,999/mo',;
         includes: ['Basic blockchain setup', 'Standard support', 'Email support'],;
-        features: ['Blockchain deployment', 'Basic smart contracts', 'Standard security'],
+        features: ['Blockchain deployment', 'Basic smart contracts', 'Standard security']
       },;
       {,
         name: 'Professional',;
         price: '$4,999/mo',;
         includes: ['Advanced features', 'Priority support', 'Custom development'],;
-        features: ['All Starter features', 'Custom smart contracts', 'Advanced security', 'Dedicated support'],
+        features: ['All Starter features', 'Custom smart contracts', 'Advanced security', 'Dedicated support']
       },;
       {,
         name: 'Enterprise',;
         price: '$12,999/mo',;
         includes: ['Full platform access', 'Dedicated support', 'Custom solutions'],;
-        features: ['All Professional features', 'White-label options', 'Custom blockchain', '24/7 support'],
-      };
+        features: ['All Professional features', 'White-label options', 'Custom blockchain', '24/7 support']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',;
@@ -473,7 +473,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['AWS', 'Azure', 'Google Cloud', 'Oracle', 'SAP'],;
       apiEndpoints: 50,;
       uptime: '99.9%',;
-      security: ['Multi-signature', 'Hardware security modules', 'Zero-knowledge proofs'],
+      security: ['Multi-signature', 'Hardware security modules', 'Zero-knowledge proofs']
     },;
     competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'],;
     marketSize: '$7.2B blockchain market',;
@@ -481,7 +481,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '6-8 weeks',;
     supportLevel: 'Enterprise',;
-    tags: ['Blockchain', 'DeFi', 'Smart Contracts', 'Enterprise', 'Security'],
+    tags: ['Blockchain', 'DeFi', 'Smart Contracts', 'Enterprise', 'Security']
   },;
   // IoT & Edge Computing,
   {,
@@ -515,20 +515,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Edge Starter',;
         price: '$499/mo',;
         includes: ['5 edge devices', 'Basic AI models', 'Email support'],;
-        features: ['Edge deployment', 'Basic monitoring', 'Standard support'],
+        features: ['Edge deployment', 'Basic monitoring', 'Standard support']
       },;
       {,
         name: 'Edge Professional',;
         price: '$1,299/mo',;
         includes: ['25 edge devices', 'Advanced AI models', 'Priority support'],;
-        features: ['All Starter features', 'Custom models', 'Advanced monitoring', 'Dedicated support'],
+        features: ['All Starter features', 'Custom models', 'Advanced monitoring', 'Dedicated support']
       },;
       {,
         name: 'Edge Enterprise',;
         price: '$2,999/mo',;
         includes: ['Unlimited devices', 'Custom solutions', 'Dedicated support'],;
-        features: ['All Professional features', 'White-label options', 'Custom hardware', '24/7 support'],
-      };
+        features: ['All Professional features', 'White-label options', 'Custom hardware', '24/7 support']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-edge-computing-platform',;
@@ -545,7 +545,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'InfluxDB', 'Grafana'],;
       apiEndpoints: 20,;
       uptime: '99.9%',;
-      security: ['TLS encryption', 'Device authentication', 'Secure boot'],
+      security: ['TLS encryption', 'Device authentication', 'Secure boot']
     },;
     competitors: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge'],;
     marketSize: '$15.7B edge computing market',;
@@ -553,7 +553,7 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '4-6 weeks',;
     supportLevel: 'Premium',;
-    tags: ['IoT', 'Edge Computing', 'AI', 'Real-time', 'Automation'],
+    tags: ['IoT', 'Edge Computing', 'AI', 'Real-time', 'Automation']
   },;
   // Cybersecurity Services,
   {,
@@ -587,20 +587,20 @@ export const enhancedServices2025: ServiceItem[] = [,
         name: 'Essential',;
         price: '$999/mo',;
         includes: ['Basic threat detection', 'Email support', 'Standard monitoring'],;
-        features: ['Threat detection', 'Basic analytics', 'Email alerts'],
+        features: ['Threat detection', 'Basic analytics', 'Email alerts']
       },;
       {,
         name: 'Professional',;
         price: '$2,499/mo',;
         includes: ['Advanced threat detection', 'Priority support', 'Custom rules'],;
-        features: ['All Essential features', 'Behavioral analytics', 'Automated response', 'Dedicated support'],
+        features: ['All Essential features', 'Behavioral analytics', 'Automated response', 'Dedicated support']
       },;
       {,
         name: 'Enterprise',;
         price: '$5,999/mo',;
         includes: ['Full security suite', 'Dedicated support', 'Custom solutions'],;
-        features: ['All Professional features', 'Custom AI models', 'White-label options', '24/7 support'],
-      };
+        features: ['All Professional features', 'Custom AI models', 'White-label options', '24/7 support']
+      }
     ],;
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-cybersecurity-suite',;
@@ -617,7 +617,7 @@ export const enhancedServices2025: ServiceItem[] = [,
       integrations: ['Splunk', 'QRadar', 'CrowdStrike', 'Palo Alto', 'Cisco'],;
       apiEndpoints: 40,;
       uptime: '99.9%',;
-      security: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Zero-trust architecture'],
+      security: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Zero-trust architecture']
     },;
     competitors: ['CrowdStrike', 'Palo Alto Networks', 'Darktrace'],;
     marketSize: '$173B cybersecurity market',;
@@ -625,8 +625,8 @@ export const enhancedServices2025: ServiceItem[] = [,
     betaAccess: true,;
     estimatedDelivery: '3-4 weeks',;
     supportLevel: 'Enterprise',;
-    tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Compliance', 'Security'],
-  };
+    tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Compliance', 'Security']
+  }
 ],
 ,
 export default enhancedServices2025,

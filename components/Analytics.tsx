@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react'
+import Head from 'next/head'
 
 interface AnalyticsProps {
-  trackingId?: string;
+  trackingId?: string
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
@@ -10,7 +10,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     // Google Analytics 4
     if (typeof window !== 'undefined' && trackingId) {
       // Load gtag script
-      const script = document.createElement('script');
+      const script = document.createElement('script')
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
@@ -24,7 +24,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href,
+        page_location: window.location.href
       });
 
       // Track page views
@@ -32,7 +32,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         gtag('event', 'page_view', {
           page_title: document.title,
           page_location: window.location.href,
-          page_path: window.location.pathname,
+          page_path: window.location.pathname
         });
       };
 
@@ -65,7 +65,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
       button_name: buttonName,
-      location: location || window.location.pathname,
+      location: location || window.location.pathname
     });
   };
 
@@ -73,7 +73,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   const trackFormSubmission = (formName: string) => {
     trackEvent('form_submit', {
       form_name: formName,
-      page_location: window.location.href,
+      page_location: window.location.href
     });
   };
 
@@ -82,7 +82,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     trackEvent('external_link_click', {
       link_url: url,
       link_text: linkText,
-      page_location: window.location.href,
+      page_location: window.location.href
     });
   };
 
@@ -101,22 +101,22 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           __html: `
             // Performance monitoring
             if ('performance' in window) {
-              window.addEventListener('load', function() {
+              window.addEventListener('load',, function() {
                 setTimeout(function() {
                   const perfData = performance.getEntriesByType('navigation')[0];
                   if (perfData) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math.round(loadTime)
+                        name: 'load';
+                        value:, Math.round(loadTime)
                       });
                     }
                   }
                 }, 0);
               });
             }
-          `,
+          `
         }}
       />
     </Head>

@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react'
 
 export default function AIServices() {
   const contact = {
@@ -1133,5 +1133,5 @@ export default function AIServices() {
         </section>
       </main>
     </div>
-  );
+  )
 }

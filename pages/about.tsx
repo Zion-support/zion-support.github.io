@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function About() {
   const contact = {
@@ -132,7 +132,7 @@ export default function About() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md: text-4xl font-bold mb-8">
               Ready to Work With Us?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
@@ -152,5 +152,5 @@ export default function About() {
         </section>
       </main>
     </>
-  );
+  )
 }

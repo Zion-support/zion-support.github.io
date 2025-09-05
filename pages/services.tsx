@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Services() {
   const services = [
@@ -210,7 +210,7 @@ export default function Services() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -235,5 +235,5 @@ export default function Services() {
         </section>
       </main>
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react'
 
 export default function Blockchain() {
   const services = [
@@ -107,7 +107,7 @@ export default function Blockchain() {
                       ))}
                     </ul>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function Blockchain() {
 
         {/* CTA Section */}
         <div className="bg-purple-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Build on Blockchain?
             </h2>
@@ -175,5 +175,5 @@ export default function Blockchain() {
         </div>
       </main>
     </div>
-  );
+  )
 }

@@ -25,11 +25,11 @@ import {,
   FileText,;
   BarChart3,;
   BookOpen,;
-  Video,
+  Video
 } from 'lucide-react',
 ,
 interface HeaderProps {,
-  className?: string,
+  className?: string
 };
 export default function Header({ className = '' }: HeaderProps) {,
   const [isOpen, setIsOpen] = useState(false),
@@ -39,11 +39,11 @@ export default function Header({ className = '' }: HeaderProps) {,
 ,
   useEffect(() => {,
     const handleScroll = () => {,
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     };
 ,
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 ,
   const navigationItems = [,
@@ -56,13 +56,13 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'AI Services',;
           href: '/ai-services',;
           icon: Brain,;
-          description: 'Machine Learning, NLP, Computer Vision',
+          description: 'Machine Learning, NLP, Computer Vision'
         },;
         {,
           name: 'IT Services',;
           href: '/it-services',;
           icon: Code,;
-          description: 'Cloud, Security, Managed Services',
+          description: 'Cloud, Security, Managed Services'
         },;
         {,
           name: 'Micro SaaS',;
@@ -80,15 +80,15 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'Cloud Solutions',;
           href: '/cloud-solutions',;
           icon: Cloud,;
-          description: 'AWS, Azure, GCP expertise',
+          description: 'AWS, Azure, GCP expertise'
         },;
         {,
           name: 'Custom Development',;
           href: '/custom-development',;
           icon: Settings,;
           description: 'Bespoke software solutions',
-        ,};
-      ],
+        ,}
+      ]
     },;
     {,
       name: 'Solutions',;
@@ -117,8 +117,8 @@ export default function Header({ className = '' }: HeaderProps) {,
           href: '/digital-transformation',;
           icon: Zap,;
           description: 'Complete digital transformation',
-        ,};
-      ],
+        ,}
+      ]
     },;
     {,
       name: 'Resources',;
@@ -153,25 +153,25 @@ export default function Header({ className = '' }: HeaderProps) {,
           href: '/api-docs',;
           icon: Code,;
           description: 'Technical documentation',
-        ,};
-      ],
+        ,}
+      ]
     },;
     { name: 'About', href: '/about' ,},;
     { name: 'Contact', href: '/contact' ,},;
-    { name: 'Pricing', href: '/pricing' ,};
+    { name: 'Pricing', href: '/pricing' ,}
   ],
 ,
   const contactInfo = {,
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008, Middletown DE 19709',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 ,
   return (,
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent',
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg'  : 'bg-transparent'
     } ${className}`}>,
-      {/* Top Contact Bar */};
+      {/* Top Contact Bar */}
       <div className="bg-blue-900 text-white py-2 px-4 hidden lg: block">,
         <div className="container mx-auto flex justify-between items-center text-sm">,
           <div className="flex items-center space-x-6">,
@@ -274,7 +274,7 @@ export default function Header({ className = '' }: HeaderProps) {,
             onClick={() => setIsOpen(!isOpen)};
             className="lg: hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
           >,
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />,};
+            {isOpen ? <X className="w-6 h-6" />  : <Menu className="w-6 h-6" />,}
           </button>,
         </div>,
         {/* Mobile Navigation */};
@@ -310,7 +310,7 @@ export default function Header({ className = '' }: HeaderProps) {,
                               <IconComponent className="w-4 h-4" />,
                               <span>{subItem.name}</span>,
                             </Link>,
-                          ),
+                          )
                         })};
                       </div>,
                     )};
@@ -331,5 +331,5 @@ export default function Header({ className = '' }: HeaderProps) {,
         </AnimatePresence>,
       </nav>,
     </header>,
-  ),
+  )
 };

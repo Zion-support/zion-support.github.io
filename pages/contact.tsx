@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import ContactForm from '../components/ContactForm';
+import Head from 'next/head'
+import Link from 'next/link'
+import ContactForm from '../components/ContactForm'
 
 export default function Contact(): any {
   const contact = {
@@ -161,7 +161,7 @@ export default function Contact(): any {
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call Now: {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Send Email
               </a>
               <Link href="/services-catalog" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
@@ -177,5 +177,5 @@ export default function Contact(): any {
         </section>
       </main>
     </>
-  );
+  )
 }

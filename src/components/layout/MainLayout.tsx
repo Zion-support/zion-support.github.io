@@ -16,7 +16,7 @@ export default function MainLayout({,
   title = "Zion Tech Group - Leading AI & Technology Solutions",;
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",;
   keywords = "AI solutions, cloud services, technology consulting, digital transformation",;
-  showSidebar = false,
+  showSidebar = false
 }: LayoutProps) {,
   const [sidebarOpen, setSidebarOpen] = useState(false),
 ,
@@ -57,5 +57,5 @@ export default function MainLayout({,
         <Footer />,
       </div>,
     </>,
-  ),
+  )
 };

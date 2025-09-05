@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link'
+import Head from 'next/head'
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
   
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
   }, []);
 
   const contact = {
@@ -214,5 +214,5 @@ export default function Home() {
         </section>
       </main>
     </>
-  );
+  )
 }

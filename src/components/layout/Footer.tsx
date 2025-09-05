@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import {
   Phone,
   Mail,
@@ -24,11 +24,11 @@ import {
   Clock,
   CheckCircle,
   Settings,
-  Zap,
-} from 'lucide-react';
+  Zap
+} from 'lucide-react'
 
 interface FooterProps {
-  className?: string;
+  className?: string
 }
 
 export default function Footer({ className = '' }: FooterProps) {
@@ -102,7 +102,7 @@ export default function Footer({ className = '' }: FooterProps) {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST',
+    hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
   return (
@@ -157,7 +157,7 @@ export default function Footer({ className = '' }: FooterProps) {
                   >
                     <IconComponent className="w-5 h-5" />
                   </a>
-                );
+                )
               })}
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function Footer({ className = '' }: FooterProps) {
                       <span>{service.name}</span>
                     </Link>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>

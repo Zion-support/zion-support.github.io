@@ -6,16 +6,17 @@ interface SkeletonProps {,
   width?: string | number,
   height?: string | number,
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full',
-  animate?: boolean,
+  animate?: boolean
 };
 const Skeleton: React.FC<SkeletonProps> = ({,
   className = '',;
   width = '100%',;
   height = '20px',;
   rounded = 'md',;
-  animate = true,
+  animate = true
 }) => {,
-  const baseClasses = `bg-zion-slate-dark/50 ${rounded !== 'none' ? `rounded-${rounded}` : ''}`,
+  const baseClasses = `bg-zion-slate-dark/50 ${rounded !== 'none' ? `rounded-${rounded}` : ''}`
+
   const finalClasses = `${baseClasses} ${className}`,
 ,
   const skeleton = (,
@@ -39,7 +40,7 @@ const Skeleton: React.FC<SkeletonProps> = ({,
       className={finalClasses};
       style={{ width, height }};
     />,
-  ),
+  )
 };
 ,
 // Predefined skeleton components,

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react'
 
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -6,7 +6,7 @@ interface AccessibilityContextType {
   reducedMotion: boolean;
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
+  toggleReducedMotion: () => void
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -38,16 +38,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     reducedMotion,
     toggleHighContrast,
     toggleLargeText,
-    toggleReducedMotion,
+    toggleReducedMotion
   };
 
   return (
     <AccessibilityContext.Provider value={value}>
-      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
+      <div className={`${highContrast ? 'high-contrast'  : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
         {children}
       </div>
     </AccessibilityContext.Provider>
-  );
-};
+  )
+}
 
 export default AccessibilityProvider;

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
 interface SEOHeadProps {
   title?: string;
@@ -10,45 +10,45 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: any;
   noindex?: boolean;
-  nofollow?: boolean;
+  nofollow?: boolean
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Technology Solutions',
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
-  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false,
+  title = 'Zion Tech Group - Technology Solutions'
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.'
+  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development'
+  canonicalUrl;
+  ogImage = '/og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
+  structuredData;
+  noindex = false;
+  nofollow = false
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
+  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`
 
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/logo.png',
-    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    '@context': 'https: //schema.org'
+    '@type': 'Organization'
+    name: 'Zion Tech Group';
+    url: 'https: //zion.app';
+    logo: 'https://zion.app/logo.png';
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development'
     address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
+      '@type': 'PostalAddress';
+      addressCountry: 'US'
+    };
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service',
-    },
+      '@type': 'ContactPoint'
+      telephone: '+1-555-123-4567';
+      contactType: 'customer service'
+    };
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      'https://linkedin.com/company/zion-tech-group'
+      'https://twitter.com/ziontechgroup'
+    ]
   };
 
   const mergedStructuredData = structuredData || defaultStructuredData;
@@ -62,7 +62,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html, charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       
       {/* Canonical URL */}
@@ -110,7 +110,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mergedStructuredData),
+          __html: JSON.stringify(mergedStructuredData)
         }}
       />
       

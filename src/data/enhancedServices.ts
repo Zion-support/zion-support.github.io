@@ -25,7 +25,7 @@ export interface ProductListing {,
       &quot,Analytics dashboard,
       &quot,Custom workflow automation,
       &quot,Multi-platform support&quot,
-    ],
+    ]
   },;
   {,
     &quot,id&quot,: &quot,micro-saas-platform,
@@ -47,7 +47,7 @@ export interface ProductListing {,
       &quot,Analytics dashboard,
       &quot,API management,
       &quot,Multi-tenant architecture&quot,
-    ],
-  };
+    ]
+  }
 ],
 ,

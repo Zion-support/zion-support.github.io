@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 import {
   Brain,
   Cloud,
@@ -22,13 +22,13 @@ import {
   Clock,
   Award,
   CheckCircle,
-  ArrowRight,
-} from 'lucide-react';
+  ArrowRight
+} from 'lucide-react'
 
 interface SidebarProps {
   className?: string;
   isOpen?: boolean;
-  onClose?: () => void;
+  onClose?: () => void
 }
 
 export default function Sidebar({ className = '', isOpen = false, onClose }: SidebarProps) {
@@ -55,7 +55,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' },
-      ],
+      ]
     },
     {
       id: 'solutions',
@@ -68,7 +68,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
         { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' },
-      ],
+      ]
     },
     {
       id: 'company',
@@ -81,7 +81,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
         { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
         { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' },
-      ],
+      ]
     },
   ];
 
@@ -95,18 +95,18 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 
   const handleLinkClick = (href: string) => {
     if (onClose) onClose();
-    router.push(href);
+    router.push(href)
   };
 
   return (
     <motion.aside
       initial={false}
-      animate={{ x: isOpen ? 0 : -320 }}
+      animate={{ x: isOpen ? 0  : -320 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`}
     >
@@ -134,21 +134,20 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>
           <div className="space-y-2">
             {quickLinks.map((link) => {
-              const IconComponent = link.icon;
+              const IconComponent = link.icon
               return (
                 <button
                   key={link.name}
                   onClick={() => handleLinkClick(link.href)}
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${
-                    link.highlight
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg'
+                    link.highlight ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover : shadow-lg'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
                   <IconComponent className="w-5 h-5" />
                   <span className="font-medium">{link.name}</span>
                 </button>
-              );
+              )
             })}
           </div>
         </div>
@@ -156,8 +155,8 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         {/* Navigation Sections */}
         <div className="space-y-6">
           {navigationSections.map((section) => {
-            const isExpanded = expandedSections.includes(section.id);
-            const IconComponent = section.icon;
+            const isExpanded = expandedSections.includes(section.id)
+            const IconComponent = section.icon
 
             return (
               <div key={section.id}>
@@ -171,7 +170,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
                   </div>
                   {isExpanded ? (
                     <ChevronDown className="w-4 h-4" />
-                  ) : (
+                  )  : (
                     <ChevronRight className="w-4 h-4" />
                   )}
                 </button>
@@ -183,7 +182,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
                     className="mt-2 space-y-1"
                   >
                     {section.items.map((item) => {
-                      const ItemIconComponent = item.icon;
+                      const ItemIconComponent = item.icon
                       return (
                         <button
                           key={item.name}
@@ -196,7 +195,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>
                           </div>
                         </button>
-                      );
+                      )
                     })}
                   </motion.div>
                 )}

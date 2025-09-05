@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback } from 'react';
+import React, { memo, useMemo, useCallback } from 'react'
 
 // Higher-order component for performance optimization
 export const withPerformanceOptimization = <P extends object>(
@@ -6,7 +6,7 @@ export const withPerformanceOptimization = <P extends object>(
   options: {
     memo?: boolean;
     memoDeps?: (props: P) => any[];
-    displayName?: string;
+    displayName?: string
   } = {}
 ) => {
   const { memo: useMemo = true, memoDeps, displayName } = options;
@@ -16,19 +16,19 @@ export const withPerformanceOptimization = <P extends object>(
   if (useMemo) {
     OptimizedComponent = memo(Component, (prevProps, nextProps) => {
       if (memoDeps) {
-        const prevDeps = memoDeps(prevProps);
-        const nextDeps = memoDeps(nextProps);
-        return prevDeps.every((dep, index) => dep === nextDeps[index]);
+        const prevDeps = memoDeps(prevProps)
+        const nextDeps = memoDeps(nextProps)
+        return prevDeps.every((dep, index) => dep === nextDeps[index])
       }
       return false; // Always re-render if no custom comparison
     });
   }
   
   if (displayName) {
-    OptimizedComponent.displayName = displayName;
+    OptimizedComponent.displayName = displayName
   }
   
-  return OptimizedComponent;
+  return OptimizedComponent
 };
 
 // Hook for expensive calculations
@@ -36,7 +36,7 @@ export const useExpensiveCalculation = <T>(
   calculation: () => T,
   deps: React.DependencyList
 ): T => {
-  return useMemo(calculation, deps);
+  return useMemo(calculation, deps)
 };
 
 // Hook for stable callbacks
@@ -44,7 +44,7 @@ export const useStableCallback = <T extends (...args: any[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {
-  return useCallback(callback, deps);
+  return useCallback(callback, deps)
 };
 
 // Performance monitoring hook
@@ -66,56 +66,56 @@ export const LazyLoadWrapper: React.FC<{
   children: React.ReactNode;
   fallback?: React.ReactNode;
   threshold?: number;
-  rootMargin?: string;
+  rootMargin?: string
 }> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [hasLoaded, setHasLoaded] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false)
+  const [hasLoaded, setHasLoaded] = React.useState(false)
   const ref = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasLoaded) {
-          setIsVisible(true);
-          setHasLoaded(true);
+          setIsVisible(true)
+          setHasLoaded(true)
         }
       },
       { threshold, rootMargin }
     );
 
     if (ref.current) {
-      observer.observe(ref.current);
+      observer.observe(ref.current)
     }
 
-    return () => observer.disconnect();
+    return () => observer.disconnect()
   }, [threshold, rootMargin, hasLoaded]);
 
   return (
     <div ref={ref}>
-      {isVisible ? children : fallback}
+      {isVisible ? children  : fallback}
     </div>
-  );
-};
+  )
+}
 
 // Image optimization component
 export const OptimizedImage: React.FC<{
-  src: string;
+  src: string,
   alt: string;
   width?: number;
   height?: number;
   className?: string;
-  loading?: 'lazy' | 'eager';
-  placeholder?: string;
+  loading?: 'lazy' | 'eager'
+  placeholder?: string
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const [hasError, setHasError] = React.useState(false);
+  const [isLoaded, setIsLoaded] = React.useState(false)
+  const [hasError, setHasError] = React.useState(false)
 
   const handleLoad = useCallback(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
   }, []);
 
   const handleError = useCallback(() => {
-    setHasError(true);
+    setHasError(true)
   }, []);
 
   return (
@@ -135,7 +135,7 @@ export const OptimizedImage: React.FC<{
         onLoad={handleLoad}
         onError={handleError}
         className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
+          isLoaded ? 'opacity-100'  : 'opacity-0'
         } ${hasError ? 'hidden' : ''}`}
       />
       {hasError && (
@@ -144,8 +144,8 @@ export const OptimizedImage: React.FC<{
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 // Virtual scrolling hook for large lists
 export const useVirtualScroll = <T>(
@@ -153,10 +153,10 @@ export const useVirtualScroll = <T>(
   itemHeight: number,
   containerHeight: number
 ) => {
-  const [scrollTop, setScrollTop] = React.useState(0);
+  const [scrollTop, setScrollTop] = React.useState(0)
   
   const visibleItems = useMemo(() => {
-    const startIndex = Math.floor(scrollTop / itemHeight);
+    const startIndex = Math.floor(scrollTop / itemHeight)
     const endIndex = Math.min(
       startIndex + Math.ceil(containerHeight / itemHeight) + 1,
       items.length
@@ -166,37 +166,37 @@ export const useVirtualScroll = <T>(
       item,
       index: startIndex + index,
       top: (startIndex + index) * itemHeight
-    }));
+    }))
   }, [items, itemHeight, containerHeight, scrollTop]);
   
   const totalHeight = items.length * itemHeight;
   
   const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
+    setScrollTop(e.currentTarget.scrollTop)
   }, []);
   
   return {
     visibleItems,
     totalHeight,
     handleScroll
-  };
+  }
 };
 
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) => {
-  const [debouncedValue, setDebouncedValue] = React.useState(value);
+  const [debouncedValue, setDebouncedValue] = React.useState(value)
   
   React.useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedValue(value);
+      setDebouncedValue(value)
     }, delay);
     
     return () => {
-      clearTimeout(handler);
-    };
+      clearTimeout(handler)
+    }
   }, [value, delay]);
   
-  return debouncedValue;
+  return debouncedValue
 };
 
 // Performance metrics collection
@@ -205,7 +205,7 @@ export const usePerformanceMetrics = () => {
     renderCount: 0,
     lastRenderTime: 0,
     averageRenderTime: 0
-  });
+  })
   
   const recordRender = useCallback((renderTime: number) => {
     setMetrics(prev => ({
@@ -215,5 +215,5 @@ export const usePerformanceMetrics = () => {
     }));
   }, []);
   
-  return { metrics, recordRender };
+  return { metrics, recordRender }
 };

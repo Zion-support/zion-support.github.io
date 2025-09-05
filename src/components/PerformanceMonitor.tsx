@@ -31,7 +31,7 @@ const PerformanceMonitor: React.FC = () => {,
             ...prev,;
             pageLoadTime: loadTime,;
             timestamp: Date.now(),
-          ,})),
+          ,}))
         };
       };
     };
@@ -39,12 +39,13 @@ const PerformanceMonitor: React.FC = () => {,
     // Track memory usage,
     const trackMemory = () => {,
       if ('memory' in performance) {,
-        const memory = (performance as any).memory,
+        const memory = (performance as any).memory;
+
         const usedMemory = memory.usedJSHeapSize / 1024 / 1024, // Convert to MB,
         setMetrics(prev => ({,
           ...prev,;
           memoryUsage: Math.round(usedMemory * 100) / 100,
-        ,})),
+        ,}))
       };
     };
 ,
@@ -58,12 +59,12 @@ const PerformanceMonitor: React.FC = () => {,
             '2g': 1,;
             '3g': 3,;
             '4g': 10,;
-            '5g': 100,
+            '5g': 100
           };
           setMetrics(prev => ({,
             ...prev,;
             networkSpeed: speedMap[connection.effectiveType] || 0,
-          ,})),
+          ,}))
         };
       };
     };
@@ -76,7 +77,7 @@ const PerformanceMonitor: React.FC = () => {,
     // Set up periodic tracking,
     const interval = setInterval(() => {,
       trackMemory(),
-      trackNetwork(),
+      trackNetwork()
     }, 10000),
 ,
     // Track online/offline status,
@@ -89,8 +90,8 @@ const PerformanceMonitor: React.FC = () => {,
     return () => {,
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline),
-    };
+      window.removeEventListener('offline', handleOffline)
+    }
   }, [location.pathname]),
 ,
   // Show performance issues,
@@ -104,8 +105,8 @@ const PerformanceMonitor: React.FC = () => {,
       setIsVisible(true),
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
-      return () => clearTimeout(timer),
-    };
+      return () => clearTimeout(timer)
+    }
   }, [metrics]),
 ,
   if (!isVisible) return null,
@@ -127,13 +128,13 @@ const PerformanceMonitor: React.FC = () => {,
           <div className="flex items-center gap-2">,
             <Clock className="w-4 h-4 text-green-400" />,
             <span className="text-white">,
-              Load: {metrics.pageLoadTime > 0 ? `${Math.round(metrics.pageLoadTime),}ms` : 'N/A'};
+              Load: {metrics.pageLoadTime > 0 ? `${Math.round(metrics.pageLoadTime),}ms`  : 'N/A'}
             </span>,
           </div>,
           <div className="flex items-center gap-2">,
             <HardDrive className="w-4 h-4 text-yellow-400" />,
             <span className="text-white">,
-              Memory: {metrics.memoryUsage > 0 ? `${metrics.memoryUsage,}MB` : 'N/A'};
+              Memory: {metrics.memoryUsage > 0 ? `${metrics.memoryUsage,}MB`  : 'N/A'}
             </span>,
           </div>,
           <div className="flex items-center gap-2">,
@@ -141,7 +142,7 @@ const PerformanceMonitor: React.FC = () => {,
               <>,
                 <Wifi className="w-4 h-4 text-green-400" />,
                 <span className="text-white">,
-                  Network: {metrics.networkSpeed > 0 ? `${metrics.networkSpeed,}Mbps` : 'N/A'};
+                  Network : {metrics.networkSpeed > 0 ? `${metrics.networkSpeed,}Mbps` : 'N/A'}
                 </span>,
               </>,
             ) : (,
@@ -164,7 +165,7 @@ const PerformanceMonitor: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),
+  )
 };
 ,
 export default PerformanceMonitor,

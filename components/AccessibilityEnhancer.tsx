@@ -1,21 +1,22 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 export default function AccessibilityEnhancer() {
   useEffect(() => {
     // Skip focus outline for mouse users
     let usingMouse = false;
 
+
     const handleMouseDown = () => {
       usingMouse = true;
-      document.body.classList.add('using-mouse');
+      document.body.classList.add('using-mouse')
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         usingMouse = false;
-        document.body.classList.remove('using-mouse');
+        document.body.classList.remove('using-mouse')
       }
     };
 
@@ -39,7 +40,7 @@ export default function AccessibilityEnhancer() {
       border-radius: 4px;
       z-index: 1000;
       transition: top 0.3s;
-    `;
+    `
 
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
@@ -95,7 +96,7 @@ export default function AccessibilityEnhancer() {
 
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
-      announcePageChange('Page loaded');
+      announcePageChange('Page, loaded')
     };
 
     // Add route change listener if available
@@ -135,11 +136,12 @@ export default function AccessibilityEnhancer() {
 // Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
-    outline: none !important;
+    outline: none !important
   }
-  .focus-visible:focus {
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
+  .focus-visible: focus {
+   ;
+  outline: 2px solid #2563eb !important;
+    outline-offset: 2px !important
   }
   .sr-only {
     position: absolute;
@@ -148,25 +150,26 @@ const focusStyles = `
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0, 0, 0,, 0)
     white-space: nowrap;
-    border: 0;
+    border: 0
   }
-  .sr-only.focus:not-sr-only:focus {
-    position: static;
+  .sr-only.focus: not-sr-only:focus {
+   ;
+  position: static;
     width: auto;
     height: auto;
     padding: inherit;
     margin: inherit;
     overflow: visible;
     clip: auto;
-    white-space: normal;
+    white-space: normal
   }
-`;
+`
 
 // Inject styles
 if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
+  const styleSheet = document.createElement('style')
   styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
+  document.head.appendChild(styleSheet)
 }

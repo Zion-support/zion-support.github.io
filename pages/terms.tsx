@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Terms() {
   const contact = {
@@ -116,12 +116,12 @@ export default function Terms() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
               Back to Home
             </Link>
           </div>
         </div>
       </main>
     </>
-  );
+  )
 }
