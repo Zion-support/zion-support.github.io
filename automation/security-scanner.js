@@ -112,9 +112,7 @@
 ,
       this.log("=" * 50),
       this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),
-
-    } catch (error) {,
+      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))} catch (error) {,
       this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")
     };
   };

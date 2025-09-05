@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');

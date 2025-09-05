@@ -85,9 +85,7 @@
       await this.fixSyntaxErrors(),
 ,
       this.log("=" * 50),
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`),
-
-    } catch (error) {,
+      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`)} catch (error) {,
       this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")
     };
   };

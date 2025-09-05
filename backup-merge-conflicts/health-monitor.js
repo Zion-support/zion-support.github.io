@@ -64,9 +64,7 @@
           if (status !== 'online') {,
             this.log(`ALERT: Process ${name} is not online (status: ${status})`)
           };
-        }),
-
-      } catch (error) {,
+        })} catch (error) {,
         this.log(`PM2 process check failed: ${error.message}`)
       };
 
@@ -160,9 +158,7 @@
       const reportFile = path.join(process.cwd(), 'logs/pm2/health-report.json'),
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
 ,
-      this.log(`Health report saved to ${reportFile}`),
-
-    } catch (error) {,
+      this.log(`Health report saved to ${reportFile}`)} catch (error) {,
       this.log(`Health report generation error: ${error.message}`)
     };
   };

@@ -67,9 +67,7 @@ class GitWorkflowAutomator {,
 ,
       this.log('Git workflow automation completed'),
 ,
-      return workflowReport,
-
-    } catch (error) {,
+      return workflowReport} catch (error) {,
       this.log(`Git workflow automation failed: ${error.message}`, 'ERROR'),
       throw error
     };

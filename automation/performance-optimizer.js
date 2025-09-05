@@ -88,9 +88,7 @@
 ,
       this.log("=" * 50),
       this.log(`🎯 Performance Optimizer completed. Optimizations: ${this.optimizations.length}`),
-      this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`)),
-
-    } catch (error) {,
+      this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`))} catch (error) {,
       this.log(`❌ Performance Optimizer failed: ${error.message}`, "ERROR")
     };
   };
