@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -264,62 +261,10 @@ const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', 
   body: JSON.stringify({
     email: 'user@example.com',
     password: 'your-password'
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   })
 });
 
 const data = await response.json();
-<<<<<<< HEAD
-console.log(data.response);`
-  },
-  {
-    language: 'Python',
-    code: `# Predictive Analytics
-import requests
-
-response = requests.post(
-    'https://api.ziontechgroup.com/ai/predictive-analytics',
-    headers={
-        'Authorization': 'Bearer YOUR_API_KEY',
-        'Content-Type': 'application/json'
-    },
-    json={
-        'data': historical_data,
-        'period': '30_days'
-    }
-)
-
-predictions = response.json()
-print(predictions['predictions'])`
-  },
-  {
-    language: 'cURL',
-    code: `# Content Generation
-curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "prompt": "Write a blog post about AI trends",
-    "type": "blog_post"
-  }'`
-  }
-];
-
-export default function APIDocumentationPage() {
-  return (
-    <Layout
-      title="API Documentation - Zion Tech Group"
-      description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
-      keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> main
-=======
 console.log(data);`,
     python: `# Python Example
 import requests
@@ -373,35 +318,11 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                API <span className="text-blue-600">Documentation</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Integrate our AI services into your applications with our comprehensive REST API. 
-                Get started with our easy-to-use endpoints and code examples.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get API Key
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/micro-saas"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View Micro SaaS
-                </Link>
-              </div>
-=======
                 API{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Documentation
@@ -411,23 +332,15 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                 Comprehensive API documentation for integrating with Zion Tech Group services. 
                 Build powerful applications with our RESTful APIs.
               </p>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* API Endpoints Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-=======
         {/* API Endpoints */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> main
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -437,14 +350,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                 Explore our comprehensive API endpoints for AI services.
               </p>
             </motion.div>
-<<<<<<< HEAD
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                    </div>
-=======
             <div className="space-y-8">
               {endpoints.map((endpoint, index) => (
                 <motion.div
@@ -514,46 +419,10 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   </button>
                 ))}
               </div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Code Examples */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Code Examples</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Get started quickly with our code examples in multiple programming languages.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {codeExamples.map((example, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 rounded-xl p-6"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-white">{example.language}</h3>
-                    <Code className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <pre className="text-sm text-gray-300 overflow-x-auto">
-                    <code>{example.code}</code>
-                  </pre>
-                </motion.div>
-              ))}
->>>>>>> main
-=======
         {/* Tab Content */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -881,22 +750,17 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   </div>
                 </motion.div>
               )}
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> main
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -948,28 +812,16 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                 >
                   View Full Documentation
                 </a>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Layout title="API Docs">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
-        <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
-      </div>
-    </Layout>
-=======
       </div>
     </Layout>
   );
 }
->>>>>>> main
 =======
       </div>
     </MainLayout>
   );
 }
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f

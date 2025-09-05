@@ -1,29 +1,4 @@
-<<<<<<< HEAD:src/components/ui/progress.tsx
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
-;
-interface ProgressProps {;
-
-  "value": "number;
-  max?: number;
-  className?: string;
-;
-"}
-;
-export function Progress("props": "any) {;
-  const percentage = Math.min(Math.max((value / max) * 100", 0), 100);
-  ;
-  return (;
-    <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>;
-      <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300";
-        style="{{{ "width": "`${percentage"}}"%` }}
-       />;
-    </div>;
-  );
-=======
 interface ProgressProps {
   "value": number;
   max?: number;
@@ -38,9 +13,6 @@ export function Progress($1) {
        />
     </div>
     );
->>>>>>> main
 }
 </div>;';';
 import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';
->>>>>>> main
->>>>>>> main:src_backup_temp/components/ui/progress.tsx

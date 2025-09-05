@@ -114,26 +114,6 @@ key = "{plan.name}"";
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}`}> {/*   */}";
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <IconComponent className="`w-8" h-8`}  />;
-<<<<<<< HEAD
-                  </div> {/* comment */}";
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
-                  {/* comment */}";
-                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300""}>";
-                    <IconComponent className=""w-8" h-8"}        />;
-                  </div>;
-                  {/* comment */}";
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
-                  <p className="text-zion-slate-light mb-6">{plan.description}</p>;
-                  {/* comment */}";
-                  <div className="mb-6">";
-                    {typeof plan.price === "number" ? (";
-                      <div className="flex items-baseline gap-2">";
-                        <span className="{"text-4xl" font-bold text-white">${plan.price}</span>";
-                        <span className=""text-zion-slate-light"}">/month</span>;
-                        {plan.originalPrice && (";
-                          <span className="{"text-lg" text-zion-slate-light line-through">;
-=======
                   </div> {/* comment */}"
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
@@ -152,7 +132,6 @@ key = "{plan.name}"";
                         <span className=""text-zion-slate-light"}">/month</span>
                         {plan.originalPrice && ("
                           <span className="{"text-lg" text-zion-slate-light line-through">
->>>>>>> main
                             ${plan.originalPrice}
 ;
                           </span>;
@@ -261,19 +240,6 @@ export default function PricingSection("props": "any) {return (";
       </div>;
   );""}";
 
-<<<<<<< HEAD
-</div>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</div>;
-</motion>;
-</motion>;
-</motion>;
-</div>;
-</div>;
-=======
 }}
 >"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
@@ -327,5 +293,4 @@ export default function PricingSection(props: any) {return ("
 </motion>
 </div>
 </div>
->>>>>>> main
 </section>

@@ -1,161 +1,3 @@
-<<<<<<< HEAD
-} from 'lucide-react';
-
-const jobOpenings = [
-  {
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle
-} from 'lucide-react';
-
-const jobOpenings = [
-  {
-    id: 1,
-    title: "Senior AI Engineer",
-    department: "AI & Machine Learning",
-    location: "Remote",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
-    requirements: [
-      "Master's degree in Computer Science or related field",
-      "5+ years experience in AI/ML development",
-      "Proficiency in Python, TensorFlow, PyTorch",
-      "Experience with cloud platforms (AWS, Azure, GCP)",
-      "Strong problem-solving and communication skills"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
-  },
-  {
-    id: 2,
-    title: "Full-Stack Developer",
-    department: "Micro SaaS",
-    location: "New York, NY",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build scalable web applications and microservices for our SaaS solutions.",
-    requirements: [
-      "3+ years experience in full-stack development",
-      "Proficiency in React, Node.js, TypeScript",
-      "Experience with databases (PostgreSQL, MongoDB)",
-      "Knowledge of cloud deployment and DevOps"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
-  },
-  {
-    id: 3,
-    title: "Cloud Solutions Architect",
-    department: "IT Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "7+ years",
-    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-    requirements: [
-      "7+ years experience in cloud architecture",
-      "Certifications in AWS, Azure, or GCP",
-      "Experience with containerization (Docker, Kubernetes)",
-      "Strong understanding of security best practices"
-    ],
-<<<<<<< HEAD
-    benefits: [
-      "Competitive salary and equity",
-      "Health, dental, and vision insurance",
-      "Flexible work arrangements",
-      "Professional development budget",
-      "401(k) with company matching"
-    ],
-    posted: "2024-01-10"
-  },
-  {
-    id: 4,
-    title: "Data Scientist",
-    department: "Data & Analytics",
-    location: "Remote / Boston, MA",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Extract insights from complex data sets and build predictive models for business intelligence.",
-    requirements: [
-      "Master's degree in Data Science or related field",
-      "3+ years experience in data science",
-      "Proficiency in Python, R, SQL",
-      "Experience with machine learning libraries",
-      "Strong analytical and communication skills"
-    ],
-    benefits: [
-      "Competitive salary and equity",
-      "Health, dental, and vision insurance",
-      "Flexible work arrangements",
-      "Professional development budget",
-      "401(k) with company matching"
-    ],
-    posted: "2024-01-08"
-  },
-  {
-    id: 5,
-    title: "Full Stack Developer",
-    department: "Technology",
-    location: "Remote / Seattle, WA",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build scalable web applications and microservices using modern technologies and frameworks.",
-    requirements: [
-      "Bachelor's degree in Computer Science or related field",
-      "3+ years experience in full-stack development",
-      "Proficiency in React, Node.js, Python",
-      "Experience with cloud platforms",
-      "Strong problem-solving skills"
-    ],
-    benefits: [
-      "Competitive salary and equity",
-      "Health, dental, and vision insurance",
-      "Flexible work arrangements",
-      "Professional development budget",
-      "401(k) with company matching"
-    ],
-    posted: "2024-01-05"
-  },
-  {
-    id: 6,
-    title: "DevOps Engineer",
-    department: "Technology",
-    location: "Remote / Denver, CO",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Automate deployment processes and maintain scalable infrastructure for cloud-based applications.",
-    requirements: [
-      "Bachelor's degree in Computer Science or related field",
-      "4+ years experience in DevOps",
-      "Experience with CI/CD pipelines",
-      "Knowledge of containerization and orchestration",
-      "Strong scripting and automation skills"
-    ],
-    benefits: [
-      "Competitive salary and equity",
-      "Health, dental, and vision insurance",
-      "Flexible work arrangements",
-      "Professional development budget",
-      "401(k) with company matching"
-    ],
-    posted: "2024-01-03"
-=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -230,25 +72,14 @@ const jobOpenings = [
       'Excellent communication skills'
     ],
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 =======
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   }
 ];
 
 const benefits = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "Competitive Compensation",
-    description: "Market-leading salaries and equity participation",
-    icon: "💰"
-  },
-  {
-=======
     icon: Heart,
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
     title: "Health & Wellness",
     description: "Comprehensive health insurance, mental health support, and wellness programs"
   },
@@ -273,21 +104,9 @@ const benefits = [
     description: "Collaborative environment, team events, and inclusive workplace"
   },
   {
-<<<<<<< HEAD
-    title: "Work-Life Balance",
-    description: "Unlimited PTO and mental health support",
-    icon: "⚖️"
-  },
-  {
-    title: "Team Culture",
-    description: "Collaborative, inclusive, and innovative environment",
-    icon: "🤝"
->>>>>>> main
-=======
     icon: Award,
     title: "Career Growth",
     description: "Clear career paths, mentorship programs, and advancement opportunities"
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   }
 ];
 
@@ -311,14 +130,6 @@ const values = [
 ];
 
 export default function CareersPage() {
-<<<<<<< HEAD
-              ))}
-            </div>,
-          </div>;
-        </div>;
-      </section>;
-
-=======
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -382,38 +193,10 @@ export default function Careers() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Join Our 
-              <span className="text-indigo-400"> Growing Team</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-indigo-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Be part of a team that's shaping the future of technology. Work on cutting-edge projects 
-              with talented professionals in a collaborative and innovative environment.
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Link href="#openings" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                View Open Positions
-              </Link>
-              <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Get in Touch
-              </Link>
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our <span className="text-blue-600">Team</span>
               </h1>
@@ -436,7 +219,6 @@ export default function Careers() {
                   Learn About Us
                 </Link>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 =======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{' '}
@@ -456,39 +238,10 @@ export default function Careers() {
                   See Benefits
                 </a>
               </div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Why Work With Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
-            <p className="text-xl text-gray-600">We offer more than just a job - we offer a career with purpose</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div 
-                key={index}
-                className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
         {/* Why Join Us */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -507,7 +260,6 @@ export default function Careers() {
                 working together to build amazing technology solutions.
               </p>
             </motion.div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -702,43 +454,6 @@ export default function Careers() {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-indigo-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
-          <p className="text-xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-            Don't see a position that matches your skills? We're always looking for talented individuals. 
-            Send us your resume and let's start a conversation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link href="/contact" className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Send Your Resume
-            </Link>
-          </div>
-          
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>careers@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-=======
         {/* Job Openings */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -840,14 +555,11 @@ export default function Careers() {
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
->>>>>>> main
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -883,12 +595,9 @@ export default function Careers() {
         </section>
       </div>
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
 =======
         </section>
       </div>
     </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   );
 }

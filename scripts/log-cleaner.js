@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -305,4 +303,3 @@ if (isMainModule) {
 }
 
 export default LogCleaner;
->>>>>>> 72f0fae78d2cb9c84158d193a6f319208ba0c11a

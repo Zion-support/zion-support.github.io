@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> main
-=======
->>>>>>> 72f0fae78d2cb9c84158d193a6f319208ba0c11a
 const path = require("path");
 const { spawnSync } = require("child_process");
 
@@ -42,22 +34,11 @@ exports.handler = async () => {
   logStep("homepage:advertise", () => runNode("automation/homepage-auto-advertiser.cjs"));
 
   return {
-<<<<<<< HEAD
-  "statusCode": 200,
-    "body": JSON.stringify({ logs })}
-}
-<<<<<<< HEAD
-=======
 const path = require("path"); const { spawnSync } = require("child_process"); exports.config = { schedule: "*/20 * * * *",} exports.handler = async () => { const logs = []; const logStep = (name,fn) => { logs.push(`\n=== ${name} ===`); const { status,stdout,stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`)} const runNode = (script) => { return spawnSync("node",[script],{ cwd: process.cwd(),; encoding: "utf8";,})} process.env.CANONICAL_URL = process.env.CANONICAL_URL || "https: logStep("sitemap:run",() => runNode("automation/sitemap-runner.cjs")); logStep("links:crawl",() => runNode("automation/site-link-crawler.cjs")); logStep("links:fix",() => runNode("automation/site-link-fixer.cjs")); logStep("external-link:check",() => runNode("automation/external-link-check.cjs")); logStep("homepage:update",() => runNode("automation/homepage-updater.cjs")); logStep("homepage:advertise",() => runNode("automation/homepage-auto-advertiser.cjs")); return { statusCode: '200',; body: JSON.stringify({ logs })} }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
->>>>>>> main
->>>>>>> main
 const path = require("path"); const { spawnSync } = require("child_process"); exports.config = { schedule: "*/20 * * * *",} exports.handler = async () => { const logs = []; const logStep = (name,fn) => { logs.push(`\n=== ${name} ===`); const { status,stdout,stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`)} const runNode = (script) => { return spawnSync("node",[script],{ cwd: process.cwd(),encoding: "utf8",})} process.env.CANONICAL_URL = process.env.CANONICAL_URL || "https: logStep("sitemap:run",() => runNode("automation/sitemap-runner.cjs")); logStep("links:crawl",() => runNode("automation/site-link-crawler.cjs")); logStep("links:fix",() => runNode("automation/site-link-fixer.cjs")); logStep("external-link:check",() => runNode("automation/external-link-check.cjs")); logStep("homepage:update",() => runNode("automation/homepage-updater.cjs")); logStep("homepage:advertise",() => runNode("automation/homepage-auto-advertiser.cjs")); return { statusCode: 200,body: JSON.stringify({ logs })} }
->>>>>>> main
 =======
     statusCode: 200,
     body: JSON.stringify({ logs })
   };
 };
->>>>>>> 72f0fae78d2cb9c84158d193a6f319208ba0c11a

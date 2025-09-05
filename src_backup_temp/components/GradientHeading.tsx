@@ -1,21 +1,5 @@
-<<<<<<< HEAD:src/components/GradientHeading.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';';';
-import { cn } from '@/lib / utils';';
-;';;';
-=======
 import React from 'react'; import { cn } from '@/lib / utils';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 import React from &apos;react&apos;; import { cn } from &apos;@/lib / utils&apos;; ;&apos;;&apos;;
 =======
-<<<<<<< HEAD
-const React from "react"; import { cn } from "@/lib / utils"; ;";";''"
-=======
 import _React from 'react'; import { cn } from '@/lib / utils'; ;';';
->>>>>>> main
->>>>>>> main:src_backup_temp/components/GradientHeading.tsx
->>>>>>> main
->>>>>>> main
