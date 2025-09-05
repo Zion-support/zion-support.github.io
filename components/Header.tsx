@@ -20,8 +20,10 @@ const navigation = {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' }
+    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Edge Computing', href: '/edge-computing' },
+    { name: '5G Networks', href: '/5g-networks' }
   ],
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
