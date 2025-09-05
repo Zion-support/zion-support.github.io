@@ -17,7 +17,6 @@ import {
 
 const supportChannels = [
   {
->>>>>>> main
     icon: MessageCircle,
     title: 'Live Chat',
     description: 'Get instant help with our 24/7 live chat support',
@@ -171,7 +170,5 @@ export default function SupportPage() {
         </section>
       </div>
     </>
->>>>>>> main
->>>>>>> main
   );
 }

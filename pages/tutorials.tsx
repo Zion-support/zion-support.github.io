@@ -16,7 +16,6 @@ import {
 
 const tutorialCategories = [
   {
->>>>>>> main
     icon: Code,
     title: 'Web Development',
     description: 'Learn modern web development technologies',
@@ -194,7 +193,5 @@ export default function TutorialsPage() {
         </section>
       </div>
     </>
->>>>>>> main
->>>>>>> main
   );
 }

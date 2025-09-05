@@ -14,7 +14,6 @@ import {
   Database, 
   Lock 
 } from 'lucide-react';
->>>>>>> main
 
 const features = [
   {
@@ -111,7 +110,6 @@ export default function EnterpriseSolutionsPage() {
             </div>
           </div>
         </section>
->>>>>>> main
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -147,7 +145,5 @@ export default function EnterpriseSolutionsPage() {
         </section>
       </div>
     </>
->>>>>>> main
->>>>>>> main
   );
 }

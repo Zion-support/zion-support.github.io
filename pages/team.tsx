@@ -1,6 +1,4 @@
 import React from 'react';
->>>>>>> main
->>>>>>> main
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users } from 'lucide-react';
@@ -10,7 +8,6 @@ const teamMembers = [
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
->>>>>>> main
     icon: Brain
   },
   {
@@ -90,6 +87,5 @@ export default function TeamPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }
