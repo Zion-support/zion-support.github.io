@@ -1,7 +1,7 @@
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 export const api = {
-  get: async <T>(endpoint: string): Promise<T> => {
+  get: async (endpoint: string) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -9,7 +9,7 @@ export const api = {
     return response.json();
   },
   
-  post: async <T>(endpoint: string, data: any): Promise<T> => {
+  post: async (endpoint: string, data: any) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'POST',
       headers: {

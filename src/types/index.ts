@@ -1,11 +1,11 @@
-export interface User {
+export type User = {
   id: string;
   email: string;
   name: string;
-}
+};
 
-export interface ApiResponse<T> {
+export type ApiResponse<T> = {
   data: T;
   success: boolean;
   message?: string;
-}
+};

@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface ButtonProps {
+type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary';
   className?: string;
-}
+};
 
 export const Button: React.FC<ButtonProps> = ({ 
   children, 
