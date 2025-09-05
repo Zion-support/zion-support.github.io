@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import {
   Users, 
   MessageSquare, 
   Calendar, 
@@ -13,19 +13,19 @@ import { }
   Star,
   Clock,
   MapPin,
-  ExternalLink;
+  ExternalLink
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const communityStats = []
+const communityStats = [
   { number: '2,500+', label: 'Active Members' },
   { number: '150+', label: 'Discussions' },
   { number: '50+', label: 'Events This Month' },
-  { number: '95%', label: 'Member Satisfaction' };
+  { number: '95%', label: 'Member Satisfaction' }
 ];
 
-const featuredEvents = []
-  {}
+const featuredEvents = [
+  {
     id: 1,
     title: 'AI & Machine Learning Workshop',
     date: '2024-02-15',
@@ -36,7 +36,7 @@ const featuredEvents = []
     maxAttendees: 50,
     description: 'Learn the latest AI techniques and best practices from industry experts.'
   },
-  {}
+  {
     id: 2,
     title: 'Cloud Architecture Deep Dive',
     date: '2024-02-20',
@@ -47,7 +47,7 @@ const featuredEvents = []
     maxAttendees: 30,
     description: 'Explore advanced cloud architecture patterns and implementation strategies.'
   },
-  {}
+  {
     id: 3,
     title: 'Cybersecurity Best Practices',
     date: '2024-02-25',
@@ -57,68 +57,68 @@ const featuredEvents = []
     attendees: 78,
     maxAttendees: 100,
     description: 'Essential cybersecurity practices for modern businesses.'
-  };
+  }
 ];
 
-const discussionTopics = []
-  {}
+const discussionTopics = [
+  {
     id: 1,
     title: 'Best practices for microservices architecture',
     author: 'Sarah Chen',
     replies: 12,
     views: 156,
     lastActivity: '2 hours ago',
-    tags: ['architecture', 'microservices', 'best-practices'];
+    tags: ['architecture', 'microservices', 'best-practices']
   },
-  {}
+  {
     id: 2,
     title: 'Implementing AI in healthcare applications',
     author: 'Dr. Michael Rodriguez',
     replies: 8,
     views: 89,
     lastActivity: '4 hours ago',
-    tags: ['ai', 'healthcare', 'implementation'];
+    tags: ['ai', 'healthcare', 'implementation']
   },
-  {}
+  {
     id: 3,
     title: 'Cloud migration strategies for enterprise',
     author: 'Alex Thompson',
     replies: 15,
     views: 203,
     lastActivity: '6 hours ago',
-    tags: ['cloud', 'migration', 'enterprise'];
+    tags: ['cloud', 'migration', 'enterprise']
   },
-  {}
+  {
     id: 4,
     title: 'DevOps automation tools comparison',
     author: 'Emma Wilson',
     replies: 6,
     views: 67,
     lastActivity: '1 day ago',
-    tags: ['devops', 'automation', 'tools'];
-  };
+    tags: ['devops', 'automation', 'tools']
+  }
 ];
 
-const resources = []
-  {}
+const resources = [
+  {
     title: 'Community Guidelines',
     description: 'Learn about our community standards and best practices',
     icon: BookOpen,
     href: '/community/guidelines'
   },
-  {}
+  {
     title: 'Technical Documentation',
     description: 'Access our comprehensive technical documentation',
     icon: BookOpen,
     href: '/docs'
   },
-  {}
+  {
     title: 'Code Examples',
     description: 'Browse our collection of code examples and snippets',
     icon: BookOpen,
     href: '/community/code-examples'
   },
-  {}
+  {
     title: 'Video Tutorials',
     description: 'Watch step-by-step video tutorials and guides',
     icon: BookOpen,
