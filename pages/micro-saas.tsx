@@ -193,376 +193,204 @@ const microSaasServices = [
     popular: true
   }
 ];
-        'Automated rightsizing recommendations',
-        'Budget forecasting and alerting',
-        'Resource utilization optimization',
-        'Multi-cloud cost comparison',
-        'Executive dashboards and reporting'
-      ],
-      pricing: '$299 – $1,499/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        'Average 30% reduction in cloud costs',
-        'Automated cost optimization',
-        'Real-time budget monitoring',
-        'Proactive cost anomaly detection'
-      ],
-      category: 'Cloud Management'
-    },
-    {
-      icon: FileText,
-      name: 'Smart Document Processor',
-      description: 'AI-powered document extraction, classification, and workflow automation for businesses.',
-      features: [
-        'OCR and intelligent data extraction',
-        'Document classification and routing',
-        'Workflow automation and approval processes',
-        'Integration with existing business systems',
-        'Compliance and audit trail',
-        'Multi-format document support'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '90% reduction in manual data entry',
-        'Automated document processing',
-        'Improved accuracy and compliance',
-        'Faster document turnaround times'
-      ],
-      category: 'Document Management'
-    },
-    {
-      icon: Zap,
-      name: 'API Rate Limiter & Analytics',
-      description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
-      features: [
-        'Dynamic rate limiting based on user tiers',
-        'Real-time usage analytics and reporting',
-        'API monetization and billing integration',
-        'DDoS protection and abuse prevention',
-        'Custom rate limiting rules',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        '99.9% API uptime guarantee',
-        'Automated abuse prevention',
-        'Revenue optimization through usage analytics',
-        'Scalable rate limiting solutions'
-      ],
-      category: 'API Management'
-    },
-    {
-      icon: Users,
-      name: 'Lead Scoring & Qualification Engine',
-      description: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
-      features: [
-        'Machine learning-based lead scoring',
-        'Automated qualification workflows',
-        'CRM integration and data synchronization',
-        'Predictive analytics and conversion optimization',
-        'Behavioral tracking and analysis',
-        'Custom scoring models and rules'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        '40% increase in lead conversion rates',
-        'Automated lead qualification',
-        'Improved sales team efficiency',
-        'Data-driven lead prioritization'
-      ],
-      category: 'Sales Automation'
-    },
-    {
-      icon: Mail,
-      name: 'Email Deliverability Monitor',
-      description: 'Real-time email reputation tracking, spam score analysis, and deliverability optimization.',
-      features: [
-        'Real-time email reputation monitoring',
-        'Spam score analysis and optimization',
-        'Deliverability testing and reporting',
-        'ISP feedback loop management',
-        'Blacklist monitoring and removal',
-        'Email authentication setup'
-      ],
-      pricing: '$149 – $899/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        '95% email deliverability rate',
-        'Reduced spam folder placement',
-        'Improved email campaign performance',
-        'Proactive reputation management'
-      ],
-      category: 'Email Marketing'
-    },
-    {
-      icon: Globe,
-      name: 'Website Uptime & Performance Tracker',
-      description: 'Global monitoring, performance insights, and instant alerts for web applications.',
-      features: [
-        'Global uptime monitoring from 50+ locations',
-        'Performance metrics and insights',
-        'Instant alerts via email, SMS, and Slack',
-        'Historical reporting and analytics',
-        'SSL certificate monitoring',
-        'API endpoint monitoring'
-      ],
-      pricing: '$79 – $499/month',
-      timeline: '1 week',
-      benefits: [
-        '99.9% uptime monitoring',
-        'Instant outage notifications',
-        'Performance optimization insights',
-        'Reduced downtime and revenue loss'
-      ],
-      category: 'Monitoring'
-    },
-    {
-      icon: BarChart3,
-      name: 'Team Productivity Analytics',
-      description: 'Workflow optimization, time tracking, and productivity insights for remote teams.',
-      features: [
-        'Time tracking and productivity analysis',
-        'Workflow optimization recommendations',
-        'Team performance dashboards',
-        'Goal setting and progress tracking',
-        'Integration with popular tools',
-        'Privacy-focused analytics'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '25% improvement in team productivity',
-        'Data-driven workflow optimization',
-        'Better resource allocation',
-        'Enhanced team collaboration'
-      ],
-      category: 'Productivity'
-    },
-    {
-      icon: TrendingUp,
-      name: 'SEO Content Optimizer',
-      description: 'AI-driven content optimization, keyword research, and SERP tracking.',
-      features: [
-        'AI-powered content optimization',
-        'Keyword research and analysis',
-        'SERP tracking and monitoring',
-        'Content performance analytics',
-        'Competitor analysis and insights',
-        'Automated content suggestions'
-      ],
-      pricing: '$199 – $1,499/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '40% improvement in search rankings',
-        'Automated content optimization',
-        'Data-driven SEO strategies',
-        'Competitive advantage insights'
-      ],
-      category: 'SEO & Marketing'
-    },
-    {
-      icon: Settings,
-      name: 'Customer Support Ticket Router',
-      description: 'Intelligent ticket classification, routing, and escalation management.',
-      features: [
-        'AI-powered ticket classification',
-        'Automated routing to appropriate agents',
-        'Escalation management and workflows',
-        'Performance analytics and reporting',
-        'Integration with support tools',
-        'Customer satisfaction tracking'
-      ],
-      pricing: '$249 – $1,599/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        '60% faster ticket resolution',
-        'Improved customer satisfaction',
-        'Automated workflow management',
-        'Better resource utilization'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: Shield,
-      name: 'Invoice & Payment Automation',
-      description: 'Automated invoicing, payment processing, and financial reporting for SMBs.',
-      features: [
-        'Automated invoice generation and sending',
-        'Payment processing and tracking',
-        'Financial reporting and analytics',
-        'Tax calculation and compliance',
-        'Customer portal and self-service',
-        'Integration with accounting systems'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '50% reduction in payment processing time',
-        'Automated financial workflows',
-        'Improved cash flow management',
-        'Reduced accounting errors'
-      ],
-      category: 'Financial Management'
-    },
-    {
-      icon: Clock,
-      name: 'Smart Meeting Scheduler',
-      description: 'AI-powered meeting scheduling with timezone optimization and conflict resolution.',
-      features: [
-        'Intelligent timezone detection and scheduling',
-        'Calendar conflict resolution',
-        'Meeting room and resource booking',
-        'Automated follow-up and reminders',
-        'Integration with all major calendar systems',
-        'Meeting analytics and insights'
-      ],
-      pricing: '$99 – $599/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        '75% reduction in scheduling conflicts',
-        'Automated meeting coordination',
-        'Improved meeting efficiency',
-        'Better time management'
-      ],
-      category: 'Productivity'
-    },
-    {
-      icon: Users,
-      name: 'Employee Onboarding Automation',
-      description: 'Streamlined employee onboarding with automated workflows and compliance tracking.',
-      features: [
-        'Automated onboarding workflows',
-        'Document collection and verification',
-        'Compliance tracking and reporting',
-        'Task assignment and progress monitoring',
-        'Integration with HR systems',
-        'Customizable onboarding templates'
-      ],
-      pricing: '$149 – $899/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '60% faster onboarding process',
-        'Reduced administrative overhead',
-        'Improved compliance tracking',
-        'Better new hire experience'
-      ],
-      category: 'HR Management'
-    },
-    {
-      icon: BarChart3,
-      name: 'Social Media Analytics Dashboard',
-      description: 'Comprehensive social media performance tracking and competitor analysis.',
-      features: [
-        'Multi-platform social media monitoring',
-        'Competitor analysis and benchmarking',
-        'Content performance analytics',
-        'Audience insights and demographics',
-        'Hashtag tracking and optimization',
-        'Automated reporting and alerts'
-      ],
-      pricing: '$199 – $1,499/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '40% improvement in engagement rates',
-        'Data-driven content strategy',
-        'Competitive advantage insights',
-        'Automated performance monitoring'
-      ],
-      category: 'Marketing Analytics'
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Video Clip Maker',
-      description: 'Automatically edit long-form videos into short, social media-ready clips using AI.',
-      features: [
-        'AI-powered video analysis and editing',
-        'Automatic highlight detection',
-        'Multi-platform format optimization',
-        'Custom branding and watermarking',
-        'Batch processing capabilities',
-        'Social media scheduling integration'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '90% time savings on video editing',
-        'Increased social media engagement',
-        'Automated content creation',
-        'Professional-quality output'
-      ],
-      category: 'Content Creation'
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Email Responder',
-      description: 'Intelligent email automation that reads and responds to emails, handling routine inquiries.',
-      features: [
-        'AI-powered email analysis and response',
-        'Context-aware reply generation',
-        'Escalation to human agents when needed',
-        'Multi-language support',
-        'Integration with CRM systems',
-        'Learning from user feedback'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        '80% reduction in response time',
-        '24/7 email handling capability',
-        'Improved customer satisfaction',
-        'Reduced workload for support teams'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: Users,
-      name: 'Event Management Dashboard',
-      description: 'Comprehensive event planning platform with ticket sales, invitations, and guest management.',
-      features: [
-        'Event creation and management tools',
-        'Ticket sales and payment processing',
-        'Guest invitation and RSVP tracking',
-        'Event scheduling and calendar integration',
-        'Real-time analytics and reporting',
-        'Mobile app for attendees'
-      ],
-      pricing: '$149 – $1,199/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        'Streamlined event organization',
-        'Increased ticket sales',
-        'Better attendee experience',
-        'Comprehensive event analytics'
-      ],
-      category: 'Event Management'
-    },
-    {
-      icon: TrendingUp,
-      name: 'Affiliate Marketing Tracking Software',
-      description: 'Complete affiliate program management with tracking, attribution, and fraud detection.',
-      features: [
-        'Customizable referral link generation',
-        'Real-time attribution tracking',
-        'Fraud detection and prevention',
-        'Automated commission calculations',
-        'Performance analytics and reporting',
-        'Integration with payment systems'
-      ],
-      pricing: '$249 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        'Increased affiliate program ROI',
-        'Automated fraud prevention',
-        'Better partner relationship management',
-        'Data-driven optimization'
-      ],
-      category: 'Marketing Automation'
-    },
-    {
-      icon: Code,
+
+const additionalServices = [
+  {
+    icon: Zap,
+    name: 'API Rate Limiter & Analytics',
+    description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
+    features: [
+      'Dynamic rate limiting based on user tiers',
+      'Real-time usage analytics and reporting',
+      'API monetization and billing integration',
+      'DDoS protection and abuse prevention',
+      'Custom rate limiting rules',
+      'Performance monitoring and optimization'
+    ],
+    pricing: '$199 – $1,999/month',
+    timeline: '1–2 weeks',
+    benefits: [
+      'Improved API performance',
+      'Better user experience',
+      'Increased revenue potential',
+      'Enhanced security'
+    ],
+    category: 'API Management'
+  }
+];
+
+const categories = [
+  'All',
+  'Content & Marketing',
+  'Social Media',
+  'Email Marketing',
+  'Productivity',
+  'Customer Service',
+  'Analytics',
+  'Finance',
+  'Security',
+  'Storage',
+  'Web Development',
+  'CRM'
+];
+
+export default function MicroSaasPage() {
+  return (
+    <Layout 
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Discover our comprehensive collection of micro SaaS applications designed to solve specific business problems with powerful, focused solutions."
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro <span className="text-blue-600">SaaS Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Powerful, focused applications that solve specific business problems. 
+                From AI content generation to project management tools.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/pricing" 
+                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Our Micro SaaS Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive micro SaaS applications designed to meet your specific business needs.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-3">Key Features</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold mb-3">Benefits</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="pt-4 border-t border-gray-200">
+                      <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
+                        <span>Pricing</span>
+                        <span className="font-semibold text-gray-900">{service.marketPrice}</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
+                        <span>Setup Time</span>
+                        <span className="font-semibold text-gray-900">{service.setupTime}</span>
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        <span className="font-medium">Target Users:</span> {service.targetUsers}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <Link 
+                      href="/contact" 
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-center block"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Let our micro SaaS solutions help you automate, optimize, and scale your business operations.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Contact Us
+                </Link>
+                <Link 
+                  href="/pricing" 
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
       name: 'AI Code Review Assistant',
       description: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
       features: [

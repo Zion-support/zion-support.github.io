@@ -327,5 +327,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
         </div>
       </section>
     </div>
+    </Layout>
   );
 }

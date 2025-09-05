@@ -160,6 +160,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }
