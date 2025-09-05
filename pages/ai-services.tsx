@@ -42,8 +42,8 @@ import {
   Mail,
   ShoppingCart,
   BookOpen,
-  Package,
-  DollarSign
+  Home,
+  Gamepad2
 } from 'lucide-react';
 
 const aiServices = [
@@ -54,7 +54,7 @@ const aiServices = [
     features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
     pricing: '$2,000 - $8,000 setup',
     category: 'Automation',
-    link: 'https://aiemail.ziontechgroup.com'
+    popular: true
   },
   {
     title: 'Predictive Analytics Platform',
@@ -63,7 +63,7 @@ const aiServices = [
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
     category: 'Analytics',
-    link: 'https://predictiveai.ziontechgroup.com'
+    popular: true
   },
   {
     title: 'Intelligent Chatbot System',
@@ -72,7 +72,7 @@ const aiServices = [
     features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
-    link: 'https://aichatbot.ziontechgroup.com'
+    popular: true
   },
   {
     title: 'Computer Vision Solutions',
@@ -80,8 +80,7 @@ const aiServices = [
     icon: Eye,
     features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
     pricing: '$3,000 - $15,000 project',
-    category: 'Computer Vision',
-    link: 'https://computervision.ziontechgroup.com'
+    category: 'Computer Vision'
   },
   {
     title: 'AI Content Generation',
@@ -89,8 +88,7 @@ const aiServices = [
     icon: FileText,
     features: ['Text Generation', 'Content Optimization', 'SEO Integration', 'Multi-format Output'],
     pricing: '$1,500 - $8,000/month',
-    category: 'Content',
-    link: 'https://aicontent.ziontechgroup.com'
+    category: 'Content'
   },
   {
     title: 'Voice AI Assistant',
@@ -98,425 +96,426 @@ const aiServices = [
     icon: Mic,
     features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
     pricing: '$2,500 - $12,000 project',
-    category: 'Voice',
-    link: 'https://voiceai.ziontechgroup.com'
+    category: 'Voice'
   },
   {
-    title: 'AI Fraud Detection System',
-    description: 'Real-time fraud detection using machine learning and behavioral analysis.',
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection using machine learning and behavioral analytics.',
     icon: Shield,
-    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'API Integration'],
+    features: ['Real-time Analysis', 'Behavioral Patterns', 'Risk Scoring', 'Automated Alerts'],
     pricing: '$5,000 - $25,000 setup',
     category: 'Security',
-    popular: true,
-    link: 'https://aifraud.ziontechgroup.com'
+    popular: true
   },
   {
-    title: 'AI Document Processing',
-    description: 'Intelligent document extraction and processing using OCR and NLP.',
-    icon: FileText,
-    features: ['OCR Processing', 'Data Extraction', 'Form Recognition', 'Automated Workflows'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Document AI',
-    link: 'https://aidocuments.ziontechgroup.com'
-  },
-  {
-    title: 'AI Recommendation Engine',
-    description: 'Personalized recommendation system using collaborative filtering and deep learning.',
-    icon: Target,
-    features: ['Collaborative Filtering', 'Deep Learning', 'Real-time Updates', 'A/B Testing'],
-    pricing: '$3,000 - $15,000/month',
-    category: 'Recommendations',
-    link: 'https://airecommendations.ziontechgroup.com'
-  },
-  {
-    title: 'AI Translation Service',
-    description: 'Advanced neural machine translation with context awareness and domain adaptation.',
-    icon: Globe,
-    features: ['Neural Translation', 'Context Awareness', 'Domain Adaptation', 'API Integration'],
-    pricing: '$1,000 - $5,000/month',
-    category: 'Translation',
-    link: 'https://aitranslation.ziontechgroup.com'
-  },
-  {
-    title: 'AI Code Generation',
-    description: 'Automated code generation and assistance using large language models.',
-    icon: Code,
-    features: ['Code Generation', 'Bug Detection', 'Code Review', 'Documentation'],
-    pricing: '$2,500 - $12,000/month',
-    category: 'Development',
-    link: 'https://aicode.ziontechgroup.com'
-  },
-  {
-    title: 'AI Medical Diagnosis',
-    description: 'AI-powered medical image analysis and diagnostic assistance.',
+    title: 'AI Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
     icon: Heart,
-    features: ['Medical Imaging', 'Diagnostic Assistance', 'Risk Assessment', 'Clinical Integration'],
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Healthcare'
+  },
+  {
+    title: 'AI Financial Modeling',
+    description: 'Advanced financial modeling and risk assessment using machine learning.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Market Prediction', 'Algorithmic Trading'],
     pricing: '$10,000 - $50,000 project',
-    category: 'Healthcare',
-    link: 'https://aimedical.ziontechgroup.com'
+    category: 'Finance'
   },
   {
     title: 'AI Supply Chain Optimization',
-    description: 'Intelligent supply chain management with demand forecasting and optimization.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
-    pricing: '$5,000 - $30,000 project',
-    category: 'Supply Chain',
-    link: 'https://aisupplychain.ziontechgroup.com'
+    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Logistics'
   },
   {
-    title: 'AI Financial Analysis',
-    description: 'Automated financial analysis and investment recommendations using AI.',
-    icon: TrendingUp,
-    features: ['Market Analysis', 'Risk Assessment', 'Portfolio Optimization', 'Real-time Alerts'],
-    pricing: '$3,000 - $20,000/month',
-    category: 'Finance',
-    link: 'https://aifinance.ziontechgroup.com'
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation system for e-commerce and content platforms.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'E-commerce'
   },
   {
-    title: 'AI Quality Control',
-    description: 'Automated quality inspection using computer vision and machine learning.',
-    icon: CheckCircle,
-    features: ['Visual Inspection', 'Defect Detection', 'Quality Scoring', 'Process Optimization'],
-    pricing: '$4,000 - $25,000 project',
-    category: 'Manufacturing',
-    link: 'https://aiquality.ziontechgroup.com'
+    title: 'AI Social Media Manager',
+    description: 'Automated social media management with content creation and scheduling.',
+    icon: Globe,
+    features: ['Content Generation', 'Optimal Posting Times', 'Engagement Analysis', 'Brand Voice Consistency'],
+    pricing: '$500 - $2,500/month',
+    category: 'Marketing'
   },
   {
-    title: 'AI Legal Document Analysis',
-    description: 'Intelligent legal document review and contract analysis using NLP.',
-    icon: BookOpen,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Document Review'],
-    pricing: '$5,000 - $30,000/month',
-    category: 'Legal',
-    link: 'https://ailegal.ziontechgroup.com'
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review and quality assurance using AI analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'Development'
+  },
+  {
+    title: 'AI Document Processing',
+    description: 'Intelligent document extraction, classification, and data processing.',
+    icon: FileText,
+    features: ['OCR Technology', 'Document Classification', 'Data Extraction', 'Workflow Automation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI Video Analytics',
+    description: 'Advanced video analysis for security, marketing, and business intelligence.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Video Analytics'
+  },
+  {
+    title: 'AI Talent Matching',
+    description: 'Intelligent candidate matching and recruitment optimization.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Cultural Fit Assessment', 'Interview Scheduling'],
+    pricing: '$2,500 - $12,000 setup',
+    category: 'HR & Recruitment'
   },
   {
     title: 'AI Energy Optimization',
-    description: 'Smart energy management and optimization using IoT and machine learning.',
+    description: 'Smart energy management and optimization for buildings and facilities.',
     icon: Zap,
-    features: ['Energy Forecasting', 'Load Optimization', 'Predictive Maintenance', 'Cost Reduction'],
-    pricing: '$3,000 - $20,000 project',
-    category: 'Energy',
-    link: 'https://aienergy.ziontechgroup.com'
+    features: ['Energy Consumption Analysis', 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Energy Management'
   },
   {
-    title: 'AI Customer Insights',
-    description: 'Advanced customer behavior analysis and insights generation.',
-    icon: Users,
-    features: ['Behavior Analysis', 'Segmentation', 'Churn Prediction', 'Personalization'],
-    pricing: '$2,000 - $12,000/month',
-    category: 'Customer Analytics',
-    link: 'https://aicustomerinsights.ziontechgroup.com'
+    title: 'AI Quality Assurance',
+    description: 'Automated quality control and defect detection in manufacturing.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Classification', 'Quality Metrics', 'Process Optimization'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Manufacturing'
   },
   {
-    title: 'AI Process Automation',
-    description: 'Intelligent process automation using RPA and machine learning.',
-    icon: Settings,
-    features: ['RPA Integration', 'Process Mining', 'Workflow Optimization', 'Exception Handling'],
-    pricing: '$4,000 - $25,000 project',
-    category: 'Process Automation',
-    link: 'https://aiprocess.ziontechgroup.com'
+    title: 'AI Legal Document Analysis',
+    description: 'Intelligent legal document review and contract analysis.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Legal Tech'
   },
   {
-    title: 'AI Research Assistant',
-    description: 'AI-powered research and data analysis for academic and business research.',
-    icon: Search,
-    features: ['Literature Review', 'Data Analysis', 'Hypothesis Generation', 'Report Generation'],
-    pricing: '$1,500 - $8,000/month',
-    category: 'Research',
-    link: 'https://airesearch.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Cybersecurity',
-    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
-    icon: Shield,
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
-    pricing: '$8,000 - $40,000/month',
-    category: 'Cybersecurity',
-    popular: true,
-    link: 'https://aicybersecurity.ziontechgroup.com'
-  },
-  {
-    title: 'AI Marketing Automation',
-    description: 'Intelligent marketing campaign optimization with predictive analytics and personalization.',
-    icon: Target,
-    features: ['Campaign Optimization', 'Predictive Analytics', 'Personalization', 'ROI Optimization'],
-    pricing: '$3,000 - $18,000/month',
-    category: 'Marketing',
-    link: 'https://aimarketing.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Drug Discovery',
-    description: 'Accelerated drug discovery using machine learning and molecular modeling.',
-    icon: Heart,
-    features: ['Molecular Modeling', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
-    pricing: '$50,000 - $500,000/project',
-    category: 'Pharmaceutical',
-    popular: true,
-    link: 'https://aidrugdiscovery.ziontechgroup.com'
-  },
-  {
-    title: 'AI Climate Change Solutions',
-    description: 'Climate modeling and environmental impact analysis using advanced AI algorithms.',
-    icon: Sprout,
-    features: ['Climate Modeling', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Sustainability Planning'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Climate Tech',
-    link: 'https://aiclimate.ziontechgroup.com'
+    title: 'AI Customer Sentiment Analysis',
+    description: 'Real-time customer sentiment analysis across multiple channels.',
+    icon: MessageSquare,
+    features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Customer Analytics'
   },
   {
     title: 'AI-Powered Autonomous Vehicles',
-    description: 'Advanced autonomous vehicle systems with computer vision and decision-making AI.',
+    description: 'Advanced autonomous vehicle systems with computer vision and decision making.',
     icon: Car,
-    features: ['Computer Vision', 'Path Planning', 'Object Detection', 'Safety Systems'],
-    pricing: '$100,000 - $1,000,000/project',
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$100,000 - $500,000 project',
     category: 'Autonomous Systems',
-    link: 'https://aiautonomous.ziontechgroup.com'
+    popular: true
   },
   {
-    title: 'AI Quantum Machine Learning',
-    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    title: 'AI Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Healthcare'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Weather Forecasting', 'Sustainability Metrics'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Environmental'
+  },
+  {
+    title: 'AI Quantum Computing Optimizer',
+    description: 'AI-powered quantum computing algorithm optimization and error correction.',
     icon: Cpu,
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Computing'],
-    pricing: '$75,000 - $500,000/project',
-    category: 'Quantum AI',
-    link: 'https://aiquantum.ziontechgroup.com'
+    features: ['Quantum Algorithm Optimization', 'Error Correction', 'Quantum State Analysis', 'Performance Tuning'],
+    pricing: '$75,000 - $300,000 project',
+    category: 'Quantum Computing'
   },
   {
     title: 'AI-Powered Space Exploration',
-    description: 'AI systems for space mission planning, satellite operations, and planetary exploration.',
+    description: 'Autonomous space mission planning and satellite constellation management.',
     icon: Rocket,
-    features: ['Mission Planning', 'Satellite Operations', 'Planetary Analysis', 'Space Weather Prediction'],
-    pricing: '$100,000 - $2,000,000/project',
-    category: 'Space Tech',
-    link: 'https://aispace.ziontechgroup.com'
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Space Technology'
   },
   {
-    title: 'AI Brain-Computer Interface',
-    description: 'Advanced brain-computer interface systems for medical and assistive applications.',
+    title: 'AI Neural Interface System',
+    description: 'Brain-computer interface with AI-powered neural signal processing.',
     icon: Brain,
     features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
-    pricing: '$200,000 - $2,000,000/project',
-    category: 'Neurotechnology',
-    link: 'https://aibci.ziontechgroup.com'
+    pricing: '$200,000 - $1,000,000 project',
+    category: 'Neurotechnology'
   },
   {
-    title: 'AI-Powered Metaverse Solutions',
-    description: 'AI-driven virtual world creation, avatar systems, and immersive experiences.',
-    icon: Globe,
-    features: ['Virtual World Creation', 'Avatar Systems', 'AI NPCs', 'Immersive Experiences'],
-    pricing: '$50,000 - $500,000/project',
-    category: 'Metaverse',
-    link: 'https://aimetaverse.ziontechgroup.com'
+    title: 'AI-Powered Smart Cities',
+    description: 'Comprehensive smart city management with AI optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$500,000 - $2,000,000 project',
+    category: 'Smart Cities'
   },
   {
-    title: 'AI-Powered Robotics',
-    description: 'Intelligent robotic systems with advanced perception and decision-making capabilities.',
-    icon: Settings,
-    features: ['Robotic Perception', 'Decision Making', 'Human-Robot Interaction', 'Autonomous Navigation'],
-    pricing: '$75,000 - $750,000/project',
-    category: 'Robotics',
-    link: 'https://airobotics.ziontechgroup.com'
+    title: 'AI Agricultural Intelligence',
+    description: 'Precision agriculture with AI-powered crop monitoring and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Agriculture'
   },
   {
-    title: 'AI-Powered Edge Computing',
-    description: 'AI inference and processing at the edge for real-time applications and IoT.',
-    icon: Network,
-    features: ['Edge AI Inference', 'Real-time Processing', 'IoT Integration', 'Distributed Learning'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Edge AI',
-    link: 'https://aiedge.ziontechgroup.com'
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Self-evolving AI cybersecurity system that adapts to new threats.',
+    icon: Shield,
+    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Cybersecurity'
   },
   {
-    title: 'AI-Powered Synthetic Data',
-    description: 'Generation of high-quality synthetic data for training and testing AI models.',
-    icon: Database,
-    features: ['Data Generation', 'Privacy Preservation', 'Model Training', 'Quality Assurance'],
-    pricing: '$10,000 - $100,000/project',
-    category: 'Synthetic Data',
-    link: 'https://aisyntheticdata.ziontechgroup.com'
+    title: 'AI Financial Trading System',
+    description: 'High-frequency trading AI with market prediction and risk management.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],
+    pricing: '$50,000 - $250,000 setup',
+    category: 'FinTech'
   },
   {
-    title: 'AI-Powered Digital Twins',
-    description: 'Digital twin creation and management for physical assets and processes.',
+    title: 'AI-Powered Virtual Reality',
+    description: 'Immersive VR experiences with AI-generated content and interactions.',
     icon: Monitor,
-    features: ['Digital Twin Creation', 'Real-time Monitoring', 'Predictive Maintenance', 'Simulation'],
-    pricing: '$30,000 - $300,000/project',
-    category: 'Digital Twins',
-    link: 'https://aidigitaltwins.ziontechgroup.com'
+    features: ['Content Generation', 'Realistic Interactions', 'Adaptive Environments', 'User Behavior Analysis'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Virtual Reality'
   },
   {
-    title: 'AI-Powered Augmented Reality',
-    description: 'AR applications with AI-powered object recognition and spatial understanding.',
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using AI for text, images, and videos.',
     icon: Eye,
-    features: ['Object Recognition', 'Spatial Understanding', 'Real-time Processing', 'AR Content Generation'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Augmented Reality',
-    link: 'https://aiar.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Blockchain Analytics',
-    description: 'Advanced blockchain analysis and cryptocurrency transaction monitoring using AI.',
-    icon: Globe,
-    features: ['Transaction Analysis', 'Anomaly Detection', 'Risk Assessment', 'Compliance Monitoring'],
-    pricing: '$15,000 - $150,000/project',
-    category: 'Blockchain AI',
-    link: 'https://aiblockchain.ziontechgroup.com'
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$0.01 - $0.05 per content item',
+    category: 'Content Safety'
   },
   {
     title: 'AI-Powered Personalization Engine',
-    description: 'Advanced personalization systems for content, products, and user experiences.',
-    icon: Users,
-    features: ['Content Personalization', 'Product Recommendations', 'User Profiling', 'Behavioral Analysis'],
-    pricing: '$5,000 - $50,000/month',
-    category: 'Personalization',
-    link: 'https://aipersonalization.ziontechgroup.com'
+    description: 'Real-time personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Content Personalization', 'A/B Testing', 'Real-time Adaptation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Personalization'
   },
   {
-    title: 'AI Voice Analytics',
-    description: 'Advanced voice analysis for emotion detection, sentiment analysis, and call optimization.',
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for emotion detection, sentiment, and speaker identification.',
     icon: Mic,
-    features: ['Emotion Detection', 'Sentiment Analysis', 'Call Optimization', 'Quality Scoring'],
-    pricing: '$2,500 - $15,000/month',
-    category: 'Voice Analytics',
-    link: 'https://aivoiceanalytics.ziontechgroup.com'
+    features: ['Emotion Detection', 'Sentiment Analysis', 'Speaker Identification', 'Voice Biometrics'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Voice Analytics'
   },
   {
-    title: 'AI Predictive Maintenance',
-    description: 'Machine learning-based predictive maintenance for industrial equipment and machinery.',
+    title: 'AI-Powered Medical Imaging',
+    description: 'AI-powered medical image analysis for diagnosis and treatment planning.',
+    icon: Heart,
+    features: ['Image Classification', 'Anomaly Detection', 'Diagnostic Support', 'Treatment Planning'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Cultural Adaptation', 'Multi-language Support'],
+    pricing: '$0.10 - $0.50 per 1000 characters',
+    category: 'Language Processing'
+  },
+  {
+    title: 'AI-Powered Search Engine',
+    description: 'Intelligent search with semantic understanding and personalized results.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalized Results', 'Natural Language Queries', 'Context Understanding'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Search Technology'
+  },
+  {
+    title: 'AI-Powered Data Visualization',
+    description: 'Intelligent data visualization with automatic chart generation and insights.',
+    icon: BarChart3,
+    features: ['Auto Chart Generation', 'Insight Discovery', 'Interactive Dashboards', 'Natural Language Queries'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Data Visualization'
+  },
+  {
+    title: 'AI-Powered Email Intelligence',
+    description: 'Smart email management with automatic categorization, prioritization, and responses.',
+    icon: Mail,
+    features: ['Auto Categorization', 'Priority Scoring', 'Smart Responses', 'Spam Detection'],
+    pricing: '$5 - $25/user/month',
+    category: 'Email Intelligence'
+  },
+  {
+    title: 'AI-Powered Workflow Automation',
+    description: 'Intelligent workflow automation with decision-making capabilities.',
     icon: Settings,
-    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
-    pricing: '$5,000 - $30,000/project',
-    category: 'Industrial AI',
-    link: 'https://aipredictivemaintenance.ziontechgroup.com'
+    features: ['Process Automation', 'Decision Making', 'Exception Handling', 'Learning Adaptation'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Workflow Automation'
   },
   {
-    title: 'AI Content Personalization',
-    description: 'Dynamic content personalization using machine learning and user behavior analysis.',
-    icon: FileText,
-    features: ['Dynamic Content', 'User Profiling', 'A/B Testing', 'Performance Optimization'],
-    pricing: '$2,000 - $12,000/month',
-    category: 'Content AI',
-    link: 'https://aicontentpersonalization.ziontechgroup.com'
+    title: 'AI-Powered Risk Assessment',
+    description: 'Comprehensive risk assessment using AI for various business domains.',
+    icon: Shield,
+    features: ['Risk Identification', 'Probability Analysis', 'Impact Assessment', 'Mitigation Strategies'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Risk Management'
   },
   {
-    title: 'AI Trading Algorithm',
-    description: 'Advanced algorithmic trading with machine learning and real-time market analysis.',
+    title: 'AI-Powered Performance Optimization',
+    description: 'AI-driven performance optimization for applications and systems.',
     icon: TrendingUp,
-    features: ['Algorithmic Trading', 'Market Analysis', 'Risk Management', 'Portfolio Optimization'],
-    pricing: '$10,000 - $50,000/month',
-    category: 'FinTech',
-    link: 'https://aitrading.ziontechgroup.com'
+    features: ['Performance Analysis', 'Bottleneck Detection', 'Optimization Recommendations', 'Auto-tuning'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Performance Optimization'
   },
   {
-    title: 'AI Image Recognition',
-    description: 'Advanced computer vision for object detection, classification, and image analysis.',
-    icon: Eye,
-    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Scene Analysis'],
-    pricing: '$2,000 - $15,000/month',
-    category: 'Computer Vision',
-    link: 'https://aiimagerecognition.ziontechgroup.com'
-  },
-  {
-    title: 'AI Natural Language Processing',
-    description: 'Advanced NLP services for text analysis, language understanding, and generation.',
-    icon: MessageSquare,
-    features: ['Text Analysis', 'Language Understanding', 'Text Generation', 'Sentiment Analysis'],
-    pricing: '$1,500 - $10,000/month',
-    category: 'NLP',
-    link: 'https://ainlp.ziontechgroup.com'
-  },
-  {
-    title: 'AI Data Mining',
-    description: 'Intelligent data mining and pattern recognition for business intelligence.',
-    icon: Database,
-    features: ['Pattern Recognition', 'Data Mining', 'Business Intelligence', 'Predictive Modeling'],
-    pricing: '$3,000 - $20,000/project',
-    category: 'Data Science',
-    link: 'https://aidatamining.ziontechgroup.com'
-  },
-  {
-    title: 'AI Video Analysis',
-    description: 'Advanced video content analysis with object tracking and behavior recognition.',
-    icon: Video,
-    features: ['Object Tracking', 'Behavior Recognition', 'Scene Analysis', 'Real-time Processing'],
-    pricing: '$4,000 - $25,000/month',
-    category: 'Video AI',
-    link: 'https://aivideoanalysis.ziontechgroup.com'
-  },
-  {
-    title: 'AI Chatbot Development',
-    description: 'Custom AI chatbot development with natural language understanding and integration.',
-    icon: Bot,
-    features: ['Custom Development', 'NLP Integration', 'Multi-platform Support', 'Analytics'],
-    pricing: '$5,000 - $30,000/project',
-    category: 'Chatbot',
-    link: 'https://aichatbotdev.ziontechgroup.com'
-  },
-  {
-    title: 'AI Sentiment Analysis',
-    description: 'Real-time sentiment analysis for social media, reviews, and customer feedback.',
-    icon: TrendingUp,
-    features: ['Real-time Analysis', 'Multi-language Support', 'Social Media Monitoring', 'Dashboard'],
-    pricing: '$1,000 - $8,000/month',
-    category: 'Sentiment Analysis',
-    link: 'https://aisentiment.ziontechgroup.com'
-  },
-  {
-    title: 'AI Price Optimization',
-    description: 'Dynamic pricing optimization using machine learning and market analysis.',
-    icon: DollarSign,
-    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Monitoring', 'Revenue Optimization'],
-    pricing: '$3,000 - $20,000/month',
-    category: 'Pricing AI',
-    link: 'https://aipriceoptimization.ziontechgroup.com'
-  },
-  {
-    title: 'AI Inventory Management',
-    description: 'Intelligent inventory optimization with demand forecasting and automated ordering.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Automated Ordering', 'Inventory Optimization', 'Cost Reduction'],
-    pricing: '$2,500 - $15,000/month',
-    category: 'Inventory AI',
-    link: 'https://aiinventory.ziontechgroup.com'
-  },
-  {
-    title: 'AI Compliance Monitoring',
-    description: 'Automated compliance monitoring and reporting using AI and regulatory intelligence.',
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting for regulatory requirements.',
     icon: CheckCircle,
-    features: ['Compliance Monitoring', 'Regulatory Intelligence', 'Automated Reporting', 'Risk Assessment'],
-    pricing: '$4,000 - $25,000/month',
-    category: 'Compliance',
-    link: 'https://aicompliance.ziontechgroup.com'
+    features: ['Regulatory Monitoring', 'Compliance Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Compliance'
   },
   {
-    title: 'AI Workflow Optimization',
-    description: 'Intelligent workflow analysis and optimization using process mining and AI.',
-    icon: Settings,
-    features: ['Process Mining', 'Workflow Analysis', 'Optimization Recommendations', 'Automation'],
-    pricing: '$3,000 - $20,000/project',
-    category: 'Workflow AI',
-    link: 'https://aiworkflow.ziontechgroup.com'
+    title: 'AI-Powered Customer Service',
+    description: 'Intelligent customer service with natural language understanding and resolution.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Intent Recognition', 'Automated Resolution', 'Escalation Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Customer Service'
   },
   {
-    title: 'AI Knowledge Management',
-    description: 'Intelligent knowledge base management with automated content organization and search.',
+    title: 'AI-Powered Investment Analysis',
+    description: 'Advanced investment analysis and portfolio optimization using AI.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Portfolio Optimization', 'Risk Assessment', 'Investment Recommendations'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Investment AI'
+  },
+  {
+    title: 'AI-Powered Content Generation',
+    description: 'Automated content generation for marketing, blogs, and social media.',
+    icon: FileText,
+    features: ['Content Creation', 'SEO Optimization', 'Brand Voice Consistency', 'Multi-format Output'],
+    pricing: '$500 - $2,500/month',
+    category: 'Content Generation'
+  },
+  {
+    title: 'AI-Powered Security Monitoring',
+    description: 'Real-time security monitoring with AI-powered threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Security AI'
+  },
+  {
+    title: 'AI-Powered Process Mining',
+    description: 'Intelligent process mining and optimization for business processes.',
+    icon: Network,
+    features: ['Process Discovery', 'Conformance Checking', 'Process Enhancement', 'Performance Analysis'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Process Mining'
+  },
+  {
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge management with automatic categorization and retrieval.',
     icon: BookOpen,
-    features: ['Content Organization', 'Intelligent Search', 'Knowledge Extraction', 'Automated Updates'],
-    pricing: '$2,000 - $12,000/month',
-    category: 'Knowledge Management',
-    link: 'https://aiknowledge.ziontechgroup.com'
+    features: ['Knowledge Extraction', 'Automatic Categorization', 'Smart Search', 'Expertise Mapping'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Knowledge Management'
   },
   {
-    title: 'AI Performance Monitoring',
-    description: 'AI-powered application and infrastructure performance monitoring with predictive alerts.',
-    icon: Monitor,
-    features: ['Performance Monitoring', 'Predictive Alerts', 'Root Cause Analysis', 'Optimization'],
-    pricing: '$2,500 - $15,000/month',
-    category: 'Performance AI',
-    link: 'https://aiperformance.ziontechgroup.com'
+    title: 'AI-Powered Decision Support',
+    description: 'AI-powered decision support systems for complex business decisions.',
+    icon: Target,
+    features: ['Decision Analysis', 'Scenario Modeling', 'Risk Assessment', 'Recommendation Engine'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Decision Support'
+  },
+  {
+    title: 'AI-Powered Robotics',
+    description: 'Intelligent robotic systems with advanced AI decision making.',
+    icon: Bot,
+    features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Learning Capabilities'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Robotics'
+  },
+  {
+    title: 'AI Music Composition',
+    description: 'AI-generated music composition with style adaptation and emotional intelligence.',
+    icon: Mic,
+    features: ['Style Adaptation', 'Emotional Intelligence', 'Instrument Simulation', 'Collaborative Composition'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI-Powered Gaming',
+    description: 'Intelligent game AI with adaptive difficulty and procedural content generation.',
+    icon: Gamepad2,
+    features: ['Adaptive Difficulty', 'Procedural Content', 'NPC Intelligence', 'Player Behavior Analysis'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Gaming'
+  },
+  {
+    title: 'AI Personal Health Coach',
+    description: 'AI-powered personal health monitoring and wellness recommendations.',
+    icon: Heart,
+    features: ['Health Monitoring', 'Wellness Recommendations', 'Symptom Analysis', 'Preventive Care'],
+    pricing: '$99 - $499/month',
+    category: 'Personal Health'
+  },
+  {
+    title: 'AI-Powered Smart Home',
+    description: 'Intelligent home automation with predictive behavior and energy optimization.',
+    icon: Home,
+    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Voice Control'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI Content Creation Studio',
+    description: 'AI-powered content creation for marketing, social media, and advertising.',
+    icon: Image,
+    features: ['Content Generation', 'Brand Consistency', 'Multi-format Output', 'Performance Optimization'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Content Marketing'
+  },
+  {
+    title: 'AI-Powered Education Platform',
+    description: 'Personalized learning platform with AI tutoring and assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'EdTech'
   }
 ];
 
@@ -621,13 +620,13 @@ export default function AIServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {aiServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -666,23 +665,13 @@ export default function AIServicesPage() {
                     <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
                   </div>
 
-                  <div className="space-y-2">
-                    <Link
-                      href={service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                    >
-                      <span>Try Now</span>
-                      <ArrowRight className="w-3 h-3 ml-1" />
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                    >
-                      <span>Get Quote</span>
-                    </Link>
-                  </div>
+                  <Link
+                    href="/contact"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                  >
+                    <span>Get Quote</span>
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </Link>
                 </motion.div>
               );
             })}
@@ -708,7 +697,7 @@ export default function AIServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (

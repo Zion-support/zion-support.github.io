@@ -86,7 +86,8 @@ const processSteps = [
   {
     step: "04",
     title: "Deployment",
-    description: "Launch your solution with full support and training"
+    description: "Launch your solution with full support and training",
+    href: "/micro-saas"
   }
 ];
 
@@ -138,28 +139,24 @@ export default function HomePage() {
           </div>
         </section>
 
----
-<MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-        {/* Background Animation */}
-        <div className="absolute inset-0">
-<div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="text-center"
-                    >
-                      <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          {/* Background Animation */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+            </div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+            </div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000">
+            </div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 AI & Technology
@@ -342,7 +339,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
                 <p className="text-gray-600 mb-4">Speak directly with our technical experts</p>
                 <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700">
-                  +1 302 464 0950;
+                  +1 302 464 0950
                 </a>
               </motion.div>
 
@@ -377,7 +374,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">Our headquarters in Delaware</p>
                 <address className="text-purple-600 font-semibold not-italic">
                   364 E Main St STE 1008<br />
-                  Middletown, DE 19709;
+                  Middletown, DE 19709
                 </address>
               </motion.div>
             </div>
