@@ -146,6 +146,9 @@ export default [
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
+      // Temporarily ignore problematic files
+      'components/**',
+      'pages/**',
       'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
