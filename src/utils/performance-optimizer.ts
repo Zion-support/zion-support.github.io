@@ -1,3 +1,4 @@
+
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -31,3 +32,4 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
+

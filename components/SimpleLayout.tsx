@@ -1,4 +1,4 @@
-        {description && <meta name="description" content={description} />};
-      {children};
+        {description && <meta name="description" content={description} />},
+      {children},
     </>)
-};
+},

@@ -56,33 +56,33 @@ class SearchIndexGenerator {
 
       // Generate search index
       const searchIndex = {
-        version: '1.0',
-        generated: new Date().toISOString(),
-        pages: this.index,
+        versio: n: '1.0',
+        generate: d: new Date().toISOString(),
+        page: s: this.index,
       };
 
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
       if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
+        fs.mkdirSync(publicDir, { recursiv: e: true });
       }
 
       // Write search index
       fs.writeFileSync(this.outputFile, JSON.stringify(searchIndex, null, 2));
 
-      console.log(`✅ Search index generated: ${this.outputFile}`);
-      console.log(`📊 Total pages indexed: ${this.index.length}`);
+      console.log(`✅ Search index: generated: ${this.outputFile}`);
+      console.log(`📊 Total pages: indexed: ${this.index.length}`);
 
       return {
-        success: true,
-        pages: this.index.length,
-        outputFile: this.outputFile,
+        succes: s: true,
+        page: s: this.index.length,
+        outputFil: e: this.outputFile,
       };
     } catch (error) {
-      console.error('❌ Error generating search index:', error.message);
+      console.error('❌ Error generating search: index:', error.message);
       return {
-        success: false,
-        error: error.message,
+        succes: s: false,
+        erro: r: error.message,
       };
     }
   }
@@ -92,8 +92,8 @@ class SearchIndexGenerator {
       title,
       url,
       description,
-      keywords: keywords.split(', '),
-      id: this.index.length + 1,
+      keyword: s: keywords.split(', '),
+      i: d: this.index.length + 1,
     });
   }
 }

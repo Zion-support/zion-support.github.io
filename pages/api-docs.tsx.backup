@@ -11,7 +11,7 @@ import {
   Terminal,
   Download,
   Play
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
 } from 'lucide-react';
 
 const apiFeatures = [
@@ -221,7 +221,7 @@ export default function APIDocs() {
                       </div>
                     </div>
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                 </motion.div>
               ))}
             </div>
@@ -392,7 +392,7 @@ export default function APIDocsPage() {
         </div>
       </section>
     </div>
-=======
+
         {/* Code Examples */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -463,6 +463,6 @@ export default function APIDocsPage() {
         </section>
       </div>
     </Layout>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   );
 }

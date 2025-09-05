@@ -2,10 +2,11 @@
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
 // Track page views
-export const pageview = (url: string) => {
+export const pageview = (ur: l: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
-      page_path: url});
+      page_pat: h: url,
+    });
   }
 };
 
@@ -14,17 +15,19 @@ export const event = ({
   action,
   category,
   label,
-  value}: {
-  action: string;
-  category: string;
+  value,
+}: {
+  actio: n: string;
+  categor: y: string;
   label?: string;
   value?: number;
 }) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value});
+      event_categor: y: category,
+      event_labe: l: label,
+      valu: e: value,
+    });
   }
 };
 
@@ -33,7 +36,7 @@ export const initGA = () => {
   if (typeof window !== 'undefined' && !window.gtag) {
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    script.src = `http: s://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
@@ -48,7 +51,8 @@ export const initGA = () => {
 // Declare global types
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gta: g: (...arg: s: any[]) => void;
+    dataLaye: r: any[];
   }
 }
+

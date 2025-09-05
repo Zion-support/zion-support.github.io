@@ -69,7 +69,7 @@ export class ApiClient {
 
 export const apiClient = new ApiClient();
 export default apiClient;
-=======
+
 // Type definitions for browser APIs
 declare global {
   interface RequestInit {

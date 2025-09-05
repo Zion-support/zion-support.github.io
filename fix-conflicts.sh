@@ -14,7 +14,7 @@ for file in $files; do
     sed -i '/^/d' "$file"
     sed -i '/^    
     # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
+    sed -i '/^
     sed -i '/^/d' "$file"
     sed -i '/^done
 

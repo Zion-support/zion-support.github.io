@@ -35,7 +35,7 @@ const generateSitemap = () => {
   writeStream.write(sitemap);
   writeStream.end();
 
-  // // // // console.log('Sitemap generated successfully at:', sitemapPath);
+  console.log('Sitemap generated successfully at:', sitemapPath);
 };
 
 generateSitemap();

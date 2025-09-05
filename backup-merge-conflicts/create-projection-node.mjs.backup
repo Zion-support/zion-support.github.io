@@ -378,7 +378,7 @@ function createProjectionNode({ attachResizeListener, defaultParent, measureScro
              */
             this.nodes.forEach(resetTransformStyle);
             /**
-             * Read ==================
+             * Read ====
              */
             // Update layout measurements of updated children
             this.nodes.forEach(updateLayout);

@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 console.log('🔧 Complete Syntax Fix');
-console.log('======================');
+console.log('=');
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
