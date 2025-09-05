@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 import { NextResponse } from "next/server";
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 import type { NextRequest } from "next/server";
 
 const publicRoutes = [
@@ -6,11 +9,34 @@ const publicRoutes = [
   "/about",
   "/contact",
   "/services",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/pricing",
+  "/team",
+  "/careers",
+  "/blog",
+  "/news",
+  "/support",
+  "/faq",
+  "/privacy",
+  "/terms",
+  "/login",
+  "/register"
+=======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   "/ai-services",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   "/it-services",
   "/micro-saas",
   "/careers",
+<<<<<<< HEAD
   "/privacy",
   "/terms",
   "/cookies",
@@ -23,10 +49,34 @@ const publicRoutes = [
 =======
   "/blog",
   "/docs",
+=======
+  "/case-studies"
+<<<<<<< HEAD
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/pricing",
+  "/team",
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   "/careers",
+  "/blog",
+  "/news",
+  "/support",
+  "/faq",
   "/privacy",
+<<<<<<< HEAD
   "/terms"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+  "/terms",
+  "/login",
+  "/register"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 ];
 
 export function middleware(request: NextRequest) {
@@ -51,9 +101,23 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     '/((?!_next/static|_next/image|favicon.ico).*)',
 =======
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+<<<<<<< HEAD
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   ],
 };

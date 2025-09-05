@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   X, 
   ChevronDown, 
@@ -13,6 +13,24 @@ import {
   Mail,
   MapPin,
   Building2,
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  X, 
+  ChevronDown, 
+  Home,
+  Briefcase,
+  Users,
+  FileText,
+  HelpCircle,
+  Phone,
+  Mail,
+  MapPin,
+<<<<<<< HEAD
+  Building2,
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   User,
   LogOut,
   Search
@@ -91,7 +109,15 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+<<<<<<< HEAD
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+  const router = useRouter();
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 
   useEffect(() => {
     if (isOpen) {
@@ -105,9 +131,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen]);
 
+<<<<<<< HEAD
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
+=======
+<<<<<<< HEAD
+  const handleDropdownToggle = (item: string) => {
+    setActiveDropdown(activeDropdown === item ? null : item);
+  };
+=======
+  const menuItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Phone },
+  ];
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 
   return (
     <AnimatePresence>
@@ -118,7 +159,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
+=======
+<<<<<<< HEAD
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+=======
+            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
             onClick={onClose}
           />
 
@@ -128,6 +177,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
+<<<<<<< HEAD
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+=======
+<<<<<<< HEAD
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -142,10 +195,35 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+=======
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+          >
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+<<<<<<< HEAD
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+=======
+                  className="p-2 text-gray-500 hover:text-gray-700"
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 
               {/* Navigation */}
               <nav className="space-y-4">
@@ -189,6 +267,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
+<<<<<<< HEAD
+=======
                     <Link
                       key={link.name}
                       href={link.href}
@@ -215,6 +295,45 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                   <div className="flex items-start text-gray-600">
                     <MapPin className="w-4 h-4 mr-3 mt-1" />
+=======
+              
+              <nav className="space-y-2">
+                {menuItems.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      onClick={onClose}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-600">
+                    <Phone className="w-4 h-4 mr-3" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <Mail className="w-4 h-4 mr-3" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+<<<<<<< HEAD
+                  <div className="flex items-start text-gray-600">
+                    <MapPin className="w-4 h-4 mr-3 mt-1" />
+=======
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <MapPin className="w-4 h-4" />
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
@@ -225,4 +344,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb

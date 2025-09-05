@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Smartphone, Database, Zap, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const products = [
   {

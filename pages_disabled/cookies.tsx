@@ -361,8 +361,6 @@ export default function CookiesPage() {
     </MainLayout>
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';
 export default function CookiesPage() {
   return (
     <div className="min-h-screen bg-gray-50">

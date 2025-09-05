@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -6,6 +7,7 @@ export interface Service {
   price?: number;
   features: string[];
 }
+
 export const findService = (query: string, services: Service[]): Service[] => {
   const searchTerm = query.toLowerCase();
   return services.filter(service => 
@@ -14,15 +16,19 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.category.toLowerCase().includes(searchTerm)
   );
 };
+
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   );
 };
+
 export default {
   findService,
   getServicesByCategory
 };
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder

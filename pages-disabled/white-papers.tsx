@@ -1,8 +1,6 @@
 import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react;
 const whitePapers = []
   {}
     id: 1,'

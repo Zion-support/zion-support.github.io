@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   User, 
   ArrowRight, 
   Tag, 
@@ -29,6 +30,10 @@ import Link from 'next/link';
 =======
 import MainLayout from '../src/components/layout/MainLayout';
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -36,40 +41,23 @@ import {
   Mail,
   MapPin,
   TrendingUp,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-  Shield,
-=======
   Users,
   Clock,
-=======
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   CheckCircle,
-  Users,
   Building,
-<<<<<<< HEAD
->>>>>>> main
-  Cloud,
-  Shield
-} from 'lucide-react';
-import Layout from '../components/Layout';
->>>>>>> main
-=======
   Globe,
   Award,
-  Clock,
   BarChart3,
   Cloud,
   Shield
 } from 'lucide-react';
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 
 const caseStudies = [
   {
     id: 1,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -77,67 +65,23 @@ const caseStudies = [
 >>>>>>> main
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
     industry: "E-commerce",
     challenge: "High customer service costs and inconsistent response quality",
     solution: "Implemented AI-powered chatbot and intelligent routing system",
-<<<<<<< HEAD
-    results: "60% reduction in support costs, 40% faster response times",
-    category: "AI Solutions",
-    duration: "3 months",
-    teamSize: "8 developers",
-    technologies: ["AI/ML", "NLP", "Python", "AWS"],
-    featured: true,
-    metrics: {
-      costReduction: "60%",
-      responseTime: "40%",
-      customerSatisfaction: "85%",
-      roi: "300%"
-    },
-    testimonial: {
-      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
-      author: "Sarah Johnson",
-      role: "VP of Customer Experience"
-    }
-  },
-  {
-    id: 2,
-    title: "Cloud Infrastructure Migration",
-    client: "Financial Services Company",
-    industry: "Financial Services",
-    challenge: "Legacy on-premise infrastructure causing scalability issues",
-    solution: "Complete migration to AWS with microservices architecture",
-    results: "99.9% uptime, 50% cost reduction, 3x faster deployment",
-    category: "IT Services",
-    duration: "6 months",
-    teamSize: "12 engineers",
-    technologies: ["AWS", "Kubernetes", "Docker", "Terraform"],
-    featured: true,
-    metrics: {
-      uptime: "99.9%",
-      costReduction: "50%",
-      deploymentSpeed: "3x",
-      scalability: "10x"
-    },
-    testimonial: {
-      quote: "The cloud migration was seamless and exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
-      author: "Michael Chen",
-      role: "CTO"
-    }
-  },
-  {
-    id: 3,
-=======
->>>>>>> main
     title: "Healthcare AI Platform Transformation",
     client: "MedTech Solutions",
->>>>>>> main
     industry: "Healthcare",
     challenge: "Manual patient data processing and diagnosis delays",
     solution: "AI-powered diagnostic platform with real-time analysis",
+<<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     results: [
       "60% reduction in support costs",
       "40% faster response times",
@@ -148,6 +92,7 @@ const caseStudies = [
     team: "8 experts",
     technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
     image: "/images/case-studies/ecommerce-ai.jpg"
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 =======
@@ -203,26 +148,11 @@ const caseStudies = [
     }
   },
   {
-    id: 6,
-    title: "Educational Technology Platform",
-    client: "Online Learning Company",
-    industry: "Education",
-    challenge: "Scaling online learning platform to support 100K+ students",
-    solution: "Cloud-native platform with AI-powered personalization",
-    results: "100K+ students, 95% satisfaction rate, 50% increase in engagement",
-    category: "Micro SaaS",
-    duration: "5 months",
-    teamSize: "10 developers",
-    technologies: ["React", "AI/ML", "Video Streaming", "Analytics"],
-    image: "/images/case-studies/education-platform.jpg",
-    featured: false
+=======
   },
   {
-<<<<<<< HEAD
-    id: 4,
-=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     id: 6,
->>>>>>> main
     title: 'Healthcare AI Transformation',
     client: 'Regional Medical Center',
     industry: 'Healthcare',
@@ -241,8 +171,11 @@ const caseStudies = [
     icon: Brain
   },
   {
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
@@ -274,6 +207,7 @@ const caseStudies = [
       "50% faster incident response"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     technologies: ["Cybersecurity", "Zero-Trust", "Compliance"],
     duration: "8 months",
     team: "15 experts",
@@ -301,6 +235,8 @@ const caseStudies = [
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     technologies: ["IoT", "Data Analytics", "Machine Learning"],
     duration: "10 months",
     team: "20 experts",
@@ -341,12 +277,16 @@ const caseStudies = [
     duration: "12 months",
     team: "25 experts",
     image: "/api/placeholder/600/400"
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   }
 ];
 
 const industries = [
+<<<<<<< HEAD
 <<<<<<< HEAD
   { name: 'All', count: caseStudies.length },
   { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
@@ -370,6 +310,8 @@ const categories = [
   { name: "Technology", count: 15, icon: Zap },
   { name: "Education", count: 7, icon: Award }
 =======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   "All Industries",
   "Healthcare",
   "E-commerce",
@@ -378,7 +320,6 @@ const categories = [
   "Real Estate",
   "SaaS",
   "Education"
->>>>>>> main
 ];
 
 const technologies = [
@@ -390,12 +331,6 @@ const technologies = [
   "PropTech",
   "SaaS Development",
   "Data Analytics"
-=======
-    duration: "4 months",
-    team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    image: "/images/case-studies/healthcare-security.jpg"
-  }
 ];
 
 const stats = [
@@ -403,46 +338,15 @@ const stats = [
   { number: "50+", label: "Happy Clients" },
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 ];
 
->>>>>>> main
 export default function CaseStudiesPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-    <Layout 
-      title="Case Studies - Zion Tech Group"
-      description="Explore our success stories and see how we've helped businesses across industries achieve their technology goals."
-      keywords="case studies, success stories, technology solutions, AI implementation, cloud migration, digital transformation"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-=======
-    <Layout
-=======
     <MainLayout
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       title="Case Studies - Zion Tech Group"
       description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
       keywords="case studies, success stories, client projects, technology solutions, AI implementation"
     >
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
->>>>>>> main
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">
@@ -453,31 +357,11 @@ export default function CaseStudiesPage() {
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories
-=======
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Stories
-                </span>
->>>>>>> main
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover how we've helped businesses transform their operations and achieve 
-                remarkable results with our innovative technology solutions.
-              </p>
->>>>>>> main
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Success{' '}
                 <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
@@ -488,14 +372,10 @@ export default function CaseStudiesPage() {
                 Discover how we've helped businesses transform and achieve their goals 
                 through innovative technology solutions.
               </p>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -514,61 +394,11 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Industries We Serve */}
-        <section className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Industries We Serve
-              </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                We have extensive experience across various industries, delivering 
-                tailored solutions that meet specific sector requirements.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => {
-                const IconComponent = industry.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {industry.name}
-                    </h3>
-                    <p className="text-3xl font-bold text-blue-600 mb-2">
-                      {industry.count}+
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      Projects Completed
-                    </p>
-                  </motion.div>
-                );
-              })}
-=======
                               {result}
                             </li>
                           ))}
@@ -595,14 +425,12 @@ export default function CaseStudiesPage() {
             </motion.h1>
             <motion.p 
               className="text-xl mb-8 text-emerald-100"
->>>>>>> main
 =======
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -702,19 +530,13 @@ export default function CaseStudiesPage() {
                     </div>
                   </motion.div>
                 ))}
->>>>>>> main
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </section>
-=======
         </div>
       </section>
 =======
         </section>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
@@ -749,60 +571,6 @@ export default function CaseStudiesPage() {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">500+</div>
-              <div className="text-gray-600">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">$50M+</div>
-              <div className="text-gray-600">Cost Savings Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
-          <p className="text-xl mb-8 text-emerald-100 max-w-3xl mx-auto">
-            Let's discuss how we can help transform your business with cutting-edge technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link href="/contact" className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Get Free Consultation
-            </Link>
-          </div>
-          
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-=======
 import { 
   Calendar, 
   User, 
@@ -1009,12 +777,16 @@ export default function CaseStudies() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -1046,6 +818,8 @@ export default function CaseStudies() {
                   Explore Our Services
                 </a>
 =======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -1073,23 +847,29 @@ export default function CaseStudies() {
                 >
                   View AI Services
                 </Link>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
     </>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 >>>>>>> main
 =======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   );
 }

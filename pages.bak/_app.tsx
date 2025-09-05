@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface _appProps {
   // Add props here as needed
 }
+
 export default function _app({ }: _appProps) {
   return (
     <div>
@@ -9,4 +11,12 @@ export default function _app({ }: _appProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

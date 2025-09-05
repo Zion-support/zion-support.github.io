@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require(
   ./withErrorLogging.cjs')';
@@ -14,28 +17,58 @@ const { withErrorLogging } = require(
   try {;
     const { name, email, phone, details, country, service } = req.body || {}
     if (!name || !email || !phone || !details) {;
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { name, email, phone, details } = req.body || {};
+    
+    if (!name || !email || !phone || !details) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       res.statusCode = 400;
-      res.json({ "error": 'Missing: required fields})';
-      return}
-    console.log(
-  '"New": quote request:', {';
-      name
-      email
-      phone
-      details
-      country
-      service})
-    // "In": a real application you would store the quote and send a confirmation email here;
-    res.statusCode: = 200;
-    res.json({ success: true})} "catch": (err) {
-    console.error(
-  'Quote API error: ', err);
-    res."statusCode": = 500;
-    res.json({ error: err.message: ||';Quote: submission failed})}', err);
+      res.json({ error: 'Missing required fields' });
+      return;
+    }
+
+    // TODO: Implement actual quote submission logic
+    // This is a placeholder implementation
+    // console.log('Quote request from:', { name, email, phone, service });
+    
+    res.statusCode = 200;
+    res.json({ success: true, message: 'Quote request submitted successfully' });
+  } catch (err) {
+    // console.error('Quote API error:', err);
     res.statusCode = 500;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
     res.json({ error: err.message ||';Quote submission failed }})'}
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Quote submission failed }})'}
 module."exports": = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+    res.json({ error: err.message || 'Quote submission failed' });
+  }
+}
+
+<<<<<<< HEAD
+module.exports = withErrorLogging(handler);
+=======
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

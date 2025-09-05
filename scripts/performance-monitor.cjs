@@ -1,98 +1,58 @@
-#!/usr/bin/env node
-/**
- * Performance Monitor
- * Basic performance monitoring for the Zion Tech Group website
- */
-
-const fs = require('fs');
-const path = require('path');
-
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {};
-    this.optimizations = [];
-    this.projectRoot = process.cwd();
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  // Monitor bundle size
-  async monitorBundleSize() {
-    this.log('📦 Monitoring bundle size...');
-    try {
-      const nextDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(nextDir)) {
-        this.log('✅ Bundle size monitoring completed');
-        this.optimizations.push('Bundle size monitoring');
-      }
-    } catch (error) {
-      this.log(`⚠️ Bundle size monitoring failed: ${error.message}`);
-    }
-  }
-
-  // Add performance optimizations
-  async addPerformanceOptimizations() {
-    this.log('🚀 Adding performance optimizations...');
-    try {
-      const optimizationsScript = `// Performance optimization utilities
-export const lazyLoadImages = () => {
-  if (typeof window === 'undefined') return;
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-        observer.unobserve(img);
-      }
-    });
-  });
-  images.forEach(img => imageObserver.observe(img));
-};`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/performance-optimizations.js'), optimizationsScript);
-      this.log('✅ Performance optimizations added');
-      this.optimizations.push('Performance optimizations');
-    } catch (error) {
-      this.log(`⚠️ Performance optimizations failed: ${error.message}`);
-    }
-  }
-
-  // Run all performance monitoring
-  async runAllPerformanceMonitoring() {
-    this.log('🚀 Starting Performance Monitoring...\n');
-    
-    try {
-      await this.monitorBundleSize();
-      await this.addPerformanceOptimizations();
-
-      this.log('\n📊 Performance Monitoring Summary:');
-      this.log(`- Optimizations applied: ${this.optimizations.length}`);
-      
-      if (this.optimizations.length > 0) {
-        this.log('\n✅ Applied optimizations:');
-        this.optimizations.forEach(opt => this.log(`  - ${opt}`));
-      }
-
-      return {
-        timestamp: new Date().toISOString(),
-        metrics: this.metrics,
-        optimizations: this.optimizations
-      };
-    } catch (error) {
-      this.log(`❌ Performance monitoring failed: ${error.message}`);
-      throw error;
-    }
-  }
-}
-
-// Run if called directly
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.runAllPerformanceMonitoring().catch(console.error);
-}
-
-module.exports = PerformanceMonitor;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+  log(message, type = 'INFO')
+      'INFO': 'ℹ'
+      'SUCCESS': ''
+      'ERROR': ''
+      'WARNING': '⚠'
+      'PERFORMANCE': '⚡'
+    }[type] || 'ℹ'
+    this.log('Measuring build time...', 'PERFORMANCE')
+      execSync('npm run build')
+        stdio: 'pipe'
+        encoding: 'utf8'
+      this.log(`Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS'`)
+      this.log(`Build failed: ${error.message}`, 'ERROR'`)
+    this.log('Analyzing bundle size...', 'PERFORMANCE')
+      const buildOutput = execSync('npm run build')
+        stdio: 'pipe'
+        encoding: 'utf8'
+      this.log(`Bundle size: ${this.metrics.bundleSize}kB`, 'INFO'`)
+      this.log(`Pages: ${this.metrics.pageCount}`, 'INFO'`)
+      this.log(`Bundle analysis failed: ${error.message}`, 'ERROR'`)
+    this.log('Checking image optimization...', 'PERFORMANCE')
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
+    const publicDir = path.join(this.projectRoot, 'public')
+              size: Math.round(stats.size / 1024) + 'KB'
+    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO'
+        type: 'image_optimization'
+        priority: 'high'
+    this.log('Checking code splitting...', 'PERFORMANCE')
+    const pagesDir = path.join(this.projectRoot, 'pages')
+        if (file.endsWith('.tsx') || file.endsWith('.jsx')
+          const content = fs.readFileSync(file, 'utf8')
+          const lines = content.split('\n')
+    this.log(`Analyzed ${totalPages} pages`, 'INFO'`)
+        type: 'code_splitting'
+        priority: 'medium'
+    this.log('Checking dependencies...', 'PERFORMANCE')
+      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'
+      const largeDeps = ['lodash', 'moment', 'jquery', 'bootstrap']
+          type: 'dependency_optimization'
+          priority: 'medium'
+          message: `Consider replacing large dependencies: ${largeDependencies.join(', '`})
+      this.log(`Dependency check failed: ${error.message}`, 'ERROR'`)
+    this.log('\n Performance Report', 'PERFORMANCE')
+    this.log('=')
+      console.log('\n Recommendations:')
+        const priority = rec.priority === 'high' ? '�' : rec.priority === 'medium' ? '�' : '�'
+          console.log(`      Details: ${rec.details.map(d => d.file || d).join(', '`})
+      this.log('� No performance issues found!', 'SUCCESS')
+    let grade = 'A'
+    if (this.metrics.performanceScore < 90) grade = 'B'
+    if (this.metrics.performanceScore < 80) grade = 'C'
+    if (this.metrics.performanceScore < 70) grade = 'D'
+    if (this.metrics.performanceScore < 60) grade = 'F'
+    this.log(' Starting Performance Monitor', 'PERFORMANCE')
+      this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)

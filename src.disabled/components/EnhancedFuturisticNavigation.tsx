@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 interface EnhancedFuturisticNavigationProps {
   // Add props here as needed
@@ -10,3 +11,5 @@ export default function EnhancedFuturisticNavigation({ }: EnhancedFuturisticNavi
     </div>
   );
 }
+=======
+>>>>>>> origin/main

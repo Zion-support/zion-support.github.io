@@ -1,7 +1,6 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
 import {},
   {
   // TODO: Implement

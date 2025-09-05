@@ -20,6 +20,7 @@ import {
   BarChart3
 =======
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   Code, 
   Cloud, 
@@ -155,6 +156,15 @@ export default function ServicesPage() {
   {
     title: 'AI & Machine Learning',
     description: 'Leverage artificial intelligence to automate processes and gain valuable insights from your data.',
+=======
+import Link from 'next/link';
+import { Brain, Network, Zap, Shield, Users, Globe, Award, Star, TrendingUp, Clock, DollarSign, BarChart3, Settings, Code, Database, Server, MessageSquare, FileText, Mic, Search, Calendar, Package, ClipboardList, ShoppingCart } from 'lucide-react';
+
+const services = [
+  {
+    title: "AI Services",
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
     icon: Brain,
     features: ['Custom AI Models', 'Data Analytics', 'Process Automation', 'Predictive Insights'],
     pricing: 'Starting at $3,999/month'
@@ -204,6 +214,169 @@ const benefits = [
     description: '99% client satisfaction rate with rigorous quality standards'
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import {
+  Brain,
+  Cloud,
+  Database,
+  Shield,
+  Code,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Globe,
+  Cpu
+} from 'lucide-react';
+
+export default function ServicesPage() {
+  const services = [
+    {
+      id: 'ai-services',
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge AI solutions and machine learning models',
+      icon: Brain,
+      features: [
+        'Custom AI model development',
+        'Natural language processing',
+        'Computer vision solutions',
+        'Predictive analytics',
+        'AI strategy consulting',
+        'Model deployment & scaling'
+      ],
+      href: '/ai-services',
+      color: 'from-blue-500 to-indigo-600',
+      bgColor: 'bg-blue-50',
+      iconColor: 'text-blue-600'
+    },
+    {
+      id: 'cloud-solutions',
+      title: 'Cloud Solutions',
+      description: 'Scalable, secure, and cost-effective cloud infrastructure for your business',
+      icon: Cloud,
+      features: [
+        'Cloud migration & strategy',
+        'Multi-cloud architecture',
+        'Serverless computing',
+        'Container orchestration',
+        'Cloud security & compliance',
+        '24/7 monitoring & support'
+      ],
+      href: '/cloud-solutions',
+      color: 'from-purple-500 to-pink-600',
+      bgColor: 'bg-purple-50',
+      iconColor: 'text-purple-600'
+    },
+    {
+      id: 'it-services',
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions to keep your business running smoothly',
+      icon: Cpu,
+      features: [
+        'Network infrastructure',
+        'System administration',
+        'IT support & maintenance',
+        'Security implementation',
+        'Backup & disaster recovery',
+        'Technology consulting'
+      ],
+      href: '/it-services',
+      color: 'from-green-500 to-teal-600',
+      bgColor: 'bg-green-50',
+      iconColor: 'text-green-600'
+    },
+    {
+      id: 'database-solutions',
+      title: 'Database Solutions',
+      description: 'Optimize your data management with our database expertise',
+      icon: Database,
+      features: [
+        'Database design & optimization',
+        'Data migration services',
+        'Performance tuning',
+        'Backup & recovery solutions',
+        'Data warehousing',
+        'Real-time analytics'
+      ],
+      href: '/database-solutions',
+      color: 'from-orange-500 to-red-600',
+      bgColor: 'bg-orange-50',
+      iconColor: 'text-orange-600'
+    },
+    {
+      id: 'security',
+      title: 'Cybersecurity',
+      description: 'Protect your business with comprehensive security solutions',
+      icon: Shield,
+      features: [
+        'Security assessment & auditing',
+        'Threat detection & response',
+        'Identity & access management',
+        'Compliance & governance',
+        'Security training',
+        'Incident response planning'
+      ],
+      href: '/security',
+      color: 'from-red-500 to-pink-600',
+      bgColor: 'bg-red-50',
+      iconColor: 'text-red-600'
+    },
+    {
+      id: 'custom-development',
+      title: 'Custom Development',
+      description: 'Bespoke software solutions tailored to your unique business needs',
+      icon: Code,
+      features: [
+        'Web application development',
+        'Mobile app development',
+        'API development & integration',
+        'Legacy system modernization',
+        'Microservices architecture',
+        'Quality assurance & testing'
+      ],
+      href: '/custom-development',
+      color: 'from-indigo-500 to-purple-600',
+      bgColor: 'bg-indigo-50',
+      iconColor: 'text-indigo-600'
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive solutions for large organizations',
+      services: ['AI Strategy', 'Cloud Migration', 'Digital Transformation', 'Security Consulting'],
+      href: '/enterprise-solutions'
+    },
+    {
+      title: 'Startup Solutions',
+      description: 'Scalable solutions for growing businesses',
+      services: ['MVP Development', 'Cloud Infrastructure', 'AI Integration', 'Growth Consulting'],
+      href: '/startup-solutions'
+    },
+    {
+      title: 'Industry Solutions',
+      description: 'Specialized solutions for different industries',
+      services: ['Healthcare', 'Finance', 'E-commerce', 'Manufacturing'],
+      href: '/industries'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 
 export default function Services() {
 >>>>>>> 2e9c29263b568858da4098d8218397d3dc948131
@@ -217,6 +390,7 @@ export default function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Navigation */}
@@ -235,6 +409,12 @@ export default function Services() {
               <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link>
             </div>
 =======
+      <div className="min-h-screen bg-gray-50">
+=======
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -252,6 +432,7 @@ export default function Services() {
       keywords="AI services, cloud solutions, cybersecurity, custom development, IT services, technology consulting"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -284,10 +465,15 @@ export default function Services() {
       </Head>
 
       <div className="min-h-screen bg-gray-50">
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -321,9 +507,20 @@ export default function Services() {
 =======
         <section className="py-20 bg-white">
 =======
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <section className="py-20 bg-white">
+=======
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -410,6 +607,7 @@ export default function Services() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Process Section */}
         <section className="px-6 py-20">
           <div className="max-w-7xl mx-auto">
@@ -441,6 +639,13 @@ export default function Services() {
 =======
         {/* Benefits Section */}
 =======
+=======
+        {/* Benefits Section */}
+=======
+<<<<<<< HEAD
+        {/* Benefits Section */}
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -507,7 +712,12 @@ export default function Services() {
       </section>
     </>
         {/* Main Services */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div

@@ -1,7 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+import Layout from '../components/Layout';
+=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users } from 'lucide-react';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
 const teamMembers = [
   {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration; describe(&apos;ServiceWorkerRegistration&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceWorkerRegistration / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
 it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration; describe(&apos;ServiceWorkerRegistration&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceWorkerRegistration / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
 import React from 'react';
@@ -12,3 +13,6 @@ export default function ServiceWorkerRegistration.test({ }: ServiceWorkerRegistr
     </div>
   );
 }
+=======
+>>>>>>> main
+>>>>>>> origin/main

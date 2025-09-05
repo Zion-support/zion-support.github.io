@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+  );
+};,
+export default EnhancedNavigation;
+=======
+<<<<<<< HEAD
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -432,6 +438,9 @@ const EnhancedNavigation: _React.FC = () => {
         )}{' '}',
       </div>{' '}',
     </nav>;,
+=======
+>>>>>>> origin/main
   );
 };,
 export default EnhancedNavigation;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
