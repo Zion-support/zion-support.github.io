@@ -1,14 +1,13 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import { execSync } from 'node:child_process';
 
-function run(cmd) {
-  try {
+function run(cmd) {}
+  try {}
     const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
-    return { ok: true, out }} catch (e) {
-    return { ok: false, out: e.stdout?.toString() || '', err: e.stderr?.toString() || e.message }}
-}
-
+    return { ok: true, out }} catch (e) {}
+    return { ok: false, out: e.stdout?.toString() || '', err: e.stderr?.toString() || e.message }};
+};
 const results = {};
 
 console.log('[Aggregate] Running health check');
@@ -20,12 +19,12 @@ results.security = run('npm run -s automation:security');
 console.log('[Aggregate] Running performance optimizer (dry)');
 results.performance = run('npm run -s automation:performance');
 
-const summary = {
+const summary = {}
   timestamp: new Date().toISOString(),
   ok: Object.values(results).every(r => r.ok),
-  details: Object.fromEntries(
-    Object.entries(results).map(([k, v]) => [k, { ok: v.ok, out: v.out?.slice(0, 5000) }])
-  )
+  details: Object.fromEntries()
+    Object.entries(results).map(([k, v]) => [k, { ok: v.ok, out: v.out?.slice(0, 5000) }]);
+  );
 };
 
 fs.mkdirSync('reports', { recursive: true });

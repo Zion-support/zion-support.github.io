@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Sitemap from '../pages/Sitemap';
-
-describe('Sitemap Integration Tests', () => {
-  test('page renders correctly', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import Sitemap from '../pages/Sitemap';''
+describe('Sitemap Integration Tests', () => {''}
+  test('page renders correctly', () => {'}
     render(<Sitemap />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  test('navigation works', () => {
+</Sitemap>
     render(<Sitemap />);
-    // Add navigation tests here
-  });
-
-  test('page content is accessible', () => {
+</Sitemap>
     render(<Sitemap />);
-    // Add accessibility tests here
-  });
-
-  test('page loads with correct data', () => {
+</Sitemap>
     render(<Sitemap />);
-    // Add data loading tests here
-  });
-});
+</Sitemap>'

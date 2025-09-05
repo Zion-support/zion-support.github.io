@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import _document from '../pages/_document';
-
-describe('_document Integration Tests', () => {
-  test('page renders correctly', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import _document from '../pages/_document';''
+describe('_document Integration Tests', () => {''}
+  test('page renders correctly', () => {'}
     render(<_document />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  test('navigation works', () => {
+</_document>
     render(<_document />);
-    // Add navigation tests here
-  });
-
-  test('page content is accessible', () => {
+</_document>
     render(<_document />);
-    // Add accessibility tests here
-  });
-
-  test('page loads with correct data', () => {
+</_document>
     render(<_document />);
-    // Add data loading tests here
-  });
-});
+</_document>'

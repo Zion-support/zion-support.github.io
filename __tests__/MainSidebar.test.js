@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import MainSidebar from '../components/MainSidebar';
-
-describe('MainSidebar', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import MainSidebar from '../components/MainSidebar';''
+describe('MainSidebar', () => {''}
+  test('renders without crashing', () => {'}
     render(<MainSidebar />);
-    expect(screen.getByTestId('mainsidebar')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</MainSidebar>
     render(<MainSidebar />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</MainSidebar>
     render(<MainSidebar />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</MainSidebar>
     render(<MainSidebar />);
-    // Add styling tests here
-  });
-});
+</MainSidebar>'

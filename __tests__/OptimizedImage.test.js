@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import OptimizedImage from '../components/OptimizedImage';
-
-describe('OptimizedImage', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import OptimizedImage from '../components/OptimizedImage';''
+describe('OptimizedImage', () => {''}
+  test('renders without crashing', () => {'}
     render(<OptimizedImage />);
-    expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</OptimizedImage>
     render(<OptimizedImage />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</OptimizedImage>
     render(<OptimizedImage />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</OptimizedImage>
     render(<OptimizedImage />);
-    // Add styling tests here
-  });
-});
+</OptimizedImage>'

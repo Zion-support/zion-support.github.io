@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-
-describe('PerformanceOptimizer', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import PerformanceOptimizer from '../components/PerformanceOptimizer';''
+describe('PerformanceOptimizer', () => {''}
+  test('renders without crashing', () => {'}
     render(<PerformanceOptimizer />);
-    expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</PerformanceOptimizer>
     render(<PerformanceOptimizer />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</PerformanceOptimizer>
     render(<PerformanceOptimizer />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</PerformanceOptimizer>
     render(<PerformanceOptimizer />);
-    // Add styling tests here
-  });
-});
+</PerformanceOptimizer>'

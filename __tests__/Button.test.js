@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Button from '../components/Button';
-
-describe('Button', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import Button from '../components/Button';''
+describe('Button', () => {''}
+  test('renders without crashing', () => {'}
     render(<Button />);
-    expect(screen.getByTestId('button')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</Button>
     render(<Button />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</Button>
     render(<Button />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</Button>
     render(<Button />);
-    // Add styling tests here
-  });
-});
+</Button>'

@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Pricing-guide from '../pages/Pricing-guide';
-
-describe('Pricing-guide Integration Tests', () => {
-  test('page renders correctly', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import Pricing-guide from '../pages/Pricing-guide';''
+describe('Pricing-guide Integration Tests', () => {''}
+  test('page renders correctly', () => {'}
     render(<Pricing-guide />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  test('navigation works', () => {
+</Pricing>
     render(<Pricing-guide />);
-    // Add navigation tests here
-  });
-
-  test('page content is accessible', () => {
+</Pricing>
     render(<Pricing-guide />);
-    // Add accessibility tests here
-  });
-
-  test('page loads with correct data', () => {
+</Pricing>
     render(<Pricing-guide />);
-    // Add data loading tests here
-  });
-});
+</Pricing>'

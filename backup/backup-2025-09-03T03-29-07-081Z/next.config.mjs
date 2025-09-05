@@ -5,28 +5,28 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+const nextConfig = {}
   reactStrictMode: true,
-  experimental: {
+  experimental: {}
     esmExternals: false,
   },
-  eslint: {
+  eslint: {}
     ignoreDuringBuilds: true,
   },
-  typescript: {
+  typescript: {}
     ignoreBuildErrors: true,
   },
-  images: {
+  images: {}
     domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
-  compiler: {
+  compiler: {}
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  webpack: config => {
-    config.module.rules.push({
+  webpack: config => {}
+    config.module.rules.push({})
       test: /\.(ts|tsx)$/,
-      exclude: [
+      exclude: []
         /node_modules/,
         /api-backup/,
         /pages\.disabled/,
@@ -42,13 +42,13 @@ const nextConfig = {
       ],
     });
 
-    config.resolve.alias = {
+    config.resolve.alias = {}
       ...config.resolve.alias,
       'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
       'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
     };
 
-    config.resolve.fallback = {
+    config.resolve.fallback = {}
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -58,7 +58,7 @@ const nextConfig = {
     return config;
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
+  onDemandEntries: {}
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
   },

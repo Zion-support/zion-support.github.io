@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SecurityHeaders from '../components/SecurityHeaders';
-
-describe('SecurityHeaders', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import SecurityHeaders from '../components/SecurityHeaders';''
+describe('SecurityHeaders', () => {''}
+  test('renders without crashing', () => {'}
     render(<SecurityHeaders />);
-    expect(screen.getByTestId('securityheaders')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</SecurityHeaders>
     render(<SecurityHeaders />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</SecurityHeaders>
     render(<SecurityHeaders />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</SecurityHeaders>
     render(<SecurityHeaders />);
-    // Add styling tests here
-  });
-});
+</SecurityHeaders>'
