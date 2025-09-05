@@ -14,6 +14,7 @@ class AppEnhancementSuite {
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
     const configPath = path.join(this.projectRoot, 'performance-config.json');
+    this.log(`Performance config will be created at: ${configPath}`);
     this.enhancements.push('Performance optimization configuration created');
   }
   
@@ -136,6 +137,7 @@ class AppEnhancementSuite {
       enhancements: this.enhancements,
       status: 'completed'
     };
+    this.log(`Enhancement report: ${JSON.stringify(report, null, 2)}`);
 
     const securityHeaders = {
       'X-Content-Type-Options': 'nosniff',
@@ -144,6 +146,7 @@ class AppEnhancementSuite {
       'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
       'Content-Security-Policy': "default-src 'self'"
     };
+    this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
     this.enhancements.push('Security headers configuration created');
   };
   createHealthCheck() {
@@ -170,6 +173,7 @@ class AppEnhancementSuite {
         }
       }
     };
+    this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
     this.enhancements.push('Health check endpoint created');
   };
 };

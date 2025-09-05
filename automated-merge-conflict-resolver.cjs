@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs'); // Unused for now
+// const path = require('path'); // Unused for now
 
 console.log('🔧 Automated Merge Conflict Resolver');
 console.log('=====================================');
@@ -152,6 +152,7 @@ function main() {
     execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { stdio: 'pipe' });
   } catch (error) {
     console.log('ℹ️  No merge conflicts detected. Nothing to resolve.');
+    console.log(`Debug: ${error.message}`);
     return;
   }
 
