@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -106,3 +107,16 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
+=======
+  };
+};
+,
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+,
+console.log('🎉 Syntax error fixes completed'),
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -85,3 +86,8 @@ export function usePerformanceMonitor() {
 
   return { metrics, isSupported };
 }
+=======
+};
+,
+export default usePerformanceMonitor,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

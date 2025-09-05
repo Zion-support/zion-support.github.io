@@ -8,7 +8,11 @@ console.log('🚀 Starting Comprehensive Improvements...');
 
 class ComprehensiveImprovements {
   constructor() {
-    this.logFile = path.join(__dirname, 'automation-reports', 'comprehensive-improvements.log');
+    this.logFile = path.join(
+      __dirname,
+      'automation-reports',
+      'comprehensive-improvements.log'
+    );
     this.ensureLogDir();
   }
 
@@ -29,10 +33,10 @@ class ComprehensiveImprovements {
   async runCommand(command, description) {
     try {
       this.log(`🚀 ${description}`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
+      const result = execSync(command, {
+        encoding: 'utf8',
         stdio: 'pipe',
-        cwd: __dirname
+        cwd: __dirname,
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -44,11 +48,11 @@ class ComprehensiveImprovements {
 
   async improveCodeQuality() {
     this.log('🔧 Improving code quality...');
-    
+
     const improvements = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
       { cmd: 'npm run type-check', desc: 'Check TypeScript types' },
-      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax errors' }
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax errors' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -58,11 +62,11 @@ class ComprehensiveImprovements {
 
   async improvePerformance() {
     this.log('⚡ Improving performance...');
-    
+
     const improvements = [
       { cmd: 'npm run performance:analyze', desc: 'Analyze performance' },
       { cmd: 'npm run performance:optimize', desc: 'Optimize performance' },
-      { cmd: 'npm run build:analyze', desc: 'Analyze bundle size' }
+      { cmd: 'npm run build:analyze', desc: 'Analyze bundle size' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -72,11 +76,11 @@ class ComprehensiveImprovements {
 
   async improveSecurity() {
     this.log('🔒 Improving security...');
-    
+
     const improvements = [
       { cmd: 'npm run security:scan', desc: 'Security scan' },
       { cmd: 'npm run security:audit', desc: 'Security audit' },
-      { cmd: 'npm audit fix', desc: 'Fix security vulnerabilities' }
+      { cmd: 'npm audit fix', desc: 'Fix security vulnerabilities' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -86,10 +90,10 @@ class ComprehensiveImprovements {
 
   async improveAccessibility() {
     this.log('♿ Improving accessibility...');
-    
+
     const improvements = [
       { cmd: 'npm run automation:accessibility', desc: 'Accessibility check' },
-      { cmd: 'npm run test:accessibility', desc: 'Accessibility tests' }
+      { cmd: 'npm run test:accessibility', desc: 'Accessibility tests' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -99,10 +103,10 @@ class ComprehensiveImprovements {
 
   async improveSEO() {
     this.log('🔍 Improving SEO...');
-    
+
     const improvements = [
       { cmd: 'npm run automation:seo', desc: 'SEO optimization' },
-      { cmd: 'npm run sitemap:generate', desc: 'Generate sitemap' }
+      { cmd: 'npm run sitemap:generate', desc: 'Generate sitemap' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -112,11 +116,11 @@ class ComprehensiveImprovements {
 
   async improveTesting() {
     this.log('🧪 Improving testing...');
-    
+
     const improvements = [
       { cmd: 'npm run test:coverage', desc: 'Test coverage' },
       { cmd: 'npm run test:comprehensive', desc: 'Comprehensive tests' },
-      { cmd: 'npm run test:ai', desc: 'AI-powered tests' }
+      { cmd: 'npm run test:ai', desc: 'AI-powered tests' },
     ];
 
     for (const { cmd, desc } of improvements) {
@@ -126,7 +130,7 @@ class ComprehensiveImprovements {
 
   async generateImprovementReport() {
     this.log('📊 Generating improvement report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       status: 'completed',
@@ -136,18 +140,22 @@ class ComprehensiveImprovements {
         security: 'completed',
         accessibility: 'completed',
         seo: 'completed',
-        testing: 'completed'
+        testing: 'completed',
       },
       summary: 'Comprehensive improvements completed successfully',
       nextSteps: [
         'Review generated reports',
         'Implement additional optimizations',
         'Monitor performance metrics',
-        'Schedule regular improvements'
-      ]
+        'Schedule regular improvements',
+      ],
     };
 
-    const reportPath = path.join(__dirname, 'automation-reports', 'comprehensive-improvements-report.json');
+    const reportPath = path.join(
+      __dirname,
+      'automation-reports',
+      'comprehensive-improvements-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
   }
@@ -155,16 +163,16 @@ class ComprehensiveImprovements {
   async run() {
     try {
       this.log('🎯 Starting comprehensive improvements...');
-      
+
       await this.improveCodeQuality();
       await this.improvePerformance();
       await this.improveSecurity();
       await this.improveAccessibility();
       await this.improveSEO();
       await this.improveTesting();
-      
+
       await this.generateImprovementReport();
-      
+
       this.log('🎉 Comprehensive improvements completed successfully!');
     } catch (error) {
       this.log(`❌ Comprehensive improvements failed: ${error.message}`);

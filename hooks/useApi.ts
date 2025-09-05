@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
@@ -39,3 +40,16 @@ export function useApi<T>(url: string, options?: RequestInit) {
 
   return state;
 }
+=======
+      setLoading(false)};
+  }, [apiFunction, options]),
+  useEffect(() => {,
+    if (options.immediate) {,
+      execute()};
+  }, [execute, options.immediate]),
+  return { data, loading, error, execute }};
+};
+};
+};
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

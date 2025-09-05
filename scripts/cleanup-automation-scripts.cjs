@@ -8,7 +8,7 @@ console.log('🧹 Cleaning up automation scripts...');
 // List of problematic files to remove or fix
 const filesToRemove = [
   'automation/intelligent-orchestrator.js',
-  'automation/lint-automation-manager.js', 
+  'automation/lint-automation-manager.js',
   'automation/lint-error-fixer.js',
   'automation/lint-monitor.js',
   'automation/linting-automation.js',
@@ -110,7 +110,7 @@ const filesToRemove = [
   'simple-automation-suite.cjs',
   'simple-catch-fixer.cjs',
   'targeted-fix.cjs',
-  'working-automation-suite.cjs'
+  'working-automation-suite.cjs',
 ];
 
 let removedCount = 0;
@@ -139,7 +139,7 @@ const dirsToCheck = [
   'pages.disabled.full',
   'pages.disabled_full',
   'pages-quarantine',
-  'src.pages.disabled'
+  'src.pages.disabled',
 ];
 
 dirsToCheck.forEach(dir => {

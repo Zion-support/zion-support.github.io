@@ -18,7 +18,7 @@ class MasterAutomation {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    
+
     // Write to log file
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -27,10 +27,10 @@ class MasterAutomation {
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, { 
-        encoding: 'utf8', 
+      const output = execSync(command, {
+        encoding: 'utf8',
         cwd: '/workspace',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -42,18 +42,18 @@ class MasterAutomation {
 
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
-    
+
     const steps = [
       { command: 'npm install', description: 'Installing dependencies' },
       { command: 'npm run build', description: 'Building application' },
-      { command: 'npm run test:smoke', description: 'Running smoke tests' }
+      { command: 'npm run test:smoke', description: 'Running smoke tests' },
     ];
 
     const results = [];
     for (const step of steps) {
       const result = await this.runCommand(step.command, step.description);
       results.push({ ...step, result });
-      
+
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
@@ -66,10 +66,10 @@ class MasterAutomation {
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
-    
+
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
-      { command: 'npm run type-check', description: 'TypeScript type check' }
+      { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
 
     const results = [];
@@ -84,11 +84,20 @@ class MasterAutomation {
 
   async runAutomationScripts() {
     this.log('🤖 Running automation scripts...');
-    
+
     const scripts = [
-      { command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs', description: 'AI Code Analyzer' },
-      { command: 'node scripts/automation/intelligent-git-workflow.cjs', description: 'Git Workflow Automation' },
-      { command: 'node scripts/automation/advanced-performance-optimizer.cjs', description: 'Performance Optimizer' }
+      {
+        command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node scripts/automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node scripts/automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
     ];
 
     const results = [];
@@ -103,7 +112,7 @@ class MasterAutomation {
 
   async generateReport() {
     this.log('📊 Generating automation report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       build: await this.runBuildProcess(),
@@ -112,24 +121,27 @@ class MasterAutomation {
       summary: {
         totalScripts: 3,
         successfulScripts: 0,
-        failedScripts: 0
-      }
+        failedScripts: 0,
+      },
     };
 
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-    
+
     if (report.quality.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-    
+
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
 
     // Save report
-    const reportFile = path.join(this.logsDir, `automation-report-${Date.now()}.json`);
+    const reportFile = path.join(
+      this.logsDir,
+      `automation-report-${Date.now()}.json`
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
+
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   }
@@ -143,12 +155,12 @@ class MasterAutomation {
 
   async status() {
     this.log('📊 Checking automation status...');
-    
+
     const status = {
       timestamp: new Date().toISOString(),
       buildStatus: 'unknown',
       gitStatus: 'unknown',
-      dependenciesStatus: 'unknown'
+      dependenciesStatus: 'unknown',
     };
 
     // Check build status
@@ -161,7 +173,10 @@ class MasterAutomation {
 
     // Check git status
     try {
-      const gitResult = await this.runCommand('git status --porcelain', 'Git status check');
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
     } catch (error) {
       status.gitStatus = 'error';
@@ -169,7 +184,10 @@ class MasterAutomation {
 
     // Check dependencies
     try {
-      const depsResult = await this.runCommand('npm list --depth=0', 'Dependencies check');
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
     } catch (error) {
       status.dependenciesStatus = 'error';
@@ -187,22 +205,28 @@ if (require.main === module) {
 
   switch (command) {
     case 'start':
-      automation.start().then(report => {
-        console.log('Automation completed:', report.summary);
-        process.exit(0);
-      }).catch(error => {
-        console.error('Automation failed:', error);
-        process.exit(1);
-      });
+      automation
+        .start()
+        .then(report => {
+          console.log('Automation completed:', report.summary);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Automation failed:', error);
+          process.exit(1);
+        });
       break;
     case 'status':
-      automation.status().then(status => {
-        console.log('Status:', status);
-        process.exit(0);
-      }).catch(error => {
-        console.error('Status check failed:', error);
-        process.exit(1);
-      });
+      automation
+        .status()
+        .then(status => {
+          console.log('Status:', status);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Status check failed:', error);
+          process.exit(1);
+        });
       break;
     default:
       console.log('Usage: node master-automation.cjs [start|status]');

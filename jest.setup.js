@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -65,6 +66,8 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
