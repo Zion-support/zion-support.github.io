@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/launch/index.jsx import React from 'react'';'; import JSZip from 'jszip'';'; import { saveAs } from 'file-saver'';'; import { AppLayout } from '@/layout/AppLayout'';'; import { NextSeo } from '@/components/NextSeo'';'; import { Button } from '@/components/ui/button''; import { Tabs,TabsList,TabsTrigger,TabsContent } from "@/components/ui/tabs"';''; import { Input } from '@/components/ui/input'';'; import { Label } from '@/components/ui/label'';'; import React from 'react'';'; import JSZip from 'jszip'';'; import { saveAs } from 'file-saver'';'; import { AppLayout } from '@/layout/AppLayout'';'; import { NextSeo } from '@/components/NextSeo'';'; import { Button } from '@/components/ui/button''; import { Tabs,TabsList,TabsTrigger,TabsContent } from "@/components/ui/tabs"';''; import { Input } from '@/components/ui/input'';'; import { Label } from '@/components/ui/label'';'';'";
+import React from 'react';
+
+interface IndexProps {
+  // Add props here as needed
+}
+
+export default function Index({ }: IndexProps) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

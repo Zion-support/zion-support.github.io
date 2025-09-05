@@ -97,7 +97,8 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
-    "default": console.log('Usage: node automation/master-orchestrator.cjs check');
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
       process.exit(1);
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const jobOpenings = [{
     "id": 1,
@@ -135,7 +135,7 @@ const values = ["Innovation and creativity",
 
 export default function TalentPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -186,7 +186,7 @@ export default function TalentPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
@@ -280,7 +280,7 @@ export default function TalentPage() {
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
                   viewport={{ "once": true }}
                 >
-                  <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between mb-6">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
                         {job.title}
@@ -305,7 +305,7 @@ export default function TalentPage() {
                     </div>
                     <Link
                       href={`/talent/${job.id}`}
-                      className="mt-4 lg: mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
+                      className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
                       Apply Now
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -316,7 +316,7 @@ export default function TalentPage() {
                     {job.description}
                   </p>
                   
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                       <ul className="space-y-1">
@@ -355,7 +355,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl md: text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don&apos;t See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -368,6 +368,6 @@ export default function TalentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

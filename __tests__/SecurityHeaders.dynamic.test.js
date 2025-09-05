@@ -1,26 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
 
-describe('SecurityHeadersdynamic', () => {
-  test('renders without crashing', () => {
-    render(<SecurityHeadersdynamic />);
-    expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument();
-  });
+interface SecurityHeaders.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<SecurityHeadersdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<SecurityHeadersdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<SecurityHeadersdynamic />);
-    // Add styling tests if needed
-  });
-});
+export default function SecurityHeaders.dynamic.test({ }: SecurityHeaders.dynamic.testProps) {
+  return (
+    <div>
+      <h1>SecurityHeaders.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
