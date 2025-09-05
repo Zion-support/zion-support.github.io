@@ -7,7 +7,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
-
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -39,14 +38,14 @@ export function PaymentButton({
       navigate("/login", { 
         state: { from: window.location.pathname } 
       }),
-      return,
+      return
     }
     
     try {
       setIsProcessing(true),
       
       if (onPaymentInitiated) {
-        onPaymentInitiated(),
+        onPaymentInitiated()
       }
       
       // Call the create-checkout edge function
@@ -60,14 +59,14 @@ export function PaymentButton({
           cancelUrl: window.location.href}}),
       
       if (error) {
-        throw error,
+        throw error
       }
       
       if (data?.url) {
         // Open Stripe checkout in a new tab
-        window.open(data.url, '_blank'),
+        window.open(data.url, '_blank')
       } else {
-        throw new Error("No checkout URL returned"),
+        throw new Error("No checkout URL returned")
       }
       
     } catch (error) {
@@ -75,12 +74,12 @@ export function PaymentButton({
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
-        setIsProcessing(false),
-      }, 1500),
+        setIsProcessing(false)
+      }, 1500)
     }
   },
   
@@ -102,5 +101,5 @@ export function PaymentButton({
         buttonText
       )}
     </Button>
-  ),
+  )
 }

@@ -1,20 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
 function readAll() {
   try {
-    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8')),
+    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'))
   } catch {
-    return [],
+    return []
   }
 }
 
 function writeAll(items: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2)),
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2))
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -27,5 +26,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (idx === -1) return res.status(404).json({ error: 'Not found' }),
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() },
   writeAll(items),
-  res.status(200).json({ ok: true }),
+  res.status(200).json({ ok: true })
 }

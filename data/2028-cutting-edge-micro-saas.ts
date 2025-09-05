@@ -12,7 +12,7 @@ export interface CuttingEdgeMicroSaas2028 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [

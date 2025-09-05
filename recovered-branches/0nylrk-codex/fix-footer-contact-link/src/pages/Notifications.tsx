@@ -19,7 +19,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
-
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -35,7 +34,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     case 'system':
       return <AlertCircle className={cn(className, "text-yellow-500")} />,
     default:
-      return <Bell className={cn(className, "text-gray-500")} />,
+      return <Bell className={cn(className, "text-gray-500")} />
   }
 },
 
@@ -76,11 +75,11 @@ const NotificationCard: React.FC<{
   
   const handleAction = () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id),
+      onMarkAsRead(notification.id)
     }
     
     if (notification.action_url) {
-      navigate(notification.action_url),
+      navigate(notification.action_url)
     }
   },
   
@@ -148,7 +147,7 @@ const NotificationCard: React.FC<{
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 export default function NotificationsPage() {
@@ -235,5 +234,5 @@ export default function NotificationsPage() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

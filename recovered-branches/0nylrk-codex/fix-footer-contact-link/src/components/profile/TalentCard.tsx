@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { Link } from "react-router-dom",
 import { TalentProfile } from "@/types/talent",
-
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -24,7 +23,7 @@ export function TalentCard({
 }: TalentCardProps) {
   const handleViewProfile = () => {
     if (onViewProfile) {
-      onViewProfile(talent.id),
+      onViewProfile(talent.id)
     }
   },
 
@@ -40,7 +39,7 @@ export function TalentCard({
     e.preventDefault(),
     e.stopPropagation(),
     if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved),
+      onToggleSave(talent.id, !isSaved)
     }
   },
 

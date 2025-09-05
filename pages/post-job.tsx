@@ -1,6 +1,5 @@
 import { useState } from 'react',
 import { useRouter } from 'next/router',
-
 export default function PostJobPage() {
   const router = useRouter(),
   const [title, setTitle] = useState(''),
@@ -44,11 +43,11 @@ export default function PostJobPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to post job'),
 
-      router.push(`/client/dashboard`),
+      router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message || 'Something went wrong')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
 
@@ -98,5 +97,5 @@ export default function PostJobPage() {
         </div>
       </form>
     </div>
-  ),
+  )
 }

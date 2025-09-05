@@ -4,7 +4,6 @@ import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } f
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-
 export default function AIGuardrailsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -14,9 +13,7 @@ export default function AIGuardrailsPage() {
 	},
 
 	const features = [
-		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detection',
-		'PII/PHI detection and redactionToxicity, bias and safety classifiers',
-		'Human handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
+		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detectionPII/PHI detection and redactionToxicity, bias and safety classifiersHuman handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
 	],
 
 	return (
@@ -85,5 +82,5 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
-	),
+	)
 }

@@ -10,9 +10,9 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   for (let i = 0, i < n, i++) {
     const change = (Math.random() - 0.5) * 2 * volatility * base,
     last = Math.max(0, Math.round(last + change)),
-    series.push(last),
+    series.push(last)
   }
-  return series,
+  return series
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const labels = Array.from({ length: 14 }, (_, i) => {
     const d = new Date(now),
     d.setDate(d.getDate() - (13 - i)),
-    return `${d.getMonth() + 1}/${d.getDate()}`,
+    return `${d.getMonth() + 1}/${d.getDate()}`
   }),
 
   const marketplace = [
@@ -70,8 +70,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
-        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}},
+        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
 
-  res.status(200).json(response),
+  res.status(200).json(response)
 }

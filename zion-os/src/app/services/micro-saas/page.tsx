@@ -1,7 +1,6 @@
 "use client",
 
 import { useState } from "react",
-
 interface MicroSAASService {
   id: string,
   name: string,

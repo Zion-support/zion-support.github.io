@@ -16,7 +16,6 @@ import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal",
 import { QuoteFormData } from "@/types/quotes",
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod",
-
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 
 const serviceStepSchema = z.object({
@@ -56,7 +55,7 @@ export function QuoteRequestForm() {
     setFormData(prev => ({
       ...prev,
       ...data
-    })),
+    }))
   },
   
   const handleNext = () => {
@@ -70,10 +69,10 @@ export function QuoteRequestForm() {
             title: "Service Required",
             description: "Please select a service before continuing.",
             variant: "destructive"}),
-          return,
+          return
         }
         setCurrentStep("details"),
-        break,
+        break
       }
       case "details": setCurrentStep("timeline"),
         break,
@@ -121,14 +120,14 @@ export function QuoteRequestForm() {
         description: "We've received your request and will get back to you soon."}),
       
       // Redirect to confirmation page or homepage
-      router.push("/"),
+      router.push("/")
     } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -151,15 +150,15 @@ export function QuoteRequestForm() {
         timeline: timeline || formData.timeline,
         budget: { ...formData.budget, ...(budget || {}) }}),
       setCurrentStep("summary"),
-      setAutoFillOpen(false),
+      setAutoFillOpen(false)
     } catch (err) {
       logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description }),
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setAutoFillLoading(false),
+      setAutoFillLoading(false)
     }
   },
   
@@ -250,5 +249,5 @@ export function QuoteRequestForm() {
         loading={autoFillLoading}
       />
     </div>
-  ),
+  )
 }

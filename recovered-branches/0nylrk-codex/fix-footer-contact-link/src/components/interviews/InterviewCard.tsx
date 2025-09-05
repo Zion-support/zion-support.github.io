@@ -12,7 +12,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
-
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
@@ -44,9 +43,9 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   
   const getRelativeTime = () => {
     if (isPast(interviewDate)) {
-      return `Took place ${formatDistanceToNow(interviewDate)} ago`,
+      return `Took place ${formatDistanceToNow(interviewDate)} ago`
     } else {
-      return `Starts in ${formatDistanceToNow(interviewDate)}`,
+      return `Starts in ${formatDistanceToNow(interviewDate)}`
     }
   },
 
@@ -63,15 +62,15 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         description: `You have successfully ${status} the interview request.`
       }),
       setIsResponseDialogOpen(false),
-      await onRefresh(),
+      await onRefresh()
     } else {
       toast({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive"
-      }),
+      })
     }
-    setIsLoading(false),
+    setIsLoading(false)
   },
 
   const handleCancelInterview = async () => {
@@ -83,15 +82,15 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         title: "Interview cancelled",
         description: "The interview has been cancelled successfully."
       }),
-      await onRefresh(),
+      await onRefresh()
     } else {
       toast({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
         variant: "destructive"
-      }),
+      })
     }
-    setIsLoading(false),
+    setIsLoading(false)
   },
 
   const getStatusBadge = () => {
@@ -111,15 +110,15 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       case 'cancelled':
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
-        return <Badge>{interview.status}</Badge>,
+        return <Badge>{interview.status}</Badge>
     }
   },
   
   const getOtherPartyName = () => {
     if (isClient) {
-      return interview.talent_name || 'Talent',
+      return interview.talent_name || 'Talent'
     } else {
-      return interview.client_name || 'Client',
+      return interview.client_name || 'Client'
     }
   },
 
@@ -274,5 +273,5 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </DialogContent>
       </Dialog>
     </Card>
-  ),
+  )
 }

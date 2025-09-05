@@ -4,7 +4,6 @@ import { motion } from 'framer-motion',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
-
 export default function QuantumCybersecurityServices() {
   return (
     <>

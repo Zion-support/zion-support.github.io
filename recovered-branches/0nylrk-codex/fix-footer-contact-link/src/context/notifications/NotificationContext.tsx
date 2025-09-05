@@ -3,7 +3,6 @@ import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { useNotificationOperations } from './useNotificationOperations',
 import { NotificationContextType } from './types',
-
 // Default context used when React type definitions are missing. Providing a
 // fully-typed object here avoids TypeScript errors that occur when an untyped
 // `createContext` call returns `{}` instead of the expected shape.
@@ -27,9 +26,9 @@ const NotificationContext = createContext(
 export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType,
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider'),
+    throw new Error('useNotifications must be used within a NotificationProvider')
   }
-  return context,
+  return context
 },
 
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
@@ -53,14 +52,14 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           },
           (payload) => {
             // // // console.log('Notification change received:', payload),
-            notificationOps.fetchNotifications(),
+            notificationOps.fetchNotifications()
           }
         )
         .subscribe(),
         
       return () => {
-        supabase.removeChannel(channel),
-      },
+        supabase.removeChannel(channel)
+      }
     }
   }, [user]),
   
@@ -68,5 +67,5 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     <NotificationContext.Provider value={notificationOps}>
       {children}
     </NotificationContext.Provider>
-  ),
+  )
 },

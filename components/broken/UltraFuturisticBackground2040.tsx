@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2040: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -36,9 +35,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        color: ['#06b6d4#3b82f6', '#8b5cf6#ec4899'][Math.floor(Math.random() * 4)],
+        color: ['#06b6d4#3b82f6#8b5cf6#ec4899'][Math.floor(Math.random() * 4)],
         opacity: Math.random() * 0.5 + 0.1
-      }),
+      })
     }
 
     const animate = () => {
@@ -72,7 +71,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.fillStyle = particle.color,
         ctx.fill(),
         
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw connecting lines between nearby particles
@@ -89,7 +88,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -105,14 +104,14 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, canvas.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       
       for (let y = offset, y < canvas.height, y += gridSize) {
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
       // Draw floating geometric shapes
@@ -132,12 +131,12 @@ const UltraFuturisticBackground2040: React.FC = () => {
         
         if (index === 0) {
           // Square
-          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size),
+          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
         } else if (index === 1) {
           // Circle
           ctx.beginPath(),
           ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2),
-          ctx.stroke(),
+          ctx.stroke()
         } else {
           // Triangle
           ctx.beginPath(),
@@ -145,10 +144,10 @@ const UltraFuturisticBackground2040: React.FC = () => {
           ctx.lineTo(shape.size/2, shape.size/2),
           ctx.lineTo(-shape.size/2, shape.size/2),
           ctx.closePath(),
-          ctx.stroke(),
+          ctx.stroke()
         }
         
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw energy waves
@@ -164,30 +163,30 @@ const UltraFuturisticBackground2040: React.FC = () => {
         for (let x = -100, x < canvas.width + 100, x += 5) {
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20,
           if (x === -100) {
-            ctx.moveTo(x, y),
+            ctx.moveTo(x, y)
           } else {
-            ctx.lineTo(x, y),
+            ctx.lineTo(x, y)
           }
         }
-        ctx.stroke(),
+        ctx.stroke()
       }
 
-      animationFrameId = requestAnimationFrame(animate),
+      animationFrameId = requestAnimationFrame(animate)
     },
 
     animate(),
 
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId),
-    },
+      cancelAnimationFrame(animationFrameId)
+    }
   }, []),
 
   return (
@@ -336,10 +335,10 @@ const UltraFuturisticBackground2040: React.FC = () => {
       <style jsx>{`
         @keyframes gridMove {
           0% {
-            transform: translate(0, 0),
+            transform: translate(0, 0)
           }
           100% {
-            transform: translate(50px, 50px),
+            transform: translate(50px, 50px)
           }
         }
         
@@ -362,7 +361,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         }
       `}</style>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2040,

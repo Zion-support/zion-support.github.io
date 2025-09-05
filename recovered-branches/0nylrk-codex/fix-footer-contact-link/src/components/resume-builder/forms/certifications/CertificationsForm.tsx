@@ -9,7 +9,6 @@ import { useResume } from '@/hooks/useResume',
 import { Alert, AlertDescription } from '@/components/ui/alert',
 import { zodResolver } from '@hookform/resolvers/zod',
 import { format } from 'date-fns',
-
 import { CertificationsList } from './CertificationsList',
 import { CertificationFormFields } from './CertificationFormFields',
 import { CertificationFormValues, certificationSchema } from './types',
@@ -30,7 +29,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
+    return format(dateValue, 'yyyy-MM-dd')
   },
 
   const form = useForm<CertificationFormValues>({
@@ -57,9 +56,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         credential_url: data.credential_url},
 
       if (editingId) {
-        success = await updateCertification(editingId, certData),
+        success = await updateCertification(editingId, certData)
       } else {
-        success = await addCertification(resumeId, certData),
+        success = await addCertification(resumeId, certData)
       }
 
       if (success) {
@@ -70,7 +69,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           expiration_date: '',
           credential_id: '',
           credential_url: ''}),
-        setEditingId(null),
+        setEditingId(null)
       }
     } catch (err: any) {
       setError(err.message || 'An error occurred')
@@ -82,7 +81,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form.reset({
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date)}),
+      expiration_date: formatDateValue(cert.expiration_date)})
   },
 
   const handleDelete = async (id: string) => {
@@ -132,9 +131,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-                      credential_url: ''}),
+                      credential_url: ''})
                   } else {
-                    onBack(),
+                    onBack()
                   }
                 }}
               >
@@ -156,5 +155,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </Form>
       </div>
     </div>
-  ),
+  )
 }

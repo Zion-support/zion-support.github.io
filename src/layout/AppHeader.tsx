@@ -16,7 +16,6 @@ import { useSelector } from 'react-redux',
 import type { RootState } from '@/store',
 import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router',
-
 export function AppHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
@@ -36,7 +35,7 @@ export function AppHeader() {
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true),
+    setLoginOpen(true)
   },
   
   return (
@@ -92,7 +91,7 @@ export function AppHeader() {
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
-                  openLoginModal(router.asPath),
+                  openLoginModal(router.asPath)
                 }}
               >
                 {t('auth.login')}
@@ -138,5 +137,5 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  ),
+  )
 }

@@ -12,11 +12,10 @@ import {
   DialogTitle} from '@/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe',
-
 interface GuestCheckoutModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
-  onSubmit: (details: { email: string, address: string }) => void,
+  onSubmit: (details: { email: string, address: string }) => void
 }
 
 export default function GuestCheckoutModal({
@@ -37,9 +36,9 @@ export default function GuestCheckoutModal({
 
     setIsSubmitting(true),
     try {
-      onSubmit({ email, address }),
+      onSubmit({ email, address })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -127,5 +126,5 @@ export default function GuestCheckoutModal({
         </form>
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

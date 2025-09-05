@@ -21,16 +21,16 @@ export function StickyAction({
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
-        setIsVisible(true),
+        setIsVisible(true)
       } else {
-        setIsVisible(false),
+        setIsVisible(false)
       }
     },
 
     window.addEventListener("scroll", handleScroll),
     return () => {
-      window.removeEventListener("scroll", handleScroll),
-    },
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [showAfterScroll]),
 
   const positionClasses = {
@@ -58,5 +58,5 @@ export function StickyAction({
         </motion.div>
       )}
     </AnimatePresence>
-  ),
+  )
 }

@@ -1,7 +1,6 @@
 
 import { useState, useMemo } from 'react',
 import { TalentProfile } from '@/types/talent',
-
 export function useFilterTalents(talents: TalentProfile[]) {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]),
@@ -16,7 +15,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
       prev.includes(skill) 
         ? prev.filter(s => s !== skill)
         : [...prev, skill]
-    ),
+    )
   },
   
   const toggleAvailability = (availability: string) => {
@@ -24,7 +23,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
       prev.includes(availability) 
         ? prev.filter(a => a !== availability)
         : [...prev, availability]
-    ),
+    )
   },
   
   const toggleRegion = (region: string) => {
@@ -32,7 +31,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
       prev.includes(region) 
         ? prev.filter(r => r !== region)
         : [...prev, region]
-    ),
+    )
   },
   
   const clearFilters = () => {
@@ -42,7 +41,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedRegions([]),
     setPriceRange([50, 200]),
     setExperienceRange([0, 15]),
-    setSortOption('relevance'),
+    setSortOption('relevance')
   },
   
   // Filter and sort talents
@@ -57,7 +56,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
         talent.professional_title.toLowerCase().includes(lowerSearch) ||
         talent.bio?.toLowerCase().includes(lowerSearch) ||
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
-      ),
+      )
     }
     
     // Filter by selected skills
@@ -68,14 +67,14 @@ export function useFilterTalents(talents: TalentProfile[]) {
             talentSkill.toLowerCase().includes(skill.toLowerCase())
           )
         )
-      ),
+      )
     }
     
     // Filter by availability
     if (selectedAvailability.length > 0) {
       result = result.filter(talent => 
         selectedAvailability.includes(talent.availability_type || '')
-      ),
+      )
     }
     
     // Filter by location/region
@@ -84,19 +83,19 @@ export function useFilterTalents(talents: TalentProfile[]) {
         selectedRegions.some(region => 
           talent.location?.includes(region)
         )
-      ),
+      )
     }
     
     // Filter by price range
     result = result.filter(talent => {
       const hourlyRate = talent.hourly_rate || 0,
-      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1],
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
     }),
     
     // Filter by experience range
     result = result.filter(talent => {
       const years = talent.years_experience || 0,
-      return years >= experienceRange[0] && years <= experienceRange[1],
+      return years >= experienceRange[0] && years <= experienceRange[1]
     }),
     
     // Sort talents
@@ -117,7 +116,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
         break
     }
     
-    return result,
+    return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),
   
   return {
@@ -136,5 +135,5 @@ export function useFilterTalents(talents: TalentProfile[]) {
     toggleSkill,
     toggleAvailability,
     toggleRegion,
-    clearFilters},
+    clearFilters}
 }

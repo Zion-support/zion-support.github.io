@@ -370,10 +370,10 @@ export default function EnhancedNavigation2025() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const toggleMenu = () => setIsOpen(!isOpen),
@@ -692,7 +692,7 @@ export default function EnhancedNavigation2025() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  ),
+  )
 },
 
 export default EnhancedNavigation2025,

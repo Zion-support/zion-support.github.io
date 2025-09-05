@@ -27,7 +27,7 @@ export function TalentCard({
 
   const handleViewProfile = () => {
     if (onViewProfile) {
-      onViewProfile(talent.id),
+      onViewProfile(talent.id)
     }
   },
 
@@ -43,7 +43,7 @@ export function TalentCard({
     e.preventDefault(),
     e.stopPropagation(),
     if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved),
+      onToggleSave(talent.id, !isSaved)
     }
   },
 

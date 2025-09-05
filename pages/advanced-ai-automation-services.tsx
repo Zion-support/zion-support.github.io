@@ -12,7 +12,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -34,7 +33,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Code Review AutomationAI Testing', 'DevOps Intelligence']
+    features: ['Code Review AutomationAI TestingDevOps Intelligence']
   },
   {
     title: 'AI Testing & Quality Assurance',
@@ -42,7 +41,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
     icon: TestTube,
     color: 'from-purple-500 to-indigo-600',
-    features: ['Test GenerationPerformance Testing', 'Quality Assurance']
+    features: ['Test GenerationPerformance TestingQuality Assurance']
   },
   {
     title: 'AI DevOps & Infrastructure',
@@ -50,7 +49,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
     icon: Server,
     color: 'from-blue-500 to-indigo-600',
-    features: ['Infrastructure ManagementDeployment Optimization', 'Performance Monitoring']
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring']
   },
   {
     title: 'AI Cybersecurity',
@@ -58,7 +57,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity'),
     icon: SecurityIcon,
     color: 'from-red-500 to-pink-600',
-    features: ['Threat DetectionIncident Response', 'Security Automation']
+    features: ['Threat DetectionIncident ResponseSecurity Automation']
   },
   {
     title: 'AI Data Management',
@@ -66,7 +65,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-    features: ['Pipeline ManagementQuality Assurance', 'Governance Automation']
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
 ],
 
@@ -413,5 +412,5 @@ export default function AdvancedAIAutomationServices() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

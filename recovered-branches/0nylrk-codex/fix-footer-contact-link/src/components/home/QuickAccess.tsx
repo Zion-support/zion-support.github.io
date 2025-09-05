@@ -84,5 +84,5 @@ export function QuickAccess() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

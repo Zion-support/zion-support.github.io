@@ -8,7 +8,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
-
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -25,7 +24,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value]),
-        e.currentTarget.value = "",
+        e.currentTarget.value = ""
       }
     }
   },
@@ -34,7 +33,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     setValue(
       "keywords",
       keywords.filter((k) => k !== keyword)
-    ),
+    )
   },
   
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
@@ -156,5 +155,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
-  ),
+  )
 },

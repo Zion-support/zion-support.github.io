@@ -2,7 +2,7 @@ export type ProjectMedia = {
   imageUrl?: string,
   pdfUrl?: string,
   githubUrl?: string,
-  demoUrl?: string,
+  demoUrl?: string
 },
 
 export type Project = {

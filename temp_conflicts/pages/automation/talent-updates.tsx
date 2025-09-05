@@ -1,7 +1,6 @@
 import fs from 'fs',
 import path from 'path',
 import { TALENT_PROFILES } from '../../data/talent',
-
 type TalentSummary = { slug: string, summary: string },
 
 export async function getServerSideProps() {
@@ -12,9 +11,9 @@ export async function getServerSideProps() {
     const raw = fs.readFileSync(file, 'utf-8'),
     const json = JSON.parse(raw),
     generatedAt = json.generatedAt || '',
-    summaries = json.summaries || [],
+    summaries = json.summaries || []
   } catch {}
-  return { props: { generatedAt, summaries } },
+  return { props: { generatedAt, summaries } }
 }
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
@@ -33,5 +32,5 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-  ),
+  )
 }

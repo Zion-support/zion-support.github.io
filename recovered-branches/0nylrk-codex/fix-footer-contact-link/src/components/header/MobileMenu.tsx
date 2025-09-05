@@ -5,7 +5,6 @@ import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } fr
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -99,5 +98,5 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
         ))}
       </nav>
     </div>
-  ),
+  )
 }

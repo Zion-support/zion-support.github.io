@@ -7,7 +7,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function CookiesPage() {
   const lastUpdated = 'January 15, 2025',
 
@@ -16,8 +15,7 @@ export default function CookiesPage() {
       name: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
       examples: [
-        'Authentication and security cookiesSession management cookies',
-        'Load balancing cookiesUser preference cookies'
+        'Authentication and security cookiesSession management cookiesLoad balancing cookiesUser preference cookies'
       ],
       icon: <Shield className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600'
@@ -26,8 +24,7 @@ export default function CookiesPage() {
       name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: [
-        'Google Analytics cookiesPage view tracking',
-        'User behavior analysisPerformance monitoring'
+        'Google Analytics cookiesPage view trackingUser behavior analysisPerformance monitoring'
       ],
       icon: <Database className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600'
@@ -36,8 +33,7 @@ export default function CookiesPage() {
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and track marketing campaign window.window.window.performance.',
       examples: [
-        'Social media cookiesAdvertising cookies',
-        'Retargeting cookiesCampaign tracking cookies'
+        'Social media cookiesAdvertising cookiesRetargeting cookiesCampaign tracking cookies'
       ],
       icon: <Globe className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-600'
@@ -46,8 +42,7 @@ export default function CookiesPage() {
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: [
-        'Language preference cookiesTheme selection cookies',
-        'Form auto-fill cookiesUser experience cookies'
+        'Language preference cookiesTheme selection cookiesForm auto-fill cookiesUser experience cookies'
       ],
       icon: <Settings className="w-6 h-6" />,
       color: 'from-orange-500 to-red-600'
@@ -345,5 +340,5 @@ export default function CookiesPage() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

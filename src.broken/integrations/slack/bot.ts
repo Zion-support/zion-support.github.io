@@ -2,13 +2,12 @@
 // Mock implementation of Slack bot that doesn't require external dependencies
 // This replaces the original implementation which had dependency issues
 import { switchNetlifySite } from '../../../scripts/switch-netlify-site.js',
-
 interface SlackCommand {
   text: string
 }
 
 interface SlackAck {
-  (): Promise<void>,
+  (): Promise<void>
 }
 
 interface SlackRespond {
@@ -27,8 +26,8 @@ declare const globalThis: {
     env: {
       PORT?: string,
       [key: string]: string | undefined
-    },
-  },
+    }
+  }
 },
 
 type CommandHandler = (args: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond }) => Promise<void>,
@@ -44,9 +43,9 @@ class MockApp {
     // Safely log without direct console reference
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`),
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
     }
-    return Promise.resolve(),
+    return Promise.resolve()
   }
 }
 
@@ -57,9 +56,9 @@ async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
   if (safeConsole && safeConsole.log) {
-    safeConsole.log(`ZionGPT was asked: ${prompt}`),
+    safeConsole.log(`ZionGPT was asked: ${prompt}`)
   }
-  return `AI response to: ${prompt}`,
+  return `AI response to: ${prompt}`
 }
 
 app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
@@ -74,12 +73,12 @@ app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand,
       const query = args.join(' '),
       const answer = await askZionGPT(`Suggest talent for ${query}`),
       await respond(answer),
-      break,
+      break
     }
     case 'track-project': {
       const project = args.join(' '),
       await respond(`Tracking project **${project}** - feature coming soon.`),
-      break,
+      break
     }
     case 'help':
     default: await respond(
@@ -96,10 +95,10 @@ app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond:
   await ack(),
   try {
     await switchNetlifySite(),
-    await respond('Rollback complete. DNS switched to the previous site.'),
+    await respond('Rollback complete. DNS switched to the previous site.')
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err),
-    await respond(`Rollback failed: ${message}`),
+    await respond(`Rollback failed: ${message}`)
   }
 }),
 
@@ -109,7 +108,7 @@ app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond:
   const env = typeof globalThis !== 'undefined' && globalThis.process ? 
     globalThis.process.env : {},
   const port = env.PORT ? Number(env.PORT) : 3000,
-  await app.start(port),
+  await app.start(port)
 })(),
 
 // Add this function either inside MockApp or as an exported function
@@ -117,11 +116,11 @@ async function sendSlackAlert(message: string): Promise<void> {
   // Safely log without direct console reference
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
   if (safeConsole && safeConsole.log) {
-    safeConsole.log(`SLACK_ALERT: ${message}`),
+    safeConsole.log(`SLACK_ALERT: ${message}`)
   }
   // In a real scenario, this would use the Slack API to send a message
   // For example: await app.client.chat.postMessage({ channel: '#alerts', text: message }),
-  return Promise.resolve(),
+  return Promise.resolve()
 }
 
 // Export it if it's standalone, or ensure it can be called

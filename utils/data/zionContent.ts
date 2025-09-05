@@ -70,8 +70,7 @@ export function generateZionWiki(): WikiContent {
       id: 'use-cases',
       title: 'Use Cases',
       paragraphs: [
-        'AI marketplaces for task fulfillment, model evaluation, and fine-tuning bounties.Talent reputation networks that verify contributions and enable portable work graphs.',
-        'Enterprise agent orchestration for workflows that require auditability and compliance.Open research funding where results and attributions are verifiable and programmable.']},
+        'AI marketplaces for task fulfillment, model evaluation, and fine-tuning bounties.Talent reputation networks that verify contributions and enable portable work graphs.Enterprise agent orchestration for workflows that require auditability and compliance.Open research funding where results and attributions are verifiable and programmable.']},
     {
       id: 'adoption',
       title: 'Adoption',
@@ -79,10 +78,9 @@ export function generateZionWiki(): WikiContent {
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],
 
   const references = [
-    '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).',
-    '[3] ZionGPT evaluation benchmarks (in progress).'],
+    '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'],
 
-  return { title, intro, infobox, sections, references },
+  return { title, intro, infobox, sections, references }
 }
 
 export function generateZionDocs(): DocsContent {
@@ -117,7 +115,7 @@ export function generateZionDocs(): DocsContent {
       id: 'public-roadmap',
       title: 'Public Roadmap',
       paragraphs: [
-        'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}},
+        'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}}
 }
 
 export function buildMarkdownFromWiki(wiki: WikiContent): string {
@@ -138,13 +136,13 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
   for (const s of wiki.sections) {
     lines.push(`## ${s.title}`),
     for (const p of s.paragraphs) lines.push(p),
-    lines.push(''),
+    lines.push('')
   }
   if (wiki.references.length) {
     lines.push('## References'),
-    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`)),
+    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`))
   }
-  return lines.join('\n'),
+  return lines.join('\n')
 }
 
 export function buildWikitextFromWiki(wiki: WikiContent): string {
@@ -162,13 +160,13 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {
   for (const s of wiki.sections) {
     lines.push(`== ${s.title} ==`),
     for (const p of s.paragraphs) lines.push(p),
-    lines.push(''),
+    lines.push('')
   }
   if (wiki.references.length) {
     lines.push('== References =='),
-    wiki.references.forEach((r) => lines.push(`* ${r}`)),
+    wiki.references.forEach((r) => lines.push(`* ${r}`))
   }
-  return lines.join('\n'),
+  return lines.join('\n')
 }
 
 export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
@@ -185,9 +183,9 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
   for (const s of sections) {
     lines.push(`## ${s.title}`),
     for (const p of s.paragraphs) lines.push(p),
-    lines.push(''),
+    lines.push('')
   }
-  return lines.join('\n'),
+  return lines.join('\n')
 }
 
 export function slugify(input: string): string {
@@ -196,5 +194,5 @@ export function slugify(input: string): string {
     .replace(/[^a-z0-9\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-'),
+    .replace(/-+/g, '-')
 }

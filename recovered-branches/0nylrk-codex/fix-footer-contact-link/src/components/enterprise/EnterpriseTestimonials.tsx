@@ -76,5 +76,5 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>
-  ),
+  )
 }

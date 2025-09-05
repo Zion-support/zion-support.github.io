@@ -12,7 +12,7 @@ export interface UserDetails {
   companyId?: string,
   bio?: string,
   createdAt?: string,
-  updatedAt?: string,
+  updatedAt?: string
 }
 
 export interface UserProfile {
@@ -48,5 +48,5 @@ export interface AuthContextType {
   loginWithWeb3: () => Promise<void>,
   signIn?: (email: string, password: string) => Promise<{ error: any }>,
   signOut?: () => Promise<void>,
-  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 }

@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast",
-
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { id } = useParams() as { id?: string },
@@ -53,16 +52,16 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   }, [error]),
 
   if (isLoading) {
-    return <ProfileLoadingState />,
+    return <ProfileLoadingState />
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />,
+    return <ProfileErrorState error={error} />
   }
 
   const handleRequestHire = () => {
@@ -72,9 +71,9 @@ export default function TalentProfilePage() {
         description: "Please sign in to hire this talent.",
         variant: "default"}),
       navigate('/login', { state: { from: `/talent/${id}` } }),
-      return,
+      return
     }
-    setIsHireModalOpen(true),
+    setIsHireModalOpen(true)
   },
 
   const handleMessageTalent = () => {
@@ -84,9 +83,9 @@ export default function TalentProfilePage() {
         description: "Please sign in to message this talent.",
         variant: "default"}),
       navigate('/login', { state: { from: `/talent/${id}` } }),
-      return,
+      return
     }
-    setIsMessageModalOpen(true),
+    setIsMessageModalOpen(true)
   },
 
   return (
@@ -136,5 +135,5 @@ export default function TalentProfilePage() {
         onClose={() => setIsMessageModalOpen(false)}
       />
     </div>
-  ),
+  )
 }

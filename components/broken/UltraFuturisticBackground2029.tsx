@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2029: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -35,10 +34,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
-        color: ['#00ffff#ff00ff', '#ffff00#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
+        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)],
         opacity: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
-      }),
+      })
     }
 
     const animate = () => {
@@ -57,10 +56,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
             size: Math.random() * 3 + 1,
-            color: ['#00ffff#ff00ff', '#ffff00#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
+            color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)],
             opacity: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
-          },
+          }
         }
 
         // Draw particle with glow effect
@@ -82,7 +81,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw connecting lines between nearby particles
@@ -101,27 +100,27 @@ const UltraFuturisticBackground2029: React.FC = () => {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
 
-      animationFrameId = requestAnimationFrame(animate),
+      animationFrameId = requestAnimationFrame(animate)
     },
 
     animate(),
 
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId),
-    },
+      cancelAnimationFrame(animationFrameId)
+    }
   }, []),
 
   return (
@@ -139,8 +138,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
+              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
             ]
           }}
           transition={{
@@ -309,7 +307,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ))}
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2029,

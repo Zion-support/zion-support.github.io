@@ -10,7 +10,6 @@ import {
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
 import { emergingTechServices } from '../data/emerging-tech-services',
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
-
 export default function InnovativeServicesShowcase() {
   const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],
 
@@ -184,7 +183,7 @@ export default function InnovativeServicesShowcase() {
                       </h3>
                     </div>
                   </motion.div>
-                ),
+                )
               })}
             </div>
           </div>

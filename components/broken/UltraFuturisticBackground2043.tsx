@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2043: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -52,12 +51,12 @@ const UltraFuturisticBackground2043: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.3,
         color: colors[Math.floor(Math.random() * colors.length)],
         life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50},
+        maxLife: Math.random() * 100 + 50}
     },
 
     // Initialize particles
     for (let i = 0, i < 100, i++) {
-      particles.push(createParticle()),
+      particles.push(createParticle())
     }
 
     // Animation loop
@@ -79,7 +78,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         // Update life
         particle.life--,
         if (particle.life <= 0) {
-          particles[index] = createParticle(),
+          particles[index] = createParticle()
         }
 
         // Draw particle
@@ -89,7 +88,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw connecting lines between nearby particles
@@ -107,19 +106,19 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, []),
 
   return (
@@ -316,7 +315,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2043,

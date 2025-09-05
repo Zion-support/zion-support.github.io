@@ -39,5 +39,5 @@ export function LanguageSelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
+  )
 }

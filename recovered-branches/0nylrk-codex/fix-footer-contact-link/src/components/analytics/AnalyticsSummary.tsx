@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
-
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
     queryKey: ['analytics-summary'],
@@ -52,7 +51,7 @@ export function AnalyticsSummary() {
         totalPageViews: pageViewsData?.count || 0,
         uniqueVisitors: uniqueUserIds.size || 0,
         conversions: conversionsData?.count || 0,
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null},
+        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
     },
     refetchInterval: 300000, // Refetch every 5 minutes
   }),
@@ -99,7 +98,7 @@ export function AnalyticsSummary() {
         }
       />
     </div>
-  ),
+  )
 }
 
 interface StatCardProps {
@@ -127,5 +126,5 @@ function StatCard({ title, value, icon }: StatCardProps) {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

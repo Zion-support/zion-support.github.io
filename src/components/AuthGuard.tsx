@@ -35,12 +35,12 @@ export function AuthGuard({
         toast({
           title: "Authentication Required",
           description: "Please log in to access this feature.",
-          variant: "destructive"}),
+          variant: "destructive"})
       }
 
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`${redirectTo}?returnTo=${returnTo}`),
-      return,
+      return
     }
 
     // If specific roles are required
@@ -53,10 +53,10 @@ export function AuthGuard({
           toast({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
-            variant: "destructive"}),
+            variant: "destructive"})
         }
         router.push('/dashboard'), // Redirect to dashboard instead of login
-        return,
+        return
       }
     }
   }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]),
@@ -70,7 +70,7 @@ export function AuthGuard({
           <span>Loading...</span>
         </div>
       </div>
-    ),
+    )
   }
 
   // Show unauthorized state if auth is required but user is not authenticated
@@ -85,7 +85,7 @@ export function AuthGuard({
           </p>
         </div>
       </div>
-    ),
+    )
   }
 
   // Show role denied state if user doesn't have required role
@@ -104,12 +104,12 @@ export function AuthGuard({
             </p>
           </div>
         </div>
-      ),
+      )
     }
   }
 
   // Render children if all auth checks pass
-  return <>{children}</>,
+  return <>{children}</>
 }
 
 // Higher-order component for easy wrapping
@@ -122,8 +122,8 @@ export function withAuthGuard<P extends object>(
       <AuthGuard {...guardOptions}>
         <Component {...props} />
       </AuthGuard>
-    ),
-  },
+    )
+  }
 }
 
 // Hook for programmatic auth checks
@@ -134,7 +134,7 @@ export function useAuthGuard() {
   const requireAuth = (options?: {
     redirectTo?: string,
     showToast?: boolean,
-    returnUrl?: string,
+    returnUrl?: string
   }) => {
     if (isLoading) return false,
 
@@ -146,19 +146,19 @@ export function useAuthGuard() {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
-          variant: "destructive"}),
+          variant: "destructive"})
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),
-      return false,
+      return false
     }
 
-    return true,
+    return true
   },
 
   const requireRole = (roles: string[], options?: {
     showToast?: boolean,
-    redirectTo?: string,
+    redirectTo?: string
   }) => {
     if (!requireAuth({ showToast: false })) return false,
 
@@ -170,14 +170,14 @@ export function useAuthGuard() {
         toast({
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
-          variant: "destructive"}),
+          variant: "destructive"})
       }
 
       router.push(options?.redirectTo || '/dashboard'),
-      return false,
+      return false
     }
 
-    return true,
+    return true
   },
 
   const checkPermission = (permission: string): boolean => {
@@ -186,7 +186,7 @@ export function useAuthGuard() {
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
     const userPermissions = (user as any).permissions || [],
-    return userPermissions.includes(permission),
+    return userPermissions.includes(permission)
   },
 
   return {
@@ -195,5 +195,5 @@ export function useAuthGuard() {
     checkPermission,
     isAuthenticated,
     user,
-    isLoading},
+    isLoading}
 }

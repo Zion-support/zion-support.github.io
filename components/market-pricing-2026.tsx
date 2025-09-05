@@ -7,7 +7,6 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services } from '../data/revolutionary-2026-services',
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services',
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services',
-
 export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setPriceRange] = useState('all'),
@@ -26,7 +25,7 @@ export default function MarketPricing2026() {
       (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
       (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
       (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000),
-    return matchesCategory && matchesPrice,
+    return matchesCategory && matchesPrice
   }),
 
   const categories = [

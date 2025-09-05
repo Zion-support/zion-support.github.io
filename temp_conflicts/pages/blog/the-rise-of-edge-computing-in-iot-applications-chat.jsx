@@ -1,7 +1,6 @@
 
 import Head from 'next/head',
 import Link from 'next/link',
-
 const TheRiseOfEdgeComputingInIotApplicationsChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  ),
+  )
 },
 
 export default TheRiseOfEdgeComputingInIotApplicationsChat,

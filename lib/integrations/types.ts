@@ -27,7 +27,7 @@ export interface SyncRules {
   pushNotesMode?: 'auto' | 'manual',
   // ATS rules
   autoSyncApplicants?: boolean,
-  autoUploadResumes?: boolean,
+  autoUploadResumes?: boolean
 }
 
 export interface ProviderConnection {

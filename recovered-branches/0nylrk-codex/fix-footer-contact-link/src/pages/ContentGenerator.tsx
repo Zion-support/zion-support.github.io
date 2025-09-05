@@ -16,7 +16,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
-
 export default function ContentGenerator() {
   const { user, isLoading } = useAuth(),
   const navigate = useNavigate(),
@@ -33,7 +32,7 @@ export default function ContentGenerator() {
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page"),
-      navigate("/login?redirect=/content-generator"),
+      navigate("/login?redirect=/content-generator")
     }
   }, [user, isLoading, navigate]),
 
@@ -55,24 +54,24 @@ export default function ContentGenerator() {
       if (error) throw error,
       
       setPreviewContent(data),
-      toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`),
+      toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
-      toast.error("Failed to generate content. Please try again."),
+      toast.error("Failed to generate content. Please try again.")
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address"),
-      return,
+      return
     }
     
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
-      return,
+      return
     }
     
     try {
@@ -88,10 +87,10 @@ export default function ContentGenerator() {
       
       if (error) throw error,
       
-      toast.success(`Test newsletter sent to ${testEmail}!`),
+      toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
-      toast.error("Failed to send test newsletter. Please try again."),
+      toast.error("Failed to send test newsletter. Please try again.")
     }
   },
 
@@ -105,7 +104,7 @@ export default function ContentGenerator() {
         </div>
         <Footer />
       </>
-    ),
+    )
   }
 
   return (
@@ -390,5 +389,5 @@ export default function ContentGenerator() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { Resume } from '@/types/resume',
 import { useAuth } from '@/hooks/useAuth',
-
 export function useResumeList() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -13,7 +12,7 @@ export function useResumeList() {
   const fetchResumes = async () => {
     if (!user) {
       setError('You must be logged in to access resumes'),
-      return [],
+      return []
     }
     
     setIsLoading(true),
@@ -32,7 +31,7 @@ export function useResumeList() {
       
       if (!resumeData || resumeData.length === 0) {
         setResumes([]),
-        return [],
+        return []
       }
       
       // Transform data to match Resume type
@@ -53,20 +52,20 @@ export function useResumeList() {
       })),
       
       setResumes(transformedResumes),
-      return transformedResumes,
+      return transformedResumes
     } catch (e: any) {
       console.error('Error fetching resumes:', e),
       setError(e.message),
-      return [],
+      return []
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
   // Fetch resumes when the component mounts
   useEffect(() => {
     if (user) {
-      fetchResumes(),
+      fetchResumes()
     }
   }, [user]),
   
@@ -75,5 +74,5 @@ export function useResumeList() {
     error,
     resumes,
     fetchResumes
-  },
+  }
 }

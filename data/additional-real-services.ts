@@ -12,7 +12,7 @@ export interface AdditionalRealService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const additionalEnhancedServices: AdditionalRealService[] = [

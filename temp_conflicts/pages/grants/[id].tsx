@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react',
 import { useRouter } from 'next/router',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplication } from '../../types/grants',
-
 export default function GrantDetailPage() {
   const router = useRouter(),
   const { id } = router.query as { id: string },
@@ -13,7 +12,7 @@ export default function GrantDetailPage() {
   useEffect(() => {
     if (!id) return,
     setLoading(true),
-    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false)),
+    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
   }, [id]),
 
   const addUpdate = async () => {
@@ -22,7 +21,7 @@ export default function GrantDetailPage() {
     if (resp.ok) {
       const u = await resp.json(),
       setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev),
-      setUpdateContent(''),
+      setUpdateContent('')
     }
   },
 
@@ -105,5 +104,5 @@ export default function GrantDetailPage() {
         </aside>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

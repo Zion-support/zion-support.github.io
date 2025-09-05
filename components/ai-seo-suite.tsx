@@ -47,22 +47,22 @@ export default function AISeosuitePage() {
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-      tools: ['Long-tail keyword finderCompetitor keyword analysis', 'Search volume estimationKeyword difficulty scoring', 'Trending keywords']
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-      tools: ['Content optimizationMeta tag generator', 'Schema markup builderInternal linking suggestions', 'Image optimization']
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-      tools: ['Site audit toolPage speed analyzer', 'Mobile optimizationCore Web Vitals', 'XML sitemap generator']
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      tools: ['Ranking trackerTraffic analysis', 'Conversion trackingCompetitor monitoring', 'Custom dashboards']
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
   ],
 
@@ -73,9 +73,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        'Up to 5 websitesBasic keyword research',
-        'Monthly site auditsEmail support',
-        'Basic reportingMobile app access'
+        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -87,10 +85,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 25 websitesAdvanced keyword research',
-        'Weekly site auditsPriority support',
-        'Advanced reportingCompetitor analysis',
-        'API accessWhite-label reports'
+        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -102,10 +97,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited websitesFull SEO suite',
-        'Daily site auditsDedicated support',
-        'Custom reportingAdvanced analytics',
-        'SLA guaranteeOn-premise option'
+        'Unlimited websitesFull SEO suiteDaily site auditsDedicated supportCustom reportingAdvanced analyticsSLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',
@@ -129,25 +121,25 @@ export default function AISeosuitePage() {
       title: 'E-commerce Websites',
       description: 'Optimize product pages, category pages, and search functionality for better conversions.',
       icon: '🛍️',
-      benefits: ['Higher search rankingsIncreased organic traffic', 'Better conversion ratesCompetitive advantage']
+      benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
     },
     {
       title: 'Content Marketing',
       description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
       icon: '📝',
-      benefits: ['Better content visibilityHigher engagement rates', 'More organic trafficAuthority building']
+      benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
-      benefits: ['Local search dominanceIncreased foot traffic', 'Better customer acquisitionCompetitive positioning']
+      benefits: ['Local search dominanceIncreased foot trafficBetter customer acquisitionCompetitive positioning']
     },
     {
       title: 'SaaS Companies',
       description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
       icon: '💻',
-      benefits: ['Higher conversion ratesBetter user experience', 'Reduced acquisition costsMarket expansion']
+      benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
     }
   ],
 

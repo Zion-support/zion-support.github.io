@@ -6,7 +6,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
-
 import {
   Form,
   FormControl,
@@ -22,7 +21,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
-
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
@@ -61,9 +59,9 @@ export function ProductSubmissionForm() {
       form.setValue("image", file),
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setImagePreview(reader.result as string),
+        setImagePreview(reader.result as string)
       },
-      reader.readAsDataURL(file),
+      reader.readAsDataURL(file)
     }
   },
 
@@ -77,7 +75,7 @@ export function ProductSubmissionForm() {
     form.setValue("price", averagePrice),
     
     // Switch to the manual tab to show applied content
-    setActiveTab("manual"),
+    setActiveTab("manual")
   },
 
   // Handle form submission
@@ -87,7 +85,7 @@ export function ProductSubmissionForm() {
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -113,7 +111,7 @@ export function ProductSubmissionForm() {
         .single(),
         
       if (productError) {
-        throw new Error(productError.message),
+        throw new Error(productError.message)
       }
 
       // If we have an image, upload it
@@ -124,7 +122,7 @@ export function ProductSubmissionForm() {
           .upload(imagePath, values.image),
           
         if (uploadError) {
-          throw new Error(uploadError.message),
+          throw new Error(uploadError.message)
         }
         
         // Get the public URL for the image
@@ -141,7 +139,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id),
           
         if (updateError) {
-          throw new Error(updateError.message),
+          throw new Error(updateError.message)
         }
       }
       
@@ -151,14 +149,14 @@ export function ProductSubmissionForm() {
         description: "Your product has been successfully published on Zion."}),
       
       // Redirect to product page
-      navigate(`/marketplace/listing/${productRecord.id}`),
+      navigate(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -333,5 +331,5 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-  ),
+  )
 }

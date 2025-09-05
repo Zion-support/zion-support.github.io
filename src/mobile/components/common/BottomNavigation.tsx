@@ -3,7 +3,6 @@ import { useRouter } from "next/router",
 import Link from "next/link",
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
 import { cn } from "@/lib/utils",
-
 export function BottomNavigation() {
   const router = useRouter(),
   
@@ -33,8 +32,8 @@ export function BottomNavigation() {
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
-        ),
+        )
       })}
     </div>
-  ),
+  )
 }

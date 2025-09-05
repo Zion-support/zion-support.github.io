@@ -4,7 +4,6 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react',
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas',
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services',
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services',
-
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [visibleServices, setVisibleServices] = useState(12),
@@ -28,11 +27,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         if (activeCategory === 'emerging') return emergingTech2025Services.includes(service),
         if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service),
         if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),
-        return true,
+        return true
       }),
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length)),
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
   },
 
   const containerVariants = {
@@ -93,7 +92,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id),
-                setVisibleServices(12),
+                setVisibleServices(12)
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id

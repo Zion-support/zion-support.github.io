@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function SitemapPage() {
   const mainPages = [
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },

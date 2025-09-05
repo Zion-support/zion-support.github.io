@@ -10,7 +10,6 @@ import {
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services',
-
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
@@ -22,18 +21,18 @@ const Homepage2043: React.FC = () => {
     
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+      setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 4000),
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
-      setCurrentTestimonialIndex((prev) => (prev + 1) % 3),
+      setCurrentTestimonialIndex((prev) => (prev + 1) % 3)
     }, 6000),
     
     return () => {
       clearInterval(serviceInterval),
-      clearInterval(testimonialInterval),
-    },
+      clearInterval(testimonialInterval)
+    }
   }, []),
 
   // Combine all revolutionary services
@@ -128,23 +127,23 @@ const Homepage2043: React.FC = () => {
   ],
 
   const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase',
+    window.location.href = '/revolutionary-2040-2041-pricing-showcase'
   }, []),
 
   const handleWatchDemo = useCallback(() => {
-    window.location.href = '/services',
+    window.location.href = '/services'
   }, []),
 
   const handleContact = useCallback(() => {
-    window.location.href = '/contact',
+    window.location.href = '/contact'
   }, []),
 
   const nextService = () => {
-    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length),
+    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
   },
 
   const prevService = () => {
-    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length),
+    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
   },
 
   return (

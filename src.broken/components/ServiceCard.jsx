@@ -14,7 +14,7 @@ export default function ServiceCard({ service, onSelect }) {
 
   const handleClick = () => {
     if (onSelect) {
-      onSelect(service.id),
+      onSelect(service.id)
     }
   },
 
@@ -23,14 +23,14 @@ export default function ServiceCard({ service, onSelect }) {
     if (!user) {
       toast.info('Log in to save favorites'),
       navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
-      return,
+      return
     }
     dispatch(addToWishlist({ id: service.id, type: 'service', data: service })),
     fetch(`${getApiUrl()}/wishlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: service.id, type: 'service' })
-    }).catch(() => {}),
+    }).catch(() => {})
   },
 
   return (
@@ -48,5 +48,5 @@ export default function ServiceCard({ service, onSelect }) {
       </button>
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>
-  ),
+  )
 }

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { Wallet } from "@/components/icons",
 import { toast } from "sonner",
-
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -18,17 +17,17 @@ export function Web3Login() {
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet"}),
-        return,
+        return
       }
       
-      await loginWithWeb3(),
+      await loginWithWeb3()
       
     } catch (error: any) {
       toast("Login failed", {
         description: error.message || "Failed to connect wallet"}),
-      console.error("Web3 login error:", error),
+      console.error("Web3 login error:", error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -55,5 +54,5 @@ export function Web3Login() {
         </>
       )}
     </Button>
-  ),
+  )
 }

@@ -22,7 +22,7 @@ export function useReferrals() {
       fetchReferralCode(),
       fetchReferralStats(),
       fetchReferrals(),
-      fetchRewards(),
+      fetchRewards()
     }
   }, [user]),
 
@@ -37,14 +37,14 @@ export function useReferrals() {
 
       if (error) {
         console.error("Error fetching referral code:", error),
-        return,
+        return
       }
 
-      setReferralCode(data),
+      setReferralCode(data)
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error),
+      console.error("Error in fetchReferralCode:", error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -60,9 +60,9 @@ export function useReferrals() {
         
       if (error) throw error,
       
-      setReferrals(data || []),
+      setReferrals(data || [])
     } catch (error) {
-      console.error("Error fetching referrals:", error),
+      console.error("Error fetching referrals:", error)
     }
   },
 
@@ -78,9 +78,9 @@ export function useReferrals() {
         
       if (error) throw error,
       
-      setRewards(data || []),
+      setRewards(data || [])
     } catch (error) {
-      console.error("Error fetching rewards:", error),
+      console.error("Error fetching rewards:", error)
     }
   },
 
@@ -110,7 +110,7 @@ export function useReferrals() {
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0,
       
       const totalRewards = rewards ? rewards.reduce((sum, item) => {
-        return sum + (item.amount || 0),
+        return sum + (item.amount || 0)
       }, 0) : 0,
       
       setStats({
@@ -118,10 +118,10 @@ export function useReferrals() {
         pendingReferrals,
         completedReferrals,
         totalRewards
-      }),
+      })
       
     } catch (error) {
-      console.error("Error fetching referral stats:", error),
+      console.error("Error fetching referral stats:", error)
     }
   },
 
@@ -132,7 +132,7 @@ export function useReferrals() {
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
-        return,
+        return
       }
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
@@ -149,13 +149,13 @@ export function useReferrals() {
       // Refresh the code
       fetchReferralCode(),
       
-      return data,
+      return data
     } catch (error: any) {
       console.error("Error generating referral code:", error),
       toast({
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -164,7 +164,7 @@ export function useReferrals() {
     if (!referralCode) return "",
     
     const baseUrl = window.location.origin,
-    return `${baseUrl}/?ref=${referralCode.code}`,
+    return `${baseUrl}/?ref=${referralCode.code}`
   },
 
   // Copy the referral link to clipboard
@@ -175,12 +175,12 @@ export function useReferrals() {
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        variant: "success"}),
+        variant: "success"})
     } else {
       toast({
         title: "Cannot copy link",
         description: "Please generate a referral code first",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -194,7 +194,7 @@ export function useReferrals() {
         title: "Cannot share",
         description: "Please generate a referral code first",
         variant: "destructive"}),
-      return,
+      return
     }
     
     let shareUrl = '',
@@ -208,11 +208,11 @@ export function useReferrals() {
         break,
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`,
-        break,
+        break
     }
     
     if (shareUrl) {
-      window.open(shareUrl, '_blank'),
+      window.open(shareUrl, '_blank')
     }
   },
 
@@ -229,5 +229,5 @@ export function useReferrals() {
     fetchReferralStats,
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-  },
+  }
 }

@@ -10,7 +10,7 @@ export default function MockCheckoutPage() {
 
   if (!mock) {
     router.push('/checkout'),
-    return <div>Redirecting...</div>,
+    return <div>Redirecting...</div>
   }
 
   return (

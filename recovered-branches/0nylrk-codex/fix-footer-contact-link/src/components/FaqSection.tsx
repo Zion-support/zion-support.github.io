@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
-
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -59,5 +58,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

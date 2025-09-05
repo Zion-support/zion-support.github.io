@@ -8,7 +8,6 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',
-
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
@@ -29,7 +28,7 @@ export default function Pricing2025() {
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
-    return `$${Math.round(annualPrice)}`,
+    return `$${Math.round(annualPrice)}`
   },
 
   const containerVariants = {
@@ -391,5 +390,5 @@ export default function Pricing2025() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

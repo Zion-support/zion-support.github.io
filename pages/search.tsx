@@ -10,7 +10,6 @@ import {
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [searchResults, setSearchResults] = useState<any[]>([]),
@@ -35,7 +34,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$499/month',
       technology: 'AI/ML',
-      features: ['AI-powered dashboardsPredictive analytics', 'Real-time insightsCustom reporting'],
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
       link: '/ai-business-intelligence',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
@@ -49,7 +48,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$799/month',
       technology: 'Quantum',
-      features: ['Quantum-resistant encryptionAI threat detection', 'Zero-trust architecture24/7 monitoring'],
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
       link: '/quantum-cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -63,7 +62,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$399/month',
       technology: 'AI/ML',
-      features: ['Customer journey mappingAI personalization', 'Sentiment analysisPredictive support'],
+      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
       link: '/ai-customer-experience',
       icon: Users,
       color: 'from-green-500 to-teal-500',
@@ -77,7 +76,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$349/month',
       technology: 'Edge',
-      features: ['Edge node managementIoT device management', 'Real-time monitoringAuto-scaling'],
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
       link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
@@ -91,7 +90,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$2,499/month',
       technology: 'Space',
-      features: ['Satellite managementAI mission planning', 'Quantum communicationResource optimization'],
+      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
       color: 'from-violet-500 to-purple-500',
@@ -105,7 +104,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$899/month',
       technology: 'Biotech',
-      features: ['BCI development toolsNeural signal processing', 'AI pattern recognitionSafety protocols'],
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
       link: '/neural-interface',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
@@ -119,7 +118,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,299/month',
       technology: 'Quantum',
-      features: ['Quantum algorithmsNeural optimization', 'Consciousness simulationResearch tools'],
+      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
@@ -133,7 +132,7 @@ export default function SearchPage() {
       status: 'active',
       price: '$599/month',
       technology: 'DevOps',
-      features: ['Auto-deploymentPerformance monitoring', 'Security scanningCost optimization'],
+      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
       link: '/autonomous-devops',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
@@ -147,7 +146,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,999/month',
       technology: 'AI/ML',
-      features: ['Business automationDecision making', 'Resource allocationPerformance optimization'],
+      features: ['Business automationDecision makingResource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
       color: 'from-indigo-500 to-purple-500',
@@ -161,7 +160,7 @@ export default function SearchPage() {
       status: 'beta',
       price: '$3,999/month',
       technology: 'Quantum',
-      features: ['Quantum algorithmsRisk assessment', 'Portfolio optimizationReal-time analysis'],
+      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
@@ -210,7 +209,7 @@ export default function SearchPage() {
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]),
-      return,
+      return
     }
 
     setIsSearching(true),
@@ -242,11 +241,11 @@ export default function SearchPage() {
               break,
             case 'over-2500':
               matchesPrice = price >= 2500,
-              break,
+              break
           }
         }
         
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice,
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
       }),
 
       // Sort results
@@ -267,8 +266,8 @@ export default function SearchPage() {
       }),
 
       setSearchResults(sortedResults),
-      setIsSearching(false),
-    }, 500),
+      setIsSearching(false)
+    }, 500)
   },
 
   // Handle search on Enter key
@@ -281,7 +280,7 @@ export default function SearchPage() {
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-      performSearch(),
+      performSearch()
     }
   }, [filters, sortBy]),
 
@@ -293,7 +292,7 @@ export default function SearchPage() {
       priceRange: 'all',
       technology: 'all'
     }),
-    setSortBy('relevance'),
+    setSortBy('relevance')
   },
 
   return (
@@ -623,12 +622,12 @@ export default function SearchPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-                {['AICybersecurity', 'Quantum ComputingEdge Computing'].map((term) => (
+                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term),
-                      performSearch(),
+                      performSearch()
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
@@ -643,5 +642,5 @@ export default function SearchPage() {
 
       <SmartFooter />
     </div>
-  ),
+  )
 }

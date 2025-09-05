@@ -34,7 +34,6 @@ import { real2027Q1Additions } from '../data/real-2027-q1-additions',
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025',
 import fs from 'fs',
 import path from 'path',
-
 type Service = typeof enhancedRealMicroSaasServices[number],
 
   const service = useMemo(() => {
@@ -70,9 +69,9 @@ type Service = typeof enhancedRealMicroSaasServices[number],
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link),
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, ''),
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-        return false,
+        return false
       }
     }),
     if (byLink) return byLink,
@@ -105,17 +104,17 @@ function getAllServices(): Service[] {
 		.concat(real2026Q4Additions as unknown as Service[])
 		.concat(real2026Q4NewServices as unknown as Service[])
 		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(newSaasItAiServices2025 as unknown as Service[]),
+		.concat(newSaasItAiServices2025 as unknown as Service[])
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function getExistingRootPageSlugs(): Set<string> {
 	const pagesDir = path.join(process.cwd(), 'pages'),
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-	const reserved = new Set<string>(['apireports', 'services']),
+	const reserved = new Set<string>(['apireportsservices']),
 	const slugs = new Set<string>(),
 	for (const entry of entries) {
 		if (entry.name.startsWith('_')) continue,
@@ -126,16 +125,16 @@ function getExistingRootPageSlugs(): Set<string> {
 			if (m) {
 				const base = m[1],
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-					slugs.add(base),
+					slugs.add(base)
 				}
 			}
 		}
 		// Directories at root (folder routes)
 		if (entry.isDirectory()) {
-			slugs.add(entry.name),
+			slugs.add(entry.name)
 		}
 	}
-	return slugs,
+	return slugs
 }
 
 export async function getStaticPaths() {
@@ -143,14 +142,14 @@ export async function getStaticPaths() {
 	const slugs = new Set<string>(),
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id)),
-		else if (s.name) slugs.add(toSlug(s.name)),
+		else if (s.name) slugs.add(toSlug(s.name))
 	}
 	const existing = getExistingRootPageSlugs(),
 	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
-	},
+	}
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -158,11 +157,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	if (!service) {
-		return { notFound: true },
+		return { notFound: true }
 	}
 	return {
 		props: { service }
-	},
+	}
 }
 
 export default function RootServiceDetailPage({ service }: { service: Service }) {

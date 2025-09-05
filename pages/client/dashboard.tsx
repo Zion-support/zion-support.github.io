@@ -1,6 +1,5 @@
 import useSWR from 'swr',
 import Link from 'next/link',
-
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function ClientDashboard() {
@@ -16,7 +15,7 @@ export default function ClientDashboard() {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status: 'Closed' })}),
-    mutate(),
+    mutate()
   }
 
   return (
@@ -51,5 +50,5 @@ export default function ClientDashboard() {
         ))}
       </div>
     </div>
-  ),
+  )
 }

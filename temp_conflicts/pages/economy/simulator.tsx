@@ -28,7 +28,7 @@ export default function EconomySimulatorPage() {
   const [loadingAnalysis, setLoadingAnalysis] = useState<boolean>(false),
 
   const handleScenario = (scenario: ScenarioKey) => {
-    setInputs((prev) => applyScenario(prev, scenario)),
+    setInputs((prev) => applyScenario(prev, scenario))
   },
 
   const series = useMemo(() => simulateEconomy(inputs), [inputs]),
@@ -45,11 +45,11 @@ export default function EconomySimulatorPage() {
         body: JSON.stringify({ operatorPrompt, context: { inputs, summary: series.summary } })}),
       const json = await res.json(),
       if ('analysis' in json) setAnalysis(json.analysis as string),
-      else setAnalysis('Failed to analyze.'),
+      else setAnalysis('Failed to analyze.')
     } catch (e) {
-      setAnalysis('Failed to analyze.'),
+      setAnalysis('Failed to analyze.')
     } finally {
-      setLoadingAnalysis(false),
+      setLoadingAnalysis(false)
     }
   },
 
@@ -109,5 +109,5 @@ export default function EconomySimulatorPage() {
         </div>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

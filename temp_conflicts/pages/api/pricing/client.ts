@@ -2,17 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import type { ClientBudgetRequest } from '../../../utils/api/aiPricing',
 import { generateClientBudgetSuggestion } from '../../../utils/api/aiPricing',
 import { trackPricingRequest } from '../../../utils/data/pricingAnalytics',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method Not Allowed' }),
+    return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
   try {
     const body = req.body as Partial<ClientBudgetRequest>,
     if (!body || !body.title || !body.category) {
-      return res.status(400).json({ error: 'Missing required fields: title, category' }),
+      return res.status(400).json({ error: 'Missing required fields: title, category' })
     }
 
     const input: ClientBudgetRequest = {
@@ -24,8 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const suggestion = await generateClientBudgetSuggestion(input),
     await trackPricingRequest({ input, suggestion }),
-    return res.status(200).json({ suggestion, disclaimer: 'Based on market data & trends' }),
+    return res.status(200).json({ suggestion, disclaimer: 'Based on market data & trends' })
   } catch (error) {
-    return res.status(500).json({ error: 'Failed to generate budget suggestion' }),
+    return res.status(500).json({ error: 'Failed to generate budget suggestion' })
   }
 }

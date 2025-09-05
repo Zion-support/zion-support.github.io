@@ -1,7 +1,6 @@
 
 import React from 'react',
 import { AddMilestoneForm } from '../AddMilestoneForm',
-
 interface MilestoneCreatorProps {
   onSubmit: (data: any) => Promise<void>,
   isSubmitting: boolean,
@@ -31,5 +30,5 @@ export function MilestoneCreator({
       projectEndDate={projectEndDate}
       projectType={projectType}
     />
-  ),
+  )
 }

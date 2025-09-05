@@ -22,7 +22,7 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   const service = getServiceById(id),
@@ -39,7 +39,7 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   return (

@@ -31,7 +31,7 @@ export default function TalentDirectory() {
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
     setInitialized(false),
-    setCurrentPage(1),
+    setCurrentPage(1)
   }),
 
   // Use our custom hook to manage state
@@ -69,7 +69,7 @@ export default function TalentDirectory() {
   const isAdmin = user?.userType === 'admin',
 
   useEffect(() => {
-    setCurrentPage(1),
+    setCurrentPage(1)
   }, [filteredTalents, total]),
 
   const totalPages = Math.ceil(total / itemsPerPage),
@@ -95,7 +95,7 @@ export default function TalentDirectory() {
     if (search) setSearchTerm(search),
     if (skills) skills.split().forEach((s) => toggleSkill(s)),
     if (availability)
-      availability.split(',').forEach((a) => toggleAvailability(a)),
+      availability.split().forEach((a) => toggleAvailability(a)),
     if (regions) regions.split().forEach((r) => toggleRegion(r)),
     if (priceMin && priceMax)
       setPriceRange([Number(priceMin), Number(priceMax)]),
@@ -103,7 +103,7 @@ export default function TalentDirectory() {
       setExperienceRange([Number(expMin), Number(expMax)]),
     if (sort && SORT_OPTIONS.some((o) => o.value === sort))
       setSortOption(sort),
-    setInitialized(true),
+    setInitialized(true)
   }, [router.isReady, router.query, initialized]), // Fixed dependencies
 
   // Persist filters to query parameters
@@ -112,23 +112,23 @@ export default function TalentDirectory() {
     
     const query: Record<string string> = {},
     if (searchTerm) query.search = searchTerm,
-    if (selectedSkills.length) query.skills = selectedSkills.join(','),
+    if (selectedSkills.length) query.skills = selectedSkills.join(),
     if (selectedAvailability.length)
       query.availability = selectedAvailability.join(),
-    if (selectedRegions.length) query.regions = selectedRegions.join(','),
+    if (selectedRegions.length) query.regions = selectedRegions.join(),
     if (priceRange[0] !== 50 || priceRange[1] !== 200) {
       query.priceMin = String(priceRange[0]),
-      query.priceMax = String(priceRange[1]),
+      query.priceMax = String(priceRange[1])
     }
     if (experienceRange[0] !== 0 || experienceRange[1] !== 15) {
       query.expMin = String(experienceRange[0]),
-      query.expMax = String(experienceRange[1]),
+      query.expMax = String(experienceRange[1])
     }
     if (sortOption !== 'relevance') query.sort = sortOption,
     if (currentPage > 1) query.page = String(currentPage),
     
     router.replace({ pathname: router.pathname, query }, undefined, {
-      shallow: true}),
+      shallow: true})
   }, [
     router.isReady,
     searchTerm,
@@ -159,7 +159,7 @@ export default function TalentDirectory() {
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <TalentSkeleton />
       </div>
-    ),
+    )
   }
 
   if (
@@ -198,7 +198,7 @@ export default function TalentDirectory() {
           </Link>
         </div>
       </div>
-    ),
+    )
   }
 
   if (error) {
@@ -206,7 +206,7 @@ export default function TalentDirectory() {
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <ErrorBanner msg="Unable to load talent profiles." />
       </div>
-    ),
+    )
   }
 
   return (
@@ -303,7 +303,7 @@ export default function TalentDirectory() {
                           href={`?page=${currentPage - 1}`}
                           onClick={(e) => {
                             e.preventDefault(),
-                            setCurrentPage(Math.max(1, currentPage - 1)),
+                            setCurrentPage(Math.max(1, currentPage - 1))
                           }}
                         />
                       </PaginationItem>
@@ -315,7 +315,7 @@ export default function TalentDirectory() {
                               isActive={page === currentPage}
                               onClick={(e) => {
                                 e.preventDefault(),
-                                setCurrentPage(page),
+                                setCurrentPage(page)
                               }}
                             />
                           </PaginationItem>
@@ -328,7 +328,7 @@ export default function TalentDirectory() {
                             e.preventDefault(),
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
-                            ),
+                            )
                           }}
                         />
                       </PaginationItem>
@@ -381,5 +381,5 @@ export default function TalentDirectory() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

@@ -20,7 +20,7 @@ export function ContactSection() {
     name?: string,
     email?: string,
     subject?: string,
-    message?: string,
+    message?: string
   }>({}),
 
   const handleChange = (
@@ -28,7 +28,7 @@ export function ContactSection() {
   ) => {
     const { name, value } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
-    setErrors((prev) => ({ ...prev, [name]: undefined })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -45,7 +45,7 @@ export function ContactSection() {
       const fieldErrors: Record<string string> = {},
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message,
+          fieldErrors[err.path[0] as string] = err.message
         }
       }
       setErrors(fieldErrors),
@@ -53,7 +53,7 @@ export function ContactSection() {
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setErrors({}),
@@ -67,22 +67,22 @@ export function ContactSection() {
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
-          throw new Error(data.error || "Failed to send message"),
+          throw new Error(data.error || "Failed to send message")
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
-        setFormData({ name: "", email: "", subject: "", message: "" }),
+        setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false),
         toast({
           title: "Submission Error",
           description: err.message,
-          variant: "destructive"}),
-      }),
+          variant: "destructive"})
+      })
   },
 
   return (
@@ -200,5 +200,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

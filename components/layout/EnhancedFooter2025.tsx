@@ -288,7 +288,7 @@ const EnhancedFooter2025: React.FC = () => {
         </div>
       </div>
     </footer>
-  ),
+  )
 },
 
 export default EnhancedFooter2025,

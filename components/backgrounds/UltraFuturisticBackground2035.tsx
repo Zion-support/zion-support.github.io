@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 export default function UltraFuturisticBackground2035() {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -16,7 +15,7 @@ export default function UltraFuturisticBackground2035() {
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
 
     let animationFrameId: number,
@@ -43,8 +42,8 @@ export default function UltraFuturisticBackground2035() {
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
-          color: ['#8b5cf6#06b6d4', '#ec4899#10b981'][Math.floor(Math.random() * 4)]
-        }),
+          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
+        })
       }
     },
 
@@ -85,15 +84,15 @@ export default function UltraFuturisticBackground2035() {
                 ctx.strokeStyle = particle.color,
                 ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08,
                 ctx.lineWidth = 1,
-                ctx.stroke(),
+                ctx.stroke()
               }
             }
-          }),
+          })
         }
       }),
 
       if (!prefersReducedMotion) {
-        animationFrameId = requestAnimationFrame(updateParticles),
+        animationFrameId = requestAnimationFrame(updateParticles)
       }
     },
 
@@ -105,9 +104,9 @@ export default function UltraFuturisticBackground2035() {
       canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
       if (ctx) {
         ctx.setTransform(1, 0, 0, 1, 0, 0),
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
-      initParticles(),
+      initParticles()
     },
 
     window.addEventListener('resize', handleResize),
@@ -115,9 +114,9 @@ export default function UltraFuturisticBackground2035() {
     return () => {
       window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId),
+        cancelAnimationFrame(animationFrameId)
       }
-    },
+    }
   }, []),
 
   return (
@@ -351,5 +350,5 @@ export default function UltraFuturisticBackground2035() {
         </div>
       </div>
     </>
-  ),
+  )
 }

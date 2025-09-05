@@ -6,13 +6,13 @@ module.exports = {,
     if ( {,
       config.plugins.push() {,
      {,
-      config.plugins.push(};
+      config.plugins.push(},
         new BundleAnalyzerPlugin({,
           "analyzerMode": 'static',
           openAnalyze: r: false,
           reportFilenam: e: 'bundle-analysis.htm,l'}),
 
-      )};
-    return config};
-};
+      )},
+    return config}
+},
 

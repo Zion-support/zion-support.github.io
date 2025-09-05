@@ -31,8 +31,7 @@ export default function Careers() {
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorch',
-        'Experience with large language models and neural networksStrong problem-solving and analytical skills'
+        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
     },
     {
@@ -44,8 +43,7 @@ export default function Careers() {
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
-        'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)',
-        'Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background'
+        'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background'
       ]
     },
     {
@@ -57,8 +55,7 @@ export default function Careers() {
       experience: '4+ years',
       description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
-        'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systems',
-        'Knowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations'
+        'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations'
       ]
     },
     {
@@ -70,8 +67,7 @@ export default function Careers() {
       experience: '3+ years',
       description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
-        'Experience with React, Node.js, and cloud platformsKnowledge of modern web technologies and APIs',
-        'Understanding of software architecture and design patternsExperience with DevOps and CI/CD practices'
+        'Experience with React, Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices'
       ]
     },
     {
@@ -83,8 +79,7 @@ export default function Careers() {
       experience: '5+ years',
       description: 'Drive business growth through strategic partnerships and client relationships.',
       requirements: [
-        'Proven track record in B2B sales and business developmentExperience in technology or consulting industries',
-        'Strong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
       ]
     }
   ],
@@ -113,10 +108,7 @@ export default function Careers() {
   ],
 
   const benefits = [
-    'Competitive salary and equity packagesComprehensive health, dental, and vision insurance',
-    'Flexible work arrangements and remote work optionsProfessional development and training programs',
-    'Generous paid time off and holidays401(k) with company matching',
-    'Modern technology and equipmentCollaborative and inclusive work environment'
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
   ],
 
   const filteredJobs = selectedDepartment === 'all' 

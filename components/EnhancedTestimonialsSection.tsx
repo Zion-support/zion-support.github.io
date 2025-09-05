@@ -91,7 +91,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'
         }`}
       />
-    )),
+    ))
   },
 
   return (
@@ -224,7 +224,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },
 
 export default EnhancedTestimonialsSection,

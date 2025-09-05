@@ -10,7 +10,6 @@ import {
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
-
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -33,7 +32,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -47,11 +46,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-      setSuggestion(result),
+      setSuggestion(result)
     } catch (error) {
-      console.error("Error generating budget suggestion:", error),
+      console.error("Error generating budget suggestion:", error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -67,7 +66,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
-        }),
+        })
       }
     }
   },
@@ -95,5 +94,5 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         )}
       </div>
     </div>
-  ),
+  )
 },

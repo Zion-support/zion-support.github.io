@@ -1,6 +1,5 @@
 import React from 'react',
 import AdminLayout from '@/components/admin/AdminLayout',
-
 export default function FeatureFlagsAdminPage() {
   const url = process.env.UNLEASH_URL || '',
   return (
@@ -16,5 +15,5 @@ export default function FeatureFlagsAdminPage() {
         </p>
       </div>
     </AdminLayout>
-  ),
+  )
 }

@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
-
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -10,7 +9,7 @@ it('renders category card with link to slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /test category/i }),
-  expect(link).toHaveAttribute('href/category/test-category'),
+  expect(link).toHaveAttribute('href/category/test-category')
 }),
 
 it('normalizes slug with special characters', () => {
@@ -21,7 +20,7 @@ it('normalizes slug with special characters', () => {
   ),
 
   const link = screen.getByRole('link', { name: /r&d tools!/i }),
-  expect(link).toHaveAttribute('href/category/rd-tools'),
+  expect(link).toHaveAttribute('href/category/rd-tools')
 }),
 
 it('removes accents from slug', () => {
@@ -32,7 +31,7 @@ it('removes accents from slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /crème brûlée/i }),
-  expect(link).toHaveAttribute('href/category/creme-brulee'),
+  expect(link).toHaveAttribute('href/category/creme-brulee')
 }),
 
 it('treats underscores as spaces in slug', () => {
@@ -43,5 +42,5 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
-  expect(link).toHaveAttribute('href/category/ai-tools'),
+  expect(link).toHaveAttribute('href/category/ai-tools')
 }),

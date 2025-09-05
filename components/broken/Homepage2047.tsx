@@ -14,12 +14,10 @@ import {
 import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2',
 import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4',
 import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2',
-
 // Import enhanced components
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047',
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047',
-
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
@@ -34,22 +32,22 @@ const Homepage2047: React.FC = () => {
     
     // Auto-rotate featured services
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+      setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 8000),
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY }),
+      setMousePosition({ x: e.clientX, y: e.clientY })
     },
     
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
-      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7),
+      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
     }, 100),
 
     // Track scroll position
     const handleScroll = () => {
-      setScrollY(window.scrollY),
+      setScrollY(window.scrollY)
     },
     
     window.addEventListener('mousemove', handleMouseMove),
@@ -59,8 +57,8 @@ const Homepage2047: React.FC = () => {
       clearInterval(interval),
       clearInterval(consciousnessInterval),
       window.removeEventListener('mousemove', handleMouseMove),
-      window.removeEventListener('scroll', handleScroll),
-    },
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, []),
 
   // Combine all innovative services
@@ -79,7 +77,7 @@ const Homepage2047: React.FC = () => {
     return allInnovativeServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    ),
+    )
   },
 
   const categories = [
@@ -446,7 +444,7 @@ const Homepage2047: React.FC = () => {
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
-  ),
+  )
 },
 
 export default Homepage2047,

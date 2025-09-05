@@ -8,7 +8,7 @@ const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true }),
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
 
@@ -18,8 +18,8 @@ function readAllGrants(): GrantApplication[] {
   return files.map((file) => {
     const full = path.join(GRANTS_DIR, file),
     const raw = fs.readFileSync(full, 'utf8'),
-    return JSON.parse(raw) as GrantApplication,
-  }),
+    return JSON.parse(raw) as GrantApplication
+  })
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,10 +31,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
-      ),
+      )
     }),
     res.status(200).json({ items: list }),
-    return,
+    return
   }
 
   if (req.method === 'POST') {
@@ -42,7 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const payload = req.body as CreateGrantPayload,
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
         res.status(400).json({ error: 'Missing required fields' }),
-        return,
+        return
       }
       ensureDir(),
       const id = uuidv4(),
@@ -68,13 +68,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updates: [],
         votes: []},
       fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8'),
-      res.status(201).json({ id, record }),
+      res.status(201).json({ id, record })
     } catch (e: any) {
-      res.status(500).json({ error: e?.message || 'Failed to create grant' }),
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
-    return,
+    return
   }
 
   res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed'),
+  res.status(405).end('Method Not Allowed')
 }

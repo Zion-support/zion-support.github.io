@@ -8,7 +8,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.moveDown(),
   doc.fontSize(11).fillColor('#222222').text(content, {
     width: 480,
-    align: 'left'}),
+    align: 'left'})
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,5 +41,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.addPage(),
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
-  doc.end(),
+  doc.end()
 }

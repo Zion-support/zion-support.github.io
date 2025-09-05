@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function CaseStudyPage() {
   return (
     <>
@@ -196,7 +195,7 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Auto-scalingLoad Balancing', 'MonitoringCost Optimization'].map((tech) => (
+                  {['Auto-scalingLoad BalancingMonitoringCost Optimization'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-blue-400 font-semibold">{tech}</span>
                     </div>

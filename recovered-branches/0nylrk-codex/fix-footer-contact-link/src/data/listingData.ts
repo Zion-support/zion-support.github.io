@@ -1,7 +1,6 @@
 
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
-
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -145,7 +144,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
-  })),
+  }))
 },
 
 // Generate filter options for sidebar
@@ -169,7 +168,7 @@ export const generateFilterOptions = () => {
       value: item
     })),
     ratingOptions: [1, 2, 3, 4, 5]
-  },
+  }
 },
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),

@@ -4,7 +4,6 @@ import { quoteRequestService } from '@/services/quoteRequestService',
 import { useAuth } from '@/hooks/useAuth',
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes',
 import { useToast } from '@/hooks/use-toast',
-
 export const useTalentQuotes = () => {
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -30,18 +29,18 @@ export const useTalentQuotes = () => {
   const filteredQuotes = allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
-      return false,
+      return false
     }
     
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
-      return false,
+      return false
     }
     if (archiveFilter === 'archived' && !quote.is_archived) {
-      return false,
+      return false
     }
     
-    return true,
+    return true
   }),
 
   // Mark as viewed/responded mutation
@@ -51,23 +50,23 @@ export const useTalentQuotes = () => {
     onSuccess: (_, variables) => {
       let message = "Status updated",
       if (variables.status === 'in_review') {
-        message = "Quote marked as viewed",
+        message = "Quote marked as viewed"
       } else if (variables.status === 'responded') {
-        message = "Quote marked as responded",
+        message = "Quote marked as responded"
       }
       
       toast({
         title: message,
         description: "The quote request status has been updated"
       }),
-      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: "Failed to update status: " + error.message,
         variant: "destructive"
-      }),
+      })
     }
   }),
 
@@ -82,14 +81,14 @@ export const useTalentQuotes = () => {
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
       }),
-      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: "Failed to update quote: " + error.message,
         variant: "destructive"
-      }),
+      })
     }
   }),
 
@@ -107,5 +106,5 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) => 
       updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation.mutate({ id, isArchived })},
+      toggleArchiveMutation.mutate({ id, isArchived })}
 },

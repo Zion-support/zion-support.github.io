@@ -4,17 +4,17 @@ function summarizeModules(modules: Record<string boolean>, bonus: Record<string 
   const active = [
     ...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`),
     ...Object.entries(bonus).filter(([ v]) => v).map(([k]) => `/${k}`)],
-  return active.length ? active.sort().join() : 'None',
+  return active.length ? active.sort().join() : 'None'
 }
 
 function missionParagraph(region: string, instanceName: string, modules: Record<string boolean>, bonus: Record<string boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length,
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`,
+  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       bonusModules = {}} = body,
 
     if (!instanceName || !deploymentRegion) {
-      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' }),
+      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
     }
 
     // Simulated provisioning operations – replace with real infra hooks later
@@ -55,10 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           trailerScript: '/trailer/script'},
         summit: '/summit'},
       publicPages: [
-        '/about/manifesto',
-        '/constitution/partners',
-        '/academy/marketplace',
-        '/dao',
+        '/about/manifesto/constitution/partners/academy/marketplace/dao',
         `/nation/${defaultLanguage || 'en'}`]},
 
     const deployLog = {
@@ -79,13 +76,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)},
 
     const access = {
-      roles: ['FounderSuperadmin', 'DAO Multisig'],
+      roles: ['FounderSuperadminDAO Multisig'],
       export: {
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}},
 
-    return res.status(200).json({ outputActions, deployLog, access, operator }),
+    return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' }),
+    return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }

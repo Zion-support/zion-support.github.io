@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2045Props {
   children: React.ReactNode
 }
@@ -42,7 +41,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
-      }),
+      })
     }
 
     // Animation loop
@@ -86,7 +85,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             alpha: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
-          },
+          }
         }
       }),
 
@@ -106,12 +105,12 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             ctx.moveTo(particle1.x, particle1.y),
             ctx.lineTo(particle2.x, particle2.y),
             ctx.stroke(),
-            ctx.restore(),
+            ctx.restore()
           }
-        }),
+        })
       }),
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     animate(),
@@ -119,17 +118,17 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-      window.removeEventListener('resize', handleResize),
-    },
+      window.removeEventListener('resize', handleResize)
+    }
   }, []),
 
   return (
@@ -284,7 +283,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2045,

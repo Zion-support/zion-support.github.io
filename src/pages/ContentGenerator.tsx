@@ -15,7 +15,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth(),
@@ -32,7 +31,7 @@ export default function ContentGenerator() {
 
   useEffect(() => {
     if (!isLoading && !user) {
-      router.push("/login?redirect=/content-generator"),
+      router.push("/login?redirect=/content-generator")
     }
   }, [user, isLoading, router]),
 
@@ -57,24 +56,24 @@ export default function ContentGenerator() {
       if (error) throw error,
       
       setPreviewContent(data), // Expecting { generatedContent: "..." }
-      toast.success(`Content for "${contentType}" generated successfully!`),
+      toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
-      toast.error("Failed to generate content. Please try again."),
+      toast.error("Failed to generate content. Please try again.")
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address"),
-      return,
+      return
     }
     
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
-      return,
+      return
     }
     
     try {
@@ -90,10 +89,10 @@ export default function ContentGenerator() {
       
       if (error) throw error,
       
-      toast.success(`Test newsletter sent to ${testEmail}!`),
+      toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
-      toast.error("Failed to send test newsletter. Please try again."),
+      toast.error("Failed to send test newsletter. Please try again.")
     }
   },
 
@@ -106,7 +105,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
       </>
-    ),
+    )
   }
 
   return (
@@ -302,5 +301,5 @@ export default function ContentGenerator() {
         </div>
       </div>
     </>
-  ),
+  )
 }

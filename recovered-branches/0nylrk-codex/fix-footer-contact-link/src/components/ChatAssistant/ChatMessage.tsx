@@ -45,5 +45,5 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         )}
       </div>
     </div>
-  ),
+  )
 }

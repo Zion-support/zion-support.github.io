@@ -5,9 +5,8 @@ import {
   Settings, LogOut, Bell, Globe, Zap
 } from 'lucide-react',
 import Link from 'next/link',
-
 interface EnhancedNavigationProps {
-  className?: string,
+  className?: string
 }
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
@@ -17,11 +16,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigationItems = [
@@ -298,7 +297,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         )}
       </AnimatePresence>
     </nav>
-  ),
+  )
 },
 
 export default EnhancedNavigation,

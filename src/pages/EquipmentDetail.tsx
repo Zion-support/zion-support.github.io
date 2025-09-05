@@ -16,8 +16,6 @@ import { ProductListing } from '@/types/listings',
 import { motion } from 'framer-motion',
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -66,14 +64,14 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
-  },
+  }
 }
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item),
-    return acc,
+    return acc
   }, {} as { [key: string]: EquipmentDetails }),
 
 export default function EquipmentDetail() {
@@ -95,7 +93,7 @@ export default function EquipmentDetail() {
       if (!id) {
         setLoading(false),
         setError('No equipment ID provided'),
-        return,
+        return
       }
 
       try {
@@ -107,7 +105,7 @@ export default function EquipmentDetail() {
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample),
           setLoading(false),
-          return,
+          return
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
@@ -124,29 +122,29 @@ export default function EquipmentDetail() {
                 equipmentData = storedData
               } else {
                 // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing),
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing)
               }
               
               setEquipment(equipmentData),
               setLoading(false),
-              return,
+              return
             }
           } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError }),
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError })
           }
         }
 
         // If not found anywhere, set error
         setError('Equipment not found'),
-        setLoading(false),
+        setLoading(false)
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error }),
         setError('Failed to load equipment details'),
-        setLoading(false),
+        setLoading(false)
       }
     }
 
-    loadEquipment(),
+    loadEquipment()
   }, [id]),
 
   const handleAddToCart = async () => {
@@ -155,7 +153,7 @@ export default function EquipmentDetail() {
         title: "Authentication Required",
         description: "Please log in to add items to cart",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsAdding(true),
@@ -170,14 +168,14 @@ export default function EquipmentDetail() {
 
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`}),
+        description: `${equipment.name} has been added to your cart.`})
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsAdding(false),
+      setIsAdding(false)
     }
   },
 
@@ -197,7 +195,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    ),
+    )
   }
 
   // Error state
@@ -467,6 +465,6 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  ),
+  )
 }
 

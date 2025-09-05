@@ -4,12 +4,11 @@ import path from 'path',
 import fs from 'fs',
 import DocsLayout from '../../../components/docs/DocsLayout',
 import CodeBlock from '../../../components/docs/CodeBlock',
-
 export type Section = {
   id: string,
   title: string,
   html?: string,
-  code?: { language?: string, content: string }[],
+  code?: { language?: string, content: string }[]
 },
 
 type DocsContent = {
@@ -22,10 +21,10 @@ type PageProps = {
 },
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-  const contentPath = path.join(process.cwd(), 'datadocs', 'content.json'),
+  const contentPath = path.join(process.cwd(), 'datadocscontent.json'),
   const raw = fs.readFileSync(contentPath, 'utf8'),
   const docs = JSON.parse(raw) as DocsContent,
-  return { props: { docs } },
+  return { props: { docs } }
 },
 
 export default function ApiDocsPage({ docs }: PageProps) {
@@ -47,5 +46,5 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>
       ))}
     </DocsLayout>
-  ),
+  )
 }

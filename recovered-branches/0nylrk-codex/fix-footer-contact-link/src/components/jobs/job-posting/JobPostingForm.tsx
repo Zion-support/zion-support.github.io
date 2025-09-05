@@ -12,10 +12,9 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
-
 interface JobPostingFormProps {
   jobId?: string,
-  onSuccess?: () => void,
+  onSuccess?: () => void
 }
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
@@ -49,39 +48,39 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Object.entries(job).forEach(([key, value]) => {
               if (key === 'published_date' && value) {
                 setStartDate(new Date(value as string)),
-                setValue('published_date', value as string),
+                setValue('published_date', value as string)
               } else if (key === 'expiry_date' && value) {
                 setEndDate(new Date(value as string)),
-                setValue('expiry_date', value as string),
+                setValue('expiry_date', value as string)
               } else if (key === 'is_remote') {
-                setIsRemote(value as boolean),
+                setIsRemote(value as boolean)
               } else if (key === 'description') {
                 setEditorContent(value as string),
-                setValue('description', value as string),
+                setValue('description', value as string)
               } else {
                 try {
                   // @ts-ignore - We know these fields exist in our form
-                  setValue(key, value as any),
+                  setValue(key, value as any)
                 } catch (e) {
                   // Skip fields that don't exist in our form
                 }
               }
-            }),
+            })
           }
         })
         .catch((error) => {
           console.error("Failed to load job:", error),
-          toast.error("Failed to load job"),
+          toast.error("Failed to load job")
         })
         .finally(() => {
-          setIsFormLoading(false),
-        }),
+          setIsFormLoading(false)
+        })
     }
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
 
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value),
-    setValue('description', value),
+    setValue('description', value)
   }, [setValue]),
 
   const onSubmit = async (values: JobSchemaType) => {
@@ -92,27 +91,27 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       
       if (jobId) {
         await updateJob(jobId, jobData),
-        toast.success("Job updated successfully!"),
+        toast.success("Job updated successfully!")
       } else {
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
-        setEditorContent(""),
+        setEditorContent("")
       }
 
       if (onSuccess) {
-        onSuccess(),
+        onSuccess()
       }
     } catch (error: any) {
       console.error("Error creating/updating job:", error),
-      toast.error(error.message || "Failed to post job"),
+      toast.error(error.message || "Failed to post job")
     } finally {
-      setIsFormLoading(false),
+      setIsFormLoading(false)
     }
   },
 
   if (isLoading || isFormLoading) {
-    return <div className="flex items-center justify-center p-8">Loading...</div>,
+    return <div className="flex items-center justify-center p-8">Loading...</div>
   }
 
   return (
@@ -158,5 +157,5 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         </Button>
       </form>
     </Form>
-  ),
+  )
 }

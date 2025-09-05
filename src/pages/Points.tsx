@@ -9,7 +9,6 @@ import { ScrollArea } from '@/components/ui/scroll-area',
 import { formatDistanceToNow } from 'date-fns',
 import Link from 'next/link',
 import { LoginModal } from '@/components/auth/LoginModal',
-
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth(),
   const { ledger, balance, loading, fetchLedger } = usePoints(),
@@ -25,9 +24,9 @@ export default function PointsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
       }),
-      await fetchLedger(),
+      await fetchLedger()
     } finally {
-      setRedeeming(false),
+      setRedeeming(false)
     }
   }
 
@@ -149,7 +148,7 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    ),
+    )
   }
 
   return (
@@ -285,5 +284,5 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

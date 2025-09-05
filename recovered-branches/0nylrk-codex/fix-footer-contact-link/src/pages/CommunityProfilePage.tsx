@@ -13,7 +13,6 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-
 // Mock user data
 const mockUser: CommunityUser = {
   id: "user1",
@@ -115,7 +114,7 @@ export default function CommunityProfilePage() {
     // For now, we'll just use the mock data
     setUser(mockUser),
     setPosts(userPosts),
-    setIsLoading(false),
+    setIsLoading(false)
   }, [userId]),
   
   if (isLoading) {
@@ -127,7 +126,7 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   if (!user) {
@@ -140,7 +139,7 @@ export default function CommunityProfilePage() {
           </Button>
         </div>
       </AppLayout>
-    ),
+    )
   }
 
   return (

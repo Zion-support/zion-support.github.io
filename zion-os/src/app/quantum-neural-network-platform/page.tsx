@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.",

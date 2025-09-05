@@ -5,7 +5,7 @@ export class ApiError extends Error {
   constructor(message: string, status: number, data?: unknown) {
     super(message),
     this.status = status,
-    this.data = data,
+    this.data = data
   }
 }
 
@@ -23,20 +23,20 @@ export async function apiClient(
         try {
           data = await response.clone().json()
         } catch {
-          data = undefined,
+          data = undefined
         }
         const message = data?.error || data?.message || response.statusText,
-        throw new ApiError(message, response.status, data),
+        throw new ApiError(message, response.status, data)
       }
-      return response,
+      return response
     } catch (err) {
       lastError = err,
       // Network errors are usually TypeError
       if (err instanceof TypeError && attempt < retries - 1) {
-        continue,
+        continue
       }
-      throw err,
+      throw err
     }
   }
-  throw lastError,
+  throw lastError
 }

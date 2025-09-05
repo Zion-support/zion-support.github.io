@@ -6,7 +6,6 @@ import {
   Globe, Zap, Shield, Crown, Brain, Atom
 } from 'lucide-react',
 import Link from 'next/link',
-
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness'),
 
@@ -28,24 +27,24 @@ export default function MarketPricing() {
           name: 'OpenAI',
           marketShare: '32%',
           pricing: '$0.002-$0.02 per 1K tokens',
-          strengths: ['Advanced language modelsStrong brand recognition', 'Large user base'],
-          weaknesses: ['Limited consciousness featuresHigh API costs', 'Privacy concerns'],
+          strengths: ['Advanced language modelsStrong brand recognitionLarge user base'],
+          weaknesses: ['Limited consciousness featuresHigh API costsPrivacy concerns'],
           rating: 4.2
         },
         {
           name: 'Anthropic',
           marketShare: '18%',
           pricing: '$0.015-$0.03 per 1K tokens',
-          strengths: ['Safety-focused approachConstitutional AI', 'Research-driven'],
-          weaknesses: ['Smaller model varietyLimited enterprise features', 'Higher pricing'],
+          strengths: ['Safety-focused approachConstitutional AIResearch-driven'],
+          weaknesses: ['Smaller model varietyLimited enterprise featuresHigher pricing'],
           rating: 4.0
         },
         {
           name: 'Zion Tech Group',
           marketShare: '12%',
           pricing: '$0.008-$0.015 per 1K tokens',
-          strengths: ['True AI consciousnessEnterprise-grade security', 'Competitive pricing'],
-          weaknesses: ['Smaller market presenceLimited brand recognition', 'Newer player'],
+          strengths: ['True AI consciousnessEnterprise-grade securityCompetitive pricing'],
+          weaknesses: ['Smaller market presenceLimited brand recognitionNewer player'],
           rating: 4.8
         }
       ],
@@ -66,24 +65,24 @@ export default function MarketPricing() {
           name: 'IBM',
           marketShare: '28%',
           pricing: '$1.60 per quantum hour',
-          strengths: ['Established infrastructureQiskit ecosystem', 'Research partnerships'],
-          weaknesses: ['Limited qubit countHigh costs', 'Complex access'],
+          strengths: ['Established infrastructureQiskit ecosystemResearch partnerships'],
+          weaknesses: ['Limited qubit countHigh costsComplex access'],
           rating: 4.1
         },
         {
           name: 'Google',
           marketShare: '22%',
           pricing: '$2.00 per quantum hour',
-          strengths: ['Quantum supremacyAdvanced algorithms', 'Research focus'],
-          weaknesses: ['Limited commercial accessHigh pricing', 'Complex setup'],
+          strengths: ['Quantum supremacyAdvanced algorithmsResearch focus'],
+          weaknesses: ['Limited commercial accessHigh pricingComplex setup'],
           rating: 4.3
         },
         {
           name: 'Zion Tech Group',
           marketShare: '8%',
           pricing: '$1.20 per quantum hour',
-          strengths: ['Competitive pricingEnterprise focus', 'Simplified access'],
-          weaknesses: ['Smaller infrastructureLimited qubit variety', 'Newer platform'],
+          strengths: ['Competitive pricingEnterprise focusSimplified access'],
+          weaknesses: ['Smaller infrastructureLimited qubit varietyNewer platform'],
           rating: 4.5
         }
       ],
@@ -104,24 +103,24 @@ export default function MarketPricing() {
           name: 'UiPath',
           marketShare: '25%',
           pricing: '$420-$1,200 per user/month',
-          strengths: ['Market leaderComprehensive platform', 'Strong partnerships'],
-          weaknesses: ['High costsComplex implementation', 'Limited AI features'],
+          strengths: ['Market leaderComprehensive platformStrong partnerships'],
+          weaknesses: ['High costsComplex implementationLimited AI features'],
           rating: 4.0
         },
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
           pricing: '$750-$1,500 per user/month',
-          strengths: ['Enterprise focusCloud-native', 'Security features'],
-          weaknesses: ['ExpensiveSteep learning curve', 'Limited customization'],
+          strengths: ['Enterprise focusCloud-nativeSecurity features'],
+          weaknesses: ['ExpensiveSteep learning curveLimited customization'],
           rating: 3.8
         },
         {
           name: 'Zion Tech Group',
           marketShare: '6%',
           pricing: '$350-$800 per user/month',
-          strengths: ['AI-powered automationCompetitive pricing', 'Easy implementation'],
-          weaknesses: ['Smaller ecosystemLimited integrations', 'Newer platform'],
+          strengths: ['AI-powered automationCompetitive pricingEasy implementation'],
+          weaknesses: ['Smaller ecosystemLimited integrationsNewer platform'],
           rating: 4.4
         }
       ],
@@ -142,24 +141,24 @@ export default function MarketPricing() {
           name: 'Microsoft',
           marketShare: '35%',
           pricing: '$22-$57 per user/month',
-          strengths: ['Market dominanceIntegrated ecosystem', 'Global presence'],
-          weaknesses: ['Complex licensingHigh costs', 'Vendor lock-in'],
+          strengths: ['Market dominanceIntegrated ecosystemGlobal presence'],
+          weaknesses: ['Complex licensingHigh costsVendor lock-in'],
           rating: 4.2
         },
         {
           name: 'Salesforce',
           marketShare: '18%',
           pricing: '$25-$300 per user/month',
-          strengths: ['CRM leadershipCloud-native', 'Extensive integrations'],
-          weaknesses: ['ExpensiveComplex pricing', 'Implementation costs'],
+          strengths: ['CRM leadershipCloud-nativeExtensive integrations'],
+          weaknesses: ['ExpensiveComplex pricingImplementation costs'],
           rating: 4.1
         },
         {
           name: 'Zion Tech Group',
           marketShare: '3%',
           pricing: '$18-$45 per user/month',
-          strengths: ['AI-powered featuresCompetitive pricing', 'Modern architecture'],
-          weaknesses: ['Smaller ecosystemLimited integrations', 'Newer player'],
+          strengths: ['AI-powered featuresCompetitive pricingModern architecture'],
+          weaknesses: ['Smaller ecosystemLimited integrationsNewer player'],
           rating: 4.3
         }
       ],
@@ -186,7 +185,7 @@ export default function MarketPricing() {
         key={i} 
         className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
       />
-    )),
+    ))
   },
 
   return (
@@ -797,9 +796,7 @@ export default function MarketPricing() {
               <h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>
               <ul className="space-y-3">
                 {[
-                  'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptography',
-                  'Automation needs in post-pandemic business operationsDigital transformation initiatives across industries',
-                  'Growing focus on AI ethics and responsible development'
+                  'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptographyAutomation needs in post-pandemic business operationsDigital transformation initiatives across industriesGrowing focus on AI ethics and responsible development'
                 ].map((driver, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -819,9 +816,7 @@ export default function MarketPricing() {
               <h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>
               <ul className="space-y-3">
                 {[
-                  'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systems',
-                  'Custom AI consciousness solutions for specific industriesPartnerships with research institutions and universities',
-                  'White-label solutions for enterprise software providers'
+                  'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systemsCustom AI consciousness solutions for specific industriesPartnerships with research institutions and universitiesWhite-label solutions for enterprise software providers'
                 ].map((opportunity, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />

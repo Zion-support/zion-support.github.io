@@ -9,7 +9,6 @@ import axios from "axios",
 import { Loader2 } from 'lucide-react'
 import { useTranslation } from "react-i18next",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function ITServiceRequestHero() {
 
   const [name, setName] = useState(""),
@@ -30,7 +29,7 @@ export function ITServiceRequestHero() {
         title: "Missing Information",
         description: "Name, email and location are required.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -52,16 +51,16 @@ export function ITServiceRequestHero() {
         setPhone(""),
         setCompany(""),
         setLocation(""),
-        setDetails(""),
+        setDetails("")
       }
     } catch (err: any) {
       logErrorToProduction(err),
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -146,5 +145,5 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

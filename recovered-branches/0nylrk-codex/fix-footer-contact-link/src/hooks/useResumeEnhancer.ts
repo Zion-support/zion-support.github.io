@@ -1,7 +1,6 @@
 
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
-
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',
 
 export function useResumeEnhancer() {
@@ -26,16 +25,16 @@ export function useResumeEnhancer() {
       }),
       
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
       
-      return data.enhancedContent,
+      return data.enhancedContent
     } catch (err: any) {
       setError(err.message || 'Failed to enhance content'),
       console.error('Enhancement error:', err),
-      return null,
+      return null
     } finally {
-      setIsEnhancing(false),
+      setIsEnhancing(false)
     }
   },
   
@@ -43,5 +42,5 @@ export function useResumeEnhancer() {
     enhanceContent,
     isEnhancing,
     error
-  },
+  }
 }

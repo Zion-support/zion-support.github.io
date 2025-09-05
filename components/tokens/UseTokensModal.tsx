@@ -22,13 +22,13 @@ export default function UseTokensModal({
   useEffect(() => {
     (async () => {
       const accs = await getAccounts(),
-      if (accs && accs.length > 0) setAccount(accs[0]),
-    })(),
+      if (accs && accs.length > 0) setAccount(accs[0])
+    })()
   }, []),
 
   async function connect() {
     const accs = await connectMetaMask(),
-    if (accs && accs.length > 0) setAccount(accs[0]),
+    if (accs && accs.length > 0) setAccount(accs[0])
   }
 
   async function redeem() {
@@ -40,10 +40,10 @@ export default function UseTokensModal({
         body: JSON.stringify({ account, amount: tokens, type, serviceId })}),
       const data = await res.json(),
       if (data?.ok) {
-        onClose(),
+        onClose()
       }
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
 

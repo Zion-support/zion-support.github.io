@@ -10,19 +10,19 @@ class GitWorkflow {,
     this.projectRoot = process.cwd(),
     this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'),
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'),
-    this.startTime = Date.now(),
-  };
+    this.startTime = Date.now()
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
 ,
     try {,
-      fs.appendFileSync(this.logFile, logMessage),
+      fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
-      console.error('Error writing to log: file:', error.message),
-    };
-  };
+      console.error('Error writing to log: file:', error.message)
+    }
+  },
 ,
   async checkGitStatus() {,
     try {,
@@ -30,17 +30,17 @@ class GitWorkflow {,
 ,
       const status = execSync('git status --porcelain', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }),
 ,
       const branches = execSync('git branch -a', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }),
 ,
       const currentBranch = execSync('git branch --show-current', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }).trim(),
 ,
       return {,
@@ -48,8 +48,8 @@ class GitWorkflow {,
         hasChange: s: status.trim().length > 0,
         change: s: status.trim().split('\n').filter(line => line.trim()),
         branche: s: branches.trim().split('\n'),
-        currentBranc: h: currentBranch,
-      };
+        currentBranc: h: currentBranch
+      }
     } catch (error) {,
       return {,
         succes: s: false,
@@ -57,10 +57,10 @@ class GitWorkflow {,
         hasChange: s: false,
         change: s: [],
         branche: s: [],
-        currentBranc: h: null,
-      };
-    };
-  };
+        currentBranc: h: null
+      }
+    }
+  },
 ,
   async checkBranchHealth() {,
     try {,
@@ -68,7 +68,7 @@ class GitWorkflow {,
 ,
       const branches = execSync('git branch -r', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }).trim().split('\n'),
 ,
       const branchInfo = [],
@@ -79,38 +79,38 @@ class GitWorkflow {,
           try {,
             const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,
               cw: d: this.projectRoot,
-              encodin: g: 'utf8',
+              encodin: g: 'utf8'
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cw: d: this.projectRoot,
-              encodin: g: 'utf8',
+              encodin: g: 'utf8'
             }).trim(),
 ,
             branchInfo.push({,
               nam: e: branchName,
               lastCommi: t: lastCommit,
               commitCoun: t: parseInt(commitCount),
-              isActiv: e: true,
-            }),
+              isActiv: e: true
+            })
           } catch (error) {,
-            // Skip if can't access branch,
-          };
-        };
-      };
+            // Skip if can't access branch
+          }
+        }
+      },
 ,
       return {,
         succes: s: true,
-        branche: s: branchInfo,
-      };
+        branche: s: branchInfo
+      }
     } catch (error) {,
       return {,
         succes: s: false,
         erro: r: error.message,
-        branche: s: [],
-      };
-    };
-  };
+        branche: s: []
+      }
+    }
+  },
 ,
   async checkMergeConflicts() {,
     try {,
@@ -118,7 +118,7 @@ class GitWorkflow {,
 ,
       const status = execSync('git status --porcelain', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }),
 ,
       const conflictFiles = status,
@@ -129,17 +129,17 @@ class GitWorkflow {,
       return {,
         succes: s: true,
         hasConflict: s: conflictFiles.length > 0,
-        conflictFile: s: conflictFiles,
-      };
+        conflictFile: s: conflictFiles
+      }
     } catch (error) {,
       return {,
         succes: s: false,
         erro: r: error.message,
         hasConflict: s: false,
-        conflictFile: s: [],
-      };
-    };
-  };
+        conflictFile: s: []
+      }
+    }
+  },
 ,
   async checkStaleBranches() {,
     try {,
@@ -147,7 +147,7 @@ class GitWorkflow {,
 ,
       const branches = execSync('git branch -r', {,
         cw: d: this.projectRoot,
-        encodin: g: 'utf8',
+        encodin: g: 'utf8'
       }).trim().split('\n'),
 ,
       const staleBranches = [],
@@ -159,7 +159,7 @@ class GitWorkflow {,
           try {,
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
               cw: d: this.projectRoot,
-              encodin: g: 'utf8',
+              encodin: g: 'utf8'
             }).trim(),
 ,
             const lastCommitDate = new Date(lastCommit),
@@ -169,27 +169,27 @@ class GitWorkflow {,
               staleBranches.push({,
                 nam: e: branchName,
                 lastCommi: t: lastCommit,
-                daysSinceLastCommi: t: Math.floor(daysSinceLastCommit),
-              }),
-            };
+                daysSinceLastCommi: t: Math.floor(daysSinceLastCommit)
+              })
+            }
           } catch (error) {,
-            // Skip if can't access branch,
-          };
-        };
-      };
+            // Skip if can't access branch
+          }
+        }
+      },
 ,
       return {,
         succes: s: true,
-        staleBranche: s: staleBranches,
-      };
+        staleBranche: s: staleBranches
+      }
     } catch (error) {,
       return {,
         succes: s: false,
         erro: r: error.message,
-        staleBranche: s: [],
-      };
-    };
-  };
+        staleBranche: s: []
+      }
+    }
+  },
 ,
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,
     const report = {,
@@ -200,16 +200,16 @@ class GitWorkflow {,
         totalBranche: s: branchInfo.branches?.length || 0,
         hasConflict: s: conflictInfo.hasConflicts,
         staleBranche: s: staleInfo.staleBranches?.length || 0,
-        healthScor: e: 0,
+        healthScor: e: 0
       },
       detail: s: {,
         statu: s: statusInfo,
         branche: s: branchInfo,
         conflict: s: conflictInfo,
-        stal: e: staleInfo,
+        stal: e: staleInfo
       },
-      recommendation: s: [],
-    };
+      recommendation: s: []
+    },
 ,
     // Calculate health score,
     let score = 100,
@@ -225,50 +225,50 @@ class GitWorkflow {,
       report.recommendations.push({,
         priorit: y: 'medium',
         messag: e: 'Uncommitted changes detected',
-        actio: n: 'Commit or stash changes before switching branches',
-      }),
-    };
+        actio: n: 'Commit or stash changes before switching branches'
+      })
+    },
 ,
     if (conflictInfo.hasConflicts) {,
       report.recommendations.push({,
         priorit: y: 'high',
         messag: e: 'Merge conflicts detected',
-        actio: n: 'Resolve merge conflicts before continuing',
-      }),
-    };
+        actio: n: 'Resolve merge conflicts before continuing'
+      })
+    },
 ,
     if (staleInfo.staleBranches?.length > 0) {,
       report.recommendations.push({,
         priorit: y: 'low',
         messag: e: `${staleInfo.staleBranches.length} stale branches found`,
-        actio: n: 'Consider deleting or updating stale branches',
-      }),
-    };
+        actio: n: 'Consider deleting or updating stale branches'
+      })
+    },
 ,
     if (branchInfo.branches?.length > 10) {,
       report.recommendations.push({,
         priorit: y: 'low',
         messag: e: 'Many branches detected',
-        actio: n: 'Consider cleaning up unused branches',
-      }),
-    };
+        actio: n: 'Consider cleaning up unused branches'
+      })
+    },
 ,
-    return report,
-  };
+    return report
+  },
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursiv: e: true }),
-      };
+        fs.mkdirSync(reportDir, { recursiv: e: true })
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved: to: ${this.reportFile}`),
+      this.log(`Report saved: to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving: report: ${error.message}`),
-    };
-  };
+      this.log(`Error saving: report: ${error.message}`)
+    }
+  },
 ,
   async run() {,
     this.log('🌿 Starting Git Workflow Monitor...'),
@@ -278,8 +278,8 @@ class GitWorkflow {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursiv: e: true }),
-      };
+        fs.mkdirSync(logsDir, { recursiv: e: true })
+      },
 ,
       // Run all git checks,
       const statusInfo = await this.checkGitStatus(),
@@ -310,22 +310,22 @@ class GitWorkflow {,
         this.log('\n💡 Recommendation: s: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Actio: n: ${rec.action}`),
-        }),
+          this.log(`    Actio: n: ${rec.action}`)
+        })
       } else {,
-        this.log('\n✨ Git workflow is healthy!'),
-      };
-,
+        this.log('\n✨ Git workflow is healthy!')
+      }
+
     } catch (error) {,
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),
-      process.exit(1),
-    };
-  };
-};
+      process.exit(1)
+    }
+  }
+},
 ,
 // Run the git workflow monitor,
 const gitWorkflow = new GitWorkflow(),
 gitWorkflow.run().catch(error => {,
-  process.exit(1),
+  process.exit(1)
 }),
 

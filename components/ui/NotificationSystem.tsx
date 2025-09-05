@@ -17,13 +17,13 @@ import { AnimatePresence, motion } from 'framer-motion',
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 
 type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void,
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
 },
 
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
 
 export function useToast() {
-  return useContext(NotificationContext),
+  return useContext(NotificationContext)
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
@@ -33,8 +33,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     const id = Math.random().toString(36).slice(2),
     setToasts((prev) => [...prev, { id, message, tone }]),
     setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id)),
-    }, 3000),
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
   }, []),
 
   return (
@@ -64,5 +64,5 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
         </div>
       </div>
     </NotificationContext.Provider>
-  ),
+  )
 }

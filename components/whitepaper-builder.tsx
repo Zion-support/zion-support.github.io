@@ -2,14 +2,13 @@ import React, { useMemo, useState } from 'react',
 import Link from 'next/link',
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper',
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper',
-
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full'),
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]),
 
   const downloadHref = useMemo(() => {
     if (edition === 'full') return '/docs/zion-protocol.pdf',
-    return `/api/zion-whitepaper-pdf?edition=${edition}`,
+    return `/api/zion-whitepaper-pdf?edition=${edition}`
   }, [edition]),
 
   return (
@@ -52,5 +51,5 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-  ),
+  )
 }

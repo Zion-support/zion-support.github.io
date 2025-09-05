@@ -13,7 +13,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -35,7 +34,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
     icon: ChartIcon,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Data AnalysisPredictive Analytics', 'Real-time Insights']
+    features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
   },
   {
     title: 'Marketing Automation',
@@ -43,7 +42,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
     icon: Megaphone,
     color: 'from-purple-500 to-pink-600',
-    features: ['Campaign OptimizationContent Personalization', 'ROI Tracking']
+    features: ['Campaign OptimizationContent PersonalizationROI Tracking']
   },
   {
     title: 'Sales Intelligence',
@@ -51,7 +50,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Sales Intelligence'),
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600',
-    features: ['Lead ScoringSales Forecasting', 'Pipeline Optimization']
+    features: ['Lead ScoringSales ForecastingPipeline Optimization']
   },
   {
     title: 'Customer Service',
@@ -59,7 +58,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Customer Service'),
     icon: HeadphonesIcon,
     color: 'from-orange-500 to-red-600',
-    features: ['AI ChatbotsTicket Automation', 'Sentiment Analysis']
+    features: ['AI ChatbotsTicket AutomationSentiment Analysis']
   },
   {
     title: 'HR Management',
@@ -67,7 +66,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management'),
     icon: TeamIcon,
     color: 'from-teal-500 to-cyan-600',
-    features: ['Recruitment AutomationPerformance Analytics', 'Employee Engagement']
+    features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
   }
 ],
 
@@ -414,5 +413,5 @@ export default function InnovativeBusinessSolutions() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

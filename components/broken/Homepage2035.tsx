@@ -11,7 +11,6 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch',
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch',
-
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -39,10 +38,10 @@ const Homepage2035: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
+      setIsVisible(true)
     }, 800),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   const fadeInUp = {
@@ -96,11 +95,11 @@ const Homepage2035: React.FC = () => {
         if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),
         if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),
         if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),
-        return true,
+        return true
       }),
 
   if (isLoading) {
-    return <LoadingFallback />,
+    return <LoadingFallback />
   }
 
   return (

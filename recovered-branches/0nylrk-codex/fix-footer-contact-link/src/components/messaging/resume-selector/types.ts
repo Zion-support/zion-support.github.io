@@ -1,6 +1,5 @@
 
 import { Resume } from "@/types/resume",
-
 export interface ResumeOption {
   id: string,
   title: string,

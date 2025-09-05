@@ -20,18 +20,17 @@ function updateIconImportsInFile(filePath) {
       /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
       'import {$1} from "@/components/icons"'
     ),
-    
     // Only write if changes were made
     if (content !== updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
-      return true,
+      return true
     }
     
-    return false,
+    return false
   } catch (err) {
     console.error(`❌ Error processing ${filePath}:`, err),
-    return false,
+    return false
   }
 }
 
@@ -41,7 +40,7 @@ let updatedFiles = 0,
 
 files.forEach(file => {
   const updated = updateIconImportsInFile(file),
-  if (updated) updatedFiles++,
+  if (updated) updatedFiles++
 }),
 
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),

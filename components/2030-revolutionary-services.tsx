@@ -6,7 +6,6 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 import { innovative2030Services } from '../data/2030-innovative-services',
-
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -322,5 +321,5 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
-  ),
+  )
 }

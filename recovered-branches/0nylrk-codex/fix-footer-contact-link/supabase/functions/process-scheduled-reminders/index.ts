@@ -1,7 +1,6 @@
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
-
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
@@ -15,7 +14,7 @@ serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders}),
+      headers: corsHeaders})
   }
   
   try {
@@ -34,7 +33,7 @@ serve(async (req: Request) => {
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-      ),
+      )
     }
     
     // Process pending reminder jobs
@@ -52,7 +51,7 @@ serve(async (req: Request) => {
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-      ),
+      )
     }
     
     const processedJobs = [],
@@ -80,9 +79,9 @@ serve(async (req: Request) => {
             .eq("id", job.id),
           
           if (updateError) {
-            console.error("Failed to update job status:", updateError),
+            console.error("Failed to update job status:", updateError)
           } else {
-            processedJobs.push(job.id),
+            processedJobs.push(job.id)
           }
         } else {
           console.error("Failed to send reminder for job:", job.id),
@@ -91,7 +90,7 @@ serve(async (req: Request) => {
             .from("scheduled_jobs")
             .update({
               status: "failed"})
-            .eq("id", job.id),
+            .eq("id", job.id)
         }
       }
     }
@@ -104,7 +103,7 @@ serve(async (req: Request) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   } catch (error) {
     console.error(error),
     return new Response(
@@ -112,6 +111,6 @@ serve(async (req: Request) => {
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   }
 }),

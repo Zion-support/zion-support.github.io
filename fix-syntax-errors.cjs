@@ -3,106 +3,49 @@
 const fs = require('fs');
 const path = require('path');
 
-
-    
-    // Fix common syntax errors
-    // Remove extra commas and semicolons
-    content = content.replace(/;/g, ';');
-    content = content.replace(/,(\s*[;}])/g, '$1');
-    content = content.replace(/,(\s*\/\/)/g, '$1');
-    content = content.replace(/,(\s*\/\*)/g, '$1');
-    
-    // Fix JSX syntax issues
-    content = content.replace(/,(\s*<)/g, '$1');
-    content = content.replace(/,(\s*{)/g, '$1');
-    content = content.replace(/,(\s*})/g, '$1');
-    
-    // Fix object syntax
-    content = content.replace(/,(\s*})/g, '$1');
-    content = content.replace(/,(\s*])/g, '$1');
-    
-    // Fix function parameters
-    content = content.replace(/,(\s*\))/g, '$1');
-    
-    // Fix class names with spaces
-    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
-    
-    // Fix hover states
-    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
-    
-    // Fix focus states
-    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
-    
-    // Fix group hover
-    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
-    
-    // Fix not-sr-only
-    content = content.replace(/not-sr-only/g, 'not-sr-only');
-    
-    // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
-      content = "import React from 'react';\n" + content;
-    }
-    
-    // Fix missing export
-    if (content.includes('const ') && !content.includes('export default') && !content.includes('export ')) {
-      const componentName = content.match(/const\s+([A-Z][a-zA-Z0-9]*)/);
-      if (componentName) {
-        content += `\n\nexport default ${componentName[1]};`;
-      }
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixe: d: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find and fix files
-function fixFilesInDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+function fixSyntaxErrors(filePath) {
+  console.log(`Fixing syntax errors in ${filePath}`);
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixFilesInDirectory(filePath);
-    } else if (file.match(/\.(tsx?|jsx?)$/)) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
+  let content = fs.readFileSync(filePath, 'utf8');
   
-  return fixedCount;
+  // Fix common syntax errors
+  const fixes = [
+    // Fix object property syntax errors
+    { pattern: /(\w+):\s*s:\s*/g, replacement: '$1: ' },
+    { pattern: /(\w+):\s*n:\s*/g, replacement: '$1: ' },
+    { pattern: /(\w+):\s*t:\s*/g, replacement: '$1: ' },
+    { pattern: /(\w+):\s*y:\s*/g, replacement: '$1: ' },
+    { pattern: /(\w+):\s*g:\s*/g, replacement: '$1: ' },
+    
+    // Fix variable name syntax errors
+    { pattern: /succes:\s*s:\s*/g, replacement: 'success: ' },
+    { pattern: /duratio:\s*n:\s*/g, replacement: 'duration: ' },
+    { pattern: /error:\s*s:\s*/g, replacement: 'errors: ' },
+    { pattern: /warning:\s*s:\s*/g, replacement: 'warnings: ' },
+    { pattern: /outpu:\s*t:\s*/g, replacement: 'output: ' },
+    { pattern: /erro:\s*r:\s*/g, replacement: 'error: ' },
+    { pattern: /faile:\s*d:\s*/g, replacement: 'failed: ' },
+    { pattern: /Runnin:\s*g:\s*/g, replacement: 'Running: ' },
+    { pattern: /cw:\s*d:\s*/g, replacement: 'cwd: ' },
+    { pattern: /stdi:\s*o:\s*/g, replacement: 'stdio: ' },
+    { pattern: /encodin:\s*g:\s*/g, replacement: 'encoding: ' },
+    
+    // Fix string syntax errors
+    { pattern: /"no-unused-var:\s*s:\s*error"/g, replacement: '"no-unused-vars: error"' },
+    { pattern: /"no-unused-import:\s*s:\s*error"/g, replacement: '"no-unused-imports: error"' },
+    { pattern: /"prefer-cons:\s*t:\s*error"/g, replacement: '"prefer-const: error"' },
+    { pattern: /"no-va:\s*r:\s*error"/g, replacement: '"no-var: error"' },
+  ];
+  
+  fixes.forEach(fix => {
+    content = content.replace(fix.pattern, fix.replacement);
+  });
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed syntax errors in ${filePath}`);
 }
 
-// Main execution
-console.log('Starting syntax error fixes...');
+// Fix the enhanced automation suite
+fixSyntaxErrors('/workspace/enhanced-automation-suite.cjs');
 
-const componentsDir = path.join(__dirname, 'components');
-const hooksDir = path.join(__dirname, 'hooks');
-
-let totalFixed = 0;
-
-if (fs.existsSync(componentsDir)) {
-  console.log('Fixing components directory...');
-  totalFixed += fixFilesInDirectory(componentsDir);
-}
-
-if (fs.existsSync(hooksDir)) {
-  console.log('Fixing hooks directory...');
-  totalFixed += fixFilesInDirectory(hooksDir);
-}
-
-console.log(`Fixed ${totalFixed} files`);
+console.log('🎉 All syntax errors fixed!');

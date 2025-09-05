@@ -16,7 +16,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 
 import CodeBlock from "./CodeBlock",
-
 export function ApiKeysManager() {
   const { 
     keys,
@@ -39,7 +38,7 @@ export function ApiKeysManager() {
 
   // Load keys on mount
   useState(() => {
-    fetchApiKeys(),
+    fetchApiKeys()
   }),
   
   const handleCreateKey = async () => {
@@ -48,7 +47,7 @@ export function ApiKeysManager() {
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
-    setSelectedScopes([]),
+    setSelectedScopes([])
   },
 
   const handleRegenerateKey = async (keyId: string) => {
@@ -75,7 +74,7 @@ export function ApiKeysManager() {
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
-    ),
+    )
   },
   
   const getExampleCode = (key: string) => {
@@ -88,7 +87,7 @@ export function ApiKeysManager() {
   const handleDialogClose = () => {
     setKeyName(""),
     setSelectedScopes([]),
-    setShowCreateDialog(false),
+    setShowCreateDialog(false)
   },
 
   return (

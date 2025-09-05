@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const dataPath = path.join(process.cwd(), 'datalearn', 'courses.json'),
+const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -18,11 +17,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const freeVal = isFree === 'true' || isFree === true,
         if (c.isFree !== freeVal) return false
       }
-      return true,
+      return true
     }),
 
-    res.status(200).json({ courses: filtered }),
+    res.status(200).json({ courses: filtered })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' }),
+    res.status(500).json({ error: e?.message ?? 'Failed to load courses' })
   }
 }

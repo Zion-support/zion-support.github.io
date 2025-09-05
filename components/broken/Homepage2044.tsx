@@ -7,7 +7,6 @@ import {
   ChevronDown, CheckCircle, Users, Award, Clock
 } from 'lucide-react',
 import { Service } from '../types',
-
 // Import our new revolutionary services
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
@@ -15,12 +14,10 @@ import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-servi
 import { innovative2025AIAutonomousEcosystemV3 } from '../data/2025-innovative-ai-autonomous-ecosystem-v3',
 import { emerging2025TechBreakthroughsV4 } from '../data/2025-emerging-tech-breakthroughs-v4',
 import { advanced2025ITInfrastructureServicesV2 } from '../data/2025-advanced-it-infrastructure-services-v2',
-
 // Import our new 2025 real enterprise AI services
 import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services',
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',
-
 // Lazy load new components for better performance
 const ServiceCard = lazy(() => import('./ServiceCard')),
 const TestimonialsSection = lazy(() => import('./TestimonialsSection')),
@@ -74,7 +71,7 @@ const Homepage2044: React.FC = () => {
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    ),
+    )
   }, [selectedCategory, allRevolutionaryServices]),
 
   const categories = useMemo(() => [
@@ -105,32 +102,32 @@ const Homepage2044: React.FC = () => {
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcta_click', { cta_type: 'get_started' }),
+      (window as any).gtag('eventcta_click', { cta_type: 'get_started' })
     }
-    window.location.href = '/revolutionary-2044-pricing-showcase',
+    window.location.href = '/revolutionary-2044-pricing-showcase'
   }, []),
 
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' }),
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' })
     }
-    window.location.href = '/services',
+    window.location.href = '/services'
   }, []),
 
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventservice_click', { service_name: service.name }),
+      (window as any).gtag('eventservice_click', { service_name: service.name })
     }
-    window.location.href = service.slug,
+    window.location.href = service.slug
   }, []),
 
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId),
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcategory_filter', { category: categoryId }),
+      (window as any).gtag('eventcategory_filter', { category: categoryId })
     }
   }, []),
 
@@ -142,14 +139,14 @@ const Homepage2044: React.FC = () => {
     },
 
     if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(initializePage),
+      (window as any).requestIdleCallback(initializePage)
     } else {
-      setTimeout(initializePage, 100),
+      setTimeout(initializePage, 100)
     }
     
     // Auto-rotate featured services with better performance
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+      setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000),
     
     // Track mouse movement for parallax effects with throttling
@@ -158,9 +155,9 @@ const Homepage2044: React.FC = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           setMousePosition({ x: e.clientX, y: e.clientY }),
-          ticking = false,
+          ticking = false
         }),
-        ticking = true,
+        ticking = true
       }
     },
     
@@ -171,7 +168,7 @@ const Homepage2044: React.FC = () => {
       const scrollTop = window.pageYOffset,
       const docHeight = document.body.offsetHeight - window.innerHeight,
       const scrollPercent = (scrollTop / docHeight) * 100,
-      setScrollProgress(scrollPercent),
+      setScrollProgress(scrollPercent)
     },
     
     window.addEventListener('scroll', handleScroll, { passive: true }),
@@ -179,8 +176,8 @@ const Homepage2044: React.FC = () => {
     return () => {
       clearInterval(interval),
       window.removeEventListener('mousemove', handleMouseMove),
-      window.removeEventListener('scroll', handleScroll),
-    },
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, []),
 
   // Loading state
@@ -198,7 +195,7 @@ const Homepage2044: React.FC = () => {
           </motion.div>
         </div>
       </Layout>
-    ),
+    )
   }
 
   return (
@@ -285,7 +282,7 @@ const Homepage2044: React.FC = () => {
           </div>
         </div>
       </Layout>
-    ),
+    )
   }
 
   return (
@@ -598,7 +595,7 @@ const Homepage2044: React.FC = () => {
         </main>
       </Layout>
     </>
-  ),
+  )
 },
 
 export default Homepage2044,

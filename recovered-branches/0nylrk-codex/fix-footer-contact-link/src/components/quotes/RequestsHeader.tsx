@@ -9,7 +9,6 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
-
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -74,5 +73,5 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
         </Select>
       </div>
     </div>
-  ),
+  )
 },

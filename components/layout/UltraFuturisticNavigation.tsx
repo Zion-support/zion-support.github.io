@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion',
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react',
 
 interface UltraFuturisticNavigationProps {
-  className?: string,
+  className?: string
 }
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
@@ -14,11 +14,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigationItems = [
@@ -268,5 +268,5 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
-  ),
+  )
 }

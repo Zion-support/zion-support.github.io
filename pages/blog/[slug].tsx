@@ -10,7 +10,6 @@ import type { BlogPost } from '@/types/blog',
 import type { GetStaticPaths, GetStaticProps } from 'next',
 import fs from 'fs',
 import path from 'path',
-
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
@@ -21,7 +20,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
   const meta = JSON.parse(match[1]),
   const content = match[2].trim(),
   const slug = path.basename(filePath).replace(/\.md$/, ''),
-  return { ...meta, id: slug, slug, content } as BlogPost,
+  return { ...meta, id: slug, slug, content } as BlogPost
 }
 
 interface BlogPostPageProps {
@@ -50,7 +49,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null,
       if (directFallback) {
         setPost(directFallback),
-        setError(null),
+        setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
@@ -61,10 +60,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   }, [slug, initialPost]),
 
   if (error) {
-    return <div>{error}</div>,
+    return <div>{error}</div>
   }
   if (!post) {
-    return <div>Article not found</div>,
+    return <div>Article not found</div>
   }
   const articleLd = {
     author: post.author.name,
@@ -90,7 +89,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement,
-              target.src = '/images/blog-placeholder.svg',
+              target.src = '/images/blog-placeholder.svg'
             }}
           />
           <div>
@@ -110,7 +109,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement,
-                target.src = '/images/blog-placeholder.svg',
+                target.src = '/images/blog-placeholder.svg'
               }}
             />
           </div>
@@ -121,7 +120,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         <CommentsSection slug={post.slug} />
       </main>
     </>
-  ),
+  )
 },
 
 export default BlogPostPage,
@@ -132,22 +131,22 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = files.map((f) => ({
     params: { slug: f.replace(/\.md$/, '') }})),
   // Use `blocking` so new posts added after build can be generated on demand
-  return { paths, fallback: 'blocking' },
+  return { paths, fallback: 'blocking' }
 },
 
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   params}: {
-  params?: { slug?: string },
+  params?: { slug?: string }
 }) => {
   const slug = params?.slug as string,
   // Validate slug to prevent malformed paths
   if (!/^[a-z0-9-]+$/.test(slug)) {
-    return { notFound: true },
+    return { notFound: true }
   }
   const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),
   const post = parseMarkdown(filePath),
   if (!post) {
-    return { notFound: true },
+    return { notFound: true }
   }
-  return { props: { initialPost: post }, revalidate: 60 },
+  return { props: { initialPost: post }, revalidate: 60 }
 },

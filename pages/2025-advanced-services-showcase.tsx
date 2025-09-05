@@ -12,7 +12,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',
-
 export default function AdvancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -45,7 +44,7 @@ export default function AdvancedServicesShowcase2025() {
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       const price = parseFloat(service.price.replace('$', '').replace(, '')),
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
-      return matchesSearch && matchesCategory && matchesPrice,
+      return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -404,7 +403,7 @@ export default function AdvancedServicesShowcase2025() {
                 onClick={() => {
                   setSearchTerm(''),
                   setSelectedCategory('all'),
-                  setPriceRange([0, 10000]),
+                  setPriceRange([0, 10000])
                 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >

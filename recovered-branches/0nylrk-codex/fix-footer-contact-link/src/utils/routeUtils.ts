@@ -29,10 +29,10 @@ export const canAccessRoute = (
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
-    return route.requiredRoles.includes(userType as any),
+    return route.requiredRoles.includes(userType as any)
   }
   
-  return true,
+  return true
 },
 
 // Get breadcrumb items for a path
@@ -53,15 +53,15 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
       breadcrumbs.push({
         label: route.label,
         path: currentPath
-      }),
+      })
     } else {
       // For dynamic routes that might not be in the static sitemap
       breadcrumbs.push({
         label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
         path: currentPath
-      }),
+      })
     }
   }
   
-  return breadcrumbs,
+  return breadcrumbs
 },

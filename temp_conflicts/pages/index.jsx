@@ -2,7 +2,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
-
 const Home = () => {
   const features = [
     {

@@ -26,12 +26,12 @@ export default function StudioHostPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })}),
       const data = await res.json(),
-      setEpisode(data.episode),
+      setEpisode(data.episode)
     } catch (e) {
       console.error(e),
-      alert('Failed to generate episode'),
+      alert('Failed to generate episode')
     } finally {
-      setGenerating(false),
+      setGenerating(false)
     }
   },
 
@@ -44,12 +44,12 @@ export default function StudioHostPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.id, persona })}),
       const data = await res.json(),
-      setEpisode(data.episode),
+      setEpisode(data.episode)
     } catch (e) {
       console.error(e),
-      alert('Failed to synthesize audio'),
+      alert('Failed to synthesize audio')
     } finally {
-      setSynthesizing(false),
+      setSynthesizing(false)
     }
   },
 
@@ -59,12 +59,12 @@ export default function StudioHostPage() {
     try {
       const res = await fetch('/api/podcast/rss', { method: 'POST' }),
       await res.json(),
-      alert('RSS feed updated. Platforms will pull on next refresh.'),
+      alert('RSS feed updated. Platforms will pull on next refresh.')
     } catch (e) {
       console.error(e),
-      alert('Failed to update RSS'),
+      alert('Failed to update RSS')
     } finally {
-      setPublishing(false),
+      setPublishing(false)
     }
   },
 
@@ -174,5 +174,5 @@ export default function StudioHostPage() {
         </section>
       )}
     </div>
-  ),
+  )
 }

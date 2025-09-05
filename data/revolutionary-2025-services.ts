@@ -12,7 +12,7 @@ export interface Revolutionary2025Service {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const revolutionary2025Services: Revolutionary2025Service[] = [

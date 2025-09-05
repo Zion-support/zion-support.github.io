@@ -8,7 +8,6 @@ import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026',
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
-
 export default function Innovative2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -71,7 +70,7 @@ export default function Innovative2026ServicesShowcase() {
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic'),
           default: return true
         }
-      }),
+      })
     }
 
     // Price range filter
@@ -87,7 +86,7 @@ export default function Innovative2026ServicesShowcase() {
             return price > 1000,
           default: return true
         }
-      }),
+      })
     }
 
     // Search filter
@@ -96,7 +95,7 @@ export default function Innovative2026ServicesShowcase() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
     // Sort
@@ -114,7 +113,7 @@ export default function Innovative2026ServicesShowcase() {
       }
     }),
 
-    return filtered,
+    return filtered
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
 
   const containerVariants = {
@@ -372,7 +371,7 @@ export default function Innovative2026ServicesShowcase() {
                   onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('all'),
-                    setSelectedPriceRange('all'),
+                    setSelectedPriceRange('all')
                   }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >

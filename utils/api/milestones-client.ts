@@ -3,7 +3,7 @@ export async function fetchMilestones(projectId: string) {
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include'}),
   if (!res.ok) throw new Error('Failed to load milestones'),
-  return res.json(),
+  return res.json()
 }
 
 export async function createMilestone(projectId: string, payload: any) {
@@ -13,7 +13,7 @@ export async function createMilestone(projectId: string, payload: any) {
     credentials: 'include',
     body: JSON.stringify(payload)}),
   if (!res.ok) throw new Error(await res.text()),
-  return res.json(),
+  return res.json()
 }
 
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
@@ -23,5 +23,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     credentials: 'include',
     body: JSON.stringify(body)}),
   if (!res.ok) throw new Error(await res.text()),
-  return res.json(),
+  return res.json()
 }

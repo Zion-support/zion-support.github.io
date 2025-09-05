@@ -5,7 +5,6 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin",
 import CompanyWorkspace from "../pages/CompanyWorkspace",
 import EnterpriseBilling from "../pages/EnterpriseBilling",
 import ZionHireAI from "../pages/ZionHireAI",
-
 const EnterpriseRoutes = () => {
   return (
     <Routes>
@@ -20,7 +19,7 @@ const EnterpriseRoutes = () => {
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
       <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
-  ),
+  )
 },
 
 export default EnterpriseRoutes,

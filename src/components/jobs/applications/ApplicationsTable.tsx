@@ -47,7 +47,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
-  ),
+  )
 },
 
 export function ApplicationsTable({ 
@@ -69,7 +69,7 @@ export function ApplicationsTable({
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
-    }),
+    })
   },
   
   return (
@@ -150,5 +150,5 @@ export function ApplicationsTable({
         onConfirm={handleHireConfirmed}
       />
     </>
-  ),
+  )
 }

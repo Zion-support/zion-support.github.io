@@ -7,7 +7,6 @@ import {
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',
 import { DollarSign } from 'lucide-react',
-
 const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
   { code: 'USD', symbol: '$' },
   { code: 'EUR', symbol: '€' },
@@ -36,5 +35,5 @@ export function CurrencySelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
+  )
 }

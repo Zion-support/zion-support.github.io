@@ -1,74 +1,74 @@
-                  key={social.name};
-                  href={social.href};
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text-gray-400hove: r:text-blue-400transition-colors";
-                  aria-label={social.name};
-                >;
-                  <social.icon className="h-5w-5" />;
-                </a>))};
-            </div>;
-          </div>;
-          {/* Services */};
-          <div>;
-            <h3 className="text-lgfont-semiboldmb-4">Services</h3>;
-            <ul className="space-y-2">;
-              {services.map((service) => (;
-                <li key={service.name}>;
-                  <Link;
-                    href={service.href};
-                    {service.name};
-                  </Link>;
-                </li>))};
-            </ul>;
-          </div>;
-          {/* Company */};
-          <div>;
-            <h3 className="text-lgfont-semiboldmb-4">Company</h3>;
-            <ul className="space-y-2">;
-              {company.map((item) => (;
-                <li key={item.name}>;
-                  <Link;
-                    href={item.href};
-                    {item.name};
-                  </Link>;
-                </li>))};
-            </ul>;
-          </div>;
-          {/* Resources & Contact */};
-          <div>;
-            <h3 className="text-lgfont-semiboldmb-4">Resources</h3>;
-            <ul className="space-y-2mb-6">;
-              {resources.map((resource) => (;
-                <li key={resource.name}>;
-                  <Link;
-                    href={resource.href};
-                    {resource.name};
-                  </Link>;
-                </li>))};
-            </ul>;
-            <h3 className="text-lgfont-semiboldmb-4">Contact</h3>;
-            <div className="space-y-2">;
-              <div className="flexitems-centertext-gray-300">;
-                <Mail className="h-4w-4mr-2" />;
-                <a href="mailt: o: info@ziontechgroup.com" className="hove: r:text-blue-400">;
-                  info@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className="flexitems-centertext-gray-300">;
-                <Phone className="h-4w-4mr-2" />;
-                <a href="te: l:+1-555-123-4567" className="hove: r:text-blue-400">;
-                  +1 (555) 123-4567;
-                </a>;
-              </div>;
-              <div className="flexitems-starttext-gray-300">;
-                <MapPin className="h-4 w-4mr-2mt-0.5" />;
-                <span>;
-                  123 Tech Street<br />;
-                  San Francisco, CA 94105;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Bottom Section */};
+                  key={social.name},
+                  href={social.href},
+                  target="_blank",
+                  rel="noopener noreferrer",
+                  className="text-gray-400hove: r:text-blue-400transition-colors",
+                  aria-label={social.name},
+                >,
+                  <social.icon className="h-5w-5" />,
+                </a>))},
+            </div>,
+          </div>,
+          {/* Services */},
+          <div>,
+            <h3 className="text-lgfont-semiboldmb-4">Services</h3>,
+            <ul className="space-y-2">,
+              {services.map((service) => (,
+                <li key={service.name}>,
+                  <Link,
+                    href={service.href},
+                    {service.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+          </div>,
+          {/* Company */},
+          <div>,
+            <h3 className="text-lgfont-semiboldmb-4">Company</h3>,
+            <ul className="space-y-2">,
+              {company.map((item) => (,
+                <li key={item.name}>,
+                  <Link,
+                    href={item.href},
+                    {item.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+          </div>,
+          {/* Resources & Contact */},
+          <div>,
+            <h3 className="text-lgfont-semiboldmb-4">Resources</h3>,
+            <ul className="space-y-2mb-6">,
+              {resources.map((resource) => (,
+                <li key={resource.name}>,
+                  <Link,
+                    href={resource.href},
+                    {resource.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+            <h3 className="text-lgfont-semiboldmb-4">Contact</h3>,
+            <div className="space-y-2">,
+              <div className="flexitems-centertext-gray-300">,
+                <Mail className="h-4w-4mr-2" />,
+                <a href="mailt: o: info@ziontechgroup.com" className="hove: r:text-blue-400">,
+                  info@ziontechgroup.com,
+                </a>,
+              </div>,
+              <div className="flexitems-centertext-gray-300">,
+                <Phone className="h-4w-4mr-2" />,
+                <a href="te: l:+1-555-123-4567" className="hove: r:text-blue-400">,
+                  +1 (555) 123-4567,
+                </a>,
+              </div>,
+              <div className="flexitems-starttext-gray-300">,
+                <MapPin className="h-4 w-4mr-2mt-0.5" />,
+                <span>,
+                  123 Tech Street<br />,
+                  San Francisco, CA 94105,
+                </span>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+        {/* Bottom Section */},

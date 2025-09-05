@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import StarRating from './StarRating',
-
 export type ReviewFormValues = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -13,7 +12,7 @@ export type ReviewFormValues = {
     timeliness?: number,
     wouldWorkWithAgain?: boolean
   },
-  anonymous?: boolean,
+  anonymous?: boolean
 },
 
 type Props = {
@@ -53,11 +52,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             wouldWorkWithAgain}})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
-      setMessage('Review submitted! Pending admin approval.'),
+      setMessage('Review submitted! Pending admin approval.')
     } catch (err: any) {
       setMessage(err.message)
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   }
 
@@ -125,7 +124,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       {message && <p className="text-sm">{message}</p>}
     </form>
-  ),
+  )
 },
 
 export default ReviewForm,

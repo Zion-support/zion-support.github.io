@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
-
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
 const timeRangeToInterval = {
@@ -35,13 +34,13 @@ export function PageViewsTable() {
         
       if (error) throw error,
       
-      return data || [],
+      return data || []
     }}),
   
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page',
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' '),
+    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
   },
   
   // Calculate total views to determine percentages
@@ -103,7 +102,7 @@ export function PageViewsTable() {
                     </div>
                   </div>
                 </div>
-              ),
+              )
             })
           ) : (
             <div className="text-center py-8 text-zion-slate">
@@ -113,5 +112,5 @@ export function PageViewsTable() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

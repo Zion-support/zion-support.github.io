@@ -10,7 +10,6 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',
-
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -37,7 +36,7 @@ export default function Comprehensive2025ServicesShowcase() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-      return matchesSearch && matchesCategory,
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -320,7 +319,7 @@ export default function Comprehensive2025ServicesShowcase() {
               <button
                 onClick={() => {
                   setSearchTerm(''),
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >

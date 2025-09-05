@@ -10,11 +10,11 @@ export default function DocsAdmin() {
     const res = await fetch('/api/admin/docs/get', { headers: { 'x-admin-token': token } }),
     if (!res.ok) {
       setStatus('Failed to load'),
-      return,
+      return
     }
     const json = await res.json(),
     setValue(JSON.stringify(json, null, 2)),
-    setStatus('Loaded'),
+    setStatus('Loaded')
   },
 
   const saveContent = async () => {
@@ -27,9 +27,9 @@ export default function DocsAdmin() {
         body: JSON.stringify(parsed)}),
       if (!res.ok) throw new Error('Save failed'),
       const data = await res.json(),
-      setStatus(`Saved version ${data.version}`),
+      setStatus(`Saved version ${data.version}`)
     } catch (e) {
-      setStatus('Invalid JSON or save error'),
+      setStatus('Invalid JSON or save error')
     }
   },
 
@@ -54,5 +54,5 @@ export default function DocsAdmin() {
         onChange={(e) => setValue(e.target.value)}
       />
     </div>
-  ),
+  )
 }

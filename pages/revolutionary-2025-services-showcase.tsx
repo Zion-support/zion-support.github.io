@@ -15,7 +15,6 @@ import {
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',
-
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
 
 const contactInfo = {
@@ -130,7 +129,7 @@ export default function Revolutionary2025ServicesShowcase() {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -524,7 +523,7 @@ export default function Revolutionary2025ServicesShowcase() {
                 <button
                   onClick={() => {
                     setSearchTerm(''),
-                    setSelectedCategory('all'),
+                    setSelectedCategory('all')
                   }}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >

@@ -9,7 +9,6 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 import { useWhitelabel } from "@/context/WhitelabelContext",
-
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string },
   const { user } = useAuth(),
@@ -21,11 +20,11 @@ export default function CompanyWorkspace() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
-    ),
+    )
   }
   
   if (error || !company) {
-    return <Navigate to="/not-found" />,
+    return <Navigate to="/not-found" />
   }
   
   // In white-label mode, use the tenant's theme instead of the company's theme
@@ -39,7 +38,7 @@ export default function CompanyWorkspace() {
   const hasAccess = true, // For demo purposes, always grant access
 
   if (!hasAccess) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
   }
 
   return (
@@ -57,5 +56,5 @@ export default function CompanyWorkspace() {
       </main>
       <Footer />
     </ProtectedRoute>
-  ),
+  )
 }

@@ -16,7 +16,6 @@ import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { ProfileContact } from "@/components/profile/ProfileContact",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { useCurrency } from '@/hooks/useCurrency',
-
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -45,14 +44,14 @@ export default function ListingDetail() {
             </div>
           </div>
         </div>
-      ),
+      )
   }
 
   const handleContact = () => {
     if (user) {
-      setIsChatOpen(true),
+      setIsChatOpen(true)
     } else {
-      setIsContactDialogOpen(true),
+      setIsContactDialogOpen(true)
     }
   },
 
@@ -207,7 +206,7 @@ export default function ListingDetail() {
                         toast({
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
-                        }),
+                        })
                       }}
                     />
                   ) : (
@@ -297,5 +296,5 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  ),
+  )
 }

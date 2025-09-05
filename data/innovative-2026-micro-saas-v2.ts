@@ -12,7 +12,7 @@ export interface Innovative2026MicroSaasV2 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [

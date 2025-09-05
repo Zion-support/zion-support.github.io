@@ -19,7 +19,6 @@ import { quantumSpaceServices } from '../data/quantum-space-services',
 import { enterpriseITServices } from '../data/enterprise-it-services',
 import { realMarketServices } from '../data/real-market-services',
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025',
-
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -79,7 +78,7 @@ export default function EnhancedServicesShowcase() {
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())),
       
-      return matchesCategory && matchesSearch,
+      return matchesCategory && matchesSearch
     }),
 
     // Sort services
@@ -105,7 +104,7 @@ export default function EnhancedServicesShowcase() {
       default: break
     }
 
-    return filtered,
+    return filtered
   }, [allServices, selectedCategory, searchTerm, sortBy]),
 
   const containerVariants = {
@@ -494,7 +493,7 @@ export default function EnhancedServicesShowcase() {
                   href="#"
                   onClick={() => {
                     setSearchTerm(''),
-                    setSelectedCategory('all'),
+                    setSelectedCategory('all')
                   }}
                   variant="primary"
                 >
@@ -600,12 +599,12 @@ const Button = ({
       <a href={href} className={classes}>
         {children}
       </a>
-    ),
+    )
   }
 
   return (
     <button onClick={onClick} className={classes}>
       {children}
     </button>
-  ),
+  )
 },

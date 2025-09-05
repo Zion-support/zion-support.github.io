@@ -2,7 +2,6 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-
 export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -75,7 +74,7 @@ export default function DocsPage() {
     const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const getDifficultyColor = (difficulty: string) => {
@@ -92,7 +91,7 @@ export default function DocsPage() {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
-    }),
+    })
   },
 
   return (
@@ -146,5 +145,5 @@ export default function DocsPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

@@ -92,14 +92,14 @@ export class AIMarketResearchService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.trends || [],
+      return data.trends || []
     } catch (error) {
       console.error('Error analyzing market trends:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -113,14 +113,14 @@ export class AIMarketResearchService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.competitors || [],
+      return data.competitors || []
     } catch (error) {
       console.error('Error analyzing competitors:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -134,14 +134,14 @@ export class AIMarketResearchService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.segments || [],
+      return data.segments || []
     } catch (error) {
       console.error('Error segmenting market:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -155,14 +155,14 @@ export class AIMarketResearchService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.report,
+      return data.report
     } catch (error) {
       console.error('Error generating comprehensive report:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -173,14 +173,14 @@ export class AIMarketResearchService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.trends || [],
+      return data.trends || []
     } catch (error) {
       console.error('Error getting real-time insights:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -194,14 +194,14 @@ export class AIMarketResearchService {
         body: JSON.stringify({ format })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.downloadUrl,
+      return data.downloadUrl
     } catch (error) {
       console.error('Error exporting report:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -215,14 +215,14 @@ export class AIMarketResearchService {
         body: JSON.stringify({ ...request, schedule })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.scheduleId,
+      return data.scheduleId
     } catch (error) {
       console.error('Error scheduling report:', error),
-      throw error,
+      throw error
     }
   }
 }

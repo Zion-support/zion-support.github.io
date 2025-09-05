@@ -36,7 +36,7 @@ function highlight(text: string, term: string) {
         )
       )}
     </>
-  ),
+  )
 }
 
 export default function SearchPage() {
@@ -66,7 +66,7 @@ export default function SearchPage() {
     
     const urlQuery = (router.query.q as string) || "",
     if (urlQuery !== query) {
-      setQuery(urlQuery),
+      setQuery(urlQuery)
     }
   }, [router.isReady, router.query.q]), // Fixed dependency array
 
@@ -75,9 +75,9 @@ export default function SearchPage() {
     if (!router.isReady) return,
     
     if (query.trim()) {
-      fetchResults(query.trim()),
+      fetchResults(query.trim())
     } else {
-      setResults([]),
+      setResults([])
     }
   }, [router.isReady, query]), // Fixed dependency array
 
@@ -92,23 +92,23 @@ export default function SearchPage() {
       const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`),
       const data = await res.json(),
       if (data && data.results && Array.isArray(data.results)) {
-        setResults(data.results),
+        setResults(data.results)
       } else {
         setResults([]),
-        logErrorToProduction('Search API response structure is not as expected:', { data: data }),
+        logErrorToProduction('Search API response structure is not as expected:', { data: data })
       }
     } catch (error) {
       logErrorToProduction('Search failed:', { data: error }),
-      setResults([]),
+      setResults([])
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`),
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
   },
 
@@ -125,7 +125,7 @@ export default function SearchPage() {
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim(),
               setQuery(searchTerm),
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`),
+              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
@@ -241,5 +241,5 @@ export default function SearchPage() {
         )}
       </main>
     </div>
-  ),
+  )
 }

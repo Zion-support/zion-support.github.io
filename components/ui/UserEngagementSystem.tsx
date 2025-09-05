@@ -1,5 +1,4 @@
 import React from 'react',
-
 export type EmptyStateProps = {
   emoji?: string,
   title: string,
@@ -17,5 +16,5 @@ export default function EmptyState({ emoji = '✨', title, message, action }: Em
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>
       {action && <div className="mt-3">{action}</div>}
     </div>
-  ),
+  )
 }

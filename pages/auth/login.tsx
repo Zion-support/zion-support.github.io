@@ -64,7 +64,7 @@ const LoginPage = () => {
           setError(sessionError as any), // Cast to any if type is too strict
         } else {
           logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
-          setUser(session?.user ?? null),
+          setUser(session?.user ?? null)
         }
       } catch (e) {
         if (mounted) {
@@ -99,7 +99,7 @@ const LoginPage = () => {
       return () => { // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
         authListener?.subscription?.unsubscribe()
-      },
+      }
     },
 
     const unsubscribePromise = checkSessionAndListen(),
@@ -108,8 +108,8 @@ const LoginPage = () => {
       mounted = false,
       clearTimeout(sessionTimeoutId), // Clear timeout on unmount
       logInfo('LoginPage: Unmounting, cleaning up auth listener.'),
-      unsubscribePromise.then(cleanup => cleanup && cleanup()),
-    },
+      unsubscribePromise.then(cleanup => cleanup && cleanup())
+    }
   }, []), // Run only once on mount
 
   // Effect for handling redirection AFTER session is checked and user state is updated
@@ -123,22 +123,22 @@ const LoginPage = () => {
       
       if (router.query.returnTo && typeof router.query.returnTo === 'string') {
         try {
-          returnTo = decodeURIComponent(router.query.returnTo),
+          returnTo = decodeURIComponent(router.query.returnTo)
         } catch (e) {
           logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo }),
-          returnTo = '/dashboard',
+          returnTo = '/dashboard'
         }
       }
       
       // Prevent redirecting back to auth pages or creating loops
-      const authPages = ['/auth/login/auth/register', '/login/signup', '/auth/forgot-password'],
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'],
       if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
-        returnTo = '/dashboard',
+        returnTo = '/dashboard'
       }
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
-        returnTo = '/dashboard',
+        returnTo = '/dashboard'
       }
       
       logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
@@ -152,17 +152,17 @@ const LoginPage = () => {
         }
       }, 100), // Small delay to let session stabilize
       
-      return () => clearTimeout(redirectTimer),
+      return () => clearTimeout(redirectTimer)
     }
     
     // Return undefined for all other cases
-    return undefined,
+    return undefined
   }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router
 
   const handleResendVerification = async () => {
     if (!email) {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
-      return,
+      return
     }
     
     setIsResendingVerification(true),
@@ -175,15 +175,15 @@ const LoginPage = () => {
       
       if (response.ok) {
         setVerificationEmailSent(true),
-        setError(null),
+        setError(null)
       } else {
         const data = await response.json(),
-        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError),
+        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError)
       }
     } catch (err) {
-      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError),
+      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
     } finally {
-      setIsResendingVerification(false),
+      setIsResendingVerification(false)
     }
   },
 
@@ -191,7 +191,7 @@ const LoginPage = () => {
     e.preventDefault(),
     if (!proactiveResendEmail) {
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
-      return,
+      return
     }
 
     setIsProactivelyResending(true),
@@ -205,14 +205,14 @@ const LoginPage = () => {
 
       const data = await response.json(),
       if (response.ok) {
-        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` }),
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
       } else {
-        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' }),
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })
       }
     } catch (err) {
-      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' }),
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })
     } finally {
-      setIsProactivelyResending(false),
+      setIsProactivelyResending(false)
     }
   },
 
@@ -251,22 +251,22 @@ const LoginPage = () => {
           
           // Auto-resend verification email
           setTimeout(() => {
-            handleResendVerification(),
-          }, 1000),
+            handleResendVerification()
+          }, 1000)
         } else {
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
-                  displayMessage = 'Invalid email or password. Please try again.',
+                  displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
-                  displayMessage = 'Network error. Please check your internet connection and try again.',
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
-                  displayMessage = 'Your account has been disabled. Please contact support.',
+                  displayMessage = 'Your account has been disabled. Please contact support.'
               }
               // Add more specific checks here if needed for other Supabase error messages
           }
-          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError),
+          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError)
         }
       } else if (data.user) {
         logInfo('Supabase sign-in successful, user:', { data: data.user }),
@@ -275,20 +275,20 @@ const LoginPage = () => {
       } else {
         // Should not happen if signInError is null and data.user is null
         logWarn('Supabase sign-in returned no error but no user.'),
-        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError),
+        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
       }
     } catch (catchedError: any) {
       logErrorToProduction('Exception during Supabase sign-in:', { data: catchedError }),
       // Check if the caught error is a network error
       let exceptionMessage = 'An unexpected error occurred. Please try again.',
       if (catchedError.message && catchedError.message.toLowerCase().includes('networkerror when attempting to fetch resource')) {
-        exceptionMessage = 'Network error. Please check your internet connection and try again.',
+        exceptionMessage = 'Network error. Please check your internet connection and try again.'
       } else if (catchedError.message) {
-        exceptionMessage = catchedError.message,
+        exceptionMessage = catchedError.message
       }
-      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError),
+      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -296,9 +296,9 @@ const LoginPage = () => {
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
-        router.push(`/verify-status?email=${encodeURIComponent(email)}`),
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000),
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),

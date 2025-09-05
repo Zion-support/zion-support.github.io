@@ -13,7 +13,6 @@ import {
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
-
 export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
@@ -32,15 +31,15 @@ export function FraudDetectionSettings() {
       
       toast({
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated."}),
+        description: "Your fraud detection preferences have been updated."})
     } catch (error) {
       console.error('Error saving preferences:', error),
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSaving(false),
+      setIsSaving(false)
     }
   },
 
@@ -144,5 +143,5 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

@@ -40,5 +40,5 @@ export default function AdminLearn() {
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
       {message && <div className="text-sm">{message}</div>}
     </div>
-  ),
+  )
 }

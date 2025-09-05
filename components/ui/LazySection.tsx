@@ -30,7 +30,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 },
       default:
-        return { opacity: 0, y: 50 },
+        return { opacity: 0, y: 50 }
     }
   },
 
@@ -45,7 +45,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 1, x: 0 },
       default:
-        return { opacity: 1, y: 0 },
+        return { opacity: 1, y: 0 }
     }
   },
 
@@ -59,7 +59,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
     >
       {children}
     </motion.div>
-  ),
+  )
 },
 
 export default LazySection,

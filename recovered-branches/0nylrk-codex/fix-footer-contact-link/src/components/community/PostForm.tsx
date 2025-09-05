@@ -20,7 +20,6 @@ import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
-
 interface PostFormValues {
   title: string,
   content: string,
@@ -55,7 +54,7 @@ export const PostForm = ({
     try {
       await onSubmit(values)
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -145,7 +144,7 @@ export const PostForm = ({
         </Form>
       </CardContent>
     </Card>
-  ),
+  )
 },
 
 export default PostForm,

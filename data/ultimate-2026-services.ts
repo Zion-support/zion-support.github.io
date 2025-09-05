@@ -12,7 +12,7 @@ export interface Ultimate2026Service {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const ultimate2026Services: Ultimate2026Service[] = [

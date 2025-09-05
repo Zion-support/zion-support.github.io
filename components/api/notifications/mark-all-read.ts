@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { supabase } from '../../../utils/supabase/client',
-
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '',
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id=')),
@@ -21,8 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (error) return res.status(200).json({ ok: true }),
 
-    return res.status(200).json({ ok: true }),
+    return res.status(200).json({ ok: true })
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' }),
+    return res.status(500).json({ error: 'Unexpected error' })
   }
 }

@@ -4,13 +4,12 @@ import SimpleLineChart from '../../../components/charts/SimpleLineChart',
 import { KpiBadge } from '../../../components/ui/InteractiveStats',
 import { exportCsv, exportSvgAsPng } from '../../../utils/exporters',
 import useRole from '../../../hooks/useRole',
-
 export default function ClientAnalyticsPage() {
   const [data, setData] = useState<any>(null),
   const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null)),
+    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null))
   }, []),
 
   if (loading) return <div>Loading...</div>,
@@ -46,5 +45,5 @@ export default function ClientAnalyticsPage() {
         />
       </div>
     </div>
-  ),
+  )
 }

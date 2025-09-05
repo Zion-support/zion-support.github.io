@@ -86,7 +86,7 @@ export default function UltraFuturisticNavigation2033() {
       if (e.key === 'Escape') closeMenu()
     },
     document.addEventListener('keydown', handleEscape),
-    return () => document.removeEventListener('keydown', handleEscape),
+    return () => document.removeEventListener('keydown', handleEscape)
   }, []),
 
   return (
@@ -313,5 +313,5 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  ),
+  )
 }

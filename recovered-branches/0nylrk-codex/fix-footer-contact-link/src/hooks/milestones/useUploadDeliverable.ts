@@ -4,7 +4,6 @@ import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
 import { useRecordActivity } from './useRecordActivity',
-
 export const useUploadDeliverable = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -57,18 +56,18 @@ export const useUploadDeliverable = () => {
       
       toast.success("Deliverable added successfully"),
       
-      return newDeliverable,
+      return newDeliverable
     } catch (err: any) {
       console.error("Error uploading deliverable:", err),
       toast.error("Failed to upload deliverable: " + err.message),
       return null
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
   return {
     uploadDeliverable,
     isSubmitting
-  },
+  }
 },

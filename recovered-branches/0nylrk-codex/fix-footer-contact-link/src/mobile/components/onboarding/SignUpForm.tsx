@@ -23,7 +23,7 @@ export function SignUpForm() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
-    setError(""),
+    setError("")
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,29 +37,29 @@ export function SignUpForm() {
           name: formData.name}),
         
         if (error) {
-          throw new Error(error),
+          throw new Error(error)
         }
         
-        navigate("/mobile"),
+        navigate("/mobile")
       } else {
         const { error } = await login(formData.email, formData.password),
         
         if (error) {
-          throw new Error(error),
+          throw new Error(error)
         }
         
-        navigate("/mobile"),
+        navigate("/mobile")
       }
     } catch (err: any) {
       setError(err.message)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle(),
+      await loginWithGoogle()
     } catch (err: any) {
       setError(err.message)
     }
@@ -179,5 +179,5 @@ export function SignUpForm() {
         </Button>
       </p>
     </div>
-  ),
+  )
 }

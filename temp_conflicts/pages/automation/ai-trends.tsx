@@ -1,6 +1,5 @@
 import fs from 'fs',
 import path from 'path',
-
 export type Trend = {
   id: string,
   date: string,
@@ -15,10 +14,10 @@ export async function getServerSideProps() {
   let items: Trend[] = [],
   try {
     const raw = fs.readFileSync(file, 'utf-8'),
-    items = JSON.parse(raw),
+    items = JSON.parse(raw)
   } catch {}
   items.sort((a, b) => (a.date < b.date ? 1 : -1)),
-  return { props: { items } },
+  return { props: { items } }
 }
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
@@ -44,5 +43,5 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
         ))}
       </div>
     </div>
-  ),
+  )
 }

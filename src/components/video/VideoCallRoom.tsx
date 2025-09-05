@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
-
 interface Participant {
   id: string,
   name: string,
@@ -45,10 +44,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   // Call duration timer
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCallDuration(prevDuration => prevDuration + 1),
+      setCallDuration(prevDuration => prevDuration + 1)
     }, 1000),
     
-    return () => clearInterval(timer),
+    return () => clearInterval(timer)
   }, []),
 
   const formatDuration = (seconds: number) => {
@@ -56,14 +55,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const mins = Math.floor((seconds % 3600) / 60),
     const secs = seconds % 60,
     
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`,
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
   },
 
   const handleToggleMute = () => {
     const newMuteState = !isMuted,
     setIsMuted(newMuteState),
     if (onToggleMute) {
-      onToggleMute(newMuteState),
+      onToggleMute(newMuteState)
     }
   },
 
@@ -71,12 +70,12 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const newVideoState = !isVideoEnabled,
     setIsVideoEnabled(newVideoState),
     if (onToggleVideo) {
-      onToggleVideo(newVideoState),
+      onToggleVideo(newVideoState)
     }
     
     // If turning video back on, ensure we're not in audio-only mode
     if (newVideoState) {
-      setIsAudioOnly(false),
+      setIsAudioOnly(false)
     }
   },
 
@@ -84,7 +83,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const newScreenShareState = !isScreenSharing,
     setIsScreenSharing(newScreenShareState),
     if (onToggleScreenShare) {
-      onToggleScreenShare(newScreenShareState),
+      onToggleScreenShare(newScreenShareState)
     }
   },
 
@@ -93,14 +92,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     if (!isAudioOnly) {
       setIsVideoEnabled(false),
       if (onToggleVideo) {
-        onToggleVideo(false),
+        onToggleVideo(false)
       }
     }
   },
 
   const handleLeaveCall = () => {
     if (onLeave) {
-      onLeave(),
+      onLeave()
     }
   },
 
@@ -220,5 +219,5 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

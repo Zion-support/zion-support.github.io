@@ -39,13 +39,13 @@ export default function InnovativeServicesPage() {
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getInnovativeServicesByCategory(selectedCategory),
+    filteredServices = getInnovativeServicesByCategory(selectedCategory)
   }
 
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
-    filteredServices = getInnovativeServicesByPriceRange(min, max),
+    filteredServices = getInnovativeServicesByPriceRange(min, max)
   }
 
   // Search filter
@@ -55,7 +55,7 @@ export default function InnovativeServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
+    )
   }
 
   // Sort services
@@ -70,14 +70,14 @@ export default function InnovativeServicesPage() {
       case 'roi': {
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
-        return bRoi - aRoi,
+        return bRoi - aRoi
       }
               default: {
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 },
           const aLevel = a.innovationLevel.split(' - ')[0],
           const bLevel = b.innovationLevel.split(' - ')[0],
-          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0),
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
         }
     }
   }),
@@ -414,5 +414,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  ),
+  )
 }

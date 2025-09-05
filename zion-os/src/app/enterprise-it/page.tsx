@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
   description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",

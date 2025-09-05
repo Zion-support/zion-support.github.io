@@ -7,10 +7,9 @@ import Link from "next/link",
 import { useTranslation } from "react-i18next",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
 import { cn } from "@/lib/utils",
-
 interface FeatureCTAsProps {
   className?: string,
-  style?: React.CSSProperties,
+  style?: React.CSSProperties
 }
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
@@ -161,5 +160,5 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
         </div>
       </div>
     </section>
-  ),
+  )
 }

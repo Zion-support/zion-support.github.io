@@ -50,5 +50,5 @@ export const CommunityTrust: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

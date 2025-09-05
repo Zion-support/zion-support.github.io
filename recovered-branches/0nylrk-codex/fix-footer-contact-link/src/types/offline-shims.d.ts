@@ -47,7 +47,7 @@ declare module 'react' {
 }
 
 declare module 'react-dom' {
-  export * from 'react-dom/index',
+  export * from 'react-dom/index'
 }
 
 declare module 'react/jsx-runtime' {

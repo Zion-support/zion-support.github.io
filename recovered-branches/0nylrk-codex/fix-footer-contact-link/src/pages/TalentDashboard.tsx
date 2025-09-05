@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader", 
+import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -17,7 +17,6 @@ import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingS
 import { MyApplications } from "@/components/jobs/MyApplications",
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -181,7 +180,7 @@ function TalentDashboardContent() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }
 
 export default function TalentDashboard() {
@@ -189,5 +188,5 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  ),
+  )
 }

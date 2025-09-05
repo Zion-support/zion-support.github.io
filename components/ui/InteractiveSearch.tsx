@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
-
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
   const [value, setValue] = useState(''),
   return (
@@ -20,5 +19,5 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         </button>
       )}
     </motion.div>
-  ),
+  )
 }

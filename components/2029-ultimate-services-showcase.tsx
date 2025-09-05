@@ -16,7 +16,6 @@ import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas',
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions',
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
-
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -68,7 +67,7 @@ export default function UltimateServicesShowcase2029() {
       (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service.price.replace(/[$]/g, '')) < 30000) ||
       (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000),
     
-    return matchesCategory && matchesSearch && matchesPrice,
+    return matchesCategory && matchesSearch && matchesPrice
   }),
 
   const containerVariants = {
@@ -376,7 +375,7 @@ export default function UltimateServicesShowcase2029() {
                 onClick={() => {
                   setSelectedCategory('all'),
                   setSearchTerm(''),
-                  setSelectedPriceRange('all'),
+                  setSelectedPriceRange('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
@@ -428,5 +427,5 @@ export default function UltimateServicesShowcase2029() {
 
       <UltraFuturisticFooter2029 />
     </>
-  ),
+  )
 }

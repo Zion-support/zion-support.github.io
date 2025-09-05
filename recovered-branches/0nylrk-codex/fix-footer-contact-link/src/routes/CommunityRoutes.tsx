@@ -7,7 +7,6 @@ import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
 import EditPostPage from "../pages/EditPostPage",
 import CommunityProfilePage from "../pages/CommunityProfilePage",
-
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -36,7 +35,7 @@ const CommunityRoutes = () => {
         }
       />
     </Routes>
-  ),
+  )
 },
 
 export default CommunityRoutes,

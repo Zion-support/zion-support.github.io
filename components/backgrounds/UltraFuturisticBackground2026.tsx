@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2026Props {
   children: React.ReactNode,
   className?: string
@@ -87,13 +86,13 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         alpha: Math.random() * 0.8 + 0.2,
         life: 0,
         maxLife: Math.random() * 200 + 100
-      },
+      }
     },
 
     const initParticles = () => {
       particles = [],
       for (let i = 0, i < 100, i++) {
-        particles.push(createParticle()),
+        particles.push(createParticle())
       }
     },
 
@@ -109,7 +108,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         if (particle.life > particle.maxLife || 
             particle.x < -20 || particle.x > canvas.width + 20 ||
             particle.y < -20 || particle.y > canvas.height + 20) {
-          particles[index] = createParticle(),
+          particles[index] = createParticle()
         }
 
         // Draw particle
@@ -131,7 +130,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw connecting lines between nearby particles
@@ -147,9 +146,9 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
             ctx.beginPath(),
             ctx.moveTo(particle1.x, particle1.y),
             ctx.lineTo(particle2.x, particle2.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
-        }),
+        })
       }),
 
       // Draw grid pattern
@@ -160,21 +159,21 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, canvas.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       for (let y = 0, y < canvas.height, y += gridSize) {
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
@@ -184,9 +183,9 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
     return () => {
       window.removeEventListener('resize', handleResize),
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-    },
+    }
   }, []),
 
   return (
@@ -288,7 +287,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2026,

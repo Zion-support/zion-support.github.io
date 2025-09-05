@@ -12,7 +12,7 @@ export interface InnovativeMicroSaas2029 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [

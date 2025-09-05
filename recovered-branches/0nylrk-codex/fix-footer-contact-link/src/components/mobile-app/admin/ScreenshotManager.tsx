@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
-
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -42,7 +41,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
-      return,
+      return
     }
     
     const filesToAdd = imageFiles.slice(0, availableSlots),
@@ -56,7 +55,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setScreenshots(prev => [...prev, ...newScreenshots]),
     
     if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`),
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
     }
   },
   
@@ -70,8 +69,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         URL.revokeObjectURL(removed.url)
       }
       
-      return filtered,
-    }),
+      return filtered
+    })
   },
   
   const handleDragOver = (e: React.DragEvent) => {
@@ -80,7 +79,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   },
   
   const handleDragLeave = () => {
-    setIsDragging(false),
+    setIsDragging(false)
   },
   
   const handleDrop = (e: React.DragEvent) => {
@@ -154,5 +153,5 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

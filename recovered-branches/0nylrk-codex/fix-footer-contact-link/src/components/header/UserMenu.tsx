@@ -18,12 +18,12 @@ export function UserMenu() {
 
   const handleSignOut = async () => {
     try {
-      await logout(),
+      await logout()
     } catch (error) {
       toast({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -74,5 +74,5 @@ export function UserMenu() {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
+  )
 }

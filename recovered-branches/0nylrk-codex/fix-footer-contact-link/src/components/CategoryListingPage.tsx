@@ -31,7 +31,7 @@ interface CategoryListingPageProps {
   description: string,
   listings: Listing[],
   sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[],
+  filterOptions?: { label: string, value: string }[]
 }
 
 export function CategoryListingPage({ 
@@ -70,7 +70,7 @@ export function CategoryListingPage({
       if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,
       if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,
       
-      return matchesSearch,
+      return matchesSearch
     })
     .sort((a, b) => {
       // Apply sorting
@@ -194,7 +194,7 @@ export function CategoryListingPage({
                 variant="outline" 
                 onClick={() => {
                   setSearchQuery(""),
-                  setSelectedFilter(filterOptions[0].value),
+                  setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -206,5 +206,5 @@ export function CategoryListingPage({
       </div>
       <Footer />
     </>
-  ),
+  )
 }

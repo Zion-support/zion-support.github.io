@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
-
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -51,7 +50,7 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-    ),
+    )
   }
   
   if (matches.length === 0) {
@@ -71,7 +70,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    ),
+    )
   }
   
   return (
@@ -153,7 +152,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-                ),
+                )
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
@@ -164,5 +163,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  ),
+  )
 }

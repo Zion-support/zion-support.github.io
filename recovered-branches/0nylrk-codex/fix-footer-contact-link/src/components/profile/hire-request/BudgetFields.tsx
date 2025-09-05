@@ -5,7 +5,6 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",
 import { TalentProfile } from "@/types/talent",
 import { FormValues } from "./useHireRequestForm",
-
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>,
   talent?: TalentProfile
@@ -56,5 +55,5 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
-  ),
+  )
 }

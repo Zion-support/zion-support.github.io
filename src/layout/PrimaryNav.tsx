@@ -20,7 +20,6 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next',
 import { CartDrawer } from '@/components/cart/CartDrawer',
 import { LoginModal } from '@/components/auth/LoginModal',
-
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -35,7 +34,7 @@ export function PrimaryNav() {
   let unreadCount = 0,
   try {
     const messaging = useMessaging(),
-    unreadCount = messaging.unreadCount,
+    unreadCount = messaging.unreadCount
   } catch {
     // context not available
   }
@@ -48,7 +47,7 @@ export function PrimaryNav() {
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' })),
+        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
   },
 
@@ -80,16 +79,16 @@ export function PrimaryNav() {
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`),
+                    router.push(`/marketplace/listing/${sugg.id}`)
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug),
+                    router.push(sugg.slug)
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`),
+                    router.push(`/blog/${sugg.slug}`)
                   } else {
                     // Default: search results page with query parameter
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`),
+                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
                   setQuery(''),
                   
@@ -99,7 +98,7 @@ export function PrimaryNav() {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
-                    }),
+                    })
                   }
                 }}
                 searchSuggestions={suggestions}
@@ -199,5 +198,5 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  ),
+  )
 }

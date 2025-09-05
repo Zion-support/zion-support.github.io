@@ -40,16 +40,16 @@ export function MilestoneSuggestions({
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones),
+        onMilestonesGenerated(milestones)
       }
     }
   },
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy'),
+      return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString,
+      return dateString
     }
   },
 
@@ -115,5 +115,5 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  ),
+  )
 }

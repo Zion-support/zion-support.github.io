@@ -7,7 +7,6 @@ import {
   DialogTitle} from '@/components/ui/dialog',
 import { AIEnhancementPanel } from './AIEnhancementPanel',
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-
 interface AIEnhancementDialogProps {
   title: string,
   isOpen: boolean,
@@ -44,5 +43,5 @@ export function AIEnhancementDialog({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

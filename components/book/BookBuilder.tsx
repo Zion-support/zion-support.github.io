@@ -3,7 +3,6 @@ import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } fro
 import { buildPrintableHtml } from '../../utils/export/buildHtml',
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',
 import { defaultChapters } from '../../utils/book/defaultOutline',
-
 const initialProject: BookProject = {
   meta: {
     title: 'Zion OS: Building the Civilization Protocol',
@@ -24,8 +23,8 @@ function fileToBase64(file: File): Promise<string> {
     const reader = new FileReader(),
     reader.onload = () => resolve(reader.result as string),
     reader.onerror = reject,
-    reader.readAsDataURL(file),
-  }),
+    reader.readAsDataURL(file)
+  })
 }
 
 export default function BookBuilder() {
@@ -52,7 +51,7 @@ export default function BookBuilder() {
           ) : null}
         </div>
       </div>
-    ),
+    )
   }, [project]),
 
   async function handleGenerateWithAI() {
@@ -64,10 +63,10 @@ export default function BookBuilder() {
         body: JSON.stringify({ meta: project.meta, chapters: project.chapters })}),
       const data = await res.json(),
       if (data?.chapters) {
-        setProject((p) => ({ ...p, chapters: data.chapters })),
+        setProject((p) => ({ ...p, chapters: data.chapters }))
       }
     } finally {
-      setBusy(false),
+      setBusy(false)
     }
   }
 
@@ -85,9 +84,9 @@ export default function BookBuilder() {
       a.href = url,
       a.download = 'zion-os-book.pdf',
       a.click(),
-      URL.revokeObjectURL(url),
+      URL.revokeObjectURL(url)
     } finally {
-      setBusy(false),
+      setBusy(false)
     }
   }
 
@@ -104,9 +103,9 @@ export default function BookBuilder() {
       a.href = url,
       a.download = 'zion-os-book.epub',
       a.click(),
-      URL.revokeObjectURL(url),
+      URL.revokeObjectURL(url)
     } finally {
-      setBusy(false),
+      setBusy(false)
     }
   }
 
@@ -117,7 +116,7 @@ export default function BookBuilder() {
       ...p,
       visuals: {
         ...p.visuals,
-        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}})),
+        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}))
   }
 
   return (
@@ -228,7 +227,7 @@ export default function BookBuilder() {
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
                   chapters[idx] = { ...chapters[idx], content: e.target.value },
-                  setProject({ ...project, chapters }),
+                  setProject({ ...project, chapters })
                 }}
               />
             </div>
@@ -247,7 +246,7 @@ export default function BookBuilder() {
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value },
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } }),
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
               <input
@@ -256,7 +255,7 @@ export default function BookBuilder() {
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } }),
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
               />
@@ -266,5 +265,5 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
-  ),
+  )
 }

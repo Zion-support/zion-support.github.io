@@ -9,7 +9,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-
 // Sample data for integration sync logs
 const syncLogs = [
   {
@@ -96,5 +95,5 @@ export function IntegrationsSyncLog() {
         </Table>
       </div>
     </Card>
-  ),
+  )
 }

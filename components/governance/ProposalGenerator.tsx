@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import EnhancedLayout from '../layout/EnhancedLayout',
-
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education',
 
 export type ProposalForm = {
@@ -30,7 +29,7 @@ export default function ProposalGenerator() {
   const [statusMessage, setStatusMessage] = useState(''),
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value })),
+    setForm((prev) => ({ ...prev, [key]: value }))
   }
 
   async function handleGenerate() {
@@ -44,12 +43,12 @@ export default function ProposalGenerator() {
       const data = await res.json(),
       setDraftMarkdown(data.markdown || ''),
       setDraftJson(data.json || null),
-      setStatusMessage('Draft ready. You can edit and export.'),
+      setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e),
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   }
 
@@ -65,10 +64,10 @@ export default function ProposalGenerator() {
           meta: form})}),
       const data = await res.json(),
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
-      setStatusMessage('Exported. Files saved.'),
+      setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e),
-      setStatusMessage('Export failed'),
+      setStatusMessage('Export failed')
     }
   }
 
@@ -80,10 +79,10 @@ export default function ProposalGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
       const data = await res.json(),
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`),
+      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
     } catch (e) {
       console.error(e),
-      setStatusMessage('Submission failed'),
+      setStatusMessage('Submission failed')
     }
   }
 
@@ -213,5 +212,5 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

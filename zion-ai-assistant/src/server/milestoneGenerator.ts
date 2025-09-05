@@ -48,9 +48,9 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
       suggestedDueDateIso: String(m.suggestedDueDateIso),
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) || 8),
       tags: ["AI Suggested"]
-    })),
+    }))
   } catch {
-    return null,
+    return null
   }
 }
 
@@ -87,13 +87,13 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       estimatedEffortHours,
       tags: ["AI Suggested"]
     }),
-    phaseStart = due,
+    phaseStart = due
   }
-  return milestones,
+  return milestones
 }
 
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {
   const ai = await callOpenAI(input),
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input),
-  return { milestones },
+  return { milestones }
 }

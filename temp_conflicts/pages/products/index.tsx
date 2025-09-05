@@ -1,7 +1,6 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-
 const ProductsPage: NextPage = () => {
   const products = [
     // AI & Automation Tools
@@ -383,7 +382,6 @@ const ProductsPage: NextPage = () => {
 
 export default ProductsPage,
 import React from 'react',
-
 export default function ProductsIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">

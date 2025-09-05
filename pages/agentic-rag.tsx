@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
-
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 export default function AgenticRAGPage() {
@@ -13,9 +12,9 @@ export default function AgenticRAGPage() {
 	},
 
 	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestion', 'Basic rerankerCSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectors', 'Hybrid search + rerankEval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO support', 'Private VPCSAML/SSO'] }],
+		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
+		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
 
 	return (
 		<UltraFuturisticMatrixBackground>
@@ -79,5 +78,5 @@ export default function AgenticRAGPage() {
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
-	),
+	)
 }

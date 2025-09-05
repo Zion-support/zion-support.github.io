@@ -33,8 +33,7 @@ export default function App() {,
           <Footer />,
         </div>,
       </Router>,
-    </ErrorBoundary>,
-  ),
+    </ErrorBoundary>)
 
-};
+},
 

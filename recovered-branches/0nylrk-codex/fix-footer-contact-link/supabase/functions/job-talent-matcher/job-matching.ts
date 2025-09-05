@@ -30,10 +30,10 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     
     // Use OpenAI to find best matches
     const bestMatches = await findBestMatches(jobDetails, talents),
-    return bestMatches,
+    return bestMatches
   } catch (error) {
     console.error("Error in processJobMatching:", error),
-    throw error,
+    throw error
   }
 }
 
@@ -55,7 +55,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       }),
     
     if (matchError) {
-      console.error(`Error storing match for talent ${match.talentId}:`, matchError),
+      console.error(`Error storing match for talent ${match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
@@ -64,9 +64,9 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`,
         _type: "job_match",
         _related_id: jobId
-      }),
+      })
     }
   }),
   
-  await Promise.all(matchInsertPromises),
+  await Promise.all(matchInsertPromises)
 }

@@ -15,9 +15,9 @@ export default function CoachWidget() {
         body: JSON.stringify({ prompt: input })
       }),
       const data = await resp.json(),
-      setReply(data.text || ''),
+      setReply(data.text || '')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -30,5 +30,5 @@ export default function CoachWidget() {
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
-  ),
+  )
 }

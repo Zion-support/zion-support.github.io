@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
-
+import React, { ReactNode } from 'react',
+import Header from '../Header',
+import Footer from './Footer',
 interface LayoutProps {
-  childre: n: ReactNode;
+  childre: n: ReactNode
 }
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -15,7 +14,7 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+},
 
-export default Layout;
+export default Layout,

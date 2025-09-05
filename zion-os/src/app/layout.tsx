@@ -1,7 +1,6 @@
 import "./globals.css",
 import type { ReactNode } from "react",
 import { Metadata } from "next",
-
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",

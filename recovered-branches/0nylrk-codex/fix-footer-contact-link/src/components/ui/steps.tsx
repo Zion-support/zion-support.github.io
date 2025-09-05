@@ -2,7 +2,6 @@
 import React from "react",
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
-
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -58,7 +57,7 @@ export function Step({
         )}
       </div>
     </li>
-  ),
+  )
 }
 
 interface StepsProps {
@@ -81,7 +80,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current",
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status}),
+            status})
         })}
       </ol>
       
@@ -95,5 +94,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         </div>
       </div>
     </div>
-  ),
+  )
 }

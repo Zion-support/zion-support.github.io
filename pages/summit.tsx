@@ -1,6 +1,5 @@
 import Head from 'next/head',
 import React from 'react',
-
 type Speaker = {
   name: string,
   title: string,
@@ -20,14 +19,14 @@ const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
 
 function useCountdown(targetIso: string) {
   const [remainingMs, setRemainingMs] = React.useState<number>(() => {
-    return new Date(targetIso).getTime() - Date.now(),
+    return new Date(targetIso).getTime() - Date.now()
   }),
 
   React.useEffect(() => {
     const id = setInterval(() => {
-      setRemainingMs(new Date(targetIso).getTime() - Date.now()),
+      setRemainingMs(new Date(targetIso).getTime() - Date.now())
     }, 1000),
-    return () => clearInterval(id),
+    return () => clearInterval(id)
   }, [targetIso]),
 
   const isPast = remainingMs <= 0,
@@ -37,7 +36,7 @@ function useCountdown(targetIso: string) {
   const minutes = Math.floor((totalSec % 3600) / 60),
   const seconds = totalSec % 60,
 
-  return { isPast, days, hours, minutes, seconds },
+  return { isPast, days, hours, minutes, seconds }
 }
 
 export default function SummitPage() {
@@ -86,11 +85,11 @@ export default function SummitPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),
       setResult({ ok: true }),
-      setForm({ name: '', email: '', role: '', country: '' }),
+      setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {
-      setResult({ error: err?.message || 'Unexpected error' }),
+      setResult({ error: err?.message || 'Unexpected error' })
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   },
 
@@ -104,7 +103,7 @@ export default function SummitPage() {
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
           allowFullScreen
         />
-      ),
+      )
     }
     if (platform === 'twitch') {
       return (
@@ -114,7 +113,7 @@ export default function SummitPage() {
           title="Twitch livestream"
           allowFullScreen
         />
-      ),
+      )
     }
     return (
       <iframe
@@ -123,7 +122,7 @@ export default function SummitPage() {
         title="Twitter livestream"
         allowFullScreen
       />
-    ),
+    )
   },
 
   return (

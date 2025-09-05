@@ -3,7 +3,6 @@
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
 import { FlagResult } from './types',
-
 /**
  * Flag content for review
  */
@@ -41,12 +40,12 @@ export const flagContent = async (
     
     if (error) throw error,
     
-    return { success: true },
+    return { success: true }
   } catch (error) {
     console.error('Error flagging content:', error),
     return { 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
-    },
+    }
   }
 },

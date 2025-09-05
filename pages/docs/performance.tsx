@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function PerformanceDocRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function PerformanceDocRedirect() {
         <p>Redirecting to Performance documentation…</p>
       </main>
     </>
-  ),
+  )
 }
 

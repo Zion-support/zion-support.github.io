@@ -1,7 +1,6 @@
 
 import { createNotification } from './createNotification',
 import { OnboardingNotificationParams } from './types',
-
 /**
  * Creates an onboarding notification for a user
  */
@@ -34,7 +33,7 @@ export async function createOnboardingNotification({
         message = 'Set your availability to help clients know when you can work',
         actionUrl = '/profile/settings',
         actionText = 'Set Availability',
-        break,
+        break
     }
   } else {
     switch (missingMilestone) {
@@ -55,7 +54,7 @@ export async function createOnboardingNotification({
         message = 'Invite talent to speed up your hiring process',
         actionUrl = '/talent',
         actionText = 'Find Talent',
-        break,
+        break
     }
   }
   
@@ -67,5 +66,5 @@ export async function createOnboardingNotification({
     sendEmail: false,
     actionUrl,
     actionText
-  }),
+  })
 }

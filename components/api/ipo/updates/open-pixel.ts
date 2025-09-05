@@ -8,7 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const idx = updates.findIndex((x: any) => x.id === id),
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens || 0) + 1,
-      writeJsonFile('updates.json', updates),
+      writeJsonFile('updates.json', updates)
     }
   }
   const pixel = Buffer.from(
@@ -16,5 +16,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ),
   res.setHeader('Content-Typeimage/gif'),
   res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate'),
-  res.status(200).send(pixel),
+  res.status(200).send(pixel)
 }

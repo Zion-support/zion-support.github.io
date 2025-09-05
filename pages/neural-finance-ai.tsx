@@ -10,7 +10,6 @@ import {
   BarChart, PieChart, LineChart, Activity
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -64,9 +63,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
-      'Basic market analysis and insightsPortfolio tracking and monitoring',
-      'Risk assessment and managementEmail support',
-      'Up to 5 trading strategiesBasic reporting and analytics'
+      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail supportUp to 5 trading strategiesBasic reporting and analytics'
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600'
@@ -77,10 +74,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
     features: [
-      'Advanced AI models and algorithmsAutomated trading with backtesting',
-      'Custom strategy developmentPriority support and API access',
-      'Advanced risk management toolsMulti-portfolio management',
-      'Real-time market alertsCustom reporting and dashboards'
+      'Advanced AI models and algorithmsAutomated trading with backtestingCustom strategy developmentPriority support and API accessAdvanced risk management toolsMulti-portfolio managementReal-time market alertsCustom reporting and dashboards'
     ],
     popular: true,
     color: 'from-cyan-500 to-purple-600'
@@ -91,10 +85,7 @@ const pricingPlans = [
     period: 'month',
     description: 'For large investment firms and institutional investors',
     features: [
-      'Custom AI model training and developmentWhite-label solution with branding',
-      'Dedicated account manager and supportAdvanced compliance automation',
-      '24/7 monitoring and supportCustom integrations and APIs',
-      'Advanced security and audit trailsMulti-user access and permissions'
+      'Custom AI model training and developmentWhite-label solution with brandingDedicated account manager and supportAdvanced compliance automation24/7 monitoring and supportCustom integrations and APIsAdvanced security and audit trailsMulti-user access and permissions'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'
@@ -106,25 +97,25 @@ const useCases = [
     title: 'Algorithmic Trading Strategy Development',
     description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
     icon: BarChart,
-    benefits: ['Increased trading efficiencyReduced emotional bias', '24/7 market monitoring']
+    benefits: ['Increased trading efficiencyReduced emotional bias24/7 market monitoring']
   },
   {
     title: 'Portfolio Risk Management & Optimization',
     description: 'Advanced risk modeling and portfolio optimization using neural networks and machine learning.',
     icon: PieChart,
-    benefits: ['Risk-adjusted returnsPortfolio diversification', 'Real-time risk monitoring']
+    benefits: ['Risk-adjusted returnsPortfolio diversificationReal-time risk monitoring']
   },
   {
     title: 'Market Trend Prediction & Analysis',
     description: 'Predict market movements and identify trading opportunities with AI-powered analytics.',
     icon: LineChart,
-    benefits: ['Early trend detectionImproved timing', 'Higher success rates']
+    benefits: ['Early trend detectionImproved timingHigher success rates']
   },
   {
     title: 'Automated Financial Reporting',
     description: 'Generate comprehensive financial reports and compliance documentation automatically.',
     icon: Activity,
-    benefits: ['Time savingsRegulatory compliance', 'Accurate reporting']
+    benefits: ['Time savingsRegulatory complianceAccurate reporting']
   }
 ],
 

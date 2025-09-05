@@ -15,7 +15,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "sonner",
-
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -47,21 +46,21 @@ export function DisputeDetail() {
         if (!disputeData) {
           toast.error("Dispute not found"),
           navigate("/dashboard/disputes"),
-          return,
+          return
         }
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
-        setMessages(messagesData),
+        setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
-        toast.error("Failed to load dispute"),
+        toast.error("Failed to load dispute")
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    loadDisputeData(),
+    loadDisputeData()
   }, [disputeId, navigate, getDisputeById, getDisputeMessages]),
 
   const handleStatusChange = async (status: DisputeStatus) => {
@@ -69,7 +68,7 @@ export function DisputeDetail() {
     
     const success = await updateDisputeStatus(disputeId, status),
     if (success && dispute) {
-      setDispute({ ...dispute, status }),
+      setDispute({ ...dispute, status })
     }
   },
 
@@ -78,7 +77,7 @@ export function DisputeDetail() {
     
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
-      return,
+      return
     }
     
     const success = await resolveDispute(disputeId, resolution),
@@ -89,7 +88,7 @@ export function DisputeDetail() {
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()
-      }),
+      })
     }
   },
 
@@ -103,12 +102,12 @@ export function DisputeDetail() {
         // Refresh messages
         const updatedMessages = await getDisputeMessages(disputeId),
         setMessages(updatedMessages),
-        setMessage(""),
+        setMessage("")
       }
     } catch (error) {
-      console.error("Error sending message:", error),
+      console.error("Error sending message:", error)
     } finally {
-      setIsSending(false),
+      setIsSending(false)
     }
   },
 
@@ -118,7 +117,7 @@ export function DisputeDetail() {
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
         <p>Loading dispute details...</p>
       </div>
-    ),
+    )
   }
 
   if (!dispute) {
@@ -129,7 +128,7 @@ export function DisputeDetail() {
           Back to Disputes
         </Button>
       </div>
-    ),
+    )
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -314,7 +313,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          ),
+                          )
                         })
                     )}
                   </div>
@@ -464,8 +463,8 @@ export function DisputeDetail() {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
-                                setMessage(""),
-                              }),
+                                setMessage("")
+                              })
                             }
                           }}
                         >
@@ -546,5 +545,5 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

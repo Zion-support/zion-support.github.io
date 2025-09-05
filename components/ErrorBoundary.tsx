@@ -1,45 +1,45 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react',
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react',
 
 interface Props {
-  children: ReactNode;
-  level?: string;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode,
+  level?: string,
+  fallback?: ReactNode,
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean,
+  error?: Error,
+  errorInfo?: ErrorInfo
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
+    }),
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
   }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -78,7 +78,7 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={() => window.location.href = '/'}
-                className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold text-white transition-colors"
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-700 hover: bg-slate-600 rounded-lg font-semibold text-white transition-colors"
               >
                 <Home className="w-4 h-4" />
                 Go Home
@@ -86,11 +86,11 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary,

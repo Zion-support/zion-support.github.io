@@ -1,7 +1,6 @@
 import React from 'react',
 import Card from '../ui/Card',
 import { Zap } from 'lucide-react',
-
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -71,7 +70,7 @@ const Features: React.FC<FeaturesProps> = ({
         </div>
       </div>
     </section>
-  ),
+  )
 },
 
 export default Features,

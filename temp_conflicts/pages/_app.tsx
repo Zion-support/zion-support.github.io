@@ -1,13 +1,12 @@
 import type { AppProps } from 'next/app',
 import Layout from '../components/Layout',
 import '../styles/globals.css',
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  ),
+  )
 }
 import React from 'react',
 import { useRouter } from 'next/router',
@@ -15,8 +14,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query',
 import type { AppProps } from 'next/app',
 import { AuthProvider } from '@/context/auth/AuthProvider',
 import { Provider as ReduxProvider } from 'react-redux',
-import { store } from '@/store', // Changed to named import
-import { useAuth } from '@/hooks/useAuth',
+import { store } from '@/store', // Changed to named import import { useAuth } from '@/hooks/useAuth',
 import { ErrorProvider } from '@/context/ErrorContext',
 import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange',
 import { I18nextProvider } from 'react-i18next',
@@ -116,7 +114,7 @@ const RouteSEO = dynamic(() =>
 // ============================================================// FONT CONFIGURATION - Optimized loading
 // =====================================================const inter = Inter({
   subsets: ['latin'],
-  weight: ['400600', '700'],
+  weight: ['400600700'],
   display: 'swap',
   fallback: ['system-uiarial'],
   adjustFontFallback: true,
@@ -124,7 +122,7 @@ const RouteSEO = dynamic(() =>
   preload: true}),
 
 const poppins = Poppins({
-  weight: ['400600', '700'],
+  weight: ['400600700'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['system-uiarial'],
@@ -139,7 +137,7 @@ const poppins = Poppins({
   const [isClient, setIsClient] = React.useState(false),
 
   React.useEffect(() => {
-    setIsClient(true),
+    setIsClient(true)
   }, []),
 
   const safeAuthState = React.useMemo(
@@ -150,7 +148,7 @@ const poppins = Poppins({
 
   return (
     <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
-  ),
+  )
 },
 
 // ============================================================// MAIN APP COMPONENT - FIXED: Optimized with fallback safety
@@ -174,7 +172,7 @@ const poppins = Poppins({
       }
     }, 3000), // Force init after 3 seconds max
 
-    return () => clearTimeout(forceInitTimeout),
+    return () => clearTimeout(forceInitTimeout)
   }, [isInitialized]),
 
   // Simplified initialization with better error handling
@@ -184,26 +182,26 @@ const poppins = Poppins({
     const initializeApp = async () => {
       try {
         if (process.env.NODE_ENV === 'development') {
-          // // // console.log('[App] Starting optimized initialization...'),
+          // // // console.log('[App] Starting optimized initialization...')
         }
 
         // Critical path only
         try {
-          initializeGlobalErrorHandlers(),
+          initializeGlobalErrorHandlers()
         } catch (error) {
-          console.warn('[App] Global error handlers failed:', error),
+          console.warn('[App] Global error handlers failed:', error)
         }
 
         try {
-          validateProductionEnvironment(),
+          validateProductionEnvironment()
         } catch (error) {
-          console.warn('[App] Environment validation warning:', error),
+          console.warn('[App] Environment validation warning:', error)
         }
 
         // Mark as initialized immediately for faster render
         if (isMounted) {
           setTimeout(() => {
-            setIsInitialized(true),
+            setIsInitialized(true)
           }, 100), // Small delay to ensure DOM is ready
         }
 
@@ -213,26 +211,26 @@ const poppins = Poppins({
 
           try {
             initializeServices().catch((err) =>
-              console.warn('Service initialization failed:', err)),
+              console.warn('Service initialization failed:', err))
           } catch (error) {
-            console.warn('Services init error:', error),
+            console.warn('Services init error:', error)
           }
 
           // Lazy load performance monitoring
           if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
             import('@/utils/performance').then(perf => {
               perf.initializePerformanceOptimizations(),
-              perf.initializePerformance(),
-            }).catch(err => console.warn('Performance monitoring failed:', err)),
+              perf.initializePerformance()
+            }).catch(err => console.warn('Performance monitoring failed:', err))
           }
 
           // Lazy load development tools
           if (process.env.NODE_ENV === 'development') {
             import('@/utils/consoleLogCapture').then(console => {
-              console.initConsoleLogCapture(),
-            }).catch(err => console.warn('Console capture failed:', err)),
+              console.initConsoleLogCapture()
+            }).catch(err => console.warn('Console capture failed:', err))
           }
-        }, 200),
+        }, 200)
 
       } catch (error) {
         console.error('[App] Critical initialization error:', error),
@@ -241,28 +239,28 @@ const poppins = Poppins({
         // Always initialize even on error to prevent infinite loading
         if (isMounted) {
           setTimeout(() => {
-            setIsInitialized(true),
-          }, 500),
+            setIsInitialized(true)
+          }, 500)
         }
 
         // Deferred error reporting
         setTimeout(() => {
           try {
             if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-              Sentry.captureException(error),
+              Sentry.captureException(error)
             }
           } catch (sentryError) {
-            console.warn('[App] Could not send error to Sentry:', sentryError),
+            console.warn('[App] Could not send error to Sentry:', sentryError)
           }
-        }, 0),
+        }, 0)
       }
     },
 
     initializeApp(),
 
     return () => {
-      isMounted = false,
-    },
+      isMounted = false
+    }
   }, []),
 
   // Lazy Sentry context updates with error handling
@@ -270,10 +268,10 @@ const poppins = Poppins({
     try {
       if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
         Sentry.setTag('route', router.pathname),
-        Sentry.setContext('query', router.query),
+        Sentry.setContext('query', router.query)
       }
     } catch (error) {
-      console.warn('Sentry context update failed:', error),
+      console.warn('Sentry context update failed:', error)
     }
   }, [router.pathname, router.query]),
 
@@ -282,9 +280,9 @@ const poppins = Poppins({
     if (process.env.NODE_ENV === 'production') {
       setTimeout(() => {
         import('@/serviceWorkerRegistration').then(sw => {
-          sw.registerServiceWorker(),
-        }).catch(err => console.warn('Service worker registration failed:', err)),
-      }, 2000),
+          sw.registerServiceWorker()
+        }).catch(err => console.warn('Service worker registration failed:', err))
+      }, 2000)
     }
   }, []),
 
@@ -301,7 +299,7 @@ const poppins = Poppins({
           <p className="text-blue-300 text-xs mt-2">This should complete in a few seconds</p>
         </div>
       </div>
-    ),
+    )
   }
 
   // FIXED: Simplified provider chain to reduce loading complexity
@@ -311,7 +309,7 @@ const poppins = Poppins({
         <style jsx global>{`
           :root {
             --font-inter: ${inter.style.fontFamily},
-            --font-poppins: ${poppins.style.fontFamily},
+            --font-poppins: ${poppins.style.fontFamily}
           }
 
           @font-face {
@@ -332,8 +330,8 @@ const poppins = Poppins({
             line-gap-override: 0%
           }
 
-          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif, }
-          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif, }
+          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif }
+          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif }
         `}</style>
       </Head>
       <div className={`${inter.variable} ${poppins.variable}`}>
@@ -406,11 +404,11 @@ const poppins = Poppins({
         </ProductionErrorBoundary>
       </div>
     </>
-  ),
+  )
 }
 
 if (process.env.NODE_ENV === 'development') {
-  // // // console.log('[App] MyApp component initialized with loading fix'),
+  // // // console.log('[App] MyApp component initialized with loading fix')
 }
 
 export default MyApp,

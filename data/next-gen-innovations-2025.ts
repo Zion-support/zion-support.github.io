@@ -12,7 +12,7 @@ export interface NextGenInnovation2025 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const nextGenInnovations2025: NextGenInnovation2025[] = [

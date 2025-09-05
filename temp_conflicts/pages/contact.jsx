@@ -2,7 +2,6 @@
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,14 +15,14 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault(),
     // Handle form submission here
-    // // // console.log('Form submitted:', formData),
+    // // // console.log('Form submitted:', formData)
   },
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    }),
+    })
   },
 
   const contactInfo = [

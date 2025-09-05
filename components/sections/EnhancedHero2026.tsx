@@ -2,7 +2,6 @@ import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react',
 import Button from '../ui/Button',
-
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string,
@@ -17,7 +16,7 @@ interface EnhancedHero2026Props {
     itSolutions: number,
     microSaas: number,
     revolutionaryServices: number
-  },
+  }
 }
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
@@ -222,5 +221,5 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         </motion.div>
       </div>
     </section>
-  ),
+  )
 }

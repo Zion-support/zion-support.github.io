@@ -10,12 +10,10 @@ import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator",
 import ReactMarkdown from 'react-markdown',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
-
 export default function BlogPost() {
 
   const router = useRouter(),
@@ -42,10 +40,10 @@ export default function BlogPost() {
         ).slice(0, 3),
         setRelatedPosts(related),
         setIsLoading(false),
-        return,
+        return
       } catch (err) {
         logErrorToProduction('Failed to fetch blog post', { data: err }),
-        setError('Failed to load article'),
+        setError('Failed to load article')
       }
 
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug),
@@ -57,15 +55,15 @@ export default function BlogPost() {
             (p.category === currentPost.category ||
               p.tags.some((tag) => currentPost.tags.includes(tag)))
         ).slice(0, 3),
-        setRelatedPosts(related),
+        setRelatedPosts(related)
       } else {
-        router.replace('/blog'),
+        router.replace('/blog')
       }
-      setIsLoading(false),
+      setIsLoading(false)
     },
 
     fetchPost(),
-    window.scrollTo({ top: 0, behavior: 'smooth' }),
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
   if (isLoading && !timedOut) {
@@ -73,7 +71,7 @@ export default function BlogPost() {
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>
-    ),
+    )
   }
 
   if (!post && (error || timedOut)) {
@@ -82,7 +80,7 @@ export default function BlogPost() {
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
       </div>
-    ),
+    )
   }
 
   // If post is still null after loading, show not found
@@ -92,7 +90,7 @@ export default function BlogPost() {
         <p>Article not found.</p>
         <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
-    ),
+    )
   }
 
   // Helper function to get share URL

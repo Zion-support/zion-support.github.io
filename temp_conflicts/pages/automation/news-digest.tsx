@@ -1,6 +1,5 @@
 import fs from 'fs',
 import path from 'path',
-
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 
 export async function getServerSideProps() {
@@ -11,9 +10,9 @@ export async function getServerSideProps() {
     const raw = fs.readFileSync(file, 'utf-8'),
     const json = JSON.parse(raw),
     items = json.items || [],
-    generatedAt = json.generatedAt || '',
+    generatedAt = json.generatedAt || ''
   } catch {}
-  return { props: { items, generatedAt } },
+  return { props: { items, generatedAt } }
 }
 
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
@@ -36,5 +35,5 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
     </div>
-  ),
+  )
 }

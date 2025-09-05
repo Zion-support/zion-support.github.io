@@ -11,7 +11,6 @@ import {
 import Button from '../components/ui/Button',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
-
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -21,26 +20,20 @@ export default function AIBusinessIntelligenceSuite() {
   },
 
   const features = [
-    'Real-time data analysis and visualizationAI-powered trend prediction and forecasting',
-    'Automated report generation and schedulingCustom dashboard builder with drag-and-drop',
-    'Multi-source data integration (CRM, ERP, Analytics)Natural language query interface',
-    'Predictive analytics and machine learning modelsMobile-responsive dashboards',
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards',
     'Role-based access control and securityAPI access for custom integrations'
   ],
 
   const useCases = [
-    'Sales performance analysisCustomer behavior insights',
-    'Financial forecastingMarketing ROI optimization',
-    'Operational efficiency tracking'
+    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
   ],
 
   const integrations = [
-    'SalesforceHubSpot', 'Google AnalyticsShopify', 
-    'QuickBooksSlack', 'Microsoft Teams'
+    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
   ],
 
   const technology = [
-    'PythonTensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSDocker'
+    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
   ],
 
   return (
@@ -482,5 +475,5 @@ export default function AIBusinessIntelligenceSuite() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

@@ -7,7 +7,6 @@ import { ContractTypeCards } from './ContractTypeCards',
 import { RecentContractsTable } from './RecentContractsTable',
 import { TalentProfile } from '@/types/talent',
 import { useAuth } from '@/hooks/useAuth',
-
 // Mock data for demo purposes
 const mockTalent: TalentProfile = {
   id: 'talent-123',
@@ -16,7 +15,7 @@ const mockTalent: TalentProfile = {
   professional_title: 'Full Stack Developer',
   hourly_rate: 85,
   profile_picture_url: '',
-  skills: ['ReactNode.js', 'Smart Contracts']},
+  skills: ['ReactNode.jsSmart Contracts']},
 
 export function ContractBuilderContent() {
   const { user } = useAuth(),
@@ -41,7 +40,7 @@ export function ContractBuilderContent() {
   ]),
 
   const handleContractGenerated = (content: string) => {
-    // // // console.log('Contract generated:', content.substring(0, 100) + '...'),
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
   const handleViewContract = (contractId: string) => {
@@ -83,5 +82,5 @@ export function ContractBuilderContent() {
         />
       )}
     </>
-  ),
+  )
 }

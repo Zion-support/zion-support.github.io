@@ -5,13 +5,12 @@ import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart',
 import { KpiBadge } from '../../components/ui/InteractiveStats',
 import { exportCsv, exportSvgAsPng } from '../../utils/exporters',
 import useRole from '../../hooks/useRole',
-
 export default function AdminAnalyticsPage() {
   const [data, setData] = useState<any>(null),
   const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null)),
+    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null))
   }, []),
 
   if (loading) return <div>Loading...</div>,
@@ -77,5 +76,5 @@ export default function AdminAnalyticsPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

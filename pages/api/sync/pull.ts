@@ -18,5 +18,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
     events,
-    scope: requestedScope}),
+    scope: requestedScope})
 }

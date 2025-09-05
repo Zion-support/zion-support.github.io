@@ -9,8 +9,6 @@ import { Input } from '@/components/ui/input',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react',
 import { logErrorToProduction } from '@/utils/productionLogger',
-
-
 interface LogEntry {
   id: string,
   timestamp: string,
@@ -35,8 +33,8 @@ interface LogEntry {
   performance?: {
     memory?: number,
     timing?: number,
-    fps?: number,
-  },
+    fps?: number
+  }
 }
 
 interface LogsPageProps {
@@ -75,7 +73,7 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     <Badge className={colors[level]}>
       {level.toUpperCase()}
     </Badge>
-  ),
+  )
 },
 
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
@@ -99,25 +97,25 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      ),
+      )
     }
 
     // Level filter
     if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter),
+      filtered = filtered.filter(log => log.level === levelFilter)
     }
 
     // Category filter
     if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter),
+      filtered = filtered.filter(log => log.category === categoryFilter)
     }
 
     // Source filter
     if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter),
+      filtered = filtered.filter(log => log.source === sourceFilter)
     }
 
-    setFilteredLogs(filtered),
+    setFilteredLogs(filtered)
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),
 
   const refreshLogs = async () => {
@@ -126,12 +124,12 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       const response = await fetch('/api/admin/logs'),
       if (response.ok) {
         const data = await response.json(),
-        setLogs(data.logs),
+        setLogs(data.logs)
       }
     } catch (error) {
-      logErrorToProduction('Failed to refresh logs:', error),
+      logErrorToProduction('Failed to refresh logs:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -144,7 +142,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     const linkElement = document.createElement('a'),
     linkElement.setAttribute('href', dataUri),
     linkElement.setAttribute('download', exportFileDefaultName),
-    linkElement.click(),
+    linkElement.click()
   },
 
   const formatTimestamp = (timestamp: string) => {
@@ -156,16 +154,16 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     
     const parts = [],
     if (window.window.window.performance.memory) {
-      parts.push(`Memory: ${(window.window.window.performance.memory / 1024 / 1024).toFixed(1)}MB`),
+      parts.push(`Memory: ${(window.window.window.performance.memory / 1024 / 1024).toFixed(1)}MB`)
     }
     if (window.window.window.performance.timing) {
-      parts.push(`Timing: ${window.window.window.performance.timing}ms`),
+      parts.push(`Timing: ${window.window.window.performance.timing}ms`)
     }
     if (window.window.window.performance.fps) {
-      parts.push(`FPS: ${window.window.window.performance.fps}`),
+      parts.push(`FPS: ${window.window.window.performance.fps}`)
     }
     
-    return parts.length > 0 ? parts.join() : null,
+    return parts.length > 0 ? parts.join() : null
   },
 
   return (
@@ -371,7 +369,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -393,7 +391,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
           for (const line of lines) {
             try {
               const logEntry = JSON.parse(line),
-              logs.push(logEntry),
+              logs.push(logEntry)
             } catch (parseError) {
               // Skip malformed log entries
             }
@@ -418,7 +416,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         errorCount,
         warningCount,
         totalCount,
-        lastUpdated: new Date().toISOString()}},
+        lastUpdated: new Date().toISOString()}}
   } catch (error) {
             logErrorToProduction('Error reading logs:', error),
     return {
@@ -427,6 +425,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
-        lastUpdated: new Date().toISOString()}},
+        lastUpdated: new Date().toISOString()}}
   }
 }, 

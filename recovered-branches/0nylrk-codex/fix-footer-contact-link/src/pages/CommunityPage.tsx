@@ -9,7 +9,6 @@ import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
-
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -153,5 +152,5 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </AppLayout>
-  ),
+  )
 }

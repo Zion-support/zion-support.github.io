@@ -1,5 +1,4 @@
 import React from 'react',
-
 export default function AdminAutomationStatusPage() {
   return (
     <div className="container mx-auto px-4 py-10">

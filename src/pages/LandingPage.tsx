@@ -126,5 +126,5 @@ export default function LandingPage() {
       <WaitlistSection />
       <FloatingCTA />
     </div>
-  ),
+  )
 }

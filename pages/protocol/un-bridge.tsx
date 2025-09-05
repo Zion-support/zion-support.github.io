@@ -16,7 +16,7 @@ export default function UNBridge() {
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
-    setForm((f) => ({ ...f, [name]: value })),
+    setForm((f) => ({ ...f, [name]: value }))
   },
 
   async function generate() {
@@ -29,8 +29,8 @@ export default function UNBridge() {
           ...form,
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json(),
-      setResult(data),
-    } finally { setLoading(false), }
+      setResult(data)
+    } finally { setLoading(false) }
   }
 
   async function translate(targetLanguage: string) {
@@ -42,8 +42,8 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })}),
       const data = await res.json(),
-      setTranslated(data.translated),
-    } finally { setLoading(false), }
+      setTranslated(data.translated)
+    } finally { setLoading(false) }
   }
 
   async function exportArtifacts() {
@@ -58,8 +58,8 @@ export default function UNBridge() {
       const list = await fetch('/api/proposals/list'),
       const { proposals } = await list.json(),
       const updated = proposals.find((p: any) => p.id === result.meta.id),
-      setResult((r: any) => ({ ...r, meta: updated })),
-    } finally { setLoading(false), }
+      setResult((r: any) => ({ ...r, meta: updated }))
+    } finally { setLoading(false) }
   }
 
   async function submit(channels: string[]) {
@@ -71,8 +71,8 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: result.meta.id, channels })}),
       const data = await res.json(),
-      setResult((r: any) => ({ ...r, meta: data.meta })),
-    } finally { setLoading(false), }
+      setResult((r: any) => ({ ...r, meta: data.meta }))
+    } finally { setLoading(false) }
   }
 
   return (
@@ -156,5 +156,5 @@ export default function UNBridge() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

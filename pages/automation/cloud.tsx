@@ -7,7 +7,7 @@ export default function CloudAutomationHub() {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
-      .catch(() => setLogs([])),
+      .catch(() => setLogs([]))
   }, []),
 
   return (

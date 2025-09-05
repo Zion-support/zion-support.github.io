@@ -5,7 +5,6 @@ import { format } from "date-fns",
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme",
-
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -65,7 +64,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
@@ -78,7 +77,7 @@ function escapeHtml(unsafe: string): string {
     .replace(/</g, "<")
     .replace(/>/g, ">")
     .replace(/"/g, """)
-    .replace(/'/g, "&#039,"),
+    .replace(/'/g, "&#039,")
 }
 
 function formatMessageWithLinks(message: string): string {

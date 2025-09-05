@@ -12,7 +12,7 @@ export interface PracticalBusinessSolution2029 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [

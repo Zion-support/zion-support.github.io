@@ -9,7 +9,6 @@ import Link from "next/link",
 import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function UpcomingInterviewsCard() {
 
   const { fetchInterviews } = useInterviews(),
@@ -33,15 +32,15 @@ export function UpcomingInterviewsCard() {
           )
           .slice(0, 3), // Take only the next 3 interviews
         
-        setUpcomingInterviews(upcoming),
+        setUpcomingInterviews(upcoming)
       } catch (error) {
-        logErrorToProduction('Error loading upcoming interviews:', { data: error }),
+        logErrorToProduction('Error loading upcoming interviews:', { data: error })
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
-    loadInterviews(),
+    loadInterviews()
   }, []),
 
   if (isLoading) {
@@ -67,7 +66,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   if (upcomingInterviews.length === 0) {
@@ -89,7 +88,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   return (
@@ -145,7 +144,7 @@ export function UpcomingInterviewsCard() {
                   </div>
                 </div>
               </div>
-            ),
+            )
           })}
         </div>
         
@@ -158,5 +157,5 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

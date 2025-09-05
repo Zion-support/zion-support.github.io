@@ -34,12 +34,12 @@ export async function createNotification({
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
         body: { user_id: userId, notification_id: notificationId }
-      }),
+      })
     }
     
-    return { success: true, notificationId: data },
+    return { success: true, notificationId: data }
   } catch (error) {
     console.error('Error creating notification:', error),
-    return { success: false, error },
+    return { success: false, error }
   }
 }

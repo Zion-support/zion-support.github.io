@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState } from "../../../utils/sync/storage",
 import { filterEventsByScope } from "../../../utils/sync/storage",
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
 
@@ -19,8 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}}),
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
   }
 
-  return res.status(405).json({ error: "Method not allowed" }),
+  return res.status(405).json({ error: "Method not allowed" })
 }

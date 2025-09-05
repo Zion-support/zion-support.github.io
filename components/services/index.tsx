@@ -61,7 +61,7 @@ export default function ServicesIndexPage() {
     const service = s as { category?: string },
     const rawCat = (service.category || '').trim(),
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
-    byCategory[mapped].push(s),
+    byCategory[mapped].push(s)
   }
 
   React.useEffect(() => {
@@ -76,15 +76,15 @@ export default function ServicesIndexPage() {
       // Rating
       if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false,
       // Delivery time (not available in data, simulate pass-through)
-      return true,
+      return true
     }),
-    setFiltered(next),
+    setFiltered(next)
   }, [filters, services]),
 
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>(),
     services.forEach((s) => s.categories.forEach((c) => set.add(c))),
-    return Array.from(set),
+    return Array.from(set)
   }, [services]),
 
   const handleRequestQuote = (service: ServiceItem) => {
@@ -104,7 +104,7 @@ export default function ServicesIndexPage() {
         email: values.email})}),
     if (!res.ok) {
       const err = await res.json().catch(() => ({})),
-      throw new Error(err?.message || 'Failed to submit'),
+      throw new Error(err?.message || 'Failed to submit')
     }
   },
 
@@ -139,7 +139,7 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  ),
+  )
 },
 
 export default ServicesPage,

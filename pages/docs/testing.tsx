@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function TestingDocRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function TestingDocRedirect() {
         <p>Redirecting to Testing documentation…</p>
       </main>
     </>
-  ),
+  )
 }
 

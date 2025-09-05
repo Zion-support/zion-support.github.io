@@ -1,7 +1,6 @@
 
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
-
 export function Toaster() {
   return (
     <SonnerToaster 
@@ -15,5 +14,5 @@ export function Toaster() {
         duration: 4000,
         descriptionClassName: "text-zion-slate-light"}}
     />
-  ),
+  )
 }

@@ -62,18 +62,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   ],
 
   const categories = [
-    'allBusiness Intelligence & Analytics',
-    'Content Creation & MarketingCustomer Service & Support',
-    'E-commerce & RetailHR & Recruitment',
-    'Financial ManagementProject Management',
-    'Education & TrainingHealthcare & Medical',
-    'Cloud Infrastructure & DevOpsCybersecurity & Threat Intelligence',
-    'Data Engineering & AnalyticsAPI Management & Integration',
-    'Network Monitoring & ManagementDatabase Management & Optimization',
-    'IT Service ManagementBackup & Disaster Recovery',
-    'Quantum Computing & AIBlockchain & Web3',
-    'Internet of Things (IoT)Edge Computing & 5G',
-    'AR/VR & Immersive TechnologyRobotics & Automation',
+    'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management',
+    'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization',
+    'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation',
     'Digital Twin & Simulation'
   ],
 
@@ -105,7 +96,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       }
     })(),
     
-    return matchesSearch && matchesCategory && matchesPrice,
+    return matchesSearch && matchesCategory && matchesPrice
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -151,7 +142,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'Robotics & Automation': <Robot className="w-5 h-5" />,
       'Digital Twin & Simulation': <Cube className="w-5 h-5" />
     },
-    return iconMap[category] || <Sparkles className="w-5 h-5" />,
+    return iconMap[category] || <Sparkles className="w-5 h-5" />
   },
 
   return (

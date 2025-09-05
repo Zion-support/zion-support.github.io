@@ -11,13 +11,11 @@ import {
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-
 // Import service data for showcase
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,7 +50,7 @@ export default function ContactPage() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    }),
+    })
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -75,8 +73,8 @@ export default function ContactPage() {
         phone: '',
         service: '',
         message: ''
-      }),
-    }, 3000),
+      })
+    }, 3000)
   },
 
   const stats = [

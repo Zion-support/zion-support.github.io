@@ -19,7 +19,6 @@ import {
 import { useState } from 'react',
 import { EducationFormFieldsProps } from './types',
 import { Education } from '@/types/resume',
-
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required'),
@@ -60,7 +59,7 @@ export function EducationFormFields({
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -221,5 +220,5 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  ),
+  )
 }

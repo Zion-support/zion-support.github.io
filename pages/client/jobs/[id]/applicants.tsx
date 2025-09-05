@@ -2,7 +2,6 @@ import { useRouter } from 'next/router',
 import useSWR from 'swr',
 import { TALENT_PROFILES } from '../../../../data/talent',
 import Link from 'next/link',
-
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function JobApplicantsPage() {
@@ -35,9 +34,9 @@ export default function JobApplicantsPage() {
                 <button className="px-2 py-1 text-sm border rounded">Message</button>
               </div>
             </div>
-          ),
+          )
         })}
       </div>
     </div>
-  ),
+  )
 }

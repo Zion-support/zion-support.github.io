@@ -5,7 +5,7 @@ const { upsertFile } = require('./_lib/github'),
 exports.handler = async function() {
   try {
     // Demo ranking: based on certifications and progress
-    const usersPath = path.join(process.cwd(), 'datalearn', 'users.json'),
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
 
     const entries = Object.values(users).map((u) => ({
@@ -22,11 +22,11 @@ exports.handler = async function() {
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2),
 
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token }),
+      await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) },
+    return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) },
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },

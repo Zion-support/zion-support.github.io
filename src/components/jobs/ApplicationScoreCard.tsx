@@ -7,7 +7,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -68,29 +67,29 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         if (error) {
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
-          return,
+          return
         }
         
         if (data.scored_at) {
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-          return,
+          return
         }
         
         if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000),
+          setTimeout(checkScore, 3000)
         } else {
           setIsScoring(false),
-          toast.info("Scoring is taking longer than expected. Check back later."),
+          toast.info("Scoring is taking longer than expected. Check back later.")
         }
       },
       
-      setTimeout(checkScore, 3000),
+      setTimeout(checkScore, 3000)
       
     } catch (error: any) {
       setIsScoring(false),
-      toast.error(`Failed to score resume: ${error.message}`),
+      toast.error(`Failed to score resume: ${error.message}`)
     }
   },
 
@@ -222,5 +221,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

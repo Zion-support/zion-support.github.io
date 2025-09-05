@@ -6,7 +6,6 @@ import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
-
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false),
   const { theme } = useTheme(),
@@ -70,5 +69,5 @@ export function SupportWidget() {
         </div>
       )}
     </>
-  ),
+  )
 }

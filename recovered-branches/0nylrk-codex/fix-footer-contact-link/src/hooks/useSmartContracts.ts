@@ -6,7 +6,6 @@ import { toast } from 'sonner',
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts',
 import { TalentProfile } from '@/types/talent',
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-
 export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -36,16 +35,16 @@ export function useSmartContracts() {
       if (error) throw error,
       
       if (data && data.solidityCode) {
-        return data.solidityCode,
+        return data.solidityCode
       } else {
-        throw new Error("Failed to generate Solidity contract"),
+        throw new Error("Failed to generate Solidity contract")
       }
     } catch (err: any) {
       console.error("Error generating Solidity contract:", err),
       toast.error("Failed to generate smart contract"),
-      throw err,
+      throw err
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -85,12 +84,12 @@ export function useSmartContracts() {
       setDeploymentStatus('success'),
       toast.success("Smart contract deployed successfully!"),
       
-      return mockSmartContractInfo,
+      return mockSmartContractInfo
     } catch (err: any) {
       console.error("Error deploying smart contract:", err),
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
-      return null,
+      return null
     }
   },
   
@@ -99,5 +98,5 @@ export function useSmartContracts() {
     deploySmartContract,
     isLoading,
     deploymentStatus
-  },
+  }
 }

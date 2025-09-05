@@ -8,7 +8,6 @@ import { useIsMobile } from '@/hooks/use-mobile',
 import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
-
 export default function MessagingInbox() {
   const { 
     conversations,
@@ -26,20 +25,20 @@ export default function MessagingInbox() {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
-        await fetchConversations(),
+        await fetchConversations()
       } catch (error) {
         console.error("Failed to load conversations:", error),
-        toast.error("Failed to load messages. Please try again."),
+        toast.error("Failed to load messages. Please try again.")
       }
     },
     
-    loadData(),
+    loadData()
   }, [fetchConversations]),
   
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
-      return,
+      return
     }
     
     const roomId = `msg-${activeConversation.id}`,
@@ -51,7 +50,7 @@ export default function MessagingInbox() {
     }),
     
     // Navigate to video call page
-    navigate(`/call/${roomId}`),
+    navigate(`/call/${roomId}`)
   },
   
   return (
@@ -101,5 +100,5 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-  ),
+  )
 }

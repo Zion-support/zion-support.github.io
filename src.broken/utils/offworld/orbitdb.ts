@@ -1,5 +1,4 @@
 import type { IPFS } from 'ipfs-core-types',
-
 let createIpfsClient: any,
 let OrbitDB: any,
 
@@ -10,7 +9,7 @@ async function lazyLoadDeps() {
   } catch {}
   try {
     const orbit = await import('orbit-db'),
-    OrbitDB = (orbit as any).default || orbit,
+    OrbitDB = (orbit as any).default || orbit
   } catch {}
 }
 
@@ -39,24 +38,24 @@ export async function connectOrbit(customIpfsUrl?: string): Promise<OrbitConnect
   const votes = await orbit.eventlog('zion.votes'),
   const constitution = await orbit.docstore('zion.constitution'),
 
-  return { ipfs, orbit, stores: { chat, votes, constitution } },
+  return { ipfs, orbit, stores: { chat, votes, constitution } }
 }
 
 export async function appendChatMessage(stores: OrbitStores, message: { from: string, text: string, ts?: number }) {
   if (!stores?.chat) return false,
   await stores.chat.add({ ...message, ts: message.ts || Date.now() }),
-  return true,
+  return true
 }
 
 export async function recordVote(stores: OrbitStores, vote: { proposalId: string, voter: string, choice: string, ts?: number }) {
   if (!stores?.votes) return false,
   await stores.votes.add({ ...vote, ts: vote.ts || Date.now() }),
-  return true,
+  return true
 }
 
 export async function editConstitution(stores: OrbitStores, change: { editor: string, section: string, diff: string, ts?: number }) {
   if (!stores?.constitution) return false,
   const id = `${Date.now()}-${change.section}`,
   await stores.constitution.put({ _id: id, ...change, ts: change.ts || Date.now() }),
-  return true,
+  return true
 }

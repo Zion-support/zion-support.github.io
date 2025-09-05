@@ -1,22 +1,22 @@
-import '@testing-library/jest-dom';
-import { cleanup } from '@testing-library/react';
-import { vi, afterEach } from 'vitest';
+import '@testing-library/jest-dom',
+import { cleanup } from '@testing-library/react',
+import { vi, afterEach } from 'vitest',
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   observe() { /* do nothing */ }
   unobserve() { /* do nothing */ }
   disconnect() { /* do nothing */ }
-};
+},
 
 // Mock window.scrollTo
-global.window.scrollTo = vi.fn(); // vi should be globally available
+global.window.scrollTo = vi.fn(), // vi should be globally available
 
 // Ensure React Testing Library cleans up and mocks are restored between tests
 afterEach(() => {
-  cleanup();
-  vi.restoreAllMocks(); // Changed from jest to vi
-});
+  cleanup(),
+  vi.restoreAllMocks(), // Changed from jest to vi
+}),
 
 // -----------------------------------------------------------------------------
 // Jest-compatibility shim ------------------------------------------------------
@@ -45,4 +45,4 @@ afterEach(() => {
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
   // We expose it so imports compile even if we don't use it.
    
-  SnapshotSerializer: () => {}};
+  SnapshotSerializer: () => {}},

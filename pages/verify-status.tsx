@@ -24,7 +24,7 @@ export default function VerifyStatus() {
 
   useEffect(() => {
     if (typeof emailParam === 'string') {
-      setEmail(emailParam),
+      setEmail(emailParam)
     }
   }, [emailParam]),
 
@@ -34,15 +34,15 @@ export default function VerifyStatus() {
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
-      }, 1000),
+      }, 1000)
     }
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, [countdown]),
 
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address'),
-      return,
+      return
     }
 
     setIsResending(true),
@@ -63,19 +63,19 @@ export default function VerifyStatus() {
         setLastSentTime(new Date()),
         setCountdown(60), // 60 second cooldown
       } else {
-        setError(data.message || 'Failed to resend verification email'),
+        setError(data.message || 'Failed to resend verification email')
       }
     } catch (err) {
-      setError('Network error. Please try again.'),
+      setError('Network error. Please try again.')
     } finally {
-      setIsResending(false),
+      setIsResending(false)
     }
   },
 
   const handleCheckStatus = async () => {
     if (!email) {
       setError('Please enter your email address'),
-      return,
+      return
     }
 
     setIsCheckingStatus(true),
@@ -89,7 +89,7 @@ export default function VerifyStatus() {
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check,
         // as user might not have a session yet or it might be invalid.
-        logWarn('Error during session refresh:', { data: refreshError.message }),
+        logWarn('Error during session refresh:', { data: refreshError.message })
       }
 
       // Get the current user details from Supabase
@@ -98,7 +98,7 @@ export default function VerifyStatus() {
       if (getUserError) {
         setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
         setIsCheckingStatus(false),
-        return,
+        return
       }
 
       if (user && user.email_confirmed_at) {
@@ -106,8 +106,8 @@ export default function VerifyStatus() {
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
         setTimeout(() => {
-          router.push(`/auth/login?email=${encodeURIComponent(email)}`),
-        }, 2000),
+          router.push(`/auth/login?email=${encodeURIComponent(email)}`)
+        }, 2000)
       } else if (user) {
         setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.'),
         setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.'),
@@ -116,22 +116,22 @@ export default function VerifyStatus() {
         // This case means there's no active user session found by Supabase client.
         // This is expected if they haven't clicked the link from a different browser/device context yet.
         setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'),
-        setError(''),
+        setError('')
       }
     } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err }),
-      setError('An unexpected error occurred while checking status. Please try again.'),
+      setError('An unexpected error occurred while checking status. Please try again.')
     } finally {
-      setIsCheckingStatus(false),
+      setIsCheckingStatus(false)
     }
   },
 
   const handleTryLogin = () => {
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`),
+    router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   },
 
   const handleGoBack = () => {
-    router.back(),
+    router.back()
   },
 
   return (
@@ -296,5 +296,5 @@ export default function VerifyStatus() {
         </div>
       </div>
     </AuthLayout>
-  ),
+  )
 }

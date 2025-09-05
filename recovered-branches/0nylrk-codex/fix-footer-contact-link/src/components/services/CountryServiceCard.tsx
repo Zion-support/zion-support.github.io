@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
-
 interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
@@ -33,7 +32,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "default": "🌐"
     },
     
-    return emojiMap[countryName] || emojiMap["default"],
+    return emojiMap[countryName] || emojiMap["default"]
   },
   
   // Get response time estimate based on country
@@ -42,11 +41,11 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     
     if (tier1.includes(countryName)) {
-      return "4 hours",
+      return "4 hours"
     } else if (tier2.includes(countryName)) {
-      return "6 hours",
+      return "6 hours"
     } else {
-      return "8-24 hours",
+      return "8-24 hours"
     }
   },
   
@@ -104,5 +103,5 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         </Button>
       </CardFooter>
     </Card>
-  ),
+  )
 }

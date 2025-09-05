@@ -1,24 +1,23 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
 export default function MicroSaaS() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer)
+  }, []),
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
   const categories = [
     { id: 'all', name: 'All Products', count: 150 },
@@ -28,7 +27,7 @@ export default function MicroSaaS() {
     { id: 'security', name: 'Security', count: 20 },
     { id: 'productivity', name: 'Productivity', count: 15 },
     { id: 'marketing', name: 'Marketing', count: 15 }
-  ];
+  ],
 
   const products = [
     {
@@ -36,7 +35,7 @@ export default function MicroSaaS() {
       name: 'AI-Powered Video Clip Maker',
       description: 'Automatically create engaging video clips from long-form content using advanced AI algorithms.',
       category: 'ai',
-      features: ['AI Content Analysis', 'Auto-Editing', 'Multiple Formats', 'Cloud Processing'],
+      features: ['AI Content AnalysisAuto-EditingMultiple FormatsCloud Processing'],
       price: '$29/month',
       popular: true
     },
@@ -45,7 +44,7 @@ export default function MicroSaaS() {
       name: 'Smart Contract Analyzer',
       description: 'Comprehensive analysis and security auditing for blockchain smart contracts.',
       category: 'security',
-      features: ['Vulnerability Detection', 'Gas Optimization', 'Code Review', 'Audit Reports'],
+      features: ['Vulnerability DetectionGas OptimizationCode ReviewAudit Reports'],
       price: '$99/month',
       popular: false
     },
@@ -54,7 +53,7 @@ export default function MicroSaaS() {
       name: 'Cybersecurity Threat Intelligence',
       description: 'Real-time threat monitoring and intelligence gathering for enhanced security.',
       category: 'security',
-      features: ['Threat Detection', 'Risk Assessment', 'Incident Response', 'Compliance Monitoring'],
+      features: ['Threat DetectionRisk AssessmentIncident ResponseCompliance Monitoring'],
       price: '$149/month',
       popular: true
     },
@@ -63,7 +62,7 @@ export default function MicroSaaS() {
       name: 'Multi-Language Website Translator',
       description: 'Automatically translate websites into multiple languages with context awareness.',
       category: 'automation',
-      features: ['100+ Languages', 'Context Translation', 'SEO Optimization', 'Real-time Updates'],
+      features: ['100+ LanguagesContext TranslationSEO OptimizationReal-time Updates'],
       price: '$49/month',
       popular: false
     },
@@ -72,7 +71,7 @@ export default function MicroSaaS() {
       name: 'Predictive Inventory Optimizer',
       description: 'AI-driven inventory management with demand forecasting and optimization.',
       category: 'analytics',
-      features: ['Demand Forecasting', 'Stock Optimization', 'Cost Analysis', 'Integration APIs'],
+      features: ['Demand ForecastingStock OptimizationCost AnalysisIntegration APIs'],
       price: '$79/month',
       popular: true
     },
@@ -81,7 +80,7 @@ export default function MicroSaaS() {
       name: 'Real-Time Analytics Dashboard',
       description: 'Comprehensive business intelligence dashboard with real-time data visualization.',
       category: 'analytics',
-      features: ['Real-time Data', 'Custom Dashboards', 'Alert System', 'Export Capabilities'],
+      features: ['Real-time DataCustom DashboardsAlert SystemExport Capabilities'],
       price: '$59/month',
       popular: false
     },
@@ -90,7 +89,7 @@ export default function MicroSaaS() {
       name: 'Automated Customer Support',
       description: 'AI-powered customer support system with natural language processing.',
       category: 'ai',
-      features: ['Chatbot Integration', 'Ticket Management', 'Knowledge Base', 'Multi-channel Support'],
+      features: ['Chatbot IntegrationTicket ManagementKnowledge BaseMulti-channel Support'],
       price: '$89/month',
       popular: true
     },
@@ -99,7 +98,7 @@ export default function MicroSaaS() {
       name: 'Blockchain Transaction Monitor',
       description: 'Monitor and analyze blockchain transactions across multiple networks.',
       category: 'analytics',
-      features: ['Multi-chain Support', 'Transaction Tracking', 'Alert System', 'API Access'],
+      features: ['Multi-chain SupportTransaction TrackingAlert SystemAPI Access'],
       price: '$69/month',
       popular: false
     },
@@ -108,7 +107,7 @@ export default function MicroSaaS() {
       name: 'Social Media Scheduler',
       description: 'Advanced social media management with AI-powered content optimization.',
       category: 'marketing',
-      features: ['Multi-platform', 'Content Calendar', 'Analytics', 'Auto-posting'],
+      features: ['Multi-platformContent CalendarAnalyticsAuto-posting'],
       price: '$39/month',
       popular: false
     },
@@ -117,7 +116,7 @@ export default function MicroSaaS() {
       name: 'Document Processing AI',
       description: 'Intelligent document processing with OCR and data extraction capabilities.',
       category: 'ai',
-      features: ['OCR Technology', 'Data Extraction', 'Format Conversion', 'Batch Processing'],
+      features: ['OCR TechnologyData ExtractionFormat ConversionBatch Processing'],
       price: '$59/month',
       popular: true
     },
@@ -126,7 +125,7 @@ export default function MicroSaaS() {
       name: 'Workflow Automation Engine',
       description: 'Create and manage complex business workflows with drag-and-drop interface.',
       category: 'automation',
-      features: ['Visual Builder', 'Integration Hub', 'Conditional Logic', 'Monitoring'],
+      features: ['Visual BuilderIntegration HubConditional LogicMonitoring'],
       price: '$79/month',
       popular: false
     },
@@ -135,15 +134,15 @@ export default function MicroSaaS() {
       name: 'Email Marketing Optimizer',
       description: 'AI-powered email marketing with personalization and performance optimization.',
       category: 'marketing',
-      features: ['Personalization', 'A/B Testing', 'Analytics', 'Template Library'],
+      features: ['PersonalizationA/B TestingAnalyticsTemplate Library'],
       price: '$49/month',
       popular: true
     }
-  ];
+  ],
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
+    : products.filter(product => product.category === selectedCategory),
 
   return (
     <>
@@ -319,7 +318,7 @@ export default function MicroSaaS() {
                 </a>
                 <a 
                   href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
                 </a>
@@ -329,5 +328,5 @@ export default function MicroSaaS() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react',
 import { UnleashClient } from 'unleash-proxy-client',
-
 // Variant type is not exported from the client typings
 export interface Variant {
   name: string,
@@ -8,7 +7,7 @@ export interface Variant {
   payload?: {
     type: string,
     value: string
-  },
+  }
 }
 
 interface FeatureFlagContextValue {
@@ -27,12 +26,12 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     const c: any = client,
     if (typeof c.on === 'function') {
-      c.on('ready', () => setReady(true)),
+      c.on('ready', () => setReady(true))
     } else {
-      setReady(true),
+      setReady(true)
     }
     if (typeof c.start === 'function') {
-      c.start(),
+      c.start()
     }
   }, [client]),
 
@@ -50,11 +49,11 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
     <FeatureFlagContext.Provider value={{ isEnabled, getVariant, track }}>
       {children}
     </FeatureFlagContext.Provider>
-  ),
+  )
 }
 
 export function useFeatureFlags() {
   const ctx = useContext(FeatureFlagContext),
   if (!ctx) throw new Error('useFeatureFlags must be used within a FeatureFlagProvider'),
-  return ctx,
+  return ctx
 }

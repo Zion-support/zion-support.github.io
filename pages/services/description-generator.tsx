@@ -16,7 +16,7 @@ export default function ServiceDescriptionGeneratorPage() {
     return featuresInput
       .split('\n')
       .map((f) => f.trim())
-      .filter(Boolean),
+      .filter(Boolean)
   }, [featuresInput]),
 
   async function handleSubmit(e: React.FormEvent) {
@@ -38,25 +38,25 @@ export default function ServiceDescriptionGeneratorPage() {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({})),
-        throw new Error(data.error || 'Failed to generate'),
+        throw new Error(data.error || 'Failed to generate')
       }
 
       const data = (await response.json()) as { description: string },
-      setGenerated(data.description || ''),
+      setGenerated(data.description || '')
     } catch (err: any) {
       setError(err.message || 'Something went wrong')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
   function handleAccept() {
-    setAccepted(true),
+    setAccepted(true)
   }
 
   function handleCopy() {
     if (!generated) return,
-    navigator.clipboard.writeText(generated).catch(() => {}),
+    navigator.clipboard.writeText(generated).catch(() => {})
   }
 
   return (
@@ -170,5 +170,5 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

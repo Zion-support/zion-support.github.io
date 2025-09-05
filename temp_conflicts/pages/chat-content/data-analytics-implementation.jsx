@@ -1,6 +1,5 @@
 
 import Head from 'next/head',
-
 const DataAnalyticsImplementation = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const DataAnalyticsImplementation = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  ),
+  )
 },
 
 export default DataAnalyticsImplementation,

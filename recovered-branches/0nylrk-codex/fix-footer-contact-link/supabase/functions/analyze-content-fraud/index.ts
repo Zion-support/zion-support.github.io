@@ -2,7 +2,6 @@
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
-
 interface AnalyzeRequest {
   content: string,
   contentType: string,
@@ -22,13 +21,13 @@ const initializeServices = () => {
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
   
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
-    throw new Error("Missing required environment variables"),
+    throw new Error("Missing required environment variables")
   }
   
   return {
     supabase: createClient(supabaseUrl, supabaseServiceKey),
     openaiApiKey
-  },
+  }
 },
 
 // Validate request content
@@ -40,14 +39,14 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   const request = data as AnalyzeRequest,
   
   if (!request.content) {
-    throw new Error("No content provided for analysis"),
+    throw new Error("No content provided for analysis")
   }
   
   if (!request.contentType) {
-    throw new Error("No content type provided"),
+    throw new Error("No content type provided")
   }
   
-  return request,
+  return request
 },
 
 // Create prompt for OpenAI
@@ -90,7 +89,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     
     if (!response.ok) {
       console.error("OpenAI API error:", data.error),
-      throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`),
+      throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
     }
     
     const analysisText = data.choices[0]?.message?.content || "",
@@ -101,9 +100,9 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     let explanation = "No issues detected.",
     
     if (analysisText.includes("SUSPICIOUS")) {
-      classification = "SUSPICIOUS",
+      classification = "SUSPICIOUS"
     } else if (analysisText.includes("DANGEROUS")) {
-      classification = "DANGEROUS",
+      classification = "DANGEROUS"
     }
     
     // Extract explanation
@@ -111,10 +110,10 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       explanation = analysisText.split(":")[1].trim()
     }
     
-    return { classification, explanation },
+    return { classification, explanation }
   } catch (error) {
     console.error("Error calling OpenAI:", error),
-    throw error,
+    throw error
   }
 },
 
@@ -138,17 +137,17 @@ const updateFraudFlag = async (
   
   if (error) {
     console.error("Error updating fraud flag:", error),
-    throw new Error(`Error updating fraud flag: ${error.message}`),
+    throw new Error(`Error updating fraud flag: ${error.message}`)
   }
   
-  // // // console.log(`Updated fraud flag ${flagId} with classification: ${classification}`),
+  // // // console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 },
 
 // Main request handler
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -160,7 +159,7 @@ serve(async (req) => {
     // Parse and validate request
     const requestData = await req.json().catch(err => {
       console.error("Error parsing request JSON:", err),
-      throw new Error("Invalid JSON in request body"),
+      throw new Error("Invalid JSON in request body")
     }),
     
     const { content, contentType, flagId } = validateRequest(requestData),
@@ -172,7 +171,7 @@ serve(async (req) => {
     
     // Update flag if flagId was provided
     if (flagId) {
-      await updateFraudFlag(supabase, flagId, classification, explanation),
+      await updateFraudFlag(supabase, flagId, classification, explanation)
     }
     
     // Return the analysis result
@@ -184,7 +183,7 @@ serve(async (req) => {
     // // // console.log("Analysis completed successfully:", result),
     return new Response(JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    }),
+    })
 
   } catch (error) {
     console.error("Error analyzing content:", error),
@@ -200,6 +199,6 @@ serve(async (req) => {
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    ),
+    )
   }
 }),

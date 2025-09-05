@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings",
-
 export const MORE_PRODUCTS: ProductListing[] = [
   {
     id: "mp-ai-copywriter",

@@ -9,7 +9,6 @@ import { extraServices } from '../../data/extra-services',
 import { additionalEnhancedServices } from '../../data/additional-real-services',
 import { newRealServices } from '../../data/new-real-services',
 import { marketReadyServices } from '../../data/market-ready-services',
-
 type Service = typeof enhancedRealMicroSaasServices[number],
 
 const contactInfo = {
@@ -26,11 +25,11 @@ function getAllServices(): Service[] {
 			additionalEnhancedServices as Service[],
 			newRealServices as Service[],
 			marketReadyServices as Service[]
-		),
+		)
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
@@ -38,11 +37,11 @@ function extractServiceSlugFromLink(link: string): string | null {
 		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length),
+			return path.substring('services/'.length)
 		}
-		return null,
+		return null
 	} catch {
-		return null,
+		return null
 	}
 }
 
@@ -55,17 +54,17 @@ export async function getStaticPaths() {
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
 		if (fromLink) {
 			slugs.add(fromLink),
-			continue,
+			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
 		if (s.id) slugs.add(toSlug(s.id)),
-		else if (s.name) slugs.add(toSlug(s.name)),
+		else if (s.name) slugs.add(toSlug(s.name))
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	},
+	}
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -79,16 +78,16 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	}),
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
 
 	if (!service) {
-		return { notFound: true },
+		return { notFound: true }
 	}
 
 	return {
 		props: { service }
-	},
+	}
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
@@ -151,5 +150,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	),
+	)
 }

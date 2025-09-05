@@ -10,9 +10,9 @@ export default function AdminPartners() {
       try {
         const res = await fetch('/api/admin/partners/list'),
         const json = await res.json(),
-        setPartners(json.partners || []),
+        setPartners(json.partners || [])
       } catch {}
-    })(),
+    })()
   }, []),
 
   async function updatePartner(code: string, updates: any) {
@@ -22,14 +22,14 @@ export default function AdminPartners() {
       body: JSON.stringify({ code, ...updates })}),
     const res = await fetch('/api/admin/partners/list'),
     const json = await res.json(),
-    setPartners(json.partners || []),
+    setPartners(json.partners || [])
   }
 
   async function viewFlags(code: string) {
     setSelected(code),
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`),
     const json = await res.json(),
-    setFlags(json.flags || []),
+    setFlags(json.flags || [])
   }
 
   return (
@@ -88,5 +88,5 @@ export default function AdminPartners() {
         </div>
       )}
     </div>
-  ),
+  )
 }

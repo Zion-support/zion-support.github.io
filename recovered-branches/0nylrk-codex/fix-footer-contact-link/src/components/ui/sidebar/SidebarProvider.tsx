@@ -37,5 +37,5 @@ export function SidebarProvider({
         {children}
       </div>
     </SidebarContext.Provider>
-  ),
+  )
 }

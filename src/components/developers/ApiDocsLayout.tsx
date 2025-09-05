@@ -91,7 +91,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       {children}
      </div>
     </div>
-  ),
+  )
 }
 
 export default ApiDocsLayout,

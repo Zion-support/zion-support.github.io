@@ -12,8 +12,6 @@ import { formatDistanceToNow } from "date-fns",
 import { safeStorage } from "@/utils/safeStorage",
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface Transaction {
   id: string,
   user_id: string,
@@ -31,8 +29,8 @@ interface Transaction {
     display_name?: string
   },
   service?: {
-    title?: string,
-  },
+    title?: string
+  }
 }
 
 export function TransactionHistory() {
@@ -43,7 +41,7 @@ export function TransactionHistory() {
   ),
 
   useEffect(() => {
-    safeStorage.setItem('transaction_filter', filter),
+    safeStorage.setItem('transaction_filter', filter)
   }, [filter]),
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
@@ -62,11 +60,11 @@ export function TransactionHistory() {
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
       
       if (filter === 'pending') {
-        query = query.eq('statuspending'),
+        query = query.eq('statuspending')
       } else if (filter === 'completed') {
-        query = query.eq('statusreleased'),
+        query = query.eq('statusreleased')
       } else if (filter === 'escrow') {
-        query = query.eq('in_escrow', true),
+        query = query.eq('in_escrow', true)
       }
       
       query = query.order('created_at', { ascending: false }),
@@ -74,7 +72,7 @@ export function TransactionHistory() {
       const { data, error } = await query,
       
       if (error) throw error,
-      return data as Transaction[],
+      return data as Transaction[]
     },
     enabled: !!user}),
 
@@ -90,13 +88,13 @@ export function TransactionHistory() {
         title: "Success",
         description: (data as any)?.message || "Transaction updated successfully"}),
       
-      refetch(),
+      refetch()
     } catch (error) {
       logErrorToProduction('Error managing transaction:', { data: error }),
       toast({
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to update transaction",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
   
@@ -176,7 +174,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -343,7 +341,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              ),
+              )
             })}
           </div>
         ) : (
@@ -362,5 +360,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  ),
+  )
 }

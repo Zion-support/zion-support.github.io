@@ -14,7 +14,6 @@ import { Button } from '@/components/ui/button',
 import { toast } from '@/hooks/use-toast',
 import { Share, Users } from 'lucide-react',
 import { useNavigate } from 'react-router-dom',
-
 export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
@@ -34,7 +33,7 @@ export default function ReferralsPage() {
         title: "Authentication required",
         description: "Please login to access the referral program",
         variant: "destructive"}),
-      navigate("/login"),
+      navigate("/login")
     }
   }, [isAuthenticated, navigate]),
 
@@ -91,5 +90,5 @@ export default function ReferralsPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

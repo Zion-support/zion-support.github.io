@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getServerSupabase } from '../../../utils/supabase/server',
-
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key',
   try {
@@ -9,7 +8,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
         leaders: [
           { code: 'aihub', profile_completions: 9 },
           { code: 'modelmasters', profile_completions: 7 },
-          { code: 'promptpro', profile_completions: 5 }]}),
+          { code: 'promptpro', profile_completions: 5 }]})
     }
 
     const supabase = getServerSupabase(),
@@ -27,7 +26,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     for (const row of data || []) {
       if (row.event !== 'profile_completed') continue,
       const key = row.partner_code as string,
-      map.set(key, (map.get(key) || 0) + 1),
+      map.set(key, (map.get(key) || 0) + 1)
     }
 
     const leaders = Array.from(map.entries())
@@ -35,8 +34,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10),
 
-    return res.status(200).json({ leaders }),
+    return res.status(200).json({ leaders })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message }),
+    return res.status(500).json({ error: e?.message })
   }
 }

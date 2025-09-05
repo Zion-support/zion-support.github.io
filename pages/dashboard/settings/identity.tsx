@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 import type { KycProfile } from '../../../utils/kyc',
 import { ProfileBadges } from '../../../components/ui/ProfileBadges',
-
 export default function IdentitySettingsPage() {
   const [userId, setUserId] = useState('demo-user'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
@@ -13,9 +12,9 @@ export default function IdentitySettingsPage() {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`),
       const data = await res.json(),
       if (data.ok) setProfile(data.profile),
-      else setError(data.error || 'Not found'),
+      else setError(data.error || 'Not found')
     } catch (e) {
-      setError('Failed to fetch'),
+      setError('Failed to fetch')
     }
   }
 
@@ -46,5 +45,5 @@ export default function IdentitySettingsPage() {
         {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
       </main>
     </>
-  ),
+  )
 }

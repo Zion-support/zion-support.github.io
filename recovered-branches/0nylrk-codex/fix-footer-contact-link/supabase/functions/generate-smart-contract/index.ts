@@ -1,21 +1,20 @@
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY'),
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set'),
+      throw new Error('OPENAI_API_KEY is not set')
     }
 
     // Parse request body
@@ -59,7 +58,7 @@ serve(async (req) => {
       ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
       ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
       ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
-      `,
+      `
     }
     
     prompt += `
@@ -86,7 +85,7 @@ serve(async (req) => {
     const data = await response.json(),
     
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate smart contract'),
+      throw new Error(data.error?.message || 'Failed to generate smart contract')
     }
 
     const solidityCode = data.choices[0].message.content.trim(),
@@ -95,7 +94,7 @@ serve(async (req) => {
       success: true, 
       solidityCode 
     }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error generating smart contract:', error),
     return new Response(
@@ -106,6 +105,6 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-    ),
+    )
   }
 }),

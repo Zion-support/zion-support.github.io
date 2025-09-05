@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react',
 import type { GetStaticProps } from 'next',
 import content from '../../../data/docs/content.json',
-
 export type Section = {
   id: string,
   title: string,
   html?: string,
-  code?: { language?: string, content: string }[],
+  code?: { language?: string, content: string }[]
 },
 
 type DocsContent = {
@@ -21,13 +20,13 @@ type PageProps = {
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent}},
+      docs: content as DocsContent}}
 },
 
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500),
-    return () => clearTimeout(id),
+    return () => clearTimeout(id)
   }, []),
 
   return (
@@ -45,5 +44,5 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-  ),
+  )
 }

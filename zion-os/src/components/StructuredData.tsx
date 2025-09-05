@@ -55,5 +55,5 @@ export function StructuredData() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  ),
+  )
 }

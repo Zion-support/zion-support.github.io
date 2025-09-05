@@ -12,7 +12,7 @@ export interface Revolutionary2027AiService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const revolutionary2027AIServices: Revolutionary2027AiService[] = [

@@ -12,7 +12,6 @@ import {
 } from "@/components/quotes",
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-
 export default function RequestsPanel() {
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
@@ -39,7 +38,7 @@ export default function RequestsPanel() {
     
     // If status is new, mark as viewed
     if (quote.status === 'new') {
-      markAsViewed(quote.id),
+      markAsViewed(quote.id)
     }
   },
 
@@ -99,12 +98,12 @@ export default function RequestsPanel() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false),
-            setSelectedQuote(null),
+            setSelectedQuote(null)
           }}
         />
         
         <Footer />
       </div>
     </ProtectedRoute>
-  ),
+  )
 }

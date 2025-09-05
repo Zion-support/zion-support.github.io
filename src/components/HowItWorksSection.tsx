@@ -4,10 +4,9 @@ import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
-
 interface HowItWorksSectionProps {
   className?: string,
-  style?: React.CSSProperties,
+  style?: React.CSSProperties
 }
 
 const getSteps = (t: any) => [
@@ -81,5 +80,5 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
         </div>
       </div>
     </section>
-  ),
+  )
 }

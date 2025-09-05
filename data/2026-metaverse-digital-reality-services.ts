@@ -12,7 +12,7 @@ export interface MetaverseDigitalRealityService2026 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [

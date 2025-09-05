@@ -15,9 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const dispute = await getDisputeById(id),
     if (!dispute) return res.status(404).json({ error: 'Not found' }),
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId),
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }),
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
     }
 
     const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },
@@ -38,16 +38,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         mimeType: f.mimeType || 'application/octet-stream',
         path: filePath,
         uploadedAt: now,
-        uploadedByUserId: user.id}),
+        uploadedByUserId: user.id})
     }
 
     dispute.updatedAt = now,
     await upsertDispute(dispute),
-    return res.status(201).json({ dispute }),
+    return res.status(201).json({ dispute })
   }
 
   res.setHeader('AllowPOST'),
-  return res.status(405).end('Method Not Allowed'),
+  return res.status(405).end('Method Not Allowed')
 }
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
@@ -56,6 +56,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
       if (err) return reject(err),
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    }),
-  }),
+    })
+  })
 }

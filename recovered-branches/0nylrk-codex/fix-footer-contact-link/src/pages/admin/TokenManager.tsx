@@ -10,7 +10,6 @@ import { TokenTransaction } from '@/types/tokens',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { useToast } from '@/hooks/use-toast',
-
 export default function TokenManager() {
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -21,7 +20,7 @@ export default function TokenManager() {
   const isAdmin = user?.userType === 'admin',
 
   useEffect(() => {
-    if (isAdmin) fetchTransactions(),
+    if (isAdmin) fetchTransactions()
   }, [isAdmin]),
 
   const fetchTransactions = async () => {
@@ -30,7 +29,7 @@ export default function TokenManager() {
       .select('*')
       .order('created_at', { ascending: false })
       .limit(100),
-    if (!error) setTransactions(data || []),
+    if (!error) setTransactions(data || [])
   },
 
   const handleIssue = async (type: 'earn' | 'burn') => {
@@ -44,14 +43,14 @@ export default function TokenManager() {
         title: 'Success',
         description: 'Transaction processed'
       }),
-      fetchTransactions(),
+      fetchTransactions()
     } else {
       const err = await res.json(),
       toast({
         title: 'Error',
         description: err.error || 'Failed',
         variant: 'destructive'
-      }),
+      })
     }
   },
 
@@ -96,5 +95,5 @@ export default function TokenManager() {
         <Footer />
       </div>
     </ProtectedRoute>
-  ),
+  )
 }

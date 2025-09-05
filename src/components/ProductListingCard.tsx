@@ -59,13 +59,13 @@ const ProductListingCardComponent = ({
 
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing",
-    return formatPrice(listing.price),
+    return formatPrice(listing.price)
   },
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg'),
-      setImageError(true),
+      setImageError(true)
     }
   },
   
@@ -74,7 +74,7 @@ const ProductListingCardComponent = ({
     if (process.env.NODE_ENV === 'development') {
       logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` }),
       logDebug('[ProductCard] Listing ID:', { id: listing.id }),
-      logDebug('[ProductCard] Listing Title:', { title: listing.title }),
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
     }
     
     // Validate listing ID exists before navigation
@@ -84,10 +84,10 @@ const ProductListingCardComponent = ({
         title: "Navigation Error",
         description: "Product information is incomplete",
         variant: "destructive"}),
-      return,
+      return
     }
     
-    router.push(`${detailBasePath}/${listing.id}`),
+    router.push(`${detailBasePath}/${listing.id}`)
   },
 
   const dispatch = useDispatch<AppDispatch>(),
@@ -101,7 +101,7 @@ const ProductListingCardComponent = ({
       action: {
         label: 'View Cart',
         onClick: () => router.push('/cart')}}),
-    setLoading(false),
+    setLoading(false)
   },
   
   const handleRequestQuote = (e: React.MouseEvent) => {
@@ -111,7 +111,7 @@ const ProductListingCardComponent = ({
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
-      router.push(`/request-quote?listing=${listing.id}`),
+      router.push(`/request-quote?listing=${listing.id}`)
     }
   },
   
@@ -127,7 +127,7 @@ const ProductListingCardComponent = ({
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(),
-          handleViewListing(),
+          handleViewListing()
         }
       }}
     >
@@ -140,7 +140,7 @@ const ProductListingCardComponent = ({
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
-            handleViewListing(),
+            handleViewListing()
           }
         }}
       >
@@ -262,7 +262,7 @@ const ProductListingCardComponent = ({
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-                router.push('/checkout'),
+                router.push('/checkout')
               }}
               disabled={loading}
             >
@@ -283,7 +283,7 @@ const ProductListingCardComponent = ({
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 export const ProductListingCard = React.memo(ProductListingCardComponent),

@@ -94,7 +94,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                   value={minBudget || rest.value}
                   onChange={e => {
                     setMinBudget(e.target.value),
-                    onChange(e),
+                    onChange(e)
                   }}
                   {...rest}
                 />
@@ -117,7 +117,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                   value={maxBudget || rest.value}
                   onChange={e => {
                     setMaxBudget(e.target.value),
-                    onChange(e),
+                    onChange(e)
                   }}
                   {...rest}
                 />
@@ -153,5 +153,5 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         )}
       />
     </div>
-  ),
+  )
 },

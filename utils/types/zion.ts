@@ -4,7 +4,7 @@ export interface Branding {
   logoUrl?: string,
   primaryColor?: string,
   secondaryColor?: string,
-  subdomain?: string,
+  subdomain?: string
 }
 
 export interface DeployModules {

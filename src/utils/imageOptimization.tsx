@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image',
 import { cn } from '@/lib/utils',
-
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -49,7 +48,7 @@ export function OptimizedImage({
       ([entry]) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true),
-          observer.disconnect(),
+          observer.disconnect()
         }
       },
       {
@@ -58,32 +57,32 @@ export function OptimizedImage({
     ),
 
     if (imgRef.current) {
-      observer.observe(imgRef.current),
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect(),
+    return () => observer.disconnect()
   }, [lazy, priority, isInView]),
 
   // Generate WebP-compatible src
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's already optimized or external, return as-is
     if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
-      return originalSrc,
+      return originalSrc
     }
     
     // For internal images, Next.js will handle optimization
-    return originalSrc,
+    return originalSrc
   },
 
   const handleLoad = () => {
     setIsLoading(false),
-    onLoad?.(),
+    onLoad?.()
   },
 
   const handleError = () => {
     setHasError(true),
     setIsLoading(false),
-    onError?.(),
+    onError?.()
   },
 
   // Generate blur placeholder
@@ -101,7 +100,7 @@ export function OptimizedImage({
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
-    ).toString('base64')}`,
+    ).toString('base64')}`
   },
 
   return (
@@ -167,7 +166,7 @@ export function OptimizedImage({
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
     </div>
-  ),
+  )
 }
 
 // Higher-order component for easy migration from regular img tags
@@ -183,8 +182,8 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
         alt={alt}
         {...(otherProps as any)}
       />
-    ),
-  },
+    )
+  }
 }
 
 // Utility to preload critical images
@@ -193,8 +192,8 @@ export function preloadImage(src: string): Promise<void> {
     const img = new window.Image(),
     img.onload = () => resolve(),
     img.onerror = reject,
-    img.src = src,
-  }),
+    img.src = src
+  })
 }
 
 // Utility to get image dimensions
@@ -203,6 +202,6 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     const img = new window.Image(),
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
     img.onerror = reject,
-    img.src = src,
-  }),
+    img.src = src
+  })
 } 

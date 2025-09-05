@@ -8,12 +8,11 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',
-
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true)
   }, []),
 
   const services = [

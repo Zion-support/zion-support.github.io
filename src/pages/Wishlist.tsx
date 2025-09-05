@@ -19,7 +19,7 @@ export default function WishlistPage() {
   useEffect(() => {
     // Redirect if not authenticated and auth loading is complete
     if (!isAuthLoading && !user) {
-      router.push('/login'),
+      router.push('/login')
     }
   }, [user, isAuthLoading, router]),
 
@@ -40,16 +40,16 @@ export default function WishlistPage() {
         quantity: 1
       }
     }),
-    toast.success(`1× ${item.title || 'Item'} added`),
+    toast.success(`1× ${item.title || 'Item'} added`)
   },
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string any>>((acc, p) => {
     acc[p.id] = p,
-    return acc,
+    return acc
   }, {}),
   const talentMap = TALENT_PROFILES.reduce<Record<string any>>((acc, t) => {
     acc[t.id] = t,
-    return acc,
+    return acc
   }, {}),
 
   const sortedFavorites = [...favorites].sort(
@@ -91,7 +91,7 @@ export default function WishlistPage() {
                     </p>
                   )}
                 </div>
-              ) : null,
+              ) : null
             }
             const item = productMap[fav.item_id],
             return item ? (
@@ -118,10 +118,10 @@ export default function WishlistPage() {
                   </p>
                 )}
               </div>
-            ) : null,
+            ) : null
           })}
         </div>
       )}
     </div>
-  ),
+  )
 }

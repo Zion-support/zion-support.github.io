@@ -8,7 +8,6 @@ export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript
 import axios from 'axios',
-
 // Configure Axios with the base URL and headers
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1',
@@ -22,10 +21,10 @@ const api = axios.create({
 async function getJobs(filters = {}) {
   try {
     const response = await api.get('/api/jobs', { params: filters }),
-    return response.data,
+    return response.data
   } catch (error) {
     console.error('Error fetching jobs:', error.response?.data || error.message),
-    throw error,
+    throw error
   }
 }
 
@@ -33,10 +32,10 @@ async function getJobs(filters = {}) {
 async function createJob(jobData) {
   try {
     const response = await api.post('/api/jobs', jobData),
-    return response.data,
+    return response.data
   } catch (error) {
     console.error('Error creating job:', error.response?.data || error.message),
-    throw error,
+    throw error
   }
 }
 
@@ -44,10 +43,10 @@ async function createJob(jobData) {
 async function searchTalent(filters = {}) {
   try {
     const response = await api.get('/api/talent', { params: filters }),
-    return response.data,
+    return response.data
   } catch (error) {
     console.error('Error searching talent:', error.response?.data || error.message),
-    throw error,
+    throw error
   }
 }
 
@@ -68,15 +67,15 @@ async function main() {
         max: 7500,
         currency: 'USD'
       },
-      skills: ['ReactTypeScript', 'Tailwind CSS']
+      skills: ['ReactTypeScriptTailwind CSS']
     }),
     // // // console.log('New job created:', newJob),
     
     // Search for talent with React skills
     const talent = await searchTalent({ skills: 'React', limit: 10 }),
-    // // // console.log('Talent:', talent),
+    // // // console.log('Talent:', talent)
   } catch (error) {
-    console.error('Something went wrong:', error),
+    console.error('Something went wrong:', error)
   }
 }
 
@@ -129,7 +128,7 @@ if __name__ == "__main__":
                 'max': 9000,
                 'currency': 'USD'
             },
-            'skills': ['PythonMachine Learning', 'SQL']
+            'skills': ['PythonMachine LearningSQL']
         })
         print(f"New job created with ID: {new_job['id']}")
         
@@ -146,7 +145,6 @@ if __name__ == "__main__":
   // Node.js example with fetch
   const nodeFetchExample = `// Using node-fetch with Node.js
 import fetch from 'node-fetch',
-
 const API_KEY = 'YOUR_API_KEY',
 const BASE_URL = 'https: //api.zionai.com/v1',
 
@@ -169,10 +167,10 @@ async function apiRequest(endpoint, options = {}) {
   
   if (!response.ok) {
     const error = await response.json(),
-    throw new Error(error.message || \`API error: \${response.status}\`),
+    throw new Error(error.message || \`API error: \${response.status}\`)
   }
   
-  return response.json(),
+  return response.json()
 }
 
 // Get all jobs
@@ -180,11 +178,11 @@ async function getJobs(filters = {}) {
   // Convert filters to query string
   const params = new URLSearchParams(),
   Object.entries(filters).forEach(([key, value]) => {
-    params.append(key, value),
+    params.append(key, value)
   }),
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',
-  return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' }),
+  return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })
 }
 
 // Post a new job
@@ -192,18 +190,18 @@ async function createJob(jobData) {
   return apiRequest('/api/jobs', {
     method: 'POST',
     body: JSON.stringify(jobData)
-  }),
+  })
 }
 
 // Search for talent
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams(),
   Object.entries(filters).forEach(([key, value]) => {
-    params.append(key, value),
+    params.append(key, value)
   }),
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',
-  return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' }),
+  return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' })
 }
 
 // Example usage
@@ -223,15 +221,15 @@ async function main() {
         max: 8000,
         currency: 'USD'
       },
-      skills: ['Node.jsExpress', 'MongoDB']
+      skills: ['Node.jsExpressMongoDB']
     }),
     // // // console.log('New job created:', newJob),
     
     // Search for talent with Node.js skills
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
-    // // // console.log('Talent:', talent),
+    // // // console.log('Talent:', talent)
   } catch (error) {
-    console.error('Something went wrong:', error),
+    console.error('Something went wrong:', error)
   }
 }
 
@@ -295,7 +293,7 @@ main(),`,
         </ul>
       </div>
     </ApiDocsLayout>
-  ),
+  )
 }
 
 export default ApiSampleCode,

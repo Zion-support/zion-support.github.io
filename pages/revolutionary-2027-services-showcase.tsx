@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
-
 import { motion, AnimatePresence } from 'framer-motion',
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react',
 
@@ -9,7 +8,6 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services',
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services',
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas',
-
 export default function Revolutionary2027ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -65,8 +63,8 @@ export default function Revolutionary2027ServicesShowcase() {
         if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure'),
         if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health'),
         if (selectedCategory === 'holographic') return service.category.includes('Holographic'),
-        return true,
-      }),
+        return true
+      })
     }
 
     // Price range filter
@@ -77,8 +75,8 @@ export default function Revolutionary2027ServicesShowcase() {
         if (selectedPriceRange === '500-2000') return price >= 500 && price < 2000,
         if (selectedPriceRange === '2000-10000') return price >= 2000 && price < 10000,
         if (selectedPriceRange === 'over-10000') return price >= 10000,
-        return true,
-      }),
+        return true
+      })
     }
 
     // Search filter
@@ -87,7 +85,7 @@ export default function Revolutionary2027ServicesShowcase() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
     // Sort
@@ -105,7 +103,7 @@ export default function Revolutionary2027ServicesShowcase() {
       }
     }),
 
-    return filtered,
+    return filtered
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const contactInfo = {
@@ -368,7 +366,7 @@ export default function Revolutionary2027ServicesShowcase() {
                   onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('all'),
-                    setSelectedPriceRange('all'),
+                    setSelectedPriceRange('all')
                   }} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
                   Clear Filters
                 </button>

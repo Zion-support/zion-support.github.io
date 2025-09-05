@@ -1,6 +1,5 @@
 import { useState } from "react",
 import Head from "next/head",
-
 export default function Partners() {
   const [form, setForm] = useState({
     name: "",
@@ -25,7 +24,7 @@ export default function Partners() {
         pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
     const data = await res.json(),
     setLoading(false),
-    setResult(data),
+    setResult(data)
   }
 
   return (
@@ -91,5 +90,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  ),
+  )
 }

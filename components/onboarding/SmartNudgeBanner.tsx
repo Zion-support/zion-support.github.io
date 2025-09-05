@@ -1,6 +1,5 @@
 import React from 'react',
 import { X } from 'lucide-react',
-
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client',
   userId?: string | null,
@@ -14,14 +13,14 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   React.useEffect(() => {
     try {
       const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null,
-      setHidden(v === 'dismissed'),
+      setHidden(v === 'dismissed')
     } catch {}
   }, [storageKey]),
 
   const dismiss = React.useCallback(() => {
     setHidden(true),
     try {
-      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed'),
+      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
     } catch {}
   }, [storageKey]),
 
@@ -36,5 +35,5 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         {message}
       </div>
     </div>
-  ),
+  )
 }

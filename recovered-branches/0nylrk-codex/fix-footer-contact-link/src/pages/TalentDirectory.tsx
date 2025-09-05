@@ -10,7 +10,6 @@ import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent",
-
 export default function TalentDirectory() {
   const navigate = useNavigate(),
 
@@ -52,7 +51,7 @@ export default function TalentDirectory() {
   
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    navigate(`/talent/${id}`),
+    navigate(`/talent/${id}`)
   },
   
   return (
@@ -168,5 +167,5 @@ export default function TalentDirectory() {
         </div>
       </div>
     </AppLayout>
-  ),
+  )
 }

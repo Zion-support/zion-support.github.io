@@ -2,10 +2,9 @@
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { useWhitelabel } from '@/context/WhitelabelContext',
-
 interface LogoProps {
   customLogo?: string,
-  customColor?: string,
+  customColor?: string
 }
 
 export function Logo({ customLogo, customColor }: LogoProps) {
@@ -21,7 +20,7 @@ export function Logo({ customLogo, customColor }: LogoProps) {
       <Link to="/" className="flex items-center">
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
       </Link>
-    ),
+    )
   }
   
   return (
@@ -30,5 +29,5 @@ export function Logo({ customLogo, customColor }: LogoProps) {
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
     </Link>
-  ),
+  )
 }

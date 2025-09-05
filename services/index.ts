@@ -48,7 +48,7 @@ export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
-    services: ['urlShortenerpasswordGenerator', 'qrCodeGenerator']
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
   },
   MEDIA: {
     name: 'Media & Files',
@@ -70,9 +70,7 @@ export const SERVICES_METADATA = {
     icon: '🔗',
     category: 'UTILITIES',
     features: [
-      'Custom short codesClick tracking',
-      'Analytics dashboardExpiration dates',
-      'QR code generation'
+      'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
     ],
     pricing: 'Free',
     apiEndpoint: '/api/url-shortener'
@@ -83,9 +81,7 @@ export const SERVICES_METADATA = {
     icon: '🔐',
     category: 'UTILITIES',
     features: [
-      'Multiple generation modesStrength analysis',
-      'Custom character setsPassword history',
-      'Security recommendations'
+      'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
     ],
     pricing: 'Free',
     apiEndpoint: '/api/password-generator'
@@ -96,9 +92,7 @@ export const SERVICES_METADATA = {
     icon: '📱',
     category: 'UTILITIES',
     features: [
-      'Multiple QR code typesCustom styling',
-      'Logo integrationError correction',
-      'Template library'
+      'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
     ],
     pricing: 'Free',
     apiEndpoint: '/api/qr-code-generator'
@@ -109,9 +103,7 @@ export const SERVICES_METADATA = {
     icon: '🔄',
     category: 'MEDIA',
     features: [
-      'Multiple file formatsBatch conversion',
-      'Quality settingsMetadata preservation',
-      'Cloud processing'
+      'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'
@@ -122,9 +114,7 @@ export const SERVICES_METADATA = {
     icon: '📊',
     category: 'ANALYSIS',
     features: [
-      'Readability metricsSentiment analysis',
-      'Keyword extractionEntity recognition',
-      'Language detection'
+      'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
@@ -139,7 +129,7 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  },
+  }
 },
 
 // Service usage statistics
@@ -155,5 +145,5 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
-  },
+  }
 },

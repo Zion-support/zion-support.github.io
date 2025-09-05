@@ -102,9 +102,7 @@ const socialLinks = [
 ],
 
 const certifications = [
-  'ISO 27001 CertifiedSOC 2 Type II Compliant',
-  'GDPR CompliantHIPAA Compliant',
-  'PCI DSS Level 1FedRAMP Authorized'
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
 ],
 
 export default function UltraFuturisticFooter2030() {

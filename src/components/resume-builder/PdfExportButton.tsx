@@ -17,7 +17,6 @@ import { Resume } from '@/types/resume',
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',
 import { toast } from '@/hooks/use-toast',
 import { FontFamily } from '@/utils/pdf/fontConfig',
-
 interface PdfExportButtonProps {
   resume: Resume
 }
@@ -57,16 +56,16 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded as a PDF."}),
+        description: "Your resume has been downloaded as a PDF."})
     } catch (error) {
       logErrorToProduction('Error exporting PDF:', { data: error }),
       toast({
         title: "Export failed",
         description: "There was an error exporting your resume to PDF.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsExporting(false),
+      setIsExporting(false)
     }
   },
 
@@ -121,5 +120,5 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
+  )
 }

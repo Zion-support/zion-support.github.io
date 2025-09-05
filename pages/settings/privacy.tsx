@@ -14,7 +14,7 @@ export default function PrivacySettingsPage() {
     const json = await res.json(),
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut),
     else setMessage(json.error || 'Failed to load'),
-    setLoading(false),
+    setLoading(false)
   },
 
   const save = async () => {
@@ -28,17 +28,17 @@ export default function PrivacySettingsPage() {
     const json = await res.json(),
     if (res.ok) setMessage('Saved'),
     else setMessage(json.error || 'Save failed'),
-    setLoading(false),
+    setLoading(false)
   },
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id'),
-    if (savedUser) setUserId(savedUser),
+    if (savedUser) setUserId(savedUser)
   }, []),
 
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId),
-    load(),
+    load()
   },
 
   return (
@@ -60,5 +60,5 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

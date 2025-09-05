@@ -21,7 +21,7 @@ export default function LanguageSwitchPrompt() {
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en',
     const normalized = detected.split('-')[0],
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null,
-    if (suggestion) setSuggested(suggestion),
+    if (suggestion) setSuggested(suggestion)
   }, []),
 
   if (!suggested) return null,
@@ -32,12 +32,12 @@ export default function LanguageSwitchPrompt() {
     localStorage.setItem('langPromptShown1'),
     document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr'),
     document.documentElement.setAttribute('lang', suggested!),
-    setSuggested(null),
+    setSuggested(null)
   },
 
   const decline = () => {
     localStorage.setItem('langPromptShown1'),
-    setSuggested(null),
+    setSuggested(null)
   },
 
   return (
@@ -52,5 +52,5 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

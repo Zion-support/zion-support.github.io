@@ -2,14 +2,13 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
 import { useTranslation } from 'react-i18next',
 import { supabase } from '../integrations/supabase/client',
 import { toast } from '../components/ui/use-toast',
-
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',
 
 export type LanguageContextType = {
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[],
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 },
 
 const supportedLanguages = [
@@ -34,8 +33,8 @@ interface LanguageProviderProps {
   children: ReactNode,
   authState?: { 
     isAuthenticated: boolean,
-    user: { id?: string } | null,
-  },
+    user: { id?: string } | null
+  }
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
@@ -54,7 +53,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     const savedLang = localStorage.getItem('zion_language') as SupportedLanguage,
     if (savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
       i18n.changeLanguage(savedLang),
-      setCurrentLanguage(savedLang),
+      setCurrentLanguage(savedLang)
     }
   }, []),
   
@@ -66,9 +65,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
-      document.documentElement.classList.add('rtl'),
+      document.documentElement.classList.add('rtl')
     } else {
-      document.documentElement.classList.remove('rtl'),
+      document.documentElement.classList.remove('rtl')
     }
   }, [currentLanguage, i18n]),
   
@@ -83,15 +82,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             .eq('id', user.id),
             
           if (error) {
-            console.error('Error updating language preference:', error),
+            console.error('Error updating language preference:', error)
           }
         } catch (err) {
-          console.error('Error syncing language with profile:', err),
+          console.error('Error syncing language with profile:', err)
         }
       }
     },
     
-    syncLanguageWithProfile(),
+    syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]),
   
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -116,11 +115,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           .eq('id', user.id),
           
         if (error) {
-          console.error('Error updating language preference:', error),
+          console.error('Error updating language preference:', error)
         }
       }
     } catch (err) {
-      console.error('Error changing language:', err),
+      console.error('Error changing language:', err)
     }
   },
   
@@ -135,5 +134,5 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     >
       {children}
     </LanguageContext.Provider>
-  ),
+  )
 },

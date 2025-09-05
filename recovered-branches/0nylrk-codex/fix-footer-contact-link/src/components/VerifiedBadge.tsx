@@ -30,5 +30,5 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  ),
+  )
 }

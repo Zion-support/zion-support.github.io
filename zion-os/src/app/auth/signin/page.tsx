@@ -3,7 +3,6 @@
 import { useState } from "react",
 import Link from "next/link",
 import { useAuth } from "@/contexts/AuthContext",
-
 export default function SignInPage() {
   const [email, setEmail] = useState(""),
   const [password, setPassword] = useState(""),
@@ -17,11 +16,11 @@ export default function SignInPage() {
     setError(""),
 
     try {
-      await login(email, password),
+      await login(email, password)
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed"),
+      setError(error instanceof Error ? error.message : "Login failed")
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 

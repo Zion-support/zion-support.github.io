@@ -32,7 +32,7 @@ export function LanguageDetectionPopup() {
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang),
     if (isSupported && browserLang !== currentLanguage) {
       setDetectedLanguage(browserLang),
-      setOpen(true),
+      setOpen(true)
     }
   }, []),
 
@@ -42,7 +42,7 @@ export function LanguageDetectionPopup() {
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
-    setOpen(false),
+    setOpen(false)
   },
 
   return (
@@ -69,5 +69,5 @@ export function LanguageDetectionPopup() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  ),
+  )
 }

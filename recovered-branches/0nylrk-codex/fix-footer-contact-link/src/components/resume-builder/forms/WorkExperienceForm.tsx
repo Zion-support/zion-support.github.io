@@ -20,7 +20,6 @@ import { useResume } from '@/hooks/useResume',
 import { Alert, AlertDescription } from '@/components/ui/alert',
 import { Card, CardContent } from '@/components/ui/card',
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
-
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -49,7 +48,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
+    return format(dateValue, 'yyyy-MM-dd')
   },
 
   const form = useForm<WorkExperienceFormValues>({
@@ -77,9 +76,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         location: data.location},
 
       if (editingId) {
-        success = await updateWorkExperience(editingId, experienceData),
+        success = await updateWorkExperience(editingId, experienceData)
       } else {
-        success = await addWorkExperience(resumeId, experienceData),
+        success = await addWorkExperience(resumeId, experienceData)
       }
 
       if (success) {
@@ -90,7 +89,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           is_current: false,
           description: '',
           location: ''}),
-        setEditingId(null),
+        setEditingId(null)
       }
     } catch (err: any) {
       setError(err.message || 'An error occurred')
@@ -102,7 +101,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.reset({
       ...work,
       start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined}),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   },
 
   const handleDelete = async (id: string) => {
@@ -112,7 +111,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent),
+    form.setValue('description', enhancedContent)
   },
 
   return (
@@ -325,9 +324,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-                      location: ''}),
+                      location: ''})
                   } else {
-                    onBack(),
+                    onBack()
                   }
                 }}
               >
@@ -351,5 +350,5 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </Form>
       </div>
     </div>
-  ),
+  )
 }

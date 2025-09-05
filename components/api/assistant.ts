@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
@@ -30,7 +29,7 @@ Style: - Use bullets and short paragraphs
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method Not Allowed' }),
+    return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
   try {
@@ -48,9 +47,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }),
 
     const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' },
-    return res.status(200).json({ message }),
+    return res.status(200).json({ message })
   } catch (error: any) {
     console.error('Assistant API error:', error?.message || error),
-    return res.status(500).json({ error: 'Assistant request failed' }),
+    return res.status(500).json({ error: 'Assistant request failed' })
   }
 }

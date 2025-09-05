@@ -12,7 +12,7 @@ export interface EnterpriseItService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const enterpriseITServices: EnterpriseItService[] = [

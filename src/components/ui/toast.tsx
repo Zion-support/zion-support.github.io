@@ -4,8 +4,6 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger',
-
-
 const ToastProvider = ToastPrimitives.Provider
 
 const ToastViewport = React.forwardRef<

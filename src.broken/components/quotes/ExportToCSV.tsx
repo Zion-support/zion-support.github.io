@@ -5,5 +5,5 @@ export function ExportToCSV() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  ),
+  )
 }

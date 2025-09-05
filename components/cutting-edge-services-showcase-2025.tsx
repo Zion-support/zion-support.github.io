@@ -12,7 +12,6 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -83,7 +82,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const containerVariants = {
@@ -392,7 +391,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <button
                   onClick={() => {
                     setSearchTerm(''),
-                    setSelectedCategory('all'),
+                    setSelectedCategory('all')
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                 >
@@ -470,5 +469,5 @@ export default function CuttingEdgeServicesShowcase2025() {
         </section>
       </Layout>
     </>
-  ),
+  )
 }

@@ -12,7 +12,6 @@ import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
-
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
@@ -57,7 +56,7 @@ export function InvoiceHistory() {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice",
-      description: `Downloading invoice ${invoiceId} as PDF.`}),
+      description: `Downloading invoice ${invoiceId} as PDF.`})
   },
 
   const getBadgeForStatus = (status: string) => {
@@ -68,7 +67,7 @@ export function InvoiceHistory() {
       case "overdue":
         return <Badge variant="destructive">Overdue</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>,
+        return <Badge variant="outline">{status}</Badge>
     }
   },
 
@@ -145,5 +144,5 @@ export function InvoiceHistory() {
         </Button>
       </div>
     </div>
-  ),
+  )
 }

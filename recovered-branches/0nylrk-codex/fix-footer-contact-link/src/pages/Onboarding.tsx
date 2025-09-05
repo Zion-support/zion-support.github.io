@@ -10,7 +10,6 @@ import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
 import { Steps, Step } from "@/components/ui/steps",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
-
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth(),
   const [currentStep, setCurrentStep] = useState(0),
@@ -39,11 +38,11 @@ export default function Onboarding() {
       return
     } else if (type === "talent") {
       navigate('/talent-onboarding'),
-      return,
+      return
     }
     
     // Continue with the onboarding flow for clients
-    setCurrentStep(1),
+    setCurrentStep(1)
   },
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
@@ -53,7 +52,7 @@ export default function Onboarding() {
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
       navigate('/login'),
-      return,
+      return
     }
     
     const dbUserType = mapUserTypeToDatabase(userType),
@@ -85,14 +84,14 @@ export default function Onboarding() {
         : "/talent-dashboard",
       
       // Redirect to dashboard
-      navigate(dashboardRoute),
+      navigate(dashboardRoute)
       
     } catch (error) {
       console.error('Error updating profile:', error),
       toast({
         title: 'Error',
         description: 'There was a problem updating your profile. Please try again.',
-        variant: 'destructive'}),
+        variant: 'destructive'})
     }
   },
 
@@ -102,7 +101,7 @@ export default function Onboarding() {
 
   if (!user) {
     navigate('/login'),
-    return null,
+    return null
   }
 
   return (
@@ -161,5 +160,5 @@ export default function Onboarding() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

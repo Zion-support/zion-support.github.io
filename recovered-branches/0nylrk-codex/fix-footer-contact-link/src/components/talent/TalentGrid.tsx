@@ -1,7 +1,6 @@
 
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
-
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -30,7 +29,7 @@ export function TalentGrid({
       handleRequestHire(talent)
     } else {
       // Default implementation
-      // // // console.log("Request to hire:", talent.id),
+      // // // console.log("Request to hire:", talent.id)
     }
   },
 
@@ -38,7 +37,7 @@ export function TalentGrid({
     if (viewProfile) {
       viewProfile(id)
     } else {
-      onTalentClick(id),
+      onTalentClick(id)
     }
   },
   
@@ -46,7 +45,7 @@ export function TalentGrid({
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
       <p className="text-zion-cyan">Loading talent profiles...</p>
-    </div>,
+    </div>
   }
 
   if (!talents || talents.length === 0) {
@@ -60,7 +59,7 @@ export function TalentGrid({
           Clear Filters
         </button>
       )}
-    </div>,
+    </div>
   }
 
   return (
@@ -77,5 +76,5 @@ export function TalentGrid({
         />
       ))}
     </div>
-  ),
+  )
 }

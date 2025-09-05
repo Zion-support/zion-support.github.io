@@ -6,7 +6,6 @@ import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
 import { RecentActivity } from "./RecentActivity",
 import { TalentPool } from "./TalentPool",
-
 export interface Company {
   id: string,
   name: string,

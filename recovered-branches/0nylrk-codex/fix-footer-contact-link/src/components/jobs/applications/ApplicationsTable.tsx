@@ -18,7 +18,6 @@ import { Briefcase, User } from "lucide-react",
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
@@ -47,7 +46,7 @@ export function ApplicationsTable({
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
-    }),
+    })
   },
   
   return (
@@ -138,5 +137,5 @@ export function ApplicationsTable({
         onConfirm={handleHireConfirmed}
       />
     </>
-  ),
+  )
 }

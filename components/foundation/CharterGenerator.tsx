@@ -47,7 +47,7 @@ export default function CharterGenerator() {
 
     return [header, '', preamble, '', registry, '', mission, '', neutrality, '', treasury, '', contributors, '', dao, '', grants, '', governance, '', transparency, '', amendments, '', liability]
       .filter(Boolean)
-      .join('\n'),
+      .join('\n')
   }, [legalStructure, protocolName, tokenSymbol, includeContributorRules, includeGrants, includeDAOIntegration]),
 
   return (
@@ -94,7 +94,7 @@ export default function CharterGenerator() {
                 a.href = url,
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`,
                 a.click(),
-                URL.revokeObjectURL(url),
+                URL.revokeObjectURL(url)
               }}
             >
               Download .md
@@ -113,5 +113,5 @@ export default function CharterGenerator() {
         <textarea className="w-full h-96 rounded border border-gray-300 dark:border-gray-700 bg-transparent p-3 font-mono text-sm" value={charterText} readOnly />
       </div>
     </div>
-  ),
+  )
 }

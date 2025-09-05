@@ -34,7 +34,7 @@ export function AIEnhancementPanel({
   const handleGenerate = async () => {
     const result = await enhanceContent(options),
     if (result) {
-      setGeneratedContent(result),
+      setGeneratedContent(result)
     }
   },
 
@@ -44,18 +44,18 @@ export function AIEnhancementPanel({
   ) => {
     setOptions({
       ...options,
-      [field]: e.target.value}),
+      [field]: e.target.value})
   },
 
   const handleApply = () => {
     onApply(generatedContent),
-    if (onClose) onClose(),
+    if (onClose) onClose()
   },
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
-    setTimeout(() => setCopied(false), 2000),
+    setTimeout(() => setCopied(false), 2000)
   },
 
   return (
@@ -162,5 +162,5 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
-  ),
+  )
 }

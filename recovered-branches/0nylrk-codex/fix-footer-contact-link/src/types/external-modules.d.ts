@@ -14,7 +14,7 @@ declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date,
-    to?: Date,
+    to?: Date
   }
 
   // Minimal placeholder for the DayPicker component used in the app
@@ -222,7 +222,7 @@ declare module 'lucide-react' {
   export const XCircle: LucideIcon,
   export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon },
-  export default icons,
+  export default icons
 }
 declare module 'child_process',
 declare module 'date-fns',

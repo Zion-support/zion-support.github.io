@@ -1,6 +1,5 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const Page: NextPage = () => {
   return (
     <>
@@ -13,7 +12,7 @@ const Page: NextPage = () => {
         {/* Page content */}
       </div>
     </>
-  ),
+  )
 },
 
 export default Page,

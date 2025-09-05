@@ -1,6 +1,5 @@
 import React from 'react',
 import Link from 'next/link',
-
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear(),
 
@@ -56,7 +55,7 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
-  ),
+  )
 },
 
 export default EnhancedFooter,

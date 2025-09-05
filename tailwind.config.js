@@ -141,8 +141,8 @@ module.exports = {
           900: '#134e4a',
           950: '#042f2e'}},
       fontFamily: {
-        sans: ['Intersystem-ui', 'sans-serif'],
-        mono: ['JetBrains MonoFira Code', 'monospace']},
+        sans: ['Intersystem-uisans-serif'],
+        mono: ['JetBrains MonoFira Codemonospace']},
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],

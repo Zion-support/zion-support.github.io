@@ -4,8 +4,6 @@ import { supabase } from '@/integrations/supabase/client',
 import axiosRetry from 'axios-retry',
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger',
 import type { AxiosResponse } from 'axios',
-
-
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https: //api.ziontechgroup.com/v1',
 
 // Global interceptor for all axios instances
@@ -14,7 +12,7 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https: //api.zionte
 export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string unknown> }).headers?.['content-type'] : undefined,
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
-    showError('html-errorServer returned HTML instead of JSON'),
+    showError('html-errorServer returned HTML instead of JSON')
   }
 
   const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {},
@@ -28,20 +26,17 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   // Handle DELETE 404 as success (item already removed)
   if (status === 404 && method === 'DELETE') {
-    return Promise.resolve(typeof error === 'object' && error && 'response' in error ? (error as { response?: unknown }).response : undefined),
+    return Promise.resolve(typeof error === 'object' && error && 'response' in error ? (error as { response?: unknown }).response : undefined)
   }
 
   // Suppress 404 toast if retries are pending
   if (status === 404 && isRetryingAndNotFinalConfiguredRetry) {
-    return Promise.reject(error),
+    return Promise.reject(error)
   }
 
   // URLs that should not trigger user-facing error toasts
   const SILENT_ERROR_PATTERNS = [
-    '/health/status',
-    '/heartbeat/ping',
-    '/analytics/metrics',
-    '/telemetrysupabase.co',
+    '/health/status/heartbeat/ping/analytics/metrics/telemetrysupabase.co',
     'googleapis.comgithub.com/api'],
 
   // Check if URL should fail silently
@@ -61,31 +56,31 @@ export const globalAxiosErrorHandler = (error: unknown) => {
       case 401: // Unauthorized - only for auth-related endpoints
         return url.includes('/auth/') || url.includes('/login') || url.includes('/signup'),
       case 403: // Forbidden - only for user-initiated actions (POST, PUT, DELETE)
-        return ['POSTPUT', 'DELETEPATCH'].includes(method),
+        return ['POSTPUTDELETEPATCH'].includes(method),
       case 404: // Not found - only for user resources, not background calls
-        return ['POSTPUT', 'DELETEPATCH'].includes(method) || url.includes('/user/') || url.includes('/profile/'),
+        return ['POSTPUTDELETEPATCH'].includes(method) || url.includes('/user/') || url.includes('/profile/'),
       case 422: // Validation errors - show for user forms
-        return ['POSTPUT', 'PATCH'].includes(method),
+        return ['POSTPUTPATCH'].includes(method),
       case 429: // Rate limiting - always show to user
         return true,
       case 500: // Server errors - only for user-initiated actions
       case 502:
       case 503:
       case 504:
-        return ['POSTPUT', 'DELETEPATCH'].includes(method),
+        return ['POSTPUTDELETEPATCH'].includes(method),
       default: return false
     }
   },
 
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
-    showApiError(error),
+    showApiError(error)
   } else {
     // Log background errors without showing toast
-    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined }),
+    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined })
   }
 
-  return Promise.reject(error),
+  return Promise.reject(error)
 },
 
 // Apply the global interceptor
@@ -100,7 +95,7 @@ const apiClient = axios.create({
   withCredentials: true}),
 
 export function setAuthToken(token: string) {
-  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`,
+  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`
 }
 
 apiClient.interceptors.response.use(
@@ -111,18 +106,18 @@ apiClient.interceptors.response.use(
     if (status === 401) {
       try {
         if (!supabase) throw new Error('Supabase client not initialized'),
-        await supabase.auth.signOut({ scope: 'global' }),
+        await supabase.auth.signOut({ scope: 'global' })
       } catch (e) {
-        logErrorToProduction('Failed to logout after 401', { data: e }),
+        logErrorToProduction('Failed to logout after 401', { data: e })
       }
       if (typeof window !== 'undefined') {
-        window.location.assign('/login'),
+        window.location.assign('/login')
       }
     } else {
       const message = error.response?.data?.message || 'Something went wrong',
-      toast.error(message),
+      toast.error(message)
     }
-    return Promise.reject(error),
+    return Promise.reject(error)
   }
 ),
 

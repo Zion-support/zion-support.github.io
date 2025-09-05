@@ -43,7 +43,7 @@ interface QuantumHolographicCardProps {
     rating: number,
     reviews: number
   },
-  className?: string,
+  className?: string
 }
 
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
@@ -279,7 +279,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         </div>
       </div>
     </motion.div>
-  ),
+  )
 },
 
 export default QuantumHolographicCard,

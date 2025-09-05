@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
-
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
@@ -20,7 +19,7 @@ export function ZionGPTModelManager() {
 
   // Fetch model data on component mount
   useEffect(() => {
-    fetchModels(),
+    fetchModels()
   }, []),
 
   const fetchModels = async () => {
@@ -43,11 +42,11 @@ export function ZionGPTModelManager() {
         active: model.active,
         trainingStatus: model.training_status,
         errorMessage: model.error_message
-      }))),
+      })))
     } catch (error) {
-      console.error('Error fetching models:', error),
+      console.error('Error fetching models:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -80,12 +79,12 @@ export function ZionGPTModelManager() {
           // If training succeeded, automatically set to active
           ...(data.status === 'succeeded' ? { active: true } : {})
         })
-        .eq('id', modelId),
+        .eq('id', modelId)
       
     } catch (error) {
-      console.error(`Error checking status for model ${modelId}:`, error),
+      console.error(`Error checking status for model ${modelId}:`, error)
     } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false })),
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }))
     }
   },
 
@@ -96,7 +95,7 @@ export function ZionGPTModelManager() {
         await supabase
           .from('model_versions')
           .update({ active: false })
-          .eq('purpose', purpose),
+          .eq('purpose', purpose)
       }
       
       // Update this model
@@ -106,9 +105,9 @@ export function ZionGPTModelManager() {
         .eq('id', modelId),
       
       // Refresh the model list
-      fetchModels(),
+      fetchModels()
     } catch (error) {
-      console.error('Error toggling model active state:', error),
+      console.error('Error toggling model active state:', error)
     }
   },
 
@@ -212,5 +211,5 @@ export function ZionGPTModelManager() {
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

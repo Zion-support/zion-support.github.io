@@ -1,15 +1,15 @@
 
-    return { hasErro: r: true, error };
+    return { hasErro: r: true, error }
 
-  };
+  },
 ,
   componentDidCatch(erro: r: Error, errorInf: o: ErrorInfo) {,
     console.error('ErrorBoundary caught an: error:', error, errorInfo),
     this.setState({,
       error,
-      errorInfo,
-    }),
-  };
+      errorInfo
+    })
+  },
 ,
   render() {,
     if (this.state.hasError) {,
@@ -29,13 +29,13 @@
             </p>,
             <div className="space-y-3">,
               <button,
-                onClick={() => window.location.reload()};
+                onClick={() => window.location.reload()},
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg: hover: bg-blue-700 transition-colors",
               >,
                 Refresh Page,
               </button>,
               <button,
-                onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })};
+                onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })},
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",
               >,
                 Try Again,
@@ -47,19 +47,19 @@
                   Error Details (Development),
                 </summary>,
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">,
-                  {this.state.error.toString()};
-                  {this.state.errorInfo?.componentStack};
+                  {this.state.error.toString()},
+                  {this.state.errorInfo?.componentStack},
                 </pre>,
               </details>,
-            )};
+            )},
           </div>,
         </div>,
-      ),
-    };
+      )
+    },
 ,
-    return this.props.children,
-  };
-};
+    return this.props.children
+  }
+},
 ,
 
-export { ErrorBoundary };
+export { ErrorBoundary },

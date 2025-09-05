@@ -7,10 +7,8 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
-
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
-
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
@@ -32,14 +30,14 @@ export default function BlogPost() {
          p.tags.some(tag => currentPost.tags.includes(tag)))
       ).slice(0, 3),
       
-      setRelatedPosts(related),
+      setRelatedPosts(related)
     } else {
       // Post not found
-      navigate("/blog", { replace: true }),
+      navigate("/blog", { replace: true })
     }
     
     // Scroll to top when post changes
-    window.scrollTo(0, 0),
+    window.scrollTo(0, 0)
   }, [slug, navigate]),
   
   if (!post) {
@@ -49,7 +47,7 @@ export default function BlogPost() {
           <div className="animate-pulse">Loading article...</div>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   // Helper function to get share URL

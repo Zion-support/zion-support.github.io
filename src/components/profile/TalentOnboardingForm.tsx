@@ -20,7 +20,6 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
-
 // Define the form schema with validation
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -115,7 +114,7 @@ export function TalentOnboardingForm() {
     reader.readAsDataURL(file),
     
     // Store the file in the form data
-    form.setValue("basicInfo.profilePicture", file),
+    form.setValue("basicInfo.profilePicture", file)
   },
 
   // Handle CV upload
@@ -127,7 +126,7 @@ export function TalentOnboardingForm() {
       
     if (cvError) {
       logErrorToProduction('Error uploading CV:', { data: cvError }),
-      throw new Error("Failed to upload CV"),
+      throw new Error("Failed to upload CV")
     }
     
     // Get the public URL
@@ -135,11 +134,11 @@ export function TalentOnboardingForm() {
       .from('resumes')
       .getPublicUrl(fileName),
     
-    return publicUrl,
+    return publicUrl
   },
 
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
-  return null,
+  return null
 }

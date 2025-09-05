@@ -25,5 +25,5 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         heading: '#ffffff',
         subheading: '#cccccc',
         accent: '#9b87f5'
-      },
+      }
 }

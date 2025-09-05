@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react",
 import Head from "next/head",
-
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState(""),
   const [token, setToken] = useState<string | null>(null),
@@ -9,7 +8,7 @@ export default function PartnerDashboard() {
 
   useEffect(() => {
     const saved = localStorage.getItem("zion_partner_token"),
-    if (saved) setToken(saved),
+    if (saved) setToken(saved)
   }, []),
 
   async function getToken() {
@@ -20,7 +19,7 @@ export default function PartnerDashboard() {
     const data = await res.json(),
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token),
-      setToken(data.token),
+      setToken(data.token)
     }
   }
 
@@ -30,7 +29,7 @@ export default function PartnerDashboard() {
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json(),
     setUsage(data.summary || null),
-    setLoading(false),
+    setLoading(false)
   }
 
   async function regenerateKey() {
@@ -39,7 +38,7 @@ export default function PartnerDashboard() {
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json(),
     if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`),
+      alert(`New API Key: ${data.apiKey}`)
     }
   }
 
@@ -97,5 +96,5 @@ export default function PartnerDashboard() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

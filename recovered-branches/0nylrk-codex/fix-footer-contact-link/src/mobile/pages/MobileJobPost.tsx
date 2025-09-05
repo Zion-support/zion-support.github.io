@@ -24,21 +24,21 @@ export function MobileJobPost() {
   
   const goToNextStep = () => {
     if (currentStep === "details") {
-      setCurrentStep("requirements"),
+      setCurrentStep("requirements")
     } else if (currentStep === "requirements") {
-      setCurrentStep("budget"),
+      setCurrentStep("budget")
     } else if (currentStep === "budget") {
-      setCurrentStep("preview"),
+      setCurrentStep("preview")
     }
   },
   
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
-      setCurrentStep("details"),
+      setCurrentStep("details")
     } else if (currentStep === "budget") {
-      setCurrentStep("requirements"),
+      setCurrentStep("requirements")
     } else if (currentStep === "preview") {
-      setCurrentStep("budget"),
+      setCurrentStep("budget")
     }
   },
   
@@ -102,7 +102,7 @@ export function MobileJobPost() {
       
       <BottomNavigation />
     </div>
-  ),
+  )
 }
 
 function DetailsStep() {
@@ -158,7 +158,7 @@ function DetailsStep() {
         />
       </div>
     </div>
-  ),
+  )
 }
 
 function RequirementsStep() {
@@ -170,7 +170,7 @@ function RequirementsStep() {
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills([...skills, newSkill]),
-      setNewSkill(""),
+      setNewSkill("")
     }
   },
   
@@ -262,7 +262,7 @@ function RequirementsStep() {
         />
       </div>
     </div>
-  ),
+  )
 }
 
 function BudgetStep() {
@@ -339,7 +339,7 @@ function BudgetStep() {
         />
       </div>
     </div>
-  ),
+  )
 }
 
 function PreviewStep() {
@@ -382,5 +382,5 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  ),
+  )
 }

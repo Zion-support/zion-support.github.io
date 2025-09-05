@@ -1,6 +1,5 @@
-import { createWriteStream } from 'fs';
-import { join } from 'path';
-
+import { createWriteStream } from 'fs',
+import { join } from 'path',
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -28,14 +27,14 @@ const generateSitemap = () => {
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-</urlset>`;
+</urlset>`,
 
-  const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
-  const writeStream = createWriteStream(sitemapPath);
-  writeStream.write(sitemap);
-  writeStream.end();
+  const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
+  const writeStream = createWriteStream(sitemapPath),
+  writeStream.write(sitemap),
+  writeStream.end(),
 
-  console.log('Sitemap generated successfully at:', sitemapPath);
-};
+  console.log('Sitemap generated successfully at:', sitemapPath)
+},
 
-generateSitemap();
+generateSitemap(),

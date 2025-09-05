@@ -21,9 +21,9 @@ export default function DaoMetrics() {
       const resp = await fetch('/api/dao/metrics'),
       const json = await resp.json(),
       setData(json),
-      setLoading(false),
+      setLoading(false)
     }
-    load(),
+    load()
   }, []),
 
   if (loading) return <div>Loading...</div>,
@@ -101,5 +101,5 @@ export default function DaoMetrics() {
         </div>
       </section>
     </div>
-  ),
+  )
 }

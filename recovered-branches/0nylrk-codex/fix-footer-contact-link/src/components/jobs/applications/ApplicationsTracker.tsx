@@ -7,21 +7,20 @@ import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
 import { Button } from "@/components/ui/button",
 import { ApplicationStatus } from "@/types/jobs",
-
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications(),
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
   
   if (isLoading) {
-    return <LoadingState />,
+    return <LoadingState />
   }
   
   if (error) {
-    return <ErrorState error={error} />,
+    return <ErrorState error={error} />
   }
   
   if (applications.length === 0) {
-    return <EmptyState />,
+    return <EmptyState />
   }
   
   const filteredApplications = statusFilter === 'all' 
@@ -94,5 +93,5 @@ export function ApplicationsTracker() {
         </div>
       )}
     </div>
-  ),
+  )
 }

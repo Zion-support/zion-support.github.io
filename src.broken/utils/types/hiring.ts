@@ -31,5 +31,5 @@ export interface ApplicationFilters {
   status?: CandidateStatus | "all",
   minScore?: number,
   fromDate?: Date | null,
-  toDate?: Date | null,
+  toDate?: Date | null
 }

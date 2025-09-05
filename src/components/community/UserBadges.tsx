@@ -46,10 +46,10 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        ),
+        )
       })}
     </div>
-  ),
+  )
 },
 
 export default UserBadges,

@@ -3,7 +3,6 @@ import { useWallet } from '@/hooks/useWallet',
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { BadgeDollarSign } from 'lucide-react',
-
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet(),
 
@@ -69,5 +68,5 @@ export default function WalletPage() {
         <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>
       </div>
     </div>
-  ),
+  )
 }

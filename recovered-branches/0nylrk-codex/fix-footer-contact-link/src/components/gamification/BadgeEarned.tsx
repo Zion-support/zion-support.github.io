@@ -50,5 +50,5 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
         <span className="text-xs text-zion-slate-light">{meta.description}</span>
       )}
     </div>
-  ),
+  )
 },

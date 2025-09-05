@@ -4,7 +4,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
 import { Star } from "lucide-react",
 import { cn } from "@/lib/utils",
-
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -97,5 +96,5 @@ export function ProfileHero({
         </div>
       </div>
     </div>
-  ),
+  )
 }

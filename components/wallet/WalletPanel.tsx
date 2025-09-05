@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react",
 import Badges from "./Badges",
-
 type Tx = {
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
@@ -12,7 +11,7 @@ type Tx = {
 type Summary = {
   wallet: { userId: string, balance: number },
   transactions: Tx[],
-  config: { usdPerToken: number, symbol: string },
+  config: { usdPerToken: number, symbol: string }
 },
 
 function getUserId(): string {
@@ -21,7 +20,7 @@ function getUserId(): string {
   if (fromStorage) return fromStorage,
   const generated = "demo-user",
   window.localStorage.setItem("zion_user_id", generated),
-  return generated,
+  return generated
 }
 
 export default function WalletPanel() {
@@ -34,11 +33,11 @@ export default function WalletPanel() {
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`),
     const data = await res.json(),
-    setSummary(data),
+    setSummary(data)
   }
 
   useEffect(() => {
-    refresh(),
+    refresh()
   }, []),
 
   const balance = summary?.wallet.balance ?? 0,
@@ -55,7 +54,7 @@ export default function WalletPanel() {
     if (balance < 200) return 200,
     if (balance < 500) return 500,
     if (balance < 1000) return 1000,
-    return balance,
+    return balance
   }, [balance]),
 
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),
@@ -65,13 +64,13 @@ export default function WalletPanel() {
     const eth = (window as any).ethereum,
     if (!eth) {
       alert("No Ethereum wallet detected. Please install MetaMask."),
-      return,
+      return
     }
     try {
       const accounts = await eth.request({ method: "eth_requestAccounts" }),
-      setEthAddress(accounts?.[0] || null),
+      setEthAddress(accounts?.[0] || null)
     } catch (e) {
-      console.error(e),
+      console.error(e)
     }
   }
 
@@ -83,10 +82,10 @@ export default function WalletPanel() {
       body: JSON.stringify({ userId, amount })}),
     const data = await res.json(),
     if (data.error) {
-      alert(data.error),
+      alert(data.error)
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`),
-      refresh(),
+      refresh()
     }
   }
 
@@ -152,5 +151,5 @@ export default function WalletPanel() {
         )}
       </div>
     </div>
-  ),
+  )
 }

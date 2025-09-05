@@ -18,7 +18,7 @@ export default function FraudAdminPage() {
 
   useEffect(() => {
     const saved = localStorage.getItem('admin-token') || '',
-    setAdminToken(saved),
+    setAdminToken(saved)
   }, []),
 
   const fetchItems = async () => {
@@ -28,11 +28,11 @@ export default function FraudAdminPage() {
       const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed to load'),
-      setItems(json.items || []),
+      setItems(json.items || [])
     } catch (e: any) {
       setError(e.message || 'Failed to load')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -43,7 +43,7 @@ export default function FraudAdminPage() {
 
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken),
-    fetchItems(),
+    fetchItems()
   },
 
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
@@ -55,7 +55,7 @@ export default function FraudAdminPage() {
       body: JSON.stringify({ fraudId: id, action })}),
     const json = await res.json(),
     if (res.ok) fetchItems(),
-    else alert(json.error || 'Action failed'),
+    else alert(json.error || 'Action failed')
   },
 
   return (
@@ -122,5 +122,5 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
-  ),
+  )
 }

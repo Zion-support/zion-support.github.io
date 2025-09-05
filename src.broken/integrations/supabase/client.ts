@@ -1,6 +1,5 @@
 import { createClient } from '@supabase/supabase-js',
 import { captureException } from '@/lib/sentry',
-
 // Export the createClient function directly for any part of the app that might need to call it.
 // However, direct usage of `supabase` instance is preferred.
 export { createClient },
@@ -54,17 +53,17 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
     envUrlActuallyProvided: !!envSupabaseUrl,
     envKeyActuallyProvided: !!envSupabaseAnonKey,
     actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
-  }}),
+  }})
 }
 
 
 // Enhanced helper function to check online status
 async function checkOnline(): Promise<boolean> {
   if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
-    return navigator.onLine,
+    return navigator.onLine
   }
   // Assume online if navigator.onLine is not available (e.g., in Node.js environment for tests)
-  return true,
+  return true
 }
 
 // Optimized safeFetch for development mode with better error handling
@@ -77,21 +76,21 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
         ok: true,
         status: 200,
         json: async () => ([]),
-        text: async () => '[]'} as Response,
+        text: async () => '[]'} as Response
     }
     
     // Use real fetch for other cases
-    return fetch(url, options),
+    return fetch(url, options)
   } catch (error) {
     logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error }),
     return {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error
       json: async () => ({ error: 'Fetch failed due to network or other issue' }),
-      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response,
+      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response
   }
 }
 
   captureException(lastError),
-  throw new Error('Failed to connect to Supabase'),
+  throw new Error('Failed to connect to Supabase')
 }

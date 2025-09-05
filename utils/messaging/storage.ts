@@ -20,17 +20,17 @@ function ensureFiles() {
   if (!fs.existsSync(CONVERSATIONS_FILE)) fs.writeFileSync(CONVERSATIONS_FILE, '[]utf8'),
   if (!fs.existsSync(MESSAGES_FILE)) fs.writeFileSync(MESSAGES_FILE, '[]utf8'),
   if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]utf8'),
-  if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true }),
+  if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true })
 }
 
 function readJson<T>(filePath: string): T {
   ensureFiles(),
-  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T,
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T
 }
 
 function writeJson<T>(filePath: string, data: T): void {
   ensureFiles(),
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8'),
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8')
 }
 
 export function getUserById(userId: string): UserSummary | undefined {
@@ -39,7 +39,7 @@ export function getUserById(userId: string): UserSummary | undefined {
 }
 
 export function listUsers(): UserSummary[] {
-  return readJson<UserSummary[]>(USERS_FILE),
+  return readJson<UserSummary[]>(USERS_FILE)
 }
 
 export function listConversations(userId: string): InboxItem[] {
@@ -66,11 +66,11 @@ export function listConversations(userId: string): InboxItem[] {
         conversation: c,
         otherParticipant: other,
         lastMessage,
-        unreadCount},
+        unreadCount}
     })
     .sort((a, b) => (b.conversation.lastMessageAt || '').localeCompare(a.conversation.lastMessageAt || '')),
 
-  return items,
+  return items
 }
 
 export function getConversationById(conversationId: string): Conversation | undefined {
@@ -82,7 +82,7 @@ export function getMessages(conversationId: string): Message[] {
   const messages = readJson<Message[]>(MESSAGES_FILE),
   return messages
     .filter((m) => m.conversationId === conversationId)
-    .sort((a, b) => a.createdAt.localeCompare(b.createdAt)),
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
 }
 
 export function markAsRead(conversationId: string, userId: string): void {
@@ -105,7 +105,7 @@ export function markAsRead(conversationId: string, userId: string): void {
   if (conv) {
     conv.unreadBy = conv.unreadBy.filter((id) => id !== userId),
     conv.lastMessageAt = now, // keep order fresh
-    writeJson(CONVERSATIONS_FILE, conversations),
+    writeJson(CONVERSATIONS_FILE, conversations)
   }
 }
 
@@ -119,9 +119,9 @@ function saveAttachmentIfProvided(base64?: string, name?: string): string | unde
     const filename = `${uuidv4()}.${ext}`,
     const filepath = path.join(UPLOADS_DIR, filename),
     fs.writeFileSync(filepath, buffer),
-    return `/uploads/${filename}`,
+    return `/uploads/${filename}`
   } catch (e) {
-    return undefined,
+    return undefined
   }
 }
 
@@ -144,7 +144,7 @@ export function createOrGetConversation(
     unreadBy: [recipientId]},
   conversations.push(conv),
   writeJson(CONVERSATIONS_FILE, conversations),
-  return conv,
+  return conv
 }
 
 export function sendMessage(input: NewMessageInput): { conversation: Conversation, message: Message } {
@@ -156,7 +156,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
     conversation = conversations.find((c) => c.id === input.conversationId)
   }
   if (!conversation) {
-    conversation = createOrGetConversation(input.senderId, input.recipientId, input.context),
+    conversation = createOrGetConversation(input.senderId, input.recipientId, input.context)
   }
 
   const attachmentUrl = saveAttachmentIfProvided(input.attachmentBase64, input.attachmentName),
@@ -176,9 +176,9 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   conversation.lastMessageAt = message.createdAt,
   if (!conversation.unreadBy.includes(input.recipientId)) {
-    conversation.unreadBy.push(input.recipientId),
+    conversation.unreadBy.push(input.recipientId)
   }
   writeJson(CONVERSATIONS_FILE, conversations),
 
-  return { conversation, message },
+  return { conversation, message }
 }

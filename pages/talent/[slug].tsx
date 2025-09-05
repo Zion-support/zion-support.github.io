@@ -12,7 +12,7 @@ const TalentProfile: NextPage = () => {
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
 
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
-    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }]),
+    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
 
   return (
@@ -66,7 +66,7 @@ const TalentProfile: NextPage = () => {
         </aside>
       </section>
     </div>
-  ),
+  )
 },
 
 export default TalentProfile,

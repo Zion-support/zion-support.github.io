@@ -1,6 +1,5 @@
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -19,7 +18,7 @@ serve(async (req) => {
 
     // Handle CORS preflight request
     if (req.method === "OPTIONS") {
-      return new Response(null, { headers, status: 204 }),
+      return new Response(null, { headers, status: 204 })
     }
 
     const reqData = await req.json(),
@@ -31,7 +30,7 @@ serve(async (req) => {
         JSON.stringify({
           error: "Missing required service provider data"}),
         { headers, status: 400 }
-      ),
+      )
     }
 
     // Get OpenAI API key from environment
@@ -41,7 +40,7 @@ serve(async (req) => {
         JSON.stringify({
           error: "OpenAI API key not configured"}),
         { headers, status: 500 }
-      ),
+      )
     }
 
     const prompt = `
@@ -91,7 +90,7 @@ serve(async (req) => {
           error: "Failed to generate enhanced profile content",
           details: responseData}),
         { headers, status: 500 }
-      ),
+      )
     }
 
     try {
@@ -103,7 +102,7 @@ serve(async (req) => {
           summary: parsedContent.summary,
           services: parsedContent.services}),
         { headers, status: 200 }
-      ),
+      )
     } catch (error) {
       console.error("Error parsing AI response:", error),
       return new Response(
@@ -111,7 +110,7 @@ serve(async (req) => {
           error: "Failed to parse AI response",
           raw: responseData.choices[0]?.message?.content}),
         { headers, status: 500 }
-      ),
+      )
     }
   } catch (error) {
     console.error("Function error:", error),
@@ -124,6 +123,6 @@ serve(async (req) => {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
       }
-    ),
+    )
   }
 }),

@@ -7,8 +7,6 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
@@ -21,7 +19,7 @@ export function ZionGPTModelManager() {
 
   // Fetch model data on component mount
   useEffect(() => {
-    fetchModels(),
+    fetchModels()
   }, []),
 
   const fetchModels = async () => {
@@ -44,11 +42,11 @@ export function ZionGPTModelManager() {
         active: model.active,
         trainingStatus: model.training_status,
         errorMessage: model.error_message
-      }))),
+      })))
     } catch (error) {
-      logErrorToProduction('Error fetching models:', { data: error }),
+      logErrorToProduction('Error fetching models:', { data: error })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -81,12 +79,12 @@ export function ZionGPTModelManager() {
           // If training succeeded, automatically set to active
           ...((data as any)?.status === 'succeeded' ? { active: true } : {})
         })
-        .eq('id', modelId),
+        .eq('id', modelId)
       
     } catch (error) {
-      logErrorToProduction('Error checking status for model ${modelId}:', { data: error }),
+      logErrorToProduction('Error checking status for model ${modelId}:', { data: error })
     } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false })),
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }))
     }
   },
 
@@ -97,7 +95,7 @@ export function ZionGPTModelManager() {
         await supabase
           .from('model_versions')
           .update({ active: false })
-          .eq('purpose', purpose),
+          .eq('purpose', purpose)
       }
       
       // Update this model
@@ -107,9 +105,9 @@ export function ZionGPTModelManager() {
         .eq('id', modelId),
       
       // Refresh the model list
-      fetchModels(),
+      fetchModels()
     } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error }),
+      logErrorToProduction('Error toggling model active state:', { data: error })
     }
   },
 
@@ -213,5 +211,5 @@ export function ZionGPTModelManager() {
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

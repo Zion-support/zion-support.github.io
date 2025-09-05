@@ -10,7 +10,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -132,5 +131,5 @@ export function EnterprisePricingTable() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

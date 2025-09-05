@@ -10,14 +10,12 @@ import {
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',
-
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedPriceRange, setSelectedPriceRange] = useState('All'),
@@ -64,7 +62,7 @@ export default function PricingPage() {
                         (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
                         (selectedPriceRange === '$20K+' && price >= 20000),
     
-    return matchesCategory && matchesPrice,
+    return matchesCategory && matchesPrice
   }),
 
   const contactInfo = {
@@ -78,10 +76,10 @@ export default function PricingPage() {
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category,
     if (!acc[category]) {
-      acc[category] = [],
+      acc[category] = []
     }
     acc[category].push(service),
-    return acc,
+    return acc
   }, {} as Record<string typeof filteredServices>),
 
   const faqs = [
@@ -112,12 +110,8 @@ export default function PricingPage() {
   ],
 
   const categories = [
-    'AllContent & Marketing',
-    'Development & DevOpsSales & CRM',
-    'Legal & ComplianceHuman Resources',
-    'Analytics & DataFinance & Accounting',
-    'Project ManagementCustomer Experience',
-    'Security & Compliance'
+    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting',
+    'Project ManagementCustomer ExperienceSecurity & Compliance'
   ],
 
   const filteredServices = selectedCategory === 'All' 

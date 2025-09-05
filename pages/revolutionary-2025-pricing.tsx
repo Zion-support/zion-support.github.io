@@ -8,7 +8,6 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services',
 import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure',
 import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas',
-
 export default function Revolutionary2025Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -42,7 +41,7 @@ export default function Revolutionary2025Pricing() {
         if (selectedCategory === 'ai') return service.category.includes('AI'),
         if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing'),
         if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative'),
-        return true,
+        return true
       }),
 
   // Calculate pricing with billing cycle
@@ -51,7 +50,7 @@ export default function Revolutionary2025Pricing() {
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
-    return basePrice,
+    return basePrice
   },
 
   // Pricing tiers for comparison
@@ -63,10 +62,7 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 25+ Core ServicesBasic AI Integration',
-        'Standard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support',
-        '99.5% Uptime GuaranteeStandard Security Features'
+        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
@@ -81,10 +77,7 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ ServicesAdvanced AI Integration',
-        'Priority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics DashboardPhone & Email Support',
-        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
         'Custom IntegrationsPerformance Monitoring'
       ],
       icon: <Rocket className="w-8 h-8" />,
@@ -100,12 +93,8 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL ServicesFull AI & Quantum Integration',
-        'Dedicated Support Team90-Day Free Trial',
-        'Enterprise Analytics Suite24/7 Dedicated Support',
-        '99.99% Uptime GuaranteeEnterprise Security Features',
-        'Custom DevelopmentWhite-label Solutions',
-        'API AccessSLA Guarantees'
+        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features',
+        'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
       ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-futuristic' as const,

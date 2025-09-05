@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { supabase } from '../../utils/supabase/client',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed'),
   const { email } = req.body || {},
@@ -15,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // If placeholders are still used, just accept without DB write
     const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder'),
     if (isPlaceholder) {
-      return res.status(200).json({ ok: true, simulated: true }),
+      return res.status(200).json({ ok: true, simulated: true })
     }
 
     const { data, error } = await supabase
@@ -26,12 +25,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (error) {
       if (error.message && error.message.includes('duplicate')) {
-        return res.status(200).json({ ok: true, duplicate: true }),
+        return res.status(200).json({ ok: true, duplicate: true })
       }
-      return res.status(500).send(error.message || 'Database error'),
+      return res.status(500).send(error.message || 'Database error')
     }
 
-    return res.status(200).json({ ok: true, data }),
+    return res.status(200).json({ ok: true, data })
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error')
   }

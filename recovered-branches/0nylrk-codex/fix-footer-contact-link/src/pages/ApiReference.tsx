@@ -306,7 +306,7 @@ export function ApiReference() {
         </div>
       </div>
     </ApiDocsLayout>
-  ),
+  )
 }
 
 export default ApiReference,

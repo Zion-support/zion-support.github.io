@@ -8,7 +8,6 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
-
 interface ProjectReviewSectionProps {
   project: Project
 }
@@ -104,5 +103,5 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         />
       )}
     </Card>
-  ),
+  )
 }

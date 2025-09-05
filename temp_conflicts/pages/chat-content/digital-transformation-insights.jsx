@@ -1,6 +1,5 @@
 
 import Head from 'next/head',
-
 const DigitalTransformationInsights = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const DigitalTransformationInsights = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  ),
+  )
 },
 
 export default DigitalTransformationInsights,

@@ -13,7 +13,7 @@ export default function MainFrontIndex() {
     const onScroll = () => setShowToTop(window.scrollY > 400),
     window.addEventListener('scroll', onScroll, { passive: true } as any),
     onScroll(),
-    return () => window.removeEventListener('scroll', onScroll),
+    return () => window.removeEventListener('scroll', onScroll)
   }, []),
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -210,10 +210,7 @@ export default function MainFrontIndex() {
               <div className="marquee">
                 <div className="marquee__track">
                   {[
-                    'Autonomous AgentsRepo Sync to Main',
-                    'Zero‑Ops CloudSafety Guardrails',
-                    'A11y + PerformanceObservability',
-                    'SEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
+                    'Autonomous AgentsRepo Sync to MainZero‑Ops CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>
@@ -1095,14 +1092,14 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ['SEO AutomationOn-site scans and safe diffs to improve visibility', '/reports/seo'],
-              ['Site HealthA11y, performance, and resilient links at a glance', '/site-health'],
-              ['Automation HubFactories and live autonomous workflows', '/automation'],
-              ['AI Trends RadarSignals inspiring new factories and experiments', '/reports/ai-trends'],
-              ['NewsroomCurated updates and product evolution highlights', '/newsroom'],
-              ['Live PipelinesObserve CI pipelines, logs, and artifacts', '/site-health'],
-              ['DocumentationTechnical notes, guides, and changelog', '/reports/seo'],
-              ['AI ChangelogSummarized autonomous changes and highlights', '/newsroom']].map(([label, desc, href]) => (
+              ['SEO AutomationOn-site scans and safe diffs to improve visibility/reports/seo'],
+              ['Site HealthA11y, performance, and resilient links at a glance/site-health'],
+              ['Automation HubFactories and live autonomous workflows/automation'],
+              ['AI Trends RadarSignals inspiring new factories and experiments/reports/ai-trends'],
+              ['NewsroomCurated updates and product evolution highlights/newsroom'],
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'],
+              ['DocumentationTechnical notes, guides, and changelog/reports/seo'],
+              ['AI ChangelogSummarized autonomous changes and highlights/newsroom']].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1237,9 +1234,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              ['🚀Speed', 'Continuous delivery to main with safe, incremental changes.'],
-              ['🛡️Safety', 'Conservative edits and guardrails keep production stable.'],
-              ['📈Scale', 'Automatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
+              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'],
+              ['🛡️SafetyConservative edits and guardrails keep production stable.'],
+              ['📈ScaleAutomatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
@@ -1316,17 +1313,9 @@ export default function MainFrontIndex() {
           </div>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branchFewer regressions via layered checks and reports',
-              'Higher velocity with automated maintenanceReduced costs via zero‑ops and automated QA',
-              'Consistent design language and UX qualityTransparent artifacts and live workflow logs',
-              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEO',
-              'Happier users thanks to performance & a11y winsLower operational risk through guardrails',
-              'Improved discoverability via deep indexing and SEOHappier engineers with less toil and more creation',
-              'Confident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
-              'Auditability for compliance with full traceabilityHappier teams: less toil, more product value',
-              'Automated dependency upgrades and security scansClear analytics and downloadable artifacts for every run',
-              'Composable factories accelerate new initiatives'].map((b) => (
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs',
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
+              'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>
@@ -1479,7 +1468,7 @@ export default function MainFrontIndex() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">
-              {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map((t) => (
+              {['Next.jsTypeScriptTailwindFramer MotionSupabaseNetlify'].map((t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">
                   {t}
                 </span>
@@ -1493,10 +1482,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md:grid-cols-4">
             {[
-              ['ExploreBrowse live automations', '/automation'],
-              ['AuditCheck site health', '/site-health'],
-              ['OptimizeRun the SEO auditor', '/reports/seo'],
-              ['LearnFollow AI trends', '/reports/ai-trends']].map(([title, desc, href]) => (
+              ['ExploreBrowse live automations/automation'],
+              ['AuditCheck site health/site-health'],
+              ['OptimizeRun the SEO auditor/reports/seo'],
+              ['LearnFollow AI trends/reports/ai-trends']].map(([title, desc, href]) => (
               <Link key={title as string} href={href as string}>
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="text-sm font-semibold text-white">{title as string}</div>
@@ -1888,7 +1877,7 @@ export default function MainFrontIndex() {
         </button>
       )}
     </div>
-  ),
+  )
 }
 
 /* AUTO-GENERATED: FRONT_ACTIONS_START */

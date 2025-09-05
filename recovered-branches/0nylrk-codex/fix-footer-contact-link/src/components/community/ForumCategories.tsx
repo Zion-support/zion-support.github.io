@@ -83,10 +83,10 @@ export const ForumCategories = () => {
               </CardContent>
             </Card>
           </Link>
-        ),
+        )
       })}
     </div>
-  ),
+  )
 },
 
 export default ForumCategories,

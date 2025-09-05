@@ -2,7 +2,6 @@
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
-
 interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (categoryId: string) => void,
@@ -32,7 +31,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           Try adjusting your search query or browse all categories.
         </p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -58,5 +57,5 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
         </Card>
       ))}
     </div>
-  ),
+  )
 }

@@ -28,5 +28,5 @@ export const MyBadgesPreview: React.FC = () => {
         <span>Complete your profile for more rewards!</span>
       </div>
     </div>
-  ),
+  )
 },

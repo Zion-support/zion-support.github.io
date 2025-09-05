@@ -1,5 +1,4 @@
 import { useState } from 'react',
-
 export type FeedbackContext = { actionType?: string, metadata?: any },
 
 export default function FeedbackModal({
@@ -29,10 +28,10 @@ export default function FeedbackModal({
       await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })}),
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
     setLoading(false),
-    onClose(true),
+    onClose(true)
   }
 
   return (
@@ -69,5 +68,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  ),
+  )
 }

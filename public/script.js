@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active'),
-            navToggle.classList.toggle('active'),
-        }),
+            navToggle.classList.toggle('active')
+        })
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav') && navMenu && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active'),
-            navToggle.classList.remove('active'),
+            navToggle.classList.remove('active')
         }
     }),
     
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
-                }),
+                })
             }
-        }),
+        })
     }),
     
     // Add scroll effects to elements
@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up'),
+                entry.target.classList.add('fade-in-up')
             }
-        }),
+        })
     }, observerOptions),
     
     // Observe elements for animation
     document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el => {
-        observer.observe(el),
+        observer.observe(el)
     }),
     
     // Header scroll effect
@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop,
         
         if (scrollTop > 100) {
-            header.classList.add('scrolled'),
+            header.classList.add('scrolled')
         } else {
-            header.classList.remove('scrolled'),
+            header.classList.remove('scrolled')
         }
         
-        lastScrollTop = scrollTop,
+        lastScrollTop = scrollTop
     }),
     
     // Form handling for contact forms
@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
                     submitBtn.disabled = false,
-                    submitBtn.style.background = '',
-                }, 3000),
-            }, 2000),
-        }),
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 2000)
+        })
     }),
     
     // Lazy loading for images
@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     const img = entry.target,
                     img.src = img.dataset.src,
                     img.classList.remove('lazy'),
-                    imageObserver.unobserve(img),
+                    imageObserver.unobserve(img)
                 }
-            }),
+            })
         }),
         
         document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img),
-        }),
+            imageObserver.observe(img)
+        })
     }
     
     // Search functionality
@@ -128,13 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (query.length > 2) {
                 // Perform search (replace with actual search logic)
-                performSearch(query),
+                performSearch(query)
             } else {
                 if (searchResults) {
-                    searchResults.style.display = 'none',
+                    searchResults.style.display = 'none'
                 }
             }
-        }),
+        })
     }
     
     // Newsletter subscription
@@ -163,22 +163,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
                     submitBtn.disabled = false,
-                    submitBtn.style.background = '',
-                }, 3000),
-            }, 1500),
-        }),
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 1500)
+        })
     }
     
     // Service card hover effects
     const serviceCards = document.querySelectorAll('.service-card'),
     serviceCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)',
+            this.style.transform = 'translateY(-10px) scale(1.02)'
         }),
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)',
-        }),
+            this.style.transform = 'translateY(0) scale(1)'
+        })
     }),
     
     // Stats counter animation
@@ -187,13 +187,13 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounter(entry.target),
-                statsObserver.unobserve(entry.target),
+                statsObserver.unobserve(entry.target)
             }
-        }),
+        })
     }, { threshold: 0.5 }),
     
     statNumbers.forEach(stat => {
-        statsObserver.observe(stat),
+        statsObserver.observe(stat)
     }),
     
     // Back to top button
@@ -207,15 +207,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        }),
+        })
     }),
     
     // Show/hide back to top button
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('visible'),
+            backToTopBtn.classList.add('visible')
         } else {
-            backToTopBtn.classList.remove('visible'),
+            backToTopBtn.classList.remove('visible')
         }
     }),
     
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTooltips(),
     
     // Initialize modals
-    initializeModals(),
+    initializeModals()
 }),
 
 // Search function
@@ -245,10 +245,10 @@ function performSearch(query) {
             searchResults.innerHTML = results.map(result => 
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
             ).join(''),
-            searchResults.style.display = 'block',
+            searchResults.style.display = 'block'
         } else {
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-            searchResults.style.display = 'block',
+            searchResults.style.display = 'block'
         }
     }
 }
@@ -264,12 +264,12 @@ function animateCounter(element) {
         current += step,
         if (current >= target) {
             current = target,
-            clearInterval(timer),
+            clearInterval(timer)
         }
         
         const suffix = element.textContent.replace(/\d/g, ''),
-        element.textContent = Math.floor(current) + suffix,
-    }, 16),
+        element.textContent = Math.floor(current) + suffix
+    }, 16)
 }
 
 // Tooltip initialization
@@ -287,16 +287,16 @@ function initializeTooltips() {
             tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
             tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
             
-            this.tooltip = tooltip,
+            this.tooltip = tooltip
         }),
         
         element.addEventListener('mouseleave', function() {
             if (this.tooltip) {
                 this.tooltip.remove(),
-                this.tooltip = null,
+                this.tooltip = null
             }
-        }),
-    }),
+        })
+    })
 }
 
 // Modal initialization
@@ -312,9 +312,9 @@ function initializeModals() {
             
             if (modal) {
                 modal.classList.add('active'),
-                document.body.style.overflow = 'hidden',
+                document.body.style.overflow = 'hidden'
             }
-        }),
+        })
     }),
     
     // Close modal on overlay click
@@ -322,7 +322,7 @@ function initializeModals() {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
                 this.classList.remove('active'),
-                document.body.style.overflow = '',
+                document.body.style.overflow = ''
             }
         }),
         
@@ -331,8 +331,8 @@ function initializeModals() {
         if (closeBtn) {
             closeBtn.addEventListener('click', function() {
                 modal.classList.remove('active'),
-                document.body.style.overflow = '',
-            }),
+                document.body.style.overflow = ''
+            })
         }
     }),
     
@@ -342,11 +342,11 @@ function initializeModals() {
             modals.forEach(modal => {
                 if (modal.classList.contains('active')) {
                     modal.classList.remove('active'),
-                    document.body.style.overflow = '',
+                    document.body.style.overflow = ''
                 }
-            }),
+            })
         }
-    }),
+    })
 }
 
 // Performance monitoring
@@ -354,7 +354,7 @@ function logPerformance() {
     if ('performance' in window) {
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
-        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms'),
+        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
     }
 }
 
@@ -383,7 +383,7 @@ document.addEventListener('click', function(e) {
             button_text: e.target.textContent,
             button_class: e.target.className,
             page: window.location.pathname
-        }),
+        })
     }
 }),
 

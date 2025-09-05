@@ -13,11 +13,11 @@ const EnhancedNavigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const services = [
@@ -43,7 +43,7 @@ const EnhancedNavigation: React.FC = () => {
 
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
-    setIsOpen(false),
+    setIsOpen(false)
   },
 
   return (
@@ -224,7 +224,7 @@ const EnhancedNavigation: React.FC = () => {
         )}
       </div>
     </nav>
-  ),
+  )
 },
 
 export default EnhancedNavigation,

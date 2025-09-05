@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react',
 import type { NextPage } from 'next',
 import type { Review } from '../../types/reviews',
-
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
 const AdminReviewsPage: NextPage = () => {
@@ -18,7 +17,7 @@ const AdminReviewsPage: NextPage = () => {
     }
   }
 
-  useEffect(() => { refresh(), }, []),
+  useEffect(() => { refresh() }, []),
 
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
@@ -26,7 +25,7 @@ const AdminReviewsPage: NextPage = () => {
       headers: {
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},
       body: JSON.stringify({ action, reviewId })}),
-    if (res.ok) refresh(),
+    if (res.ok) refresh()
   }
 
   return (
@@ -60,7 +59,7 @@ const AdminReviewsPage: NextPage = () => {
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
-  ),
+  )
 },
 
 export default AdminReviewsPage,

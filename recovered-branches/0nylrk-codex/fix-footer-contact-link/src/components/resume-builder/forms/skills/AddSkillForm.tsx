@@ -5,7 +5,6 @@ import { Label } from '@/components/ui/label',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
 import { Skill } from '@/types/resume',
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
-
 interface AddSkillFormProps {
   resumeId: string,
   onAddSkill: (skill: Skill) => Promise<boolean>
@@ -29,7 +28,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
     const success = await onAddSkill(newSkill),
     if (success) {
       setSkillName(''),
-      setProficiency(3),
+      setProficiency(3)
     }
   },
   
@@ -100,5 +99,5 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
         </div>
       </div>
     </form>
-  ),
+  )
 },

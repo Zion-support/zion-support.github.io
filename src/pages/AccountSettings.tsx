@@ -32,14 +32,14 @@ export default function AccountSettings() {
         setDidHandle(didHandle),
         setEnableBackup(enableBackup),
         logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully'),
+        toast.success('Account settings updated successfully')
       } catch (e) {
         logErrorToProduction('Failed to save settings', { data:  e }),
-        toast.error('Failed to save settings'),
+        toast.error('Failed to save settings')
       } finally {
-        setIsSubmitting(false),
+        setIsSubmitting(false)
       }
-    }, 1000),
+    }, 1000)
   },
   
   const handleConnectWallet = async () => {
@@ -48,7 +48,7 @@ export default function AccountSettings() {
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),
-        return,
+        return
       }
       
       // Request accounts
@@ -67,13 +67,13 @@ export default function AccountSettings() {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum),
         const ensName = await provider.lookupAddress(address),
         if (ensName) {
-          setDidHandle(ensName),
+          setDidHandle(ensName)
         }
       } catch (error) {
-        logErrorToProduction('ENS lookup error:', { data: error }),
+        logErrorToProduction('ENS lookup error:', { data: error })
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet')
     }
@@ -274,5 +274,5 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
-  ),
+  )
 }

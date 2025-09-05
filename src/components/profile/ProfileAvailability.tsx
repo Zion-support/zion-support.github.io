@@ -67,5 +67,5 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         </div>
       )}
     </div>
-  ),
+  )
 }

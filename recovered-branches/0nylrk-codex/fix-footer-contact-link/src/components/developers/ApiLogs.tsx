@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Badge } from "@/components/ui/badge",
-
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
@@ -16,11 +15,11 @@ export function ApiLogs() {
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize),
+    fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
   
   const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize),
+    fetchApiLogs(pageSize, currentPage * pageSize)
   },
   
   // Helper to format the timestamp
@@ -33,11 +32,11 @@ export function ApiLogs() {
     if (statusCode >= 200 && statusCode < 300) {
       return <Badge className="bg-green-700">Success</Badge>
     } else if (statusCode >= 400 && statusCode < 500) {
-      return <Badge className="bg-amber-700">Client Error</Badge>,
+      return <Badge className="bg-amber-700">Client Error</Badge>
     } else if (statusCode >= 500) {
-      return <Badge className="bg-red-700">Server Error</Badge>,
+      return <Badge className="bg-red-700">Server Error</Badge>
     } else {
-      return <Badge className="bg-blue-700">Other</Badge>,
+      return <Badge className="bg-blue-700">Other</Badge>
     }
   },
   
@@ -185,5 +184,5 @@ export function ApiLogs() {
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

@@ -1,6 +1,5 @@
 import React from 'react',
 import { useFeatureFlags } from '@/context/FeatureFlagContext',
-
 interface FeatureFlagProps {
   name: string,
   children: React.ReactNode
@@ -9,7 +8,7 @@ interface FeatureFlagProps {
 export function FeatureFlag({ name, children }: FeatureFlagProps) {
   const { isEnabled } = useFeatureFlags(),
   if (!isEnabled(name)) return null,
-  return <>{children}</>,
+  return <>{children}</>
 }
 
 export default FeatureFlag,

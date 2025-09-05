@@ -2,7 +2,6 @@
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -10,7 +9,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -18,11 +17,11 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),
 
     if (!openAiKey) {
-      throw new Error("OPENAI_API_KEY is not defined"),
+      throw new Error("OPENAI_API_KEY is not defined")
     }
 
     if (!content) {
-      throw new Error("Content is required"),
+      throw new Error("Content is required")
     }
 
     // Determine the system prompt based on enhancement type
@@ -41,7 +40,7 @@ serve(async (req) => {
         userPrompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`,
         break,
       default: systemPrompt = "You are a professional resume enhancement assistant. Improve the given text to be more impactful and professional.",
-        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`,
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
     }
 
     // Call OpenAI API
@@ -63,7 +62,7 @@ serve(async (req) => {
 
     if (!response.ok) {
       const errorData = await response.json(),
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
     const data = await response.json(),
@@ -74,7 +73,7 @@ serve(async (req) => {
         enhancedContent}),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    ),
+    )
   } catch (error) {
     console.error("Error in resume-enhancer function:", error),
     return new Response(
@@ -83,6 +82,6 @@ serve(async (req) => {
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    ),
+    )
   }
 }),

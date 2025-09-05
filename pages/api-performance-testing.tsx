@@ -4,9 +4,7 @@ import { Check, ExternalLink } from 'lucide-react',
 
 export default function ApiPerformanceTestingPage() {
 	const features = [
-		'k6/Gatling-compatible test runnerSLO-aware latency reports',
-		'Regression baselines per endpointCI checks and PR annotations',
-		'Synthetic traffic for staging'
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	],
 
 	return (

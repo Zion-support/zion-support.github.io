@@ -1,7 +1,6 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { StepProps } from "./types",
-
 interface ResumeStepsProps {
   steps: StepProps[],
   activeTab: string,
@@ -17,5 +16,5 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
         </TabsTrigger>
       ))}
     </TabsList>
-  ),
+  )
 },

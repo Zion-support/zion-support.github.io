@@ -6,14 +6,13 @@ import { create as createIpfsClient } from 'ipfs-http-client',
 import { ethers } from 'ethers',
 import fs from 'fs',
 import path from 'path',
-
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID,
   const projectSecret = process.env.IPFS_PROJECT_SECRET,
   const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0',
   if (!projectId || !projectSecret) return null,
   const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64'),
-  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any }),
+  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 }
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
@@ -36,13 +35,13 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
         const width = font.widthOfTextAtSize(test, fontSize),
         if (width > maxWidth) {
           if (current) wrapped.push(current),
-          current = word,
+          current = word
         } else {
-          current = test,
+          current = test
         }
       }
       if (current) wrapped.push(current),
-      return wrapped.length ? wrapped : [' '],
+      return wrapped.length ? wrapped : [' ']
     }),
 
   let y = page.getHeight() - margin,
@@ -52,13 +51,13 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin,
-      pdfDoc.addPage(),
+      pdfDoc.addPage()
     }
     page.drawText(line, { x: margin, y, size: fontSize, font }),
-    y -= 14,
+    y -= 14
   }
 
-  return pdfDoc.save(),
+  return pdfDoc.save()
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -91,13 +90,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (ipfs) {
       try {
         const { cid } = await ipfs.add(markdown),
-        ipfsCid = cid.toString(),
+        ipfsCid = cid.toString()
       } catch {}
     }
 
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid }),
-    return res.status(200).json({ meta: updated }),
+    return res.status(200).json({ meta: updated })
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Export failed' }),
+    return res.status(500).json({ error: error?.message || 'Export failed' })
   }
 }

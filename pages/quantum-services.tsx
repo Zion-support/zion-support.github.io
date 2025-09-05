@@ -6,8 +6,7 @@ import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 
 export default function QuantumServicesPage() {
   const features = [
-    'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicable',
-    'Quantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
+    'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
 
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
@@ -68,5 +67,5 @@ export default function QuantumServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

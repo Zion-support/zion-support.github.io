@@ -25,7 +25,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsMatchmaking(true),
@@ -46,7 +46,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       
       toast({
         title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`}),
+        description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
       console.error("Error during AI matching:", error),
       toast({
@@ -54,9 +54,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "We couldn't find matches for your request. Please try again.",
         variant: "destructive"}),
       // Set empty matches to show no results found UI
-      setMatches([]),
+      setMatches([])
     } finally {
-      setIsMatchmaking(false),
+      setIsMatchmaking(false)
     }
   },
   
@@ -121,5 +121,5 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

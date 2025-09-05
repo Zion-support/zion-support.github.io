@@ -6,7 +6,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
-
 export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
@@ -14,7 +13,7 @@ export default function Profile() {
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile"),
-      navigate("/login?redirect=/profile"),
+      navigate("/login?redirect=/profile")
     }
   }, [user, isLoading, navigate]),
 
@@ -27,7 +26,7 @@ export default function Profile() {
         </div>
         <Footer />
       </>
-    ),
+    )
   }
 
   if (!user) {
@@ -70,7 +69,7 @@ export default function Profile() {
                 <Button
                   onClick={() => {
                     logout(),
-                    navigate("/"),
+                    navigate("/")
                   }}
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"

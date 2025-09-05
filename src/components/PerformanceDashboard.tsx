@@ -215,7 +215,7 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
-  ),
+  )
 },
 
 export default PerformanceDashboard, 

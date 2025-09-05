@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, FileText, Star } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-
 export default function PromptPolicyRegistryPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry')),
   if (!service) return null,
@@ -51,6 +49,6 @@ export default function PromptPolicyRegistryPage() {
         </div>
       </div>
     </Layout>
-  ),
+  )
 }
 

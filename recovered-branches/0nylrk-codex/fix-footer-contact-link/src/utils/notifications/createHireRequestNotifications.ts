@@ -1,7 +1,6 @@
 
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-
 /**
  * Creates a hire request notification for admin and talent
  */
@@ -51,11 +50,11 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-    },
+    }
   }
   
   return {
     success: talentNotification.success,
     talentNotification
-  },
+  }
 }

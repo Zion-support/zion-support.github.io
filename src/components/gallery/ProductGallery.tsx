@@ -5,14 +5,13 @@ import {
   DialogTrigger} from '@/components/ui/dialog',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { AspectRatio } from '@/components/ui/aspect-ratio',
-
 const ReactPlayer = React.lazy(() => import('react-player')),
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer'),
   return {
     default: (props: any) => (
       React.createElement('model-viewer', props)
-    )},
+    )}
 }),
 
 interface ProductGalleryProps {
@@ -28,7 +27,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const poster = images[0],
 
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false), }}>
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
       <Tabs defaultValue="images" className="w-full">
       <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
         <TabsTrigger value="images">Images</TabsTrigger>
@@ -114,5 +113,5 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       </DialogContent>
     )}
     </Dialog>
-  ),
+  )
 }

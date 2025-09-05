@@ -15,7 +15,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
   const url = useMemo(() => {
     if (path.startsWith('http')) return path,
-    return baseUrl.replace(/\/$/, '') + path,
+    return baseUrl.replace(/\/$/, '') + path
   }, [baseUrl, path]),
 
   async function onSend() {
@@ -29,11 +29,11 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         headers,
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
       const text = await res.text(),
-      setResponse(text),
+      setResponse(text)
     } catch (e: any) {
       setResponse(String(e?.message || e))
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -67,5 +67,5 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
       </div>
     </div>
-  ),
+  )
 }

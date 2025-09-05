@@ -2,7 +2,6 @@
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils",
-
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -22,8 +21,8 @@ export function CodeBlock({
     await navigator.clipboard.writeText(code),
     setCopied(true),
     setTimeout(() => {
-      setCopied(false),
-    }, 2000),
+      setCopied(false)
+    }, 2000)
   },
 
   return (
@@ -59,7 +58,7 @@ export function CodeBlock({
         </div>
       )}
     </div>
-  ),
+  )
 }
 
 export default CodeBlock,

@@ -13,7 +13,6 @@ import {
   NotificationFooter 
 } from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter',
-
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
@@ -38,27 +37,27 @@ export const NotificationCenter: React.FC = () => {
       const loadNotifications = async () => {
         try {
           await fetchNotifications(),
-          setError(null),
+          setError(null)
         } catch (err) {
           logErrorToProduction('Failed to fetch notifications:', { data: err }),
           setError("Couldn't load notifications"),
-          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
+          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
         } finally {
-          setLoadedOnce(true),
+          setLoadedOnce(true)
         }
       },
 
-      loadNotifications(),
+      loadNotifications()
     }
   }, [open, loadedOnce, fetchNotifications]),
 
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' }),
+      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
     } catch (err) {
       logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
+      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
     }
   },
 
@@ -101,5 +100,5 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-  ),
+  )
 },

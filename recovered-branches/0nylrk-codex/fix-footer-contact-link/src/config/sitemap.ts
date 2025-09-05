@@ -310,17 +310,17 @@ export const getAccessibleRoutes = (
     
     // Add role-specific routes
     if (userType === 'creator' || userType === 'jobSeeker') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes],
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
     }
     
     if (userType === 'employer' || userType === 'buyer') {
-      accessibleRoutes = [...accessibleRoutes, ...clientRoutes],
+      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
     }
     
     if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
   
-  return accessibleRoutes,
+  return accessibleRoutes
 },

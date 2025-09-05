@@ -21,7 +21,6 @@ import {
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { Link, useNavigate } from "react-router-dom",
 import { LoadingOverlay } from "@/components/LoadingOverlay",
-
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -50,17 +49,17 @@ export function LoginForm() {
       const { res, data: resData } = await loginUser(data.email, data.password),
       if (!res.ok) {
         toast.error(resData?.error || "Invalid credentials"),
-        return,
+        return
       }
       toast.success("Logged in successfully"),
       if (resData?.token) {
-        document.cookie = `token=${resData.token}, path=/`,
+        document.cookie = `token=${resData.token}, path=/`
       }
-      navigate("/"),
+      navigate("/")
     } catch (err) {
-      toast.error("Unable to login. Please try again."),
+      toast.error("Unable to login. Please try again.")
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -75,7 +74,7 @@ export function LoginForm() {
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues,
           if (firstError) {
-            form.setFocus(firstError),
+            form.setFocus(firstError)
           }
         })}
         className="space-y-6"
@@ -164,5 +163,5 @@ export function LoginForm() {
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
-  ),
+  )
 }

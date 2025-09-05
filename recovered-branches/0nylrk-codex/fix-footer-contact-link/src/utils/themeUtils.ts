@@ -53,7 +53,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#0f172a',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#f8fafc'},
+        cardBackground: '#f8fafc'}
   }
 }
 
@@ -69,5 +69,5 @@ export function applyThemeColors(colors: ThemeColors) {
   
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor,
-  document.body.style.color = colors.textColor,
+  document.body.style.color = colors.textColor
 }

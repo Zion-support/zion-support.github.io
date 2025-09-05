@@ -14,7 +14,6 @@ import useJobDetails from '@/hooks/useJobDetails',
 import { ApplyToJobModal } from '@/components/messaging/job-application',
 import { SEO } from '@/components/SEO',
 import { useWhitelabel } from '@/context/WhitelabelContext',
-
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string },
@@ -30,7 +29,7 @@ export default function JobDetails() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
-    ),
+    )
   }
 
   if (error || !job) {
@@ -44,22 +43,22 @@ export default function JobDetails() {
         </div>
         <Footer />
       </>
-    ),
+    )
   }
 
   const handleApply = () => {
     if (!isAuthenticated) {
       toast.error("Please log in to apply for this job"),
       navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
-      return,
+      return
     }
     
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
       toast.error("Only job seekers can apply for jobs"),
-      return,
+      return
     }
     
-    setIsApplyModalOpen(true),
+    setIsApplyModalOpen(true)
   },
 
   const handleApplySuccess = async (appliedJobId: string) => {
@@ -69,7 +68,7 @@ export default function JobDetails() {
 
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
-    return `$${budget.min} - $${budget.max}`,
+    return `$${budget.min} - $${budget.max}`
   },
 
   const isOwnJob = user?.id === job.client_id,
@@ -196,5 +195,5 @@ export default function JobDetails() {
         />
       )}
     </>
-  ),
+  )
 }

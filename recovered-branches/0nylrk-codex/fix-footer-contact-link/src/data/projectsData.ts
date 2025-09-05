@@ -1,5 +1,4 @@
 import { Project } from "@/types/projects",
-
 export const PROJECTS: Project[] = [
   {
     id: "project-1",

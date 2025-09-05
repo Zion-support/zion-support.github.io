@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react',
 import Head from 'next/head',
-
 interface SEOProps {
   title?: string,
   description?: string,
@@ -15,7 +14,7 @@ interface SEOProps {
   tags?: string[],
   structuredData?: any,
   noindex?: boolean,
-  nofollow?: boolean,
+  nofollow?: boolean
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -178,7 +177,7 @@ const SEO: React.FC<SEOProps> = ({
         />
       )}
     </Head>
-  ),
+  )
 },
 
 export default SEO,

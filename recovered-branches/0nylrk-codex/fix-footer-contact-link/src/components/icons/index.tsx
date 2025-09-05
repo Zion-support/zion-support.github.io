@@ -1,6 +1,5 @@
 import React from 'react',
 import * as LucideIcons from 'lucide-react',
-
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string keyof typeof LucideIcons> = {
   // Grid views
@@ -110,10 +109,10 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
-    return <LucideIcon {...props} />,
+    return <LucideIcon {...props} />
   },
   IconComponent.displayName = aliasName,
-  return IconComponent,
+  return IconComponent
 },
 
 // Export all of our icon components
@@ -122,11 +121,11 @@ const iconExports: Record<string React.FC<IconProps>> = {},
 // Generate icon exports
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
-    iconExports[alias] = createIconComponent(alias, lucideName),
+    iconExports[alias] = createIconComponent(alias, lucideName)
   } else {
     console.warn(`Icon '${lucideName}' not found in lucide-react`),
     // Use a fallback icon
-    iconExports[alias] = createIconComponent(alias, 'HelpCircle'),
+    iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
 }),
 

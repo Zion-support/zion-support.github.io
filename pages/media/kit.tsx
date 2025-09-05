@@ -15,7 +15,7 @@ const KitPage = () => {
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]),
 
   const onGenerateTimeline = useCallback(() => {
-    setTimeline(buildTimeline(startDate)),
+    setTimeline(buildTimeline(startDate))
   }, [startDate]),
 
   const onDownloadZip = useCallback(async () => {
@@ -25,11 +25,11 @@ const KitPage = () => {
     // Add static/dynamic assets
     for (const asset of assets) {
       if (asset.type === 'text' && asset.content != null) {
-        zip.file(asset.filename, asset.content),
+        zip.file(asset.filename, asset.content)
       } else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path),
         const blob = await res.blob(),
-        zip.file(asset.filename, blob),
+        zip.file(asset.filename, blob)
       }
     }
 
@@ -45,12 +45,12 @@ const KitPage = () => {
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n'),
-      zip.file('rollout-timeline.txt', tl),
+      zip.file('rollout-timeline.txt', tl)
     }
 
     const blob = await zip.generateAsync({ type: 'blob' }),
     const { saveAs } = await import('file-saver'),
-    saveAs(blob, `zion-media-kit-${bundle}.zip`),
+    saveAs(blob, `zion-media-kit-${bundle}.zip`)
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),
 
   const onGeneratePdf = useCallback(async () => {
@@ -60,18 +60,18 @@ const KitPage = () => {
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica),
 
     const drawText = (text: string, x: number, y: number, size = 12) => {
-      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) }),
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })
     },
 
     let y = 760,
     drawText('Zion Media Kit', 50, y, 18), y -= 24,
     drawText(`Bundle: ${bundle}`, 50, y), y -= 16,
     drawText('Assets:', 50, y), y -= 16,
-    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14, }),
-    if (y < 120) { pdfDoc.addPage([612, 792]), }
+    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 }),
+    if (y < 120) { pdfDoc.addPage([612, 792]) }
     if (timeline.length) {
       y -= 6, drawText('Timeline:', 50, y), y -= 16,
-      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14, }),
+      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 })
     }
 
     const pdfBytes = await pdfDoc.save(),
@@ -79,7 +79,7 @@ const KitPage = () => {
     const url = URL.createObjectURL(blob),
     const link = document.createElement('a'),
     link.href = url, link.download = `zion-media-kit-${bundle}.pdf`, link.click(),
-    URL.revokeObjectURL(url),
+    URL.revokeObjectURL(url)
   }, [assets, bundle, timeline]),
 
   const PressReleaseCard = ({ type, title }: { type: PressReleaseType, title: string }) => {
@@ -94,7 +94,7 @@ const KitPage = () => {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
-    ),
+    )
   },
 
   return (
@@ -117,7 +117,7 @@ const KitPage = () => {
           <div className="p-4 border rounded-lg">
             <h3 className="font-semibold mb-2">Bundle</h3>
             <div className="flex gap-2">
-              {(['generalweb3','institutional'] as MediaBundle[]).map(b => (
+              {(['generalweb3institutional'] as MediaBundle[]).map(b => (
                 <button key={b} onClick={() => setBundle(b)} className={`px-3 py-1 rounded border ${bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white'}`}>{b}</button>
               ))}
             </div>
@@ -167,7 +167,7 @@ const KitPage = () => {
         </section>
       </div>
     </div>
-  ),
+  )
 },
 
 export default KitPage,

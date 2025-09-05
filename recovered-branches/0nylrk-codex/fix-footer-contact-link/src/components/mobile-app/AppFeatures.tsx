@@ -52,5 +52,5 @@ export const AppFeatures: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

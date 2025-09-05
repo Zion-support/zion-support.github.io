@@ -24,9 +24,7 @@ export default function DeveloperToolsPage() {
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-        'Intelligent code completionMulti-language support',
-        'IDE integrationCode explanation',
-        'Security vulnerability detection'
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
       ],
       pricing: '$10/month',
       marketPrice: '$10-20/month',
@@ -42,9 +40,7 @@ export default function DeveloperToolsPage() {
       title: 'GitHub Pro',
       description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
       features: [
-        'Unlimited private repositoriesAdvanced code review tools',
-        'Priority supportAdvanced insights',
-        'Team management features'
+        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ],
       pricing: '$4/month',
       marketPrice: '$4/month',
@@ -60,9 +56,7 @@ export default function DeveloperToolsPage() {
       title: 'MongoDB Atlas',
       description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
       features: [
-        'Fully managed MongoDBAuto-scaling & optimization',
-        'Global distributionAdvanced security',
-        'Real-time analytics'
+        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
       ],
       pricing: '$9/month',
       marketPrice: '$9-57/month',
@@ -78,9 +72,7 @@ export default function DeveloperToolsPage() {
       title: 'Vercel Pro',
       description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
       features: [
-        'Zero-config deploymentsPreview deployments',
-        'Advanced analyticsTeam collaboration',
-        'Custom domains'
+        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -96,9 +88,7 @@ export default function DeveloperToolsPage() {
       title: 'Snyk',
       description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
       features: [
-        'Vulnerability scanningDependency monitoring',
-        'Container securityInfrastructure as Code',
-        'CI/CD integration'
+        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
       ],
       pricing: '$25/month',
       marketPrice: '$25-100/month',
@@ -114,9 +104,7 @@ export default function DeveloperToolsPage() {
       title: 'Postman',
       description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
       features: [
-        'API design & testingTeam collaboration',
-        'API documentationMock servers',
-        'Monitoring & analytics'
+        'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics'
       ],
       pricing: '$12/month',
       marketPrice: '$12-99/month',
@@ -198,12 +186,12 @@ export default function DeveloperToolsPage() {
   const devWorkflow = [
     {
       phase: 'Development',
-      tools: ['GitHub CopilotVS Code', 'Git'],
+      tools: ['GitHub CopilotVS CodeGit'],
       description: 'Write and manage code with AI assistance'
     },
     {
       phase: 'Testing',
-      tools: ['JestCypress', 'Postman'],
+      tools: ['JestCypressPostman'],
       description: 'Test code quality and API functionality'
     },
     {
@@ -213,7 +201,7 @@ export default function DeveloperToolsPage() {
     },
     {
       phase: 'Deployment',
-      tools: ['VercelGitHub Actions', 'Docker'],
+      tools: ['VercelGitHub ActionsDocker'],
       description: 'Deploy and host applications'
     }
   ],

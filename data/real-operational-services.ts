@@ -12,7 +12,7 @@ export interface RealOperationalService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const realOperationalServices: RealOperationalService[] = [

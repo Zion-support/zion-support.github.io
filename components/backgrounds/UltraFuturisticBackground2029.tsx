@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface Particle {
   x: number,
   y: number,
@@ -26,7 +25,7 @@ export default function UltraFuturisticBackground2029() {
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     resizeCanvas(),
@@ -38,12 +37,12 @@ export default function UltraFuturisticBackground2029() {
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000),
 
       for (let i = 0, i < particleCount, i++) {
-        const type = ['quantumholographic', 'neuralcyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'],
+        const type = ['quantumholographicneuralcyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'],
         const colors = {
-          quantum: ['#00ffff#0080ff', '#0040ff'],
-          holographic: ['#8b5cf6#a855f7', '#c084fc'],
-          neural: ['#10b981#059669', '#047857'],
-          cyberpunk: ['#ec4899#f97316', '#f59e0b']
+          quantum: ['#00ffff#0080ff#0040ff'],
+          holographic: ['#8b5cf6#a855f7#c084fc'],
+          neural: ['#10b981#059669#047857'],
+          cyberpunk: ['#ec4899#f97316#f59e0b']
         },
 
         particles.push({
@@ -55,10 +54,10 @@ export default function UltraFuturisticBackground2029() {
           opacity: Math.random() * 0.8 + 0.2,
           color: colors[type][Math.floor(Math.random() * colors[type].length)],
           type
-        }),
+        })
       }
 
-      particlesRef.current = particles,
+      particlesRef.current = particles
     },
 
     initParticles(),
@@ -124,7 +123,7 @@ export default function UltraFuturisticBackground2029() {
                   ctx.beginPath(),
                   ctx.moveTo(particle.x, particle.y),
                   ctx.lineTo(partner.x, partner.y),
-                  ctx.stroke(),
+                  ctx.stroke()
                 }
               }
             }
@@ -166,8 +165,8 @@ export default function UltraFuturisticBackground2029() {
                 ctx.beginPath(),
                 ctx.moveTo(particle.x, particle.y),
                 ctx.lineTo(connection.x, connection.y),
-                ctx.stroke(),
-              }),
+                ctx.stroke()
+              })
             }
             break,
 
@@ -183,10 +182,10 @@ export default function UltraFuturisticBackground2029() {
             ctx.moveTo(particle.x + particle.size, particle.y - particle.size),
             ctx.lineTo(particle.x - particle.size, particle.y + particle.size),
             ctx.stroke(),
-            break,
+            break
         }
 
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw floating geometric shapes
@@ -195,7 +194,7 @@ export default function UltraFuturisticBackground2029() {
       // Draw energy waves
       drawEnergyWaves(ctx, canvas.width, canvas.height),
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     animate(),
@@ -203,9 +202,9 @@ export default function UltraFuturisticBackground2029() {
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-    },
+    }
   }, []),
 
   const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
@@ -227,11 +226,11 @@ export default function UltraFuturisticBackground2029() {
         const px = x + size * Math.cos(angle),
         const py = y + size * Math.sin(angle),
         if (j === 0) ctx.moveTo(px, py),
-        else ctx.lineTo(px, py),
+        else ctx.lineTo(px, py)
       }
       ctx.closePath(),
       ctx.stroke(),
-      ctx.restore(),
+      ctx.restore()
     }
 
     // Floating triangles
@@ -250,11 +249,11 @@ export default function UltraFuturisticBackground2029() {
         const px = x + size * Math.cos(angle),
         const py = y + size * Math.sin(angle),
         if (j === 0) ctx.moveTo(px, py),
-        else ctx.lineTo(px, py),
+        else ctx.lineTo(px, py)
       }
       ctx.closePath(),
       ctx.stroke(),
-      ctx.restore(),
+      ctx.restore()
     }
   },
 
@@ -274,11 +273,11 @@ export default function UltraFuturisticBackground2029() {
                   Math.sin(x * 0.01 + time + i) * 50 +
                   Math.sin(x * 0.02 + time * 2 + i) * 25,
         if (x === 0) ctx.moveTo(x, y),
-        else ctx.lineTo(x, y),
+        else ctx.lineTo(x, y)
       }
       
       ctx.stroke(),
-      ctx.restore(),
+      ctx.restore()
     }
 
     // Vertical energy waves
@@ -294,11 +293,11 @@ export default function UltraFuturisticBackground2029() {
                   Math.sin(y * 0.01 + time + i) * 60 +
                   Math.sin(y * 0.015 + time * 1.5 + i) * 30,
         if (y === 0) ctx.moveTo(x, y),
-        else ctx.lineTo(x, y),
+        else ctx.lineTo(x, y)
       }
       
       ctx.stroke(),
-      ctx.restore(),
+      ctx.restore()
     }
   },
 
@@ -309,8 +308,7 @@ export default function UltraFuturisticBackground2029() {
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)',
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)'
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)'
           ]
         }}
         transition={{
@@ -399,5 +397,5 @@ export default function UltraFuturisticBackground2029() {
         ))}
       </div>
     </div>
-  ),
+  )
 }

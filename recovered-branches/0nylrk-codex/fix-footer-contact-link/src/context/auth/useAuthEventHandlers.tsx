@@ -3,7 +3,6 @@ import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
-
 /**
  * Custom hook for auth event handling
  */
@@ -22,7 +21,7 @@ export function useAuthEventHandlers(
     // Check for new registration and send welcome email if needed
     setTimeout(() => {
       if (mappedUser) {
-        checkNewRegistration(mappedUser),
+        checkNewRegistration(mappedUser)
       }
     }, 0),
 
@@ -33,7 +32,7 @@ export function useAuthEventHandlers(
         title: "Complete your profile",
         description: "Please complete your profile information to get started",
         variant: "default"}),
-      navigate('/onboarding'),
+      navigate('/onboarding')
     }
   },
 
@@ -41,11 +40,11 @@ export function useAuthEventHandlers(
     toast({
       title: "Signed out",
       description: "You have been successfully logged out",
-      variant: "default"}),
+      variant: "default"})
   },
 
   return {
     handleSignedIn,
     handleSignedOut
-  },
+  }
 }

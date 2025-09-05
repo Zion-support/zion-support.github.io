@@ -29,7 +29,7 @@ interface BaseSearchResult {
   },
   tags?: string[],
   category?: string,
-  date?: string,
+  date?: string
 }
 
 interface ProductSearchResult extends BaseSearchResult {
@@ -72,7 +72,7 @@ interface OfflineFilters {
   category?: string,
   minPrice?: number,
   maxPrice?: number,
-  minRating?: number,
+  minRating?: number
 }
 
 function offlineSearch(
@@ -142,31 +142,31 @@ function offlineSearch(
   let all = [...productResults, ...talentResults, ...blogResults],
 
   if (filters.category) {
-    all = all.filter(r => r.category === filters.category),
+    all = all.filter(r => r.category === filters.category)
   }
   if (typeof filters.minPrice === 'number') {
     all = all.filter(r => {
       if (r.type === 'product') {
-        return (r.price ?? 0) >= filters.minPrice!,
+        return (r.price ?? 0) >= filters.minPrice!
       }
-      return true,
-    }),
+      return true
+    })
   }
   if (typeof filters.maxPrice === 'number') {
     all = all.filter(r => {
       if (r.type === 'product') {
-        return (r.price ?? 0) <= filters.maxPrice!,
+        return (r.price ?? 0) <= filters.maxPrice!
       }
-      return true,
-    }),
+      return true
+    })
   }
   if (typeof filters.minRating === 'number') {
     all = all.filter(r => {
       if (r.type === 'product' || r.type === 'talent') {
-        return (r.rating ?? 0) >= filters.minRating!,
+        return (r.rating ?? 0) >= filters.minRating!
       }
-      return true,
-    }),
+      return true
+    })
   }
 
   if (filters.sortBy && filters.sortBy !== 'relevance') {
@@ -175,31 +175,31 @@ function offlineSearch(
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0,
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0,
-          return aPrice - bPrice,
+          return aPrice - bPrice
         }),
         break,
       case 'price_desc':
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0,
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0,
-          return bPrice - aPrice,
+          return bPrice - aPrice
         }),
         break,
       case 'rating':
         all.sort((a, b) => {
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0,
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0,
-          return bRating - aRating,
+          return bRating - aRating
         }),
         break,
       default: break
     }
   } else {
-    all.sort((a, b) => a.title.localeCompare(b.title)),
+    all.sort((a, b) => a.title.localeCompare(b.title))
   }
   const start = (page - 1) * limit,
   const paginated = all.slice(start, start + limit),
-  return { results: paginated, totalCount: all.length },
+  return { results: paginated, totalCount: all.length }
 }
 
 export default function SearchResultsPage({
@@ -241,7 +241,7 @@ export default function SearchResultsPage({
       const response = await fetch(`/api/search?${params.toString()}`),
 
       if (!response.ok) {
-        throw new Error(`Search API error: ${response.status}`),
+        throw new Error(`Search API error: ${response.status}`)
       }
 
       const data = await response.json(),
@@ -250,9 +250,9 @@ export default function SearchResultsPage({
       setTotalResults(data.totalCount || data.results?.length || 0),
 
       if (page === 1) {
-        setResults(data.results || []),
+        setResults(data.results || [])
       } else {
-        setResults((prev) => [...prev, ...(data.results || [])]),
+        setResults((prev) => [...prev, ...(data.results || [])])
       }
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error }),
@@ -264,12 +264,12 @@ export default function SearchResultsPage({
         minRating: minRating ? Number(minRating) : undefined}),
       setTotalResults(offline.totalCount),
       if (page === 1) {
-        setResults(offline.results),
+        setResults(offline.results)
       } else {
-        setResults((prev) => [...prev, ...offline.results]),
+        setResults((prev) => [...prev, ...offline.results])
       }
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -279,16 +279,16 @@ export default function SearchResultsPage({
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true}),
-      setCurrentPage(1),
+      setCurrentPage(1)
     }
   },
 
   useEffect(() => {
     if (debouncedQuery.trim()) {
-      fetchResults(debouncedQuery, 1),
+      fetchResults(debouncedQuery, 1)
     } else {
       setResults([]),
-      setTotalResults(0),
+      setTotalResults(0)
     }
   }, [debouncedQuery]),
 
@@ -296,7 +296,7 @@ export default function SearchResultsPage({
   const loadMore = () => {
     const nextPage = currentPage + 1,
     setCurrentPage(nextPage),
-    fetchResults(searchQuery, nextPage),
+    fetchResults(searchQuery, nextPage)
   },
 
   const categories = Array.from(
@@ -308,24 +308,24 @@ export default function SearchResultsPage({
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-      return false,
+      return false
     }
     if (minPrice && r.type === 'product') {
       if ((r.price ?? 0) < Number(minPrice)) {
-        return false,
+        return false
       }
     }
     if (maxPrice && r.type === 'product') {
       if ((r.price ?? 0) > Number(maxPrice)) {
-        return false,
+        return false
       }
     }
     if (minRating && (r.type === 'product' || r.type === 'talent')) {
       if ((r.rating ?? 0) < Number(minRating)) {
-        return false,
+        return false
       }
     }
-    return true,
+    return true
   }),
 
   // Group results by type for better display
@@ -333,7 +333,7 @@ export default function SearchResultsPage({
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [],
       acc[result.type]!.push(result),
-      return acc,
+      return acc
     },
     {} as Record<string SearchResult[]>),
 
@@ -382,10 +382,10 @@ export default function SearchResultsPage({
                 is_verified: false,
                 availability_type: 'available'}}
               onViewProfile={(id: string) => {
-                router.push(`/talent/${id}`),
+                router.push(`/talent/${id}`)
               }}
               onRequestHire={(talent) => {
-                router.push(`/talent/${talent.id}?action=hire`),
+                router.push(`/talent/${talent.id}?action=hire`)
               }}
               isAuthenticated={isAuthenticated}
             />
@@ -413,7 +413,7 @@ export default function SearchResultsPage({
               {result.description}
             </p>
           </div>
-        ),
+        )
     }
   },
 
@@ -612,7 +612,7 @@ export default function SearchResultsPage({
         </div>
       </div>
     </>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps<
@@ -641,13 +641,13 @@ export const getServerSideProps: GetServerSideProps<
       const data = await response.json(),
       results = data.results || [],
       totalCount = data.totalCount || results.length,
-      logInfo(`Server-side fetch successful: ${results.length} results`),
+      logInfo(`Server-side fetch successful: ${results.length} results`)
     } else {
       logErrorToProduction(
         `Search API error: ${response.status} ${response.statusText}`),
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
       results = offline.results,
-      totalCount = offline.totalCount,
+      totalCount = offline.totalCount
     }
 
     return {
@@ -655,7 +655,7 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: results,
         query,
         slug,
-        totalCount}},
+        totalCount}}
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error }),
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
@@ -665,6 +665,6 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: offline.results,
         query,
         slug,
-        totalCount: offline.totalCount}},
+        totalCount: offline.totalCount}}
   }
 },

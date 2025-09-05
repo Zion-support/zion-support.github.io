@@ -14,7 +14,6 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -27,9 +26,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   const formatDate = (dateString?: string) => {
     if (!dateString) return 'Not specified',
     try {
-      return format(new Date(dateString), 'PPP'),
+      return format(new Date(dateString), 'PPP')
     } catch (e) {
-      return dateString,
+      return dateString
     }
   },
 
@@ -112,5 +111,5 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
-  ),
+  )
 },

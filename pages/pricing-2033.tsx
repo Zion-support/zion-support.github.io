@@ -6,7 +6,6 @@ import {
 } from 'lucide-react',
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -23,7 +22,7 @@ export default function Pricing2033Page() {
     {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
-      services: ['AI Consciousness EvolutionAI Emotional Intelligence', 'AI Creativity OrchestratorAI Autonomous Business Manager'],
+      services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
       avgPrice: '$11,499/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -32,7 +31,7 @@ export default function Pricing2033Page() {
     {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
-      services: ['Quantum DNA ComputingQuantum Internet Security', 'Quantum Financial TradingQuantum Creativity Studio'],
+      services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio'],
       avgPrice: '$19,999/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -41,7 +40,7 @@ export default function Pricing2033Page() {
     {
       name: 'Enterprise IT Solutions',
       description: 'Autonomous operations and zero-trust security',
-      services: ['Autonomous DevOpsZero Trust Architecture', 'Edge Computing OrchestrationAI IT Operations Center'],
+      services: ['Autonomous DevOpsZero Trust ArchitectureEdge Computing OrchestrationAI IT Operations Center'],
       avgPrice: '$649/month',
       savings: 'Save 50-70% vs. competitors',
       icon: Cpu,
@@ -50,7 +49,7 @@ export default function Pricing2033Page() {
     {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
-      services: ['Space Mining AutomationMetaverse AI Development', 'AI Health AnalyticsHolographic Events'],
+      services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
       avgPrice: '$14,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: Rocket,
@@ -59,7 +58,7 @@ export default function Pricing2033Page() {
     {
       name: 'Innovative Micro SAAS',
       description: 'Cutting-edge solutions for every business',
-      services: ['AI Business IntelligenceQuantum-Secure Communication', 'AI Customer SuccessBlockchain Supply Chain'],
+      services: ['AI Business IntelligenceQuantum-Secure CommunicationAI Customer SuccessBlockchain Supply Chain'],
       avgPrice: '$374/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Target,
@@ -68,7 +67,7 @@ export default function Pricing2033Page() {
     {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
-      services: ['Neuromorphic ComputingPhotonic Computing', 'Swarm RoboticsBiotech Automation'],
+      services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
       avgPrice: '$1,099/month',
       savings: 'Save 55-75% vs. competitors',
       icon: Microscope,
@@ -85,10 +84,7 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core ServicesBasic AI Integration',
-        'Standard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support',
-        '99.5% Uptime GuaranteeBasic Security Features',
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features',
         'API Access (1000 calls/month)Community Support'
       ],
       popular: false,
@@ -101,12 +97,8 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Advanced ServicesAdvanced AI Integration',
-        'Priority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics DashboardPhone & Email Support',
-        '99.9% Uptime GuaranteeAdvanced Security Features',
-        'API Access (10,000 calls/month)Dedicated Account Manager',
-        'Custom IntegrationsAdvanced Reporting'
+        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
+        'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ],
       popular: true,
       color: 'from-purple-500 to-cyan-500'
@@ -118,13 +110,8 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to All 500+ ServicesFull AI & Quantum Integration',
-        'Premium Support (24/7)90-Day Free Trial',
-        'Enterprise Analytics SuiteDedicated Support Users',
-        '99.99% Uptime GuaranteeEnterprise Security Features',
-        'Unlimited API AccessDedicated Success Manager',
-        'Custom DevelopmentAdvanced Compliance',
-        'White-label SolutionsSLA Guarantees'
+        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features',
+        'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ],
       popular: false,
       color: 'from-blue-500 to-indigo-500'
@@ -138,7 +125,7 @@ export default function Pricing2033Page() {
       price: '$24,999/month',
       description: 'Develop genuine AI consciousness through advanced neural architecture',
       category: 'AI & Consciousness',
-      features: ['Multi-dimensional consciousness mappingEmotional intelligence evolution', 'Self-awareness development'],
+      features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],
       savings: 'Save 70% vs. competitors'
     },
     {
@@ -146,7 +133,7 @@ export default function Pricing2033Page() {
       price: '$35,999/month',
       description: 'Breakthrough platform combining quantum computing with DNA-based computation',
       category: 'Quantum & Biotech',
-      features: ['DNA-based quantum algorithmsBiological quantum entanglement', 'DNA memory systems'],
+      features: ['DNA-based quantum algorithmsBiological quantum entanglementDNA memory systems'],
       savings: 'Save 75% vs. competitors'
     },
     {
@@ -154,7 +141,7 @@ export default function Pricing2033Page() {
       price: '$45,999/month',
       description: 'Revolutionary platform for automated asteroid mining and resource extraction',
       category: 'Space Technology',
-      features: ['Asteroid identification and mappingAutomated mining operations', 'Resource extraction algorithms'],
+      features: ['Asteroid identification and mappingAutomated mining operationsResource extraction algorithms'],
       savings: 'Save 80% vs. competitors'
     },
     {
@@ -162,7 +149,7 @@ export default function Pricing2033Page() {
       price: '$299/month',
       description: 'Comprehensive business intelligence platform powered by artificial intelligence',
       category: 'Micro SAAS',
-      features: ['AI-powered analyticsPredictive insights', 'Automated reporting'],
+      features: ['AI-powered analyticsPredictive insightsAutomated reporting'],
       savings: 'Save 50% vs. competitors'
     }
   ],
@@ -476,5 +463,5 @@ export default function Pricing2033Page() {
         </div>
       </div>
     </>
-  ),
+  )
 }

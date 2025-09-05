@@ -9,12 +9,12 @@ function useCounter(target: number, durationMs: number) {
       if (start === null) start = ts,
       const progress = Math.min(1, (ts - start) / durationMs),
       setValue(Math.floor(progress * target)),
-      if (progress < 1) raf = requestAnimationFrame(step),
+      if (progress < 1) raf = requestAnimationFrame(step)
     },
     raf = requestAnimationFrame(step),
-    return () => cancelAnimationFrame(raf),
+    return () => cancelAnimationFrame(raf)
   }, [target, durationMs]),
-  return value,
+  return value
 }
 
 export default function InteractiveStats() {
@@ -29,7 +29,7 @@ export default function InteractiveStats() {
       <Stat label="Partners" value={partners} suffix="+" />
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
-  ),
+  )
 }
 
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
@@ -38,5 +38,5 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-3xl font-bold">{value}{suffix}</div>
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
-  ),
+  )
 }

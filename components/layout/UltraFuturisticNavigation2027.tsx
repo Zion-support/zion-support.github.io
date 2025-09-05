@@ -120,18 +120,18 @@ export default function UltraFuturisticNavigation2027() {
   const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
-    setIsClient(true),
+    setIsClient(true)
   }, []),
 
   useEffect(() => {
     if (!isClient) return,
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [isClient]),
 
   const navigation = [
@@ -646,7 +646,7 @@ export default function UltraFuturisticNavigation2027() {
         )}
       </AnimatePresence>
     </header>
-  ),
+  )
 },
 
 export default UltraFuturisticNavigation2027,

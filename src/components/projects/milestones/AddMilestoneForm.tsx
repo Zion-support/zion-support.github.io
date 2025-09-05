@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod',
 import { z } from 'zod',
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { format } from 'date-fns',
-
 import { Button } from '@/components/ui/button',
 import { Calendar } from '@/components/ui/calendar',
 import {
@@ -23,7 +22,6 @@ import {
   PopoverTrigger} from '@/components/ui/popover',
 import { AIMilestoneGenerator } from './AIMilestoneGenerator',
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',
-
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   description: z.string().optional(),
@@ -74,7 +72,7 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         }),
-        return,
+        return
       }
     }
 
@@ -85,8 +83,8 @@ export function AddMilestoneForm({
         description: milestone.description,
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      }),
-    }),
+      })
+    })
   },
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
@@ -95,7 +93,7 @@ export function AddMilestoneForm({
       description: milestone.description,
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    }),
+    })
   },
 
   return (
@@ -232,5 +230,5 @@ export function AddMilestoneForm({
         </form>
       </Form>
     </div>
-  ),
+  )
 }

@@ -1,30 +1,29 @@
-// import { prisma } from "@/lib/prisma";
-
+// import { prisma } from "@/lib/prisma",
 interface InstanceWithCounts {
-  id: string;
-  name: string;
-  slug: string;
-  domain: string | null;
-  subdomain: string | null;
-  vertical: string;
-  defaultLanguage: string;
-  tokenSystem: string;
-  governanceType: string;
-  isPublic: boolean;
-  region: string | null;
-  country: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-  daoConfig: any | null;
+  id: string,
+  name: string,
+  slug: string,
+  domain: string | null,
+  subdomain: string | null,
+  vertical: string,
+  defaultLanguage: string,
+  tokenSystem: string,
+  governanceType: string,
+  isPublic: boolean,
+  region: string | null,
+  country: string | null,
+  createdAt: Date,
+  updatedAt: Date,
+  daoConfig: any | null,
   _count: {
-    deployments: number;
-    features: number;
-  };
+    deployments: number,
+    features: number
+  }
 }
 
 export default function InstancesPage() {
-  const instances: any[] = []; // Temporary empty array
-  const error: string | null = null;
+  const instances: any[] = [], // Temporary empty array
+  const error: string | null = null,
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -470,22 +469,22 @@ export default function InstancesPage() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
 function getGovernanceLabel(type: string) {
   switch (type) {
-    case "ADMIN": return "Admin Control";
-    case "DAO_LITE": return "DAO-lite";
-    case "DAO_FULL": return "Full DAO";
-    default: return type;
+    case "ADMIN": return "Admin Control",
+    case "DAO_LITE": return "DAO-lite",
+    case "DAO_FULL": return "Full DAO",
+    default: return type
   }
 }
 
 function getTokenSystemLabel(type: string) {
   switch (type) {
-    case "SHARED": return "ZION$ Shared";
-    case "LOCAL": return "Local Token";
-    default: return type;
+    case "SHARED": return "ZION$ Shared",
+    case "LOCAL": return "Local Token",
+    default: return type
   }
 }

@@ -3,7 +3,6 @@ import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { TalentProfile } from "@/types/talent",
-
 export interface HireRequestData {
   talent: {
     id: string,
@@ -21,7 +20,7 @@ export interface HireRequestData {
     timeline: string,
     budgetMin: number,
     budgetMax: number
-  },
+  }
 }
 
 export function useHireRequest() {
@@ -45,7 +44,7 @@ export function useHireRequest() {
         title: "Request Submitted",
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
       
-      return { success: true, requestId: response?.request_id },
+      return { success: true, requestId: response?.request_id }
     } catch (error) {
       console.error("Error submitting hire request:", error),
       
@@ -60,9 +59,9 @@ export function useHireRequest() {
         description: errorMessage,
         variant: "destructive"}),
       
-      return { success: false, error: errorMessage },
+      return { success: false, error: errorMessage }
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -70,5 +69,5 @@ export function useHireRequest() {
     submitHireRequest,
     isSubmitting,
     error
-  },
+  }
 }

@@ -15,8 +15,7 @@ const flagshipSolutions = [
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
     features: [
-      'Natural Language ProcessingMulti-modal Learning',
-      'Real-time CollaborationAdvanced Analytics'
+      'Natural Language ProcessingMulti-modal LearningReal-time CollaborationAdvanced Analytics'
     ],
     href: '/solutions/ai-autonomous-research'},
   {
@@ -24,8 +23,7 @@ const flagshipSolutions = [
     description: 'Breakthrough quantum computing technology for next-generation AI applications.',
     icon: CpuChipIcon,
     features: [
-      'Quantum SupremacyNeural Architecture Search',
-      'Hybrid Classical-QuantumScalable Architecture'
+      'Quantum SupremacyNeural Architecture SearchHybrid Classical-QuantumScalable Architecture'
     ],
     href: '/solutions/quantum-neural-networks'},
   {
@@ -33,8 +31,7 @@ const flagshipSolutions = [
     description: 'Self-optimizing business processes that adapt and improve automatically.',
     icon: RocketLaunchIcon,
     features: [
-      'Process AutomationPredictive Analytics',
-      'Continuous OptimizationReal-time Monitoring'
+      'Process AutomationPredictive AnalyticsContinuous OptimizationReal-time Monitoring'
     ],
     href: '/solutions/autonomous-business'},
   {
@@ -42,8 +39,7 @@ const flagshipSolutions = [
     description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.',
     icon: ShieldCheckIcon,
     features: [
-      'Asset DiscoveryLifecycle Management',
-      'Security ComplianceCost Optimization'
+      'Asset DiscoveryLifecycle ManagementSecurity ComplianceCost Optimization'
     ],
     href: '/solutions/it-asset-management'}]
 
@@ -52,22 +48,22 @@ const industryApplications = [
     name: 'Healthcare',
     description: 'AI-powered diagnostics, drug discovery, and patient care optimization.',
     icon: UserGroupIcon,
-    useCases: ['Medical Imaging AnalysisDrug Discovery', 'Patient Risk AssessmentClinical Decision Support']},
+    useCases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']},
   {
     name: 'Finance',
     description: 'Intelligent trading, risk assessment, and fraud detection systems.',
     icon: ChartBarIcon,
-    useCases: ['Algorithmic TradingCredit Risk Analysis', 'Fraud DetectionPortfolio Optimization']},
+    useCases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']},
   {
     name: 'Manufacturing',
     description: 'Predictive maintenance, quality control, and supply chain optimization.',
     icon: CogIcon,
-    useCases: ['Predictive MaintenanceQuality Control', 'Supply Chain OptimizationProduction Planning']},
+    useCases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']},
   {
     name: 'Retail',
     description: 'Customer behavior analysis, inventory management, and personalized marketing.',
     icon: GlobeAltIcon,
-    useCases: ['Customer AnalyticsInventory Management', 'Personalized MarketingDemand Forecasting']}]
+    useCases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}]
 
 const implementationSteps = [
   {

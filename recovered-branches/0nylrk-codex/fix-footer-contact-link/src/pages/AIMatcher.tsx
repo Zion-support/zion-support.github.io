@@ -8,7 +8,6 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
-
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
@@ -22,7 +21,7 @@ export default function AIMatcherPage() {
         category === "data science" || category === "development") {
       itemType = "talent"
     } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment",
+      itemType = "equipment"
     }
     
     toast({
@@ -35,7 +34,7 @@ export default function AIMatcherPage() {
         serviceType: itemType,
         specificItem: match.item
       }
-    }),
+    })
   },
   
   return (
@@ -77,5 +76,5 @@ export default function AIMatcherPage() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

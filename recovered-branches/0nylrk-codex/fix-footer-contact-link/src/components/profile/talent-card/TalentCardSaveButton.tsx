@@ -3,7 +3,6 @@ import React from "react",
 import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
-
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
@@ -32,12 +31,12 @@ export function TalentCardSaveButton({
         description: "Please log in to save talents to your favorites",
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     setLocalIsSaved(!localIsSaved),
     if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved),
+      onToggleSave(profileId, !localIsSaved)
     }
     
     toast({
@@ -46,7 +45,7 @@ export function TalentCardSaveButton({
         ? `${profileName} has been removed from your favorites` 
         : `${profileName} has been added to your favorites`,
       variant: "default"
-    }),
+    })
   },
 
   return (
@@ -62,5 +61,5 @@ export function TalentCardSaveButton({
         )} 
       />
     </button>
-  ),
+  )
 }

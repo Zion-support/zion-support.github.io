@@ -1,6 +1,5 @@
 
 import { Helmet } from "react-helmet-async",
-
 interface SEOProps {
   title: string,
   description: string,
@@ -49,5 +48,5 @@ export function SEO({
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>
-  ),
+  )
 }

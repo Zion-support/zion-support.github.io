@@ -3,7 +3,6 @@ import Head from 'next/head',
 import Link from 'next/link',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -14,10 +13,9 @@ export default function CaseStudies() {
       challenge: 'Complex supply chain management with 50+ locations worldwide, manual processes causing delays and inefficiencies.',
       solution: 'Implemented AI Autonomous Business Manager with predictive analytics and automated decision-making.',
       results: [
-        '40% reduction in supply chain delays25% improvement in inventory management',
-        '30% cost savings in operations99.9% uptime achieved'
+        '40% reduction in supply chain delays25% improvement in inventory management30% cost savings in operations99.9% uptime achieved'
       ],
-      technologies: ['AI/MLPredictive Analytics', 'AutomationCloud Infrastructure'],
+      technologies: ['AI/MLPredictive AnalyticsAutomationCloud Infrastructure'],
       duration: '6 months',
       roi: '300%',
       image: '🏭'
@@ -30,10 +28,9 @@ export default function CaseStudies() {
       challenge: 'Increasing cyber threats, manual security monitoring, compliance requirements, and 24/7 security operations.',
       solution: 'Deployed AI-Powered Enterprise Security with autonomous threat detection and response.',
       results: [
-        '95% faster threat detection80% reduction in false positives',
-        '100% compliance achievementZero security breaches'
+        '95% faster threat detection80% reduction in false positives100% compliance achievementZero security breaches'
       ],
-      technologies: ['AI SecurityThreat Intelligence', 'AutomationCompliance'],
+      technologies: ['AI SecurityThreat IntelligenceAutomationCompliance'],
       duration: '4 months',
       roi: '400%',
       image: '🔒'
@@ -46,10 +43,9 @@ export default function CaseStudies() {
       challenge: 'High content creation costs, inconsistent quality, slow turnaround times, and scaling challenges.',
       solution: 'Integrated AI Content Generation Platform with personalized content creation and optimization.',
       results: [
-        '70% reduction in content creation time60% improvement in content quality',
-        '3x increase in content output45% cost savings'
+        '70% reduction in content creation time60% improvement in content quality3x increase in content output45% cost savings'
       ],
-      technologies: ['NLPContent AI', 'PersonalizationAnalytics'],
+      technologies: ['NLPContent AIPersonalizationAnalytics'],
       duration: '3 months',
       roi: '250%',
       image: '📝'
@@ -62,10 +58,9 @@ export default function CaseStudies() {
       challenge: 'Complex computational problems, limited computing resources, and need for breakthrough research capabilities.',
       solution: 'Deployed Quantum Cloud Infrastructure with AI-powered research automation.',
       results: [
-        '1000x faster computation for specific problemsBreakthrough discoveries in 3 research areas',
-        '50% reduction in research timeNew patent applications filed'
+        '1000x faster computation for specific problemsBreakthrough discoveries in 3 research areas50% reduction in research timeNew patent applications filed'
       ],
-      technologies: ['Quantum ComputingAI Research', 'Cloud NativeResearch Automation'],
+      technologies: ['Quantum ComputingAI ResearchCloud NativeResearch Automation'],
       duration: '12 months',
       roi: '500%',
       image: '⚛️'
@@ -78,10 +73,9 @@ export default function CaseStudies() {
       challenge: 'High diagnostic error rates, long wait times, limited specialist availability, and increasing patient load.',
       solution: 'Implemented AI Autonomous Healthcare Physician with diagnostic assistance and patient monitoring.',
       results: [
-        '90% reduction in diagnostic errors60% faster diagnosis times',
-        '40% improvement in patient outcomes24/7 diagnostic availability'
+        '90% reduction in diagnostic errors60% faster diagnosis times40% improvement in patient outcomes24/7 diagnostic availability'
       ],
-      technologies: ['Medical AIComputer Vision', 'DiagnosticsPatient Monitoring'],
+      technologies: ['Medical AIComputer VisionDiagnosticsPatient Monitoring'],
       duration: '8 months',
       roi: '350%',
       image: '🏥'
@@ -94,10 +88,9 @@ export default function CaseStudies() {
       challenge: 'Complex blockchain transactions, regulatory compliance, fraud detection, and market analysis needs.',
       solution: 'Built AI Blockchain Analytics platform with governance and compliance automation.',
       results: [
-        '99.9% fraud detection accuracyReal-time compliance monitoring',
-        '50% reduction in regulatory reporting timeEnhanced market insights'
+        '99.9% fraud detection accuracyReal-time compliance monitoring50% reduction in regulatory reporting timeEnhanced market insights'
       ],
-      technologies: ['BlockchainAI Analytics', 'ComplianceReal-time Processing'],
+      technologies: ['BlockchainAI AnalyticsComplianceReal-time Processing'],
       duration: '5 months',
       roi: '280%',
       image: '⛓️'

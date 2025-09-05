@@ -5,7 +5,6 @@ import {
   Phone, Mail, MapPin, Globe, ChevronDown
 } from 'lucide-react',
 import Link from 'next/link',
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
@@ -13,11 +12,11 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50),
+      setIsScrolled(window.scrollY > 50)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigationItems = [
@@ -136,7 +135,7 @@ const Navigation: React.FC = () => {
                                       </div>
                                     </div>
                                   </Link>
-                                ),
+                                )
                               })}
                             </div>
                           </motion.div>
@@ -243,7 +242,7 @@ const Navigation: React.FC = () => {
                                     <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
                                   </div>
                                 </Link>
-                              ),
+                              )
                             })}
                           </div>
                         </div>
@@ -297,7 +296,7 @@ const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  ),
+  )
 },
 
 export default Navigation,

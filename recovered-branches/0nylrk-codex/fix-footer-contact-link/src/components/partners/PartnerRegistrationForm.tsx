@@ -11,7 +11,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
-
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -57,9 +56,9 @@ export function PartnerRegistrationForm() {
         description: "You have already registered as a partner.",
         variant: "destructive"}),
       setIsSubmitting(false),
-      return true,
+      return true
     }
-    return false,
+    return false
   },
 
   async function onSubmit(data: PartnerFormValues) {
@@ -68,7 +67,7 @@ export function PartnerRegistrationForm() {
         title: "Authentication required",
         description: "You must be logged in to register as a partner.",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -114,7 +113,7 @@ export function PartnerRegistrationForm() {
         .single(),
 
       if (!existingCode) {
-        await supabase.rpc('generate_referral_code', { user_id: user.id }),
+        await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
 
     } catch (error: any) {
@@ -122,9 +121,9 @@ export function PartnerRegistrationForm() {
       toast({
         title: "Submission failed",
         description: error.message || "There was a problem submitting your application.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
 
@@ -327,5 +326,5 @@ export function PartnerRegistrationForm() {
         </Form>
       </CardContent>
     </Card>
-  ),
+  )
 }
