@@ -30,12 +30,14 @@ export function middleware(request: NextRequest) {
 
   if (!authCookie) {
     // Redirect to login if not authenticated
-    return NextResponse.redirect(new URL("/auth/login", request.url))}
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
 
-  return NextResponse.next()}
+  return NextResponse.next();
+}
 
 export const config = {
-  "matcher": [/*
+  matcher: [/*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
      * - _next/static (static files)
@@ -43,4 +45,5 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ]};
+  ],
+};

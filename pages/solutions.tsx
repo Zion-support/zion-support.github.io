@@ -1,77 +1,59 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Globe,
-  Zap
-} from 'lucide-react';
+import { Shield, Rocket, BarChart3, Settings, ArrowRight, CheckCircle, Users, Building, Globe } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const solutions = [
   {
-    title: "Enterprise Solutions",
-    description: "Comprehensive technology solutions for large organizations",
-    icon: Shield,
-    href: "/solutions/enterprise",
-    features: ["Scalable Infrastructure", "Enterprise Security", "24/7 Support"],
-    color: "from-blue-500 to-blue-600"
+    title: 'Enterprise Solutions',
+    description: 'Comprehensive technology solutions for large organizations',
+    icon: Building,
+    href: '/solutions/enterprise',
+    features: ['Scalable Architecture', 'Enterprise Security', '24/7 Support', 'Custom Integration'],
+    stats: { clients: '50+', projects: '200+', uptime: '99.9%' }
   },
   {
-    title: "Startup Solutions", 
-    description: "Rapid deployment solutions for growing startups",
+    title: 'Startup Solutions',
+    description: 'Rapid development and scaling solutions for growing startups',
     icon: Rocket,
-    href: "/solutions/startup",
-    features: ["Quick Setup", "Cost Effective", "Growth Focused"],
-    color: "from-green-500 to-green-600"
+    href: '/solutions/startup',
+    features: ['Rapid Prototyping', 'Cost Optimization', 'Scalable Infrastructure', 'MVP Development'],
+    stats: { clients: '100+', projects: '300+', growth: '300%' }
   },
   {
-    title: "Industry Solutions",
-    description: "Specialized solutions for specific industries",
+    title: 'Industry Solutions',
+    description: 'Specialized solutions tailored to specific industries',
     icon: BarChart3,
-    href: "/solutions/industry",
-    features: ["Industry Expertise", "Compliance Ready", "Custom Workflows"],
-    color: "from-purple-500 to-purple-600"
+    href: '/solutions/industry',
+    features: ['Industry Expertise', 'Compliance Ready', 'Custom Workflows', 'Regulatory Support'],
+    stats: { industries: '15+', compliance: '100%', expertise: '10+ years' }
   },
   {
-    title: "Custom Development",
-    description: "Tailored solutions built specifically for your needs",
+    title: 'Custom Development',
+    description: 'Bespoke software solutions designed for your unique needs',
     icon: Settings,
-    href: "/solutions/custom",
-    features: ["100% Custom", "Full Control", "Dedicated Team"],
-    color: "from-orange-500 to-orange-600"
+    href: '/solutions/custom',
+    features: ['Tailored Solutions', 'Full Stack Development', 'API Integration', 'Ongoing Support'],
+    stats: { projects: '150+', satisfaction: '98%', delivery: 'On Time' }
   }
 ];
 
 const industries = [
-  { name: "Healthcare", icon: "🏥", description: "HIPAA-compliant solutions" },
-  { name: "Finance", icon: "💰", description: "Secure financial systems" },
-  { name: "E-commerce", icon: "🛒", description: "Scalable online platforms" },
-  { name: "Education", icon: "🎓", description: "Learning management systems" },
-  { name: "Manufacturing", icon: "🏭", description: "IoT and automation" },
-  { name: "Real Estate", icon: "🏠", description: "Property management systems" }
-];
-
-const stats = [
-  { number: '500+', label: 'Projects Delivered' },
-  { number: '50+', label: 'Industries Served' },
-  { number: '99.9%', label: 'Client Satisfaction' },
-  { number: '24/7', label: 'Support Available' }
+  { name: 'Healthcare', icon: '🏥', description: 'HIPAA-compliant solutions for healthcare providers' },
+  { name: 'Finance', icon: '💰', description: 'Secure financial technology and payment solutions' },
+  { name: 'E-commerce', icon: '🛒', description: 'Scalable online retail and marketplace platforms' },
+  { name: 'Education', icon: '🎓', description: 'Learning management and educational technology' },
+  { name: 'Manufacturing', icon: '🏭', description: 'IoT and automation solutions for manufacturing' },
+  { name: 'Real Estate', icon: '🏠', description: 'Property management and real estate platforms' }
 ];
 
 export default function SolutionsPage() {
   return (
     <MainLayout
       title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
-      keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
+      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development, AI integration, and scalable platforms."
+      keywords="technology solutions, enterprise software, startup development, custom development, industry solutions"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -79,7 +61,6 @@ export default function SolutionsPage() {
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -87,24 +68,27 @@ export default function SolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Tailored technology solutions for every business size and industry. 
-                From startups to enterprises, we deliver results that matter.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Comprehensive technology solutions tailored to your business needs, from startups to enterprises
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Custom Quote
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Learn More
+                <Link
+                  href="/case-studies"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
+                >
+                  View Case Studies
                 </Link>
               </div>
             </motion.div>
@@ -112,128 +96,104 @@ export default function SolutionsPage() {
         </section>
 
         {/* Solutions Grid */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solution Categories
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Solutions</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Choose the solution that best fits your business needs and growth stage
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We provide comprehensive technology solutions designed to accelerate your business growth and digital transformation
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {solution.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {solution.description}
-                    </p>
-
-                    <div className="space-y-2 mb-6">
-                      {solution.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link
-                      href={solution.href}
-                      className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${solution.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                    >
-                      <span>Explore Solution</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Specialized solutions for various industries with deep domain expertise
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
+              {solutions.map((solution, index) => (
                 <motion.div
-                  key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer group"
+                  key={solution.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 p-8 border border-gray-100"
                 >
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-                    {industry.icon}
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">{solution.title}</h3>
+                      <p className="text-gray-600">{solution.description}</p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-sm text-gray-600">{industry.description}</p>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {solution.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-600">
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {Object.entries(solution.stats).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-2xl font-bold text-blue-600">{value}</div>
+                        <div className="text-sm text-gray-600 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    href={solution.href}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        {/* Industries Section */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Expertise</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
                 <motion.div
-                  key={index}
-                  className="text-center"
+                  key={industry.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="text-4xl md:text-5xl font-bold mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-blue-100 font-medium">{stat.label}</div>
+                  <div className="text-4xl mb-4">{industry.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
+                  <p className="text-gray-600">{industry.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -241,27 +201,32 @@ export default function SolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Let's discuss your specific needs and create a custom solution that drives results
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's discuss how our solutions can help you achieve your business goals and drive digital transformation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Start Your Project
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Learn About Us
+                <Link
+                  href="/case-studies"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
+                >
+                  View Our Work
                 </Link>
               </div>
             </motion.div>

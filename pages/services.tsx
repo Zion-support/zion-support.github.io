@@ -6,33 +6,33 @@ import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } fro
 
 const services = [{
     "title": "AI Services",
-    "description": "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, computer vision, and advanced AI applications for healthcare, finance, and emerging technologies.",
+    "description": "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
     "icon": Brain,
     "href": "/ai-services",
-    "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Drug Discovery", "Autonomous Vehicles", "Quantum Computing", "Climate Modeling"],
+    "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     "pricing": "Starting at $1,000/month",
-    "count": "40+ Services",
-    "popular": true
+    "count": "20+ Services",
+    popular:true
   },
   {
     "title": "IT Services", 
-    "description": "Comprehensive information technology services including cloud infrastructure, cybersecurity, edge computing, 5G networks, blockchain, and next-generation IT solutions.",
+    "description": "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
     "icon": Network,
     "href": "/it-services",
-    "features": ["Cloud Infrastructure", "Zero Trust Security", "Edge Computing", "5G Networks", "Blockchain Infrastructure", "IoT Platforms", "Digital Twins", "Green IT"],
+    "features": ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     "pricing": "Starting at $120/hour",
-    "count": "40+ Services",
-    "popular": true
+    "count": "20+ Services",
+    popular:true
   },
   {
     "title": "Micro SaaS",
-    "description": "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
+    "description": "Scalable software as a service solutions designed for specific business needs and rapid deployment.",
     "icon": Cloud,
     "href": "/micro-saas",
-    "features": ["AI-Powered Tools", "Blockchain Analytics", "Smart Energy Management", "Voice AI Assistants", "Predictive Maintenance", "Smart Contracts", "Green Technology", "Advanced Automation"],
+    "features": ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     "pricing": "Starting at $29/month",
-    "count": "45+ Products",
-    "popular": true
+    "count": "25+ Products",
+    popular:true
   }
 ];
 
@@ -76,9 +76,9 @@ export default function ServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -99,10 +99,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12 md:mb-16"
-            initial={{ opacity: 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               What We Offer
@@ -119,11 +119,11 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
-                  whileHover={{ "y": -5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
+                  whileHover={{ y:-5 }}
                 >
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -182,10 +182,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us?
@@ -202,10 +202,10 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -227,10 +227,10 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?

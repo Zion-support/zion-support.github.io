@@ -78,24 +78,20 @@ async function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-        filesProcessed++;
-      }
+        filesProcessed++}
     }
   }
 
-  console.log("\n📊 Summary:");
+  console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements removed: ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-    console.log("\n✨ Production build optimized!");
-  } else {
-    console.log("\n✨ No console statements found to remove.");
-  }
+    console.log("\n✨ Production build optimized!")} else {
+    console.log("\n✨ No console statements found to remove.")}
 }
 
 if (require.main === module) {
-  main().catch(console.error);
-}
+  main().catch(console.error)}
 
 module.exports = { removeConsoleStatements, processFile };
