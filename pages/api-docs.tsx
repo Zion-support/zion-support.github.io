@@ -39,7 +39,6 @@ export default function APIDocs() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

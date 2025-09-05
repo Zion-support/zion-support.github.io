@@ -216,20 +216,6 @@ const Header: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  ShoppingCart,
-  Bell,
-  Settings,
-  LogOut,
-  ChevronDown
-} from 'lucide-react';
 
 const navigation = [
   {
@@ -354,7 +340,6 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
             </div>
           </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         )}
       </AnimatePresence>
     </header>
