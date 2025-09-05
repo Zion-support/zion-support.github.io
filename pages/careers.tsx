@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Users,
   MapPin,
@@ -16,28 +15,14 @@ import {
   Shield,
   Briefcase,
   GraduationCap,
-  Globe
-=======
-import { 
-  Users, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  MapPin,
-  Clock,
-  Briefcase,
-  Heart,
-  Zap,
   Globe,
-  Shield,
+  CheckCircle,
   Brain
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const benefits = [
   {
-<<<<<<< HEAD
     icon: Heart,
     title: "Health & Wellness",
     description: "Comprehensive health insurance, mental health support, and wellness programs"
@@ -46,26 +31,20 @@ const benefits = [
     icon: Clock,
     title: "Work-Life Balance",
     description: "Flexible working hours, remote work options, and generous PTO"
-=======
+  },
+  {
     title: "Competitive Salary",
     description: "Above-market compensation with performance bonuses and equity options.",
     icon: Star
   },
   {
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance, dental, vision, and mental health support.",
-    icon: Heart
-  },
-  {
     title: "Flexible Work",
     description: "Remote work options, flexible hours, and work-life balance initiatives.",
     icon: Globe
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
   },
   {
     icon: GraduationCap,
     title: "Learning & Development",
-<<<<<<< HEAD
     description: "Continuous learning opportunities, conference attendance, and skill development"
   },
   {
@@ -82,7 +61,9 @@ const benefits = [
     icon: Globe,
     title: "Global Opportunities",
     description: "Work with international clients and teams across different time zones"
-=======
+  },
+  {
+    title: "Professional Development",
     description: "Professional development budget, conferences, and continuous learning opportunities.",
     icon: Brain
   },

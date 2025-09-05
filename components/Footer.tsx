@@ -22,35 +22,34 @@ import {
 
 const services = {
   'AI Solutions': [
-<<<<<<< HEAD
-    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
-    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
-    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
-    { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Quantum Computing Integration', href: '/ai-services#ai-quantum-computing' },
+    { name: 'AI Climate Change Modeling', href: '/ai-services#ai-climate-modeling' },
+    { name: 'AI Autonomous Vehicle Systems', href: '/ai-services#ai-autonomous-vehicles' },
+    { name: 'AI Brain-Computer Interface', href: '/ai-services#ai-brain-computer-interface' },
+    { name: 'AI Metaverse Development', href: '/ai-services#ai-metaverse-development' },
+    { name: 'AI Cybersecurity Intelligence', href: '/ai-services#ai-cybersecurity' },
+    { name: 'AI Medical Diagnosis Assistant', href: '/ai-services#ai-medical-diagnosis' },
+    { name: 'AI Space Technology Solutions', href: '/ai-services#ai-space-technology' }
   ],
   'IT Services': [
-    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-    { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-    { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Zero Trust Security Architecture', href: '/it-services#zero-trust-security' },
+    { name: 'Edge Computing Infrastructure', href: '/it-services#edge-computing' },
+    { name: '5G Network Implementation', href: '/it-services#5g-networks' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain-infrastructure' },
+    { name: 'IoT Platform Management', href: '/it-services#iot-platform' },
+    { name: 'Digital Twin Technology', href: '/it-services#digital-twins' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Smart City Infrastructure', href: '/it-services#smart-city-infrastructure' }
   ],
   'Micro SaaS': [
-    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-    { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-    { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'AI-Powered Code Generator', href: '/micro-saas#ai-code-generator' },
+    { name: 'Blockchain Analytics Platform', href: '/micro-saas#blockchain-analytics' },
+    { name: 'Quantum Computing Simulator', href: '/micro-saas#quantum-computing-simulator' },
+    { name: 'AI Voice Cloning Studio', href: '/micro-saas#ai-voice-cloning' },
+    { name: 'Metaverse Development Platform', href: '/micro-saas#metaverse-platform' },
+    { name: 'AI Medical Diagnosis Assistant', href: '/micro-saas#ai-medical-diagnosis' },
+    { name: 'Autonomous Vehicle Fleet Management', href: '/micro-saas#autonomous-vehicle-fleet' },
+    { name: 'AI Climate Change Predictor', href: '/micro-saas#ai-climate-predictor' }
   ]
 };
 
@@ -97,75 +96,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-=======
-    { "name": 'AI Drug Discovery Platform', "href": '/ai-services#ai-drug-discovery' },
-    { "name": 'AI Climate Change Modeling', "href": '/ai-services#ai-climate-modeling' },
-    { "name": 'AI Autonomous Vehicle Systems', "href": '/ai-services#ai-autonomous-vehicles' },
-    { "name": 'AI Quantum Computing Integration', "href": '/ai-services#ai-quantum-computing' },
-    { "name": 'AI Space Technology Solutions', "href": '/ai-services#ai-space-technology' },
-    { "name": 'AI Brain-Computer Interface', "href": '/ai-services#ai-brain-computer-interface' },
-    { "name": 'AI Metaverse Development', "href": '/ai-services#ai-metaverse-development' },
-    { "name": 'AI Cybersecurity Intelligence', "href": '/ai-services#ai-cybersecurity' }
-  ],
-  'IT Services': [
-    { "name": 'Zero Trust Security Architecture', "href": '/it-services#zero-trust-security' },
-    { "name": 'Edge Computing Infrastructure', "href": '/it-services#edge-computing' },
-    { "name": '5G Network Implementation', "href": '/it-services#5g-networks' },
-    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
-    { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
-    { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
-    { "name": 'Quantum Computing Infrastructure', "href": '/it-services#quantum-computing' },
-    { "name": 'Smart City Infrastructure', "href": '/it-services#smart-city-infrastructure' }
-  ],
-  'Micro SaaS': [
-    { "name": 'AI-Powered Code Generator', "href": '/micro-saas#ai-code-generator' },
-    { "name": 'Blockchain Analytics Platform', "href": '/micro-saas#blockchain-analytics' },
-    { "name": 'Quantum Computing Simulator', "href": '/micro-saas#quantum-computing-simulator' },
-    { "name": 'AI Voice Cloning Studio', "href": '/micro-saas#ai-voice-cloning' },
-    { "name": 'Metaverse Development Platform', "href": '/micro-saas#metaverse-platform' },
-    { "name": 'AI-Powered Medical Diagnosis', "href": '/micro-saas#ai-medical-diagnosis' },
-    { "name": 'Autonomous Vehicle Fleet Management', "href": '/micro-saas#autonomous-vehicle-fleet' },
-    { "name": 'AI Climate Change Predictor', "href": '/micro-saas#ai-climate-predictor' }
-  ]
-};
-
-const company = [{ "name": 'About Us', "href": '/about' },
-  { "name": 'Our Team', "href": '/about#team' },
-  { "name": 'Careers', "href": '/careers' },
-  { "name": 'Case Studies', "href": '/case-studies' },
-  { "name": 'Blog', "href": '/blog' },
-  { "name": 'News', "href": '/news' }
-];
-
-const resources = [{ "name": 'Documentation', "href": '/docs' },
-  { "name": 'API Reference', "href": '/api-docs' },
-  { "name": 'Tutorials', "href": '/tutorials' },
-  { "name": 'Guides', "href": '/guides' },
-  { "name": 'FAQ', "href": '/faq' },
-  { "name": 'Support', "href": '/support' }
-];
-
-const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
-  { "name": 'Terms of Service', "href": '/terms' },
-  { "name": 'Cookie Policy', "href": '/cookies' },
-  { "name": 'Security', "href": '/security' },
-  { "name": 'Compliance', "href": '/compliance' },
-  { "name": 'Sitemap', "href": '/sitemap' }
-];
-
-const socialLinks = [{ "name": 'LinkedIn', "href": 'https://linkedin.com/company/ziontechgroup', "icon": Linkedin },
-  { "name": 'Twitter', "href": 'https://twitter.com/ziontechgroup', "icon": Twitter },
-  { "name": 'GitHub', "href": 'https://github.com/ziontechgroup', "icon": Github },
-  { "name": 'YouTube', "href": 'https://youtube.com/@ziontechgroup', "icon": Youtube },
-  { "name": 'Facebook', "href": 'https://facebook.com/ziontechgroup', "icon": Facebook }
-];
-
-const contactInfo = {
-  "phone": '+1 302 464 0950',
-  "email": 'kleber@ziontechgroup.com',
-  "address": '364 E Main St STE 1008, Middletown, DE 19709',
-  "hours": '24/7 Support Available'
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
 };
 
 export default function Footer() {
@@ -250,11 +180,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-=======
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -275,11 +201,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-=======
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -300,11 +222,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
-=======
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -325,17 +243,10 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-<<<<<<< HEAD
                       className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
                       aria-label={social.name}
                     >
                       <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
-=======
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover: bg-blue-600 transition-colors group"
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-hover: text-white" />
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
                     </a>
                   );
                 })}
@@ -348,11 +259,7 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row items-center justify-between">
-=======
-          <div className="flex flex-col md: flex-row items-center justify-between">
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
@@ -376,11 +283,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row items-center justify-between">
-=======
-          <div className="flex flex-col md: flex-row items-center justify-between">
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>

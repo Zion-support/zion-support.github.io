@@ -5,13 +5,10 @@ import {
   BarChart3, 
   ArrowRight,
   TrendingUp,
-<<<<<<< HEAD
   CheckCircle,
-=======
   Users,
   Building,
   Globe,
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
   Award,
   Clock,
   Target,
@@ -23,7 +20,6 @@ import MainLayout from '../components/layout/MainLayout';
 
 const caseStudies = [
   {
-<<<<<<< HEAD
     id: 1,
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
@@ -97,7 +93,9 @@ const caseStudies = [
       author: "Emily Rodriguez",
       role: "Founder & CEO"
     }
-=======
+  },
+  {
+    id: 2,
     title: "Healthcare AI Platform Transformation",
     client: "MedTech Solutions",
     industry: "Healthcare",

@@ -31,7 +31,6 @@ export default function APIPage() {
     }
   ];
 
-<<<<<<< HEAD
   const apiEndpoints = [{
     method: 'GET',
     path: '/api/v1/services',
@@ -159,8 +158,7 @@ export default function APIPage() {
         + `\n.catch(error => console.error('Error:', error));`;
     }
   }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
+
   return (
     <Layout 
       title="API Reference - Zion Tech Group"

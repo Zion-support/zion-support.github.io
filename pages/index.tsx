@@ -164,6 +164,10 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
               Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
+              <br /><br />
+              <strong>Market-Leading Pricing:</strong> Our services are priced competitively with industry standards, 
+              offering exceptional value for cutting-edge technology solutions. From $29/month micro SaaS tools to 
+              $5M enterprise AI projects, we provide transparent, scalable pricing that fits your budget.
             </p>
           </motion.div>
 
@@ -177,9 +181,10 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro "SaaS": $29 - $4,999/month</li>
-                <li>• IT "Services": $120 - $500/hour</li>
-                <li>• AI Solutions: $1,000 - $1M/project</li>
+                <li>• Micro SaaS: $29 - $2,499/month</li>
+                <li>• IT Services: $2,000 - $2M/project</li>
+                <li>• AI Solutions: $1,000 - $5M/project</li>
+                <li>• Quantum Computing: $50K - $5M/project</li>
                 <li>• Transparent, no hidden fees</li>
               </ul>
             </motion.div>
@@ -193,9 +198,10 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
-                <li>• Quantum computing solutions</li>
+                <li>• 300+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT, Quantum expertise</li>
+                <li>• Metaverse & AR/VR solutions</li>
+                <li>• Edge computing & 5G networks</li>
                 <li>• Future-ready technology stack</li>
               </ul>
             </motion.div>

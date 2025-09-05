@@ -198,16 +198,577 @@ const aiServices = [
     description: 'Intelligent legal document review and contract analysis.',
     icon: BookOpen,
     features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
-    pricing: '$5,000 - $25,000 setup',
+    pricing: '$5,000 - $25,000 project',
     category: 'Legal Tech'
   },
   {
-    title: 'AI Customer Sentiment Analysis',
-    description: 'Real-time customer sentiment analysis across multiple channels.',
-    icon: MessageSquare,
-    features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
+    title: 'AI Quantum Computing Integration',
+    description: 'Quantum-enhanced AI algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Machine Learning', 'Optimization Algorithms', 'Cryptography', 'Simulation'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using AI.',
+    icon: Sprout,
+    features: ['Climate Forecasting', 'Carbon Footprint Analysis', 'Environmental Risk Assessment', 'Sustainability Planning'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Climate Tech'
+  },
+  {
+    title: 'AI Brain-Computer Interface',
+    description: 'Neural interface technology for direct brain-computer communication.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Thought-to-Text', 'Motor Control', 'Cognitive Enhancement'],
+    pricing: '$200,000 - $1,000,000 project',
+    category: 'Neurotechnology'
+  },
+  {
+    title: 'AI Autonomous Vehicle Systems',
+    description: 'Complete autonomous vehicle AI systems for self-driving cars and drones.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Real-time Decision Making'],
+    pricing: '$500,000 - $2,000,000 project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Space Technology Solutions',
+    description: 'AI systems for space exploration, satellite management, and space missions.',
+    icon: Rocket,
+    features: ['Satellite Operations', 'Mission Planning', 'Space Weather Prediction', 'Autonomous Navigation'],
+    pricing: '$1,000,000 - $5,000,000 project',
+    category: 'Space Tech'
+  },
+  {
+    title: 'AI Metaverse Development',
+    description: 'AI-powered virtual worlds and immersive digital experiences.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Real-time Interaction'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Metaverse'
+  },
+  {
+    title: 'AI Cybersecurity Intelligence',
+    description: 'Advanced AI-powered cybersecurity threat detection and response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Zero-day Detection', 'Automated Response'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical imaging analysis and diagnostic support.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'Drug Interaction Check'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Prediction', 'Compliance Monitoring'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI Voice Cloning Studio',
+    description: 'High-fidelity voice synthesis and cloning technology.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Synthesis', 'Multi-language Support', 'Real-time Processing'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced AI-powered content moderation for social platforms.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Bias Detection', 'Real-time Moderation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered equipment maintenance prediction and optimization.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI Personal Finance Advisor',
+    description: 'Intelligent personal finance management and investment advice.',
+    icon: TrendingUp,
+    features: ['Portfolio Management', 'Risk Assessment', 'Investment Recommendations', 'Budget Planning'],
     pricing: '$1,000 - $5,000/month',
-    category: 'Customer Analytics'
+    category: 'FinTech'
+  },
+  {
+    title: 'AI Language Translation Pro',
+    description: 'Real-time, context-aware translation with cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Industry-specific Terms', 'Voice Translation'],
+    pricing: '$500 - $2,500/month',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI Smart Home Controller',
+    description: 'Intelligent home automation and energy management system.',
+    icon: Home,
+    features: ['Device Integration', 'Energy Optimization', 'Predictive Control', 'Voice Commands'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI Sports Analytics Platform',
+    description: 'Advanced sports performance analysis and prediction system.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Scouting'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Sports Tech'
+  },
+  {
+    title: 'AI Educational Tutor',
+    description: 'Personalized AI tutoring system with adaptive learning.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Progress Tracking', 'Adaptive Content', 'Assessment Generation'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'EdTech'
+  },
+  {
+    title: 'AI Retail Optimization',
+    description: 'AI-powered retail analytics and customer experience optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Behavior Analysis', 'Inventory Optimization', 'Price Optimization', 'Personalization'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI Agricultural Intelligence',
+    description: 'Smart farming solutions with AI-powered crop and livestock management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Disease Detection', 'Resource Optimization'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI Mental Health Assistant',
+    description: 'AI-powered mental health monitoring and support system.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'HealthTech'
+  },
+  {
+    title: 'AI Real Estate Analytics',
+    description: 'Intelligent property valuation and market analysis platform.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'PropTech'
+  },
+  {
+    title: 'AI Gaming Intelligence',
+    description: 'AI-powered game development and player behavior analysis.',
+    icon: Target,
+    features: ['Procedural Content Generation', 'Player Behavior Analysis', 'Balancing Algorithms', 'Anti-cheat Systems'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Game AI'
+  },
+  {
+    title: 'AI Supply Chain Intelligence',
+    description: 'End-to-end supply chain optimization with AI-powered insights.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Supplier Risk Analysis', 'Route Optimization', 'Inventory Management'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI Environmental Monitoring',
+    description: 'AI-powered environmental data collection and analysis system.',
+    icon: Sprout,
+    features: ['Air Quality Monitoring', 'Water Quality Analysis', 'Pollution Detection', 'Environmental Reporting'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'AI-powered digital twin creation and simulation platform.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI Edge Computing Solutions',
+    description: 'AI processing at the edge for real-time decision making.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI Robotic Process Automation',
+    description: 'Intelligent automation of complex business processes.',
+    icon: Settings,
+    features: ['Process Discovery', 'Workflow Automation', 'Exception Handling', 'Performance Monitoring'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'RPA'
+  },
+  {
+    title: 'AI Augmented Reality Solutions',
+    description: 'AI-enhanced AR applications for various industries.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Virtual Reality Experiences',
+    description: 'Immersive VR experiences powered by artificial intelligence.',
+    icon: Monitor,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Haptic Feedback'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'VR AI'
+  },
+  {
+    title: 'AI Internet of Things Platform',
+    description: 'AI-powered IoT device management and data analytics.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'IoT AI'
+  },
+  {
+    title: 'AI 5G Network Optimization',
+    description: 'AI-powered 5G network management and optimization.',
+    icon: Network,
+    features: ['Network Slicing', 'Traffic Optimization', 'Quality of Service', 'Resource Allocation'],
+    pricing: '$20,000 - $100,000 project',
+    category: '5G AI'
+  },
+  {
+    title: 'AI Blockchain Smart Contracts',
+    description: 'AI-enhanced smart contract development and auditing.',
+    icon: Code,
+    features: ['Smart Contract Generation', 'Security Auditing', 'Gas Optimization', 'Automated Testing'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms and models.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Simulation'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Quantum ML'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-powered synthetic data creation for training and testing.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Bias Reduction', 'Quality Validation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Data AI'
+  },
+  {
+    title: 'AI Explainable AI Platform',
+    description: 'Platform for creating and managing explainable AI models.',
+    icon: Brain,
+    features: ['Model Interpretability', 'Bias Detection', 'Fairness Metrics', 'Transparency Reports'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'XAI'
+  },
+  {
+    title: 'AI Federated Learning Platform',
+    description: 'Distributed machine learning while preserving data privacy.',
+    icon: Network,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Federated Learning'
+  },
+  {
+    title: 'AI AutoML Platform',
+    description: 'Automated machine learning model development and deployment.',
+    icon: Settings,
+    features: ['Automated Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Auto Deployment'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'AutoML'
+  },
+  {
+    title: 'AI MLOps Platform',
+    description: 'Complete machine learning operations and model lifecycle management.',
+    icon: Settings,
+    features: ['Model Versioning', 'Experiment Tracking', 'Model Monitoring', 'Automated Deployment'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'MLOps'
+  },
+  {
+    title: 'AI Data Pipeline Automation',
+    description: 'Intelligent data pipeline creation and management.',
+    icon: Database,
+    features: ['Pipeline Generation', 'Data Quality Monitoring', 'Error Handling', 'Performance Optimization'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Data Engineering'
+  },
+  {
+    title: 'AI Model Monitoring & Observability',
+    description: 'Comprehensive AI model performance monitoring and alerting.',
+    icon: Monitor,
+    features: ['Performance Tracking', 'Drift Detection', 'Alert Management', 'Root Cause Analysis'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Model Ops'
+  },
+  {
+    title: 'AI Bias Detection & Mitigation',
+    description: 'AI system bias detection and fairness optimization tools.',
+    icon: Shield,
+    features: ['Bias Detection', 'Fairness Metrics', 'Mitigation Strategies', 'Compliance Reporting'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'AI Ethics'
+  },
+  {
+    title: 'AI Model Compression & Optimization',
+    description: 'AI model size reduction and performance optimization.',
+    icon: Cpu,
+    features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Hardware Optimization'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Model Optimization'
+  },
+  {
+    title: 'AI Edge AI Model Deployment',
+    description: 'Deployment of AI models on edge devices and embedded systems.',
+    icon: Smartphone,
+    features: ['Model Conversion', 'Hardware Optimization', 'Performance Tuning', 'Deployment Automation'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Edge Deployment'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'AI systems that process multiple data types simultaneously.',
+    icon: Eye,
+    features: ['Text-Image Processing', 'Audio-Visual Analysis', 'Cross-Modal Learning', 'Fusion Techniques'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Multi-Modal AI'
+  },
+  {
+    title: 'AI Transfer Learning Platform',
+    description: 'Platform for transferring knowledge between AI models and domains.',
+    icon: Network,
+    features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning Tools', 'Knowledge Transfer'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Transfer Learning'
+  },
+  {
+    title: 'AI Reinforcement Learning Platform',
+    description: 'Platform for developing and training reinforcement learning agents.',
+    icon: Target,
+    features: ['Environment Simulation', 'Agent Training', 'Policy Optimization', 'Reward Engineering'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Reinforcement Learning'
+  },
+  {
+    title: 'AI Generative Adversarial Networks',
+    description: 'GAN-based solutions for data generation and augmentation.',
+    icon: Image,
+    features: ['Image Generation', 'Data Augmentation', 'Style Transfer', 'Anomaly Generation'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'GANs'
+  },
+  {
+    title: 'AI Transformer Models',
+    description: 'Advanced transformer-based AI models for various applications.',
+    icon: Brain,
+    features: ['Language Models', 'Vision Transformers', 'Multimodal Transformers', 'Custom Architectures'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Transformers'
+  },
+  {
+    title: 'AI Graph Neural Networks',
+    description: 'Graph-based AI solutions for complex relationship modeling.',
+    icon: Network,
+    features: ['Graph Analysis', 'Node Classification', 'Link Prediction', 'Graph Generation'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Graph AI'
+  },
+  {
+    title: 'AI Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting solutions.',
+    icon: TrendingUp,
+    features: ['Seasonal Analysis', 'Trend Detection', 'Anomaly Detection', 'Multi-step Forecasting'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Time Series'
+  },
+  {
+    title: 'AI Natural Language Processing',
+    description: 'Advanced NLP solutions for text understanding and generation.',
+    icon: FileText,
+    features: ['Text Analysis', 'Sentiment Analysis', 'Named Entity Recognition', 'Text Generation'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'NLP'
+  },
+  {
+    title: 'AI Computer Vision Solutions',
+    description: 'Advanced computer vision and image processing solutions.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Segmentation', '3D Vision'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Computer Vision'
+  },
+  {
+    title: 'AI Speech Recognition & Synthesis',
+    description: 'Advanced speech processing and voice synthesis solutions.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Text-to-Speech', 'Voice Cloning', 'Emotion Recognition'],
+    pricing: '$2,000 - $10,000 setup',
+    category: 'Speech AI'
+  },
+  {
+    title: 'AI Recommendation Systems',
+    description: 'Advanced recommendation and personalization engines.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Approaches', 'Real-time Updates'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Recommendation Systems'
+  },
+  {
+    title: 'AI Search & Retrieval Systems',
+    description: 'Intelligent search and information retrieval solutions.',
+    icon: Search,
+    features: ['Semantic Search', 'Vector Search', 'Query Understanding', 'Result Ranking'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Search AI'
+  },
+  {
+    title: 'AI Knowledge Graphs',
+    description: 'AI-powered knowledge representation and reasoning systems.',
+    icon: Network,
+    features: ['Entity Extraction', 'Relationship Modeling', 'Query Answering', 'Knowledge Inference'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Knowledge AI'
+  },
+  {
+    title: 'AI Causal Inference',
+    description: 'AI systems for understanding cause-and-effect relationships.',
+    icon: Target,
+    features: ['Causal Discovery', 'Treatment Effect Estimation', 'Counterfactual Analysis', 'Causal Graphs'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Causal AI'
+  },
+  {
+    title: 'AI Uncertainty Quantification',
+    description: 'AI systems that provide uncertainty estimates and confidence intervals.',
+    icon: Shield,
+    features: ['Uncertainty Estimation', 'Confidence Intervals', 'Risk Assessment', 'Robust Predictions'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Uncertainty AI'
+  },
+  {
+    title: 'AI Adversarial Robustness',
+    description: 'AI systems resistant to adversarial attacks and perturbations.',
+    icon: Shield,
+    features: ['Attack Detection', 'Robust Training', 'Defense Mechanisms', 'Security Testing'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Robust AI'
+  },
+  {
+    title: 'AI Continual Learning',
+    description: 'AI systems that learn continuously without forgetting previous knowledge.',
+    icon: Brain,
+    features: ['Catastrophic Forgetting Prevention', 'Incremental Learning', 'Memory Consolidation', 'Adaptive Learning'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Continual Learning'
+  },
+  {
+    title: 'AI Meta-Learning',
+    description: 'AI systems that learn how to learn and adapt quickly to new tasks.',
+    icon: Brain,
+    features: ['Few-shot Learning', 'Rapid Adaptation', 'Learning to Learn', 'Task Generalization'],
+    pricing: '$6,000 - $30,000 project',
+    category: 'Meta-Learning'
+  },
+  {
+    title: 'AI Neural Architecture Search',
+    description: 'Automated neural network architecture design and optimization.',
+    icon: Settings,
+    features: ['Architecture Search', 'Performance Optimization', 'Hardware-aware Design', 'Automated Design'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'NAS'
+  },
+  {
+    title: 'AI Hyperparameter Optimization',
+    description: 'Automated hyperparameter tuning and optimization for AI models.',
+    icon: Settings,
+    features: ['Bayesian Optimization', 'Multi-objective Optimization', 'Early Stopping', 'Resource Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'HPO'
+  },
+  {
+    title: 'AI Model Ensemble Methods',
+    description: 'Advanced ensemble learning and model combination techniques.',
+    icon: Network,
+    features: ['Model Stacking', 'Bagging', 'Boosting', 'Voting Methods'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Ensemble Learning'
+  },
+  {
+    title: 'AI Active Learning',
+    description: 'AI systems that intelligently select data for labeling and training.',
+    icon: Target,
+    features: ['Query Strategy', 'Uncertainty Sampling', 'Diversity Sampling', 'Human-in-the-loop'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Active Learning'
+  },
+  {
+    title: 'AI Semi-Supervised Learning',
+    description: 'AI systems that learn from both labeled and unlabeled data.',
+    icon: Database,
+    features: ['Pseudo-labeling', 'Consistency Regularization', 'Graph-based Methods', 'Self-training'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Semi-Supervised Learning'
+  },
+  {
+    title: 'AI Unsupervised Learning',
+    description: 'AI systems that discover patterns in data without labels.',
+    icon: Eye,
+    features: ['Clustering', 'Dimensionality Reduction', 'Anomaly Detection', 'Density Estimation'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Unsupervised Learning'
+  },
+  {
+    title: 'AI Supervised Learning',
+    description: 'AI systems that learn from labeled training data.',
+    icon: Target,
+    features: ['Classification', 'Regression', 'Feature Selection', 'Model Validation'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Supervised Learning'
+  },
+  {
+    title: 'AI Deep Learning',
+    description: 'Advanced deep neural network solutions for complex problems.',
+    icon: Brain,
+    features: ['Neural Networks', 'Deep Architectures', 'Gradient Descent', 'Backpropagation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Deep Learning'
+  },
+  {
+    title: 'AI Machine Learning',
+    description: 'Comprehensive machine learning solutions for various applications.',
+    icon: Cpu,
+    features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Evaluation'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Machine Learning'
+  },
+  {
+    title: 'AI Artificial Intelligence',
+    description: 'Complete AI solutions covering all aspects of artificial intelligence.',
+    icon: Brain,
+    features: ['Problem Solving', 'Learning', 'Reasoning', 'Perception'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'General AI'
   },
   {
     title: 'AI-Powered Autonomous Vehicles',

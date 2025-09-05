@@ -131,6 +131,87 @@ const itServices = [
     pricing: '$50,000 - $250,000/project',
     category: 'Quantum',
     popular: false
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT.',
+    icon: Cpu,
+    features: ['Edge Nodes', 'Data Processing', 'Real-time Analytics', 'IoT Integration'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network design, deployment, and optimization services.',
+    icon: Network,
+    features: ['5G Core Network', 'RAN Deployment', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Networks',
+    popular: false
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions and distributed ledger technology implementation.',
+    icon: Network,
+    features: ['Blockchain Development', 'Smart Contracts', 'Consensus Mechanisms', 'Security Auditing'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Comprehensive IoT device management and data analytics platform.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin creation and management for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Digital Twin',
+    popular: false
+  },
+  {
+    title: 'Smart City Infrastructure',
+    description: 'Complete smart city technology solutions and urban infrastructure management.',
+    icon: Building,
+    features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Citizen Services'],
+    pricing: '$500,000 - $2,000,000/project',
+    category: 'Smart City',
+    popular: false
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Cpu,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Solutions',
+    description: 'Quantum computing solutions and hybrid classical-quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Systems', 'Quantum Security', 'Performance Optimization'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Quantum',
+    popular: false
   }
 ];
 
