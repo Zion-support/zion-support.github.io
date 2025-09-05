@@ -1,3 +1,14 @@
-export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI - powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions', technology consulting',digital transformation', cloud computing',cybersecurity', machine learning'], image = '/images / zion - tech - group - og.jpg', url = '"https": ";";""})
-export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions',description = 'Leading provider of innovative technology solutions,AI - powered services,and digital transformation expertise. We help businesses thrive in the digital age.',keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'],image = '/images / zion - tech - group - og.jpg',url = 'https:";";"})
-origin/cursor/automate-test-improve-and-merge-code-eafe;)"
+import React from 'react';
+
+interface SEOEnhancerProps {
+  // Add props here as needed
+}
+
+export default function SEOEnhancer({ }: SEOEnhancerProps) {
+  return (
+    <div>
+      <h1>SEOEnhancer</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

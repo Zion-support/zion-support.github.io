@@ -1,3 +1,14 @@
-import { GetServerSideProps } from 'next'''
-  const baseUrl = '"https""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface SitemapProps {
+  // Add props here as needed
+}
+
+export default function Sitemap({ }: SitemapProps) {
+  return (
+    <div>
+      <h1>Sitemap</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

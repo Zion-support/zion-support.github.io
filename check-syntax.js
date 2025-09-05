@@ -1,27 +1,14 @@
-#!/usr/bin/env node
-const fs = require('fs');
-// const path = require('path'); // Not currently used
+import React from 'react';
 
-function checkSyntax(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    // Basic syntax check - could be enhanced with actual parsing
-    console.log(`✅ ${filePath} syntax OK (${content.length} chars)`);
-    return true;
-  } catch (error) {
-    console.error(`❌ Syntax error in ${filePath}:`, error.message);
-    return false;
-  }
+interface ChecksyntaxProps {
+  // Add props here as needed
 }
 
-console.log('🔍 Checking for syntax errors...\n');
-console.log('📁 Checking pages directory...');
-
-// Example usage
-const testFiles = ['package.json', 'next.config.js'];
-testFiles.forEach(file => {
-  if (fs.existsSync(file)) {
-    checkSyntax(file);
-  }
+export default function Checksyntax({ }: ChecksyntaxProps) {
+  return (
+    <div>
+      <h1>Checksyntax</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
 }
-});

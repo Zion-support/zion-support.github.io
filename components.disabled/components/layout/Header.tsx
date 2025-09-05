@@ -1,1 +1,14 @@
-import React,{ useState } from "react"; Phone,; X,;,} from "lucide-react"; const Header: React.FC = () => {; const [isMenuOpen,setIsMenuOpen] = useState(false); const [isServicesOpen,setIsServicesOpen] = useState(false); const services = [; {; name: "AI Services",; href: "/ai-services",; icon: 'Brain',; description: "Artificial Intelligence Solutions";,},; {; name: "IT Services",; href: "/it-services",; icon: 'Cloud',; description: "Information Technology Services";,},; {; name: "Micro SaaS",; href: "/micro-saas",; icon: 'Code',; description: "Custom Software Solutions";,},; {; name: "All Services",; href: "/services",; icon: 'null',; const navigation = [; { name: "Home",href: "/" },; { name: "Services",href: "/services""]"}
+import React from 'react';
+
+interface HeaderProps {
+  // Add props here as needed
+}
+
+export default function Header({ }: HeaderProps) {
+  return (
+    <div>
+      <h1>Header</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

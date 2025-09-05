@@ -1,7 +1,14 @@
-import {Button} from "@/components/ui/button"""
-import {Download, Settings} from "lucide-react"""
-import {useCompWorkspace} from "@/hooks/useCompWorkspace"""
-    <div className="min-h-screen bg-white"""
-      <div className="flex items-center justify-between"""
-          <h1 className="text-3xl font-bold tracking-tight"""
-          <p className="text-muted-foreground mt-1"""
+import React from 'react';
+
+interface AdminHeaderProps {
+  // Add props here as needed
+}
+
+export default function AdminHeader({ }: AdminHeaderProps) {
+  return (
+    <div>
+      <h1>AdminHeader</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
