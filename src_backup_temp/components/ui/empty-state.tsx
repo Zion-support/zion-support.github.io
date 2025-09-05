@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 interface EmptyStateProps {;
   title?: "string;
@@ -7,32 +5,8 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-';
-const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
-  title = 'No data available',';';
-  description = 'There are no items to display at the moment.',
-  icon,';
-  action,';';
-  className = ''
-}) => {
-  return (
-    <div className="min-h-screen bg-white">
-      {icon && (
-        <div className="mx-auto h-12 w-12 text-gray-400 mb-4">
-          {icon}
-            </div>
-  );
-}
-      <h3 className="text-lg font-medium text-gray-900 mb-2">
-=======
 =======
 "}
->>>>>>> main
 ;
 const "EmptyState": "React.FC<EmptyStateProps> = ({;
   title = 'No data available'",;
@@ -50,17 +24,9 @@ const "EmptyState": "React.FC<EmptyStateProps> = ({;
       )}
 ;
       <h3 className="text-lg font-medium text-gray-900 mb-2">;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 =======
 }
-<<<<<<< HEAD
-
-const EmptyState: React.FC<EmptyStateProps> = ({
-=======
 const "EmptyState": Reac t.FC<EmptyStateProps> = ({
->>>>>>> main
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,
@@ -76,19 +42,7 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   );
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
->>>>>>> main
->>>>>>> main
         {title}
-<<<<<<< HEAD
-      
-      
-      {description && (
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
-=======
-;
-      {description && (;
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;
->>>>>>> main
           {description}
         </p>;
       )}
@@ -96,50 +50,22 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
       {action && (;
         <div className="flex justify-center">;
           {action}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
             </div>
   );
 }
     </div>
-<<<<<<< HEAD
-  );
-};
-';
-// Default empty state icon component';';
-export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = '' }) => (
-  <svg
-=======
         </div>;
       )}
     </div>;
   );
 =======
     );
->>>>>>> main
 };
-<<<<<<< HEAD
-;
-// Default empty state icon component;
-export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className = '' }) => (;
-  <svg;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
     className={`h-full w-full ${className}`}
 =======
 // Default empty state icon component
-<<<<<<< HEAD
-export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
-=======
-export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className = " }) => (
->>>>>>> main
   <svg
     className={`h-full w-full ${className}`};
->>>>>>> main
     fill="none";
     viewBox="0 0 24 24";
     stroke="currentColor";
@@ -153,17 +79,9 @@ export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className 
   </svg>;
 );
 export default EmptyState;
-<<<<<<< HEAD
-<<<<<<< HEAD
-</path>';
-</EmptyStateProps>;';;';
-=======
 </path>;
 </EmptyStateProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 </path>
 </EmptyStateProps>;';';
 import React from 'react'; ; interface EmptyStateProps {; title?: string; description?: string; icon?: React.ReactNode; action?: React.ReactNode; className?: string} const EmptyState: Reac t.FC<EmptyStateProps> = ({ title = 'No data available',description = 'There are no items to display at the moment.',icon,action,className = " }) => { return ( <div className="min-h-screen bg-white"> {icon && ( <div className="mx-auto h-12 w-12 text-gray-400 mb-4"> {icon}; </div> )} <h3 className="text-lg font-medium text-gray-900 mb-2"> {title} ; {description && (; <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">; {description} </p>; )} ; {action && (; <div className="flex justify-center">; {action} </div> )} </div> )}; export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = " }) => ( <svg className={`h-full w-full ${className}`}; fill="none"; viewBox="0 0 24 24"; stroke="currentColor"; aria-hidden="true"; >; <path strokeLinecap="round"; strokeLinejoin="round"; strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"; />; </svg>; ); ; export default EmptyState; </path> </EmptyStateProps>;';';
->>>>>>> main
->>>>>>> main

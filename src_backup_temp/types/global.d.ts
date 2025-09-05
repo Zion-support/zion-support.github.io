@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/types/global.d.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -46,3 +48,4 @@ declare module '*.module.css' { const classes: { [key: string]: string }; export
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/types/global.d.ts

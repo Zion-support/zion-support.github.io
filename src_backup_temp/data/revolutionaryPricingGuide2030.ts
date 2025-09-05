@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/revolutionaryPricingGuide2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -471,3 +473,4 @@ export interface PricingTier { id: string; name: string; price: number; billingC
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/revolutionaryPricingGuide2030.ts

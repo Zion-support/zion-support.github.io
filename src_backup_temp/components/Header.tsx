@@ -1,50 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
-import { MainNavigation } from './header/MainNavigation';';';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
->>>>>>> origin/main
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
 interface HeaderProps {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  className?: string;
-
-}
-export function Header(props: any) {const router = useRouter()
-}
-export function Header(props: any) {
-
-export function Header(props: any) {
-  const [isScrolled, setIsScrolled] = useState<any>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
 =======
-<<<<<<< HEAD
-export function Header(props: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-=======
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 =======
@@ -57,20 +19,12 @@ interface HeaderProps {;
 "}
 export function Header({ className = '' }: "HeaderProps) {;
   const [isScrolled", setIsScrolled] = useState(false);
->>>>>>> main
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 =======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   const location = useLocation();
 ;
   useEffect(() => {;
@@ -129,9 +83,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             </div>;
           </Link>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
@@ -308,7 +259,6 @@ const Header = () => {
     },
     {
       name: 'Services',
->>>>>>> main
       href: '/services',
       dropdown: [
         { name: 'AI Services', href: '/ai-services' },
@@ -370,15 +320,11 @@ const Header = () => {
     },
   ];
 
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
->>>>>>> main
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -418,18 +364,9 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <MainNavigation className="hidden md: fle x"  />
-=======
-<<<<<<< HEAD
-          <MainNavigation className="hidden md:flex" />
-=======
           <nav className="hidden md:flex items-center space-x-8">
 =======
           <nav className="hidden lg:flex items-center space-x-8">
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
@@ -442,10 +379,6 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
 
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
@@ -458,19 +391,14 @@ const Header = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
           {/* Right side actions */}
           <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-<<<<<<< HEAD
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-=======
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               <Search className="w-5 h-5"  />
             </button>
@@ -478,28 +406,18 @@ const Header = () => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-<<<<<<< HEAD
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
-            >';';
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-=======
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             </button>
 
             {/* User menu */}
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-<<<<<<< HEAD
-                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
-=======
                 className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
                 aria-label="User menu"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               >
                 <User className="w-5 h-5"  />
                 <span className="hidden sm: bloc k">Account</span>
@@ -508,19 +426,7 @@ const Header = () => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
-                    onClick={() => setIsUserMenuOpen(false)}
 =======
-<<<<<<< HEAD
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    onClick={() => setIsUserMenuOpen(false)}
-=======
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -530,23 +436,13 @@ const Header = () => {
                   <Link
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
                     onClick={() => setIsUserMenuOpen(false)}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                   >
                     Sign In
                   </Link>
                   <Link
-<<<<<<< HEAD
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
-=======
                     to="/contact"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     onClick={() => setIsUserMenuOpen(false)}
                   >
                     Sign Up
@@ -559,59 +455,15 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-<<<<<<< HEAD
-              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-=======
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400"
-              >
-                <Search className="w-5 h-5"  />
-              </button>
 =======
-<<<<<<< HEAD
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-400"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-=======
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -631,7 +483,6 @@ const Header = () => {
                 <button
                   onClick={() => item.dropdown && toggleDropdown(item.name)}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
->>>>>>> main
                 >
                   <Link href={item.href}>{item.name}</Link>
                   {item.dropdown && (
@@ -641,9 +492,6 @@ const Header = () => {
                   )}
                 </button>
 
-<<<<<<< HEAD
-        {/* Search overlay */}
-=======
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -672,33 +520,6 @@ const Header = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
-        {/* Search Bar */}
->>>>>>> main
-        {isSearchOpen && (
-          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or help..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors"
-                >
-                  Search
-                </button>
-              </div>
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             </form>
           </div>
         )
@@ -707,39 +528,10 @@ const Header = () => {
     );
 }
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation  />
-          </div>
-<<<<<<< HEAD
-            </div>
-  );
-}
 =======
-<<<<<<< HEAD
-
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation />
-          </div>
-        </div>
-      )}
-=======
->>>>>>> origin/main
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
         </div>
       )}
->>>>>>> main
     </header>
   );
 }
@@ -801,7 +593,6 @@ const router = useRouter()
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
             >
               Get Started
->>>>>>> main
             </Link>
           </div>
 
@@ -876,16 +667,7 @@ const router = useRouter()
         </AnimatePresence>
       </nav>
     </header>
-<<<<<<< HEAD
-  )
-}
-    );"
-}"
-"
-=======
->>>>>>> main
   );
 };
->>>>>>> main
 
 export default Header;
