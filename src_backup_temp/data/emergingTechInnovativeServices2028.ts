@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/emergingTechInnovativeServices2028.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -303,3 +305,4 @@ import { ProductListing } from "@/types/listings"; export const EMERGING_TECH_IN
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/emergingTechInnovativeServices2028.ts

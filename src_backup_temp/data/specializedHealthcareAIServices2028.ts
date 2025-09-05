@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedHealthcareAIServices2028.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,3 +359,4 @@ export interface HealthcareAIService2028 { id: string; title: string; descriptio
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedHealthcareAIServices2028.ts

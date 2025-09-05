@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/advancedCybersecurityServices2027.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -203,3 +205,4 @@ export interface AdvancedCybersecurityService { id: string; name: string; descri
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/advancedCybersecurityServices2027.ts

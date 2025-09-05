@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/advancedEnterpriseSolutions2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -394,3 +396,4 @@ export interface EnterpriseSolution { id: string; title: string; description: st
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/advancedEnterpriseSolutions2025.ts

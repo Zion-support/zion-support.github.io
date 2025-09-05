@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensive-real-services-2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,3 +56,4 @@ export interface ComprehensiveService { id: string; name: string; tagline: strin
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensive-real-services-2025.ts
