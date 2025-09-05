@@ -141,9 +141,34 @@ const faqs = [
   }
 ]
 
+const contactMethods = [
+  {
+    title: "Live Chat",
+    description: "Get instant help from our support team",
+    icon: MessageCircle,
+    available: "24/7",
+    responseTime: "Immediate"
+  },
+  {
+    title: "Email Support",
+    description: "Send us a detailed message",
+    icon: Mail,
+    available: "24/7",
+    responseTime: "Within 2 hours"
+  },
+  {
+    title: "Phone Support",
+    description: "Speak directly with our experts",
+    icon: Phone,
+    available: "Mon-Fri 9AM-6PM EST",
+    responseTime: "Immediate"
+  }
+]
+
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   return (
     <div className="min-h-screen bg-gray-50">
