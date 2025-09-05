@@ -25,5 +25,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "automation/**/*", "automation_backup/**/*", "pages.disabled/**/*", "pages.broken/**/*", "pages.bak/**/*", "pages._quarantine/**/*", "pages._archive_corrupted/**/*", "pages-disabled/**/*", "pages-quarantine/**/*", "pages.__backup/**/*", "src.disabled/**/*", "temp_broken_files/**/*", "temp-backup/**/*", "corrupted-files-backup/**/*", "**/*.disabled", "**/*.backup", "**/*.broken", "**/*.bak"]
 }
