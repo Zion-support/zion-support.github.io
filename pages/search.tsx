@@ -53,57 +53,43 @@ const searchResults = [
     type: "Resource",
     href: "/blog",
     icon: FileText
-  },
-  {
+  }
 ];
 
-export default function SearchPage() {},
-  {
+export default function SearchPage() {
   const router = useRouter();
-  const ["searchQuery", "setSearchQuery"] = useState('');
-  const ["results", "setResults"] = useState(searchResults);
-  const ["isLoading", "setIsLoading"] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [results, setResults] = useState(searchResults);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {},
-  {
-    if (router.query.q) {},
-  {
+  useEffect(() => {
+    if (router.query.q) {
       setSearchQuery(router.query.q as string);
-      performSearch(router.query.q as string)
-  },
-  {
-  },
-  { ["router.query.q"]);
+      performSearch(router.query.q as string);
+    }
+  }, [router.query.q]);
 
-  const performSearch = (query: string) => {},
-  {
+  const performSearch = (query: string) => {
     setIsLoading(true);
     
-    // Simulate search delay;
-    setTimeout(() => {},
-  {
-      const filteredResults = searchResults.filter(item =>)
+    // Simulate search delay
+    setTimeout(() => {
+      const filteredResults = searchResults.filter(item =>
         item.title.toLowerCase().includes(query.toLowerCase()) ||
         item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.type.toLowerCase().includes(query.toLowerCase());
+        item.type.toLowerCase().includes(query.toLowerCase())
       );
       setResults(filteredResults);
-      setIsLoading(false)
-  },
-  { 300)
-  },
-  {
+      setIsLoading(false);
+    }, 500);
+  };
 
-  const handleSearch = (e: React.FormEvent) => {},
-  {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {},
-  {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);`
-    },
-  {
-  },
-  {
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+    }
+  };
 
   return (
     <Layout
@@ -112,46 +98,39 @@ export default function SearchPage() {},
       keywords="search, find, services, solutions, resources"
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */},
-  {
+        {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
-  {
-              animate={{ opacity: 1, y: 0 }},
-  {
-              transition={{ duration: 0.8 }},
-  {
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Search Results;
+                Search Results
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Find exactly what you're looking for;
+                Find exactly what you're looking for
               </p>
               
-              {/* Search Form */},
-  {
+              {/* Search Form */}
               <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
                   <input
                     type="text"
-                    value={searchQuery},
-  {
-                    onChange={(e) => setSearchQuery(e.target.value)},
-  {
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search services, solutions, resources..."
                     className="w-full pl-12 pr-4 py-4 text-lg bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    autoFocus;
+                    autoFocus
                   />
                   <button
                     type="submit"
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    Search;
+                    Search
                   </button>
                 </div>
               </form>
@@ -159,16 +138,14 @@ export default function SearchPage() {},
           </div>
         </section>
 
-        {/* Search Results */},
-  {
+        {/* Search Results */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              {router.query.q && (})
+              {router.query.q && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }},
-  {
-                  animate={{ opacity: 1, y: 0 }},
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
   {
                   transition={{ duration: 0.5 }},
   {

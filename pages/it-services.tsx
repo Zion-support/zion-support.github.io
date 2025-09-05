@@ -376,6 +376,132 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations Management',
+    description: 'Intelligent IT operations with automated incident response and predictive maintenance.',
+    icon: Cpu,
+    features: ['Automated Incident Response', 'Predictive Maintenance', 'Performance Optimization', 'Root Cause Analysis'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Zero Trust Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Nodes', 'Low Latency', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Compliance', 'Workload Migration'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API management with security, monitoring, and developer portal.',
+    icon: Code,
+    features: ['API Security', 'Rate Limiting', 'Analytics Dashboard', 'Developer Portal'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete ITSM implementation with service desk, change management, and asset tracking.',
+    icon: Settings,
+    features: ['Service Desk', 'Change Management', 'Asset Tracking', 'SLA Management'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Data Center Modernization',
+    description: 'Modern data center design and implementation with energy efficiency and scalability.',
+    icon: Server,
+    features: ['Modern Architecture', 'Energy Efficiency', 'Scalable Design', 'Disaster Recovery'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Data Center',
+    popular: true
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'Comprehensive IT compliance management with automated reporting and audit trails.',
+    icon: CheckCircle,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Audit Trails', 'Policy Management'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices design and implementation with container orchestration and service mesh.',
+    icon: Server,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'API Gateway'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'IT Automation & Orchestration',
+    description: 'Comprehensive IT automation with workflow orchestration and self-healing systems.',
+    icon: Settings,
+    features: ['Workflow Automation', 'Self-healing Systems', 'Configuration Management', 'Deployment Automation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Automation',
+    popular: true
+  },
+  {
+    title: 'Digital Workplace Solutions',
+    description: 'Modern digital workplace implementation with collaboration tools and productivity solutions.',
+    icon: Users,
+    features: ['Collaboration Tools', 'Productivity Solutions', 'Unified Communications', 'Mobile Access'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Digital Workplace',
+    popular: true
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Comprehensive IT performance monitoring with real-time analytics and alerting.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Automated Alerting', 'Capacity Planning'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Performance Monitoring',
+    popular: true
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Intelligent cloud cost optimization with automated rightsizing and resource management.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Automated Rightsizing', 'Resource Optimization', 'Budget Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Cloud Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and implementation with testing and validation.',
+    icon: Shield,
+    features: ['Recovery Planning', 'Testing & Validation', 'RTO/RPO Optimization', 'Business Continuity'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Disaster Recovery',
+    popular: true
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
@@ -713,6 +839,96 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </motion.div>
                   </div>
                   </section>
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with IT Services Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
+              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className="text-green-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+          <motion.div
+            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6">
+              Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Start Building
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
                   </div>
   );
 }

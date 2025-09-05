@@ -551,6 +551,132 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Customer Sentiment Analysis',
+    description: 'Advanced sentiment analysis for customer feedback, reviews, and social media monitoring.',
+    icon: MessageSquare,
+    features: ['Real-time Analysis', 'Multi-language Support', 'Emotion Detection', 'Trend Analysis'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent equipment maintenance prediction using IoT sensors and machine learning.',
+    icon: Settings,
+    features: ['Sensor Integration', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'IoT & Maintenance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for social platforms with real-time filtering and classification.',
+    icon: Eye,
+    features: ['Real-time Filtering', 'Multi-modal Detection', 'Custom Rules', 'Scalable Processing'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Advanced neural machine translation with context awareness and domain specialization.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Domain Adaptation', 'Real-time Processing'],
+    pricing: '$0.50 - $5.00 per 1K characters',
+    category: 'Language Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Image Recognition',
+    description: 'Advanced computer vision for object detection, classification, and scene understanding.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Scene Understanding', 'Custom Models'],
+    pricing: '$0.10 - $1.00 per image',
+    category: 'Computer Vision',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Synthesis',
+    description: 'Natural-sounding voice generation with emotion control and multiple language support.',
+    icon: Mic,
+    features: ['Natural Voice', 'Emotion Control', 'Multi-language', 'Custom Voices'],
+    pricing: '$0.50 - $3.00 per 1K characters',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Anonymization',
+    description: 'Intelligent data anonymization and privacy protection for sensitive datasets.',
+    icon: Lock,
+    features: ['Privacy Protection', 'Data Masking', 'Compliance Tools', 'Risk Assessment'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'Data Privacy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Classification',
+    description: 'Intelligent email categorization, spam detection, and priority scoring.',
+    icon: Mail,
+    features: ['Auto Categorization', 'Spam Detection', 'Priority Scoring', 'Workflow Integration'],
+    pricing: '$500 - $3,000/month',
+    category: 'Email Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Inventory Optimization',
+    description: 'Smart inventory management with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Stock Optimization', 'Supplier Integration'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Inventory Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Detection',
+    description: 'Advanced threat detection and response using behavioral analysis and machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Dynamic personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Multi-channel'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Personalization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Document Summarization',
+    description: 'Intelligent document summarization with key point extraction and multi-language support.',
+    icon: FileText,
+    features: ['Key Point Extraction', 'Multi-language', 'Custom Length', 'Format Options'],
+    pricing: '$0.10 - $0.50 per document',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using market analysis and demand forecasting.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Demand Forecasting', 'Competitor Monitoring'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Pricing Strategy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Chatbot Development',
+    description: 'Custom chatbot development with natural language understanding and integration.',
+    icon: Bot,
+    features: ['NLP Integration', 'Multi-platform', 'Custom Training', 'Analytics Dashboard'],
+    pricing: '$2,000 - $15,000 setup',
+    category: 'Conversational AI',
+    popular: true
   }
 ];
 const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
@@ -809,6 +935,96 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </motion.div>
                   </div>
                   </section>
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with AI Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to harness the power of artificial intelligence? Our expert team is here to help you implement cutting-edge AI solutions that drive real business value. Contact us for a free consultation and discover how AI can transform your organization.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free AI Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your AI project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your AI project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 font-semibold hover:text-blue-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
+              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className="text-blue-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+          <motion.div
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6">
+              Join 500+ successful businesses that trust Zion Tech Group for their AI development needs. Let&apos;s build the perfect AI solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Start Building
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
                   </div>
   );
 }

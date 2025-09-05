@@ -46,7 +46,11 @@ import {
   Home,
   Trash2,
   Camera,
-  HardDrive
+  HardDrive,
+  QrCode,
+  Palette,
+  Type,
+  Link as LinkIcon
 } from 'lucide-react';
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
@@ -421,6 +425,177 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature creation with brand consistency and compliance features.',
+    icon: Mail,
+    features: ['Brand Templates', 'Compliance Checking', 'Bulk Generation', 'Analytics Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'Email Marketing',
+    popular: true
+  },
+  {
+    title: 'Smart Meeting Scheduler AI',
+    description: 'Intelligent meeting scheduling with timezone optimization and conflict resolution.',
+    icon: Calendar,
+    features: ['Timezone Detection', 'Conflict Resolution', 'Auto Rescheduling', 'Calendar Integration'],
+    pricing: '$29 - $149/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Password Manager Pro',
+    description: 'Advanced password management with AI-powered security recommendations and breach monitoring.',
+    icon: Lock,
+    features: ['Security Scoring', 'Breach Monitoring', 'Auto Generation', 'Team Sharing'],
+    pricing: '$9 - $49/month',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Intelligent Expense Tracker',
+    description: 'Smart expense tracking with receipt OCR and automatic categorization using AI.',
+    icon: DollarSign,
+    features: ['Receipt OCR', 'Auto Categorization', 'Tax Preparation', 'Team Management'],
+    pricing: '$19 - $99/month',
+    category: 'Finance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Logo Generator',
+    description: 'Professional logo creation using AI with brand guidelines and multiple format exports.',
+    icon: Image,
+    features: ['AI Design', 'Brand Guidelines', 'Multiple Formats', 'Commercial License'],
+    pricing: '$29 - $199/month',
+    category: 'Design',
+    popular: true
+  },
+  {
+    title: 'Smart Website Uptime Monitor',
+    description: 'Advanced website monitoring with AI-powered incident prediction and automated responses.',
+    icon: Monitor,
+    features: ['Predictive Alerts', 'Auto Response', 'Performance Analysis', 'SLA Tracking'],
+    pricing: '$39 - $199/month',
+    category: 'Monitoring',
+    popular: true
+  },
+  {
+    title: 'AI-Powered QR Code Generator',
+    description: 'Dynamic QR code generation with analytics, customization, and batch processing capabilities.',
+    icon: QrCode,
+    features: ['Dynamic Codes', 'Analytics Tracking', 'Custom Design', 'Batch Processing'],
+    pricing: '$19 - $99/month',
+    category: 'Marketing Tools',
+    popular: true
+  },
+  {
+    title: 'Intelligent Form Builder',
+    description: 'AI-powered form creation with smart validation, conditional logic, and analytics.',
+    icon: FileText,
+    features: ['Smart Validation', 'Conditional Logic', 'Analytics Dashboard', 'API Integration'],
+    pricing: '$29 - $149/month',
+    category: 'Form Builder',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Color Palette Generator',
+    description: 'Professional color palette creation with accessibility checking and brand consistency.',
+    icon: Palette,
+    features: ['AI Generation', 'Accessibility Check', 'Brand Matching', 'Export Options'],
+    pricing: '$19 - $79/month',
+    category: 'Design Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Invoice Generator Pro',
+    description: 'AI-powered invoice creation with automated calculations, payment tracking, and compliance.',
+    icon: FileText,
+    features: ['Auto Calculations', 'Payment Tracking', 'Tax Compliance', 'Multi-Currency'],
+    pricing: '$29 - $149/month',
+    category: 'Invoicing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Text Summarizer',
+    description: 'Advanced text summarization with multiple languages and customizable output formats.',
+    icon: FileText,
+    features: ['Multi-Language', 'Custom Length', 'Format Options', 'API Access'],
+    pricing: '$19 - $99/month',
+    category: 'Content Tools',
+    popular: true
+  },
+  {
+    title: 'Intelligent Backup Manager',
+    description: 'Smart backup solution with AI-powered deduplication and automated scheduling.',
+    icon: HardDrive,
+    features: ['AI Deduplication', 'Auto Scheduling', 'Version Control', 'Cloud Storage'],
+    pricing: '$39 - $199/month',
+    category: 'Backup Solutions',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Font Pairing Tool',
+    description: 'Intelligent font pairing suggestions with accessibility and brand consistency checks.',
+    icon: Type,
+    features: ['AI Suggestions', 'Accessibility Check', 'Brand Matching', 'Preview Tools'],
+    pricing: '$19 - $79/month',
+    category: 'Typography',
+    popular: true
+  },
+  {
+    title: 'Smart Social Media Scheduler',
+    description: 'AI-powered social media scheduling with optimal timing and content optimization.',
+    icon: Calendar,
+    features: ['Optimal Timing', 'Content Optimization', 'Multi-Platform', 'Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'Social Media',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Website Speed Optimizer',
+    description: 'Automated website performance optimization with AI-powered recommendations.',
+    icon: Zap,
+    features: ['Auto Optimization', 'Performance Monitoring', 'CDN Integration', 'Image Compression'],
+    pricing: '$49 - $299/month',
+    category: 'Performance',
+    popular: true
+  },
+  {
+    title: 'Intelligent Email Validator',
+    description: 'Advanced email validation with deliverability scoring and bounce prediction.',
+    icon: Mail,
+    features: ['Deliverability Scoring', 'Bounce Prediction', 'Bulk Validation', 'API Integration'],
+    pricing: '$19 - $99/month',
+    category: 'Email Tools',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Screenshot Tool',
+    description: 'Smart screenshot capture with automatic annotation and sharing capabilities.',
+    icon: Camera,
+    features: ['Auto Annotation', 'Smart Capture', 'Cloud Storage', 'Team Sharing'],
+    pricing: '$9 - $49/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Smart URL Shortener Pro',
+    description: 'Advanced URL shortening with analytics, custom domains, and QR code generation.',
+    icon: LinkIcon,
+    features: ['Custom Domains', 'Analytics Dashboard', 'QR Generation', 'Bulk Operations'],
+    pricing: '$19 - $99/month',
+    category: 'URL Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Favicon Generator',
+    description: 'Professional favicon creation with multiple sizes and formats for all devices.',
+    icon: Image,
+    features: ['Multiple Sizes', 'Format Options', 'Preview Tools', 'Bulk Generation'],
+    pricing: '$9 - $49/month',
+    category: 'Web Tools',
     popular: true
   }
 ];
