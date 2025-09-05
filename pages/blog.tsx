@@ -96,6 +96,9 @@ export default function BlogPage() {
                 Stay ahead with the latest insights on AI, technology trends, and business innovation
               </p>
             </motion.div>
+          </div>
+        </section>
+
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
