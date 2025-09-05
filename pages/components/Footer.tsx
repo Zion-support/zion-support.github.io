@@ -45,8 +45,7 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers,
-  Database
+  Layers
 } from 'lucide-react';
 
 const footerSections = [
@@ -56,24 +55,24 @@ const footerSections = [
       { title: 'AI Services', href: '/ai-services', icon: Brain },
       { title: 'IT Services', href: '/it-services', icon: Network },
       { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { title: 'Process Automation', href: '/process-automation', icon: Zap },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings }
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
+      { title: 'Blockchain', href: '/blockchain', icon: Lock },
+      { title: 'IoT Solutions', href: '/iot', icon: Globe },
+      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
+      { title: 'Space Technology', href: '/space-tech', icon: Settings }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
-      { title: 'AI Integration', href: '/ai-integration', icon: Brain },
-      { title: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-      { title: 'Process Automation', href: '/process-automation', icon: Zap },
-      { title: 'Data Management', href: '/data-management', icon: Database },
-      { title: 'Security Assessment', href: '/security-assessment', icon: Shield },
-      { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock }
+      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+      { title: 'Startup Solutions', href: '/startup', icon: Settings },
+      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Automation', href: '/automation', icon: Zap },
+      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
+      { title: 'Custom Development', href: '/custom-development', icon: Code }
     ]
   },
   {
@@ -85,7 +84,7 @@ const footerSections = [
       { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { title: 'Education', href: '/industries/education', icon: BookOpen },
       { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
-      { title: 'Government', href: '/industries/government', icon: Building },
+      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
       { title: 'Energy', href: '/industries/energy', icon: Zap }
     ]
   },
@@ -98,8 +97,8 @@ const footerSections = [
       { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
       { title: 'API Documentation', href: '/api-docs', icon: Code },
-      { title: 'Pricing Calculator', href: '/pricing-calculator', icon: Calculator },
-      { title: 'ROI Calculator', href: '/roi-calculator', icon: TrendingUp }
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'FAQ', href: '/faq', icon: MessageSquare }
     ]
   },
   {
@@ -110,20 +109,22 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
-      { title: 'Awards', href: '/awards', icon: Award },
-      { title: 'Contact', href: '/contact', icon: MessageSquare }
+      { title: 'Contact', href: '/contact', icon: MessageSquare },
+      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
+      { title: 'Terms of Service', href: '/terms', icon: FileText }
     ]
   },
   {
     title: 'Support',
     links: [
       { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Contact Us', href: '/contact', icon: Phone },
-      { title: 'Status Page', href: '/status', icon: BarChart3 },
       { title: 'Documentation', href: '/docs', icon: FileText },
+      { title: 'API Reference', href: '/api', icon: Code },
+      { title: 'Status Page', href: '/status', icon: BarChart3 },
       { title: 'Community', href: '/community', icon: Users },
       { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'Free Consultation', href: '/consultation', icon: Calendar }
+      { title: 'Free Consultation', href: '/consultation', icon: Calendar },
+      { title: 'Get Quote', href: '/quote', icon: FileText }
     ]
   }
 ];
