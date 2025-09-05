@@ -350,7 +350,10 @@ export {NotFound};
 export {NotFound};
 ;
 export {NotFound};
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>
 </motion>';
@@ -366,11 +369,9 @@ export {NotFound};
 </motion>;
 </motion>;
 import React from 'react';
-
 interface NotFound.jsProps {
   // Add props here as needed
 }
-
 export default function NotFound.js({ }: NotFound.jsProps) {
   return (
     <div>
@@ -378,4 +379,8 @@ export default function NotFound.js({ }: NotFound.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

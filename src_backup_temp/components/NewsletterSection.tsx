@@ -7,22 +7,17 @@ import React from 'react';
   ];
 ;
   if(isSubscribed) {;
-
     return (";
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">";
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <motion.div;
             initial = {;
-
   { "opacity": "0",;
   "scale": "0.8;
-
 "}}
             animate = {;
-
   { "opacity": "1",;
   "scale": "1;
-
 "}}
             transition={{ "duration": "0.5 "}}";
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20";
@@ -49,16 +44,12 @@ import React from 'react';
           {/* Left Column - Content */"}
           <motion.div;
             initial = {;
-
   { "opacity": "0",;
   "x": "-30;
-
 "}}
             whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}}
             transition={{ "duration": "0.6 "}}
 ";
@@ -73,22 +64,30 @@ import React from 'react';
                 <motion.div;
                   key={index}
                   initial = {;
-
   { "opacity": "0",;
   "x": "-20;
-
 "}}
                   whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}}
                   transition = {;
-
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
+<<<<<<< HEAD
 
+=======
+"}}";
+                  className="flex items-start";
+";
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
+                    <benefit.icon className="w-6 h-6 text-white" />;
+                  </div>;
+                  <div>";
+                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
+                    <p className="text-gray-400">{benefit.description}</p>;
+                  </div>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }}"
                   className="flex items-start"
 "
@@ -106,26 +105,41 @@ import React from 'react';
               <CheckCircle className="w-5 h-5 text-green-400 mr-2"   />              <span>No spam, unsubscribe at  time</span>;
             </div>;
           </motion.div>;
-
           {/* Right Column - Newsletter Form */}
           <motion.div;
             initial = {;
-
   { "opacity": "0",;
   "x": "3 0;
-
 "}}
             whileInView = {;
-
   { "opacity": "1",;
   "x": "0;
-
 "}}
             transition = {;
-
   { "duration": "0.6",;
   "delay": "0.2;
+<<<<<<< HEAD
 
+=======
+"}}
+          >";
+            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
+              <div className="text-center mb-6">";
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">";
+                  <Mail className="w-8 h-8 text-white"   />;
+                </div>";
+                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>;
+              </div>;
+";
+              <form onSubmit={handleSubmit} className="space-y-4">;
+                <div>";
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">;
+                    Email Address;
+                  </label>;
+                  <input";
+                    type="email";
+                    id="email";
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
@@ -151,12 +165,10 @@ import React from 'react';
                     required;
                   />;
                 </div>;
-
                 <button";
                   type="submit";
                   disabled={isLoading || !email"}";
                   className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg "hover": "fro m-cyan-600 "hover": t o-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed transition-all duration-300 transform "hover": scal e-105 "hover": shado w-lg "hover": shado w-cyan-500/25 flex items-center justify-center";
-
                   {isLoading ? (;";
                     <div className="flex items-center">";
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>;
@@ -189,7 +201,6 @@ import React from 'react';
     </section>;) "};
 ;
 export default NewsletterSection}}}'";
-
 </motion>;
 </motion>;
 </motion>;

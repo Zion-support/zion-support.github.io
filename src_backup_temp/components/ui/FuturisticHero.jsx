@@ -362,17 +362,19 @@ export default function FuturisticHero(props: any) {}
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </div>
 </motion>
@@ -403,4 +405,8 @@ export {FuturisticHero};
 </motion>;
 </section>;
 </motion>
+<<<<<<< HEAD
 </section>
+=======
+</section>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

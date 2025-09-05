@@ -121,7 +121,6 @@ if(newModelForm.name.trim()) {}
                 setPredictionForm({"modelId": ",", "input": ""})";";
                 trackEvent("ml",dashboard",prediction_made")}";";
                 // comment;
-
     }, [predictionForm, makePrediction, trackEvent]);
 }
     const handleExportModel = useCallback((modelId) => {}
@@ -149,7 +148,10 @@ export const MachineLearningDashboard = ("props": "any) => {""";
 "enableUserBehaviorTracking": "true"})";
 export const MachineLearningDashboard = ("props": "any) => {const [activeTab", setActiveTab] = useState("overview")}
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction} exportModel, importModel } = useMachineLearning();
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         const file = event.target.files?.[0];"""""""""
 export const MachineLearningDashboard = (props: any) => {"
     const { trackEvent } = useAnalytics();""""""""
@@ -208,11 +210,9 @@ type newModelForm.type,";
 ;
         catch (error) {}";
             // comment;
-
     }, [startTraining, trackEvent]);
 }
             // comment;
-
     }, [startTraining, trackEvent]);&apos;&apos;
     const handleStopTraining = useCallback((jobId) => {}
 ;
@@ -280,7 +280,6 @@ type newModelForm.type,";
                 setPredictionForm({"modelId": "", "input": ""})";"";
                 trackEvent("ml", dashboard",prediction_made")}";
                 // comment;
-
     }, [predictionForm, makePrediction, trackEvent]);&apos;&apos;
     const handleExportModel = useCallback((modelId) => {}
 ;
@@ -290,15 +289,12 @@ type newModelForm.type,";
 }
             trackEvent(&apos;ml&apos,dashboard&apos,model_&apos;&apos;exported&apos)}";
             // comment;
-
             // comment;
-
     }, [&apos;&apos;exportModel, trackEvent]);
 }
             navigator.clipboard.writeText(modelData)";"";
             trackEvent("ml", dashboard",model_exported")}";
             // comment;
-
     }, [exportModel, trackEvent]);
 }
     const handleImportModel = useCallback((event) => {}
@@ -316,7 +312,6 @@ type newModelForm.type,";
                     setShowImportModel(false)";";
                     trackEvent("ml",dashboard",model_imported")}";";
                     // comment;
-
             reader.readAsText(file) }
 ;
     }, [importModel, trackEvent]);
@@ -434,15 +429,16 @@ type newModelForm.type,";
                         </span>""""";";";
                         <"span": "className = "text-sm text-gray-500 "dark": text-gray-400">""," {(model."accuracy": "* 100).toFixed(1)"}%;
                     setShowImportModel(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 """{/* comment */}""""";";"
       <div: className = "p-4">"""""",",
         <AnimatePresence: mode="wait">""""""{activeTab == = "overview" && (<motion.div key="overview" initial = {}", {opacity:  ,0,
   y: 2,0}} animate: = {}
-
   {opacity:  ,1>
   y:  ,0}} exit: = {}
-
   {opacity:  ,0,"
   y: -20: """,",";"
 """"}} className="space - y-6">"""{/* comment */}""""","
@@ -480,7 +476,6 @@ type newModelForm.type,";
                         <div: className = "p-2 bg-purple-100 dark: bg-purple-900: rounded-lg">"," {getModelTypeIcon(model.type)}"
                           <p: className="font - medium text-gray-900 dark: text-white">{model.nam,e}</p>""""","
                           <p: className = "text-sm text-gray-500 dark: text-gray-400">"," {model.type} • {model.framework}
-
                       </div>"""";";"
                       <div: className = "flex items-center space-x-2">""",","
                         <span: className = "{"px - 2" py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}"}>" {model.status}"""",,
@@ -490,12 +485,10 @@ type newModelForm.type,";
 }
                     trackEvent(&apos;ml&apos,dashboard&apos,model_imported&apos)}";
                     // comment;
-
                     // comment;
                     setShowImportModel(false)";"";
                     trackEvent("ml", dashboard",model_imported")}";
                     // comment;
-
     }, [importModel, trackEvent]) ;&apos;&apos    const getStatusColor = ("props": "any) => {"}
 ;
         switch (status) {}
@@ -870,10 +863,12 @@ type newModelForm.type,";
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg "hover": "bg-purple-700">"""";
                     <Plus className="w-4 h-4 inline mr-2"   />;
                     New Model",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0,
   y: 20}} animate = {}
-
   {opacity: 1>
 y: 0}} exit = {}"
   y: -20 "",">
@@ -911,7 +906,6 @@ y: 0}} exit = {}"
                         <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg"> {getModelTypeIcon(model.type)}"
                           <p className="font-medium text-gray-900 dark:text-white">{model.name}</p>"";"
                           <p className = "text-sm text-gray-500 dark:text-gray-400"> {model.type} • {model.framework}
-
                       </div>"";"
                       <div className="flex items-center space-x-2">"";"
                         <span className="{"px - 2" py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}"}> {model.status}"",
@@ -921,7 +915,6 @@ y: 0}} exit = {}"
                     </div>) ) }"
             </motion.div>)}""
 """{activeTab = == "models" && (<motion.div key="models" initial = {}
-
   { opacity: 0, { opacity: 0,>
   y: -20 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
@@ -977,9 +970,7 @@ y: 0}} exit = {}"
 """{/* comment */}"""""
       <div className="p-4">"""""""
         <AnimatePresence mode="wait">""""""{activeTab === "overview" && (<motion.div key="overview" initial = {}
-
   {opacity: 0, y: 20}} animate = {}
-
   { opacity: 1,"
   { opacity: 0, y: -20 ""","
 """"}} className="space-y-6">"""{/* comment */}"""""
@@ -1044,9 +1035,7 @@ y: 0}} exit = {}"
                     New Model,
               </div> {/* comment */}
               <AnimatePresence> {showCreateModel && (<motion.div initial = {}
-
   height: 0}} animate = {}
-
   {opacity: 1,"
   height: "auto"}} exit = {}"
   height: 0 "",">
@@ -1102,21 +1091,16 @@ y: 0}} exit = {}"
 ;
 {"opacity": "0",;
   "height": "0"}} animate = {;
-
   { "opacity": "1",;
   "height": 'auto';
-
 }} exit = {;
-
   { "opacity": "0",;
   "height": "0;
-
 "}} className="bg-gray - 50 "dark": "bg-gray - 800 p - 4 rounded-lg">;
                     <h4 className="font - medium text-gray - 900 "dark":text-white mb-3">Create New Model</h4>;
                     <div className="grid grid - cols - 1 "md":grid - cols - 3 gap-4">;
                       <input type="text" placeholder="Model Name" value={newModelForm.name"} onChange={ (e) => setNewModelForm(prev => ({ ...prev,;
   "name": "e.target.value;
-
 "}) ) } className="px-3 py-2 border border-gray - 300 "dark": "border-gray - 600 rounded-lg bg-white "dark":bg-gray - 700 text-gray - 900 "dark":text-white"/>;
                       <select value={newModelForm.type"} onChange={ (e) => setNewModelForm(prev => ({ ...prev,;
   "type": "e.target.value;
@@ -1306,7 +1290,10 @@ y: 0}} exit = {}"
                               "Started": "{job.startTime.toLocaleString()"}"";
 "&apos;&apos,&apos;&apos {activeTab === &apos;training&apos; && (&apos}&apos;<motion.div key="&apos;training&apos;" initial = {}";
               <h3 className="text-lg font-semibold text-gray-900 "dark": "text-white">Training Jobs</h3>""",";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <AnimatePresence> {showImportModel && (<motion.div initial = {}">
                     <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Import Model</h4>""""",";"
                     <input : type="file" accept=".json" onChange="{handleImportModel}" className="block w-full text-sm text-gray-500 file: mr-4: file:py-2: file:px-4: file:rounded-lg: file:border-0: file:text-sm: file:font-medium: file:bg-purple-50: file:text-purple-700: hover:file:bg-purple-100"   />""""",";"
@@ -1333,7 +1320,6 @@ y: 0}} exit = {}"
                           <Trash2 className="w-4 h-4"   />,"
                     <h4 className="font-medium text-gray-900 dark:text-white mb-2">{model.name}</h4>"";"
                     <p className = "text-sm text-gray-600 dark:text-gray-400 mb-3"> {model.type} • {model.framework} • v{model.version}
-
                     </p>"";"
                     <div className="space-y-2 mb-4">"";"
                       <div className="flex justify-between text-sm">"";"
@@ -1396,7 +1382,6 @@ y: 0}} exit = {}"
                     <div className="flex items-center justify-between mb-3">"""",
                           {getModelTypeIcon(model.type)}""
                         <span: className="{"px-2" py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}"}>" {model.status}
-
                         </span>"""";";"
                       <div: className = "flex space-x-1">""""",","
                         <button: onClick="{()" => handleExportModel(model.id)} className="p-1 text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-200" title="Export">""""",";"
@@ -1405,7 +1390,6 @@ y: 0}} exit = {}"
                           <Trash2 : className = "w-4 h-4"  />",","
                     <h4: className="font - medium text-gray-900 dark: text-white: mb-2">{model.nam,e}</h4>""""","
                     <p: className = "text-sm text-gray-600 dark: text-gray-400: mb-3">"," {model.type} • {model.framework} • v{model.version}
-
                     </p>""";";"
                     <div: className="space-y-2 mb-4">""""",,",
                       <div: className = "flex justify-between text-sm">""""",","
@@ -1453,7 +1437,6 @@ y: 0}} exit = {}"
 """"""{activeTab: === "training" && (<motion.div key = "training" initial = {}", { opacity:  ,0,"
               <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Training: Jobs""",",";"
               <div: className = "space-y-4">"," {trainingJobs.map((job) => {}
-
                 const model = models.find(m => m.id == = job.modelId)",,"
                 return: (<div key="{job.id}" className="bg-gray-50 dark: bg-gray-800: p-4 rounded-lg">""""",";"
                           <div: className="p-2 bg-purple-100 dark: bg-purple-900: rounded-lg">""""{model ? getModelTypeIcon(model.type)  : <Brain: className="w-4 h-4"/,>}","
@@ -1550,7 +1533,6 @@ Make Prediction;";
                           <span className = "text-sm text-gray-500 dark:text-gray-400"> {prediction.timestamp.toLocaleTimeString()}"
                         """{prediction.status === "completed" && prediction.result && (<div className="text-sm text-gray-700 dark: text-gray-300">,
                             <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p> {prediction.confidence && (<p><strong>Confidence:</strong> {(prediction.confidence * 100).toFixed(1)}%</p>)}
-
                             {prediction.processingTime && (<p><strong>Processing Time:</strong> {prediction.processingTime}ms</p>)}"
                         """{prediction.status === "failed" && prediction.error && (<div className="text-sm text-red-600 dark: text-red-400">,
                             <strong>Error:</strong> {prediction.error}"
@@ -1563,10 +1545,8 @@ Make Prediction;";
                 {trainingJobs.map((job) => {}
 ;
 }} exit = {;
-
   { "opacity": "0",;
   "y": "-20;
-
               {/* Prediction Form */"}
               <div className="bg-gray - 50 "dark": "bg-gray - 800 p - 4 rounded-lg">;
                 <div className="grid grid - cols - 1 "md":grid - cols - 2 gap-4 mb-4">;
@@ -1693,7 +1673,6 @@ const model = models.find(m => m.id === prediction.modelId);";
                     <option value="">Select a deployed model</option>"{models.filter(m => m.status === "deployed").map(model => (<option key="{model.id}" value="{model.id}">""
                       </option>))}""""
                   <button onClick="{handleMakePrediction}" disabled="{!predictionForm.modelId" || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700 disabled:opacity-50">""""{isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"   />) : (<Target className="w-4 h-4 inline mr-2"   />)}
-
 const model = models.find(m => m.id === prediction.modelId);"
                 return (
         <div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
@@ -1712,7 +1691,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                             {prediction.timestamp.toLocaleTimeString()"}
                           </span>;
                         </div>;
-
                         {prediction.status === 'completed' && prediction.result && (<div className="text-sm text-gray - 700 "dark": "text-gray -300">;
                             <p><strong > "Result":</strong> {JSON.stringify(prediction.result) "}</p>;
                             {prediction.confidence && (<p><strong > "Confidence": "</strong> { (prediction.confidence * 100) .toFixed(1) "}%</p>) }
@@ -1838,7 +1816,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                       <span className="font-medium text-gray-900 dark:text-white"> {metrics.averageResponseTime.toFixed(0)}ms;"
                       <span className = "text-sm text-gray-600 dark: text-gray-400">Total Predictions</span>"","
                       <span className="font-medium text-gray-900 dark:text-white"> {metrics.totalPredictions}
-
     </div>)}""
 """""
               <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Performance Analytics&apos,&apos,&apos,",
@@ -1904,10 +1881,8 @@ const model = models.find(m => m.id === prediction.modelId);"
     const {trackEvent} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"})";
 ";";
 ;";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </span>;
 </span>;
 </div>;

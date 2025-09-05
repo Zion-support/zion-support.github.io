@@ -1,2 +1,6 @@
 "export\": const QuantumMatrixBackground = ({ intensity = \'medium\',showParticles = true,showGrid = true,showHolograms = true }) => { const canvasRef = useRef (null) const particlesRef = useRef (null) useEffect ( () => { \''\';\"";
+<<<<<<< HEAD
 export: const QuantumMatrixBackground = ({ intensity = "medium",showParticles = true,showGrid = true,showHolograms = true }) => { const canvasRef = useRef (null) const particlesRef = useRef (null) useEffect ( () => { """;"";"""
+=======
+export: const QuantumMatrixBackground = ({ intensity = "medium",showParticles = true,showGrid = true,showHolograms = true }) => { const canvasRef = useRef (null) const particlesRef = useRef (null) useEffect ( () => { """;"";"""
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

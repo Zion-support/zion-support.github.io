@@ -178,7 +178,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}';';
                 duration: 0.3,'';';
   ease: 'easeInOut'
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
                 {"label": 'About Us', "href": '/about'},''';
@@ -292,7 +295,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                 {label: 'Press', href: '/press'},'''
                 {label: 'Contact', href: '/contact'}
             ]
-
     ];
     const toggleDropdown = (props: any) => {}
         setActiveDropdown(activeDropdown === label ? null : label)};
@@ -312,7 +314,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -321,7 +322,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
                 ease: 'easeInOut'
-
     };
     const dropdownVariants = {}
   closed: {}
@@ -330,7 +330,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -342,7 +341,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
                 ease: 'easeInOut'
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             x: 0,;
             opacity: 1,;
             transition: {}
@@ -615,22 +617,27 @@ export {MobileNavigation};
 export {MobileNavigation};
 ;
 export {MobileNavigation};
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

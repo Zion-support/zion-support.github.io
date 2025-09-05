@@ -799,17 +799,15 @@ const InteractiveServiceShowcase = (props: any) => {}
       </div>
     </section>)};
 export default InteractiveServiceShowcase;
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>';
 </motion>;';;';
@@ -819,9 +817,16 @@ export {InteractiveServiceShowcase};
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

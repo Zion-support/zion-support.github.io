@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+=======
+// In-memory storage for fallback with optimizations;
+const inMemoryStore = {};; let localStorageAvailable = null; let lastAvailabilityCheck = 0; const AVAILABILITY_CHECK_INTERVAL = 5000; function isLocalStorageAvailable() { const now = Date.now(); if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) { return localStorageAvailable} lastAvailabilityCheck = now; try { if (typeof window === &apos;undefined&apos;) { localStorageAvailable = false; return false} const testKey = &apos;__localStorage_test__&apos;; localStorage.setItem(testKey,&apos;test&apos;); localStorage.removeItem(testKey); localStorageAvailable = true; return true} catch { localStorageAvailable = false; return false} } function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? &apos;production&apos;; if (env === &apos;production&apos;) return; try { } } export const safeStorage = { getItem: (key) => { try { return localStorage.getItem(key)} catch (error) { return null} };,setItem: (key,value) => { try { localStorage.setItem(key,value); return true} catch (error) { return false} },removeItem: (key) => { try { localStorage.removeItem(key); return true} catch (error) { return false} },clear: () => { try { localStorage.clear(); return true} catch (error) { return false} },key: (index) => { try { return localStorage.key(index)} catch (error) { return null} },get length() { try { return localStorage.length} catch (error) { return 0} } }; export default safeStorage;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
+<<<<<<< HEAD
+=======
+const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
+function isLocalStorageAvailable() {;
+    const now = Date.now();
+    // Use cached result if checked recently;
+    if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {;
+        return localStorageAvailable;
+    }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 function isLocalStorageAvailable() {
     const now = Date.now();
@@ -12,19 +27,99 @@ function isLocalStorageAvailable() {
     try {;
         if (typeof window === 'undefined') {;
             localStorageAvailable = false;
+<<<<<<< HEAD
+=======
+            return false;
+        }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
             return false}
         const testKey = '__localStorage_test__';
         localStorage.setItem(testKey, 'test');
         localStorage.removeItem(testKey);
         localStorageAvailable = true;
+<<<<<<< HEAD
+=======
+        return true;
+    } catch {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
         return true} catch {
         localStorageAvailable = false;
         return false}
 }
+<<<<<<< HEAD
+=======
+function safeConsoleError(message, error) {;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 function safeConsoleError(message, error) {
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging;
   if (env === 'production') return;
+<<<<<<< HEAD
+=======
+;
+    try {;
+        // // // // // console.error(message, error);
+    } catch {;
+        // Silent fail if console.error causes recursion;
+    }
+}
+export const safeStorage = {;
+  "getItem": "(key) => {;
+    try {;
+      return localStorage.getItem(key);
+    "} catch (error) {;
+      // // // // // ;
+      return null;
+    }
+  }
+  "setItem": "(key", value) => {;
+    try {;
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {;
+      // // // // // ;
+      return false;
+    }
+  }
+  "removeItem": "(key) => {;
+    try {;
+      localStorage.removeItem(key);
+      return true;
+    "} catch (error) {;
+      // // // // // ;
+      return false;
+    }
+  }
+  "clear": "() => {;
+    try {;
+      localStorage.clear();
+      return true;
+    "} catch (error) {;
+      // // // // // ;
+      return false;
+    }
+  }
+  "key": "(index) => {;
+    try {;
+      return localStorage.key(index);
+    "} catch (error) {;
+      // // // // // ;
+      return null;
+    }
+  }
+  get length() {;
+    try {;
+      return localStorage.length;
+    } catch (error) {;
+      // // // // // ;
+      return 0;
+    }
+  }
+};
+;
+export default safeStorage;
+;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     try {
         // // // // // console.error(message, error)} catch {
         // Silent fail if console.error causes recursion
@@ -72,4 +167,8 @@ export const safeStorage = {
   }
 };
 export default safeStorage;
+<<<<<<< HEAD
 const inMemoryStore = {};; let localStorageAvailable = null; let lastAvailabilityCheck = 0; const AVAILABILITY_CHECK_INTERVAL = 5000; function isLocalStorageAvailable() { const now = Date.now(); if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) { return localStorageAvailable} lastAvailabilityCheck = now; try { if (typeof window === 'undefined') { localStorageAvailable = false; return false} const testKey = '__localStorage_test__'; localStorage.setItem(testKey,'test'); localStorage.removeItem(testKey); localStorageAvailable = true; return true} catch { localStorageAvailable = false; return false} } function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if (env === 'production') return; try { } } export const safeStorage = { getItem: (key) => { try { return localStorage.getItem(key)} catch (error) { return null} };,setItem: (key,value) => { try { localStorage.setItem(key,value); return true} catch (error) { return false} },removeItem: (key) => { try { localStorage.removeItem(key); return true} catch (error) { return false} },clear: () => { try { localStorage.clear(); return true} catch (error) { return false} },key: (index) => { try { return localStorage.key(index)} catch (error) { return null} },get length() { try { return localStorage.length} catch (error) { return 0} } }; export default safeStorage;
+=======
+const inMemoryStore = {};; let localStorageAvailable = null; let lastAvailabilityCheck = 0; const AVAILABILITY_CHECK_INTERVAL = 5000; function isLocalStorageAvailable() { const now = Date.now(); if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) { return localStorageAvailable} lastAvailabilityCheck = now; try { if (typeof window === 'undefined') { localStorageAvailable = false; return false} const testKey = '__localStorage_test__'; localStorage.setItem(testKey,'test'); localStorage.removeItem(testKey); localStorageAvailable = true; return true} catch { localStorageAvailable = false; return false} } function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if (env === 'production') return; try { } } export const safeStorage = { getItem: (key) => { try { return localStorage.getItem(key)} catch (error) { return null} };,setItem: (key,value) => { try { localStorage.setItem(key,value); return true} catch (error) { return false} },removeItem: (key) => { try { localStorage.removeItem(key); return true} catch (error) { return false} },clear: () => { try { localStorage.clear(); return true} catch (error) { return false} },key: (index) => { try { return localStorage.key(index)} catch (error) { return null} },get length() { try { return localStorage.length} catch (error) { return 0} } }; export default safeStorage;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

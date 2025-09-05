@@ -3,7 +3,6 @@ import React, {useState, useCallback} from 'react';
 // Simple toast function for direct import`';';
 export const toast = ("props": "any) => {  // In a real app", this would integrate with a toast library;
   ;
-
   // For now, just log to console;
   // You can replace this with your preferred toast implementation;
   return Date.now();};
@@ -24,7 +23,10 @@ export const useToast = ("props": "any) => {;
   return {toast, dismiss,';
     toasts};};"`""';';
 import React,{useState,useCallback} from &apos;react&apos;; &apos;;&apos;;&apos;; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `&apos;; const toast = useCallback(({ title,description,variant = &apos;default&apos; };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);&apos;;&apos;; return {toast,dismiss,toasts}};&quot;`&quot;;&apos;;&apos;;&apos;;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React, {useState, useCallback} from 'react';
 ';';';
 // Simple toast function for direct import"
@@ -44,4 +46,8 @@ export const useToast = (props) => {;
   const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id));}, []);';';
   return {toast, dismiss,
     toasts};};"`";';';';
+<<<<<<< HEAD
 import React,{useState,useCallback} from 'react'; ';';'; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);';'; return {toast,dismiss,toasts}};"`";';';';
+=======
+import React,{useState,useCallback} from 'react'; ';';'; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);';'; return {toast,dismiss,toasts}};"`";';';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

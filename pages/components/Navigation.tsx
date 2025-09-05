@@ -2,22 +2,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Network, 
-  Cloud, 
-  Phone, 
-  Mail, 
-  MapPin,
   ArrowRight,
-  CheckCircle,
-  Star,
   Award,
-  Users,
-  Settings,
   BarChart3,
+<<<<<<< HEAD
   Shield,
   Code,
   Zap,
@@ -28,18 +16,44 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   BookOpen,
-  Camera,
-  Music,
-  Gamepad2,
-  Heart,
-  Truck,
+  Brain,
+  Building,
   Calculator,
+  Calendar,
+  Camera,
+  CheckCircle,
+  ChevronDown,
+  Clock,
+  Cloud,
+  Code,
   CreditCard,
-  Lock,
+  Document,
+  DollarSign,
   Eye,
+  FileText,
+  Gamepad2,
+  Globe,
+  Heart,
+  Home,
+  Lock,
+  Mail,
+  MapPin,
+  Menu,
+  MessageSquare,
+  Music,
+  Network,
+  Phone,
+  Rocket,
+  Settings,
+  Shield,
+  ShoppingCart,
+  Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
   Clock,
   DollarSign,
   Cpu,
@@ -77,6 +91,12 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
+=======
+  Truck,
+  Users,
+  X,
+  Zap
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 } from 'lucide-react';
 
 const navigationItems = [

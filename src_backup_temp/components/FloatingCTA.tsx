@@ -1,37 +1,93 @@
+<<<<<<< HEAD
+=======
+import React from 'react';';';
+import { Link  } from 'react-router-dom';';
+export default function Page(props: any) {';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {;
 import React from 'react';
 import { Link  } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+export default function Page("props": "any) {;
+ from 'lucide-react';
+;
+const "FloatingCTA": React.FC = () : JSX.Element => {;
+  const [isOpen", setIsOpen] = useState<any>(false);
+  const [isVisible, setIsVisible] = useState<any>(false);
+;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+  "};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
  from 'lucide-react';
-
 const FloatingCTA: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState<any>(false);
   const [isVisible, setIsVisible] = useState<any>(false);
-
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
 }, []);, []);
     // Show CTA after 5 seconds
-    
       setIsVisible(true) }, 5000) ;
-
     return () => clearTimeout(timer) }, []) };
   ];
+<<<<<<< HEAD
 
+=======
+;
+  const quickServices = [";
+    { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
+    { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
+    { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
+    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
   const quickServices = ["
     { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
     { name: "Cloud Services", icon: Clou d, link: "/cloud-solutions" },;"
     { name: "Digital Transformation", icon: Za p, link: "/digital-transformation" };
   ];
-
   if(!isVisible) return null;
+<<<<<<< HEAD
+=======
+                    to="/services";
+                    className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
+                    onClick={() => setIsExpanded(false)"}
+                  >";
+                    <span className="text-xl">🚀</span>;
+                    <div>";
+                      <div className="font-semibold">Our Services</div>";
+                      <div className="text-sm text-gray-400">Explore solutions</div>;
+                    </div>;
+                  </Link>;
+                  <Link                    to="/quote";
+                    className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
+                    onClick={() => setIsExpanded(false)"}
+                  >";
+                    <span className="text-xl">💰</span>;
+                    <div>";
+                      <div className="font-semibold">Get Quote</div>";
+                      <div className="text-sm text-gray-400">Request pricing</div>;
+                    </div>;
+                  </Link>;
+                  <div  className="border-t border-slate - 600 pt -3">;
+                    <div  className="text-center text-sm text-gray - 400 mb-2">;
+                      Available 24 / 7;
+                    </div>;
+                    <div  className="flex items - center justify - center gap-2">;
+                      <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div>;
+                      <span className="text-green - 400 text-sm font -semibold">Online Now</span>                    </div>;
+                  </div>;
+                </div>;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover: b g-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -42,7 +98,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Explore solutions</div>
                     </div>
                   </Link>
-
                   <Link                    to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover: b g-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -53,7 +108,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Request pricing</div>
                     </div>
                   </Link>
-
                   <div  className="border-t border-slate - 600 pt -3">
                     <div  className="text-center text-sm text-gray - 400 mb-2">
                       Available 24 / 7
@@ -67,8 +121,17 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
           </AnimatePresence>
         </div>
       </motion.div>
-
       {/* Backdrop */}
+<<<<<<< HEAD
+=======
+      <AnimatePresence>;
+        {isExpanded && (;
+          <motion.div";
+            className="fixed inset-0 bg-black/20 z-40";
+            initial={{ "opacity": "0 "}}
+            animate={{ "opacity": "1 "}}
+            exit={{ "opacity": "0 "}}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
       <AnimatePresence>
         {isExpanded && (
           <motion.div"
@@ -81,10 +144,18 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
       </AnimatePresence>;
     </>
   )};
-
             onClick={ () => setIsExpanded(false) };
           />;) };
       </AnimatePresence>;
+<<<<<<< HEAD
+=======
+    </>';
+  )}';';
+'"
+</motion>
+</any>';
+</any>;';;';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </>;
   )}
 '";
@@ -94,7 +165,10 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     </>
   )}
 '"
-
 </motion>
 </any>
+<<<<<<< HEAD
 </any>
+=======
+</any>
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

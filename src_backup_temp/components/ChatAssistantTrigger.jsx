@@ -38,7 +38,6 @@ export function ChatAssistantTrigger("props": "any) {;
                 "id": 'ai-assistant',;
                 "name": 'AI Assistant',;
                 "avatarUrl": '"https": "//placehold.co/64x64?text=AI'",;
-
 ;
 export default ChatAssistantTrigger;
 </ChatAssistant>

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -9,4 +17,8 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

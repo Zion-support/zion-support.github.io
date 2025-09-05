@@ -6,4 +6,8 @@ import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SE
 import { ProductListing } from "@/types/listings"; export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [, export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""","});"})"
 ,"});"})" export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [,"});"})"@/types/listings&apos;&apos, export ;const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [&apos,&apos,",&quot,""export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""
 """,
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
+=======
+import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

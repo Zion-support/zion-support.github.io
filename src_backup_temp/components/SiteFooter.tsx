@@ -77,6 +77,16 @@ export function SiteFooter("props": "any) {';
             </div>;
           </div>;
           {/* Navigation Sections */}
+<<<<<<< HEAD
+=======
+          { navSections.map((section) => (;
+            <div key={section.title}>;
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>;
+              <ul className="space-y-3">;
+                {section.links.map((link) => (;
+                  <li key={link.label}>;
+                    <Link;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
           { navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
@@ -92,6 +102,11 @@ export function SiteFooter("props": "any) {';
                   </li>;
                 ));
       )}
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </div>
     );
 }
@@ -99,6 +114,11 @@ export function SiteFooter("props": "any) {';
             </div>;
           ));
       )}
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </div>
     );
 }
@@ -122,6 +142,11 @@ export function SiteFooter("props": "any) {';
                 </a>;
               ));
       )}
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </div>
     );
 }
