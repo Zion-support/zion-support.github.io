@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -61,6 +63,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 }) => {;
   const generateSlides = async () => {;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
     setIsGenerating(true);
     // Simulate slide generation;
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -324,6 +327,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 =======
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">;
           {/* Slide List */}
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
 <<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Slides
@@ -342,6 +347,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>;
                   <button;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                     onClick={() => removeSlide(slide.id)}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -426,6 +432,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
             ))}
           </div>;
           {/* Preview */}
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
 <<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Preview
@@ -499,6 +507,7 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
   );
 }
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                   </div>
                 </div>
               ))}

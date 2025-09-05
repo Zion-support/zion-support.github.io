@@ -299,6 +299,8 @@ import {
   Twitter, 
   Linkedin, 
   Instagram, 
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
 <<<<<<< HEAD
   Github, 
   Mail, 
@@ -827,6 +829,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
 >>>>>>> origin/merge-pr-11190
 =======
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
   Youtube,
   ArrowRight,
   Shield,
@@ -841,172 +844,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
 =======
 >>>>>>> main
   Award,
-<<<<<<< HEAD
-  CheckCircle,
-  Star,
-  Lock,
-  Eye,
-  Network,
-  Database,
-  Cpu,
-  Smartphone,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Sparkles,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette} from "lucide-react
-export function Footer(...args: an y[]): any {,
-  const currentYear = new Date().getFullYear(),
-  const [activeSection, setActiveSection] = useState<any>(null)"
-  const footerSections = []}, {"
-      title: "AI & Quantum Solutions",
-icon: Brai n,"
-category: "Core Services","
-services: [ { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" }, { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" }, { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" }, { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" }, { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" }, { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" }, { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" }, { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" }, { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" }, { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" }, { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" }, { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" }, { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" }, { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" }, { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" }, { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }"
-      title: "AI Cybersecurity & Infrastructure",
-icon: Shiel d,"
-category: "Security & Infrastructure","
-services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", badge: "New" }, { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" }, { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" }, { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" }, { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" }, { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" }, { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }"
-      title: "Micro SaaS Solutions",
-icon: Cod e,"
-category: "Micro SaaS","
-services: [ { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", badge: "New" }, { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", badge: "New" }, { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", badge: "New" }, { name: "Micro CRM", href: "/services/micro-crm", badge: "Popular" }, { name: "Helpdesk Platform", href: "/services/helpdesk-platform", badge: "Support" }, { name: "Website Analytics", href: "/services/website-analytics", badge: "Analytics" }"
-      title: "Solutions","
-links: [ { name: "Enterprise Solutions", href: "/enterprise" }, { name: "Healthcare Tech", href: "/solutions/healthcare" }, { name: "Financial Solutions", href: "/financial-solutions" }, { name: "Manufacturing", href: "/manufacturing-solutions" }, { name: "Industry Solutions", href: "/industry-solutions" }, { name: "Emerging Tech", href: "/emerging-tech" }"
-      title: "Company","
-links: [ { name: "About Us", href: "/about" }, { name: "Our Team", href: "/about/team" }, { name: "Careers", href: "/careers" }, { name: "Partners", href: "/partners" }, { name: "News & Updates", href: "/news" }, { name: "Case Studies", href: "/case-studies" }"
-      title: "Quantum Computing & Emerging Tech",
-icon: Ato m,"
-services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" }, { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" }, { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }, { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }"
-      title: "Resources","
-links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
-
-export function Footer(props: any) {
-  const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }
-    );
-  };
-
-  ]"
-  const solutions = []
-
-  const contactInfo = [
-    { icon: Mai l, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto: klebe r@ziontechgroup.com" },
-    { icon: Phon e, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPi n, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
-];
-
-  const legalLinks = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
-    { name: "Data Protection", href: "/data-protection" },
-    { name: "Accessibility", href: "/accessibility" }
-  ];
-
-  const socialLinks = [
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
-    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
-  ];
-
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
-        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-5 gap-8">
-          {/* Company Info */}
-<div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white"  />
-              </div>
-              <span className="font-bold text-lg">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-4">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.
-            </p>
-            
-            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-3 text-zion-cyan" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
-                  {contactInfo.phone}
-                </a>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-3 text-zion-cyan" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-start text-gray-300">
-                <MapPin className="w-4 h-4 mr-3 mt-0.5 text-zion-cyan flex-shrink-0" />
-                <span>{contactInfo.address}</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5"  />
-              </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
-                <Twitter className="w-5 h-5"  />
-              </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
-                <Facebook className="w-5 h-5"  />
-              </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
-                <Instagram className="w-5 h-5"  />
-              </a>
-            </div>
-          </div>
-
-<<<<<<< HEAD
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
-                {section.title}
-              
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover: tex t-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-</ul>
-=======
-  Building2,
-  FileText,
-=======
->>>>>>> main
   Users,
 <<<<<<< HEAD
   Briefcase,
@@ -1035,52 +872,6 @@ const Footer = () => {
 >>>>>>> main:src_backup_temp/components/Footer.tsx
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }
-    );
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
-      { name: 'Data Analytics', href: '/services/data-analytics' },
-    ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { name: 'Healthcare', href: '/solutions/healthcare' },
-      { name: 'Finance', href: '/solutions/finance' },
-      { name: 'Government', href: '/solutions/government' },
-      { name: 'Retail', href: '/solutions/retail' },
-      { name: 'Education', href: '/solutions/education' },
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'News', href: '/news' },
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'API Documentation', href: '/api-docs' },
-      { name: 'Support', href: '/support' },
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Compliance', href: '/compliance' },
-      { name: 'Security', href: '/security' },
-    ],
->>>>>>> main
   };
 
 <<<<<<< HEAD:src/components/Footer.tsx
@@ -1232,110 +1023,16 @@ const Footer = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
-          {/* Service Sections */}
-          {footerSections.slice(1, 4).map((section) => (
-            <div key={section.title} className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <section.icon className="w-5 h-5 text-blue-400" />
-                <h3 className="font-semibold text-white">{section.title}
-              </div>
-              <div className="space-y-2">
-                {section.services ? (
-                  section.services.slice(0, 6).map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="block text-sm text-gray-300 hover:text-blue-400 transition-colors duration-200 group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span>{service.name}</span>
-                        {service.badge && (
-                          <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">
-                            {service.badge}
-                          </span>
-                        )}
-                      </div>
-                    </Link>
-                  ))
-                ) : (
-                  section.links?.slice(0, 6).map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="block text-sm text-gray-300 hover:text-blue-400 transition-colors duration-200 group"
-                    >
-                      <span>{link.name}</span>
-                    </Link>
-                  ))
-                )}
-              </div>
->>>>>>> origin/merge-pr-11190
-=======
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
-                >
-                  <social.icon className="w-5 h-5" />
-                </Link>
-              ))}
->>>>>>> main
             </div>
           </div>
 
           {/* Services */}
-<<<<<<< HEAD
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services
-            <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
-              <li><Link href="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Micro SaaS</Link></li>
-              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blockchain Solutions</Link></li>
-              <li><Link href="/iot-solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IoT Solutions</Link></li>
-              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Solutions</Link></li>
-=======
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Solutions</h4>
-            <ul className="space-y-3">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
->>>>>>> main
             </ul>
           </div>
 
           {/* Company */}
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
 <<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company
@@ -1749,16 +1446,15 @@ const Footer = () => {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
+>>>>>>> main:src_backup_temp/components/Footer.tsx
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    {link.name}
-                  </Link>
-                </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
 
           {/* Resources */}
           <div>
@@ -2717,6 +2413,7 @@ export default Footer;
           ))}
 =======
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
         </div>
 >>>>>>> main
 
@@ -2741,6 +2438,8 @@ export default Footer;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
 <<<<<<< HEAD
 
         {/* Newsletter Signup */}
@@ -2835,6 +2534,7 @@ Cookie Policy
         </div>
 =======
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
       </div>
 
       {/* Bottom Bar */}

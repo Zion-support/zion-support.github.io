@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/Security/SecurityHeaders.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useEffect } from 'react'; export const SecurityHeaders: Reac t.FC = () => { useEffect(() => {"';';';';;';;';
@@ -19,6 +21,7 @@ const React,{ useEffect } from "react"; export const SecurityHeaders: Reac t.FC 
 import { useEffect } from 'react';,
 import _React,{ useEffect } from 'react'; export const SecurityHeaders: Reac t.FC = () => { useEffect(() => {";';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/Security/SecurityHeaders.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

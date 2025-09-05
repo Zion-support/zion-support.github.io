@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/ComprehensiveServicesShowcase2030.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';';
@@ -52,6 +54,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 =======
 const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/ComprehensiveServicesShowcase2030.tsx
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>(");
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -517,6 +520,8 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD:src/data/ComprehensiveServicesShowcase2030.tsx
+=======
 <<<<<<< HEAD
       )"} else {;
       return (";
@@ -541,6 +546,7 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name"}";
               <div className="flex flex-col items-end">"                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/ComprehensiveServicesShowcase2030.tsx
                   {service.category}
                 </span>";
                 <div className="text-sm text-gray-600">";

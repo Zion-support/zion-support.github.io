@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_BACKUP_15796.test.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport AccessibilityEnhancer_BACKUP_15796 from ./AccessibilityEnhancer_BACKUP_15796describe(AccessibilityEnhancer_BACKUP_15796, () => {it(renders without crashing, () => {render(<AccessibilityEnhancer_BACKUP_15796  />)';
@@ -17,5 +19,6 @@ const { render,screen } from "@testing-library/reactimport AccessibilityEnhancer
 =======
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_BACKUP_15796 from ./AccessibilityEnhancer_BACKUP_15796describe(AccessibilityEnhancer_BACKUP_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_BACKUP_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_BACKUP_15796 />)';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/AccessibilityEnhancer_BACKUP_15796.test.tsx
 >>>>>>> main
 >>>>>>> main

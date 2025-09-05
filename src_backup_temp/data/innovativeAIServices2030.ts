@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeAIServices2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -530,3 +532,4 @@ export default innovativeAIServices2030}}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeAIServices2030.ts

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ServicesPage.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -107,6 +109,7 @@ const "Card": React.FC<{ title: string; tagline: string }>
 const "Price": React.FC<{ value: string }> = ({ value }) => (
 	<span style="{{{ "fontWeight": 600}}"}>{value};</span>
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ServicesPage.tsx
 );
 export const "ServicesPage": React.FC = (props) => {
 	const grouped = addedServices.reduce<Record<string, typeof addedServices>>( (acc, item) => {

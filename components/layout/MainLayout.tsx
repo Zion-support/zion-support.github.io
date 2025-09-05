@@ -8,42 +8,44 @@ interface MainLayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  title = "Zion Tech Group - Leading Technology Solutions Provider",
-  description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
-  keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, IT, micro SaaS, solutions",
+  canonical = "https://ziontechgroup.com",
+  ogTitle,
+  ogDescription,
+  ogImage,
+  noIndex = false,
 }) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {ogTitle && <meta property="og:title" content={ogTitle} />}
+        {ogDescription && <meta property="og:description" content={ogDescription} />}
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <link rel="canonical" href="https://ziontechgroup.com" />
+        {noIndex && <meta name="robots" content="noindex, nofollow" />}
       </Head>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 };
 

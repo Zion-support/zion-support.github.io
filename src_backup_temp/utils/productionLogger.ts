@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/productionLogger.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function logErrorToProduction(message: string, error?: unknown): void {
@@ -26,3 +28,4 @@ export function logErrorToProduction(message: string,error?: unknown): void { if
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/productionLogger.ts

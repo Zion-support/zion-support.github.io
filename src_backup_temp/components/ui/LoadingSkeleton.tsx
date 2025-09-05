@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+=======
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -152,6 +154,7 @@ interface TableSkeletonProps extends React.PropsWithChildren<{"}> {;
 =======
 interface TableSkeletonProps extends React.PropsWithChildren<{}> {;
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/LoadingSkeleton.tsx
   rows?: number;
 >>>>>>> main
   columns?: number;

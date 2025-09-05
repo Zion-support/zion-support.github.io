@@ -15,7 +15,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 const features = [
   {
@@ -76,7 +76,7 @@ const stats = [
 
 export default function EcommercePage() {
   return (
-    <Layout
+    <MainLayout
       title="E-commerce Solutions - Zion Tech Group"
       description="Professional e-commerce development services including custom online stores, marketplace platforms, mobile commerce apps, and payment integration."
       keywords="e-commerce development, online store, marketplace platform, mobile commerce, payment integration, shopping cart"
@@ -258,6 +258,6 @@ export default function EcommercePage() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 }

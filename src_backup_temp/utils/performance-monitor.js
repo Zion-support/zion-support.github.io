@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/utils/performance-monitor.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -33,6 +35,7 @@ export class PerformanceMonitor {;
         "event_label": name,
         "value": Math.round(end - start)})}
 >>>>>>> main
+>>>>>>> main:src_backup_temp/utils/performance-monitor.js
     ;
     return result}
   ;
@@ -48,23 +51,6 @@ export class PerformanceMonitor {;
           "event_label": name,
           "value": Math.round(end - start)})}
       ;
-<<<<<<< HEAD
-      if (typeof window !== 'undefined' && window.gtag) {;
-        window.gtag('event', 'performance', {;
-          event_category: 'timing',;
-          event_label: name,;
-          value: Math.round(end - start);
-        }
-    );
-      }
-      ;
-      return result;
-    }
-    );
-  }
-=======
-      return result})}
->>>>>>> main
   ;
   static reportWebVitals() {;';';
     if (typeof window !== 'undefined' && 'web-vitals' in window) {;';';
@@ -73,14 +59,6 @@ export class PerformanceMonitor {;
         getFID(console.log);
         getFCP(console.log);
         getLCP(console.log);
-<<<<<<< HEAD
-        getTTFB(console.log);
-      }
-    );
-    }
-=======
-        getTTFB(console.log)})}
->>>>>>> main
   }
 <<<<<<< HEAD
 }';

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/services.js
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -320,3 +322,4 @@ export const microSaasServices = [ { id: 'ai-content-optimizer',name: 'AI Conten
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/services.js

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/ui/EnhancedMarketplaceCard.tsx
+=======
 <<<<<<< HEAD
 interface EnhancedMarketplaceCardProps {;
 
@@ -44,6 +46,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ ;,;,
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>;""
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/EnhancedMarketplaceCard.tsx
       <p className="text-gray-300">{description}</p>;
     </div>;
   );

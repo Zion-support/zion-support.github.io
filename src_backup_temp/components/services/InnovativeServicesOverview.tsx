@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/services/InnovativeServicesOverview.tsx
+=======
 <<<<<<< HEAD
 =======
 import React, { useState, useMemo } from 'react';
@@ -380,6 +382,7 @@ maxServices:  6,;
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
           <pclassName="text-gray-600 mb-6 max-w-2xl mx-auto">';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/services/InnovativeServicesOverview.tsx
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
           <div className="flex flex-col "sm": flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/components/Performance/AdvancedPerformanceMonitor.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react' import { motion  } from 'framer-motioninterface PerformanceMetrics {fcp: number;';
@@ -46,6 +48,7 @@ import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{ useEffect,useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: Reac t.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible,setIsVisible] = useState<any>(false) useEffect(() => { </any> </PerformanceMetrics>;';';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/components/Performance/AdvancedPerformanceMonitor.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
