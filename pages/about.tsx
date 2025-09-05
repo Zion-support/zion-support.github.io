@@ -2,17 +2,22 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe,
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
-  Handshake
+  Handshake,
+  Brain,
+  Users, 
+  Award, 
+  Target, 
+  Heart, 
+  Globe, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star
 } from 'lucide-react';
 
 const values = [
@@ -31,9 +36,7 @@ const values = [
     title: 'Collaboration',
     description: 'We believe in the power of collaboration and work closely with our clients to achieve their goals.'
   }
-                  </motion.div>
-                  </div>
-                  </section>
+];
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -290,7 +293,8 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
   );
 }
 
-const team = [{
+const team = [
+  {
     "name": 'Dr. Sarah Chen',
     "role": 'Chief Technology Officer',
     "expertise": 'AI & Machine Learning',
