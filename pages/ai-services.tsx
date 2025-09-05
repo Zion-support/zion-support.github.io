@@ -43,7 +43,8 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  DollarSign
 } from 'lucide-react';
 const aiServices = [
   {
@@ -1111,6 +1112,349 @@ title: 'Generative AI Content Creation Suite',
     features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
+    popular: true
+  },
+  // NEW INNOVATIVE AI SERVICES - 2025
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions for complex computational problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Quantum ML Models', 'Optimization Problems', 'Quantum Simulation'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI Edge Intelligence Platform',
+    description: 'Deploy AI models on edge devices with real-time processing and offline capabilities.',
+    icon: Smartphone,
+    features: ['Edge Model Deployment', 'Real-time Processing', 'Offline Capability', 'Resource Optimization'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI Neuromorphic Computing Solutions',
+    description: 'Brain-inspired AI computing systems for ultra-efficient processing and learning.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Low Power Processing', 'Adaptive Learning'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Neuromorphic AI',
+    popular: true
+  },
+  {
+    title: 'AI Swarm Intelligence Systems',
+    description: 'Coordinated AI agent systems for complex problem-solving and distributed decision making.',
+    icon: Network,
+    features: ['Multi-Agent Coordination', 'Distributed Learning', 'Emergent Behavior', 'Scalable Systems'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Swarm AI',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin Intelligence',
+    description: 'AI-powered digital twins with predictive analytics and real-time optimization.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization Algorithms', 'IoT Integration'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Digital Twin AI',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Systems Development',
+    description: 'Complete AI solutions for autonomous vehicles, drones, and robotic systems.',
+    icon: Car,
+    features: ['Autonomous Navigation', 'Object Detection', 'Path Planning', 'Safety Systems'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Autonomous AI',
+    popular: true
+  },
+  {
+    title: 'AI Metaverse Intelligence Platform',
+    description: 'AI-powered virtual world creation, management, and user interaction systems.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Social Intelligence'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Metaverse AI',
+    popular: true
+  },
+  {
+    title: 'AI Climate Intelligence Solutions',
+    description: 'Advanced AI for climate modeling, environmental monitoring, and sustainability optimization.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Environmental Monitoring', 'Carbon Optimization', 'Sustainability Planning'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI Space Technology Solutions',
+    description: 'AI applications for space exploration, satellite management, and space mission optimization.',
+    icon: Rocket,
+    features: ['Space Mission Planning', 'Satellite Optimization', 'Space Weather Prediction', 'Orbital Mechanics'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI Biotechnology Platform',
+    description: 'AI-powered drug discovery, genetic analysis, and personalized medicine solutions.',
+    icon: Heart,
+    features: ['Drug Discovery', 'Genetic Analysis', 'Personalized Medicine', 'Biomarker Detection'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Bio AI',
+    popular: true
+  },
+  {
+    title: 'AI Cybersecurity Intelligence',
+    description: 'Advanced AI for threat detection, security analysis, and automated response systems.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Security Optimization'],
+    pricing: '$3,000 - $30,000/project',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Financial Intelligence Suite',
+    description: 'Comprehensive AI solutions for trading, risk management, and financial analysis.',
+    icon: DollarSign,
+    features: ['Algorithmic Trading', 'Risk Assessment', 'Fraud Detection', 'Market Analysis'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI Manufacturing Intelligence',
+    description: 'Smart manufacturing solutions with AI-powered optimization and quality control.',
+    icon: Settings,
+    features: ['Predictive Maintenance', 'Quality Control', 'Process Optimization', 'Supply Chain Intelligence'],
+    pricing: '$8,000 - $80,000/project',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI Energy Management Systems',
+    description: 'Intelligent energy optimization and renewable energy management solutions.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Demand Forecasting'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI Smart City Solutions',
+    description: 'Comprehensive AI platform for smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Infrastructure Monitoring'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Smart City AI',
+    popular: true
+  },
+  {
+    title: 'AI Agricultural Intelligence',
+    description: 'Precision agriculture solutions with AI-powered crop management and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Optimization', 'Disease Detection', 'Resource Management'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'AgTech AI',
+    popular: true
+  },
+  {
+    title: 'AI Healthcare Diagnostics Platform',
+    description: 'Advanced medical AI for diagnosis, treatment planning, and patient monitoring.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Diagnostic Support', 'Treatment Planning', 'Patient Monitoring'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI Legal Intelligence System',
+    description: 'AI-powered legal research, document analysis, and case prediction solutions.',
+    icon: FileText,
+    features: ['Legal Research', 'Document Analysis', 'Case Prediction', 'Contract Review'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Legal AI',
+    popular: true
+  },
+  {
+    title: 'AI Educational Intelligence Platform',
+    description: 'Personalized learning systems with AI-powered curriculum optimization and assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Curriculum Optimization', 'Adaptive Assessment', 'Learning Analytics'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'EdTech AI',
+    popular: true
+  },
+  {
+    title: 'AI Retail Intelligence Suite',
+    description: 'Comprehensive retail AI for inventory, pricing, and customer experience optimization.',
+    icon: ShoppingCart,
+    features: ['Inventory Optimization', 'Dynamic Pricing', 'Customer Analytics', 'Demand Forecasting'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Retail AI',
+    popular: true
+  },
+  {
+    title: 'AI Transportation Intelligence',
+    description: 'Smart transportation solutions with AI-powered traffic management and logistics optimization.',
+    icon: Car,
+    features: ['Traffic Management', 'Route Optimization', 'Fleet Management', 'Predictive Maintenance'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Transportation AI',
+    popular: true
+  },
+  {
+    title: 'AI Entertainment Intelligence',
+    description: 'AI-powered content creation, recommendation systems, and interactive entertainment.',
+    icon: Video,
+    features: ['Content Generation', 'Recommendation Systems', 'Interactive Experiences', 'Audience Analytics'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Entertainment AI',
+    popular: true
+  },
+  {
+    title: 'AI Research Intelligence Platform',
+    description: 'AI-powered research tools for scientific discovery and knowledge management.',
+    icon: Search,
+    features: ['Literature Analysis', 'Hypothesis Generation', 'Data Mining', 'Knowledge Discovery'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Research AI',
+    popular: true
+  },
+  {
+    title: 'AI Social Intelligence Solutions',
+    description: 'AI systems for social media analysis, sentiment monitoring, and community management.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Social Media Monitoring', 'Community Management', 'Influence Tracking'],
+    pricing: '$2,000 - $20,000/project',
+    category: 'Social AI',
+    popular: true
+  },
+  {
+    title: 'AI Supply Chain Intelligence',
+    description: 'End-to-end supply chain optimization with AI-powered forecasting and risk management.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Risk Management', 'Supplier Optimization', 'Logistics Intelligence'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Supply Chain AI',
+    popular: true
+  },
+  {
+    title: 'AI Real Estate Intelligence',
+    description: 'AI-powered property analysis, market prediction, and investment optimization.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Optimization', 'Risk Assessment'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Real Estate AI',
+    popular: true
+  },
+  {
+    title: 'AI Sports Intelligence Platform',
+    description: 'Advanced sports analytics with AI-powered performance analysis and strategy optimization.',
+    icon: Target,
+    features: ['Performance Analysis', 'Strategy Optimization', 'Injury Prevention', 'Talent Scouting'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Sports AI',
+    popular: true
+  },
+  {
+    title: 'AI Gaming Intelligence Suite',
+    description: 'AI-powered game development, player behavior analysis, and dynamic content generation.',
+    icon: Target,
+    features: ['Game Development', 'Player Analytics', 'Content Generation', 'Balancing Algorithms'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Gaming AI',
+    popular: true
+  },
+  {
+    title: 'AI Environmental Intelligence',
+    description: 'AI solutions for environmental monitoring, conservation, and sustainability management.',
+    icon: Sprout,
+    features: ['Environmental Monitoring', 'Conservation Planning', 'Sustainability Optimization', 'Ecosystem Analysis'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI Human Resources Intelligence',
+    description: 'AI-powered HR solutions for recruitment, performance management, and workforce optimization.',
+    icon: Users,
+    features: ['Talent Acquisition', 'Performance Analysis', 'Workforce Planning', 'Employee Engagement'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'HR AI',
+    popular: true
+  },
+  {
+    title: 'AI Marketing Intelligence Platform',
+    description: 'Comprehensive AI marketing solutions for campaign optimization and customer insights.',
+    icon: BarChart3,
+    features: ['Campaign Optimization', 'Customer Insights', 'Predictive Analytics', 'ROI Optimization'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Marketing AI',
+    popular: true
+  },
+  {
+    title: 'AI Customer Service Intelligence',
+    description: 'Advanced AI customer service solutions with natural language processing and automation.',
+    icon: MessageSquare,
+    features: ['Natural Language Processing', 'Automated Responses', 'Sentiment Analysis', 'Issue Resolution'],
+    pricing: '$2,000 - $20,000/project',
+    category: 'Customer Service AI',
+    popular: true
+  },
+  {
+    title: 'AI Data Intelligence Platform',
+    description: 'AI-powered data analysis, visualization, and business intelligence solutions.',
+    icon: Database,
+    features: ['Data Analysis', 'Predictive Modeling', 'Business Intelligence', 'Data Visualization'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Data AI',
+    popular: true
+  },
+  {
+    title: 'AI Process Intelligence Suite',
+    description: 'AI-powered business process optimization and automation solutions.',
+    icon: Settings,
+    features: ['Process Optimization', 'Workflow Automation', 'Performance Monitoring', 'Efficiency Analysis'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Process AI',
+    popular: true
+  },
+  {
+    title: 'AI Innovation Intelligence Platform',
+    description: 'AI-powered innovation management and technology trend analysis solutions.',
+    icon: Rocket,
+    features: ['Innovation Management', 'Trend Analysis', 'Technology Forecasting', 'Idea Evaluation'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Innovation AI',
+    popular: true
+  },
+  {
+    title: 'AI Compliance Intelligence System',
+    description: 'AI-powered compliance monitoring and regulatory analysis solutions.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Regulatory Analysis', 'Risk Assessment', 'Audit Automation'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Compliance AI',
+    popular: true
+  },
+  {
+    title: 'AI Quality Intelligence Platform',
+    description: 'AI-powered quality assurance and testing solutions for software and products.',
+    icon: CheckCircle,
+    features: ['Quality Testing', 'Defect Detection', 'Performance Analysis', 'Automated Testing'],
+    pricing: '$2,000 - $20,000/project',
+    category: 'Quality AI',
+    popular: true
+  },
+  {
+    title: 'AI Innovation Lab Services',
+    description: 'Custom AI research and development services for cutting-edge technology solutions.',
+    icon: Brain,
+    features: ['Custom AI Development', 'Research & Development', 'Proof of Concept', 'Technology Consulting'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'AI R&D',
     popular: true
   }
 ];

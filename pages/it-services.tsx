@@ -36,7 +36,8 @@ import {
   Rocket,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Mail
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management',
@@ -378,6 +379,322 @@ title: 'AI-Powered IT Operations (AIOps)',
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  // NEW INNOVATIVE IT SERVICES - 2025
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$25,000 - $100,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Operations',
+    description: 'AI-driven security operations center with automated threat detection and response.',
+    icon: Brain,
+    features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Predictive Security'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'AI Security',
+    popular: true
+  },
+  {
+    title: 'Cloud-Native Application Development',
+    description: 'Modern cloud-native application development with microservices and containerization.',
+    icon: Cloud,
+    features: ['Microservices Architecture', 'Container Orchestration', 'API Gateway', 'Service Mesh'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Cloud Development',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Data Centers', 'IoT Integration', 'Low Latency Processing', 'Distributed Computing'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Post-quantum cryptography solutions to protect against future quantum threats.',
+    icon: Lock,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Planning', 'Compliance Support'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: '5G Network Infrastructure',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Core Network', 'Network Slicing', 'Edge Computing Integration', 'Performance Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Network,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management Platform',
+    description: 'Comprehensive IoT security and device management solutions for enterprise environments.',
+    icon: Wifi,
+    features: ['Device Management', 'Security Monitoring', 'Firmware Updates', 'Compliance Reporting'],
+    pricing: '$15,000 - $80,000/setup',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Software-defined infrastructure solutions combining compute, storage, and networking.',
+    icon: Server,
+    features: ['HCI Implementation', 'Software-Defined Storage', 'Network Virtualization', 'Management Platform'],
+    pricing: '$35,000 - $180,000/setup',
+    category: 'HCI',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery as a Service (DRaaS)',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'Recovery Testing', 'RTO/RPO Optimization', 'Cloud Backup'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'API Gateway & Management Platform',
+    description: 'Enterprise API gateway with security, monitoring, and lifecycle management.',
+    icon: Network,
+    features: ['API Security', 'Rate Limiting', 'Analytics & Monitoring', 'Developer Portal'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Modern data lake architecture with real-time analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Ingestion', 'Real-time Processing', 'ML Integration', 'Data Governance'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Data Analytics',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Management Platform',
+    description: 'Unified management platform for multi-cloud environments with cost optimization.',
+    icon: Cloud,
+    features: ['Multi-cloud Visibility', 'Cost Optimization', 'Security Management', 'Compliance Monitoring'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Multi-Cloud',
+    popular: true
+  },
+  {
+    title: 'DevSecOps Implementation',
+    description: 'Security-integrated DevOps practices with automated security testing and compliance.',
+    icon: Settings,
+    features: ['Security Integration', 'Automated Testing', 'Compliance Automation', 'Risk Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'DevSecOps',
+    popular: true
+  },
+  {
+    title: 'Network Function Virtualization (NFV)',
+    description: 'Virtualized network functions for flexible and scalable network infrastructure.',
+    icon: Network,
+    features: ['VNF Deployment', 'Orchestration Platform', 'Service Chaining', 'Performance Monitoring'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'NFV',
+    popular: true
+  },
+  {
+    title: 'Software-Defined WAN (SD-WAN)',
+    description: 'Software-defined wide area network solutions for optimized connectivity and security.',
+    icon: Network,
+    features: ['SD-WAN Implementation', 'Traffic Optimization', 'Security Integration', 'Centralized Management'],
+    pricing: '$25,000 - $120,000/setup',
+    category: 'SD-WAN',
+    popular: true
+  },
+  {
+    title: 'Identity & Access Management (IAM)',
+    description: 'Comprehensive identity and access management solutions with single sign-on and MFA.',
+    icon: Users,
+    features: ['Single Sign-On', 'Multi-Factor Authentication', 'Privileged Access Management', 'Identity Governance'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'IAM',
+    popular: true
+  },
+  {
+    title: 'Endpoint Detection & Response (EDR)',
+    description: 'Advanced endpoint security with real-time threat detection and automated response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Forensic Analysis', 'Behavioral Monitoring'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Endpoint Security',
+    popular: true
+  },
+  {
+    title: 'Container Security Platform',
+    description: 'Comprehensive security solutions for containerized applications and Kubernetes environments.',
+    icon: Server,
+    features: ['Container Scanning', 'Runtime Protection', 'Policy Enforcement', 'Vulnerability Management'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'Container Security',
+    popular: true
+  },
+  {
+    title: 'Data Loss Prevention (DLP)',
+    description: 'Data loss prevention solutions with content inspection and policy enforcement.',
+    icon: Lock,
+    features: ['Content Inspection', 'Policy Enforcement', 'Data Classification', 'Incident Response'],
+    pricing: '$18,000 - $90,000/setup',
+    category: 'Data Protection',
+    popular: true
+  },
+  {
+    title: 'Security Information & Event Management (SIEM)',
+    description: 'Advanced SIEM platform with AI-powered threat detection and correlation.',
+    icon: Monitor,
+    features: ['Log Collection', 'Threat Correlation', 'Incident Response', 'Compliance Reporting'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'SIEM',
+    popular: true
+  },
+  {
+    title: 'Network Access Control (NAC)',
+    description: 'Network access control solutions for device authentication and policy enforcement.',
+    icon: Network,
+    features: ['Device Authentication', 'Policy Enforcement', 'Guest Access Management', 'Compliance Monitoring'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'NAC',
+    popular: true
+  },
+  {
+    title: 'Web Application Firewall (WAF)',
+    description: 'Advanced web application firewall with AI-powered threat detection and mitigation.',
+    icon: Shield,
+    features: ['Threat Detection', 'DDoS Protection', 'Bot Management', 'API Security'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'WAF',
+    popular: true
+  },
+  {
+    title: 'Email Security Gateway',
+    description: 'Comprehensive email security solutions with threat protection and compliance features.',
+    icon: Mail,
+    features: ['Threat Protection', 'Spam Filtering', 'Data Loss Prevention', 'Compliance Archiving'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Mobile Device Management (MDM)',
+    description: 'Enterprise mobile device management with security policies and application control.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Policy Management', 'App Control', 'Remote Wipe'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Mobile Security',
+    popular: true
+  },
+  {
+    title: 'Backup & Recovery Automation',
+    description: 'Automated backup and recovery solutions with cloud integration and testing.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Cloud Integration', 'Recovery Testing', 'Compliance Reporting'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'Backup & Recovery',
+    popular: true
+  },
+  {
+    title: 'IT Asset Management System',
+    description: 'Comprehensive IT asset lifecycle management with automated discovery and tracking.',
+    icon: Monitor,
+    features: ['Asset Discovery', 'Lifecycle Tracking', 'License Management', 'Cost Optimization'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Asset Management',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete IT service management platform with ticketing, change management, and reporting.',
+    icon: Settings,
+    features: ['Service Desk', 'Change Management', 'Incident Management', 'Service Catalog'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Network Performance Monitoring',
+    description: 'Advanced network monitoring with performance analytics and predictive insights.',
+    icon: BarChart3,
+    features: ['Performance Monitoring', 'Traffic Analysis', 'Predictive Analytics', 'Alert Management'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Network Monitoring',
+    popular: true
+  },
+  {
+    title: 'Cloud Cost Optimization Services',
+    description: 'Cloud cost analysis and optimization services with automated recommendations.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Optimization Recommendations', 'Budget Management', 'Resource Rightsizing'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Cloud Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Compliance & Audit Services',
+    description: 'Comprehensive IT compliance and audit services for various regulatory requirements.',
+    icon: CheckCircle,
+    features: ['Compliance Assessment', 'Audit Preparation', 'Policy Development', 'Risk Assessment'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'IT Training & Certification Programs',
+    description: 'Comprehensive IT training programs for teams and individual certification preparation.',
+    icon: BookOpen,
+    features: ['Custom Training', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$2,000 - $10,000/person',
+    category: 'Training',
+    popular: true
+  },
+  {
+    title: 'IT Consulting & Strategy',
+    description: 'Strategic IT consulting services for digital transformation and technology roadmaps.',
+    icon: Users,
+    features: ['Technology Assessment', 'Digital Strategy', 'Roadmap Planning', 'Vendor Selection'],
+    pricing: '$150 - $300/hour',
+    category: 'Consulting',
+    popular: true
+  },
+  {
+    title: 'IT Project Management Services',
+    description: 'Professional IT project management services with agile methodologies and best practices.',
+    icon: Settings,
+    features: ['Project Planning', 'Agile Management', 'Risk Management', 'Quality Assurance'],
+    pricing: '$100 - $200/hour',
+    category: 'Project Management',
+    popular: true
+  },
+  {
+    title: 'IT Support & Maintenance',
+    description: 'Comprehensive IT support and maintenance services with 24/7 monitoring and response.',
+    icon: Users,
+    features: ['24/7 Support', 'Proactive Monitoring', 'Preventive Maintenance', 'Incident Response'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Support & Maintenance',
     popular: true
   }
 ];
