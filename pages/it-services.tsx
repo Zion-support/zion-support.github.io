@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -416,6 +418,142 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Servers', 'IoT Integration', 'Low Latency', 'Distributed Processing'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Edge Computing',
+    popular: true,
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing readiness assessment and hybrid quantum-classical solutions.',
+    icon: Cpu,
+    features: ['Quantum Readiness', 'Hybrid Solutions', 'Algorithm Optimization', 'Security Enhancement'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Design', 'Network Optimization', 'IoT Connectivity', 'Performance Tuning'],
+    pricing: '$30,000 - $200,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure setup with GPU clusters and model deployment.',
+    icon: Brain,
+    features: ['GPU Clusters', 'Model Deployment', 'MLOps Pipeline', 'Scalable Training'],
+    pricing: '$25,000 - $300,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract deployment, and DApp development.',
+    icon: Shield,
+    features: ['Blockchain Setup', 'Smart Contracts', 'DApp Development', 'Security Auditing'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and analytics.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Real-time Processing', 'Security Framework'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Zero Trust security model implementation with identity verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$45,000 - $350,000/project',
+    category: 'Zero Trust',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Compliance', 'Workload Migration'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway setup with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway', 'Security Policies', 'Rate Limiting', 'Analytics Dashboard'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation with container orchestration.',
+    icon: Server,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake setup with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Lake Setup', 'ETL Pipelines', 'Analytics Tools', 'ML Integration'],
+    pricing: '$50,000 - $400,000/project',
+    category: 'Data Analytics',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'Serverless Architecture',
+    description: 'Serverless application architecture design and implementation.',
+    icon: Cloud,
+    features: ['Function Design', 'Event Processing', 'Auto-scaling', 'Cost Optimization'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Serverless',
+    link: 'https://serverless.ziontechgroup.com'
+  },
+  {
+    title: 'IT Automation & Orchestration',
+    description: 'Comprehensive IT automation with workflow orchestration and self-healing systems.',
+    icon: Settings,
+    features: ['Workflow Automation', 'Self-healing Systems', 'Policy Enforcement', 'Resource Optimization'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Policies'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'IT Resilience & Continuity',
+    description: 'Comprehensive IT resilience planning with business continuity and disaster recovery.',
+    icon: Shield,
+    features: ['Resilience Planning', 'Business Continuity', 'Disaster Recovery', 'Testing & Validation'],
+    pricing: '$35,000 - $300,000/project',
+    category: 'Resilience',
+    link: 'https://itresilience.ziontechgroup.com'
   }
 ];
 

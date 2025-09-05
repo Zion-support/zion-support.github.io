@@ -89,6 +89,10 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive technology solutions designed to transform your business and drive innovation.
+              <br /><br />
+              <span className="text-lg text-blue-300 font-semibold">
+                📞 Call: +1 302 464 0950 | ✉️ Email: kleber@ziontechgroup.com
+              </span>
             </p>
           </motion.div>
         </div>

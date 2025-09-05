@@ -62,6 +62,10 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
               We deliver innovative micro SaaS solutions, cutting-edge AI services, and comprehensive IT solutions to help businesses thrive in the digital age.
+              <br /><br />
+              <span className="text-lg text-blue-300 font-semibold">
+                📞 Call: +1 302 464 0950 | ✉️ Email: kleber@ziontechgroup.com
+              </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -152,7 +156,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Information Section */}
+      {/* Services Overview Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -163,14 +167,79 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
+              Our Comprehensive Service Portfolio
+            </h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-12">
+              We offer over 120+ cutting-edge technology services across AI, IT, and Micro SaaS solutions. 
+              From quantum computing to smart cities, we're your one-stop technology partner.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">AI Services (40+ Solutions)</h3>
+                <p className="text-blue-700 mb-4">Cutting-edge AI solutions including generative AI, quantum machine learning, autonomous vehicles, and space exploration AI.</p>
+                <ul className="text-sm text-blue-600 space-y-2">
+                  <li>• Generative AI Content Studio - $1,500-$8,000/month</li>
+                  <li>• AI Drug Discovery - $50,000-$500,000/project</li>
+                  <li>• Autonomous Vehicle AI - $100,000-$1M/project</li>
+                  <li>• Quantum Machine Learning - $75,000-$750,000/project</li>
+                </ul>
+                <Link href="/ai-services" className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-semibold">
+                  View All AI Services →
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-green-900 mb-4">IT Services (40+ Solutions)</h3>
+                <p className="text-green-700 mb-4">Enterprise-grade IT solutions including edge computing, 5G networks, blockchain infrastructure, and zero trust security.</p>
+                <ul className="text-sm text-green-600 space-y-2">
+                  <li>• Edge Computing Infrastructure - $20,000-$150,000/project</li>
+                  <li>• 5G Network Implementation - $30,000-$200,000/project</li>
+                  <li>• Blockchain Infrastructure - $40,000-$400,000/project</li>
+                  <li>• Zero Trust Security - $45,000-$350,000/project</li>
+                </ul>
+                <Link href="/it-services" className="inline-block mt-4 text-green-600 hover:text-green-800 font-semibold">
+                  View All IT Services →
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-purple-900 mb-4">Micro SaaS (45+ Products)</h3>
+                <p className="text-purple-700 mb-4">Innovative micro SaaS solutions including AI-powered tools, smart energy management, and blockchain applications.</p>
+                <ul className="text-sm text-purple-600 space-y-2">
+                  <li>• AI Legal Document Analyzer - $399-$1,999/month</li>
+                  <li>• Smart Home Automation Hub - $99-$499/month</li>
+                  <li>• Supply Chain Visibility - $599-$2,999/month</li>
+                  <li>• Digital Twin Platform - $999-$4,999/month</li>
+                </ul>
+                <Link href="/micro-saas" className="inline-block mt-4 text-purple-600 hover:text-purple-800 font-semibold">
+                  View All Micro SaaS →
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-              Ready to transform your business? Contact our expert team for a free consultation.
+              Contact our expert team for a free consultation and discover how our 120+ technology solutions can transform your business.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-lg">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -178,13 +247,14 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
                 <p className="text-gray-600 mb-2">
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 font-semibold">
                     kleber@ziontechgroup.com
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">Get a detailed proposal within 24 hours</p>
               </div>
               
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-lg">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -192,13 +262,14 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
                 <p className="text-gray-600 mb-2">
-                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800 font-semibold">
                     +1 302 464 0950
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">Speak with our experts directly</p>
               </div>
               
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-lg">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -210,11 +281,12 @@ export default function HomePage() {
                   <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="text-purple-600 hover:text-purple-800">
+                     className="text-purple-600 hover:text-purple-800 font-semibold">
                     364 E Main St STE 1008<br />
                     Middletown, DE 19709
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">Schedule an in-person meeting</p>
               </div>
             </div>
           </motion.div>

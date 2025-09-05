@@ -398,6 +398,178 @@ const microSaaSProducts = [
     link: 'https://cryptotracker.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true,
+    link: 'https://legaldocs.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI learning and energy optimization.',
+    icon: Home,
+    features: ['Device Integration', 'AI Learning', 'Energy Optimization', 'Voice Control'],
+    pricing: '$99 - $499/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Visibility Platform',
+    description: 'End-to-end supply chain tracking with real-time visibility and predictive analytics.',
+    icon: Package,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Supplier Portal'],
+    pricing: '$599 - $2,999/month',
+    category: 'Supply Chain',
+    link: 'https://supplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recruitment Assistant',
+    description: 'Intelligent candidate screening and matching with bias detection and interview scheduling.',
+    icon: Users,
+    features: ['Resume Screening', 'Bias Detection', 'Interview Scheduling', 'Candidate Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'HR Tech',
+    link: 'https://recruitment.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain transaction analysis with compliance monitoring and risk assessment.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Compliance Monitoring', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$799 - $3,999/month',
+    category: 'Blockchain',
+    link: 'https://blockchain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research Platform',
+    description: 'Automated market research with sentiment analysis, competitor tracking, and trend prediction.',
+    icon: Search,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Trend Prediction', 'Custom Reports'],
+    pricing: '$499 - $2,499/month',
+    category: 'Market Research',
+    link: 'https://marketresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'AI-driven energy optimization for buildings with predictive maintenance and cost reduction.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Predictive Maintenance', 'Cost Analysis', 'Carbon Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Energy',
+    link: 'https://energy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Service',
+    description: 'Real-time translation with context awareness and industry-specific terminology support.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Quality Assurance'],
+    pricing: '$149 - $799/month',
+    category: 'Language',
+    link: 'https://translation.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create digital replicas of physical assets for simulation, monitoring, and optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$999 - $4,999/month',
+    category: 'Digital Twin',
+    link: 'https://digitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection using machine learning with real-time monitoring and alerts.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning', 'Pattern Recognition', 'Alert System'],
+    pricing: '$399 - $1,999/month',
+    category: 'Security',
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Agriculture Platform',
+    description: 'IoT-based farm management with crop monitoring, weather prediction, and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Prediction', 'Yield Optimization', 'Resource Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Agriculture',
+    link: 'https://smartagri.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance tracking with budgeting, investment advice, and goal setting.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Advice', 'Goal Setting', 'Financial Planning'],
+    pricing: '$19 - $99/month',
+    category: 'Personal Finance',
+    link: 'https://personalfinance.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Commerce Platform',
+    description: 'Voice-activated e-commerce with natural language processing and payment integration.',
+    icon: Mic,
+    features: ['Voice Commands', 'Natural Language', 'Payment Integration', 'Order Management'],
+    pricing: '$199 - $999/month',
+    category: 'E-commerce',
+    link: 'https://voicecommerce.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health support with mood tracking, therapy recommendations, and crisis intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Therapy Recommendations', 'Crisis Intervention', 'Progress Monitoring'],
+    pricing: '$29 - $149/month',
+    category: 'Healthcare',
+    link: 'https://mentalhealth.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT-based waste monitoring with route optimization and recycling analytics.',
+    icon: Package,
+    features: ['Waste Monitoring', 'Route Optimization', 'Recycling Analytics', 'Cost Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental',
+    link: 'https://wastemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generator',
+    description: 'Automated code generation from natural language descriptions with multiple language support.',
+    icon: Code,
+    features: ['Natural Language Input', 'Multi-language Support', 'Code Review', 'Documentation'],
+    pricing: '$99 - $499/month',
+    category: 'Development',
+    link: 'https://codegenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Parking Management',
+    description: 'AI-powered parking optimization with real-time availability and dynamic pricing.',
+    icon: Car,
+    features: ['Real-time Availability', 'Dynamic Pricing', 'Reservation System', 'Analytics'],
+    pricing: '$149 - $799/month',
+    category: 'Smart City',
+    link: 'https://smartparking.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Creator',
+    description: 'Automated content creation for social media, blogs, and marketing with brand voice consistency.',
+    icon: FileText,
+    features: ['Multi-platform Content', 'Brand Voice', 'A/B Testing', 'Performance Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Content Creation',
+    link: 'https://contentcreator.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification with privacy protection and cross-platform compatibility.',
+    icon: Shield,
+    features: ['Decentralized Identity', 'Privacy Protection', 'Cross-platform', 'Compliance'],
+    pricing: '$299 - $1,499/month',
+    category: 'Identity',
+    link: 'https://identity.ziontechgroup.com'
+  },
+  {
     title: 'Smart Home Automation',
     description: 'IoT platform for smart home device management and automation rules.',
     icon: Home,
