@@ -32,15 +32,22 @@ export default [
         fetch: 'readonly',
         process: 'readonly',
         // DOM types
+        Element: 'readonly',
+        HTMLElement: 'readonly',
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLDivElement: 'readonly',
-        HTMLElement: 'readonly',
         MouseEvent: 'readonly',
         KeyboardEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        LayoutShift: 'readonly',
+        performance: 'readonly',
+        IntersectionObserver: 'readonly',
+        IntersectionObserverEntry: 'readonly',
         // React
         React: 'readonly',
         // Jest/Testing globals
