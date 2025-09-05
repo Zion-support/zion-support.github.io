@@ -16,7 +16,8 @@ import {
   Briefcase,
   GraduationCap,
   Globe,
-  CheckCircle
+  CheckCircle,
+  BookOpen
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -181,9 +182,8 @@ export default function CareersPage() {
                 working together to build amazing technology solutions.
               </p>
             </motion.div>
-          </div>
-
-          <div className="max-w-6xl mx-auto">
+          
+            <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
                   <motion.div
@@ -208,8 +208,7 @@ export default function CareersPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       {/* Why Join Us */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -295,7 +294,8 @@ export default function CareersPage() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
