@@ -1,6 +1,6 @@
-module.exports = {
-  "apps": [// Main Application
-    {
+module.exports = {}
+  "apps": [// Main Application;]
+    {}
       name: 'ziontechgroup-web',
       "script": 'npm',
       "args": 'start',
@@ -9,9 +9,9 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
-        "PORT": 3000
+        "PORT": 3000;
       },
       "log_file": './logs/web.log',
       "out_file": './logs/web-out.log',
@@ -19,8 +19,8 @@ module.exports = {
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // CI/CD Pipeline Replacement - Build and Test
-    {
+    // CI/CD Pipeline Replacement - Build and Test;
+    {}
       "name": 'ci-cd-pipeline',
       "script": 'node',
       "args": 'scripts/ci-cd-automation.cjs',
@@ -28,9 +28,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */1 * * *', // Every hour
+      "cron_restart": '0 */1 * * *', // Every hour;
       "max_memory_restart": '512M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/ci-cd.log',
@@ -38,8 +38,8 @@ module.exports = {
       "error_file": './logs/ci-cd-error.log'
     },
 
-    // Continuous Automation Replacement
-    {
+    // Continuous Automation Replacement;
+    {}
       "name": 'continuous-automation',
       "script": 'node',
       "args": 'scripts/automation-orchestrator.cjs',
@@ -47,9 +47,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */6 * * *', // Every 6 hours
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
       "max_memory_restart": '512M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/continuous-automation.log',
@@ -57,8 +57,8 @@ module.exports = {
       "error_file": './logs/continuous-automation-error.log'
     },
 
-    // Performance Monitor
-    {
+    // Performance Monitor;
+    {}
       "name": 'performance-monitor',
       "script": 'node',
       "args": 'scripts/performance-monitor.cjs',
@@ -66,9 +66,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */2 * * *', // Every 2 hours
+      "cron_restart": '0 */2 * * *', // Every 2 hours;
       "max_memory_restart": '256M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/performance-monitor.log',
@@ -76,8 +76,8 @@ module.exports = {
       "error_file": './logs/performance-monitor-error.log'
     },
 
-    // Security Audit
-    {
+    // Security Audit;
+    {}
       "name": 'security-audit',
       "script": 'node',
       "args": 'scripts/security-audit.cjs',
@@ -85,9 +85,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */4 * * *', // Every 4 hours
+      "cron_restart": '0 */4 * * *', // Every 4 hours;
       "max_memory_restart": '256M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/security-audit.log',
@@ -95,8 +95,8 @@ module.exports = {
       "error_file": './logs/security-audit-error.log'
     },
 
-    // Code Quality Monitor
-    {
+    // Code Quality Monitor;
+    {}
       "name": 'code-quality-monitor',
       "script": 'node',
       "args": 'scripts/code-quality-monitor.cjs',
@@ -104,9 +104,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */3 * * *', // Every 3 hours
+      "cron_restart": '0 */3 * * *', // Every 3 hours;
       "max_memory_restart": '256M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/code-quality.log',
@@ -114,8 +114,8 @@ module.exports = {
       "error_file": './logs/code-quality-error.log'
     },
 
-    // Dependency Updates
-    {
+    // Dependency Updates;
+    {}
       "name": 'dependency-updates',
       "script": 'node',
       "args": 'scripts/dependency-updater.cjs',
@@ -123,9 +123,9 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '0 */6 * * *', // Every 6 hours
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
       "max_memory_restart": '256M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/dependency-updates.log',
@@ -133,8 +133,8 @@ module.exports = {
       "error_file": './logs/dependency-updates-error.log'
     },
 
-    // Health Check
-    {
+    // Health Check;
+    {}
       "name": 'health-check',
       "script": 'node',
       "args": 'scripts/health-check.sh',
@@ -142,14 +142,14 @@ module.exports = {
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "cron_restart": '*/5 * * * *', // Every 5 minutes
+      "cron_restart": '*/5 * * * *', // Every 5 minutes;
       "max_memory_restart": '128M',
-      "env": {
+      "env": {}
         NODE_ENV: 'production'
       },
       "log_file": './logs/health-check.log',
       "out_file": './logs/health-check-out.log',
       "error_file": './logs/health-check-error.log'
-    }
-  ]
+    };
+  ];
 };

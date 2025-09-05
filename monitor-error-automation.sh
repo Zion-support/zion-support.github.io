@@ -1,14 +1,14 @@
 #!/bin/bash
 echo "🔍 Error Automation System Status:"
-echo "=================================="
+echo "======"
 pm2 status
 echo ""
 echo "📊 Recent Logs:"
-echo "==============="
+echo "="
 pm2 logs --lines 20
 echo ""
 echo "📈 Error Fixing Statistics:"
-echo "==========================="
+echo "======"
 if [ -f "master-error-coordinator-report.json" ]; then
     cat master-error-coordinator-report.json | jq '.summary' 2>/dev/null || echo "No statistics available yet"
 else

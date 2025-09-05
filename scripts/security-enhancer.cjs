@@ -1,93 +1,17 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class SecurityEnhancer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json');
-  }
-
-  async enhanceSecurity() {
-    console.log('🔒 Enhancing security...');
-    
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
-    const securityIssues = [];
-
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        const issues = this.findSecurityIssues(content, file);
-        if (issues.length > 0) {
-          securityIssues.push({
-            file: path.relative(this.projectRoot, file),
-            issues: issues
-          });
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}: ${error.message}`);
-      }
-    }
-
-    this.saveReport(securityIssues);
-    console.log(`✅ Security enhancement completed! Found ${securityIssues.length} files with issues.`);
-  }
-
-  findSecurityIssues(content, filePath) {
-    const issues = [];
-    
-    // Check for common security issues
-    if (content.includes('eval(')) {
-      issues.push('Use of eval() - potential security risk');
-    }
-    
-    if (content.includes('innerHTML')) {
-      issues.push('Use of innerHTML - consider using textContent for security');
-    }
-    
-    if (content.includes('document.write')) {
-      issues.push('Use of document.write - potential XSS risk');
-    }
-    
-    if (content.includes('localStorage.setItem')) {
-      issues.push('Use of localStorage - ensure sensitive data is not stored');
-    }
-    
-    return issues;
-  }
-
-  getAllFiles(dir, extensions) {
-    const files = [];
-    try {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files.push(...this.getAllFiles(fullPath, extensions));
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-    return files;
-  }
-
-  saveReport(securityIssues) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalFiles: securityIssues.length,
-      issues: securityIssues
-    };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-  }
-}
-
-if (require.main === module) {
-  const enhancer = new SecurityEnhancer();
-  enhancer.enhanceSecurity().catch(console.error);
-}
-
-module.exports = SecurityEnhancer;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
+    console.log('� Enhancing security...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    if (content.includes('eval(')
+      issues.push('Use of eval() - potential security risk'
+    if (content.includes('innerHTML')
+      issues.push('Use of innerHTML - consider using textContent for security')
+    if (content.includes('document.write')
+      issues.push('Use of document.write - potential XSS risk')
+    if (content.includes('localStorage.setItem')
+      issues.push('Use of localStorage - ensure sensitive data is not stored')
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+      // Skip directories that can'
