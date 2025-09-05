@@ -1,43 +1,59 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
 
 // Test wrapper with providers
-export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  )};
+  );
+};
 
 // Custom render function
-export const renderWithProviders = ("ui": React.ReactElement) => {
-  return render(ui, { "wrapper": TestWrapper })};
+export const renderWithProviders = (ui: React.ReactElement) => {
+  return render(ui, { wrapper: TestWrapper });
+};
 
 // Mock data generators
 export const mockUser = {
-  "id": '1',
-  "name": 'Test User',
-  "email": 'test@example.com',
-  "role": 'user'
+  id: '1',
+  name: 'Test User',
+  email: 'test@example.com',
+  role: 'user'
 };
 
-export const mockMessage = {
-  "id": '1',
-  "text": 'Test message',
-  "sender": 'user' as const,
-  "timestamp": new Date()
+export const mockProduct = {
+  id: '1',
+  title: 'Test Product',
+  description: 'Test Description',
+  price: 99.99,
+  category: 'test',
+  features: ['feature1', 'feature2'],
+  image: '/test-image.jpg',
+  status: 'active'
 };
 
-// Common test helpers
-export const waitForElementToBeRemoved = waitFor;
-export const waitForElementToAppear = waitFor;
+// Mock functions
+export const mockNavigate = jest.fn();
+export const mockDispatch = jest.fn();
 
-export default {
-  renderWithProviders,
-  mockUser,
-  mockMessage,
-  waitForElementToBeRemoved,
-  waitForElementToAppear
+// Helper functions
+export const waitForElementToBeRemoved = async (element: HTMLElement) => {
+  await waitFor(() => {
+    expect(element).not.toBeInTheDocument();
+  });
 };
-import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+
+export const clickButton = async (buttonText: string) => {
+  const button = screen.getByText(buttonText);
+  fireEvent.click(button);
+  return button;
+};
+
+export const fillInput = (inputLabel: string, value: string) => {
+  const input = screen.getByLabelText(inputLabel);
+  fireEvent.change(input, { target: { value } });
+  return input;
+};
