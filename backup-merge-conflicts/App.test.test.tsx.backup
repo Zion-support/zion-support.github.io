@@ -1,5 +1,8 @@
 <<<<<<< HEAD:backup-merge-conflicts/App.test.test.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/App.test.test.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> main:__tests__/App.test.test.tsx
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from '../App';
@@ -21,13 +24,17 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 =======
 <<<<<<< HEAD
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
+<<<<<<< HEAD:backup-merge-conflicts/App.test.test.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/App.test.test.tsx
+=======
+>>>>>>> main:__tests__/App.test.test.tsx
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<App />)}
 }); it('handles user interactions',() => { render(<App />)})}
 });'
+<<<<<<< HEAD:backup-merge-conflicts/App.test.test.tsx.backup
 </App>'
 <<<<<<< HEAD:backup-merge-conflicts/App.test.test.tsx.backup
 >>>>>>> main
@@ -35,3 +42,6 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/App.test.test.tsx
+=======
+</App>'
+>>>>>>> main:__tests__/App.test.test.tsx

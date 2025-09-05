@@ -1,5 +1,8 @@
 <<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizer.dynamic.test.js.backup
+<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizer.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+>>>>>>> main:__tests__/PerformanceOptimizer.dynamic.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,6 +27,7 @@ describe('PerformanceOptimizerdynamic', () => {
 =======
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceOptimizerdynamic from "./components/PerformanceOptimizer.dynamic"; describe("PerformanceOptimizerdynamic",() => { test("renders without crashing",() => { render(<PerformanceOptimizerdynamic />); expect( screen.getByTestId("performanceoptimizer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceOptimizerdynamic />)}); test("handles user interactions",() => { render(<PerformanceOptimizerdynamic />)}); test("applies correct styling",() => { render(<PerformanceOptimizerdynamic />)})});''"
+<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizer.dynamic.test.js.backup
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import PerformanceOptimizerdynamic from '../components/PerformanceOptimizer.dynamic'; describe('PerformanceOptimizerdynamic',() => { test('renders without crashing',() => { render(<PerformanceOptimizerdynamic />); expect( screen.getByTestId('performanceoptimizer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceOptimizerdynamic />)}); test('handles user interactions',() => { render(<PerformanceOptimizerdynamic />)}); test('applies correct styling',() => { render(<PerformanceOptimizerdynamic />)})});
 >>>>>>> main
@@ -31,3 +35,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Performa
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import PerformanceOptimizerdynamic from '../components/PerformanceOptimizer.dynamic'; describe('PerformanceOptimizerdynamic',() => { test('renders without crashing',() => { render(<PerformanceOptimizerdynamic />); expect( screen.getByTestId('performanceoptimizer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceOptimizerdynamic />)}); test('handles user interactions',() => { render(<PerformanceOptimizerdynamic />)}); test('applies correct styling',() => { render(<PerformanceOptimizerdynamic />)})});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/PerformanceOptimizer.dynamic.test.js
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import PerformanceOptimizerdynamic from '../components/PerformanceOptimizer.dynamic'; describe('PerformanceOptimizerdynamic',() => { test('renders without crashing',() => { render(<PerformanceOptimizerdynamic />); expect( screen.getByTestId('performanceoptimizer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceOptimizerdynamic />)}); test('handles user interactions',() => { render(<PerformanceOptimizerdynamic />)}); test('applies correct styling',() => { render(<PerformanceOptimizerdynamic />)})});
+>>>>>>> main:__tests__/PerformanceOptimizer.dynamic.test.js

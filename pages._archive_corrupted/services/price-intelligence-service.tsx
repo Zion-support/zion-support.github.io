@@ -10,3 +10,7 @@ export default function Priceintelligenceservice({ }: PriceintelligenceservicePr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> main

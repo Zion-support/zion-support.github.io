@@ -1,4 +1,8 @@
+<<<<<<< HEAD:pages_backup/pages/partners.tsx.backup
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> main:pages/partners.tsx.backup
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

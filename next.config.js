@@ -1,11 +1,10 @@
 const nextConfig = {
   reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
+<<<<<<< HEAD
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
@@ -35,10 +34,30 @@ const nextConfig = {
             chunks: 'all',
           },
         },
+=======
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+>>>>>>> main
       };
     }
     
     return config;
+<<<<<<< HEAD
   },
   
   // Headers for security and performance
@@ -115,6 +134,9 @@ const nextConfig = {
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
+=======
+  }
+>>>>>>> main
 };
 
 export default nextConfig;

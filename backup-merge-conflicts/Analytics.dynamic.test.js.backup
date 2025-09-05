@@ -1,5 +1,8 @@
 <<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.test.js.backup
+<<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+>>>>>>> main:__tests__/Analytics.dynamic.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -22,6 +25,7 @@ describe('Analyticsdynamic', () => {
 =======
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe("Analyticsdynamic",() => { test("renders without crashing",() => { render(<Analyticsdynamic />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic />)}); test("handles user interactions",() => { render(<Analyticsdynamic />)}); test("applies correct styling",() => { render(<Analyticsdynamic />)})});''"
+<<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.test.js.backup
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
 >>>>>>> main
@@ -29,3 +33,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/Analytics.dynamic.test.js
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
+>>>>>>> main:__tests__/Analytics.dynamic.test.js

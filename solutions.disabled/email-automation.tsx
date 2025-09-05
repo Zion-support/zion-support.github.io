@@ -9,3 +9,7 @@ export default function Emailautomation({ }: EmailautomationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> main

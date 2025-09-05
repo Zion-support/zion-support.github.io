@@ -10,3 +10,7 @@ export default function M365securitycopilot({ }: M365securitycopilotProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> main

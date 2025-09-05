@@ -1,5 +1,8 @@
 <<<<<<< HEAD:backup-merge-conflicts/ContactFormEnhanced.dynamic.test.js.backup
+<<<<<<< HEAD:backup-merge-conflicts/ContactFormEnhanced.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+>>>>>>> main:__tests__/ContactFormEnhanced.dynamic.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,6 +27,7 @@ describe('ContactFormEnhanceddynamic', () => {
 =======
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe("ContactFormEnhanceddynamic",() => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling",() => { render(<ContactFormEnhanceddynamic />)})});''"
+<<<<<<< HEAD:backup-merge-conflicts/ContactFormEnhanced.dynamic.test.js.backup
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
 >>>>>>> main
@@ -31,3 +35,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/ContactFormEnhanced.dynamic.test.js
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
+>>>>>>> main:__tests__/ContactFormEnhanced.dynamic.test.js

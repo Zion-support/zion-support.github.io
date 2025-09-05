@@ -10,3 +10,7 @@ export default function Fractionalcto({ }: FractionalctoProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> main

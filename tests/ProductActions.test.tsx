@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ProductActions.testProps {
   // Add props here as needed
 }
-
 export default function ProductActions.test({ }: ProductActions.testProps) {
   return (
     <div>
@@ -11,4 +9,8 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

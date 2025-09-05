@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD:pages/forgot-password.tsx
+import Layout from '../components/Layout';
+=======
 import MainLayout from '../components/layout/MainLayout';
+>>>>>>> main:pages_disabled/forgot-password.tsx
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -21,7 +25,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <MainLayout 
+    <Layout 
       title="Forgot Password - Zion Tech Group"
       description="Reset your password for Zion Tech Group account"
     >
@@ -138,6 +142,6 @@ export default function ForgotPassword() {
           </motion.div>
         </div>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
