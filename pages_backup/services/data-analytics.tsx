@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -122,21 +117,13 @@ export default function DataAnalyticsPage() {
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
 const analyticsServices = [
-<<<<<<< HEAD
->>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   {
     icon: BarChart3,
@@ -169,11 +156,6 @@ const analyticsServices = [
     description: 'Interactive charts, graphs, and visual data representations'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -183,14 +165,7 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
-<<<<<<< HEAD
-=======
-=======
-
-export default function DataAnalyticsPage() {
->>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
 
 export default function DataAnalyticsPage() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -223,11 +198,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,11 +215,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -265,10 +230,7 @@ export default function DataAnalyticsPage() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
->>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -282,11 +244,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -322,13 +279,7 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
@@ -352,17 +303,7 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-    </Layout>
-=======
-    </>
->>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
     </>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );

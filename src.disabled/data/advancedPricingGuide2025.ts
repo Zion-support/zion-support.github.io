@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export: interface AdvancedPricingTier {
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 "export": interface AdvancedPricingTier {
    id: string;
    name: string;
