@@ -1,1 +1,7 @@
-describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})});
+import { describe, it, expect } from 'vitest';
+
+describe('smoke', () => {
+  it('true is truthy', () => {
+    expect(true).toBeTruthy();
+  });
+});

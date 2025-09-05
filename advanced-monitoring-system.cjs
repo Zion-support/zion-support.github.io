@@ -46,7 +46,7 @@ class AdvancedMonitoringSystem {
   }
 
   async generateReport() {
-    const metrics = await this.collectMetrics(;);
+    const metrics = await this.collectMetrics();
     const report = {
       "timestamp": new Date().toISOString(),
       metrics,

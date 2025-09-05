@@ -9,11 +9,13 @@ class AdvancedAppImprovementSuite {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
-    this.ensureDirectories()}
+    this.ensureDirectories();
+  }
 
   ensureDirectories() {
-    if () {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message) {

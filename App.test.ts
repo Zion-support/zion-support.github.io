@@ -1,1 +1,18 @@
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import App from './src/App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}); it('displays correct content',() => { render(<App />)}); it('handles user interactions',() => { render(<App />)})});
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import Home from './pages/index';
+
+describe('Home Page', () => {
+  it('renders without crashing', () => {
+    render(<Home />);
+    expect(document.body).toBeInTheDocument();
+  });
+
+  it('displays correct content', () => {
+    render(<Home />);
+  });
+
+  it('handles user interactions', () => {
+    render(<Home />);
+  });
+});
