@@ -285,7 +285,7 @@ main() {
     local command=${1:-"all"}
     
     echo "📊 Zion Tech Group Monitoring and Alerting"
-    echo "=========================================="
+    echo ""
     
     case $command in
         "metrics")
