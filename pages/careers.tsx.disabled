@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Users, 
+<<<<<<< HEAD:pages/careers.tsx
   ArrowRight,
   CheckCircle,
   MapPin,
@@ -10,6 +11,19 @@ import {
   Briefcase,
   GraduationCap,
   Globe
+=======
+  Heart, 
+  Zap, 
+  Globe, 
+  Award, 
+  Coffee, 
+  Laptop, 
+  Home, 
+  DollarSign, 
+  BookOpen, 
+  Briefcase, 
+  CheckCircle 
+>>>>>>> cursor/expand-services-advertise-and-build-project-5dae:pages/careers.tsx.disabled
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -31,13 +45,13 @@ export default function CareersPage() {
   return (
     <MainLayout 
       title="Careers - Zion Tech Group"
-            <motion.div
+    >
+      <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Join our team of innovators and help shape the future of technology
               </p>

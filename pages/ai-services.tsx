@@ -49,7 +49,9 @@ import {
   Bell,
   Home,
   BookOpen,
-  Database
+  Database,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const aiServices = [
@@ -280,6 +282,133 @@ const aiServices = [
     pricing: '$1,500 - $7,500/month',
     category: 'Speech AI',
     link: 'https://voicesynthesis.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Advanced AI system for automated code generation and software development assistance.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Detection', 'Code Optimization', 'Multi-language Support'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Development AI',
+    popular: true,
+    link: 'https://codegen.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Advanced medical AI for diagnostic assistance and treatment recommendations.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'Drug Interaction Check'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Medical AI',
+    link: 'https://medicalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Intelligence',
+    description: 'Advanced threat detection and cybersecurity intelligence using machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Cybersecurity AI',
+    link: 'https://cyberthreat.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Intelligent financial risk assessment and portfolio optimization using AI.',
+    icon: TrendingUp,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis', 'Fraud Detection'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'Financial AI',
+    link: 'https://riskmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Cultural Adaptation', 'Voice Translation'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Language AI',
+    link: 'https://translation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Advanced recommendation system for personalized content and product suggestions.',
+    icon: Target,
+    features: ['Personalized Recommendations', 'Behavioral Analysis', 'A/B Testing', 'Real-time Updates'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Recommendation AI',
+    link: 'https://recommendations.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Image Generation',
+    description: 'Advanced AI for creating high-quality images, artwork, and visual content.',
+    icon: Image,
+    features: ['Image Generation', 'Style Transfer', 'Upscaling', 'Custom Training'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Creative AI',
+    link: 'https://imagegen.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Process Automation',
+    description: 'Intelligent process automation for business workflows and operations.',
+    icon: Settings,
+    features: ['Workflow Automation', 'Decision Making', 'Process Optimization', 'Integration'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Process AI',
+    link: 'https://processai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Sentiment Analysis',
+    description: 'Advanced sentiment analysis for customer feedback and social media monitoring.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Emotion Detection', 'Trend Analysis', 'Real-time Monitoring'],
+    pricing: '$1,200 - $6,000/month',
+    category: 'Sentiment AI',
+    link: 'https://sentiment.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'Industrial AI',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Quality Management',
+    description: 'Automated data quality assessment and cleaning using machine learning.',
+    icon: Database,
+    features: ['Data Quality Assessment', 'Automated Cleaning', 'Anomaly Detection', 'Data Validation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Data AI',
+    link: 'https://dataquality.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Virtual Assistant Platform',
+    description: 'Comprehensive virtual assistant platform with natural language understanding.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Integration APIs', 'Custom Training'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Assistant AI',
+    link: 'https://virtualassistant.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation system for text, images, and video content.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Content AI',
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Energy Optimization',
+    description: 'Intelligent energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Optimization Algorithms', 'Cost Reduction', 'Sustainability Tracking'],
+    pricing: '$3,500 - $17,500/month',
+    category: 'Energy AI',
+    link: 'https://energyoptimization.ziontechgroup.com'
   }
 ];
 
@@ -308,7 +437,17 @@ const categories = [
   { name: 'Education AI', count: aiServices.filter(s => s.category === 'Education AI').length },
   { name: 'Content AI', count: aiServices.filter(s => s.category === 'Content AI').length },
   { name: 'Supply Chain AI', count: aiServices.filter(s => s.category === 'Supply Chain AI').length },
-  { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length }
+  { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
+  { name: 'Development AI', count: aiServices.filter(s => s.category === 'Development AI').length },
+  { name: 'Medical AI', count: aiServices.filter(s => s.category === 'Medical AI').length },
+  { name: 'Language AI', count: aiServices.filter(s => s.category === 'Language AI').length },
+  { name: 'Recommendation AI', count: aiServices.filter(s => s.category === 'Recommendation AI').length },
+  { name: 'Creative AI', count: aiServices.filter(s => s.category === 'Creative AI').length },
+  { name: 'Process AI', count: aiServices.filter(s => s.category === 'Process AI').length },
+  { name: 'Sentiment AI', count: aiServices.filter(s => s.category === 'Sentiment AI').length },
+  { name: 'Industrial AI', count: aiServices.filter(s => s.category === 'Industrial AI').length },
+  { name: 'Data AI', count: aiServices.filter(s => s.category === 'Data AI').length },
+  { name: 'Assistant AI', count: aiServices.filter(s => s.category === 'Assistant AI').length }
 ];
 
 export default function AIServicesPage() {
@@ -492,6 +631,67 @@ export default function AIServicesPage() {
                 <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Contact our AI experts to discuss your artificial intelligence needs and get a custom solution.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-2">+1 302 464 0950</p>
+                <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-2">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-500">24/7 Support</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 mb-2">364 E Main St STE 1008</p>
+                <p className="text-sm text-gray-500">Middletown, DE 19709</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
