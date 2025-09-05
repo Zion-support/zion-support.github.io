@@ -239,9 +239,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
-            <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
+            <p className="mb-3 font-medium text-gray-300">Need help?</p>
+            <div className="space-y-2">
+              <p className="text-blue-400">kleber@ziontechgroup.com</p>
+              <p className="text-blue-400">+1 302 464 0950</p>
+              <p className="text-gray-500 text-xs">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+            </div>
           </div>
         </div>
       </div>

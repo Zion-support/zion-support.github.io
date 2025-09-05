@@ -11,7 +11,8 @@ import {
   Instagram,
   Github,
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Globe
 } from 'lucide-react';
 const services = {
   'AI Solutions': [
@@ -72,7 +73,8 @@ const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
+  hours: '24/7 Support Available',
+  website: 'https://ziontechgroup.com'
 };
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -154,6 +156,17 @@ export default function Footer() {
               <div className="text-gray-400 text-sm">
                 <Zap className="w-4 h-4 inline mr-2" />
                 {contactInfo.hours}
+              </div>
+              <div className="flex items-center space-x-3">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <a 
+                  href={contactInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  {contactInfo.website}
+                </a>
               </div>
             </div>
           </div>

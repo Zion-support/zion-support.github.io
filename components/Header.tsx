@@ -22,7 +22,8 @@ import {
   Rocket, 
   MessageSquare, 
   Phone, 
-  FileText 
+  FileText,
+  Mail
 } from 'lucide-react';
 
 const navigation = [
@@ -154,6 +155,22 @@ export default function Header() {
               </div>
             ))}
           </nav>
+
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="text-sm text-gray-600">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-blue-600" />
+                <span className="font-medium">+1 302 464 0950</span>
+              </div>
+            </div>
+            <div className="text-sm text-gray-600">
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-blue-600" />
+                <span className="font-medium">kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">

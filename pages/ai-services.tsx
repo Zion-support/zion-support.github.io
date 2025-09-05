@@ -300,6 +300,79 @@ const aiServices = [
     category: 'Industrial AI'
   },
   {
+    title: 'AI Edge Computing Solutions',
+    description: 'AI processing at the edge for real-time decision making and low-latency applications.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI Federated Learning Platform',
+    description: 'Distributed machine learning while preserving data privacy and security.',
+    icon: Network,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Federated Learning'
+  },
+  {
+    title: 'AI Explainable AI Solutions',
+    description: 'Creating transparent and interpretable AI models for critical applications.',
+    icon: Brain,
+    features: ['Model Interpretability', 'Bias Detection', 'Fairness Metrics', 'Transparency Reports'],
+    pricing: '$20,000 - $80,000 project',
+    category: 'XAI'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-powered synthetic data creation for training and testing machine learning models.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Bias Reduction', 'Quality Validation'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Data AI'
+  },
+  {
+    title: 'AI AutoML Solutions',
+    description: 'Automated machine learning model development and deployment.',
+    icon: Settings,
+    features: ['Automated Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Auto Deployment'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'AutoML'
+  },
+  {
+    title: 'AI Robotic Process Automation',
+    description: 'Intelligent automation of complex business processes with AI-powered decision making.',
+    icon: Bot,
+    features: ['Process Discovery', 'Workflow Automation', 'Exception Handling', 'Performance Monitoring'],
+    pricing: '$12,000 - $60,000 project',
+    category: 'RPA AI'
+  },
+  {
+    title: 'AI Augmented Reality Solutions',
+    description: 'AI-enhanced AR applications and experiences for various industries.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Virtual Reality Experiences',
+    description: 'Immersive VR experiences powered by artificial intelligence and machine learning.',
+    icon: Monitor,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Haptic Feedback'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'VR AI'
+  },
+  {
+    title: 'AI Internet of Things Platform',
+    description: 'AI-powered IoT device management and data analytics platform.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'IoT AI'
+  },
+  {
     title: 'AI Personal Finance Advisor',
     description: 'Intelligent personal finance management and investment advice.',
     icon: TrendingUp,
