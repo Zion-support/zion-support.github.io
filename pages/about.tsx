@@ -1,7 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -39,13 +40,8 @@ const AboutPage: React.FC = () => {
       title: "Integrity",
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
-  ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+    }
+  ];
 
 export default function AboutPage() {
   const stats = [

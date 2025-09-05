@@ -1,26 +1,26 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 
 export interface MarketValidatedService {
-	id: string,
-	name: string,
-	tagline: string,
-	price: string,
-	period: string,
-	description: string,
-	features: string[],
-	category: string,
-	link: string,
-	variant?: ServiceVariant,
-	rating?: number,
-	customers?: number,
-	trialDays?: number,
-	setupTime?: string,
+	id: string;
+	name: string;
+	tagline: string;
+	price: string;
+	period: string;
+	description: string;
+	features: string[];
+	category: string;
+	link: string;
+	variant?: ServiceVariant;
+	rating?: number;
+	customers?: number;
+	trialDays?: number;
+	setupTime?: string;
 	contactInfo: {
-		mobile: string,
-		email: string,
-		address: string,
-		website?: string
-	},
+		mobile: string;
+		email: string;
+		address: string;
+		website?: string;
+	};
 }
 
 const contactInfo = {
@@ -28,7 +28,7 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+};
 
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
@@ -410,5 +410,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		trialDays: 14,
 		setupTime: '2 hours',
 		contactInfo
-	}],
+	}
+];
 

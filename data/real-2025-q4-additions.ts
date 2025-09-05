@@ -1,42 +1,42 @@
 export interface Q4Service {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular?: boolean,
-  icon?: string,
-  color?: string,
-  textColor?: string,
-  link: string,
-  marketPosition?: string,
-  targetAudience?: string,
-  trialDays?: number,
-  setupTime?: string,
-  category: string,
-  realService: boolean,
-  technology?: string[],
-  integrations?: string[],
-  useCases?: string[],
-  roi?: string,
-  competitors?: string[],
-  marketSize?: string,
-  growthRate?: string,
-  variant?: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  icon?: string;
+  color?: string;
+  textColor?: string;
+  link: string;
+  marketPosition?: string;
+  targetAudience?: string;
+  trialDays?: number;
+  setupTime?: string;
+  category: string;
+  realService: boolean;
+  technology?: string[];
+  integrations?: string[];
+  useCases?: string[];
+  roi?: string;
+  competitors?: string[];
+  marketSize?: string;
+  growthRate?: string;
+  variant?: string;
   contactInfo?: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails?: string,
-  launchDate?: string,
-  customers?: number,
-  rating?: number,
-  reviews?: number
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails?: string;
+  launchDate?: string;
+  customers?: number;
+  rating?: number;
+  reviews?: number;
 }
 
 const contact = {
@@ -44,7 +44,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 export const realQ4Services2025: RealQ4Service[] = [
 	{
@@ -242,7 +242,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		rating: 4.5,
 		reviews: 28
 	}
-],
+];
+
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -661,4 +662,4 @@ export const real2025Q4Additions = [
     rating: 4.6,
     reviews: 9
   }
-],
+];
