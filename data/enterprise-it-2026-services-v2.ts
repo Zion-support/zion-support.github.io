@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface EnterpriseIT2026ServiceV2 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -51,16 +51,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
     features: [
-      'Identity verification',
-      'Device trust scoring',
-      'Continuous monitoring',
-      'Micro-segmentation',
-      'Least privilege access',
-      'Real-time threat detection',
-      'Compliance frameworks',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise deployment'
+      'Identity verificationDevice trust scoring',
+      'Continuous monitoringMicro-segmentation',
+      'Least privilege accessReal-time threat detection',
+      'Compliance frameworksAdvanced analytics',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '🔒',
@@ -73,11 +68,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Cybersecurity & Networking',
     realService: true,
-    technology: ['Zero Trust', 'Network Security', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth', 'Custom identity systems'],
-    useCases: ['Network security', 'Access control', 'Threat prevention', 'Compliance', 'Risk management', 'Security monitoring'],
+    technology: ['Zero TrustNetwork Security', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['Active DirectoryLDAP', 'SAMLOAuth', 'Custom identity systems'],
+    useCases: ['Network securityAccess control', 'Threat preventionCompliance', 'Risk managementSecurity monitoring'],
     roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.',
-    competitors: ['Palo Alto Networks', 'Cisco', 'Fortinet', 'Check Point', 'Juniper'],
+    competitors: ['Palo Alto NetworksCisco', 'FortinetCheck Point', 'Juniper'],
     marketSize: '$67.8B market',
     growthRate: '220% annual growth',
     variant: 'security-futuristic',
@@ -104,16 +99,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Comprehensive multi-cloud orchestration platform that enables enterprises to manage, monitor, and optimize workloads across AWS, Azure, Google Cloud, and private clouds. Perfect for enterprises with multi-cloud strategies.',
     features: [
-      'Multi-cloud management',
-      'Workload orchestration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Security compliance',
-      'Automated scaling',
-      'Resource optimization',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise support'
+      'Multi-cloud managementWorkload orchestration',
+      'Cost optimizationPerformance monitoring',
+      'Security complianceAutomated scaling',
+      'Resource optimizationAdvanced analytics',
+      'API for integrationEnterprise support'
     ],
     popular: true,
     icon: '☁️',
@@ -126,11 +116,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '1 week',
     category: 'Cloud & DevOps',
     realService: true,
-    technology: ['Multi-Cloud', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Terraform', 'Ansible'],
-    useCases: ['Multi-cloud management', 'Workload orchestration', 'Cost optimization', 'Performance monitoring', 'Security compliance', 'Resource optimization'],
+    technology: ['Multi-CloudKubernetes', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['AWSAzure', 'Google CloudKubernetes', 'TerraformAnsible'],
+    useCases: ['Multi-cloud managementWorkload orchestration', 'Cost optimizationPerformance monitoring', 'Security complianceResource optimization'],
     roi: 'Average customer sees 500% ROI through reduced cloud costs and improved efficiency.',
-    competitors: ['HashiCorp', 'Terraform Cloud', 'CloudBolt', 'RightScale', 'Scalr'],
+    competitors: ['HashiCorpTerraform Cloud', 'CloudBoltRightScale', 'Scalr'],
     marketSize: '$28.9B market',
     growthRate: '280% annual growth',
     variant: 'cloud-futuristic',
@@ -157,16 +147,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary AI-powered IT operations center that provides intelligent monitoring, automation, and insights for enterprise IT infrastructure. Perfect for large enterprises, MSPs, and organizations with complex IT environments.',
     features: [
-      'AI-powered monitoring',
-      'Predictive analytics',
-      'Automated remediation',
-      'Intelligent alerting',
-      'Performance optimization',
-      'Capacity planning',
-      'Advanced reporting',
-      'Custom dashboards',
-      'API for integration',
-      'Enterprise deployment'
+      'AI-powered monitoringPredictive analytics',
+      'Automated remediationIntelligent alerting',
+      'Performance optimizationCapacity planning',
+      'Advanced reportingCustom dashboards',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '🖥️',
@@ -179,11 +164,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'IT Operations & AI',
     realService: true,
-    technology: ['AI/ML', 'IT Operations', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['ServiceNow', 'BMC', 'Micro Focus', 'Custom IT systems', 'Monitoring tools'],
-    useCases: ['IT monitoring', 'Automation', 'Performance optimization', 'Capacity planning', 'Incident management', 'Service delivery'],
+    technology: ['AI/MLIT Operations', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['ServiceNowBMC', 'Micro FocusCustom IT systems', 'Monitoring tools'],
+    useCases: ['IT monitoringAutomation', 'Performance optimizationCapacity planning', 'Incident managementService delivery'],
     roi: 'Average customer sees 600% ROI through improved efficiency and reduced operational costs.',
-    competitors: ['ServiceNow', 'BMC Helix', 'Micro Focus', 'BMC Software', 'CA Technologies'],
+    competitors: ['ServiceNowBMC Helix', 'Micro FocusBMC Software', 'CA Technologies'],
     marketSize: '$35.2B market',
     growthRate: '240% annual growth',
     variant: 'ai-futuristic',
@@ -210,16 +195,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Advanced infrastructure platform that prepares enterprises for quantum computing while maintaining current classical computing capabilities. Perfect for forward-thinking enterprises, research institutions, and government agencies.',
     features: [
-      'Quantum-ready architecture',
-      'Hybrid classical-quantum',
-      'Post-quantum cryptography',
-      'Quantum simulation',
-      'Performance optimization',
-      'Security hardening',
-      'Future-proofing tools',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise deployment'
+      'Quantum-ready architectureHybrid classical-quantum',
+      'Post-quantum cryptographyQuantum simulation',
+      'Performance optimizationSecurity hardening',
+      'Future-proofing toolsAdvanced analytics',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '⚛️',
@@ -232,11 +212,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '1 month',
     category: 'Quantum & Infrastructure',
     realService: true,
-    technology: ['Quantum Computing', 'Infrastructure', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
-    integrations: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Custom infrastructure', 'Quantum hardware'],
-    useCases: ['Quantum preparation', 'Infrastructure optimization', 'Security hardening', 'Performance improvement', 'Future-proofing', 'Research collaboration'],
+    technology: ['Quantum ComputingInfrastructure', 'ReactNode.js', 'PostgreSQLQuantum Simulators'],
+    integrations: ['IBM QuantumGoogle Quantum', 'Amazon BraketCustom infrastructure', 'Quantum hardware'],
+    useCases: ['Quantum preparationInfrastructure optimization', 'Security hardeningPerformance improvement', 'Future-proofingResearch collaboration'],
     roi: 'Average customer sees 700% ROI through future-proofing and quantum readiness.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Microsoft Azure Quantum', 'Rigetti'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Amazon BraketMicrosoft Azure Quantum', 'Rigetti'],
     marketSize: '$12.8B market',
     growthRate: '380% annual growth',
     variant: 'quantum-futuristic',
@@ -263,16 +243,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Comprehensive edge computing orchestration platform that enables enterprises to deploy, manage, and optimize applications at the edge. Perfect for IoT deployments, edge computing initiatives, and distributed applications.',
     features: [
-      'Edge deployment management',
-      'Distributed orchestration',
-      'Performance optimization',
-      'Security management',
-      'Monitoring and analytics',
-      'Automated scaling',
-      'Edge AI capabilities',
-      'Custom edge applications',
-      'API for integration',
-      'Enterprise deployment'
+      'Edge deployment managementDistributed orchestration',
+      'Performance optimizationSecurity management',
+      'Monitoring and analyticsAutomated scaling',
+      'Edge AI capabilitiesCustom edge applications',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '📡',
@@ -285,11 +260,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '1 week',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['Edge Computing', 'IoT', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Custom edge devices', 'IoT platforms'],
-    useCases: ['Edge deployment', 'IoT management', 'Performance optimization', 'Security management', 'Monitoring', 'Edge AI'],
+    technology: ['Edge ComputingIoT', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoTCustom edge devices', 'IoT platforms'],
+    useCases: ['Edge deploymentIoT management', 'Performance optimizationSecurity management', 'MonitoringEdge AI'],
     roi: 'Average customer sees 500% ROI through improved edge performance and reduced latency.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'FogHorn', 'ClearBlade'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoTFogHorn', 'ClearBlade'],
     marketSize: '$15.7B market',
     growthRate: '320% annual growth',
     variant: 'edge-futuristic',
@@ -316,16 +291,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Advanced AI-powered data governance platform that provides intelligent data management, compliance, and insights. Perfect for enterprises with complex data environments, compliance requirements, and data governance needs.',
     features: [
-      'AI-powered data discovery',
-      'Automated classification',
-      'Compliance monitoring',
-      'Data lineage tracking',
-      'Privacy protection',
-      'Quality assessment',
-      'Governance automation',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise deployment'
+      'AI-powered data discoveryAutomated classification',
+      'Compliance monitoringData lineage tracking',
+      'Privacy protectionQuality assessment',
+      'Governance automationAdvanced analytics',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '📊',
@@ -338,11 +308,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Data Governance & AI',
     realService: true,
-    technology: ['AI/ML', 'Data Governance', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Collibra', 'Informatica', 'Alation', 'Custom data systems', 'Compliance platforms'],
-    useCases: ['Data governance', 'Compliance monitoring', 'Data quality', 'Privacy protection', 'Lineage tracking', 'Governance automation'],
+    technology: ['AI/MLData Governance', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['CollibraInformatica', 'AlationCustom data systems', 'Compliance platforms'],
+    useCases: ['Data governanceCompliance monitoring', 'Data qualityPrivacy protection', 'Lineage trackingGovernance automation'],
     roi: 'Average customer sees 500% ROI through improved compliance and data quality.',
-    competitors: ['Collibra', 'Informatica', 'Alation', 'Data.World', 'Atlan'],
+    competitors: ['CollibraInformatica', 'AlationData.World', 'Atlan'],
     marketSize: '$23.4B market',
     growthRate: '260% annual growth',
     variant: 'ai-futuristic',
@@ -369,16 +339,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Comprehensive enterprise blockchain platform that enables businesses to build, deploy, and manage blockchain applications. Perfect for enterprises exploring blockchain technology, supply chain solutions, and digital transformation.',
     features: [
-      'Multi-blockchain support',
-      'Smart contract development',
-      'Enterprise security',
-      'Compliance frameworks',
-      'Performance optimization',
-      'Integration tools',
-      'Advanced analytics',
-      'Custom applications',
-      'API for developers',
-      'Enterprise support'
+      'Multi-blockchain supportSmart contract development',
+      'Enterprise securityCompliance frameworks',
+      'Performance optimizationIntegration tools',
+      'Advanced analyticsCustom applications',
+      'API for developersEnterprise support'
     ],
     popular: true,
     icon: '⛓️',
@@ -391,11 +356,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Blockchain & Enterprise',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['IBM Blockchain', 'Microsoft Azure', 'Amazon Managed Blockchain', 'Custom systems', 'Enterprise platforms'],
-    useCases: ['Supply chain management', 'Digital identity', 'Smart contracts', 'Asset tokenization', 'Compliance', 'Business transformation'],
+    technology: ['BlockchainSmart Contracts', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['IBM BlockchainMicrosoft Azure', 'Amazon Managed BlockchainCustom systems', 'Enterprise platforms'],
+    useCases: ['Supply chain managementDigital identity', 'Smart contractsAsset tokenization', 'ComplianceBusiness transformation'],
     roi: 'Average customer sees 400% ROI through improved efficiency and transparency.',
-    competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain', 'R3 Corda', 'Hyperledger'],
+    competitors: ['IBM BlockchainMicrosoft Azure Blockchain', 'Amazon Managed BlockchainR3 Corda', 'Hyperledger'],
     marketSize: '$19.9B market',
     growthRate: '280% annual growth',
     variant: 'blockchain-futuristic',
@@ -422,16 +387,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary AI-powered DevOps platform that provides intelligent automation, monitoring, and insights for software development and operations. Perfect for development teams, DevOps engineers, and technology companies.',
     features: [
-      'AI-powered automation',
-      'Intelligent monitoring',
-      'Predictive analytics',
-      'Performance optimization',
-      'Security scanning',
-      'Deployment automation',
-      'Advanced reporting',
-      'Custom workflows',
-      'API for integration',
-      'Enterprise deployment'
+      'AI-powered automationIntelligent monitoring',
+      'Predictive analyticsPerformance optimization',
+      'Security scanningDeployment automation',
+      'Advanced reportingCustom workflows',
+      'API for integrationEnterprise deployment'
     ],
     popular: true,
     icon: '🚀',
@@ -444,11 +404,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '1 week',
     category: 'DevOps & AI',
     realService: true,
-    technology: ['AI/ML', 'DevOps', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['GitLab', 'GitHub', 'Azure DevOps', 'Jenkins', 'Custom CI/CD', 'Monitoring tools'],
-    useCases: ['CI/CD automation', 'Performance monitoring', 'Security scanning', 'Deployment automation', 'Workflow optimization', 'DevOps insights'],
+    technology: ['AI/MLDevOps', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['GitLabGitHub', 'Azure DevOpsJenkins', 'Custom CI/CDMonitoring tools'],
+    useCases: ['CI/CD automationPerformance monitoring', 'Security scanningDeployment automation', 'Workflow optimizationDevOps insights'],
     roi: 'Average customer sees 600% ROI through improved efficiency and faster deployments.',
-    competitors: ['GitLab', 'GitHub Actions', 'Azure DevOps', 'Jenkins', 'CircleCI'],
+    competitors: ['GitLabGitHub Actions', 'Azure DevOpsJenkins', 'CircleCI'],
     marketSize: '$18.7B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -475,16 +435,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description: 'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long-term security. Perfect for government agencies, financial institutions, and enterprises requiring quantum-resistant security.',
     features: [
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Threat detection',
-      'Security monitoring',
-      'Compliance frameworks',
-      'Advanced analytics',
-      'Custom security policies',
-      'API for integration',
-      'Enterprise deployment',
-      '24/7 monitoring'
+      'Post-quantum cryptographyQuantum-resistant algorithms',
+      'Threat detectionSecurity monitoring',
+      'Compliance frameworksAdvanced analytics',
+      'Custom security policiesAPI for integration',
+      'Enterprise deployment24/7 monitoring'
     ],
     popular: true,
     icon: '🛡️',
@@ -497,11 +452,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     setupTime: '1 month',
     category: 'Quantum & Cybersecurity',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Quantum Algorithms', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Security systems', 'Compliance platforms', 'Custom security tools', 'Enterprise platforms'],
-    useCases: ['Quantum threat protection', 'Security monitoring', 'Compliance', 'Risk management', 'Threat detection', 'Security automation'],
+    technology: ['Post-Quantum CryptographyQuantum Algorithms', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['Security systemsCompliance platforms', 'Custom security toolsEnterprise platforms'],
+    useCases: ['Quantum threat protectionSecurity monitoring', 'ComplianceRisk management', 'Threat detectionSecurity automation'],
     roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.',
-    competitors: ['Specialized quantum security companies', 'Government initiatives', 'Research projects'],
+    competitors: ['Specialized quantum security companiesGovernment initiatives', 'Research projects'],
     marketSize: '$8.9B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
@@ -518,4 +473,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180
   }
-];
+],

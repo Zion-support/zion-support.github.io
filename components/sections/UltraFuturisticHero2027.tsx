@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Cpu, Database, Cloud, Lock, ArrowRight, 
   Star, TrendingUp, Users, CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function UltraFuturisticHero2027() {
   const features = [
@@ -13,14 +13,14 @@ export default function UltraFuturisticHero2027() {
     { icon: Atom, text: 'Quantum Computing', color: 'from-blue-400 to-cyan-400' },
     { icon: Globe, text: 'Digital Reality', color: 'from-green-400 to-emerald-400' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-red-400 to-orange-400' }
-  ];
+  ],
 
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' },
     { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' },
     { number: '99.9%', label: 'Uptime SLA', icon: CheckCircle, color: 'text-green-400' },
     { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
-  ];
+  ],
 
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -196,7 +196,7 @@ export default function UltraFuturisticHero2027() {
               Trusted by Industry Leaders
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {['Fortune 500', 'Tech Giants', 'Research Labs', 'Government'].map((trust, index) => (
+              {['Fortune 500Tech Giants', 'Research LabsGovernment'].map((trust, index) => (
                 <motion.div
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
@@ -218,5 +218,5 @@ export default function UltraFuturisticHero2027() {
       {/* Bottom Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
     </section>
-  );
+  ),
 }

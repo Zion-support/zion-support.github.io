@@ -1,24 +1,24 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner',
 
 export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false),
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer),
+  }, []),
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
   const serviceCategories = [
     {
@@ -27,14 +27,10 @@ export default function Services() {
       count: '150+',
       color: 'blue',
       services: [
-        'AI-Powered Video Clip Maker',
-        'Smart Contract Analyzer',
-        'Cybersecurity Threat Intelligence',
-        'Multi-Language Website Translator',
-        'Predictive Inventory Optimizer',
-        'Real-Time Analytics Dashboard',
-        'Automated Customer Support',
-        'Blockchain Transaction Monitor'
+        'AI-Powered Video Clip MakerSmart Contract Analyzer',
+        'Cybersecurity Threat IntelligenceMulti-Language Website Translator',
+        'Predictive Inventory OptimizerReal-Time Analytics Dashboard',
+        'Automated Customer SupportBlockchain Transaction Monitor'
       ],
       href: '/micro-saas'
     },
@@ -44,14 +40,10 @@ export default function Services() {
       count: '100+',
       color: 'purple',
       services: [
-        'Autonomous AI Agents',
-        'AI-Powered Financial Trading',
-        'AI Legal Document Analysis',
-        'AI-Powered Voice Analytics',
-        'AI-Powered Search & Discovery',
-        'Machine Learning Model Training',
-        'Natural Language Processing',
-        'Computer Vision Solutions'
+        'Autonomous AI AgentsAI-Powered Financial Trading',
+        'AI Legal Document AnalysisAI-Powered Voice Analytics',
+        'AI-Powered Search & DiscoveryMachine Learning Model Training',
+        'Natural Language ProcessingComputer Vision Solutions'
       ],
       href: '/ai-services'
     },
@@ -61,18 +53,14 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-        'Quantum Computing Consulting',
-        'Blockchain & Web3 Solutions',
-        'DevSecOps & Security Automation',
-        'Enterprise Data Platform',
-        'High-Performance Computing',
-        'Cloud Migration Services',
-        'Infrastructure as Code',
-        'Disaster Recovery Solutions'
+        'Quantum Computing ConsultingBlockchain & Web3 Solutions',
+        'DevSecOps & Security AutomationEnterprise Data Platform',
+        'High-Performance ComputingCloud Migration Services',
+        'Infrastructure as CodeDisaster Recovery Solutions'
       ],
       href: '/it-services'
     }
-  ];
+  ],
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -97,9 +85,9 @@ export default function Services() {
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
       }
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
+    },
+    return colors[color as keyof typeof colors] || colors.blue,
+  },
 
   return (
     <>
@@ -137,7 +125,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
                 {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color);
+                  const colors = getColorClasses(category.color),
                   return (
                     <div 
                       key={category.title}
@@ -176,7 +164,7 @@ export default function Services() {
                         </svg>
                       </Link>
                     </div>
-                  );
+                  ),
                 })}
               </div>
             </div>
@@ -259,7 +247,7 @@ export default function Services() {
                 </a>
                 <a 
                   href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
                 </a>
@@ -269,5 +257,5 @@ export default function Services() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

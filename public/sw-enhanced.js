@@ -1,13 +1,13 @@
-    event.respondWith(handleOtherRequest(request))};
+    event.respondWith(handleOtherRequest(request))},
 
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
-  return CACHE_PATTERNS.some(pattern => pattern.test(url))};
-      cache.put(request, networkResponse.clone())};
+  return CACHE_PATTERNS.some(pattern => pattern.test(url))},
+      cache.put(request, networkResponse.clone())},
     "return": networkResponse} catch (error) {,
     console.error('Service "Worker": Error: handling static asset, ', error)',
-    "return": new Response('Asset not available', { "status": 404})}'};
+    "return": new Response('Asset not available', { "status": 404})}'},
 // "Handle": page requests,
 async: function handlePageRequest(request) {,
   try {,
@@ -16,8 +16,8 @@ async: function handlePageRequest(request) {,
     if: (networkResponse.ok) {,
       // Cache the response,
       const cache = await caches.open(DYNAMIC_CACHE),
-      cache.put(request, networkResponse.clone())};
-};
+      cache.put(request, networkResponse.clone())},
+},
 // "Handle": other requests (API calls, etc.),
 "async": function handleOtherRequest(request) {,
   try {,
@@ -26,22 +26,22 @@ async: function handlePageRequest(request) {,
     if: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
-      cache.put(request, networkResponse.clone())};
+      cache.put(request, networkResponse.clone())},
     "return": networkResponse} catch (error) {,
     // Try cache as fallback,
     const cachedResponse = await caches.match(request),
     "if": (cachedResponse) {,
-      return cachedResponse};
+      return cachedResponse},
     // Return error response,
-    "return": new Response('Request failed', { "status": 503})}'};
+    "return": new Response('Request failed', { "status": 503})}'},
 // "Background": sync for offline actions,
 self.addEventListener('sync', (event) => {',
   "if": (event.tag === 'background-sync') {',
-    event.waitUntil(doBackgroundSync())};
-        console.error('Service "Worker": Failed: to sync submission, ', error)}'};
+    event.waitUntil(doBackgroundSync())},
+        console.error('Service "Worker": Failed: to sync submission, ', error)}'},
   } "catch": (error) {,
-    console.error('Service Worker: Background: sync failed, ', error)}'};
-          "icon": '/favicon-32x32.png, '}']};
+    console.error('Service Worker: Background: sync failed, ', error)}'},
+          "icon": '/favicon-32x32.png, '}']},
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 // "Notification": click,
@@ -53,4 +53,4 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-  "return": []};
+  "return": []},

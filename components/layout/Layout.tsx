@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
+import React, { ReactNode } from 'react',
+import Header from '../Header',
+import Footer from './Footer',
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -15,14 +15,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  ),
+},
 
-export default Layout;
-      {children};
+export default Layout,
+      {children},
     </div>)
-};
-import React, { useState } from 'react';
+},
+import React, { useState } from 'react',
       {/* Top Contact Bar */}
       <TopContactBar />
       
@@ -156,12 +156,12 @@ import React, { useState } from 'react';
         </div>
       )}
     </div>
-  );
+  ),
 }
-import EnhancedNavigation2025 from './EnhancedNavigation2025';
+import EnhancedNavigation2025 from './EnhancedNavigation2025',
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -287,5 +287,5 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </UltraFuturisticBackground2035>
     </div>
-  );
+  ),
 }

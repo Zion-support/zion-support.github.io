@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
-import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
-import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react',
+import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas',
+import { emergingTech2025Services } from '../../data/emerging-tech-2025-services',
+import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services',
 
 const RevolutionaryServicesShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [visibleServices, setVisibleServices] = useState(12);
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [visibleServices, setVisibleServices] = useState(12),
 
   const categories = [
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
@@ -16,24 +16,24 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
-  ];
+  ],
 
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services],
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI');
-        if (activeCategory === 'quantum') return service.category.includes('Quantum');
-        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
-        return true;
-      });
+        if (activeCategory === 'ai') return service.category.includes('AI'),
+        if (activeCategory === 'quantum') return service.category.includes('Quantum'),
+        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service),
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service),
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),
+        return true,
+      }),
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
-  };
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length)),
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,7 +43,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -54,7 +54,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -92,8 +92,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <button
               key={category.id}
               onClick={() => {
-                setActiveCategory(category.id);
-                setVisibleServices(12);
+                setActiveCategory(category.id),
+                setVisibleServices(12),
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id
@@ -244,7 +244,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services. 
             Transform your business and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4">
             <a 
               href="/contact" 
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
@@ -261,7 +261,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+},
 
-export default RevolutionaryServicesShowcase;
+export default RevolutionaryServicesShowcase,

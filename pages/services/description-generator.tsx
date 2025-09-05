@@ -1,29 +1,29 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react',
 
 export default function ServiceDescriptionGeneratorPage() {
-  const [title, setTitle] = useState('');
-  const [targetAudience, setTargetAudience] = useState('');
-  const [featuresInput, setFeaturesInput] = useState('');
-  const [additionalNotes, setAdditionalNotes] = useState('');
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [title, setTitle] = useState(''),
+  const [targetAudience, setTargetAudience] = useState(''),
+  const [featuresInput, setFeaturesInput] = useState(''),
+  const [additionalNotes, setAdditionalNotes] = useState(''),
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [generated, setGenerated] = useState('');
-  const [accepted, setAccepted] = useState(false);
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [generated, setGenerated] = useState(''),
+  const [accepted, setAccepted] = useState(false),
 
   const keyFeatures = useMemo(() => {
     return featuresInput
       .split('\n')
       .map((f) => f.trim())
-      .filter(Boolean);
-  }, [featuresInput]);
+      .filter(Boolean),
+  }, [featuresInput]),
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setAccepted(false);
+    e.preventDefault(),
+    setLoading(true),
+    setError(null),
+    setAccepted(false),
 
     try {
       const response = await fetch('/api/generate-service-description', {
@@ -34,29 +34,29 @@ export default function ServiceDescriptionGeneratorPage() {
           keyFeatures,
           targetAudience,
           additionalNotes: additionalNotes || undefined,
-          tone})});
+          tone})}),
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || 'Failed to generate');
+        const data = await response.json().catch(() => ({})),
+        throw new Error(data.error || 'Failed to generate'),
       }
 
-      const data = (await response.json()) as { description: string };
-      setGenerated(data.description || '');
+      const data = (await response.json()) as { description: string },
+      setGenerated(data.description || ''),
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message || 'Something went wrong')
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function handleAccept() {
-    setAccepted(true);
+    setAccepted(true),
   }
 
   function handleCopy() {
-    if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
+    if (!generated) return,
+    navigator.clipboard.writeText(generated).catch(() => {}),
   }
 
   return (
@@ -170,5 +170,5 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

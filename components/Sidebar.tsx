@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  X, 
+  X,
   Building2, 
   Code, 
   Smartphone, 
@@ -18,23 +18,23 @@ import {
   Phone,
   Mail,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]),
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
         : [...prev, title]
-    );
-  };
+    ),
+  },
 
   const navigation = {
     'Services': [
@@ -42,22 +42,22 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
       { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
+      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
     ],
     'Solutions': [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
       { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
       { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
+      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
     ],
     'Industries': [
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
       { name: 'Logistics', href: '/industries/logistics', icon: Truck },
       { name: 'Finance', href: '/industries/finance', icon: CreditCard },
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],
-  };
+      { name: 'Education', href: '/industries/education', icon: GraduationCap }
+    ]
+  },
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -65,8 +65,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ];
+    { name: 'Contact', href: '/contact' }
+  ],
 
   return (
     <AnimatePresence>
@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </>
       )}
     </AnimatePresence>
-  );
-};
+  ),
+},
 
-export default Sidebar;
+export default Sidebar,

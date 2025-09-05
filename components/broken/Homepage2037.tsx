@@ -1,25 +1,25 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Star, Users, Award, Clock, 
   Brain, Atom, Shield, Rocket, Zap,
   TrendingUp, Globe, Cpu, Database, Cloud,
   Lock, Palette, Target, CheckCircle, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import new service data
-import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
-import { realITServices2025 } from '../data/real-it-services-2025';
-import { realAIServices2025 } from '../data/real-ai-services-2025';
+import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025',
+import { realITServices2025 } from '../data/real-it-services-2025',
+import { realAIServices2025 } from '../data/real-ai-services-2025',
 
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
-  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
-  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
-  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
+  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3),
+  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3),
+  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3),
 
   return (
     <Layout>
@@ -464,7 +464,7 @@ const Homepage2037: React.FC = () => {
                     <motion.button 
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                      className="px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover: bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                     >
                       Request Demo
                     </motion.button>
@@ -481,7 +481,7 @@ const Homepage2037: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2037;
+export default Homepage2037,

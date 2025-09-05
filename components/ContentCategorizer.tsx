@@ -1,43 +1,43 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react',
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings, 
   BarChart3, Globe, Database, Cpu, Rocket, Brain
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface ContentItem {
-  id: string;
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];
-  source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+  id: string,
+  title: string,
+  href: string,
+  desc: string,
+  category: string,
+  subcategory?: string,
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
+  tags: string[],
+  source: string,
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 }
 
 interface ContentCategory {
-  id: string;
-  name: string;
-  icon: any;
-  description: string;
-  color: string;
-  count: number;
-  subcategories?: string[];
+  id: string,
+  name: string,
+  icon: any,
+  description: string,
+  color: string,
+  count: number,
+  subcategories?: string[]
 }
 
 const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
 
   // Sample content data - in a real implementation, this would come from an API
   const contentItems: ContentItem[] = [
@@ -50,7 +50,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'structured-data',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['seo', 'json-ld', 'schema', 'audit'],
+      tags: ['seojson-ld', 'schemaaudit'],
       source: 'autonomous-auditor',
       type: 'report'
     },
@@ -63,7 +63,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'vulnerability-scan',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['security', 'vulnerability', 'scan', 'remediation'],
+      tags: ['securityvulnerability', 'scanremediation'],
       source: 'security-scanner',
       type: 'security'
     },
@@ -76,7 +76,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'performance',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['ai', 'performance', 'optimization', 'metrics'],
+      tags: ['aiperformance', 'optimizationmetrics'],
       source: 'ai-monitor',
       type: 'update'
     },
@@ -89,7 +89,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'deployment',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['features', 'deployment', 'ux', 'impact'],
+      tags: ['featuresdeployment', 'uximpact'],
       source: 'deployment-tracker',
       type: 'feature'
     },
@@ -102,7 +102,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'system-health',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['monitoring', 'performance', 'infrastructure', 'health'],
+      tags: ['monitoringperformance', 'infrastructurehealth'],
       source: 'health-monitor',
       type: 'report'
     },
@@ -115,11 +115,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'user-behavior',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['analytics', 'user-behavior', 'engagement', 'optimization'],
+      tags: ['analyticsuser-behavior', 'engagementoptimization'],
       source: 'behavior-analyzer',
       type: 'insight'
     }
-  ];
+  ],
 
   const categories: ContentCategory[] = [
     {
@@ -137,7 +137,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Search optimization and performance analytics',
       color: 'from-green-500 to-emerald-500',
       count: contentItems.filter(item => item.category === 'seo').length,
-      subcategories: ['structured-data', 'performance', 'technical-seo']
+      subcategories: ['structured-dataperformance', 'technical-seo']
     },
     {
       id: 'security',
@@ -146,7 +146,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Security assessments and compliance reports',
       color: 'from-red-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'security').length,
-      subcategories: ['vulnerability-scan', 'compliance', 'threat-detection']
+      subcategories: ['vulnerability-scancompliance', 'threat-detection']
     },
     {
       id: 'ai',
@@ -155,7 +155,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'AI model performance and insights',
       color: 'from-purple-500 to-pink-500',
       count: contentItems.filter(item => item.category === 'ai').length,
-      subcategories: ['performance', 'training', 'deployment']
+      subcategories: ['performancetraining', 'deployment']
     },
     {
       id: 'features',
@@ -164,7 +164,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'New features and system updates',
       color: 'from-yellow-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'features').length,
-      subcategories: ['deployment', 'enhancements', 'roadmap']
+      subcategories: ['deploymentenhancements', 'roadmap']
     },
     {
       id: 'monitoring',
@@ -173,7 +173,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Infrastructure and system health',
       color: 'from-indigo-500 to-purple-500',
       count: contentItems.filter(item => item.category === 'monitoring').length,
-      subcategories: ['system-health', 'performance', 'infrastructure']
+      subcategories: ['system-healthperformance', 'infrastructure']
     },
     {
       id: 'analytics',
@@ -182,9 +182,9 @@ const ContentCategorizer: React.FC = () => {
       description: 'User behavior and engagement insights',
       color: 'from-teal-500 to-cyan-500',
       count: contentItems.filter(item => item.category === 'analytics').length,
-      subcategories: ['user-behavior', 'engagement', 'conversion']
+      subcategories: ['user-behaviorengagement', 'conversion']
     }
-  ];
+  ],
 
   const contentTypes = [
     { id: 'all', name: 'All Types', icon: Globe },
@@ -194,7 +194,7 @@ const ContentCategorizer: React.FC = () => {
     { id: 'guide', name: 'Guides', icon: Code },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'feature', name: 'Features', icon: TrendingUp }
-  ];
+  ],
 
   const dateRanges = [
     { id: 'all', name: 'All Time' },
@@ -202,76 +202,76 @@ const ContentCategorizer: React.FC = () => {
     { id: 'week', name: 'This Week' },
     { id: 'month', name: 'This Month' },
     { id: 'quarter', name: 'This Quarter' }
-  ];
+  ],
 
   const relevanceLevels = [
     { id: 'all', name: 'All Relevance', color: 'text-gray-400' },
     { id: 'high', name: 'High Priority', color: 'text-green-400' },
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-  ];
+  ],
 
   const filteredItems = useMemo(() => {
     let filtered = contentItems.filter(item => {
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' || item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' || item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
       
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
-    });
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance,
+    }),
 
     // Sort items
     filtered.sort((a, b) => {
-      let comparison = 0;
+      let comparison = 0,
       switch (sortBy) {
         case 'date':
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-          break;
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
+          break,
         case 'relevance':
-          const relevanceOrder = { high: 3, medium: 2, low: 1 };
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
-          break;
+          const relevanceOrder = { high: 3, medium: 2, low: 1 },
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
+          break,
         case 'title':
-          comparison = a.title.localeCompare(b.title);
-          break;
+          comparison = a.title.localeCompare(b.title),
+          break,
       }
-      return sortOrder === 'asc' ? comparison : -comparison;
-    });
+      return sortOrder === 'asc' ? comparison : -comparison,
+    }),
 
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
+    return filtered,
+  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
 
   const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Globe;
-  };
+    const cat = categories.find(c => c.id === category),
+    return cat ? cat.icon : Globe
+  },
 
   const getRelevanceColor = (relevance: string) => {
     switch (relevance) {
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'high': return 'text-green-400',
+      case 'medium': return 'text-yellow-400',
+      case 'low': return 'text-red-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type);
-    return typeInfo ? typeInfo.icon : Globe;
-  };
+    const typeInfo = contentTypes.find(t => t.id === type),
+    return typeInfo ? typeInfo.icon : Globe
+  },
 
   const clearAllFilters = () => {
-    setSearchTerm('');
-    setSelectedCategory('all');
-    setSelectedSubcategory('all');
-    setSelectedType('all');
-    setSelectedDateRange('all');
-    setSelectedRelevance('all');
-  };
+    setSearchTerm(''),
+    setSelectedCategory('all'),
+    setSelectedSubcategory('all'),
+    setSelectedType('all'),
+    setSelectedDateRange('all'),
+    setSelectedRelevance('all'),
+  },
 
   return (
     <div className="space-y-6">
@@ -297,8 +297,8 @@ const ContentCategorizer: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => {
-                setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+                setSelectedCategory(e.target.value),
+                setSelectedSubcategory('all'),
               }}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
@@ -321,7 +321,7 @@ const ContentCategorizer: React.FC = () => {
               <option value="all">All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-                  {sub.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
                 </option>
               ))}
             </select>
@@ -424,11 +424,11 @@ const ContentCategorizer: React.FC = () => {
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map((item) => {
-          const CategoryIcon = getCategoryIcon(item.category);
-          const TypeIcon = getTypeIcon(item.type);
-          const category = categories.find(c => c.id === item.category);
+          const CategoryIcon = getCategoryIcon(item.category),
+          const TypeIcon = getTypeIcon(item.type),
+          const category = categories.find(c => c.id === item.category),
           
           return (
             <div key={item.id} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
@@ -493,14 +493,14 @@ const ContentCategorizer: React.FC = () => {
                   href={item.href} 
                   target="_blank" 
                   rel="noopener"
-                  className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium"
+                  className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium"
                 >
                   Open Content
                   <span aria-hidden>→</span>
                 </a>
               </div>
             </div>
-          );
+          )
         })}
       </div>
 
@@ -521,7 +521,7 @@ const ContentCategorizer: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default ContentCategorizer;
+export default ContentCategorizer,

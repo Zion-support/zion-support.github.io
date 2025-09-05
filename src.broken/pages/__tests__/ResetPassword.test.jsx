@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 export export export default function ResetPassword.test()      {
   return (
@@ -6,5 +6,5 @@ export export export default function ResetPassword.test()      {
       <h1>ResetPassword.test</h1>
       <p>Component placeholder - needs implementation</p>
     </div>
-  );
+  ),
 }

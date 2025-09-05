@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 
 type Question = {
-  id: string;
-  question: string;
-  options: string[];
-  answerIndex: number;
-};
+  id: string,
+  question: string,
+  options: string[],
+  answerIndex: number
+},
 
 type Props = {
-  questions: Question[];
-  onComplete: (score: number) => void;
-};
+  questions: Question[],
+  onComplete: (score: number) => void
+},
 
 export default function Quiz({ questions, onComplete }: Props) {
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [answers, setAnswers] = useState<Record<string, number>>({}),
+  const [submitted, setSubmitted] = useState(false),
 
-  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
+  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0),
 
   function submit() {
-    setSubmitted(true);
-    onComplete(score);
+    setSubmitted(true),
+    onComplete(score),
   }
 
   return (
@@ -55,5 +55,5 @@ export default function Quiz({ questions, onComplete }: Props) {
       <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
-  );
+  ),
 }

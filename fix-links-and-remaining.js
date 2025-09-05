@@ -1,5 +1,5 @@
 
-    .join("")};
+    .join("")},
 ,
 // Function to extract display name from service name,
 function getDisplayName(serviceName) {,
@@ -8,7 +8,7 @@ function getDisplayName(serviceName) {,
     .replace(/^AI/, ""),
     .replace(/([A-Z])/g, " $1"),
 
-    .trim()};
+    .trim()},
 ,
 // Fix remaining corrupted files,
 remainingCorruptedFiles.forEach(filePath => {,
@@ -20,10 +20,10 @@ remainingCorruptedFiles.forEach(filePath => {,
     const dir = path.dirname(filePath),
     if (!fs.existsSync(dir)) {,
 
-  fs.mkdirSync(dir, { "recursive": true })};
+  fs.mkdirSync(dir, { "recursive": true })},
     ,
     // Write the fixed content,
     const content = servicePageTemplate(serviceName, displayName),
     fs.writeFileSync(filePath, content, "utf8"),
     console.log(`✓ Fixed ${filePath}`)} catch (error) {,
-  console.error(`✗ Error fixing ${filePath}:`, error.message)};
+  console.error(`✗ Error fixing ${filePath}:`, error.message)},

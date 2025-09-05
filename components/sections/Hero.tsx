@@ -1,23 +1,23 @@
-import React from 'react';
-import Button from '../ui/Button';
-import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
+import React from 'react',
+import Button from '../ui/Button',
+import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react',
 
 interface HeroProps {
-  title: string;
-  subtitle: string;
+  title: string,
+  subtitle: string,
   primaryAction?: {
-    text: string;
-    href: string;
-  };
+    text: string,
+    href: string
+  },
   secondaryAction?: {
-    text: string;
-    href: string;
-  };
+    text: string,
+    href: string
+  },
   stats?: Array<{
-    value: string;
-    label: string;
-    color: string;
-  }>;
+    value: string,
+    label: string,
+    color: string
+  }>,
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in">
               <Zap className="w-4 h-4 mr-2" />
-              World&apos;s Most Advanced Autonomous Platform
+              World&apos,s Most Advanced Autonomous Platform
             </div>
           </div>
           
@@ -140,7 +140,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
-  );
-};
+  ),
+},
 
-export default Hero;
+export default Hero,

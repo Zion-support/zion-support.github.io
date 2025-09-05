@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react',
+import Link from 'next/link',
 
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
@@ -14,7 +14,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulation', 'Neural pattern recognition', 'Emotional intelligence modeling', 'Real-time brain-computer interface'],
+      features: ['Quantum consciousness simulationNeural pattern recognition', 'Emotional intelligence modelingReal-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
     },
@@ -27,7 +27,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
-      features: ['Autonomous mining operations', 'Resource detection algorithms', 'Risk assessment AI', 'Mission planning automation'],
+      features: ['Autonomous mining operationsResource detection algorithms', 'Risk assessment AIMission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
     },
@@ -40,7 +40,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
-      features: ['DNA-based computation', 'Molecular algorithm optimization', 'Real-time molecular analysis', 'Algorithm library (100+ algorithms)'],
+      features: ['DNA-based computationMolecular algorithm optimization', 'Real-time molecular analysisAlgorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
     },
@@ -53,7 +53,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
-      features: ['3D holographic rendering', 'Real-time 3D modeling', 'Holographic projection systems', 'AI-powered content generation'],
+      features: ['3D holographic renderingReal-time 3D modeling', 'Holographic projection systemsAI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
     },
@@ -66,7 +66,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
-      features: ['Autonomous diagnosis', 'Treatment recommendation AI', 'Continuous learning algorithms', 'Predictive health analytics'],
+      features: ['Autonomous diagnosisTreatment recommendation AI', 'Continuous learning algorithmsPredictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
     },
@@ -79,18 +79,18 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
-      features: ['Quantum key distribution', 'Unbreakable encryption', 'Real-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distributionUnbreakable encryption', 'Real-time threat detectionZero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
-  ];
+  ],
 
   const categories = [
     { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
     { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
     { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,7 +100,7 @@ const Revolutionary2027ServicesShowcase = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -112,7 +112,7 @@ const Revolutionary2027ServicesShowcase = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -246,7 +246,7 @@ const Revolutionary2027ServicesShowcase = () => {
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -272,7 +272,7 @@ const Revolutionary2027ServicesShowcase = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+},
 
-export default Revolutionary2027ServicesShowcase;
+export default Revolutionary2027ServicesShowcase,

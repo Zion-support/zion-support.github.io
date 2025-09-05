@@ -1,22 +1,22 @@
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 import { StarIcon } from 'lucide-react'
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
 
 interface ListingScoreCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string;
+  title: string,
+  description: string,
+  image?: string,
+  category: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  className?: string
 }
 
 export function ListingScoreCard({ 
@@ -32,8 +32,8 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
+  const [mainImageError, setMainImageError] = useState(false),
+  const [authorImageError, setAuthorImageError] = useState(false),
 
   return (
     <div className={cn(
@@ -134,5 +134,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  );
+  ),
 }

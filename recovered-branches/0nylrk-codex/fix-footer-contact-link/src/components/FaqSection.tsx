@@ -1,11 +1,11 @@
 
-import { GradientHeading } from "./GradientHeading";
+import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from "lucide-react";
+  AccordionTrigger} from "@/components/ui/accordion",
+import { FileText } from "lucide-react",
 
 const faqs = [
   {
@@ -25,7 +25,7 @@ const faqs = [
     answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},
   {
     question: "Are there any fees for listing my products or services?",
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
 
 export function FaqSection() {
   return (
@@ -59,5 +59,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

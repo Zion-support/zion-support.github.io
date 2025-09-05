@@ -1,12 +1,12 @@
 
-};
+},
 ,
 generateSitemap(),
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'),
+const path = require('path'),
 
 // Base URL for the site
-const BASE_URL = 'https://zion.app';
+const BASE_URL = 'https: //zion.app',
 
 // Define the pages and their metadata
 const pages = [
@@ -112,51 +112,51 @@ const pages = [
     changefreq: 'monthly',
     lastmod: new Date().toISOString().split('T')[0]
   }
-];
+],
 
 // Generate sitemap XML content
 function generateSitemapXML() {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n',
+  xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n',
   
   pages.forEach(page => {
-    xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`;
-    xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
-    xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-    xml += `    <priority>${page.priority}</priority>\n`;
-    xml += '  </url>\n';
-  });
+    xml += '  <url>\n',
+    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`,
+    xml += `    <lastmod>${page.lastmod}</lastmod>\n`,
+    xml += `    <changefreq>${page.changefreq}</changefreq>\n`,
+    xml += `    <priority>${page.priority}</priority>\n`,
+    xml += '  </url>\n',
+  }),
   
-  xml += '</urlset>';
-  return xml;
+  xml += '</urlset>',
+  return xml,
 }
 
 // Generate sitemap.txt (simple text version)
 function generateSitemapTXT() {
-  return pages.map(page => `${BASE_URL}${page.url}`).join('\n');
+  return pages.map(page => `${BASE_URL}${page.url}`).join('\n'),
 }
 
 // Main execution
 function main() {
   try {
     // Create public directory if it doesn't exist
-    const publicDir = path.join(__dirname, '../public');
+    const publicDir = path.join(__dirname, '../public'),
     if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
+      fs.mkdirSync(publicDir, { recursive: true }),
     }
 
     // Generate and save sitemap.xml
-    const sitemapXML = generateSitemapXML();
-    const xmlPath = path.join(publicDir, 'sitemap.xml');
-    fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
-    console.log(`✅ Sitemap XML generated: ${xmlPath}`);
+    const sitemapXML = generateSitemapXML(),
+    const xmlPath = path.join(publicDir, 'sitemap.xml'),
+    fs.writeFileSync(xmlPath, sitemapXML, 'utf8'),
+    console.log(`✅ Sitemap XML generated: ${xmlPath}`),
 
     // Generate and save sitemap.txt
-    const sitemapTXT = generateSitemapTXT();
-    const txtPath = path.join(publicDir, 'sitemap.txt');
-    fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
-    console.log(`✅ Sitemap TXT generated: ${txtPath}`);
+    const sitemapTXT = generateSitemapTXT(),
+    const txtPath = path.join(publicDir, 'sitemap.txt'),
+    fs.writeFileSync(txtPath, sitemapTXT, 'utf8'),
+    console.log(`✅ Sitemap TXT generated: ${txtPath}`),
 
     // Generate robots.txt
     const robotsTXT = `User-agent: *
@@ -167,25 +167,25 @@ Sitemap: ${BASE_URL}/sitemap.xml
 Sitemap: ${BASE_URL}/sitemap.txt
 
 # Crawl-delay
-Crawl-delay: 1`;
+Crawl-delay: 1`,
     
-    const robotsPath = path.join(publicDir, 'robots.txt');
-    fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
-    console.log(`✅ Robots.txt generated: ${robotsPath}`);
+    const robotsPath = path.join(publicDir, 'robots.txt'),
+    fs.writeFileSync(robotsPath, robotsTXT, 'utf8'),
+    console.log(`✅ Robots.txt generated: ${robotsPath}`),
 
-    console.log(`\n🎉 Sitemap generation complete!`);
-    console.log(`📊 Total pages: ${pages.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
+    console.log(`\n🎉 Sitemap generation complete!`),
+    console.log(`📊 Total pages: ${pages.length}`),
+    console.log(`🌐 Base URL: ${BASE_URL}`),
     
   } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-    process.exit(1);
+    console.error('❌ Error generating sitemap:', error),
+    process.exit(1),
   }
 }
 
 // Run if called directly
 if (require.main === module) {
-  main();
+  main(),
 }
 
-module.exports = { generateSitemapXML, generateSitemapTXT, pages };
+module.exports = { generateSitemapXML, generateSitemapTXT, pages },

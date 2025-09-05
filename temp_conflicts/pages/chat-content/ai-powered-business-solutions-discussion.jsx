@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+import Head from 'next/head',
 
 const AiPoweredBusinessSolutionsDiscussion = () => {
   return (
@@ -14,7 +14,7 @@ const AiPoweredBusinessSolutionsDiscussion = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default AiPoweredBusinessSolutionsDiscussion;
+export default AiPoweredBusinessSolutionsDiscussion,

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Phone, 
+  Phone,
   Mail, 
   Facebook, 
   Twitter, 
@@ -24,15 +24,15 @@ import {
   Factory,
   Truck,
   CreditCard
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false),
+  const [isServicesOpen, setIsServicesOpen] = useState(false),
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false),
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false),
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen),
 
   const servicesDropdown = [
     {
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
       href: '/services/performance',
       icon: Zap
     }
-  ];
+  ],
 
   const solutionsDropdown = [
     {
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
       href: '/solutions/education',
       icon: GraduationCap
     }
-  ];
+  ],
 
   const industriesDropdown = [
     { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
     { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
     { name: 'Education', href: '/industries/education', icon: GraduationCap },
     { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ];
+  ],
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' }
-  ];
+  ],
 
   return (
     <header className="bg-white shadow-lg">
@@ -333,7 +333,7 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
     </header>
-  );
-};
+  ),
+},
 
-export default Header;
+export default Header,

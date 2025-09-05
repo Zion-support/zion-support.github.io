@@ -1,38 +1,38 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react',
+import DatePicker from 'react-datepicker',
+import { useRouter } from 'next/router',
 
-type PaymentType = 'hourly' | 'fixed';
+type PaymentType = 'hourly' | 'fixed',
 
 export default function ContractBuilderPage() {
-  const router = useRouter();
-  const [talentName, setTalentName] = useState('');
-  const [projectName, setProjectName] = useState('');
-  const [scopeSummary, setScopeSummary] = useState('');
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
-  const [currency, setCurrency] = useState('USD');
-  const [hourlyRate, setHourlyRate] = useState<number>(100);
-  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
-  const [fixedAmount, setFixedAmount] = useState<number>(5000);
-  const [milestoneSummary, setMilestoneSummary] = useState('');
-  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
-  const [nda, setNda] = useState(true);
-  const [ipTransfer, setIpTransfer] = useState(true);
-  const [governingLaw, setGoverningLaw] = useState('Delaware, USA');
-  const [revisionRounds, setRevisionRounds] = useState<number>(2);
+  const router = useRouter(),
+  const [talentName, setTalentName] = useState(''),
+  const [projectName, setProjectName] = useState(''),
+  const [scopeSummary, setScopeSummary] = useState(''),
+  const [startDate, setStartDate] = useState<Date | null>(null),
+  const [endDate, setEndDate] = useState<Date | null>(null),
+  const [paymentType, setPaymentType] = useState<PaymentType>('hourly'),
+  const [currency, setCurrency] = useState('USD'),
+  const [hourlyRate, setHourlyRate] = useState<number>(100),
+  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>(''),
+  const [fixedAmount, setFixedAmount] = useState<number>(5000),
+  const [milestoneSummary, setMilestoneSummary] = useState(''),
+  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice'),
+  const [nda, setNda] = useState(true),
+  const [ipTransfer, setIpTransfer] = useState(true),
+  const [governingLaw, setGoverningLaw] = useState('Delaware, USA'),
+  const [revisionRounds, setRevisionRounds] = useState<number>(2),
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [contract, setContract] = useState<string>('');
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [contract, setContract] = useState<string>(''),
 
   useEffect(() => {
-    if (!router.isReady) return;
-    const { talent, project } = router.query as { talent?: string; project?: string };
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent));
-    if (project && !projectName) setProjectName(decodeURIComponent(project));
-  }, [router.isReady, router.query, talentName, projectName]);
+    if (!router.isReady) return,
+    const { talent, project } = router.query as { talent?: string, project?: string },
+    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),
+    if (project && !projectName) setProjectName(decodeURIComponent(project)),
+  }, [router.isReady, router.query, talentName, projectName]),
 
   const canSubmit = useMemo(() => {
     return (
@@ -42,16 +42,16 @@ export default function ContractBuilderPage() {
       !!startDate &&
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
-    );
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]);
+    ),
+  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),
 
   async function submitForm(event: React.FormEvent) {
-    event.preventDefault();
-    if (!canSubmit) return;
+    event.preventDefault(),
+    if (!canSubmit) return,
 
-    setLoading(true);
-    setError(null);
-    setContract('');
+    setLoading(true),
+    setError(null),
+    setContract(''),
 
     try {
       const body = {
@@ -78,42 +78,42 @@ export default function ContractBuilderPage() {
           nda,
           ipTransfer},
         governingLaw,
-        revisionRounds};
+        revisionRounds},
 
       const res = await fetch('/api/ai-contract', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'},
-        body: JSON.stringify(body)});
+        body: JSON.stringify(body)}),
 
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || `Request failed: ${res.status}`);
+        const data = await res.json().catch(() => ({})),
+        throw new Error(data?.error || `Request failed: ${res.status}`),
       }
 
-      const data = (await res.json()) as { contract: string };
-      setContract(data.contract);
+      const data = (await res.json()) as { contract: string },
+      setContract(data.contract),
     } catch (e: any) {
-      setError(e?.message || 'Failed to generate contract');
+      setError(e?.message || 'Failed to generate contract')
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function copyToClipboard() {
-    if (!contract) return;
-    void navigator.clipboard.writeText(contract);
+    if (!contract) return,
+    void navigator.clipboard.writeText(contract),
   }
 
   function downloadAsTxt() {
-    if (!contract) return;
-    const blob = new Blob([contract], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
+    if (!contract) return,
+    const blob = new Blob([contract], { type: 'text/plain,charset=utf-8' }),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`,
+    a.click(),
+    URL.revokeObjectURL(url),
   }
 
   return (
@@ -234,5 +234,5 @@ export default function ContractBuilderPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

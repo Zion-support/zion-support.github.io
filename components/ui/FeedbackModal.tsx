@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from 'react',
 
-export type FeedbackContext = { actionType?: string; metadata?: any };
+export type FeedbackContext = { actionType?: string, metadata?: any },
 
 export default function FeedbackModal({
   isOpen,
@@ -8,31 +8,31 @@ export default function FeedbackModal({
   defaultContext,
   defaultKind = 'general',
   userHeaders}: {
-  isOpen: boolean;
-  onClose: (submitted: boolean) => void;
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;
+  isOpen: boolean,
+  onClose: (submitted: boolean) => void,
+  defaultContext?: FeedbackContext,
+  defaultKind?: 'general' | 'bug' | 'feature',
+  userHeaders?: Record<string, string>,
 }) {
-  const [rating, setRating] = useState<number>(0);
-  const [hover, setHover] = useState<number>(0);
-  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
-  const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [rating, setRating] = useState<number>(0),
+  const [hover, setHover] = useState<number>(0),
+  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind),
+  const [comment, setComment] = useState(''),
+  const [loading, setLoading] = useState(false),
 
-  if (!isOpen) return null;
+  if (!isOpen) return null,
 
   async function submit() {
-    if (rating < 1) return onClose(false);
-    setLoading(true);
+    if (rating < 1) return onClose(false),
+    setLoading(true),
     try {
       await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })});
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })}),
     } catch {}
-    setLoading(false);
-    onClose(true);
+    setLoading(false),
+    onClose(true),
   }
 
   return (
@@ -69,5 +69,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  );
+  ),
 }

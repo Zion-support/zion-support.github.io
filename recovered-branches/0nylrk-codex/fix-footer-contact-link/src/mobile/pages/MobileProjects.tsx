@@ -1,8 +1,8 @@
 
-import React from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { MobileProjectView } from "../components/projects/MobileProjectView";
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileProjectView } from "../components/projects/MobileProjectView",
 
 // Mock data
 const projectData = {
@@ -18,7 +18,7 @@ const projectData = {
   totalAmount: "$12,000",
   progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
-};
+},
 
 const milestonesData = [
   {
@@ -45,7 +45,7 @@ const milestonesData = [
     paymentStatus: "pending" as const,
     amount: "$5,000"
   }
-];
+],
 
 export function MobileProjects() {
   return (
@@ -64,5 +64,5 @@ export function MobileProjects() {
       
       <BottomNavigation />
     </div>
-  );
+  ),
 }

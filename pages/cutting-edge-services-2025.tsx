@@ -1,20 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
+import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
+import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -53,7 +53,7 @@ const serviceCategories = [
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30'
   }
-];
+],
 
 export default function CuttingEdgeServices2025() {
   return (
@@ -245,7 +245,7 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
+            {['StarterProfessional', 'Enterprise'].map((plan, index) => (
               <motion.div
                 key={plan}
                 initial={{ opacity: 0, y: 30 }}
@@ -351,7 +351,7 @@ export default function CuttingEdgeServices2025() {
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
@@ -361,5 +361,5 @@ export default function CuttingEdgeServices2025() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

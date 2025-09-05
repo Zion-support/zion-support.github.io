@@ -10,7 +10,7 @@ class SecurityScanner {,
     this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),
     this.startTime = Date.now()
-  };
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -20,8 +20,8 @@ class SecurityScanner {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    };
-  };
+    },
+  },
 ,
   async scanDependencies() {,
     try {,
@@ -37,8 +37,8 @@ class SecurityScanner {,
       return {,
         success: true,
         vulnerabilities: audit.vulnerabilities || {},
-        summary: audit.metadata || {};
-      };
+        summary: audit.metadata || {},
+      },
     } catch (error) {,
       // npm audit might fail if there are vulnerabilities,
       try {,
@@ -48,19 +48,19 @@ class SecurityScanner {,
             success: false,
             error: 'Vulnerabilities found',
             output: output
-          };
-        };
+          },
+        },
       } catch (parseError) {,
         this.log(`Error parsing npm audit output: ${parseError.message}`)
-      };
+      },
 ,
       return {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || ''
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async scanCode() {,
     try {,
@@ -86,13 +86,13 @@ class SecurityScanner {,
               severity: 'high',
               message: 'Hardcoded password detected'
             })
-          };
-      };
-    };
+          },
+      },
+    },
 ,
     scanDirectory(this.projectRoot),
     return files
-  };
+  },
 ,
   async scanConfigs() {,
     try {,
@@ -100,8 +100,7 @@ class SecurityScanner {,
 ,
       const configIssues = [],
       const configFiles = [,
-        'package.jsonnext.config.jstsconfig.json.env',
-        '.env.local.env.production'
+        'package.jsonnext.config.jstsconfig.json.env.env.local.env.production'
       ],
 ,
       configFiles.forEach(configFile => {,
@@ -117,7 +116,7 @@ class SecurityScanner {,
               severity: 'high',
               message: 'Potential secret exposed in configuration file'
             })
-          };
+          },
 ,
           // Check for debug mode in production configs,
           if (configFile.includes('production') && content.includes('debug: true')) {,
@@ -127,22 +126,22 @@ class SecurityScanner {,
               severity: 'medium',
               message: 'Debug mode enabled in production configuration'
             })
-          };
-        };
+          },
+        },
       }),
 ,
       return {,
         success: true,
         issues: configIssues
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         issues: []
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async generateReport(depResults, codeResults, configResults) {,
     const report = {,
@@ -159,7 +158,7 @@ class SecurityScanner {,
         configs: configResults
       },
       recommendations: []
-    };
+    },
 ,
     // Generate recommendations,
     if (!depResults.success) {,
@@ -168,7 +167,7 @@ class SecurityScanner {,
         message: 'Dependency vulnerabilities found',
         action: 'Run npm audit fix to resolve vulnerabilities'
       })
-    };
+    },
 ,
     if (codeResults.issues.length > 0) {,
       const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,
@@ -178,8 +177,8 @@ class SecurityScanner {,
           message: `${highSeverity} high-severity security issues found in code`,
           action: 'Review and fix high-severity security issues'
         })
-      };
-    };
+      },
+    },
 ,
     if (configResults.issues.length > 0) {,
       report.recommendations.push({,
@@ -187,24 +186,24 @@ class SecurityScanner {,
         message: 'Configuration security issues found',
         action: 'Review configuration files for security issues'
       })
-    };
+    },
 ,
     return report
-  };
+  },
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
         fs.mkdirSync(reportDir, { recursive: true })
-      };
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    };
-  };
+    },
+  },
 ,
   async run() {,
     this.log('🛡️  Starting Security Scanner...'),
@@ -215,7 +214,7 @@ class SecurityScanner {,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursive: true })
-      };
+      },
 ,
       // Run all security scans,
       const depResults = await this.scanDependencies(),
@@ -247,17 +246,17 @@ class SecurityScanner {,
         })
       } else {,
         this.log('\n✨ No security issues found!')
-      };
+      },
 
     } catch (error) {,
       this.log(`❌ Error running security scanner: ${error.message}`),
       process.exit(1)
-    };
-  };
-};
+    },
+  },
+},
 ,
 // Run the security scanner,
 const scanner = new SecurityScanner(),
 scanner.run().catch(error => {,
   process.exit(1)
-}),);
+}),),

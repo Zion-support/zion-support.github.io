@@ -1,15 +1,13 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+import React from 'react',
+import SEO from '../components/SEO',
+import { Check, ExternalLink } from 'lucide-react',
 
 export default function ApiPerformanceTestingPage() {
 	const features = [
-		'k6/Gatling-compatible test runner',
-		'SLO-aware latency reports',
-		'Regression baselines per endpoint',
-		'CI checks and PR annotations',
+		'k6/Gatling-compatible test runnerSLO-aware latency reports',
+		'Regression baselines per endpointCI checks and PR annotations',
 		'Synthetic traffic for staging'
-	];
+	],
 
 	return (
 		<div className="relative isolate">
@@ -52,7 +50,7 @@ export default function ApiPerformanceTestingPage() {
 								<p className="mt-4 text-3xl font-bold">Custom</p>
 							</div>
 						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://k6.io/pricing/" target="_blank" rel="noreferrer">Grafana k6</a>, <a className="underline hover:text-cyan-300" href="https://www.loadmill.com/pricing" target="_blank" rel="noreferrer">Loadmill</a>, <a className="underline hover:text-cyan-300" href="https://www.blazemeter.com/pricing" target="_blank" rel="noreferrer">BlazeMeter</a>.</p>
+						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://k6.io/pricing/" target="_blank" rel="noreferrer">Grafana k6</a>, <a className="underline hover:text-cyan-300" href="https://www.loadmill.com/pricing" target="_blank" rel="noreferrer">Loadmill</a>, <a className="underline hover: text-cyan-300" href="https://www.blazemeter.com/pricing" target="_blank" rel="noreferrer">BlazeMeter</a>.</p>
 					</div>
 
 					<div className="mt-14 flex flex-wrap items-center gap-4">
@@ -63,5 +61,5 @@ export default function ApiPerformanceTestingPage() {
 				</div>
 			</section>
 		</div>
-	);
+	)
 }

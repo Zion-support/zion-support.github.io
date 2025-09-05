@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Calculator
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIFinancialPlanningPlatform() {
   const features = [
@@ -39,18 +39,14 @@ export default function AIFinancialPlanningPlatform() {
       title: 'Real-Time Financial Insights',
       description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Increase investment returns by 25%',
-    'Reduce financial planning time by 70%',
-    'Improve risk-adjusted returns by 40%',
-    'Optimize tax efficiency by 30%',
-    'Reduce portfolio volatility by 35%',
-    'Improve financial goal achievement by 50%',
-    'Reduce financial planning costs by 60%',
-    'Gain professional-grade financial insights'
-  ];
+    'Increase investment returns by 25%Reduce financial planning time by 70%',
+    'Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%',
+    'Reduce portfolio volatility by 35%Improve financial goal achievement by 50%',
+    'Reduce financial planning costs by 60%Gain professional-grade financial insights'
+  ],
 
 					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
@@ -270,7 +266,7 @@ export default function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales
                 </motion.button>
@@ -280,5 +276,5 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-  );
+  )
 }

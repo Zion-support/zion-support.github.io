@@ -1,6 +1,6 @@
-import React from "react";
-import ThemeToggle from "@/components/ThemeToggle";
-import { ThemeProvider } from "@/context/ThemeContext";
+import React from "react",
+import ThemeToggle from "@/components/ThemeToggle",
+import { ThemeProvider } from "@/context/ThemeContext",
 
 export default function ThemeTest() {
   return (
@@ -9,5 +9,5 @@ export default function ThemeTest() {
         <ThemeToggle />
       </div>
     </ThemeProvider>
-  );
+  ),
 }

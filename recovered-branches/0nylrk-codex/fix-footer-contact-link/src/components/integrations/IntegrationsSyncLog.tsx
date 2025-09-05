@@ -1,14 +1,14 @@
 
-import React from "react";
-import { Card } from "@/components/ui/card";
+import React from "react",
+import { Card } from "@/components/ui/card",
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 
 // Sample data for integration sync logs
 const syncLogs = [
@@ -52,21 +52,20 @@ const syncLogs = [
     timestamp: "2024-05-18T09:10:05Z",
     details: "Updated candidate status to 'Interview Scheduled'"
   }
-];
+],
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case "success":
-        return <Badge className="bg-green-500">Success</Badge>;
+      case "success": return <Badge className="bg-green-500">Success</Badge>,
       case "error":
-        return <Badge variant="destructive">Error</Badge>;
+        return <Badge variant="destructive">Error</Badge>,
       case "warning":
-        return <Badge className="bg-amber-500">Warning</Badge>;
+        return <Badge className="bg-amber-500">Warning</Badge>,
       default:
-        return <Badge variant="outline">Unknown</Badge>;
+        return <Badge variant="outline">Unknown</Badge>
     }
-  };
+  },
   
   return (
     <Card>
@@ -97,5 +96,5 @@ export function IntegrationsSyncLog() {
         </Table>
       </div>
     </Card>
-  );
+  ),
 }

@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react',
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: any) => void
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const paint = performance.getEntriesByType('paint'),
         
         const performanceData = {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -17,27 +17,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
           totalTime: navigation.loadEventEnd - navigation.fetchStart
-        };
+        },
         
         if (onPerformanceData) {
-          onPerformanceData(performanceData);
+          onPerformanceData(performanceData),
         }
       }
-    };
+    },
     
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance(),
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance),
     }
     
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('load', measurePerformance),
     }
-  }, [onPerformanceData]);
+  }, [onPerformanceData]),
   return null
-};
+},
 
-export { PerformanceMonitor };
-export default PerformanceMonitor;
+export { PerformanceMonitor },
+export default PerformanceMonitor,

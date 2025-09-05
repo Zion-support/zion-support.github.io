@@ -1,17 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string,
+  description?: string,
+  keywords?: string,
+  canonicalUrl?: string,
+  ogImage?: string,
+  ogType?: string,
+  twitterCard?: string,
+  structuredData?: any,
+  noindex?: boolean,
+  nofollow?: boolean,
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -24,35 +24,33 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
+  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`,
 
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https://schema.org@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
     description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
-      contactType: 'customer service',
+      contactType: 'customer service'
     },
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
-  };
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup'
+    ]
+  },
 
-  const mergedStructuredData = structuredData || defaultStructuredData;
+  const mergedStructuredData = structuredData || defaultStructuredData,
 
   return (
     <Head>
@@ -63,7 +61,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html, charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -105,7 +103,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mergedStructuredData),
+          __html: JSON.stringify(mergedStructuredData)
         }}
       />
       {/* Additional SEO Meta Tags */}
@@ -122,9 +120,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
     </Head>
-  );
-};
+  ),
+},
 
-export default SEOHead;
+export default SEOHead,

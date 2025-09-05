@@ -1,19 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -53,7 +53,7 @@ const serviceCategories = [
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -64,14 +64,14 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-];
+],
 
 const footerSections = [
   {
@@ -118,7 +118,7 @@ const footerSections = [
       { name: 'Compliance', href: '/compliance' }
     ]
   }
-];
+],
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -282,7 +282,7 @@ const UltraFuturisticFooter2029 = () => {
               Join our newsletter for exclusive updates and industry insights.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -296,7 +296,7 @@ const UltraFuturisticFooter2029 = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2029;
+export default UltraFuturisticFooter2029,

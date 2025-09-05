@@ -1,43 +1,40 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useTranslation } from 'react-i18next';
+import { cn } from '@/lib/utils',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { ModeToggle } from '@/components/ModeToggle',
+import { useTranslation } from 'react-i18next',
 
 export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
-  openLoginModal: (returnToPath: string) => void; // Added from plan
+  unreadCount?: number,
+  onClose: () => void,
+  openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.
 const protectedRoutes = [
-  '/categories',
-  '/talent',
-  '/equipment',
-  '/partners',
-  '/tutorials',
-  '/case-studies',
+  '/categories/talent',
+  '/equipment/partners',
+  '/tutorials/case-studies',
   '/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
   '/messages',  // Already marked as authRequired
   '/dashboard', // Already marked as authRequired
   // Add any specific sub-routes if necessary
-];
+],
 
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route));
+  return protectedRoutes.some(route => href.startsWith(route))
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
-  const router = useRouter();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+  const router = useRouter(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { t } = useTranslation(),
 
   const baseItems = [
     {
@@ -78,16 +75,16 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       href: '/dashboard',
       icon: User,
       matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true}];
+      authRequired: true}],
 
   const navItems = baseItems.map((item) => ({
     ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)}));
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(
     (item) => !item.authRequired || (item.authRequired && isAuthenticated),
-  );
+  ),
 
   return (
     <div className="py-6">
@@ -117,16 +114,16 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 : 'text-foreground hover:bg-primary/10 hover:text-primary',
             )}
             onClick={(e) => {
-              const routeIsProtected = item.authRequired || isProtectedRoute(item.href);
+              const routeIsProtected = item.authRequired || isProtectedRoute(item.href),
               if (!isAuthenticated && routeIsProtected) {
-                e.preventDefault();
+                e.preventDefault(),
                 // Update URL to include returnTo, then open modal
-                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
-                openLoginModal(item.href);
+                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true }),
+                openLoginModal(item.href),
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
-              onClose(); // Close mobile menu on any click
+              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -145,5 +142,5 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
-  );
+  ),
 }

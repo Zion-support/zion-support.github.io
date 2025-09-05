@@ -1,16 +1,16 @@
-'use client';
+'use client',
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Link from 'next/link',
 
 interface InteractiveCardProps {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-  color?: string;
-  className?: string;
-  children?: React.ReactNode;
+  title: string,
+  description: string,
+  icon: string,
+  href: string,
+  color?: string,
+  className?: string,
+  children?: React.ReactNode
 }
 
 export default function InteractiveCard({
@@ -22,7 +22,7 @@ export default function InteractiveCard({
   className = '',
   children
 }: InteractiveCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false),
 
   return (
     <Link
@@ -79,7 +79,7 @@ export default function InteractiveCard({
         />
       </div>
     </Link>
-  );
+  ),
 }
 
 export function FeatureCard({
@@ -89,7 +89,7 @@ export function FeatureCard({
   href,
   stats,
   className = ''
-}: InteractiveCardProps & { stats?: { label: string; value: string }[] }) {
+}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {
   return (
     <InteractiveCard
       title={title}
@@ -111,7 +111,7 @@ export function FeatureCard({
         </div>
       )}
     </InteractiveCard>
-  );
+  ),
 }
 
 export function TestimonialCard({
@@ -122,12 +122,12 @@ export function TestimonialCard({
   rating = 5,
   className = ''
 }: {
-  quote: string;
-  author: string;
-  position: string;
-  company: string;
-  rating?: number;
-  className?: string;
+  quote: string,
+  author: string,
+  position: string,
+  company: string,
+  rating?: number,
+  className?: string
 }) {
   return (
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>
@@ -155,5 +155,5 @@ export function TestimonialCard({
         <div className="text-purple-400 text-sm">{company}</div>
       </div>
     </div>
-  );
+  ),
 }

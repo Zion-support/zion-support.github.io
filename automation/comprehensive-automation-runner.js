@@ -1,19 +1,19 @@
 
-import fs from "fs";
-import path from "path";
-import { execSync, spawn } from "child_process";
-import { fileURLToPath } from "url";
+import fs from "fs",
+import path from "path",
+import { execSync, spawn } from "child_process",
+import { fileURLToPath } from "url",
 
-      });
-      const duration = Date.now() - startTime;
-      this.log(`✓ ${description} completed in ${duration}ms`);
-      return { success: true, output: output.toString(), duration };
+      }),
+      const duration = Date.now() - startTime,
+      this.log(`✓ ${description} completed in ${duration}ms`),
+      return { success: true, output: output.toString(), duration },
 
 #!/usr/bin/env node,
-import fs from "fs";
-import path from "path";
+import fs from "fs",
+import path from "path",
 import { execSync, spawn } from "child_process",
-import { fileURLToPath } from "url";
+import { fileURLToPath } from "url",
 ,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
@@ -30,18 +30,18 @@ class ComprehensiveAutomationRunner {,
       linting: {},
       performance: {},
       security: {},
-      overall: { status: "unknown", score: 0 };
-    };
-      };
+      overall: { status: "unknown", score: 0 },
+    },
+      },
     })
-  };
+  },
 ,
   log(message, level = "INFO") {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logMessage)
-  };
+  },
 ,
   async runCommand(command, description) {,
     try {,
@@ -54,16 +54,16 @@ class ComprehensiveAutomationRunner {,
       }),
       const duration = Date.now() - startTime,
       this.log(`✓ ${description} completed in ${duration}ms`),
-      return { success: true, output: output.toString(), duration };
+      return { success: true, output: output.toString(), duration },
     } catch (error) {,
       this.log(`✗ ${description} failed: ${error.message}`, "ERROR"),
       return {,
         success: false,
         error: error.message,
         output: error.stdout?.toString() || error.stderr?.toString() || ""
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async runBuildTests() {,
     this.log("=== RUNNING BUILD TESTS ==="),
@@ -72,42 +72,42 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run build", desc: "Production build" },
       { cmd: "npm run lint", desc: "Linting check" },
       { cmd: "npm run type-check", desc: "TypeScript type checking" },
-      { cmd: "npm run test:smoke", desc: "Smoke tests" };
+      { cmd: "npm run test:smoke", desc: "Smoke tests" },
     ],
 ,
     for (const test of buildTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result
-    };
-  };
+    },
+  },
 ,
   async runPerformanceTests() {,
     this.log("=== RUNNING PERFORMANCE TESTS ==="),
 ,
     const perfTests = [,
       { cmd: "npm run build:analyze", desc: "Bundle analysis" },
-      { cmd: "npm run perf:audit", desc: "Performance audit" };
+      { cmd: "npm run perf:audit", desc: "Performance audit" },
     ],
 ,
     for (const test of perfTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.performance[test.desc] = result
-    };
-  };
+    },
+  },
 ,
   async runSecurityTests() {,
     this.log("=== RUNNING SECURITY TESTS ==="),
 ,
     const securityTests = [,
       { cmd: "npm audit", desc: "Security audit" },
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" };
+      { cmd: "npm run security:audit", desc: "Enhanced security audit" },
     ],
 ,
     for (const test of securityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.security[test.desc] = result
-    };
-  };
+    },
+  },
 ,
   async runQualityTests() {,
     this.log("=== RUNNING QUALITY TESTS ==="),
@@ -115,14 +115,14 @@ class ComprehensiveAutomationRunner {,
     const qualityTests = [,
       { cmd: "npm run lint:check", desc: "Lint check" },
       { cmd: "npm run format:check", desc: "Format check" },
-      { cmd: "npm run test:coverage", desc: "Test coverage" };
+      { cmd: "npm run test:coverage", desc: "Test coverage" },
     ],
 ,
     for (const test of qualityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.tests[test.desc] = result
-    };
-  };
+    },
+  },
 ,
   calculateOverallScore() {,
     let totalScore = 0,
@@ -155,7 +155,7 @@ class ComprehensiveAutomationRunner {,
                                  finalScore >= 40 ? "fair" : "poor",
 ,
     return finalScore
-  };
+  },
 ,
   calculateCategoryScore(category) {,
     if (!category || Object.keys(category).length === 0) return 0,
@@ -163,7 +163,7 @@ class ComprehensiveAutomationRunner {,
     const results = Object.values(category),
     const successCount = results.filter(r => r.success).length,
     return Math.round((successCount / results.length) * 100)
-  };
+  },
 ,
   generateRecommendations() {,
     const recommendations = [],
@@ -172,32 +172,32 @@ class ComprehensiveAutomationRunner {,
     Object.entries(this.results.builds).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Fix ${test}: ${result.error}`)
-      };
+      },
     }),
 ,
     // Performance recommendations,
     Object.entries(this.results.performance).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Optimize ${test}: ${result.error}`)
-      };
+      },
     }),
 ,
     // Security recommendations,
     Object.entries(this.results.security).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Address security issue in ${test}: ${result.error}`)
-      };
+      },
     }),
 ,
     // Quality recommendations,
     Object.entries(this.results.tests).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Improve ${test}: ${result.error}`)
-      };
+      },
     }),
 ,
     return recommendations
-  };
+  },
 ,
   async saveResults() {,
     this.results.recommendations = this.generateRecommendations(),
@@ -205,7 +205,7 @@ class ComprehensiveAutomationRunner {,
 ,
     fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),
     this.log(`Results saved to: ${this.resultsFile}`)
-  };
+  },
 ,
   async runAll() {,
     this.log("🚀 Starting Comprehensive Automation Runner"),
@@ -228,19 +228,19 @@ class ComprehensiveAutomationRunner {,
         this.log("⚠️  Some improvements needed. Check recommendations.", "WARN")
       } else {,
         this.log("✅ All systems performing well!", "SUCCESS")
-      };
+      },
 
     } catch (error) {,
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"),
       throw error
-    };
-  };
-};
+    },
+  },
+},
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,
   const runner = new ComprehensiveAutomationRunner(),
   runner.runAll().catch(console.error)
-};
+},
 ,
 export default ComprehensiveAutomationRunner,

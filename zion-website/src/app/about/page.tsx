@@ -1,5 +1,5 @@
 import { 
-  UserGroupIcon, 
+  UserGroupIcon,
   LightBulbIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,

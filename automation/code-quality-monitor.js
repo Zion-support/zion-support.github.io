@@ -12,9 +12,9 @@ class CodeQualityMonitor {,
       performance: 0,
 
       lastUpdated: new Date().toISOString()
-    };
+    },
     this.logFile = path.join(__dirname, "logs", "code-quality.log")
-  };
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -22,7 +22,7 @@ class CodeQualityMonitor {,
     console.log(message),
 
     fs.appendFileSync(this.logFile, logMessage)
-  };
+  },
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -41,4 +41,4 @@ class CodeQualityMonitor {,
     } catch (error) {,
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null
-    };
+    },

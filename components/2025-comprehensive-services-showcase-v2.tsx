@@ -1,24 +1,24 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new 2025 V2 innovative services
-import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
-import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
-import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
-import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
+import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2',
+import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2',
+import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2',
+import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2',
+import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2',
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
-};
+},
 
 const staggerContainer = {
   animate: {
@@ -26,7 +26,7 @@ const staggerContainer = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
@@ -35,7 +35,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
     ...emergingTechBreakthroughs2025V2
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -78,13 +78,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: emergingTechBreakthroughs2025V2,
       description: 'Breakthrough technologies of the future'
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -332,7 +332,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             <a 
               href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Contact Our Team
             </a>
@@ -346,5 +346,5 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>
       </section>
     </div>
-  );
+  )
 }

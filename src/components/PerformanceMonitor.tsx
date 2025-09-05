@@ -1,7 +1,7 @@
-        };
-      };
+        },
+      },
 
-    };
+    },
 ,
     // Initial tracking,
     trackPageLoad(),
@@ -25,7 +25,7 @@
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
       window.removeEventListener('offline', handleOffline)
-    };
+    },
   }, [location.pathname]),
 ,
   // Show performance issues,
@@ -40,7 +40,7 @@
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
       return () => clearTimeout(timer)
-    };
+    },
   }, [metrics]),
 ,
   if (!isVisible) return null,
@@ -52,4 +52,4 @@
           <BarChart3 className="w-5 h-5 text-blue-400" />,
           <span className="text-sm font-medium text-white">Performance Monitor</span>,
           <button,
-            onClick={() => setIsVisible(false)};
+            onClick={() => setIsVisible(false)},

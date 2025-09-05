@@ -1,26 +1,26 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react',
 
 export default function Dashboard() {
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams(),
+  const tenantId = params.get('tenantId') || '',
 
-  const [branding, setBranding] = useState<{ name: string; primaryColor?: string; logoUrl?: string } | null>(null);
+  const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null),
 
   useEffect(() => {
     async function fetchBranding() {
       try {
-        const resp = await fetch('/api/tenants');
-        const data = await resp.json();
-        const t = (data.tenants || []).find((x: any) => x.id === tenantId);
-        setBranding(t?.branding || { name: 'Zion Hire AI' });
+        const resp = await fetch('/api/tenants'),
+        const data = await resp.json(),
+        const t = (data.tenants || []).find((x: any) => x.id === tenantId),
+        setBranding(t?.branding || { name: 'Zion Hire AI' }),
       } catch {
-        setBranding({ name: 'Zion Hire AI' });
+        setBranding({ name: 'Zion Hire AI' }),
       }
     }
-    fetchBranding();
-  }, [tenantId]);
+    fetchBranding(),
+  }, [tenantId]),
 
-  const accent = branding?.primaryColor || '#111827';
+  const accent = branding?.primaryColor || '#111827',
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -36,7 +36,7 @@ export default function Dashboard() {
             <input className="border rounded px-3 py-2" placeholder="Company Name" defaultValue={branding?.name || ''} />
             <input className="border rounded px-3 py-2" placeholder="Primary Color (hex)" />
             <input className="border rounded px-3 py-2 md:col-span-2" placeholder="Hiring Needs (e.g., 3 engineers, 1 PM)" />
-            <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 md:col-span-2">Save</button>
+            <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 md: col-span-2">Save</button>
           </form>
         </section>
         <section className="bg-white border rounded p-4">
@@ -60,5 +60,5 @@ export default function Dashboard() {
         </section>
       </main>
     </div>
-  );
+  )
 }

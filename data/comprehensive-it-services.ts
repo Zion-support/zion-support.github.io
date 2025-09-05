@@ -1,42 +1,42 @@
 export interface ComprehensiveITService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
@@ -49,16 +49,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
     features: [
-      'Network infrastructure management',
-      'Server and storage management',
-      'Security monitoring and management',
-      '24/7 infrastructure monitoring',
-      'Performance optimization',
-      'Disaster recovery planning',
-      'Compliance management',
-      'IT asset management',
-      'Help desk support',
-      'Strategic IT consulting'
+      'Network infrastructure managementServer and storage management',
+      'Security monitoring and management24/7 infrastructure monitoring',
+      'Performance optimizationDisaster recovery planning',
+      'Compliance managementIT asset management',
+      'Help desk supportStrategic IT consulting'
     ],
     popular: true,
     icon: '🏢',
@@ -71,11 +66,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '8-12 weeks',
     category: 'Enterprise IT Infrastructure',
     realService: true,
-    technology: ['Cloud computing', 'Virtualization', 'Network management', 'Security systems', 'Monitoring tools', 'Automation platforms', 'AI operations'],
-    integrations: ['ERP systems', 'CRM platforms', 'Security tools', 'Monitoring systems', 'Cloud platforms', 'Legacy systems'],
-    useCases: ['IT infrastructure management', 'Digital transformation', 'Cloud migration', 'Security enhancement', 'Performance optimization', 'Compliance management'],
+    technology: ['Cloud computingVirtualization', 'Network managementSecurity systems', 'Monitoring toolsAutomation platforms', 'AI operations'],
+    integrations: ['ERP systemsCRM platforms', 'Security toolsMonitoring systems', 'Cloud platformsLegacy systems'],
+    useCases: ['IT infrastructure managementDigital transformation', 'Cloud migrationSecurity enhancement', 'Performance optimizationCompliance management'],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
-    competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
+    competitors: ['IBM Global ServicesAccenture', 'DeloittePwC', 'EY'],
     marketSize: '$1.2T IT services market, 8% annual growth',
     growthRate: '8% annual growth',
     variant: 'enterprise-futuristic',
@@ -102,16 +97,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.',
     features: [
-      'Cloud migration planning',
-      'Workload assessment',
-      'Cost optimization',
-      'Performance optimization',
-      'Security migration',
-      'Data migration',
-      'Application modernization',
-      'Cloud governance',
-      'Training and support',
-      'Post-migration optimization'
+      'Cloud migration planningWorkload assessment',
+      'Cost optimizationPerformance optimization',
+      'Security migrationData migration',
+      'Application modernizationCloud governance',
+      'Training and supportPost-migration optimization'
     ],
     popular: true,
     icon: '☁️',
@@ -124,11 +114,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '12-16 weeks',
     category: 'Cloud Migration & Optimization',
     realService: true,
-    technology: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Cloud native tools'],
-    integrations: ['On-premises systems', 'Legacy applications', 'Database systems', 'Security tools', 'Monitoring systems', 'Backup systems'],
-    useCases: ['Cloud migration', 'Application modernization', 'Cost optimization', 'Performance improvement', 'Scalability enhancement', 'Disaster recovery'],
+    technology: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform', 'AnsibleCloud native tools'],
+    integrations: ['On-premises systemsLegacy applications', 'Database systemsSecurity tools', 'Monitoring systemsBackup systems'],
+    useCases: ['Cloud migrationApplication modernization', 'Cost optimizationPerformance improvement', 'Scalability enhancementDisaster recovery'],
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements',
-    competitors: ['AWS Professional Services', 'Microsoft Consulting', 'Google Cloud', 'Accenture', 'Deloitte'],
+    competitors: ['AWS Professional ServicesMicrosoft Consulting', 'Google CloudAccenture', 'Deloitte'],
     marketSize: '$400B cloud services market, 20% annual growth',
     growthRate: '20% annual growth',
     variant: 'cloud-futuristic',
@@ -155,16 +145,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.',
     features: [
-      '24/7 threat monitoring',
-      'AI-powered threat detection',
-      'Incident response automation',
-      'Security analytics dashboard',
-      'Threat intelligence',
-      'Vulnerability management',
-      'Security compliance',
-      'Security awareness training',
-      'Penetration testing',
-      'Security consulting'
+      '24/7 threat monitoringAI-powered threat detection',
+      'Incident response automationSecurity analytics dashboard',
+      'Threat intelligenceVulnerability management',
+      'Security complianceSecurity awareness training',
+      'Penetration testingSecurity consulting'
     ],
     popular: true,
     icon: '🛡️',
@@ -177,11 +162,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '4-6 weeks',
     category: 'Cybersecurity Operations',
     realService: true,
-    technology: ['AI threat detection', 'Machine learning', 'Security analytics', 'Threat intelligence', 'Incident response', 'Vulnerability scanning', 'Penetration testing'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Identity management', 'Vulnerability scanners', 'Compliance tools'],
-    useCases: ['Threat monitoring', 'Incident response', 'Vulnerability management', 'Security compliance', 'Security training', 'Penetration testing'],
+    technology: ['AI threat detectionMachine learning', 'Security analyticsThreat intelligence', 'Incident responseVulnerability scanning', 'Penetration testing'],
+    integrations: ['SIEM systemsEDR platforms', 'FirewallsIdentity management', 'Vulnerability scannersCompliance tools'],
+    useCases: ['Threat monitoringIncident response', 'Vulnerability managementSecurity compliance', 'Security trainingPenetration testing'],
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction',
-    competitors: ['CrowdStrike Falcon Complete', 'Palo Alto Networks Cortex', 'SentinelOne Vigilance', 'Carbon Black', 'Cylance'],
+    competitors: ['CrowdStrike Falcon CompletePalo Alto Networks Cortex', 'SentinelOne VigilanceCarbon Black', 'Cylance'],
     marketSize: '$200B cybersecurity market, 15% annual growth',
     growthRate: '15% annual growth',
     variant: 'cybersecurity-futuristic',
@@ -208,16 +193,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.',
     features: [
-      'Data center infrastructure management',
-      'Power and cooling optimization',
-      'Network performance optimization',
-      'Storage management',
-      'Backup and disaster recovery',
-      'Security management',
-      'Performance monitoring',
-      'Capacity planning',
-      'Energy efficiency optimization',
-      '24/7 operations center'
+      'Data center infrastructure managementPower and cooling optimization',
+      'Network performance optimizationStorage management',
+      'Backup and disaster recoverySecurity management',
+      'Performance monitoringCapacity planning',
+      'Energy efficiency optimization24/7 operations center'
     ],
     popular: true,
     icon: '🏗️',
@@ -230,11 +210,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '8-12 weeks',
     category: 'Data Center Management',
     realService: true,
-    technology: ['AI optimization', 'Automation platforms', 'Monitoring systems', 'Energy management', 'Network management', 'Storage systems', 'Security tools'],
-    integrations: ['Data center infrastructure', 'Monitoring systems', 'Security tools', 'Backup systems', 'Network equipment', 'Power systems'],
-    useCases: ['Data center management', 'Infrastructure optimization', 'Performance improvement', 'Energy efficiency', 'Capacity planning', 'Disaster recovery'],
+    technology: ['AI optimizationAutomation platforms', 'Monitoring systemsEnergy management', 'Network managementStorage systems', 'Security tools'],
+    integrations: ['Data center infrastructureMonitoring systems', 'Security toolsBackup systems', 'Network equipmentPower systems'],
+    useCases: ['Data center managementInfrastructure optimization', 'Performance improvementEnergy efficiency', 'Capacity planningDisaster recovery'],
     roi: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization',
-    competitors: ['Equinix', 'Digital Realty', 'CyrusOne', 'CoreSite', 'QTS Realty'],
+    competitors: ['EquinixDigital Realty', 'CyrusOneCoreSite', 'QTS Realty'],
     marketSize: '$200B data center market, 12% annual growth',
     growthRate: '12% annual growth',
     variant: 'datacenter-futuristic',
@@ -261,16 +241,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.',
     features: [
-      'SD-WAN implementation',
-      'Network security management',
-      'Threat protection',
-      'Traffic optimization',
-      'Centralized management',
-      'Performance monitoring',
-      'Bandwidth optimization',
-      'Security compliance',
-      'Network automation',
-      '24/7 network support'
+      'SD-WAN implementationNetwork security management',
+      'Threat protectionTraffic optimization',
+      'Centralized managementPerformance monitoring',
+      'Bandwidth optimizationSecurity compliance',
+      'Network automation24/7 network support'
     ],
     popular: true,
     icon: '🌐',
@@ -283,11 +258,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '6-8 weeks',
     category: 'Network Security & SD-WAN',
     realService: true,
-    technology: ['SD-WAN', 'Network security', 'Threat protection', 'Traffic optimization', 'Network automation', 'Monitoring tools', 'Security analytics'],
-    integrations: ['Network equipment', 'Security tools', 'Monitoring systems', 'Cloud platforms', 'Legacy networks', 'Security platforms'],
-    useCases: ['Network optimization', 'Security enhancement', 'Traffic management', 'Performance improvement', 'Remote work support', 'Multi-location management'],
+    technology: ['SD-WANNetwork security', 'Threat protectionTraffic optimization', 'Network automationMonitoring tools', 'Security analytics'],
+    integrations: ['Network equipmentSecurity tools', 'Monitoring systemsCloud platforms', 'Legacy networksSecurity platforms'],
+    useCases: ['Network optimizationSecurity enhancement', 'Traffic managementPerformance improvement', 'Remote work supportMulti-location management'],
     roi: 'Enterprises achieve 350% ROI through improved network performance and security',
-    competitors: ['Cisco SD-WAN', 'VMware SD-WAN', 'Fortinet', 'Palo Alto Networks', 'Juniper Networks'],
+    competitors: ['Cisco SD-WANVMware SD-WAN', 'FortinetPalo Alto Networks', 'Juniper Networks'],
     marketSize: '$8B SD-WAN market, 35% annual growth',
     growthRate: '35% annual growth',
     variant: 'network-futuristic',
@@ -314,16 +289,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.',
     features: [
-      'Project planning and management',
-      'Resource allocation',
-      'Risk management',
-      'Quality assurance',
-      'Stakeholder communication',
-      'Project reporting',
-      'Change management',
-      'Strategic consulting',
-      'Technology advisory',
-      'Project recovery'
+      'Project planning and managementResource allocation',
+      'Risk managementQuality assurance',
+      'Stakeholder communicationProject reporting',
+      'Change managementStrategic consulting',
+      'Technology advisoryProject recovery'
     ],
     popular: true,
     icon: '📋',
@@ -336,11 +306,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '2-4 weeks',
     category: 'IT Project Management',
     realService: true,
-    technology: ['Project management tools', 'Agile methodologies', 'DevOps practices', 'Change management', 'Quality assurance', 'Risk management', 'Reporting tools'],
-    integrations: ['Project management platforms', 'Communication tools', 'Documentation systems', 'Reporting tools', 'Development platforms', 'Testing tools'],
-    useCases: ['IT project management', 'Digital transformation', 'Technology implementation', 'Strategic planning', 'Project recovery', 'Change management'],
+    technology: ['Project management toolsAgile methodologies', 'DevOps practicesChange management', 'Quality assuranceRisk management', 'Reporting tools'],
+    integrations: ['Project management platformsCommunication tools', 'Documentation systemsReporting tools', 'Development platformsTesting tools'],
+    useCases: ['IT project managementDigital transformation', 'Technology implementationStrategic planning', 'Project recoveryChange management'],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
-    competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'],
+    competitors: ['McKinseyBCG', 'BainAccenture', 'Deloitte'],
     marketSize: '$50B IT consulting market, 10% annual growth',
     growthRate: '10% annual growth',
     variant: 'consulting-futuristic',
@@ -367,16 +337,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.',
     features: [
-      'Comprehensive IT training',
-      'Industry certifications',
-      'Hands-on labs',
-      'Expert instructors',
-      'Flexible learning options',
-      'Certification preparation',
-      'Career guidance',
-      'Learning management system',
-      'Progress tracking',
-      '24/7 learning support'
+      'Comprehensive IT trainingIndustry certifications',
+      'Hands-on labsExpert instructors',
+      'Flexible learning optionsCertification preparation',
+      'Career guidanceLearning management system',
+      'Progress tracking24/7 learning support'
     ],
     popular: true,
     icon: '🎓',
@@ -389,11 +354,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 week',
     category: 'IT Training & Certification',
     realService: true,
-    technology: ['Learning management systems', 'Virtual labs', 'Video conferencing', 'Interactive content', 'Assessment tools', 'Progress tracking', 'Mobile learning'],
-    integrations: ['Learning platforms', 'Certification bodies', 'Career platforms', 'Social learning', 'Assessment systems', 'Progress tracking'],
-    useCases: ['Professional development', 'Career advancement', 'Skill acquisition', 'Certification preparation', 'Team training', 'Knowledge transfer'],
+    technology: ['Learning management systemsVirtual labs', 'Video conferencingInteractive content', 'Assessment toolsProgress tracking', 'Mobile learning'],
+    integrations: ['Learning platformsCertification bodies', 'Career platformsSocial learning', 'Assessment systemsProgress tracking'],
+    useCases: ['Professional developmentCareer advancement', 'Skill acquisitionCertification preparation', 'Team trainingKnowledge transfer'],
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential',
-    competitors: ['CompTIA', 'Cisco', 'Microsoft', 'AWS Training', 'Google Cloud Training'],
+    competitors: ['CompTIACisco', 'MicrosoftAWS Training', 'Google Cloud Training'],
     marketSize: '$15B IT training market, 12% annual growth',
     growthRate: '12% annual growth',
     variant: 'training-futuristic',
@@ -418,16 +383,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.',
     features: [
-      'Quantum computing resources',
-      'Quantum-secured networking',
-      'Quantum encryption at rest and in transit',
-      'Quantum load balancing',
-      'Quantum database optimization',
-      'Quantum machine learning acceleration',
-      'Quantum blockchain integration',
-      'Quantum IoT platform',
-      'Quantum analytics engine',
-      '24/7 quantum operations center'
+      'Quantum computing resourcesQuantum-secured networking',
+      'Quantum encryption at rest and in transitQuantum load balancing',
+      'Quantum database optimizationQuantum machine learning acceleration',
+      'Quantum blockchain integrationQuantum IoT platform',
+      'Quantum analytics engine24/7 quantum operations center'
     ],
     popular: true,
     icon: '☁️',
@@ -440,11 +400,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '2 weeks',
     category: 'Quantum IT Infrastructure',
     realService: true,
-    technology: ['Quantum computing', 'Quantum networking', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom quantum hardware'],
-    integrations: ['Enterprise systems', 'Legacy applications', 'Cloud platforms', 'Security tools', 'Monitoring systems'],
-    useCases: ['High-performance computing', 'Financial modeling', 'Drug discovery', 'Climate modeling', 'AI training', 'Blockchain operations'],
+    technology: ['Quantum computingQuantum networking', 'ReactNode.js', 'PostgreSQLRedis', 'AWSCustom quantum hardware'],
+    integrations: ['Enterprise systemsLegacy applications', 'Cloud platformsSecurity tools', 'Monitoring systems'],
+    useCases: ['High-performance computingFinancial modeling', 'Drug discoveryClimate modeling', 'AI trainingBlockchain operations'],
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.',
-    competitors: ['AWS', 'Azure', 'Google Cloud', 'Traditional cloud providers'],
+    competitors: ['AWSAzure', 'Google CloudTraditional cloud providers'],
     marketSize: '$400B cloud market, quantum segment growing 400% annually',
     growthRate: '400% annual growth',
     variant: 'quantum-advanced',
@@ -469,16 +429,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
     features: [
-      'AI-powered deployment optimization',
-      'Intelligent infrastructure scaling',
-      'Predictive failure detection',
-      'Automated performance tuning',
-      'Smart resource allocation',
-      'AI-driven security scanning',
-      'Automated compliance checks',
-      'Real-time performance monitoring',
-      'Predictive analytics dashboard',
-      '24/7 AI operations center'
+      'AI-powered deployment optimizationIntelligent infrastructure scaling',
+      'Predictive failure detectionAutomated performance tuning',
+      'Smart resource allocationAI-driven security scanning',
+      'Automated compliance checksReal-time performance monitoring',
+      'Predictive analytics dashboard24/7 AI operations center'
     ],
     popular: true,
     icon: '🤖',
@@ -491,11 +446,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 day',
     category: 'AI & DevOps Automation',
     realService: true,
-    technology: ['AI algorithms', 'Machine learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker', 'Kubernetes'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Slack', 'Jira', 'Confluence', 'AWS', 'Azure', 'Google Cloud'],
-    useCases: ['CI/CD automation', 'Infrastructure management', 'Performance optimization', 'Security automation', 'Compliance automation', 'Resource optimization'],
+    technology: ['AI algorithmsMachine learning', 'ReactNode.js', 'PostgreSQLRedis', 'AWSDocker', 'Kubernetes'],
+    integrations: ['GitHubGitLab', 'BitbucketSlack', 'JiraConfluence', 'AWSAzure', 'Google Cloud'],
+    useCases: ['CI/CD automationInfrastructure management', 'Performance optimizationSecurity automation', 'Compliance automationResource optimization'],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
-    competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
+    competitors: ['GitLab CI/CDJenkins', 'CircleCIGitHub Actions'],
     marketSize: '$8B DevOps market, AI segment growing 350% annually',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -520,16 +475,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
     features: [
-      'Quantum encryption algorithms',
-      'AI-powered threat detection',
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'Real-time threat intelligence',
-      'Automated incident response',
-      'Quantum-secured communication',
-      'Advanced security analytics',
-      'Compliance automation',
-      '24/7 quantum security operations'
+      'Quantum encryption algorithmsAI-powered threat detection',
+      'Quantum key distributionPost-quantum cryptography',
+      'Real-time threat intelligenceAutomated incident response',
+      'Quantum-secured communicationAdvanced security analytics',
+      'Compliance automation24/7 quantum security operations'
     ],
     popular: true,
     icon: '🔒',
@@ -542,11 +492,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 week',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum encryption', 'AI algorithms', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom quantum hardware'],
-    integrations: ['SIEM systems', 'Firewalls', 'Endpoint protection', 'Identity management', 'Compliance tools'],
-    useCases: ['Network security', 'Endpoint protection', 'Data encryption', 'Threat detection', 'Incident response', 'Compliance management'],
+    technology: ['Quantum encryptionAI algorithms', 'ReactNode.js', 'PostgreSQLRedis', 'AWSCustom quantum hardware'],
+    integrations: ['SIEM systemsFirewalls', 'Endpoint protectionIdentity management', 'Compliance tools'],
+    useCases: ['Network securityEndpoint protection', 'Data encryptionThreat detection', 'Incident responseCompliance management'],
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'Symantec', 'Traditional security tools'],
+    competitors: ['Palo Alto NetworksCrowdStrike', 'SymantecTraditional security tools'],
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
@@ -563,4 +513,4 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9,
     reviews: 156
   }
-];
+],

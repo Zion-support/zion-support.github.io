@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
@@ -10,19 +10,19 @@ import {
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -227,44 +227,44 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-];
+],
 
 const UltraFuturisticNavigation2047 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-        setActiveDropdown(null);
+        setIsOpen(false),
+        setActiveDropdown(null),
       }
-    };
+    },
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener('resize', handleResize),
+    return () => window.removeEventListener('resize', handleResize),
+  }, []),
 
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
@@ -456,7 +456,7 @@ const UltraFuturisticNavigation2047 = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  ),
+},
 
-export default UltraFuturisticNavigation2047;
+export default UltraFuturisticNavigation2047,

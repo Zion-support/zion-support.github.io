@@ -1,11 +1,11 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { type Company } from "./CompanyDashboard",
+import { Bell, Users, Settings } from "lucide-react",
 
 interface WorkspaceHeaderProps {
-  company: Company;
+  company: Company
 }
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
@@ -41,7 +41,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
           <div className="text-2xl font-medium">8</div>
@@ -56,5 +56,5 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

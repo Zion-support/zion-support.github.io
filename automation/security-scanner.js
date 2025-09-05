@@ -1,13 +1,13 @@
 
-    };
-  };
+    },
+  },
 ,
   log(message, level = "INFO") {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logMessage)
-  };
+  },
 ,
   async runSecurityAudit() {,
     try {,
@@ -21,11 +21,11 @@
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
       } else {,
         this.log("✓ No vulnerabilities found")
-      };
+      },
     } catch (error) {,
       this.log(`Security audit failed: ${error.message}`, "ERROR")
-    };
-  };
+    },
+  },
 ,
   async checkSecrets() {,
     try {,
@@ -45,7 +45,7 @@
         secretPatterns.forEach(pattern => {,
           if (pattern.test(content)) {,
             secretCount++
-          };
+          },
         })
       }),
 ,
@@ -54,11 +54,11 @@
         this.log(`Found ${secretCount} potential secrets`, "WARN")
       } else {,
         this.log("✓ No exposed secrets found")
-      };
+      },
     } catch (error) {,
       this.log(`Secret check failed: ${error.message}`, "ERROR")
-    };
-  };
+    },
+  },
 ,
   getSourceFiles() {,
     const files = [],
@@ -75,15 +75,15 @@
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath)
-          };
+          },
         })
-      };
+      },
 ,
       walkDir(srcDir)
-    };
+    },
 ,
     return files
-  };
+  },
 ,
   async generateReport() {,
     const report = {,
@@ -97,12 +97,12 @@
 
         "Regularly update dependencies"
       ]
-    };
+    },
 ,
     const reportFile = path.join(__dirname, "reports", "security-report.json"),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
     this.log(`Security report saved to: ${reportFile}`)
-  };
+  },
 ,
   async run() {,
     this.log("🔒 Starting Security Scanner"),
@@ -117,14 +117,14 @@
       this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))} catch (error) {,
       this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")
-    };
-  };
-};
+    },
+  },
+},
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,
   const scanner = new SecurityScanner(),
   scanner.run().catch(console.error)
-};
+},
 ,
 export default SecurityScanner,

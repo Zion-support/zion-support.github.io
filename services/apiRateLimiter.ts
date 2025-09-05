@@ -1,65 +1,65 @@
 export interface RateLimitConfig {
-  requestsPerMinute: number;
-  requestsPerHour: number;
-  requestsPerDay: number;
-  burstLimit: number;
-  windowSize: number;
+  requestsPerMinute: number,
+  requestsPerHour: number,
+  requestsPerDay: number,
+  burstLimit: number,
+  windowSize: number
 }
 
 export interface RateLimitRule {
-  id: string;
-  name: string;
-  pattern: string;
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
-  config: RateLimitConfig;
-  enabled: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  id: string,
+  name: string,
+  pattern: string,
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL',
+  config: RateLimitConfig,
+  enabled: boolean,
+  createdAt: Date,
+  updatedAt: Date
 }
 
 export interface RateLimitStats {
-  endpoint: string;
-  method: string;
-  totalRequests: number;
-  blockedRequests: number;
-  averageResponseTime: number;
-  lastRequest: Date;
+  endpoint: string,
+  method: string,
+  totalRequests: number,
+  blockedRequests: number,
+  averageResponseTime: number,
+  lastRequest: Date,
   currentUsage: {
-    minute: number;
-    hour: number;
-    day: number;
-  };
+    minute: number,
+    hour: number,
+    day: number
+  },
 }
 
 export interface APIKey {
-  id: string;
-  name: string;
-  key: string;
-  permissions: string[];
-  rateLimit: RateLimitConfig;
-  createdAt: Date;
-  lastUsed: Date;
-  isActive: boolean;
+  id: string,
+  name: string,
+  key: string,
+  permissions: string[],
+  rateLimit: RateLimitConfig,
+  createdAt: Date,
+  lastUsed: Date,
+  isActive: boolean
 }
 
 export interface RateLimitViolation {
-  id: string;
-  apiKey: string;
-  endpoint: string;
-  method: string;
-  timestamp: Date;
-  reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-  ipAddress: string;
-  userAgent: string;
+  id: string,
+  apiKey: string,
+  endpoint: string,
+  method: string,
+  timestamp: Date,
+  reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded',
+  ipAddress: string,
+  userAgent: string
 }
 
 export class APIRateLimiterService {
-  private apiKey: string;
-  private baseUrl: string;
+  private apiKey: string,
+  private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
-    this.baseUrl = baseUrl;
+    this.apiKey = apiKey,
+    this.baseUrl = baseUrl
   }
 
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
@@ -69,13 +69,13 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'},
-        body: JSON.stringify(rule)});
+        body: JSON.stringify(rule)}),
 
       if (!response.ok) {
-        throw new Error(`Failed to create rate limit rule: ${response.statusText}`);
+        throw new Error(`Failed to create rate limit rule: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock response for demo
       return {
@@ -83,7 +83,7 @@ export class APIRateLimiterService {
         id: `rule_${Date.now()}`,
         createdAt: new Date(),
         updatedAt: new Date()
-      };
+      },
     }
   }
 
@@ -91,13 +91,13 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`);
+        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock rules for demo
       return [
@@ -133,7 +133,7 @@ export class APIRateLimiterService {
           createdAt: new Date(),
           updatedAt: new Date()
         }
-      ];
+      ],
     }
   }
 
@@ -144,25 +144,25 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'},
-        body: JSON.stringify(updates)});
+        body: JSON.stringify(updates)}),
 
       if (!response.ok) {
-        throw new Error(`Failed to update rate limit rule: ${response.statusText}`);
+        throw new Error(`Failed to update rate limit rule: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock update for demo
-      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id);
+      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),
       if (!existingRule) {
-        throw new Error('Rule not found');
+        throw new Error('Rule not found'),
       }
       
       return {
         ...existingRule,
         ...updates,
         updatedAt: new Date()
-      };
+      },
     }
   }
 
@@ -171,29 +171,29 @@ export class APIRateLimiterService {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`);
+        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`),
       }
     } catch (error) {
-      console.error('Failed to delete rate limit rule:', error);
-      throw error;
+      console.error('Failed to delete rate limit rule:', error),
+      throw error,
     }
   }
 
   async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
     try {
-      const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
+      const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '',
       const response = await fetch(`${this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`);
+        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock stats for demo
       return [
@@ -223,7 +223,7 @@ export class APIRateLimiterService {
             day: 650
           }
         }
-      ];
+      ],
     }
   }
 
@@ -234,13 +234,13 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'},
-        body: JSON.stringify({ name, permissions, rateLimit })});
+        body: JSON.stringify({ name, permissions, rateLimit })}),
 
       if (!response.ok) {
-        throw new Error(`Failed to create API key: ${response.statusText}`);
+        throw new Error(`Failed to create API key: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock API key creation for demo
       return {
@@ -252,7 +252,7 @@ export class APIRateLimiterService {
         createdAt: new Date(),
         lastUsed: new Date(),
         isActive: true
-      };
+      },
     }
   }
 
@@ -260,13 +260,13 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response.statusText}`);
+        throw new Error(`Failed to fetch API keys: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock API keys for demo
       return [
@@ -274,7 +274,7 @@ export class APIRateLimiterService {
           id: 'key_1',
           name: 'Web Application',
           key: 'zion_web123',
-          permissions: ['read', 'write'],
+          permissions: ['readwrite'],
           rateLimit: {
             requestsPerMinute: 100,
             requestsPerHour: 1000,
@@ -302,7 +302,7 @@ export class APIRateLimiterService {
           lastUsed: new Date(),
           isActive: true
         }
-      ];
+      ],
     }
   }
 
@@ -310,13 +310,13 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch violations: ${response.statusText}`);
+        throw new Error(`Failed to fetch violations: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Mock violations for demo
       return [
@@ -328,7 +328,7 @@ export class APIRateLimiterService {
           timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded',
           ipAddress: '192.168.1.100',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
         },
         {
           id: 'violation_2',
@@ -340,41 +340,41 @@ export class APIRateLimiterService {
           ipAddress: '10.0.0.50',
           userAgent: 'ZionMobileApp/1.0'
         }
-      ];
+      ],
     }
   }
 
   async generateReport(): Promise<{
     overview: {
-      totalRequests: number;
-      blockedRequests: number;
-      activeRules: number;
-      activeAPIKeys: number;
-    };
+      totalRequests: number,
+      blockedRequests: number,
+      activeRules: number,
+      activeAPIKeys: number
+    },
     topEndpoints: {
-      endpoint: string;
-      requests: number;
-      blocked: number;
-      averageResponseTime: number;
-    }[];
+      endpoint: string,
+      requests: number,
+      blocked: number,
+      averageResponseTime: number
+    }[],
     violations: {
-      total: number;
-      byReason: Record<string, number>;
-      recent: RateLimitViolation[];
-    };
+      total: number,
+      byReason: Record<string, number>,
+      recent: RateLimitViolation[]
+    },
   }> {
-    const stats = await this.getRateLimitStats();
-    const rules = await this.getRateLimitRules();
-    const apiKeys = await this.getAPIKeys();
-    const violations = await this.getViolations(50);
+    const stats = await this.getRateLimitStats(),
+    const rules = await this.getRateLimitRules(),
+    const apiKeys = await this.getAPIKeys(),
+    const violations = await this.getViolations(50),
 
-    const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0);
-    const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0);
+    const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0),
+    const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0),
 
     const violationsByReason = violations.reduce((acc, violation) => {
-      acc[violation.reason] = (acc[violation.reason] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+      acc[violation.reason] = (acc[violation.reason] || 0) + 1,
+      return acc,
+    }, {} as Record<string, number>),
 
     return {
       overview: {
@@ -397,7 +397,7 @@ export class APIRateLimiterService {
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
       }
-    };
+    },
   }
 }
 
@@ -408,12 +408,9 @@ export const API_RATE_LIMITER_PRICING = {
     price: 25,
     period: '/month',
     features: [
-      'Up to 10 rate limit rules',
-      'Basic rate limiting',
-      'API key management',
-      'Email notifications',
-      '7-day data retention',
-      'Basic analytics'
+      'Up to 10 rate limit rulesBasic rate limiting',
+      'API key managementEmail notifications',
+      '7-day data retentionBasic analytics'
     ]
   },
   professional: {
@@ -421,14 +418,10 @@ export const API_RATE_LIMITER_PRICING = {
     price: 79,
     period: '/month',
     features: [
-      'Up to 50 rate limit rules',
-      'Advanced rate limiting',
-      'Unlimited API keys',
-      'Real-time monitoring',
-      'Slack and webhook notifications',
-      '30-day data retention',
-      'Advanced analytics',
-      'Custom dashboards',
+      'Up to 50 rate limit rulesAdvanced rate limiting',
+      'Unlimited API keysReal-time monitoring',
+      'Slack and webhook notifications30-day data retention',
+      'Advanced analyticsCustom dashboards',
       'API access'
     ]
   },
@@ -437,15 +430,11 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199,
     period: '/month',
     features: [
-      'Unlimited rate limit rules',
-      'Enterprise-grade rate limiting',
-      'Advanced security features',
-      'Multiple notification channels',
-      '1-year data retention',
-      'Custom integrations',
-      'White-label options',
-      'Priority support',
+      'Unlimited rate limit rulesEnterprise-grade rate limiting',
+      'Advanced security featuresMultiple notification channels',
+      '1-year data retentionCustom integrations',
+      'White-label optionsPriority support',
       'SLA guarantee'
     ]
   }
-};
+},

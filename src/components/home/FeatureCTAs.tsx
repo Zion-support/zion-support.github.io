@@ -1,20 +1,20 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import { useTranslation } from "react-i18next",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 
 interface FeatureCTAsProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const features = [
     {
       key: 'ai_talent_matching',
@@ -97,7 +97,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/zion-hire-ai',
       badge: 'premium'
     }
-  ];
+  ],
 
   return (
     <section
@@ -161,5 +161,5 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
         </div>
       </div>
     </section>
-  );
+  ),
 }

@@ -2191,7 +2191,7 @@ export type Database = {
         }[]
       }
       complete_referral: {
-        Args: { _referred_id: string; _user_type: string }
+        Args: { _referred_id: string, _user_type: string }
         Returns: undefined
       }
       create_notification: {
@@ -2226,7 +2226,7 @@ export type Database = {
         Returns: string
       }
       generate_fraud_report: {
-        Args: { year: number; month: number }
+        Args: { year: number, month: number }
         Returns: string
       }
       generate_referral_code: {
@@ -2234,7 +2234,7 @@ export type Database = {
         Returns: string
       }
       get_api_key_user_id: {
-        Args: { key_prefix: string; provided_key: string }
+        Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
       get_current_tenant_id: {
@@ -2262,11 +2262,11 @@ export type Database = {
         Returns: undefined
       }
       update_onboarding_milestone: {
-        Args: { _user_id: string; _milestone: string; _status: boolean }
+        Args: { _user_id: string, _milestone: string, _status: boolean }
         Returns: undefined
       }
       verify_api_key: {
-        Args: { provided_key: string; stored_hash: string }
+        Args: { provided_key: string, stored_hash: string }
         Returns: boolean
       }
     }

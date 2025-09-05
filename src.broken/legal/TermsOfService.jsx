@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 export export export default function TermsOfService()   {
   return (
@@ -6,5 +6,5 @@ export export export default function TermsOfService()   {
       <h1>TermsOfService</h1>
       <p>Component placeholder - needs implementation</p>
     </div>
-  );
+  ),
 }

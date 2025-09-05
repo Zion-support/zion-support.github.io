@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Rocket, ArrowRight, CheckCircle, Zap, Target, Users, 
   TrendingUp, Globe, Cpu, Database, Star, Lightbulb, Clock, DollarSign
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function StartupToolsPage() {
   const tools = [
@@ -46,7 +46,7 @@ export default function StartupToolsPage() {
       price: "$149/month",
       icon: Database
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function StartupToolsPage() {
       title: "Proven Success",
       description: "Tools that have helped hundreds of startups succeed"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -239,7 +239,7 @@ export default function StartupToolsPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Your Journey</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +250,5 @@ export default function StartupToolsPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

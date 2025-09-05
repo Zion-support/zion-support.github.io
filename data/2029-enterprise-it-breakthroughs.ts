@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface EnterpriseITBreakthroughService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [
@@ -50,16 +50,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
-      'Autonomous infrastructure management',
-      'AI-powered deployment automation',
-      'Self-healing systems',
-      'Predictive scaling',
-      'Automated monitoring',
-      'Intelligent incident response',
-      'Performance optimization',
-      'Security automation',
-      'Compliance monitoring',
-      'Analytics dashboard'
+      'Autonomous infrastructure managementAI-powered deployment automation',
+      'Self-healing systemsPredictive scaling',
+      'Automated monitoringIntelligent incident response',
+      'Performance optimizationSecurity automation',
+      'Compliance monitoringAnalytics dashboard'
     ],
     popular: true,
     icon: '⚙️',
@@ -101,16 +96,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Advanced quantum-enhanced cloud infrastructure that provides unprecedented performance, security, and scalability using quantum computing principles and quantum-resistant encryption.',
     features: [
-      'Quantum-enhanced performance',
-      'Quantum-resistant security',
-      'Advanced scalability',
-      'Quantum encryption',
-      'Performance optimization',
-      'Security monitoring',
-      'Compliance frameworks',
-      'Analytics dashboard',
-      'Integration capabilities',
-      'Training and support'
+      'Quantum-enhanced performanceQuantum-resistant security',
+      'Advanced scalabilityQuantum encryption',
+      'Performance optimizationSecurity monitoring',
+      'Compliance frameworksAnalytics dashboard',
+      'Integration capabilitiesTraining and support'
     ],
     popular: true,
     icon: '☁️',
@@ -152,16 +142,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Advanced AI-powered enterprise security platform that provides real-time threat detection, automated response, and comprehensive security management using machine learning and behavioral analysis.',
     features: [
-      'AI threat detection',
-      'Automated response systems',
-      'Behavioral analysis',
-      'Real-time monitoring',
-      'Threat intelligence',
-      'Incident automation',
-      'Compliance monitoring',
-      'Security analytics',
-      'Integration frameworks',
-      'Training and support'
+      'AI threat detectionAutomated response systems',
+      'Behavioral analysisReal-time monitoring',
+      'Threat intelligenceIncident automation',
+      'Compliance monitoringSecurity analytics',
+      'Integration frameworksTraining and support'
     ],
     popular: true,
     icon: '🛡️',
@@ -203,16 +188,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Revolutionary autonomous IT operations center that uses AI to automatically manage, monitor, and optimize entire IT infrastructure without human intervention, ensuring maximum uptime and performance.',
     features: [
-      'Autonomous IT management',
-      'Self-healing infrastructure',
-      'Predictive maintenance',
-      'Performance optimization',
-      'Automated monitoring',
-      'Intelligent alerting',
-      'Capacity planning',
-      'Cost optimization',
-      'Compliance automation',
-      'Analytics dashboard'
+      'Autonomous IT managementSelf-healing infrastructure',
+      'Predictive maintenancePerformance optimization',
+      'Automated monitoringIntelligent alerting',
+      'Capacity planningCost optimization',
+      'Compliance automationAnalytics dashboard'
     ],
     popular: true,
     icon: '🏢',
@@ -246,4 +226,4 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4.9,
     reviews: 95
   }
-];
+],

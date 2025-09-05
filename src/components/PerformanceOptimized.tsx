@@ -8,7 +8,7 @@ export const withPerformanceOptimization = <P extends object>(,
     memo?: boolean,
     memoDeps?: (props: P) => any[],
     displayName?: string
-  } = {};
+  } = {},
 ) => {,
   const { memo: useMemo = true, memoDeps, displayName } = options,
 ,
@@ -20,17 +20,17 @@ export const withPerformanceOptimization = <P extends object>(,
         const prevDeps = memoDeps(prevProps),
         const nextDeps = memoDeps(nextProps),
         return prevDeps.every((dep, index) => dep === nextDeps[index])
-      };
+      },
       return false, // Always re-render if no custom comparison
     })
-  };
+  },
 ,
   if (displayName) {,
     OptimizedComponent.displayName = displayName
-  };
+  },
 ,
   return OptimizedComponent
-};
+},
 ,
 // Hook for expensive calculations,
 export const useExpensiveCalculation = <T>(,
@@ -38,15 +38,15 @@ export const useExpensiveCalculation = <T>(,
   deps: React.DependencyList,
 ): T => {,
   return useMemo(calculation, deps)
-};
+},
 ,
 // Hook for stable callbacks,
 export const useStableCallback = <T extends (...args: any[]) => any>(,
   callback: T,
   deps: React.DependencyList): T => {,
   return useCallback(callback, deps)
-};
-};
+},
+},
 ,
 // Lazy loading wrapper with intersection observer,
 export const LazyLoadWrapper: React.FC<{,
@@ -65,23 +65,23 @@ export const LazyLoadWrapper: React.FC<{,
         if (entry.isIntersecting && !hasLoaded) {,
           setIsVisible(true),
           setHasLoaded(true)
-        };
+        },
       },
-      { threshold, rootMargin };
+      { threshold, rootMargin },
     ),
 ,
     if (ref.current) {,
       observer.observe(ref.current)
-    };
+    },
 ,
     return () => observer.disconnect()
   }, [threshold, rootMargin, hasLoaded]),
 ,
   return (,
     <div ref={ref}>,
-      {isVisible ? children : fallback};
+      {isVisible ? children : fallback},
     </div>)
-};
+},
 ,
 // Image optimization component,
 export const OptimizedImage: React.FC<{,
@@ -109,31 +109,31 @@ export const OptimizedImage: React.FC<{,
       {placeholder && !isLoaded && (,
         <div,
           className="absolute inset-0 bg-gray-200 animate-pulse",
-          style={{ width, height }};
-        />)};
+          style={{ width, height }},
+        />)},
       <img,
-        src={src};
-        alt={alt};
-        width={width};
-        height={height};
-        loading={loading};
-        onLoad={handleLoad};
-        onError={handleError};
-        className={`transition-opacity duration-300 ${} ${hasError ? 'hidden' : ''}`};
+        src={src},
+        alt={alt},
+        width={width},
+        height={height},
+        loading={loading},
+        onLoad={handleLoad},
+        onError={handleError},
+        className={`transition-opacity duration-300 ${} ${hasError ? 'hidden' : ''}`},
         className={`transition-opacity duration-300 ${,
           isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${hasError ? 'hidden' : ''}`};
+        } ${hasError ? 'hidden' : ''}`},
       />,
       {hasError && (,
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
           Failed to load image,
 
-        </div>)};
+        </div>)},
     </div>,
   )
-};
-  };
-};
+},
+  },
+},
 ,
 // Debounced search hook,
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,
@@ -146,11 +146,11 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {,
 ,
     return () => {,
       clearTimeout(handler)
-    };
+    },
   }, [value, delay]),
 ,
   return debouncedValue
-};
+},
 ,
 // Performance metrics collection,
 export const usePerformanceMetrics = () => {,
@@ -170,5 +170,5 @@ export const usePerformanceMetrics = () => {,
     }))
   }, []),
 ,
-  return { metrics, recordRender };
-};
+  return { metrics, recordRender },
+},

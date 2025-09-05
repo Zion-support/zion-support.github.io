@@ -1,11 +1,11 @@
-"use client";
+"use client",
 
-import { useWalkthroughTarget } from "./OnboardingWalkthrough";
-import { useAuth } from "@/contexts/AuthContext";
-import Link from "next/link";
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",
+import { useAuth } from "@/contexts/AuthContext",
+import Link from "next/link",
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth(),
 
   return (
     <>
@@ -68,5 +68,5 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
       </nav>
       {children}
     </>
-  );
+  ),
 }

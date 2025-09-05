@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react',
 
 export default function AISeosuitePage() {
   const features = [
@@ -41,30 +41,30 @@ export default function AISeosuitePage() {
       title: 'Automated Reports',
       description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500'}];
+      gradient: 'from-pink-400 to-rose-500'}],
 
   const seoTools = [
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-      tools: ['Long-tail keyword finder', 'Competitor keyword analysis', 'Search volume estimation', 'Keyword difficulty scoring', 'Trending keywords']
+      tools: ['Long-tail keyword finderCompetitor keyword analysis', 'Search volume estimationKeyword difficulty scoring', 'Trending keywords']
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-      tools: ['Content optimization', 'Meta tag generator', 'Schema markup builder', 'Internal linking suggestions', 'Image optimization']
+      tools: ['Content optimizationMeta tag generator', 'Schema markup builderInternal linking suggestions', 'Image optimization']
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-      tools: ['Site audit tool', 'Page speed analyzer', 'Mobile optimization', 'Core Web Vitals', 'XML sitemap generator']
+      tools: ['Site audit toolPage speed analyzer', 'Mobile optimizationCore Web Vitals', 'XML sitemap generator']
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      tools: ['Ranking tracker', 'Traffic analysis', 'Conversion tracking', 'Competitor monitoring', 'Custom dashboards']
+      tools: ['Ranking trackerTraffic analysis', 'Conversion trackingCompetitor monitoring', 'Custom dashboards']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -73,12 +73,9 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        'Up to 5 websites',
-        'Basic keyword research',
-        'Monthly site audits',
-        'Email support',
-        'Basic reporting',
-        'Mobile app access'
+        'Up to 5 websitesBasic keyword research',
+        'Monthly site auditsEmail support',
+        'Basic reportingMobile app access'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -90,14 +87,10 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 25 websites',
-        'Advanced keyword research',
-        'Weekly site audits',
-        'Priority support',
-        'Advanced reporting',
-        'Competitor analysis',
-        'API access',
-        'White-label reports'
+        'Up to 25 websitesAdvanced keyword research',
+        'Weekly site auditsPriority support',
+        'Advanced reportingCompetitor analysis',
+        'API accessWhite-label reports'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -109,20 +102,16 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited websites',
-        'Full SEO suite',
-        'Daily site audits',
-        'Dedicated support',
-        'Custom reporting',
-        'Advanced analytics',
-        'SLA guarantee',
-        'On-premise option'
+        'Unlimited websitesFull SEO suite',
+        'Daily site auditsDedicated support',
+        'Custom reportingAdvanced analytics',
+        'SLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ];
+  ],
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
@@ -133,41 +122,41 @@ export default function AISeosuitePage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'E-commerce Websites',
       description: 'Optimize product pages, category pages, and search functionality for better conversions.',
       icon: '🛍️',
-      benefits: ['Higher search rankings', 'Increased organic traffic', 'Better conversion rates', 'Competitive advantage']
+      benefits: ['Higher search rankingsIncreased organic traffic', 'Better conversion ratesCompetitive advantage']
     },
     {
       title: 'Content Marketing',
       description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
       icon: '📝',
-      benefits: ['Better content visibility', 'Higher engagement rates', 'More organic traffic', 'Authority building']
+      benefits: ['Better content visibilityHigher engagement rates', 'More organic trafficAuthority building']
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
-      benefits: ['Local search dominance', 'Increased foot traffic', 'Better customer acquisition', 'Competitive positioning']
+      benefits: ['Local search dominanceIncreased foot traffic', 'Better customer acquisitionCompetitive positioning']
     },
     {
       title: 'SaaS Companies',
       description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
       icon: '💻',
-      benefits: ['Higher conversion rates', 'Better user experience', 'Reduced acquisition costs', 'Market expansion']
+      benefits: ['Higher conversion ratesBetter user experience', 'Reduced acquisition costsMarket expansion']
     }
-  ];
+  ],
 
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-  ];
+  ],
 
   return (
     <>
@@ -479,7 +468,7 @@ export default function AISeosuitePage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Dominate Search Rankings?
@@ -510,5 +499,5 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,20 +1,20 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router',
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
-import { ProductListing } from '@/types/listings';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { SERVICES } from '@/data/servicesData';
-import { useCurrency } from '@/hooks/useCurrency';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
+import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm',
+import { ProductListing } from '@/types/listings',
+import { SkeletonCard } from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import Spinner from '@/components/ui/spinner',
+import { SERVICES } from '@/data/servicesData',
+import { useCurrency } from '@/hooks/useCurrency',
 
 // Initial services from existing data
-const INITIAL_SERVICES: ProductListing[] = SERVICES;
+const INITIAL_SERVICES: ProductListing[] = SERVICES,
 
 // Market insights component
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
@@ -43,7 +43,7 @@ const ServicesMarketInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-);
+),
 
 // Filter controls
 const ServiceFilterControls = ({
@@ -80,11 +80,11 @@ const ServiceFilterControls = ({
       {showRecommended ? "All Services" : "Recommended"}
     </Button>
   </div>
-);
+),
 
 // Service card
-const ServiceCard = ({ service, onViewDetails }: { service: ProductListing; onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency();
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency(),
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -124,73 +124,72 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing; onVi
       </div>
     </CardHeader>
   </Card>
-);
-};
+),
+},
 
 // Loading grid
 const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
-);
+),
 
 // Main component
 export default function ServicesPage() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [totalGenerated, setTotalGenerated] = useState(0);
+  const router = useRouter(),
+  const [sortBy, setSortBy] = useState('newest'),
+  const [filterCategory, setFilterCategory] = useState(''),
+  const [showRecommended, setShowRecommended] = useState(false),
+  const [totalGenerated, setTotalGenerated] = useState(0),
 
   const fetchServices = useCallback(async (page: number, limit: number) => {
-    await new Promise(resolve => setTimeout(resolve, 400));
+    await new Promise(resolve => setTimeout(resolve, 400)),
 
-    let allServices: ProductListing[] = [];
+    let allServices: ProductListing[] = [],
     
     if (page === 1) {
-      allServices = [...INITIAL_SERVICES];
+      allServices = [...INITIAL_SERVICES]
     }
     
-    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated;
-    const newServices = generateITServices(limit, startId);
-    setTotalGenerated(prev => prev + newServices.length);
-    allServices = [...allServices, ...newServices];
+    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated,
+    const newServices = generateITServices(limit, startId),
+    setTotalGenerated(prev => prev + newServices.length),
+    allServices = [...allServices, ...newServices],
     
-    let filteredServices = allServices;
+    let filteredServices = allServices,
     
     if (filterCategory) {
-      filteredServices = filteredServices.filter(s => s.category === filterCategory);
+      filteredServices = filteredServices.filter(s => s.category === filterCategory),
     }
     
     if (showRecommended) {
-      filteredServices = getRecommendedServices(filteredServices);
+      filteredServices = getRecommendedServices(filteredServices),
     }
     
     filteredServices.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return (a.price || 0) - (b.price || 0);
+          return (a.price || 0) - (b.price || 0),
         case 'price-high':
-          return (b.price || 0) - (a.price || 0);
+          return (b.price || 0) - (a.price || 0),
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'ai-score':
-          return (b.aiScore || 0) - (a.aiScore || 0);
-        default:
-          return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+          return (b.aiScore || 0) - (a.aiScore || 0),
+        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
       }
-    });
+    }),
     
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    const items = filteredServices.slice(startIndex, endIndex);
+    const startIndex = (page - 1) * limit,
+    const endIndex = startIndex + limit,
+    const items = filteredServices.slice(startIndex, endIndex),
     
     return {
       items,
       hasMore: endIndex < filteredServices.length || page < 10,
       total: filteredServices.length
-    };
-  }, [sortBy, filterCategory, showRecommended, totalGenerated]);
+    },
+  }, [sortBy, filterCategory, showRecommended, totalGenerated]),
 
   const {
     items: services,
@@ -202,28 +201,28 @@ export default function ServicesPage() {
     scrollToTop,
     refresh,
     total
-  } = useInfiniteScrollPagination(fetchServices, 12);
+  } = useInfiniteScrollPagination(fetchServices, 12),
 
   useEffect(() => {
-    refresh();
-    setTotalGenerated(0);
-  }, [sortBy, filterCategory, showRecommended]);
+    refresh(),
+    setTotalGenerated(0),
+  }, [sortBy, filterCategory, showRecommended]),
 
   const marketStats = useMemo(() => {
-    if (services.length === 0) return null;
-    return getServicesMarketStats(services);
-  }, [services]);
+    if (services.length === 0) return null,
+    return getServicesMarketStats(services),
+  }, [services]),
 
   const categories = useMemo(() => {
-    return Array.from(new Set(services.map(s => s.category).filter(Boolean)));
-  }, [services]);
+    return Array.from(new Set(services.map(s => s.category).filter(Boolean))),
+  }, [services]),
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   if (loading && services.length === 0) {
     return (
@@ -236,7 +235,7 @@ export default function ServicesPage() {
         </motion.div>
         <ServicesLoadingGrid />
       </div>
-    );
+    ),
   }
 
   if (error) {
@@ -246,7 +245,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -315,5 +314,5 @@ export default function ServicesPage() {
         )}
       </AnimatePresence>
     </div>
-  );
+  ),
 }

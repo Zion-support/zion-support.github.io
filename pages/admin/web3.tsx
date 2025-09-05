@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head',
 
 export default function AdminWeb3Page() {
-  const [users, setUsers] = useState<{ id: string; enabled: boolean; chain?: string }[]>([]);
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
 
   useEffect(() => {
-    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null;
-    setUsers(raw ? JSON.parse(raw) : []);
-  }, []);
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,
+    setUsers(raw ? JSON.parse(raw) : []),
+  }, []),
 
   const save = (list: any) => {
-    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
-    setUsers(list);
-  };
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),
+    setUsers(list),
+  },
 
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
-    disabled: users.filter(u => !u.enabled).length};
+    disabled: users.filter(u => !u.enabled).length},
 
   return (
     <>
@@ -40,7 +40,7 @@ export default function AdminWeb3Page() {
                 <label className="inline-flex items-center gap-2 text-sm">
                   <span>Web3</span>
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
-                    const next = users.slice(); next[i] = { ...u, enabled: e.target.checked }; save(next);
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next),
                   }} />
                 </label>
               </li>
@@ -49,5 +49,5 @@ export default function AdminWeb3Page() {
         </div>
       </div>
     </>
-  );
+  ),
 }

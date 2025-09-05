@@ -1,13 +1,13 @@
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next',
 
 export default function PaymentSuccess() {
-  const router = useRouter(); // Changed from navigate
-  const { t } = useTranslation();
+  const router = useRouter(), // Changed from navigate
+  const { t } = useTranslation(),
   
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
@@ -40,5 +40,5 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
