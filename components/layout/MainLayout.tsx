@@ -8,6 +8,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
+export default function MainLayout({
   children, 
   title = "Zion Tech Group", 
   description = "Leading technology solutions provider",
