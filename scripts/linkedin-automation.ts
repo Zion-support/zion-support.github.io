@@ -5,5 +5,4 @@ export const linkedinAutomation = {
     // TODO: Implement actual LinkedIn automation functionality
   }
 };
-
 export default linkedinAutomation;

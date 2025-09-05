@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -18,5 +27,9 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
-
 export { Switch };
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

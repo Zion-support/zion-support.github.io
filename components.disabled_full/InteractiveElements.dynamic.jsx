@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 const InteractiveElements = dynamic(() => import(\"./InteractiveElements\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default InteractiveElements\' ,
+=======
+<<<<<<< HEAD
+const InteractiveElements = dynamic(() => import("./InteractiveElements"),{"; loading: () => <p>Loading.</p,>}) export: "default InteractiveElements" ,"""
+=======
+const InteractiveElements = dynamic(() => import("./InteractiveElements"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default InteractiveElements' ,'
+</p>'
+>>>>>>> main
+>>>>>>> main

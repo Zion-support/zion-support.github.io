@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 export interface ProductListing {
   &quot;id&quot;: string;
   title: string;
@@ -16,6 +25,7 @@ export interface ProductListing {
   features: string[];
   image?: string;
 }
+<<<<<<< HEAD
 
 export const &quot;ENHANCED_SERVICES&quot;: ProductListing[] = [{
     id: &quot;ai-automation-suite
@@ -28,6 +38,19 @@ export const &quot;ENHANCED_SERVICES&quot;: ProductListing[] = [{
     &quot;author&quot;: {
       name: &quot;Zion Tech Group
       &quot;id&quot;: &quot;zion-tech-group&quot;
+=======
+export const "ENHANCED_SERVICES": ProductListing[] = [{
+    id: "ai-automation-suite
+    "title": "AI Process Automation Suite
+    "description": "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.
+    "category": "AI Automation
+    "price": 2999,
+    "currency": "$
+    "tags": ["Process Automation "RPA "Workflow Optimization "AI"],
+    "author": {
+      name: "Zion Tech Group
+      "id": "zion-tech-group"
+>>>>>>> main
     },
     &quot;rating&quot;: 4.8,
     &quot;reviews&quot;: 156,
@@ -62,6 +85,7 @@ export const &quot;ENHANCED_SERVICES&quot;: ProductListing[] = [{
     ]
   };
 ];
+<<<<<<< HEAD
 
 export const SERVICE_CATEGORIES = [&quot;AI Automation
   &quot;Micro SaaS
@@ -70,3 +94,14 @@ export const SERVICE_CATEGORIES = [&quot;AI Automation
   &quot;Cloud Solutions
   &quot;Cybersecurity&quot;
 ];
+=======
+export const SERVICE_CATEGORIES = ["AI Automation
+  "Micro SaaS
+  "Web Development
+  "Mobile Apps
+  "Cloud Solutions
+  "Cybersecurity"
+];
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

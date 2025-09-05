@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 import React from &apos;react&apos;; export default function BundleAnalyzer() { return ( <div className=&quot;bundle-analyzer&quot;> <h3>Bundle Analysis</h3> <p>Use webpack-bundle-analyzer to analyze your bundle size</p> </div> )}
+=======
+<<<<<<< HEAD
+const React from "react"; export default function BundleAnalyzer() { return ( <div className="bundle-analyzer"> <h3>Bundle Analysis</h3> <p>Use webpack-bundle-analyzer to analyze your bundle size</p> </div> )}'"'"
+=======
+import _React from 'react'; export default function BundleAnalyzer() { return ( <div className="bundle-analyzer"> <h3>Bundle Analysis</h3> <p>Use webpack-bundle-analyzer to analyze your bundle size</p> </div> )}
+>>>>>>> main
+>>>>>>> main

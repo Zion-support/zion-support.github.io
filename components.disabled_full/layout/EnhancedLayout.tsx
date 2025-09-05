@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
+=======
+import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+import EnhancedNavigation from "./EnhancedNavigation";
+import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> main
 interface EnhancedLayoutProps {
   \"children\": ReactNode;
 }
-
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
     <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\">
@@ -14,3 +20,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter"; 
+>>>>>>> main

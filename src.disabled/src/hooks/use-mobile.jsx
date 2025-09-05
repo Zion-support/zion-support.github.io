@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 import React from \"react\"; import { useState,useEffect } from \"react\" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener(\"resize\",checkIsMobile) return () => window.removeEventListener(\"resize\",checkIsMobile)},[]) return isMobile}\"; ); export default Component;
+=======
+<<<<<<< HEAD
+const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;""
+=======
+import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
+>>>>>>> main
+>>>>>>> main
