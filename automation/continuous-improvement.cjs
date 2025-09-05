@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-
 /**
  * Continuous Improvement Automation Script
  * Replaces GitHub Actions continuous improvement workflows
  * Runs every 3 hours via PM2 cron restart
  */
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class ContinuousImprovement {
   constructor() {
     this.logFile = path.join(__dirname, '..', 'logs', 'continuous-improvement.log');
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class ContinuousImprovement { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; return false; } } try {" this.log("Checking for dependency updates.");"" execSync("npm outdated", { stdio: "pipe" });" this.log("Dependency check completed"); return true; } catch (error) {"` this.log(`Dependency check failed: ${error.message}`); return false; } } return false; } }}module.exports = ContinuousImprovement;""`"`
-=======
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -30,7 +23,6 @@ class ContinuousImprovement {}
 this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
     this.ensureLogDir();
   };
   ensureLogDir() {}
@@ -42,12 +34,10 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     );
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async runCodeQualityChecks() {
     try {
       this.log('Running code quality checks...');
@@ -59,7 +49,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       return false;
     }
   }
-
   async runPerformanceOptimization() {
     try {
       this.log('Running performance optimization...');
@@ -71,7 +60,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       return false;
     }
   }
-
   async runSecurityAudit() {
     try {
       this.log('Running security audit...');
@@ -83,10 +71,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       return false;
     }
   }
-
   async runDependencyUpdates() {
     try {
-=======
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -108,7 +94,6 @@ async runDependencyUpdate() {ursor/migrate-github-actions-to-pm2-and-clean-up-f0
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
     try {}
->>>>>>> main
       this.log('Checking for dependency updates...');
       execSync('npm outdated', { "stdio": 'pipe' }
 });
@@ -117,10 +102,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     } catch (error) {}
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
-<<<<<<< HEAD
     }
   }
-
   async runCodeAnalysis() {
     try {
       this.log('Running code analysis...');
@@ -132,7 +115,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       return false;
     }
   }
-
   async generateReport() {
     try {
       this.log('Generating improvement report...');
@@ -146,7 +128,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
           "analysis": true
         }
       };
-      
       const reportFile = path.join(__dirname, '..', 'logs', 'improvement-report.json');
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
       this.log('Improvement report generated successfully');
@@ -156,10 +137,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       return false;
     }
   }
-
   async run() {
     this.log('=== Continuous Improvement Automation Started ===');
-    
     const results = {
       "codeQuality": await this.runCodeQualityChecks(),
       "performance": await this.runPerformanceOptimization(),
@@ -168,9 +147,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       "analysis": await this.runCodeAnalysis(),
       "report": await this.generateReport()
     };
-
     const allPassed = Object.values(results).every(result => result === true);
-    
     if (allPassed) {
       this.log('=== Continuous Improvement Automation Completed Successfully ===');
     } else {
@@ -179,14 +156,11 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     }
   }
 }
-
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.run().catch(console.error);
 }
-
-=======
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -259,6 +233,4 @@ if (require.main === module) {}
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
->>>>>>> main
 module.exports = ContinuousImprovement;
->>>>>>> main
