@@ -4,32 +4,6 @@ import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
 export default function APIPage() {
-  const apiFeatures = [
-    {
-      title: "RESTful APIs",
-      description: "Clean, intuitive REST API endpoints for easy integration",
-      icon: Code,
-      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-    },
-    {
-      title: "Comprehensive Documentation",
-      description: "Detailed API documentation with examples and guides",
-      icon: Book,
-      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-    },
-    {
-      title: "High Performance",
-      description: "Fast, reliable APIs built for scale and speed",
-      icon: Zap,
-      features: ["Low Latency", "High Throughput", "Global CDN"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with authentication and encryption",
-      icon: Shield,
-      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
-    }
-  ];
 
   const apiEndpoints = [{
     method: 'GET',
@@ -81,11 +55,7 @@ export default function APIPage() {
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
   }]
-<<<<<<< HEAD
-const apiFeaturesDetailed = [{
-=======
-  const apiFeatures = [{
->>>>>>> main
+  const apiFeaturesDetailed = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -121,17 +91,6 @@ const apiFeaturesDetailed = [{
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
   }]
-<<<<<<< HEAD
-const sdkLanguages = [
-  { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
-  { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
-  { name: 'Java', icon: 'J', color: 'bg-red-500' },
-  { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
-  { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
-  { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
-  
-  // UI State & helpers
-=======
   const sdkLanguages = [
     { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
     { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
@@ -139,7 +98,6 @@ const sdkLanguages = [
     { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
     { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
     { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
->>>>>>> main
   const [selectedEndpoint, setSelectedEndpoint] = useState(0)
   const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
