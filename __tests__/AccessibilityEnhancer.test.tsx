@@ -37,9 +37,9 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
     const element = screen.getByRole('button');
-    fireEvent.keyDown(element, { key: 'Enter' });
+    fireEvent.keyDown(element, { "key": 'Enter' });
     expect(handleClick).toHaveBeenCalledTimes(1);
-    fireEvent.keyDown(element, { key: ' ' });
+    fireEvent.keyDown(element, { "key": ' ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
 

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React, { ReactNode } from "react";
-=======
 import { ReactNode } from "react";
 import EnhancedNavigation from "./EnhancedNavigation";
 import EnhancedFooter from "./EnhancedFooter";
->>>>>>> origin/merge-pr-11208
-
 interface EnhancedLayoutProps {
-  children: ReactNode;
+  "children": ReactNode;
 }
-
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
@@ -21,3 +16,4 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter"; 

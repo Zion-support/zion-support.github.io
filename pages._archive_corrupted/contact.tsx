@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -15,45 +13,38 @@ import {
   MessageCircle,
   Globe
 } from 'lucide-react'
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/merge-pr-11195
-
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
-
-const ContactPage: React.FC = () => {
-  const contactInfo = [
-    {
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
+const "ContactPage": React.FC = () => {
+  const contactInfo = [{
       icon: <Phone className="w-6 h-6"  />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      link: "tel:+13024640950"
+      "title": "Phone",
+      "details": "+1 302 464 0950",
+      "link": "tel:+13024640950"
     },
     {
-      icon: <Mail className="w-6 h-6"  />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      link: "mailto: klebe r@ziontechgroup.com"
+      "icon": <Mail className="w-6 h-6"  />,
+      "title": "Email",
+      "details": "kleber@ziontechgroup.com",
+      "link": "mailto: klebe r@ziontechgroup.com"
     },
     {
-      icon: <MapPin className="w-6 h-6"  />,
-      title: "Address",
-      details: "364 E Main St STE 1008\nMiddletown, DE 19709",
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+      "icon": <MapPin className="w-6 h-6"  />,
+      "title": "Address",
+      "details": "364 E Main St STE 1008\nMiddletown, DE 19709",
+      "link": "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
     },
     {
-      icon: <Clock className="w-6 h-6"  />,
-      title: "Business Hours",
-      details: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
-      link: null
+      "icon": <Clock className="w-6 h-6"  />,
+      "title": "Business Hours",
+      "details": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
+      "link": null
     }
   ]
-
-  const services = [
-    "AI & Machine Learning Solutions",
+  const services = ["AI & Machine Learning Solutions",
     "IT Infrastructure & Support",
     "Micro SaaS Development",
     "Cybersecurity Services",
@@ -62,46 +53,44 @@ const ContactPage: React.FC = () => {
     "Digital Transformation",
     "Consulting & Strategy"
   ]
-
   return (
     <>
       <SEO title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
         keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"
-        canonical="https://ziontechgroup.com/contact"
+        canonical=""https": //ziontechgroup.com/contact"
        />
-      
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl "md": text-6xl font-bold text-gray-900 mb-6">
                   Get In <span className="text-blue-600">Touch</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let's discuss your project.
                 </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
                   <motion.a
                     href="tel:+13024640950"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Phone className="w-5 h-5"  />
-                    Call Now: +1 302 464 0950
+                    Call "Now": +1 302 464 0950
                   </motion.a>
                   <motion.a
                     href="mailto: klebe r@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5"  />
@@ -111,60 +100,54 @@ const ContactPage: React.FC = () => {
               </motion.div>
             </div>
           </section>
-=======
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-
-const Contact: NextPage = () => {
-  const contactInfo = [
-    {
+const "Contact": NextPage = () => {
+  const contactInfo = [{
       icon: Mail,
-      title: 'Email Us',
-      details: 'info@ziontechgroup.com',
-      link: 'mailto:info@ziontechgroup.com'
+      "title": 'Email Us',
+      "details": 'info@ziontechgroup.com',
+      "link": 'mailto:info@ziontechgroup.com'
     },
     {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+1-555-123-4567'
+      "icon": Phone,
+      "title": 'Call Us',
+      "details": '+1 (555) 123-4567',
+      "link": 'tel:+1-555-123-4567'
     },
     {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Tech Street, San Francisco, CA 94105',
-      link: 'https://maps.google.com'
+      "icon": MapPin,
+      "title": 'Visit Us',
+      "details": '123 Tech Street, San Francisco, CA 94105',
+      "link": 'https://maps.google.com'
     },
     {
-      icon: Clock,
-      title: 'Business Hours',
-      details: 'Mon-Fri: 9AM-6PM PST',
-      link: null
+      "icon": Clock,
+      "title": 'Business Hours',
+      "details": 'Mon-Fri: 9AM-6PM PST',
+      "link": null
     }
   ];
-
-  const offices = [
-    {
-      city: 'San Francisco',
-      address: '123 Tech Street, San Francisco, CA 94105',
-      phone: '+1 (555) 123-4567',
-      email: 'sf@ziontechgroup.com'
+  const offices = [{
+      "city": 'San Francisco',
+      "address": '123 Tech Street, San Francisco, CA 94105',
+      "phone": '+1 (555) 123-4567',
+      "email": 'sf@ziontechgroup.com'
     },
     {
-      city: 'New York',
-      address: '456 Innovation Ave, New York, NY 10001',
-      phone: '+1 (555) 987-6543',
-      email: 'ny@ziontechgroup.com'
+      "city": 'New York',
+      "address": '456 Innovation Ave, New York, NY 10001',
+      "phone": '+1 (555) 987-6543',
+      "email": 'ny@ziontechgroup.com'
     },
     {
-      city: 'London',
-      address: '789 Digital Lane, London, UK EC1A 1BB',
-      phone: '+44 20 7123 4567',
-      email: 'london@ziontechgroup.com'
+      "city": 'London',
+      "address": '789 Digital Lane, London, UK EC1A 1BB',
+      "phone": '+44 20 7123 4567',
+      "email": 'london@ziontechgroup.com'
     }
   ];
-
   return (
     <MainLayout
       title="Contact Us - Zion Tech Group"
@@ -172,7 +155,7 @@ const Contact: NextPage = () => {
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
             <p className="text-xl max-w-3xl mx-auto">
@@ -182,10 +165,9 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info) => (
               <div key={info.title} className="text-center">
@@ -198,7 +180,7 @@ const Contact: NextPage = () => {
                 {info.link ? (
                   <a
                     href={info.link}
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                    className="text-blue-600 "hover": text-blue-700 transition-colors"
                   >
                     {info.details}
                   </a>
@@ -210,16 +192,15 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form & Office Locations */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *
@@ -245,7 +226,6 @@ const Contact: NextPage = () => {
                     />
                   </div>
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -258,7 +238,6 @@ const Contact: NextPage = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
@@ -270,7 +249,6 @@ const Contact: NextPage = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -282,7 +260,6 @@ const Contact: NextPage = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service of Interest
@@ -304,7 +281,6 @@ const Contact: NextPage = () => {
                     <option value="consulting">Technology Consulting</option>
                   </select>
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -314,11 +290,10 @@ const Contact: NextPage = () => {
                     name="message"
                     rows={6}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or how we can help you..."
                   ></textarea>
                 </div>
-                
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center"
@@ -328,7 +303,6 @@ const Contact: NextPage = () => {
                 </button>
               </form>
             </div>
-
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Offices</h2>
@@ -345,13 +319,13 @@ const Contact: NextPage = () => {
                       </div>
                       <div className="flex items-center">
                         <Phone className="h-5 w-5 mr-2 text-blue-600" />
-                        <a href={`tel:${office.phone}`} className="hover:text-blue-600">
+                        <a href={`"tel": ${office.phone}`} className=""hover": text-blue-600">
                           {office.phone}
                         </a>
                       </div>
                       <div className="flex items-center">
                         <Mail className="h-5 w-5 mr-2 text-blue-600" />
-                        <a href={`mailto:${office.email}`} className="hover:text-blue-600">
+                        <a href={`"mailto": ${office.email}`} className=""hover": text-blue-600">
                           {office.email}
                         </a>
                       </div>
@@ -363,17 +337,15 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get answers to common questions about our services and process
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -385,7 +357,6 @@ const Contact: NextPage = () => {
                 We'll provide a detailed timeline during our initial consultation.
               </p>
             </div>
-            
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Do you provide ongoing support?
@@ -396,7 +367,6 @@ const Contact: NextPage = () => {
                 security patches, and technical support.
               </p>
             </div>
-            
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 What technologies do you specialize in?
@@ -407,7 +377,6 @@ const Contact: NextPage = () => {
                 the best technology stack for each project's specific needs.
               </p>
             </div>
-            
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 How do you ensure project quality?
@@ -424,33 +393,30 @@ const Contact: NextPage = () => {
     </MainLayout>
   );
 };
->>>>>>> origin/merge-pr-10614
-
           {/* Contact Information */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
                   Contact Information
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
-
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {info.icon}
@@ -461,7 +427,7 @@ const Contact: NextPage = () => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-gray-600 hover: tex t-blue-600 transition-colors whitespace-pre-line"
+                        className="text-gray-600 "hover": tex t-blue-600 transition-colors whitespace-pre-line"
                       >
                         {info.details}
                       </a>
@@ -475,32 +441,30 @@ const Contact: NextPage = () => {
               </div>
             </div>
           </section>
-
           {/* Contact Form */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
                   Send Us a Message
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Fill out the form below and we'll get back to you within 24 hours
                 </p>
               </motion.div>
-
               <div className="max-w-4xl mx-auto">
                 <motion.form
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={{ opacity: 0, "y": 20 }}
+                  animate={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.6, "delay": 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-8"
                 >
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
@@ -526,7 +490,6 @@ const Contact: NextPage = () => {
                        />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -551,7 +514,6 @@ const Contact: NextPage = () => {
                        />
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                       Service Interest
@@ -569,7 +531,6 @@ const Contact: NextPage = () => {
                       ))}
                     </select>
                   </div>
-
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
@@ -579,28 +540,26 @@ const Contact: NextPage = () => {
                       name="message"
                       rows={6}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                       placeholder="Tell us about your project requirements..."
                     ></textarea>
                   </div>
-
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                    whileTap={{ "scale": 0.98 }}
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": b g-blue-700 transition-colors"
                   >
                     <Send className="w-5 h-5"  />
                     Send Message
                   </motion.button>
                 </motion.form>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl "md": text-6xl font-bold text-white mb-6">
                 Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -609,15 +568,13 @@ const Contact: NextPage = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Form & Info Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 "lg": grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-                
                 {isSubmitted ? (
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -625,14 +582,14 @@ const Contact: NextPage = () => {
                     <p className="text-gray-300 mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                      className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 "hover": from-cyan-600 hover:to-blue-600 transition-all duration-300"
                     >
                       Send Another Message
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Full Name *
@@ -644,7 +601,7 @@ const Contact: NextPage = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="Your full name"
                         />
                       </div>
@@ -659,12 +616,11 @@ const Contact: NextPage = () => {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="your@email.com"
                         />
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -676,7 +632,7 @@ const Contact: NextPage = () => {
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="Your company name"
                         />
                       </div>
@@ -690,12 +646,11 @@ const Contact: NextPage = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="+1 (555) 123-4567"
                         />
                       </div>
                     </div>
-
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                         Service Interest
@@ -705,7 +660,7 @@ const Contact: NextPage = () => {
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                       >
                         <option value="">Select a service</option>
                         {services.map((service) => (
@@ -713,7 +668,6 @@ const Contact: NextPage = () => {
                         ))}
                       </select>
                     </div>
-
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Message *
@@ -725,15 +679,14 @@ const Contact: NextPage = () => {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 "focus": ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Tell us about your project or requirements..."
                       />
                     </div>
-
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                      className="w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 "hover": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                     >
                       {isSubmitting ? (
                         <>
@@ -750,7 +703,6 @@ const Contact: NextPage = () => {
                   </form>
                 )}
               </div>
-
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
@@ -759,7 +711,6 @@ const Contact: NextPage = () => {
                     We're here to help you succeed. Reach out to us through any of the channels below, and we'll respond promptly.
                   </p>
                 </div>
-
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700">
@@ -776,34 +727,31 @@ const Contact: NextPage = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </section>
-
           {/* Services Overview */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
                   Our Services
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Comprehensive technology solutions to meet all your business needs
                 </p>
               </motion.div>
-
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
                 {services.map((service, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
                   >
                     <h3 className="text-lg font-semibold text-gray-900">
                       {service}
@@ -818,13 +766,11 @@ const Contact: NextPage = () => {
     </>
   )
 }
-
 export default ContactPage
-=======
           </div>
         </section>
       </div>
     </>
   );
 }
->>>>>>> origin/merge-pr-11195
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react'; 
