@@ -15,7 +15,8 @@ import {
   FileText,
   Users,
   Zap,
-  Shield
+  Shield,
+  MessageCircle
 } from 'lucide-react';
 
 const supportChannels = [
@@ -322,8 +323,7 @@ export default function SupportPage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
     </div>
     </Layout>
   );

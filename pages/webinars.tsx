@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import Link from 'next/link';import {
+import {
   Play,
   Calendar,
   Clock,
@@ -16,7 +18,42 @@ import Link from 'next/link';import {
   Download
 } from 'lucide-react';
 
+const liveWebinars = [
+  {
+    id: 1,
+    title: "AI in Business: Practical Applications",
+    date: "2024-02-15",
+    time: "2:00 PM EST",
+    presenter: "Dr. Sarah Johnson",
+    description: "Learn how AI is transforming business operations and discover practical applications for your organization.",
+    image: "/api/placeholder/400/300",
+    registrationLink: "/register/webinar-1"
+  },
+  {
+    id: 2,
+    title: "Cloud Security Best Practices",
+    date: "2024-02-22",
+    time: "1:00 PM EST",
+    presenter: "Michael Chen",
+    description: "Essential security practices for cloud infrastructure and data protection strategies.",
+    image: "/api/placeholder/400/300",
+    registrationLink: "/register/webinar-2"
+  }
+];
+
+const categories = [
+  { id: 'all', name: 'All Categories' },
+  { id: 'ai', name: 'AI & Machine Learning' },
+  { id: 'cloud', name: 'Cloud Computing' },
+  { id: 'security', name: 'Cybersecurity' },
+  { id: 'devops', name: 'DevOps' },
+  { id: 'business', name: 'Business Strategy' }
+];
+
 export default function WebinarsPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
   return (
     <>
       <Head>
@@ -309,7 +346,11 @@ export default function WebinarsPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
-            <motion.div              className="text-center"
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Webinars & <span className="text-yellow-400">Events</span>
@@ -331,7 +372,7 @@ export default function WebinarsPage() {
                   Browse Tutorials
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>
