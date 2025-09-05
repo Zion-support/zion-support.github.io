@@ -17,148 +17,126 @@ import {
   Globe,
   Settings,
   Shield,
-  Zap
+  Zap,
+  Code,
+  Database
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const guideCategories = [
   {
-    title: "Getting Started",
-    description: "Essential guides to help you get up and running quickly",
+    name: 'Getting Started',
+    description: 'Essential guides for new users',
     icon: BookOpen,
-    color: "blue",
+    color: 'from-blue-600 to-purple-600',
     guides: [
       {
-        title: "Platform Setup Guide",
-        description: "Complete setup instructions for new users",
-        duration: "15 min",
-        difficulty: "Beginner",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 1250
+        title: 'Quick Start Guide',
+        description: 'Get up and running in 5 minutes',
+        readTime: '5 min',
+        difficulty: 'Beginner',
+        rating: 4.8
       },
       {
-        title: "First Project Walkthrough",
-        description: "Step-by-step guide to creating your first project",
-        duration: "20 min",
-        difficulty: "Beginner",
-        type: "Tutorial",
-        rating: 4.9,
-        downloads: 980
+        title: 'Account Setup',
+        description: 'Configure your account and preferences',
+        readTime: '3 min',
+        difficulty: 'Beginner',
+        rating: 4.9
       },
       {
-        title: "Account Configuration",
-        description: "Setting up your account and preferences",
-        duration: "10 min",
-        difficulty: "Beginner",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 750
+        title: 'First Project',
+        description: 'Create your first AI-powered project',
+        readTime: '10 min',
+        difficulty: 'Beginner',
+        rating: 4.7
       }
     ]
   },
   {
-    title: "API & Integration",
-    description: "Comprehensive guides for API usage and integrations",
-    icon: Settings,
-    color: "green",
+    name: 'AI Services',
+    description: 'Learn to use our AI capabilities',
+    icon: Zap,
+    color: 'from-green-600 to-blue-600',
     guides: [
       {
-        title: "API Authentication Guide",
-        description: "Complete guide to API authentication methods",
-        duration: "25 min",
-        difficulty: "Intermediate",
-        type: "Guide",
-        rating: 4.6,
-        downloads: 850
+        title: 'AI Integration Basics',
+        description: 'Integrate AI services into your applications',
+        readTime: '15 min',
+        difficulty: 'Intermediate',
+        rating: 4.6
       },
       {
-        title: "Webhook Implementation",
-        description: "Setting up and managing webhooks",
-        duration: "30 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.8,
-        downloads: 650
+        title: 'Natural Language Processing',
+        description: 'Build NLP applications with our APIs',
+        readTime: '20 min',
+        difficulty: 'Intermediate',
+        rating: 4.5
       },
       {
-        title: "SDK Integration Guide",
-        description: "Using our official SDKs in your applications",
-        duration: "35 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 420
+        title: 'Computer Vision',
+        description: 'Implement image recognition and analysis',
+        readTime: '25 min',
+        difficulty: 'Advanced',
+        rating: 4.8
       }
     ]
   },
   {
-    title: "Security & Compliance",
-    description: "Security best practices and compliance guidelines",
+    name: 'Cloud Services',
+    description: 'Master cloud infrastructure and deployment',
+    icon: Database,
+    color: 'from-purple-600 to-pink-600',
+    guides: [
+      {
+        title: 'Cloud Migration',
+        description: 'Migrate your applications to the cloud',
+        readTime: '30 min',
+        difficulty: 'Advanced',
+        rating: 4.7
+      },
+      {
+        title: 'Auto-scaling Setup',
+        description: 'Configure automatic scaling for your services',
+        readTime: '20 min',
+        difficulty: 'Intermediate',
+        rating: 4.6
+      },
+      {
+        title: 'Monitoring & Logging',
+        description: 'Set up comprehensive monitoring',
+        readTime: '15 min',
+        difficulty: 'Intermediate',
+        rating: 4.8
+      }
+    ]
+  },
+  {
+    name: 'Security',
+    description: 'Secure your applications and data',
     icon: Shield,
-    color: "red",
+    color: 'from-red-600 to-orange-600',
     guides: [
       {
-        title: "Security Best Practices",
-        description: "Essential security measures for your applications",
-        duration: "40 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.9,
-        downloads: 680
+        title: 'Authentication Setup',
+        description: 'Implement secure user authentication',
+        readTime: '20 min',
+        difficulty: 'Intermediate',
+        rating: 4.9
       },
       {
-        title: "Data Privacy Compliance",
-        description: "GDPR, CCPA, and other privacy regulations",
-        duration: "45 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 520
+        title: 'Data Encryption',
+        description: 'Encrypt sensitive data at rest and in transit',
+        readTime: '25 min',
+        difficulty: 'Advanced',
+        rating: 4.7
       },
       {
-        title: "Access Control Setup",
-        description: "Implementing proper access controls",
-        duration: "30 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.7,
-        downloads: 380
-      }
-    ]
-  },
-  {
-    title: "Deployment & Operations",
-    description: "Deployment guides and operational best practices",
-    icon: Globe,
-    color: "purple",
-    guides: [
-      {
-        title: "Production Deployment",
-        description: "Deploying applications to production environments",
-        duration: "50 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 720
-      },
-      {
-        title: "Monitoring & Alerting",
-        description: "Setting up comprehensive monitoring",
-        duration: "35 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.6,
-        downloads: 450
-      },
-      {
-        title: "Scaling Applications",
-        description: "Best practices for scaling your applications",
-        duration: "40 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 380
+        title: 'Security Best Practices',
+        description: 'Follow industry security standards',
+        readTime: '15 min',
+        difficulty: 'Intermediate',
+        rating: 4.8
       }
     ]
   }
@@ -166,337 +144,316 @@ const guideCategories = [
 
 const featuredGuides = [
   {
-    title: "Complete Platform Guide",
-    description: "The definitive guide to using all platform features",
-    duration: "120 min",
-    difficulty: "All Levels",
-    type: "Comprehensive Guide",
+    title: 'Complete AI Integration Guide',
+    description: 'A comprehensive guide to integrating AI services into your applications with real-world examples.',
+    category: 'AI Services',
+    readTime: '45 min',
+    difficulty: 'Advanced',
     rating: 4.9,
-    downloads: 2500,
-    featured: true
+    author: 'Sarah Johnson',
+    date: '2024-01-15',
+    image: '/images/guides/ai-integration.jpg'
   },
   {
-    title: "Enterprise Implementation",
-    description: "Best practices for enterprise deployments",
-    duration: "90 min",
-    difficulty: "Advanced",
-    type: "Guide",
+    title: 'Cloud Migration Checklist',
+    description: 'Step-by-step checklist for migrating your infrastructure to the cloud without downtime.',
+    category: 'Cloud Services',
+    readTime: '30 min',
+    difficulty: 'Intermediate',
     rating: 4.8,
-    downloads: 1200,
-    featured: true
+    author: 'Michael Chen',
+    date: '2024-01-10',
+    image: '/images/guides/cloud-migration.jpg'
   },
   {
-    title: "Troubleshooting Handbook",
-    description: "Common issues and their solutions",
-    duration: "60 min",
-    difficulty: "All Levels",
-    type: "Reference Guide",
+    title: 'Security Audit Guide',
+    description: 'How to conduct a comprehensive security audit of your applications and infrastructure.',
+    category: 'Security',
+    readTime: '35 min',
+    difficulty: 'Advanced',
     rating: 4.7,
-    downloads: 1800,
-    featured: true
+    author: 'Emily Rodriguez',
+    date: '2024-01-08',
+    image: '/images/guides/security-audit.jpg'
   }
 ];
 
-const searchFilters = [
-  "All Guides",
-  "Getting Started",
-  "API & Integration",
-  "Security & Compliance",
-  "Deployment & Operations"
-];
+const difficultyColors = {
+  'Beginner': 'bg-green-100 text-green-800',
+  'Intermediate': 'bg-yellow-100 text-yellow-800',
+  'Advanced': 'bg-red-100 text-red-800'
+};
 
-export default function GuidesPage() {
+export default function Guides() {
   return (
-    <MainLayout 
-      title="Guides - Zion Tech Group"
-      description="Comprehensive guides and documentation to help you master Zion Tech Group's platform and services."
-      keywords="guides, documentation, how-to, tutorials, best practices, implementation guides"
+    <Layout
+      title="Guides & Tutorials - Zion Tech Group"
+      description="Comprehensive guides and tutorials to help you master our AI and cloud services. From beginner to advanced topics."
+      keywords="guides, tutorials, documentation, AI guides, cloud guides, learning resources"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Guides & Tutorials
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+              Master our platform with comprehensive guides, tutorials, and best practices 
+              from beginner to advanced levels.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#guide-categories"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+              >
+                Browse Guides
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="#featured-guides"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-100 font-semibold rounded-lg hover:border-blue-300 hover:text-white transition-all duration-200"
+              >
+                Featured Content
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                User <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Guides</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Comprehensive guides and documentation to help you master our platform. 
-                From basic setup to advanced implementation strategies.
-              </p>
-              
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto mb-8">
-                <div className="relative">
+      {/* Guide Categories */}
+      <section id="guide-categories" className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Guide Categories
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Explore our organized collection of guides and tutorials by category.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {guideCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h3>
+                <p className="text-gray-600 mb-6">{category.description}</p>
+                <div className="space-y-3">
+                  {category.guides.map((guide, guideIndex) => (
+                    <div key={guideIndex} className="border-l-4 border-blue-200 pl-4">
+                      <h4 className="font-semibold text-gray-900 mb-1">{guide.title}</h4>
+                      <p className="text-sm text-gray-600 mb-2">{guide.description}</p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span>{guide.readTime}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className={`px-2 py-1 rounded-full ${difficultyColors[guide.difficulty]}`}>
+                            {guide.difficulty}
+                          </span>
+                          <div className="flex items-center">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                            <span className="ml-1">{guide.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Guides */}
+      <section id="featured-guides" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Featured Guides
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Our most popular and comprehensive guides to help you succeed.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredGuides.map((guide, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-blue-600" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+                      {guide.category}
+                    </span>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {guide.readTime}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{guide.title}</h3>
+                  <p className="text-gray-600 mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 text-gray-400 mr-2" />
+                      <span className="text-sm text-gray-600">{guide.author}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                      <span className="text-sm text-gray-600">{guide.rating}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${difficultyColors[guide.difficulty]}`}>
+                      {guide.difficulty}
+                    </span>
+                    <Link
+                      href={`/guides/${guide.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Read Guide
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Search & Filter */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Find the Right Guide
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Search and filter our guides to find exactly what you need.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="flex flex-col md:flex-row gap-4 mb-6">
+                <div className="flex-1 relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search guides..."
-                    className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
+                <div className="flex gap-4">
+                  <select className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>All Categories</option>
+                    <option>Getting Started</option>
+                    <option>AI Services</option>
+                    <option>Cloud Services</option>
+                    <option>Security</option>
+                  </select>
+                  <select className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>All Levels</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                  </select>
+                </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#guides"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Browse Guides
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/docs"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                >
-                  View Documentation
-                </Link>
+              <div className="flex flex-wrap gap-2">
+                <button className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors">
+                  Most Popular
+                </button>
+                <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                  Recently Updated
+                </button>
+                <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                  Quick Reads
+                </button>
+                <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                  Video Guides
+                </button>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Featured Guides */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Featured Guides
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our most popular and comprehensive guides to get you started.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredGuides.map((guide, index) => (
-                <motion.div
-                  key={guide.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-600 rounded text-sm font-medium">
-                      Featured
-                    </span>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      {guide.rating}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {guide.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4">
-                    {guide.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span>{guide.duration}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Download className="w-4 h-4 mr-1" />
-                      <span>{guide.downloads} downloads</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                      guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                      guide.difficulty === 'All Levels' ? 'bg-blue-100 text-blue-600' :
-                      'bg-red-100 text-red-600'
-                    }`}>
-                      {guide.difficulty}
-                    </span>
-                    <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs font-medium">
-                      {guide.type}
-                    </span>
-                  </div>
-                  
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Guide
-                  </button>
-                </motion.div>
-              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Filter Bar */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {searchFilters.map((filter, index) => (
-                <motion.button
-                  key={filter}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                    filter === 'All Guides'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-600 hover:bg-blue-50'
-                  }`}
-                >
-                  {filter}
-                </motion.button>
-              ))}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Our team is here to help. Contact us for personalized guidance or request a specific guide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
+              >
+                Contact Support
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/docs"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+              >
+                Browse Documentation
+              </Link>
             </div>
-          </div>
-        </section>
-
-        {/* Guide Categories */}
-        <section id="guides" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Browse by Category
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Find guides organized by topic and complexity level.
-              </p>
-            </motion.div>
-
-            <div className="space-y-12">
-              {guideCategories.map((category, categoryIndex) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  className="bg-gray-50 rounded-xl shadow-lg p-8"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 bg-${category.color}-100 rounded-lg flex items-center justify-center mr-4`}>
-                      <category.icon className={`w-6 h-6 text-${category.color}-600`} />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-600">
-                        {category.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {category.guides.map((guide, guideIndex) => (
-                      <div key={guideIndex} className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                            guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                            'bg-red-100 text-red-600'
-                          }`}>
-                            {guide.difficulty}
-                          </span>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Star className="w-3 h-3 text-yellow-400 mr-1" />
-                            {guide.rating}
-                          </div>
-                        </div>
-                        
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          {guide.title}
-                        </h4>
-                        
-                        <p className="text-gray-600 text-sm mb-3">
-                          {guide.description}
-                        </p>
-                        
-                        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-                          <div className="flex items-center">
-                            <Clock className="w-3 h-3 mr-1" />
-                            <span>{guide.duration}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Download className="w-3 h-3 mr-1" />
-                            <span>{guide.downloads}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center justify-between">
-                          <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs">
-                            {guide.type}
-                          </span>
-                          <button className="text-blue-600 hover:text-blue-700 font-medium text-sm inline-flex items-center">
-                            Download
-                            <ExternalLink className="w-3 h-3 ml-1" />
-                          </button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Need More Help?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help you with any questions or custom guidance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/support"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-                >
-                  Contact Support
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-                >
-                  Request Custom Guide
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
   );
 }
