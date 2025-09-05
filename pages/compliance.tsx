@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from '../components/Layout';';
 
 const complianceFrameworks = [;
@@ -8,6 +10,15 @@ const complianceFrameworks = [;
     name: 'SOC 2 Type II,',
     description: 'Service Organization Control 2 Type II compliance for security, availability, and confidentiality',',
     status: 'Compliant,',
+=======
+import Layout from '../components/Layout';
+import SimpleLayout from '../components/SimpleLayout';
+const complianceFrameworks = [
+  {
+    name: 'SOC 2 Type II',
+    description: 'Service Organization Control 2 Type II compliance for security, availability, and confidentiality',
+    status: 'Compliant',
+>>>>>>> main
     icon: Shield,
     color: 'from-blue-500 to-cyan-500,',
     details: [;
@@ -64,11 +75,19 @@ const complianceFrameworks = [;
     lastAudit: 'N/A,',
     nextAudit: '2024-12-31'';
   }
+<<<<<<< HEAD
 ;];
 
 const complianceAreas = [;
   {}
     category: 'Data Protection,',
+=======
+];
+
+const complianceAreas = [
+  {
+    category: 'Data Protection',
+>>>>>>> main
     icon: Lock,
     requirements: [;
       'Data encryption in transit and at rest,',
@@ -107,6 +126,7 @@ const complianceAreas = [;
       'Third-party security audits'';
     ];
   }
+<<<<<<< HEAD
 ;];
 
 const complianceMetrics = [;
@@ -122,6 +142,25 @@ const certifications = [;
     issuer: 'AICPA,',
     validUntil: '2025-01-15,',
     status: 'Valid'';
+=======
+];
+
+ursor/website-audit-and-update-with-deployment-9cae
+const complianceMetrics = [
+  { label: 'SOC 2 Score', value: '98%', description: 'Last audit score' },
+  { label: 'HIPAA Compliance', value: '100%', description: 'Current compliance status' },
+  { label: 'GDPR Compliance', value: '100%', description: 'EU data protection compliance' },
+  { label: 'Audit Frequency', value: 'Annual', description: 'Compliance audit schedule' }
+];
+
+ursor/website-audit-and-update-with-deployment-9cae
+const certifications = [
+  {
+    name: 'SOC 2 Type II',
+    issuer: 'AICPA',
+    validUntil: '2025-01-15',
+    status: 'Valid'
+>>>>>>> main
   },
   {}
     name: 'HIPAA Compliance,',
@@ -144,6 +183,7 @@ const certifications = [;
 ;];
 
 export default function CompliancePage() {
+<<<<<<< HEAD
   return (;
     <Layout);
       title="Compliance - Zion Tech Group"";
@@ -178,6 +218,46 @@ export default function CompliancePage() {
           </div>;
         </section>;
 
+=======
+  return (
+    <Layout
+    <SimpleLayout
+ursor/website-audit-and-update-with-deployment-9cae
+      title="Compliance - Zion Tech Group"
+      description="Learn about our compliance with industry standards including SOC 2, HIPAA, GDPR, and ISO 27001. Your data protection and regulatory compliance is our priority."
+      keywords="compliance, SOC 2, HIPAA, GDPR, ISO 27001, data protection, regulatory compliance, security standards"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <div className="flex items-center justify-center mb-6">
+                <Shield className="w-16 h-16 text-blue-400 mr-4" />
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  Compliance & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Standards</span>
+                </h1>
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                We maintain compliance with industry-leading standards to ensure the highest level of data protection and security
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Compliance Metrics */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
@@ -195,10 +275,18 @@ export default function CompliancePage() {
                   <div className="text-sm text-gray-600">{metric.description}</div>"
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 
+=======
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Compliance Frameworks */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -206,6 +294,7 @@ export default function CompliancePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -219,6 +308,22 @@ export default function CompliancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {complianceFrameworks.map((framework, index) => (,
                 <motion.div}),
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Frameworks</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We maintain compliance with multiple industry standards and regulatory frameworks
+              </p>
+            </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {complianceFrameworks.map((framework, index) => (
+                <motion.div
+>>>>>>> main
                   key={framework.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -235,6 +340,7 @@ export default function CompliancePage() {
                         framework.status === 'Compliant' ? 'bg-green-100 text-green-600' : 'bg-yellow-100 text-yellow-600',
                       }`}>,
                         {framework.status}
+<<<<<<< HEAD
                       </span>,
                     </div>;
                   </div>;
@@ -247,9 +353,26 @@ export default function CompliancePage() {
                       {framework.details.map((detail, detailIndex) => (,
                         <li key={detailIndex} className="flex items-center text-gray-600">"
                           <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
+=======
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-6">{framework.description}</p>
+
+                  <p className="text-gray-600 mb-6">{framework.description}</p>
+
+ursor/website-audit-and-update-with-deployment-9cae
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Requirements:</h4>
+                    <ul className="space-y-2">
+                      {framework.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-center text-gray-600">
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+>>>>>>> main
                           {detail}
                         </li>,
                       ))}
+<<<<<<< HEAD
                     </ul>,
                   </div>;
 
@@ -269,6 +392,29 @@ export default function CompliancePage() {
           </div>;
         </section>;
 
+=======
+                    </ul>
+                  </div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="text-gray-500">Last Audit:</span>
+                      <div className="font-medium">{framework.lastAudit}</div>
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Next Audit:</span>
+                      <div className="font-medium">{framework.nextAudit}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Compliance Areas */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -276,6 +422,7 @@ export default function CompliancePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -289,6 +436,22 @@ export default function CompliancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {complianceAreas.map((area, index) => (,
                 <motion.div}),
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Areas</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our comprehensive approach to compliance across all operational areas
+              </p>
+            </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {complianceAreas.map((area, index) => (
+                <motion.div
+>>>>>>> main
                   key={area.category}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -311,10 +474,18 @@ export default function CompliancePage() {
                   </ul>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 
+=======
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Certifications */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -322,6 +493,7 @@ export default function CompliancePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -347,6 +519,34 @@ export default function CompliancePage() {
                     <tbody className="divide-y divide-gray-200">";
                       {certifications.map((cert, index) => (,
                         <motion.tr}),
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Current <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Certifications</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our current compliance certifications and their validity status
+              </p>
+            </motion.div>
+
+ursor/website-audit-and-update-with-deployment-9cae
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Certification</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Issuer</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Valid Until</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {certifications.map((cert, index) => (
+                        <motion.tr
+>>>>>>> main
                           key={cert.name}
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
@@ -365,6 +565,7 @@ export default function CompliancePage() {
                           </td>;
                         </motion.tr>;
                       ))}
+<<<<<<< HEAD
                     </tbody>,
                   </table>;
                 </div>;
@@ -373,6 +574,17 @@ export default function CompliancePage() {
           </div>;
         </section>;
 
+=======
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Compliance Commitment */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -381,6 +593,7 @@ export default function CompliancePage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+<<<<<<< HEAD
                 className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200""
               >;
                 <div className="flex items-center mb-6">";
@@ -407,6 +620,46 @@ export default function CompliancePage() {
           </div>;
         </section>;
 
+=======
+                className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200"
+              >
+                <div className="flex items-center mb-6">
+                  <AlertCircle className="w-8 h-8 text-blue-600 mr-4" />
+                  <h3 className="text-2xl font-bold text-gray-900">Our Compliance Commitment</h3>
+                </div>
+                <div className="prose prose-lg max-w-none text-gray-600">
+                  <p className="mb-4">
+                    At Zion Tech Group, compliance is not just a requirement—it's a fundamental part of our commitment to
+                    protecting our clients' data and maintaining the highest standards of security and privacy.
+                  </p>
+                  <p className="mb-4">
+                    We continuously monitor and update our compliance programs to ensure they meet the latest regulatory
+                    requirements and industry best practices. Our dedicated compliance team works closely with all departments
+                    to maintain our certifications and implement necessary controls.
+                  </p>
+                  <p>
+                    Regular audits, assessments, and training ensure that our compliance programs remain effective and
+                    At Zion Tech Group, compliance is not just a requirement—it's a fundamental part of our commitment to 
+                    protecting our clients' data and maintaining the highest standards of security and privacy.
+                  </p>
+                  <p className="mb-4">
+                    We continuously monitor and update our compliance programs to ensure they meet the latest regulatory 
+                    requirements and industry best practices. Our dedicated compliance team works closely with all departments 
+                    to maintain our certifications and implement necessary controls.
+                  </p>
+                  <p>
+                    Regular audits, assessments, and training ensure that our compliance programs remain effective and 
+ursor/website-audit-and-update-with-deployment-9cae
+                    up-to-date with evolving regulations and standards.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -414,6 +667,7 @@ export default function CompliancePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Compliance Questions?;
@@ -441,5 +695,38 @@ export default function CompliancePage() {
         </section>;
       </div>;
     </Layout>;
+=======
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Compliance Questions?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Have questions about our compliance programs or need compliance documentation? Contact our compliance team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:compliance@ziontechgroup.com"
+                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  <FileText className="mr-2 w-5 h-5" />
+                  Compliance Team
+                </a>
+                <a
+                  href="/contact"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+    </Layout>
+    </SimpleLayout>
+ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
   );
 }
+

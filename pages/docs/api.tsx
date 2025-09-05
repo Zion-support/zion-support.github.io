@@ -1,71 +1,9 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import {
-  Code,
-  Copy,
-  Check,
-  ExternalLink,
-  Search,
-  Filter,
-  BookOpen,
-  Zap,
-  Shield,
-  Globe,
-  ArrowRight
-} from 'lucide-react'
+import React from 'react'
 import Layout from '../../components/Layout'
-const apiEndpoints = [{
-    method: 'GET',
-    path: '/api/v1/services',
-    description: 'Retrieve all available services',
-    parameters: [
-      { name: 'limit', type: 'integer', required: false, description: 'Number of services to return (max 100)' },
-      { name: 'offset', type: 'integer', required: false, description: 'Number of services to skip' },
-      { name: 'category', type: 'string', required: false, description: 'Filter by service category' }
-    ],
-    responses: [
-      { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }]
-  },
+
+export default function ApiDocs() {
+const codeExamples = [
   {
-    method: 'POST',
-    path: '/api/v1/contact',
-    description: 'Submit a contact form or inquiry',
-    parameters: [
-      { name: 'name', type: 'string', required: true, description: 'Contact person name' },
-      { name: 'email', type: 'string', required: true, description: 'Contact email address' },
-      { name: 'message', type: 'string', required: true, description: 'Message content' },
-      { name: 'company', type: 'string', required: false, description: 'Company name' },
-      { name: 'phone', type: 'string', required: false, description: 'Phone number' }
-    ],
-    responses: [
-      { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }]
-  },
-  {
-    method: 'GET',
-    path: '/api/v1/status',
-    description: 'Get system status and health information',
-    parameters: [],
-    responses: [
-      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }]
-  },
-  {
-    method: 'POST',
-    path: '/api/v1/quote',
-    description: 'Request a project quote',
-    parameters: [
-      { name: 'project_type', type: 'string', required: true, description: 'Type of project (ai, cloud, web, mobile)' },
-      { name: 'description', type: 'string', required: true, description: 'Project description' },
-      { name: 'budget_range', type: 'string', required: false, description: 'Budget range' },
-      { name: 'timeline', type: 'string', required: false, description: 'Project timeline' }
-    ],
-    responses: [
-      { code: 201, description: 'Created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
-  }]
-const codeExamples = [{
     language: 'JavaScript',
     title: 'Fetch Services',
     code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
@@ -74,7 +12,6 @@ const codeExamples = [{
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-}
 })
 const data = await response.json()
 `
@@ -85,69 +22,24 @@ const data = await response.json()
     code: `import requests,
     url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
 }
 data = {
-    'name': 'John Doe',
-    'email': 'john@example.com',
-    'message': 'Interested in AI services',
-    'company': 'Tech Corp'
+  'name': 'John Doe',
+  'email': 'john@example.com',
+  'message': 'Interested in AI services',
+  'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())`
-  },
-  {
-    language: 'cURL',
-    title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
-  }]
-const sdkLibraries = [
-  {
-    name: 'JavaScript SDK',
-    description: 'Official JavaScript SDK for easy integration',
-    version: '1.2.0',
-    install: 'npm install @ziontechgroup/sdk',
-    documentation: '/docs/sdk/javascript'
-  },
-  {
-    name: 'Python SDK',
-    description: 'Python SDK with full API support',
-    version: '1.1.5',
-    install: 'pip install ziontechgroup-sdk',
-    documentation: '/docs/sdk/python'
-  },
-  {
-    name: 'PHP SDK',
-    description: 'PHP SDK for server-side integration',
-    version: '1.0.8',
-    install: 'composer require ziontechgroup/sdk',
-    documentation: '/docs/sdk/php'
-  }]
-export default function APIDocumentationPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedMethod, setSelectedMethod] = useState('all')
-  const copyToClipboard = async (code: string, id: string) => {
-    try {
-      if (typeof window !== 'undefined' && window.navigator?.clipboard) {
-        await window.navigator.clipboard.writeText(code)
-        setCopiedCode(id)
-        window.setTimeout(() => setCopiedCode(null), 2000)
-      }
-    } catch (err) {
-      console.error('Failed to copy: ', err)
-    }
+print(response.json())
+`
   }
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {
-    const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         endpoint.description.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase()
-    return matchesSearch && matchesMethod
-  })
+]
+
+export default function APIDocumentationPage() {
   return (
+<<<<<<< HEAD
     <Layout,
     title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
@@ -489,7 +381,14 @@ export default function APIDocumentationPage() {
             </motion.div>
           </div>
         </section>
+=======
+    <Layout title="API Docs">
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
+        <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
+>>>>>>> main
       </div>
     </Layout>
   )
 }
+

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -14,6 +15,15 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
+=======
+interface LayoutProps {
+  children: React.ReactNode;
+}
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+>>>>>>> main
     </div>
   );
 }
