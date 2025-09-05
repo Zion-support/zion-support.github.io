@@ -125,10 +125,10 @@ export default function Pricing() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change plans later?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. We'll prorate any changes to your billing.</p>
+                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. We&apos;ll prorate any changes to your billing.</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in support?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in support?</h3>
                 <p className="text-gray-600">All plans include email support. Professional and Enterprise plans include priority and 24/7 support respectively.</p>
               </div>
               <div>

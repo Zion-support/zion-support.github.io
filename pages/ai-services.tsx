@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Eye, MessageSquare, BarChart3, Shield, Rocket, Target } from 'lucide-react';
+import { Brain, Zap, Eye, MessageSquare, BarChart3, Shield } from 'lucide-react';
 
 export default function AIServices() {
   const services = [
@@ -120,7 +120,7 @@ export default function AIServices() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI solutions can help you achieve your business goals.
+              Let&apos;s discuss how our AI solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">

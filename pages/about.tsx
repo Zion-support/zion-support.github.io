@@ -28,7 +28,7 @@ export default function About() {
                 To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation. We believe in the transformative power of technology and its ability to solve complex business challenges.
               </p>
               <p className="text-lg text-gray-600">
-                Our team of expert developers, engineers, and consultants work tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.
+                Our team of expert developers, engineers, and consultants work tirelessly to deliver solutions that not only meet today&apos;s needs but anticipate tomorrow&apos;s challenges.
               </p>
             </div>
             
@@ -51,7 +51,7 @@ export default function About() {
                   <span className="text-2xl">🚀</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
-                <p className="text-gray-600">We constantly push the boundaries of what's possible with technology.</p>
+                <p className="text-gray-600">We constantly push the boundaries of what&apos;s possible with technology.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -73,7 +73,7 @@ export default function About() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how we can help transform your business with our technology solutions.
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
