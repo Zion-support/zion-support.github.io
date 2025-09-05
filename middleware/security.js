@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 
 // Security middleware
 import { NextResponse } from 'next/server';
@@ -22,3 +26,8 @@ export function securityMiddleware(request) {
   
   return response;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

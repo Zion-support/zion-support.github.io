@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 <meta name=\"description\" content=\"Comprehensive API documentation for Zion Tech Group services and integrations.\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
       </Head>
@@ -44,6 +48,11 @@ const "API": NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gray-50">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Header */}
         <div className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16\">
           <div className=\"container mx-auto px-4 text-center\">
@@ -55,12 +64,21 @@ const "API": NextPage = () => {
             </p>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         <section className=\"py-16 max-w-6xl mx-auto px-6\">
           <h2 className=\"text-3xl font-bold text-gray-900 text-center mb-12\">Available Endpoints</h2>
           <div className=\"space-y-6\">
         <section className="py-16 max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Available Endpoints</h2>
           <div className="space-y-6">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             {apiEndpoints.map((endpoint, index) => (
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
                 <div className=\"flex items-center justify-between mb-4\">
@@ -84,6 +102,10 @@ const "API": NextPage = () => {
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         <section className=\"py-16 bg-gray-50\">
           <div className=\"max-w-4xl mx-auto px-6 text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Need Help with Integration?</h2>
@@ -92,6 +114,11 @@ const "API": NextPage = () => {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help with Integration?</h2>
             <p className="text-gray-600 text-xl mb-8">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               Our team is here to help you integrate our APIs into your applications.
             </p>
             <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 text-white rounded-lg \"hover\": b g-blue-700 transition-colors inline-flex items-center\">
@@ -104,4 +131,11 @@ const "API": NextPage = () => {
   );
 };
 export default API;
+<<<<<<< HEAD
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; const API: NextPage = () => { const apiEndpoints = [ { name: 'Services API',endpoint: '/api/services',method: 'GET',description: 'Retrieve all available services',response: 'Array of services' },{ name: 'Contact API',endpoint: '/api/contact',method: 'POST',description: 'Submit contact form',response: 'Success message' },{ name: 'Quote API',endpoint: '/api/quote',method: 'POST',description: 'Request a quote',response: 'Quote details' } ]; return ( <> <Head> <title>API Documentation - Zion Tech Group</title>  <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." /> </Head> <div className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center"> <div className="max-w-5xl mx-auto px-6"> <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">API Documentation</h1> <p className="text-blue-100 text-xl"> Integrate with our services using our comprehensive REST API  <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl md:text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services
+=======
+<<<<<<< HEAD
+import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; const API: NextPage = () => { const apiEndpoints = [ { name: 'Services API',endpoint: '/api/services',method: 'GET',description: 'Retrieve all available services',response: 'Array of services' },{ name: 'Contact API',endpoint: '/api/contact',method: 'POST',description: 'Submit contact form',response: 'Success message' },{ name: 'Quote API',endpoint: '/api/quote',method: 'POST',description: 'Request a quote',response: 'Quote details' } ]; return ( <> <Head> <title>API Documentation - Zion Tech Group</title>  <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." /> </Head> <div className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center"> <div className="max-w-5xl mx-auto px-6"> <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">API Documentation</h1> <p className="text-blue-100 text-xl"> Integrate with our services using our comprehensive REST API  <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl md:text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

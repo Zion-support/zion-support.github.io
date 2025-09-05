@@ -7,6 +7,7 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
+<<<<<<< HEAD
     const heading = screen.getByRole('heading', { level: '1' });
     expect(heading).toBeInTheDocument();
   });
@@ -15,3 +16,9 @@ describe('App', () => {
     expect(heading).toBeInTheDocument();
   });
 });
+=======
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
+  });
+});
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

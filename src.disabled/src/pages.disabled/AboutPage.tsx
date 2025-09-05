@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React from \'react\'; const \"AboutPage\": React.FC = () => {}}; export default AboutPage;
-const React from "react"; const AboutPage: React.FC = () => {}}; export default AboutPage;'"'"
-import _React from 'react'; const "AboutPage": _React.FC = () => {}}; export default AboutPage;
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

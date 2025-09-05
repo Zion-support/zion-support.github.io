@@ -1,8 +1,9 @@
-const { roomId } = useParams () const navigate = useNavigate () const [isJoining,setIsJoining] = useState (false) const [hasJoined,setHasJoined] = useState (false) const [isVideoEnabled,setIsVideoEnabled] = useState (true) const [isMuted,setIsMuted] = useState (false) const [isScreenSharing,setIsScreenSharing] = useState (false) const [participants,setParticipants] = useState ([{ \"id\": \'user: - 1,\',\"name\": \'You,\',\"isVideoEnabled\": \'tru\',e,\"isMuted\": \'fals\',e,\"isScreenSharing\": \'fals\',e}]) const handleJoinCall = () => { setIsJoining (true) \';\"";
 import React from 'react';
+
 interface VideoCallProps {
   // Add props here as needed
 }
+
 export default function VideoCall({ }: VideoCallProps) {
   return (
     <div>
@@ -11,7 +12,11 @@ export default function VideoCall({ }: VideoCallProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -8,6 +9,11 @@ import { motion } from 'framer-motion';
 import { Building, 
   Shield, 
   Users, 
+=======
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import {
   Building,
   Shield,
@@ -22,11 +28,14 @@ import {
   Phone,
   Mail;
 } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -95,12 +104,15 @@ const services = [
       'Audit automation'';
     ];
   }
+<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
     icon: Shield;
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 ];
 const benefits = [
   {
@@ -123,6 +135,7 @@ const benefits = [
     description: 'Digital systems provide transparency and enable better accountability.,',
     icon: Globe;
   }
+<<<<<<< HEAD
 ;];
 export default function GovernmentPage() {
   return (;
@@ -170,6 +183,8 @@ export default function GovernmentPage() {
             </motion.div>;
           </div>;
         </section>;
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 ];
 export default function GovernmentPage() {
   return (
@@ -224,6 +239,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -237,6 +253,8 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -254,6 +272,7 @@ export default function GovernmentPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -265,6 +284,8 @@ export default function GovernmentPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -282,9 +303,12 @@ export default function GovernmentPage() {
                   </ul>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </div>
           </div>
         </section>
@@ -295,6 +319,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -308,6 +333,8 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -334,9 +361,12 @@ export default function GovernmentPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </div>
           </div>
         </section>
@@ -347,6 +377,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;
@@ -368,6 +399,8 @@ export default function GovernmentPage() {
         </section>;
       </div>;
     </Layout>;
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?

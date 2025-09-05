@@ -1,7 +1,0 @@
-import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
-const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
-<<<<<<< HEAD
-import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
-=======
-import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -1,4 +1,4 @@
-module.exports = {
+=======
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -395,5 +395,4 @@ module.exports = {
       'pre-setup': ''
     }
   }
-};
 };

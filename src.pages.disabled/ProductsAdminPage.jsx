@@ -1,8 +1,9 @@
-const initialProducts = [{ \"id\": \'1\',\"name\": \'Alpha,\',\"category\": \'Software,\',\"status\": \'pending\'},{ \"id\": \'2\',\"name\": \'Beta,\',\"category\": \'Hardware,\',\"status\": \'approved\'},{ \"id\": \'3\',\"name\": \'Gamma,\',\"category\": \'Service,\',\"status\": \'rejected\'}] const [search,setSearch] = useState (\') const [products,setProducts] = useState (initialProducts) const filtered = products.filter (p => p.name.toLowerCase () .includes (search.toLowerCase () ) ) const toggleApproval = id => { setProducts (prev => prev.map (p => p.id === id ? { ...p,\"status\": p.status: === \'approved\' ? \'rejected\' : \'approved,\'} : p) ) } \"return\": (<AdminLayout> <div className=\'space - y-4\'> <div className=\'flex items - center justify - between\'> <h1 className=\'text - 2xl font - bold\'>Products</h1> <Input placeholder=\'Search products...\' value={search} onChange={e => setSearch (e.target.value) } className=\'max - w-xs\' /> </div> <div className=\'rounded - md border\'> <Table> <TableHeader> <TableRow> <TableHead > ID</TableHead> <TableHead > Name</TableHead> <TableHead > Category</TableHead> <TableHead > Status</TableHead> <TableHead className=\'text - center\'>Approve</TableHead> </TableRow> </TableHeader> <TableBody> {filtered.map (p => (<TableRow key={p.id}> <TableCell>{p.id}</TableCell> <TableCell>{p.name}</TableCell> <TableCell>{p.category}</TableCell> <TableCell>{p.status}</TableCell> <TableCell className=\'text - center\'> <Switch checked={p.status === \'approved\'} onCheckedChange={ () => toggleApproval (p.id) } /> </TableCell> </TableRow>) ) } </TableBody> </Table> </div> </div> </AdminLayout>) } \''\';\'"\";
 import React from 'react';
+
 interface ProductsAdminPageProps {
   // Add props here as needed
 }
+
 export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
   return (
     <div>
@@ -11,7 +12,11 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

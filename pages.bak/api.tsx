@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 module.exports = default function APIPage() { return null}
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import React from 'react';
+
 interface ApiProps {
   // Add props here as needed
 }
+
 export default function Api({ }: ApiProps) {
   return (
     <div>
@@ -10,4 +15,8 @@ export default function Api({ }: ApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

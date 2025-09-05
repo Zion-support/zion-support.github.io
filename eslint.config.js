@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 import globals from 'globals';
 <<<<<<< HEAD
 =======
@@ -85,16 +86,24 @@ export default [
         Buffer: 'readonly',
         global: 'readonly'
       },
+=======
+      },
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import react from 'eslint-plugin-react';
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 
 export default [
   {
     ignores: [
+=======
+export default [{
+    "ignores": [
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       'node_modules/',
       '.next/',
       'out/',
@@ -104,6 +113,7 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
       'fix-critical-files.js',
       'fix-*.js',
       'fix-*.cjs',
@@ -208,6 +218,8 @@ export default [
       'no-undef': 'off',
     },
   },
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -218,6 +230,7 @@ export default [
       'data_backup/',
       'pm2-automation/',
       '__tests__/',
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       'pages.disabled/',
       'src.disabled/',
@@ -376,11 +389,25 @@ export default [
       'analyze-missing-pages.js',
       'automation-improvement-suite.cjs',
       'automation-runner.js',
+=======
+      'pages.disabled/',
+      'pages.corrupted.*/',
+      'pages.broken/',
+      'pages.bak/',
+      'pages.blog.disabled/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
+<<<<<<< HEAD
       '*.spec.tsx',
       'test-*.js',
       'test-*.cjs',
@@ -424,6 +451,79 @@ export default [
 <<<<<<< HEAD
     files: ['**/*.{ts,tsx}'],
 =======
+=======
+      '*.spec.tsx'
+    ]
+  },
+  {
+    "files": ['**/*.{js,jsx}'],
+    "languageOptions": {
+      ecmaVersion: 2021,
+      "sourceType": 'module',
+      "globals": {
+        window: 'readonly',
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "require": 'readonly',
+        "module": 'readonly',
+        "__dirname": 'readonly',
+        "__filename": 'readonly',
+        "exports": 'readonly'
+      },
+      "parserOptions": {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    "plugins": {
+      react,
+      'react-hooks': reactHooks
+    },
+    "rules": {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "files": ['**/*.{ts,tsx}'],
     "languageOptions": {
       parser: tsparser,
@@ -485,6 +585,7 @@ export default [
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
     },
@@ -596,6 +697,10 @@ export default [
       'pages.disabled.full/**',
       'ai-optimization-backups/**',
       'fix_typescript_syntax_errors.jsx'
+=======
+  },
+  {
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       'src/**',
       'automation/**',
       'automation_backup/**',
@@ -731,8 +836,8 @@ export default [
   }
 ];
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
->>>>>>> b53b98be96da3bddf99ec2a6a7536d70cb4cb38c
     languageOptions: {
+<<<<<<< HEAD
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
@@ -754,14 +859,34 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+=======
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
     },
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   {
     ignores: [
       'node_modules/',
@@ -773,5 +898,9 @@ export default [
       'coverage/',
     ],
   },
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 ];
+=======
+];
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

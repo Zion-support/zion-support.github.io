@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -19,3 +20,6 @@ describe('Navigationdynamic', () => {
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation.dynamic"; describe("Navigationdynamic",() => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen.getByTestId("navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling",() => { render(<Navigationdynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

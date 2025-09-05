@@ -1,5 +1,6 @@
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
@@ -151,21 +152,12 @@ module.exports = {
     "pages.disabled_auto/"
   ]
 };
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   "extends": ['next/core-web-vitals',
     '"eslint": recommended',
     '@typescript-eslint/recommended',
   ],
-:.eslintrc.cjs
-  rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_" }
-    ],
-    "react/no-unescaped-entities": "off"
-  }
-};
   "parser": '@typescript-eslint/parser',
   "plugins": ['@typescript-eslint'],
   "rules": {
@@ -195,4 +187,7 @@ module.exports = {
     "fs": 'readonly',
     "CodeQualityChecker": 'readonly'}};
 module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

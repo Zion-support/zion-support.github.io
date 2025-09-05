@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {
   apps: [
     {
@@ -175,6 +176,8 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log',
     }
   ],
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",

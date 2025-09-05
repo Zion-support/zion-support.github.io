@@ -1,6 +1,0 @@
-import React from\';react\' const LazyWrapper = ({ children,threshold = 0.1,className = \',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\'}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ \"amount\": \'threshold\'}) useEffect(() => { \"if\": (inView && !isInView) { setIsInView(true)\'';\';
-<<<<<<< HEAD
-const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
-=======
-const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

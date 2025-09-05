@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface DocsProps {
   // Add props here as needed
 }
+
 export default function Docs({ }: DocsProps) {
   return (
     <div>
@@ -9,4 +11,8 @@ export default function Docs({ }: DocsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

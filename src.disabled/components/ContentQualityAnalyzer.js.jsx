@@ -1,7 +1,0 @@
-import React from\';react\' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\')\'';\';
-const React from";react" const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState("all") const [searchTerm,setSearchTerm] = useState(")"";";''"
-<<<<<<< HEAD
-import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
-=======
-import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

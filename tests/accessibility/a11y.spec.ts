@@ -1,13 +1,15 @@
-import { test, expect } from '@playwright/test';
-import AxeBuilder from '@axe-core/playwright';
 const { test,expect } from "@playwright/test"; import AxeBuilder from "@axe-core/playwright"; test.describe("Accessibility Tests",() => { test("homepage is accessible",async ({ page }) => { await page.goto("/"); const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;); expect(accessibilityScanResults.violations).toEqual([])}); test("contact form is accessible",async ({ page }) => { await page.goto("/contact"); const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;); expect(accessibilityScanResults.violations).toEqual([])}); test("has proper heading hierarchy",async ({ page }) => { await page.goto("/"); const h1 = await page.locator("h1").count(;); const h2 = await page.locator("h2").count(;); const h3 = await page.locator("h3").count(;); expect(h1).toBeGreaterThan(0); expect(h2).toBeGreaterThanOrEqual(0); expect(h3).toBeGreaterThanOrEqual(0)}); test("forms have proper labels",async ({ page }) => { await page.goto("/contact"); const inputs = await page.locator("input,textarea,select").count(;); const labels = await page.locator("label").count(;); expect(labels).toBeGreaterThanOrEqual(inputs)}); test("has proper color contrast",async ({ page }) => { await page.goto("/"); const accessibilityScanResults = await new AxeBuilder({ page };); .withTags(["color-contrast"]); .analyze(); expect(accessibilityScanResults.violations).toEqual([])}); test("keyboard navigation works",async ({ page }) => { await page.goto("/"); await page.keyboard.press("Tab"); await page.keyboard.press("Tab"); await page.keyboard.press("Tab"); await expect(page.locator(":focus")).toBeVisible()})});''"
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 
 interface A11y.specProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 =======
 interface A11y.specProps {
   // Add props here as needed
@@ -44,6 +46,8 @@ interface A11y.specProps {
     await page.keyboard.press('Tab');
     // Should be able to navigate without errors;
     await expect(page.locator(':focus')).toBeVisible()})});
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import { test,expect } from '@playwright/test'; import AxeBuilder from '@axe-core/playwright'; test.describe('Accessibility Tests',() => { test('homepage is accessible',async ({ page }) => { await page.goto('/'); const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;); expect(accessibilityScanResults.violations).toEqual([])}); test('contact form is accessible',async ({ page }) => { await page.goto('/contact'); const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;); expect(accessibilityScanResults.violations).toEqual([])}); test('has proper heading hierarchy',async ({ page }) => { await page.goto('/'); const h1 = await page.locator('h1').count(;); const h2 = await page.locator('h2').count(;); const h3 = await page.locator('h3').count(;); expect(h1).toBeGreaterThan(0); expect(h2).toBeGreaterThanOrEqual(0); expect(h3).toBeGreaterThanOrEqual(0)}); test('forms have proper labels',async ({ page }) => { await page.goto('/contact'); const inputs = await page.locator('input,textarea,select').count(;); const labels = await page.locator('label').count(;); expect(labels).toBeGreaterThanOrEqual(inputs)}); test('has proper color contrast',async ({ page }) => { await page.goto('/'); const accessibilityScanResults = await new AxeBuilder({ page };); .withTags(['color-contrast']); .analyze(); expect(accessibilityScanResults.violations).toEqual([])}); test('keyboard navigation works',async ({ page }) => { await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press('Tab'); await page.keyboard.press('Tab'); await expect(page.locator(':focus')).toBeVisible()})});
 export default function A11y.spec({ }: A11y.specProps) {
   return (
@@ -53,7 +57,11 @@ export default function A11y.spec({ }: A11y.specProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

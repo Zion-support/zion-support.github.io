@@ -444,7 +444,6 @@ class BackupManager {
 
   displaySummary() {
     console.log('\n💾 BACKUP MANAGER SUMMARY');
-    console.log('=========================');
     
     const status = this.backupStatus;
     const config = this.config;
