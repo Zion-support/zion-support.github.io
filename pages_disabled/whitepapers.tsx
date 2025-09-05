@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Layout from "../components/Layout";";
->>>>>>> main
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { User, FileText, Download, Calendar } from 'lucide-react';

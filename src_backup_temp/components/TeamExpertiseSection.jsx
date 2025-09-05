@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -192,17 +191,14 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.2;
 
-<<<<<<< HEAD
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>;
           </h3>;
-=======
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
           
->>>>>>> main
 
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-6">;
             {expertiseAreas.map((area", index) => (<motion.div key={index} initial = {  { "opacity": "0",;
@@ -261,17 +257,14 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.3;
 
-<<<<<<< HEAD
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>;
           </h3>;
-=======
 }}>"
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
           
->>>>>>> main
 
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-8">;
             {teamMembers.map((member", index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ "y": "-8 "}} transition = {;
@@ -407,7 +400,6 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.5;
 
-<<<<<<< HEAD
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -440,7 +432,6 @@ const stats = [";
 </motion>;
 </motion>;
 </motion>
-=======
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
@@ -473,7 +464,6 @@ const stats = [";
 </motion>
 </motion>
 </motion>
-=======
 import React from 'react';
 
 interface TeamExpertiseSection.jsProps {
@@ -488,5 +478,3 @@ export default function TeamExpertiseSection.js({ }: TeamExpertiseSection.jsProp
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 export function Skeleton("props": "any) {;
     const roundedClasses = {;
@@ -8,15 +7,9 @@ export function Skeleton("props": "any) {;
         "lg": 'rounded-lg',;
   "full": 'rounded-full';
     ;
-=======
-<<<<<<< HEAD
 import {cn} from &apos;@/lib/utils&apos;; export function Skeleton($1) { const roundedClasses = { none: &quot;,sm: &apos;rounded-sm&apos;,md: &apos;rounded-md&apos;,lg: &apos;rounded-lg&apos;,full: &apos;rounded-full&apos; };;&apos;;&apos;; return (<div className = {cn(&apos;bg-muted&apos;,roundedClasses[rounded],animated && &apos;animate-pulse&apos;,className)} style=&quot;{{{ width: width; height: height}}&quot;} />)} export function CardSkeleton($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {showImage && (<Skeleton className=&quot;w-full h-48 rounded-lg&quot; />)} <div className=&quot;space-y-3&quot;> {showTitle && (<Skeleton className=&quot;h-6 w-3/4&quot; />)} {showDescription && (<div className=&quot;space-y-2&quot;> {Array.from({ length: lines }).map((_,i) => (<Skeleton key={i} className = {cn(&quot;h-4&quot;,i === lines - 1 ? &quot;w-2/3&quot; : &quot;w-full&quot;)} />))} </div> )} {showActions && (<div className=&quot;flex gap-2 pt-2&quot;> <Skeleton className=&quot;h-10 w-24&quot; /> <Skeleton className=&quot;h-10 w-20&quot; /> </div> )} </div> </div> )} export function ListSkeleton($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {Array.from({ length: items }).map((_,i) => (<div key={i} className=&quot;flex gap-4 items-start&quot;> {showAvatar && (<Skeleton className=&quot;w-12 h-12 rounded-full flex-shrink-0&quot; />)} <div className=&quot;flex-1 space-y-2&quot;> {showTitle && (<Skeleton className=&quot;h-5 w-3/4&quot; />)} {showSubtitle && (<Skeleton className=&quot;h-4 w-1/2&quot; />)} {showDescription && (<div className=&quot;space-y-1&quot;> <Skeleton className=&quot;h-4 w-full&quot; /> <Skeleton className=&quot;h-4 w-2/3&quot; /> </div> )} </div> </div>))} </div> )} export function TableSkeleton($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {showHeader && (<div className=&quot;flex gap-4 pb-2 border-b border-border&quot;> {Array.from({ length: columns }).map((_,i) => (<Skeleton key={i} className=&quot;h-5 flex-1&quot; />))} </div> )} <div className=&quot;space-y-3&quot;> {Array.from({ length: rows }).map((_,rowIndex) => (<div key={rowIndex} className=&quot;flex gap-4&quot;> {Array.from({ length: columns }).map((_,colIndex) => (<Skeleton key={colIndex} className = {cn(&quot;h-4&quot;,colIndex === 0 ? &quot;w-1/3&quot; : &quot;flex-1&quot;)} />))} </div>))} </div> </div> )} export function GridSkeleton($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {Array.from({ length: items }).map((_,i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))} </div> )} export function HeroSkeleton($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {showImage && (<div className=&quot;lg:w-1/2&quot;> <Skeleton className=&quot;w-full h-96 rounded-2xl&quot; /> </div> )} <div className=&quot;lg:w-1/2 space-y-6&quot;> {showTitle && (<div className=&quot;space-y-3&quot;> <Skeleton className=&quot;h-12 w-full&quot; /> <Skeleton className=&quot;h-8 w-3/4&quot; /> </div> )} {showDescription && (<div className=&quot;space-y-2&quot;> <Skeleton className=&quot;h-5 w-full&quot; /> <Skeleton className=&quot;h-5 w-2/3&quot; /> </div> )} {showActions && (<div className=&quot;flex flex-col sm:flex-row gap-3 pt-4&quot;> <Skeleton className=&quot;h-12 w-32&quot; /> <Skeleton className=&quot;h-12 w-28&quot; /> </div> )} </div> </div> )} export function Shimmer($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> <div className=&quot;absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent&quot; /> </div> )} export const shimmerAnimation = `; @keyframes shimmer { 0% { transform: translateX(-100%)} 100% {transform: translateX(100%)} } `; </Skeleton> </div>;&apos;;&apos;;
-=======
->>>>>>> main
 
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
     return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',;
   className)} style="{{{;
             "width": "width; "height": height"}}"} />)}
@@ -24,7 +17,6 @@ export function CardSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-4'",;
   className);
-=======
     return (
         <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
@@ -34,7 +26,6 @@ export function CardSkeleton(props: any) {
         <div className = {
   cn('space-y-4',
   className)
->>>>>>> main
 
 }>;
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
@@ -53,18 +44,15 @@ export function CardSkeleton(props: any) {
           </div>)}
       </div>;
     </div>)}
-<<<<<<< HEAD
 export function ListSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-4'",;
   className);
-=======
 export function ListSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-4',
   className)
->>>>>>> main
 
 }>;
       {Array.from({ "length": "items "}).map((_, i) => (<div key={i} className="flex gap-4 items-start">;
@@ -82,18 +70,15 @@ export function ListSkeleton(props: any) {
           </div>;
         </div>))}
     </div>)}
-<<<<<<< HEAD
 export function TableSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-3'",;
   className);
-=======
 export function TableSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-3',
   className)
->>>>>>> main
 
 }>;
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">;
@@ -107,18 +92,15 @@ export function TableSkeleton(props: any) {
           </div>))}
       </div>;
     </div>)}
-<<<<<<< HEAD
 export function GridSkeleton("props": "any) {;
     return (<div className = {;
   cn('grid gap-4'",;
   className);
-=======
 export function GridSkeleton(props: any) {
     return (
         <div className = {
   cn('grid gap-4',
   className)
->>>>>>> main
 
 } style="{{{;
             "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`,;
@@ -126,18 +108,15 @@ export function GridSkeleton(props: any) {
         }}>;
       {Array.from({ "length": "items "}).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
     </div>)}
-<<<<<<< HEAD
 export function HeroSkeleton("props": "any) {;
     return (<div className = {;
   cn('flex flex-col "lg":flex-row gap-8 items-center'",;
   className);
-=======
 export function HeroSkeleton(props: any) {
     return (
         <div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
->>>>>>> main
 
 }>;
       {showImage && (<div className=""lg": "w-1/2">;
@@ -162,20 +141,17 @@ export function HeroSkeleton(props: any) {
           </div>)"}
       </div>;
     </div>)}
-<<<<<<< HEAD
 // Shimmer effect component;
 export function Shimmer("props": "any) {;
     return (<div className = {;
   cn('relative overflow-hidden'",;
   className);
-=======
 // Shimmer effect component
 export function Shimmer(props: any) {
     return (
         <div className = {
   cn('relative overflow-hidden',
   className)
->>>>>>> main
 
 }>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />;
@@ -188,17 +164,11 @@ export const shimmerAnimation = `;
     100% {"transform": "translateX(100%)"}
   }
 `;
-<<<<<<< HEAD
 ;
 </Skeleton>;
 </Skeleton>;
 </div>
-=======
 
 </Skeleton>
 </Skeleton>
 </div>
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

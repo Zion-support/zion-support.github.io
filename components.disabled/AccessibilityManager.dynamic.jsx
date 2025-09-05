@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityManager\' ,
-=======
-<<<<<<< HEAD
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityManager" ,"""
-=======
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
 </p>'
->>>>>>> main
->>>>>>> main

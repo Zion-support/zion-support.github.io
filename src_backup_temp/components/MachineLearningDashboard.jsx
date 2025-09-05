@@ -3,22 +3,18 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const MachineLearningDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const MachineLearningDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel} = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -42,7 +38,6 @@ export const MachineLearningDashboard = (props: any) => {
             "});';
             setNewModelForm({"name": '', "type": 'classification', "framework": 'tensorflow'});
             setShowCreateModel(false);';
-=======
 '
 ''
 '''
@@ -70,7 +65,6 @@ export const MachineLearningDashboard = (props: any) => {
             setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'}
     );
             setShowCreateModel(false);'
->>>>>>> main
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {}
@@ -138,7 +132,6 @@ if(newModelForm.name.trim()) {}
             trackEvent("ml",dashboard",model_exported")}";";
             // comment;
     const handleImportModel = useCallback((event) => {}
-<<<<<<< HEAD
 ;
         const file = event.target.files?.[0];""""""""";
 export const MachineLearningDashboard = ("props": "any) => {";
@@ -156,7 +149,6 @@ export const MachineLearningDashboard = ("props": "any) => {""";
 "enableUserBehaviorTracking": "true"})";
 export const MachineLearningDashboard = ("props": "any) => {const [activeTab", setActiveTab] = useState("overview")}
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction} exportModel, importModel } = useMachineLearning();
-=======
 
         const file = event.target.files?.[0];"""""""""
 export const MachineLearningDashboard = (props: any) => {"
@@ -174,7 +166,6 @@ export const MachineLearningDashboard = (props: any) => {"""
 enableUserBehaviorTracking: true})"
 export const MachineLearningDashboard = (props: any) => {const [activeTab, setActiveTab] = useState("overview")}
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction} exportModel, importModel } = useMachineLearning()
->>>>>>> main
 }
     const [newModelForm, setNewModelForm] = useState({}";
 ";
@@ -390,7 +381,6 @@ type newModelForm.type,";
             <Icon : "className = "w-4 h-4"  />"",",;
             <span>{label}</span>;
           </button>) ) }
-<<<<<<< HEAD
 ;
 """{/* comment */}""""";";";
       <"div": "className = "p-4">""""""",",;
@@ -444,7 +434,6 @@ type newModelForm.type,";
                         </span>""""";";";
                         <"span": "className = "text-sm text-gray-500 "dark": text-gray-400">""," {(model."accuracy": "* 100).toFixed(1)"}%;
                     setShowImportModel(false);
-=======
 
 """{/* comment */}""""";";"
       <div: className = "p-4">"""""",",
@@ -498,7 +487,6 @@ type newModelForm.type,";
                         </span>""""";";"
                         <span: className = "text-sm text-gray-500 dark: text-gray-400">"," {(model.accuracy: * 100).toFixed(1)}%
                     setShowImportModel(false)
->>>>>>> main
 }
                     trackEvent(&apos;ml&apos,dashboard&apos,model_imported&apos)}";
                     // comment;
@@ -657,7 +645,6 @@ type newModelForm.type,";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
       <div className="&apos;p-4&apos;">"&apos;&apos,&apos;&apos,";
         <AnimatePresence mode="&apos;wait&apos;">"&apos;&apos,&apos;&apos {activeTab === &apos;overview&apos; && (&apos}&apos;<motion.div key="&apos;overview&apos;" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0",;
   "y": "20"}} animate = {}
@@ -883,7 +870,6 @@ type newModelForm.type,";
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg "hover": "bg-purple-700">"""";
                     <Plus className="w-4 h-4 inline mr-2"   />;
                     New Model",;
-=======
 
   {opacity: 0,
   y: 20}} animate = {}
@@ -1109,7 +1095,6 @@ y: 0}} exit = {}"
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""
                     <Plus className="w-4 h-4 inline mr-2"   />
                     New Model,
->>>>>>> main
               {/* comment */}
 ;
               <AnimatePresence>;
@@ -1165,7 +1150,6 @@ y: 0}} exit = {}"
 </motion.div>) "}
 ;
               </AnimatePresence> {/* comment */}
-<<<<<<< HEAD
 ;
               <AnimatePresence> {showImportModel && (<motion.div initial = {}">;
                     <"h4": "className="font-medium text-gray-900 "dark": text-"white": mb-3">Import Model</h4>"""""",";";
@@ -1322,7 +1306,6 @@ y: 0}} exit = {}"
                               "Started": "{job.startTime.toLocaleString()"}"";
 "&apos;&apos,&apos;&apos {activeTab === &apos;training&apos; && (&apos}&apos;<motion.div key="&apos;training&apos;" initial = {}";
               <h3 className="text-lg font-semibold text-gray-900 "dark": "text-white">Training Jobs</h3>""",";
-=======
 
               <AnimatePresence> {showImportModel && (<motion.div initial = {}">
                     <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Import Model</h4>""""",";"
@@ -1479,7 +1462,6 @@ y: 0}} exit = {}"
                               Started: {job.startTime.toLocaleString()}""
 "&apos;&apos,&apos;&apos {activeTab === &apos;training&apos; && (&apos}&apos;<motion.div key="&apos;training&apos;" initial = {}"
               <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Training Jobs"","
->>>>>>> main
               <div className="space-y-4"> {trainingJobs.map((job) => {}
 ;
                 const model = models.find(m => m.id === job.modelId);
@@ -1536,7 +1518,6 @@ Make Prediction;";
 ;
                 const model = models.find(m => m.id === prediction.modelId);
 }
-<<<<<<< HEAD
                 return (";
     <div key = "{prediction.id}" className="bg-white "dark": "bg-gray-700 p-3 rounded-lg">""",";
                         <div className="flex items-center justify-between mb-2">"",";
@@ -1558,7 +1539,6 @@ Make Prediction;";
 """{activeTab === "analytics" && (<motion.div key="analytics" initial = {}">;
               <h3 className="&apos;text-lg" font-semibold text-gray-900 "dark": "text-white&apos;>Training Jobs&apos",</h3>&apos,&apos,",;
               <div className = "&apos,space-y-4&apos,">;
-=======
                 return ("
     <div key = "{prediction.id}" className="bg-white dark: bg-gray-700 p-3 rounded-lg">"","
                         <div className="flex items-center justify-between mb-2">"","
@@ -1580,7 +1560,6 @@ Make Prediction;";
 """{activeTab === "analytics" && (<motion.div key="analytics" initial = {}">
               <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Training Jobs&apos,&apos,&apos,",
               <div className = "&apos,space-y-4&apos,">
->>>>>>> main
                 {trainingJobs.map((job) => {}
 ;
 }} exit = {;
@@ -1599,7 +1578,6 @@ Make Prediction;";
                     {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id"} value={model.id}>;
                         {model.name} ({model.type});
                       </option>))}
-<<<<<<< HEAD
                   </select>";
                   <button onClick={handleMakePrediction} disabled={!predictionForm.modelId || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg "hover": "bg-purple-700 "disabled":opacity-50">";
                     {isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin" />) : (<Target className="w-4 h-4 inline mr-2" />)"}
@@ -1663,7 +1641,6 @@ const model = models.find(m => m.id === prediction.modelId);";
                             <span className={`px-2 py-1 text-xs font-medium rounded-full ${prediction.status === 'completed' ? 'text-green-600 bg-green-100' :';
                         prediction.status === 'failed' ? 'text-red-600 bg-red-100' :'`;
                             'text-yellow-600 bg-yellow-100'}`}>;
-=======
                   </select>"
                   <button onClick={handleMakePrediction} disabled={!predictionForm.modelId || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">"
                     {isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin" />) : (<Target className="w-4 h-4 inline mr-2" />)}
@@ -1728,7 +1705,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                             <span className={`px-2 py-1 text-xs font-medium rounded-full ${prediction.status === 'completed' ? 'text-green-600 bg-green-100' :'
                         prediction.status === 'failed' ? 'text-red-600 bg-red-100' :'`
                             'text-yellow-600 bg-yellow-100'}`}>
->>>>>>> main
                               {prediction.status}
                             </span>;
                           </div>";
@@ -1754,7 +1730,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                     </div>)"}                </div>;
               </div>;
             </motion.div>)}
-<<<<<<< HEAD
 '";
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {;
 {prediction.processingTime && (<p><strong>Processing "Time": "</strong> {prediction.processingTime"}ms</p>)}";
@@ -1836,7 +1811,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                       <span className="text-sm text-gray-600 "dark": "text-gray-400">Avg Response Time</span>""""",;
                         {metrics.averageResponseTime.toFixed(0)}ms";
                       <span className="text-sm text-gray-600 "dark": "text-gray-400">Total Predictions</span>""""",;
-=======
 '"
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
 {prediction.processingTime && (<p><strong>Processing Time: </strong> {prediction.processingTime}ms</p>)}"
@@ -1918,7 +1892,6 @@ const model = models.find(m => m.id === prediction.modelId);"
                       <span className="text-sm text-gray-600 dark: text-gray-400">Avg Response Time</span>"""",
                         {metrics.averageResponseTime.toFixed(0)}ms"
                       <span className="text-sm text-gray-600 dark: text-gray-400">Total Predictions</span>"""",
->>>>>>> main
                         {metrics.totalPredictions}
 ;
     </div>)}""";";";

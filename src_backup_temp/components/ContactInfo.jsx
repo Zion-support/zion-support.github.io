@@ -15,7 +15,6 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
           </p>;
         </div>;
 
-<<<<<<< HEAD
         <div className="grid grid-cols-1 "lg":grid-cols-2 gap-8">;
           {/* Contact Information */"}
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">;
@@ -166,7 +165,6 @@ import React from "react";
                   <Phone className = "h-5 w-5 text-zion-cyan"   />;
                   Contact Details,;
                 </CardTitle>""";
-=======
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">
@@ -448,7 +446,6 @@ Contact: our experts today for a free consultation.
                   <Phone className = "h-5 w-5 text-zion-cyan"   />
                   Contact Details,
                 </CardTitle>"""
->>>>>>> main
 import {Link} from "react - router - dom";
 import React from 'react';""";
 ;"""";
@@ -465,7 +462,6 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                 </CardTitle>"""";
                 <CardDescription className="text-zion-slate-light">;
                   Reach out to us through  of these channels;
-<<<<<<< HEAD
                 </CardDescription>""";
               </CardHeader>"""";
               <CardContent className="space-y-4">"""";
@@ -1105,7 +1101,6 @@ size="lg""";
 """"';
 }";
 ";
-=======
                 </CardDescription>"""
               </CardHeader>""""
               <CardContent className="space-y-4">""""
@@ -1745,11 +1740,9 @@ size="lg"""
 """"'
 }"
 "
->>>>>>> main
 
 export default Component;
 
-<<<<<<< HEAD
 </Button>;
 </a>;
 </div>;
@@ -1886,7 +1879,6 @@ export default Component;
 </div>;
 </div>;
 </div>;
-=======
 </Button>
 </a>
 </div>
@@ -2023,5 +2015,4 @@ export default Component;
 </div>
 </div>
 </div>
->>>>>>> main
 </div>

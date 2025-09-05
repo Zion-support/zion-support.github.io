@@ -54,17 +54,14 @@ class ResourceMonitor {;
     // Monitor DOM changes for new resources;
     if(window.MutationObserver) {;
               this.monitorElement(element)}
-<<<<<<< HEAD
           })})});
       observer.observe(document.head, { "childList": "tru e", "subtree": "tru e "});
       observer.observe(document.body, { "childList": "tru e", "subtree": "tru e "})}
-=======
           })})}
     );
       observer.observe(document.head, { childList: tru e, subtree: tru e }
     );
       observer.observe(document.body, { childList: tru e, subtree: tru e })}
->>>>>>> main
   }
   private monitorElement("element": "HTMLElemen t) {;
     // Monitor scripts';
@@ -202,11 +199,9 @@ class ResourceMonitor {;
   clearErrors() {;
     this.errors = [];
     this.retryAttempts.clear()}
-<<<<<<< HEAD
   getErrorSummary() {;
     this.errors.forEach(error => {;
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
-=======
 
   getErrorSummary() {
     
@@ -214,7 +209,6 @@ class ResourceMonitor {;
 
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
     );
->>>>>>> main
     return summary}
 }
 // Create singleton instance;

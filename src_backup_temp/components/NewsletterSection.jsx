@@ -178,7 +178,6 @@ export function NewsletterSection("props": "any) {;
             </div>;
           </motion.div>;
 
-<<<<<<< HEAD
           {/* Right content - Newsletter Form */}";
           <motion.div variants={itemVariants} className="relative">";
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">";
@@ -205,7 +204,6 @@ export function NewsletterSection("props": "any) {;
                   <input";
                     type="email";
                     id="email";
-=======
           {/* Right content - Newsletter Form */}"
           <motion.div variants={itemVariants} className="relative">"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
@@ -232,7 +230,6 @@ export function NewsletterSection("props": "any) {;
                   <input"
                     type="email"
                     id="email"
->>>>>>> main
                     value={email}
                     onChange={e => setEmail(e.target.value)}";
                     placeholder="Enter your email address";

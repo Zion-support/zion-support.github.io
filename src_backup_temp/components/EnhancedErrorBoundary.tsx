@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';';';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
@@ -54,23 +50,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {;
 ;
     // Call custom error handler;
     if (this.props.onError) {;
-=======
 import React from 'react';
->>>>>>> main
 import {  import { motion  } from 'framer-motion';
 
 export default function Page(props: any) {
 -${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
-<<<<<<< HEAD
-';
-    // Log error to console in development';';
-    if (process.env.NODE_ENV === 'development') {';';
-      console.group('🚨 Error Boundary Caught Error');';';
-      console.error('Error:', error);';';
-      console.error('Error Info:', errorInfo);
-      console.groupEnd();
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
@@ -121,8 +106,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -130,104 +113,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error:', error);
       console.error('Error Info:', errorInfo);
       console.groupEnd();
->>>>>>> main
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
->>>>>>> main
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-';
-    // Log to external service in production';';
-=======
 
     // Log to external service in production
->>>>>>> main
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       // like Sentry, LogRocket, or Bugsnag
       console.error('Production Error:', error, errorInfo);
     }
   }
-<<<<<<< HEAD
-  private reportError = ("error": "Error", "errorInfo": "ErrorInfo) => {;
-    if (!this.props.enableReporting) return;
-;
-    const errorReport = {;
-      "errorId": this.state.errorId;
-      "message": error.message;
-      "stack": error.stack;
-      "componentStack": errorInfo.componentStack;
-      "timestamp": new Date().toISOString();
-      "userAgent": navigator.userAgent;
-      "url": window.location.href;
-      "retryCount": this.retryCount;
-    "};
-;
-    // Send to error reporting service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {;
-      (window as any).gtag('event', 'exception', {;
-        "description": "error.message;
-        "fatal": false;
-        "custom_map": {;
-          "error_id": this.state.errorId;
-          "component_stack": errorInfo.componentStack;
-        "}
-      });
-    }
-    // Store locally for debugging;
-    try {;
-      const existingErrors = JSON.parse(localStorage.getItem('error_reports') || '[]');
-      existingErrors.push(errorReport);
-      localStorage.setItem('error_reports', JSON.stringify(existingErrors.slice(-10))); // Keep last 10;
-    } catch (e) {;
-    }
-  };
-;
-  private handleRetry = () => {;
-    if (this.retryCount < this.maxRetries) {;
-      this.retryCount++;
-      this.setState({;
-        "hasError": "false;
-        "error": null;
-        "errorInfo": null;
-        "errorId": '';
-      "});
-    }
-  };
-;
-  private handleReload = () => {;
-    window.location.reload();
-  };
-;
-  private handleGoHome = () => {;
-    window.location.href = '/';
-  };
-;
-  private handleReportBug = () => {;
-    const errorDetails = {;
-      "errorId": "this.state.errorId;
-      "message": this.state.error?.message;
-      "stack": this.state.error?.stack;
-      "url": window.location.href;
-      "timestamp": new Date().toISOString();
-    "};
-;
-    // Create a mailto link with error details;
-    const subject = `Bug Report - Error "ID": "${this.state.errorId"}`;
-    const body = `Error "Details": "\n${JSON.stringify(errorDetails", null, 2)}`;
-    const mailtoLink = `"mailto": "support@ziontechgroup.com?subject=${encodeURIComponent(subject)"}&body=${encodeURIComponent(body)}`;
-    ;
-    window.open(mailtoLink);
-  };
-;
-  render() {;
-    if (this.state.hasError) {;
-      if (this.props.fallback) {;
-=======
 
     // Send error to error reporting service
     this.reportError(error, errorInfo) }
@@ -301,8 +200,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       } catch(err) {
 
         // console.error('Failed to copy error details:', err)}    }
-<<<<<<< HEAD
-=======
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -339,9 +236,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     } catch (e) {
       
     }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   };
 
   handleReload = () => {
@@ -352,7 +246,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
->>>>>>> main
         return this.props.fallback;
       }
       return (;
@@ -370,9 +263,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Our team has been notified.;
             </p>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             {this.props.showDetails && this.state.error && (;
               <details className="mb-6 text-left">;
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">;
@@ -489,8 +379,6 @@ export const useErrorReporting = () => {;
 };
 ;
 export default EnhancedErrorBoundary;
-=======
->>>>>>> main
         return this.props.fallback}
       return ()
         <motion.div
@@ -660,10 +548,6 @@ export default EnhancedErrorBoundary;
 </p>
 </motion>
 </motion>
-<<<<<<< HEAD
-</motion>';
-</motion>;';;';
-=======
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
@@ -800,13 +684,9 @@ export const useErrorReporting = () => {
 };
 
 export default EnhancedErrorBoundary;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
->>>>>>> main
->>>>>>> main

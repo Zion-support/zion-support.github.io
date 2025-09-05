@@ -17,7 +17,7 @@ import {
   Globe,
   Lock
 } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 const features = [
   {
@@ -78,7 +78,7 @@ const stats = [
 
 export default function IoTPage() {
   return (
-    <Layout
+    <MainLayout
       title="IoT Solutions - Zion Tech Group"
       description="Expert IoT development services including smart city solutions, industrial IoT, device management, and edge computing platforms."
       keywords="IoT development, smart city, industrial IoT, edge computing, device management, connected devices"
@@ -260,6 +260,6 @@ export default function IoTPage() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 }

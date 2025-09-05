@@ -68,15 +68,12 @@ links['/services',/team',/contact',/mission'];
             for(const page of samplePages) {contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
             const newReport = contentAnalyzer.generateReport();
             setReport(newReport)}
-<<<<<<< HEAD
         catch(error) {// console.error('Error analyzing "pages":', error)}
         finally {setIsLoading(false)}
-=======
         catch(error) {// console.error('Error analyzing pages:', error)}
         finally {
                 setIsLoading(false);
             }
->>>>>>> main
     }, [contentAnalyzer]);
     useEffect(() => {// "TODO": "Add dependencies if needed"}, []);
         // Auto-analyze pages when component mounts;
@@ -134,19 +131,15 @@ links['/services',/team',/contact',/mission'];
                 page.recommendations.join('; ');
             ])'";
         ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
-<<<<<<< HEAD
         const blob = new Blob([csvContent], {"type": 'text/csv'});
-=======
         const blob = new Blob([csvContent], {type: 'text/csv'}
     );
->>>>>>> main
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = 'content-quality-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
-<<<<<<< HEAD
     const filteredPages = getFilteredPages();`;
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>;
       {/* Floating Action Button */}";
@@ -593,7 +586,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
                   </select>"""";
                   <button onClick={exportReport"} className="px-3 py-2 bg-green-600 "hover": "bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">"""";
                     <Download className="w-4 h-4" />;
-=======
     const filteredPages = getFilteredPages();`
     return (
         <div className={`fixed bottom-6 left-6 z-50 ${className}`}>
@@ -1402,7 +1394,6 @@ const ContentQualityDashboardJs = (props: any) => {
                   </select>""""
                   <button onClick={exportReport} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">""""
                     <Download className="w-4 h-4" />
->>>>>>> main
                     Export;
                   </button>;
                 </div>;
@@ -1468,7 +1459,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               </span>;
                             </td>;
                           </tr>) ) }
-<<<<<<< HEAD
                       </tbody>;
                     </table>;
                   </div>;
@@ -1512,7 +1502,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               {selectedPage.issues.map((issue", index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 "dark": "text-red-400">"""";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />;
                                   <span>{issue"}</span>;
-=======
                       </tbody>
                     </table>
                   </div>
@@ -1556,7 +1545,6 @@ const ContentQualityDashboardJs = (props: any) => {
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">""""
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
->>>>>>> main
                                 </div>) ) }
                             </div>;
                           </div>) }

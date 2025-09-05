@@ -3,16 +3,13 @@ import {motion} from 'framer-motion';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const CollaborativeTextEditor = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
-=======
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );
->>>>>>> main
     const [editorState, setEditorState] = useState({}
         "content": "initialContent",';
         "selection": "{"start": 0", "end": "0", "text": ''},;
@@ -484,16 +481,13 @@ ${editorState.content}"}
         if(onExport) {}
 ;
             onExport(exportContent, format)}
-<<<<<<< HEAD
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
-=======
 
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
->>>>>>> main
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`;
@@ -620,7 +614,6 @@ window.removeEventListener('collaborationTextChange', handleCollaborationTextCha
   "};
 }, []);, []);
 generateAISuggestions()}
-<<<<<<< HEAD
 ;
         }, 3000)";
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])";
@@ -638,7 +631,6 @@ generateAISuggestions()}
           "";";
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""",";
                 <Users className="w-4 h-4"   />,;
-=======
 
         }, 3000)"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"
@@ -656,7 +648,6 @@ generateAISuggestions()}
           "";"
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"","
                 <Users className="w-4 h-4"   />,
->>>>>>> main
                 {collaboration.onlineUsers.length}
 ;
               </button>) }";
@@ -738,7 +729,6 @@ generateAISuggestions()}
                 <div className="&apos;w-2" h-2 bg-green-400 rounded-full&apos;>&apos,</div>;
                 Live,;
               </div>)}
-<<<<<<< HEAD
 ;
           </h3>&apos;&apos,;
           &apos;&apos,&apos;&apos,";
@@ -768,7 +758,6 @@ generateAISuggestions()}
           """";
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""";
                 <Users className="w-4 h-4"   />",;
-=======
 
           &apos;&apos,
           &apos;&apos,&apos;&apos,"
@@ -798,7 +787,6 @@ generateAISuggestions()}
           """"
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"""""
                 <Users className="w-4 h-4"   />,
->>>>>>> main
                 {collaboration.onlineUsers.length}
 ;
               </button>) }";
