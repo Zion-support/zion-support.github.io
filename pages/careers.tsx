@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
 import { 
   MapPin, 
   Clock, 
@@ -159,6 +160,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </>
+    </MainLayout>
   );
 }

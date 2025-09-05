@@ -247,17 +247,8 @@ const itServices = [
     popular: false
   }
 ];
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
+
+const additionalServices = [
     {
       icon: Shield,
       name: 'Cybersecurity Hardening & SOC',

@@ -44,7 +44,6 @@ import {
   HardDrive,
   Droplets,
   Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -194,22 +193,8 @@ const microSaasServices = [
     popular: true
   }
 ];
-        'Automated rightsizing recommendations',
-        'Budget forecasting and alerting',
-        'Resource utilization optimization',
-        'Multi-cloud cost comparison',
-        'Executive dashboards and reporting'
-      ],
-      pricing: '$299 – $1,499/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        'Average 30% reduction in cloud costs',
-        'Automated cost optimization',
-        'Real-time budget monitoring',
-        'Proactive cost anomaly detection'
-      ],
-      category: 'Cloud Management'
-    },
+
+const additionalServices = [
     {
       icon: FileText,
       name: 'Smart Document Processor',

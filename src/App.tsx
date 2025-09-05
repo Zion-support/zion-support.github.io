@@ -12,6 +12,7 @@ import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer'
 import { ChatAssistant } from './components/ChatAssistant';
 // Lazy load pages for better performance - only import existing pages
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
+const EnhancedServices2025 = lazy(() => import('../pages/enhanced-services-2025').then(module => ({ default: module.default })));
 // Service Pages
   return (
     <ErrorBoundary>
@@ -108,6 +109,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedNewServices2025 />} />
+                <Route path="/enhanced-services" element={<EnhancedServices2025 />} />
                 {/* Sitemap routes */}
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
