@@ -6,8 +6,8 @@ import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Glo
 import Layout from '../components/Layout';
 
 const stats = [
+  { number: '100+', label: 'AI & Technology Solutions' },
   { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Countries Served' }
 ];
@@ -15,24 +15,30 @@ const stats = [
 const services = [
   {
     title: 'AI Services',
-    description: 'Cutting-edge artificial intelligence solutions',
+    description: '35+ cutting-edge AI solutions including machine learning, computer vision, NLP, and quantum AI',
     icon: Brain,
     link: '/ai-services',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
+    count: '35+ Services',
+    popular: true
   },
   {
     title: 'IT Services',
-    description: 'Comprehensive IT solutions and support',
+    description: '25+ comprehensive IT solutions including cloud, cybersecurity, DevOps, and infrastructure',
     icon: Network,
     link: '/it-services',
-    color: 'from-green-500 to-blue-600'
+    color: 'from-green-500 to-blue-600',
+    count: '25+ Services',
+    popular: true
   },
   {
     title: 'Micro SAAS',
-    description: 'Innovative micro software solutions',
+    description: '40+ innovative micro software solutions for productivity, marketing, and business automation',
     icon: Cloud,
     link: '/micro-saas',
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-purple-500 to-pink-600',
+    count: '40+ Solutions',
+    popular: true
   }
 ];
 
@@ -83,11 +89,11 @@ export default function HomePage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI & Technology</span>
+                Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">100+ AI & Technology Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Leading provider of innovative AI services, IT solutions, and micro SAAS platforms. 
-                Empowering businesses to thrive in the digital age.
+                Leading provider of 100+ innovative AI services, IT solutions, and micro SAAS platforms. 
+                From quantum computing to smart automation - we deliver cutting-edge technology that drives real business results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -161,13 +167,21 @@ export default function HomePage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="text-sm text-blue-600 font-semibold mb-6">{service.count}</div>
                   <Link
                     href={service.link}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-2 transition-transform duration-300"
                   >
-                    Learn More
+                    Explore Services
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </motion.div>
@@ -213,6 +227,121 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Featured Services Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Featured Innovation Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our most cutting-edge solutions that are transforming industries worldwide.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Quantum AI & Machine Learning</h3>
+                <p className="text-gray-600 mb-4">Revolutionary quantum-enhanced AI for complex optimization and advanced computational tasks.</p>
+                <div className="text-sm text-purple-600 font-semibold">Starting at $5,500/month</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Quantum-Safe Cybersecurity</h3>
+                <p className="text-gray-600 mb-4">Future-proof security solutions with quantum-resistant encryption and advanced threat protection.</p>
+                <div className="text-sm text-green-600 font-semibold">Starting at $4,999/month</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <Cloud className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">AI-Powered DevOps Pipeline</h3>
+                <p className="text-gray-600 mb-4">Intelligent DevOps automation with AI-driven deployment, testing, and monitoring capabilities.</p>
+                <div className="text-sm text-blue-600 font-semibold">Starting at $3,500/month</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Smart Task Automation Platform</h3>
+                <p className="text-gray-600 mb-4">AI-powered workflow automation with intelligent task routing and optimization.</p>
+                <div className="text-sm text-orange-600 font-semibold">Starting at $55/month</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Eye className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">AI Computer Vision Solutions</h3>
+                <p className="text-gray-600 mb-4">Advanced image and video analysis for object detection, recognition, and automated inspection.</p>
+                <div className="text-sm text-teal-600 font-semibold">Starting at $2,800/month</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <MessageSquare className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">AI Voice & Speech Technology</h3>
+                <p className="text-gray-600 mb-4">Advanced voice AI solutions including speech recognition, synthesis, and conversational interfaces.</p>
+                <div className="text-sm text-indigo-600 font-semibold">Starting at $2,600/month</div>
+              </motion.div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/services"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold inline-flex items-center"
+              >
+                View All 100+ Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -222,11 +351,28 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Business?
+                Ready to Transform Your Business with 100+ AI & Technology Solutions?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's discuss how our innovative solutions can help you achieve your goals and drive growth.
+                Let's discuss how our innovative AI services, IT solutions, and micro SAAS platforms can help you achieve your goals and drive growth.
               </p>
+              <div className="mb-8 bg-white/10 rounded-lg p-6 max-w-2xl mx-auto">
+                <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <div className="font-semibold text-blue-200">📞 Phone</div>
+                    <div>+1 302 464 0950</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-blue-200">📧 Email</div>
+                    <div>kleber@ziontechgroup.com</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-blue-200">📍 Address</div>
+                    <div>364 E Main St STE 1008<br />Middletown DE 19709</div>
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
