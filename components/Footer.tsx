@@ -9,9 +9,7 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  Github,
-  ArrowRight,
-  ExternalLink
+  Github
 } from 'lucide-react';
 const services = {
   'AI Solutions': [

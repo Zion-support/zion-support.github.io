@@ -14,10 +14,7 @@ import {
   Linkedin, 
   Instagram,
   Github,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star
+  ArrowRight
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -50,14 +47,6 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Education', href: '/industries/education', description: 'EdTech platforms' }
   ];
 
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
-  ];
 
   return (
     <>

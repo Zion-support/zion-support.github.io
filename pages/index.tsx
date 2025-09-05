@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Target, Clock, DollarSign } from 'lucide-react';
+import { Brain, Network, Cloud, Zap, CheckCircle, Phone, Mail, MapPin, Star, TrendingUp, Target, Clock, DollarSign } from 'lucide-react';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },

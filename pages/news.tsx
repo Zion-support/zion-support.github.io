@@ -3,36 +3,8 @@ import { motion } from 'framer-motion';
 import { 
   Calendar, 
   User, 
-  Tag, 
   ArrowRight,
-  ExternalLink,
-  Clock,
-  TrendingUp,
-  Award,
-  Users,
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  BarChart3,
-  Target,
-  CheckCircle,
-  Star,
-  MessageSquare,
-  FileText,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Settings,
-  Code,
-  Network,
-  Lock,
-  Eye,
-  Phone,
-  Mail,
-  MapPin
+  FileText
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

@@ -40,17 +40,7 @@ import {
   Target, 
   Brain, 
   TrendingUp, 
-  Package, 
-  Calendar, 
-  BookOpen, 
-  ShoppingCart, 
-  Home, 
-  Trash2, 
-  Camera, 
-  HardDrive,
-  Database,
-  Phone,
-  MapPin
+  Package
 } from 'lucide-react';
 
 const microSaaSServices = [

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Database, Smartphone, Globe, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
+import { Brain, Network, Cloud, Shield, Smartphone, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 
 const services = [
   {

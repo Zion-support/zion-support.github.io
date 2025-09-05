@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Book, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
 const apiFeatures = [
   {
