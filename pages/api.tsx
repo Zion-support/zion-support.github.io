@@ -56,17 +56,15 @@ export default function APIPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+              {apiFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                     <div className="text-indigo-600 mb-4">
                       <IconComponent className="w-10 h-10" />
                     </div>
@@ -85,15 +83,41 @@ export default function APIPage() {
                       ))}
                     </ul>
                   </motion.div>
-                );
-              })}
+                ))}
             </div>
           </div>
         </section>
-      </div>
-    </Layout>
-  );
-}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                API Documentation
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Comprehensive guides and examples to help you integrate with our APIs
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-50 p-6 rounded-lg">
+</div>"
+                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Services API</h3>"
+                <div className="space-y-2">"
+</div>"
+                  <div className="flex items-center justify-between">"
+</div>"
+                    <span className="text-sm text-gray-600">POST /api/ai/analyze</span>"
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>"
+                  </div>"
+                  <div className="flex items-center justify-between">"
+</div>"
+                    <span className="text-sm text-gray-600">POST /api/ai/predict</span>"
                     <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>"
                   </div>"
                   <div className="flex items-center justify-between">"
@@ -151,27 +175,25 @@ export default function APIPage() {
               </div>
             </div>
           </div>
-        </section>"
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
-</section>"
-          <div className="container mx-auto px-4 text-center">"
-</div>"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
-</h2>
-            </h2>"
-            <p className="text-xl mb-8 max-w-2xl mx-auto">"
-</p>
-            </p>
-            <motion.a;"
+        </section>
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Get Started with Our APIs
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Ready to integrate? Contact our team to get started with API access and support.
+              </p>
+            <motion.a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }};
             >
-</motion>"
-              <ArrowRight className="w-5 h-5 ml-2" />"
-</ArrowRight>
+              <ArrowRight className="w-5 h-5 ml-2" />
             </motion.a>
           </div>
         </section>
       </div>
-    </Layout>"
+    </Layout>
+  );
+}
