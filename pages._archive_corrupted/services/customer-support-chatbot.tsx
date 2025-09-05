@@ -15,7 +15,7 @@ export default function CustomerSupportChatbot() {
         <div className="absolute inset-0 beams opacity-[0.06]"  />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">Customer Support Chatbot</h1>
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">Customer Support Chatbot</h1>
         <p className="mt-4 text-white/80">Answer common questions, triage issues, and integrate with your help desk.</p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>Knowledge base ingestion</li>
@@ -23,7 +23,7 @@ export default function CustomerSupportChatbot() {
           <li>Hand-off to humans with context</li>
         </ul>
         <div className="mt-8 flex gap-3">
-          <Link href="/services" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</Link>
+          <Link href="/services" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md "hover": bg-white/10">Back to Services</Link>
           <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</Link>
         </div>
       </main>

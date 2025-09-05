@@ -37,34 +37,34 @@ function fixFile(filePath) {
     // Replace the export statement
     newContent = newContent.replace(
       new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g'),
-export default ${camelCaseName};`;
+export default ${camelCaseName};";
     );
 
     // Update title and meta description
     const title = filename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     newContent = newContent.replace(
       /<title>.*?<\/title>/g,
-      `<title>${title} - Zion Tech Solutions</title>`
+      "<title>${title} - Zion Tech Solutions</title>"
     );
 
     newContent = newContent.replace(
       /<meta name="description" content=".*?" \/>/g,
-      `<meta name="description" content="${title} blog post" />`
+      "<meta name="description" content="${title} blog post" />"
     );
 
     // Update h1 content
     newContent = newContent.replace(
       /<h1>.*?<\/h1>/g,
-      `<h1>${title}</h1>`
+      "<h1>${title}</h1>"
     );
 
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      // // // // // // // console.log(`Fixed: ${filePath}`);
+      // // // // // // // console.log(""Fixed": ${filePath}");
       return true;
 
     return false} catch (error) {
-    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+    // // // // // // // console.error("Error fixing ${filePath}:", error.message);
     return false;
 
 function findAndFixFiles(dir) {
@@ -73,11 +73,11 @@ function findAndFixFiles(dir) {
 
   for (const file of files) {
     const filePath = path.join(dir, file);
-      console.log(`Fixed: ${filePath}`);
+      console.log(""Fixed": ${filePath}");
       return true}
     
     return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error("Error fixing ${filePath}:", error.message);
     return false}
 }
 function fixedCount = 0;
@@ -96,8 +96,8 @@ function fixedCount = 0;
 // Start fixing files
 // // // // // // // console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');
-// // // // // // // console.log(`Fixed ${fixedCount} files.`);
-console.log(`Fixed ${fixedCount} files.`);
+// // // // // // // console.log("Fixed ${fixedCount} files.");
+console.log("Fixed ${fixedCount} files.`);
 
 export default toCamelCase;
 export default toCamelCase;

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-export interface PricingTier2032 { id: string; name: string; price: number; currency: string; billingCycle: string; description: string; features: string[]; limitations: string[]; bestFor: string; popular?: boolean; savings?: string}; export interface ServicePricing2032 { serviceId: string; serviceName: string; category: string; basePrice: number; currency: string; pricingModel: string; tiers: PricingTier203 2[]; enterprisePricing: { custom: boolean; startingPrice: number; contactRequired: boolean; features: string[]}; addOns: { name: string; price: number; description: string}[]; volumeDiscounts: { users: number; discount: number}[]; annualDiscount: number; freeTrial: boolean; trialDuration: string; moneyBackGuarantee: boolean; guaranteeDuration: string; sla: string; supportLevels: { level: string; responseTime: string; features: string[]}[]}; export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing203 2[] = [;
+export interface PricingTier2032 { "id": string; name: string; price: number; currency: string; billingCycle: string; description: string; features: string[]; limitations: string[]; bestFor: string; popular?: boolean; savings?: string}; export interface ServicePricing2032 { "serviceId": string; serviceName: string; category: string; basePrice: number; currency: string; pricingModel: string; tiers: PricingTier203 2[]; enterprisePricing: { custom: boolean; startingPrice: number; contactRequired: boolean; features: string[]}; "addOns": { name: string; price: number; description: string}[]; "volumeDiscounts": { users: number; discount: number}[]; "annualDiscount": number; freeTrial: boolean; trialDuration: string; moneyBackGuarantee: boolean; guaranteeDuration: string; sla: string; supportLevels: { level: string; responseTime: string; features: string[]}[]}; export const "COMPREHENSIVE_PRICING_GUIDE_2032": ServicePricing203 2[] = [;
 =======
 export interface PricingTier {
   name: string;
@@ -13,7 +13,7 @@ export interface PricingTier {
   color: string}
 
 export interface ServicePricing {
-  serviceId: string;
+  "serviceId": string;
   serviceName: string;
   category: string;
   tiers: PricingTier[];
@@ -21,23 +21,22 @@ export interface ServicePricing {
     competitors: string[];
     advantages: string[];
     marketPosition: string};
-  roi: {
+  "roi": {
     timeToValue: string;
     expectedReturn: string;
     costSavings: string}}
 
-export const comprehensivePricingGuide2032: ServicePricing[] = [
-  {
+export const "comprehensivePricingGuide2032": ServicePricing[] = [{
     serviceId: 'ai-autonomous-code-reviewer',
-    serviceName: 'AI Autonomous Code Reviewer',
-    category: 'ai-services',
-    tiers: [
+    "serviceName": 'AI Autonomous Code Reviewer',
+    "category": 'ai-services',
+    "tiers": [
       {
         name: 'Starter',
-        price: '$99',
-        period: 'month',
-        description: 'Perfect for small development teams',
-        features: [
+        "price": '$99',
+        "period": 'month',
+        "description": 'Perfect for small development teams',
+        "features": [
           'Up to 10,000 lines of code per month',
           'Basic security vulnerability detection',
           'Code style suggestions',
@@ -45,16 +44,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Email support',
           'Basic reporting'
         ],
-        trial: '14 days free',
-        color: 'from-blue-500 to-cyan-500'
+        "trial": '14 days free',
+        "color": 'from-blue-500 to-cyan-500'
       },
       {
-        name: 'Professional',
-        price: '$299',
-        period: 'month',
-        description: 'Ideal for growing development teams',
-        features: [
-          'Up to 100,000 lines of code per month',
+        "name": 'Professional',
+        "price": '$299',
+        "period": 'month',
+        "description": 'Ideal for growing development teams',
+        "features": ['Up to 100,000 lines of code per month',
           'Advanced security analysis',
           'Performance optimization suggestions',
           'Multi-language support',
@@ -63,17 +61,16 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Advanced analytics',
           'Custom rule configuration'
         ],
-        popular: true,
-        trial: '14 days free',
-        color: 'from-purple-500 to-pink-500'
+        "popular": true,
+        "trial": '14 days free',
+        "color": 'from-purple-500 to-pink-500'
       },
       {
-        name: 'Enterprise',
-        price: '$999',
-        period: 'month',
-        description: 'For large organizations with complex needs',
-        features: [
-          'Unlimited code analysis',
+        "name": 'Enterprise',
+        "price": '$999',
+        "period": 'month',
+        "description": 'For large organizations with complex needs',
+        "features": ['Unlimited code analysis',
           'Custom AI model training',
           'Advanced threat detection',
           'Compliance reporting',
@@ -82,40 +79,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'White-label options',
           'SLA guarantees'
         ],
-        setup: '$2,000 one-time',
-        trial: '30 days free',
-        color: 'from-indigo-500 to-purple-500'
+        "setup": '$2,000 one-time',
+        "trial": '30 days free',
+        "color": 'from-indigo-500 to-purple-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['SonarQube', 'CodeClimate', 'Snyk', 'Traditional code review'],
-      advantages: [
-        'AI-powered analysis with human-level understanding',
+      "advantages": ['AI-powered analysis with human-level understanding',
         '80% reduction in code review time',
         'Advanced security vulnerability detection',
         'Real-time collaboration features',
         'Predictive code quality insights'
       ],
-      marketPosition: 'Leading AI-powered code review platform'
+      "marketPosition": 'Leading AI-powered code review platform'
     },
-    roi: {
+    "roi": {
       timeToValue: 'Immediate',
-      expectedReturn: 'Reduce development time by 30%',
-      costSavings: 'Save $50,000+ annually in developer time'
+      "expectedReturn": 'Reduce development time by 30%',
+      "costSavings": 'Save $50,000+ annually in developer time'
     }
   },
 
   {
-    serviceId: 'ai-powered-seo-optimizer',
-    serviceName: 'AI-Powered SEO Optimizer',
-    category: 'ai-services',
-    tiers: [
-      {
+    "serviceId": 'ai-powered-seo-optimizer',
+    "serviceName": 'AI-Powered SEO Optimizer',
+    "category": 'ai-services',
+    "tiers": [{
         name: 'Basic',
-        price: '$49',
-        period: 'month',
-        description: 'For small businesses and startups',
-        features: [
+        "price": '$49',
+        "period": 'month',
+        "description": 'For small businesses and startups',
+        "features": [
           'Up to 5 websites',
           'Basic keyword research',
           'Content optimization suggestions',
@@ -123,16 +118,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Monthly reports',
           'Email support'
         ],
-        trial: '7 days free',
-        color: 'from-green-500 to-blue-500'
+        "trial": '7 days free',
+        "color": 'from-green-500 to-blue-500'
       },
       {
-        name: 'Professional',
-        price: '$199',
-        period: 'month',
-        description: 'For growing businesses and agencies',
-        features: [
-          'Up to 25 websites',
+        "name": 'Professional',
+        "price": '$199',
+        "period": 'month',
+        "description": 'For growing businesses and agencies',
+        "features": ['Up to 25 websites',
           'Advanced keyword research',
           'Predictive ranking analysis',
           'Competitive intelligence',
@@ -141,17 +135,16 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Weekly reports',
           'Custom optimization strategies'
         ],
-        popular: true,
-        trial: '7 days free',
-        color: 'from-blue-500 to-purple-500'
+        "popular": true,
+        "trial": '7 days free',
+        "color": 'from-blue-500 to-purple-500'
       },
       {
-        name: 'Enterprise',
-        price: '$499',
-        period: 'month',
-        description: 'For large organizations and enterprises',
-        features: [
-          'Unlimited websites',
+        "name": 'Enterprise',
+        "price": '$499',
+        "period": 'month',
+        "description": 'For large organizations and enterprises',
+        "features": ['Unlimited websites',
           'Custom AI models',
           'Advanced competitive analysis',
           'White-label reporting',
@@ -160,40 +153,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'API access',
           'SLA guarantees'
         ],
-        setup: '$1,000 one-time',
-        trial: '14 days free',
-        color: 'from-purple-500 to-pink-500'
+        "setup": '$1,000 one-time',
+        "trial": '14 days free',
+        "color": 'from-purple-500 to-pink-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Traditional SEO tools'],
-      advantages: [
-        'AI-powered predictive analytics',
+      "advantages": ['AI-powered predictive analytics',
         '200% improvement in search rankings',
         'Automated content optimization',
         'Real-time algorithm updates',
         'Advanced competitive intelligence'
       ],
-      marketPosition: 'Leading AI-powered SEO platform'
+      "marketPosition": 'Leading AI-powered SEO platform'
     },
-    roi: {
+    "roi": {
       timeToValue: '2-4 weeks',
-      expectedReturn: 'Improve organic traffic by 200%',
-      costSavings: 'Reduce SEO costs by 70%'
+      "expectedReturn": 'Improve organic traffic by 200%',
+      "costSavings": 'Reduce SEO costs by 70%'
     }
   },
 
   {
-    serviceId: 'quantum-neural-network-platform',
-    serviceName: 'Quantum Neural Network Platform',
-    category: 'quantum-computing',
-    tiers: [
-      {
+    "serviceId": 'quantum-neural-network-platform',
+    "serviceName": 'Quantum Neural Network Platform',
+    "category": 'quantum-computing',
+    "tiers": [{
         name: 'Research',
-        price: '$2,500',
-        period: 'month',
-        description: 'For academic and research institutions',
-        features: [
+        "price": '$2,500',
+        "period": 'month',
+        "description": 'For academic and research institutions',
+        "features": [
           'Basic quantum neural networks',
           'Standard optimization algorithms',
           'Research collaboration tools',
@@ -201,16 +192,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Email support',
           'Basic documentation'
         ],
-        trial: '30 days free',
-        color: 'from-indigo-500 to-purple-500'
+        "trial": '30 days free',
+        "color": 'from-indigo-500 to-purple-500'
       },
       {
-        name: 'Commercial',
-        price: '$5,000',
-        period: 'month',
-        description: 'For commercial applications',
-        features: [
-          'Advanced quantum algorithms',
+        "name": 'Commercial',
+        "price": '$5,000',
+        "period": 'month',
+        "description": 'For commercial applications',
+        "features": ['Advanced quantum algorithms',
           'Custom model development',
           'High-performance computing',
           'Priority support',
@@ -219,18 +209,17 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Advanced documentation',
           'Training and certification'
         ],
-        popular: true,
-        setup: '$10,000 one-time',
-        trial: '30 days free',
-        color: 'from-purple-500 to-pink-500'
+        "popular": true,
+        "setup": '$10,000 one-time',
+        "trial": '30 days free',
+        "color": 'from-purple-500 to-pink-500'
       },
       {
-        name: 'Enterprise',
-        price: '$15,000',
-        period: 'month',
-        description: 'For large-scale enterprise applications',
-        features: [
-          'Custom quantum hardware access',
+        "name": 'Enterprise',
+        "price": '$15,000',
+        "period": 'month',
+        "description": 'For large-scale enterprise applications',
+        "features": ['Custom quantum hardware access',
           'Dedicated quantum resources',
           'Advanced security protocols',
           'Custom algorithm development',
@@ -239,40 +228,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'SLA guarantees',
           'On-premise deployment options'
         ],
-        setup: '$25,000 one-time',
-        trial: '60 days free',
-        color: 'from-pink-500 to-red-500'
+        "setup": '$25,000 one-time',
+        "trial": '60 days free',
+        "color": 'from-pink-500 to-red-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['Traditional supercomputers', 'Classical neural networks', 'Other quantum platforms'],
-      advantages: [
-        '1000x faster problem solving',
+      "advantages": ['1000x faster problem solving',
         'Quantum advantage for complex problems',
         'Hybrid quantum-classical algorithms',
         'Advanced error correction',
         'Scalable quantum architecture'
       ],
-      marketPosition: 'First quantum neural network platform'
+      "marketPosition": 'First quantum neural network platform'
     },
-    roi: {
+    "roi": {
       timeToValue: '2-4 weeks',
-      expectedReturn: 'Solve complex problems 1000x faster',
-      costSavings: 'Reduce computational costs by 90%'
+      "expectedReturn": 'Solve complex problems 1000x faster',
+      "costSavings": 'Reduce computational costs by 90%'
     }
   },
 
   {
-    serviceId: 'blockchain-enterprise-solutions',
-    serviceName: 'Blockchain Enterprise Solutions',
-    category: 'blockchain-web3',
-    tiers: [
-      {
+    "serviceId": 'blockchain-enterprise-solutions',
+    "serviceName": 'Blockchain Enterprise Solutions',
+    "category": 'blockchain-web3',
+    "tiers": [{
         name: 'Starter',
-        price: '$1,500',
-        period: 'month',
-        description: 'For small to medium enterprises',
-        features: [
+        "price": '$1,500',
+        "period": 'month',
+        "description": 'For small to medium enterprises',
+        "features": [
           'Basic blockchain infrastructure',
           'Smart contract development',
           'Standard security protocols',
@@ -280,16 +267,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Basic documentation',
           'Community forum access'
         ],
-        trial: '21 days free',
-        color: 'from-green-500 to-emerald-500'
+        "trial": '21 days free',
+        "color": 'from-green-500 to-emerald-500'
       },
       {
-        name: 'Professional',
-        price: '$2,500',
-        period: 'month',
-        description: 'For growing enterprises',
-        features: [
-          'Advanced blockchain features',
+        "name": 'Professional',
+        "price": '$2,500',
+        "period": 'month',
+        "description": 'For growing enterprises',
+        "features": ['Advanced blockchain features',
           'Custom smart contracts',
           'DeFi applications',
           'Cross-chain interoperability',
@@ -298,18 +284,17 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Custom integrations',
           'Performance monitoring'
         ],
-        popular: true,
-        setup: '$5,000 one-time',
-        trial: '21 days free',
-        color: 'from-emerald-500 to-blue-500'
+        "popular": true,
+        "setup": '$5,000 one-time',
+        "trial": '21 days free',
+        "color": 'from-emerald-500 to-blue-500'
       },
       {
-        name: 'Enterprise',
-        price: '$5,000',
-        period: 'month',
-        description: 'For large enterprises and institutions',
-        features: [
-          'Custom blockchain networks',
+        "name": 'Enterprise',
+        "price": '$5,000',
+        "period": 'month',
+        "description": 'For large enterprises and institutions',
+        "features": ['Custom blockchain networks',
           'Advanced DeFi protocols',
           'Regulatory compliance',
           'Dedicated support team',
@@ -318,40 +303,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'SLA guarantees',
           'On-premise deployment'
         ],
-        setup: '$10,000 one-time',
-        trial: '30 days free',
-        color: 'from-blue-500 to-purple-500'
+        "setup": '$10,000 one-time',
+        "trial": '30 days free',
+        "color": 'from-blue-500 to-purple-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['Traditional banking systems', 'Other blockchain platforms', 'Financial institutions'],
-      advantages: [
-        '90% reduction in transaction costs',
+      "advantages": ['90% reduction in transaction costs',
         'Improved transparency and trust',
         'Automated complex processes',
         'Regulatory compliance built-in',
         'Cross-chain interoperability'
       ],
-      marketPosition: 'Leading enterprise blockchain platform'
+      "marketPosition": 'Leading enterprise blockchain platform'
     },
-    roi: {
+    "roi": {
       timeToValue: '1-2 weeks',
-      expectedReturn: 'Reduce operational costs by 60%',
-      costSavings: 'Improve efficiency by 80%'
+      "expectedReturn": 'Reduce operational costs by 60%',
+      "costSavings": 'Improve efficiency by 80%'
     }
   },
 
   {
-    serviceId: 'ai-healthcare-analytics-platform',
-    serviceName: 'AI Healthcare Analytics Platform',
-    category: 'healthtech',
-    tiers: [
-      {
+    "serviceId": 'ai-healthcare-analytics-platform',
+    "serviceName": 'AI Healthcare Analytics Platform',
+    "category": 'healthtech',
+    "tiers": [{
         name: 'Clinical',
-        price: '$2,500',
-        period: 'month',
-        description: 'For hospitals and clinics',
-        features: [
+        "price": '$2,500',
+        "period": 'month',
+        "description": 'For hospitals and clinics',
+        "features": [
           'Basic patient analytics',
           'Predictive diagnostics',
           'Treatment recommendations',
@@ -359,16 +342,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Email support',
           'Basic reporting'
         ],
-        trial: '30 days free',
-        color: 'from-blue-500 to-green-500'
+        "trial": '30 days free',
+        "color": 'from-blue-500 to-green-500'
       },
       {
-        name: 'Research',
-        price: '$3,500',
-        period: 'month',
-        description: 'For research institutions',
-        features: [
-          'Advanced analytics',
+        "name": 'Research',
+        "price": '$3,500',
+        "period": 'month',
+        "description": 'For research institutions',
+        "features": ['Advanced analytics',
           'Clinical trial optimization',
           'Population health analytics',
           'Custom research tools',
@@ -377,18 +359,17 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Data visualization',
           'API access'
         ],
-        popular: true,
-        setup: '$7,000 one-time',
-        trial: '30 days free',
-        color: 'from-green-500 to-teal-500'
+        "popular": true,
+        "setup": '$7,000 one-time',
+        "trial": '30 days free',
+        "color": 'from-green-500 to-teal-500'
       },
       {
-        name: 'Enterprise',
-        price: '$7,500',
-        period: 'month',
-        description: 'For large healthcare systems',
-        features: [
-          'Custom AI models',
+        "name": 'Enterprise',
+        "price": '$7,500',
+        "period": 'month',
+        "description": 'For large healthcare systems',
+        "features": ['Custom AI models',
           'Advanced predictive analytics',
           'Multi-site integration',
           'Dedicated support team',
@@ -397,40 +378,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'SLA guarantees',
           'On-premise deployment'
         ],
-        setup: '$15,000 one-time',
-        trial: '60 days free',
-        color: 'from-teal-500 to-cyan-500'
+        "setup": '$15,000 one-time',
+        "trial": '60 days free',
+        "color": 'from-teal-500 to-cyan-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['Traditional medical systems', 'Other AI healthcare platforms', 'Research institutions'],
-      advantages: [
-        '40% improvement in diagnostic accuracy',
+      "advantages": ['40% improvement in diagnostic accuracy',
         '30% reduction in healthcare costs',
         'Personalized medicine capabilities',
         'Accelerated drug development',
         'Advanced patient outcome analysis'
       ],
-      marketPosition: 'Leading AI healthcare analytics platform'
+      "marketPosition": 'Leading AI healthcare analytics platform'
     },
-    roi: {
+    "roi": {
       timeToValue: '2-4 weeks',
-      expectedReturn: 'Improve patient outcomes by 40%',
-      costSavings: 'Reduce healthcare costs by 30%'
+      "expectedReturn": 'Improve patient outcomes by 40%',
+      "costSavings": 'Reduce healthcare costs by 30%'
     }
   },
 
   {
-    serviceId: 'micro-crm-platform',
-    serviceName: 'Micro CRM Platform',
-    category: 'micro-saas',
-    tiers: [
-      {
+    "serviceId": 'micro-crm-platform',
+    "serviceName": 'Micro CRM Platform',
+    "category": 'micro-saas',
+    "tiers": [{
         name: 'Starter',
-        price: '$29',
-        period: 'month',
-        description: 'For small businesses and startups',
-        features: [
+        "price": '$29',
+        "period": 'month',
+        "description": 'For small businesses and startups',
+        "features": [
           'Up to 1,000 contacts',
           'Basic lead tracking',
           'Email integration',
@@ -438,16 +417,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Email support',
           'Basic reporting'
         ],
-        trial: '14 days free',
-        color: 'from-blue-500 to-cyan-500'
+        "trial": '14 days free',
+        "color": 'from-blue-500 to-cyan-500'
       },
       {
-        name: 'Professional',
-        price: '$49',
-        period: 'month',
-        description: 'For growing businesses',
-        features: [
-          'Up to 10,000 contacts',
+        "name": 'Professional',
+        "price": '$49',
+        "period": 'month',
+        "description": 'For growing businesses',
+        "features": ['Up to 10,000 contacts',
           'Advanced sales pipeline',
           'Task management',
           'Team collaboration',
@@ -456,17 +434,16 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Custom fields',
           'API access'
         ],
-        popular: true,
-        trial: '14 days free',
-        color: 'from-cyan-500 to-green-500'
+        "popular": true,
+        "trial": '14 days free',
+        "color": 'from-cyan-500 to-green-500'
       },
       {
-        name: 'Enterprise',
-        price: '$99',
-        period: 'month',
-        description: 'For larger organizations',
-        features: [
-          'Unlimited contacts',
+        "name": 'Enterprise',
+        "price": '$99',
+        "period": 'month',
+        "description": 'For larger organizations',
+        "features": ['Unlimited contacts',
           'Advanced automation',
           'Custom workflows',
           'White-label options',
@@ -475,40 +452,38 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Advanced security',
           'SLA guarantees'
         ],
-        setup: '$199 one-time',
-        trial: '14 days free',
-        color: 'from-green-500 to-emerald-500'
+        "setup": '$199 one-time',
+        "trial": '14 days free',
+        "color": 'from-green-500 to-emerald-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM'],
-      advantages: [
-        '50% improvement in sales efficiency',
+      "advantages": ['50% improvement in sales efficiency',
         '30% reduction in customer churn',
         'Streamlined sales processes',
         'Affordable pricing',
         'Easy setup and onboarding'
       ],
-      marketPosition: 'Leading micro CRM platform'
+      "marketPosition": 'Leading micro CRM platform'
     },
-    roi: {
+    "roi": {
       timeToValue: 'Immediate',
-      expectedReturn: 'Improve sales efficiency by 50%',
-      costSavings: 'Reduce customer churn by 30%'
+      "expectedReturn": 'Improve sales efficiency by 50%',
+      "costSavings": 'Reduce customer churn by 30%'
     }
   },
 
   {
-    serviceId: 'space-tech-platform',
-    serviceName: 'Space Technology Platform',
-    category: 'space-tech',
-    tiers: [
-      {
+    "serviceId": 'space-tech-platform',
+    "serviceName": 'Space Technology Platform',
+    "category": 'space-tech',
+    "tiers": [{
         name: 'Basic',
-        price: '$1,500',
-        period: 'month',
-        description: 'For basic satellite data access',
-        features: [
+        "price": '$1,500',
+        "period": 'month',
+        "description": 'For basic satellite data access',
+        "features": [
           'Basic satellite data',
           'Earth observation',
           'Weather data',
@@ -516,16 +491,15 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Basic API access',
           'Standard resolution'
         ],
-        trial: '30 days free',
-        color: 'from-indigo-500 to-purple-500'
+        "trial": '30 days free',
+        "color": 'from-indigo-500 to-purple-500'
       },
       {
-        name: 'Professional',
-        price: '$2,000',
-        period: 'month',
-        description: 'For advanced applications',
-        features: [
-          'High-resolution data',
+        "name": 'Professional',
+        "price": '$2,000',
+        "period": 'month',
+        "description": 'For advanced applications',
+        "features": ['High-resolution data',
           'Custom satellite solutions',
           'Advanced analytics',
           'Priority support',
@@ -534,18 +508,17 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'Advanced visualization',
           'API access'
         ],
-        popular: true,
-        setup: '$4,000 one-time',
-        trial: '30 days free',
-        color: 'from-purple-500 to-pink-500'
+        "popular": true,
+        "setup": '$4,000 one-time',
+        "trial": '30 days free',
+        "color": 'from-purple-500 to-pink-500'
       },
       {
-        name: 'Enterprise',
-        price: '$5,000',
-        period: 'month',
-        description: 'For large-scale applications',
-        features: [
-          'Custom satellite networks',
+        "name": 'Enterprise',
+        "price": '$5,000',
+        "period": 'month',
+        "description": 'For large-scale applications',
+        "features": ['Custom satellite networks',
           'Advanced AI analytics',
           'Dedicated support team',
           'Custom solutions',
@@ -554,68 +527,67 @@ export const comprehensivePricingGuide2032: ServicePricing[] = [
           'On-premise deployment',
           'Custom hardware integration'
         ],
-        setup: '$10,000 one-time',
-        trial: '60 days free',
-        color: 'from-pink-500 to-red-500'
+        "setup": '$10,000 one-time',
+        "trial": '60 days free',
+        "color": 'from-pink-500 to-red-500'
       }
     ],
-    comparison: {
+    "comparison": {
       competitors: ['Traditional monitoring systems', 'Other space tech companies', 'Government agencies'],
-      advantages: [
-        '80% improvement in monitoring efficiency',
+      "advantages": ['80% improvement in monitoring efficiency',
         '60% reduction in costs',
         'Global coverage',
         'Real-time data access',
         'Advanced AI analytics'
       ],
-      marketPosition: 'Leading space technology platform'
+      "marketPosition": 'Leading space technology platform'
     },
-    roi: {
+    "roi": {
       timeToValue: '1-2 weeks',
-      expectedReturn: 'Improve monitoring efficiency by 80%',
-      costSavings: 'Reduce monitoring costs by 60%'
+      "expectedReturn": 'Improve monitoring efficiency by 80%',
+      "costSavings": 'Reduce monitoring costs by 60%'
     }
   };
 ];
 
 export const pricingComparison = {
-  summary: {
+  "summary": {
     totalServices: comprehensivePricingGuide2032.length,
-    averageMonthlyPrice: '$1,847',
-    averageROI: '300%',
-    averageTimeToValue: '2-4 weeks'
+    "averageMonthlyPrice": '$1,847',
+    "averageROI": '300%',
+    "averageTimeToValue": '2-4 weeks'
   },
-  categories: {
+  "categories": {
     'ai-services': {
       count: 2,
-      averagePrice: '$249',
-      averageROI: '250%'
+      "averagePrice": '$249',
+      "averageROI": '250%'
     },
     'quantum-computing': {
-      count: 1,
-      averagePrice: '$7,500',
-      averageROI: '1000%'
+      "count": 1,
+      "averagePrice": '$7,500',
+      "averageROI": '1000%'
     },
     'blockchain-web3': {
-      count: 1,
-      averagePrice: '$3,000',
-      averageROI: '60%'
+      "count": 1,
+      "averagePrice": '$3,000',
+      "averageROI": '60%'
     },
     'healthtech': {
-      count: 1,
-      averagePrice: '$4,500',
-      averageROI: '40%'
+      "count": 1,
+      "averagePrice": '$4,500',
+      "averageROI": '40%'
     },
     'micro-saas': {
-      count: 1,
-      averagePrice: '$59',
-      averageROI: '50%'
+      "count": 1,
+      "averagePrice": '$59',
+      "averageROI": '50%'
     },
     'space-tech': {
-      count: 1,
-      averagePrice: '$2,833',
-      averageROI: '80%'
+      "count": 1,
+      "averagePrice": '$2,833',
+      "averageROI": '80%'
     }
   }
-};;
+};
 >>>>>>> origin/merge-pr-10615';

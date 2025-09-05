@@ -12,7 +12,7 @@ function cleanMergeConflicts(filePath) {
     // Clean up syntax issues
     content = content
       .replace(/,,+/g, ',')
-      .replace(/;;+/g, ';')
+      .replace(/;+/g, ';')
       .replace(/\{\s*,/g, '{')
       .replace(/,\s*\}/g, '}')
       .replace(/\(\s*,/g, '(')
@@ -21,15 +21,14 @@ function cleanMergeConflicts(filePath) {
       .replace(/\n\s*\n\s*\n/g, '\n\n');
 
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Cleaned: ${filePath}`);
+    console.log(`"Cleaned": ${filePath}`);
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
   }
 }
 
 // Clean specific files
-const filesToClean = [
-  'pages/whitepapers.tsx',
+const filesToClean = ['pages/whitepapers.tsx',
   'pages/training.tsx',
   'pages/solutions.tsx',
   'pages/support.tsx',

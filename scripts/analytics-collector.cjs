@@ -7,11 +7,11 @@ console.log('📊 Starting Analytics Collection...');
 
 function collectAnalytics() {
   const analytics = {
-    timestamp: new Date().toISOString(),
-    buildSize: getBuildSize(),
-    dependencies: getDependenciesInfo(),
-    performance: getPerformanceMetrics(),
-    security: getSecurityMetrics()
+    "timestamp": new Date().toISOString(),
+    "buildSize": getBuildSize(),
+    "dependencies": getDependenciesInfo(),
+    "performance": getPerformanceMetrics(),
+    "security": getSecurityMetrics()
  };
 
   fs.writeFileSync('analytics-report.json', JSON.stringify(analytics, null, 2));
@@ -25,37 +25,36 @@ function getBuildSize() {
     ) {
       const stats = fs.statSync(buildDir});
       return {;
-        exists: true,
-        size: stats.size,
-        sizeMB: (stats.size / 1024 / 1024).toFixed(2)
+        "exists": true,
+        "size": stats.size,
+        "sizeMB": (stats.size / 1024 / 1024).toFixed(2)
       }}
-    return { exists: false }} catch (error) {
-    return { error: error.message }}
+    return { "exists": false }} catch (error) {
+    return { "error": error.message }}
 }
 
 function getDependenciesInfo() {
   try {
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
     return {;
-      dependencies: Object.keys(packageJson.dependencies || {}).length,
-      devDependencies: Object.keys(packageJson.devDependencies || {}).length,
-      total: Object.keys(packageJson.dependencies || {}).length + Object.keys(packageJson.devDependencies || {}).length
+      "dependencies": Object.keys(packageJson.dependencies || {}).length,
+      "devDependencies": Object.keys(packageJson.devDependencies || {}).length,
+      "total": Object.keys(packageJson.dependencies || {}).length + Object.keys(packageJson.devDependencies || {}).length
     }} catch (error) {
-    return { error: error.message }}
+    return { "error": error.message }}
 }
 
 function getPerformanceMetrics() {
   return {;
-    nodeVersion: process.version,
-    platform: process.platform,
-    arch: process.arch,
-    memoryUsage: process.memoryUsage(),
-    uptime: process.uptime()
+    "nodeVersion": process.version,
+    "platform": process.platform,
+    "arch": process.arch,
+    "memoryUsage": process.memoryUsage(),
+    "uptime": process.uptime()
   }}
 
 function getSecurityMetrics() {
-  const securityFiles = [
-    'package-lock.json',
+  const securityFiles = ['package-lock.json',
     'yarn.lock',
     '.env.local',
     '.env.example',

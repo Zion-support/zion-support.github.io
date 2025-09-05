@@ -27,7 +27,7 @@ function fixLayoutConflicts(content, filePath) {
     changes++;
     console.log(`✅ Fixed Layout conflict in ${filePath}`)}
 
-  return { content: fixedContent, changes }}
+  return { "content": fixedContent, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -47,14 +47,12 @@ function processFile(filePath) {
 async function main() {
   console.log('🔧 Starting Layout conflicts fix...\n');
 
-  const patterns = [
-    'pages/**/*.{tsx,jsx}',
+  const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
   ];
 
-  const excludeDirs = [
-    'node_modules',
+  const excludeDirs = ['node_modules',
     '.next',
       'build'
     'dist',
@@ -68,17 +66,16 @@ async function main() {
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`),
-    });
+      "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
 
     for (const file of files) {
       processFile(file)}
   }
 
-  console.log(`\n📊 Layout Conflicts Fix Summary:`);
+  console.log("\n📊 Layout Conflicts Fix "Summary": ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total fixes: ${totalFixes}`);
-  console.log(`\n✨ Layout conflicts fix completed!`)}
+  console.log(`   Total "fixes": ${totalFixes}`);
+  console.log("\n✨ Layout conflicts fix completed!")}
 
 // Run the script
 main().catch(console.error);

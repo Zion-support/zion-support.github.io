@@ -7,7 +7,7 @@ export default function Terms() {
       <Head>
         <title>Terms | Zion Tech Group</title>
         <meta name="description" content="Terms page for Zion Tech Group." />
-        <link rel="canonical" href="https://ziontechgroup.com/terms" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/terms" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">

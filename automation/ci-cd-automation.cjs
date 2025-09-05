@@ -26,7 +26,7 @@ class CICDAutomation {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -44,11 +44,11 @@ class CICDAutomation {
   async runTests() {
     try {
       this.log('Running tests...');
-      execSync('npm run test:smoke', { stdio: 'pipe' });
+      execSync('npm run "test": smoke', { "stdio": 'pipe' });
       this.log('Tests completed successfully');
       return true;
     } catch (error) {
-      this.log(`Tests failed: ${error.message}`);
+      this.log(`Tests "failed": ${error.message}`);
       return false;
     }
   }
@@ -58,11 +58,11 @@ class CICDAutomation {
   async runLint() {
     try {
       this.log('Running linting...');
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       this.log('Linting completed successfully');
       return true;
     } catch (error) {
-      this.log(`Linting failed: ${error.message}`);
+      this.log(`Linting "failed": ${error.message}`);
       return false;
     }
   }
@@ -70,11 +70,11 @@ class CICDAutomation {
   async runTypeCheck() {
     try {
       this.log('Running type checking...');
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       this.log('Type checking completed successfully');
       return true;
     } catch (error) {
-      this.log(`Type checking failed: ${error.message}`);
+      this.log(`Type checking "failed": ${error.message}`);
       return false;
     }
   }
@@ -83,11 +83,11 @@ class CICDAutomation {
   async runBuild() {
     try {
       this.log('Running build...');
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
       this.log('Build completed successfully');
       return true;
     } catch (error) {
-      this.log(`Build failed: ${error.message}`);
+      this.log(`Build "failed": ${error.message}`);
       return false;
     }
   }
@@ -96,20 +96,20 @@ class CICDAutomation {
   async runLint() {
     try {
       this.log('Running lint...');
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       this.log('Lint completed successfully');
       return true;
     } catch (error) {
-      this.log(`Lint failed: ${error.message}`);
+      this.log(`Lint "failed": ${error.message}`);
 =======
   async runVerify() {
     try {
       this.log('Running verify (type-check, lint, tests, build)...');
-      execSync('npm run verify', { stdio: 'pipe' });
+      execSync('npm run verify', { "stdio": 'pipe' });
       this.log('Verify completed successfully');
       return true;
     } catch (error) {
-      this.log(`Verify failed: ${error.message}`);
+      this.log(`Verify "failed": ${error.message}`);
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
       return false;
     }
@@ -119,11 +119,11 @@ class CICDAutomation {
   async runTypeCheck() {
     try {
       this.log('Running type check...');
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       this.log('Type check completed successfully');
       return true;
     } catch (error) {
-      this.log(`Type check failed: ${error.message}`);
+      this.log(`Type check "failed": ${error.message}`);
 =======
   async deploy() {
     try {
@@ -132,7 +132,7 @@ class CICDAutomation {
       this.log('Deployment completed successfully');
       return true;
     } catch (error) {
-      this.log(`Deployment failed: ${error.message}`);
+      this.log(`Deployment "failed": ${error.message}`);
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
       return false;
     }
@@ -147,11 +147,11 @@ class CICDAutomation {
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
     
     const results = {
-      lint: await this.runLint(),
-      typeCheck: await this.runTypeCheck(),
+      "lint": await this.runLint(),
+      "typeCheck": await this.runTypeCheck(),
 <<<<<<< HEAD
-      test: await this.runTests(),
-      build: await this.runBuild()
+      "test": await this.runTests(),
+      "build": await this.runBuild()
     };
 
     const allPassed = Object.values(results).every(result => result);
@@ -183,10 +183,10 @@ if (require.main === module) {
   const automation = new CICDAutomation();
   automation.start().catch(console.error);
 =======
-      tests: await this.runTests(),
-      build: await this.runBuild(),
-      verify: await this.runVerify(),
-      deploy: await this.deploy()
+      "tests": await this.runTests(),
+      "build": await this.runBuild(),
+      "verify": await this.runVerify(),
+      "deploy": await this.deploy()
     };
 
     const allPassed = Object.values(results).every(result => result === true);
@@ -195,7 +195,7 @@ if (require.main === module) {
       this.log('=== CI/CD Automation Completed Successfully ===');
     } else {
       this.log('=== CI/CD Automation Completed with Failures ===');
-      this.log(`Results: ${JSON.stringify(results, null, 2)}`);
+      this.log(`"Results": ${JSON.stringify(results, null, 2)}`);
     }
   }
 }

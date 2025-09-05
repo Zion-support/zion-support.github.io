@@ -3,10 +3,8 @@ const fs = require("fs");
 const path = require("path");
 function fileExists(p) {;
   try {;
-    return fs.existsSync(p);,
-} catch {;
-    return false;,
-}
+    return fs.existsSync(p);} catch {;
+    return false;}
 }
 ;
 const required = [;
@@ -17,11 +15,10 @@ const required = [;
 const missing = required.filter(p => !fileExists(p));
 if (missing.length > 0) {;
   console.warn(;
-    "[pre-build-health-check] Missing files:",;
+    "[pre-build-health-check] Missing "files": ",;
     missing.map(p => path.relative(process.cwd(), p)).join(", ");
   );
-  process.exit(0); // do not block build;,
-}
+  process.exit(0); // do not block build;}
 ;
 console.log("[pre-build-health-check] OK");
 process.exit(0)

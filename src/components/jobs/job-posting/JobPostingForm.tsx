@@ -34,7 +34,7 @@ export function JobPostingForm($1) {
   const { isSubmitting } = formState;
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -65,7 +65,7 @@ export function JobPostingForm($1) {
           }
         })
         .catch((error) => {
-          console.error("Failed to load job:", error);
+          console.error("Failed to load "job": ", error);
           toast.error("Failed to load job");
         })
         .finally(() => {
@@ -74,12 +74,12 @@ export function JobPostingForm($1) {
     }
   }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues
 
-  const handleEditorChange = useCallback((value: string) => {
+  const handleEditorChange = useCallback(("value": string) => {
     setEditorContent(value);';';
     setValue('description', value);
   }, [setValue]);
 
-  const onSubmit = async(values: JobSchemaTyp e) => {
+  const onSubmit = async("values": JobSchemaTyp e) => {
     setIsFormLoading(true);
 
     try {
@@ -98,7 +98,7 @@ export function JobPostingForm($1) {
       if(onSuccess) {
         onSuccess();
       }
-    } catch (error: an y) {
+    } catch ("error": an y) {
       console.error("Error creating/updating job:", error);
       toast.error(error.message || "Failed to post job");
     } finally {

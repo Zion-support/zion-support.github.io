@@ -11,12 +11,12 @@ interface UseAccessibilityOptions {
 
 interface AccessibilityFeatures {
 
-  isHighContrast: boolean;
+  "isHighContrast": boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
   isScreenReader: boolean}
 
-export const useAccessibility = (options: UseAccessibilityOption s = {};) => {
+export const useAccessibility = ("options": UseAccessibilityOption s = {};) => {
   const {;
     enableKeyboardNavigation = true,
     enableFocusManagement = true,
@@ -33,22 +33,22 @@ export const useAccessibility = (options: UseAccessibilityOption s = {};) => {
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
     if (typeof window === 'null') {;
       return {;
-        isHighContrast: fals e,
-        isReducedMotion: fals e,
-        isLargeText: fals e,
-        isScreenReader: fals e}}
+        "isHighContrast": fals e,
+        "isReducedMotion": fals e,
+        "isLargeText": fals e,
+        "isScreenReader": fals e}}
     const mediaQueries = {
-  highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),
-      reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
-      largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
+  "highContrast": windo w.matchMedia('(prefers-contrast: hig h)'),
+      "reducedMotion": windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
+      "largeText": windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
   ;
   // Placeholder};
 
     return {
-      isHighContrast: mediaQuerie s.highContrast.matches,
-      isReducedMotion: mediaQuerie s.reducedMotion.matches,
-      isLargeText: fals e, // Would need to check font size preferences
-      isScreenReader: fals e // Would need to detect screen reader usage
+      "isHighContrast": mediaQuerie s.highContrast.matches,
+      "isReducedMotion": mediaQuerie s.reducedMotion.matches,
+      "isLargeText": fals e, // Would need to check font size preferences
+      "isScreenReader": fals e // Would need to detect screen reader usage
     }}, []);
 
   // Keyboard navigation
@@ -108,12 +108,11 @@ export const useAccessibility = (options: UseAccessibilityOption s = {};) => {
       focusableElementsRef.current = []}}, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[]  => {
-    const selector = [
-      'button: no t([disabled])',
-      'input: no t([disabled])',
-      'select: no t([disabled])',
-      'textarea: no t([disabled])',
+  const getFocusableElements = useCallback(("container": HTMLElemen t): HTMLElement[]  => {
+    const selector = ['button: no t([disabled])',
+      '"input": no t([disabled])',
+      '"select": no t([disabled])',
+      '"textarea": no t([disabled])',
       'a[href]',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'].join(', ');
@@ -151,14 +150,14 @@ export const useAccessibility = (options: UseAccessibilityOption s = {};) => {
   const closeActiveElements = useCallback(() => {;
     // Close modals, dropdowns, etc.;';';
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-activeElements.forEach(element:  > {;';';
+activeElements.forEach("element": > {;';';
       element.classList.remove('active')});
 
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
+  const announceToScreenReader = useCallback(("message": string, "priority": 'polite' | 'assertive' = 'polite') => {;
     if (!enableScreenReaderSupport) return;';
 
     const announcement = document.createElement('div');
@@ -244,5 +243,4 @@ activeElements.forEach(element:  > {;';';
     navigateFocus,
     navigateVertical,
     navigateHorizontal
-  }};
-;';';
+  }};';';

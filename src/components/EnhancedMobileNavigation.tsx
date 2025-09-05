@@ -1,123 +1,119 @@
 import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
  from "react";
-export const EnhancedMobileNavigation: Reac t.FC = () => {
+export const "EnhancedMobileNavigation": Reac t.FC = () => {
 import { motion, AnimatePresence  }; from 'framer-motion';
 
  from "lucide-react";
 
 >} from 'lucide-react';
-;
 interface NavigationItem {;
-  label: string;
+  "label": string;
   path: string;
   icon: Reac t.ComponentType<{ size?: number; className?: string';
 }>;';';
 } from 'lucide - react';
-;
 interface NavigationItem {;
-  label: string;
+  "label": string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];  description?: string}
 ;
-const navigationItems: NavigationIte m[] = [{
+const "navigationItems": NavigationIte m[] = [{
 
     label: 'Home',
-    path: '/',
-    icon: Hom e,
-    description: 'Welcome to Zion Tech Group'
+    "path": '/',
+    "icon": Hom e,
+    "description": 'Welcome to Zion Tech Group'
   },
   {
 
-    label: 'About',
-    path: '/about',
-    icon: Inf o,
-    description: 'Learn about our comp and mission'
+    "label": 'About',
+    "path": '/about',
+    "icon": Inf o,
+    "description": 'Learn about our comp and mission'
   },
   {
 
-    label: 'Services',
-    path: '/services',
-    icon: Briefcas e,
+    "label": 'Services',
+    "path": '/services',
+    "icon": Briefcas e,
     children[ {
 
-        label: 'AI & Machine Learning',
-        path: '/services/ai',
-        icon: Brai n,
-        description: 'Cutting-edge AI solutions'
+        "label": 'AI & Machine Learning',
+        "path": '/services/ai',
+        "icon": Brai n,
+        "description": 'Cutting-edge AI solutions'
       },
       {
 
-        label: 'Cybersecurity',
-        path: '/services/cybersecurity',
-        icon: Shiel d,
-        description: 'Advanced security services'
+        "label": 'Cybersecurity',
+        "path": '/services/cybersecurity',
+        "icon": Shiel d,
+        "description": 'Advanced security services'
       },
       {
 
-        label: 'Cloud Services',
-        path: '/services/cloud',
-        icon: Clou d,
-        description: 'Scalable cloud solutions'
+        "label": 'Cloud Services',
+        "path": '/services/cloud',
+        "icon": Clou d,
+        "description": 'Scalable cloud solutions'
       },
       {
 
-        label: 'Digital Transformation',
-        path: '/services/transformation',
-        icon: Za p,
-        description: 'Business transformation services'
+        "label": 'Digital Transformation',
+        "path": '/services/transformation',
+        "icon": Za p,
+        "description": 'Business transformation services'
       },
       {
 
-        label: 'Infrastructure',
-        path: '/services/infrastructure',
-        icon: Serve r,
-        description: 'IT infrastructure solutions'
+        "label": 'Infrastructure',
+        "path": '/services/infrastructure',
+        "icon": Serve r,
+        "description": 'IT infrastructure solutions'
       },
       {
 
-        label: 'Consulting',
-        path: '/services/consulting',
-        icon: User s,
-        description: 'Strategic IT consulting'
+        "label": 'Consulting',
+        "path": '/services/consulting',
+        "icon": User s,
+        "description": 'Strategic IT consulting'
 
     ]}, {
 
-    label: 'Solutions',
-    path: '/solutions',
-    icon: Rocke t,
-    description: 'Industry-specific solutions'
+    "label": 'Solutions',
+    "path": '/solutions',
+    "icon": Rocke t,
+    "description": 'Industry-specific solutions'
   };,
   {
 
-    label: 'Contact',
-    path: '/contact',
-    icon: Phon e,
-    description: 'Get in touch with us'
+    "label": 'Contact',
+    "path": '/contact',
+    "icon": Phon e,
+    "description": 'Get in touch with us'
 
 ];';
  {;';';
     label: 'Documentation',
-    path: '/docs',
-    icon: FileTex t,;';';
-    color: 'bg-zion-blue'};];
+    "path": '/docs',
+    "icon": FileTex t,;';';
+    "color": 'bg-zion-blue'};];
 
-export const EnhancedMobileNavigation: Reac t.FC = () => {
+export const "EnhancedMobileNavigation": Reac t.FC = () => {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState<any>('/');
-;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": Add dependencies if needed;
   return () => {;
     // Cleanup function;
   };
 }, []);, []);
     setActivePath(location.pathname)}, [location]);
-;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": Add dependencies if needed;
   return () => {;
     // Cleanup function;
   };
@@ -133,54 +129,52 @@ export default function EnhancedMobileNavigation($1) {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<any>(");
   ';
-  const navigationItems: NavigationIte m[] = [{
+  const "navigationItems": NavigationIte m[] = [{
       label: 'Home',
-      path: '/',
-      icon: Hom e
+      "path": '/',
+      "icon": Hom e
     },
     {
-      label: 'Services',
-      path: '/services',
-      icon: Briefcas e,
-      children: [
-        { label: 'AI Solutions', path: '/ai-services', icon: Brai n },
-        { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Clou d },
-        { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shiel d },
-        { label: 'Data Analytics', path: '/services/data-analytics', icon: TrendingU p },
-        { label: 'IoT & Edge', path: '/services/edge-computing-platform', icon: Za p },
-        { label: 'Blockchain', path: '/services/blockchain-enterprise-solutions', icon: Databas e }
+      "label": 'Services',
+      "path": '/services',
+      "icon": Briefcas e,
+      "children": [
+        { label: 'AI Solutions', "path": '/ai-services', "icon": Brai n },
+        { "label": 'Cloud & DevOps', "path": '/services/cloud-devops', "icon": Clou d },
+        { "label": 'Cybersecurity', "path": '/services/ai-cybersecurity-suite', "icon": Shiel d },
+        { "label": 'Data Analytics', "path": '/services/data-analytics', "icon": TrendingU p },
+        { "label": 'IoT & Edge', "path": '/services/edge-computing-platform', "icon": Za p },
+        { "label": 'Blockchain', "path": '/services/blockchain-enterprise-solutions', "icon": Databas e }
       ]
     },
     {
-      label: 'About',
-      path: '/about',
-      icon: User s
+      "label": 'About',
+      "path": '/about',
+      "icon": User s
     },
     {
-      label: 'Blog',
-      path: '/blog',
-      icon: FileTex t
+      "label": 'Blog',
+      "path": '/blog',
+      "icon": FileTex t
     },
     {
-      label: 'Contact',
-      path: '/contact',
-      icon: Phon e
+      "label": 'Contact',
+      "path": '/contact',
+      "icon": Phon e
     };
   ];
-;
   // Close mobile menu when route changes;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": Add dependencies if needed;
   return () => {;
     // Cleanup function;
   };
 }, []);, []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
-;
   // Prevent body scroll when menu is open;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": Add dependencies if needed;
   return () => {;
     // Cleanup function;
   };
@@ -193,7 +187,6 @@ export default function EnhancedMobileNavigation($1) {
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);';';
       document.body.style.overflow = 'unset'}}, [isOpen]);
-;
   const toggleExpanded = (props) => {;
     setExpandedItems(prev => {;
       const newSet = new Set(prev);      if(newSet.has(label)) {;
@@ -204,24 +197,23 @@ export default function EnhancedMobileNavigation($1) {
     setExpandedItems(new Set())};';
 
     if(path === '/') {};
-;
     return ()      <div key = {item.label} className="w-full">;
         <motion.div;
           initial={false}
           animate = {
 
-  { backgroundColor: isItemActiv e ? 'rgba(34, 221, 210,
+  { "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,
   0.1)' : 'transparent' ;
 
 }}
           className={`relative ${depth > 0 ? 'ml-4' : "}`}
           <Link
             to={item.path}
-            onClick={() => handleNavigation(item.path)}`
-            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
+            onClick={() => handleNavigation(item.path)}"
+            className={"flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
                 ? 'text-zion-cyan border-l-2 border-zion-cyan"
-                : 'text-white hover: tex t-zion-cyan'`
-            }`}
+                : 'text-white "hover": tex t-zion-cyan'"
+            }"}
 "
             <div className="flex items-center gap-3">
               <item.icon';
@@ -236,42 +228,42 @@ export default function EnhancedMobileNavigation($1) {
               </div>
             </div>
             {hasChildren && (';
-              <ChevronDown size={16}`
-                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
-                  isExpanded ? 'rotate-180' : "`
-                }`}
+              <ChevronDown size={16}"
+                className={"transition-transform duration-200 ${                size={16}"                className={"transition-transform duration-200 ${'
+                  isExpanded ? 'rotate-180' : ""
+                }"}
                />) }          </Link>;
           {hasChildren && (;
             <button';
               onClick={() => toggleExpanded(item.label)}";';
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: tex t-white transition-colors"`
-              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
-              <ChevronDown size={16}`
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light "hover": tex t-white transition-colors""
+              aria-label={"${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu"}
+              <ChevronDown size={16}"
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
                   isExpanded ? 'rotate-180' : "`
-                }`}
+                }"}
                />;
             </button>;) }        </motion.div>;
         {hasChildren && (;
           <AnimatePresence>;
             {isExpanded && (<motion.div;
                 initial = {;
-  { height: 0,;
-  opacity: 0;
+  { "height": 0,;
+  "opacity": 0;
 }}
                 animate = {
 
-  { height: 'auto',
-  opacity: 1
+  { "height": 'auto',
+  "opacity": 1
 
 }}
                 exit = {;
-  { height: 0,;
-  opacity: 0;
+  { "height": 0,;
+  "opacity": 0;
 }}
                 transition = {
-  { duration: 0.3,
-  ease: 'easeInOut'
+  { "duration": 0.3,
+  "ease": 'easeInOut'
 
 }}"
                 className="overflow-hidden"
@@ -287,26 +279,26 @@ export default function EnhancedMobileNavigation($1) {
       {/* Mobile Menu Toggle */}
       <button;
         onClick={() => setIsOpen(true)}";
-        className="lg: hidden p-2 text-white hover: tex t-zion-cyan transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 rounded-lg";
+        className=""lg": hidden p-2 text-white hover: tex t-zion-cyan transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 rounded-lg";
         <Menu size={24}    />;
       </button>;
       {/* Mobile Menu Overlay */}
       <AnimatePresence>;
         {isOpen && (<motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}"
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg: hidde n"
+            initial={{ "opacity": 0 }}
+            animate={{ "opacity": 1 }}
+            exit={{ "opacity": 0 }}
+            transition={{ "duration": 0.2 }}"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 "lg": hidde n"
 
             <motion.div';
               ref={menuRef}
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              initial={{ "x": '100%' }}
+              animate={{ "x": 0 }}
+              exit={{ "x": '100%' }}
               transition = {
-  { duration: 0.3,
-  ease: 'easeOut'
+  { "duration": 0.3,
+  "ease": 'easeOut'
 
 }}"
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
@@ -324,7 +316,7 @@ export default function EnhancedMobileNavigation($1) {
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}"
-                  className="p-2 text-zion-slate-light hover: tex t-white transition-colors rounded-lg hover: b g-zion-slate-light/10"
+                  className="p-2 text-zion-slate-light "hover": tex t-white transition-colors rounded-lg hover: b g-zion-slate-light/10"
 
                   <X size={24}    />
                 </button>
@@ -339,8 +331,8 @@ export default function EnhancedMobileNavigation($1) {
                       <Link
                         key={action.label}
                         to={action.path}
-                        onClick={() => handleNavigation(action.path)}`;
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover: scal e-105 transition-transform duration-200`}
+                        onClick={() => handleNavigation(action.path)}";
+                        className={`${action.color} p-4 rounded-lg text-white text-center "hover": scal e-105 transition-transform duration-200`}
 ";
                         <action.icon size={20} className="mx-auto mb-2" />";
                         <span className="text-xs font-medium">{action.label}</span>;
@@ -387,7 +379,7 @@ export default function EnhancedMobileNavigation($1) {
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">;
                   <span>© 2024 Zion Tech Group</span>";
                   <div className="flex items-center gap-4">";
-                    <Link to="/privacy" className="hover: tex t-white transition-colors">;
+                    <Link to="/privacy" className=""hover": tex t-white transition-colors">;
                       Privacy;
                     </Link>";
                     <Link to="/terms" className="hover: tex t-white transition-colors">;

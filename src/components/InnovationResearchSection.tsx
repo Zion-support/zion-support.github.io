@@ -9,12 +9,12 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 2 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          initial={{ "opacity": 0, "y": 2 0 }}
+          whileInView={{ "opacity": 1, "y": 0 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Innovation & Research
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -24,10 +24,10 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
 
         {/* Innovation Metrics */}
         <motion.div
-          className="grid grid - cols - 2 md: gri d - cols - 4 gap-8 mb-16"          initial={{ opacity: 0, y: 3 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid - cols - 2 "md": gri d - cols - 4 gap-8 mb-16"          initial={{ opacity: 0, "y": 3 0 }}
+          whileInView={{ "opacity": 1, "y": 0 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
         >
           {innovationMetrics.map((metric, index) => ("
             <div key={metric.label} className="text-center">"
@@ -43,10 +43,10 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
         {/* Research Areas */}
         <motion.div "
           className="mb-16"
-          initial={{ opacity: 0, y: 3 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ "opacity": 0, "y": 3 0 }}
+          whileInView={{ "opacity": 1, "y": 0 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
         >
           {innovationMetrics.map((metric, index) => ("
             <div key={metric.label} className="text-center">"
@@ -59,10 +59,10 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
         {/* Research Areas */}
         <motion.div
           className="mb-16"
-          initial={{ opacity: 0, y: 3 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ "opacity": 0, "y": 3 0 }}
+          whileInView={{ "opacity": 1, "y": 0 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
         >
           {innovationMetrics.map((metric, index) => (<div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-2xl flex items - center justify - center mx - auto mb-4">
@@ -74,21 +74,21 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
         <motion.div
           className="mb-16";          initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
         >"
@@ -96,26 +96,26 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
             Active Research Areas
           </h3>
 
-          <div className="grid grid - cols - 1 md: gri d - cols - 2 gap-8">
+          <div className="grid grid - cols - 1 "md": gri d - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
                 key={area.title}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 hover: borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25"                initial = {
+                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 "hover": borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25"                initial = {
 
   { opacity: 0,
-  y: 3 0
+  "y": 3 0
 
 }}
                 whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-                viewport={{ once: tru e }}
+                viewport={{ "once": tru e }}
                 transition = {
 
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1
+  { "duration": 0.6,
+  "delay": 0.6 + index * 0.1
 
 }}
               >"
@@ -133,15 +133,15 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
                         <span > Research Progress</span>                        <span>{area.progress}%</span>
                       </div>"
                       <div className="w-full bg-slate-700 rounded-full h-2">
-                        <motion.div`
-                          className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
-                          initial={{ width: 0 }}`
-                          whileInView={{ width: `${area.progress}%` }}
-                          viewport={{ once: tru e }}
+                        <motion.div"
+                          className={"h-2 bg-gradient-to-r ${area.color} rounded-full"}
+                          initial={{ "width": 0 }}"
+                          whileInView={{ "width": `${area.progress}%` }}
+                          viewport={{ "once": tru e }}
                           transition = {
 
-  { duration: 1,
-  delay: 0.8 + index * 0.1
+  { "duration": 1,
+  "delay": 0.8 + index * 0.1
 
 }}
                         />
@@ -156,21 +156,21 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
         <motion.div
           className="mb-12"          initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.8
+  { "duration": 0.6,
+  "delay": 0.8
 
 }}
         >"
@@ -179,7 +179,7 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
               Latest Research Breakthroughs
             </h3>
 
-            <div className="grid grid - cols - 1 md: gri d - cols - 3 gap-6">
+            <div className="grid grid - cols - 1 "md": gri d - cols - 3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
                   <span className="text-2xl">🔬</span>
@@ -210,20 +210,20 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 2 0
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 1.0
+  { "duration": 0.6,
+  "delay": 1.0
 
 }}
         >"
@@ -234,7 +234,7 @@ function InnovationResearchSection($1) {export function InnovationResearchSectio
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
               Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Research Partnership"
                 <Flask className="ml-2 h-5 w-5"   />

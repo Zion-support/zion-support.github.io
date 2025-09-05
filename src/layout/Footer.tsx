@@ -4,80 +4,69 @@ import { Link } from 'react-router-dom';
 export default function Footer($1) {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
+  const footerSections = [{
+      "title": 'Services',
+      "links": [
+        { name: 'AI & Machine Learning', "href": '/services/ai-machine-learning' },
+        { "name": 'Cloud & DevOps', "href": '/services/cloud-devops' },
+        { "name": 'Cybersecurity', "href": '/services/cybersecurity' },
+        { "name": 'Digital Transformation', "href": '/services/digital-transformation' },
+        { "name": 'Financial Solutions', "href": '/services/financial-solutions' },
+        { "name": 'Manufacturing Solutions', "href": '/services/manufacturing-solutions' },
+        { "name": 'Micro SaaS Solutions', "href": '/services/micro-saas' },
+        { "name": 'AI Content Creation', "href": '/services/ai-content-creation' },
+        { "name": 'Email Automation', "href": '/services/email-automation' },
+        { "name": 'Customer Support Platform', "href": '/services/customer-support' },
+      ]},
     {
-      title: 'Services',
-      links: [
-        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
-        { name: 'Email Automation', href: '/services/email-automation' },
-        { name: 'Customer Support Platform', href: '/services/customer-support' },
-      ],
-    },
+      "title": 'Solutions',
+      "links": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise' },
+        { "name": 'Startup Solutions', "href": '/solutions/startup' },
+        { "name": 'Space Technology', "href": '/solutions/space-tech' },
+        { "name": 'Supply Chain', "href": '/solutions/supply-chain' },
+        { "name": 'AI-Powered Solutions', "href": '/solutions/ai-powered' },
+        { "name": 'Quantum Computing', "href": '/solutions/quantum-computing' },
+        { "name": 'Industry Solutions', "href": '/solutions/industry' },
+      ]},
     {
-      title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Startup Solutions', href: '/solutions/startup' },
-        { name: 'Space Technology', href: '/solutions/space-tech' },
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },
-        { name: 'AI-Powered Solutions', href: '/solutions/ai-powered' },
-        { name: 'Quantum Computing', href: '/solutions/quantum-computing' },
-        { name: 'Industry Solutions', href: '/solutions/industry' },
-      ],
-    },
+      "title": 'Company',
+      "links": [{ name: 'About Us', "href": '/about' },
+        { "name": 'Our Story', "href": '/about/story' },
+        { "name": 'Team', "href": '/about/team' },
+        { "name": 'Careers', "href": '/careers' },
+        { "name": 'Partners', "href": '/partners' },
+        { "name": 'Contact', "href": '/contact' },
+      ]},
     {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Story', href: '/about/story' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' },
-      ],
-    },
+      "title": 'Resources',
+      "links": [{ name: 'Blog', "href": '/blog' },
+        { "name": 'Case Studies', "href": '/case-studies' },
+        { "name": 'White Papers', "href": '/white-papers' },
+        { "name": 'Webinars', "href": '/webinars' },
+        { "name": 'Training', "href": '/training' },
+        { "name": 'Documentation', "href": '/docs' },
+        { "name": 'API Documentation', "href": '/api-docs' },
+      ]},
     {
-      title: 'Resources',
-      links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Documentation', href: '/api-docs' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Support', href: '/support' },
-        { name: 'System Status', href: '/system-status' },
-        { name: 'Request Quote', href: '/request-quote' },
-        { name: 'Contact Support', href: '/contact' },
-      ],
-    };,
+      "title": 'Support',
+      "links": [{ name: 'Help Center', "href": '/help' },
+        { "name": 'FAQ', "href": '/faq' },
+        { "name": 'Support', "href": '/support' },
+        { "name": 'System Status', "href": '/system-status' },
+        { "name": 'Request Quote', "href": '/request-quote' },
+        { "name": 'Contact Support', "href": '/contact' },
+      ]};,
   ];
 
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms-of-service' },
-    { name: 'Cookie Policy', href: '/cookie-policy' },
-    { name: 'Accessibility', href: '/accessibility' };,
+  const legalLinks = [{ "name": 'Privacy Policy', "href": '/privacy-policy' },
+    { "name": 'Terms of Service', "href": '/terms-of-service' },
+    { "name": 'Cookie Policy', "href": '/cookie-policy' },
+    { "name": 'Accessibility', "href": '/accessibility' };,
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -94,7 +83,7 @@ export default function Footer($1) {
               and digital transformation expertise to drive growth and competitive advantage.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="#" className="text-gray-400 "hover": text-white transition-colors" aria-label="Twitter">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                 </svg>
@@ -118,7 +107,7 @@ export default function Footer($1) {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                    <Link to={link.href} className="text-gray-400 "hover": text-white transition-colors text-sm">
                       {link.name}
                     </Link>
                   </li>
@@ -130,7 +119,7 @@ export default function Footer($1) {
       </div>
 
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h5 className="text-white font-semibold mb-3">Contact Information</h5>
@@ -147,7 +136,7 @@ export default function Footer($1) {
             <div>
               <h5 className="text-white font-semibold mb-3">Business Hours</h5>
               <div className="space-y-2 text-gray-400 text-sm">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                <p>Monday - "Friday": 9:00 AM - 6:00 PM EST</p>
                 <p>Saturday: 10:00 AM - 4:00 PM EST</p>
                 <p>Sunday: Closed</p>
               </div>
@@ -176,7 +165,7 @@ export default function Footer($1) {
             <div className="text-gray-400 text-sm">© {currentYear} Zion Tech Group. All rights reserved.</div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (
-                <Link key={link.name} to={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link key={link.name} to={link.href} className="text-gray-400 "hover": text-white transition-colors text-sm">
                   {link.name}
                 </Link>
               ))}

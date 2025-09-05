@@ -6,9 +6,9 @@ const path = require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      pageLoadTimes: [],
-      memoryUsage: [],
-      timestamp: new Date().toISOString()
+      "pageLoadTimes": [],
+      "memoryUsage": [],
+      "timestamp": new Date().toISOString()
     }}
 
   log(message) {
@@ -26,23 +26,23 @@ class PerformanceMonitor {
     if (typeof process !== 'undefined' && process.memoryUsage) {
       const memory = process.memoryUsage();
       this.metrics.memoryUsage.push({
-        rss: memory.rss,
-        heapUsed: memory.heapUsed,
-        heapTotal: memory.heapTotal,
-        external: memory.external,
-        timestamp: new Date().toISOString()
+        "rss": memory.rss,
+        "heapUsed": memory.heapUsed,
+        "heapTotal": memory.heapTotal,
+        "external": memory.external,
+        "timestamp": new Date().toISOString()
       })}
   }
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "metrics": this.metrics,
+      "summary": {
         averagePageLoad: this.metrics.pageLoadTimes.length > 0 
           ? this.metrics.pageLoadTimes.reduce((a, b) => a + b, 0) / this.metrics.pageLoadTimes.length 
           : 0,
-        memoryPeak: this.metrics.memoryUsage.length > 0
+        "memoryPeak": this.metrics.memoryUsage.length > 0
           ? Math.max(...this.metrics.memoryUsage.map(m => m.heapUsed))
           : 0
       }

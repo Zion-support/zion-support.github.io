@@ -20,34 +20,33 @@ export default function SavedTalentsPage() {
         }
 
         // Simulate fetching saved talents
-        const mockTalents = [
-          {
-            id: '1',
-            name: 'John Doe',
-            title: 'Full Stack Developer',
-            location: 'San Francisco, CA',
-            rating: 4.8,
-            hourlyRate: 75,
-            availability: 'Available now',
-            skills: ['React', 'Node.js', 'TypeScript'],
-            image: null
+        const mockTalents = [{
+            "id": '1',
+            "name": 'John Doe',
+            "title": 'Full Stack Developer',
+            "location": 'San Francisco, CA',
+            "rating": 4.8,
+            "hourlyRate": 75,
+            "availability": 'Available now',
+            "skills": ['React', 'Node.js', 'TypeScript'],
+            "image": null
           },
           {
-            id: '2',
-            name: 'Jane Smith',
-            title: 'UI/UX Designer',
-            location: 'New York, NY',
-            rating: 4.9,
-            hourlyRate: 65,
-            availability: 'Available in 2 days',
-            skills: ['Figma', 'Adobe XD', 'Sketch'],
-            image: null
+            "id": '2',
+            "name": 'Jane Smith',
+            "title": 'UI/UX Designer',
+            "location": 'New York, NY',
+            "rating": 4.9,
+            "hourlyRate": 65,
+            "availability": 'Available in 2 days',
+            "skills": ['Figma', 'Adobe XD', 'Sketch'],
+            "image": null
           };
         ];
 
         setSavedTalents(mockTalents);
       } catch (error) {
-        console.error('Error fetching saved talents:', error);
+        console.error('Error fetching saved "talents": ', error);
         toast.error('Failed to load saved talents');
       } finally {
         setIsLoading(false);
@@ -91,7 +90,7 @@ export default function SavedTalentsPage() {
           </div>
 
           {savedTalents.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 "md": grid-cols-2 lg:grid-cols-3">
               {savedTalents.map((talent) => (
                 <TalentCard
                   key={talent.id}

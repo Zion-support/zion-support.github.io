@@ -4,65 +4,64 @@ const fs = require('fs');
 const path = require('path');
 
 // Final targeted fixes for remaining errors
-const fixes = [
-  // Fix missing semicolons in import statements
+const fixes = [// Fix missing semicolons in import statements
   {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
-    replacement: 'import { $1 } from \'$2\';'
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
+    "replacement": 'import { $1 } from \'$2\';'
   },
   
   // Fix malformed import statements
   {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
-    replacement: 'import { $1 } from \'$2\';\n\nexport default function'
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
   },
   
   // Fix missing semicolons after import statements
   {
-    pattern: /import\s+([^]+)\s*$/gm,
-    replacement: 'import $1;'
+    "pattern": /import\s+([^]+)\s*$/gm,
+    "replacement": 'import $1;'
   },
   
   // Fix unterminated string literals
   {
-    pattern: /'([^']*)\s*$/gm,
-    replacement: '\'$1\';'
+    "pattern": /'([^']*)\s*$/gm,
+    "replacement": '\'$1\';'
   },
   
   // Fix malformed function declarations
   {
-    pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
-    replacement: 'export default function $1() {\n  return ('
+    "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
+    "replacement": 'export default function $1() {\n  return ('
   },
   
   // Fix missing closing brackets
   {
-    pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,
-    replacement: 'return (\n    <div className="min-h-screen bg-white">'
+    "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
+    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
   
   // Fix malformed JSX
   {
-    pattern: /<\/div>\s*;\s*$/gm,
-    replacement: '</div>\n  );\n}'
+    "pattern": /<\/div>\s*;\s*$/gm,
+    "replacement": '</div>\n  );\n}'
   },
   
   // Fix missing semicolons in object properties
   {
-    pattern: /(\w+):\s*'([^']*)',\s*$/gm,
-    replacement: '$1: \'$2\','
+    "pattern": /(\w+):\s*'([^']*)',\s*$/gm,
+    "replacement": '$1: \'$2\','
   },
   
   // Fix malformed array declarations
   {
-    pattern: /const\s+(\w+)\s*=\s*\[\s*$/gm,
-    replacement: 'const $1 = [\n    '
+    "pattern": /const\s+(\w+)\s*=\s*\[\s*$/gm,
+    "replacement": 'const $1 = [\n    '
   },
   
   // Fix missing commas in arrays
   {
-    pattern: /'([^']*)'\s*;\s*'([^']*)'/g,
-    replacement: '\'$1\',\n    \'$2\''
+    "pattern": /'([^']*)'\s*;\s*'([^']*)'/g,
+    "replacement": '\'$1\',\n    \'$2\''
   }
 ];
 
@@ -88,7 +87,7 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     
     return false} catch (error) {

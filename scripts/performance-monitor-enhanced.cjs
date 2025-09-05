@@ -5,18 +5,18 @@ const path = require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      timestamp: new Date().toISOString(),
-      memory: process.memoryUsage(),
-      uptime: process.uptime(),
-      cpu: process.cpuUsage()
+      "timestamp": new Date().toISOString(),
+      "memory": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "cpu": process.cpuUsage()
     }}
 
   collectMetrics() {
     this.metrics = {
-      timestamp: new Date().toISOString(),
-      memory: process.memoryUsage(),
-      uptime: process.uptime(),
-      cpu: process.cpuUsage()
+      "timestamp": new Date().toISOString(),
+      "memory": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "cpu": process.cpuUsage()
     };
     
     const reportPath = path.join(process.cwd(), 'performance-metrics.json');

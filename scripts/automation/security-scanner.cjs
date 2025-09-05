@@ -19,13 +19,13 @@ class SecurityScanner {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -39,37 +39,36 @@ class SecurityScanner {
         
         try {
             const auditResult = execSync('npm audit --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||; ;0;
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;
-                status: 'success',
-                vulnerabilities: vulnerabilities,
-                details: auditData.vulnerabilities,
-                metadata: auditData.metadata
+                "status": 'success',
+                "vulnerabilities": vulnerabilities,
+                "details": auditData.vulnerabilities,
+                "metadata": auditData.metadata
             }} catch (error) {
-            this.log(`Vulnerability scan failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Vulnerability scan "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     scanForSecrets() {
         this.log('Scanning for exposed secrets...');
         
-        const secretPatterns = [
-            { name: 'API Keys', pattern: /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'Passwords', pattern: /password\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'Secrets', pattern: /secret\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'Tokens', pattern: /token\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'Private Keys', pattern: /private[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'Database URLs', pattern: /database[_-]?url\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'AWS Keys', pattern: /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
-            { name: 'GitHub Tokens', pattern: /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi }
+        const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'Tokens', "pattern": /token\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'Private Keys', "pattern": /private[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'Database URLs', "pattern": /database[_-]?url\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'AWS Keys', "pattern": /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
+            { "name": 'GitHub Tokens', "pattern": /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi }
        ];
         
         const files = this.findSourceFiles(;);
@@ -83,10 +82,10 @@ class SecurityScanner {
                     const matches = content.match(secretType.pattern;);
                     if ( {
                         foundSecrets.push({
-                            file: path.relative(this.projectRoot, file),
-                            type: secretType.name,
-                            matches: matches.length,
-                            severity: 'high'
+                            "file": path.relative(this.projectRoot, file),
+                            "type": secretType.name,
+                            "matches": matches.length,
+                            "severity": 'high'
                         })}
                 }
             } catch (error) {
@@ -96,10 +95,10 @@ class SecurityScanner {
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {
      {
                         foundSecrets.push({
-                            file: path.relative(this.projectRoot, file),
-                            type: secretType.name,
-                            matches: matches.length,
-                            severity: 'high'
+                            "file": path.relative(this.projectRoot, file),
+                            "type": secretType.name,
+                            "matches": matches.length,
+                            "severity": 'high'
                         })}
                 }
             } catch (error) {
@@ -139,8 +138,7 @@ class SecurityScanner {
     checkFilePermissions() {
         this.log('Checking file permissions...');
         
-        const criticalFiles = [
-            'package.json',
+        const criticalFiles = ['package.json',
             'package-lock.json',
             '.env',
             '.env.local',
@@ -157,17 +155,17 @@ class SecurityScanner {
     ) {
                 const stats = fs.statSync(filePath});
                 const mode = stats.mod;e;
-                const isReadableByOthers = (mode & 0o004) !==; ;0;
-                const isWritableByOthers = (mode & 0o002) !==; ;0;
-                const isExecutableByOthers = (mode & 0o001) !==; ;0;
+                const isReadableByOthers = (mode & 0o004) !==;0;
+                const isWritableByOthers = (mode & 0o002) !==;0;
+                const isExecutableByOthers = (mode & 0o001) !==;0;
                 
                 if ( {
                     permissionIssues.push({
-                        file: file,
-                        readableByOthers: isReadableByOthers,
-                        writableByOthers: isWritableByOthers,
-                        executableByOthers: isExecutableByOthers,
-                        severity: 'medium'
+                        "file": file,
+                        "readableByOthers": isReadableByOthers,
+                        "writableByOthers": isWritableByOthers,
+                        "executableByOthers": isExecutableByOthers,
+                        "severity": 'medium'
                     })}
             }
         }
@@ -175,11 +173,11 @@ class SecurityScanner {
         this.log(`Found ${permissionIssues.length} permission issues`)) {
      {
                     permissionIssues.push({
-                        file: file,
-                        readableByOthers: isReadableByOthers,
-                        writableByOthers: isWritableByOthers,
-                        executableByOthers: isExecutableByOthers,
-                        severity: 'medium'
+                        "file": file,
+                        "readableByOthers": isReadableByOthers,
+                        "writableByOthers": isWritableByOthers,
+                        "executableByOthers": isExecutableByOthers,
+                        "severity": 'medium'
                     })}
             }
         }
@@ -206,19 +204,18 @@ class SecurityScanner {
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
             
             return {;
-                status: 'success',
-                totalDependencies: totalDeps,
-                vulnerablePackages: vulnerablePackages,
-                dependencies: Object.keys(dependencies)
+                "status": 'success',
+                "totalDependencies": totalDeps,
+                "vulnerablePackages": vulnerablePackages,
+                "dependencies": Object.keys(dependencies)
             }} catch (error) {
-            this.log(`Dependency check failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Dependency check "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     checkForVulnerablePackages(dependencies) {
         // This is a simplified check - in practice, you'd use a vulnerability database
-        const knownVulnerable = [
-            'lodash@4.17.0',
+        const knownVulnerable = ['lodash@4.17.0',
             'jquery@1.12.0',
             'moment@2.24.0'
         ];
@@ -229,18 +226,18 @@ class SecurityScanner {
             const packageVersion = \`\${name}@\${version}\;`;
             if ([0]))) {
                 vulnerable.push({
-                    name: name,
-                    version: version,
-                    severity: 'high'
+                    "name": name,
+                    "version": version,
+                    "severity": 'high'
                 })}
         }
         
         return vulnerable) {
     [0]))) {
                 vulnerable.push({
-                    name: name,
-                    version: version,
-                    severity: 'high'
+                    "name": name,
+                    "version": version,
+                    "severity": 'high'
                 })}
         }
         
@@ -257,7 +254,7 @@ class SecurityScanner {
         
         // Add security headers if not already present
         if (!nextConfig.includes('X-Frame-Options')) {
-            const securityHeaders = `
+            const securityHeaders = "
   // Security headers
   async headers() {
     return ) {
@@ -266,64 +263,57 @@ class SecurityScanner {
         
         // Add security headers if not already present
         if (!nextConfig.includes('X-Frame-Options')) {
-            const securityHeaders = `
+            const securityHeaders = "
   // Security headers
   async headers() {
     return }[;
       {
-        source: '/(.*)',
-        headers: [
+        "source": '/(.*)',
+        "headers": [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            "value": 'DENY'},
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            "key": 'X-Content-Type-Options',
+            "value": 'nosniff'},
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
+            "key": 'Referrer-Policy',
+            "value": 'origin-when-cross-origin'},
           {
-            key: 'X-XSS-Protection',
-            value: ';1; mode=block',
-          },
+            "key": 'X-XSS-Protection',
+            "value": ';1; mode=block'},
           {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains',
-          },
+            "key": 'Strict-Transport-Security',
+            "value": 'max-age=31536000; includeSubDomains'},
           {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';",
-          }],
-      }]},`;
+            "key": 'Content-Security-Policy',
+            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
             
             // Insert security headers before the closing brace
-            const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, `$1${securityHeaders}$1$2`);
+            const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
             this.log('Security headers added to Next.js config')}
         
-        return { status: 'success' }}
+        return { "status": 'success' }}
 
     generateSecurityReport() {
         this.log('Generating security scan report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            security: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "security": {
                 vulnerabilities: this.scanForVulnerabilities(),
-                secrets: this.scanForSecrets(),
-                permissions: this.checkFilePermissions(),
-                dependencies: this.checkDependencies(),
-                headers: this.generateSecurityHeaders()
+                "secrets": this.scanForSecrets(),
+                "permissions": this.checkFilePermissions(),
+                "dependencies": this.checkDependencies(),
+                "headers": this.generateSecurityHeaders()
             },
-            recommendations: this.generateSecurityRecommendations()
+            "recommendations": this.generateSecurityRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Security scan report saved to ${this.reportFile}`);
+        this.log("Security scan report saved to ${this.reportFile}");
         
         return report}
 
@@ -350,7 +340,7 @@ class SecurityScanner {
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
             return report} catch (error) {
-            this.log(`Security Scanner failed: ${error.message}`);
+            this.log("Security Scanner "failed": ${error.message}`);
             throw error}
     }
 }

@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export function SEOHead($1) {
   const fullTitle = `${title}; | Zion Tech Group - AI & Technology Solutions`;
-  const defaultKeywords = [
-    'AI services',
+  const defaultKeywords = ['AI services',
     'technology solutions',
     'enterprise automation',
     'cybersecurity',
@@ -27,19 +26,19 @@ export function SEOHead($1) {
       
       {canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}
       
-      <meta property="og:title" content={fullTitle}  />
-      <meta property="og:description" content={description}  />
-      <metaproperty="og:type" content={ogType}  />
-      <metaproperty="og:image" content={ogImage}  />';
-      <meta property="og:url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ")}  />
-      <meta property="og:site_name" content="Zion Tech Group"  />
+      <meta property=""og": title" content={fullTitle}  />
+      <meta property=""og": description" content={description}  />
+      <metaproperty=""og": type" content={ogType}  />
+      <metaproperty=""og": image" content={ogImage}  />';
+      <meta property=""og": url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ")}  />
+      <meta property=""og": site_name" content="Zion Tech Group"  />
       <meta property="og:locale" content="en_US"  />
       
       <meta name="twitter:card" content="summary_large_image"  />
       <meta name="twitter:title" content={fullTitle}  />
-      <meta name="twitter:description" content={description}  />
-      <meta name="twitter:image" content={ogImage}  />
-      <meta name="twitter:site" content="@ziontechgroup"  />
+      <meta name=""twitter": description" content={description}  />
+      <meta name=""twitter": image" content={ogImage}  />
+      <meta name=""twitter": site" content="@ziontechgroup"  />
       
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
       <meta name="theme-color" content="#0ea5e9"  />
@@ -53,11 +52,11 @@ export function SEOHead($1) {
       
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
+          "@context": ""https": //schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/logo.png",
+          "url": ""https": //ziontechgroup.com",
+          "logo": ""https": //ziontechgroup.com/images/logo.png",
           "description": "Leading provider of AI services, technology solutions, and digital transformation",
           "contactPoint": {
             "@type": "ContactPoint",

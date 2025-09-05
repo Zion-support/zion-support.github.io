@@ -15,7 +15,7 @@ class TypeScriptErrorAutoFixer {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.fixesApplied = 0;
@@ -28,17 +28,17 @@ class TypeScriptErrorAutoFixer {
   async runTypeScriptCheck() {
     try {
       this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 }} catch (error) {
+      execSync('npm run type-check', { "stdio": 'pipe' });
+      return { "success": true, "errors": [], "count": 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseTypeScriptErrors(output);
       this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length }}
+      return { "success": false, errors, "count": errors.length }}
   }
 
   parseTypeScriptErrors(output) {
     const errorLines = output.split('\n').filter(line => 
-      line.includes('error TS') || line.includes('error:')
+      line.includes('error TS') || line.includes('"error": ')
     );
     
     const errors = [];
@@ -51,11 +51,11 @@ class TypeScriptErrorAutoFixer {
           if (currentError) {
             errors.push(currentError)}
           currentError = {
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: line.split(' - ')[1] || line,
-            type: 'typescript'
+            "file": match[1].trim(),
+            "line": parseInt(match[2]),
+            "column": parseInt(match[3]),
+            "message": line.split(' - ')[1] || line,
+            "type": 'typescript'
           }}
       } else if (currentError && line.trim()) {
         currentError.message += ' ' + line.trim()}
@@ -87,8 +87,7 @@ class TypeScriptErrorAutoFixer {
     const lines = content.split('\n');
     
     // Apply common TypeScript fixes
-    const fixes = [
-      this.fixAnyType.bind(this),
+    const fixes = [this.fixAnyType.bind(this),
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
       this.fixInterfaceIssues.bind(this),
@@ -129,13 +128,13 @@ class TypeScriptErrorAutoFixer {
       if (fixedLine !== line) {
         lines[lineIndex] = fixedLine;
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Replaced any with unknown type'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Replaced any with unknown type'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixMissingImports(lines, error) {
     if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {
@@ -158,13 +157,13 @@ class TypeScriptErrorAutoFixer {
           lines.unshift(importStatement)}
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: `Added missing import for ${moduleName}`
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": `Added missing import for ${moduleName}`
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixTypeAnnotations(lines, error) {
     const lineIndex = error.line - 1;
@@ -177,20 +176,20 @@ class TypeScriptErrorAutoFixer {
         const varName = varMatch[2];
         const fixedLine = line.replace(
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),
-          `$1: unknown =`
+          "$"1": unknown ="
         );
         
         if (fixedLine !== line) {
           lines[lineIndex] = fixedLine;
           return {
             modified: true,
-            content: lines.join('\n'),
-            description: `Added type annotation for ${varName}`
+            "content": lines.join('\n'),
+            "description": `Added type annotation for ${varName}`
           }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixInterfaceIssues(lines, error) {
     if (error.message.includes('Property') && error.message.includes('does not exist on type')) {
@@ -207,15 +206,15 @@ class TypeScriptErrorAutoFixer {
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
             
             return {
-              modified: true,
-              content: lines.join('\n'),
-              description: `Added missing property ${propName} to ${typeName}`
+              "modified": true,
+              "content": lines.join('\n'),
+              "description": `Added missing property ${propName} to ${typeName}`
             }}
         }
       }
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixGenericTypes(lines, error) {
     const lineIndex = error.line - 1;
@@ -230,14 +229,14 @@ class TypeScriptErrorAutoFixer {
         if (fixedLine !== line) {
           lines[lineIndex] = fixedLine;
           return {
-            modified: true,
-            content: lines.join('\n'),
-            description: 'Added generic type parameter'
+            "modified": true,
+            "content": lines.join('\n'),
+            "description": 'Added generic type parameter'
           }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixOptionalProperties(lines, error) {
     const lineIndex = error.line - 1;
@@ -250,13 +249,13 @@ class TypeScriptErrorAutoFixer {
       if (fixedLine !== line) {
         lines[lineIndex] = fixedLine;
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added optional chaining'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added optional chaining'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   async runAutoFix() {
     if (!this.autoFixEnabled) {
@@ -284,11 +283,11 @@ class TypeScriptErrorAutoFixer {
       const postCheckResult = await this.runTypeScriptCheck();
       
       const report = {
-        timestamp: new Date().toISOString(),
-        initialErrors: checkResult.errors.length,
+        "timestamp": new Date().toISOString(),
+        "initialErrors": checkResult.errors.length,
         fixesApplied,
-        remainingErrors: postCheckResult.errors.length,
-        success: postCheckResult.success
+        "remainingErrors": postCheckResult.errors.length,
+        "success": postCheckResult.success
       };
       
       // Save report
@@ -296,7 +295,7 @@ class TypeScriptErrorAutoFixer {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
       this.log(`TypeScript auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
-      this.log(`TypeScript auto-fix failed: ${error.message}`, 'ERROR')}
+      this.log(`TypeScript auto-fix "failed": ${error.message}`, 'ERROR')}
   }
 
   async startAutoFixer() {
@@ -309,7 +308,7 @@ class TypeScriptErrorAutoFixer {
     setInterval(async () => {
       try {
         await this.runAutoFix()} catch (error) {
-        this.log(`Error in periodic fix: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')}
     }, this.fixInterval);
 
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
@@ -330,7 +329,7 @@ if (require.main === module) {
 
   // Start auto-fixer
   fixer.startAutoFixer().catch(error => {
-    fixer.log(`Failed to start auto-fixer: ${error.message}`, 'ERROR');
+    fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
 module.exports = TypeScriptErrorAutoFixer;

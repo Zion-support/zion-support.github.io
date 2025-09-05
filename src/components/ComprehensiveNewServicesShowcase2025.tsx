@@ -5,13 +5,13 @@ export default function Page($1) {
 ;
   return ()
     <div className="min-h-screen py-8 bg-gray-900">"
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
         {/* Header Section */}"
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 2 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ "opacity": 0, "y": 2 0 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6 }}
           >"
             <h1 className="text-5xl font-bold text-white mb-6">
               Revolutionary New Services 2025
@@ -23,7 +23,7 @@ export default function Page($1) {
 
         {/* Contact Info Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 mb-12 text-white">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col "md": flex-row items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Business?</h3>
               <p className="text-blue-100">Contact our experts for personalized solutions and pricing</p>
@@ -37,8 +37,8 @@ export default function Page($1) {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'
                       ? 'bg-cyan-600 text-white"
-                      : 'bg-gray-800 text-gray-300 hover: b g-gray-700'`
-                  }`}
+                      : 'bg-gray-800 text-gray-300 "hover": b g-gray-700'`
+                  }"}
                 >"
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
@@ -55,11 +55,11 @@ export default function Page($1) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center space-x-2 px-6 py-3 m-2 rounded-lg font-medium transition-all duration-200 ${
+                className={"flex items-center space-x-2 px-6 py-3 m-2 rounded-lg font-medium transition-all duration-200 ${
                   activeTab === tab.id
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
+                    : 'bg-white text-gray-700 "hover": bg-gray-100 border border-gray-200'
+                }"}
               >
                 <Icon className="w-5 h-5" />
                 <span>{tab.name}</span>
@@ -72,18 +72,18 @@ export default function Page($1) {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
           {getCurrentServices().map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
+              className="bg-white rounded-lg shadow-lg "hover": shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
               {/* Service Header */}
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-"hover": text-blue-600 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-sm text-gray-600 mb-2">{service.category}</p>
@@ -111,7 +111,7 @@ export default function Page($1) {
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-600">
@@ -129,7 +129,7 @@ export default function Page($1) {
 
                 {/* Benefits */}
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">"Benefits": </h4>
                   <div className="flex flex-wrap gap-2">
                     {service.benefits.slice(0, 2).map((benefit, index) => (
                       <span
@@ -180,7 +180,7 @@ export default function Page($1) {
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": bg-blue-700 transition-colors flex items-center justify-center space-x-2">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -209,7 +209,7 @@ export default function Page($1) {
                   </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="text-gray-400 hover:text-gray-600"
+                    className="text-gray-400 "hover": text-gray-600"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -217,12 +217,12 @@ export default function Page($1) {
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 "md": grid-cols-2 gap-8">
                   {/* Features */}
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Features</h3>
                     <ul className="space-y-2">
-                      {selectedService.features.map((feature: string, index: number) => (
+                      {selectedService.features.map(("feature": string, "index": number) => (
                         <li key={index} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
@@ -235,7 +235,7 @@ export default function Page($1) {
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Benefits</h3>
                     <ul className="space-y-2">
-                      {selectedService.benefits.map((benefit: string, index: number) => (
+                      {selectedService.benefits.map(("benefit": string, "index": number) => (
                         <li key={index} className="flex items-start">
                           <Star className="w-5 h-5 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{benefit}</span>
@@ -248,7 +248,7 @@ export default function Page($1) {
                 {/* Contact Information */}
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Get Started Today</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-blue-600" />
                       <div>
@@ -290,11 +290,11 @@ export default function Page($1) {
 
         {/* Stats Section */}"
         <div className="mt-20">"
-          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
+          <div className="grid grid-cols-2 "md": gri d-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}"
+              initial={{ opacity: 0, "y": 2 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.5 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
@@ -306,9 +306,9 @@ export default function Page($1) {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.5, "delay": 0.1 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
@@ -320,9 +320,9 @@ export default function Page($1) {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.5, "delay": 0.2 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
@@ -334,9 +334,9 @@ export default function Page($1) {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.5, "delay": 0.3 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
@@ -350,7 +350,7 @@ export default function Page($1) {
         </div>
       </div>
     </div>) }
-export default ComprehensiveNewServicesShowcase2025;"`
+export default ComprehensiveNewServicesShowcase2025;""
 
 </motion>
 </motion>

@@ -13,35 +13,33 @@ class $1 {
     this.errorReportsPath = path.join(this.workspacePath, "error-reports");
     this.ensureDirectories();
     this.errorData = {
-  typescript: [],
-      eslint: [],
-      build: [],
-      dependencies: [],
-      system: [],
-      mergeConflicts: [],
-}
+  "typescript": [],
+      "eslint": [],
+      "build": [],
+      "dependencies": [],
+      "system": [],
+      "mergeConflicts": []}
     this.trends = {
-  daily: {},
-      weekly: {},
-      monthly: {},
-}
+  "daily": {},
+      "weekly": {},
+      "monthly": {}}
   }
 ;
   ensureDirectories() {
-  ["this.logsPath", "this.reportsPath", `this.errorReportsPath`].forEach(dir => {
+  ["this.logsPath", "this.reportsPath", "this.errorReportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     })}
 ;
-  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
-    const logFile = path.join(this.logsPath, `error-analytics-dashboard.log`);
-    fs.appendFileSync(logFile, logMessage + `\n`)}
+    console.log("logMessage);
+    const logFile = path.join(this.logsPath, "error-analytics-dashboard.log");
+    fs.appendFileSync(logFile, logMessage + "\n")}
 ;
   async collectErrorData() {
-  this.log(`📊 Collecting error data from various sources...`);
+  this.log("📊 Collecting error data from various sources...");
     // Collect from automation reports;
     await this.collectFromAutomationReports();
     // Collect from error reports;
@@ -49,8 +47,8 @@ class $1 {
 
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
+    const logMessage = "[${timestamp}] [${level}] ${message}";
+    console.log("logMessage);
 
     const logFile = path.join(this.logsPath, "error-analytics-dashboard.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -88,16 +86,16 @@ class $1 {
           if (data.timestamp && data.errors) {
   this.processErrorReport(data)}
     for (const file of files) {
-  if (file.endsWith(`.json`)) {
+  if (file.endsWith(".json")) {
   try {
   const content = fs.readFileSync(;
-            path.join(this.reportsPath, `file)`, utf8`;
-            path.join(this.reportsPath, "file)", utf8`);
+            path.join(this.reportsPath, "file)", utf8";
+            path.join(this.reportsPath, "file)", utf8");
           );
           const data = JSON.parse(content);
           if (data.timestamp && data.errors) {
   this.processErrorReport(data)}
-        } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, `WARN``)} catch (error) {this.log(Failed to parse report ${file}: ${error.message}, "WARN"`)}
+        } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, "WARN"`)} catch (error) {this.log(Failed to parse report ${file}: ${error.message}, "WARN"`)}
       }
     }
   }
@@ -107,10 +105,10 @@ class $1 {
 
     const files = fs.readdirSync(this.errorReportsPath);
     for (const file of files) {
-  if (file.endsWith(`.json`)) {
+  if (file.endsWith(".json")) {
   try {
   const content = fs.readFileSync(;
-            path.join(this.errorReportsPath, `file)`, utf8`;
+            path.join(this.errorReportsPath, "file)", utf8";
     for (const file of files) {
   if (file.endsWith(".json")) {
   try {
@@ -122,10 +120,10 @@ class $1 {
           if (data.timestamp && data.errorType) {
   this.processErrorReport(data)}
         } catch (error) {
-  this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`} catch (error) {
+  this.log( "Failed to parse error report ${file  }: ${error.message}",WARN"} catch (error) {
   this.log( `Failed to parse error report ${file}: ${error.message}",WARN";
           );
-          this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`;
+          this.log( `Failed to parse error report ${file  }: ${error.message}",WARN";
           )}
       }
     }
@@ -133,7 +131,7 @@ class $1 {
 ;
   async collectFromLogs() {
   if (!fs.existsSync(this.logsPath)) return;
-    const logFiles = [`comprehensive-error-fixer.log", "typescript-error-monitor.log"", "eslint-error-cleaner.log", "build-error-detector.log"", "dependency-error-resolver.log", "config-error-fixer.log"", "error-prevention-monitor.log", "auto-recovery-manager.log"", "critical-error-alert-system.log", ""];
+    const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log"", "eslint-error-cleaner.log", "build-error-detector.log"", "dependency-error-resolver.log", "config-error-fixer.log"", "error-prevention-monitor.log", "auto-recovery-manager.log"", "critical-error-alert-system.log", ""];
     for (const logFile of logFiles) {
   const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log", "eslint-error-cleaner.log", "build-error-detector.log", "dependency-error-resolver.log", "config-error-fixer.log", "error-prevention-monitor.log", "auto-recovery-manager.log", "critical-error-alert-system.log", "];
 
@@ -151,8 +149,8 @@ class $1 {
       for (const line of lines) {
   if (;
           line.includes("error") ||;
-          line.includes(`Error`) ||;
-          line.includes(`ERROR`);
+          line.includes("Error") ||;
+          line.includes("ERROR");
         ) {
   this.processLogLine(line, path.basename(logPath))}
 =======
@@ -171,20 +169,20 @@ class ErrorAnalyticsDashboard {
     // Ensure directories exist
     [this.reportsDir, this.logsDir, this.dashboardDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.analyticsData = {
-      errorTrends: [],
-      fixSuccessRates: [],
-      errorTypes: {},
-      timeDistribution: {},
-      fileDistribution: {}
+      "errorTrends": [],
+      "fixSuccessRates": [],
+      "errorTypes": {},
+      "timeDistribution": {},
+      "fileDistribution": {}
     }}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
+    console.log("[${timestamp}] [${level}] ${message}")}
 
   async collectErrorReports() {
     try {
@@ -202,50 +200,49 @@ class ErrorAnalyticsDashboard {
       
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
 <<<<<<< HEAD
-  this.log(`Failed to parse log file ${logPath  }: ${error.message}`, `WARN`)}
+  this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}
   }
 ;
   async collectCurrentStatus() {
-  this.log(`🔍 Collecting current project status...`);
+  this.log("🔍 Collecting current project status...");
     // Check TypeScript errors;
     try {
   execSync("npm run type-check", {
-  cwd: this.workspacePath,
-        stdio: "pipe",
-        timeout: 60000})} catch (error) {
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 60000})} catch (error) {
   const errorCount = this.countTypeScriptErrors(error.stdout || "");
       this.errorData.typescript.push({
-  timestamp: new Date().toISOString(),
-        count: errorCount,
-        source: "current-status",
-        details: error.stdout || ""})}
+  "timestamp": new Date().toISOString(),
+        "count": errorCount,
+        "source": "current-status",
+        "details": error.stdout || ""})}
 ;
     // Check ESLint errors;
     try {
   execSync("npm run lint", {
-  cwd: this.workspacePath,
-        stdio: "pipe",
-        timeout: 60000})} catch (error) {
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 60000})} catch (error) {
   const errorCount = this.countLintErrors(error.stdout || "");
       this.errorData.eslint.push({
-  timestamp: new Date().toISOString(),
-        count: errorCount,
-        source: "current-status",
-        details: error.stdout || ""})}
+  "timestamp": new Date().toISOString(),
+        "count": errorCount,
+        "source": "current-status",
+        "details": error.stdout || ""})}
 ;
     // Check build status;
     try {
   execSync("npm run build", {
-  cwd: this.workspacePath,
-        stdio: "pipe",
-        timeout: 300000})} catch (error) {
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 300000})} catch (error) {
   const errorCount = this.countBuildErrors(error.stdout || "");
       this.errorData.build.push({
-  timestamp: new Date().toISOString(),
-        count: errorCount,
-        source: "current-status",
-        details: error.stdout || "",
-})}
+  "timestamp": new Date().toISOString(),
+        "count": errorCount,
+        "source": "current-status",
+        "details": error.stdout || ""})}
   }
 ;
   processErrorReport(data) {
@@ -255,68 +252,61 @@ class ErrorAnalyticsDashboard {
   data.errors.forEach(error => {
   this.addErrorData(error.type || "unknown", {
   timestamp,
-          count: error.count || 1,
-          source: "automation-report",
-          details: error.message || error.details || ",
-})})} else if (data.errorType) {
+          "count": error.count || 1,
+          "source": "automation-report",
+          "details": error.message || error.details || "})})} else if (data.errorType) {
   this.addErrorData(data.errorType, {
   timestamp,
-        count: data.errorCount || 1,
-        source: "error-report",
-        details: data.errorMessage || data.details || ",
-})}
+        "count": data.errorCount || 1,
+        "source": "error-report",
+        "details": data.errorMessage || data.details || "})}
   }
 ;
   processLogLine(line, logFile) {
   const timestamp = new Date().toISOString();
-    if (line.includes("TypeScript") || line.includes(`tsc`)) {
-  this.addErrorData(`typescript`, {
+    if (line.includes("TypeScript") || line.includes("tsc")) {
+  this.addErrorData("typescript", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line})} else if (line.includes(`ESLint`) || line.includes(`lint`)) {
-  this.addErrorData(`eslint`, {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
+  this.addErrorData("eslint", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line})} else if (line.includes(`build`) || line.includes(`Build`)) {
-  this.addErrorData(`build`, {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("build") || line.includes("Build")) {
+  this.addErrorData("build", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line})} else if (line.includes(`dependency`) || line.includes(`npm`)) {
-  this.addErrorData(`dependencies`, {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
+  this.addErrorData("dependencies", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line})} else if (line.includes(`merge`) || line.includes(`conflict`)) {
-  this.addErrorData(`mergeConflicts`, {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
+  this.addErrorData("mergeConflicts", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
+        "count": 1,"source": "log-${logFile}",
+        "details": line,
 
     if (line.includes("TypeScript") || line.includes("tsc")) {
   this.addErrorData("typescript", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-})} else if (line.includes("ESLint") || line.includes("lint")) {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
   this.addErrorData("eslint", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-})} else if (line.includes("build") || line.includes("Build")) {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("build") || line.includes("Build")) {
   this.addErrorData("build", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-})} else if (line.includes("dependency") || line.includes("npm")) {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
   this.addErrorData("dependencies", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-})} else if (line.includes("merge") || line.includes("conflict")) {
+        "count": 1,"source": "log-${logFile}",
+        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
   this.addErrorData("mergeConflicts", {
   timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-})}
+        "count": 1,"source": "log-${logFile}",
+        "details": line})}
   }
 ;
   addErrorData(type, data) {
@@ -327,8 +317,8 @@ class ErrorAnalyticsDashboard {
 ;
   countTypeScriptErrors(output) {
   const errorLines = output;
-      .split(`\n`);
-      .filter(line => line.includes(`error TS`) || line.includes("warning TS"));
+      .split("\n");
+      .filter(line => line.includes("error TS") || line.includes("warning TS"));
     return errorLines.length}
 ;
   countLintErrors(output) {
@@ -364,10 +354,9 @@ class ErrorAnalyticsDashboard {
         e => new Date(e.timestamp) >= oneDayAgo;
       );
       this.trends.daily[errorType] = {
-  count: dailyErrors.length,
-        totalErrors: dailyErrors.reduce((sum, e) => sum + e.count, 0),
-        sources: [...new Set(dailyErrors.map(e => e.source))],
-}
+  "count": dailyErrors.length,
+        "totalErrors": dailyErrors.reduce((sum, e) => sum + e.count, 0),
+        "sources": [...new Set(dailyErrors.map(e => e.source))]}
       // Weekly trends;
       const weeklyErrors = errors.filter(;
 
@@ -376,36 +365,32 @@ class ErrorAnalyticsDashboard {
         e => new Date(e.timestamp) >= oneWeekAgo;
       );
       this.trends.weekly[errorType] = {
-  count: weeklyErrors.length,
-        totalErrors: weeklyErrors.reduce((sum, e) => sum + e.count, 0),
-        sources: [...new Set(weeklyErrors.map(e => e.source))],
-}
+  "count": weeklyErrors.length,
+        "totalErrors": weeklyErrors.reduce((sum, e) => sum + e.count, 0),
+        "sources": [...new Set(weeklyErrors.map(e => e.source))]}
       // Monthly trends;
       const monthlyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneMonthAgo;
       );
       this.trends.monthly[errorType] = {
-  count: monthlyErrors.length,
-        totalErrors: monthlyErrors.reduce((sum, e) => sum + e.count, 0),
-        sources: [...new Set(monthlyErrors.map(e => e.source))],
-}
+  "count": monthlyErrors.length,
+        "totalErrors": monthlyErrors.reduce((sum, e) => sum + e.count, 0),
+        "sources": [...new Set(monthlyErrors.map(e => e.source))]}
     })}
 ;
   generateInsights() {
   this.log("💡 Generating insights and recommendations...");
 
     const insights = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   totalErrors: Object.values(this.errorData).flat().length,
-        errorTypes: Object.keys(this.errorData),
-        timeRange: "Last 30 days",
-},
-      trends: this.trends,
-      topIssues: this.identifyTopIssues(),
-      recommendations: this.generateRecommendations(),
-      errorPatterns: this.identifyErrorPatterns(),
-}
+        "errorTypes": Object.keys(this.errorData),
+        "timeRange": "Last 30 days"},
+      "trends": this.trends,
+      "topIssues": this.identifyTopIssues(),
+      "recommendations": this.generateRecommendations(),
+      "errorPatterns": this.identifyErrorPatterns()}
 ;
     return insights}
 ;
@@ -415,12 +400,11 @@ class ErrorAnalyticsDashboard {
     Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType];
       issueCounts[errorType] = {
-  totalCount: errors.length,
-        totalErrors: errors.reduce((sum, e) => sum + e.count, 0),
-        recentCount: errors.filter(e => {
+  "totalCount": errors.length,
+        "totalErrors": errors.reduce((sum, e) => sum + e.count, 0),
+        "recentCount": errors.filter(e => {
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
-          return new Date(e.timestamp) >= oneDayAgo}).length,
-}
+          return new Date(e.timestamp) >= oneDayAgo}).length}
     });
 
     return Object.entries(issueCounts);
@@ -433,88 +417,82 @@ class ErrorAnalyticsDashboard {
     // TypeScript errors;
     if (this.trends.daily.typescript?.totalErrors > 10) {
   recommendations.push({
-  priority: "high",
-        category: "typescript",
-        action: Implement stricter TypeScript configuration and add type guards",
-        impact: "Reduce runtime errors and improve code quality",
-})}
+  "priority": "high",
+        "category": "typescript",
+        "action": Implement stricter TypeScript configuration and add type guards",
+        "impact": "Reduce runtime errors and improve code quality"})}
 ;
     // ESLint errors;
     if (this.trends.daily.eslint?.totalErrors > 20) {
   recommendations.push({
-  priority: "medium",
-        category: "code-quality",
-        action: "Set up pre-commit hooks and enforce ESLint rules",
-        impact: "Maintain consistent code style and catch issues early"})}
+  "priority": "medium",
+        "category": "code-quality",
+        "action": "Set up pre-commit hooks and enforce ESLint rules",
+        "impact": "Maintain consistent code style and catch issues early"})}
 ;
     // Build errors;
     if (this.trends.daily.build?.totalErrors > 5) {
   recommendations.push({
-  priority: "high",
-        category: "build-process",
-        action: "Implement automated build testing and rollback procedures",
-        impact: "Prevent broken builds from reaching production"})}
+  "priority": "high",
+        "category": "build-process",
+        "action": "Implement automated build testing and rollback procedures",
+        "impact": "Prevent broken builds from reaching production"})}
 ;
     // Dependencies;
     if (this.trends.daily.dependencies?.totalErrors > 3) {
   recommendations.push({
-  priority: "medium",
-        category: "dependencies",
-        action: "Regular dependency audits and automated security updates",
-        impact: "Reduce security vulnerabilities and compatibility issues"})}
+  "priority": "medium",
+        "category": "dependencies",
+        "action": "Regular dependency audits and automated security updates",
+        "impact": "Reduce security vulnerabilities and compatibility issues"})}
 ;
     // Merge conflicts;
     if (this.trends.daily.mergeConflicts?.totalErrors > 2) {
   recommendations.push({
-  priority: "low",
-        category: "git-workflow",
-        action: "Improve branch management and merge strategies",
-        impact: "Reduce development friction and merge conflicts",
+  "priority": "low",
+        "category": "git-workflow",
+        "action": "Improve branch management and merge strategies",
+        "impact": "Reduce development friction and merge conflicts",
 
     // TypeScript errors;
     if (this.trends.daily.typescript?.totalErrors > 10) {
   recommendations.push({
-  priority: "high",
-        category: "typescript",
-        action: Implement stricter TypeScript configuration and add type guards",
-        impact: "Reduce runtime errors and improve code quality",
-})}
+  "priority": "high",
+        "category": "typescript",
+        "action": Implement stricter TypeScript configuration and add type guards",
+        "impact": "Reduce runtime errors and improve code quality"})}
 ;
     // ESLint errors;
     if (this.trends.daily.eslint?.totalErrors > 20) {
   recommendations.push({
-  priority: "medium",
-        category: "code-quality",
-        action: "Set up pre-commit hooks and enforce ESLint rules",
-        impact: "Maintain consistent code style and catch issues early",
-})}
+  "priority": "medium",
+        "category": "code-quality",
+        "action": "Set up pre-commit hooks and enforce ESLint rules",
+        "impact": "Maintain consistent code style and catch issues early"})}
 ;
     // Build errors;
     if (this.trends.daily.build?.totalErrors > 5) {
   recommendations.push({
-  priority: "high",
-        category: "build-process",
-        action: "Implement automated build testing and rollback procedures",
-        impact: "Prevent broken builds from reaching production",
-})}
+  "priority": "high",
+        "category": "build-process",
+        "action": "Implement automated build testing and rollback procedures",
+        "impact": "Prevent broken builds from reaching production"})}
 ;
     // Dependencies;
     if (this.trends.daily.dependencies?.totalErrors > 3) {
   recommendations.push({
-  priority: "medium",
-        category: "dependencies",
-        action: "Regular dependency audits and automated security updates",
-        impact: "Reduce security vulnerabilities and compatibility issues",
-})}
+  "priority": "medium",
+        "category": "dependencies",
+        "action": "Regular dependency audits and automated security updates",
+        "impact": "Reduce security vulnerabilities and compatibility issues"})}
 ;
     // Merge conflicts;
     if (this.trends.daily.mergeConflicts?.totalErrors > 2) {
   recommendations.push({
-  priority: "low",
-        category: "git-workflow",
-        action: "Improve branch management and merge strategies",
-        impact: "Reduce development friction and merge conflicts",
-})}
+  "priority": "low",
+        "category": "git-workflow",
+        "action": "Improve branch management and merge strategies",
+        "impact": "Reduce development friction and merge conflicts"})}
 ;
     return recommendations}
 ;
@@ -525,58 +503,54 @@ class ErrorAnalyticsDashboard {
   const errors = this.errorData[errorType];
       const errorMessages = errors.map(e => e.details).join(" ");
       // Find common patterns;
-      const commonPatterns = ["{ name: "syntax"", "regex: /syntax|parsing|""unexpected/i"" }", "{ name: "type"", "regex: /type|interface|implicit|""any/i"" }", "{ name: "import"", "regex: /import|module|""resolve/i"" }", "{ name: "dependency"", "regex: /dependency|peer|""version/i"" }", "{ name: "build"", "regex: /build|compile|""transpile/i"" }", "`];
+      const commonPatterns = ["{ "name": "syntax"", ""regex": /syntax|parsing|""unexpected/i"" }", "{ "name": "type"", ""regex": /type|interface|implicit|""any/i"" }", "{ "name": "import"", ""regex": /import|module|""resolve/i"" }", "{ "name": "dependency"", ""regex": /dependency|peer|""version/i"" }", "{ "name": "build"", ""regex": /build|compile|""transpile/i"" }", ""];
       patterns[errorType] = commonPatterns;
         .map(pattern => ({
-  name: pattern.name,
-          count: (errorMessages.match(pattern.regex) || []).length,
-}))        .filter(p => p.count > 0)});
+  "name": pattern.name,
+          "count": (errorMessages.match(pattern.regex) || []).length}))        .filter(p => p.count > 0)});
 
     return patterns}
 ;
   async generateDashboard() {
-  this.log(`📊 Generating error analytics dashboard...`);
+  this.log("📊 Generating error analytics dashboard...");
     const dashboard = {
-  timestamp: new Date().toISOString(),
-      overview: {
+  "timestamp": new Date().toISOString(),
+      "overview": {
   totalErrors: Object.values(this.errorData).flat().length,
-        errorTypes: Object.keys(this.errorData),
-        lastUpdated: new Date().toISOString()},
-      errorData: this.errorData,
-      trends: this.trends,
-      insights: this.generateInsights(),
-      charts: {
+        "errorTypes": Object.keys(this.errorData),
+        "lastUpdated": new Date().toISOString()},
+      "errorData": this.errorData,
+      "trends": this.trends,
+      "insights": this.generateInsights(),
+      "charts": {
   errorTypeDistribution: this.generateErrorTypeDistribution(),
-        errorTimeline: this.generateErrorTimeline(),
-        sourceBreakdown: this.generateSourceBreakdown()}}
+        "errorTimeline": this.generateErrorTimeline(),
+        "sourceBreakdown": this.generateSourceBreakdown()}}
     const dashboardFile = path.join(;
-      this.reportsPath,error-analytics-dashboard.json`;
+      this.reportsPath,error-analytics-dashboard.json";
 
   async generateDashboard() {
   this.log("📊 Generating error analytics dashboard...");
 
     const dashboard = {
-  timestamp: new Date().toISOString(),
-      overview: {
+  "timestamp": new Date().toISOString(),
+      "overview": {
   totalErrors: Object.values(this.errorData).flat().length,
-        errorTypes: Object.keys(this.errorData),
-        lastUpdated: new Date().toISOString(),
-},
-      errorData: this.errorData,
-      trends: this.trends,
-      insights: this.generateInsights(),
-      charts: {
+        "errorTypes": Object.keys(this.errorData),
+        "lastUpdated": new Date().toISOString()},
+      "errorData": this.errorData,
+      "trends": this.trends,
+      "insights": this.generateInsights(),
+      "charts": {
   errorTypeDistribution: this.generateErrorTypeDistribution(),
-        errorTimeline: this.generateErrorTimeline(),
-        sourceBreakdown: this.generateSourceBreakdown(),
-},
-}
+        "errorTimeline": this.generateErrorTimeline(),
+        "sourceBreakdown": this.generateSourceBreakdown()}}
 ;
     const dashboardFile = path.join(;
       this.reportsPath,error-analytics-dashboard.json";
     );
     fs.writeFileSync(dashboardFile, JSON.stringify(dashboard, null, 2));
-this.log(`📄 Dashboard generated: ${dashboardFile}`);
+this.log("📄 Dashboard "generated": ${dashboardFile}");
     return dashboard}
 ;
   generateErrorTypeDistribution() {
@@ -584,10 +558,9 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
     Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType];
       distribution[errorType] = {
-  count: errors.length,
-        totalErrors: errors.reduce((sum, e) => sum + e.count, 0),
-        percentage: 0,
-}
+  "count": errors.length,
+        "totalErrors": errors.reduce((sum, e) => sum + e.count, 0),
+        "percentage": 0}
     });
     const total = Object.values(distribution).reduce(;
       (sum, d) => sum + d.totalErrors,
@@ -604,17 +577,17 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
     // Last 7 days;
     for (let i = 6; i >= 0; i--) {
   const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
-      const dateStr = date.toISOString().split(`T`)[0];
+      const dateStr = date.toISOString().split("T")[0];
       timeline[dateStr] = {
-  typescript: 0,
-        eslint: 0,
-        build: 0,
-        dependencies: 0,
-        system: 0,
-        mergeConflicts: 0}
+  "typescript": 0,
+        "eslint": 0,
+        "build": 0,
+        "dependencies": 0,
+        "system": 0,
+        "mergeConflicts": 0}
       Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType].filter(e => {
-  const errorDate = new Date(e.timestamp).toISOString().split(`T`)[0];
+  const errorDate = new Date(e.timestamp).toISOString().split("T")[0];
           return errorDate === dateStr});
         timeline[dateStr][errorType] = errors.reduce(;
           (sum, e) => sum + e.count,
@@ -625,13 +598,12 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       const dateStr = date.toISOString().split("T")[0];
 
       timeline[dateStr] = {
-  typescript: 0,
-        eslint: 0,
-        build: 0,
-        dependencies: 0,
-        system: 0,
-        mergeConflicts: 0,
-}
+  "typescript": 0,
+        "eslint": 0,
+        "build": 0,
+        "dependencies": 0,
+        "system": 0,
+        "mergeConflicts": 0}
 ;
       Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType].filter(e => {
@@ -659,7 +631,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       .map((["source", "count"]) => ({ source, count }))}
 ;
   async run() {
-  this.log("🚀 Starting Error Analytics Dashboard...`);
+  this.log("🚀 Starting Error Analytics Dashboard...");
     try {
   // Collect error data;
       await this.collectErrorData();
@@ -667,28 +639,27 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       this.analyzeTrends();
       // Generate dashboard;
       const dashboard = await this.generateDashboard();
-      this.log(`🎉 Error Analytics Dashboard completed!`);
-      this.log(📊 Analyzed ${Object.values(this.errorData).flat().length} errors`;
+      this.log("🎉 Error Analytics Dashboard completed!");
+      this.log(📊 Analyzed ${Object.values(this.errorData).flat().length} errors";
       );
-      this.log( `📈 Generated trends for ${Object.keys(this.trends).length} time periods`;
+      this.log( "📈 Generated trends for ${Object.keys(this.trends).length} time periods`;
       );
       this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`;
       );
 
       return {
-  success: true,
+  "success": true,
         dashboard,
-        errorCount: Object.values(this.errorData).flat().length,
-}
+        "errorCount": Object.values(this.errorData).flat().length}
     } catch (error) {
   this.log(;
-        `💥 Error Analytics Dashboard failed: ${error.message  }`,ERROR`} catch (error) {
+        `💥 Error Analytics Dashboard "failed": ${error.message  }`,ERROR"} catch (error) {
   this.log(;
-        `💥 Error Analytics Dashboard failed: ${error.message}",ERROR";
+        "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
       );
       throw error}
 =======
-      this.log(`Error collecting reports: ${error.message}`, 'ERROR');
+      this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
       return []}
   }
 
@@ -701,11 +672,11 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       
       if (!errorCounts[date]) {
         errorCounts[date] = {
-          total: 0,
-          typescript: 0,
-          eslint: 0,
-          build: 0,
-          dependency: 0
+          "total": 0,
+          "typescript": 0,
+          "eslint": 0,
+          "build": 0,
+          "dependency": 0
         }}
       
       if (report.totalErrors) {
@@ -745,12 +716,12 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       
       if (totalIssues > 0) {
         successRates.push({
-          timestamp: report.timestamp,
+          "timestamp": report.timestamp,
           totalIssues,
           fixesApplied,
           remainingIssues,
-          successRate: ((fixesApplied / totalIssues) * 100).toFixed(2),
-          type: report.type || 'general'
+          "successRate": ((fixesApplied / totalIssues) * 100).toFixed(2),
+          "type": report.type || 'general'
         })}
     }
     
@@ -758,11 +729,11 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
   analyzeErrorTypes(reports) {
     const errorTypes = {
-      typescript: 0,
-      eslint: 0,
-      build: 0,
-      dependency: 0,
-      other: 0
+      "typescript": 0,
+      "eslint": 0,
+      "build": 0,
+      "dependency": 0,
+      "other": 0
     };
     
     for (const report of reports) {
@@ -782,20 +753,20 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
   analyzeTimeDistribution(reports) {
     const timeDistribution = {
-      '00:00-06:00': 0,
-      '06:00-12:00': 0,
-      '12:00-18:00': 0,
-      '18:00-24:00': 0
+      '"00": 00-06:00': 0,
+      '"06": 00-12:00': 0,
+      '"12": 00-18:00': 0,
+      '"18": 00-24:00': 0
     };
     
     for (const report of reports) {
       const hour = new Date(report.timestamp).getHours();
       
       if (hour >= 0 && hour < 6) {
-        timeDistribution['00:00-06:00']++} else if (hour >= 6 && hour < 12) {
-        timeDistribution['06:00-12:00']++} else if (hour >= 12 && hour < 18) {
-        timeDistribution['12:00-18:00']++} else {
-        timeDistribution['18:00-24:00']++}
+        timeDistribution['"00": 00-06:00']++} else if (hour >= 6 && hour < 12) {
+        timeDistribution['"06": 00-12:00']++} else if (hour >= 12 && hour < 18) {
+        timeDistribution['"12": 00-18:00']++} else {
+        timeDistribution['"18": 00-24:00']++}
     }
     
     return timeDistribution}
@@ -829,54 +800,54 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error Analytics Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src=""https": //cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
+            "margin": 0;
             padding: 20px;
             background-color: #f5f5f5}
         .container {
-            max-width: 1200px;
+            max-"width": 1200px;
             margin: 0 auto}
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "color": white;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
             text-align: center}
         .stats-grid {
-            display: grid;
+            "display": grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            "gap": 20px;
             margin-bottom: 30px}
         .stat-card {
-            background: white;
+            "background": white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center}
+            text-"align": center}
         .stat-number {
-            font-size: 2.5em;
+            font-"size": 2.5em;
             font-weight: bold;
             color: #667eea}
         .stat-label {
-            color: #666;
+            "color": #666;
             margin-top: 5px}
         .chart-container {
-            background: white;
+            "background": white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px}
+            margin-"bottom": 20px}
         .chart-title {
-            font-size: 1.2em;
+            font-"size": 1.2em;
             font-weight: bold;
             margin-bottom: 15px;
             color: #333}
         .last-updated {
-            text-align: center;
+            text-"align": center;
             color: #666;
             font-size: 0.9em;
             margin-top: 20px}
@@ -924,7 +895,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         </div>
         
         <div class="last-updated">
-            Last updated: ${new Date().toLocaleString()}
+            Last "updated": ${new Date().toLocaleString()}
         </div>
     </div>
 
@@ -932,20 +903,20 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         // Error Trends Chart
         const trendsCtx = document.getElementById('trendsChart').getContext('2d');
         new Chart(trendsCtx, {
-            type: 'line',
-            data: {
+            "type": 'line',
+            "data": {
                 labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
-                datasets: [{
+                "datasets": [{
                     label: 'Total Errors',
-                    data: ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
-                    borderColor: '#667eea',
-                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                    tension: 0.4
+                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
+                    "borderColor": '#667eea',
+                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
+                    "tension": 0.4
                 }]
             },
-            options: {
+            "options": {
                 responsive: true,
-                scales: {
+                "scales": {
                     y: {
                         beginAtZero: true
                     }
@@ -956,25 +927,24 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         // Error Types Chart
         const typesCtx = document.getElementById('typesChart').getContext('2d');
         new Chart(typesCtx, {
-            type: 'doughnut',
-            data: {
+            "type": 'doughnut',
+            "data": {
                 labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
-                datasets: [{
+                "datasets": [{
                     data: [
                         ${analyticsData.errorTypes.typescript},
                         ${analyticsData.errorTypes.eslint},
                         ${analyticsData.errorTypes.build},
                         ${analyticsData.errorTypes.dependency}
                     ],
-                    backgroundColor: [
-                        '#667eea',
+                    "backgroundColor": ['#667eea',
                         '#764ba2',
                         '#f093fb',
                         '#f5576c'
                     ]
                 }]
             },
-            options: {
+            "options": {
                 responsive: true
             }
         });
@@ -982,21 +952,21 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         // Success Rates Chart
         const successCtx = document.getElementById('successChart').getContext('2d');
         new Chart(successCtx, {
-            type: 'bar',
-            data: {
+            "type": 'bar',
+            "data": {
                 labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
-                datasets: [{
+                "datasets": [{
                     label: 'Success Rate (%)',
-                    data: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
-                    backgroundColor: '#667eea'
+                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
+                    "backgroundColor": '#667eea'
                 }]
             },
-            options: {
+            "options": {
                 responsive: true,
-                scales: {
+                "scales": {
                     y: {
                         beginAtZero: true,
-                        max: 100
+                        "max": 100
                     }
                 }
             }
@@ -1032,13 +1002,13 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       
       const analyticsData = {
         totalErrors,
-        fixSuccessRate: avgSuccessRate.toFixed(1),
+        "fixSuccessRate": avgSuccessRate.toFixed(1),
         errorTypes,
         timeDistribution,
         fileDistribution,
         errorTrends,
         fixSuccessRates,
-        lastUpdated: new Date().toISOString()
+        "lastUpdated": new Date().toISOString()
       };
       
       // Save analytics data
@@ -1053,8 +1023,8 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       // Update analytics data
       this.analyticsData = analyticsData;
       
-      this.log(`Analytics report generated: ${dashboardPath}`, 'INFO')} catch (error) {
-      this.log(`Failed to generate analytics report: ${error.message}`, 'ERROR')}
+      this.log(`Analytics report "generated": ${dashboardPath}`, 'INFO')} catch (error) {
+      this.log(`Failed to generate analytics "report": ${error.message}`, 'ERROR')}
 >>>>>>> origin/merge-pr-10644
   }
 
@@ -1068,19 +1038,19 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
     setInterval(async () => {
       try {
         await this.generateAnalyticsReport()} catch (error) {
-        this.log(`Error in periodic analytics update: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic analytics "update": ${error.message}`, 'ERROR')}
     }, this.updateInterval);
 
     this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
-    this.log(`Dashboard available at: ${path.join(this.dashboardDir, 'index.html')}`)}
+    this.log(`Dashboard available "at": ${path.join(this.dashboardDir, 'index.html')}`)}
 
   getStatus() {
     return {
-      running: true,
-      dashboardPath: path.join(this.dashboardDir, 'index.html'),
-      updateInterval: this.updateInterval,
-      analyticsEnabled: this.analyticsEnabled,
-      lastUpdate: this.analyticsData.lastUpdated
+      "running": true,
+      "dashboardPath": path.join(this.dashboardDir, 'index.html'),
+      "updateInterval": this.updateInterval,
+      "analyticsEnabled": this.analyticsEnabled,
+      "lastUpdate": this.analyticsData.lastUpdated
     }}
 }
 <<<<<<< HEAD
@@ -1104,7 +1074,7 @@ if (require.main === module) {
 
   // Start dashboard
   dashboard.startDashboard().catch(error => {
-    dashboard.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
+    dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
 module.exports = ErrorAnalyticsDashboard

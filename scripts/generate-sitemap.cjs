@@ -8,12 +8,11 @@ const glob = require('glob');
  * Generate sitemap.xml for better SEO
  */
 
-const BASE_URL = 'https://ziontechgroup.com';
+const BASE_URL = '"https": //ziontechgroup.com';
 const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 
 // Static pages that should be included in sitemap
-const STATIC_PAGES = [
-  '',
+const STATIC_PAGES = ['',
   '/about',
   '/services',
   '/solutions',
@@ -42,8 +41,7 @@ const STATIC_PAGES = [
 ];
 
 // Dynamic pages patterns
-const DYNAMIC_PATTERNS = [
-  'pages/services/*.tsx',
+const DYNAMIC_PATTERNS = ['pages/services/*.tsx',
   'pages/solutions/*.tsx',
   'pages/products/*.tsx'
 ];
@@ -55,10 +53,10 @@ function generateSitemap() {
   // Add static pages
   STATIC_PAGES.forEach(page => {
     urls.push({
-      loc: `${BASE_URL}${page}`,
-      lastmod: currentDate,
-      changefreq: page === '' ? 'daily' : 'weekly',
-      priority: page === '' ? '1.0' : '0.8'
+      "loc": `${BASE_URL}${page}`,
+      "lastmod": currentDate,
+      "changefreq": page === '' ? 'daily' : 'weekly',
+      "priority": page === '' ? '1.0' : '0.8'
     })});
 
   // Add dynamic pages
@@ -75,28 +73,28 @@ function generateSitemap() {
       const url = `${BASE_URL}/${relativePath}`;
       
       urls.push({
-        loc: url,
-        lastmod: currentDate,
-        changefreq: 'monthly',
-        priority: '0.6'
+        "loc": url,
+        "lastmod": currentDate,
+        "changefreq": 'monthly',
+        "priority": '0.6'
       })})});
 
   // Generate XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(url => `  <url>
     <loc>${url.loc}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`;
+  </url>").join('\n')}
+</urlset>";
 
   // Write sitemap
   fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
   
   console.log(`✓ Sitemap generated with ${urls.length} URLs`);
-  console.log(`  Location: ${SITEMAP_PATH}`)}
+  console.log(`  "Location": ${SITEMAP_PATH}`)}
 
 if (require.main === module) {
   generateSitemap()}

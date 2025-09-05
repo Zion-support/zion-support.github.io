@@ -25,7 +25,7 @@ class BuildOptimizer {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -38,16 +38,16 @@ class BuildOptimizer {
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log "file": ', error.message);
     }
   }
 
   error(message) {
     this.log(message, 'ERROR');
     try {
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`);
     } catch (err) {
-      console.error('Failed to write to error file:', err.message);
+      console.error('Failed to write to error "file": ', err.message);
     }
   }
 
@@ -58,24 +58,24 @@ class BuildOptimizer {
       const buildDir = this.findBuildDirectory();
       if (!buildDir) {
         this.log('No build directory found', 'WARNING');
-        return { success: false, message: 'No build directory found' };
+        return { "success": false, "message": 'No build directory found' };
       }
       
       const bundleInfo = this.getBundleInfo(buildDir);
-      this.log(`Bundle analysis completed:`);
+      this.log("Bundle analysis "completed": ");
       this.log(`  - Total files: ${bundleInfo.totalFiles}`);
-      this.log(`  - Total size: ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`);
-      this.log(`  - Largest files: ${bundleInfo.largestFiles.length}`);
+      this.log(`  - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`);
+      this.log(`  - Largest "files": ${bundleInfo.largestFiles.length}`);
       
       return {
-        success: true,
+        "success": true,
         buildDir,
         ...bundleInfo
       };
       
     } catch (error) {
-      this.error(`Bundle analysis failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.error(`Bundle analysis "failed": ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
@@ -108,9 +108,9 @@ class BuildOptimizer {
             scanDirectory(fullPath, relativePath);
           } else if (stat.isFile()) {
             const fileInfo = {
-              path: relativePath,
-              size: stat.size,
-              extension: path.extname(item)
+              "path": relativePath,
+              "size": stat.size,
+              "extension": path.extname(item)
             };
             
             files.push(fileInfo);
@@ -137,11 +137,11 @@ class BuildOptimizer {
     const cssFiles = files.filter(f => f.extension === '.css');
     
     return {
-      totalFiles: files.length,
+      "totalFiles": files.length,
       totalSize,
-      jsFiles: jsFiles.length,
-      cssFiles: cssFiles.length,
-      largestFiles: largestFiles.slice(0, 5)
+      "jsFiles": jsFiles.length,
+      "cssFiles": cssFiles.length,
+      "largestFiles": largestFiles.slice(0, 5)
     };
   }
 
@@ -156,9 +156,9 @@ class BuildOptimizer {
         const unusedDeps = await this.findUnusedDependencies();
         if (unusedDeps.length > 0) {
           optimizations.push({
-            type: 'unused_dependencies',
-            count: unusedDeps.length,
-            dependencies: unusedDeps
+            "type": 'unused_dependencies',
+            "count": unusedDeps.length,
+            "dependencies": unusedDeps
           });
         }
       }
@@ -169,9 +169,9 @@ class BuildOptimizer {
         const largeFiles = bundleAnalysis.largestFiles.filter(f => f.size > 100 * 1024); // > 100KB
         if (largeFiles.length > 0) {
           optimizations.push({
-            type: 'large_files',
-            count: largeFiles.length,
-            files: largeFiles
+            "type": 'large_files',
+            "count": largeFiles.length,
+            "files": largeFiles
           });
         }
       }
@@ -180,8 +180,8 @@ class BuildOptimizer {
       const duplicates = await this.findDuplicateDependencies();
       if (duplicates.length > 0) {
         optimizations.push({
-          type: 'duplicate_dependencies',
-          count: duplicates.length,
+          "type": 'duplicate_dependencies',
+          "count": duplicates.length,
           duplicates
         });
       }
@@ -189,13 +189,13 @@ class BuildOptimizer {
       this.log(`Found ${optimizations.length} optimization opportunities`);
       
       return {
-        success: true,
+        "success": true,
         optimizations
       };
       
     } catch (error) {
-      this.error(`Bundle optimization failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.error(`Bundle optimization "failed": ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
@@ -217,7 +217,7 @@ class BuildOptimizer {
       return unusedDeps;
       
     } catch (error) {
-      this.log(`Failed to check unused dependencies: ${error.message}`, 'WARNING');
+      this.log(`Failed to check unused "dependencies": ${error.message}`, 'WARNING');
       return [];
     }
   }
@@ -232,8 +232,7 @@ class BuildOptimizer {
           const content = fs.readFileSync(file, 'utf8');
           
           // Check for various import patterns
-          const importPatterns = [
-            new RegExp(`import.*['"]${dependency}['"]`, 'g'),
+          const importPatterns = [new RegExp(`import.*['"]${dependency}['"]`, 'g'),
             new RegExp(`require\\(['"]${dependency}['"]\\)`, 'g'),
             new RegExp(`from\\s+['"]${dependency}['"]`, 'g'),
             new RegExp(`import\\s+['"]${dependency}/`, 'g')
@@ -280,12 +279,12 @@ class BuildOptimizer {
             if (existing.version !== version) {
               duplicates.push({
                 name,
-                versions: [existing.version, version],
-                paths: [existing.path, fullPath]
+                "versions": [existing.version, version],
+                "paths": [existing.path, fullPath]
               });
             }
           } else {
-            dependencyVersions.set(name, { version, path: fullPath });
+            dependencyVersions.set(name, { version, "path": fullPath });
           }
           
           // Recursively check nested dependencies
@@ -300,7 +299,7 @@ class BuildOptimizer {
       return duplicates;
       
     } catch (error) {
-      this.log(`Failed to check duplicate dependencies: ${error.message}`, 'WARNING');
+      this.log(`Failed to check duplicate "dependencies": ${error.message}`, 'WARNING');
       return [];
     }
   }
@@ -341,14 +340,14 @@ class BuildOptimizer {
     
     try {
       const report = {
-        timestamp: new Date().toISOString(),
-        processName: this.processName,
-        bundleAnalysis: await this.analyzeBundleSize(),
-        optimizationResults: await this.optimizeBundle(),
-        environment: {
+        "timestamp": new Date().toISOString(),
+        "processName": this.processName,
+        "bundleAnalysis": await this.analyzeBundleSize(),
+        "optimizationResults": await this.optimizeBundle(),
+        "environment": {
           nodeVersion: process.version,
-          platform: process.platform,
-          cwd: process.cwd()
+          "platform": process.platform,
+          "cwd": process.cwd()
         }
       };
       
@@ -356,16 +355,16 @@ class BuildOptimizer {
       const reportDir = path.dirname(reportFile);
       
       if (!fs.existsSync(reportDir)) {
-        fs.mkdirSync(reportDir, { recursive: true });
+        fs.mkdirSync(reportDir, { "recursive": true });
       }
       
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      this.log(`Optimization report saved to: ${reportFile}`);
+      this.log(`Optimization report saved "to": ${reportFile}`);
       
       return report;
       
     } catch (error) {
-      this.error(`Failed to generate optimization report: ${error.message}`);
+      this.error(`Failed to generate optimization "report": ${error.message}`);
       return null;
     }
   }
@@ -392,7 +391,7 @@ class BuildOptimizer {
 if (require.main === module) {
   const optimizer = new BuildOptimizer();
   optimizer.start().catch(error => {
-    console.error('Build optimizer failed to start:', error);
+    console.error('Build optimizer failed to "start": ', error);
     process.exit(1);
   });
 }

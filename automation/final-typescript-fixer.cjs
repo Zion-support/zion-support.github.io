@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 class $1 {;
@@ -9,8 +8,7 @@ class $1 {;
 ;
   log(message, type = "INFO") {;
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`),,
-}
+    console.log(`[${timestamp}] [${type}] ${message}`),}
 ;
   async fixCorruptedImports() {;
   this.log("🔧 Fixing corrupted import statements...");
@@ -19,12 +17,10 @@ class $1 {;
       "components",
       "utils",
       "hooks"];
-    ;
     for (const dir of filesToFix) {;
   const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {;
-  this.fixFilesInDirectory(dirPath),,
-}
+  this.fixFilesInDirectory(dirPath),}
     }
   }
 ;
@@ -34,10 +30,8 @@ class $1 {;
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-  this.fixFilesInDirectory(fullPath),,
-} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {;
-  this.fixCorruptedFile(fullPath),,
-}
+  this.fixFilesInDirectory(fullPath),} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {;
+  this.fixCorruptedFile(fullPath),}
     }
   }
 ;
@@ -51,46 +45,36 @@ class $1 {;
           /import React from "react";\\nimport type { NextPage }/g,
           "import React from \"react\";\nimport type { NextPage }";
         );
-        modified = true,,
-}
+        modified = true,}
       ;
       // Fix other corrupted patterns;
       if (content.includes("\\n")) {;
   content = content.replace(/\\n/g, "\n");
-        modified = true,,
-}
+        modified = true,}
       ;
       // Fix specific corrupted files;
       if (filePath.includes("messageChannelHandler.ts")) {;
-  content = `// Message channel handler utility;
+  content = "// Message channel handler utility;
 export const messageChannelHandler = {;
-  receiveMessage: (callback: (message: any) => void) => {;
-  // Implementation for receiving messages,,
-},
-  sendMessage: (message: any) => {;
-  // Implementation for sending messages,,
-}
-};`;
-        modified = true,,
-}
+  "receiveMessage": (callback: (message: any) => void) => {;
+  // Implementation for receiving messages,},
+  "sendMessage": (message: any) => {;
+  // Implementation for sending messages,}
+};";
+        modified = true,}
       ;
       if (filePath.includes("sanitizeHtml.ts")) {;
-  content = `// HTML sanitization utility to prevent CSP violations;
+  content = "// HTML sanitization utility to prevent CSP violations;
 import DOMPurify from "isomorphic-dompurify";
-export const sanitizeHtml = (html: string): string => {;
-  return DOMPurify.sanitize(html),,
-};`;
-        modified = true,,
-}
+export const sanitizeHtml = ("html": string): string => {;
+  return DOMPurify.sanitize(html),};";
+        modified = true,}
       ;
       if (modified) {;
   fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`),,
-}
-      ,,
-} catch (error) {;
-  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN"),,
-}
+        this.fixes.push(`Fixed corrupted "file": ${path.relative(this.projectRoot, filePath)}`),}
+      ,} catch (error) {;
+  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN"),}
   }
 ;
   async run() {;
@@ -100,19 +84,15 @@ export const sanitizeHtml = (html: string): string => {;
   await this.fixCorruptedImports();
       this.log("\\n📊 FINAL TYPESCRIPT FIXING REPORT");
       this.log("======");
-      this.log(`Fixes Applied: ${this.fixes.length}`);
+      this.log(`Fixes "Applied": ${this.fixes.length}`);
       if (this.fixes.length > 0) {;
-  this.log("\\n✅ Fixes Applied:");
+  this.log("\\n✅ Fixes "Applied": ");
         this.fixes.forEach((fix, index) => {;
-  this.log(`  ${index + 1}. ${fix}`),,
-}),,
-}
+  this.log(`  ${index + 1}. ${fix}`),}),}
       ;
-      this.log("\\n🎉 Final TypeScript fixing completed!"),,
-} catch (error) {;
-  this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1),,
-}
+      this.log("\\n🎉 Final TypeScript fixing completed!"),} catch (error) {;
+  this.log(`💥 Fatal "error": ${error.message}`, "ERROR");
+      process.exit(1),}
   }
 }
 ;

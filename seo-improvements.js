@@ -1,7 +1,6 @@
 
 // SEO Improvements
-const seoEnhancements = [
-  'Added structured data (JSON-LD)',
+const seoEnhancements = ['Added structured data (JSON-LD)',
   'Improved meta descriptions',
   'Added Open Graph tags',
   'Enhanced sitemap generation',
@@ -11,4 +10,4 @@ const seoEnhancements = [
   'Optimized page titles'
 ];
 
-console.log('SEO improvements applied:', seoEnhancements.length);
+console.log('SEO improvements "applied": ', seoEnhancements.length);

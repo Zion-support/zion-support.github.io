@@ -1,15 +1,15 @@
 import { Helmet } from 'react - helmet -async';
 
 export default function Page($1) {
- | Zion Tech Group`;
-  const fullUrl = canonical || `${url}${window.location.pathname};`;
+ | Zion Tech Group";
+  const fullUrl = canonical || "${url}${window.location.pathname};";
   // Structured data for better SEO
   const structuredData = {
 ";
-    "@context": "https://schema.org",";';
+    "@context": ""https": //schema.org",";';
     "@type": type === 'website' ? "Organization" : "Article","
     "name": "Zion Tech Group","
-    "url": url,"`
+    "url": url,""
     "logo": `${url}/images/zion-tech-group-logo.png`,"
     "description": description,"
     "foundingDate": "2020","
@@ -26,13 +26,13 @@ export default function Page($1) {
 "
       "@type": "ContactPoint","
       "telephone": "+1-555-123-4567","
-      "contactType": "customer service","`
-      "url": `${url}/contact`
+      "contactType": "customer service",""
+      "url": "${url}/contact"
     },"
     "sameAs": ["
-      "https://linkedin.com/company/ziontechgroup","
-      "https://twitter.com/ziontechgroup","
-      "https://github.com/ziontechgroup"
+      ""https": //linkedin.com/company/ziontechgroup","
+      ""https": //twitter.com/ziontechgroup","
+      ""https": //github.com/ziontechgroup"
     ],"
     "serviceType": ["
       "AI Solutions","
@@ -42,8 +42,8 @@ export default function Page($1) {
       "Technology Consulting"
     ]"
     "sameAs": [;"
-      "https://twitter.com/ziontechgroup","
-      "https://linkedin.com/company/ziontechgroup","      "https://facebook.com/ziontechgroup"
+      ""https": //twitter.com/ziontechgroup","
+      ""https": //linkedin.com/company/ziontechgroup","      ""https": //facebook.com/ziontechgroup"
     ],"
     "foundingDate": "2020","
     "numberOfEmployees": "100+","
@@ -118,7 +118,7 @@ export default function Page($1) {
         "name": "Zion Tech Group","
         "logo": {
 "
-          "@type": "ImageObject","`
+          "@type": "ImageObject",""
           "url": `${url}/images/zion-tech-group-logo.png`
         }
       },"
@@ -140,20 +140,20 @@ export default function Page($1) {
       {canonical && <link rel="canonical" href={canonical}   />}
 
       {/* Open Graph Meta Tags */}"
-      <meta property="og: titl e" content={title}   />"
-      <meta property="og: descriptio n" content={description}   />"
-      <meta property="og: typ e" content={type}   />"
-      <meta property="og: ur l" content={url}   />"
-      <meta property="og: imag e" content={image}   />"
-      <meta property="og: site_nam e" content="Zion Tech Group"   />"
+      <meta property=""og": titl e" content={title}   />"
+      <meta property=""og": descriptio n" content={description}   />"
+      <meta property=""og": typ e" content={type}   />"
+      <meta property=""og": ur l" content={url}   />"
+      <meta property=""og": imag e" content={image}   />"
+      <meta property=""og": site_nam e" content="Zion Tech Group"   />"
       <meta property="og: local e" content="en_US"   />
 
       {/* Twitter Card Meta Tags */}"
-      <meta name="twitter: car d" content={twitterCard}   />"
-      <meta name="twitter: titl e" content={title}   />"
-      <meta name="twitter: descriptio n" content={description}   />"
-      <meta name="twitter: imag e" content={ogImage}   />"
-      <meta name="twitter: sit e" content="@ziontechgroup"   />
+      <meta name=""twitter": car d" content={twitterCard}   />"
+      <meta name=""twitter": titl e" content={title}   />"
+      <meta name=""twitter": descriptio n" content={description}   />"
+      <meta name=""twitter": imag e" content={ogImage}   />"
+      <meta name=""twitter": sit e" content="@ziontechgroup"   />
 
       {/* Additional SEO Meta Tags */}
       <title>{fullTitle}</title>"
@@ -168,36 +168,36 @@ export default function Page($1) {
       <link rel="canonical" href={fullUrl}   />
 
       {/* Open Graph */}
-      <meta property="og: titl e" content={fullTitle}   />
-      <meta property="og: descriptio n" content={description}   />
-      <metaproperty="og: typ e" content={type}   />
-      <metaproperty="og: ur l" content={fullUrl}   />';
-      <meta property="og: imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
-      <meta property="og: site_nam e" content="Zion Tech Group"   />
+      <meta property=""og": titl e" content={fullTitle}   />
+      <meta property=""og": descriptio n" content={description}   />
+      <metaproperty=""og": typ e" content={type}   />
+      <metaproperty=""og": ur l" content={fullUrl}   />';
+      <meta property=""og": imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
+      <meta property=""og": site_nam e" content="Zion Tech Group"   />
       <meta property="og: local e" content="en_US"   />
 
       {/* Twitter Card */}
-      <meta name="twitter: car d" content="summary_large_image"   />
+      <meta name=""twitter": car d" content="summary_large_image"   />
       <meta name="twitter: sit e" content="@ziontechgroup"   />
       <meta name="twitter: creato r" content="@ziontechgroup"   />
       <metaname="twitter: titl e" content={fullTitle}   />
-      <metaname="twitter: descriptio n" content={description}   />';
-      <meta name="twitter: imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
+      <metaname=""twitter": descriptio n" content={description}   />';
+      <meta name=""twitter": imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
 
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width = device - width, initial-scale= 1.0"   />
       <meta name="theme - color" content="#22ddd2"   />
       <meta name="msapplication - TileColor" content="#22ddd2"   />
       {/* Preconnect to external domains for performance */}"
-      <link rel="preconnect" href="https://fonts.googleapis.com"   />"
+      <link rel="preconnect" href=""https": //fonts.googleapis.com"   />"
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"   />
 
       {/* Additional SEO Meta Tags */}
-      {publishedTime && <meta property="article: published_tim e" content={publishedTime}   />}
-      {modifiedTime && <meta property="article: modified_tim e" content={modifiedTime}   />}
-      {author && <meta property="article: autho r" content={author}   />}
-      {section && <meta property="article: sectio n" content={section}   />}
-      {tags.map((tag, index) => (<meta key={index} property="article: ta g" content={tag}   />) ) }
+      {publishedTime && <meta property=""article": published_tim e" content={publishedTime}   />}
+      {modifiedTime && <meta property=""article": modified_tim e" content={modifiedTime}   />}
+      {author && <meta property=""article": autho r" content={author}   />}
+      {section && <meta property=""article": sectio n" content={section}   />}
+      {tags.map((tag, index) => (<meta key={index} property=""article": ta g" content={tag}   />) ) }
     </Helmet>) ;
 };}}}}
 

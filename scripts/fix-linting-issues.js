@@ -25,7 +25,7 @@ class LintingIssuesFixer {
       await this.fixSourceFiles();
       this.generateSummary();
     } catch (error) {
-      console.error('❌ Error during linting issues fixing:', error.message);
+      console.error('❌ Error during linting issues "fixing": ', error.message);
     }
   }
 
@@ -42,8 +42,8 @@ class LintingIssuesFixer {
         this.fixedFiles.push('eslint.config.js');
       }
     } catch (error) {
-      console.error('Error fixing ESLint config:', error.message);
-      this.errors.push({ file: 'eslint.config.js', error: error.message });
+      console.error('Error fixing ESLint "config": ', error.message);
+      this.errors.push({ "file": 'eslint.config.js', "error": error.message });
     }
   }
 
@@ -59,8 +59,8 @@ class LintingIssuesFixer {
         this.fixedFiles.push('tsconfig.json');
       }
     } catch (error) {
-      console.error('Error fixing TypeScript config:', error.message);
-      this.errors.push({ file: 'tsconfig.json', error: error.message });
+      console.error('Error fixing TypeScript "config": ', error.message);
+      this.errors.push({ "file": 'tsconfig.json', "error": error.message });
     }
   }
 
@@ -68,15 +68,15 @@ class LintingIssuesFixer {
     try {
       console.log('🔍 Finding source files...');
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
-        cwd: this.projectRoot,
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
+        "cwd": this.projectRoot,
+        "ignore": ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
       });
       console.log(`📁 Found ${sourceFiles.length} source files`);
       for (const sourceFile of sourceFiles) {
         await this.fixSourceFile(sourceFile);
       }
     } catch (error) {
-      console.error('Error fixing source files:', error.message);
+      console.error('Error fixing source "files": ', error.message);
     }
   }
 
@@ -85,7 +85,7 @@ class LintingIssuesFixer {
       const fullPath = path.join(this.projectRoot, filePath);
       const content = fs.readFileSync(fullPath, 'utf8');
       if (this.hasLintingIssues(content)) {
-        console.log(`🔧 Fixing: ${filePath}`);
+        console.log(`🔧 "Fixing": ${filePath}`);
         let fixedContent = content;
         fixedContent = this.fixTrailingCommas(fixedContent);
         fixedContent = this.fixUnusedImports(fixedContent);
@@ -96,17 +96,16 @@ class LintingIssuesFixer {
       }
     } catch (error) {
       console.error(`❌ Error fixing ${filePath}:`, error.message);
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
     }
   }
 
   hasLintingIssues(content) {
-    const issuePatterns = [
-      /,\s*}/g,
+    const issuePatterns = [/,\s*}/g,
       /,\s*]/g,
       /import\s+{\s*}\s+from/g,
       /;\s*$/gm,
-      /[`']\s*;\s*['`]/g,
+      /["']\s*;\s*['"]/g,
     ];
     return issuePatterns.some(pattern => pattern.test(content));
   }
@@ -133,20 +132,20 @@ class LintingIssuesFixer {
   }
 
   generateSummary() {
-    console.log('\n📊 Linting Issues Fix Summary:');
+    console.log('\n📊 Linting Issues Fix "Summary": ');
     console.log('===============================');
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
-    console.log(`❌ Errors: ${this.errors.length}`);
+    console.log(`❌ "Errors": ${this.errors.length}`);
     
     if (this.fixedFiles.length > 0) {
-      console.log('\n✅ Fixed Files:');
+      console.log('\n✅ Fixed "Files": ');
       this.fixedFiles.forEach(file => {
         console.log(` - ${file}`);
       });
     }
     
     if (this.errors.length > 0) {
-      console.log('\n❌ Errors:');
+      console.log('\n❌ "Errors": ');
       this.errors.forEach(error => {
         console.log(` - ${error.file}: ${error.error}`);
       });
@@ -158,6 +157,6 @@ class LintingIssuesFixer {
 
 const fixer = new LintingIssuesFixer();
 fixer.run().catch(error => {
-  console.error('❌ Failed to run linting issues fixer:', error);
+  console.error('❌ Failed to run linting issues "fixer": ', error);
   process.exit(1);
 });

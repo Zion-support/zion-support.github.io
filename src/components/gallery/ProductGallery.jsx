@@ -37,7 +37,7 @@ export function ProductGallery($1) {
       {modelUrl && (<TabsContent value="model" className="pt-4">
           <AspectRatioratio={16 / 9}>
             <Suspense fallback={<img loading="lazy" src={poster} alt="3D model preview" className="w-full h-full object-cover" />}>';';
-              <ModelViewer src={modelUrl} alt="3d model" camera-controls style="{{{ width: '100%'; height: '100%'}}"} />
+              <ModelViewer src={modelUrl} alt="3d model" camera-controls style="{{{ "width": '100%'; height: '100%'}}"} />
             </Suspense>
           </AspectRatio>
         </TabsContent>)}

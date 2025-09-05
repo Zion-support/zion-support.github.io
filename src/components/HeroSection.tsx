@@ -3,66 +3,66 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page($1) {
 []}
 ;
-const heroSlides: HeroSlid e[] = [  {
+const "heroSlides": HeroSlid e[] = [{
 
     id: 'ai-solutions',
-    title: 'AI-Powered Business Solutions',
-    subtitle:'
+    "title": 'AI-Powered Business Solutions',
+    "subtitle": '
       'Transform your business with cutting-edge artificial intelligence',
-    description:'
+    "description": '
       'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',
-    image: '/images/hero-ai-solutions.jpg',
-    cta: 'Explore AI Solutions',
-    path: '/services/ai-business-intelligence',
-    features: ['
+    "image": '/images/hero-ai-solutions.jpg',
+    "cta": 'Explore AI Solutions',
+    "path": '/services/ai-business-intelligence',
+    "features": ['
       'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
     ],
-    gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
-    icon: Brai n,
-    stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Targe t },
-      { label: 'ROI Increase', value: '450%', icon: TrendingU p },
-      { label: 'Market Growth', value: '280%', icon: Rocke t },
+    "gradient": 'from-zion-cyan via-zion-purple to-zion-blue',
+    "icon": Brai n,
+    "stats": ['
+      { label: 'Accuracy Rate', "value": '95%+', "icon": Targe t },
+      { "label": 'ROI Increase', "value": '450%', "icon": TrendingU p },
+      { "label": 'Market Growth', "value": '280%', "icon": Rocke t },
     ]},
   {
 
-    id: 'it-services',
-    title: 'Comprehensive IT Services',
-    subtitle: 'End-to-end technology solutions for modern businesses',
-    description:'
+    "id": 'it-services',
+    "title": 'Comprehensive IT Services',
+    "subtitle": 'End-to-end technology solutions for modern businesses',
+    "description": '
       "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-    image: '/images/hero-it-services.jpg',
-    cta: 'View Our Services',
-    path: '/services',
-    features: ['
+    "image": '/images/hero-it-services.jpg',
+    "cta": 'View Our Services',
+    "path": '/services',
+    "features": ['
       'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
     ],
-    gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
-    icon: Shiel d,
-    stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Targe t },
-      { label: 'Cost Savings', value: '700%', icon: TrendingU p },
-      { label: 'Response Time', value: '<5min', icon: Rocke t },
+    "gradient": 'from-zion-blue via-zion-cyan to-zion-purple',
+    "icon": Shiel d,
+    "stats": ['
+      { label: 'Uptime', "value": '99.99%', "icon": Targe t },
+      { "label": 'Cost Savings', "value": '700%', "icon": TrendingU p },
+      { "label": 'Response Time', "value": '<5min', "icon": Rocke t },
     ]},
   {
 
-    id: 'green-it',
-    title: 'Green IT Solutions',
-    subtitle: 'Sustainable technology for a better future',
-    description:'
+    "id": 'green-it',
+    "title": 'Green IT Solutions',
+    "subtitle": 'Sustainable technology for a better future',
+    "description": '
       'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',
-    image: '/images/hero-green-it.jpg',
-    cta: 'Learn More',
-    path: '/green-it',
-    features: ['
+    "image": '/images/hero-green-it.jpg',
+    "cta": 'Learn More',
+    "path": '/green-it',
+    "features": ['
       'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
     ],
-    gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
-    icon: Glob e,
-    stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Targe t },
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingU p },
-      { label: 'Cost Reduction', value: '40%', icon: Rocke t },
+    "gradient": 'from-zion-cyan via-zion-blue to-zion-purple',
+    "icon": Glob e,
+    "stats": ['
+      { label: 'Energy Savings', "value": '60%', "icon": Targe t },
+      { "label": 'Carbon Reduction', "value": '75%', "icon": TrendingU p },
+      { "label": 'Cost Reduction', "value": '40%', "icon": Rocke t },
     ]};,
 ];
 };
@@ -89,7 +89,7 @@ const heroSlides: HeroSlid e[] = [  {
   );
   // Auto-play functionality with pause on hover
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -103,7 +103,7 @@ const heroSlides: HeroSlid e[] = [  {
 
   // Handle keyboard navigation
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -121,7 +121,7 @@ const heroSlides: HeroSlid e[] = [  {
 
   // Handle image loading
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -159,30 +159,30 @@ const heroSlides: HeroSlid e[] = [  {
       </div>
 
       {/* Hero Content */}"
-      <div className="relative z-10 container mx-auto px-4 sm: p x-6 lg: p x-8 pt-20 pb-16">"
+      <div className="relative z-10 container mx-auto px-4 "sm": p x-6 lg: p x-8 pt-20 pb-16">"
         <div className="grid lg: gri d-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}"
+            initial={{ "opacity": 0, "x": -50 }}
+            animate={{ "opacity": 1, "x": 0 }}
+            transition={{ "duration": 0.8, "delay": 0.2 }}"
             className="space-y-8"
           >"
             <div className="space-y-4">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}"
+                initial={{ "opacity": 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.4 }}"
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >"
                 <Star className="w-4 h-4 mr-2 text-yellow-400"   />                Leading Technology Solutions
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}"
-                className="text-4xl sm: tex t-5xl lg: tex t-6xl font-bold text-white leading-tight"
+                initial={{ "opacity": 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.6 }}"
+                className="text-4xl "sm": tex t-5xl lg: tex t-6xl font-bold text-white leading-tight"
               >"
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   {currentSlideData.title}
@@ -190,18 +190,18 @@ const heroSlides: HeroSlid e[] = [  {
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}"
+                initial={{ "opacity": 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.8 }}"
                 className="text-xl text-slate-300 leading-relaxed"
               >
                 {currentSlideData.subtitle}
               </motion.p>
 
               <motion.p
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}"
+                initial={{ "opacity": 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 1.0 }}"
                 className="text-lg text-slate-400 leading-relaxed"
               >
                 {currentSlideData.description}
@@ -210,9 +210,9 @@ const heroSlides: HeroSlid e[] = [  {
 
             {/* Features */}
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.6, "delay": 1.2 }}"
               className="grid grid-cols-2 gap-3"
             >
               {currentSlideData.features.map((feature, index) => ("
@@ -224,21 +224,21 @@ const heroSlides: HeroSlid e[] = [  {
 
             {/* CTA Button */}
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}"
-              className="flex flex-col sm: fle x-row gap-4"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.6, "delay": 1.4 }}"
+              className="flex flex-col "sm": fle x-row gap-4"
             >
               <Link
                 to={currentSlideData.path}"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover: scal e-105 hover: shado w-2xl hover: shado w-cyan-500/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 "hover": fro m-cyan-600 hover: t o-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover: scal e-105 hover: shado w-2xl hover: shado w-cyan-500/25"
               >
                 {currentSlideData.cta}"
                 <ArrowRight className="w-5 h-5 ml-2"   />              </Link>
 
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
-                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover: borde r-cyan-400 text-slate-300 hover: tex t-cyan-400 font-medium rounded-lg transition-all duration-300"
+                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 "hover": borde r-cyan-400 text-slate-300 hover: tex t-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={
 
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
@@ -253,9 +253,9 @@ const heroSlides: HeroSlid e[] = [  {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 2 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.6 }}"
+              initial={{ "opacity": 0, "y": 2 0 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.6, "delay": 1.6 }}"
               className="grid grid-cols-3 gap-6 pt-8"
             >
               {currentSlideData.stats.map((stat, index) => ("
@@ -271,9 +271,9 @@ const heroSlides: HeroSlid e[] = [  {
 
           {/* Visual Content */}
           <motion.div
-            initial={{ opacity: 0, x: 5 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}"
+            initial={{ "opacity": 0, "x": 5 0 }}
+            animate={{ "opacity": 1, "x": 0 }}
+            transition={{ "duration": 0.8, "delay": 0.4 }}"
             className="relative"
           >"
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8">
@@ -300,12 +300,12 @@ const heroSlides: HeroSlid e[] = [  {
           {memoizedSlides.map((_, index) => (
             <button
               key={index}
-              onClick={() => goToSlide(index)}`
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
+              onClick={() => goToSlide(index)}"
+              className={"w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
                   ? 'bg-cyan-400 scale-125"
-                  : 'bg-slate-600 hover: b g-slate-500'`
-              }`}`
-              aria-label={`Go to slide ${index + 1}`}
+                  : 'bg-slate-600 "hover": b g-slate-500'"
+              }"}"
+              aria-label={"Go to slide ${index + 1}"}
             />
           ))}
         </div>
@@ -314,21 +314,21 @@ const heroSlides: HeroSlid e[] = [  {
       {/* Arrow Navigation */}
       <button
         onClick={prevSlide}"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover: b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 "hover": b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
         
       >"
         <ChevronLeft className="w-6 h-6"   />      </button>
 
       <button
         onClick={nextSlide}"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover: b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 "hover": b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
         
       >"
         <ChevronRight className="w-6 h-6"   />
       </button>
     </section>) }
 export { HeroSection };';';
-"`
+""
 
 </button>
 </motion>

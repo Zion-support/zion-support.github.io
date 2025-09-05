@@ -7,11 +7,11 @@ console.log('⚡ Starting Performance Optimization Automation...');
 
 // Performance metrics from the report
 const performanceMetrics = {
-  bundleSize: {
+  "bundleSize": {
     '.next': '43.33 MB',
     'node_modules': '782.66 MB'
   },
-  fileCounts: {
+  "fileCounts": {
     '.tsx': 25,
     '.ts': 0,
     '.jsx': 0,
@@ -30,21 +30,21 @@ function createImageOptimizer() {
     console.log('📁 Creating images directory...')) {
     ) {
     console.log('📁 Creating images directory...')}
-    fs.mkdirSync(imagesDir, { recursive: true })}
+    fs.mkdirSync(imagesDir, { "recursive": true })}
 
   // Create optimized image component
-  const optimizedImageComponent = `import React from 'reac;t;';
+  const optimizedImageComponent = "import React from 'reac;t;';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
+  "src": string;
   alt: string;
   width?: number;
   height?: number;
   priority?: boolean;
   className?: string}
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
@@ -59,24 +59,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       priority={priority}
-      className={\`\${className}\`}
+      className={\"\${className}\"}
       placeholder="blur"
-      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      sizes="(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw"
     />
   )};
 
 export default OptimizedImage;
-`;
+";
 
   fs.writeFileSync('components/OptimizedImage.tsx', optimizedImageComponent);
   console.log('✅ Created OptimizedImage component')}
 
 // Create performance monitoring component
 function createPerformanceMonitor() {
-  const performanceMonitor = `import { useEffect } from 'reac;t;';
+  const performanceMonitor = "import { useEffect } from 'reac;t;';
 
-const PerformanceMonitor: React.FC = () => {
+const "PerformanceMonitor": React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if ( {
@@ -90,21 +90,21 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime});
+            console.log('"LCP": ', entry.startTime});
             // Send to analytics
             if ( {
-              console.warn('LCP is slow:', entry.startTime)}
+              console.warn('LCP is "slow": ', entry.startTime)}
           }
         }
       })) {
      {
-              console.warn('LCP is slow:', entry.startTime)}
+              console.warn('LCP is "slow": ', entry.startTime)}
           }
         }
       })}
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+        observer.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -112,23 +112,23 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if ( {
-            console.log('FID:', entry.processingStart - entry.startTime) {
+            console.log('"FID": ', entry.processingStart - entry.startTime) {
      {
-            console.log('FID:', entry.processingStart - entry.startTime});
+            console.log('"FID": ', entry.processingStart - entry.startTime});
             // Send to analytics
             if ( {
-              console.warn('FID is slow:', entry.processingStart - entry.startTime)}
+              console.warn('FID is "slow": ', entry.processingStart - entry.startTime)}
           }
         }
       })) {
      {
-              console.warn('FID is slow:', entry.processingStart - entry.startTime)}
+              console.warn('FID is "slow": ', entry.processingStart - entry.startTime)}
           }
         }
       })}
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {
+        fidObserver.observe({ "entryTypes": ['first-input'] })} catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -139,21 +139,21 @@ const PerformanceMonitor: React.FC = () => {
           if (.hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        console.log('CLS:', clsValue) {
+        console.log('"CLS": ', clsValue) {
     .hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        console.log('CLS:', clsValue});
+        console.log('"CLS": ', clsValue});
         // Send to analytics
         if ( {
-          console.warn('CLS is poor:', clsValue)}
+          console.warn('CLS is "poor": ', clsValue)}
       })) {
      {
-          console.warn('CLS is poor:', clsValue)}
+          console.warn('CLS is "poor": ', clsValue)}
       })}
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+        clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
         // Fallback for browsers that don't support CLS
       }
 
@@ -167,14 +167,14 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-`;
+";
 
   fs.writeFileSync('components/PerformanceMonitor.tsx', performanceMonitor);
   console.log('✅ Created PerformanceMonitor component')}
 
 // Create bundle analyzer script
 function createBundleAnalyzer() {
-  const bundleAnalyzer = `#!/usr/bin/env node
+  const bundleAnalyzer = "#!/usr/bin/env node
 
 const fs = require('fs')
 const path = require('path')
@@ -186,15 +186,14 @@ function analyzeBundle() {
   try {
     // Run Next.js bundle analyzer
     console.log('🔍 Analyzing bundle size...');
-    execSync('npx @next/bundle-analyzer', { stdio: 'inherit' });
+    execSync('npx @next/bundle-analyzer', { "stdio": 'inherit' });
     
     // Generate bundle report
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         bundleSize: 'Check bundle-analyzer output',
-        recommendations: [
-          'Use dynamic imports for large components',
+        "recommendations": ['Use dynamic imports for large components',
           'Implement code splitting',
           'Optimize images and assets',
           'Remove unused dependencies',
@@ -205,11 +204,11 @@ function analyzeBundle() {
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
     console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
-    console.error('❌ Bundle analysis failed:', error.message)}
+    console.error('❌ Bundle analysis "failed": ', error.message)}
 }
 
 analyzeBundle();
-`;
+";
 
   fs.writeFileSync('scripts/bundle-analyzer.cjs', bundleAnalyzer);
   console.log('✅ Created bundle analyzer script')}
@@ -217,14 +216,13 @@ analyzeBundle();
 // Create performance optimization report
 function generatePerformanceReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    currentMetrics: performanceMetrics,
-    optimizations: {
+    "timestamp": new Date().toISOString(),
+    "currentMetrics": performanceMetrics,
+    "optimizations": {
       imageOptimization: 'Created OptimizedImage component with Next.js Image optimization',
-      performanceMonitoring: 'Enhanced PerformanceMonitor with Core Web Vitals tracking',
-      bundleAnalysis: 'Created bundle analyzer script',
-      recommendations: [
-        'Implement lazy loading for components',
+      "performanceMonitoring": 'Enhanced PerformanceMonitor with Core Web Vitals tracking',
+      "bundleAnalysis": 'Created bundle analyzer script',
+      "recommendations": ['Implement lazy loading for components',
         'Use dynamic imports for large pages',
         'Optimize images with WebP/AVIF formats',
         'Implement service worker for caching',
@@ -233,8 +231,7 @@ function generatePerformanceReport() {
         'Implement code splitting'
       ]
     },
-    nextSteps: [
-      'Run bundle analyzer to identify optimization opportunities',
+    "nextSteps": ['Run bundle analyzer to identify optimization opportunities',
       'Implement lazy loading for large components',
       'Optimize images in public directory',
       'Set up performance monitoring in production',
@@ -253,10 +250,10 @@ try {
   generatePerformanceReport();
   
   console.log('🎉 Performance optimization automation completed successfully!');
-  console.log('📋 Performance improvements created:');
+  console.log('📋 Performance improvements "created": ');
   console.log('   ✅ OptimizedImage component');
   console.log('   ✅ Enhanced PerformanceMonitor');
   console.log('   ✅ Bundle analyzer script');
   console.log('   ✅ Performance optimization report')} catch (error) {
-  console.error('❌ Performance optimization automation failed:', error.message);
+  console.error('❌ Performance optimization automation "failed": ', error.message);
   process.exit(1)}

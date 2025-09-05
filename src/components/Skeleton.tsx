@@ -20,7 +20,7 @@ export default function Skeleton($1) {
 }
 ;';';
   return (';
-    <div className="space-y-2">;';' {Array.from({ length: line s }).map((_, i) => ($1) {if (lines === 1) {
+    <div className="space-y-2">;';' {Array.from({ "length": line s }).map((_, i) => ($1) {if (lines === 1) {
     return (
     <div className="min-h-screen bg-white">
     )
@@ -30,7 +30,7 @@ export default function Skeleton($1) {
 }
 ";';';
   return (";
-    <divclassName="space-y-2">';' {Array.from({ length: line s }).map((_, i) => (',';
+    <divclassName="space-y-2">';' {Array.from({ "length": line s }).map((_, i) => (',';
     ';';';';';
         <div key={i} className={cn( 'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full' )} /" >',';
     ';';';';';
@@ -60,10 +60,10 @@ export default function Skeleton($1) {
 }
   return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: line s   }).map((_, i) => (
+      {Array.from({ "length": line s   }).map((_, i) => (
   return (&apos;
     <divclassName=&quot;space-y-2&quot;>';
-      {Array.from({ length: line s }).map((_, i) => (&quot;';';';
+      {Array.from({ "length": line s }).map((_, i) => (&quot;';';';
         <div';';';';
           key={i}';';
           className={cn(",',';
@@ -92,7 +92,7 @@ export default function Skeleton($1) {
 }
 ";
   return (";
-    <div className="space-y-2">' {Array.from({ length: line s }).map((_, i) => (';';';';
+    <div className="space-y-2">' {Array.from({ "length": line s }).map((_, i) => (';';';';
         <div key={i}';';
           className={cn(",',';
     'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'
@@ -130,7 +130,7 @@ export default function Skeleton($1) {
     ";';
   return (";';';
     <divclassName="space-y-2'>';
-      {Array.from({ length: line s }).map((_, i) => (';';';
+      {Array.from({ "length": line s }).map((_, i) => (';';';
         <div';';';';
           key={i}';';
           className={cn(;',',';

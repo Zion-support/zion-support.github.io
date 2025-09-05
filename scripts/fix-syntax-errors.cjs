@@ -24,45 +24,45 @@ class SyntaxErrorFixer {
     try {
       // Run ESLint with auto-fix
       this.log('Running ESLint auto-fix...');
-      execSync('npm run lint:fix', { stdio: 'inherit' });
+      execSync('npm run "lint": fix', { "stdio": 'inherit' });
       this.fixes++;
       
       // Run TypeScript compiler to check for errors
       this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { stdio: 'inherit' });
+      execSync('npm run type-check', { "stdio": 'inherit' });
       
       // Format code with Prettier
       this.log('Formatting code with Prettier...');
-      execSync('npm run format', { stdio: 'inherit' });
+      execSync('npm run format', { "stdio": 'inherit' });
       this.fixes++;
       
       this.log(`✅ Syntax fixing completed successfully. Applied ${this.fixes} fixes.`);
-      return { success: true, fixes: this.fixes }} catch (error) {
-      this.log(`❌ Syntax fixing failed: ${error.message}`, 'ERROR');
+      return { "success": true, "fixes": this.fixes }} catch (error) {
+      this.log(`❌ Syntax fixing "failed": ${error.message}`, 'ERROR');
       this.errors.push(error.message);
-      return { success: false, error: error.message, fixes: this.fixes }}
+      return { "success": false, "error": error.message, "fixes": this.fixes }}
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixes: this.fixes,
-      errors: this.errors,
-      success: this.errors.length === 0
+      "timestamp": new Date().toISOString(),
+      "fixes": this.fixes,
+      "errors": this.errors,
+      "success": this.errors.length === 0
    };
 
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
     const logDir = path.dirname(reportPath;);
     
     if () {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
     
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
     ) {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
     
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
-    this.log(`📄 Report saved to: ${reportPath}`);
+    this.log(`📄 Report saved "to": ${reportPath}`);
     
     return report}
 
@@ -81,7 +81,7 @@ class SyntaxErrorFixer {
         this.log('⚠️ Syntax error fixing completed with some issues')}
       
       return report}} catch (error) {
-      this.log(`💥 Syntax error fixing failed: ${error.message}`, 'ERROR');
+      this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
       throw error}
   }
 }

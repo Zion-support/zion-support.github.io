@@ -12,21 +12,20 @@ class SyntaxFixer {
       let originalContent = content;
       let hasChanges = false;
       // Fix common syntax errors
-      const fixes = [
-        // Remove trailing semicolons after closing braces
-        {pattern: /,\s*}\s*;/, replacement: '}' };
+      const fixes = [// Remove trailing semicolons after closing braces
+        {"pattern": /,\s*}\s*;/, "replacement": '}' };
         // Fix missing semicolons after require statements
-        {pattern: /require\("[^"]+"\)\s*const/g, replacement: 'require("$1"),\nconst'};
+        {"pattern": /require\("[^"]+"\)\s*const/g, "replacement": 'require("$1"),\nconst'};
         // Fix malformed class definitions
-        { pattern: /class\s+(\w+)\s*{\s*constructor\(\)\s*{/, replacement: 'class $1 {\n  constructor() {' };
+        { "pattern": /class\s+(\w+)\s*{\s*constructor\(\)\s*{/, "replacement": 'class $1 {\n  constructor() {' };
         // Fix malformed function definitions
-        { pattern: /function\s+(\w+)\s*\(\)\s*{/, replacement: 'function $1() {' };
+        { "pattern": /function\s+(\w+)\s*\(\)\s*{/, "replacement": 'function $1() {' };
         // Remove duplicate semicolons
-        {pattern: /,+/g, replacement: ','};
+        {"pattern": /,+/g, "replacement": ','};
         // Fix malformed object literals
-        { pattern: /{\s*,\s*/g, replacement: '{\n  ' };
+        { "pattern": /{\s*,\s*/g, "replacement": '{\n  ' };
         // Fix malformed array literals
-        {pattern: /\[\s*,\s*/g, replacement: '[\n  '}
+        {"pattern": /\[\s*,\s*/g, "replacement": '[\n  '}
       ];
       fixes.forEach(fix => {
         const newContent = content.replace(fix.pattern, fix.replacement);
@@ -35,10 +34,10 @@ class SyntaxFixer {
       if (hasChanges) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed syntax errors in: ${filePath}`);
+        this.log(`✅ Fixed syntax errors "in": ${filePath}`);
         return true}
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false}
   }
@@ -58,7 +57,7 @@ class SyntaxFixer {
             files.push(fullPath)}
         }
       } catch (error) {
-        this.log(`Warning: Could not scan directory ${currentDir}: ${error.message}`)}
+        this.log(`"Warning": Could not scan directory ${currentDir}: ${error.message}`)}
     };
     scanDir(dir);
     return files}
@@ -71,18 +70,18 @@ class SyntaxFixer {
       if (this.fixFile(file)) {
         fixedCount++}
     }
-    this.log(`\n📊 Syntax Fixer Results: `);
+    this.log("\n📊 Syntax Fixer "Results": ");
     this.log(`- Files processed: ${files.length}`);
-    this.log(`- Files fixed: ${fixedCount}`);
-    this.log(`- Errors encountered: ${this.errors.length}`);
+    this.log(`- Files "fixed": ${fixedCount}`);
+    this.log(`- Errors "encountered": ${this.errors.length}`);
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors encountered: ');
+      this.log('\n❌ Errors "encountered": ');
       this.errors.forEach(err => {
         this.log(`  - ${err.file}: ${err.error}`)})}
     if (fixedCount > 0) {
       this.log('\n✅ Syntax fixing completed successfully!')} else {
       this.log('\n✅ No syntax errors found!')}
-    return {filesProcessed: files.length,filesFixed: fixedCount;
+    return {"filesProcessed": files.length,"filesFixed": fixedCount;
       errors: this.errors}}
 }
 // Run the syntax fixer

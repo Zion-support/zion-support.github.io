@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {SEO} from "./SEO";
-;
 export default function SitemapPage($1) {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&';
@@ -17,7 +16,7 @@ export default function SitemapPage($1) {
         route.requiredRoles.includes('admin'));
     return (
     <div className="min-h-screen bg-white">
-      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page" />
+      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical=""https": //ziontechgroup.com/content/sitemap-page" />
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -37,7 +36,7 @@ export default function SitemapPage($1) {
                 <li key={route.path}" >"
                   <Link"
                     to={route.path}"
-                    className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,
+                    className="text-zion-slate-light "hover": text-zion-cyan transition-colors block ">,
                     {route.label || route.title}
 
                   </Link>
@@ -57,7 +56,7 @@ export default function SitemapPage($1) {
                 <li key={route.path}" >"
                   <Link"
                     to={route.path}"
-                    className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,
+                    className="text-zion-slate-light "hover": text-zion-cyan transition-colors block ">,
                     {route.label || route.title}
 
                   </Link>
@@ -77,7 +76,7 @@ export default function SitemapPage($1) {
                 <li key={route.path}" >"
                   <Link"
                     to={route.path}"
-                    className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,
+                    className="text-zion-slate-light "hover": text-zion-cyan transition-colors block ">,
                     {route.label || route.title}
 
                   </Link>
@@ -97,7 +96,7 @@ export default function SitemapPage($1) {
                 <li key={route.path}" >"
                   <Link"
                     to={route.path}"
-                    className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,
+                    className="text-zion-slate-light "hover": text-zion-cyan transition-colors block ">,
                     {route.label || route.title}
 
                   </Link>
@@ -113,12 +112,12 @@ export default function SitemapPage($1) {
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">"
             Complete Route List"
           </h2>"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">"
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-4">"
             {completeSitemap.map(route => (",
               <div key="{route.path}" className="bg-white/5 rounded p-3">"
                 <Link"
                   to={route.path}"
-                  className="text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium ">",
+                  className="text-zion-cyan "hover": text-zion-cyan-light transition-colors font-medium ">",
                   {route.path}"
                 </Link>"
                 <span className="ml-2 text-xs italic text-zion-slate-light">";
@@ -145,5 +144,4 @@ export {SitemapPage};
 
 export {SitemapPage};
 
-export {SitemapPage};';
-;';';
+export {SitemapPage};';';';

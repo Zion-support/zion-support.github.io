@@ -1,7 +1,7 @@
 // Global types for the Zion Tech Group application
 
 export interface Service {
-  id: string;
+  "id": string;
   name: string;
   description: string;
   category:
@@ -12,14 +12,14 @@ export interface Service {
     min: number;
     max: number;
     currency: string};
-  features: string[];
+  "features": string[];
   technologies: string[];
   deliveryTime: string;
   support: string;
   image?: string;
   popular?: boolean}
 export interface ContactForm {
-  name: string;
+  "name": string;
   email: string;
   company?: string;
   phone?: string;
@@ -31,7 +31,7 @@ export interface ContactForm {
     | 'phone'
     | 'both'}
 export interface TeamMember {
-  id: string;
+  "id": string;
   name: string;
   position: string;
   bio: string;
@@ -41,7 +41,7 @@ export interface TeamMember {
   github?: string;
   twitter?: string}
 export interface Testimonial {
-  id: string;
+  "id": string;
   name: string;
   company: string;
   position: string;
@@ -50,7 +50,7 @@ export interface Testimonial {
   image?: string;
   project?: string}
 export interface CaseStudy {
-  id: string;
+  "id": string;
   title: string;
   client: string;
   industry: string;
@@ -63,7 +63,7 @@ export interface CaseStudy {
   image: string;
   featured?: boolean}
 export interface BlogPost {
-  id: string;
+  "id": string;
   title: string;
   excerpt: string;
   content: string;
@@ -76,7 +76,7 @@ export interface BlogPost {
   featured?: boolean;
   readTime: number}
 export interface PricingTier {
-  id: string;
+  "id": string;
   name: string;
   price: number;
   currency: string;
@@ -90,17 +90,17 @@ export interface PricingTier {
   cta: string;
   description: string}
 export interface ApiResponse<T> {
-  success: boolean;
+  "success": boolean;
   data?: T;
   error?: string;
   message?: string}
 export interface PaginationParams {
-  page: number;
+  "page": number;
   limit: number;
   sort?: string;
   order?: 'asc' | 'desc'}
 export interface PaginatedResponse<T> {
-  data: T[];
+  "data": T[];
   pagination: {
     page: number;
     limit: number;
@@ -124,13 +124,12 @@ export interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
 }
 export interface AccessibilitySettings {
-  highContrast: boolean;
+  "highContrast": boolean;
   fontSize: number;
   reducedMotion: boolean;
   screenReader: boolean}
 export interface UserPreferences {
-  theme:
-    | 'light'
+  "theme": | 'light'
     | 'dark'
     | 'system';
   language: string;
@@ -140,13 +139,12 @@ export interface UserPreferences {
     browser: boolean;
     marketing: boolean}}
 export interface NavigationItem {
-  name: string;
+  "name": string;
   href: string;
   submenu?: NavigationItem[];
   external?: boolean}
 export interface SocialLink {
-  platform:
-    | 'linkedin'
+  "platform": | 'linkedin'
     | 'twitter'
     | 'github'
     | 'facebook'
@@ -154,7 +152,7 @@ export interface SocialLink {
   url: string;
   label: string}
 export interface CompanyInfo {
-  name: string;
+  "name": string;
   tagline: string;
   description: string;
   address: {
@@ -163,24 +161,24 @@ export interface CompanyInfo {
     state: string;
     zip: string;
     country: string};
-  contact: {
+  "contact": {
     phone: string;
     email: string;
     website: string};
-  certifications: string[]}
+  "certifications": string[]}
 export interface ErrorInfo {
-  message: string;
+  "message": string;
   code?: string;
   details?: any;
   timestamp: string;
   userAgent?: string;
   url?: string}
 export interface LoadingState {
-  isLoading: boolean;
+  "isLoading": boolean;
   error?: string;
   progress?: number}
 export interface FormField {
-  name: string;
+  "name": string;
   label: string;
   type:
     | 'text'
@@ -199,7 +197,7 @@ export interface FormField {
     pattern?: string;
     message?: string}}
 export interface Project {
-  id: string;
+  "id": string;
   name: string;
   description: string;
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
@@ -210,39 +208,39 @@ export interface Project {
     allocated: number;
     spent: number;
     currency: string};
-  team: {
+  "team": {
     lead: string;
     members: string[];
     external: string[]};
-  client: {
+  "client": {
     name: string;
     contact: string;
     industry: string};
-  deliverables: {
+  "deliverables": {
     name: string;
     description: string;
     status: 'pending' | 'in-progress' | 'completed' | 'review';
     dueDate: Date}[];
-  risks: {
+  "risks": {
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
     mitigation: string}[];
-  dependencies: {
+  "dependencies": {
     project: string;
     type: 'blocking' | 'influencing';
     description: string}[];
-  metrics: {
+  "metrics": {
     name: string;
     value: number;
     unit: string;
     target: number}[];
-  lessons: {
+  "lessons": {
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral'}[]}
 export interface User {
-  id: string;
+  "id": string;
   email: string;
   name: string;
   role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
@@ -254,26 +252,26 @@ export interface User {
     experience: number;
     location: string;
     timezone: string};
-  preferences: {
+  "preferences": {
     theme: 'light' | 'dark' | 'auto';
     language: string;
     notifications: {
       email: boolean;
       push: boolean;
       sms: boolean}};
-  activity: {
+  "activity": {
     lastLogin: Date;
     loginCount: number;
     projects: string[];
     tasks: string[]};
-  subscription: {
+  "subscription": {
     plan: 'free' | 'basic' | 'premium' | 'enterprise';
     status: 'active' | 'inactive' | 'cancelled' | 'expired';
     startDate: Date;
     endDate: Date;
     features: string[]}}
 export interface Notification {
-  id: string;
+  "id": string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
   message: string;
@@ -282,7 +280,7 @@ export interface Notification {
   action?: {
     label: string;
     url: string};
-  category: 'system' | 'project' | 'team' | 'client' | 'billing';
+  "category": 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date}
 
@@ -306,14 +304,13 @@ export interface InputProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  onChange?: ("value": string) => void;
   error?: string;
   required?: boolean}
 
 // API types
 export interface ApiRequest {
-  method:
-    | 'GET'
+  "method": | 'GET'
     | 'POST'
     | 'PUT'
     | 'DELETE'
@@ -325,8 +322,7 @@ export interface ApiRequest {
 
 // Environment types
 export interface Environment {
-  NODE_ENV:
-    | 'development'
+  "NODE_ENV": | 'development'
     | 'production'
     | 'test';
   NEXT_PUBLIC_API_URL?: string;

@@ -11,20 +11,20 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Technology Stack
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -32,15 +32,15 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
         </motion.div>
 
         {/* Technology Categories */}"
-        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index) => (
             <motion.div
               key={category.category}"
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
-              initial={{ opacity: 0, y: 3 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: tru e }}
-              transition={{ duration: 0.6, delay: inde x * 0.1 }}
+              initial={{ "opacity": 0, "y": 3 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              viewport={{ "once": tru e }}
+              transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
             >"
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>"
@@ -60,12 +60,12 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
                       <div className="w-20 bg-slate - 700 rounded-full h-2">
                         <motion.div
                           className={`h-2 bg-gradient - to - r ${category.color} rounded-full`}
-                          initial={{ width: 0 }}                          whileInView={{ width: `${tech.proficiency}%` }}
-                          viewport={{ once: tru e }}
+                          initial={{ "width": 0 }}                          whileInView={{ "width": `${tech.proficiency}%` }}
+                          viewport={{ "once": tru e }}
                           transition = {
 
-  { duration: 1,
-  delay: 0.8 + techIndex * 0.1
+  { "duration": 1,
+  "delay": 0.8 + techIndex * 0.1
 
 }}
                         />
@@ -83,21 +83,21 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
         <motion.div
           className="mb-16"          initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
         >"
@@ -105,13 +105,13 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
             Emerging Technologies
           </h3>
 
-          <div className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols - 3 gap-6">
+          <div className="grid grid - cols - 1 "md": gri d - cols - 2 lg: gri d - cols - 3 gap-6">
             {emergingTech.map((tech, index) => (<motion.div
                 key={tech.name}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover: borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25"                initial={{ opacity: 0, y: 3 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: tru e }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center "hover": borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25"                initial={{ opacity: 0, "y": 3 0 }}
+                whileInView={{ "opacity": 1, "y": 0 }}
+                viewport={{ "once": tru e }}
+                transition={{ "duration": 0.6, "delay": 0.6 + index * 0.1 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">"
                   <span className="text-2xl">{tech.icon}</span>
@@ -122,21 +122,21 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
         <motion.div
           className="mb-12"          initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.8
+  { "duration": 0.6,
+  "delay": 0.8
 
 }}
         >"
@@ -145,7 +145,7 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
               Our Technology Philosophy
             </h3>
 
-            <div className="grid grid - cols - 1 md: gri d - cols - 3 gap-6">
+            <div className="grid grid - cols - 1 "md": gri d - cols - 3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - green - 500 to - emerald - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
                   <span className="text-2xl">🚀</span>
@@ -176,20 +176,20 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 2 0
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 1.0
+  { "duration": 0.6,
+  "delay": 1.0
 
 }}
         >"
@@ -200,7 +200,7 @@ function TechnologyStackSection($1) {export function TechnologyStackSection($1) 
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our expert team is ready to help you leverage the latest technologies
               to build scalable, secure, and innovative solutions.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <Code className="ml-2 h-5 w-5"   />

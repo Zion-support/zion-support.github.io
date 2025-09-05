@@ -10,20 +10,20 @@ import { motion, AnimatePresence  } from 'framer-motion';
  */
 function FeaturedListingsSection($1) {          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Featured Services
           </h2>"
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
@@ -35,11 +35,11 @@ function FeaturedListingsSection($1) {          initial = {
           {featuredListings.map((listing, index) => (
             <motion.div
               key={listing.id}"
-              className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
-              initial={{ opacity: 0, y: 3 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: tru e }}
-              transition={{ duration: 0.6, delay: inde x * 0.1 }}
+              className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 "hover": borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
+              initial={{ opacity: 0, "y": 3 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              viewport={{ "once": tru e }}
+              transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
             >"
               <div className="relative">
                 <img src={listing.image}
@@ -51,11 +51,11 @@ function FeaturedListingsSection($1) {          initial = {
                   </span>
                 </div>
 "
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover: scal e-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-"hover": scal e-110 transition-transform duration-300">
                   {service.image}
                 </div>
 "
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-"hover": tex t-blue-600 transition-colors">
                   {service.title}
                 </h3>
 "
@@ -64,7 +64,7 @@ function FeaturedListingsSection($1) {          initial = {
                 </p>
 "
                 <div className="mb-4">"
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>"
+                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key "Features": </h4>"
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-sm text-gray-600">"
@@ -78,7 +78,7 @@ function FeaturedListingsSection($1) {          initial = {
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
                     to={service.link}"
-                    className="text-blue-600 hover: tex t-blue-700 font-medium text-sm group-hover: underlin e"
+                    className="text-blue-600 "hover": tex t-blue-700 font-medium text-sm group-hover: underlin e"
 
                     Learn More →
                   </Link>
@@ -88,7 +88,7 @@ function FeaturedListingsSection($1) {          initial = {
               <div className="px-6 pb-6">
                 <Link
                   to={service.link}"
-                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover: b g-blue-700 transition-colors duration-300 text-center block group-hover: shado w-lg"
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg "hover": b g-blue-700 transition-colors duration-300 text-center block group-hover: shado w-lg"
 
                   Get Started
                 </Link>
@@ -99,26 +99,26 @@ function FeaturedListingsSection($1) {          initial = {
         <motion.div
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
         >
           <Link            to="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200 hover: scal e-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": fro m-blue-700 hover: t o-purple-700 transition-all duration-200 hover: scal e-105"
           >
             View All Services"
             <span className="text-xl">→</span>;

@@ -9,19 +9,19 @@ console.log('🧪 Starting Comprehensive Test Suite...');
 class ComprehensiveTestSuite {
   constructor() {
     this.testResults = {
-      timestamp: new Date().toISOString(),
-      tests: [],
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "tests": [],
+      "summary": {
         total: 0,
-        passed: 0,
-        failed: 0,
-        skipped: 0
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0
       }
     };
   }
 
   async runTest(name, testFunction) {
-    console.log(`🔍 Running: ${name}`);
+    console.log(`🔍 "Running": ${name}`);
     const startTime = Date.now();
     
     try {
@@ -30,7 +30,7 @@ class ComprehensiveTestSuite {
       
       this.testResults.tests.push({
         name,
-        status: 'passed',
+        "status": 'passed',
         duration,
         result
       });
@@ -45,9 +45,9 @@ class ComprehensiveTestSuite {
       
       this.testResults.tests.push({
         name,
-        status: 'failed',
+        "status": 'failed',
         duration,
-        error: error.message
+        "error": error.message
       });
       
       this.testResults.summary.total++;
@@ -61,10 +61,10 @@ class ComprehensiveTestSuite {
   async testBuildProcess() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run build', { stdio: 'pipe' });
+        execSync('npm run build', { "stdio": 'pipe' });
         resolve('Build completed successfully');
       } catch (error) {
-        reject(new Error(`Build failed: ${error.message}`));
+        reject(new Error(`Build "failed": ${error.message}`));
       }
     });
   }
@@ -72,10 +72,10 @@ class ComprehensiveTestSuite {
   async testLinting() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run lint', { stdio: 'pipe' });
+        execSync('npm run lint', { "stdio": 'pipe' });
         resolve('Linting passed');
       } catch (error) {
-        reject(new Error(`Linting failed: ${error.message}`));
+        reject(new Error(`Linting "failed": ${error.message}`));
       }
     });
   }
@@ -83,10 +83,10 @@ class ComprehensiveTestSuite {
   async testTypeChecking() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run type-check', { stdio: 'pipe' });
+        execSync('npm run type-check', { "stdio": 'pipe' });
         resolve('Type checking passed');
       } catch (error) {
-        reject(new Error(`Type checking failed: ${error.message}`));
+        reject(new Error(`Type checking "failed": ${error.message}`));
       }
     });
   }
@@ -94,10 +94,10 @@ class ComprehensiveTestSuite {
   async testHealthChecks() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run automation:health', { stdio: 'pipe' });
+        execSync('npm run "automation": health', { "stdio": 'pipe' });
         resolve('Health checks passed');
       } catch (error) {
-        reject(new Error(`Health checks failed: ${error.message}`));
+        reject(new Error(`Health checks "failed": ${error.message}`));
       }
     });
   }
@@ -105,10 +105,10 @@ class ComprehensiveTestSuite {
   async testSecurityScan() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run automation:security', { stdio: 'pipe' });
+        execSync('npm run "automation": security', { "stdio": 'pipe' });
         resolve('Security scan passed');
       } catch (error) {
-        reject(new Error(`Security scan failed: ${error.message}`));
+        reject(new Error(`Security scan "failed": ${error.message}`));
       }
     });
   }
@@ -116,17 +116,16 @@ class ComprehensiveTestSuite {
   async testPerformanceOptimization() {
     return new Promise((resolve, reject) => {
       try {
-        execSync('npm run automation:performance', { stdio: 'pipe' });
+        execSync('npm run "automation": performance', { "stdio": 'pipe' });
         resolve('Performance optimization completed');
       } catch (error) {
-        reject(new Error(`Performance optimization failed: ${error.message}`));
+        reject(new Error(`Performance optimization "failed": ${error.message}`));
       }
     });
   }
 
   async testFileStructure() {
-    const requiredFiles = [
-      'package.json',
+    const requiredFiles = ['package.json',
       'next.config.js',
       'tailwind.config.js',
       'tsconfig.json'
@@ -135,7 +134,7 @@ class ComprehensiveTestSuite {
     const missingFiles = requiredFiles.filter(file => !fs.existsSync(file));
     
     if (missingFiles.length > 0) {
-      throw new Error(`Missing required files: ${missingFiles.join(', ')}`);
+      throw new Error(`Missing required "files": ${missingFiles.join(', ')}`);
     }
 
     return 'File structure is valid';
@@ -148,7 +147,7 @@ class ComprehensiveTestSuite {
     const missingDeps = requiredDeps.filter(dep => !packageJson.dependencies[dep]);
     
     if (missingDeps.length > 0) {
-      throw new Error(`Missing required dependencies: ${missingDeps.join(', ')}`);
+      throw new Error(`Missing required "dependencies": ${missingDeps.join(', ')}`);
     }
 
     return 'Dependencies are valid';
@@ -187,7 +186,7 @@ class ComprehensiveTestSuite {
     this.generateReport();
     
     console.log('\n🎉 Test Suite Completed!');
-    console.log(`📊 Summary: ${this.testResults.summary.passed}/${this.testResults.summary.total} tests passed`);
+    console.log(`📊 "Summary": ${this.testResults.summary.passed}/${this.testResults.summary.total} tests passed`);
     
     return this.testResults;
   }
@@ -195,7 +194,7 @@ class ComprehensiveTestSuite {
   generateReport() {
     const reportPath = `test-suite-report-${Date.now()}.json`;
     fs.writeFileSync(reportPath, JSON.stringify(this.testResults, null, 2));
-    console.log(`📄 Test report saved to: ${reportPath}`);
+    console.log(`📄 Test report saved "to": ${reportPath}`);
   }
 }
 

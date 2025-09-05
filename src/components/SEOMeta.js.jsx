@@ -8,11 +8,11 @@ const SEOMeta = (props) => {};
     const fullTitle = `${title} | ${siteName};`;
     // Default structured data for organization;
     const defaultStructuredData = {}
-  "@context": "https://schema.org","
+  "@context": ""https": //schema.org","
         "@type": "Organization","
         "name": "Zion Tech Group","
-        "url": "https://ziontechgroup.com","
-        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","
+        "url": ""https": //ziontechgroup.com","
+        "logo": ""https": //ziontechgroup.com/images/zion-tech-group-logo.png","
         "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","
         "address": {}
 "
@@ -34,9 +34,9 @@ const SEOMeta = (props) => {};
             "email": "kleber@ziontechgroup.com"
         };,"
         "sameAs"[;"
-            "https://linkedin.com/company/ziontechgroup","
-            "https://twitter.com/ziontechgroup","
-            "https://github.com/ziontechgroup"
+            ""https": //linkedin.com/company/ziontechgroup","
+            ""https": //twitter.com/ziontechgroup","
+            ""https": //github.com/ziontechgroup"
         ],"
         "foundingDate": "2015","
         "numberOfEmployees": "50+","
@@ -86,23 +86,23 @@ const SEOMeta = (props) => {};
       <meta name="revisit-after" content="7 days"  />
       "
       {/* Open Graph Meta Tags */}"
-      <meta property="og:title" content={fullTitle}  />"
-      <meta property="og:description" content={description}  />"
-      <meta property="og:type" content={type}  />"
-      <meta property="og:url" content={url}  />"
-      <meta property="og:image" content={image}  />"
-      <meta property="og:image:width" content="1200"  />"
+      <meta property=""og": title" content={fullTitle}  />"
+      <meta property=""og": description" content={description}  />"
+      <meta property=""og": type" content={type}  />"
+      <meta property=""og": url" content={url}  />"
+      <meta property=""og": image" content={image}  />"
+      <meta property=""og": image:width" content="1200"  />"
       <meta property="og:image:height" content="630"  />"
       <meta property="og:site_name" content={siteName}  />"
-      <meta property="og:locale" content="en_US"  />
+      <meta property=""og": locale" content="en_US"  />
       "
       {/* Twitter Card Meta Tags */}"
-      <meta name="twitter:card" content="summary_large_image"  />"
+      <meta name=""twitter": card" content="summary_large_image"  />"
       <meta name="twitter:site" content="@ziontechgroup"  />"
       <meta name="twitter:creator" content="@ziontechgroup"  />"
       <meta name="twitter:title" content={fullTitle}  />"
-      <meta name="twitter:description" content={description}  />"
-      <meta name="twitter:image" content={image}  />
+      <meta name=""twitter": description" content={description}  />"
+      <meta name=""twitter": image" content={image}  />
       "
       {/* Additional Meta Tags */}"
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />"
@@ -123,7 +123,7 @@ const SEOMeta = (props) => {};
       <link rel="manifest" href="/site.webmanifest"  />
       "
       {/* Preconnect to external domains for performance */}"
-      <link rel="preconnect" href="https://fonts.googleapis.com"  />"
+      <link rel="preconnect" href=""https": //fonts.googleapis.com"  />"
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
       "
       {/* Structured Data */}"
@@ -155,5 +155,4 @@ export {SEOMeta};
 
 export {SEOMeta};
 
-export {SEOMeta};';
-;';';
+export {SEOMeta};';';';

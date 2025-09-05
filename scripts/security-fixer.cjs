@@ -30,23 +30,23 @@ class SecurityFixer {
       await this.generateReport();
       
       this.log('✅ Security fixes completed')} catch (error) {
-      this.log(`❌ Security fixes failed: ${error.message}`)}
+      this.log(`❌ Security fixes "failed": ${error.message}`)}
   }
 
   async fixDependencyVulnerabilities() {
     this.log('🔧 Fixing dependency vulnerabilities');
     try {
-      execSync('npm audit fix --force', { cwd: this.projectRoot });
+      execSync('npm audit fix --force', { "cwd": this.projectRoot });
       this.fixes.push({
-        type: 'dependency',
-        action: 'npm audit fix',
-        status: 'success'
+        "type": 'dependency',
+        "action": 'npm audit fix',
+        "status": 'success'
       })} catch (error) {
       this.fixes.push({
-        type: 'dependency',
-        action: 'npm audit fix',
-        status: 'failed',
-        error: error.message
+        "type": 'dependency',
+        "action": 'npm audit fix',
+        "status": 'failed',
+        "error": error.message
       })}
   }
 
@@ -62,30 +62,30 @@ class SecurityFixer {
         if (!content.includes('DOMPurify')) {
           content = content.replace(
             /import React from 'react';/,
-            `import React from 'react';
-import DOMPurify from 'dompurify';`
+            "import React from 'react';
+import DOMPurify from 'dompurify';"
           )}
         
         // Sanitize HTML content
         content = content.replace(
-          /dangerouslySetInnerHTML=\{\{__html: ([^}]+)\}\}/g,
-          'dangerouslySetInnerHTML={{__html: DOMPurify.sanitize($1)}}'
+          /dangerouslySetInnerHTML=\{\{"__html": ([^}]+)\}\}/g,
+          'dangerouslySetInnerHTML={{"__html": DOMPurify.sanitize($1)}}'
         );
         
         fs.writeFileSync(seoEnhancerPath, content);
         
         this.fixes.push({
-          type: 'xss',
-          file: 'SEOEnhancer.tsx',
-          action: 'Added DOMPurify sanitization',
-          status: 'success'
+          "type": 'xss',
+          "file": 'SEOEnhancer.tsx',
+          "action": 'Added DOMPurify sanitization',
+          "status": 'success'
         })} catch (error) {
         this.fixes.push({
-          type: 'xss',
-          file: 'SEOEnhancer.tsx',
-          action: 'Added DOMPurify sanitization',
-          status: 'failed',
-          error: error.message
+          "type": 'xss',
+          "file": 'SEOEnhancer.tsx',
+          "action": 'Added DOMPurify sanitization',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
@@ -109,34 +109,34 @@ import DOMPurify from 'dompurify';`
         fs.writeFileSync(helpersPath, content);
         
         this.fixes.push({
-          type: 'code-injection',
-          file: 'helpers.js',
-          action: 'Removed eval and Function constructor',
-          status: 'success'
+          "type": 'code-injection',
+          "file": 'helpers.js',
+          "action": 'Removed eval and Function constructor',
+          "status": 'success'
         })} catch (error) {
         this.fixes.push({
-          type: 'code-injection',
-          file: 'helpers.js',
-          action: 'Removed eval and Function constructor',
-          status: 'failed',
-          error: error.message
+          "type": 'code-injection',
+          "file": 'helpers.js',
+          "action": 'Removed eval and Function constructor',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixes: this.fixes,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "fixes": this.fixes,
+      "summary": {
         total: this.fixes.length,
-        successful: this.fixes.filter(f => f.status === 'success').length,
-        failed: this.fixes.filter(f => f.status === 'failed').length
+        "successful": this.fixes.filter(f => f.status === 'success').length,
+        "failed": this.fixes.filter(f => f.status === 'failed').length
       }
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Security fix report generated: ${this.reportFile}`)}
+    this.log(`📊 Security fix report "generated": ${this.reportFile}`)}
 }
 
 // Run the security fixer

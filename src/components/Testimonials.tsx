@@ -1,6 +1,6 @@
 export default function Testimonials($1) {
 interface Testimonial {
-  quote: string;
+  "quote": string;
   author: string;
   role: string;
   company: string;
@@ -10,12 +10,12 @@ interface Testimonial {
 
 interface TestimonialsProps {
 
-  testimonials: Testimonia l[];
+  "testimonials": Testimonia l[];
 
 }
 
   return (<section className="py-20 bg-gray -800">
-      <div className="max - w-7xl mx - auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max - w-7xl mx - auto px-4 "sm": p x-6 lg: p x-8">
         <div className="text-center mb-16">
           <motion.h2
             className="text-4xl font - bold text-white mb-4"        <div className="text-center mb-16">
@@ -31,7 +31,7 @@ interface TestimonialsProps {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.author}
-              className="group bg-gray-900 rounded-xl p-8 border border-gray-700 hover: borde r-cyan-500/30 hover: shado w-2xl hover: shado w-cyan-500/10 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-gray-900 rounded-xl p-8 border border-gray-700 "hover": borde r-cyan-500/30 hover: shado w-2xl hover: shado w-cyan-500/10 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -39,12 +39,12 @@ interface TestimonialsProps {
                 ))}
               </div>
 
-              <blockquote className="text-gray-300 mb-6 italic leading-relaxed group-hover: tex t-gray-200 transition-colors">
+              <blockquote className="text-gray-300 mb-6 italic leading-relaxed group-"hover": tex t-gray-200 transition-colors">
                 "{testimonial.quote}"
               </blockquote>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center group-"hover": scal e-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white"  />
                 </div>
                 <div>

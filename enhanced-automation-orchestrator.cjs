@@ -9,21 +9,21 @@ console.log('🚀 Starting Enhanced Automation Orchestrator...');
 class AutomationOrchestrator {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      health: {},
-      security: {},
-      performance: {},
-      linting: {},
-      testing: {},
-      build: {},
-      deployment: {}
+      "timestamp": new Date().toISOString(),
+      "health": {},
+      "security": {},
+      "performance": {},
+      "linting": {},
+      "testing": {},
+      "build": {},
+      "deployment": {}
     };
   }
 
   async runHealthChecks() {
     console.log('🏥 Running Health Checks...');
     try {
-      execSync('npm run automation:health', { stdio: 'pipe' });
+      execSync('npm run "automation": health', { "stdio": 'pipe' });
       this.results.health.status = 'passed';
       this.results.health.message = 'All health checks passed';
     } catch (error) {
@@ -35,7 +35,7 @@ class AutomationOrchestrator {
   async runSecurityScan() {
     console.log('🔒 Running Security Scan...');
     try {
-      execSync('npm run automation:security', { stdio: 'pipe' });
+      execSync('npm run "automation": security', { "stdio": 'pipe' });
       this.results.security.status = 'passed';
       this.results.security.message = 'Security scan completed';
     } catch (error) {
@@ -47,7 +47,7 @@ class AutomationOrchestrator {
   async runPerformanceOptimization() {
     console.log('⚡ Running Performance Optimization...');
     try {
-      execSync('npm run automation:performance', { stdio: 'pipe' });
+      execSync('npm run "automation": performance', { "stdio": 'pipe' });
       this.results.performance.status = 'passed';
       this.results.performance.message = 'Performance optimization completed';
     } catch (error) {
@@ -59,7 +59,7 @@ class AutomationOrchestrator {
   async runLinting() {
     console.log('🔍 Running Linting...');
     try {
-      execSync('npm run lint:fix', { stdio: 'pipe' });
+      execSync('npm run "lint": fix', { "stdio": 'pipe' });
       this.results.linting.status = 'passed';
       this.results.linting.message = 'Linting completed';
     } catch (error) {
@@ -71,17 +71,17 @@ class AutomationOrchestrator {
   async runTypeChecking() {
     console.log('📝 Running Type Checking...');
     try {
-      execSync('npm run type-check', { stdio: 'pipe' });
-      this.results.typeChecking = { status: 'passed', message: 'Type checking completed' };
+      execSync('npm run type-check', { "stdio": 'pipe' });
+      this.results.typeChecking = { "status": 'passed', "message": 'Type checking completed' };
     } catch (error) {
-      this.results.typeChecking = { status: 'failed', error: error.message };
+      this.results.typeChecking = { "status": 'failed', "error": error.message };
     }
   }
 
   async runBuild() {
     console.log('🏗️  Running Build...');
     try {
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
       this.results.build.status = 'passed';
       this.results.build.message = 'Build completed successfully';
     } catch (error) {
@@ -93,7 +93,7 @@ class AutomationOrchestrator {
   async runTests() {
     console.log('🧪 Running Tests...');
     try {
-      execSync('npm run test:smoke', { stdio: 'pipe' });
+      execSync('npm run "test": smoke', { "stdio": 'pipe' });
       this.results.testing.status = 'passed';
       this.results.testing.message = 'Tests passed';
     } catch (error) {
@@ -106,14 +106,14 @@ class AutomationOrchestrator {
     console.log('📦 Optimizing Dependencies...');
     try {
       // Remove unused dependencies
-      execSync('npm prune', { stdio: 'pipe' });
+      execSync('npm prune', { "stdio": 'pipe' });
       
       // Update dependencies
-      execSync('npm update', { stdio: 'pipe' });
+      execSync('npm update', { "stdio": 'pipe' });
       
-      this.results.dependencies = { status: 'optimized', message: 'Dependencies optimized' };
+      this.results.dependencies = { "status": 'optimized', "message": 'Dependencies optimized' };
     } catch (error) {
-      this.results.dependencies = { status: 'failed', error: error.message };
+      this.results.dependencies = { "status": 'failed', "error": error.message };
     }
   }
 
@@ -121,19 +121,19 @@ class AutomationOrchestrator {
     console.log('📊 Generating Reports...');
     
     const report = {
-      timestamp: this.results.timestamp,
-      summary: {
+      "timestamp": this.results.timestamp,
+      "summary": {
         totalChecks: Object.keys(this.results).length - 1, // Exclude timestamp
-        passed: Object.values(this.results).filter(r => r.status === 'passed').length,
-        failed: Object.values(this.results).filter(r => r.status === 'failed').length
+        "passed": Object.values(this.results).filter(r => r.status === 'passed').length,
+        "failed": Object.values(this.results).filter(r => r.status === 'failed').length
       },
-      details: this.results
+      "details": this.results
     };
 
     const reportPath = `automation-report-${Date.now()}.json`;
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📄 Report saved to: ${reportPath}`);
+    console.log(`📄 Report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -152,7 +152,7 @@ class AutomationOrchestrator {
     const report = await this.generateReports();
     
     console.log('\n🎉 Automation Suite Completed!');
-    console.log(`📊 Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`);
+    console.log(`📊 "Summary": ${report.summary.passed}/${report.summary.totalChecks} checks passed`);
     
     return report;
   }

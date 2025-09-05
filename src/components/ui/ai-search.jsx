@@ -14,10 +14,10 @@ export function AISearch($1) {
     const [filters, setFilters] = useState({
         category[],;
         priceRange[0, 10000],;
-        rating: 0,
+        "rating": 0,
         location[],;
-        verified: false,
-        featured: false
+        "verified": false,
+        "featured": false
     });
     const [results, setResults] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
@@ -28,8 +28,7 @@ export function AISearch($1) {
     // Mock suggestions based on query
     const generateSuggestions = useCallback((searchQuery) => {if (!searchQuery.trim())
             return [];
-        const baseSuggestions = [
-            'AI services',
+        const baseSuggestions = ['AI services',
             'Machine learning',
             'Cloud solutions',
             'Cybersecurity',
@@ -55,56 +54,55 @@ export function AISearch($1) {
     const performSearch = useCallback(async (searchQuery, searchFilters) => {
         setIsSearching(true);
         // Mock search results
-        const mockResults = [
-            {
-                id: '1',
-                title: 'AI-Powered Business Intelligence Platform',
-                description: 'Advanced analytics and insights powered by machine learning algorithms',
-                category: 'AI & Analytics',
+        const mockResults = [{
+                "id": '1',
+                "title": 'AI-Powered Business Intelligence Platform',
+                "description": 'Advanced analytics and insights powered by machine learning algorithms',
+                "category": 'AI & Analytics',
                 tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],;
-                relevance: 0.95,
-                rating: 4.8,
-                reviews: 1247,
-                price: '$2,500/month',
-                type: 'service',
-                metadata: {
+                "relevance": 0.95,
+                "rating": 4.8,
+                "reviews": 1247,
+                "price": '$2,500/month',
+                "type": 'service',
+                "metadata": {
                     lastUpdated: '2024-01-15',
-                    verified: true,
-                    featured: true
+                    "verified": true,
+                    "featured": true
 
             },
             {
-                id: '2',
-                title: 'Senior AI Engineer - Remote',
-                description: 'Experienced AI engineer specializing in deep learning and NLP',
-                category: 'Talent',
+                "id": '2',
+                "title": 'Senior AI Engineer - Remote',
+                "description": 'Experienced AI engineer specializing in deep learning and NLP',
+                "category": 'Talent',
                 tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],;
-                relevance: 0.92,
-                rating: 4.9,
-                reviews: 89,
-                price: '$150/hour',
-                type: 'talent',
-                metadata: {
+                "relevance": 0.92,
+                "rating": 4.9,
+                "reviews": 89,
+                "price": '$150/hour',
+                "type": 'talent',
+                "metadata": {
                     lastUpdated: '2024-01-20',
-                    verified: true,
-                    featured: false
+                    "verified": true,
+                    "featured": false
 
             },
             {
-                id: '3',
-                title: 'Quantum Computing Solutions Inc.',
-                description: 'Leading provider of quantum computing services and consulting',
-                category: 'Quantum Technology',
+                "id": '3',
+                "title": 'Quantum Computing Solutions Inc.',
+                "description": 'Leading provider of quantum computing services and consulting',
+                "category": 'Quantum Technology',
                 tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],;
-                relevance: 0.88,
-                rating: 4.7,
-                reviews: 456,
-                location: 'San Francisco, CA',
-                type: 'comp',
-                metadata: {
+                "relevance": 0.88,
+                "rating": 4.7,
+                "reviews": 456,
+                "location": 'San Francisco, CA',
+                "type": 'comp',
+                "metadata": {
                     lastUpdated: '2024-01-18',
-                    verified: true,
-                    featured: true
+                    "verified": true,
+                    "featured": true
 
         ];
         // Simulate API call
@@ -146,9 +144,9 @@ export function AISearch($1) {
     const shareResults = useCallback(() => {
         if (navigator.share) {
             navigator.share({
-                title: 'Search Results from Zion Tech Group',
-                text: `Check out these results for "${query}"`,
-                url: window.location.href
+                "title": 'Search Results from Zion Tech Group',
+                "text": `Check out these results for "${query}"`,
+                "url": window.location.href
             })}
         else {
             // Fallback to copying to clipboard
@@ -170,7 +168,7 @@ export function AISearch($1) {
         const handleClickOutside = (props) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setIsOpen(false)}
-        };;';';
+        };';';
         document.addEventListener('mousedown', handleClickOutside);';';
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     // Focus input when opened
@@ -186,39 +184,39 @@ export function AISearch($1) {
       <div className="relative">
         <div className="relative">
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
-          <input ref={inputRef} type="text" value={query} onChange={(e) => handleSearchInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={placeholder} className="w-full pl-12 pr-20 py-3 bg-zion-blue-dark/60 border border-zion-blue-light/30 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"/>
+          <input ref={inputRef} type="text" value={query} onChange={(e) => handleSearchInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={placeholder} className="w-full pl-12 pr-20 py-3 bg-zion-blue-dark/60 border border-zion-blue-light/30 rounded-xl text-white placeholder-zinc-400 "focus": outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"/>
 
           {/* Voice Input Button */}
           <button onClick={toggleVoiceInput} className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${isVoiceActive';
             ? 'bg-red-500/20 text-red-400'
-            : 'text-zinc-400 hover:text-zinc-300 hover:bg-zion-blue/20'}`}>
+            : 'text-zinc-400 "hover": text-zinc-300 hover:bg-zion-blue/20'}`}>
             {isVoiceActive ? (<Mic className="w-4 h-4 animate-pulse" />) : (<MicOff className="w-4 h-4" />)}
           </button>
 
           {/* Search Button */}
-          <Button onClick={handleSearch} disabled={!query.trim() || isSearching} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50" size="sm">
+          <Button onClick={handleSearch} disabled={!query.trim() || isSearching} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan "hover": bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50" size="sm">
             {isSearching ? (<div className="w-4 h-4 border-2 border-zion-blue-dark border-t-transparent rounded-full animate-spin" />) : (<Search className="w-4 h-4" />)}
           </Button>
         </div>
 
         {/* Clear Button */}
         {query && (<motion.button initial = {
-  { opacity: 0,
-  scale: 0.8 
+  { "opacity": 0,
+  "scale": 0.8 
 
 }} animate = {
-  { opacity: 1,
-  scale: 1 
+  { "opacity": 1,
+  "scale": 1 
 
 }} exit = {
-  { opacity: 0,
-  scale: 0.8 
+  { "opacity": 0,
+  "scale": 0.8 
 
 }} onClick={() => {
                 setQuery(");
                 setResults([]);
                 setSuggestions([]);
-                setIsOpen(false)}} className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-400 hover:text-white hover:bg-zion-blue/20 rounded-lg transition-all duration-200">
+                setIsOpen(false)}} className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-400 "hover": text-white hover:bg-zion-blue/20 rounded-lg transition-all duration-200">
             <X className="w-4 h-4" />
           </motion.button>)}
       </div>
@@ -226,20 +224,20 @@ export function AISearch($1) {
       {/* Search Results Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial = {
-  { opacity: 0, y: -10,
-  scale: 0.95 
+  { "opacity": 0, "y": -10,
+  "scale": 0.95 
 
 }} animate = {
-  { opacity: 1, y: 0,
-  scale: 1 
+  { "opacity": 1, "y": 0,
+  "scale": 1 
 
 }} exit = {
-  { opacity: 0, y: -10,
-  scale: 0.95 
+  { "opacity": 0, "y": -10,
+  "scale": 0.95 
 
 }} transition = {
-  { duration: 0.2,
-  ease: "easeOut" 
+  { "duration": 0.2,
+  "ease": "easeOut" 
 
 }}>
             {/* Header */}
@@ -255,10 +253,10 @@ export function AISearch($1) {
               </div>
 
               <div className="flex items-center gap-2">
-                <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white p-2">
+                <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 "hover": text-white p-2">
                   <Filter className="w-4 h-4" />
                 </Button>
-                <Button size="sm" variant="ghost" onClick={shareResults} className="text-zinc-400 hover:text-white p-2">
+                <Button size="sm" variant="ghost" onClick={shareResults} className="text-zinc-400 "hover": text-white p-2">
                   <Share2 className="w-4 h-4" />
                 </Button>
               </div>
@@ -267,29 +265,29 @@ export function AISearch($1) {
             {/* Filters Panel */}
             <AnimatePresence>
               {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
-  { height: 0,
-  opacity: 0 
+  { "height": 0,
+  "opacity": 0 
 
 }} animate = {
-  { height: 'auto',
-  opacity: 1 
+  { "height": 'auto',
+  "opacity": 1 
 
 }} exit = {
-  { height: 0,
-  opacity: 0 
+  { "height": 0,
+  "opacity": 0 
 
-}} transition={{ duration: 0.2 }}>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+}} transition={{ "duration": 0.2 }}>
+                  <div className="grid grid-cols-2 "md": grid-cols-4 gap-4">
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Category</label>
                       <select multiple value={filters.category} onChange={
   (e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev,
-  category: selected 
+  "category": selected 
 
 }));
-                }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                         <option value="AI & Analytics">AI & Analytics</option>
                         <option value="Cybersecurity">Cybersecurity</option>
                         <option value="Cloud Solutions">Cloud Solutions</option>
@@ -302,9 +300,9 @@ export function AISearch($1) {
                       <label className="text-zinc-300 text-sm font-medium">Min Rating</label>
                       <select value={filters.rating} onChange={
   (e) => setFilters(prev => ({ ...prev,
-  rating: Number(e.target.value) 
+  "rating": Number(e.target.value) 
 
-}))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+}))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
                         <option value={3}>3+ Stars</option>
                         <option value={4}>4+ Stars</option>
@@ -317,9 +315,9 @@ export function AISearch($1) {
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.verified} onChange={
   (e) => setFilters(prev => ({ ...prev,
-  verified: e.target.checked 
+  "verified": e.target.checked 
 
-}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
+}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded "focus": ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
 
@@ -328,9 +326,9 @@ export function AISearch($1) {
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.featured} onChange={
   (e) => setFilters(prev => ({ ...prev,
-  featured: e.target.checked 
+  "featured": e.target.checked 
 
-}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
+}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded "focus": ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
                   </div>
@@ -353,7 +351,7 @@ export function AISearch($1) {
   filters);
                     
 
-}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
+}} className="w-full text-left p-2 rounded-lg "hover": bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
                         {search}
                       </button>))}
                   </div>
@@ -374,9 +372,9 @@ export function AISearch($1) {
   filters);
                     
 
-}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
+}} className="w-full text-left p-2 rounded-lg "hover": bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
                         <span>{suggestion}</span>
-                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                        <ArrowRight className="w-4 h-4 opacity-0 group-"hover": opacity-100 transition-opacity duration-200" />
                       </button>))}
                   </div>
                     </div>
@@ -389,10 +387,10 @@ export function AISearch($1) {
                     Search Results ({results.length})
                   </h4>
                   <div className="space-y-3">
-                    {results.map((result) => (<motion.div key={result.id} className="p-3 rounded-lg hover:bg-zion-blue/20 border border-transparent hover:border-zion-blue-light/30 transition-all duration-200 cursor-pointer group" whileHover={{ scale: 1.02 }} onClick={() => handleResultClick(result)}>
+                    {results.map((result) => (<motion.div key={result.id} className="p-3 rounded-lg "hover": bg-zion-blue/20 border border-transparent hover:border-zion-blue-light/30 transition-all duration-200 cursor-pointer group" whileHover={{ scale: 1.02 }} onClick={() => handleResultClick(result)}>
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
-                            <h5 className="text-white font-medium group-hover:text-zion-cyan transition-colors duration-200">
+                            <h5 className="text-white font-medium group-"hover": text-zion-cyan transition-colors duration-200">
                               {result.title}
                             </h5>
                             <p className="text-zinc-400 text-sm line-clamp-2">
@@ -442,12 +440,12 @@ export function AISearch($1) {
             {/* Footer Actions */}
             <div className="p-4 border-t border-zion-blue-light/30 bg-zion-blue/10">
               <div className="flex items-center justify-between">
-                <Button size="sm" variant="outline" onClick={() => saveSearch(query)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+                <Button size="sm" variant="outline" onClick={() => saveSearch(query)} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">
                   <Bookmark className="w-4 h-4 mr-2" />
                   Save Search
                 </Button>
 
-                <Button size="sm" variant="outline" onClick={() => setShowFilters(!showFilters)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+                <Button size="sm" variant="outline" onClick={() => setShowFilters(!showFilters)} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">
                   <Settings className="w-4 h-4 mr-2" />
                   Advanced Filters
                 </Button>

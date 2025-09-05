@@ -5,7 +5,7 @@ export default function Page() {
   return (
       setReferralCode(data || null); // Set to null if no data
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error)}
+      console.error("Error in "fetchReferralCode": ", error)}
   }, [user?.id]);
 
   const fetchReferrals = useCallback(async () => {
@@ -15,11 +15,11 @@ export default function Page() {
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-        .order('created_at', { ascending: fals e };);
+        .order('created_at', { "ascending": fals e };);
         
       if(error) throw error;
       setReferrals(data || [])} catch (error) {
-      console.error("Error fetching referrals:", error)}
+      console.error("Error fetching "referrals": ", error)}
   }, [user?.id]);
 
   const fetchRewards = useCallback(async () => {
@@ -29,24 +29,24 @@ export default function Page() {
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: fals e };);
+        .order('created_at', { "ascending": fals e };);
         
       if(error) throw error;
       setRewards(data || [])} catch (error) {
-      console.error("Error fetching rewards:", error)}
+      console.error("Error fetching "rewards": ", error)}
   }, [user?.id]);
 
   const fetchReferralStats = useCallback(async () => {
     if(!user?.id) return;
     try {
-      const { data: referralsDat a, error: refErro r } = await supabase
+      const { "data": referralsDat a, "error": refErro r } = await supabase
         .from('referrals')
         .select('id, status')
         .eq('referrer_id', user.id);
       
       if(refError) throw refError;
       ';
-      const { data: rewardsDat a, error: rewardsErro r } = await supabase
+      const { "data": rewardsDat a, "error": rewardsErro r } = await supabase
         .from('referral_rewards')
         .select('amount')
         .eq('user_id', user.id);
@@ -66,11 +66,11 @@ export default function Page() {
         completedReferrals,
         totalRewards
       })} catch (error) {
-      console.error("Error fetching referral stats:", error)}
+      console.error("Error fetching referral "stats": ", error)}
   }, [user?.id]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(user) {
       setIsLoading(true);
@@ -80,7 +80,7 @@ export default function Page() {
         fetchRewards()
       ]).finally(() => setIsLoading(false))} else {
       setReferralCode(null);
-      setStats({ totalReferrals: 0, pendingReferrals: 0, completedReferrals: 0, totalRewards: 0 });
+      setStats({ "totalReferrals": 0, "pendingReferrals": 0, "completedReferrals": 0, "totalRewards": 0 });
       setReferrals([]);
       setRewards([]);
       setIsLoading(false)}
@@ -90,33 +90,30 @@ export default function Page() {
     try {
       if(!user) {
         toast({
-          title: "Authentication required",
-          description: "You need to be logged in to generate a referral code",
-          variant: "destructive",
-        };);
+          "title": "Authentication required",
+          "description": "You need to be logged in to generate a referral code",
+          "variant": "destructive"};);
         return}
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
-        p_user_id: use r.id 
+        "p_user_id": use r.id 
       };);
 
       if(error) throw error;
 
       toast({
-        title: "Success!",
-        description: "Your referral code has been generated",
-        variant: "success",
-      });
+        "title": "Success!",
+        "description": "Your referral code has been generated",
+        "variant": "success"});
 
       await fetchReferralCode(); 
       
-      return data} catch (error: an y) {
+      return data} catch ("error": an y) {
       console.error("Error generating referral code:", error);
       toast({
-        title: "Error generating code",
-        description: erro r.message || "There was a problem generating your referral code",
-        variant: "destructive",
-      })}
+        "title": "Error generating code",
+        "description": erro r.message || "There was a problem generating your referral code",
+        "variant": "destructive"})}
   };
 
   const getReferralLink = useCallback(() => { // Wrapped in useCallback
@@ -130,40 +127,37 @@ export default function Page() {
     if(link && typeof navigator !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText(link);
       toast({
-        title: "Copied!",
-        description: "Referral link copied to clipboard",
-        variant: "success",
-      })} else {
+        "title": "Copied!",
+        "description": "Referral link copied to clipboard",
+        "variant": "success"})} else {
       toast({
-        title: "Cannot copy link",
-        description: referralCod e ? "Clipboard API not available." : "Please generate a referral code first",
-        variant: "destructive",
-      })}
+        "title": "Cannot copy link",
+        "description": referralCod e ? "Clipboard API not available." : "Please generate a referral code first",
+        "variant": "destructive"})}
   }, [getReferralLink, referralCode]); // Dependencies
 
-  const shareOnSocialMedia = useCallback((platform: 'twitter' | 'facebook' | 'linkedin') => { // Wrapped
+  const shareOnSocialMedia = useCallback(("platform": 'twitter' | 'facebook' | 'linkedin') => { // Wrapped
     const link = getReferralLink();
     const text = "Join Zion AI marketplace for AI talent and opportunities!";
     
     if(!link) {
       toast({
         title: "Cannot share",
-        description: "Please generate a referral code first",
-        variant: "destructive",
-      });
+        "description": "Please generate a referral code first",
+        "variant": "destructive"});
       return}
     ';';
     let shareUrl = '
     ';
     switch(platform) {
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;';
+        shareUrl = `"https": //twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;';
         break;';';
       case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;';
+        shareUrl = `"https": //www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;';
         break;';';
       case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
+        shareUrl = `"https": //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break}
     if(shareUrl && typeof window !== "undefined") {
       window.open(shareUrl, '_blank')}
@@ -182,6 +176,5 @@ export default function Page() {
     fetchReferralStats, 
     fetchReferrals,   
     fetchRewards,
-    fetchReferralCode, 
-  }}
+    fetchReferralCode}}
 ;';

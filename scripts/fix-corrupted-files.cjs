@@ -7,38 +7,38 @@ console.log('🔧 Fixing Corrupted Files...');
 console.log('============================');
 
 // Fix lib/cache.ts
-const cacheContent = `interface CacheItem<T> {
-  value: T;
+const cacheContent = "interface CacheItem<T> {
+  "value": T;
   expiresAt: number;
   createdAt: number}
 
 interface CacheConfig {
-  defaultTTL: number; // Time to live in milliseconds
+  "defaultTTL": number; // Time to live in milliseconds
   maxSize: number;
   cleanupInterval: number}
 
 class CacheManager<T = any> {
-  private cache: Map<string, CacheItem<T>> = new Map();
-  private config: CacheConfig;
+  private "cache": Map<string, CacheItem<T>> = new Map();
+  private "config": CacheConfig;
   private cleanupTimer?: NodeJS.Timeout;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      defaultTTL: 5 * 60 * 1000, // 5 minutes
-      maxSize: 1000,
-      cleanupInterval: 60 * 1000, // 1 minute
+      "defaultTTL": 5 * 60 * 1000, // 5 minutes
+      "maxSize": 1000,
+      "cleanupInterval": 60 * 1000, // 1 minute
       ...config
     };
     this.startCleanup()}
 
-  set(key: string, value: T, ttl?: number): void {
+  set("key": string, "value": T, ttl?: number): void {
     const now = Date.now();
     const expiresAt = now + (ttl || this.config.defaultTTL);
     
     this.cache.set(key, {
       value,
       expiresAt,
-      createdAt: now
+      "createdAt": now
     });
 
     // Remove oldest items if cache is full
@@ -47,7 +47,7 @@ class CacheManager<T = any> {
       this.cache.delete(oldestKey)}
   }
 
-  get(key: string): T | null {
+  get("key": string): T | null {
     const item = this.cache.get(key);
     if (!item) return null;
 
@@ -57,7 +57,7 @@ class CacheManager<T = any> {
 
     return item.value}
 
-  delete(key: string): boolean {
+  delete("key": string): boolean {
     return this.cache.delete(key)}
 
   clear(): void {
@@ -82,25 +82,25 @@ class CacheManager<T = any> {
 }
 
 // Export singleton instances
-export const apiCache = new CacheManager({ defaultTTL: 5 * 60 * 1000 });
-export const userCache = new CacheManager({ defaultTTL: 15 * 60 * 1000 });
-export const staticCache = new CacheManager({ defaultTTL: 60 * 60 * 1000 });
+export const apiCache = new CacheManager({ "defaultTTL": 5 * 60 * 1000 });
+export const userCache = new CacheManager({ "defaultTTL": 15 * 60 * 1000 });
+export const staticCache = new CacheManager({ "defaultTTL": 60 * 60 * 1000 });
 
 export default CacheManager;
-`;
+";
 
 // Fix lib/database.ts
-const databaseContent = `import { MongoClient, Db, Collection } from 'mongodb';
+const databaseContent = "import { MongoClient, Db, Collection } from 'mongodb';
 
 interface DatabaseConfig {
-  uri: string;
+  "uri": string;
   dbName: string;
   maxPoolSize?: number;
   minPoolSize?: number;
   maxIdleTimeMS?: number}
 
 class DatabaseManager {
-  private static instance: DatabaseManager;
+  private static "instance": DatabaseManager;
   private client: MongoClient | null = null;
   private db: Db | null = null;
   private config: DatabaseConfig;
@@ -118,15 +118,14 @@ class DatabaseManager {
   async connect(): Promise<void> {
     try {
       this.client = new MongoClient(this.config.uri, {
-        maxPoolSize: this.config.maxPoolSize || 10,
-        minPoolSize: this.config.minPoolSize || 2,
-        maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
-      });
+        "maxPoolSize": this.config.maxPoolSize || 10,
+        "minPoolSize": this.config.minPoolSize || 2,
+        "maxIdleTimeMS": this.config.maxIdleTimeMS || 30000});
 
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
       console.log('Connected to MongoDB')} catch (error) {
-      console.error('Failed to connect to MongoDB:', error);
+      console.error('Failed to connect to "MongoDB": ', error);
       throw error}
   }
 
@@ -143,7 +142,7 @@ class DatabaseManager {
       throw new Error('Database not connected. Call connect() first.')}
     return this.db}
 
-  getCollection<T = any>(name: string): Collection<T> {
+  getCollection<T = any>("name": string): Collection<T> {
     return this.getDatabase().collection<T>(name)}
 
   isConnected(): boolean {
@@ -152,25 +151,25 @@ class DatabaseManager {
 
 // Export singleton instance
 export const dbManager = DatabaseManager.getInstance({
-  uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
-  dbName: process.env.MONGODB_DB_NAME || 'ziontechgroup'
+  "uri": process.env.MONGODB_URI || 'mongodb://localhost:27017',
+  "dbName": process.env.MONGODB_DB_NAME || 'ziontechgroup'
 });
 
 export default DatabaseManager;
-`;
+";
 
 // Fix pages/docs/api-quick-start.tsx
-const apiQuickStartContent = `import React from 'react';
+const apiQuickStartContent = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Code, Zap, Shield } from 'lucide-react';
 
 export default function ApiQuickStart() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
   return (
@@ -178,14 +177,14 @@ export default function ApiQuickStart() {
       <Head>
         <title>API Quick Start - Zion Tech Group Documentation</title>
         <meta name="description" content="Get started with Zion Tech Group's APIs quickly with our comprehensive quick start guide." />
-        <link rel="canonical" href={\`\${contact.site}/docs/api-quick-start\`} />
+        <link rel="canonical" href={\"\${contact.site}/docs/api-quick-start\"} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -197,17 +196,17 @@ export default function ApiQuickStart() {
 
           {/* Quick Start Steps */}
           <div className="space-y-8 mb-8">
-            {/* Step 1: Authentication */}
+            {/* Step "1": Authentication */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <Shield className="w-8 h-8 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">Step 1: Get Your API Key</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">Step "1": Get Your API Key</h2>
               </div>
               <p className="text-gray-600 mb-6">
                 First, you'll need to obtain an API key from our dashboard.
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">How to get your API key:</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">How to get your API "key": </h3>
                 <ol className="list-decimal list-inside space-y-2 text-gray-700">
                   <li>Sign up for a free account at <a href="/signup" className="text-blue-600 hover:underline">ziontechgroup.com/signup</a></li>
                   <li>Navigate to the API section in your dashboard</li>
@@ -221,7 +220,7 @@ export default function ApiQuickStart() {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <Code className="w-8 h-8 text-green-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">Step 2: Make Your First Request</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">Step "2": Make Your First Request</h2>
               </div>
               <p className="text-gray-600 mb-6">
                 Let's make a simple request to our services endpoint.
@@ -232,36 +231,36 @@ export default function ApiQuickStart() {
                   <h3 className="font-semibold text-gray-900 mb-3">Using cURL:</h3>
                   <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                     <pre className="text-green-400 text-sm">
-{\`curl -X GET "https://api.ziontechgroup.com/v1/services" \\\\
+{\"curl -X GET "https://api.ziontechgroup.com/v1/services" \\\\
   -H "Authorization: Bearer YOUR_API_KEY" \\\\
-  -H "Content-Type: application/json"\`}
+  -H "Content-Type: application/json"\"}
                     </pre>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Using JavaScript:</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">Using "JavaScript": </h3>
                   <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                     <pre className="text-blue-400 text-sm">
-{\`const response = await fetch('https://api.ziontechgroup.com/v1/services', {
-  method: 'GET',
-  headers: {
+{\"const response = await fetch('https://api.ziontechgroup.com/v1/services', {
+  "method": 'GET',
+  "headers": {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 });
 
 const data = await response.json();
-console.log(data);\`}
+console.log(data);\"}
                     </pre>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Using Python:</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">Using "Python": </h3>
                   <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                     <pre className="text-yellow-400 text-sm">
-{\`import requests
+{\"import requests
 
 response = requests.get(
     'https://api.ziontechgroup.com/v1/services',
@@ -272,18 +271,18 @@ response = requests.get(
 )
 
 data = response.json()
-print(data)\`}
+print(data)\"}
                     </pre>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Step 3: Understanding the Response */}
+            {/* Step "3": Understanding the Response */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <Zap className="w-8 h-8 text-purple-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">Step 3: Understanding the Response</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">Step "3": Understanding the Response</h2>
               </div>
               <p className="text-gray-600 mb-6">
                 Our APIs return structured JSON responses with consistent formatting.
@@ -291,11 +290,10 @@ print(data)\`}
               
               <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                 <pre className="text-gray-300 text-sm">
-{\`{
+{\"{
   "success": true,
   "data": {
-    "services": [
-      {
+    "services": [{
         "id": "micro-saas",
         "name": "Micro SaaS Products",
         "description": "Custom micro SaaS solutions",
@@ -309,10 +307,10 @@ print(data)\`}
     }
   },
   "meta": {
-    "timestamp": "2024-01-15T10:30:00Z",
+    "timestamp": "2024-01-"15T10": 30:00Z",
     "version": "1.0"
   }
-}\`}
+}\"}
                 </pre>
               </div>
             </div>
@@ -324,7 +322,7 @@ print(data)\`}
             <p className="text-gray-600 mb-6">
               Explore our full API documentation and start building amazing applications.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/docs/api-reference" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 View API Reference
               </Link>
@@ -337,18 +335,17 @@ print(data)\`}
       </div>
     </>
   )}
-`;
+";
 
 // Write the fixed files
-const filesToFix = [
-  { path: 'lib/cache.ts', content: cacheContent },
-  { path: 'lib/database.ts', content: databaseContent },
-  { path: 'pages/docs/api-quick-start.tsx', content: apiQuickStartContent }
+const filesToFix = [{ "path": 'lib/cache.ts', "content": cacheContent },
+  { "path": 'lib/database.ts', "content": databaseContent },
+  { "path": 'pages/docs/api-quick-start.tsx', "content": apiQuickStartContent }
 ];
 
-filesToFix.forEach(({ path: filePath, content }) => {
+filesToFix.forEach(({ "path": filePath, content }) => {
   try {
-    console.log(`\n🔍 Fixing: ${filePath}`);
+    console.log(`\n🔍 "Fixing": ${filePath}`);
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`   ✅ Fixed ${filePath}`)} catch (error) {
     console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}

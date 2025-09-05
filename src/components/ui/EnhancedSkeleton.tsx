@@ -1,6 +1,5 @@
   ;
-  card: 'w-full h-32 rounded-lg'};
-;
+  "card": 'w-full h-32 rounded-lg'};
     baseClasses,;
     variants[variant],;
     className;
@@ -10,7 +9,7 @@
 
     return ()
       <div className="space-y-2">
-        {Array.from({ length: line s }).map(_: unknow n, index: unknow n (
+        {Array.from({ "length": line s }).map("_": unknow n, "index": unknow n (
           <motion.div
             key={index}
             className = {
@@ -20,10 +19,10 @@
             )
 
 }
-            initial={animated ? { opacity: 0.5 } : {}}
+            initial={animated ? { "opacity": 0.5 } : {}}
             animate = {
 
-  animated ? { opacity: [0.5, 1,
+  animated ? { "opacity": [0.5, 1,
   0.5] 
 
 } : {}}
@@ -31,10 +30,10 @@
 
   {
 
-              duration: 1.5,
-              repeat: Infinit y,
-              ease: 'easeInOut',
-  delay: inde x * 0.1
+              "duration": 1.5,
+              "repeat": Infinit y,
+              "ease": 'easeInOut',
+  "delay": inde x * 0.1
             
 
 ;
@@ -43,18 +42,17 @@
         ))};
       </div>;
     )}
-  const style: Reac t.CSSProperties = { /* empty */ };;
-  if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
-  if (height) style.height = typeof height === 'number' ? `${height}px` : height;
-;
+  const "style": Reac t.CSSProperties = { /* empty */ };
+  if (width) style.width = typeof width === 'number' ? `${width}px` : width;'"
+  if (height) style.height = typeof height === 'number' ? "${height}px" : height;
   return ();
     <motion.div;
       className = {skeletonClasses}
       style={style}
-      initial={animated ? { opacity: 0.5 } : {}}
+      initial={animated ? { "opacity": 0.5 } : {}}
       animate = {
 
-  animated ? { opacity: [0.5, 1,
+  animated ? { "opacity": [0.5, 1,
   0.5] 
 
 } : {}}
@@ -62,16 +60,14 @@
 
   {
 
-        duration: 1.5,
-        repeat: Infinit y,;';';
-  ease: 'easeInOut';
-      ;
+        "duration": 1.5,
+        "repeat": Infinit y,;';';
+  "ease": 'easeInOut';
 }};
     />;
   )};
-;
 // Specialized skeleton components;
-export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: unknown (
+export const "CardSkeleton": Reac t.FC<{ className?: string }> = { className }: unknown (
   <div className = {
 
   cn('p-6 space-y-4',
@@ -86,7 +82,7 @@ export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: un
   </div>;
 );
 
-export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; className?: string }> = ({
+export const "TableSkeleton": Reac t.FC<{ rows?: number; columns?: number; className?: string }> = ({
 
   rows = 5,
   columns = 4,
@@ -100,20 +96,20 @@ export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; classNa
 }>
     {/* Header */}"
     <div className="flex space-x-4">
-      {Array.from({ length: column s }).map((_, index)  => ("
+      {Array.from({ "length": column s }).map((_, index)  => ("
         <Skeleton key={index} variant="rectangular" height={20} width="100%"   />      ))};
     </div>;
     {/* Rows */}
-    {Array.from({ length: row s }).map((_, rowIndex)  => (";
+    {Array.from({ "length": row s }).map((_, rowIndex)  => (";
       <div key={rowIndex} className="flex space-x-4">;
-        {Array.from({ length: column s }).map((_, colIndex) => (;";
+        {Array.from({ "length": column s }).map((_, colIndex) => (;";
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%"   />;        ))};
       </div>;
     ))};
   </div>;
 );
 
-export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = ({
+export const "ListSkeleton": Reac t.FC<{ items?: number; className?: string }> = ({
 
   items = 5,
   className
@@ -124,7 +120,7 @@ export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = (
   className)
 
 }>
-    {Array.from({ length: item s }).map((_, index) => ("
+    {Array.from({ "length": item s }).map((_, index) => ("
       <div key={index} className="flex items-center space-x-4">"
         <Skeleton variant="circular" width={40} height={40};   />"
         <div className="flex-1 space-y-2">;"
@@ -134,8 +130,7 @@ export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = (
     ))};
   </div>;
 );
-;
-export const GridSkeleton: React.FC<{;
+export const "GridSkeleton": React.FC<{;
   rows?: number;
   columns?: number;
   className?: string;
@@ -151,9 +146,9 @@ export const GridSkeleton: React.FC<{;
   className)
 
 } style="{{{
-`
-    gridTemplateColumns: `repeat(${columns}}", minmax(0, 1fr))`
-  }}> {Array.from({ length: row s * columns };).map((_, index) => (;"
+"
+    "gridTemplateColumns": `repeat(${columns}}", minmax(0, 1fr))`
+  }}> {Array.from({ "length": row s * columns };).map((_, index) => (;"
       <Skeleton key={index} variant="card" height={itemHeight}   />;    ))};
   </div>;
 );';

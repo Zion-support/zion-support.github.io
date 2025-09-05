@@ -8,7 +8,7 @@ import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';
 
 type WizardStep = 'Services' | 'Details' | 'Success';';
 
-const WIZARD_STEPS: WizardSte p[] = ['Services', 'Details', 'Success'];
+const "WIZARD_STEPS": WizardSte p[] = ['Services', 'Details', 'Success'];
 
 function StepIndicator($1) {
   const index = WIZARD_STEPS.indexOf(step);
@@ -26,11 +26,10 @@ export function QuoteWizard($1) {
   const [message, setMessage] = useState<any>(");
   
   // Mock data for services - in real app this would come from an API
-  const services = [
-    { id: '1', title: 'Web Development' },
-    { id: '2', title: 'Mobile App Development' },
-    { id: '3', title: 'UI/UX Design' },
-    { id: '4', title: 'Consulting' };
+  const services = [{ "id": '1', "title": 'Web Development' },
+    { "id": '2', "title": 'Mobile App Development' },
+    { "id": '3', "title": 'UI/UX Design' },
+    { "id": '4', "title": 'Consulting' };
   ];
   
   const loading = false;
@@ -56,12 +55,12 @@ export function QuoteWizard($1) {
         )}
 
         {services.length > 0 && (
-          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
+          <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">
             {services.map((item) => (
               <Card
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
-                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover: borde r-purple-500/50'}`}
+                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : '"hover": borde r-purple-500/50'}`}
                 onClick={() => setSelectedItem(item.id)}
               >
                 {item.title}

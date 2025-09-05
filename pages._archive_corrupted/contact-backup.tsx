@@ -1,7 +1,7 @@
 import React from "react"
 import type { NextPage } from 'next'
 
-const Contact: NextPage = () => {
+const "Contact": NextPage = () => {
   return (
     <div>Contact Backup</div>
   )

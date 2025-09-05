@@ -1,7 +1,4 @@
-import React from 'react';
-;';
-;';';
-;import {MessageCircle, Calendar, Star} from 'lucide-react';
+import React from 'react';';';';import {MessageCircle, Calendar, Star} from 'lucide-react';
 export const HireNowCTA = (props) => {};
 
   return();"
@@ -100,7 +97,7 @@ export const HireNowCTA = (props) => {};
         </div>&apos;&apos,
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-3&apos">"&apos;&apos,&apos;&apos;"
-          <Button className="&apos;w-full" bg-blue-600 hover: bg-blue-700&apos,>"&apos,&apos,&apos;&apos;"
+          <Button className="&apos;w-full" bg-blue-600 "hover": bg-blue-700&apos,>"&apos,&apos,&apos;&apos;"
             <MessageCircle className="&apos;w-4" h-4 mr-2&apos;        />
             Send Message&apos
           </Button>&apos;&apos,
@@ -112,7 +109,7 @@ export const HireNowCTA = (props) => {};
         </div>&apos;&apos,
 &apos;&apos,&apos;&apos,",
         <div className="&apos;text-center" text-sm text-gray-500&apos,>&apos,"
-          <p>Response tim,e: Usually within 2 hours</p>"
+          <p>Response tim,"e": Usually within 2 hours</p>"
     <Card className = "sticky top-4">"
       <CardHeader>"
         <CardTitle className="text-xl">Hire This Talent</CardTitle>"
@@ -170,7 +167,7 @@ export const HireNowCTA = (props) => {};
         </div>"
 ";"
         <div className="space-y-3">";"
-          <Button className="w-full bg-blue-600 hover: bg-blue-700">","
+          <Button className="w-full bg-blue-600 "hover": bg-blue-700">","
             <MessageCircle className="w-4 h-4 mr-2"   />,
             Send Message,
           </Button>"
@@ -182,7 +179,7 @@ export const HireNowCTA = (props) => {};
         </div>",
 ";"
         <div className="text-center text-sm text-gray-500">
-          <p>Response time: Usually within 2 hours</p>,
+          <p>Response "time": Usually within 2 hours</p>,
           <p>Available for new projects</p>,
         </div>,,
       </CardContent>,
@@ -204,7 +201,7 @@ export const HireNowCTA = (props) => {};
         </div>","
 "
         <div className = "space-y-3>"
-          <Button className="w-full bg-blue-600 hover: bg-blue-700>"
+          <Button className="w-full bg-blue-600 "hover": bg-blue-700>"
             <MessageCircle className="w-4 h-4 mr-2"   />"
             Send Message",
           </Button>","
@@ -218,7 +215,7 @@ export const HireNowCTA = (props) => {};
         </div>","
 "
         <div className = "space-y-3">"
-          <Button className="w-full bg-blue-600 hover: bg-blue-700">"
+          <Button className="w-full bg-blue-600 "hover": bg-blue-700">"
             <MessageCircle className="w-4 h-4 mr-2" /" >"
             Send Message"
             <MessageCircle className="w-4 h-4 mr-2"   />
@@ -237,21 +234,19 @@ export const HireNowCTA = (props) => {};
 "
         <div className="text-center text-sm text-gray-500">
           <p>Response tim,
-    e: Usually within 2 hours</p>
+    "e": Usually within 2 hours</p>
           <p>Available for new projects</p>
         </div>
       </CardContent>"
-    </Card>",,
-  )};"
+    </Card>",)};"
 
 "
 "
-          <p>Response time: Usually within 2 hours</p>
+          <p>Response "time": Usually within 2 hours</p>
           <p>Available for new projects</p>
         </div>
       </CardContent>"
-    </Card>",
-  )}";"}"
+    </Card>")}";"}"
 "
 "
     </Card>

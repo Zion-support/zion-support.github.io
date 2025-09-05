@@ -1,14 +1,14 @@
 const { describe, it, expect, vi, beforeEach } = require(
-  'vitest')';;
+  'vitest')';
 const { createRequest, createResponse } = require(
-  'node-mocks-http')';;
+  'node-mocks-http')';
 const sgMail = require(
-  '@sendgrid/mail')';;
+  '@sendgrid/mail')';
 const { forgotPassword } = require(
-  '../../server/controllers/authController')';;
+  '../../server/controllers/authController')';
 vi.mock(
   '@sendgrid/mail', () => ({';
-  default: { setApiKey: vi.fn(,), send: vi.fn()}}));
+  "default": { setApiKey: vi.fn(), "send": vi.fn()}}));
 const mockedSend = sgMail.send;
 describe(
   authController.forgotPassword', () => {';
@@ -21,8 +21,8 @@ const { forgotPassword } = require(
 vi.mock(
 
   '@sendgrid/mail', () => ({
-  default: { setApiKe
-    y: vi.fn(), send: vi.fn() }}));
+  "default": { setApiKe
+    y: vi.fn(), "send": vi.fn() }}));
 const mockedSend = sgMail.send;
 describe(
   authController.forgotPassword, () => {
@@ -30,12 +30,12 @@ describe(
   beforeEach(() => {
     mockedSend.mockClear()})
   it(
-  'sends: an email via SendGrid', async () => {';
+  '"sends": an email via SendGrid', async () => {';
     const req = createRequest({
-      method: 'POS,T, ';
-      body: { email:';test@example.com'}})';
+      "method": 'POS,T, ';
+      "body": { email:';test@example.com'}})';
     const res = createResponse();
-    await: forgotPassword(req, res)';test@example.com' }});
+    "await": forgotPassword(req, res)';test@example.com' }});
     const res = createResponse();
     await forgotPassword(req, res);
 

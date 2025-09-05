@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 interface BundleInfo {
-  totalSize: number;
+  "totalSize": number;
   jsSize: number;
   cssSize: number;
   imageSize: number}
 
-const BundleAnalyzer: React.FC = () => {
+const "BundleAnalyzer": React.FC = () => {
   const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
-    totalSize: 0,
-    jsSize: 0,
-    cssSize: 0,
-    imageSize: 0
+    "totalSize": 0,
+    "jsSize": 0,
+    "cssSize": 0,
+    "imageSize": 0
   };);
 
   useEffect(() => {
@@ -19,15 +19,15 @@ const BundleAnalyzer: React.FC = () => {
     const analyzeBundle = () => {
       // In a real implementation, this would analyze the actual bundle
       setBundleInfo({
-        totalSize: 1024 * 1024, // 1MB
-        jsSize: 800 * 1024,      // 800KB
-        cssSize: 200 * 1024,     // 200KB
-        imageSize: 24 * 1024     // 24KB
-      })};;
+        "totalSize": 1024 * 1024, // 1MB
+        "jsSize": 800 * 1024,      // 800KB
+        "cssSize": 200 * 1024,     // 200KB
+        "imageSize": 24 * 1024     // 24KB
+      })};
 
     analyzeBundle()}, []);
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes = ("bytes": number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];

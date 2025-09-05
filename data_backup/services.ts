@@ -1,5 +1,5 @@
 export interface Service {
-  id: string;
+  "id": string;
   name: string;
   category:
   'micro-saas' |
@@ -12,23 +12,22 @@ export interface Service {
     professional: number;
     enterprise: number;
     currency: string};
-  benefits: string[];
+  "benefits": string[];
   useCases: string[];
   technologies: string[];
   link: string;
   icon: string}
 
-export const services: Service[] = [
-  // Micro SaaS Services
+export const "services": Service[] = [// Micro SaaS Services
   {
     id:,
   ai-content-generator',
-    name: 'AI Content Generator Pro,
+    "name": 'AI Content Generator Pro,
     category:,
   micro-saas',
-    description: Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.,
+    "description": Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.,
   ,
-    features: [
+    "features": [
   'Multi-language content generation,
   'SEO-optimized content',
   'Brand voice customization',
@@ -38,49 +37,45 @@ export const services: Service[] = [
   'Plagiarism detection',
   'Content templates library'
     ],
-    pricing: {
+    "pricing": {
       starter: 29,
-      professional: 79,
-      enterprise: 199,
+      "professional": 79,
+      "enterprise": 199,
       currency:,
   USD'
     },
-    benefits: [
-  '10x faster content creation,
+    "benefits": ['10x faster content creation,
 ,
   Consistent brand messaging',
   'SEO optimization built-in',
   'Multi-platform publishing',
   'Cost-effective content marketing'
     ],
-    useCases: [
-  'Blog content creation,
+    "useCases": ['Blog content creation,
 ,
   Social media management',
   'Email marketing campaigns',
   'Product descriptions',
   'Marketing copywriting'
     ],
-    technologies: [
-  'OpenAI GPT-4,
+    "technologies": ['OpenAI GPT-4,
 ,
   React',
   'Node.js',
   'PostgreSQL',
   'Stripe'],
-    link: 'https://ziontechgroup.com/services/ai-content-generator,
+    "link": 'https://ziontechgroup.com/services/ai-content-generator,
     icon:,
   📝'
   },
   {
-    id: 'ai-meeting-notes-assistant,
+    "id": 'ai-meeting-notes-assistant,
     name:,
   AI Meeting Notes Assistant',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Automated recording, transcription, summarization, and action-item extraction for meetings across Zoom, Google Meet, and Teams.',
-    features: [
-  'One-click meeting recording,
+    "features": ['One-click meeting recording,
   'Accurate multilingual transcription',
   'Key-point and decision summaries',
   'Action items with owners and due dates',
@@ -89,42 +84,38 @@ export const services: Service[] = [
   'Secure storage and search',
   'Compliance-friendly redaction'
     ],
-    pricing: { starter: 19, professional: 49, enterprise: 149, currency:,
+    "pricing": { starter: 19, "professional": 49, "enterprise": 149, currency:,
   USD' },
-    benefits: [
-  'Save 4+ hours per week per employee,
+    "benefits": ['Save 4+ hours per week per employee,
 ,
   Never miss decisions or follow-ups',
   'Centralized, searchable meeting knowledge',
   'Improved accountability across teams'
     ],
-    useCases: [
-  'Sales and customer success reviews,
+    "useCases": ['Sales and customer success reviews,
 ,
   Engineering standups and retrospectives',
   'Executive and board meetings',
   'Client discovery and requirement gathering'
     ],
-    technologies: [
-  'Whisper/ASR,
+    "technologies": ['Whisper/ASR,
 ,
   OpenAI',
   'React',
   'Node.js',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/ai-meeting-notes-assistant,
+    "link": 'https://ziontechgroup.com/services/ai-meeting-notes-assistant,
     icon:,
   📝'
   },
   {
-    id: 'whatsapp-crm-inbox,
+    "id": 'whatsapp-crm-inbox,
     name:,
   WhatsApp CRM Inbox',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Unified WhatsApp shared inbox with automation, templates, and CRM enrichment for SMB sales and support teams.',
-    features: [
-  'Team shared inbox and assignment,
+    "features": ['Team shared inbox and assignment,
   'Templates and quick replies',
   'AI reply suggestions',
   'Contact enrichment and tagging',
@@ -133,40 +124,36 @@ export const services: Service[] = [
   'Metrics and SLA tracking',
   'Role-based permissions'
     ],
-    pricing: { starter: 29, professional: 79, enterprise: 199, currency:,
+    "pricing": { starter: 29, "professional": 79, "enterprise": 199, currency:,
   USD' },
-    benefits: [
-  'Faster first-response times,
+    "benefits": ['Faster first-response times,
 ,
   Higher conversion from chat-to-deal',
   'Reduced context switching',
   'Compliance-friendly messaging'
     ],
-    useCases: [
-  'Inbound sales,
+    "useCases": ['Inbound sales,
 ,
   Customer support',
   'Abandoned cart recovery',
   'Local services intake'],
-    technologies: [
-  'Meta WhatsApp API,
+    "technologies": ['Meta WhatsApp API,
 ,
   React',
   'Node.js',
   'Redis'],
-    link: 'https://ziontechgroup.com/services/whatsapp-crm-inbox,
+    "link": 'https://ziontechgroup.com/services/whatsapp-crm-inbox,
     icon:,
   💬'
   },
   {
-    id: 'local-seo-audit-suite,
+    "id": 'local-seo-audit-suite,
     name:,
   Local SEO Audit Suite',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Automated local SEO audits with citation checks, GBP optimization, review insights, and prioritized recommendations.',
-    features: [
-  'Google Business Profile audit,
+    "features": ['Google Business Profile audit,
   'NAP consistency checks',
   'Review sentiment analysis',
   'Local SERP and competitor gap analysis',
@@ -175,39 +162,35 @@ export const services: Service[] = [
   'Backlink discovery',
   'Actionable checklist'
     ],
-    pricing: { starter: 12, professional: 35, enterprise: 99, currency:,
+    "pricing": { starter: 12, "professional": 35, "enterprise": 99, currency:,
   USD' },
-    benefits: [
-  'Higher local rankings,
+    "benefits": ['Higher local rankings,
 ,
   Increased foot traffic and calls',
   'Quick, actionable fixes',
   'Benchmark vs competitors'],
-    useCases: [
-  'Local services,
+    "useCases": ['Local services,
 ,
   Restaurants',
   'Clinics',
   'Home services'],
-    technologies: [
-  'SEO APIs,
+    "technologies": ['SEO APIs,
 ,
   React',
   'Node.js',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/local-seo-audit-suite,
+    "link": 'https://ziontechgroup.com/services/local-seo-audit-suite,
     icon:,
   📍'
   },
   {
-    id: 'ai-rfp-proposal-writer,
+    "id": 'ai-rfp-proposal-writer,
     name:,
   AI RFP & Proposal Writer',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Generate compliant RFP responses and tailored proposals using your past wins, case studies, and brand tone.',
-    features: [
-  'RFP requirements extraction,
+    "features": ['RFP requirements extraction,
   'Reusable answer library',
   'Auto-compliance checklists',
   'Citations and source linking',
@@ -216,40 +199,36 @@ export const services: Service[] = [
   'Export to DOCX/PDF',
   'Red teaming and accuracy guardrails'
     ],
-    pricing: { starter: 59, professional: 149, enterprise: 399, currency:,
+    "pricing": { starter: 59, "professional": 149, "enterprise": 399, currency:,
   USD' },
-    benefits: [
-  'Win more bids,
+    "benefits": ['Win more bids,
 ,
   Cut drafting time by 70%',
   'Ensure compliance',
   'Consistent branding'],
-    useCases: [
-  'Government contracts,
+    "useCases": ['Government contracts,
 ,
   Enterprise RFPs',
   'Agency proposals',
   'Vendor questionnaires'],
-    technologies: [
-  'RAG,
+    "technologies": ['RAG,
 ,
   OpenAI',
   'Vector DB',
   'React',
   'Node.js'],
-    link: 'https://ziontechgroup.com/services/ai-rfp-proposal-writer,
+    "link": 'https://ziontechgroup.com/services/ai-rfp-proposal-writer,
     icon:,
   📄'
   },
   {
-    id: 'ecommerce-image-optimizer,
+    "id": 'ecommerce-image-optimizer,
     name:,
   E‑commerce Image Optimizer',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Automated product image background removal, uniform shadows, variants, and size optimization for faster storefronts.',
-    features: [
-  'Background removal and replacement,
+    "features": ['Background removal and replacement,
   'Consistent lighting and shadow',
   'Batch processing and presets',
   'WebP/AVIF conversion',
@@ -258,40 +237,36 @@ export const services: Service[] = [
   'CDN delivery',
   'Accessibility contrast checks'
     ],
-    pricing: { starter: 15, professional: 49, enterprise: 129, currency:,
+    "pricing": { starter: 15, "professional": 49, "enterprise": 129, currency:,
   USD' },
-    benefits: [
-  'Higher conversion rates,
+    "benefits": ['Higher conversion rates,
 ,
   Improved Core Web Vitals',
   'Brand-consistent visuals',
   'Reduced design costs'],
-    useCases: [
-  'D2C stores,
+    "useCases": ['D2C stores,
 ,
   Marketplaces',
   'Wholesale catalogs',
   'Dropshipping'],
-    technologies: [
-  'Computer Vision,
+    "technologies": ['Computer Vision,
 ,
   FFmpeg',
   'CDN',
   'React',
   'Node.js'],
-    link: 'https://ziontechgroup.com/services/ecommerce-image-optimizer,
+    "link": 'https://ziontechgroup.com/services/ecommerce-image-optimizer,
     icon:,
   🛍️'
   },
   {
-    id: 'soc2-readiness-and-automation,
+    "id": 'soc2-readiness-and-automation,
     name:,
   SOC 2 Readiness & Automation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   End-to-end SOC 2 readiness with control mapping, evidence collection automation, and auditor collaboration.',
-    features: [
-  'Gap assessment and remediation plan,
+    "features": ['Gap assessment and remediation plan,
   'Automated evidence collection',
   'Policy generation and training',
   'Continuous control monitoring',
@@ -300,40 +275,36 @@ export const services: Service[] = [
   'Ticketing and workflows',
   'Reporting and dashboards'
     ],
-    pricing: { starter: 8000, professional: 25000, enterprise: 65000, currency:,
+    "pricing": { starter: 8000, "professional": 25000, "enterprise": 65000, currency:,
   USD' },
-    benefits: [
-  'Faster audit timelines,
+    "benefits": ['Faster audit timelines,
 ,
   Lower compliance costs',
   'Reduced manual effort',
   'Audit-ready anytime'],
-    useCases: [
-  'SaaS startups,
+    "useCases": ['SaaS startups,
 ,
   FinTech',
   'HealthTech',
   'Enterprise vendor programs'],
-    technologies: [
-  'GRC,
+    "technologies": ['GRC,
 ,
   SIEM',
   'IDP',
   'Cloud APIs',
   'Automation'],
-    link: 'https://ziontechgroup.com/services/soc2-readiness-and-automation,
+    "link": 'https://ziontechgroup.com/services/soc2-readiness-and-automation,
     icon:,
   ✅'
   },
   {
-    id: 'lakehouse-architecture-deployment,
+    "id": 'lakehouse-architecture-deployment,
     name:,
   Data Lakehouse Architecture & Deployment',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Design and implement a modern lakehouse leveraging open table formats, scalable ETL, and governed self-serve analytics.',
-    features: [
-  'Architecture and governance blueprint,
+    "features": ['Architecture and governance blueprint,
   'Medallion data modeling',
   'Ingestion and ETL pipelines',
   'Batch and streaming processing',
@@ -342,41 +313,37 @@ export const services: Service[] = [
   'BI and semantic layer setup',
   'Security and compliance'
     ],
-    pricing: { starter: 30000, professional: 90000, enterprise: 250000, currency:,
+    "pricing": { starter: 30000, "professional": 90000, "enterprise": 250000, currency:,
   USD' },
-    benefits: [
-  'Unified storage and compute,
+    "benefits": ['Unified storage and compute,
 ,
   Lower TCO vs legacy DW',
   'Governed self-serve analytics',
   'Future-proof architecture'],
-    useCases: [
-  'Enterprise analytics,
+    "useCases": ['Enterprise analytics,
 ,
   IoT telemetry',
   'Marketing data hubs',
   'Financial reporting'],
-    technologies: [
-  'Delta Lake,
+    "technologies": ['Delta Lake,
 ,
   Iceberg',
   'Apache Spark',
   'dbt',
   'Airflow',
   'AWS/Azure/GCP'],
-    link: 'https://ziontechgroup.com/services/lakehouse-architecture-deployment,
+    "link": 'https://ziontechgroup.com/services/lakehouse-architecture-deployment,
     icon:,
   🏗️'
   },
   {
-    id: 'finops-cloud-cost-optimization,
+    "id": 'finops-cloud-cost-optimization,
     name:,
   FinOps Cloud Cost Optimization',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Operationalize FinOps with visibility, anomaly detection, and automated rightsizing to reduce cloud spend without slowing delivery.',
-    features: [
-  'Cost allocation and showback,
+    "features": ['Cost allocation and showback,
   'Anomaly detection and alerts',
   'Rightsizing and scheduling automation',
   'Reserved/spot strategy',
@@ -385,41 +352,37 @@ export const services: Service[] = [
   'Dashboards and KPIs',
   'Stakeholder enablement'
     ],
-    pricing: { starter: 6000, professional: 18000, enterprise: 75000, currency:,
+    "pricing": { starter: 6000, "professional": 18000, "enterprise": 75000, currency:,
   USD' },
-    benefits: [
-  'Reduce cloud spend 20–40%,
+    "benefits": ['Reduce cloud spend 20–40%,
 ,
   Faster budgeting cycles',
   'Predictable unit economics',
   'No vendor lock-in'],
-    useCases: [
-  'SaaS platforms,
+    "useCases": ['SaaS platforms,
 ,
   Data platforms',
   'Microservices estates',
   'Seasonal workloads'],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'GCP',
   'Kubernetes',
   'Cloud APIs',
   'Automation'],
-    link: 'https://ziontechgroup.com/services/finops-cloud-cost-optimization,
+    "link": 'https://ziontechgroup.com/services/finops-cloud-cost-optimization,
     icon:,
   💸'
   },
   {
-    id: 'sre-reliability-retainer,
+    "id": 'sre-reliability-retainer,
     name:,
   SRE Reliability Retainer',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   24/7 SRE services with SLIs/SLOs, incident response, and proactive reliability engineering for critical systems.',
-    features: [
-  'SLO design and error budgets,
+    "features": ['SLO design and error budgets,
   'On-call runbooks and automation',
   'Chaos and load testing',
   'Observability as code',
@@ -428,42 +391,37 @@ export const services: Service[] = [
   'Reliability roadmap',
   'Monthly executive reporting'
     ],
-    pricing: { starter: 12000, professional: 35000, enterprise: 120000, currency:,
+    "pricing": { starter: 12000, "professional": 35000, "enterprise": 120000, currency:,
   USD' },
-    benefits: [
-  'Lower downtime risk,
+    "benefits": ['Lower downtime risk,
 ,
   Faster MTTR',
   'Predictable reliability',
   'Happier engineers and users'],
-    useCases: [
-  'Payments and checkout,
+    "useCases": ['Payments and checkout,
 ,
   Core APIs',
   'Real-time apps',
   'Multi-tenant SaaS'],
-    technologies: [
-  'Terraform,
+    "technologies": ['Terraform,
 ,
   Kubernetes',
   'Prometheus',
   'Grafana',
   'OpenTelemetry',
   'PagerDuty'],
-    link: 'https://ziontechgroup.com/services/sre-reliability-retainer,
+    "link": 'https://ziontechgroup.com/services/sre-reliability-retainer,
     icon:,
   🛠️'
   },
   {
-    id: 'rag-enterprise-search,
+    "id": 'rag-enterprise-search,
     name:,
   RAG Enterprise Search',
-    category: 'ai-services,
-    description:
-  'Retrieval-Augmented Generation for enterprise knowledge: private, secure question answering over documents, tickets, and wikis.,
+    "category": 'ai-services,
+    "description": 'Retrieval-Augmented Generation for enterprise knowledge: private, secure question answering over documents, tickets, and wikis.,
   ,
-    features: [
-  'Document ingestion and chunking,
+    "features": ['Document ingestion and chunking,
   'Embeddings and vector indexing',
   'Source-grounded citations',
   'Access control and redaction',
@@ -472,41 +430,37 @@ export const services: Service[] = [
   'Usage analytics and guardrails',
   'Multi-tenant isolation'
     ],
-    pricing: { starter: 10000, professional: 35000, enterprise: 120000, currency:,
+    "pricing": { starter: 10000, "professional": 35000, "enterprise": 120000, currency:,
   USD' },
-    benefits: [
-  'Reduce search time by 80%,
+    "benefits": ['Reduce search time by 80%,
 ,
   Trustworthy answers with citations',
   'Protect sensitive data',
   'Scale across departments'],
-    useCases: [
-  'Support deflection,
+    "useCases": ['Support deflection,
 ,
   Policy Q&A',
   'Sales playbooks',
   'Engineering runbooks'],
-    technologies: [
-  'RAG,
+    "technologies": ['RAG,
 ,
   Vector DB',
   'OpenAI',
   'Azure OpenAI',
   'LangChain',
   'Next.js'],
-    link: 'https://ziontechgroup.com/services/rag-enterprise-search,
+    "link": 'https://ziontechgroup.com/services/rag-enterprise-search,
     icon:,
   🔎'
   },
   {
-    id: 'mlops-platform-and-ops,
+    "id": 'mlops-platform-and-ops,
     name:,
   MLOps Platform & Operations',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Productionize ML with experiment tracking, model registry, CI/CD for models, monitoring, and drift remediation.',
-    features: [
-  'Feature store and governance,
+    "features": ['Feature store and governance,
   'Experiment tracking',
   'Model registry and promotion gates',
   'Model CI/CD and canarying',
@@ -515,40 +469,37 @@ export const services: Service[] = [
   'Shadow deployments',
   'Incident and rollback playbooks'
     ],
-    pricing: { starter: 20000, professional: 60000, enterprise: 180000, currency:,
+    "pricing": { starter: 20000, "professional": 60000, "enterprise": 180000, currency:,
   USD' },
-    benefits: [
-  'Faster model velocity,
+    "benefits": ['Faster model velocity,
 ,
   Reduced production risk',
   'Traceable lineage',
   'Operational excellence'],
-    useCases: [
-  'Personalization,
+    "useCases": ['Personalization,
 ,
   Fraud detection',
   'Forecasting',
   'NLP pipelines'],
-    technologies: [
-  'MLflow,
+    "technologies": ['MLflow,
 ,
   Kubeflow',
   'Vertex AI',
   'SageMaker',
   'Airflow',
   'dbt'],
-    link: 'https://ziontechgroup.com/services/mlops-platform-and-ops,
+    "link": 'https://ziontechgroup.com/services/mlops-platform-and-ops,
     icon:,
   🧪'
   },
   {
-    id: 'synthetic-data-generation,
+    "id": 'synthetic-data-generation,
     name:,
   Synthetic Data Generation',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Create privacy-preserving synthetic datasets to unblock AI/analytics while meeting compliance and bias-reduction goals.',
-    features: [Tabular, image, and text synthesis',
+    "features": [Tabular, image, and text synthesis',
   'Differential privacy controls',
   'Quality and utility evaluation',
   'Bias detection and mitigation',
@@ -557,41 +508,37 @@ export const services: Service[] = [
   'Versioning and governance',
   'Regulatory documentation'
     ],
-    pricing: { starter: 15000, professional: 45000, enterprise: 150000, currency:,
+    "pricing": { starter: 15000, "professional": 45000, "enterprise": 150000, currency:,
   USD' },
-    benefits: [
-  'Accelerate AI safely,
+    "benefits": ['Accelerate AI safely,
 ,
   Reduce privacy risk',
   'Balance rare classes',
   'Share data across teams'],
-    useCases: [
-  'Healthcare analytics,
+    "useCases": ['Healthcare analytics,
 ,
   Financial modeling',
   'CV pretraining',
   'Anomaly detection'],
-    technologies: [
-  'GANs,
+    "technologies": ['GANs,
 ,
   Diffusion',
   'DP-SGD',
   'Python',
   'TensorFlow',
   'PyTorch'],
-    link: 'https://ziontechgroup.com/services/synthetic-data-generation,
+    "link": 'https://ziontechgroup.com/services/synthetic-data-generation,
     icon:,
   🧬'
   },
   {
-    id: 'llm-evaluation-red-teaming,
+    "id": 'llm-evaluation-red-teaming,
     name:,
   LLM Evaluation & Red-Teaming',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Holistic LLM safety and quality evaluation with automated test suites, jailbreak resistance, and bias and toxicity audits.',
-    features: [
-  'Automated eval harness and metrics,
+    "features": ['Automated eval harness and metrics,
   'Adversarial prompt libraries',
   'Hallucination and citation checks',
   'PII/PHI leakage testing',
@@ -600,40 +547,36 @@ export const services: Service[] = [
   'Incident response runbooks',
   'Reporting for compliance teams'
     ],
-    pricing: { starter: 12000, professional: 35000, enterprise: 100000, currency:,
+    "pricing": { starter: 12000, "professional": 35000, "enterprise": 100000, currency:,
   USD' },
-    benefits: [
-  'Reduce production incidents,
+    "benefits": ['Reduce production incidents,
 ,
   Meet regulatory expectations',
   'Improve answer quality',
   'Strengthen brand trust'],
-    useCases: [
-  'Customer support agents,
+    "useCases": ['Customer support agents,
 ,
   Internal copilots',
   'Content generation',
   'Healthcare/finance assistants'],
-    technologies: [
-  'Eval frameworks,
+    "technologies": ['Eval frameworks,
 ,
   OpenAI',
   'Azure OpenAI',
   'Guardrails',
   'Vector search'],
-    link: 'https://ziontechgroup.com/services/llm-evaluation-red-teaming,
+    "link": 'https://ziontechgroup.com/services/llm-evaluation-red-teaming,
     icon:,
   🛡️'
   },
   {
-    id: 'social-media-scheduler,
+    "id": 'social-media-scheduler,
     name:,
   Social Media Scheduler Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive social media management platform with AI-powered content optimization and cross-platform scheduling.',
-    features: [
-  'Multi-platform scheduling,
+    "features": ['Multi-platform scheduling,
   'AI content optimization',
   'Hashtag research',
   'Analytics & reporting',
@@ -642,47 +585,43 @@ export const services: Service[] = [
   'Auto-posting',
   'Engagement tracking'
     ],
-    pricing: {
+    "pricing": {
       starter: 19,
-      professional: 49,
-      enterprise: 129,
+      "professional": 49,
+      "enterprise": 129,
       currency:,
   USD'
     },
-    benefits: [
-  'Save 5+ hours weekly,
+    "benefits": ['Save 5+ hours weekly,
 ,
   Increase engagement by 40%',
   'Consistent posting schedule',
   'Data-driven insights'
     ],
-    useCases: [
-  'Small businesses,
+    "useCases": ['Small businesses,
 ,
   Marketing agencies',
   'Content creators',
   'E-commerce brands'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'Social APIs',
   'Redis'],
-    link: 'https://ziontechgroup.com/services/social-media-scheduler,
+    "link": 'https://ziontechgroup.com/services/social-media-scheduler,
     icon:,
   📱'
   },
   {
-    id: 'email-marketing-automation,
+    "id": 'email-marketing-automation,
     name:,
   Email Marketing Automation Suite',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced email marketing platform with AI-driven personalization, automation workflows, and detailed analytics.',
-    features: [
-  'Drag-and-drop email builder,
+    "features": ['Drag-and-drop email builder,
   'AI personalization',
   'Automation workflows',
   'A/B testing',
@@ -691,47 +630,43 @@ export const services: Service[] = [
   'Analytics dashboard',
   'Template library'
     ],
-    pricing: {
+    "pricing": {
       starter: 25,
-      professional: 65,
-      enterprise: 179,
+      "professional": 65,
+      "enterprise": 179,
       currency:,
   USD'
     },
-    benefits: [
-  '3x higher open rates,
+    "benefits": ['3x higher open rates,
 ,
   Automated lead nurturing',
   'Personalized customer journeys',
   'ROI tracking'
     ],
-    useCases: [
-  'E-commerce businesses,
+    "useCases": ['E-commerce businesses,
 ,
   SaaS companies',
   'Marketing agencies',
   'Non-profit organizations'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'SendGrid',
   'Redis'],
-    link: 'https://ziontechgroup.com/services/email-marketing-automation,
+    "link": 'https://ziontechgroup.com/services/email-marketing-automation,
     icon:,
   📧'
   },
   {
-    id: 'invoice-management-system,
+    "id": 'invoice-management-system,
     name:,
   Smart Invoice Management',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent invoice management system with automated billing, payment tracking, and financial reporting.',
-    features: [
-  'Automated invoice generation,
+    "features": ['Automated invoice generation,
   'Payment tracking',
   'Recurring billing',
   'Multi-currency support',
@@ -740,47 +675,43 @@ export const services: Service[] = [
   'Financial reporting',
   'Payment reminders'
     ],
-    pricing: {
+    "pricing": {
       starter: 15,
-      professional: 39,
-      enterprise: 99,
+      "professional": 39,
+      "enterprise": 99,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce billing time by 80%,
+    "benefits": ['Reduce billing time by 80%,
 ,
   Faster payment collection',
   'Automated tax compliance',
   'Better cash flow management'
     ],
-    useCases: [
-  'Freelancers,
+    "useCases": ['Freelancers,
 ,
   Small businesses',
   'Consulting firms',
   'Service providers'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'Stripe',
   'PDF.js'],
-    link: 'https://ziontechgroup.com/services/invoice-management,
+    "link": 'https://ziontechgroup.com/services/invoice-management,
     icon:,
   🧾'
   },
   {
-    id: 'time-tracking-productivity,
+    "id": 'time-tracking-productivity,
     name:,
   Time Tracking & Productivity Suite',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive time tracking and productivity management platform with AI insights and team collaboration.',
-    features: [
-  'Automatic time tracking,
+    "features": ['Automatic time tracking,
   'Project management',
   'Team collaboration',
   'Productivity analytics',
@@ -789,47 +720,43 @@ export const services: Service[] = [
   'Reporting dashboard',
   'Mobile apps'
     ],
-    pricing: {
+    "pricing": {
       starter: 12,
-      professional: 29,
-      enterprise: 79,
+      "professional": 29,
+      "enterprise": 79,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase productivity by 25%,
+    "benefits": ['Increase productivity by 25%,
 ,
   Accurate project billing',
   'Team performance insights',
   'Better resource allocation'
     ],
-    useCases: [
-  'Remote teams,
+    "useCases": ['Remote teams,
 ,
   Freelancers',
   'Consulting firms',
   'Software development'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'WebRTC',
   'Chart.js'],
-    link: 'https://ziontechgroup.com/services/time-tracking,
+    "link": 'https://ziontechgroup.com/services/time-tracking,
     icon:,
   ⏱️'
   },
   {
-    id: 'crm-sales-pipeline,
+    "id": 'crm-sales-pipeline,
     name:,
   CRM & Sales Pipeline Manager',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Customer relationship management platform with AI-powered lead scoring and sales pipeline automation.',
-    features: [
-  'Lead management,
+    "features": ['Lead management,
   'Sales pipeline tracking',
   'AI lead scoring',
   'Email integration',
@@ -838,47 +765,43 @@ export const services: Service[] = [
   'Mobile access',
   'Team collaboration'
     ],
-    pricing: {
+    "pricing": {
       starter: 22,
-      professional: 55,
-      enterprise: 149,
+      "professional": 55,
+      "enterprise": 149,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase sales by 30%,
+    "benefits": ['Increase sales by 30%,
 ,
   Better lead qualification',
   'Automated follow-ups',
   'Sales forecasting'
     ],
-    useCases: [
-  'Sales teams,
+    "useCases": ['Sales teams,
 ,
   Real estate agents',
   'Insurance brokers',
   'B2B companies'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'AI/ML',
   'Email APIs'],
-    link: 'https://ziontechgroup.com/services/crm-sales-pipeline,
+    "link": 'https://ziontechgroup.com/services/crm-sales-pipeline,
     icon:,
   📊'
   },
   {
-    id: 'appointment-booking-system,
+    "id": 'appointment-booking-system,
     name:,
   Smart Appointment Booking',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent appointment booking system with automated scheduling, reminders, and payment processing.',
-    features: [
-  'Online booking calendar,
+    "features": ['Online booking calendar,
   'Automated reminders',
   'Payment processing',
   'Multi-service support',
@@ -887,47 +810,43 @@ export const services: Service[] = [
   'Analytics dashboard',
   'Mobile optimization'
     ],
-    pricing: {
+    "pricing": {
       starter: 18,
-      professional: 45,
-      enterprise: 119,
+      "professional": 45,
+      "enterprise": 119,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce no-shows by 50%,
+    "benefits": ['Reduce no-shows by 50%,
 ,
   24/7 booking availability',
   'Automated payment collection',
   'Streamlined operations'
     ],
-    useCases: [
-  'Healthcare providers,
+    "useCases": ['Healthcare providers,
 ,
   Beauty salons',
   'Consulting services',
   'Fitness trainers'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'Stripe',
   'Calendar APIs'],
-    link: 'https://ziontechgroup.com/services/appointment-booking,
+    "link": 'https://ziontechgroup.com/services/appointment-booking,
     icon:,
   📅'
   },
   {
-    id: 'inventory-pos-system,
+    "id": 'inventory-pos-system,
     name:,
   Inventory & POS System',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Complete point-of-sale and inventory management system for retail and restaurant businesses.',
-    features: [
-  'Point of sale terminal,
+    "features": ['Point of sale terminal,
   'Inventory tracking',
   'Barcode scanning',
   'Multi-location support',
@@ -936,47 +855,43 @@ export const services: Service[] = [
   'Payment processing',
   'Staff management'
     ],
-    pricing: {
+    "pricing": {
       starter: 35,
-      professional: 85,
-      enterprise: 229,
+      "professional": 85,
+      "enterprise": 229,
       currency:,
   USD'
     },
-    benefits: [
-  'Streamlined operations,
+    "benefits": ['Streamlined operations,
 ,
   Real-time inventory',
   'Better sales insights',
   'Reduced manual work'
     ],
-    useCases: [
-  'Retail stores,
+    "useCases": ['Retail stores,
 ,
   Restaurants',
   'Coffee shops',
   'Boutique stores'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'Stripe',
   'Barcode APIs'],
-    link: 'https://ziontechgroup.com/services/inventory-pos,
+    "link": 'https://ziontechgroup.com/services/inventory-pos,
     icon:,
   🛒'
   },
   {
-    id: 'document-management-system,
+    "id": 'document-management-system,
     name:,
   Document Management & Collaboration',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Secure document management platform with version control, collaboration tools, and AI-powered search.',
-    features: [
-  'Document storage,
+    "features": ['Document storage,
   'Version control',
   'Collaborative editing',
   'AI-powered search',
@@ -985,47 +900,43 @@ export const services: Service[] = [
   'Workflow automation',
   'Audit trails'
     ],
-    pricing: {
+    "pricing": {
       starter: 20,
-      professional: 50,
-      enterprise: 139,
+      "professional": 50,
+      "enterprise": 139,
       currency:,
   USD'
     },
-    benefits: [
-  'Centralized document storage,
+    "benefits": ['Centralized document storage,
 ,
   Improved collaboration',
   'Version control',
   'Enhanced security'
     ],
-    useCases: [
-  'Legal firms,
+    "useCases": ['Legal firms,
 ,
   Accounting firms',
   'Real estate agencies',
   'Consulting companies'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'AWS S3',
   'AI Search'],
-    link: 'https://ziontechgroup.com/services/document-management,
+    "link": 'https://ziontechgroup.com/services/document-management,
     icon:,
   📄'
   },
   {
-    id: 'survey-feedback-platform,
+    "id": 'survey-feedback-platform,
     name:,
   Survey & Feedback Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced survey and feedback collection platform with AI analysis and real-time insights.',
-    features: [
-  'Drag-and-drop survey builder,
+    "features": ['Drag-and-drop survey builder,
   'AI response analysis',
   'Real-time analytics',
   'Multi-channel distribution',
@@ -1034,47 +945,43 @@ export const services: Service[] = [
   'Integration APIs',
   'Mobile optimization'
     ],
-    pricing: {
+    "pricing": {
       starter: 16,
-      professional: 42,
-      enterprise: 109,
+      "professional": 42,
+      "enterprise": 109,
       currency:,
   USD'
     },
-    benefits: [
-  'Better customer insights,
+    "benefits": ['Better customer insights,
 ,
   Automated analysis',
   'Real-time feedback',
   'Data-driven decisions'
     ],
-    useCases: [
-  'Market research,
+    "useCases": ['Market research,
 ,
   Customer satisfaction',
   'Employee feedback',
   'Event feedback'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'AI/ML',
   'Chart.js'],
-    link: 'https://ziontechgroup.com/services/survey-feedback,
+    "link": 'https://ziontechgroup.com/services/survey-feedback,
     icon:,
   📋'
   },
   {
-    id: 'expense-management-system,
+    "id": 'expense-management-system,
     name:,
   Expense Management & Reimbursement',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Automated expense management system with receipt scanning, approval workflows, and financial reporting.',
-    features: [
-  'Receipt scanning,
+    "features": ['Receipt scanning,
   'Expense categorization',
   'Approval workflows',
   'Reimbursement processing',
@@ -1083,187 +990,171 @@ export const services: Service[] = [
   'Mobile app',
   'Integration with accounting'
     ],
-    pricing: {
+    "pricing": {
       starter: 14,
-      professional: 35,
-      enterprise: 89,
+      "professional": 35,
+      "enterprise": 89,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce processing time by 70%,
+    "benefits": ['Reduce processing time by 70%,
 ,
   Automated compliance',
   'Better expense control',
   'Streamlined reimbursements'
     ],
-    useCases: [
-  'Small businesses,
+    "useCases": ['Small businesses,
 ,
   Startups',
   'Consulting firms',
   'Sales teams'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'OCR',
   'Stripe'],
-    link: 'https://ziontechgroup.com/services/expense-management,
+    "link": 'https://ziontechgroup.com/services/expense-management,
     icon:,
   💰'
   },
   {
-    id: 'project-management-suite,
+    "id": 'project-management-suite,
     name:,
   Smart Project Manager',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent project management platform with AI-powered task prioritization and team collaboration.',
-    features: [
-  'AI task prioritization,
+    "features": ['AI task prioritization,
   'Real-time collaboration',
   'Time tracking',
   'Resource allocation',
   'Progress analytics',
   'Mobile app'
     ],
-    pricing: {
+    "pricing": {
       starter: 19,
-      professional: 49,
-      enterprise: 129,
+      "professional": 49,
+      "enterprise": 129,
       currency:,
   USD'
     },
-    benefits: [
-  '30% faster project completion,
+    "benefits": ['30% faster project completion,
 ,
   Improved team productivity',
   'Better resource utilization',
   'Real-time insights'
     ],
-    useCases: [
-  'Software development teams,
+    "useCases": ['Software development teams,
 ,
   Marketing agencies',
   'Construction projects',
   'Event planning'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'Socket.io'],
-    link: 'https://ziontechgroup.com/services/project-management,
+    "link": 'https://ziontechgroup.com/services/project-management,
     icon:,
   📊'
   },
   {
-    id: 'inventory-management,
+    "id": 'inventory-management,
     name:,
   Inventory Tracker Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Smart inventory management system with predictive analytics and automated reordering.',
-    features: [
-  'Real-time inventory tracking,
+    "features": ['Real-time inventory tracking,
   'Predictive analytics',
   'Automated reordering',
   'Barcode scanning',
   'Multi-location support',
   'Integration APIs'
     ],
-    pricing: {
+    "pricing": {
       starter: 39,
-      professional: 89,
-      enterprise: 249,
+      "professional": 89,
+      "enterprise": 249,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce stockouts by 80%,
+    "benefits": ['Reduce stockouts by 80%,
 ,
   Optimize inventory levels',
   'Automated procurement',
   'Cost savings'
     ],
-    useCases: [
-  'E-commerce businesses,
+    "useCases": ['E-commerce businesses,
 ,
   Retail stores',
   'Manufacturing',
   'Warehouse management'
     ],
-    technologies: [
-  'React Native,
+    "technologies": ['React Native,
 ,
   Python',
   'PostgreSQL',
   'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/inventory-management,
+    "link": 'https://ziontechgroup.com/services/inventory-management,
     icon:,
   📦'
   },
   {
-    id: 'customer-support-platform,
+    "id": 'customer-support-platform,
     name:,
   AI Support Assistant',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent customer support platform with AI chatbots and automated ticket routing.',
-    features: [
-  'AI-powered chatbots,
+    "features": ['AI-powered chatbots,
   'Smart ticket routing',
   'Knowledge base management',
   'Multi-channel support',
   'Performance analytics',
   'Integration capabilities'
     ],
-    pricing: {
+    "pricing": {
       starter: 25,
-      professional: 65,
-      enterprise: 179,
+      "professional": 65,
+      "enterprise": 179,
       currency:,
   USD'
     },
-    benefits: [
-  '24/7 customer support,
+    "benefits": ['24/7 customer support,
 ,
   Faster response times',
   'Reduced support costs',
   'Improved customer satisfaction'
     ],
-    useCases: [
-  'E-commerce platforms,
+    "useCases": ['E-commerce platforms,
 ,
   SaaS companies',
   'Service businesses',
   'Educational institutions'
     ],
-    technologies: [
-  'Next.js,
+    "technologies": ['Next.js,
 ,
   OpenAI',
   'Redis',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/customer-support,
+    "link": 'https://ziontechgroup.com/services/customer-support,
     icon:,
   🤖'
   },
 
   // IT Services
   {
-    id: 'cloud-migration,
+    "id": 'cloud-migration,
     name:,
   Cloud Migration Expert',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive cloud migration services for seamless transition to AWS, Azure, or Google Cloud with zero downtime.',
-    features: [
-  'Infrastructure assessment,
+    "features": ['Infrastructure assessment,
   'Migration planning',
   'Data migration',
   'Application modernization',
@@ -1272,49 +1163,45 @@ export const services: Service[] = [
   'Cost optimization',
   '24/7 monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 50000,
+      "professional": 15000,
+      "enterprise": 50000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduced infrastructure costs by 40%,
+    "benefits": ['Reduced infrastructure costs by 40%,
 ,
   Improved scalability',
   'Enhanced security',
   'Better performance',
   'Disaster recovery'
     ],
-    useCases: [
-  'Legacy system modernization,
+    "useCases": ['Legacy system modernization,
 ,
   Data center consolidation',
   'Disaster recovery setup',
   'Application scaling'
     ],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'Google Cloud',
   'Docker',
   'Kubernetes',
   'Terraform'],
-    link: 'https://ziontechgroup.com/services/cloud-migration,
+    "link": 'https://ziontechgroup.com/services/cloud-migration,
     icon:,
   ☁️'
   },
   {
-    id: 'multi-cloud-strategy,
+    "id": 'multi-cloud-strategy,
     name:,
   Multi-Cloud Strategy & Management',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Strategic multi-cloud implementation and management to optimize costs, performance, and avoid vendor lock-in.',
-    features: [
-  'Multi-cloud architecture design,
+    "features": ['Multi-cloud architecture design,
   'Cost optimization across providers',
   'Disaster recovery planning',
   'Security compliance',
@@ -1323,48 +1210,44 @@ export const services: Service[] = [
   'Automated scaling',
   'Compliance auditing'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Avoid vendor lock-in,
+    "benefits": ['Avoid vendor lock-in,
 ,
   Optimize costs across providers',
   'Enhanced disaster recovery',
   'Better performance distribution'
     ],
-    useCases: [
-  'Enterprise applications,
+    "useCases": ['Enterprise applications,
 ,
   Global businesses',
   'High-availability systems',
   'Compliance requirements'
     ],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'GCP',
   'Kubernetes',
   'Terraform',
   'Ansible'],
-    link: 'https://ziontechgroup.com/services/multi-cloud-strategy,
+    "link": 'https://ziontechgroup.com/services/multi-cloud-strategy,
     icon:,
   🌐'
   },
   {
-    id: 'container-orchestration,
+    "id": 'container-orchestration,
     name:,
   Container Orchestration & Kubernetes',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete container orchestration setup with Kubernetes, Docker, and microservices architecture implementation.',
-    features: [
-  'Kubernetes cluster setup,
+    "features": ['Kubernetes cluster setup,
   'Container orchestration',
   'Microservices architecture',
   'Service mesh implementation',
@@ -1373,48 +1256,44 @@ export const services: Service[] = [
   'CI/CD integration',
   'Security hardening'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved scalability,
+    "benefits": ['Improved scalability,
 ,
   Better resource utilization',
   'Faster deployments',
   'Enhanced reliability'
     ],
-    useCases: [
-  'Microservices applications,
+    "useCases": ['Microservices applications,
 ,
   Scalable web services',
   'DevOps transformation',
   'Legacy application modernization'
     ],
-    technologies: [
-  'Kubernetes,
+    "technologies": ['Kubernetes,
 ,
   Docker',
   'Istio',
   'Helm',
   'Prometheus',
   'Grafana'],
-    link: 'https://ziontechgroup.com/services/container-orchestration,
+    "link": 'https://ziontechgroup.com/services/container-orchestration,
     icon:,
   📦'
   },
   {
-    id: 'serverless-architecture,
+    "id": 'serverless-architecture,
     name:,
   Serverless Architecture Implementation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Serverless architecture design and implementation using AWS Lambda, Azure Functions, and Google Cloud Functions.',
-    features: [
-  'Serverless architecture design,
+    "features": ['Serverless architecture design,
   'Function optimization',
   'API Gateway setup',
   'Event-driven architecture',
@@ -1423,47 +1302,43 @@ export const services: Service[] = [
   'Security implementation',
   'Auto-scaling configuration'
     ],
-    pricing: {
+    "pricing": {
       starter: 4000,
-      professional: 12000,
-      enterprise: 35000,
+      "professional": 12000,
+      "enterprise": 35000,
       currency:,
   USD'
     },
-    benefits: [
-  'Pay-per-use pricing,
+    "benefits": ['Pay-per-use pricing,
 ,
   Automatic scaling',
   'Reduced operational overhead',
   'Faster time to market'
     ],
-    useCases: [
-  'API development,
+    "useCases": ['API development,
 ,
   Event processing',
   'Data processing pipelines',
   'IoT applications'
     ],
-    technologies: [
-  'AWS Lambda,
+    "technologies": ['AWS Lambda,
 ,
   Azure Functions',
   'GCP Functions',
   'API Gateway',
   'EventBridge'],
-    link: 'https://ziontechgroup.com/services/serverless-architecture,
+    "link": 'https://ziontechgroup.com/services/serverless-architecture,
     icon:,
   ⚡'
   },
   {
-    id: 'network-security-audit,
+    "id": 'network-security-audit,
     name:,
   Network Security & Infrastructure Audit',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive network security assessment and infrastructure hardening to protect against cyber threats.',
-    features: [
-  'Network vulnerability assessment,
+    "features": ['Network vulnerability assessment,
   'Firewall configuration review',
   'Intrusion detection setup',
   'Network segmentation',
@@ -1472,48 +1347,44 @@ export const services: Service[] = [
   'Compliance auditing',
   'Incident response planning'
     ],
-    pricing: {
+    "pricing": {
       starter: 3500,
-      professional: 9500,
-      enterprise: 28000,
+      "professional": 9500,
+      "enterprise": 28000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced network security,
+    "benefits": ['Enhanced network security,
 ,
   Compliance with regulations',
   'Reduced security risks',
   'Better threat detection'
     ],
-    useCases: [
-  'Enterprise networks,
+    "useCases": ['Enterprise networks,
 ,
   Healthcare organizations',
   'Financial institutions',
   'Government agencies'
     ],
-    technologies: [
-  'Cisco,
+    "technologies": ['Cisco,
 ,
   Fortinet',
   'Palo Alto',
   'Wireshark',
   'Nmap',
   'Snort'],
-    link: 'https://ziontechgroup.com/services/network-security-audit,
+    "link": 'https://ziontechgroup.com/services/network-security-audit,
     icon:,
   🛡️'
   },
   {
-    id: 'database-optimization,
+    "id": 'database-optimization,
     name:,
   Database Optimization & Migration',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Database performance optimization, migration, and management services for improved performance and scalability.',
-    features: [
-  'Database performance tuning,
+    "features": ['Database performance tuning,
   'Migration planning & execution',
   'Query optimization',
   'Index optimization',
@@ -1522,48 +1393,44 @@ export const services: Service[] = [
   'Security hardening',
   'Monitoring & alerting'
     ],
-    pricing: {
+    "pricing": {
       starter: 3000,
-      professional: 8500,
-      enterprise: 25000,
+      "professional": 8500,
+      "enterprise": 25000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved query performance,
+    "benefits": ['Improved query performance,
 ,
   Reduced downtime',
   'Better scalability',
   'Enhanced data security'
     ],
-    useCases: [
-  'Legacy database modernization,
+    "useCases": ['Legacy database modernization,
 ,
   Performance optimization',
   'Cloud database migration',
   'High-availability setup'
     ],
-    technologies: [
-  'PostgreSQL,
+    "technologies": ['PostgreSQL,
 ,
   MySQL',
   'MongoDB',
   'Redis',
   'AWS RDS',
   'Azure SQL'],
-    link: 'https://ziontechgroup.com/services/database-optimization,
+    "link": 'https://ziontechgroup.com/services/database-optimization,
     icon:,
   🗄️'
   },
   {
-    id: 'api-gateway-management,
+    "id": 'api-gateway-management,
     name:,
   API Gateway & Microservices Management',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   API gateway setup and microservices management for scalable, secure, and efficient API operations.',
-    features: [
-  'API gateway configuration,
+    "features": ['API gateway configuration,
   'Rate limiting & throttling',
   'Authentication & authorization',
   'API versioning',
@@ -1572,47 +1439,43 @@ export const services: Service[] = [
   'Load balancing',
   'Security policies'
     ],
-    pricing: {
+    "pricing": {
       starter: 2500,
-      professional: 7500,
-      enterprise: 22000,
+      "professional": 7500,
+      "enterprise": 22000,
       currency:,
   USD'
     },
-    benefits: [
-  'Centralized API management,
+    "benefits": ['Centralized API management,
 ,
   Enhanced security',
   'Better performance monitoring',
   'Simplified integration'
     ],
-    useCases: [
-  'Microservices architecture,
+    "useCases": ['Microservices architecture,
 ,
   API-first businesses',
   'Third-party integrations',
   'Mobile app backends'
     ],
-    technologies: [
-  'Kong,
+    "technologies": ['Kong,
 ,
   AWS API Gateway',
   'Azure API Management',
   'Istio',
   'Nginx'],
-    link: 'https://ziontechgroup.com/services/api-gateway-management,
+    "link": 'https://ziontechgroup.com/services/api-gateway-management,
     icon:,
   🔗'
   },
   {
-    id: 'disaster-recovery-planning,
+    "id": 'disaster-recovery-planning,
     name:,
   Disaster Recovery & Business Continuity',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive disaster recovery planning and business continuity solutions to ensure minimal downtime.',
-    features: [
-  'Disaster recovery planning,
+    "features": ['Disaster recovery planning,
   'Backup strategy implementation',
   'Failover systems setup',
   'Recovery time objectives',
@@ -1621,47 +1484,43 @@ export const services: Service[] = [
   'Staff training',
   'Regular audits'
     ],
-    pricing: {
+    "pricing": {
       starter: 4000,
-      professional: 12000,
-      enterprise: 35000,
+      "professional": 12000,
+      "enterprise": 35000,
       currency:,
   USD'
     },
-    benefits: [
-  'Minimal downtime,
+    "benefits": ['Minimal downtime,
 ,
   Data protection',
   'Business continuity',
   'Compliance adherence'
     ],
-    useCases: [
-  'Critical business systems,
+    "useCases": ['Critical business systems,
 ,
   Financial institutions',
   'Healthcare organizations',
   'E-commerce platforms'
     ],
-    technologies: [
-  'Veeam,
+    "technologies": ['Veeam,
 ,
   Commvault',
   'AWS DR',
   'Azure Site Recovery',
   'VMware SRM'],
-    link: 'https://ziontechgroup.com/services/disaster-recovery-planning,
+    "link": 'https://ziontechgroup.com/services/disaster-recovery-planning,
     icon:,
   🔄'
   },
   {
-    id: 'it-infrastructure-monitoring,
+    "id": 'it-infrastructure-monitoring,
     name:,
   IT Infrastructure Monitoring & Management',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   24/7 IT infrastructure monitoring and management services with proactive issue detection and resolution.',
-    features: [
-  '24/7 infrastructure monitoring,
+    "features": ['24/7 infrastructure monitoring,
   'Proactive issue detection',
   'Performance optimization',
   'Capacity planning',
@@ -1670,48 +1529,44 @@ export const services: Service[] = [
   'Incident response',
   'Regular reporting'
     ],
-    pricing: {
+    "pricing": {
       starter: 2000,
-      professional: 6000,
-      enterprise: 18000,
+      "professional": 6000,
+      "enterprise": 18000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduced downtime,
+    "benefits": ['Reduced downtime,
 ,
   Proactive issue resolution',
   'Better performance',
   'Cost optimization'
     ],
-    useCases: [
-  'Enterprise infrastructure,
+    "useCases": ['Enterprise infrastructure,
 ,
   Cloud environments',
   'Hybrid systems',
   'Critical applications'
     ],
-    technologies: [
-  'Nagios,
+    "technologies": ['Nagios,
 ,
   Zabbix',
   'Prometheus',
   'Grafana',
   'ELK Stack',
   'Splunk'],
-    link: 'https://ziontechgroup.com/services/it-infrastructure-monitoring,
+    "link": 'https://ziontechgroup.com/services/it-infrastructure-monitoring,
     icon:,
   📊'
   },
   {
-    id: 'identity-access-management,
+    "id": 'identity-access-management,
     name:,
   Identity & Access Management (IAM)',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive identity and access management solutions with single sign-on, multi-factor authentication, and role-based access control.',
-    features: [
-  'Single Sign-On (SSO) setup,
+    "features": ['Single Sign-On (SSO) setup,
   'Multi-factor authentication',
   'Role-based access control',
   'Identity provisioning',
@@ -1720,189 +1575,173 @@ export const services: Service[] = [
   'API security',
   'Integration with existing systems'
     ],
-    pricing: {
+    "pricing": {
       starter: 3000,
-      professional: 9000,
-      enterprise: 27000,
+      "professional": 9000,
+      "enterprise": 27000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced security,
+    "benefits": ['Enhanced security,
 ,
   Simplified user management',
   'Compliance adherence',
   'Reduced IT overhead'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Healthcare systems',
   'Financial institutions',
   'Government agencies'
     ],
-    technologies: [
-  'Okta,
+    "technologies": ['Okta,
 ,
   Azure AD',
   'AWS IAM',
   'Auth0',
   'SAML',
   'OAuth'],
-    link: 'https://ziontechgroup.com/services/identity-access-management,
+    "link": 'https://ziontechgroup.com/services/identity-access-management,
     icon:,
   🔐'
   },
   {
-    id: 'cybersecurity-audit,
+    "id": 'cybersecurity-audit,
     name:,
   Cybersecurity Assessment',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive cybersecurity audit and penetration testing services to protect your business.',
-    features: [
-  'Vulnerability assessment,
+    "features": ['Vulnerability assessment,
   'Penetration testing',
   'Security policy review',
   'Compliance auditing',
   'Incident response planning',
   'Security training'
     ],
-    pricing: {
+    "pricing": {
       starter: 3000,
-      professional: 8000,
-      enterprise: 25000,
+      "professional": 8000,
+      "enterprise": 25000,
       currency:,
   USD'
     },
-    benefits: [
-  'Identify security vulnerabilities,
+    "benefits": ['Identify security vulnerabilities,
 ,
   Compliance with regulations',
   'Protect customer data',
   'Reduce security risks'
     ],
-    useCases: [
-  'Financial institutions,
+    "useCases": ['Financial institutions,
 ,
   Healthcare organizations',
   'E-commerce platforms',
   'Government agencies'
     ],
-    technologies: [
-  'Nmap,
+    "technologies": ['Nmap,
 ,
   Metasploit',
   'Burp Suite',
   'OWASP ZAP'],
-    link: 'https://ziontechgroup.com/services/cybersecurity,
+    "link": 'https://ziontechgroup.com/services/cybersecurity,
     icon:,
   🔒'
   },
   {
-    id: 'devops-automation,
+    "id": 'devops-automation,
     name:,
   DevOps Automation Suite',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete DevOps automation including CI/CD pipelines, infrastructure as code, and monitoring.',
-    features: [
-  'CI/CD pipeline setup,
+    "features": ['CI/CD pipeline setup,
   'Infrastructure as Code',
   'Container orchestration',
   'Monitoring & alerting',
   'Automated testing',
   'Deployment automation'
     ],
-    pricing: {
+    "pricing": {
       starter: 4000,
-      professional: 12000,
-      enterprise: 35000,
+      "professional": 12000,
+      "enterprise": 35000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster deployments,
+    "benefits": ['Faster deployments,
 ,
   Reduced manual errors',
   'Improved reliability',
   'Better collaboration'
     ],
-    useCases: [
-  'Software development teams,
+    "useCases": ['Software development teams,
 ,
   Startups scaling up',
   'Enterprise applications',
   'Microservices architecture'
     ],
-    technologies: [
-  'Jenkins,
+    "technologies": ['Jenkins,
 ,
   GitLab CI',
   'Terraform',
   'Kubernetes',
   'Prometheus'],
-    link: 'https://ziontechgroup.com/services/devops,
+    "link": 'https://ziontechgroup.com/services/devops,
     icon:,
   ⚙️'
   },
   {
-    id: 'data-backup-recovery,
+    "id": 'data-backup-recovery,
     name:,
   Data Backup & Recovery',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive data backup and disaster recovery solutions to protect your critical business data.',
-    features: [
-  'Automated backup scheduling,
+    "features": ['Automated backup scheduling,
   'Incremental backups',
   'Disaster recovery planning',
   'Data encryption',
   'Backup testing',
   'Recovery time objectives'
     ],
-    pricing: {
+    "pricing": {
       starter: 2000,
-      professional: 6000,
-      enterprise: 18000,
+      "professional": 6000,
+      "enterprise": 18000,
       currency:,
   USD'
     },
-    benefits: [
-  'Data protection,
+    "benefits": ['Data protection,
 ,
   Business continuity',
   'Compliance adherence',
   'Peace of mind'
     ],
-    useCases: [
-  'Database systems,
+    "useCases": ['Database systems,
 ,
   File servers',
   'Virtual machines',
   'Cloud applications'
     ],
-    technologies: [
-  'Veeam,
+    "technologies": ['Veeam,
 ,
   Commvault',
   'AWS S3',
   'Azure Backup'],
-    link: 'https://ziontechgroup.com/services/backup-recovery,
+    "link": 'https://ziontechgroup.com/services/backup-recovery,
     icon:,
   💾'
   },
 
   // AI Services
   {
-    id: 'custom-ai-models,
+    "id": 'custom-ai-models,
     name:,
   Custom AI Model Development',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Custom AI model development tailored to your specific business needs and data with advanced machine learning techniques.',
-    features: [
-  'Custom model training,
+    "features": ['Custom model training,
   'Data preprocessing',
   'Model optimization',
   'API development',
@@ -1911,50 +1750,46 @@ export const services: Service[] = [
   'Model versioning',
   'Performance monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 10000,
-      professional: 30000,
-      enterprise: 100000,
+      "professional": 30000,
+      "enterprise": 100000,
       currency:,
   USD'
     },
-    benefits: [
-  'Tailored to your data,
+    "benefits": ['Tailored to your data,
 ,
   Better accuracy',
   'Competitive advantage',
   'Scalable solutions',
   'ROI optimization'
     ],
-    useCases: [
-  'Predictive analytics,
+    "useCases": ['Predictive analytics,
 ,
   Image recognition',
   'Natural language processing',
   'Recommendation systems',
   'Fraud detection'
     ],
-    technologies: [
-  'TensorFlow,
+    "technologies": ['TensorFlow,
 ,
   PyTorch',
   'Scikit-learn',
   'Python',
   'Docker',
   'MLflow'],
-    link: 'https://ziontechgroup.com/services/custom-ai-models,
+    "link": 'https://ziontechgroup.com/services/custom-ai-models,
     icon:,
   🧠'
   },
   {
-    id: 'computer-vision-solutions,
+    "id": 'computer-vision-solutions,
     name:,
   Computer Vision & Image Recognition',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced computer vision solutions for object detection, facial recognition, and image analysis applications.',
-    features: [
-  'Object detection & classification,
+    "features": ['Object detection & classification,
   'Facial recognition systems',
   'Image segmentation',
   'OCR & text extraction',
@@ -1963,49 +1798,45 @@ export const services: Service[] = [
   'Custom model training',
   'API integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Automated visual inspection,
+    "benefits": ['Automated visual inspection,
 ,
   Enhanced security',
   'Improved accuracy',
   'Cost reduction'
     ],
-    useCases: [
-  'Manufacturing quality control,
+    "useCases": ['Manufacturing quality control,
 ,
   Security & surveillance',
   'Medical imaging',
   'Retail analytics',
   'Autonomous vehicles'
     ],
-    technologies: [
-  'OpenCV,
+    "technologies": ['OpenCV,
 ,
   TensorFlow',
   'PyTorch',
   'YOLO',
   'ResNet',
   'CUDA'],
-    link: 'https://ziontechgroup.com/services/computer-vision-solutions,
+    "link": 'https://ziontechgroup.com/services/computer-vision-solutions,
     icon:,
   👁️'
   },
   {
-    id: 'natural-language-processing,
+    "id": 'natural-language-processing,
     name:,
   Natural Language Processing (NLP)',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.',
-    features: [
-  'Text classification & analysis,
+    "features": ['Text classification & analysis,
   'Sentiment analysis',
   'Language translation',
   'Named entity recognition',
@@ -2014,49 +1845,45 @@ export const services: Service[] = [
   'Chatbot development',
   'Document processing'
     ],
-    pricing: {
+    "pricing": {
       starter: 7000,
-      professional: 22000,
-      enterprise: 65000,
+      "professional": 22000,
+      "enterprise": 65000,
       currency:,
   USD'
     },
-    benefits: [
-  'Automated text processing,
+    "benefits": ['Automated text processing,
 ,
   Better customer insights',
   'Multilingual support',
   'Improved efficiency'
     ],
-    useCases: [
-  'Customer service automation,
+    "useCases": ['Customer service automation,
 ,
   Content moderation',
   'Market research',
   'Legal document analysis',
   'Social media monitoring'
     ],
-    technologies: [
-  'BERT,
+    "technologies": ['BERT,
 ,
   GPT',
   'Transformers',
   'spaCy',
   'NLTK',
   'Hugging Face'],
-    link: 'https://ziontechgroup.com/services/natural-language-processing,
+    "link": 'https://ziontechgroup.com/services/natural-language-processing,
     icon:,
   💬'
   },
   {
-    id: 'predictive-analytics-platform,
+    "id": 'predictive-analytics-platform,
     name:,
   Predictive Analytics & Forecasting',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced predictive analytics platform for business forecasting, demand planning, and risk assessment.',
-    features: [
-  'Time series forecasting,
+    "features": ['Time series forecasting,
   'Demand prediction',
   'Risk assessment models',
   'Customer behavior analysis',
@@ -2065,49 +1892,45 @@ export const services: Service[] = [
   'Churn prediction',
   'Real-time predictions'
     ],
-    pricing: {
+    "pricing": {
       starter: 9000,
-      professional: 28000,
-      enterprise: 85000,
+      "professional": 28000,
+      "enterprise": 85000,
       currency:,
   USD'
     },
-    benefits: [
-  'Data-driven decisions,
+    "benefits": ['Data-driven decisions,
 ,
   Reduced risks',
   'Optimized operations',
   'Competitive advantage'
     ],
-    useCases: [
-  'Supply chain optimization,
+    "useCases": ['Supply chain optimization,
 ,
   Financial risk management',
   'Marketing campaign optimization',
   'Healthcare predictions',
   'Energy demand forecasting'
     ],
-    technologies: [
-  'Python,
+    "technologies": ['Python,
 ,
   R',
   'TensorFlow',
   'Prophet',
   'ARIMA',
   'XGBoost'],
-    link: 'https://ziontechgroup.com/services/predictive-analytics-platform,
+    "link": 'https://ziontechgroup.com/services/predictive-analytics-platform,
     icon:,
   📈'
   },
   {
-    id: 'ai-powered-recommendation-engine,
+    "id": 'ai-powered-recommendation-engine,
     name:,
   AI Recommendation Engine',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent recommendation systems for personalized content, products, and services using advanced ML algorithms.',
-    features: [
-  'Collaborative filtering,
+    "features": ['Collaborative filtering,
   'Content-based filtering',
   'Hybrid recommendation systems',
   'Real-time recommendations',
@@ -2116,49 +1939,45 @@ export const services: Service[] = [
   'Multi-domain support',
   'Scalable architecture'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Increased engagement,
+    "benefits": ['Increased engagement,
 ,
   Higher conversion rates',
   'Personalized experiences',
   'Revenue growth'
     ],
-    useCases: [
-  'E-commerce platforms,
+    "useCases": ['E-commerce platforms,
 ,
   Streaming services',
   'Social media platforms',
   'News websites',
   'Job matching platforms'
     ],
-    technologies: [
-  'TensorFlow,
+    "technologies": ['TensorFlow,
 ,
   PyTorch',
   'Apache Spark',
   'Redis',
   'Kafka',
   'Elasticsearch'],
-    link: 'https://ziontechgroup.com/services/ai-powered-recommendation-engine,
+    "link": 'https://ziontechgroup.com/services/ai-powered-recommendation-engine,
     icon:,
   🎯'
   },
   {
-    id: 'ai-automation-workflows,
+    "id": 'ai-automation-workflows,
     name:,
   AI-Powered Workflow Automation',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent workflow automation using AI to streamline business processes and reduce manual intervention.',
-    features: [
-  'Process mining & analysis,
+    "features": ['Process mining & analysis,
   'Intelligent document processing',
   'Decision automation',
   'Exception handling',
@@ -2167,49 +1986,45 @@ export const services: Service[] = [
   'Monitoring & analytics',
   'Continuous improvement'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce manual work by 80%,
+    "benefits": ['Reduce manual work by 80%,
 ,
   Faster processing times',
   'Improved accuracy',
   'Cost savings'
     ],
-    useCases: [
-  'Invoice processing,
+    "useCases": ['Invoice processing,
 ,
   Customer onboarding',
   'Claims processing',
   'HR workflows',
   'Compliance monitoring'
     ],
-    technologies: [
-  'UiPath,
+    "technologies": ['UiPath,
 ,
   Automation Anywhere',
   'Python',
   'OCR',
   'RPA',
   'ML'],
-    link: 'https://ziontechgroup.com/services/ai-automation-workflows,
+    "link": 'https://ziontechgroup.com/services/ai-automation-workflows,
     icon:,
   ⚙️'
   },
   {
-    id: 'ai-data-analytics-platform,
+    "id": 'ai-data-analytics-platform,
     name:,
   AI Data Analytics & Business Intelligence',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI-powered analytics platform for business intelligence, data visualization, and automated insights.',
-    features: [
-  'Automated data analysis,
+    "features": ['Automated data analysis,
   'Natural language queries',
   'Predictive insights',
   'Anomaly detection',
@@ -2218,49 +2033,45 @@ export const services: Service[] = [
   'Data visualization',
   'Real-time analytics'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster insights,
+    "benefits": ['Faster insights,
 ,
   Automated analysis',
   'Better decision making',
   'Reduced manual work'
     ],
-    useCases: [
-  'Business intelligence,
+    "useCases": ['Business intelligence,
 ,
   Financial analysis',
   'Marketing analytics',
   'Operations monitoring',
   'Performance tracking'
     ],
-    technologies: [
-  'Tableau,
+    "technologies": ['Tableau,
 ,
   Power BI',
   'Python',
   'Apache Spark',
   'TensorFlow',
   'D3.js'],
-    link: 'https://ziontechgroup.com/services/ai-data-analytics-platform,
+    "link": 'https://ziontechgroup.com/services/ai-data-analytics-platform,
     icon:,
   📊'
   },
   {
-    id: 'ai-chatbot-voice-assistant,
+    "id": 'ai-chatbot-voice-assistant,
     name:,
   AI Chatbot & Voice Assistant Development',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced conversational AI solutions including chatbots, voice assistants, and virtual agents.',
-    features: [
-  'Natural language understanding,
+    "features": ['Natural language understanding,
   'Multi-channel deployment',
   'Voice recognition',
   'Context awareness',
@@ -2269,49 +2080,45 @@ export const services: Service[] = [
   'Custom training',
   '24/7 availability'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 45000,
+      "professional": 15000,
+      "enterprise": 45000,
       currency:,
   USD'
     },
-    benefits: [
-  '24/7 customer support,
+    "benefits": ['24/7 customer support,
 ,
   Reduced response times',
   'Scalable customer service',
   'Cost-effective support'
     ],
-    useCases: [
-  'Customer support,
+    "useCases": ['Customer support,
 ,
   Sales assistance',
   'Appointment booking',
   'FAQ handling',
   'Voice commands'
     ],
-    technologies: [
-  'OpenAI GPT,
+    "technologies": ['OpenAI GPT,
 ,
   Dialogflow',
   'Amazon Lex',
   'Azure Bot',
   'WebRTC',
   'Speech APIs'],
-    link: 'https://ziontechgroup.com/services/ai-chatbot-voice-assistant,
+    "link": 'https://ziontechgroup.com/services/ai-chatbot-voice-assistant,
     icon:,
   🤖'
   },
   {
-    id: 'ai-fraud-detection,
+    "id": 'ai-fraud-detection,
     name:,
   AI Fraud Detection & Security',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI-powered fraud detection and security systems to protect against financial crimes and cyber threats.',
-    features: [
-  'Real-time fraud detection,
+    "features": ['Real-time fraud detection,
   'Anomaly detection',
   'Risk scoring',
   'Behavioral analysis',
@@ -2320,49 +2127,45 @@ export const services: Service[] = [
   'Threat intelligence',
   'Automated response'
     ],
-    pricing: {
+    "pricing": {
       starter: 10000,
-      professional: 30000,
-      enterprise: 90000,
+      "professional": 30000,
+      "enterprise": 90000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduced fraud losses,
+    "benefits": ['Reduced fraud losses,
 ,
   Real-time protection',
   'Improved accuracy',
   'Compliance adherence'
     ],
-    useCases: [
-  'Financial institutions,
+    "useCases": ['Financial institutions,
 ,
   E-commerce platforms',
   'Payment processors',
   'Insurance companies',
   'Gaming platforms'
     ],
-    technologies: [
-  'TensorFlow,
+    "technologies": ['TensorFlow,
 ,
   PyTorch',
   'Apache Kafka',
   'Redis',
   'Elasticsearch',
   'MLflow'],
-    link: 'https://ziontechgroup.com/services/ai-fraud-detection,
+    "link": 'https://ziontechgroup.com/services/ai-fraud-detection,
     icon:,
   🛡️'
   },
   {
-    id: 'ai-content-moderation,
+    "id": 'ai-content-moderation,
     name:,
   AI Content Moderation & Safety',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent content moderation system using AI to automatically detect and filter inappropriate content.',
-    features: [
-  'Text content analysis,
+    "features": ['Text content analysis,
   'Image & video moderation',
   'Hate speech detection',
   'Spam filtering',
@@ -2371,49 +2174,45 @@ export const services: Service[] = [
   'Custom policy enforcement',
   'Human review integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 4000,
-      professional: 12000,
-      enterprise: 35000,
+      "professional": 12000,
+      "enterprise": 35000,
       currency:,
   USD'
     },
-    benefits: [
-  'Automated content filtering,
+    "benefits": ['Automated content filtering,
 ,
   Reduced manual moderation',
   'Consistent policy enforcement',
   'Improved user safety'
     ],
-    useCases: [
-  'Social media platforms,
+    "useCases": ['Social media platforms,
 ,
   Online communities',
   'E-commerce marketplaces',
   'Educational platforms',
   'Gaming communities'
     ],
-    technologies: [
-  'OpenAI,
+    "technologies": ['OpenAI,
 ,
   Google Vision API',
   'AWS Rekognition',
   'TensorFlow',
   'NLP',
   'Computer Vision'],
-    link: 'https://ziontechgroup.com/services/ai-content-moderation,
+    "link": 'https://ziontechgroup.com/services/ai-content-moderation,
     icon:,
   🔍'
   },
   {
-    id: 'ai-supply-chain-optimization,
+    "id": 'ai-supply-chain-optimization,
     name:,
   AI Supply Chain Optimization',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   AI-powered supply chain optimization for demand forecasting, inventory management, and logistics optimization.',
-    features: [
-  'Demand forecasting,
+    "features": ['Demand forecasting,
   'Inventory optimization',
   'Route optimization',
   'Supplier risk assessment',
@@ -2422,1408 +2221,1288 @@ export const services: Service[] = [
   'Real-time monitoring',
   'Predictive maintenance'
     ],
-    pricing: {
+    "pricing": {
       starter: 12000,
-      professional: 35000,
-      enterprise: 100000,
+      "professional": 35000,
+      "enterprise": 100000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduced inventory costs,
+    "benefits": ['Reduced inventory costs,
 ,
   Improved efficiency',
   'Better demand planning',
   'Risk mitigation'
     ],
-    useCases: [
-  'Manufacturing companies,
+    "useCases": ['Manufacturing companies,
 ,
   Retail chains',
   'Logistics providers',
   'Food & beverage industry',
   'Pharmaceutical companies'
     ],
-    technologies: [
-  'Python,
+    "technologies": ['Python,
 ,
   TensorFlow',
   'Apache Spark',
   'Optimization algorithms',
   'IoT',
   'Blockchain'],
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization,
+    "link": 'https://ziontechgroup.com/services/ai-supply-chain-optimization,
     icon:,
   🚚'
   },
   {
-    id: 'ai-process-automation,
+    "id": 'ai-process-automation,
     name:,
   AI Process Automation',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent process automation using AI to streamline business operations and reduce manual work.',
-    features: [
-  'Process analysis,
+    "features": ['Process analysis,
   'RPA implementation',
   'AI decision making',
   'Workflow automation',
   'Integration with existing systems',
   'Performance monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce manual work by 70%,
+    "benefits": ['Reduce manual work by 70%,
 ,
   Improve accuracy',
   'Faster processing',
   'Cost savings'
     ],
-    useCases: [
-  'Invoice processing,
+    "useCases": ['Invoice processing,
 ,
   Customer onboarding',
   'Data entry automation',
   'Report generation'
     ],
-    technologies: [
-  'UiPath,
+    "technologies": ['UiPath,
 ,
   Automation Anywhere',
   'Python',
   'OCR'],
-    link: 'https://ziontechgroup.com/services/ai-automation,
+    "link": 'https://ziontechgroup.com/services/ai-automation,
     icon:,
   🤖'
   },
   {
-    id: 'ai-analytics-platform,
+    "id": 'ai-analytics-platform,
     name:,
   AI Analytics Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced analytics platform powered by AI for deep business insights and predictive analytics.',
-    features: [
-  'Data visualization,
+    "features": ['Data visualization,
   'Predictive analytics',
   'Real-time dashboards',
   'Automated reporting',
   'Anomaly detection',
   'Custom alerts'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Data-driven decisions,
+    "benefits": ['Data-driven decisions,
 ,
   Predictive insights',
   'Real-time monitoring',
   'Competitive advantage'
     ],
-    useCases: [
-  'Business intelligence,
+    "useCases": ['Business intelligence,
 ,
   Sales forecasting',
   'Risk assessment',
   'Performance monitoring'
     ],
-    technologies: [
-  'Tableau,
+    "technologies": ['Tableau,
 ,
   Power BI',
   'Python',
   'Apache Spark',
   'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-analytics,
+    "link": 'https://ziontechgroup.com/services/ai-analytics,
     icon:,
   📈'
   },
   {
-    id: 'ai-chatbot-development,
+    "id": 'ai-chatbot-development,
     name:,
   AI Chatbot Development',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Custom AI chatbot development for customer service, sales, and internal communication.',
-    features: [
-  'Natural language processing,
+    "features": ['Natural language processing,
   'Multi-language support',
   'Integration APIs',
   'Analytics dashboard',
   'Custom training',
   '24/7 availability'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 45000,
+      "professional": 15000,
+      "enterprise": 45000,
       currency:,
   USD'
     },
-    benefits: [
-  '24/7 customer support,
+    "benefits": ['24/7 customer support,
 ,
   Reduced response times',
   'Scalable customer service',
   'Cost-effective support'
     ],
-    useCases: [
-  'Customer support,
+    "useCases": ['Customer support,
 ,
   Sales qualification',
   'Appointment booking',
   'FAQ handling'
     ],
-    technologies: [
-  'OpenAI GPT,
+    "technologies": ['OpenAI GPT,
 ,
   Dialogflow',
   'React',
   'Node.js',
   'MongoDB'],
-    link: 'https://ziontechgroup.com/services/ai-chatbot,
+    "link": 'https://ziontechgroup.com/services/ai-chatbot,
     icon:,
   💬'
   },
 
   // Additional Micro SaaS Services
   {
-    id: 'social-media-scheduler,
+    "id": 'social-media-scheduler,
     name:,
   Social Media Scheduler Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced social media management platform with AI-powered content optimization and cross-platform scheduling.',
-    features: [
-  'Multi-platform scheduling,
+    "features": ['Multi-platform scheduling,
   'AI content optimization',
   'Hashtag research',
   'Analytics & insights',
   'Team collaboration',
   'Content calendar'
     ],
-    pricing: {
+    "pricing": {
       starter: 15,
-      professional: 45,
-      enterprise: 120,
+      "professional": 45,
+      "enterprise": 120,
       currency:,
   USD'
     },
-    benefits: [
-  'Save 10+ hours per week,
+    "benefits": ['Save 10+ hours per week,
 ,
   Increase engagement by 40%',
   'Consistent brand presence',
   'Data-driven content strategy'
     ],
-    useCases: [
-  'Marketing agencies,
+    "useCases": ['Marketing agencies,
 ,
   Small businesses',
   'Content creators',
   'E-commerce brands'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'Social APIs'],
-    link: 'https://ziontechgroup.com/services/social-media-scheduler,
+    "link": 'https://ziontechgroup.com/services/social-media-scheduler,
     icon:,
   📱'
   },
   {
-    id: 'expense-tracker,
+    "id": 'expense-tracker,
     name:,
   Smart Expense Tracker',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent expense management with receipt scanning, categorization, and automated reporting.',
-    features: [
-  'Receipt scanning with OCR,
+    "features": ['Receipt scanning with OCR,
   'Automatic categorization',
   'Multi-currency support',
   'Tax preparation',
   'Team expense management',
   'Mobile app'
     ],
-    pricing: {
+    "pricing": {
       starter: 12,
-      professional: 35,
-      enterprise: 95,
+      "professional": 35,
+      "enterprise": 95,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce expense processing time by 80%,
+    "benefits": ['Reduce expense processing time by 80%,
 ,
   Accurate tax deductions',
   'Real-time expense insights',
   'Compliance with regulations'
     ],
-    useCases: [
-  'Small businesses,
+    "useCases": ['Small businesses,
 ,
   Freelancers',
   'Sales teams',
   'Remote workers'
     ],
-    technologies: [
-  'React Native,
+    "technologies": ['React Native,
 ,
   Python',
   'PostgreSQL',
   'OCR'],
-    link: 'https://ziontechgroup.com/services/expense-tracker,
+    "link": 'https://ziontechgroup.com/services/expense-tracker,
     icon:,
   💰'
   },
   {
-    id: 'lead-scoring-platform,
+    "id": 'lead-scoring-platform,
     name:,
   AI Lead Scoring Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent lead scoring system that uses AI to identify and prioritize high-value prospects.',
-    features: [
-  'AI-powered lead scoring,
+    "features": ['AI-powered lead scoring,
   'Behavioral tracking',
   'CRM integration',
   'Custom scoring models',
   'Real-time alerts',
   'Performance analytics'
     ],
-    pricing: {
+    "pricing": {
       starter: 49,
-      professional: 129,
-      enterprise: 349,
+      "professional": 129,
+      "enterprise": 349,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase conversion rates by 35%,
+    "benefits": ['Increase conversion rates by 35%,
 ,
   Focus on high-value leads',
   'Automated lead qualification',
   'Better sales efficiency'
     ],
-    useCases: [
-  'Sales teams,
+    "useCases": ['Sales teams,
 ,
   Marketing agencies',
   'B2B companies',
   'Lead generation services'
     ],
-    technologies: [
-  'Machine Learning,
+    "technologies": ['Machine Learning,
 ,
   React',
   'Node.js',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/lead-scoring,
+    "link": 'https://ziontechgroup.com/services/lead-scoring,
     icon:,
   🎯'
   },
   {
-    id: 'time-tracking-analytics,
+    "id": 'time-tracking-analytics,
     name:,
   Time Tracking Analytics Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced time tracking with productivity analytics, project insights, and team performance metrics.',
-    features: [
-  'Automatic time tracking,
+    "features": ['Automatic time tracking,
   'Productivity analytics',
   'Project profitability analysis',
   'Team performance metrics',
   'Client billing integration',
   'Mobile time tracking'
     ],
-    pricing: {
+    "pricing": {
       starter: 8,
-      professional: 25,
-      enterprise: 65,
+      "professional": 25,
+      "enterprise": 65,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase billable hours by 25%,
+    "benefits": ['Increase billable hours by 25%,
 ,
   Better project profitability',
   'Improved team productivity',
   'Accurate client billing'
     ],
-    useCases: [
-  'Consulting firms,
+    "useCases": ['Consulting firms,
 ,
   Freelancers',
   'Remote teams',
   'Project-based businesses'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'Analytics'],
-    link: 'https://ziontechgroup.com/services/time-tracking,
+    "link": 'https://ziontechgroup.com/services/time-tracking,
     icon:,
   ⏱️'
   },
   {
-    id: 'email-marketing-automation,
+    "id": 'email-marketing-automation,
     name:,
   Email Marketing Automation Suite',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive email marketing platform with advanced automation, segmentation, and personalization.',
-    features: [
-  'Drag-and-drop email builder,
+    "features": ['Drag-and-drop email builder,
   'Advanced automation workflows',
   'Behavioral segmentation',
   'A/B testing',
   'Deliverability optimization',
   'Analytics & reporting'
     ],
-    pricing: {
+    "pricing": {
       starter: 29,
-      professional: 79,
-      enterprise: 199,
+      "professional": 79,
+      "enterprise": 199,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase email ROI by 300%,
+    "benefits": ['Increase email ROI by 300%,
 ,
   Automated customer journeys',
   'Personalized messaging',
   'Better deliverability rates'
     ],
-    useCases: [
-  'E-commerce businesses,
+    "useCases": ['E-commerce businesses,
 ,
   SaaS companies',
   'Marketing agencies',
   'Content creators'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'Redis',
   'Email APIs'],
-    link: 'https://ziontechgroup.com/services/email-marketing,
+    "link": 'https://ziontechgroup.com/services/email-marketing,
     icon:,
   📧'
   },
   {
-    id: 'website-speed-optimizer,
+    "id": 'website-speed-optimizer,
     name:,
   Website Speed Optimizer',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   AI-powered website performance optimization tool that automatically improves loading speeds and Core Web Vitals.',
-    features: [
-  'Automatic image optimization,
+    "features": ['Automatic image optimization,
   'Code minification',
   'CDN integration',
   'Core Web Vitals monitoring',
   'Performance reports',
   'One-click optimization'
     ],
-    pricing: {
+    "pricing": {
       starter: 19,
-      professional: 49,
-      enterprise: 129,
+      "professional": 49,
+      "enterprise": 129,
       currency:,
   USD'
     },
-    benefits: [
-  'Improve page speed by 60%,
+    "benefits": ['Improve page speed by 60%,
 ,
   Better SEO rankings',
   'Reduced bounce rates',
   'Improved user experience'
     ],
-    useCases: [
-  'Website owners,
+    "useCases": ['Website owners,
 ,
   Digital agencies',
   'E-commerce sites',
   'Content websites'
     ],
-    technologies: [
-  'AI Optimization,
+    "technologies": ['AI Optimization,
 ,
   CDN',
   'React',
   'Node.js'],
-    link: 'https://ziontechgroup.com/services/speed-optimizer,
+    "link": 'https://ziontechgroup.com/services/speed-optimizer,
     icon:,
   ⚡'
   },
   {
-    id: 'api-monitoring-platform,
+    "id": 'api-monitoring-platform,
     name:,
   API Monitoring Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive API monitoring and testing platform with real-time alerts and performance analytics.',
-    features: [
-  'Real-time API monitoring,
+    "features": ['Real-time API monitoring,
   'Automated testing',
   'Performance analytics',
   'Uptime monitoring',
   'Error tracking',
   'SLA monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 25,
-      professional: 65,
-      enterprise: 175,
+      "professional": 65,
+      "enterprise": 175,
       currency:,
   USD'
     },
-    benefits: [
-  '99.9% API uptime,
+    "benefits": ['99.9% API uptime,
 ,
   Faster issue resolution',
   'Better user experience',
   'Proactive monitoring'
     ],
-    useCases: [
-  'API developers,
+    "useCases": ['API developers,
 ,
   SaaS companies',
   'Mobile app developers',
   'Enterprise applications'
     ],
-    technologies: [
-  'Node.js,
+    "technologies": ['Node.js,
 ,
   MongoDB',
   'Monitoring APIs',
   'React'],
-    link: 'https://ziontechgroup.com/services/api-monitoring,
+    "link": 'https://ziontechgroup.com/services/api-monitoring,
     icon:,
   🔍'
   },
   {
-    id: 'password-manager-business,
+    "id": 'password-manager-business,
     name:,
   Business Password Manager',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Enterprise-grade password management solution with team sharing, security policies, and audit trails.',
-    features: [
-  'Secure password storage,
+    "features": ['Secure password storage,
   'Team password sharing',
   'Security policies',
   'Audit trails',
   'SSO integration',
   'Mobile apps'
     ],
-    pricing: {
+    "pricing": {
       starter: 3,
-      professional: 8,
-      enterprise: 20,
+      "professional": 8,
+      "enterprise": 20,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced security,
+    "benefits": ['Enhanced security,
 ,
   Reduced password-related breaches',
   'Centralized access management',
   'Compliance with security standards'
     ],
-    useCases: [
-  'Small businesses,
+    "useCases": ['Small businesses,
 ,
   Remote teams',
   'IT departments',
   'Security-conscious organizations'
     ],
-    technologies: [
-  'Encryption,
+    "technologies": ['Encryption,
 ,
   React',
   'Node.js',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/password-manager,
+    "link": 'https://ziontechgroup.com/services/password-manager,
     icon:,
   🔐'
   },
   {
-    id: 'form-builder-platform,
+    "id": 'form-builder-platform,
     name:,
   Advanced Form Builder',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Powerful form builder with conditional logic, payment integration, and advanced analytics.',
-    features: [
-  'Drag-and-drop builder,
+    "features": ['Drag-and-drop builder,
   'Conditional logic',
   'Payment integration',
   'Multi-step forms',
   'Analytics dashboard',
   'API access'
     ],
-    pricing: {
+    "pricing": {
       starter: 15,
-      professional: 45,
-      enterprise: 120,
+      "professional": 45,
+      "enterprise": 120,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase form conversions by 40%,
+    "benefits": ['Increase form conversions by 40%,
 ,
   Reduce form abandonment',
   'Streamlined data collection',
   'Better user experience'
     ],
-    useCases: [
-  'Lead generation,
+    "useCases": ['Lead generation,
 ,
   Event registration',
   'Customer feedback',
   'Order processing'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'MongoDB',
   'Payment APIs'],
-    link: 'https://ziontechgroup.com/services/form-builder,
+    "link": 'https://ziontechgroup.com/services/form-builder,
     icon:,
   📋'
   },
   {
-    id: 'screenshot-api-service,
+    "id": 'screenshot-api-service,
     name:,
   Screenshot API Service',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   High-performance screenshot API for websites, PDFs, and web applications with advanced customization options.',
-    features: [
-  'High-quality screenshots,
+    "features": ['High-quality screenshots,
   'PDF generation',
   'Custom dimensions',
   'Mobile device simulation',
   'Batch processing',
   'API integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 20,
-      professional: 60,
-      enterprise: 160,
+      "professional": 60,
+      "enterprise": 160,
       currency:,
   USD'
     },
-    benefits: [
-  'Fast screenshot generation,
+    "benefits": ['Fast screenshot generation,
 ,
   Scalable infrastructure',
   'Multiple output formats',
   'Developer-friendly API'
     ],
-    useCases: [
-  'Web development,
+    "useCases": ['Web development,
 ,
   Quality assurance',
   'Documentation',
   'Social media automation'
     ],
-    technologies: [
-  'Puppeteer,
+    "technologies": ['Puppeteer,
 ,
   Node.js',
   'AWS',
   'React'],
-    link: 'https://ziontechgroup.com/services/screenshot-api,
+    "link": 'https://ziontechgroup.com/services/screenshot-api,
     icon:,
   📸'
   },
 
   // Additional IT Services
   {
-    id: 'kubernetes-orchestration,
+    "id": 'kubernetes-orchestration,
     name:,
   Kubernetes Orchestration',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete Kubernetes setup, management, and optimization for containerized applications.',
-    features: [
-  'Cluster setup & configuration,
+    "features": ['Cluster setup & configuration,
   'Auto-scaling implementation',
   'Service mesh integration',
   'Monitoring & logging',
   'Security hardening',
   'Disaster recovery'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved application reliability,
+    "benefits": ['Improved application reliability,
 ,
   Automatic scaling',
   'Reduced infrastructure costs',
   'Better resource utilization'
     ],
-    useCases: [
-  'Microservices architecture,
+    "useCases": ['Microservices architecture,
 ,
   Cloud-native applications',
   'High-traffic websites',
   'Enterprise applications'
     ],
-    technologies: [
-  'Kubernetes,
+    "technologies": ['Kubernetes,
 ,
   Docker',
   'Helm',
   'Prometheus',
   'Istio'],
-    link: 'https://ziontechgroup.com/services/kubernetes,
+    "link": 'https://ziontechgroup.com/services/kubernetes,
     icon:,
   ☸️'
   },
   {
-    id: 'api-gateway-setup,
+    "id": 'api-gateway-setup,
     name:,
   API Gateway & Management',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Enterprise API gateway setup with rate limiting, authentication, monitoring, and analytics.',
-    features: [
-  'API gateway configuration,
+    "features": ['API gateway configuration,
   'Rate limiting & throttling',
   'Authentication & authorization',
   'API versioning',
   'Analytics & monitoring',
   'Developer portal'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Centralized API management,
+    "benefits": ['Centralized API management,
 ,
   Enhanced security',
   'Better performance',
   'Simplified integration'
     ],
-    useCases: [
-  'Microservices architecture,
+    "useCases": ['Microservices architecture,
 ,
   Third-party integrations',
   'Mobile app backends',
   'Enterprise systems'
     ],
-    technologies: [
-  'Kong,
+    "technologies": ['Kong,
 ,
   AWS API Gateway',
   'Azure API Management',
   'Nginx'],
-    link: 'https://ziontechgroup.com/services/api-gateway,
+    "link": 'https://ziontechgroup.com/services/api-gateway,
     icon:,
   🚪'
   },
   {
-    id: 'database-optimization,
+    "id": 'database-optimization,
     name:,
   Database Performance Optimization',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive database optimization including query tuning, indexing, and performance monitoring.',
-    features: [
-  'Query performance analysis,
+    "features": ['Query performance analysis,
   'Index optimization',
   'Database tuning',
   'Performance monitoring',
   'Backup optimization',
   'Scaling strategies'
     ],
-    pricing: {
+    "pricing": {
       starter: 4000,
-      professional: 12000,
-      enterprise: 35000,
+      "professional": 12000,
+      "enterprise": 35000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster query execution,
+    "benefits": ['Faster query execution,
 ,
   Reduced resource usage',
   'Better scalability',
   'Improved user experience'
     ],
-    useCases: [
-  'High-traffic applications,
+    "useCases": ['High-traffic applications,
 ,
   Data-intensive systems',
   'E-commerce platforms',
   'Analytics systems'
     ],
-    technologies: [
-  'PostgreSQL,
+    "technologies": ['PostgreSQL,
 ,
   MySQL',
   'MongoDB',
   'Redis',
   'Elasticsearch'],
-    link: 'https://ziontechgroup.com/services/database-optimization,
+    "link": 'https://ziontechgroup.com/services/database-optimization,
     icon:,
   🗄️'
   },
   {
-    id: 'network-security-audit,
+    "id": 'network-security-audit,
     name:,
   Network Security Audit',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive network security assessment including penetration testing and vulnerability scanning.',
-    features: [
-  'Network vulnerability scanning,
+    "features": ['Network vulnerability scanning,
   'Penetration testing',
   'Firewall configuration review',
   'Wireless security audit',
   'Compliance assessment',
   'Security recommendations'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 45000,
+      "professional": 15000,
+      "enterprise": 45000,
       currency:,
   USD'
     },
-    benefits: [
-  'Identify security vulnerabilities,
+    "benefits": ['Identify security vulnerabilities,
 ,
   Compliance with standards',
   'Protect against threats',
   'Improve security posture'
     ],
-    useCases: [
-  'Corporate networks,
+    "useCases": ['Corporate networks,
 ,
   Healthcare organizations',
   'Financial institutions',
   'Government agencies'
     ],
-    technologies: [
-  'Nmap,
+    "technologies": ['Nmap,
 ,
   Nessus',
   'Metasploit',
   'Wireshark',
   'Burp Suite'],
-    link: 'https://ziontechgroup.com/services/network-security,
+    "link": 'https://ziontechgroup.com/services/network-security,
     icon:,
   🛡️'
   },
   {
-    id: 'disaster-recovery-planning,
+    "id": 'disaster-recovery-planning,
     name:,
   Disaster Recovery Planning',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive disaster recovery planning and implementation for business continuity.',
-    features: [
-  'Business impact analysis,
+    "features": ['Business impact analysis,
   'Recovery time objectives',
   'Backup strategy design',
   'Failover implementation',
   'Testing & validation',
   'Documentation & training'
     ],
-    pricing: {
+    "pricing": {
       starter: 7000,
-      professional: 20000,
-      enterprise: 60000,
+      "professional": 20000,
+      "enterprise": 60000,
       currency:,
   USD'
     },
-    benefits: [
-  'Minimize downtime,
+    "benefits": ['Minimize downtime,
 ,
   Protect critical data',
   'Ensure business continuity',
   'Compliance requirements'
     ],
-    useCases: [
-  'Enterprise systems,
+    "useCases": ['Enterprise systems,
 ,
   Critical applications',
   'Data centers',
   'Cloud infrastructure'
     ],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'VMware',
   'Veeam',
   'Commvault'],
-    link: 'https://ziontechgroup.com/services/disaster-recovery,
+    "link": 'https://ziontechgroup.com/services/disaster-recovery,
     icon:,
   🔄'
   },
   {
-    id: 'microservices-architecture,
+    "id": 'microservices-architecture,
     name:,
   Microservices Architecture Design',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete microservices architecture design and implementation for scalable applications.',
-    features: [
-  'Architecture design,
+    "features": ['Architecture design,
   'Service decomposition',
   'API design',
   'Container orchestration',
   'Service mesh implementation',
   'Monitoring setup'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 45000,
-      enterprise: 120000,
+      "professional": 45000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved scalability,
+    "benefits": ['Improved scalability,
 ,
   Better maintainability',
   'Faster development',
   'Technology flexibility'
     ],
-    useCases: [
-  'Legacy system modernization,
+    "useCases": ['Legacy system modernization,
 ,
   High-scale applications',
   'Multi-team development',
   'Cloud-native applications'
     ],
-    technologies: [
-  'Docker,
+    "technologies": ['Docker,
 ,
   Kubernetes',
   'Istio',
   'gRPC',
   'Redis'],
-    link: 'https://ziontechgroup.com/services/microservices,
+    "link": 'https://ziontechgroup.com/services/microservices,
     icon:,
   🏗️'
   },
   {
-    id: 'performance-monitoring,
+    "id": 'performance-monitoring,
     name:,
   Application Performance Monitoring',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive APM solution with real-time monitoring, alerting, and performance optimization.',
-    features: [
-  'Real-time performance monitoring,
+    "features": ['Real-time performance monitoring,
   'Error tracking & alerting',
   'User experience monitoring',
   'Infrastructure monitoring',
   'Custom dashboards',
   'Performance optimization'
     ],
-    pricing: {
+    "pricing": {
       starter: 3000,
-      professional: 9000,
-      enterprise: 25000,
+      "professional": 9000,
+      "enterprise": 25000,
       currency:,
   USD'
     },
-    benefits: [
-  'Proactive issue detection,
+    "benefits": ['Proactive issue detection,
 ,
   Improved application performance',
   'Better user experience',
   'Reduced downtime'
     ],
-    useCases: [
-  'Web applications,
+    "useCases": ['Web applications,
 ,
   Mobile apps',
   'API services',
   'Enterprise systems'
     ],
-    technologies: [
-  'New Relic,
+    "technologies": ['New Relic,
 ,
   Datadog',
   'Prometheus',
   'Grafana',
   'ELK Stack'],
-    link: 'https://ziontechgroup.com/services/apm,
+    "link": 'https://ziontechgroup.com/services/apm,
     icon:,
   📊'
   },
   {
-    id: 'identity-access-management,
+    "id": 'identity-access-management,
     name:,
   Identity & Access Management',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Enterprise IAM solution with SSO, multi-factor authentication, and role-based access control.',
-    features: [
-  'Single Sign-On (SSO),
+    "features": ['Single Sign-On (SSO),
   'Multi-factor authentication',
   'Role-based access control',
   'User provisioning',
   'Audit & compliance',
   'API security'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 40000,
+      "professional": 15000,
+      "enterprise": 40000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced security,
+    "benefits": ['Enhanced security,
 ,
   Simplified user management',
   'Compliance adherence',
   'Reduced IT overhead'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Healthcare systems',
   'Financial institutions',
   'Government agencies'
     ],
-    technologies: [
-  'Okta,
+    "technologies": ['Okta,
 ,
   Azure AD',
   'Auth0',
   'SAML',
   'OAuth'],
-    link: 'https://ziontechgroup.com/services/iam,
+    "link": 'https://ziontechgroup.com/services/iam,
     icon:,
   👤'
   },
 
   // Additional AI Services
   {
-    id: 'computer-vision-solutions,
+    "id": 'computer-vision-solutions,
     name:,
   Computer Vision Solutions',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Custom computer vision solutions for image recognition, object detection, and visual analytics.',
-    features: [
-  'Image classification,
+    "features": ['Image classification,
   'Object detection',
   'Facial recognition',
   'OCR & text extraction',
   'Quality inspection',
   'Real-time processing'
     ],
-    pricing: {
+    "pricing": {
       starter: 12000,
-      professional: 35000,
-      enterprise: 100000,
+      "professional": 35000,
+      "enterprise": 100000,
       currency:,
   USD'
     },
-    benefits: [
-  'Automated visual inspection,
+    "benefits": ['Automated visual inspection,
 ,
   Improved accuracy',
   'Cost reduction',
   '24/7 operation'
     ],
-    useCases: [
-  'Manufacturing quality control,
+    "useCases": ['Manufacturing quality control,
 ,
   Retail analytics',
   'Security surveillance',
   'Medical imaging'
     ],
-    technologies: [
-  'TensorFlow,
+    "technologies": ['TensorFlow,
 ,
   OpenCV',
   'YOLO',
   'PyTorch',
   'CUDA'],
-    link: 'https://ziontechgroup.com/services/computer-vision,
+    "link": 'https://ziontechgroup.com/services/computer-vision,
     icon:,
   👁️'
   },
   {
-    id: 'natural-language-processing,
+    "id": 'natural-language-processing,
     name:,
   Natural Language Processing',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
-    features: [
-  'Text classification,
+    "features": ['Text classification,
   'Sentiment analysis',
   'Named entity recognition',
   'Language translation',
   'Text summarization',
   'Question answering'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Automated text processing,
+    "benefits": ['Automated text processing,
 ,
   Better customer insights',
   'Improved content management',
   'Multilingual support'
     ],
-    useCases: [
-  'Customer feedback analysis,
+    "useCases": ['Customer feedback analysis,
 ,
   Content moderation',
   'Document processing',
   'Chatbot enhancement'
     ],
-    technologies: [
-  'BERT,
+    "technologies": ['BERT,
 ,
   GPT',
   'spaCy',
   'NLTK',
   'Transformers'],
-    link: 'https://ziontechgroup.com/services/nlp,
+    "link": 'https://ziontechgroup.com/services/nlp,
     icon:,
   📝'
   },
   {
-    id: 'predictive-analytics,
+    "id": 'predictive-analytics,
     name:,
   Predictive Analytics Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced predictive analytics using machine learning for forecasting and trend analysis.',
-    features: [
-  'Demand forecasting,
+    "features": ['Demand forecasting,
   'Risk assessment',
   'Customer behavior prediction',
   'Market trend analysis',
   'Anomaly detection',
   'Real-time predictions'
     ],
-    pricing: {
+    "pricing": {
       starter: 10000,
-      professional: 30000,
-      enterprise: 90000,
+      "professional": 30000,
+      "enterprise": 90000,
       currency:,
   USD'
     },
-    benefits: [
-  'Data-driven decisions,
+    "benefits": ['Data-driven decisions,
 ,
   Reduced risks',
   'Improved efficiency',
   'Competitive advantage'
     ],
-    useCases: [
-  'Supply chain optimization,
+    "useCases": ['Supply chain optimization,
 ,
   Financial risk management',
   'Sales forecasting',
   'Maintenance scheduling'
     ],
-    technologies: [
-  'Scikit-learn,
+    "technologies": ['Scikit-learn,
 ,
   XGBoost',
   'Prophet',
   'Python',
   'Apache Spark'],
-    link: 'https://ziontechgroup.com/services/predictive-analytics,
+    "link": 'https://ziontechgroup.com/services/predictive-analytics,
     icon:,
   🔮'
   },
   {
-    id: 'recommendation-engine,
+    "id": 'recommendation-engine,
     name:,
   AI Recommendation Engine',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent recommendation system for personalized content, products, and services.',
-    features: [
-  'Collaborative filtering,
+    "features": ['Collaborative filtering,
   'Content-based filtering',
   'Hybrid recommendations',
   'Real-time personalization',
   'A/B testing framework',
   'Performance analytics'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 45000,
-      enterprise: 120000,
+      "professional": 45000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Increased engagement,
+    "benefits": ['Increased engagement,
 ,
   Higher conversion rates',
   'Better user experience',
   'Revenue growth'
     ],
-    useCases: [
-  'E-commerce platforms,
+    "useCases": ['E-commerce platforms,
 ,
   Streaming services',
   'Content platforms',
   'Social media'
     ],
-    technologies: [
-  'TensorFlow,
+    "technologies": ['TensorFlow,
 ,
   Apache Spark',
   'Redis',
   'Python',
   'MLlib'],
-    link: 'https://ziontechgroup.com/services/recommendation-engine,
+    "link": 'https://ziontechgroup.com/services/recommendation-engine,
     icon:,
   🎯'
   },
   {
-    id: 'ai-powered-search,
+    "id": 'ai-powered-search,
     name:,
   AI-Powered Search Engine',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent search solution with semantic understanding, auto-complete, and personalized results.',
-    features: [
-  'Semantic search,
+    "features": ['Semantic search,
   'Auto-complete suggestions',
   'Personalized results',
   'Multi-language support',
   'Voice search',
   'Search analytics'
     ],
-    pricing: {
+    "pricing": {
       starter: 6000,
-      professional: 18000,
-      enterprise: 55000,
+      "professional": 18000,
+      "enterprise": 55000,
       currency:,
   USD'
     },
-    benefits: [
-  'Better search accuracy,
+    "benefits": ['Better search accuracy,
 ,
   Improved user experience',
   'Increased engagement',
   'Reduced bounce rates'
     ],
-    useCases: [
-  'E-commerce search,
+    "useCases": ['E-commerce search,
 ,
   Document management',
   'Knowledge bases',
   'Content platforms'
     ],
-    technologies: [
-  'Elasticsearch,
+    "technologies": ['Elasticsearch,
 ,
   BERT',
   'Vector Search',
   'Python',
   'React'],
-    link: 'https://ziontechgroup.com/services/ai-search,
+    "link": 'https://ziontechgroup.com/services/ai-search,
     icon:,
   🔍'
   },
   {
-    id: 'ai-content-moderation,
+    "id": 'ai-content-moderation,
     name:,
   AI Content Moderation',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Automated content moderation using AI to detect and filter inappropriate content across platforms.',
-    features: [
-  'Text content filtering,
+    "features": ['Text content filtering,
   'Image content detection',
   'Video content analysis',
   'Real-time moderation',
   'Custom policy enforcement',
   'Human review integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 5000,
-      professional: 15000,
-      enterprise: 45000,
+      "professional": 15000,
+      "enterprise": 45000,
       currency:,
   USD'
     },
-    benefits: [
-  '24/7 content monitoring,
+    "benefits": ['24/7 content monitoring,
 ,
   Reduced moderation costs',
   'Consistent policy enforcement',
   'Scalable solution'
     ],
-    useCases: [
-  'Social media platforms,
+    "useCases": ['Social media platforms,
 ,
   User-generated content',
   'Online communities',
   'Marketplace platforms'
     ],
-    technologies: [
-  'Computer Vision,
+    "technologies": ['Computer Vision,
 ,
   NLP',
   'TensorFlow',
   'OpenCV',
   'Python'],
-    link: 'https://ziontechgroup.com/services/content-moderation,
+    "link": 'https://ziontechgroup.com/services/content-moderation,
     icon:,
   🛡️'
   },
   {
-    id: 'ai-fraud-detection,
+    "id": 'ai-fraud-detection,
     name:,
   AI Fraud Detection System',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced fraud detection using machine learning to identify and prevent fraudulent activities.',
-    features: [
-  'Real-time fraud detection,
+    "features": ['Real-time fraud detection,
   'Transaction monitoring',
   'Behavioral analysis',
   'Risk scoring',
   'Alert system',
   'False positive reduction'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
+      "professional": 25000,
+      "enterprise": 75000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduced fraud losses,
+    "benefits": ['Reduced fraud losses,
 ,
   Faster detection',
   'Lower false positives',
   'Compliance adherence'
     ],
-    useCases: [
-  'Financial institutions,
+    "useCases": ['Financial institutions,
 ,
   E-commerce platforms',
   'Payment processors',
   'Insurance companies'
     ],
-    technologies: [
-  'Machine Learning,
+    "technologies": ['Machine Learning,
 ,
   Anomaly Detection',
   'Python',
   'Apache Spark',
   'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/fraud-detection,
+    "link": 'https://ziontechgroup.com/services/fraud-detection,
     icon:,
   🚨'
   },
   {
-    id: 'ai-voice-assistant,
+    "id": 'ai-voice-assistant,
     name:,
   AI Voice Assistant Development',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Custom voice assistant development with natural language understanding and multi-platform integration.',
-    features: [
-  'Voice recognition,
+    "features": ['Voice recognition,
   'Natural language understanding',
   'Multi-platform support',
   'Custom wake words',
   'Integration APIs',
   'Analytics dashboard'
     ],
-    pricing: {
+    "pricing": {
       starter: 10000,
-      professional: 30000,
-      enterprise: 90000,
+      "professional": 30000,
+      "enterprise": 90000,
       currency:,
   USD'
     },
-    benefits: [
-  'Hands-free operation,
+    "benefits": ['Hands-free operation,
 ,
   Improved accessibility',
   'Enhanced user experience',
   'Multi-language support'
     ],
-    useCases: [
-  'Smart home automation,
+    "useCases": ['Smart home automation,
 ,
   Customer service',
   'Healthcare applications',
   'Automotive systems'
     ],
-    technologies: [
-  'Speech Recognition,
+    "technologies": ['Speech Recognition,
 ,
   NLP',
   'WebRTC',
   'Python',
   'Node.js'],
-    link: 'https://ziontechgroup.com/services/voice-assistant,
+    "link": 'https://ziontechgroup.com/services/voice-assistant,
     icon:,
   🎤'
   },
 
   // Additional Innovative Micro SaaS Services
   {
-    id: 'ai-email-responder,
+    "id": 'ai-email-responder,
     name:,
   AI Email Responder Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent email automation that reads, categorizes, and responds to emails using advanced AI, handling simple inquiries and flagging important messages.',
-    features: [
-  'AI-powered email analysis,
+    "features": ['AI-powered email analysis,
   'Automatic response generation',
   'Priority email flagging',
   'Sentiment analysis',
@@ -3832,48 +3511,44 @@ export const services: Service[] = [
   'Integration with CRM systems',
   'Analytics dashboard'
     ],
-    pricing: {
+    "pricing": {
       starter: 35,
-      professional: 89,
-      enterprise: 249,
+      "professional": 89,
+      "enterprise": 249,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce email response time by 80%,
+    "benefits": ['Reduce email response time by 80%,
 ,
   24/7 email handling',
   'Improved customer satisfaction',
   'Better email organization',
   'Reduced manual workload'
     ],
-    useCases: [
-  'Customer support teams,
+    "useCases": ['Customer support teams,
 ,
   Sales departments',
   'Small businesses',
   'Freelancers and consultants'
     ],
-    technologies: [
-  'OpenAI GPT-4,
+    "technologies": ['OpenAI GPT-4,
 ,
   React',
   'Node.js',
   'PostgreSQL',
   'Email APIs'],
-    link: 'https://ziontechgroup.com/services/ai-email-responder,
+    "link": 'https://ziontechgroup.com/services/ai-email-responder,
     icon:,
   📧'
   },
   {
-    id: 'mobile-survey-platform,
+    "id": 'mobile-survey-platform,
     name:,
   Mobile-First Survey Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced mobile-optimized survey platform with adaptive questioning, real-time analytics, and AI-powered insights for better data collection.',
-    features: [
-  'Mobile-first design,
+    "features": ['Mobile-first design,
   'Adaptive questioning logic',
   'Real-time analytics',
   'Offline survey capability',
@@ -3882,48 +3557,44 @@ export const services: Service[] = [
   'Custom branding',
   'Integration APIs'
     ],
-    pricing: {
+    "pricing": {
       starter: 25,
-      professional: 65,
-      enterprise: 179,
+      "professional": 65,
+      "enterprise": 179,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase response rates by 60%,
+    "benefits": ['Increase response rates by 60%,
 ,
   Better data quality',
   'Real-time insights',
   'Mobile-optimized experience',
   'Reduced survey abandonment'
     ],
-    useCases: [
-  'Market research,
+    "useCases": ['Market research,
 ,
   Customer feedback',
   'Employee surveys',
   'Event feedback collection'
     ],
-    technologies: [
-  'React Native,
+    "technologies": ['React Native,
 ,
   Node.js',
   'MongoDB',
   'AI/ML',
   'Analytics'],
-    link: 'https://ziontechgroup.com/services/mobile-survey-platform,
+    "link": 'https://ziontechgroup.com/services/mobile-survey-platform,
     icon:,
   📱'
   },
   {
-    id: 'niche-productivity-planner,
+    "id": 'niche-productivity-planner,
     name:,
   Industry-Specific Productivity Planner',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Specialized productivity planning tool tailored to specific industries with custom dashboards, tools, and AI-powered recommendations.',
-    features: [
-  'Industry-specific templates,
+    "features": ['Industry-specific templates,
   'AI-powered goal setting',
   'Custom dashboard creation',
   'Team collaboration tools',
@@ -3932,48 +3603,44 @@ export const services: Service[] = [
   'Integration with industry tools',
   'Mobile app'
     ],
-    pricing: {
+    "pricing": {
       starter: 22,
-      professional: 55,
-      enterprise: 149,
+      "professional": 55,
+      "enterprise": 149,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase productivity by 35%,
+    "benefits": ['Increase productivity by 35%,
 ,
   Industry-specific insights',
   'Better goal achievement',
   'Streamlined workflows',
   'Data-driven decisions'
     ],
-    useCases: [
-  'Healthcare professionals,
+    "useCases": ['Healthcare professionals,
 ,
   Legal firms',
   'Real estate agents',
   'Consulting firms'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'AI/ML',
   'Analytics'],
-    link: 'https://ziontechgroup.com/services/niche-productivity-planner,
+    "link": 'https://ziontechgroup.com/services/niche-productivity-planner,
     icon:,
   📋'
   },
   {
-    id: 'event-management-dashboard,
+    "id": 'event-management-dashboard,
     name:,
   Smart Event Management Dashboard',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive event management platform with ticket sales, guest management, scheduling, and real-time analytics for successful events.',
-    features: [
-  'Event planning tools,
+    "features": ['Event planning tools,
   'Ticket sales management',
   'Guest registration',
   'Schedule management',
@@ -3982,48 +3649,44 @@ export const services: Service[] = [
   'Mobile check-in',
   'Post-event surveys'
     ],
-    pricing: {
+    "pricing": {
       starter: 45,
-      professional: 119,
-      enterprise: 299,
+      "professional": 119,
+      "enterprise": 299,
       currency:,
   USD'
     },
-    benefits: [
-  'Streamline event planning,
+    "benefits": ['Streamline event planning,
 ,
   Increase ticket sales',
   'Better guest experience',
   'Real-time insights',
   'Reduced manual work'
     ],
-    useCases: [
-  'Conference organizers,
+    "useCases": ['Conference organizers,
 ,
   Wedding planners',
   'Corporate events',
   'Community organizations'
     ],
-    technologies: [
-  'React,
+    "technologies": ['React,
 ,
   Node.js',
   'PostgreSQL',
   'Stripe',
   'Analytics'],
-    link: 'https://ziontechgroup.com/services/event-management-dashboard,
+    "link": 'https://ziontechgroup.com/services/event-management-dashboard,
     icon:,
   🎪'
   },
   {
-    id: 'ai-seo-optimizer,
+    "id": 'ai-seo-optimizer,
     name:,
   AI SEO Content Optimizer',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   AI-powered SEO optimization platform that analyzes web pages, provides keyword recommendations, and optimizes content for better search rankings.',
-    features: [
-  'Real-time SEO analysis,
+    "features": ['Real-time SEO analysis,
   'Keyword research and recommendations',
   'Content optimization suggestions',
   'Competitor analysis',
@@ -4032,48 +3695,44 @@ export const services: Service[] = [
   'Content scoring',
   'Automated reports'
     ],
-    pricing: {
+    "pricing": {
       starter: 39,
-      professional: 99,
-      enterprise: 249,
+      "professional": 99,
+      "enterprise": 249,
       currency:,
   USD'
     },
-    benefits: [
-  'Improve search rankings by 50%,
+    "benefits": ['Improve search rankings by 50%,
 ,
   Increase organic traffic',
   'Better content performance',
   'Automated optimization',
   'Competitive advantage'
     ],
-    useCases: [
-  'Content creators,
+    "useCases": ['Content creators,
 ,
   Digital marketing agencies',
   'E-commerce businesses',
   'Blog owners'
     ],
-    technologies: [
-  'AI/ML,
+    "technologies": ['AI/ML,
 ,
   React',
   'Node.js',
   'SEO APIs',
   'Analytics'],
-    link: 'https://ziontechgroup.com/services/ai-seo-optimizer,
+    "link": 'https://ziontechgroup.com/services/ai-seo-optimizer,
     icon:,
   🔍'
   },
   {
-    id: 'ai-talent-matching,
+    "id": 'ai-talent-matching,
     name:,
   AI Talent Matching Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced AI-powered talent matching system that connects businesses with the right tech professionals using machine learning algorithms.',
-    features: [
-  'AI-powered candidate matching,
+    "features": ['AI-powered candidate matching,
   'Skills assessment tools',
   'Behavioral analysis',
   'Cultural fit evaluation',
@@ -4082,48 +3741,44 @@ export const services: Service[] = [
   'Integration with job boards',
   'Analytics dashboard'
     ],
-    pricing: {
+    "pricing": {
       starter: 199,
-      professional: 499,
-      enterprise: 1299,
+      "professional": 499,
+      "enterprise": 1299,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce hiring time by 70%,
+    "benefits": ['Reduce hiring time by 70%,
 ,
   Better candidate matches',
   'Improved retention rates',
   'Cost-effective recruitment',
   'Data-driven hiring decisions'
     ],
-    useCases: [
-  'Tech companies,
+    "useCases": ['Tech companies,
 ,
   Recruitment agencies',
   'HR departments',
   'Startups'
     ],
-    technologies: [
-  'AI/ML,
+    "technologies": ['AI/ML,
 ,
   React',
   'Node.js',
   'PostgreSQL',
   'Matching Algorithms'],
-    link: 'https://ziontechgroup.com/services/ai-talent-matching,
+    "link": 'https://ziontechgroup.com/services/ai-talent-matching,
     icon:,
   👥'
   },
   {
-    id: 'ai-recruiting-platform,
+    "id": 'ai-recruiting-platform,
     name:,
   AI Recruiting Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent recruitment platform with automated screening, candidate scoring, and streamlined hiring processes for faster, better hires.',
-    features: [
-  'Automated resume screening,
+    "features": ['Automated resume screening,
   'AI candidate scoring',
   'Video interview analysis',
   'Reference checking automation',
@@ -4132,48 +3787,44 @@ export const services: Service[] = [
   'Diversity and inclusion metrics',
   'Integration with ATS systems'
     ],
-    pricing: {
+    "pricing": {
       starter: 149,
-      professional: 399,
-      enterprise: 999,
+      "professional": 399,
+      "enterprise": 999,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce time-to-hire by 60%,
+    "benefits": ['Reduce time-to-hire by 60%,
 ,
   Improve candidate quality',
   'Eliminate bias in hiring',
   'Streamlined recruitment process',
   'Better candidate experience'
     ],
-    useCases: [
-  'Enterprise companies,
+    "useCases": ['Enterprise companies,
 ,
   HR departments',
   'Recruitment agencies',
   'Growing startups'
     ],
-    technologies: [
-  'AI/ML,
+    "technologies": ['AI/ML,
 ,
   React',
   'Node.js',
   'PostgreSQL',
   'Video Analysis'],
-    link: 'https://ziontechgroup.com/services/ai-recruiting-platform,
+    "link": 'https://ziontechgroup.com/services/ai-recruiting-platform,
     icon:,
   🎯'
   },
   {
-    id: 'quantum-computing-solutions,
+    "id": 'quantum-computing-solutions,
     name:,
   Quantum Computing Solutions',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Cutting-edge quantum computing applications for optimization, cryptography, and scientific research, positioning businesses at the forefront of innovation.',
-    features: [
-  'Quantum optimization algorithms,
+    "features": ['Quantum optimization algorithms,
   'Cryptographic solutions',
   'Scientific simulation tools',
   'Quantum machine learning',
@@ -4182,50 +3833,46 @@ export const services: Service[] = [
   'Custom algorithm development',
   'Research collaboration tools'
     ],
-    pricing: {
+    "pricing": {
       starter: 999,
-      professional: 2999,
-      enterprise: 9999,
+      "professional": 2999,
+      "enterprise": 9999,
       currency:,
   USD'
     },
-    benefits: [
-  'Exponential computational power,
+    "benefits": ['Exponential computational power,
 ,
   Advanced optimization capabilities',
   'Future-proof technology',
   'Competitive advantage',
   'Research and development edge'
     ],
-    useCases: [
-  'Financial institutions,
+    "useCases": ['Financial institutions,
 ,
   Pharmaceutical companies',
   'Research organizations',
   'Government agencies'
     ],
-    technologies: [
-  'Quantum Computing,
+    "technologies": ['Quantum Computing,
 ,
   Python',
   'Qiskit',
   'Cirq',
   'Quantum Algorithms'],
-    link: 'https://ziontechgroup.com/services/quantum-computing-solutions,
+    "link": 'https://ziontechgroup.com/services/quantum-computing-solutions,
     icon:,
   ⚛️'
   },
 
   // Additional Advanced IT Services
   {
-    id: 'edge-computing-solutions,
+    "id": 'edge-computing-solutions,
     name:,
   Edge Computing Solutions',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive edge computing implementation for reduced latency, improved performance, and enhanced data processing at the network edge.',
-    features: [
-  'Edge infrastructure setup,
+    "features": ['Edge infrastructure setup,
   'Data processing optimization',
   'Latency reduction strategies',
   'Edge security implementation',
@@ -4234,48 +3881,44 @@ export const services: Service[] = [
   'Disaster recovery planning',
   'Performance monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 12000,
-      professional: 35000,
-      enterprise: 100000,
+      "professional": 35000,
+      "enterprise": 100000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce latency by 90%,
+    "benefits": ['Reduce latency by 90%,
 ,
   Improved application performance',
   'Better data privacy',
   'Reduced bandwidth costs',
   'Enhanced reliability'
     ],
-    useCases: [
-  'IoT applications,
+    "useCases": ['IoT applications,
 ,
   Real-time gaming',
   'Autonomous vehicles',
   'Smart cities'
     ],
-    technologies: [
-  'Kubernetes,
+    "technologies": ['Kubernetes,
 ,
   Docker',
   'Edge Computing',
   '5G',
   'IoT'],
-    link: 'https://ziontechgroup.com/services/edge-computing-solutions,
+    "link": 'https://ziontechgroup.com/services/edge-computing-solutions,
     icon:,
   🌐'
   },
   {
-    id: 'blockchain-infrastructure,
+    "id": 'blockchain-infrastructure,
     name:,
   Blockchain Infrastructure & Development',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete blockchain infrastructure setup and smart contract development for secure, decentralized applications and business processes.',
-    features: [
-  'Blockchain network setup,
+    "features": ['Blockchain network setup,
   'Smart contract development',
   'DeFi protocol integration',
   'NFT marketplace development',
@@ -4284,48 +3927,44 @@ export const services: Service[] = [
   'Performance optimization',
   'Compliance consulting'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 45000,
-      enterprise: 120000,
+      "professional": 45000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced security and transparency,
+    "benefits": ['Enhanced security and transparency,
 ,
   Reduced transaction costs',
   'Improved traceability',
   'Decentralized operations',
   'Future-proof technology'
     ],
-    useCases: [
-  'Financial services,
+    "useCases": ['Financial services,
 ,
   Supply chain management',
   'Digital identity',
   'Asset tokenization'
     ],
-    technologies: [
-  'Ethereum,
+    "technologies": ['Ethereum,
 ,
   Solidity',
   'Web3',
   'IPFS',
   'Blockchain'],
-    link: 'https://ziontechgroup.com/services/blockchain-infrastructure,
+    "link": 'https://ziontechgroup.com/services/blockchain-infrastructure,
     icon:,
   ⛓️'
   },
   {
-    id: 'zero-trust-security,
+    "id": 'zero-trust-security,
     name:,
   Zero Trust Security Architecture',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and advanced threat protection.',
-    features: [
-  'Identity verification systems,
+    "features": ['Identity verification systems,
   'Micro-segmentation implementation',
   'Continuous monitoring',
   'Threat detection and response',
@@ -4334,48 +3973,44 @@ export const services: Service[] = [
   'Compliance automation',
   'Incident response planning'
     ],
-    pricing: {
+    "pricing": {
       starter: 20000,
-      professional: 60000,
-      enterprise: 150000,
+      "professional": 60000,
+      "enterprise": 150000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced security posture,
+    "benefits": ['Enhanced security posture,
 ,
   Reduced attack surface',
   'Better compliance adherence',
   'Improved visibility',
   'Proactive threat protection'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Healthcare systems',
   'Financial institutions',
   'Government agencies'
     ],
-    technologies: [
-  'Zero Trust,
+    "technologies": ['Zero Trust,
 ,
   SIEM',
   'SOAR',
   'Identity Management',
   'Network Security'],
-    link: 'https://ziontechgroup.com/services/zero-trust-security,
+    "link": 'https://ziontechgroup.com/services/zero-trust-security,
     icon:,
   🔒'
   },
   {
-    id: '5g-network-implementation,
+    "id": '5g-network-implementation,
     name:,
   5G Network Implementation & Optimization',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete 5G network deployment and optimization services for ultra-fast connectivity, low latency, and massive IoT device support.',
-    features: [
-  '5G network planning and design,
+    "features": ['5G network planning and design,
   'Infrastructure deployment',
   'Network optimization',
   'IoT device integration',
@@ -4384,48 +4019,44 @@ export const services: Service[] = [
   'Security implementation',
   'Compliance management'
     ],
-    pricing: {
+    "pricing": {
       starter: 50000,
-      professional: 150000,
-      enterprise: 500000,
+      "professional": 150000,
+      "enterprise": 500000,
       currency:,
   USD'
     },
-    benefits: [
-  'Ultra-fast connectivity,
+    "benefits": ['Ultra-fast connectivity,
 ,
   Low latency applications',
   'Massive device support',
   'Enhanced mobile experiences',
   'Future-ready infrastructure'
     ],
-    useCases: [
-  'Smart cities,
+    "useCases": ['Smart cities,
 ,
   Industrial IoT',
   'Autonomous vehicles',
   'Telecommunications'
     ],
-    technologies: [
-  '5G,
+    "technologies": ['5G,
 ,
   Network Infrastructure',
   'IoT',
   'Edge Computing',
   'Telecommunications'],
-    link: 'https://ziontechgroup.com/services/5g-network-implementation,
+    "link": 'https://ziontechgroup.com/services/5g-network-implementation,
     icon:,
   📡'
   },
   {
-    id: 'hyperautomation-platform,
+    "id": 'hyperautomation-platform,
     name:,
   Hyperautomation Platform',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive hyperautomation solution combining RPA, AI, and process mining to automate complex business processes end-to-end.',
-    features: [
-  'Process discovery and mining,
+    "features": ['Process discovery and mining,
   'RPA implementation',
   'AI-powered decision making',
   'Workflow automation',
@@ -4434,50 +4065,46 @@ export const services: Service[] = [
   'Continuous optimization',
   'Change management'
     ],
-    pricing: {
+    "pricing": {
       starter: 25000,
-      professional: 75000,
-      enterprise: 200000,
+      "professional": 75000,
+      "enterprise": 200000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce operational costs by 60%,
+    "benefits": ['Reduce operational costs by 60%,
 ,
   Improve process efficiency',
   'Eliminate manual errors',
   'Faster process execution',
   'Better resource utilization'
     ],
-    useCases: [
-  'Financial services,
+    "useCases": ['Financial services,
 ,
   Healthcare organizations',
   'Manufacturing companies',
   'Government agencies'
     ],
-    technologies: [
-  'RPA,
+    "technologies": ['RPA,
 ,
   AI/ML',
   'Process Mining',
   'Workflow Automation',
   'Integration'],
-    link: 'https://ziontechgroup.com/services/hyperautomation-platform,
+    "link": 'https://ziontechgroup.com/services/hyperautomation-platform,
     icon:,
   🤖'
   },
 
   // Additional Advanced AI Services
   {
-    id: 'ai-drug-discovery,
+    "id": 'ai-drug-discovery,
     name:,
   AI Drug Discovery Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Revolutionary AI-powered drug discovery platform using machine learning to accelerate pharmaceutical research and development.',
-    features: [
-  'Molecular design and optimization,
+    "features": ['Molecular design and optimization,
   'Drug-target interaction prediction',
   'Toxicity assessment',
   'Clinical trial optimization',
@@ -4486,48 +4113,44 @@ export const services: Service[] = [
   'Patent analysis',
   'Regulatory compliance support'
     ],
-    pricing: {
+    "pricing": {
       starter: 100000,
-      professional: 300000,
-      enterprise: 1000000,
+      "professional": 300000,
+      "enterprise": 1000000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce drug development time by 50%,
+    "benefits": ['Reduce drug development time by 50%,
 ,
   Lower R&D costs',
   'Higher success rates',
   'Faster time to market',
   'Improved patient outcomes'
     ],
-    useCases: [
-  'Pharmaceutical companies,
+    "useCases": ['Pharmaceutical companies,
 ,
   Biotech startups',
   'Research institutions',
   'Government health agencies'
     ],
-    technologies: [
-  'Deep Learning,
+    "technologies": ['Deep Learning,
 ,
   Molecular AI',
   'Bioinformatics',
   'Python',
   'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-drug-discovery,
+    "link": 'https://ziontechgroup.com/services/ai-drug-discovery,
     icon:,
   💊'
   },
   {
-    id: 'ai-climate-modeling,
+    "id": 'ai-climate-modeling,
     name:,
   AI Climate Modeling & Prediction',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI climate modeling system for accurate weather prediction, climate change analysis, and environmental impact assessment.',
-    features: [
-  'Weather pattern prediction,
+    "features": ['Weather pattern prediction,
   'Climate change modeling',
   'Environmental impact analysis',
   'Natural disaster forecasting',
@@ -4536,48 +4159,44 @@ export const services: Service[] = [
   'Agricultural yield prediction',
   'Risk assessment tools'
     ],
-    pricing: {
+    "pricing": {
       starter: 50000,
-      professional: 150000,
-      enterprise: 500000,
+      "professional": 150000,
+      "enterprise": 500000,
       currency:,
   USD'
     },
-    benefits: [
-  'Accurate climate predictions,
+    "benefits": ['Accurate climate predictions,
 ,
   Better disaster preparedness',
   'Environmental sustainability',
   'Cost-effective solutions',
   'Data-driven decisions'
     ],
-    useCases: [
-  'Government agencies,
+    "useCases": ['Government agencies,
 ,
   Environmental organizations',
   'Agricultural companies',
   'Energy sector'
     ],
-    technologies: [
-  'Climate AI,
+    "technologies": ['Climate AI,
 ,
   Machine Learning',
   'Satellite Data',
   'Python',
   'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-climate-modeling,
+    "link": 'https://ziontechgroup.com/services/ai-climate-modeling,
     icon:,
   🌍'
   },
   {
-    id: 'ai-space-exploration,
+    "id": 'ai-space-exploration,
     name:,
   AI Space Exploration Solutions',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Cutting-edge AI solutions for space exploration, satellite management, and astronomical research with advanced data analysis capabilities.',
-    features: [
-  'Satellite orbit optimization,
+    "features": ['Satellite orbit optimization,
   'Space debris tracking',
   'Astronomical data analysis',
   'Mission planning automation',
@@ -4586,48 +4205,44 @@ export const services: Service[] = [
   'Communication optimization',
   'Resource management'
     ],
-    pricing: {
+    "pricing": {
       starter: 200000,
-      professional: 600000,
-      enterprise: 2000000,
+      "professional": 600000,
+      "enterprise": 2000000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced mission success rates,
+    "benefits": ['Enhanced mission success rates,
 ,
   Optimized resource utilization',
   'Improved safety protocols',
   'Advanced data insights',
   'Cost-effective operations'
     ],
-    useCases: [
-  'Space agencies,
+    "useCases": ['Space agencies,
 ,
   Satellite companies',
   'Research institutions',
   'Defense organizations'
     ],
-    technologies: [
-  'Space AI,
+    "technologies": ['Space AI,
 ,
   Orbital Mechanics',
   'Machine Learning',
   'Python',
   'Satellite Data'],
-    link: 'https://ziontechgroup.com/services/ai-space-exploration,
+    "link": 'https://ziontechgroup.com/services/ai-space-exploration,
     icon:,
   🚀'
   },
   {
-    id: 'ai-neuroscience-research,
+    "id": 'ai-neuroscience-research,
     name:,
   AI Neuroscience Research Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI platform for neuroscience research, brain-computer interfaces, and neurological disorder analysis using cutting-edge machine learning.',
-    features: [
-  'Brain signal analysis,
+    "features": ['Brain signal analysis,
   'Neural network modeling',
   'Brain-computer interface development',
   'Neurological disorder detection',
@@ -4636,48 +4251,44 @@ export const services: Service[] = [
   'Research data management',
   'Clinical trial support'
     ],
-    pricing: {
+    "pricing": {
       starter: 75000,
-      professional: 225000,
-      enterprise: 750000,
+      "professional": 225000,
+      "enterprise": 750000,
       currency:,
   USD'
     },
-    benefits: [
-  'Accelerated research progress,
+    "benefits": ['Accelerated research progress,
 ,
   Better treatment outcomes',
   'Improved patient care',
   'Advanced diagnostic capabilities',
   'Research collaboration tools'
     ],
-    useCases: [
-  'Medical research institutions,
+    "useCases": ['Medical research institutions,
 ,
   Hospitals and clinics',
   'Pharmaceutical companies',
   'Neuroscience laboratories'
     ],
-    technologies: [
-  'Neural Networks,
+    "technologies": ['Neural Networks,
 ,
   Brain Imaging',
   'Machine Learning',
   'Python',
   'Medical AI'],
-    link: 'https://ziontechgroup.com/services/ai-neuroscience-research,
+    "link": 'https://ziontechgroup.com/services/ai-neuroscience-research,
     icon:,
   🧠'
   },
   {
-    id: 'ai-robotics-automation,
+    "id": 'ai-robotics-automation,
     name:,
   AI Robotics & Automation',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Intelligent robotics solutions with advanced AI for autonomous operations, human-robot collaboration, and industrial automation.',
-    features: [
-  'Autonomous robot control,
+    "features": ['Autonomous robot control,
   'Human-robot interaction',
   'Computer vision integration',
   'Predictive maintenance',
@@ -4686,48 +4297,44 @@ export const services: Service[] = [
   'Performance optimization',
   'Custom robot programming'
     ],
-    pricing: {
+    "pricing": {
       starter: 100000,
-      professional: 300000,
-      enterprise: 1000000,
+      "professional": 300000,
+      "enterprise": 1000000,
       currency:,
   USD'
     },
-    benefits: [
-  'Increased productivity,
+    "benefits": ['Increased productivity,
 ,
   Reduced operational costs',
   'Improved safety',
   '24/7 operations',
   'Consistent quality'
     ],
-    useCases: [
-  'Manufacturing companies,
+    "useCases": ['Manufacturing companies,
 ,
   Warehouse operations',
   'Healthcare facilities',
   'Agricultural operations'
     ],
-    technologies: [
-  'Robotics,
+    "technologies": ['Robotics,
 ,
   Computer Vision',
   'Machine Learning',
   'ROS',
   'AI Control Systems'],
-    link: 'https://ziontechgroup.com/services/ai-robotics-automation,
+    "link": 'https://ziontechgroup.com/services/ai-robotics-automation,
     icon:,
   🤖'
   },
   {
-    id: 'ai-financial-trading,
+    "id": 'ai-financial-trading,
     name:,
   AI Financial Trading Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI-powered financial trading platform with algorithmic trading, risk management, and market prediction capabilities.',
-    features: [
-  'Algorithmic trading strategies,
+    "features": ['Algorithmic trading strategies,
   'Real-time market analysis',
   'Risk assessment and management',
   'Portfolio optimization',
@@ -4736,50 +4343,46 @@ export const services: Service[] = [
   'Backtesting capabilities',
   'Regulatory compliance'
     ],
-    pricing: {
+    "pricing": {
       starter: 50000,
-      professional: 150000,
-      enterprise: 500000,
+      "professional": 150000,
+      "enterprise": 500000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved trading performance,
+    "benefits": ['Improved trading performance,
 ,
   Reduced risk exposure',
   '24/7 market monitoring',
   'Data-driven decisions',
   'Automated execution'
     ],
-    useCases: [
-  'Investment firms,
+    "useCases": ['Investment firms,
 ,
   Hedge funds',
   'Banks and financial institutions',
   'Individual traders'
     ],
-    technologies: [
-  'Financial AI,
+    "technologies": ['Financial AI,
 ,
   Machine Learning',
   'Quantitative Analysis',
   'Python',
   'Trading APIs'],
-    link: 'https://ziontechgroup.com/services/ai-financial-trading,
+    "link": 'https://ziontechgroup.com/services/ai-financial-trading,
     icon:,
   📈'
   },
 
   // Additional Innovative Micro SaaS Services
   {
-    id: 'ai-video-editor,
+    "id": 'ai-video-editor,
     name:,
   AI Video Editor Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Revolutionary AI-powered video editing platform that automatically creates professional videos from raw footage with intelligent scene detection and editing.',
-    features: [
-  'AI-powered auto-editing,
+    "features": ['AI-powered auto-editing,
   'Smart scene detection',
   'Automatic color correction',
   'Background music matching',
@@ -4788,48 +4391,44 @@ export const services: Service[] = [
   'Collaborative editing',
   'Cloud storage integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 29,
-      professional: 79,
-      enterprise: 199,
+      "professional": 79,
+      "enterprise": 199,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce editing time by 80%,
+    "benefits": ['Reduce editing time by 80%,
 ,
   Professional-quality results',
   'No technical skills required',
   'Consistent brand styling',
   'Faster content production'
     ],
-    useCases: [
-  'Content creators,
+    "useCases": ['Content creators,
 ,
   Marketing agencies',
   'Small businesses',
   'Social media managers'
     ],
-    technologies: [
-  'AI Video Processing,
+    "technologies": ['AI Video Processing,
 ,
   React',
   'Node.js',
   'FFmpeg',
   'Cloud Storage'],
-    link: 'https://ziontechgroup.com/services/ai-video-editor,
+    "link": 'https://ziontechgroup.com/services/ai-video-editor,
     icon:,
   🎬'
   },
   {
-    id: 'smart-contract-auditor,
+    "id": 'smart-contract-auditor,
     name:,
   Smart Contract Security Auditor',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   AI-powered smart contract auditing platform that automatically detects vulnerabilities, security issues, and compliance problems in blockchain code.',
-    features: [
-  'Automated vulnerability scanning,
+    "features": ['Automated vulnerability scanning,
   'Security best practices checking',
   'Gas optimization analysis',
   'Compliance verification',
@@ -4838,48 +4437,44 @@ export const services: Service[] = [
   'Integration with development tools',
   'Continuous monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 199,
-      professional: 499,
-      enterprise: 1299,
+      "professional": 499,
+      "enterprise": 1299,
       currency:,
   USD'
     },
-    benefits: [
-  'Prevent costly security breaches,
+    "benefits": ['Prevent costly security breaches,
 ,
   Reduce audit time by 90%',
   'Comprehensive security coverage',
   'Compliance assurance',
   'Cost-effective auditing'
     ],
-    useCases: [
-  'Blockchain developers,
+    "useCases": ['Blockchain developers,
 ,
   DeFi projects',
   'NFT platforms',
   'Crypto startups'
     ],
-    technologies: [
-  'AI Code Analysis,
+    "technologies": ['AI Code Analysis,
 ,
   Solidity',
   'React',
   'Node.js',
   'Blockchain APIs'],
-    link: 'https://ziontechgroup.com/services/smart-contract-auditor,
+    "link": 'https://ziontechgroup.com/services/smart-contract-auditor,
     icon:,
   🔍'
   },
   {
-    id: 'ai-code-reviewer,
+    "id": 'ai-code-reviewer,
     name:,
   AI Code Review Assistant',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent code review platform that automatically analyzes code quality, suggests improvements, and ensures best practices across development teams.',
-    features: [
-  'Automated code analysis,
+    "features": ['Automated code analysis,
   'Security vulnerability detection',
   'Performance optimization suggestions',
   'Code style enforcement',
@@ -4888,48 +4483,44 @@ export const services: Service[] = [
   'Integration with Git platforms',
   'Custom rule configuration'
     ],
-    pricing: {
+    "pricing": {
       starter: 49,
-      professional: 129,
-      enterprise: 349,
+      "professional": 129,
+      "enterprise": 349,
       currency:,
   USD'
     },
-    benefits: [
-  'Improve code quality by 40%,
+    "benefits": ['Improve code quality by 40%,
 ,
   Reduce bugs and security issues',
   'Faster development cycles',
   'Consistent coding standards',
   'Knowledge sharing across teams'
     ],
-    useCases: [
-  'Software development teams,
+    "useCases": ['Software development teams,
 ,
   Tech startups',
   'Enterprise development',
   'Open source projects'
     ],
-    technologies: [
-  'AI Code Analysis,
+    "technologies": ['AI Code Analysis,
 ,
   React',
   'Node.js',
   'Git APIs',
   'Static Analysis'],
-    link: 'https://ziontechgroup.com/services/ai-code-reviewer,
+    "link": 'https://ziontechgroup.com/services/ai-code-reviewer,
     icon:,
   👨‍💻'
   },
   {
-    id: 'ai-translation-platform,
+    "id": 'ai-translation-platform,
     name:,
   AI Translation Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced AI-powered translation platform supporting 100+ languages with context-aware translations, industry-specific terminology, and real-time collaboration.',
-    features: [
-  '100+ language support,
+    "features": ['100+ language support,
   'Context-aware translations',
   'Industry-specific terminology',
   'Real-time collaboration',
@@ -4938,48 +4529,44 @@ export const services: Service[] = [
   'API integration',
   'Bulk translation processing'
     ],
-    pricing: {
+    "pricing": {
       starter: 39,
-      professional: 99,
-      enterprise: 249,
+      "professional": 99,
+      "enterprise": 249,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce translation costs by 60%,
+    "benefits": ['Reduce translation costs by 60%,
 ,
   Faster time to market',
   'Consistent terminology',
   'High-quality translations',
   'Scalable translation workflow'
     ],
-    useCases: [
-  'Global businesses,
+    "useCases": ['Global businesses,
 ,
   E-commerce platforms',
   'Content creators',
   'Software companies'
     ],
-    technologies: [
-  'AI Translation,
+    "technologies": ['AI Translation,
 ,
   React',
   'Node.js',
   'Translation APIs',
   'NLP'],
-    link: 'https://ziontechgroup.com/services/ai-translation-platform,
+    "link": 'https://ziontechgroup.com/services/ai-translation-platform,
     icon:,
   🌐'
   },
   {
-    id: 'ai-customer-insights,
+    "id": 'ai-customer-insights,
     name:,
   AI Customer Insights Platform',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent customer analytics platform that analyzes customer behavior, predicts churn, and provides actionable insights for better business decisions.',
-    features: [
-  'Customer behavior analysis,
+    "features": ['Customer behavior analysis,
   'Churn prediction models',
   'Sentiment analysis',
   'Customer segmentation',
@@ -4988,48 +4575,44 @@ export const services: Service[] = [
   'Real-time dashboards',
   'Integration with CRM systems'
     ],
-    pricing: {
+    "pricing": {
       starter: 79,
-      professional: 199,
-      enterprise: 499,
+      "professional": 199,
+      "enterprise": 499,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase customer retention by 30%,
+    "benefits": ['Increase customer retention by 30%,
 ,
   Better understanding of customers',
   'Data-driven marketing decisions',
   'Improved customer experience',
   'Higher customer lifetime value'
     ],
-    useCases: [
-  'E-commerce businesses,
+    "useCases": ['E-commerce businesses,
 ,
   SaaS companies',
   'Retail chains',
   'Subscription services'
     ],
-    technologies: [
-  'AI Analytics,
+    "technologies": ['AI Analytics,
 ,
   Machine Learning',
   'React',
   'Node.js',
   'Analytics APIs'],
-    link: 'https://ziontechgroup.com/services/ai-customer-insights,
+    "link": 'https://ziontechgroup.com/services/ai-customer-insights,
     icon:,
   👥'
   },
   {
-    id: 'ai-workflow-automation,
+    "id": 'ai-workflow-automation,
     name:,
   AI Workflow Automation Suite',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent workflow automation platform that learns from your processes and automatically optimizes business workflows for maximum efficiency.',
-    features: [
-  'Process mining and analysis,
+    "features": ['Process mining and analysis,
   'Intelligent workflow design',
   'Automated task routing',
   'Exception handling',
@@ -5038,48 +4621,44 @@ export const services: Service[] = [
   'Custom automation rules',
   'Analytics and reporting'
     ],
-    pricing: {
+    "pricing": {
       starter: 45,
-      professional: 119,
-      enterprise: 299,
+      "professional": 119,
+      "enterprise": 299,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce manual work by 70%,
+    "benefits": ['Reduce manual work by 70%,
 ,
   Improve process efficiency',
   'Eliminate human errors',
   'Faster task completion',
   'Better resource allocation'
     ],
-    useCases: [
-  'Business process automation,
+    "useCases": ['Business process automation,
 ,
   HR workflows',
   'Finance operations',
   'Customer service'
     ],
-    technologies: [
-  'AI Automation,
+    "technologies": ['AI Automation,
 ,
   Workflow Engine',
   'React',
   'Node.js',
   'Integration APIs'],
-    link: 'https://ziontechgroup.com/services/ai-workflow-automation,
+    "link": 'https://ziontechgroup.com/services/ai-workflow-automation,
     icon:,
   ⚙️'
   },
   {
-    id: 'ai-data-privacy,
+    "id": 'ai-data-privacy,
     name:,
   AI Data Privacy Compliance',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Comprehensive data privacy compliance platform that automatically ensures GDPR, CCPA, and other privacy regulations compliance with AI-powered monitoring.',
-    features: [
-  'Automated compliance checking,
+    "features": ['Automated compliance checking,
   'Data mapping and classification',
   'Privacy impact assessments',
   'Consent management',
@@ -5088,48 +4667,44 @@ export const services: Service[] = [
   'Compliance reporting',
   'Integration with existing systems'
     ],
-    pricing: {
+    "pricing": {
       starter: 99,
-      professional: 249,
-      enterprise: 599,
+      "professional": 249,
+      "enterprise": 599,
       currency:,
   USD'
     },
-    benefits: [
-  'Ensure regulatory compliance,
+    "benefits": ['Ensure regulatory compliance,
 ,
   Reduce compliance costs by 50%',
   'Automated privacy management',
   'Risk mitigation',
   'Audit-ready documentation'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Healthcare providers',
   'Financial institutions',
   'E-commerce platforms'
     ],
-    technologies: [
-  'AI Compliance,
+    "technologies": ['AI Compliance,
 ,
   Privacy Analytics',
   'React',
   'Node.js',
   'Compliance APIs'],
-    link: 'https://ziontechgroup.com/services/ai-data-privacy,
+    "link": 'https://ziontechgroup.com/services/ai-data-privacy,
     icon:,
   🔒'
   },
   {
-    id: 'ai-performance-monitoring,
+    "id": 'ai-performance-monitoring,
     name:,
   AI Performance Monitoring',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced AI-powered application performance monitoring that predicts issues before they occur and provides intelligent optimization recommendations.',
-    features: [
-  'Predictive performance analysis,
+    "features": ['Predictive performance analysis,
   'Anomaly detection',
   'Root cause analysis',
   'Performance optimization suggestions',
@@ -5138,48 +4713,44 @@ export const services: Service[] = [
   'Integration with monitoring tools',
   'Automated scaling recommendations'
     ],
-    pricing: {
+    "pricing": {
       starter: 35,
-      professional: 89,
-      enterprise: 229,
+      "professional": 89,
+      "enterprise": 229,
       currency:,
   USD'
     },
-    benefits: [
-  'Prevent performance issues,
+    "benefits": ['Prevent performance issues,
 ,
   Reduce downtime by 80%',
   'Optimize resource usage',
   'Better user experience',
   'Cost-effective monitoring'
     ],
-    useCases: [
-  'Web applications,
+    "useCases": ['Web applications,
 ,
   Mobile apps',
   'API services',
   'Cloud infrastructure'
     ],
-    technologies: [
-  'AI Monitoring,
+    "technologies": ['AI Monitoring,
 ,
   Performance Analytics',
   'React',
   'Node.js',
   'Monitoring APIs'],
-    link: 'https://ziontechgroup.com/services/ai-performance-monitoring,
+    "link": 'https://ziontechgroup.com/services/ai-performance-monitoring,
     icon:,
   📊'
   },
   {
-    id: 'ai-content-moderation-advanced,
+    "id": 'ai-content-moderation-advanced,
     name:,
   AI Content Moderation Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Advanced AI content moderation platform with real-time detection of inappropriate content, hate speech, and spam across text, images, and videos.',
-    features: [
-  'Real-time content analysis,
+    "features": ['Real-time content analysis,
   'Multi-modal content detection',
   'Custom moderation rules',
   'Human review integration',
@@ -5188,48 +4759,44 @@ export const services: Service[] = [
   'Analytics and reporting',
   'Compliance monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 25,
-      professional: 65,
-      enterprise: 175,
+      "professional": 65,
+      "enterprise": 175,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce moderation costs by 70%,
+    "benefits": ['Reduce moderation costs by 70%,
 ,
   24/7 content monitoring',
   'Consistent policy enforcement',
   'Improved user safety',
   'Scalable moderation solution'
     ],
-    useCases: [
-  'Social media platforms,
+    "useCases": ['Social media platforms,
 ,
   Online communities',
   'E-commerce marketplaces',
   'Educational platforms'
     ],
-    technologies: [
-  'AI Content Analysis,
+    "technologies": ['AI Content Analysis,
 ,
   Computer Vision',
   'NLP',
   'React',
   'Node.js'],
-    link: 'https://ziontechgroup.com/services/ai-content-moderation-pro,
+    "link": 'https://ziontechgroup.com/services/ai-content-moderation-pro,
     icon:,
   🛡️'
   },
   {
-    id: 'ai-financial-forecasting,
+    "id": 'ai-financial-forecasting,
     name:,
   AI Financial Forecasting',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Intelligent financial forecasting platform that uses AI to predict cash flow, revenue, and financial performance with high accuracy.',
-    features: [
-  'Cash flow prediction,
+    "features": ['Cash flow prediction,
   'Revenue forecasting',
   'Expense optimization',
   'Risk assessment',
@@ -5238,50 +4805,46 @@ export const services: Service[] = [
   'Integration with accounting software',
   'Real-time financial insights'
     ],
-    pricing: {
+    "pricing": {
       starter: 59,
-      professional: 149,
-      enterprise: 399,
+      "professional": 149,
+      "enterprise": 399,
       currency:,
   USD'
     },
-    benefits: [
-  'Improve financial planning accuracy,
+    "benefits": ['Improve financial planning accuracy,
 ,
   Better cash flow management',
   'Reduced financial risks',
   'Data-driven financial decisions',
   'Optimized resource allocation'
     ],
-    useCases: [
-  'Small businesses,
+    "useCases": ['Small businesses,
 ,
   Startups',
   'Financial advisors',
   'Accounting firms'
     ],
-    technologies: [
-  'AI Forecasting,
+    "technologies": ['AI Forecasting,
 ,
   Financial Analytics',
   'React',
   'Node.js',
   'Financial APIs'],
-    link: 'https://ziontechgroup.com/services/ai-financial-forecasting,
+    "link": 'https://ziontechgroup.com/services/ai-financial-forecasting,
     icon:,
   💰'
   },
 
   // Additional Advanced IT Services
   {
-    id: 'cloud-native-architecture,
+    "id": 'cloud-native-architecture,
     name:,
   Cloud-Native Architecture Design',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete cloud-native architecture design and implementation using microservices, containers, and serverless technologies for maximum scalability and efficiency.',
-    features: [
-  'Microservices architecture design,
+    "features": ['Microservices architecture design,
   'Container orchestration setup',
   'Serverless function implementation',
   'API gateway configuration',
@@ -5290,30 +4853,27 @@ export const services: Service[] = [
   'Security and compliance',
   'Cost optimization strategies'
     ],
-    pricing: {
+    "pricing": {
       starter: 25000,
-      professional: 75000,
-      enterprise: 200000,
+      "professional": 75000,
+      "enterprise": 200000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved scalability and performance,
+    "benefits": ['Improved scalability and performance,
 ,
   Reduced infrastructure costs',
   'Faster time to market',
   'Better resource utilization',
   'Enhanced reliability and availability'
     ],
-    useCases: [
-  'Digital transformation projects,
+    "useCases": ['Digital transformation projects,
 ,
   Legacy system modernization',
   'High-scale applications',
   'Startup scaling'
     ],
-    technologies: [
-  'Kubernetes,
+    "technologies": ['Kubernetes,
 ,
   Docker',
   'AWS',
@@ -5321,19 +4881,18 @@ export const services: Service[] = [
   'GCP',
   'Istio',
   'Prometheus'],
-    link: 'https://ziontechgroup.com/services/cloud-native-architecture,
+    "link": 'https://ziontechgroup.com/services/cloud-native-architecture,
     icon:,
   ☁️'
   },
   {
-    id: 'cybersecurity-operations-center,
+    "id": 'cybersecurity-operations-center,
     name:,
   Cybersecurity Operations Center (SOC)',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   24/7 cybersecurity operations center with advanced threat detection, incident response, and security monitoring to protect your organization from cyber threats.',
-    features: [
-  '24/7 security monitoring,
+    "features": ['24/7 security monitoring,
   'Advanced threat detection',
   'Incident response and forensics',
   'Security information and event management (SIEM)',
@@ -5342,49 +4901,45 @@ export const services: Service[] = [
   'Compliance monitoring',
   'Security awareness training'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 45000,
-      enterprise: 120000,
+      "professional": 45000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Proactive threat detection,
+    "benefits": ['Proactive threat detection,
 ,
   Reduced security incidents',
   'Faster incident response',
   'Compliance adherence',
   'Peace of mind'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Financial institutions',
   'Healthcare providers',
   'Government agencies'
     ],
-    technologies: [
-  'SIEM,
+    "technologies": ['SIEM,
 ,
   SOAR',
   'EDR',
   'XDR',
   'Threat Intelligence',
   'Forensics Tools'],
-    link: 'https://ziontechgroup.com/services/cybersecurity-operations-center,
+    "link": 'https://ziontechgroup.com/services/cybersecurity-operations-center,
     icon:,
   🛡️'
   },
   {
-    id: 'data-lake-architecture,
+    "id": 'data-lake-architecture,
     name:,
   Data Lake & Analytics Architecture',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive data lake architecture design and implementation for big data analytics, machine learning, and business intelligence with scalable data processing.',
-    features: [
-  'Data lake architecture design,
+    "features": ['Data lake architecture design,
   'Data ingestion and processing',
   'Real-time and batch analytics',
   'Machine learning pipeline setup',
@@ -5393,49 +4948,45 @@ export const services: Service[] = [
   'Data quality management',
   'Cost optimization'
     ],
-    pricing: {
+    "pricing": {
       starter: 30000,
-      professional: 90000,
-      enterprise: 250000,
+      "professional": 90000,
+      "enterprise": 250000,
       currency:,
   USD'
     },
-    benefits: [
-  'Unified data platform,
+    "benefits": ['Unified data platform,
 ,
   Scalable analytics capabilities',
   'Improved data insights',
   'Reduced data silos',
   'Better decision making'
     ],
-    useCases: [
-  'Big data analytics,
+    "useCases": ['Big data analytics,
 ,
   Machine learning projects',
   'Business intelligence',
   'Data-driven organizations'
     ],
-    technologies: [
-  'AWS S3,
+    "technologies": ['AWS S3,
 ,
   Apache Spark',
   'Hadoop',
   'Kafka',
   'Elasticsearch',
   'Tableau'],
-    link: 'https://ziontechgroup.com/services/data-lake-architecture,
+    "link": 'https://ziontechgroup.com/services/data-lake-architecture,
     icon:,
   🏞️'
   },
   {
-    id: 'iot-platform-development,
+    "id": 'iot-platform-development,
     name:,
   IoT Platform Development',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete IoT platform development with device management, data processing, analytics, and integration capabilities for connected devices and smart systems.',
-    features: [
-  'IoT device management,
+    "features": ['IoT device management,
   'Data ingestion and processing',
   'Real-time analytics',
   'Device connectivity management',
@@ -5444,49 +4995,45 @@ export const services: Service[] = [
   'Custom dashboard development',
   'Predictive maintenance'
     ],
-    pricing: {
+    "pricing": {
       starter: 40000,
-      professional: 120000,
-      enterprise: 300000,
+      "professional": 120000,
+      "enterprise": 300000,
       currency:,
   USD'
     },
-    benefits: [
-  'Connected device ecosystem,
+    "benefits": ['Connected device ecosystem,
 ,
   Real-time insights',
   'Improved operational efficiency',
   'Predictive maintenance capabilities',
   'Scalable IoT infrastructure'
     ],
-    useCases: [
-  'Smart manufacturing,
+    "useCases": ['Smart manufacturing,
 ,
   Connected vehicles',
   'Smart cities',
   'Industrial automation'
     ],
-    technologies: [
-  'IoT Platforms,
+    "technologies": ['IoT Platforms,
 ,
   MQTT',
   'CoAP',
   'Edge Computing',
   'Time Series DB',
   'Machine Learning'],
-    link: 'https://ziontechgroup.com/services/iot-platform-development,
+    "link": 'https://ziontechgroup.com/services/iot-platform-development,
     icon:,
   🌐'
   },
   {
-    id: 'api-first-architecture,
+    "id": 'api-first-architecture,
     name:,
   API-First Architecture Design',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Strategic API-first architecture design and implementation for modern applications with comprehensive API management, security, and developer experience.',
-    features: [
-  'API strategy and design,
+    "features": ['API strategy and design,
   'API gateway implementation',
   'API security and authentication',
   'Developer portal development',
@@ -5495,49 +5042,45 @@ export const services: Service[] = [
   'Documentation and testing tools',
   'Integration with existing systems'
     ],
-    pricing: {
+    "pricing": {
       starter: 20000,
-      professional: 60000,
-      enterprise: 150000,
+      "professional": 60000,
+      "enterprise": 150000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improved developer experience,
+    "benefits": ['Improved developer experience,
 ,
   Faster integration capabilities',
   'Better system scalability',
   'Enhanced security',
   'Reduced development time'
     ],
-    useCases: [
-  'Digital transformation,
+    "useCases": ['Digital transformation,
 ,
   Microservices architecture',
   'Third-party integrations',
   'Mobile app development'
     ],
-    technologies: [
-  'API Gateway,
+    "technologies": ['API Gateway,
 ,
   OpenAPI',
   'GraphQL',
   'REST',
   'OAuth',
   'Rate Limiting'],
-    link: 'https://ziontechgroup.com/services/api-first-architecture,
+    "link": 'https://ziontechgroup.com/services/api-first-architecture,
     icon:,
   🔗'
   },
   {
-    id: 'hybrid-cloud-strategy,
+    "id": 'hybrid-cloud-strategy,
     name:,
   Hybrid Cloud Strategy & Implementation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive hybrid cloud strategy and implementation that seamlessly integrates on-premises infrastructure with public and private cloud services.',
-    features: [
-  'Hybrid cloud architecture design,
+    "features": ['Hybrid cloud architecture design,
   'Cloud migration planning',
   'Data synchronization strategies',
   'Security and compliance management',
@@ -5546,49 +5089,45 @@ export const services: Service[] = [
   'Performance monitoring',
   'Governance and policy management'
     ],
-    pricing: {
+    "pricing": {
       starter: 35000,
-      professional: 100000,
-      enterprise: 250000,
+      "professional": 100000,
+      "enterprise": 250000,
       currency:,
   USD'
     },
-    benefits: [
-  'Flexibility and scalability,
+    "benefits": ['Flexibility and scalability,
 ,
   Cost optimization',
   'Risk mitigation',
   'Compliance adherence',
   'Seamless operations'
     ],
-    useCases: [
-  'Enterprise organizations,
+    "useCases": ['Enterprise organizations,
 ,
   Regulated industries',
   'Legacy system integration',
   'Multi-cloud environments'
     ],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'VMware',
   'Kubernetes',
   'Terraform',
   'Cloud Management'],
-    link: 'https://ziontechgroup.com/services/hybrid-cloud-strategy,
+    "link": 'https://ziontechgroup.com/services/hybrid-cloud-strategy,
     icon:,
   🌩️'
   },
   {
-    id: 'devsecops-implementation,
+    "id": 'devsecops-implementation,
     name:,
   DevSecOps Implementation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Complete DevSecOps implementation integrating security into the development lifecycle with automated security testing, compliance, and continuous monitoring.',
-    features: [
-  'Security integration in CI/CD,
+    "features": ['Security integration in CI/CD,
   'Automated security testing',
   'Infrastructure as code security',
   'Container security scanning',
@@ -5597,49 +5136,45 @@ export const services: Service[] = [
   'Vulnerability management',
   'Security training and awareness'
     ],
-    pricing: {
+    "pricing": {
       starter: 25000,
-      professional: 75000,
-      enterprise: 200000,
+      "professional": 75000,
+      "enterprise": 200000,
       currency:,
   USD'
     },
-    benefits: [
-  'Shift-left security approach,
+    "benefits": ['Shift-left security approach,
 ,
   Reduced security vulnerabilities',
   'Faster secure deployments',
   'Compliance automation',
   'Improved security posture'
     ],
-    useCases: [
-  'Software development teams,
+    "useCases": ['Software development teams,
 ,
   Financial services',
   'Healthcare organizations',
   'Government agencies'
     ],
-    technologies: [
-  'Jenkins,
+    "technologies": ['Jenkins,
 ,
   GitLab CI',
   'SonarQube',
   'OWASP',
   'SAST',
   'DAST'],
-    link: 'https://ziontechgroup.com/services/devsecops-implementation,
+    "link": 'https://ziontechgroup.com/services/devsecops-implementation,
     icon:,
   🔐'
   },
   {
-    id: 'observability-platform,
+    "id": 'observability-platform,
     name:,
   Observability Platform Implementation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Comprehensive observability platform setup with logging, monitoring, tracing, and alerting for complete system visibility and proactive issue resolution.',
-    features: [
-  'Centralized logging setup,
+    "features": ['Centralized logging setup,
   'Application performance monitoring',
   'Distributed tracing implementation',
   'Infrastructure monitoring',
@@ -5648,51 +5183,47 @@ export const services: Service[] = [
   'Root cause analysis tools',
   'Integration with existing tools'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 45000,
-      enterprise: 120000,
+      "professional": 45000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Complete system visibility,
+    "benefits": ['Complete system visibility,
 ,
   Proactive issue detection',
   'Faster troubleshooting',
   'Improved system reliability',
   'Better user experience'
     ],
-    useCases: [
-  'Microservices applications,
+    "useCases": ['Microservices applications,
 ,
   Cloud-native systems',
   'High-traffic websites',
   'Enterprise applications'
     ],
-    technologies: [
-  'Prometheus,
+    "technologies": ['Prometheus,
 ,
   Grafana',
   'ELK Stack',
   'Jaeger',
   'OpenTelemetry',
   'AlertManager'],
-    link: 'https://ziontechgroup.com/services/observability-platform,
+    "link": 'https://ziontechgroup.com/services/observability-platform,
     icon:,
   👁️'
   },
 
   // Additional Cutting-Edge AI Services
   {
-    id: 'ai-generative-design,
+    "id": 'ai-generative-design,
     name:,
   AI Generative Design Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Revolutionary AI-powered generative design platform that creates optimized designs, prototypes, and solutions using advanced machine learning algorithms.',
-    features: [
-  'Automated design generation,
+    "features": ['Automated design generation,
   'Multi-objective optimization',
   'Material and cost optimization',
   'Performance simulation',
@@ -5701,48 +5232,44 @@ export const services: Service[] = [
   'Manufacturing feasibility analysis',
   'Patent and IP protection'
     ],
-    pricing: {
+    "pricing": {
       starter: 50000,
-      professional: 150000,
-      enterprise: 500000,
+      "professional": 150000,
+      "enterprise": 500000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce design time by 80%,
+    "benefits": ['Reduce design time by 80%,
 ,
   Optimize for multiple criteria',
   'Innovative design solutions',
   'Cost-effective prototyping',
   'Competitive advantage'
     ],
-    useCases: [
-  'Product design and development,
+    "useCases": ['Product design and development,
 ,
   Architecture and construction',
   'Automotive industry',
   'Aerospace engineering'
     ],
-    technologies: [
-  'Generative AI,
+    "technologies": ['Generative AI,
 ,
   CAD Integration',
   'Simulation Software',
   'Machine Learning',
   '3D Modeling'],
-    link: 'https://ziontechgroup.com/services/ai-generative-design,
+    "link": 'https://ziontechgroup.com/services/ai-generative-design,
     icon:,
   🎨'
   },
   {
-    id: 'ai-autonomous-systems,
+    "id": 'ai-autonomous-systems,
     name:,
   AI Autonomous Systems Development',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced AI autonomous systems development for self-driving vehicles, drones, robots, and smart infrastructure with real-time decision making capabilities.',
-    features: [
-  'Autonomous navigation systems,
+    "features": ['Autonomous navigation systems,
   'Real-time decision making',
   'Sensor fusion and processing',
   'Path planning and optimization',
@@ -5751,48 +5278,44 @@ export const services: Service[] = [
   'Safety and reliability systems',
   'Regulatory compliance support'
     ],
-    pricing: {
+    "pricing": {
       starter: 100000,
-      professional: 300000,
-      enterprise: 1000000,
+      "professional": 300000,
+      "enterprise": 1000000,
       currency:,
   USD'
     },
-    benefits: [
-  'Enhanced safety and efficiency,
+    "benefits": ['Enhanced safety and efficiency,
 ,
   Reduced operational costs',
   '24/7 autonomous operation',
   'Improved performance',
   'Future-ready technology'
     ],
-    useCases: [
-  'Autonomous vehicles,
+    "useCases": ['Autonomous vehicles,
 ,
   Delivery drones',
   'Industrial robots',
   'Smart city infrastructure'
     ],
-    technologies: [
-  'Computer Vision,
+    "technologies": ['Computer Vision,
 ,
   Reinforcement Learning',
   'ROS',
   'Edge Computing',
   'Sensor Fusion'],
-    link: 'https://ziontechgroup.com/services/ai-autonomous-systems,
+    "link": 'https://ziontechgroup.com/services/ai-autonomous-systems,
     icon:,
   🚗'
   },
   {
-    id: 'ai-digital-twin,
+    "id": 'ai-digital-twin,
     name:,
   AI Digital Twin Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Comprehensive AI-powered digital twin platform that creates virtual replicas of physical systems for simulation, monitoring, and optimization.',
-    features: [
-  'Real-time system modeling,
+    "features": ['Real-time system modeling,
   'Predictive maintenance',
   'Performance optimization',
   'Simulation and testing',
@@ -5801,48 +5324,44 @@ export const services: Service[] = [
   '3D visualization',
   'Collaborative platform'
     ],
-    pricing: {
+    "pricing": {
       starter: 75000,
-      professional: 225000,
-      enterprise: 750000,
+      "professional": 225000,
+      "enterprise": 750000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce maintenance costs by 40%,
+    "benefits": ['Reduce maintenance costs by 40%,
 ,
   Improve system performance',
   'Predict and prevent failures',
   'Optimize operations',
   'Better decision making'
     ],
-    useCases: [
-  'Manufacturing facilities,
+    "useCases": ['Manufacturing facilities,
 ,
   Smart buildings',
   'Energy systems',
   'Transportation networks'
     ],
-    technologies: [
-  'IoT,
+    "technologies": ['IoT,
 ,
   Machine Learning',
   '3D Modeling',
   'Simulation',
   'Real-time Analytics'],
-    link: 'https://ziontechgroup.com/services/ai-digital-twin,
+    "link": 'https://ziontechgroup.com/services/ai-digital-twin,
     icon:,
   🔄'
   },
   {
-    id: 'ai-meta-learning,
+    "id": 'ai-meta-learning,
     name:,
   AI Meta-Learning Systems',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced meta-learning AI systems that can quickly adapt to new tasks and environments with minimal training data, enabling rapid AI deployment.',
-    features: [
-  'Few-shot learning capabilities,
+    "features": ['Few-shot learning capabilities,
   'Rapid task adaptation',
   'Transfer learning optimization',
   'Automated model selection',
@@ -5851,48 +5370,44 @@ export const services: Service[] = [
   'Domain adaptation',
   'Performance monitoring'
     ],
-    pricing: {
+    "pricing": {
       starter: 80000,
-      professional: 240000,
-      enterprise: 800000,
+      "professional": 240000,
+      "enterprise": 800000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster AI deployment,
+    "benefits": ['Faster AI deployment,
 ,
   Reduced training data requirements',
   'Better generalization',
   'Adaptive AI systems',
   'Cost-effective AI solutions'
     ],
-    useCases: [
-  'Rapid prototyping,
+    "useCases": ['Rapid prototyping,
 ,
   Multi-domain applications',
   'Resource-constrained environments',
   'Dynamic business requirements'
     ],
-    technologies: [
-  'Meta-Learning,
+    "technologies": ['Meta-Learning,
 ,
   Few-Shot Learning',
   'Transfer Learning',
   'Neural Architecture Search',
   'Python'],
-    link: 'https://ziontechgroup.com/services/ai-meta-learning,
+    "link": 'https://ziontechgroup.com/services/ai-meta-learning,
     icon:,
   🧠'
   },
   {
-    id: 'ai-federated-learning,
+    "id": 'ai-federated-learning,
     name:,
   AI Federated Learning Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Privacy-preserving federated learning platform that enables AI model training across distributed data sources without compromising data privacy.',
-    features: [
-  'Distributed model training,
+    "features": ['Distributed model training,
   'Privacy-preserving algorithms',
   'Secure aggregation protocols',
   'Differential privacy',
@@ -5901,48 +5416,44 @@ export const services: Service[] = [
   'Performance monitoring',
   'Compliance management'
     ],
-    pricing: {
+    "pricing": {
       starter: 60000,
-      professional: 180000,
-      enterprise: 600000,
+      "professional": 180000,
+      "enterprise": 600000,
       currency:,
   USD'
     },
-    benefits: [
-  'Maintain data privacy,
+    "benefits": ['Maintain data privacy,
 ,
   Collaborative AI development',
   'Regulatory compliance',
   'Distributed intelligence',
   'Reduced data transfer costs'
     ],
-    useCases: [
-  'Healthcare data analysis,
+    "useCases": ['Healthcare data analysis,
 ,
   Financial services',
   'Cross-organization collaboration',
   'Privacy-sensitive applications'
     ],
-    technologies: [
-  'Federated Learning,
+    "technologies": ['Federated Learning,
 ,
   Cryptography',
   'Privacy-Preserving ML',
   'Distributed Systems',
   'Blockchain'],
-    link: 'https://ziontechgroup.com/services/ai-federated-learning,
+    "link": 'https://ziontechgroup.com/services/ai-federated-learning,
     icon:,
   🔐'
   },
   {
-    id: 'ai-explainable-ai,
+    "id": 'ai-explainable-ai,
     name:,
   Explainable AI (XAI) Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Comprehensive explainable AI platform that provides transparent, interpretable, and trustworthy AI decision-making processes for critical applications.',
-    features: [
-  'Model interpretability tools,
+    "features": ['Model interpretability tools,
   'Decision explanation generation',
   'Bias detection and mitigation',
   'Feature importance analysis',
@@ -5951,48 +5462,44 @@ export const services: Service[] = [
   'Regulatory compliance tools',
   'Human-AI collaboration interfaces'
     ],
-    pricing: {
+    "pricing": {
       starter: 40000,
-      professional: 120000,
-      enterprise: 400000,
+      "professional": 120000,
+      "enterprise": 400000,
       currency:,
   USD'
     },
-    benefits: [
-  'Build trust in AI systems,
+    "benefits": ['Build trust in AI systems,
 ,
   Meet regulatory requirements',
   'Improve model performance',
   'Enable human oversight',
   'Reduce bias and discrimination'
     ],
-    useCases: [
-  'Financial decision making,
+    "useCases": ['Financial decision making,
 ,
   Healthcare diagnostics',
   'Legal and compliance',
   'Critical infrastructure'
     ],
-    technologies: [
-  'Explainable AI,
+    "technologies": ['Explainable AI,
 ,
   Interpretability Methods',
   'Bias Detection',
   'Fairness Metrics',
   'Python'],
-    link: 'https://ziontechgroup.com/services/ai-explainable-ai,
+    "link": 'https://ziontechgroup.com/services/ai-explainable-ai,
     icon:,
   🔍'
   },
   {
-    id: 'ai-edge-intelligence,
+    "id": 'ai-edge-intelligence,
     name:,
   AI Edge Intelligence Platform',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced edge AI platform that brings intelligent processing to the edge of networks, enabling real-time AI inference with minimal latency.',
-    features: [
-  'Edge AI model deployment,
+    "features": ['Edge AI model deployment,
   'Real-time inference processing',
   'Model optimization for edge devices',
   'Distributed AI coordination',
@@ -6001,48 +5508,44 @@ export const services: Service[] = [
   'Resource-constrained optimization',
   'Security and privacy protection'
     ],
-    pricing: {
+    "pricing": {
       starter: 35000,
-      professional: 105000,
-      enterprise: 350000,
+      "professional": 105000,
+      "enterprise": 350000,
       currency:,
   USD'
     },
-    benefits: [
-  'Ultra-low latency processing,
+    "benefits": ['Ultra-low latency processing,
 ,
   Reduced bandwidth requirements',
   'Enhanced privacy and security',
   'Offline AI capabilities',
   'Cost-effective deployment'
     ],
-    useCases: [
-  'IoT devices and sensors,
+    "useCases": ['IoT devices and sensors,
 ,
   Autonomous vehicles',
   'Smart manufacturing',
   'Real-time surveillance'
     ],
-    technologies: [
-  'Edge Computing,
+    "technologies": ['Edge Computing,
 ,
   Model Compression',
   'TensorRT',
   'OpenVINO',
   'Edge AI Frameworks'],
-    link: 'https://ziontechgroup.com/services/ai-edge-intelligence,
+    "link": 'https://ziontechgroup.com/services/ai-edge-intelligence,
     icon:,
   ⚡'
   },
   {
-    id: 'ai-multimodal-learning,
+    "id": 'ai-multimodal-learning,
     name:,
   AI Multimodal Learning Systems',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Advanced multimodal AI systems that process and understand multiple data types (text, images, audio, video) simultaneously for comprehensive insights.',
-    features: [
-  'Cross-modal data processing,
+    "features": ['Cross-modal data processing,
   'Multimodal fusion techniques',
   'Cross-modal retrieval',
   'Multimodal generation',
@@ -6051,48 +5554,44 @@ export const services: Service[] = [
   'Real-time multimodal analysis',
   'Custom multimodal models'
     ],
-    pricing: {
+    "pricing": {
       starter: 70000,
-      professional: 210000,
-      enterprise: 700000,
+      "professional": 210000,
+      "enterprise": 700000,
       currency:,
   USD'
     },
-    benefits: [
-  'Richer data understanding,
+    "benefits": ['Richer data understanding,
 ,
   Improved accuracy and robustness',
   'Comprehensive insights',
   'Better user experiences',
   'Advanced AI capabilities'
     ],
-    useCases: [
-  'Content analysis and moderation,
+    "useCases": ['Content analysis and moderation,
 ,
   Autonomous systems',
   'Healthcare diagnostics',
   'Creative AI applications'
     ],
-    technologies: [
-  'Multimodal AI,
+    "technologies": ['Multimodal AI,
 ,
   Transformer Models',
   'Cross-Modal Learning',
   'Computer Vision',
   'NLP'],
-    link: 'https://ziontechgroup.com/services/ai-multimodal-learning,
+    "link": 'https://ziontechgroup.com/services/ai-multimodal-learning,
     icon:,
   🎭'
   },
   {
-    id: 'ai-neuromorphic-computing,
+    "id": 'ai-neuromorphic-computing,
     name:,
   AI Neuromorphic Computing Solutions',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Cutting-edge neuromorphic computing solutions that mimic brain-like processing for ultra-efficient AI computation and real-time learning capabilities.',
-    features: [
-  'Brain-inspired computing architectures,
+    "features": ['Brain-inspired computing architectures,
   'Spiking neural networks',
   'Ultra-low power consumption',
   'Real-time learning and adaptation',
@@ -6101,48 +5600,44 @@ export const services: Service[] = [
   'Scalable neuromorphic systems',
   'Research and development support'
     ],
-    pricing: {
+    "pricing": {
       starter: 200000,
-      professional: 600000,
-      enterprise: 2000000,
+      "professional": 600000,
+      "enterprise": 2000000,
       currency:,
   USD'
     },
-    benefits: [
-  'Extremely low power consumption,
+    "benefits": ['Extremely low power consumption,
 ,
   Real-time learning capabilities',
   'Brain-like processing efficiency',
   'Future-proof technology',
   'Research and innovation edge'
     ],
-    useCases: [
-  'Edge AI applications,
+    "useCases": ['Edge AI applications,
 ,
   Autonomous systems',
   'IoT devices',
   'Research and development'
     ],
-    technologies: [
-  'Neuromorphic Hardware,
+    "technologies": ['Neuromorphic Hardware,
 ,
   Spiking Neural Networks',
   'Event-Driven Processing',
   'Low-Power AI',
   'Research Tools'],
-    link: 'https://ziontechgroup.com/services/ai-neuromorphic-computing,
+    "link": 'https://ziontechgroup.com/services/ai-neuromorphic-computing,
     icon:,
   🧬'
   },
   {
-    id: 'ai-legal-contract-review-pro,
+    "id": 'ai-legal-contract-review-pro,
     name:,
   AI Legal Contract Review Pro',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Automated contract review micro SaaS with clause extraction, risk scoring, and redline suggestions for NDAs, MSAs, SOWs, and DPAs.',
-    features: [
-  'Clause extraction and tagging,
+    "features": ['Clause extraction and tagging,
   'Risk and compliance scoring',
   'Auto redlines and suggestions',
   'Playbook-based review rules',
@@ -6151,49 +5646,45 @@ export const services: Service[] = [
   'Export to Word/PDF',
   'API for DMS/CLM integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 49,
-      professional: 129,
-      enterprise: 499,
+      "professional": 129,
+      "enterprise": 499,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce review time by 70%,
+    "benefits": ['Reduce review time by 70%,
 ,
   Improve legal compliance',
   'Consistent playbook enforcement',
   'Lower outside counsel costs',
   'Faster deal cycles'
     ],
-    useCases: [
-  'Procurement contract intake,
+    "useCases": ['Procurement contract intake,
 ,
   Sales contract review',
   'Vendor risk assessments',
   'Policy compliance checks'
     ],
-    technologies: [
-  'RAG,
+    "technologies": ['RAG,
 ,
   LLMs',
   'NLP',
   'Node.js',
   'Next.js',
   'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/ai-legal-contract-review-pro,
+    "link": 'https://ziontechgroup.com/services/ai-legal-contract-review-pro,
     icon:,
   ⚖️'
   },
   {
-    id: 'ecommerce-repricing-optimizer,
+    "id": 'ecommerce-repricing-optimizer,
     name:,
   eCommerce Repricing Optimizer',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   Real-time automated repricing engine for marketplaces and storefronts to maximize buy-box win rate and margins.',
-    features: [
-  'Competitor price tracking,
+    "features": ['Competitor price tracking,
   'Dynamic repricing rules',
   'MAP policy enforcement',
   'Cost and fee awareness',
@@ -6202,48 +5693,44 @@ export const services: Service[] = [
   'Alerts and anomaly detection',
   'CSV and API imports'
     ],
-    pricing: {
+    "pricing": {
       starter: 39,
-      professional: 99,
-      enterprise: 299,
+      "professional": 99,
+      "enterprise": 299,
       currency:,
   USD'
     },
-    benefits: [
-  'Increase buy-box wins,
+    "benefits": ['Increase buy-box wins,
 ,
   Grow gross margin',
   'Reduce manual pricing work',
   'Protect brand pricing policies'
     ],
-    useCases: [
-  'Amazon and Walmart marketplaces,
+    "useCases": ['Amazon and Walmart marketplaces,
 ,
   Shopify and BigCommerce',
   'B2B price lists',
   'Promo and seasonal pricing'
     ],
-    technologies: [
-  'TypeScript,
+    "technologies": ['TypeScript,
 ,
   Next.js',
   'Queues',
   'Redis',
   'PostgreSQL',
   'Playwright'],
-    link: 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer,
+    "link": 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer,
     icon:,
   💹'
   },
   {
-    id: 'customer-feedback-mining,
+    "id": 'customer-feedback-mining,
     name:,
   Customer Feedback Mining',
-    category: 'micro-saas,
+    "category": 'micro-saas,
     description:,
   AI-driven feedback aggregation from reviews, tickets, and NPS to extract themes, sentiment, and product opportunities.',
-    features: [
-  'Multi-source ingestion,
+    "features": ['Multi-source ingestion,
   'Topic modeling and clustering',
   'Sentiment and emotion detection',
   'Feature request surfacing',
@@ -6252,47 +5739,43 @@ export const services: Service[] = [
   'Exports to Jira/Linear',
   'Slack/MS Teams integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 29,
-      professional: 79,
-      enterprise: 249,
+      "professional": 79,
+      "enterprise": 249,
       currency:,
   USD'
     },
-    benefits: [
-  'Prioritize roadmap by data,
+    "benefits": ['Prioritize roadmap by data,
 ,
   Faster bug/issue detection',
   'Reduce churn with insights',
   'Amplify customer voice'
     ],
-    useCases: [
-  'Product ops and UX research,
+    "useCases": ['Product ops and UX research,
 ,
   CS leadership reporting',
   'Marketing messaging testing',
   'C-suite customer health'
     ],
-    technologies: [
-  'Python,
+    "technologies": ['Python,
 ,
   NLP',
   'Vector DB',
   'Next.js',
   'Airflow/Temporal'],
-    link: 'https://ziontechgroup.com/services/customer-feedback-mining,
+    "link": 'https://ziontechgroup.com/services/customer-feedback-mining,
     icon:,
   🗣️'
   },
   {
-    id: 'cloud-migration-accelerator,
+    "id": 'cloud-migration-accelerator,
     name:,
   Cloud Migration Accelerator',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Blueprint-driven assessment, landing zone setup, and phased migration to AWS/Azure/GCP with zero-trust security and FinOps.',
-    features: [
-  'TCO/ROI assessment,
+    "features": ['TCO/ROI assessment,
   'Landing zone and guardrails',
   'Workload discovery and grouping',
   'Data migration and cutover',
@@ -6301,48 +5784,44 @@ export const services: Service[] = [
   'FinOps and cost optimization',
   'Knowledge transfer and docs'
     ],
-    pricing: {
+    "pricing": {
       starter: 15000,
-      professional: 65000,
-      enterprise: 250000,
+      "professional": 65000,
+      "enterprise": 250000,
       currency:,
   USD'
     },
-    benefits: [
-  'Accelerate time-to-cloud,
+    "benefits": ['Accelerate time-to-cloud,
 ,
   Reduce migration risk',
   'Improve security posture',
   'Lower run costs with FinOps'
     ],
-    useCases: [
-  'Data center exit,
+    "useCases": ['Data center exit,
 ,
   Modernize legacy apps',
   'Disaster recovery setup',
   'Global scalability needs'
     ],
-    technologies: [
-  'AWS,
+    "technologies": ['AWS,
 ,
   Azure',
   'GCP',
   'Terraform',
   'Kubernetes',
   'Datadog'],
-    link: 'https://ziontechgroup.com/services/cloud-migration-accelerator,
+    "link": 'https://ziontechgroup.com/services/cloud-migration-accelerator,
     icon:,
   ☁️'
   },
   {
-    id: 'kubernetes-platform-engineering,
+    "id": 'kubernetes-platform-engineering,
     name:,
   Kubernetes Platform Engineering',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   Enterprise-grade Kubernetes platform with golden paths, GitOps, self-service environments, and security by default.',
-    features: [
-  'Cluster design and hardening,
+    "features": ['Cluster design and hardening,
   'GitOps (Argo CD/Flux)',
   'Golden paths and templates',
   'Service mesh and policies',
@@ -6351,47 +5830,43 @@ export const services: Service[] = [
   'Secrets and identity',
   'Runbooks and training'
     ],
-    pricing: {
+    "pricing": {
       starter: 12000,
-      professional: 48000,
-      enterprise: 180000,
+      "professional": 48000,
+      "enterprise": 180000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster developer onboarding,
+    "benefits": ['Faster developer onboarding,
 ,
   Higher deployment velocity',
   'Improved reliability and SLOs',
   'Governance and compliance'
     ],
-    useCases: [
-  'Multi-tenant platforms,
+    "useCases": ['Multi-tenant platforms,
 ,
   Hybrid/multi-cloud',
   'Regulated environments',
   'Edge and on-prem clusters'
     ],
-    technologies: [
-  'Kubernetes,
+    "technologies": ['Kubernetes,
 ,
   Helm',
   'Argo CD',
   'Istio/Linkerd',
   'OPA/Gatekeeper'],
-    link: 'https://ziontechgroup.com/services/kubernetes-platform-engineering,
+    "link": 'https://ziontechgroup.com/services/kubernetes-platform-engineering,
     icon:,
   🐳'
   },
   {
-    id: 'soc2-compliance-implementation,
+    "id": 'soc2-compliance-implementation,
     name:,
   SOC 2 Compliance Implementation',
-    category: 'it-services,
+    "category": 'it-services,
     description:,
   End-to-end SOC 2 readiness, controls implementation, evidence automation, and audit support.',
-    features: [
-  'Gap assessment and roadmap,
+    "features": ['Gap assessment and roadmap,
   'Policy and control library',
   'Evidence automation',
   'Vulnerability management',
@@ -6400,47 +5875,43 @@ export const services: Service[] = [
   'Vendor risk management',
   'Audit coordination'
     ],
-    pricing: {
+    "pricing": {
       starter: 8000,
-      professional: 35000,
-      enterprise: 120000,
+      "professional": 35000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Faster audit readiness,
+    "benefits": ['Faster audit readiness,
 ,
   Reduced manual evidence work',
   'Improved security hygiene',
   'Stronger customer trust'
     ],
-    useCases: [
-  'Pre-seed to enterprise SaaS,
+    "useCases": ['Pre-seed to enterprise SaaS,
 ,
   Healthcare and fintech',
   'B2B vendor due diligence',
   'Continuous compliance'
     ],
-    technologies: [
-  'GRC Platforms,
+    "technologies": ['GRC Platforms,
 ,
   CIS Benchmarks',
   'SIEM',
   'CSPM',
   'IaC'],
-    link: 'https://ziontechgroup.com/services/soc2-compliance-implementation,
+    "link": 'https://ziontechgroup.com/services/soc2-compliance-implementation,
     icon:,
   🔒'
   },
   {
-    id: 'ragt-knowledge-bot,
+    "id": 'ragt-knowledge-bot,
     name:,
   RAG Knowledge Bot',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Retrieval-augmented generation assistant grounded in your docs, tickets, and code with robust guardrails and analytics.',
-    features: [
-  'Multi-repo document ingestion,
+    "features": ['Multi-repo document ingestion,
   'Embeddings and vector search',
   'Conversation memory and tools',
   'Citations and source tracing',
@@ -6449,47 +5920,43 @@ export const services: Service[] = [
   'SSO and role permissions',
   'SDK and API access'
     ],
-    pricing: {
+    "pricing": {
       starter: 7000,
-      professional: 18000,
-      enterprise: 120000,
+      "professional": 18000,
+      "enterprise": 120000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce support tickets,
+    "benefits": ['Reduce support tickets,
 ,
   Accelerate onboarding',
   'Improve answer accuracy',
   'Protect IP and privacy'
     ],
-    useCases: [
-  'Internal IT helpdesk,
+    "useCases": ['Internal IT helpdesk,
 ,
   Customer self-service',
   'Sales and SE enablement',
   'Policy and compliance Q&A'
     ],
-    technologies: [
-  'RAG,
+    "technologies": ['RAG,
 ,
   Vector DB',
   'OpenAI/Azure OpenAI',
   'LangChain',
   'Next.js'],
-    link: 'https://ziontechgroup.com/services/rag-knowledge-bot,
+    "link": 'https://ziontechgroup.com/services/rag-knowledge-bot,
     icon:,
   🤖'
   },
   {
-    id: 'computer-vision-inspection,
+    "id": 'computer-vision-inspection,
     name:,
   Computer Vision Quality Inspection',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   High-accuracy vision models for defect detection, part counting, and assembly verification on the factory line.',
-    features: [
-  'Dataset labeling workflows,
+    "features": ['Dataset labeling workflows,
   'Model training and evaluation',
   'On-edge inference optimization',
   'Active learning loops',
@@ -6498,47 +5965,43 @@ export const services: Service[] = [
   'Integration with PLC/SCADA',
   'Secure on-prem deployment'
     ],
-    pricing: {
+    "pricing": {
       starter: 20000,
-      professional: 90000,
-      enterprise: 400000,
+      "professional": 90000,
+      "enterprise": 400000,
       currency:,
   USD'
     },
-    benefits: [
-  'Reduce scrap and rework,
+    "benefits": ['Reduce scrap and rework,
 ,
   Increase throughput and OEE',
   'Consistent quality at scale',
   'Lower inspection costs'
     ],
-    useCases: [
-  'Electronics assembly,
+    "useCases": ['Electronics assembly,
 ,
   Automotive parts',
   'Pharmaceutical packaging',
   'Food and beverage lines'
     ],
-    technologies: [
-  'PyTorch,
+    "technologies": ['PyTorch,
 ,
   ONNX/TensorRT',
   'Edge AI',
   'OpenCV',
   'MLOps'],
-    link: 'https://ziontechgroup.com/services/computer-vision-inspection,
+    "link": 'https://ziontechgroup.com/services/computer-vision-inspection,
     icon:,
   📷'
   },
   {
-    id: 'ai-sales-forecasting-suite,
+    "id": 'ai-sales-forecasting-suite,
     name:,
   AI Sales Forecasting Suite',
-    category: 'ai-services,
+    "category": 'ai-services,
     description:,
   Probabilistic demand and revenue forecasting with scenario planning and driver analysis for sales and operations teams.',
-    features: [
-  'Time-series feature store,
+    "features": ['Time-series feature store,
   'Hierarchical forecasting',
   'Causal and driver analysis',
   'Promotion and seasonality modeling',
@@ -6547,43 +6010,39 @@ export const services: Service[] = [
   'Data quality and lineage',
   'API for ERP/CRM integration'
     ],
-    pricing: {
+    "pricing": {
       starter: 10000,
-      professional: 35000,
-      enterprise: 150000,
+      "professional": 35000,
+      "enterprise": 150000,
       currency:,
   USD'
     },
-    benefits: [
-  'Improve forecast accuracy,
+    "benefits": ['Improve forecast accuracy,
 ,
   Optimize inventory levels',
   'Increase service levels',
   'Align finance and supply chain'
     ],
-    useCases: [
-  'CPG demand planning,
+    "useCases": ['CPG demand planning,
 ,
   SaaS ARR forecasting',
   'Retail allocation',
   'Manufacturing S&OP'
     ],
-    technologies: [
-  'Python,
+    "technologies": ['Python,
 ,
   Prophet',
   'NeuralForecast',
   'dbt',
   'Snowflake/BigQuery'],
-    link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite,
+    "link": 'https://ziontechgroup.com/services/ai-sales-forecasting-suite,
     icon:,
   📈'
   }
 ];
 
-export const getServicesByCategory = (category: Service[
-  'category]) => {
+export const getServicesByCategory = ("category": Service['category]) => {
   return services.filter(service => service.category === category)};
 
-export const getServiceById = (id: string) => {
+export const getServiceById = ("id": string) => {
   return services.find(service => service.id === id)};

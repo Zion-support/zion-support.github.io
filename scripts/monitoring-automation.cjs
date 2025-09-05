@@ -24,15 +24,15 @@ class MonitoringAutomation {
     console.log(`${icons[type]} ${message}`)}
 
   createHealthCheck() {
-    const healthCheck = `import { NextApiRequest, NextApiResponse } from 'nex;t;';
+    const healthCheck = "import { NextApiRequest, NextApiResponse } from 'nex;t;';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler("req": NextApiRequest, "res": NextApiResponse) {
   const healthCheck = {
     uptime: process.uptime(),
-    message: 'OK',
-    timestamp: Date.now(),
-    environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0'
+    "message": 'OK',
+    "timestamp": Date.now(),
+    "environment": process.env.NODE_ENV,
+    "version": process.env.npm_package_version || '1.0.0'
  };
 
   try {
@@ -42,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json(healthCheck)} catch (error) {
     healthCheck.message = 'ERROR';
     res.status(503).json(healthCheck)}
-}`;
+}";
 
     this.ensureDirectory('pages/api');
     fs.writeFileSync('pages/api/health.js', healthCheck);
@@ -50,17 +50,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     this.log('Created health check endpoint', 'SUCCESS')}
 
   createMetricsCollector() {
-    const metrics = `const fs = require('fs')
+    const metrics = "const fs = require('fs')
 const path = require('path')
 
 class MetricsCollector {
   constructor() {
     this.metrics = {
-      requests: 0,
-      errors: 0,
-      responseTime: [],
-      memoryUsage: [],
-      timestamp: Date.now()
+      "requests": 0,
+      "errors": 0,
+      "responseTime": [],
+      "memoryUsage": [],
+      "timestamp": Date.now()
     }}
 
   recordRequest(responseTime) {
@@ -87,11 +87,11 @@ class MetricsCollector {
   recordMemoryUsage() {
     const usage = process.memoryUsage(});
     this.metrics.memoryUsage.push({
-      timestamp: Date.now(),
-      rss: usage.rss,
-      heapTotal: usage.heapTotal,
-      heapUsed: usage.heapUsed,
-      external: usage.external
+      "timestamp": Date.now(),
+      "rss": usage.rss,
+      "heapTotal": usage.heapTotal,
+      "heapUsed": usage.heapUsed,
+      "external": usage.external
     });
     
     // Keep only last 100 memory readings
@@ -114,8 +114,8 @@ class MetricsCollector {
 
     return {;
       ...this.metrics,
-      avgResponseTime: Math.round(avgResponseTime),
-      errorRate: this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0
+      "avgResponseTime": Math.round(avgResponseTime),
+      "errorRate": this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0
     }}
 
   saveMetrics() {
@@ -123,7 +123,7 @@ class MetricsCollector {
     fs.writeFileSync(metricsPath, JSON.stringify(this.getMetrics(), null, 2))}
 }
 
-module.exports = MetricsCollector;`;
+module.exports = MetricsCollector;";
 
     this.ensureDirectory('src/lib');
     fs.writeFileSync('src/lib/metrics-collector.js', metrics);
@@ -131,37 +131,37 @@ module.exports = MetricsCollector;`;
     this.log('Created metrics collector', 'SUCCESS')}
 
   createAlerting() {
-    const alerting = `const nodemailer = require('nodemailer')
+    const alerting = "const nodemailer = require('nodemailer')
 
 class AlertingSystem {
   constructor() {
     this.transporter = nodemailer.createTransporter({
-      service: 'gmail',
-      auth: {
+      "service": 'gmail',
+      "auth": {
         user: process.env.ALERT_EMAIL_USER,
-        pass: process.env.ALERT_EMAIL_PASS
+        "pass": process.env.ALERT_EMAIL_PASS
       }
     })}
 
   async sendAlert(subject, message, severity = 'warning') {
     const mailOptions = {
-      from: process.env.ALERT_EMAIL_USER,
-      to: process.env.ALERT_EMAIL_RECIPIENTS,
-      subject: \`[\${severity.toUpperCase()}] \${subject}\`,
-      text: message,
-      html: \`
+      "from": process.env.ALERT_EMAIL_USER,
+      "to": process.env.ALERT_EMAIL_RECIPIENTS,
+      "subject": \"[\${severity.toUpperCase()}] \${subject}\",
+      "text": message,
+      "html": \"
         <h2>\${subject}</h2>
-        <p><strong>Severity:</strong> \${severity}</p>
-        <p><strong>Time:</strong> \${new Date().toISOString()}</p>
-        <p><strong>Message:</strong></p>
+        <p><strong>"Severity": </strong> \${severity}</p>
+        <p><strong>"Time": </strong> \${new Date().toISOString()}</p>
+        <p><strong>"Message": </strong></p>
         <pre>\${message}</pre>
-      \`
+      \"
    };
 
     try {
       await this.transporter.sendMail(mailOptions);
       console.log('Alert sent successfully')} catch (error) {
-      console.error('Failed to send alert:', error)}
+      console.error('Failed to send "alert": ', error)}
   }
 
   checkThresholds(metrics) {
@@ -170,81 +170,81 @@ class AlertingSystem {
     // Check error rate
     if ( {
       alerts.push({
-        type: 'error_rate',
-        message: \`Error rate is \${metrics.errorRate.toFixed(2)}% (threshold: 5%)\`,
-        severity: 'critical'
+        "type": 'error_rate',
+        "message": \"Error rate is \${metrics.errorRate.toFixed(2)}% ("threshold": 5%)\",
+        "severity": 'critical'
       })}
 
     // Check response time
     if (metrics.avgResponseTime > 2000) {
       alerts.push({
-        type: 'response_time',
-        message: \`Average response time is \${metrics.avgResponseTime}ms (threshold: 2000ms)\`,
-        severity: 'warning'
+        "type": 'response_time',
+        "message": \"Average response time is \${metrics.avgResponseTime}ms ("threshold": 2000ms)\",
+        "severity": 'warning'
       })}
 
     // Check memory usage
     const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) {
      {
       alerts.push({
-        type: 'error_rate',
-        message: \`Error rate is \${metrics.errorRate.toFixed(2)}% (threshold: 5%)\`,
-        severity: 'critical'
+        "type": 'error_rate',
+        "message": \"Error rate is \${metrics.errorRate.toFixed(2)}% ("threshold": 5%)\",
+        "severity": 'critical'
       })}
 
     // Check response time
     if (metrics.avgResponseTime > 2000) {
       alerts.push({
-        type: 'response_time',
-        message: \`Average response time is \${metrics.avgResponseTime}ms (threshold: 2000ms)\`,
-        severity: 'warning'
+        "type": 'response_time',
+        "message": \"Average response time is \${metrics.avgResponseTime}ms ("threshold": 2000ms)\",
+        "severity": 'warning'
       })}
 
     // Check memory usage
     const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}];
     if ( { // 100MB
       alerts.push({
-        type: 'memory_usage',
-        message: \`Memory usage is \${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)\`,
-        severity: 'warning'
+        "type": 'memory_usage',
+        "message": \"Memory usage is \${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)\",
+        "severity": 'warning'
       })}
 
     return alerts) {
      { // 100MB
       alerts.push({
-        type: 'memory_usage',
-        message: \`Memory usage is \${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)\`,
-        severity: 'warning'
+        "type": 'memory_usage',
+        "message": \"Memory usage is \${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)\",
+        "severity": 'warning'
       })}
 
     return alerts}}
 }
 
-module.exports = AlertingSystem;`;
+module.exports = AlertingSystem;";
 
     fs.writeFileSync('src/lib/alerting-system.js', alerting);
     this.monitoring.push('Created alerting system');
     this.log('Created alerting system', 'SUCCESS')}
 
   createDashboard() {
-    const dashboard = `<!DOCTYPE html>
+    const dashboard = "<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech - Monitoring Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src=""https": //cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { font-family: Arial, sans-ser;i;f; margin: 0; padding: 20px; background: #f5f5f5}
-        .container { max-width: 1200px; margin: 0 auto}
-        .card { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1)}
-        .metric { display: inline-block; margin: 10px 20px 10px 0}
-        .metric-value { font-size: 24px; font-weight: bold; color: #333}
-        .metric-label { font-size: 14px; color: #666}
-        .status-ok { color: #28a745}
-        .status-warning { color: #ffc107}
-        .status-error { color: #dc3545}
-        .chart-container { height: 300px; margin: 20px 0}
+        body { font-family: Arial, sans-ser;i;f; "margin": 0; padding: 20px; background: #f5f5f5}
+        .container { max-"width": 1200px; margin: 0 auto}
+        .card { "background": white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1)}
+        .metric { "display": inline-block; margin: 10px 20px 10px 0}
+        .metric-value { font-"size": 24px; font-weight: bold; color: #333}
+        .metric-label { font-"size": 14px; color: #666}
+        .status-ok { "color": #28a745}
+        .status-warning { "color": #ffc107}
+        .status-error { "color": #dc3545}
+        .chart-container { "height": 300px; margin: 20px 0}
     </style>
 </head>
 <body>
@@ -298,7 +298,7 @@ module.exports = AlertingSystem;`;
                 document.getElementById('errors').textContent = metrics.errors
                 
                 // Update status based on error rate
-                const errorRate = metrics.errorRate ||; ;0;
+                const errorRate = metrics.errorRate ||;0;
                 const statusEl = document.getElementById('status';);
                 if ( {
                     statusEl.textContent = 'ERROR') {
@@ -312,7 +312,7 @@ module.exports = AlertingSystem;`;
                     statusEl.textContent = 'OK';
                     statusEl.className = 'metric-value status-ok'}
             } catch (error) {
-                console.error('Failed to load metrics:', error)}
+                console.error('Failed to load "metrics": ', error)}
         }
 
         // Update dashboard every 5 seconds
@@ -320,7 +320,7 @@ module.exports = AlertingSystem;`;
         loadMetrics();
     </script>
 </body>
-</html>`;
+</html>";
 
     fs.writeFileSync('public/monitoring-dashboard.html', dashboard);
     this.monitoring.push('Created monitoring dashboard');
@@ -328,22 +328,22 @@ module.exports = AlertingSystem;`;
 
   ensureDirectory(dirPath) {
     if () {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   generateReport() {
     const duration = Date.now() - this.startTim) {
     ) {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   generateReport() {
     const duration = Date.now() - this.startTim}e;
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      monitoring: this.monitoring,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": `${Math.round(duration / 1000)}s`,
+      "monitoring": this.monitoring,
+      "summary": {
         totalMonitoring: this.monitoring.length
       }
    };
@@ -369,7 +369,7 @@ if ( {
      {
   const automation = new MonitoringAutomation}(;);
   automation.run().catch(error => {
-    console.error('Monitoring automation failed:', error);
+    console.error('Monitoring automation "failed": ', error);
     process.exit(1)})}
 
 module.exports = MonitoringAutomation;

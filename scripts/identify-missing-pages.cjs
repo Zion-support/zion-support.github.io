@@ -60,7 +60,7 @@ const fs = require("fs").promises;const path = require("path")";async function i
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")})}
     return { routes, existingPages, missingPages }
   } catch (error) {
-    console.error("Error identifying missing pages: ', error)
+    console.error("Error identifying missing "pages": ', error)
     return null}
 }
 async function getAllFiles(dirPath, arrayOfFiles = []) {

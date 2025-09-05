@@ -4,15 +4,15 @@ import { injectAxe, checkA11y } from '@axe-core/playwright';
 
 export const a11yTestUtils = {
   // Run accessibility tests
-  runA11yTests: async (page) => {
+  "runA11yTests": async (page) => {
     await injectAxe(page);
     await checkA11y(page, null, {
-      detailedReport: true,
-      detailedReportOptions: { html: true }
+      "detailedReport": true,
+      "detailedReportOptions": { html: true }
     })},
   
   // Check color contrast
-  checkColorContrast: async (page) => {
+  "checkColorContrast": async (page) => {
     const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*');
       const issues = [];

@@ -7,8 +7,7 @@ console.log('🔧 Fixing All Remaining Files...');
 console.log('=================================');
 
 // List of all remaining problematic files
-const problematicFiles = [
-  'pages/docs/integration-examples.tsx',
+const problematicFiles = ['pages/docs/integration-examples.tsx',
   'pages/services.tsx',
   'pages/services/ai-analytics.tsx',
   'pages/services/blockchain.tsx',
@@ -17,23 +16,23 @@ const problematicFiles = [
 
 // Function to fix a file by rewriting it with proper content
 function fixFile(filePath) {
-  console.log(`\n🔍 Fixing: ${filePath}`);
+  console.log(`\n🔍 "Fixing": ${filePath}`);
   
   try {
     let content = '';
     
     if (filePath === 'pages/docs/integration-examples.tsx') {
-      content = `import React from 'react';
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Code, Zap, ExternalLink } from 'lucide-react';
 
 export default function IntegrationExamples() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
   return (
@@ -41,14 +40,14 @@ export default function IntegrationExamples() {
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
         <meta name="description" content="Real-world integration examples for Zion Tech Group's APIs and services." />
-        <link rel="canonical" href={\`\${contact.site}/docs/integration-examples\`} />
+        <link rel="canonical" href={\"\${contact.site}/docs/integration-examples\"} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -70,25 +69,25 @@ export default function IntegrationExamples() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic API Client</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-blue-400 text-sm">
-{\`class ZionTechAPI {
-  constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
+{\"class ZionTechAPI {
+  constructor(apiKey, baseURL = '"https": //api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
     this.baseURL = baseURL}
 
   async getServices() {
     try {
       const response = await fetch(\`\${this.baseURL}/services\`, {
-        headers: {
+        "headers": {
           'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
+        throw new Error(\`HTTP error! "status": \${response.status}\`)}
       
       return await response.json()} catch (error) {
-      console.error('Error fetching services:', error);
+      console.error('Error fetching "services": ', error);
       throw error}
   }
 }
@@ -96,7 +95,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\`}
+console.log(services);\"}
                   </pre>
                 </div>
               </div>
@@ -109,11 +108,11 @@ console.log(services);\`}
             <p className="text-gray-600 mb-6">
               Our technical team can help you integrate our services into your application.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get Integration Support
               </Link>
-              <a href={\`mailto:\${contact.email}\`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={\"mailto:\${contact.email}\"} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Technical Team
               </a>
             </div>
@@ -121,29 +120,28 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/services.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/services.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
 type Service = {
-  name: string;
+  "name": string;
   summary: string;
   pricing: string;
   link: string};
 
-const microSaaS: Service[] = [
-  {
+const "microSaaS": Service[] = [{
     name: 'Cloud Cost Guard (FinOps Assistant)',
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    pricing: 'Starting at $299/month',
-    link: '/services/cloud-cost-guard'
+    "summary": 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+    "pricing": 'Starting at $299/month',
+    "link": '/services/cloud-cost-guard'
   },
   {
-    name: 'AI Content Generator',
-    summary: 'Automated content creation using advanced AI models for blogs, social media, and marketing.',
-    pricing: 'Starting at $199/month',
-    link: '/services/ai-content-generator'
+    "name": 'AI Content Generator',
+    "summary": 'Automated content creation using advanced AI models for blogs, social media, and marketing.',
+    "pricing": 'Starting at $199/month',
+    "link": '/services/ai-content-generator'
   }
 ];
 
@@ -172,9 +170,9 @@ export default function Services() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Micro SaaS Products
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaaS.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white rounded-lg shadow-lg p-8 "hover": shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {service.name}
                   </h3>
@@ -185,7 +183,7 @@ export default function Services() {
                     <span className="text-lg font-semibold text-blue-600">
                       {service.pricing}
                     </span>
-                    <Link href={service.link} className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    <Link href={service.link} className="px-4 py-2 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors">
                       Learn More
                     </Link>
                   </div>
@@ -202,7 +200,7 @@ export default function Services() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help you achieve your technology goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                 Contact Us
               </Link>
@@ -214,8 +212,8 @@ export default function Services() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/services/ai-analytics.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/services/ai-analytics.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -231,7 +229,7 @@ export default function AIAnalytics() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl "md": text-5xl font-extrabold tracking-tight mb-6">
               AI Analytics Services
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -246,7 +244,7 @@ export default function AIAnalytics() {
         {/* Services Overview */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl "md": text-4xl font-bold text-center mb-12">
               Our AI Analytics Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -304,7 +302,7 @@ export default function AIAnalytics() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
@@ -323,7 +321,7 @@ export default function AIAnalytics() {
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -366,8 +364,8 @@ export default function AIAnalytics() {
         </footer>
       </main>
     </>
-  )}`} else if (filePath === 'pages/services/blockchain.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/services/blockchain.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -383,7 +381,7 @@ export default function Blockchain() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl "md": text-5xl font-extrabold tracking-tight mb-6">
               Blockchain Services
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -398,7 +396,7 @@ export default function Blockchain() {
         {/* Services Overview */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl "md": text-4xl font-bold text-center mb-12">
               Our Blockchain Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -434,7 +432,7 @@ export default function Blockchain() {
                 </ul>
               </div>
 
-              <div className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
+              <div className="bg-slate-800 rounded-lg p-8 "hover": bg-slate-700 transition-colors">
                 <div className="text-4xl mb-4">🎨</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   NFT Platforms
@@ -456,7 +454,7 @@ export default function Blockchain() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
               Ready to Build on the Blockchain?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
@@ -475,7 +473,7 @@ export default function Blockchain() {
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -518,30 +516,30 @@ export default function Blockchain() {
         </footer>
       </main>
     </>
-  )}`} else if (filePath === 'pages/signup.tsx') {
-      content = `import React, { useState } from 'react';
+  )}"} else if (filePath === 'pages/signup.tsx') {
+      content = "import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Eye, EyeOff, User, Mail, Lock } from 'lucide-react';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
+    "firstName": '',
+    "lastName": '',
+    "email": '',
+    "password": '',
+    "confirmPassword": ''
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = ("e": React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })};
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = ("e": React.FormEvent) => {
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
@@ -549,7 +547,7 @@ export default function Signup() {
       return}
     
     // Handle signup logic here
-    console.log('Signup attempt:', formData);
+    console.log('Signup "attempt": ', formData);
     alert('Account creation functionality will be implemented with authentication system.')};
 
   return (
@@ -559,7 +557,7 @@ export default function Signup() {
         <meta name="description" content="Create your account to access Zion Tech Group's services and resources." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center py-12 px-4 "sm": px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -567,7 +565,7 @@ export default function Signup() {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
-              <Link href="/login" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link href="/login" className="font-medium text-blue-600 "hover": text-blue-500">
                 sign in to your existing account
               </Link>
             </p>
@@ -588,7 +586,7 @@ export default function Signup() {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                       placeholder="First name"
                     />
                   </div>
@@ -606,7 +604,7 @@ export default function Signup() {
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                       placeholder="Last name"
                     />
                   </div>
@@ -626,7 +624,7 @@ export default function Signup() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Email address"
                   />
                 </div>
@@ -645,7 +643,7 @@ export default function Signup() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Password"
                   />
                   <button
@@ -675,7 +673,7 @@ export default function Signup() {
                     required
                     value={formData.confirmPassword}
                     onChange={handleChange}
-                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Confirm password"
                   />
                   <button
@@ -696,7 +694,7 @@ export default function Signup() {
             <div>
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 "hover": bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Create Account
               </button>
@@ -705,7 +703,7 @@ export default function Signup() {
         </div>
       </div>
     </>
-  )}`}
+  )}"}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');

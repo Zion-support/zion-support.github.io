@@ -8,35 +8,35 @@ export default function Page($1) {
 ,
         {
 
-            id: 'nanotechnology',
-            title: 'Advanced Nanotechnology Platform',
-            category: 'biotech-ai',
-            price: '$450,000/month',
-            duration: '30-42 months',
-            status: 'Active',
-            performance: 89,
-            clientCount: 12,
-            revenue: 5400000,
-            growth: 34.2,
-            complexity: 'Advanced',
-            marketDemand: 'High',
-            technologyMaturity: 'Growing'
+            "id": 'nanotechnology',
+            "title": 'Advanced Nanotechnology Platform',
+            "category": 'biotech-ai',
+            "price": '$450,000/month',
+            "duration": '30-42 months',
+            "status": 'Active',
+            "performance": 89,
+            "clientCount": 12,
+            "revenue": 5400000,
+            "growth": 34.2,
+            "complexity": 'Advanced',
+            "marketDemand": 'High',
+            "technologyMaturity": 'Growing'
         },
         {
 
-            id: 'brain-computer-interface',
-            title: 'Advanced Brain-Computer Interface',
-            category: 'biotech-ai',
-            price: '$600,000/month',
-            duration: '30-42 months',
-            status: 'Active',
-            performance: 91,
-            clientCount: 6,
-            revenue: 3600000,
-            growth: 42.1,
-            complexity: 'Enterprise',
-            marketDemand: 'Exploding',
-            technologyMaturity: 'Leading'
+            "id": 'brain-computer-interface',
+            "title": 'Advanced Brain-Computer Interface',
+            "category": 'biotech-ai',
+            "price": '$600,000/month',
+            "duration": '30-42 months',
+            "status": 'Active',
+            "performance": 91,
+            "clientCount": 6,
+            "revenue": 3600000,
+            "growth": 42.1,
+            "complexity": 'Enterprise',
+            "marketDemand": 'Exploding',
+            "technologyMaturity": 'Leading'
 
     ];
     const filteredPortfolio = useMemo(() => {
@@ -56,12 +56,12 @@ export default function Page($1) {
             : 0;
         return {
 
-            totalServices: portfolioData.length,
+            "totalServices": portfolioData.length,
             totalRevenue,
-            activeClients: totalClients,
-            averagePerformance: Math.round(avgPerformance) ,
-            portfolioGrowth: Math.round(portfolioGrowth) ,
-            marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
+            "activeClients": totalClients,
+            "averagePerformance": Math.round(avgPerformance) ,
+            "portfolioGrowth": Math.round(portfolioGrowth) ,
+            "marketCoverage": Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
         }}, [portfolioData]) ;
     const getStatusColor = (props) => {
 
@@ -71,7 +71,7 @@ export default function Page($1) {
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            "default": return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (props) => {
 
@@ -81,7 +81,7 @@ export default function Page($1) {
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            "default": return 'bg-gray-100 text-gray-800'}
     };
     const getMarketDemandColor = (props) => {
 
@@ -91,7 +91,7 @@ export default function Page($1) {
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            "default": return 'bg-gray-100 text-gray-800'}
     };
     const getTechnologyMaturityColor = (props) => {
 
@@ -101,32 +101,32 @@ export default function Page($1) {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            "default": return 'bg-gray-100 text-gray-800'}
     };
     const categories = ['
-        {id: 'all', name: 'All Categories', count: portfolioData.length},
-        {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},
-        {id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length},
-        {id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length},
-        {id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length},
-        {id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length};
+        {"id": 'all', "name": 'All Categories', "count": portfolioData.length},
+        {"id": 'ai', "name": 'AI & Machine Learning', "count": portfolioData.filter(s => s.category === 'ai').length},
+        {"id": 'quantum', "name": 'Quantum Computing', "count": portfolioData.filter(s => s.category === 'quantum').length},
+        {"id": 'space-tech', "name": 'Space Technology', "count": portfolioData.filter(s => s.category === 'space-tech').length},
+        {"id": 'biotech-ai', "name": 'Biotech AI', "count": portfolioData.filter(s => s.category === 'biotech-ai').length},
+        {"id": 'green-tech', "name": 'Green Technology', "count": portfolioData.filter(s => s.category === 'green-tech').length};
     ];"
     return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
 }} className="mb-8">"
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div className="flex flex-col "lg": flex-row lg:items-center lg:justify-between gap-4">
           <div>"
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
               Advanced Service Portfolio Dashboard
@@ -150,16 +150,16 @@ export default function Page($1) {
       {/* Portfolio Metrics */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
-}} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">"
+}} transition={{ "delay": 0.1 }} className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-6 mb-8">"
         <Card className="hover:shadow-lg transition-shadow">"
           <CardHeader className="pb-3">"
             <div className="flex items-center justify-between">"
@@ -184,7 +184,7 @@ export default function Page($1) {
           </CardContent>
         </Card>
 "
-        <Card className="hover:shadow-lg transition-shadow">"
+        <Card className=""hover": shadow-lg transition-shadow">"
           <CardHeader className="pb-3">"
             <div className="flex items-center justify-between">"
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">"
@@ -208,7 +208,7 @@ export default function Page($1) {
           </CardContent>
         </Card>
 "
-        <Card className="hover:shadow-lg transition-shadow">"
+        <Card className=""hover": shadow-lg transition-shadow">"
           <CardHeader className="pb-3">"
             <div className="flex items-center justify-between">"
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">"
@@ -232,7 +232,7 @@ export default function Page($1) {
           </CardContent>
         </Card>
 "
-        <Card className="hover:shadow-lg transition-shadow">"
+        <Card className=""hover": shadow-lg transition-shadow">"
           <CardHeader className="pb-3">"
             <div className="flex items-center justify-between">"
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">"
@@ -260,17 +260,17 @@ export default function Page($1) {
       {/* Filters and Controls */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
-}} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+}} transition={{ "delay": 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-5 gap-4">
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -324,16 +324,16 @@ export default function Page($1) {
       {/* Portfolio Table */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
-}} transition={{ delay: 0.3 }} className="mb-8">
+}} transition={{ "delay": 0.3 }} className="mb-8">
         <Card>
           <CardHeader>"
             <div className="flex items-center justify-between">"
@@ -365,16 +365,16 @@ export default function Page($1) {
                 <tbody>
                   {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {
 
-  { opacity: 0,
-  x: -20
+  { "opacity": 0,
+  "x": -20
 
 }} animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 "
-}} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">"
+}} transition={{ "delay": 0.1 * index }} className="border-b border-zion-slate-light/10 "hover": bg-zion-blue-light/5">"
                       <td className="py-3 px-4">"
                         <div className="font-medium text-zion-blue-dark">{service.title}</div>"
                         <div className="text-sm text-zion-slate-light">{service.price}</div>
@@ -387,7 +387,7 @@ export default function Page($1) {
                       <td className="py-3 px-4">"
                         <div className="flex items-center gap-2">"
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">"
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{{ width: `${service.performance}}"%` }}></div>
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{{ "width": `${service.performance}}"%` }}></div>
                           </div>"
                           <span className="text-sm font-medium">{service.performance}%</span>
                         </div>
@@ -400,8 +400,8 @@ export default function Page($1) {
                       </td>"
                       <td className="py-3 px-4">";
                         <div className="flex items-center gap-1">";';
-                          {service.growth > 0 ? (<ArrowUpRight className="w-4 h-4 text-green-500" />) : (<ArrowDownRight className="w-4 h-4 text-red-500" />)}'`
-                          <span className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}>';';
+                          {service.growth > 0 ? (<ArrowUpRight className="w-4 h-4 text-green-500" />) : (<ArrowDownRight className="w-4 h-4 text-red-500" />)}'"
+                          <span className={"text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}"}>';';
                             {service.growth > 0 ? '+' : "}{service.growth}%
                           </span>
                         </div>
@@ -427,16 +427,16 @@ export default function Page($1) {
       {/* Portfolio Insights */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
-}} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+}} transition={{ "delay": 0.4 }} className="grid grid-cols-1 "lg": grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
           <CardHeader>"
@@ -449,31 +449,31 @@ export default function Page($1) {
             <divclassName="space-y-3">';
               {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
 
-  { opacity: 0,
-  x: -20
+  { "opacity": 0,
+  "x": -20
 
 }} animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 ";
-}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">";';
-                  <div className="flex items-center gap-3">'`
+}} transition={{ "delay": 0.1 * index }} className="flex items-center justify-between">";';
+                  <div className="flex items-center gap-3">'"
                     <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :'
                 index === 1 ? 'bg-purple-500' :'
                     index === 2 ? 'bg-green-500' :'
                         index === 3 ? 'bg-orange-500' :'`
-                            index === 4 ? 'bg-red-500' : 'bg-gray-500'}`}></div>"
+                            index === 4 ? 'bg-red-500' : 'bg-gray-500'}"}></div>"
                     <span className="font-medium text-zion-slate-dark">{category.name}</span>
                   </div>";
                   <div className="flex items-center gap-2">";';
-                    <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">'`
+                    <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">'"
                       <div className={`h-2 rounded-full ${index === 0 ? 'bg-blue-500' :'
                 index === 1 ? 'bg-purple-500' :'
                     index === 2 ? 'bg-green-500' :'
                         index === 3 ? 'bg-orange-500' :'`
-                            index === 4 ? 'bg-red-500' : 'bg-gray-500'}`} style="{{{ width: `${(category.count / portfolioData.length) * 100}}"%` }}></div>
+                            index === 4 ? 'bg-red-500' : 'bg-gray-500'}"} style="{{{ "width": "${(category.count / portfolioData.length) * 100}}"%` }}></div>
                     </div>"
                     <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>
                   </div>
@@ -529,26 +529,26 @@ export default function Page($1) {
       {/* CTA Section */}
       <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
+  { "opacity": 0,
+  "y": 20
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 "
-}} transition={{ delay: 0.5 }} className="text-center">"
+}} transition={{ "delay": 0.5 }} className="text-center">"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">";';
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center">";';
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank')}>"
               <Users className="w-5 h-5 mr-2" />
               Get Portfolio Consultation';
             </Button>";';
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950',_blank')}>"
+            <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950',_blank')}>"
               <Zap className="w-5 h-5 mr-2" />
               Call Now
             </Button>

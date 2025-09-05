@@ -3,13 +3,13 @@ import {motion, AnimatePresence} from 'framer-motion';
 
 export const AccessibilityPanel = (props) => {
     const [settings, setSettings] = useState({
-        highContrast: false,
-        fontSize: 100,
-        colorBlindness: 'none',
-        reducedMotion: false,
-        screenReader: false,
-        keyboardNavigation: false,
-        focusIndicator: true
+        "highContrast": false,
+        "fontSize": 100,
+        "colorBlindness": 'none',
+        "reducedMotion": false,
+        "screenReader": false,
+        "keyboardNavigation": false,
+        "focusIndicator": true
     };);
     ';
     const [accessibilityScore, setAccessibilityScore] = useState(85);
@@ -22,7 +22,7 @@ export const AccessibilityPanel = (props) => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));';';
-            } catch (error) {console.error('Failed to parse accessibility settings:', error);}
+            } catch (error) {console.error('Failed to parse accessibility "settings": ', error);}
         }
     }, []);
 
@@ -60,14 +60,14 @@ export const AccessibilityPanel = (props) => {
 
     const resetSettings = (props) => {
         const defaultSettings = {
-            highContrast: false,
-            fontSize: 100,
-            reducedMotion: false,
-            screenReader: false,
-            keyboardNavigation: false,
-            focusIndicator: true,
-            colorBlindness: 'none'
-        };;
+            "highContrast": false,
+            "fontSize": 100,
+            "reducedMotion": false,
+            "screenReader": false,
+            "keyboardNavigation": false,
+            "focusIndicator": true,
+            "colorBlindness": 'none'
+        };
         setSettings(defaultSettings);
     };
 
@@ -75,10 +75,10 @@ export const AccessibilityPanel = (props) => {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    initial={{ opacity: 0, x: -300 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -300 }}
-                    className="fixed left-0 top-0 h-full w-80 bg-white dark:bg-gray-800 shadow-xl z-50"
+                    initial={{ "opacity": 0, "x": -300 }}
+                    animate={{ "opacity": 1, "x": 0 }}
+                    exit={{ "opacity": 0, "x": -300 }}
+                    className="fixed left-0 top-0 h-full w-80 bg-white "dark": bg-gray-800 shadow-xl z-50"
                 >
                     <div className="p-6">
                         <div className="flex items-center justify-between mb-6">
@@ -87,7 +87,7 @@ export const AccessibilityPanel = (props) => {
                             </h2>
                             <button
                                 onClick={onToggle}
-                                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                                className="text-gray-500 "hover": text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                             >
                                 ×
                             </button>
@@ -96,7 +96,7 @@ export const AccessibilityPanel = (props) => {
                         <div className="space-y-6">
                             {/* Font Size */}
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
                                     Font Size: {settings.fontSize}%
                                 </label>
                                 <input
@@ -118,7 +118,7 @@ export const AccessibilityPanel = (props) => {
                                         onChange={(e) => updateSetting('highContrast', e.target.checked)}
                                         className="mr-2"
                                     />
-                                    <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
+                                    <span className="text-sm text-gray-700 "dark": text-gray-300">High Contrast</span>
                                 </label>
                             </div>
 
@@ -131,7 +131,7 @@ export const AccessibilityPanel = (props) => {
                                         onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                                         className="mr-2"
                                     />
-                                    <span className="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>
+                                    <span className="text-sm text-gray-700 "dark": text-gray-300">Reduced Motion</span>
                                 </label>
                             </div>
 
@@ -144,14 +144,14 @@ export const AccessibilityPanel = (props) => {
                                         onChange={(e) => updateSetting('focusIndicator', e.target.checked)}
                                         className="mr-2"
                                     />
-                                    <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
+                                    <span className="text-sm text-gray-700 "dark": text-gray-300">Focus Indicators</span>
                                 </label>
                             </div>
 
                             {/* Reset Button */}
                             <button
                                 onClick={resetSettings}
-                                className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                                className="w-full px-4 py-2 bg-gray-200 "dark": bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                             >
                                 Reset to Default
                             </button>

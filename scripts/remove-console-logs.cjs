@@ -9,16 +9,14 @@ const { glob } = require('glob');
  * This helps improve performance and security
  */
 
-const CONSOLE_PATTERNS = [
-  /console\.log\([^)]*\);?/g,
+const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   // Keep console.error for debugging
 ];
 
-const EXCLUDE_PATTERNS = [
-  'node_modules',
+const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
   'dist',
   'build',
@@ -45,12 +43,12 @@ function removeConsoleStatements(content) {
       modifiedContent = modifiedContent.replace(pattern, '')}
   });
 
-  return { content: modifiedContent, removedCount }}
+  return { "content": modifiedContent, removedCount }}
 
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: newContent, removedCount } = removeConsoleStatements(content);
+    const { "content": newContent, removedCount } = removeConsoleStatements(content);
     
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
@@ -66,8 +64,7 @@ async function main() {
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
-  const patterns = [
-    `${srcDir}/**/*.{js,jsx,ts,tsx}`,
+  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
 
@@ -85,13 +82,13 @@ async function main() {
     }
   }
 
-  console.log(`\n📊 Summary:`);
+  console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements removed: ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-    console.log(`\n✨ Production build optimized!`)} else {
-    console.log(`\n✨ No console statements found to remove.`)}
+    console.log("\n✨ Production build optimized!")} else {
+    console.log("\n✨ No console statements found to remove.")}
 }
 
 if (require.main === module) {

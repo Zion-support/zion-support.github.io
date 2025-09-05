@@ -7,8 +7,7 @@ console.log('🔧 Fixing All Remaining Syntax Issues...');
 console.log('========================================');
 
 // List of all remaining problematic files
-const problematicFiles = [
-  'pages/docs/integration-examples.tsx',
+const problematicFiles = ['pages/docs/integration-examples.tsx',
   'pages/security.tsx',
   'pages/services-catalog.tsx',
   'pages/services-comparison.tsx',
@@ -17,23 +16,23 @@ const problematicFiles = [
 
 // Function to fix a file by rewriting it with proper content
 function fixFile(filePath) {
-  console.log(`\n🔍 Fixing: ${filePath}`);
+  console.log(`\n🔍 "Fixing": ${filePath}`);
   
   try {
     let content = '';
     
     if (filePath === 'pages/docs/integration-examples.tsx') {
-      content = `import React from 'react';
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Code, Zap, ExternalLink } from 'lucide-react';
 
 export default function IntegrationExamples() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
   return (
@@ -41,14 +40,14 @@ export default function IntegrationExamples() {
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
         <meta name="description" content="Real-world integration examples for Zion Tech Group's APIs and services." />
-        <link rel="canonical" href={\`\${contact.site}/docs/integration-examples\`} />
+        <link rel="canonical" href={\"\${contact.site}/docs/integration-examples\"} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -70,25 +69,25 @@ export default function IntegrationExamples() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic API Client</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-blue-400 text-sm">
-{\`class ZionTechAPI {
-  constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
+{\"class ZionTechAPI {
+  constructor(apiKey, baseURL = '"https": //api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
     this.baseURL = baseURL}
 
   async getServices() {
     try {
       const response = await fetch(\`\${this.baseURL}/services\`, {
-        headers: {
+        "headers": {
           'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
+        throw new Error(\`HTTP error! "status": \${response.status}\`)}
       
       return await response.json()} catch (error) {
-      console.error('Error fetching services:', error);
+      console.error('Error fetching "services": ', error);
       throw error}
   }
 }
@@ -96,7 +95,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\`}
+console.log(services);\"}
                   </pre>
                 </div>
               </div>
@@ -109,11 +108,11 @@ console.log(services);\`}
             <p className="text-gray-600 mb-6">
               Our technical team can help you integrate our services into your application.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get Integration Support
               </Link>
-              <a href={\`mailto:\${contact.email}\`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={\"mailto:\${contact.email}\"} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Technical Team
               </a>
             </div>
@@ -121,18 +120,17 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/security.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/security.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
 
 export default function Security() {
-  const securityMeasures = [
-    {
-      title: "Data Encryption",
-      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
-      icon: "🔐",
-      details: [
+  const securityMeasures = [{
+      "title": "Data Encryption",
+      "description": "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
+      "icon": "🔐",
+      "details": [
         "AES-256 encryption for data at rest",
         "TLS 1.3 for data in transit",
         "End-to-end encryption for sensitive communications",
@@ -140,22 +138,20 @@ export default function Security() {
       ]
     },
     {
-      title: "Access Control",
-      description: "Multi-layered access control system to ensure only authorized personnel can access sensitive data",
-      icon: "🔑",
-      details: [
-        "Multi-factor authentication (MFA)",
+      "title": "Access Control",
+      "description": "Multi-layered access control system to ensure only authorized personnel can access sensitive data",
+      "icon": "🔑",
+      "details": ["Multi-factor authentication (MFA)",
         "Role-based access control (RBAC)",
         "Regular access reviews and audits",
         "Zero-trust security model"
       ]
     },
     {
-      title: "Security Monitoring",
-      description: "24/7 security monitoring and threat detection to identify and respond to potential threats",
-      icon: "👁️",
-      details: [
-        "Real-time threat detection",
+      "title": "Security Monitoring",
+      "description": "24/7 security monitoring and threat detection to identify and respond to potential threats",
+      "icon": "👁️",
+      "details": ["Real-time threat detection",
         "Automated incident response",
         "Security information and event management (SIEM)",
         "Regular security assessments"
@@ -184,9 +180,9 @@ export default function Security() {
           </div>
 
           {/* Security Measures */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {securityMeasures.map((measure, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 "hover": shadow-xl transition-shadow">
                 <div className="text-4xl mb-4">{measure.icon}</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   {measure.title}
@@ -211,7 +207,7 @@ export default function Security() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Compliance & Certifications
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full p-4 mb-4 mx-auto w-16 h-16 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-blue-600" />
@@ -251,7 +247,7 @@ export default function Security() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Our security team is available to discuss our security measures and answer any questions you may have.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <a href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                 Contact Security Team
               </a>
@@ -263,8 +259,8 @@ export default function Security() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/services-catalog.tsx') {
-      content = `import React, { useState } from 'react';
+  )}"} else if (filePath === 'pages/services-catalog.tsx') {
+      content = "import React, { useState } from 'react';
 import Head from 'next/head';
 import { Search, Filter, Star } from 'lucide-react';
 
@@ -272,41 +268,39 @@ export default function ServicesCatalog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const services = [
-    {
-      id: 1,
-      name: 'Cloud Cost Guard (FinOps Assistant)',
-      category: 'micro-saas',
-      description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-      price: 'Starting at $299/month',
-      rating: 4.8,
-      features: ['Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support', 'Real-time Monitoring']
+  const services = [{
+      "id": 1,
+      "name": 'Cloud Cost Guard (FinOps Assistant)',
+      "category": 'micro-saas',
+      "description": 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+      "price": 'Starting at $299/month',
+      "rating": 4.8,
+      "features": ['Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support', 'Real-time Monitoring']
     },
     {
-      id: 2,
-      name: 'AI Content Generator',
-      category: 'ai-services',
-      description: 'Automated content creation using advanced AI models for blogs, social media, and marketing.',
-      price: 'Starting at $199/month',
-      rating: 4.9,
-      features: ['Content Generation', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Training']
+      "id": 2,
+      "name": 'AI Content Generator',
+      "category": 'ai-services',
+      "description": 'Automated content creation using advanced AI models for blogs, social media, and marketing.',
+      "price": 'Starting at $199/month',
+      "rating": 4.9,
+      "features": ['Content Generation', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Training']
     },
     {
-      id: 3,
-      name: 'DevOps Automation Suite',
-      category: 'it-services',
-      description: 'Complete CI/CD pipeline automation with monitoring and deployment tools.',
-      price: 'Starting at $399/month',
-      rating: 4.7,
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Auto-scaling']
+      "id": 3,
+      "name": 'DevOps Automation Suite',
+      "category": 'it-services',
+      "description": 'Complete CI/CD pipeline automation with monitoring and deployment tools.',
+      "price": 'Starting at $399/month',
+      "rating": 4.7,
+      "features": ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Auto-scaling']
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'micro-saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'micro-saas').length },
-    { id: 'ai-services', name: 'AI Services', count: services.filter(s => s.category === 'ai-services').length },
-    { id: 'it-services', name: 'IT Services', count: services.filter(s => s.category === 'it-services').length }
+  const categories = [{ "id": 'all', "name": 'All Services', "count": services.length },
+    { "id": 'micro-saas', "name": 'Micro SaaS', "count": services.filter(s => s.category === 'micro-saas').length },
+    { "id": 'ai-services', "name": 'AI Services', "count": services.filter(s => s.category === 'ai-services').length },
+    { "id": 'it-services', "name": 'IT Services', "count": services.filter(s => s.category === 'it-services').length }
   ];
 
   const filteredServices = services.filter(service => {
@@ -336,7 +330,7 @@ export default function ServicesCatalog() {
 
           {/* Search and Filters */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col "md": flex-row gap-6">
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -345,7 +339,7 @@ export default function ServicesCatalog() {
                     placeholder="Search services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -356,11 +350,11 @@ export default function ServicesCatalog() {
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      className={\`px-4 py-2 rounded-lg font-medium transition-colors \${
+                      className={\"px-4 py-2 rounded-lg font-medium transition-colors \${
                         selectedCategory === category.id
                           ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }\`}
+                          : 'bg-gray-100 text-gray-700 "hover": bg-gray-200'
+                      }\"}
                     >
                       {category.name} ({category.count})
                     </button>
@@ -371,9 +365,9 @@ export default function ServicesCatalog() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-6 "hover": shadow-xl transition-shadow">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
                     {service.category}
@@ -393,7 +387,7 @@ export default function ServicesCatalog() {
                 </p>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key "Features": </h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center">
@@ -408,7 +402,7 @@ export default function ServicesCatalog() {
                   <span className="text-lg font-semibold text-blue-600">
                     {service.price}
                   </span>
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors">
                     Learn More
                   </button>
                 </div>
@@ -424,43 +418,42 @@ export default function ServicesCatalog() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/services-comparison.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/services-comparison.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import { CheckCircle, XCircle, Star } from 'lucide-react';
 
 export default function ServicesComparison() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
-  const serviceCategories = [
-    {
-      name: 'Micro SaaS Products',
-      count: '150+',
-      description: 'Focused software solutions for specific business needs',
-      features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'],
-      pricing: 'Starting at $99/month',
-      bestFor: 'Small to medium businesses'
+  const serviceCategories = [{
+      "name": 'Micro SaaS Products',
+      "count": '150+',
+      "description": 'Focused software solutions for specific business needs',
+      "features": ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'],
+      "pricing": 'Starting at $99/month',
+      "bestFor": 'Small to medium businesses'
     },
     {
-      name: 'AI Services',
-      count: '100+',
-      description: 'Artificial intelligence solutions to automate and optimize processes',
-      features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics'],
-      pricing: 'Starting at $199/month',
-      bestFor: 'Data-driven organizations'
+      "name": 'AI Services',
+      "count": '100+',
+      "description": 'Artificial intelligence solutions to automate and optimize processes',
+      "features": ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics'],
+      "pricing": 'Starting at $199/month',
+      "bestFor": 'Data-driven organizations'
     },
     {
-      name: 'IT Services',
-      count: '100+',
-      description: 'Comprehensive IT infrastructure and support services',
-      features: ['Cloud migration', 'System administration', 'Security audits', 'Technical support'],
-      pricing: 'Starting at $299/month',
-      bestFor: 'Large enterprises'
+      "name": 'IT Services',
+      "count": '100+',
+      "description": 'Comprehensive IT infrastructure and support services',
+      "features": ['Cloud migration', 'System administration', 'Security audits', 'Technical support'],
+      "pricing": 'Starting at $299/month',
+      "bestFor": 'Large enterprises'
     }
   ];
 
@@ -552,9 +545,9 @@ export default function ServicesComparison() {
           </div>
 
           {/* Detailed Comparison */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 "hover": shadow-xl transition-shadow">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {category.name}
@@ -568,7 +561,7 @@ export default function ServicesComparison() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Key "Features": </h4>
                   <ul className="space-y-2">
                     {category.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-700">
@@ -580,7 +573,7 @@ export default function ServicesComparison() {
                 </div>
 
                 <div className="text-center">
-                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg "hover": bg-blue-700 transition-colors font-semibold">
                     Learn More
                   </button>
                 </div>
@@ -596,7 +589,7 @@ export default function ServicesComparison() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Our experts can help you choose the right services for your specific needs and budget.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <a href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                 Get Personalized Recommendation
               </a>
@@ -608,40 +601,39 @@ export default function ServicesComparison() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/services-overview.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/services-overview.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import { Zap, Users, Shield, ArrowRight } from 'lucide-react';
 
 export default function ServicesOverview() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
-      count: '150+',
-      description: 'Focused software solutions for specific business needs',
-      icon: <Zap className="w-8 h-8" />,
-      features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding']
+  const serviceCategories = [{
+      "title": 'Micro SaaS Products',
+      "count": '150+',
+      "description": 'Focused software solutions for specific business needs',
+      "icon": <Zap className="w-8 h-8" />,
+      "features": ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding']
     },
     {
-      title: 'AI Services',
-      count: '100+',
-      description: 'Artificial intelligence solutions to automate and optimize processes',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics']
+      "title": 'AI Services',
+      "count": '100+',
+      "description": 'Artificial intelligence solutions to automate and optimize processes',
+      "icon": <Users className="w-8 h-8" />,
+      "features": ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics']
     },
     {
-      title: 'IT Services',
-      count: '100+',
-      description: 'Comprehensive IT infrastructure and support services',
-      icon: <Shield className="w-8 h-8" />,
-      features: ['Cloud migration', 'System administration', 'Security audits', 'Technical support']
+      "title": 'IT Services',
+      "count": '100+',
+      "description": 'Comprehensive IT infrastructure and support services',
+      "icon": <Shield className="w-8 h-8" />,
+      "features": ['Cloud migration', 'System administration', 'Security audits', 'Technical support']
     }
   ];
 
@@ -653,18 +645,18 @@ export default function ServicesOverview() {
         <meta name="keywords" content="services overview, micro SaaS, AI services, IT solutions, technology services, enterprise solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={\`\${contact.site}/services-overview\`} />
-        <meta property="og:title" content="Services Overview - Zion Tech Group" />
+        <link rel="canonical" href={\"\${contact.site}/services-overview\"} />
+        <meta property=""og": title" content="Services Overview - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive overview of Zion Tech Group's 350+ innovative services including micro SaaS products, AI services, and IT solutions." />
-        <meta property="og:url" content={\`\${contact.site}/services-overview\`} />
-        <meta property="og:type" content="website" />
+        <meta property=""og": url" content={\"\${contact.site}/services-overview\"} />
+        <meta property=""og": type" content="website" />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl "md": text-5xl font-extrabold tracking-tight mb-6">
               Services Overview
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -679,12 +671,12 @@ export default function ServicesOverview() {
         {/* Service Categories */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl "md": text-4xl font-bold text-center mb-12">
               Our Service Categories
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
+                <div key={index} className="bg-slate-800 rounded-lg p-8 "hover": bg-slate-700 transition-colors">
                   <div className="text-blue-400 mb-4">
                     {category.icon}
                   </div>
@@ -705,7 +697,7 @@ export default function ServicesOverview() {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg "hover": bg-blue-700 transition-colors font-semibold">
                     Explore Services
                   </button>
                 </div>
@@ -717,7 +709,7 @@ export default function ServicesOverview() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
@@ -736,7 +728,7 @@ export default function ServicesOverview() {
         </section>
       </main>
     </>
-  )}`}
+  )}"}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');

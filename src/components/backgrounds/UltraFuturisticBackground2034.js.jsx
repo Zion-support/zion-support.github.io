@@ -37,7 +37,7 @@ const particles = []"
 
             particles.push({}
 
-                x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2, size: Math.random() * 3 + 1, opacity: Math.random() * 0.5 + 0.3, color: selectedColors[Math.floor(Math.random() * selectedColors.length)]})}>
+                "x": Math.random() * canvas.width, "y": Math.random() * canvas.height, "vx": (Math.random() - 0.5) * 2, "vy": (Math.random() - 0.5) * 2, "size": Math.random() * 3 + 1, "opacity": Math.random() * 0.5 + 0.3, "color": selectedColors[Math.floor(Math.random() * selectedColors.length)]})}>
         const animate = (props) => {}
 
             ctx.clearRect()
@@ -152,8 +152,8 @@ cancelAnimationFrame(animationRef.current)}'
             window.removeEventListener('resize', handleResize)}};, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
   {}
-            opacity: intensity, "
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
+            "opacity": intensity, "
+  "filter": theme === 'quantum' ? 'blur(0.5px)' : 'none'
 }} />)};
 export default UltraFuturisticBackground2034;
 

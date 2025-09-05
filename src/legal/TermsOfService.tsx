@@ -5,7 +5,7 @@ const TermsOfService = (props) => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
           <p className="text-zion-slate-light text-lg">
-            Last updated: {new Date().toLocaleDateString()};
+            Last "updated": {new Date().toLocaleDateString()};
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const TermsOfService = (props) => {
       </section>
 
       <div className="mt-12 text-center">
-        <a href="/" className="text-indigo-400 hover:text-indigo-300 font-medium">
+        <a href="/" className="text-indigo-400 "hover": text-indigo-300 font-medium">
           ← Back to Home
         </a>
       </div>

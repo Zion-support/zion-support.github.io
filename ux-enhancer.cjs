@@ -8,8 +8,7 @@ class UXEnhancer {
 
   async addAccessibilityFeatures() {
     const accessibilityConfig = {
-      features: [
-        'ARIA labels',
+      "features": ['ARIA labels',
         'Keyboard navigation',
         'Screen reader support',
         'High contrast mode',
@@ -22,13 +21,12 @@ class UXEnhancer {
 
   async addResponsiveDesign() {
     const responsiveConfig = {
-      breakpoints: {
+      "breakpoints": {
         mobile: '768px',
-        tablet: '1024px',
-        desktop: '1200px'
+        "tablet": '1024px',
+        "desktop": '1200px'
       },
-      features: [
-        'Mobile-first design',
+      "features": ['Mobile-first design',
         'Flexible grid system',
         'Responsive images',
         'Touch-friendly interfaces'
@@ -40,8 +38,8 @@ class UXEnhancer {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      improvements: this.improvements
+      "timestamp": new Date().toISOString(),
+      "improvements": this.improvements
    };
     
     fs.writeFileSync('ux-enhancement-report.json', JSON.stringify(report, null, 2));

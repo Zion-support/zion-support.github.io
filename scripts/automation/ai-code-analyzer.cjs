@@ -19,13 +19,13 @@ class AICodeAnalyzer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -40,15 +40,15 @@ class AICodeAnalyzer {
         try {
             // Run ESLint analysis
             const eslintResult = execSync('npm run lint', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             this.log('ESLint analysis completed successfully');
-            return { eslint: 'passed', output: eslintResult }} catch (error) {
-            this.log(`ESLint analysis failed: ${error.message}`);
-            return { eslint: 'failed', output: error.stdout || error.message }}
+            return { "eslint": 'passed', "output": eslintResult }} catch (error) {
+            this.log(`ESLint analysis "failed": ${error.message}`);
+            return { "eslint": 'failed', "output": error.stdout || error.message }}
     }
 
     analyzeTypeScript() {
@@ -56,15 +56,15 @@ class AICodeAnalyzer {
         
         try {
             const typeCheckResult = execSync('npm run type-check', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             this.log('TypeScript analysis completed successfully');
-            return { typescript: 'passed', output: typeCheckResult }} catch (error) {
-            this.log(`TypeScript analysis failed: ${error.message}`);
-            return { typescript: 'failed', output: error.stdout || error.message }}
+            return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {
+            this.log(`TypeScript analysis "failed": ${error.message}`);
+            return { "typescript": 'failed', "output": error.stdout || error.message }}
     }
 
     analyzeDependencies() {
@@ -72,35 +72,35 @@ class AICodeAnalyzer {
         
         try {
             const auditResult = execSync('npm audit --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
             
             return {;
-                vulnerabilities: auditData.vulnerabilities?.total || 0,
-                dependencies: auditData.metadata?.dependencies || 0,
-                devDependencies: auditData.metadata?.devDependencies || 0
+                "vulnerabilities": auditData.vulnerabilities?.total || 0,
+                "dependencies": auditData.metadata?.dependencies || 0,
+                "devDependencies": auditData.metadata?.devDependencies || 0
             }} catch (error) {
-            this.log(`Dependency analysis failed: ${error.message}`);
-            return { error: error.message }}
+            this.log(`Dependency analysis "failed": ${error.message}`);
+            return { "error": error.message }}
     }
 
     generateReport() {
         this.log('Generating comprehensive analysis report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            analysis: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "analysis": {
                 codeQuality: this.analyzeCodeQuality(),
-                typeScript: this.analyzeTypeScript(),
-                dependencies: this.analyzeDependencies()
+                "typeScript": this.analyzeTypeScript(),
+                "dependencies": this.analyzeDependencies()
             },
-            recommendations: this.generateRecommendations()
+            "recommendations": this.generateRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -124,7 +124,7 @@ class AICodeAnalyzer {
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
             return report} catch (error) {
-            this.log(`AI Code Analyzer failed: ${error.message}`);
+            this.log(`AI Code Analyzer "failed": ${error.message}`);
             throw error}
     }
 }

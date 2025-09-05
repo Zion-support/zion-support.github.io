@@ -6,8 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
-const corruptedFiles = [
-  // Main pages directory;
+const corruptedFiles = [// Main pages directory;
   "src/pages/InnovativeServicesShowcase2025.tsx",
   "src/pages/InnovativeServicesShowcase2026.tsx",
   "src/pages/InnovativeServicesShowcase2028.tsx",
@@ -172,9 +171,8 @@ const ${componentName} = () => {
         <title>${displayName} - Zion Tech Group</title>;
         <meta name="description" content="Professional ${displayName} services" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">;
           <div className="text-center">;
             <h1 className="text-4xl font-bold text-gray-900 mb-8">;
               ${displayName}
@@ -182,8 +180,7 @@ const ${componentName} = () => {
             <p className="text-xl text-gray-600 mb-12">;
               Professional ${displayName} services and solutions;
             </p>;
-            ;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+            <div className="grid "md": grid-cols-2 gap-8 mb-12">;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -193,7 +190,6 @@ const ${componentName} = () => {
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              ;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -204,7 +200,6 @@ const ${componentName} = () => {
                 </ul>;
               </div>;
             </div>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;

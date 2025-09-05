@@ -31,56 +31,54 @@ const Header = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
-    {
-      icon: Brai n,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent solutions for business automation',
-      href: '/services/ai-solutions',
-      color: 'from-purple-500 to-pink-500'
+  const services = [{
+      "icon": Brai n,
+      "title": 'AI & Machine Learning',
+      "description": 'Intelligent solutions for business automation',
+      "href": '/services/ai-solutions',
+      "color": 'from-purple-500 to-pink-500'
     },
     {
-      icon: Shiel d,
-      title: 'Cybersecurity',
-      description: 'Advanced security and threat protection',
-      href: '/services/cybersecurity',
-      color: 'from-red-500 to-orange-500'
+      "icon": Shiel d,
+      "title": 'Cybersecurity',
+      "description": 'Advanced security and threat protection',
+      "href": '/services/cybersecurity',
+      "color": 'from-red-500 to-orange-500'
     },
     {
-      icon: Clou d,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and migration',
-      href: '/services/cloud-infrastructure',
-      color: 'from-blue-500 to-cyan-500'
+      "icon": Clou d,
+      "title": 'Cloud Infrastructure',
+      "description": 'Scalable cloud solutions and migration',
+      "href": '/services/cloud-infrastructure',
+      "color": 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Cod e,
-      title: 'Blockchain & Web3',
-      description: 'Decentralized applications and smart contracts',
-      href: '/services/blockchain-web3',
-      color: 'from-indigo-500 to-purple-500'
+      "icon": Cod e,
+      "title": 'Blockchain & Web3',
+      "description": 'Decentralized applications and smart contracts',
+      "href": '/services/blockchain-web3',
+      "color": 'from-indigo-500 to-purple-500'
     },
     {
-      icon: Buildin g,
-      title: 'Smart City Solutions',
-      description: 'AI-powered urban management systems',
-      href: '/services/smart-city',
-      color: 'from-green-500 to-blue-500'
+      "icon": Buildin g,
+      "title": 'Smart City Solutions',
+      "description": 'AI-powered urban management systems',
+      "href": '/services/smart-city',
+      "color": 'from-green-500 to-blue-500'
     },
     {
-      icon: Za p,
-      title: 'Quantum Computing',
-      description: 'Next-generation computational power',
-      href: '/services/quantum-computing',
-      color: 'from-yellow-500 to-orange-500'
+      "icon": Za p,
+      "title": 'Quantum Computing',
+      "description": 'Next-generation computational power',
+      "href": '/services/quantum-computing',
+      "color": 'from-yellow-500 to-orange-500'
     };
   ];
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services', hasDropdown: tru e },
-    { name: 'Contact', href: '/contact' };
+  const navigation = [{ "name": 'Home', "href": '/' },
+    { "name": 'About', "href": '/about' },
+    { "name": 'Services', "href": '/services', "hasDropdown": tru e },
+    { "name": 'Contact', "href": '/contact' };
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -103,7 +101,7 @@ const Header = (props) => {
               className="flex items-center space-x-3 group"
               onClick={closeMenu}
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover: scal e-110 transition-transform duration-200">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-"hover": scal e-110 transition-transform duration-200">
                 <Globe className="w-6 h-6 text-white"  />
               </div>
               <div>
@@ -113,7 +111,7 @@ const Header = (props) => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg: flex items-center space-x-8">
+            <nav className="hidden "lg": flex items-center space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
@@ -126,7 +124,7 @@ const Header = (props) => {
                         className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
                           location.pathname.startsWith('/services')';';
                             ? 'text-cyan-400 bg-cyan-400/10'
-                            : 'text-gray-300 hover: tex t-cyan-400 hover: b g-cyan-400/5'
+                            : 'text-gray-300 "hover": tex t-cyan-400 hover: b g-cyan-400/5'
                         }`}
                       >
                         <span>{item.name}</span>
@@ -136,10 +134,10 @@ const Header = (props) => {
                       <AnimatePresence>
                         {isServicesOpen && (
                           <motion.div
-                            initial={{ opacity: 0, y: 1 0 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 1 0 }}
-                            transition={{ duration: 0.2 }}
+                            initial={{ "opacity": 0, "y": 1 0 }}
+                            animate={{ "opacity": 1, "y": 0 }}
+                            exit={{ "opacity": 0, "y": 1 0 }}
+                            transition={{ "duration": 0.2 }}
                             className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-xl"
                           >
                             <div className="p-4">
@@ -148,14 +146,14 @@ const Header = (props) => {
                                   <Link
                                     key={service.title}
                                     to={service.href}
-                                    className="flex items-start space-x-3 p-3 rounded-lg hover: b g-white/5 transition-colors duration-200 group"
+                                    className="flex items-start space-x-3 p-3 rounded-lg "hover": b g-white/5 transition-colors duration-200 group"
                                     onClick={() => setIsServicesOpen(false)}
                                   >
-                                    <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover: scal e-110 transition-transform duration-200`}>
+                                    <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-"hover": scal e-110 transition-transform duration-200`}>
                                       <service.icon className="w-5 h-5 text-white" />
                                     </div>
                                     <div className="flex-1">
-                                      <div className="text-white font-medium group-hover: tex t-cyan-400 transition-colors">
+                                      <div className="text-white font-medium group-"hover": tex t-cyan-400 transition-colors">
                                         {service.title}
                                       </div>
                                       <div className="text-sm text-gray-400">
@@ -168,7 +166,7 @@ const Header = (props) => {
                               <div className="mt-4 pt-4 border-t border-white/10">
                                 <Link
                                   to="/services"
-                                  className="block text-center py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: fro m-cyan-600 hover: t o-blue-600 transition-all duration-200"
+                                  className="block text-center py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg "hover": fro m-cyan-600 hover: t o-blue-600 transition-all duration-200"
                                   onClick={() => setIsServicesOpen(false)}
                                 >
                                   View All Services
@@ -185,7 +183,7 @@ const Header = (props) => {
                       className={`px-3 py-2 rounded-lg transition-colors duration-200 ${
                         location.pathname === item.href';';
                           ? 'text-cyan-400 bg-cyan-400/10'
-                          : 'text-gray-300 hover: tex t-cyan-400 hover: b g-cyan-400/5'
+                          : 'text-gray-300 "hover": tex t-cyan-400 hover: b g-cyan-400/5'
                       }`}
                       onClick={closeMenu}
                     >
@@ -197,7 +195,7 @@ const Header = (props) => {
             </nav>
 
             {/* Contact Info & CTA */}
-            <div className="hidden lg: flex items-center space-x-4">
+            <div className="hidden "lg": flex items-center space-x-4">
               <div className="flex items-center space-x-4 text-sm text-gray-300">
                 <a
                   href="tel:+13024640950"
@@ -225,7 +223,7 @@ const Header = (props) => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg: hidden p-2 text-gray-300 hover: tex t-cyan-400 transition-colors"
+              className=""lg": hidden p-2 text-gray-300 hover: tex t-cyan-400 transition-colors"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6"  />
@@ -240,11 +238,11 @@ const Header = (props) => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div';
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg: hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10"
+              initial={{ "opacity": 0, "height": 0 }}
+              animate={{ "opacity": 1, "height": 'auto' }}
+              exit={{ "opacity": 0, "height": 0 }}
+              transition={{ "duration": 0.3 }}
+              className=""lg": hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10"
             >
               <div className="container mx-auto px-4 py-6">
                 <nav className="space-y-4">
@@ -254,7 +252,7 @@ const Header = (props) => {
                         <div>
                           <button
                             onClick={() => setIsServicesOpen(!isServicesOpen)}
-                            className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: tex t-cyan-400 transition-colors"
+                            className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 "hover": tex t-cyan-400 transition-colors"
                           >
                             <span>{item.name}</span>
                             <ChevronDown className={`w-4 h-4 transition-transform ${
@@ -265,17 +263,17 @@ const Header = (props) => {
                           <AnimatePresence>
                             {isServicesOpen && (
                               <motion.div';
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.2 }}
+                                initial={{ "opacity": 0, "height": 0 }}
+                                animate={{ "opacity": 1, "height": 'auto' }}
+                                exit={{ "opacity": 0, "height": 0 }}
+                                transition={{ "duration": 0.2 }}
                                 className="mt-2 pl-4 space-y-2"
                               >
                                 {services.map((service) => (
                                   <Link
                                     key={service.title}
                                     to={service.href}
-                                    className="block px-3 py-2 text-sm text-gray-400 hover: tex t-cyan-400 transition-colors"
+                                    className="block px-3 py-2 text-sm text-gray-400 "hover": tex t-cyan-400 transition-colors"
                                     onClick={closeMenu}
                                   >
                                     {service.title}
@@ -298,7 +296,7 @@ const Header = (props) => {
                           className={`block px-3 py-2 rounded-lg transition-colors ${
                             location.pathname === item.href';';
                               ? 'text-cyan-400 bg-cyan-400/10'
-                              : 'text-gray-300 hover: tex t-cyan-400'
+                              : 'text-gray-300 "hover": tex t-cyan-400'
                           }`}
                           onClick={closeMenu}
                         >
@@ -313,7 +311,7 @@ const Header = (props) => {
                 <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
                   <div className="space-y-2">
                     <a
-                      href="tel:+13024640950"
+                      href=""tel": +13024640950"
                       className="flex items-center space-x-2 text-gray-300 hover: tex t-cyan-400 transition-colors"
                     >
                       <Phone className="w-4 h-4"  />

@@ -14,18 +14,18 @@ class MasterAutomationSuite {
     this.logDir = 'automation-reports';
     this.timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     this.masterResults = {
-      timestamp: this.timestamp,
-      suite: 'master-automation',
-      status: 'running',
-      phases: [],
-      summary: {}
+      "timestamp": this.timestamp,
+      "suite": 'master-automation',
+      "status": 'running',
+      "phases": [],
+      "summary": {}
     };
     
     this.ensureLogDir()}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true })}
+      fs.mkdirSync(this.logDir, { "recursive": true })}
   }
 
   log(message, level = 'info') {
@@ -37,20 +37,20 @@ class MasterAutomationSuite {
     this.log(`🔄 Running ${description}...`);
     
     const phaseResult = {
-      name: phaseName,
+      "name": phaseName,
       description,
-      startTime: new Date().toISOString(),
-      status: 'running',
-      output: '',
-      error: '',
-      duration: 0
+      "startTime": new Date().toISOString(),
+      "status": 'running',
+      "output": '',
+      "error": '',
+      "duration": 0
     };
 
     try {
       const startTime = Date.now();
       const output = execSync(`node "${phaseScript}"`, { 
-        encoding: 'utf8',
-        timeout: 600000 // 10 minutes timeout
+        "encoding": 'utf8',
+        "timeout": 600000 // 10 minutes timeout
       });
       
       const endTime = Date.now();
@@ -66,7 +66,7 @@ class MasterAutomationSuite {
       phaseResult.error = error.message;
       phaseResult.endTime = new Date().toISOString();
       
-      this.log(`❌ ${description} failed: ${error.message}`, 'error')}
+      this.log(`❌ ${description} "failed": ${error.message}`, 'error')}
 
     this.masterResults.phases.push(phaseResult);
     return phaseResult}
@@ -75,36 +75,35 @@ class MasterAutomationSuite {
     this.log('🚀 Starting Master Automation Suite');
     this.log('===================================');
 
-    const phases = [
-      {
-        name: 'enhanced-orchestrator',
-        script: 'scripts/enhanced-automation-orchestrator.cjs',
-        description: 'Enhanced Automation Orchestrator'
+    const phases = [{
+        "name": 'enhanced-orchestrator',
+        "script": 'scripts/enhanced-automation-orchestrator.cjs',
+        "description": 'Enhanced Automation Orchestrator'
       },
       {
-        name: 'continuous-integration',
-        script: 'scripts/continuous-integration.cjs',
-        description: 'Continuous Integration Pipeline'
+        "name": 'continuous-integration',
+        "script": 'scripts/continuous-integration.cjs',
+        "description": 'Continuous Integration Pipeline'
       },
       {
-        name: 'monitoring-dashboard',
-        script: 'scripts/monitoring-dashboard.cjs',
-        description: 'Monitoring Dashboard'
+        "name": 'monitoring-dashboard',
+        "script": 'scripts/monitoring-dashboard.cjs',
+        "description": 'Monitoring Dashboard'
       },
       {
-        name: 'security-audit',
-        script: 'scripts/security-audit.cjs',
-        description: 'Security Audit'
+        "name": 'security-audit',
+        "script": 'scripts/security-audit.cjs',
+        "description": 'Security Audit'
       },
       {
-        name: 'performance-monitor',
-        script: 'scripts/performance-monitor.cjs',
-        description: 'Performance Monitoring'
+        "name": 'performance-monitor',
+        "script": 'scripts/performance-monitor.cjs',
+        "description": 'Performance Monitoring'
       },
       {
-        name: 'code-quality-monitor',
-        script: 'scripts/code-quality-monitor.cjs',
-        description: 'Code Quality Analysis'
+        "name": 'code-quality-monitor',
+        "script": 'scripts/code-quality-monitor.cjs',
+        "description": 'Code Quality Analysis'
       }
     ];
 
@@ -123,7 +122,7 @@ class MasterAutomationSuite {
     const totalCount = this.masterResults.phases.length;
     
     this.log('🏁 Master Automation Suite completed');
-    this.log(`📊 Results: ${successCount}/${totalCount} phases successful`);
+    this.log(`📊 "Results": ${successCount}/${totalCount} phases successful`);
     
     this.masterResults.status = successCount >= totalCount * 0.8 ? 'success' : 'partial';
     return this.masterResults}
@@ -137,17 +136,17 @@ class MasterAutomationSuite {
       this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0) / this.masterResults.phases.length : 0;
 
     this.masterResults.summary = {
-      totalPhases: totalCount,
-      successfulPhases: successCount,
-      failedPhases: totalCount - successCount,
-      successRate: totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) + '%' : '0%',
-      averageDuration: Math.round(averageDuration),
-      totalDuration: this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0),
-      recommendations: this.generateMasterRecommendations()
+      "totalPhases": totalCount,
+      "successfulPhases": successCount,
+      "failedPhases": totalCount - successCount,
+      "successRate": totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) + '%' : '0%',
+      "averageDuration": Math.round(averageDuration),
+      "totalDuration": this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0),
+      "recommendations": this.generateMasterRecommendations()
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(this.masterResults, null, 2));
-    this.log(`📄 Master automation report saved to: ${reportPath}`)}
+    this.log(`📄 Master automation report saved "to": ${reportPath}`)}
 
   generateMasterRecommendations() {
     const recommendations = [];
@@ -176,7 +175,7 @@ if (require.main === module) {
     .then(results => {
       process.exit(results.status === 'success' ? 0 : 1)})
     .catch(error => {
-      console.error('Fatal error:', error);
+      console.error('Fatal "error": ', error);
       process.exit(1)})}
 
 module.exports = MasterAutomationSuite;

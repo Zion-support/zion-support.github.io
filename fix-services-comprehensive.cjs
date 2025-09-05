@@ -22,10 +22,10 @@ class ServicesComprehensiveFixer {
       content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n  }');
       
       // Fix missing commas after object properties
-      content = content.replace(/(\w+):\s*'([^']*)'\s*\n/g, "$1: '$2',\n");
-      content = content.replace(/(\w+):\s*"([^"]*)"\s*\n/g, '$1: "$2",\n');
-      content = content.replace(/(\w+):\s*(\d+)\s*\n/g, '$1: $2,\n');
-      content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$1: $2,\n');
+      content = content.replace(/(\w+):\s*'([^']*)'\s*\n/g, "$"1": '$2',\n");
+      content = content.replace(/(\w+):\s*"([^"]*)"\s*\n/g, '$"1": "$2",\n');
+      content = content.replace(/(\w+):\s*(\d+)\s*\n/g, '$"1": $2,\n');
+      content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$"1": $2,\n');
       
       // Fix missing commas in arrays
       content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, "'$1',\n      '$2'");
@@ -44,7 +44,7 @@ class ServicesComprehensiveFixer {
       content = content.replace(/,(\s*[}\]])/g, '$1');
       
       // Fix specific patterns
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $2:');
+      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2": ');
       content = content.replace(/(\w+)\s*\n\s*]/g, '$1\n  ]');
       content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n}');
       
@@ -52,7 +52,7 @@ class ServicesComprehensiveFixer {
       this.log('✅ Comprehensive fix applied to data/services.ts');
       
       return true} catch (error) {
-      this.log(`❌ Error fixing services file: ${error.message}`);
+      this.log(`❌ Error fixing services "file": ${error.message}`);
       return false}
   }
 }

@@ -7,13 +7,13 @@ export default function AISalesForecastingInventory() {
       <Head>
         <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Demand forecasting with ML, automated replenishment, and pricing optimization for retail, ecommerce, and B2B." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-sales-forecasting-inventory" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/services/ai-sales-forecasting-inventory" />
       </Head>
       <main className="min-h-screen bg-white">
         <section className="mx-auto max-w-5xl px-6 py-14">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1>
           <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning, dynamic safety stock, and automated purchase recommendations.</p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid "md": grid-cols-2 gap-8">
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Capabilities</h2>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -39,11 +39,11 @@ export default function AISalesForecastingInventory() {
           </div>
           <div className="mt-10 p-5 border rounded-xl bg-gray-50">
             <h3 className="font-semibold mb-2">Talk to us</h3>
-            <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+            <p className="text-gray-700">"Phone": <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
             <p className="text-gray-700">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             <div className="mt-4 flex gap-3">
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link>
-              <a href="https://ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
+              <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
             </div>
           </div>
         </section>

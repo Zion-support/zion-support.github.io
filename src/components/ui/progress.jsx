@@ -6,7 +6,7 @@ const Progress = React.forwardRef(({className, value, max = 100, ...props};, ref
   return (
     <div className="min-h-screen bg-white">
       <div className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"
-        style="{{{ width: `${percentage}}"%` }}
+        style="{{{ "width": `${percentage}}"%` }}
        />
     </div>
   );

@@ -10,11 +10,11 @@ export default function Page($1) {
 
   // Combine all services
   ';';
-      source: 'innovative',
-      category: servic e.category,;';
-      features: servic e.features || [],;';';
-      ctaLabel: servic e.ctaLabel || 'Get Started',;';';
-      href: servic e.href || '/contact'}) ) ;  ];
+      "source": 'innovative',
+      "category": servic e.category,;';
+      "features": servic e.features || [],;';';
+      "ctaLabel": servic e.ctaLabel || 'Get Started',;';';
+      "href": servic e.href || '/contact'}) ) ;  ];
 
   // Filter services based on search and category
 
@@ -29,27 +29,23 @@ export default function Page($1) {
       case 'name':;';
         return a.title.localeCompare(b.title);
       case 'price':;';';
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
+        return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g));      case 'category':;
         return a.category.localeCompare(b.category) ;
-      default:;
+      "default": ;
         return 0}
-  });
-
-  ;';';
+  });';';
 '
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',
-  ;';
-  ;';';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
+  "phone": '+1 302 464 0950','
+    "email": 'kleber@ziontechgroup.com',
+  ;';';';
+  "address": '364 E Main St STE 1008 Middletown DE 19709';
 
 };';
 
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
     return 'High'};
-      default: retur n 'text-white'}
+      "default": retur n 'text-white'}
   };';
 
       'Robotics & Automation': Cpu,;';';
@@ -72,24 +68,24 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 3 0 }}
-          transition={{ duration: 0.8 }}"
+} : { "opacity": 0, "y": 3 0 }}
+          transition={{ "duration": 0.8 }}"
           className="text-center mb-16"
 "
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">"
             <Calculator className="w-5 h-5 text-zion-cyan mr-2"   />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
           </div>
 "
-          <h2 className="text-4xl md: tex t-6xl font-bold text-white mb-6">"
+          <h2 className="text-4xl "md": tex t-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Comprehensive
             </span>
@@ -106,26 +102,26 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 2 0 }}
+} : { "opacity": 0, "y": 2 0 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
+  { "duration": 0.8,
+  "delay": 0.2
 
 }}"
           className="mb-12"
 "
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">"
-            <div className="grid grid-cols-1 md: gri d-cols-4 gap-4">
+            <div className="grid grid-cols-1 "md": gri d-cols-4 gap-4">
               {/* Search */}"
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"   />
@@ -133,7 +129,7 @@ export default function Page($1) {
                   type="text"
                   placeholder="Search services..."                  value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
-                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 "focus": outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
                 />
               </div>
 
@@ -141,7 +137,7 @@ export default function Page($1) {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white "focus": outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
               >
                 {categories.map(category  => ("
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
@@ -153,7 +149,7 @@ export default function Page($1) {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}"
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white "focus": outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
               >
                 {priceRanges.map(range  => ("
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
@@ -165,7 +161,7 @@ export default function Page($1) {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white "focus": outlin e-none focus: borde r-zion-cyan/40 focus: rin g-2 focus: rin g-zion-cyan/20"
 "
                 <option value="name" className="bg-zion-slate-dark text-white">Sort by Name</option>"
                 <option value="price" className="bg-zion-slate-dark text-white">Sort by Price</option>"
@@ -188,47 +184,47 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0 }}          animate = {
+  { "opacity": 0,
+  "y": 3 0 }}          animate = {
 
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 3 0 }}          transition = {
+  isVisible ? { "opacity": 1,;
+  "y": 0 } : { "opacity": 0, "y": 3 0 }}          transition = {
 
-  { duration: 0.8,
-  delay: 0.4 }}"          className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16"
+  { "duration": 0.8,
+  "delay": 0.4 }}"          className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index) => (;
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
               animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 2 0 }}
+} : { "opacity": 0, "y": 2 0 }}
               transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.05
+  { "duration": 0.6,
+  "delay": inde x * 0.05
 
 }}"
               className="group relative"
 "
-              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover: scal e-105 hover: borde r-zion-cyan/40 hover: shado w-2xl hover: shado w-zion-cyan/25">
+              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 "hover": scal e-105 hover: borde r-zion-cyan/40 hover: shado w-2xl hover: shado w-zion-cyan/25">
                 {/* Service Header */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
                     <div className="flex items-center gap-2 mb-2">"
-                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 text-zion-cyan" })}"
+                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { "className": "w-4 h-4 text-zion-cyan" })}"
                       <span className="text-zion-cyan text-xs font-medium">{service.category}</span>
                     </div>"
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>"
                     <p className="text-gray-300 text-sm leading-relaxed">
@@ -258,8 +254,8 @@ export default function Page($1) {
 
                 {/* Pricing & Billing */}"
                 <div className="mb-4">"
-                  <div className="flex items-center justify-between">`
-                    <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
+                  <div className="flex items-center justify-between">"
+                    <div className={"text-2xl font-bold ${getPriceColor(service.price)}"}>
                       {service.price}
                     </div>";
                     <divclassName="text-gray-400 text-sm">';
@@ -288,10 +284,10 @@ export default function Page($1) {
                 <a href={service.href}"
                   target={service.external ? "_blank" : "_self"}"
                   rel={service.external ? "noopener noreferrer" : "}"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                   {service.ctaLabel}"
-                  <ArrowRight className="w-4 h-4 group-hover: translat e-x-1 transition-transform duration-300"   />"
+                  <ArrowRight className="w-4 h-4 group-"hover": translat e-x-1 transition-transform duration-300"   />"
                   {service.external && <ExternalLink className="w-4 h-4"   />}                </a>
               </div>
             </motion.div>) ) }
@@ -301,14 +297,14 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0 }}          animate = {
+  { "opacity": 0,
+  "y": 3 0 }}          animate = {
 
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 3 0 }}          transition = {
+  isVisible ? { "opacity": 1,;
+  "y": 0 } : { "opacity": 0, "y": 3 0 }}          transition = {
 
-  { duration: 0.8,
-  delay: 0.6 }}"          className="text-center"
+  { "duration": 0.8,
+  "delay": 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
@@ -318,7 +314,7 @@ export default function Page($1) {
               Our team of experts is ready to provide personalized quotes and answer any questions
               about our services.Get in touch for a detailed consultation.</p>
 "
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">"
+            <div className="grid grid-cols-1 "md": gri d-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
                 <Phone className="w-5 h-5"   />"
                 <span className="font-semibold">{contactInfo.phone}</span>
@@ -332,7 +328,7 @@ export default function Page($1) {
               </div>
             </div>
 "
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -352,7 +348,7 @@ export default function Page($1) {
         </motion.div>;
       </div>;';
     </section>;) };';';
-"`
+""
 
 </motion>
 </motion>

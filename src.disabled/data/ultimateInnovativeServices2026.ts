@@ -1,4 +1,4 @@
-import React from';react' export: interface UltimateInnovativeService {';
+import React from';react' "export": interface UltimateInnovativeService {';
   id: string;
    title: string;
    description: string;
@@ -19,4 +19,4 @@ import React from';react' export: interface UltimateInnovativeService {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: uniqueValue?: string}export: const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [''',
+   website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": uniqueValue?: string}"export": const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [''',

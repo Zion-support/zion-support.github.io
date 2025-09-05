@@ -7,10 +7,9 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {ScoreBadge} from "@/components/jobs/applications/ScoreBadge";
 import {toast} from "@/hooks/use-toast";
-;
 export function CandidateCard($1) {
     const [showNotes, setShowNotes] = useState(false);    const [notes, setNotes] = useState(application.notes || ");
     const [showHireModal, setShowHireModal] = useState(false);
@@ -24,8 +23,8 @@ export function CandidateCard($1) {
         toast({}
 "
 "
-            title: "Notes saved","
-            description: "Your notes have been saved"
+            "title": "Notes saved","
+            "description": "Your notes have been saved"
         });
         setShowNotes(false)};
     const handleHireConfirmed = (props) => {};
@@ -33,8 +32,8 @@ export function CandidateCard($1) {
         toast({}
 "
 "
-            title: "Hiring process initiated","
-            description: "Offer has been sent to the talent."
+            "title": "Hiring process initiated","
+            "description": "Offer has been sent to the talent."
         })};
     return (<>"
       <Draggable draggableId={application.id} index={index}>"
@@ -87,7 +86,7 @@ export function CandidateCard($1) {
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">"
                 <div className="flex items-center">"
                   <Calendar className="h-3 w-3 mr-1" />
-                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+                  {formatDistanceToNow(new Date(application.created_at), { "addSuffix": true })}
                 </div>
 "
                 {isStalled && (<div className="flex items-center text-amber-500">"
@@ -115,8 +114,8 @@ export function CandidateCard($1) {
 }
               {/* Action Buttons */}"
               <div className="flex justify-between mt-2 gap-1">"
-                <Button variant="outline" size="sm" className="flex-1" asChild>`
-                  <Link to={`/messages?talentId=${application.talent_id}`}>"
+                <Button variant="outline" size="sm" className="flex-1" asChild>"
+                  <Link to={"/messages?talentId=${application.talent_id}"}>"
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
@@ -140,7 +139,7 @@ export function CandidateCard($1) {
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>';
     </>)}
-"`
+""
 
 </HireConfirmationModal>
 </Textarea>;';';

@@ -1,56 +1,55 @@
-import React from 'react'; interface User { id: string; email: string; name: string; :src/store/authSlice.tsx avatar?: string } avatar?: string} interface AuthState { isLoggedIn: boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string | null; :src/store/authSlice.tsx error: string | null } error: string | null} } ; const initialState: AuthStat e = { isLoggedIn: fals e, isAuthenticated: fals e, isLoading: fals e, user: nul l, token: nul l, :src/store/authSlice.tsx error: nul l}}, error: nul l}};, setUser: ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, setToken: (state, action: PayloadActio n<string>) => { :src/store/authSlice.tsx state.token = action.payload}, logout: stat e => { state.token = action.payload}, logout: ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => { :src/store/authSlice.tsx state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: stat e => { state.error = null}}}); state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;';';';';';
-interface User { id: string; email: string; name: string; : src/store/authSlice.tsx avatar?: string} avatar?: string} interface AuthState { isLoggedIn: boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string| null; : src/store/authSlice.tsx error: string| null} error: string| null} } ; const initialState: AuthStat e = { isLoggedIn: fals e, isAuthenticated: fals e, isLoading: fals e, user: nul l, token: nul l, : src/store/authSlice.tsx error: nul l}}, error: nul l}};, setUser: ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, setToken: (state, action: PayloadActio n<string>) => { : src/store/authSlice.tsx state.token = action.payload}, logout: stat e => { state.token = action.payload}, logout: ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => { : src/store/authSlice.tsx state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: stat e => { state.error = null}}}); state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;',',';
-    ',"});,"})';';';
-;,"});,"})';';';';
- interface User { id: string; email: string; name: string; :src/store/authSlice.tsx avatar?: string} avatar?: string} interface AuthState { isLoggedIn: boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string| null; :src/store/authSlice.tsx error: string| null } error: string| null} } ; const initialState: AuthStat e = { isLoggedIn: fals e, isAuthenticated: fals e, isLoading: fals e, user: nul l, token: nul l, :src/store/authSlice.tsx error: nul l}}, error: nul l}};, setUser: ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, setToken: (state, action: PayloadActio n<string>) => { :src/store/authSlice.tsx state.token = action.payload}, logout: stat e => { state.token = action.payload}, logout: ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => { :src/store/authSlice.tsx state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: stat e => { state.error = null}}}); state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;';';';';';
+import React from 'react'; interface User { "id": string; email: string; name: string; :src/store/authSlice.tsx avatar?: string } avatar?: string} interface AuthState { "isLoggedIn": boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string | null; :src/store/authSlice.tsx error: string | null } "error": string | null} } ; const "initialState": AuthStat e = { isLoggedIn: fals e, "isAuthenticated": fals e, "isLoading": fals e, "user": nul l, "token": nul l, :src/store/authSlice.tsx "error": nul l}}, "error": nul l}};, "setUser": ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, "setToken": (state, "action": PayloadActio n<string>) => { :src/store/authSlice.tsx state.token = action.payload}, "logout": stat e => { state.token = action.payload}, "logout": ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => { :src/store/authSlice.tsx state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": stat e => { state.error = null}}}); state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;';';';';';
+interface User { "id": string; email: string; name: string; : src/store/authSlice.tsx avatar?: string} avatar?: string} interface AuthState { "isLoggedIn": boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string| null; : src/store/authSlice.tsx error: string| null} "error": string| null} } ; const "initialState": AuthStat e = { isLoggedIn: fals e, "isAuthenticated": fals e, "isLoading": fals e, "user": nul l, "token": nul l, : src/store/authSlice.tsx "error": nul l}}, "error": nul l}};, "setUser": ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, "setToken": (state, "action": PayloadActio n<string>) => { : src/store/authSlice.tsx state.token = action.payload}, "logout": stat e => { state.token = action.payload}, "logout": ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => { : src/store/authSlice.tsx state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": stat e => { state.error = null}}}); state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;',',';
+    ',"});,"})';';';,"});,"})';';';';
+ interface User { "id": string; email: string; name: string; :src/store/authSlice.tsx avatar?: string} avatar?: string} interface AuthState { "isLoggedIn": boolean; isAuthenticated: boolean; isLoading: boolean; user: Use r | null; token: string| null; :src/store/authSlice.tsx error: string| null } "error": string| null} } ; const "initialState": AuthStat e = { isLoggedIn: fals e, "isAuthenticated": fals e, "isLoading": fals e, "user": nul l, "token": nul l, :src/store/authSlice.tsx "error": nul l}}, "error": nul l}};, "setUser": ({ state.user = action.payload; state.isAuthenticated = true) => $3 state.error = null}, "setToken": (state, "action": PayloadActio n<string>) => { :src/store/authSlice.tsx state.token = action.payload}, "logout": stat e => { state.token = action.payload}, "logout": ({ state.isLoggedIn = false; state.user = null; state.isAuthenticated = false; state.token = null) => $3 state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => { :src/store/authSlice.tsx state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": stat e => { state.error = null}}}); state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": (state) => { state.error = null}}}); export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions; export default authSlice.reducer;';';';';';
 ,"});,"})',';
     ';';';';';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface User {
-  id: string;
+  "id": string;
   email: string;
   name: string;
   avatar?: string}
 interface AuthState {
-  user: Use r | null;
+  "user": Use r | null;
   isAuthenticated: boolean;
   isLoading: boolean}
-const initialState: AuthStat e = {
+const "initialState": AuthStat e = {
   user: nul l,
-  isAuthenticated: fals e,';
-  isLoading: fals e};';';';';';
+  "isAuthenticated": fals e,';
+  "isLoading": fals e};';';';';';
 const authSlice = createSlice({',
     ';';';';';
-  name: 'auth',
+  "name": 'auth',
   initialState,
-  reducers: {
+  "reducers": {
     setUser: ({
       state.user = action.payload) => $3
       state.isAuthenticated = true},
-    clearUser: ({
+    "clearUser": ({
       state.user = null) => $3';
       state.isAuthenticated = false},
-    setLoading: (state, action: PayloadActio n<boolean>) => {
+    "setLoading": (state, "action": PayloadActio n<boolean>) => {
       state.isLoading = action.payload}}});';';';';
 export const { setUser, clearUser, setLoading } = authSlice.actions;';';
 export default authSlice.reducer;',';
     ';';';';';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit',;',';
     ';
-  id: string,
-  email: string,
-  name: string,
-  isLoggedIn: boolean,
-  isAuthenticated: boolean,
-  isLoading: boolean,
-  user: Use r: | null,
-  token: string: | null,
-  error: string: | null,
-interface User { id: string;';';
+  "id": string,
+  "email": string,
+  "name": string,
+  "isLoggedIn": boolean,
+  "isAuthenticated": boolean,
+  "isLoading": boolean,
+  "user": Use r: | null,
+  "token": string: | null,
+  "error": string: | null,
+interface User { "id": string;';';
 emai,
-    l: string;';';';';
+    "l": string;';';';';
   nam,';';
-    e: string;';';';';';';
+    "e": string;';';';';';';
 import {createSlice, PayloadAction } from '@reduxjs/toolkit',;',';
     ';';';';';';
 import {User } from 'lucide-react',;';
@@ -61,126 +60,126 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';",';
     ';';';';';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit;";
 import { User } from 'lucide-react';
-interface User {id: string;
-  nam,e: string;
+interface User {"id": string;
+  nam,"e": string;
 interface AuthState { isLoggedIn: boolean;
   isLoading: boolean;';
   token: string | null;';';
   error: string | null}
-const initialState: AuthStat e = { isLoggedIn: fals e, isAuthenticated: fals e,
-  isLoading: fals e, user: nul l,';';
-  token: nul l, error: nul l};',';
+const "initialState": AuthStat e = { isLoggedIn: fals e, "isAuthenticated": fals e,
+  "isLoading": fals e, "user": nul l,';';
+  "token": nul l, "error": nul l};',';
     ';';';';';
-const authSlice = createSlice({ name: 'auth', initialState,
-  reducers: { setLoggedIn: (state, action: PayloadActio n<boolean>) => {
-      state.isLoggedIn = action.payload}, setUser: ({
+const authSlice = createSlice({ "name": 'auth', initialState,
+  "reducers": { setLoggedIn: (state, "action": PayloadActio n<boolean>) => {
+      state.isLoggedIn = action.payload}, "setUser": ({
       state.isAuthenticated = true) => $3
       state.error = null};
-  isLoggedIn: boolean;
+  "isLoggedIn": boolean;
 interface AuthState {isLoggedIn: boolean;
   toke,
-    n: string | null;
+    "n": string | null;
   erro
     r: string | null}
-const initialState: AuthStat e: =  {,
-  isLoggedIn: fal s,e,
-  isAuthenticated: fal s,e,
-  isLoading: fal s,e,
-  user: nu l,l,';
-  token: nu l,l,';';
-  error: nul l};',';
+const "initialState": AuthStat e: =  {,
+  "isLoggedIn": fal s,e,
+  "isAuthenticated": fal s,e,
+  "isLoading": fal s,e,
+  "user": nu l,l,';
+  "token": nu l,l,';';
+  "error": nul l};',';
     ';';';';';
-  name: 'auth,',',',';
+  "name": 'auth,',',',';
     ';
-  reducers:   {,
-    setLoggedIn: (stat,e, action: PayloadActio n<boolean>) =>  {,
-      state.isLoggedIn: = action.payload},
-    setUser: (stat,e, action: PayloadActio n<User>) =>  {,
-      state.user: = action.payload;
+  "reducers": {,
+    "setLoggedIn": (stat,e, "action": PayloadActio n<boolean>) =>  {,
+      state."isLoggedIn": = action.payload},
+    "setUser": (stat,e, "action": PayloadActio n<User>) =>  {,
+      state."user": = action.payload;
       state.isAuthenticated: = true;
       state.error: = null},
-    setToken: (stat,e, action: PayloadActio n<string>) =>  {,
-      state.token: = action.payload},
-    logout: (state) =>  {,
-      state.isLoggedIn: = false;
+    "setToken": (stat,e, "action": PayloadActio n<string>) =>  {,
+      state."token": = action.payload},
+    "logout": (state) =>  {,
+      state."isLoggedIn": = false;
       state.user: = null;
       state.isAuthenticated: = false;
       state.token: = null;
-    setLoading: (stat,e, action: PayloadActio n<boolean>) =>  {,
-      state.isLoading: = action.payload},
-    setError: (stat,e, action: PayloadActio n<string>) =>  {,
-      state.error: = action.payload},
-    clearError: (state) =>  {,
-      state.error: = null;';';';';
+    setLoading: (stat,e, "action": PayloadActio n<boolean>) =>  {,
+      state."isLoading": = action.payload},
+    "setError": (stat,e, "action": PayloadActio n<string>) =>  {,
+      state."error": = action.payload},
+    "clearError": (state) =>  {,
+      state."error": = null;';';';';
   isLoggedI,';';
-    n: fals e, isAuthenticated: fals e,';';';
+    "n": fals e, "isAuthenticated": fals e,';';';
 const authSlice = createSlice({",
     ';';';';';
-  name: 'auth', initialState,
+  "name": 'auth', initialState,
     setLoggedI,
-    n: (state, action: PayloadActio n<boolean>) => {
+    "n": (state, "action": PayloadActio n<boolean>) => {
   isLoggedIn: false isAuthenticated: false';';';
   isLoading: fals e';';';';
   user: nul l';';';';';
   token: nul l',';
     ';';';';';
-  name: 'auth'
+  "name": 'auth'
   initialState
-    setLoggedIn: (state, action: PayloadActio n<boolean>) => {
+    setLoggedIn: (state, "action": PayloadActio n<boolean>) => {
       state.isLoggedIn = action.payload},;
       state.error = null},;
-    setToken: (state, action: PayloadActio n<string>) => {
+    "setToken": (state, "action": PayloadActio n<string>) => {
       state.token = action.payload},;
-    logout: (state) => {
-  erro,r: string | null}&apos;&apos;
-  isLoggedI,n: fals e,
-  isLoading: fals e,
-  token: nul l,
-  error: nul l';';';';
+    "logout": (state) => {
+  erro,"r": string | null}&apos;&apos;
+  isLoggedI,"n": fals e,
+  "isLoading": fals e,
+  "token": nul l,
+  "error": nul l';';';';
   name: &apos;auth&apos,';';
-const initialState: AuthStat e = {isLoggedIn: fals e, isAuthenticated: fals e,',
+const "initialState": AuthStat e = {isLoggedIn: fals e, "isAuthenticated": fals e,',
     ';';';';';
-const authSlice = createSlice({name: 'auth', initialState,
-    setLoggedI,n: (state, action: PayloadActio n&apos}};<;<boolean>) => {
-      state.isLoggedIn = action.payload}, setUser: ({state.user = action.payload) => $3
-      state.error = null}, setToken: (state, action: PayloadActio n<string>) => {state.token = action.payload}, logout: (state) => {state.isLoggedIn = false}, setToken: (state, action: PayloadActio n<string>) => {
-      state.token = action.payload}, logout: (state) => {
-  token: nul l, error: nul l};
+const authSlice = createSlice({"name": 'auth', initialState,
+    setLoggedI,"n": (state, "action": PayloadActio n&apos}};<;<boolean>) => {
+      state.isLoggedIn = action.payload}, "setUser": ({state.user = action.payload) => $3
+      state.error = null}, "setToken": (state, "action": PayloadActio n<string>) => {state.token = action.payload}, "logout": (state) => {state.isLoggedIn = false}, "setToken": (state, "action": PayloadActio n<string>) => {
+      state.token = action.payload}, "logout": (state) => {
+  token: nul l, "error": nul l};
 const authSlice = createSlice({"
-      state.isLoggedIn = action.payload}, setUser: (state, action: PayloadActio n<User>) => {
-      state.error = null};, setToken: ({
+      state.isLoggedIn = action.payload}, "setUser": (state, "action": PayloadActio n<User>) => {
+      state.error = null};, "setToken": ({
       state.isLoggedIn = false;
       state.isAuthenticated = false) => $3
-      state.token = null}, setLoading: (state, action: PayloadActio n<boolean>) => {
-      state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => {
-      state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => {
-      state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => {
-      state.error = action.payload}, clearError: (state) => {
+      state.token = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => {
+      state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => {
+      state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => {
+      state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => {
+      state.error = action.payload}, "clearError": (state) => {
       state.error = null}
       state.isLoading = action.payload},;
-    setError: (state, action: PayloadActio n<string>) => {
+    "setError": (state, "action": PayloadActio n<string>) => {
       state.error = action.payload},;
-    clearError: (state) => {
-      state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => {state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => {state.error = action.payload}, clearError: (state) => {state.error = null}
+    "clearError": (state) => {
+      state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => {state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => {state.error = action.payload}, "clearError": (state) => {state.error = null}
 });
-export: cons t { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
-export: default authSlice.reducer;
+"export": cons t { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
+"export": default authSlice.reducer;
 export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer
 export default authSlice.reducer;"
 export const {setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;"
 export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;"
-  id: string email: string
+  "id": string email: string
    name: string
    : src/store/authSlice.tsx avatar?: string} avatar?: string} interface AuthState {
-  isLoggedIn: boolean isAuthenticated: boolean';';
+  "isLoggedIn": boolean isAuthenticated: boolean';';
    isLoading: boolean';';';
    user: Use r | null';';';';
    token: string | null';';';';';
    : src/store/authSlice.tsx error: string | null",";',';
     ';';';';';
-} error: string | null} }  const initialState: AuthStat e = { isLoggedIn: fals e, isAuthenticated: fals e, isLoading: fals e, user: nul l, token: nul l, : src/store/authSlice.tsx error: nul l}}, error: nul l}}, setUser: (state, action: PayloadActio n<User>) => { state.user = action.payload state.isAuthenticated = true state.error = null}, setToken: (state, action: PayloadActio n<string>) => { : src/store/authSlice.tsx state.token = action.payload}, logout: stat e => { state.token = action.payload}, logout: (state) => { state.isLoggedIn = false state.user = null state.isAuthenticated = false state.token = null state.error = null}, setLoading: (state, action: PayloadActio n<boolean>) => { : src/store/authSlice.tsx state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: stat e => { state.error = null}}}) state.isLoading = action.payload}, setError: (state, action: PayloadActio n<string>) => { state.error = action.payload}, clearError: (state) => { state.error = null}}}) export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError}; = authSlice.actions export default authSlice.reducer "
+} "error": string | null} }  const "initialState": AuthStat e = { isLoggedIn: fals e, "isAuthenticated": fals e, "isLoading": fals e, "user": nul l, "token": nul l, : src/store/authSlice.tsx "error": nul l}}, "error": nul l}}, "setUser": (state, "action": PayloadActio n<User>) => { state.user = action.payload state.isAuthenticated = true state.error = null}, "setToken": (state, "action": PayloadActio n<string>) => { : src/store/authSlice.tsx state.token = action.payload}, "logout": stat e => { state.token = action.payload}, "logout": (state) => { state.isLoggedIn = false state.user = null state.isAuthenticated = false state.token = null state.error = null}, "setLoading": (state, "action": PayloadActio n<boolean>) => { : src/store/authSlice.tsx state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": stat e => { state.error = null}}}) state.isLoading = action.payload}, "setError": (state, "action": PayloadActio n<string>) => { state.error = action.payload}, "clearError": (state) => { state.error = null}}}) export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError}; = authSlice.actions export default authSlice.reducer "
 ";';';';';
 ";';';';
 </string>

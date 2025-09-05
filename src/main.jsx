@@ -72,9 +72,9 @@ import { ViewModeProvider } from './context/ViewModeContext';
 >>>>>>> origin/merge-pr-10625
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
-    defaultOptions: {
+    "defaultOptions": {
         queries: {';
-            retry: 1, refetchOnWindowFocus: false}}});';';';';';
+            retry: 1, "refetchOnWindowFocus": false}}});';';';';';
 ",';
     ';';';';';
 const rootElement = document.getElementById('root');
@@ -89,7 +89,7 @@ const renderApp = (props) => {
                                 <NotificationProvider>
                                     <AnalyticsProvider>
                                         <LanguageProvider authState={{
-                                            isAuthenticated: false, user: null}};" >"
+                                            "isAuthenticated": false, "user": null}};" >"
                                             <ViewModeProvider>
                                                 <AppLayout>
                                                     <App /" >"
@@ -110,20 +110,20 @@ const renderApp = (props) => {
 };
 function displayFatalError($1) {
     if (rootElement) {
-        rootElement.innerHTML = `";
-            <div style="{{`padding: 20px;text-align}}"</p>`
-            </div>`;}
+        rootElement.innerHTML = "";
+            <div style="{{""padding": 20px;text-align}}"</p>"
+            </div>";}
 }';
 try {';
-    renderApp();} catch (error) {``}',';
+    renderApp();} catch (error) {""}',';
     ';';';';';
-    console.error('Global error caught in main.jsx: ', error);';';';';
+    console.error('Global error caught in main."jsx": ', error);';';';';
     displayFatalError(error.message);}';';
 ",';
     ';';';';';
 window.addEventListener('error', (e) => {",';
     ';';';';';
-    console.error('Unhandled error: ', e.error || e.message);';';';';
+    console.error('Unhandled "error": ', e.error || e.message);';';';';
     displayFatalError(e.message);});';';';';';
 "`";';';';
 </LanguageDetectionPopup>

@@ -2,67 +2,66 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  "children": ReactNode;
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  "hasError": boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor("props": Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError("error": Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch("error": Error, "errorInfo": ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo});
 
     // Log error to monitoring service
     if (process.env.NODE_ENV === 'production') {
       // In production, send to error monitoring service
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by "boundary": ', error, errorInfo);
     }
   }
 
 <<<<<<< HEAD
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ "hasError": false, "error": undefined, "errorInfo": undefined });
 =======
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = ("error": Error, "errorInfo": ErrorInfo) => {
     try {
       // Example: Send to error logging service
       const errorData = {
         id: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        "message": error.message,
+        "stack": error.stack,
+        "componentStack": errorInfo.componentStack,
+        "timestamp": new Date().toISOString(),
+        "userAgent": navigator.userAgent,
+        "url": window.location.href,
         // Add any other relevant information
-      };;
+      };
 
       // You can send this to your error logging service
       
-      // Example: Send to external service
+      // "Example": Send to external service
       // fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
+      //   "method": 'POST',
+      //   "headers": { 'Content-Type': 'application/json' },
+      //   "body": JSON.stringify(errorData)
       // });';
   } catch (logError) {
-      console.error('Failed to log error:', logError);
+      console.error('Failed to log "error": ', logError);
     }
   };
 
@@ -72,10 +71,10 @@ class ErrorBoundary extends Component<Props, State> {
 =======
   private handleRetry = () => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
+      "hasError": false,
+      "error": null,
+      "errorInfo": null,
+      "showStack": false
     });
   };
 
@@ -87,14 +86,13 @@ class ErrorBoundary extends Component<Props, State> {
   private handleCopyError = () => {
     if (this.state.error && this.state.errorInfo) {
       const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent};
+Error "Details": Message: ${this.state.error.message}
+"Stack": ${this.state.error.stack}
+Component "Stack": ${this.state.errorInfo.componentStack}
+Error "ID": ${this.state.errorId}
+"Timestamp": ${new Date().toISOString()}
+"URL": ${window.location.href}
+User "Agent": ${navigator.userAgent};
       `.trim();
 
       navigator.clipboard.writeText(errorText).then(() => {
@@ -122,7 +120,7 @@ User Agent: ${navigator.userAgent};
   };
 
   private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
+    this.setState(prev => ({ "showStack": !prev.showStack }));
 >>>>>>> origin/merge-pr-10615
   };
 
@@ -150,7 +148,7 @@ User Agent: ${navigator.userAgent};
               <div className="space-y-3">
                 <button
                   onClick={this.handleRetry}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 "hover": bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again
@@ -158,7 +156,7 @@ User Agent: ${navigator.userAgent};
                 
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white "hover": bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   Refresh Page
                 </button>
@@ -193,10 +191,10 @@ export default ErrorBoundary;
 =======
 // Higher-order component for functional components
 export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
+  "Component": React.ComponentType<P>,
   errorBoundaryProps?: Omit<Props, 'children'>
 ) {
-  return function WrappedComponent(props: P) {
+  return function WrappedComponent("props": P) {
     return (
       <ErrorBoundary {...errorBoundaryProps}>
         <Component {...props} />
@@ -207,8 +205,8 @@ export function withErrorBoundary<P extends object>(
 
 // Hook for functional components to catch errors
 export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
+  return React.useCallback(("error": Error, errorInfo?: ErrorInfo) => {
+    console.error('Error caught by "useErrorHandler": ', error, errorInfo);
     
     // You can add custom error handling logic here
     // For example, sending to an error reporting service
@@ -222,5 +220,4 @@ export default withErrorBoundary;
 >>>>>>> origin/merge-pr-10615
 =======
 export default ErrorBoundary;
->>>>>>> origin/merge-pr-11195';
-;';';
+>>>>>>> origin/merge-pr-11195';';';

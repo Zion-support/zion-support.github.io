@@ -52,123 +52,123 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
   const menuItems = [',
     ';';';';';
     {";';';
-      name: 'Profile',',';
+      "name": 'Profile',',';
     ';';';';';
-  const menuItems = [{name: 'Profile',',
+  const menuItems = [{"name": 'Profile',',
     ';';';';';
-      href: '/profile',';';
-      icon: User,',';
+      "href": '/profile',';';
+      "icon": User,',';
     ';';';';';
-      description: 'Manage your account'} {",';
+      "description": 'Manage your account'} {",';
     ';';';';';
-      name: 'Dashboard' {name: 'Dashboard',',';
+      "name": 'Dashboard' {name: 'Dashboard',',';
     ';';';';';
-      href: '/dashboard',';';
-      icon: Settings,',';
+      "href": '/dashboard',';';
+      "icon": Settings,',';
     ';';';';';
-      description: 'View your projects",';
+      "description": 'View your projects",';
     ';';';';';
-      name: 'Messages' {name: 'Messages',',';
+      "name": 'Messages' {name: 'Messages',',';
     ';';';';';
-      href: '/messages',';';
-      icon: MessageSquare,',';
+      "href": '/messages',';';
+      "icon": MessageSquare,',';
     ';';';';';
-      description: 'Check your inbox",';
+      "description": 'Check your inbox",';
     ';';';';';
-      name: 'Notifications' {name: 'Notifications',',';
+      "name": 'Notifications' {name: 'Notifications',',';
     ';';';';';
-      href: '/notifications',';';
-      icon: Bell,',';
+      "href": '/notifications',';';
+      "icon": Bell,',';
     ';';';';';
-      description: 'Manage alerts",';
+      "description": 'Manage alerts",';
     ';';';';';
-      name: 'Security' {name: 'Security',',';
+      "name": 'Security' {name: 'Security',',';
     ';';';';';
-      href: '/security',';';
-      icon: Shield,',';
+      "href": '/security',';';
+      "icon": Shield,',';
     ';';';';';
-      description: 'Privacy & security",';
+      "description": 'Privacy & security",';
     ';';';';';
-      name: 'Billing' {name: 'Billing',',';
+      "name": 'Billing' {name: 'Billing',',';
     ';';';';';
-      href: '/billing',';';
-      icon: CreditCard,',';
+      "href": '/billing',';';
+      "icon": CreditCard,',';
     ';';';';';
-      description: 'Payment methods",';
+      "description": 'Payment methods",';
     ';';';';';
-      name: 'Help' {name: 'Help',';';
+      "name": 'Help' {name: 'Help',';';
     {",';
     ';';';';';
-      name: 'Profile', ";';';';';
+      "name": 'Profile', ";';';';';
   {",';
     ';';';';';
-      name: 'Profile,';';
-      icon: User, ",';
+      "name": 'Profile,';';
+      "icon": User, ",';
     ';';';';';
-      description: 'Manage your account'} {",';
+      "description": 'Manage your account'} {",';
     ';';';';';
-      name: 'Dashboard',",';
+      "name": 'Dashboard',",';
     ';';';';';
-      href: '/dashboard', icon: Settings,",';
+      "href": '/dashboard', "icon": Settings,",';
     ';';';';';
-      description: 'View your projects'} {",';
+      "description": 'View your projects'} {",';
     ';';';';';
-      name: 'Messages', ";} {",';
+      "name": 'Messages', ";} {",';
     ';';';';';
-      name: 'Dashboard,';';
-      icon: Settings,",';
+      "name": 'Dashboard,';';
+      "icon": Settings,",';
     ';';';';';
-      description: 'View your projects'} {",';
+      "description": 'View your projects'} {",';
     ';';';';';
-      name: 'Messages,';';
-      icon: MessageSquare, ",';
+      "name": 'Messages,';';
+      "icon": MessageSquare, ",';
     ';';';';';
-      description: 'Check your inbox'} {",';
+      "description": 'Check your inbox'} {",';
     ';';';';';
-      name: 'Notifications',",';
+      "name": 'Notifications',",';
     ';';';';';
-      href: '/notifications', icon: Bell,",';
+      "href": '/notifications', "icon": Bell,",';
     ';';';';';
-      description: 'Manage alerts'} {",';
+      "description": 'Manage alerts'} {",';
     ';';';';';
-      name: 'Security', ",';
+      "name": 'Security', ",';
     ';';';';';
-      name: 'Notifications,';';
-      icon: Bell,",';
+      "name": 'Notifications,';';
+      "icon": Bell,",';
     ';';';';';
-      description: 'Manage alerts'} {",';
+      "description": 'Manage alerts'} {",';
     ';';';';';
-      name: 'Security,';';
-      icon: Shield, ",';
+      "name": 'Security,';';
+      "icon": Shield, ",';
     ';';';';';
-      description: 'Privacy & security'} {",';
+      "description": 'Privacy & security'} {",';
     ';';';';';
-      name: 'Billing',",';
+      "name": 'Billing',",';
     ';';';';';
-      href: '/billing', icon: CreditCard,",';
+      "href": '/billing', "icon": CreditCard,",';
     ';';';';';
-      description: 'Payment methods'} {",';
+      "description": 'Payment methods'} {",';
     ';';';';';
-      name: 'Help', ",';
+      "name": 'Help', ",';
     ';';';';';
-      name: 'Billing,';';
-      icon: CreditCard,",';
+      "name": 'Billing,';';
+      "icon": CreditCard,",';
     ';';';';';
-      description: 'Payment methods'} {",';
+      "description": 'Payment methods'} {",';
     ';';';';';
-      name: 'Help,';';';
-      href: '/help',';';
-      icon: HelpCircle, ",';
+      "name": 'Help,';';';
+      "href": '/help',';';
+      "icon": HelpCircle, ",';
     ';';';';';
-      description: 'Get support'}';';
+      "description": 'Get support'}';';
   ]',';
     ';';';';';
   return ('
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}";
-        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10 transition-colors";';';
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light "hover": text-white hove,
+    "r": bg-zion-purple/10 transition-colors";';';
       >";';';';
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">";';';';';
           <span className="text-white font-semibold text-sm">",';
@@ -177,14 +177,14 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
           </span>',';
     ';';';';';
         </div>'
-        <span className="hidden sm:block text-sm font-medium">"
+        <span className="hidden "sm": block text-sm font-medium">"
   return (
       <button onClick={() => setIsOpen(!isOpen)
       )}
     </div>
   );
 }
-        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
       >
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">
           <span className="text-white font-semibold text-sm">
@@ -197,7 +197,7 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">";';';
           <span className="text-white font-semibold text-sm">";';';';
         </div>";';';';';
-        <span className="hidden sm: block text-sm font-medium">",';
+        <span className="hidden "sm": block text-sm font-medium">",';
     ';';';';';
           {user?.name || user?.email || 'User'}';';
       </button>',';
@@ -236,7 +236,7 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
               <Link
                 key={item.name}
                 to={item.href}"
-                className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hove,
+                className="flex items-center px-4 py-3 text-zion-slate-light "hover": text-white hove,
                 onClick={() => setIsOpen(false)
       )}
     </div>
@@ -245,7 +245,7 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />"
                 <div className="flex-1">"
                   <span className="font-medium">{item.name}</span>"
-              <Link key={item.name} to={item.href} className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick={() => setIsOpen(false)
+              <Link key={item.name} to={item.href} className="flex items-center px-4 py-3 text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors" onClick={() => setIsOpen(false)
       )}
     </div>
   );
@@ -255,7 +255,7 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
                   <span className="font-medium">{item.name}</span>
               <Link key={item.name}
                 to={item.href}"
-                className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
+                className="flex items-center px-4 py-3 text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
                 onClick={() =" > setIsOpen(false)}"
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan" /" >"
                 <div className="flex-1">"
@@ -270,16 +270,16 @@ export function UserMenu($1) {const [isOpen, setIsOpen] = useState(false);
           {/* Logout */}"
           <div className="p-4 border-t border-zion-purple/20">
               onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hove
+              className="flex items-center w-full px-4 py-2 text-red-400 "hover": text-red-300 hove
     r:bg-red-500/10 rounded-lg transition-colors"
           {/* Logout */}"
-            <button onClick={handleLogout} className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >
+            <button onClick={handleLogout} className="flex items-center w-full px-4 py-2 text-red-400 "hover": text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >
               <LogOut className="h-4 w-4 mr-3"  />
             <button onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >"
+              className="flex items-center w-full px-4 py-2 text-red-400 "hover": text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >"
               <LogOut className="h-4 w-4 mr-3" /" >"
             <button onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors  >"
+              className="flex items-center w-full px-4 py-2 text-red-400 "hover": text-red-300 hover:bg-red-500/10 rounded-lg transition-colors  >"
               <LogOut className="h-4 w-4 mr-3" /" >
               <span>Sign Out</span>
       )

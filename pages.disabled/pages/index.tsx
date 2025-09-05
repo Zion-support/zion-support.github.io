@@ -1,44 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React, { memo } from 'react';
-=======
-import type { NextPage } from 'next';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/merge-pr-11208
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function Home(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group — AI, Cybersecurity, Cloud</title>
-        <meta name="description" content="Zion Tech Group provides AI, cybersecurity, cloud and digital transformation services." />
-        <link rel="canonical" href="https://ziontechgroup.com/" />
-      </Head>
-      <section>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>Zion Tech Group</h1>
-        <p style={{ color: '#444', marginBottom: 16 }}>
-          Technology solutions in AI, cybersecurity, cloud, and digital transformation.
-        </p>
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link href="/services" style={{ padding: '10px 14px', background: '#111', color: '#fff' }}>Explore Services</Link>
-          <Link href="/contact" style={{ padding: '10px 14px', border: '1px solid #111', color: '#111' }}>Contact Us</Link>
-        </div>
-      </section>
-    </>
-  );
-}
-
-import React, { useState, useCallback, memo } from 'react';
-=======
-import React, { memo } from 'react';
->>>>>>> origin/main
->>>>>>> origin/pr-11573
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -47,11 +7,11 @@ import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smar
 
 const Home = memo(() => {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": ""https": //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": ""https": //ziontechgroup.com",
+    "logo": ""https": //ziontechgroup.com/logo.png",
     "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
     "address": {
       "@type": "PostalAddress",
@@ -67,14 +27,12 @@ const Home = memo(() => {
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https://ziontechgroup.com"
+    "sameAs": [""https": //ziontechgroup.com"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "10-50",
     "industry": "Technology Services",
-    "services": [
-      "AI Services",
+    "services": ["AI Services",
       "IT Solutions",
       "Micro SaaS Development",
       "Cloud Infrastructure",
@@ -83,49 +41,45 @@ const Home = memo(() => {
     ]
   } as const;
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+  const stats = [{ "number": '500+', "label": 'Projects Completed' },
+    { "number": '50+', "label": 'Happy Clients' },
+    { "number": '99.9%', "label": 'Uptime Guarantee' },
+    { "number": '24/7', "label": 'Support Available' }
   ];
 
-  const services = [
-    {
-      title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
-      icon: Brain,
-      href: '/ai-services'
+  const services = [{
+      "title": 'AI Services',
+      "description": 'Cutting-edge artificial intelligence solutions',
+      "icon": Brain,
+      "href": '/ai-services'
     },
     {
-      title: 'IT Services',
-      description: 'Comprehensive IT infrastructure and cloud solutions',
-      icon: Server,
-      href: '/it-services'
+      "title": 'IT Services',
+      "description": 'Comprehensive IT infrastructure and cloud solutions',
+      "icon": Server,
+      "href": '/it-services'
     },
     {
-      title: 'Micro SaaS',
-      description: 'Custom software-as-a-service applications',
-      icon: Smartphone,
-      href: '/micro-saas'
+      "title": 'Micro SaaS',
+      "description": 'Custom software-as-a-service applications',
+      "icon": Smartphone,
+      "href": '/micro-saas'
     },
     {
-      title: 'All Services',
-      description: 'Complete technology solutions overview',
-      icon: Globe,
-      href: '/comprehensive-services'
+      "title": 'All Services',
+      "description": 'Complete technology solutions overview',
+      "icon": Globe,
+      "href": '/comprehensive-services'
     }
   ] as const;
 
-  const features = [
-    { icon: Zap, title: 'Fast Delivery', description: 'Quick turnaround times without compromising quality' },
-    { icon: Shield, title: 'Enterprise Security', description: 'Bank-level security and compliance standards' },
-    { icon: Users, title: 'Expert Team', description: 'Dedicated professionals with years of experience' },
-    { icon: Globe, title: 'Global Reach', description: 'Serving clients worldwide with local expertise' }
+  const features = [{ "icon": Zap, "title": 'Fast Delivery', "description": 'Quick turnaround times without compromising quality' },
+    { "icon": Shield, "title": 'Enterprise Security', "description": 'Bank-level security and compliance standards' },
+    { "icon": Users, "title": 'Expert Team', "description": 'Dedicated professionals with years of experience' },
+    { "icon": Globe, "title": 'Global Reach', "description": 'Serving clients worldwide with local expertise' }
   ] as const;
 
   return (
-<<<<<<< HEAD
     <>
       <SEOHead
         title="Zion Tech Group - Leading Technology Solutions Provider"
@@ -138,7 +92,7 @@ const Home = memo(() => {
 
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6" id="hero-heading">
                 Transform Your Business with
@@ -147,7 +101,7 @@ const Home = memo(() => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. We help businesses innovate, scale, and succeed in the digital age.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col "sm": flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Get Started
                 </Link>
@@ -173,7 +127,7 @@ const Home = memo(() => {
         </section>
 
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive technology solutions designed to drive your business forward</p>
@@ -181,14 +135,14 @@ const Home = memo(() => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="bg-white rounded-lg p-8 shadow-sm "hover": shadow-md transition-shadow">
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
                   <Link href={service.href} className="block">
-                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
+                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold "hover": bg-blue-700 transition-colors text-center flex items-center justify-center">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
@@ -200,13 +154,13 @@ const Home = memo(() => {
         </section>
 
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-lg text-gray-600">We deliver exceptional results through innovation, expertise, and dedication</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -221,7 +175,7 @@ const Home = memo(() => {
         </section>
 
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
               <p className="text-lg text-gray-600">Ready to start your next project? Contact us today.</p>
@@ -250,73 +204,71 @@ const Home = memo(() => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <Link href="/contact" className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
+                <Link href="/contact" className="inline-flex items-center text-sm font-medium text-blue-600 "hover": text-blue-500">
 =======
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Users, Award, Clock, Shield } from 'lucide-react';
 
-const Home: NextPage = () => {
-  const services = [
-    {
+const "Home": NextPage = () => {
+  const services = [{
       title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models for your business needs.',
-      icon: '🤖',
-      href: '/services/ai-development'
+      "description": 'Custom AI solutions and machine learning models for your business needs.',
+      "icon": '🤖',
+      "href": '/services/ai-development'
     },
     {
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern applications.',
-      icon: '☁️',
-      href: '/services/cloud-solutions'
+      "title": 'Cloud Solutions',
+      "description": 'Scalable cloud infrastructure and migration services for modern applications.',
+      "icon": '☁️',
+      "href": '/services/cloud-solutions'
     },
     {
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      icon: '🌐',
-      href: '/services/web-development'
+      "title": 'Web Development',
+      "description": 'Modern, responsive web applications built with cutting-edge technologies.',
+      "icon": '🌐',
+      "href": '/services/web-development'
     },
     {
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      icon: '📱',
-      href: '/services/mobile-development'
+      "title": 'Mobile Apps',
+      "description": 'Native and cross-platform mobile applications for iOS and Android.',
+      "icon": '📱',
+      "href": '/services/mobile-development'
     },
     {
-      title: 'Blockchain Solutions',
-      description: 'Decentralized applications and smart contract development.',
-      icon: '⛓️',
-      href: '/services/blockchain'
+      "title": 'Blockchain Solutions',
+      "description": 'Decentralized applications and smart contract development.',
+      "icon": '⛓️',
+      "href": '/services/blockchain'
     },
     {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: '🔒',
-      href: '/services/cybersecurity'
+      "title": 'Cybersecurity',
+      "description": 'Comprehensive security solutions to protect your digital assets.',
+      "icon": '🔒',
+      "href": '/services/cybersecurity'
     }
   ];
 
-  const features = [
-    {
-      title: 'Expert Team',
-      description: 'Experienced developers and consultants with deep industry knowledge.',
-      icon: Users
+  const features = [{
+      "title": 'Expert Team',
+      "description": 'Experienced developers and consultants with deep industry knowledge.',
+      "icon": Users
     },
     {
-      title: 'Quality Assurance',
-      description: 'Rigorous testing and quality control processes for reliable solutions.',
-      icon: CheckCircle
+      "title": 'Quality Assurance',
+      "description": 'Rigorous testing and quality control processes for reliable solutions.',
+      "icon": CheckCircle
     },
     {
-      title: 'Fast Delivery',
-      description: 'Agile development methodology ensuring timely project completion.',
-      icon: Clock
+      "title": 'Fast Delivery',
+      "description": 'Agile development methodology ensuring timely project completion.',
+      "icon": Clock
     },
     {
-      title: 'Security First',
-      description: 'Built-in security measures to protect your data and applications.',
-      icon: Shield
+      "title": 'Security First',
+      "description": 'Built-in security measures to protect your data and applications.',
+      "icon": Shield
     }
   ];
 
@@ -324,7 +276,7 @@ const Home: NextPage = () => {
     <MainLayout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Transform Your Business with
@@ -334,7 +286,7 @@ const Home: NextPage = () => {
               Leading technology solutions provider helping businesses innovate and grow 
               with cutting-edge AI, cloud architecture, and digital transformation services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center"
@@ -355,7 +307,7 @@ const Home: NextPage = () => {
 
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Services
@@ -369,7 +321,7 @@ const Home: NextPage = () => {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg p-8 "hover": shadow-xl transition-shadow"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -380,14 +332,12 @@ const Home: NextPage = () => {
                 </p>
                 <Link
                   href={service.href}
-                  className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                  className="text-blue-600 "hover": text-blue-700 font-medium flex items-center"
                 >
->>>>>>> origin/merge-pr-10614
                   Learn More
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -414,7 +364,7 @@ const Home: NextPage = () => {
 
       {/* About Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -432,7 +382,7 @@ const Home: NextPage = () => {
               </p>
               <Link
                 href="/about"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+                className="bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
                 Learn More About Us
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -461,7 +411,7 @@ const Home: NextPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -485,45 +435,10 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
->>>>>>> origin/merge-pr-10614
-=======
-    <EnhancedLayout>
-      <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-700">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get in Touch
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-            </div>
-          </div>
-      </div>
-    </EnhancedLayout>
->>>>>>> origin/merge-pr-11208
+      </main>
+
+      <Footer />
+    </>
   );
 });
 

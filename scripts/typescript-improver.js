@@ -11,13 +11,13 @@ let filesProcessed = 0;
 const typeReplacements = {
   // React types
   'any[]': 'React.ReactNode[]',
-  any: 'unknown',
+  "any": 'unknown',
   'any)': 'unknown)',
   'any;': 'unknown;',
   'any,': 'unknown,',
   'any ': 'unknown ',
   'any=': 'unknown=',
-  'any:': 'unknown:',
+  '"any": ': 'unknown:',
   'any>': 'unknown>',
   'any<': 'unknown<',
   'any}': 'unknown}',
@@ -35,11 +35,11 @@ const typeReplacements = {
 
   // Function types
   '() => any': '() => void',
-  '(value: any)': '(value: unknown)',
-  '(item: any)': '(item: unknown)',
-  '(data: any)': '(data: unknown)',
-  '(props: any)': '(props: Record<string, unknown>)',
-  '(event: any)': '(event: React.SyntheticEvent)',
+  '("value": any)': '(value: unknown)',
+  '("item": any)': '(item: unknown)',
+  '("data": any)': '(data: unknown)',
+  '("props": any)': '(props: Record<string, unknown>)',
+  '("event": any)': '(event: React.SyntheticEvent)',
 
   // Array types
   'any[]': 'unknown[]',
@@ -47,38 +47,37 @@ const typeReplacements = {
 
   // Object types
   'Record<string, any>': 'Record<string, unknown>',
-  '{ [key: string]: any }': '{ [key: string]: unknown }',
-};
+  '{ ["key": string]: any }': '{ ["key": string]: unknown }'};
 
 // Interface definitions for common patterns
-const commonInterfaces = `
+const commonInterfaces = "
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
-  data: T;
+  "data": T;
   status: number;
   message?: string}
 
 interface User {
-  id: string;
+  "id": string;
   email: string;
   name: string;
   role: 'admin' | 'user' | 'guest'}
 
 interface Service {
-  id: string;
+  "id": string;
   name: string;
   description: string;
   price: number;
   category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File}
+  ["key": string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown}
-`;
+  ["key": string]: unknown}
+";
 
 // Improve TypeScript file
 function improveTypeScriptFile(content, filePath) {
@@ -115,7 +114,7 @@ function improveTypeScriptFile(content, filePath) {
   const functionMatches = improved.match(functionParamRegex);
   if (functionMatches) {
     improved = improved.replace(functionParamRegex, (match, paramName) => {
-      return match.replace(`: any`, ': unknown')});
+      return match.replace(": any", ': unknown')});
     changes += functionMatches.length}
 
   // Add proper typing for arrow function parameters
@@ -123,7 +122,7 @@ function improveTypeScriptFile(content, filePath) {
   const arrowMatches = improved.match(arrowParamRegex);
   if (arrowMatches) {
     improved = improved.replace(arrowParamRegex, (match, paramName) => {
-      return match.replace(`: any`, ': unknown')});
+      return match.replace(": any", ': unknown')});
     changes += arrowMatches.length}
 
   // Add proper typing for object destructuring
@@ -131,7 +130,7 @@ function improveTypeScriptFile(content, filePath) {
   const destructuringMatches = improved.match(destructuringRegex);
   if (destructuringMatches) {
     improved = improved.replace(destructuringRegex, (match, propName) => {
-      return match.replace(`: any`, ': unknown')});
+      return match.replace(": any", ': unknown')});
     changes += destructuringMatches.length}
 
   // Add proper typing for useState
@@ -154,7 +153,7 @@ function improveTypeScriptFile(content, filePath) {
   const eventHandlerMatches = improved.match(eventHandlerRegex);
   if (eventHandlerMatches) {
     improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
-      return match.replace('event: any', 'event: React.SyntheticEvent')});
+      return match.replace('"event": any', '"event": React.SyntheticEvent')});
     changes += eventHandlerMatches.length}
 
   // Add proper typing for API calls
@@ -163,10 +162,10 @@ function improveTypeScriptFile(content, filePath) {
   const apiCallMatches = improved.match(apiCallRegex);
   if (apiCallMatches) {
     improved = improved.replace(apiCallRegex, match => {
-      return match.replace('response: any', 'response: Response')});
+      return match.replace('"response": any', '"response": Response')});
     changes += apiCallMatches.length}
 
-  return { content: improved, changes }}
+  return { "content": improved, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -188,42 +187,37 @@ function processFile(filePath) {
 // Generate TypeScript improvement report
 function generateTypeScriptReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    improvements: {
+    "timestamp": new Date().toISOString(),
+    "improvements": {
       totalFilesProcessed: filesProcessed,
-      totalTypeImprovements: totalImprovements,
-      recommendations: [
-        'Consider using strict TypeScript configuration',
+      "totalTypeImprovements": totalImprovements,
+      "recommendations": ['Consider using strict TypeScript configuration',
         'Add proper error handling with typed error objects',
         'Use discriminated unions for better type safety',
         'Implement proper API response typing',
         'Add JSDoc comments for complex functions',
         'Use const assertions for immutable data',
         'Consider using branded types for IDs',
-      ],
-    },
-  };
+      ]}};
 
   fs.writeFileSync(
     'typescript-improvement-report.json',
     JSON.stringify(report, null, 2)
   );
   console.log(
-    '📊 TypeScript improvement report generated: typescript-improvement-report.json'
+    '📊 TypeScript improvement report "generated": typescript-improvement-report.json'
   )}
 
 // Main improvement function
 async function main() {
   console.log('🔧 Starting TypeScript improvements...\n');
 
-  const patterns = [
-    'src/**/*.{ts,tsx}',
+  const patterns = ['src/**/*.{ts,tsx}',
     'pages/**/*.{ts,tsx}',
     'components/**/*.{ts,tsx}',
   ];
 
-  const excludeDirs = [
-    'node_modules',
+  const excludeDirs = ['node_modules',
     '.next',
       'build'
     'dist',
@@ -237,8 +231,7 @@ async function main() {
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`),
-    });
+      "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
 
     for (const file of files) {
       processFile(file)}
@@ -246,10 +239,10 @@ async function main() {
 
   generateTypeScriptReport();
 
-  console.log(`\n📊 TypeScript Improvement Summary:`);
+  console.log("\n📊 TypeScript Improvement "Summary": ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total type improvements: ${totalImprovements}`);
-  console.log(`\n✨ TypeScript improvements completed!`)}
+  console.log(`   Total type "improvements": ${totalImprovements}`);
+  console.log("\n✨ TypeScript improvements completed!")}
 
 // Run the script
 main().catch(console.error);

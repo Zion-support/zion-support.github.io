@@ -16,8 +16,7 @@ class SimpleScriptFixer {
     console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async findScriptFiles() {
-    const scriptDirs = [
-      path.join(this.projectRoot, 'scripts'),
+    const scriptDirs = [path.join(this.projectRoot, 'scripts'),
       path.join(this.projectRoot, 'scripts/automation')
     ];
 
@@ -42,20 +41,19 @@ class SimpleScriptFixer {
       let fixedContent = content;
 
       // Fix common issues
-      const fixes = [
-        // Fix malformed require statements
-        { from: 'require("child_process")', to: 'require("child_process")' },
-        { from: "require('child_process')", to: "require('child_process')" },
+      const fixes = [// Fix malformed require statements
+        { "from": 'require("child_process")', "to": 'require("child_process")' },
+        { "from": "require('child_process')", "to": "require('child_process')" },
         // Fix malformed shebang
-        { from: '#!/usr/bin/env node', to: '#!/usr/bin/env node' },
-        { from: '#!/usr/bin/env node', to: '#!/usr/bin/env node' },
+        { "from": '#!/usr/bin/env node', "to": '#!/usr/bin/env node' },
+        { "from": '#!/usr/bin/env node', "to": '#!/usr/bin/env node' },
         // Fix trailing commas in object literals
-        { from: ',\n}', to: '\n}' },
-        { from: '}', to: '}' },
+        { "from": ',\n}', "to": '\n}' },
+        { "from": '}', "to": '}' },
         // Fix duplicate method definitions
-        { from: 'async log(message, level = `INFO`) {\n\n  async log(message, level = "INFO")', to: 'async log(message, level = "INFO")' },
+        { "from": 'async log(message, level = "INFO") {\n\n  async log(message, level = "INFO")', "to": 'async log(message, level = "INFO")' },
         // Fix malformed class definitions
-        { from: 'this.projectRoot = path.join(__dirname, ".."),\n}', to: 'this.projectRoot = path.join(__dirname, "..");\n  }' }
+        { "from": 'this.projectRoot = path.join(__dirname, ".."),\n}', "to": 'this.projectRoot = path.join(__dirname, "..");\n  }' }
       ];
 
       let hasChanges = false;
@@ -67,7 +65,7 @@ class SimpleScriptFixer {
 
       if (hasChanges) {
         await fs.writeFile(filePath, fixedContent, 'utf8');
-        await this.log(`Fixed script: ${path.basename(filePath)}`);
+        await this.log(`Fixed "script": ${path.basename(filePath)}`);
         this.fixedCount++;
         return true}
 
@@ -79,9 +77,9 @@ class SimpleScriptFixer {
 
   async testScript(filePath) {
     try {
-      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { timeout: 5000 });
-      return { success: true, output: stdout, error: stderr }} catch (error) {
-      return { success: false, output: '', error: error.message }}
+      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 });
+      return { "success": true, "output": stdout, "error": stderr }} catch (error) {
+      return { "success": false, "output": '', "error": error.message }}
   }
 
   async run() {
@@ -93,7 +91,7 @@ class SimpleScriptFixer {
     let testedCount = 0;
 
     for (const scriptFile of scriptFiles) {
-      await this.log(`Processing: ${path.basename(scriptFile)}`);
+      await this.log(`"Processing": ${path.basename(scriptFile)}`);
       
       const wasFixed = await this.fixScriptFile(scriptFile);
 
@@ -102,12 +100,12 @@ class SimpleScriptFixer {
       testedCount++;
       
       if (testResult.success) {
-        await this.log(`✓ Syntax OK: ${path.basename(scriptFile)}`)} else {
-        await this.log(`✗ Syntax Error: ${path.basename(scriptFile)} - ${testResult.error}`)}
+        await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`)} else {
+        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`)}
     }
 
     await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);
-    return { fixed: this.fixedCount, errors: this.errorCount, total: scriptFiles.length }}
+    return { "fixed": this.fixedCount, "errors": this.errorCount, "total": scriptFiles.length }}
 }
 
 // Run the fixer

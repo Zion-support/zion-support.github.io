@@ -7,10 +7,10 @@ export function SimpleFooter($1) {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div className=""md": col-span-2">
             <div className="flex items-center mb-4">
               <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold">Z</span>
@@ -25,7 +25,7 @@ export function SimpleFooter($1) {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white">
+                <a href=""tel": +13024640950" className="text-gray-300 hover:text-white">
                   +1 302 464 0950
                 </a>
               </div>
@@ -48,7 +48,7 @@ export function SimpleFooter($1) {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white text-sm">AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 "hover": text-white text-sm">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-white text-sm">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-gray-300 hover:text-white text-sm">Micro SaaS</Link></li>
               <li><Link to="/cybersecurity" className="text-gray-300 hover:text-white text-sm">Cybersecurity</Link></li>
@@ -63,7 +63,7 @@ export function SimpleFooter($1) {
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white text-sm">About</Link></li>
+              <li><Link to="/about" className="text-gray-300 "hover": text-white text-sm">About</Link></li>
               <li><Link to="/team" className="text-gray-300 hover:text-white text-sm">Team</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white text-sm">Careers</Link></li>
               <li><Link to="/case-studies" className="text-gray-300 hover:text-white text-sm">Case Studies</Link></li>
@@ -82,7 +82,7 @@ export function SimpleFooter($1) {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-4">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white">
+              <a href=""https": //facebook.com/ziontechgroup" className="text-gray-400 hover:text-white">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white">

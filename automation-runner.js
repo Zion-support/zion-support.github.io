@@ -5,50 +5,55 @@ const { execSync } = require('child_process');
 class AutomationRunner {
   constructor() {
     this.results = {
-      tests: { passed: 0, failed: 0, errors: [] },
-      builds: { success: false, errors: [] },
-      linting: { success: false, errors: [] },
-      security: { issues: [], fixed: 0 },
-      improvements: []
-    };
+      "tests": { passed: 0, "failed": 0, "errors": [] },
+      "builds": { success: false, "errors": [] },
+      "linting": { success: false, "errors": [] },
+      "security": { issues: [], "fixed": 0 },
+      "improvements": []};
     this.startTime = Date.now();
   }
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    
+    const prefix =
+      {
+        "INFO": 'ℹ️',
+        "SUCCESS": '✅',
+        "ERROR": '❌',
+        "WARNING": '⚠️',
+        "PROGRESS": '🔄'}[type] || 'ℹ️';
+
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
   async runCommand(command, description, timeout = 30000) {
-    this.log(`Running: ${description}`, 'PROGRESS');
+    this.log(`"Running": ${description}`, 'PROGRESS');
     try {
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        timeout: timeout,
-        cwd: process.cwd()
-      });
+      const result = execSync(command, {
+        "encoding": 'utf8',
+        "stdio": 'pipe',
+        "timeout": timeout,
+        "cwd": process.cwd()});
       this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result };
-    } catch(error) {
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+      return { "success": true, "output": result };
+    } catch (error) {
+      this.log(`${description} "failed": ${error.message}`, 'ERROR');
+      return {
+        "success": false,
+        "error": error.message,
+        "output": error.stdout || error.stderr};
     }
   }
 
   async runTests() {
     this.log('Starting test suite...', 'PROGRESS');
-    
+
     // Run Jest tests
-    const testResult = await this.runCommand('npm test -- --passWithNoTests', 'Jest tests', 60000);
+    const testResult = await this.runCommand(
+      'npm test -- --passWithNoTests',
+      'Jest tests',
+      60000
+    );
     if (testResult.success) {
       this.results.tests.passed++;
     } else {
@@ -57,7 +62,11 @@ class AutomationRunner {
     }
 
     // Run type checking
-    const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check', 30000);
+    const typeResult = await this.runCommand(
+      'npm run type-check',
+      'TypeScript type check',
+      30000
+    );
     if (typeResult.success) {
       this.results.tests.passed++;
     } else {
@@ -68,15 +77,23 @@ class AutomationRunner {
 
   async runLinting() {
     this.log('Running linting...', 'PROGRESS');
-    
-    const lintResult = await this.runCommand('npm run lint', 'ESLint check', 30000);
+
+    const lintResult = await this.runCommand(
+      'npm run lint',
+      'ESLint check',
+      30000
+    );
     if (lintResult.success) {
       this.results.linting.success = true;
     } else {
       this.results.linting.errors.push(lintResult.error);
-      
+
       // Try to fix linting issues
-      const fixResult = await this.runCommand('npm run lint -- --fix', 'ESLint fix', 30000);
+      const fixResult = await this.runCommand(
+        'npm run lint -- --fix',
+        'ESLint fix',
+        30000
+      );
       if (fixResult.success) {
         this.log('Linting issues fixed automatically', 'SUCCESS');
         this.results.linting.success = true;
@@ -86,8 +103,12 @@ class AutomationRunner {
 
   async runBuild() {
     this.log('Building application...', 'PROGRESS');
-    
-    const buildResult = await this.runCommand('npm run build', 'Next.js build', 120000);
+
+    const buildResult = await this.runCommand(
+      'npm run build',
+      'Next.js build',
+      120000
+    );
     if (buildResult.success) {
       this.results.builds.success = true;
       this.log('Build completed successfully', 'SUCCESS');
@@ -99,13 +120,21 @@ class AutomationRunner {
 
   async runSecurityAudit() {
     this.log('Running security audit...', 'PROGRESS');
-    
-    const auditResult = await this.runCommand('npm audit --audit-level=moderate', 'Security audit', 30000);
+
+    const auditResult = await this.runCommand(
+      'npm audit --audit-level=moderate',
+      'Security audit',
+      30000
+    );
     if (!auditResult.success) {
       this.results.security.issues.push('Security vulnerabilities found');
-      
+
       // Try to fix automatically
-      const fixResult = await this.runCommand('npm audit fix', 'Security fix', 30000);
+      const fixResult = await this.runCommand(
+        'npm audit fix',
+        'Security fix',
+        30000
+      );
       if (fixResult.success) {
         this.results.security.fixed++;
         this.log('Security issues fixed automatically', 'SUCCESS');
@@ -117,7 +146,7 @@ class AutomationRunner {
 
   async createImprovements() {
     this.log('Creating improvements...', 'PROGRESS');
-    
+
     // Create a performance monitoring script
     const performanceScript = `#!/usr/bin/env node
 const fs = require('fs');
@@ -126,10 +155,10 @@ const path = require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString()
+      "bundleSize": 0,
+      "loadTime": 0,
+      "memoryUsage": 0,
+      "timestamp": new Date().toISOString()
     };
   }
 
@@ -141,7 +170,7 @@ class PerformanceMonitor {
         this.metrics.bundleSize = stats.size;
       }
     } catch(error) {
-      console.error('Error measuring bundle size:', error);
+      console.error('Error measuring bundle "size": ', error);
     }
   }
 
@@ -152,10 +181,10 @@ class PerformanceMonitor {
 
   generateReport() {
     const report = {
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
+      "timestamp": this.metrics.timestamp,
+      "bundleSize": this.metrics.bundleSize,
+      "memoryUsage": this.metrics.memoryUsage,
+      "recommendations": []
     };
 
     if (this.metrics.bundleSize > 1000000) {
@@ -177,30 +206,30 @@ const report = monitor.generateReport();
 
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log('Performance report generated:', reportPath);
+console.log('Performance report generated: ', reportPath);
 `;
 
     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath, performanceScript);
     fs.chmodSync(scriptPath, '755');
-    
+
     this.results.improvements.push('Created performance monitoring script');
     this.log('Performance monitoring script created', 'SUCCESS');
   }
 
   async runAllAutomations() {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
-    
+
     try {
       await this.runTests();
       await this.runLinting();
       await this.runSecurityAudit();
       await this.runBuild();
       await this.createImprovements();
-      
+
       this.generateFinalReport();
     } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'ERROR');
+      this.log(`Automation "failed": ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }
@@ -208,29 +237,27 @@ console.log('Performance report generated:', reportPath);
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      results: this.results,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": `${Math.round(duration / 1000)}s`,
+      "results": this.results,
+      "summary": {
         testsPassed: this.results.tests.passed,
-        testsFailed: this.results.tests.failed,
-        buildSuccess: this.results.builds.success,
-        lintingSuccess: this.results.linting.success,
-        securityIssuesFixed: this.results.security.fixed,
-        improvementsCreated: this.results.improvements.length
-      }
-    };
+        "testsFailed": this.results.tests.failed,
+        "buildSuccess": this.results.builds.success,
+        "lintingSuccess": this.results.linting.success,
+        "securityIssuesFixed": this.results.security.fixed,
+        "improvementsCreated": this.results.improvements.length}};
 
     const reportPath = path.join(process.cwd(), 'automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log('📊 Final Report Generated', 'SUCCESS');
-    this.log(`✅ Tests Passed: ${report.summary.testsPassed}`);
-    this.log(`❌ Tests Failed: ${report.summary.testsFailed}`);
-    this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`);
-    this.log(`🔍 Linting Success: ${report.summary.lintingSuccess}`);
-    this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`);
-    this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`);
+    this.log(`✅ Tests "Passed": ${report.summary.testsPassed}`);
+    this.log(`❌ Tests "Failed": ${report.summary.testsFailed}`);
+    this.log(`🏗️ Build "Success": ${report.summary.buildSuccess}`);
+    this.log(`🔍 Linting "Success": ${report.summary.lintingSuccess}`);
+    this.log(`🔒 Security Issues "Fixed": ${report.summary.securityIssuesFixed}`);
+    this.log(`🚀 Improvements "Created": ${report.summary.improvementsCreated}`);
   }
 }
 
@@ -238,7 +265,7 @@ console.log('Performance report generated:', reportPath);
 if (require.main === module) {
   const runner = new AutomationRunner();
   runner.runAllAutomations().catch(error => {
-    console.error('Automation runner failed:', error);
+    console.error('Automation runner "failed": ', error);
     process.exit(1);
   });
 }

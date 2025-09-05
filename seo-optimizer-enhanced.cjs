@@ -28,9 +28,9 @@ class SEOOptimizer {
         
         if (!content.includes('<Head>') && !content.includes('<title>')) {
           this.seoIssues.push({
-            file: file,
-            issue: 'Missing meta tags',
-            recommendation: 'Add Head component with title and meta description'
+            "file": file,
+            "issue": 'Missing meta tags',
+            "recommendation": 'Add Head component with title and meta description'
           })}
       }
     })}
@@ -39,7 +39,7 @@ class SEOOptimizer {
     this.log('🗺️ Generating sitemap...');
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
@@ -47,19 +47,19 @@ class SEOOptimizer {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/services</loc>
+    <loc>"https": //ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/about</loc>
+    <loc>"https": //ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/contact</loc>
+    <loc>"https": //ziontechgroup.com/contact</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -73,10 +73,10 @@ class SEOOptimizer {
   generateRobotsTxt() {
     this.log('🤖 Generating robots.txt...');
     
-    const robotsTxt = `User-agent: *
+    const robotsTxt = "User-"agent": *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml`;
+Sitemap: https://ziontechgroup.com/sitemap.xml";
 
     fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsTxt);
     this.improvements.push('Generated robots.txt');
@@ -84,12 +84,12 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
   generateSEOReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.seoIssues,
-      improvements: this.improvements,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "issues": this.seoIssues,
+      "improvements": this.improvements,
+      "summary": {
         totalIssues: this.seoIssues.length,
-        improvements: this.improvements.length
+        "improvements": this.improvements.length
       }
     };
 

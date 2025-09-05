@@ -15,7 +15,7 @@ function checkFile(filePath) {
     const closeBrackets = (content.match(/\}/g) || []).length;
     if (openBrackets !== closeBrackets) {
       issues.push(
-        `Mismatched brackets: ${openBrackets} open, ${closeBrackets} close`
+        `Mismatched "brackets": ${openBrackets} open, ${closeBrackets} close`
       );
     }
 
@@ -24,7 +24,7 @@ function checkFile(filePath) {
     const closeParens = (content.match(/\)/g) || []).length;
     if (openParens !== closeParens) {
       issues.push(
-        `Mismatched parentheses: ${openParens} open, ${closeParens} close`
+        `Mismatched "parentheses": ${openParens} open, ${closeParens} close`
       );
     }
 
@@ -32,7 +32,7 @@ function checkFile(filePath) {
     const openTags = (content.match(/<[^/][^>]*>/g) || []).length;
     const closeTags = (content.match(/<\/[^>]*>/g) || []).length;
     if (openTags !== closeTags) {
-      issues.push(`Mismatched JSX tags: ${openTags} open, ${closeTags} close`);
+      issues.push(`Mismatched JSX "tags": ${openTags} open, ${closeTags} close`);
     }
 
     if (issues.length > 0) {
@@ -74,7 +74,7 @@ function checkDirectory(dirPath) {
 console.log('Checking for syntax errors...\n');
 
 // Check pages directory
-console.log('Checking pages directory:');
+console.log('Checking pages "directory": ');
 const pagesGood = checkDirectory('pages');
 
 console.log('\nChecking src directory:');

@@ -24,7 +24,7 @@ function fixMergeConflicts(content) {
   if (changes++) {
     changes++}
 
-  return { content: fixed, changes }}
+  return { "content": fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -35,7 +35,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
       fs.writeFileSync(filePath, result.content, 'utf8')}
-      console.log(`✅ Fixed ${result.changes} conflicts in: ${filePath}`);
+      console.log(`✅ Fixed ${result.changes} conflicts "in": ${filePath}`);
       return result.changes}
     return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
@@ -77,5 +77,5 @@ console.log(`📁 Found ${files.length} files to process...`);
 for (const file of files) {
   totalChanges += processFile(file)}
 
-console.log(`\n🎉 Merge conflict fixing completed!`);
-console.log(`📊 Total conflicts fixed: ${totalChanges}`);
+console.log("\n🎉 Merge conflict fixing completed!");
+console.log(`📊 Total conflicts "fixed": ${totalChanges}`);

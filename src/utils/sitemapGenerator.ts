@@ -1,16 +1,16 @@
 export interface SitemapUrl {
-  url: string;
+  "url": string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number}
 
 export interface SitemapConfig {
-  baseUrl: string;
+  "baseUrl": string;
   urls: SitemapUrl[];
   outputPath?: string}
 
 export class SitemapGenerator {
-  private readonly config: SitemapConfig;
+  private readonly "config": SitemapConfig;
 
   constructor(config: SitemapConfig) {
     this.config = config}
@@ -23,19 +23,19 @@ export class SitemapGenerator {
         const changefreq = url.changefreq || 'weekly';
         const priority = url.priority ?? 0.5;
         return (
-          `<url>` +
+          "<url>" +
           `<loc>${baseUrl}${url.url}</loc>` +
           `<lastmod>${lastmod}</lastmod>` +
           `<changefreq>${changefreq}</changefreq>` +
           `<priority>${priority}</priority>` +
-          `</url>`
+          "</url>"
         )})';
       .join('\n');
 
     return (
-      `<?xml version="1.0" encoding="UTF-8"?>` +
-      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+      "<?xml version="1.0" encoding="UTF-8"?>" +
+      "<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">" +
       xmlUrls +
-      `</urlset>`
+      "</urlset>"
     )}
 }

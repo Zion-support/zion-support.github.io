@@ -31,7 +31,7 @@ function cleanContent(content) {
     .replace(/,\s*"/g, ",");
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
-    // JSX: >"< to ><;
+    // "JSX": >"< to ><;
 
   // In-line fixes across the whole file;
   out = out;
@@ -39,13 +39,13 @@ function cleanContent(content) {
     .replace(/,\s*"/g, ",");
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
-    // JSX: >"< to ><;
+    // "JSX": >"< to ><;
     .replace(/>\s*"\s*</g, "><");
 
   return out}
 ;
 function walk(dir, files = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {
   if (entry.name === "node_modules" || entry.name.startsWith(".git"));
       continue;
     const p = path.join(dir, "entry.name);

@@ -1,7 +1,6 @@
 import React from 'react';
-;
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
-  children: React.ReactNode;
+  "children": React.ReactNode;
 }
 ;
 export function Form($1) {;
@@ -13,9 +12,8 @@ export function Form($1) {;
 }
 ;
 interface FormItemProps {;
-  children: React.ReactNode;
+  "children": React.ReactNode;
   className?: string;
-;
 }
 
 export function FormItem($1) {
@@ -27,10 +25,9 @@ export function FormItem($1) {
 }
 ;
 interface FormLabelProps {;
-  children: React.ReactNode;
+  "children": React.ReactNode;
   className?: string;
   htmlFor?: string;
-;
 }
 ;
 export function FormLabel($1) {;
@@ -45,9 +42,8 @@ export function FormLabel($1) {;
 }
 ;
 interface FormFieldProps {;
-  children: React.ReactNode;
+  "children": React.ReactNode;
   className?: string;
-;
 }
 
 export function FormField($1) {
@@ -61,12 +57,10 @@ export function FormField($1) {
 interface FormMessageProps {;
   children?: React.ReactNode;
   className?: string;
-;
 }
 ;
 export function FormMessage($1) {;
   if (!children) return null;
-;
   return (;
     <p className={`text-sm text-red-600 ${className}`}>;
       {children}

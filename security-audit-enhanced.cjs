@@ -16,21 +16,20 @@ class SecurityAuditor {
     this.log('🔒 Running Security Audit');
     
     // Check for common security issues
-    const securityChecks = [
-      {
-        name: 'Hardcoded Secrets',
-        pattern: /(password|secret|key|token)\s*=\s*['"][^'"]+['"]/gi,
-        severity: 'high'
+    const securityChecks = [{
+        "name": 'Hardcoded Secrets',
+        "pattern": /(password|secret|key|token)\s*=\s*['"][^'"]+['"]/gi,
+        "severity": 'high'
       },
       {
-        name: 'SQL Injection Risk',
-        pattern: /\$\{[^}]*\}/g,
-        severity: 'medium'
+        "name": 'SQL Injection Risk',
+        "pattern": /\$\{[^}]*\}/g,
+        "severity": 'medium'
       },
       {
-        name: 'XSS Vulnerability',
-        pattern: /dangerouslySetInnerHTML/g,
-        severity: 'medium'
+        "name": 'XSS Vulnerability',
+        "pattern": /dangerouslySetInnerHTML/g,
+        "severity": 'medium'
       }
     ];
     
@@ -46,10 +45,10 @@ class SecurityAuditor {
             const matches = content.match(check.pattern);
             if (matches) {
               this.vulnerabilities.push({
-                file: path.relative(this.projectRoot, file),
-                type: check.name,
-                severity: check.severity,
-                count: matches.length
+                "file": path.relative(this.projectRoot, file),
+                "type": check.name,
+                "severity": check.severity,
+                "count": matches.length
               })}
           }
         } catch (error) {
@@ -66,10 +65,10 @@ class SecurityAuditor {
       this.recommendations.push('Sanitize user input to prevent XSS')}
     
     const report = {
-      timestamp: new Date().toISOString(),
-      vulnerabilities: this.vulnerabilities,
-      recommendations: this.recommendations,
-      securityScore: Math.max(0, 100 - this.vulnerabilities.length * 5)
+      "timestamp": new Date().toISOString(),
+      "vulnerabilities": this.vulnerabilities,
+      "recommendations": this.recommendations,
+      "securityScore": Math.max(0, 100 - this.vulnerabilities.length * 5)
     };
     
     fs.writeFileSync(
@@ -77,8 +76,8 @@ class SecurityAuditor {
       JSON.stringify(report, null, 2)
     );
     
-    this.log(`🔒 Security Score: ${report.securityScore}/100`);
-    this.log(`⚠️  Vulnerabilities Found: ${this.vulnerabilities.length}`)}
+    this.log(`🔒 Security "Score": ${report.securityScore}/100`);
+    this.log(`⚠️  Vulnerabilities "Found": ${this.vulnerabilities.length}`)}
 
   getAllFiles(dir, extensions) {
     let files = [];

@@ -5,49 +5,48 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Common syntax fixes
-const fixes = [
-  // Fix numeric literals in object properties
+const fixes = [// Fix numeric literals in object properties
   {
-    pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,
-    replacement: '$1: $2$3'
+    "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,
+    "replacement": '$1: $2$3'
   },
   // Fix missing quotes around string values
   {
-    pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,
-    replacement: '$1: "$2"'
+    "pattern": /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[}])/g,
+    "replacement": '$1: "$2"'
   },
   // Fix malformed JSX attributes
   {
-    pattern: /(\w+)=\{`([^`]+)`\}/g,
-    replacement: '$1={`$2`}'
+    "pattern": /(\w+)=\{"([^"]+)"\}/g,
+    "replacement": '$1={"$2"}'
   },
   // Fix missing colons in object properties
   {
-    pattern: /(\w+)\s+(\d+)/g,
-    replacement: '$1: $2'
+    "pattern": /(\w+)\s+(\d+)/g,
+    "replacement": '$1: $2'
   },
   // Fix malformed style objects
   {
-    pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,
-    replacement: (match, content) => {
+    "pattern": /style=\{\{\s*([^}]+)\s*\}\}/g,
+    "replacement": (match, content) => {
       // Fix common style object issues
       const fixed = content
-        .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$1: "$2$3"')
-        .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, (m, prop, value) => {
+        .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$"1": "$2$3"')
+        .replace(/(\w+):\s*([^}]+)(?=\s*[}])/g, (m, prop, value) => {
           if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
-            return `${prop}: "${value}"`}
+            return "${prop}: "${value}""}
           return m});
-      return `style={{ ${fixed} }}`}
+      return "style={{ ${fixed} }}`}
   },
   // Fix unterminated strings
   {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"'
+    "pattern": /"([^"]*)\n/g,
+    "replacement": '"$1"'
   },
   // Fix malformed template literals
   {
-    pattern: /\$\{([^}]+)\}/g,
-    replacement: '${$1}'
+    "pattern": /\$\{([^}]+)\}/g,
+    "replacement": '${$1}'
   }
 ];
 
@@ -66,9 +65,9 @@ function fixFile(filePath) {
     // Additional specific fixes for common issues
     content = content
       // Fix numeric literals in style objects
-      .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$1: "$2$3"')
+      .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$"1": "$2$3"')
       // Fix missing quotes in object properties
-      .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g, (match, prop, value) => {
+      .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[}])/g, (match, prop, value) => {
         if (!value.includes('"') && !value.includes("'") && !value.includes('`')) {
           return `${prop}: "${value}"`}
         return match})
@@ -79,7 +78,7 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -87,8 +86,7 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  const patterns = [
-    'pages/**/*.tsx',
+  const patterns = ['pages/**/*.tsx',
     'components/**/*.tsx',
     'src/**/*.tsx',
     'src/**/*.ts'
@@ -97,7 +95,7 @@ async function main() {
   let totalFixed = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
+    const files = await glob(pattern, { "cwd": process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
         totalFixed++}
@@ -106,7 +104,7 @@ async function main() {
   
   console.log(`\nFixed ${totalFixed} files`)}
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `"file": //${process.argv[1]}`) {
   main()}
 
 export { fixFile, fixes };

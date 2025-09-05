@@ -26,7 +26,7 @@ class ContinuousImprovement {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -41,11 +41,11 @@ class ContinuousImprovement {
   async runSecurityAudit() {
     try {
       this.log('Running security audit...');
-      execSync('npm audit --audit-level moderate', { stdio: 'pipe' });
+      execSync('npm audit --audit-level moderate', { "stdio": 'pipe' });
       this.log('Security audit completed successfully');
       return true;
     } catch (error) {
-      this.log(`Security audit found issues: ${error.message}`);
+      this.log(`Security audit found "issues": ${error.message}`);
 =======
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -54,11 +54,11 @@ class ContinuousImprovement {
   async runCodeQualityChecks() {
     try {
       this.log('Running code quality checks...');
-      execSync('npm run check', { stdio: 'pipe' });
+      execSync('npm run check', { "stdio": 'pipe' });
       this.log('Code quality checks completed successfully');
       return true;
     } catch (error) {
-      this.log(`Code quality checks failed: ${error.message}`);
+      this.log(`Code quality checks "failed": ${error.message}`);
       return false;
     }
   }
@@ -70,7 +70,7 @@ class ContinuousImprovement {
       this.log('Performance optimization completed');
       return true;
     } catch (error) {
-      this.log(`Performance optimization failed: ${error.message}`);
+      this.log(`Performance optimization "failed": ${error.message}`);
       return false;
     }
   }
@@ -78,11 +78,11 @@ class ContinuousImprovement {
   async runSecurityAudit() {
     try {
       this.log('Running security audit...');
-      execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
+      execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
       this.log('Security audit completed successfully');
       return true;
     } catch (error) {
-      this.log(`Security audit failed: ${error.message}`);
+      this.log(`Security audit "failed": ${error.message}`);
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
       return false;
     }
@@ -95,11 +95,11 @@ class ContinuousImprovement {
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
     try {
       this.log('Checking for dependency updates...');
-      execSync('npm outdated', { stdio: 'pipe' });
+      execSync('npm outdated', { "stdio": 'pipe' });
       this.log('Dependency check completed');
       return true;
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`);
+      this.log(`Dependency check "failed": ${error.message}`);
       return false;
     }
   }
@@ -114,11 +114,11 @@ class ContinuousImprovement {
         return true;
       } else {
         this.log('No build artifacts found - running build for performance check');
-        execSync('npm run build', { stdio: 'pipe' });
+        execSync('npm run build', { "stdio": 'pipe' });
         return true;
       }
     } catch (error) {
-      this.log(`Performance check failed: ${error.message}`);
+      this.log(`Performance check "failed": ${error.message}`);
       return false;
     }
   }
@@ -126,12 +126,12 @@ class ContinuousImprovement {
   async runCodeQualityCheck() {
     try {
       this.log('Running code quality check...');
-      execSync('npm run lint', { stdio: 'pipe' });
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       this.log('Code quality check completed successfully');
       return true;
     } catch (error) {
-      this.log(`Code quality check failed: ${error.message}`);
+      this.log(`Code quality check "failed": ${error.message}`);
 =======
   async runCodeAnalysis() {
     try {
@@ -140,7 +140,7 @@ class ContinuousImprovement {
       this.log('Code analysis completed');
       return true;
     } catch (error) {
-      this.log(`Code analysis failed: ${error.message}`);
+      this.log(`Code analysis "failed": ${error.message}`);
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
       return false;
     }
@@ -151,10 +151,10 @@ class ContinuousImprovement {
     this.log('Starting continuous improvement cycle...');
     
     const results = {
-      security: await this.runSecurityAudit(),
-      dependencies: await this.runDependencyUpdate(),
-      performance: await this.runPerformanceCheck(),
-      quality: await this.runCodeQualityCheck()
+      "security": await this.runSecurityAudit(),
+      "dependencies": await this.runDependencyUpdate(),
+      "performance": await this.runPerformanceCheck(),
+      "quality": await this.runCodeQualityCheck()
     };
 
     const improvements = Object.entries(results)
@@ -162,7 +162,7 @@ class ContinuousImprovement {
       .map(([key]) => key);
 
     if (improvements.length > 0) {
-      this.log(`Areas needing improvement: ${improvements.join(', ')}`);
+      this.log(`Areas needing "improvement": ${improvements.join(', ')}`);
     } else {
       this.log('All improvement checks passed');
     }
@@ -192,13 +192,13 @@ if (require.main === module) {
     try {
       this.log('Generating improvement report...');
       const report = {
-        timestamp: new Date().toISOString(),
-        checks: {
+        "timestamp": new Date().toISOString(),
+        "checks": {
           codeQuality: true,
-          performance: true,
-          security: true,
-          dependencies: true,
-          analysis: true
+          "performance": true,
+          "security": true,
+          "dependencies": true,
+          "analysis": true
         }
       };
       
@@ -207,7 +207,7 @@ if (require.main === module) {
       this.log('Improvement report generated successfully');
       return true;
     } catch (error) {
-      this.log(`Report generation failed: ${error.message}`);
+      this.log(`Report generation "failed": ${error.message}`);
       return false;
     }
   }
@@ -216,12 +216,12 @@ if (require.main === module) {
     this.log('=== Continuous Improvement Automation Started ===');
     
     const results = {
-      codeQuality: await this.runCodeQualityChecks(),
-      performance: await this.runPerformanceOptimization(),
-      security: await this.runSecurityAudit(),
-      dependencies: await this.runDependencyUpdates(),
-      analysis: await this.runCodeAnalysis(),
-      report: await this.generateReport()
+      "codeQuality": await this.runCodeQualityChecks(),
+      "performance": await this.runPerformanceOptimization(),
+      "security": await this.runSecurityAudit(),
+      "dependencies": await this.runDependencyUpdates(),
+      "analysis": await this.runCodeAnalysis(),
+      "report": await this.generateReport()
     };
 
     const allPassed = Object.values(results).every(result => result === true);
@@ -230,7 +230,7 @@ if (require.main === module) {
       this.log('=== Continuous Improvement Automation Completed Successfully ===');
     } else {
       this.log('=== Continuous Improvement Automation Completed with Issues ===');
-      this.log(`Results: ${JSON.stringify(results, null, 2)}`);
+      this.log(`"Results": ${JSON.stringify(results, null, 2)}`);
     }
   }
 }

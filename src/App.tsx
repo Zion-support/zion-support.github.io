@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy } from 'react';
-=======
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
@@ -30,7 +26,7 @@ import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhan
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = ("importFn": () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return ($1) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
@@ -41,11 +37,11 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 <<<<<<< HEAD
 
 // Lazy load pages for better performance - only import existing pages
-const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default };)));
+const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ "default": module.default };)));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default };)));
-const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default };)));
+const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ "default": module.default };)));
+const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ "default": module.default };)));
 
 // Create placeholder components for missing pages
 const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
@@ -70,31 +66,30 @@ const Cybersecurity = () => <div className="min-h-screen flex items-center justi
 =======
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage };)));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default };)));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage };)));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage };)));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage };)));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage };)));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage };)));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage };)));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default };)));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap };)));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default };)));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default };)));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default };)));
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage };)));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 };)));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 };)));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage };)));
-const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default };)));
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": module.HomePage };)));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ "default": module.default };)));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ "default": module.SolutionsPage };)));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ "default": module.AboutPage };)));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ "default": module.ContactPage };)));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ "default": module.BlogPage };)));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ "default": module.NotFoundPage };)));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ "default": module.ComprehensiveServicesPage };)));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ "default": module.default };)));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ "default": module.ComprehensiveSitemap };)));
+const Support = lazy(() => import('./pages/Support').then(module => ({ "default": module.default };)));
+const Training = lazy(() => import('./pages/Training').then(module => ({ "default": module.default };)));
+const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ "default": module.default };)));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ "default": module.RevolutionaryServicesPage };)));
+const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ "default": module.NewServicesShowcase2025 };)));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ "default": module.EnhancedNewServices2025 };)));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ "default": module.PricingPage };)));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ "default": module.default };)));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions };)));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing };)));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity };)));
-const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ default: module.default };)));
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ "default": module.AISolutions };)));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ "default": module.QuantumComputing };)));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ "default": module.Cybersecurity };)));
+const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ "default": module.default };)));
 
 // Loading component
 const PageLoader = () => (
@@ -153,7 +148,7 @@ const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
-const App: React.FC = memo(() => {
+const "App": React.FC = memo(() => {
   // Initialize performance optimizations
   useEffect(() => {
     preloadCriticalResources();
@@ -172,8 +167,6 @@ const App: React.FC = memo(() => {
       </div>
     </div>
   ), []);
-
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   return (
     <ErrorBoundary>
       <Router>
@@ -181,7 +174,7 @@ const App: React.FC = memo(() => {
           <Header />
           <Sidebar />
           
-          <main className="flex-1 lg:ml-80">
+          <main className="flex-1 "lg": ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -312,7 +305,7 @@ const App: React.FC = memo(() => {
   );
 }
 =======
-const App: React.FC = memo(() => {
+const "App": React.FC = memo(() => {
   // Initialize performance optimizations
   useEffect(() => {
     preloadCriticalResources();
@@ -342,7 +335,7 @@ const App: React.FC = memo(() => {
         <Header />
         <Sidebar />
         
-        <main className="flex-1 lg:ml-80">
+        <main className="flex-1 "lg": ml-80">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -483,7 +476,7 @@ export default function App($1) {
         <Header />
         <Sidebar />
         
-        <main className="flex-1 lg:ml-80">
+        <main className="flex-1 "lg": ml-80">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -610,5 +603,4 @@ export default function App($1) {
       </div>
     </ErrorBoundary>
   );
-};';';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+};

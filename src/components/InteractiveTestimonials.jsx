@@ -1,52 +1,52 @@
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ,
-    {id: '2',
-        name: 'Marcus Rodriguez',
-        role: 'Head of Engineering',
-        comp: 'InnovateCorp',
-        avatar: 'MR',
-        rating: 5,
-        content: 'The talent matching algorithm is incredible.We found our lead AI engineer in just 3 days, and the quality was outstanding.Zion has become our go-to platform for all tech talent needs.',
-        category: 'Talent Matching',
-        date: '1 month ago',
-        likes: 89,
-        verified: true},
-    {id: '3',
-        name: 'Dr.Emily Watson',
-        role: 'Research Director',
-        comp: 'Quantum Labs',
-        avatar: 'EW',
-        rating: 5,
-        content: 'Working with Zion\'s AI services has accelerated our research by months.The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
-        category: 'Research & Development',
-        date: '3 weeks ago',
-        likes: 156,
-        verified: true},
-    {id: '4',
-        name: 'Alex Thompson',
-        role: 'Product Manager',
-        comp: 'StartupXYZ',
-        avatar: 'AT',
-        rating: 5,
-        content: 'As a startup, we needed cost-effective AI solutions.Zion delivered enterprise-grade tools at startup prices.The ROI was immediate and substantial.',
-        category: 'Startup Solutions',
-        date: '1 week ago',
-        likes: 73,
-        verified: true},
+    {"id": '2',
+        "name": 'Marcus Rodriguez',
+        "role": 'Head of Engineering',
+        "comp": 'InnovateCorp',
+        "avatar": 'MR',
+        "rating": 5,
+        "content": 'The talent matching algorithm is incredible.We found our lead AI engineer in just 3 days, and the quality was outstanding.Zion has become our go-to platform for all tech talent needs.',
+        "category": 'Talent Matching',
+        "date": '1 month ago',
+        "likes": 89,
+        "verified": true},
+    {"id": '3',
+        "name": 'Dr.Emily Watson',
+        "role": 'Research Director',
+        "comp": 'Quantum Labs',
+        "avatar": 'EW',
+        "rating": 5,
+        "content": 'Working with Zion\'s AI services has accelerated our research by months.The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
+        "category": 'Research & Development',
+        "date": '3 weeks ago',
+        "likes": 156,
+        "verified": true},
+    {"id": '4',
+        "name": 'Alex Thompson',
+        "role": 'Product Manager',
+        "comp": 'StartupXYZ',
+        "avatar": 'AT',
+        "rating": 5,
+        "content": 'As a startup, we needed cost-effective AI solutions.Zion delivered enterprise-grade tools at startup prices.The ROI was immediate and substantial.',
+        "category": 'Startup Solutions',
+        "date": '1 week ago',
+        "likes": 73,
+        "verified": true},
     {
 
-        id: '5',
-        name: 'Lisa Park',
-        role: 'VP of Operations',
-        comp: 'GlobalTech Inc',
-        avatar: 'LP',
-        rating: 5,
-        content: 'The global network and 24/7 support are game-changers.We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
-        category: 'Global Operations',
-        date: '2 months ago',
-        likes: 94,
-        verified: true
+        "id": '5',
+        "name": 'Lisa Park',
+        "role": 'VP of Operations',
+        "comp": 'GlobalTech Inc',
+        "avatar": 'LP',
+        "rating": 5,
+        "content": 'The global network and 24/7 support are game-changers.We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
+        "category": 'Global Operations',
+        "date": '2 months ago',
+        "likes": 94,
+        "verified": true
 
 ];';';
 const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
@@ -59,7 +59,7 @@ export function InteractiveTestimonials($1) {
         ? testimonials
         : testimonials.filter(testimonial => testimonial.category === selectedCategory) ;
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -68,8 +68,8 @@ export function InteractiveTestimonials($1) {
         if(!isAutoPlaying) return;
         const interval = setInterval(() => {setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};, 5000) ;
         return () => clearInterval(interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
-    const nextTestimonial = (props) => {setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};;
-    const prevTestimonial = (props) => {setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};;
+    const nextTestimonial = (props) => {setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
+    const prevTestimonial = (props) => {setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
     const toggleLike = (props) => {
 
         setLikedTestimonials(prev => {
@@ -82,36 +82,36 @@ export function InteractiveTestimonials($1) {
             return newSet})};
     const renderStars = (props) => {
 
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />))};;
+        return Array.from({ "length": 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />))};
     const containerVariants = {
 
-        hidden: { opacity: 0 },
-        visible: {
+        "hidden": { opacity: 0 },
+        "visible": {
 
             opacity: 1,
-            transition: {
+            "transition": {
 
                 staggerChildren: 0.1,
-                delayChildren: 0.2
+                "delayChildren": 0.2
 
-    };;
+    };
     const itemVariants = {
 
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95
+  "hidden": { opacity: 0, "y": 20,
+  "scale": 0.95
 
 },
-        visible: {
+        "visible": {
 
             opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
+            "y": 0,
+            "scale": 1,
+            "transition": {
 
                 duration: 0.5,
-                ease: "easeOut"
+                "ease": "easeOut"
 
-    };;"
+    };"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}"
       <div className="absolute inset-0">"

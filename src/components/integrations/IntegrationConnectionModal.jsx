@@ -7,10 +7,10 @@ import {toast} from "sonner";
 export function IntegrationConnectionModal($1) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
-        autoCreateContacts: true,
-        pushNotes: false,
-        syncJobDetails: true,
-        syncApplicantData: true
+        "autoCreateContacts": true,
+        "pushNotes": false,
+        "syncJobDetails": true,
+        "syncApplicantData": true
     };);
     const handleConnectOAuth = (props) => {
         setIsConnecting(true);
@@ -29,7 +29,7 @@ export function IntegrationConnectionModal($1) {
         toast.success("Integration settings saved");
         onClose()};
     return (<Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className=""sm": max-w-md">
         <DialogHeader className="flex flex-row items-center gap-4">
           <img loading="lazy" src={integration.logoUrl} alt={`${integration.name} logo`} className="h-12 w-12 rounded" onError={(e) => {
             e.target.src = "/placeholder.svg"}}/>
@@ -51,7 +51,7 @@ export function IntegrationConnectionModal($1) {
                 <div className="flex items-center space-x-2">
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
-  autoCreateContacts: checked 
+  "autoCreateContacts": checked 
 
 })}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
@@ -60,7 +60,7 @@ export function IntegrationConnectionModal($1) {
                 <div className="flex items-center space-x-2">
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
-  pushNotes: checked 
+  "pushNotes": checked 
 
 })}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -69,7 +69,7 @@ export function IntegrationConnectionModal($1) {
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
-  syncJobDetails: checked 
+  "syncJobDetails": checked 
 
 })}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -78,7 +78,7 @@ export function IntegrationConnectionModal($1) {
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
-  syncApplicantData: checked 
+  "syncApplicantData": checked 
 
 })}/>
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
@@ -88,7 +88,7 @@ export function IntegrationConnectionModal($1) {
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
-                  Last synced: {integration.lastSync
+                  Last "synced": {integration.lastSync
                 ? new Date(integration.lastSync).toLocaleString()
                 : "Never"}
                 </p>
@@ -111,7 +111,7 @@ export function IntegrationConnectionModal($1) {
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-sm font-medium">What will be synced:</h3>
+                <h3 className="text-sm font-medium">What will be "synced": </h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
                   <li>Contact information</li>
                   <li>Job details and descriptions</li>

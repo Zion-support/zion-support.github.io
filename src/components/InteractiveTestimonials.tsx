@@ -24,20 +24,20 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
         <motion.div
           className="text-center mb-16"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>";
           <pclassName="text-xl text-gray-600 max-w-3xl mx-auto">';
@@ -48,18 +48,18 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
         {/* Category Filter */}
         <motion.div"
           className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 2 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ "opacity": 0, "y": 2 0 }}
+          whileInView={{ "opacity": 1, "y": 0 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
         >
           {categories.map ( (category) => (<button      key={category}
               onClick={ () => {
                 setSelectedCategory(category) ;';';
                 setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25"
-                  : 'bg-slate-700 text-gray-300 hover: b g-slate-600 hover: tex t-white'`
-              }`}
+                  : 'bg-slate-700 text-gray-300 "hover": b g-slate-600 hover: tex t-white'`
+              }"}
             >
               {category}
             </button>
@@ -95,7 +95,7 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
                 </p>
               </blockquote>
 "
-              <div className="grid md: gri d-cols-3 gap-6">
+              <div className="grid "md": gri d-cols-3 gap-6">
                 {Object.entries(currentTestimonial.metrics).map(([key, value])  => ("
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">"
                     <div className="text-2xl font-bold text-blue-600 mb-1">
@@ -112,12 +112,12 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
           {/* Navigation Arrows */}
           <button
             onClick={previousTestimonial}"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover: shado w-xl transition-all duration-200"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg "hover": shado w-xl transition-all duration-200"
           >"
             <ChevronLeft className="h-6 w-6 text-gray-600"   />          </button>
           <button
             onClick={nextTestimonial}"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover: shado w-xl transition-all duration-200"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg "hover": shado w-xl transition-all duration-200"
           >"
             <ChevronRight className="h-6 w-6 text-gray-600"   />          </button>
         </div>
@@ -128,9 +128,9 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToTestimonial(index)}`
+                onClick={() => goToTestimonial(index)}"
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
-                }`}
+                }"}
               />) ) }
           </div>
         </div>
@@ -139,7 +139,7 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
         <div className="flex justify-center mb-8">;
           <button
             onClick={togglePlayPause}"
-            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors duration-200"
+            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors duration-200"
           >
             {isPlaying ? (
               <>"
@@ -157,28 +157,28 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 2 0 }}
+  { "opacity": 0,
+  "y": 2 0 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0 }}
+  { "opacity": 1,
+  "y": 0 }}
         {/* Category Filter */}
         <motion.div
           className="flex flex - wrap justify - center gap-3 mb-12"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
@@ -187,7 +187,7 @@ function InteractiveTestimonials($1) {export function InteractiveTestimonials($1
             <pclassName="text-blue-100 mb-6 max-w-2xl mx-auto">';
               Let's discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <Award className="ml-2 h-5 w-5"   />
@@ -209,7 +209,7 @@ export default InteractiveTestimonials;"
     </section>;) }
 export default InteractiveTestimonials;';
 export default InteractiveTestimonials;';';
-"`
+""
 
 </motion>
 </button>

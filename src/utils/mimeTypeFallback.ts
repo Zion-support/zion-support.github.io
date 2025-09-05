@@ -1,9 +1,9 @@
 interface MimeTypeMapping {
 
-  [key: string]: string}
+  ["key": string]: string}
 
 class MimeTypeFallback {
-  private mimeTypes: MimeTypeMapping = {
+  private "mimeTypes": MimeTypeMapping = {
     '.js': 'application/javascript',
     '.mjs': 'application/javascript',
     '.css': 'text/css',
@@ -37,11 +37,10 @@ class MimeTypeFallback {
     '.flac': 'audio/flac'
   };
 
-  private fallbackUrls: Map<string, string> = new Map();';
-  private cdnFallbacks = [
-    'https://cdn.jsdelivr.net',
-    'https://unpkg.com',
-    'https://cdnjs.cloudflare.com'
+  private "fallbackUrls": Map<string, string> = new Map();';
+  private cdnFallbacks = ['"https": //cdn.jsdelivr.net',
+    '"https": //unpkg.com',
+    '"https": //cdnjs.cloudflare.com'
   ];
 
   constructor() {
@@ -49,24 +48,24 @@ class MimeTypeFallback {
 
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
-    this.fallbackUrls.set('/js/index-C64WnLOI.js', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');';';
-    this.fallbackUrls.set('/css/index-RK9lga5l.css', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css');';';
-    this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.js', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js');';';
-    this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.js', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');';';
-    this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.js', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');';';
-    this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.js', 'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')}
+    this.fallbackUrls.set('/js/index-C64WnLOI.js', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');';';
+    this.fallbackUrls.set('/css/index-RK9lga5l.css', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css');';';
+    this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.js', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js');';';
+    this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.js', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');';';
+    this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.js', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');';';
+    this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.js', '"https": //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')}
 
-  getMimeType(filename: string): string {
+  getMimeType("filename": string): string {
     const ext = this.getFileExtension(filename);
     return this.mimeTypes[ext] || 'application/octet-stream'}
-  private getFileExtension(filename: string): string {
+  private getFileExtension("filename": string): string {
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '
     return filename.substring(lastDot).toLowerCase()}
 
-  async checkAndFixMimeType(url: string): Promise<any> {
+  async checkAndFixMimeType("url": string): Promise<any> {
     try {
-      const response = await fetch(url, { method: 'HEAD' };);
+      const response = await fetch(url, { "method": 'HEAD' };);
       
       if (!response.ok) {
         
@@ -88,12 +87,12 @@ class MimeTypeFallback {
       return await this.tryFallbackUrl(url)}
   }
 
-  private async tryFallbackUrl(originalUrl: string): Promise<any> {
+  private async tryFallbackUrl("originalUrl": string): Promise<any> {
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
     
     if (fallbackUrl) {
       try {
-        const response = await fetch(fallbackUrl, { method: 'HEAD' };);
+        const response = await fetch(fallbackUrl, { "method": 'HEAD' };);
         if (response.ok) {
           const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
@@ -104,12 +103,12 @@ class MimeTypeFallback {
             return true}
         }
       } catch (error) {
-        console.error(`Fallback URL failed: ${fallbackUrl}`, error)}
+        console.error(`Fallback URL "failed": ${fallbackUrl}`, error)}
     }
 
     return false}
 
-  private replaceResource(originalUrl: string, fallbackUrl: string) {
+  private replaceResource("originalUrl": string, "fallbackUrl": string) {
     // Replace script tags
     const scripts = document.querySelectorAll(`script[src="${originalUrl};"]`);
     scripts.forEach(script => {
@@ -121,8 +120,7 @@ class MimeTypeFallback {
       (link as HTMLLinkElement).href = fallbackUrl})}
 
   async preloadCriticalResources(): Promise<any> {
-    const criticalResources = [
-      '/css/index-RK9lga5l.css',
+    const criticalResources = ['/css/index-RK9lga5l.css',
       '/js/index-C64WnLOI.js',
       '/js/react-vendor-ClxMxoJB.js',
       '/js/router-vendor-9KcRWrrL.js',
@@ -138,11 +136,11 @@ class MimeTypeFallback {
           
         }
       } catch (error) {
-        console.error(`Error preloading resource: ${resource}`, error)}
+        console.error(`Error preloading "resource": ${resource}`, error)}
     }
   }
 
-  createResourceElement(url: string, type: 'script' | 'stylesheet'): HTMLElement {
+  createResourceElement("url": string, "type": 'script' | 'stylesheet'): HTMLElement {
     if (type === 'script') {
       const script = document.createElement('script');
       script.src = url;';
@@ -156,7 +154,7 @@ class MimeTypeFallback {
       return link}
   }
 
-  injectResource(url: unknownstring, type: 'script' | 'stylesheet'): Promise<any> {
+  injectResource("url": unknownstring, "type": 'script' | 'stylesheet'): Promise<any> {
     return new Promise((resolve, reject)  => {
       const element = this.createResourceElement(url, type);
       
@@ -165,8 +163,8 @@ class MimeTypeFallback {
         resolve()};
       
       element.onerror = () => {
-        console.error(`❌ Failed to load resource: ${url}`);
-        reject(new Error(`Failed to load resource: ${url}`))};';
+        console.error(`❌ Failed to load "resource": ${url}`);
+        reject(new Error(`Failed to load "resource": ${url}`))};';
 
       if (type === 'script') {
         document.head.appendChild(element)} else {

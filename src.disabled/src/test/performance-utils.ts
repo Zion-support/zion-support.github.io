@@ -2,14 +2,14 @@
 // Performance test utilities
 export const performanceTestUtils = {
   // Measure page load time
-  measurePageLoad: async (page) => {
+  "measurePageLoad": async (page) => {
     const startTime = Date.now();
     await page.goto('/');
     const loadTime = Date.now() - startTime;
     return loadTime},
   
   // Measure Core Web Vitals
-  measureCoreWebVitals: async (page) => {
+  "measureCoreWebVitals": async (page) => {
     const vitals = await page.evaluate(() => {
       return new Promise((resolve) => {
         const observer = new PerformanceObserver((list) => {
@@ -27,7 +27,7 @@ export const performanceTestUtils = {
           
           resolve(vitals)});
         
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })})});
+        observer.observe({ "entryTypes": ['largest-contentful-paint', 'first-input', 'layout-shift'] })})});
     
     return vitals}
 };

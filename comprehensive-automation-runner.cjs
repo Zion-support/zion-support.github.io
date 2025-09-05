@@ -11,12 +11,12 @@ const { execSync, spawn } = require('child_process');
 class ComprehensiveAutomationRunner {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      status: 'running',
-      scripts: [],
-      tests: [],
-      improvements: [],
-      errors: []
+      "timestamp": new Date().toISOString(),
+      "status": 'running',
+      "scripts": [],
+      "tests": [],
+      "improvements": [],
+      "errors": []
     };
     this.logFile = 'comprehensive-automation-log.txt'}
 
@@ -28,33 +28,33 @@ class ComprehensiveAutomationRunner {
 
   async runScript(scriptPath, description) {
     try {
-      this.log(`🚀 Running: ${description}`);
+      this.log(`🚀 "Running": ${description}`);
       const result = execSync(`node ${scriptPath}`, { 
-        encoding: 'utf8', 
-        timeout: 30000,
-        stdio: 'pipe'
+        "encoding": 'utf8', 
+        "timeout": 30000,
+        "stdio": 'pipe'
       });
       
       this.results.scripts.push({
-        script: scriptPath,
+        "script": scriptPath,
         description,
-        status: 'success',
-        output: result
+        "status": 'success',
+        "output": result
       });
       
-      this.log(`✅ Success: ${description}`);
+      this.log(`✅ "Success": ${description}`);
       return true} catch (error) {
       this.results.scripts.push({
-        script: scriptPath,
+        "script": scriptPath,
         description,
-        status: 'failed',
-        error: error.message
+        "status": 'failed',
+        "error": error.message
       });
       
-      this.log(`❌ Failed: ${description} - ${error.message}`);
+      this.log(`❌ "Failed": ${description} - ${error.message}`);
       this.results.errors.push({
-        script: scriptPath,
-        error: error.message
+        "script": scriptPath,
+        "error": error.message
       });
       return false}
   }
@@ -62,37 +62,36 @@ class ComprehensiveAutomationRunner {
   async runTests() {
     this.log('🧪 Running comprehensive tests...');
     
-    const testCommands = [
-      { cmd: 'npm run lint', desc: 'Linting check' },
-      { cmd: 'npm run format:check', desc: 'Format check' },
-      { cmd: 'npm test', desc: 'Unit tests' }
+    const testCommands = [{ "cmd": 'npm run lint', "desc": 'Linting check' },
+      { "cmd": 'npm run format:check', "desc": 'Format check' },
+      { "cmd": 'npm test', "desc": 'Unit tests' }
     ];
 
     for (const test of testCommands) {
       try {
-        this.log(`🧪 Running: ${test.desc}`);
+        this.log(`🧪 "Running": ${test.desc}`);
         const result = execSync(test.cmd, { 
-          encoding: 'utf8', 
-          timeout: 60000,
-          stdio: 'pipe'
+          "encoding": 'utf8', 
+          "timeout": 60000,
+          "stdio": 'pipe'
         });
         
         this.results.tests.push({
-          test: test.cmd,
-          description: test.desc,
-          status: 'passed',
-          output: result
+          "test": test.cmd,
+          "description": test.desc,
+          "status": 'passed',
+          "output": result
         });
         
-        this.log(`✅ Passed: ${test.desc}`)} catch (error) {
+        this.log(`✅ "Passed": ${test.desc}`)} catch (error) {
         this.results.tests.push({
-          test: test.cmd,
-          description: test.desc,
-          status: 'failed',
-          error: error.message
+          "test": test.cmd,
+          "description": test.desc,
+          "status": 'failed',
+          "error": error.message
         });
         
-        this.log(`❌ Failed: ${test.desc} - ${error.message}`)}
+        this.log(`❌ "Failed": ${test.desc} - ${error.message}`)}
     }
   }
 
@@ -100,25 +99,25 @@ class ComprehensiveAutomationRunner {
     this.log('🔧 Creating additional improvement scripts...');
     
     // Create a performance monitor script
-    const performanceMonitor = `#!/usr/bin/env node
+    const performanceMonitor = "#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      timestamp: new Date().toISOString(),
-      memory: process.memoryUsage(),
-      uptime: process.uptime(),
-      cpu: process.cpuUsage()
+      "timestamp": new Date().toISOString(),
+      "memory": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "cpu": process.cpuUsage()
     }}
 
   collectMetrics() {
     this.metrics = {
-      timestamp: new Date().toISOString(),
-      memory: process.memoryUsage(),
-      uptime: process.uptime(),
-      cpu: process.cpuUsage()
+      "timestamp": new Date().toISOString(),
+      "memory": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "cpu": process.cpuUsage()
     };
     
     const reportPath = path.join(process.cwd(), 'performance-metrics.json');
@@ -130,13 +129,13 @@ if (require.main === module) {
   const monitor = new PerformanceMonitor();
   monitor.collectMetrics()}
 
-module.exports = PerformanceMonitor;`;
+module.exports = PerformanceMonitor;";
 
     fs.writeFileSync('scripts/performance-monitor-enhanced.cjs', performanceMonitor);
     this.log('✅ Created enhanced performance monitor');
 
     // Create a code quality checker
-    const codeQualityChecker = `#!/usr/bin/env node
+    const codeQualityChecker = "#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -144,33 +143,32 @@ const { execSync } = require('child_process');
 class CodeQualityChecker {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      checks: []
+      "timestamp": new Date().toISOString(),
+      "checks": []
     }}
 
   async checkCodeQuality() {
     console.log('🔍 Running code quality checks...');
     
-    const checks = [
-      { name: 'ESLint', cmd: 'npm run lint' },
-      { name: 'Prettier', cmd: 'npm run format:check' },
-      { name: 'TypeScript', cmd: 'npx tsc --noEmit' }
+    const checks = [{ "name": 'ESLint', "cmd": 'npm run lint' },
+      { "name": 'Prettier', "cmd": 'npm run format:check' },
+      { "name": 'TypeScript', "cmd": 'npx tsc --noEmit' }
     ];
 
     for (const check of checks) {
       try {
-        execSync(check.cmd, { stdio: 'pipe' });
+        execSync(check.cmd, { "stdio": 'pipe' });
         this.results.checks.push({
-          name: check.name,
-          status: 'passed'
+          "name": check.name,
+          "status": 'passed'
         });
-        console.log(\`✅ \${check.name}: Passed\`)} catch (error) {
+        console.log(\"✅ \${check.name}: Passed\")} catch (error) {
         this.results.checks.push({
-          name: check.name,
-          status: 'failed',
-          error: error.message
+          "name": check.name,
+          "status": 'failed',
+          "error": error.message
         });
-        console.log(\`❌ \${check.name}: Failed\`)}
+        console.log(\"❌ \${check.name}: Failed\")}
     }
 
     const reportPath = path.join(process.cwd(), 'code-quality-report.json');
@@ -182,13 +180,13 @@ if (require.main === module) {
   const checker = new CodeQualityChecker();
   checker.checkCodeQuality().catch(console.error)}
 
-module.exports = CodeQualityChecker;`;
+module.exports = CodeQualityChecker;";
 
     fs.writeFileSync('scripts/code-quality-checker.cjs', codeQualityChecker);
     this.log('✅ Created code quality checker');
 
     // Create a deployment automation script
-    const deploymentAutomation = `#!/usr/bin/env node
+    const deploymentAutomation = "#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -200,28 +198,27 @@ class DeploymentAutomation {
   async deploy() {
     console.log('🚀 Starting deployment automation...');
     
-    const deploymentSteps = [
-      { name: 'Install Dependencies', cmd: 'npm install' },
-      { name: 'Run Tests', cmd: 'npm test' },
-      { name: 'Build Project', cmd: 'npm run build' },
-      { name: 'Lint Check', cmd: 'npm run lint' }
+    const deploymentSteps = [{ "name": 'Install Dependencies', "cmd": 'npm install' },
+      { "name": 'Run Tests', "cmd": 'npm test' },
+      { "name": 'Build Project', "cmd": 'npm run build' },
+      { "name": 'Lint Check', "cmd": 'npm run lint' }
     ];
 
     for (const step of deploymentSteps) {
       try {
-        console.log(\`🔄 \${step.name}...\`);
-        execSync(step.cmd, { stdio: 'inherit' });
+        console.log(\"🔄 \${step.name}...\");
+        execSync(step.cmd, { "stdio": 'inherit' });
         this.steps.push({
-          name: step.name,
-          status: 'completed'
+          "name": step.name,
+          "status": 'completed'
         });
-        console.log(\`✅ \${step.name} completed\`)} catch (error) {
+        console.log(\"✅ \${step.name} completed\")} catch (error) {
         this.steps.push({
-          name: step.name,
-          status: 'failed',
-          error: error.message
+          "name": step.name,
+          "status": 'failed',
+          "error": error.message
         });
-        console.log(\`❌ \${step.name} failed: \${error.message}\`);
+        console.log(\"❌ \${step.name} "failed": \${error.message}\");
         throw error}
     }
 
@@ -232,16 +229,15 @@ if (require.main === module) {
   const deployment = new DeploymentAutomation();
   deployment.deploy().catch(console.error)}
 
-module.exports = DeploymentAutomation;`;
+module.exports = DeploymentAutomation;";
 
     fs.writeFileSync('scripts/deployment-automation-enhanced.cjs', deploymentAutomation);
     this.log('✅ Created enhanced deployment automation');
 
     this.results.improvements.push({
-      type: 'new_scripts',
-      count: 3,
-      scripts: [
-        'scripts/performance-monitor-enhanced.cjs',
+      "type": 'new_scripts',
+      "count": 3,
+      "scripts": ['scripts/performance-monitor-enhanced.cjs',
         'scripts/code-quality-checker.cjs',
         'scripts/deployment-automation-enhanced.cjs'
       ]
@@ -252,26 +248,26 @@ module.exports = DeploymentAutomation;`;
     
     try {
       // Add all changes
-      execSync('git add .', { stdio: 'pipe' });
+      execSync('git add .', { "stdio": 'pipe' });
       this.log('✅ Git add completed');
 
       // Commit changes
       const commitMessage = `Automated improvements and fixes - ${new Date().toISOString()}`;
-      execSync(`git commit -m "${commitMessage}"`, { stdio: 'pipe' });
+      execSync(`git commit -m "${commitMessage}"`, { "stdio": 'pipe' });
       this.log('✅ Git commit completed');
 
       // Push to current branch
-      execSync('git push origin HEAD', { stdio: 'pipe' });
+      execSync('git push origin HEAD', { "stdio": 'pipe' });
       this.log('✅ Git push completed');
 
       this.results.git = {
-        status: 'completed',
-        commit: commitMessage
+        "status": 'completed',
+        "commit": commitMessage
       }} catch (error) {
-      this.log(`❌ Git operation failed: ${error.message}`);
+      this.log(`❌ Git operation "failed": ${error.message}`);
       this.results.git = {
-        status: 'failed',
-        error: error.message
+        "status": 'failed',
+        "error": error.message
       }}
   }
 
@@ -283,10 +279,9 @@ module.exports = DeploymentAutomation;`;
       fs.mkdirSync('automation-reports')}
 
     // Run existing automation scripts
-    const automationScripts = [
-      { path: 'scripts/health-check.cjs', desc: 'Health Check' },
-      { path: 'scripts/performance-monitor.cjs', desc: 'Performance Monitor' },
-      { path: 'scripts/security-audit.cjs', desc: 'Security Audit' }
+    const automationScripts = [{ "path": 'scripts/health-check.cjs', "desc": 'Health Check' },
+      { "path": 'scripts/performance-monitor.cjs', "desc": 'Performance Monitor' },
+      { "path": 'scripts/security-audit.cjs', "desc": 'Security Audit' }
     ];
 
     for (const script of automationScripts) {
@@ -309,7 +304,7 @@ module.exports = DeploymentAutomation;`;
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     
     this.log('🎉 Comprehensive automation completed!');
-    this.log(`📄 Final report saved to: ${reportPath}`);
+    this.log(`📄 Final report saved "to": ${reportPath}`);
     
     return this.results}
 }

@@ -16,68 +16,64 @@ import {
   CheckCircle
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 
-const DemoPage: React.FC = () => {
+const "DemoPage": React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services')
   
-  const demos = [
-    {
-      id: 1,
-      title: 'AI Services Demo',
-      description: 'See how our AI solutions can transform your business processes',
-      duration: '15 minutes',
-      icon: <Brain className="w-8 h-8"  />,
-      features: [
+  const demos = [{
+      "id": 1,
+      "title": 'AI Services Demo',
+      "description": 'See how our AI solutions can transform your business processes',
+      "duration": '15 minutes',
+      "icon": <Brain className="w-8 h-8"  />,
+      "features": [
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics'
       ],
-      category: 'AI Services'
+      "category": 'AI Services'
     },
     {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Demo',
-      description: 'Explore our comprehensive IT infrastructure solutions',
-      duration: '20 minutes',
-      icon: <Server className="w-8 h-8"  />,
-      features: [
-        'Cloud Migration',
+      "id": 'it-infrastructure',
+      "title": 'IT Infrastructure Demo',
+      "description": 'Explore our comprehensive IT infrastructure solutions',
+      "duration": '20 minutes',
+      "icon": <Server className="w-8 h-8"  />,
+      "features": ['Cloud Migration',
         'Network Setup',
         'System Integration',
         '24/7 Support'
       ],
-      category: 'IT Services'
+      "category": 'IT Services'
     },
     {
-      id: 3,
-      title: 'Micro SaaS Demo',
-      description: 'Discover our innovative micro SaaS development capabilities',
-      duration: '18 minutes',
-      icon: <Zap className="w-8 h-8"  />,
-      features: [
-        'Custom SaaS Development',
+      "id": 3,
+      "title": 'Micro SaaS Demo',
+      "description": 'Discover our innovative micro SaaS development capabilities',
+      "duration": '18 minutes',
+      "icon": <Zap className="w-8 h-8"  />,
+      "features": ['Custom SaaS Development',
         'API Integration',
         'Scalable Architecture',
         'Performance Optimization'
       ],
-      category: 'Micro SaaS'
+      "category": 'Micro SaaS'
     },
     {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Demo',
-      description: 'Learn about our comprehensive security solutions',
-      duration: '25 minutes',
-      icon: <Shield className="w-8 h-8"  />,
-      features: [
-        'Security Assessment',
+      "id": 'cybersecurity',
+      "title": 'Cybersecurity Demo',
+      "description": 'Learn about our comprehensive security solutions',
+      "duration": '25 minutes',
+      "icon": <Shield className="w-8 h-8"  />,
+      "features": ['Security Assessment',
         'Threat Monitoring',
         'Incident Response',
         'Compliance Management'
       ],
-      category: 'Cybersecurity'
+      "category": 'Cybersecurity'
     }
   ]
 
@@ -88,30 +84,30 @@ const DemoPage: React.FC = () => {
       <SEO title="Demo - Zion Tech Group"
         description="Experience our AI services, IT solutions, and micro SaaS development capabilities through interactive demos."
         keywords="demo, AI services, IT solutions, micro SaaS, cybersecurity, Zion Tech Group"
-        canonical="https://ziontechgroup.com/demo"
+        canonical=""https": //ziontechgroup.com/demo"
        />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">
                   Interactive <span className="text-blue-600">Demos</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Experience our AI services, IT solutions, and micro SaaS development capabilities through interactive demonstrations.
                 </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Play className="w-5 h-5"  />
@@ -119,8 +115,8 @@ const DemoPage: React.FC = () => {
                   </motion.button>
                   <motion.a
                     href="/contact"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <ArrowRight className="w-5 h-5"  />
@@ -133,14 +129,14 @@ const DemoPage: React.FC = () => {
 
           {/* Demo Selection */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
                   Choose Your Demo
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -152,14 +148,14 @@ const DemoPage: React.FC = () => {
                 {demos.map((demo, index) => (
                   <motion.button
                     key={demo.id}
-                    initial={{ opacity: 0, y: 2 0 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
                     onClick={() => setSelectedDemo(demo.id)}
                     className={`p-6 rounded-xl border-2 transition-all duration-300 ${
                       selectedDemo === demo.id
                         ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 bg-white hover: borde r-blue-300'
+                        : 'border-gray-200 bg-white "hover": borde r-blue-300'
                     }`}
                   >
                     <div className="text-center">
@@ -182,12 +178,12 @@ const DemoPage: React.FC = () => {
               {/* Selected Demo Details */}
               {selectedDemoData && (
                 <motion.div
-                  initial={{ opacity: 0, y: 2 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={{ "opacity": 0, "y": 2 0 }}
+                  animate={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.6 }}
                   className="bg-white rounded-xl shadow-lg p-8"
                 >
-                  <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
+                  <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
                         <div className="text-blue-600">
@@ -208,7 +204,7 @@ const DemoPage: React.FC = () => {
                       </p>
                       
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-3">What You'll See:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-3">What You'll "See": </h4>
                         <ul className="space-y-2">
                           {selectedDemoData.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-gray-600">
@@ -231,9 +227,9 @@ const DemoPage: React.FC = () => {
                       </div>
                       
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                        whileHover={{ "scale": 1.05 }}
+                        whileTap={{ "scale": 0.95 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": b g-blue-700 transition-colors"
                       >
                         <Play className="w-5 h-5"  />
                         Start Demo
@@ -258,14 +254,14 @@ const DemoPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -275,20 +271,20 @@ const DemoPage: React.FC = () => {
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <ArrowRight className="w-5 h-5"  />
                     Schedule Consultation
                   </motion.a>
                   <motion.a
-                    href="tel:+13024640950"
+                    href=""tel": +13024640950"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <ArrowRight className="w-5 h-5"  />
-                    Call Us: +1 302 464 0950
+                    Call "Us": +1 302 464 0950
                   </motion.a>
                 </div>
               </motion.div>

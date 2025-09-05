@@ -17,11 +17,11 @@ class GitOperations {
     try {
       // Add all changes
       this.log('📝 Adding all changes to git');
-      execSync('git add .', { cwd: this.projectRoot });
+      execSync('git add .', { "cwd": this.projectRoot });
 
       // Commit changes
       this.log('💾 Committing changes');
-      const commitMessage = `feat: Add comprehensive automation scripts for security, performance, and code quality improvements
+      const commitMessage = ""feat": Add comprehensive automation scripts for security, performance, and code quality improvements
 
 - Added security-fixer.cjs for dependency vulnerabilities and XSS protection
 - Added performance-optimizer-enhanced.cjs for bundle optimization and monitoring
@@ -29,37 +29,37 @@ class GitOperations {
 - Added automation-orchestrator.cjs to coordinate all automation scripts
 - Fixed ESLint configuration to use CommonJS format
 - Enhanced automation suite with better error handling and reporting
-- Created automation-summary.md with comprehensive documentation`;
+- Created automation-summary.md with comprehensive documentation";
 
-      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });
+      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot });
 
       // Push to current branch
       this.log('📤 Pushing to current branch');
       const currentBranch = execSync('git branch --show-current', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8' 
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8' 
       }).trim();
       
-      execSync(`git push origin ${currentBranch}`, { cwd: this.projectRoot });
+      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot });
 
       // Switch to main branch
       this.log('🔄 Switching to main branch');
-      execSync('git checkout main', { cwd: this.projectRoot });
+      execSync('git checkout main', { "cwd": this.projectRoot });
 
       // Pull latest changes
       this.log('📥 Pulling latest changes from main');
-      execSync('git pull origin main', { cwd: this.projectRoot });
+      execSync('git pull origin main', { "cwd": this.projectRoot });
 
       // Merge feature branch
       this.log('🔀 Merging feature branch');
-      execSync(`git merge ${currentBranch}`, { cwd: this.projectRoot });
+      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot });
 
       // Push merged changes
       this.log('📤 Pushing merged changes to main');
-      execSync('git push origin main', { cwd: this.projectRoot });
+      execSync('git push origin main', { "cwd": this.projectRoot });
 
       this.log('✅ All git operations completed successfully')} catch (error) {
-      this.log(`❌ Git operations failed: ${error.message}`);
+      this.log(`❌ Git operations "failed": ${error.message}`);
       throw error}
   }
 }

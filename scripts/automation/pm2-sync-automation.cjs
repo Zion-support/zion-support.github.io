@@ -19,13 +19,13 @@ class PM2SyncAutomation {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -39,23 +39,23 @@ class PM2SyncAutomation {
         
         try {
             const statusResult = execSync('pm2 status --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const status = JSON.parse(statusResult;);
             this.log(`Found ${status.length} PM2 processes`);
             
             return {;
-                status: 'success',
-                processes: status.length,
-                details: status
+                "status": 'success',
+                "processes": status.length,
+                "details": status
             }} catch (error) {
-            this.log(`PM2 status check failed: ${error.message}`);
+            this.log(`PM2 status check "failed": ${error.message}`);
             return {;
-                status: 'failed',
-                error: error.message
+                "status": 'failed',
+                "error": error.message
             }}
     }
 
@@ -65,26 +65,26 @@ class PM2SyncAutomation {
         try {
             // Stop all processes
             execSync('pm2 stop all', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             // Delete all processes
             execSync('pm2 delete all', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             // Start processes from ecosystem file
             execSync('pm2 start ecosystem.config.cjs', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             this.log('PM2 processes synced successfully');
-            return { status: 'success' }} catch (error) {
-            this.log(`PM2 sync failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            return { "status": 'success' }} catch (error) {
+            this.log(`PM2 sync "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     checkProcessHealth() {
@@ -92,26 +92,26 @@ class PM2SyncAutomation {
         
         try {
             const statusResult = execSync('pm2 status --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const processes = JSON.parse(statusResult;);
             const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
             const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
             
-            this.log(`Healthy processes: ${healthyProcesses.length}/${processes.length}`);
+            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
             
             return {;
-                status: 'success',
-                total: processes.length,
-                healthy: healthyProcesses.length,
-                unhealthy: unhealthyProcesses.length,
-                processes: processes
+                "status": 'success',
+                "total": processes.length,
+                "healthy": healthyProcesses.length,
+                "unhealthy": unhealthyProcesses.length,
+                "processes": processes
             }} catch (error) {
-            this.log(`Process health check failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Process health check "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     restartUnhealthyProcesses() {
@@ -122,37 +122,37 @@ class PM2SyncAutomation {
             
             if ( {
                 execSync('pm2 restart all', { 
-                    cwd: this.projectRoot, 
-                    stdio: 'pipe'
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
                 })) {
      {
                 execSync('pm2 restart all', { 
-                    cwd: this.projectRoot, 
-                    stdio: 'pipe'
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
                 })}
                 
                 this.log('Unhealthy processes restarted');
-                return { status: 'success', restarted: healthCheck.unhealthy }} else {
+                return { "status": 'success', "restarted": healthCheck.unhealthy }} else {
                 this.log('All processes are healthy');
-                return { status: 'success', restarted: 0 }}
+                return { "status": 'success', "restarted": 0 }}
         } catch (error) {
-            this.log(`Process restart failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Process restart "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     generateSyncReport() {
         this.log('Generating PM2 sync report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            pm2: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "pm2": {
                 status: this.checkPM2Status(),
-                health: this.checkProcessHealth(),
-                sync: this.syncPM2Processes(),
-                restart: this.restartUnhealthyProcesses()
+                "health": this.checkProcessHealth(),
+                "sync": this.syncPM2Processes(),
+                "restart": this.restartUnhealthyProcesses()
             },
-            recommendations: this.generateSyncRecommendations()
+            "recommendations": this.generateSyncRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -178,7 +178,7 @@ class PM2SyncAutomation {
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
             return report} catch (error) {
-            this.log(`PM2 Sync Automation failed: ${error.message}`);
+            this.log(`PM2 Sync Automation "failed": ${error.message}`);
             throw error}
     }
 }

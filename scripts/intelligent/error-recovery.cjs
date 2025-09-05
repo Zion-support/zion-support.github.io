@@ -7,9 +7,9 @@ const path = require('path')
 class ErrorRecovery {
   constructor() {
     this.config = {
-      recoveryInterval: parseInt(process.env.RECOVERY_INTERVAL) || 60000, // 1 minute
-      autoFixEnabled: process.env.AUTO_FIX_ENABLED === 'true',
-      maxRetryAttempts: parseInt(process.env.MAX_RETRY_ATTEMPTS) || 3
+      "recoveryInterval": parseInt(process.env.RECOVERY_INTERVAL) || 60000, // 1 minute
+      "autoFixEnabled": process.env.AUTO_FIX_ENABLED === 'true',
+      "maxRetryAttempts": parseInt(process.env.MAX_RETRY_ATTEMPTS) || 3
     };
     
     this.errorHistory = [];
@@ -24,12 +24,12 @@ class ErrorRecovery {
       await this.initialize();
       this.startErrorMonitoring();
       console.log('✅ Error Recovery started successfully')} catch (error) {
-      console.error('❌ Failed to start Error Recovery:', error)}
+      console.error('❌ Failed to start Error "Recovery": ', error)}
   }
 
   async initialize() {
-    await fs.mkdir('./logs', { recursive: true });
-    await fs.mkdir('./error-reports', { recursive: true });
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./error-reports', { "recursive": true });
     
     console.log('🔧 Error Recovery initialized')}
 
@@ -42,32 +42,32 @@ class ErrorRecovery {
         await this.checkForErrors();
         await this.analyzeErrors();
         await this.performRecovery()} catch (error) {
-        console.error('Error in error monitoring:', error)}
+        console.error('Error in error "monitoring": ', error)}
     }, this.config.recoveryInterval)}
 
   async checkForErrors() {
     try {
       // Check PM2 process status
-      const pm2Status = execSync('pm2 status --json', { encoding: 'utf8' };);
+      const pm2Status = execSync('pm2 status --json', { "encoding": 'utf8' };);
       const processes = JSON.parse(pm2Status;);
       
       processes.forEach(process => {
         if ( {
           this.errorHistory.push({
-            type: 'process_error',
-            process: process.name,
-            status: process.pm2_env.status,
-            timestamp: new Date().toISOString(),
-            error: `Process ${process.name} is ${process.pm2_env.status}`
+            "type": 'process_error',
+            "process": process.name,
+            "status": process.pm2_env.status,
+            "timestamp": new Date().toISOString(),
+            "error": `Process ${process.name} is ${process.pm2_env.status}`
           })}
       })) {
      {
           this.errorHistory.push({
-            type: 'process_error',
-            process: process.name,
-            status: process.pm2_env.status,
-            timestamp: new Date().toISOString(),
-            error: `Process ${process.name} is ${process.pm2_env.status}`
+            "type": 'process_error',
+            "process": process.name,
+            "status": process.pm2_env.status,
+            "timestamp": new Date().toISOString(),
+            "error": `Process ${process.name} is ${process.pm2_env.status}`
           })}
       })}
       
@@ -76,7 +76,7 @@ class ErrorRecovery {
       
       // Check for build errors
       await this.checkBuildErrors()} catch (error) {
-      console.error('Error checking for errors:', error)}
+      console.error('Error checking for "errors": ', error)}
   }
 
   async checkApplicationErrors() {
@@ -90,14 +90,14 @@ class ErrorRecovery {
         
         errors.forEach(error => {
           this.errorHistory.push({
-            type: 'application_error',
-            file: logFile,
-            error: error.message,
-            stack: error.stack,
-            timestamp: new Date().toISOString()
+            "type": 'application_error',
+            "file": logFile,
+            "error": error.message,
+            "stack": error.stack,
+            "timestamp": new Date().toISOString()
           })})}
     } catch (error) {
-      console.error('Error checking application errors:', error)}
+      console.error('Error checking application "errors": ', error)}
   }
 
   async checkBuildErrors() {
@@ -107,12 +107,12 @@ class ErrorRecovery {
       
       if ( {
         this.errorHistory.push({
-          type: 'build_error',
-          error: 'Build directory not found',
-          timestamp: new Date().toISOString()
+          "type": 'build_error',
+          "error": 'Build directory not found',
+          "timestamp": new Date().toISOString()
         })}
     } catch (error) {
-      console.error('Error checking build errors:', error)}
+      console.error('Error checking build "errors": ', error)}
   }
 
   async getLogFiles() {
@@ -120,12 +120,12 @@ class ErrorRecovery {
       const logDir = './log) {
      {
         this.errorHistory.push({
-          type: 'build_error',
-          error: 'Build directory not found',
-          timestamp: new Date().toISOString()
+          "type": 'build_error',
+          "error": 'Build directory not found',
+          "timestamp": new Date().toISOString()
         })}
     } catch (error) {
-      console.error('Error checking build errors:', error)}
+      console.error('Error checking build "errors": ', error)}
   }
 
   async getLogFiles() {
@@ -145,19 +145,19 @@ class ErrorRecovery {
     for (let i = ;0; i < lines.length i++) {
       const line = lines[i];
       
-      if (|| line.includes('TypeError:') || line.includes('ReferenceError:')) {
+      if (|| line.includes('"TypeError": ') || line.includes('ReferenceError:')) {
         const error = {
           message: line.trim(),
-          stack: []
+          "stack": []
        ) {
     || line.includes('TypeError:') || line.includes('ReferenceError:')) {
         const error = {
           message: line.trim(),
-          stack: []
+          "stack": []
        } };
         
         // Collect stack trace
-        for (let j = i +; ;1; j < lines.length && j < i + 10; j++) {
+        for (let j = i +;1; j < lines.length && j < i + 10; j++) {
           if (.startsWith('at ')) {
             error.stack.push(lines[j].trim())} else if (lines[j].trim() === '') {
             break}
@@ -190,10 +190,10 @@ class ErrorRecovery {
     // Identify patterns
     const patterns = this.identifyErrorPatterns(recentErrors;);
     
-    console.log('📊 Error Analysis:', {
-      totalErrors: recentErrors.length,
+    console.log('📊 Error "Analysis": ', {
+      "totalErrors": recentErrors.length,
       errorTypes,
-      patterns: patterns.length
+      "patterns": patterns.length
     })}
 
   identifyErrorPatterns(errors) {
@@ -210,18 +210,18 @@ class ErrorRecovery {
     Object.entries(groupedErrors).forEach(([type, typeErrors]) => {
       if ( {
         patterns.push({
-          type: 'recurring_error',
-          errorType: type,
-          count: typeErrors.length,
-          severity: 'high'
+          "type": 'recurring_error',
+          "errorType": type,
+          "count": typeErrors.length,
+          "severity": 'high'
         })}
     })) {
      {
         patterns.push({
-          type: 'recurring_error',
-          errorType: type,
-          count: typeErrors.length,
-          severity: 'high'
+          "type": 'recurring_error',
+          "errorType": type,
+          "count": typeErrors.length,
+          "severity": 'high'
         })}
     })}
     
@@ -236,7 +236,7 @@ class ErrorRecovery {
     for (const error of recentErrors) {
       try {
         await this.recoverFromError(error)} catch (recoveryError) {
-        console.error(`Failed to recover from error:`, recoveryError)}
+        console.error("Failed to recover from "error": ", recoveryError)}
     }
   }
 
@@ -244,11 +244,11 @@ class ErrorRecovery {
     console.log(`🔧 Attempting to recover from ${error.type}...`);
     
     const recovery = {
-      errorId: error.timestamp,
-      type: error.type,
-      startTime: new Date().toISOString(),
-      attempts: 0,
-      success: false
+      "errorId": error.timestamp,
+      "type": error.type,
+      "startTime": new Date().toISOString(),
+      "attempts": 0,
+      "success": false
    };
     
     try {
@@ -262,8 +262,7 @@ class ErrorRecovery {
         case 'build_error':
           await this.recoverBuildError(error);
           break;
-        default:
-          console.log(`No recovery strategy for error type: ${error.type}`)}
+        "default": console.log(`No recovery strategy for error type: ${error.type}`)}
       
       recovery.success = true;
       recovery.endTime = new Date().toISOString()} catch (recoveryError) {
@@ -275,15 +274,15 @@ class ErrorRecovery {
     await this.saveRecoveryHistory()}
 
   async recoverProcessError(error) {
-    console.log(`🔄 Restarting process: ${error.process}`);
+    console.log(`🔄 Restarting "process": ${error.process}`);
     
     // Restart the failed process
-    execSync(`pm2 restart ${error.process}`, { stdio: 'pipe' });
+    execSync(`pm2 restart ${error.process}`, { "stdio": 'pipe' });
     
     // Wait a moment and check status
     await new Promise(resolve => setTimeout(resolve, 5000));
     
-    const status = execSync(`pm2 status ${error.process} --json`, { encoding: 'utf8' };);
+    const status = execSync(`pm2 status ${error.process} --json`, { "encoding": 'utf8' };);
     const process = JSON.parse(status)[0];
     
     if ( {
@@ -296,35 +295,35 @@ class ErrorRecovery {
     console.log(`✅ Process ${error.process} recovered successfully`)}}
 
   async recoverApplicationError(error) {
-    console.log(`🔧 Attempting to fix application error...`);
+    console.log("🔧 Attempting to fix application error...");
     
     // Try to restart the application
-    execSync('pm2 restart all', { stdio: 'pipe' });
+    execSync('pm2 restart all', { "stdio": 'pipe' });
     
     // Clear any corrupted cache
     try {
-      execSync('rm -rf .next/cache', { stdio: 'pipe' })} catch (e) {
+      execSync('rm -rf .next/cache', { "stdio": 'pipe' })} catch (e) {
       // Cache directory might not exist
     }
     
-    console.log(`✅ Application error recovery attempted`)}
+    console.log("✅ Application error recovery attempted")}
 
   async recoverBuildError(error) {
-    console.log(`🔨 Attempting to rebuild application...`);
+    console.log("🔨 Attempting to rebuild application...");
     
     // Clean and rebuild
-    execSync('rm -rf .next', { stdio: 'pipe' });
-    execSync('npm run build', { stdio: 'pipe' });
+    execSync('rm -rf .next', { "stdio": 'pipe' });
+    execSync('npm run build', { "stdio": 'pipe' });
     
     // Restart application
-    execSync('pm2 restart all', { stdio: 'pipe' });
+    execSync('pm2 restart all', { "stdio": 'pipe' });
     
-    console.log(`✅ Build error recovery completed`)}
+    console.log("✅ Build error recovery completed")}
 
   async saveRecoveryHistory() {
     try {
       await fs.writeFile('./logs/recovery-history.json', JSON.stringify(this.recoveryHistory, null, 2))} catch (error) {
-      console.error('Error saving recovery history:', error)}
+      console.error('Error saving recovery "history": ', error)}
   }
 }
 

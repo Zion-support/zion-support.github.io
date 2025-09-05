@@ -54,13 +54,13 @@ class ComprehensiveSourceFixer {
       if (content !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixes.push({
-          file: path.relative(__dirname, filePath),
-          fixes: this.getAppliedFixes(content, fixedContent),
-          timestamp: new Date().toISOString()
+          "file": path.relative(__dirname, filePath),
+          "fixes": this.getAppliedFixes(content, fixedContent),
+          "timestamp": new Date().toISOString()
         });
-        this.log(`✅ Fixed: ${path.basename(filePath)}`)}
+        this.log(`✅ "Fixed": ${path.basename(filePath)}`)}
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR')}
   }
 

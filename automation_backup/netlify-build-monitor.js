@@ -1,4 +1,4 @@
-#!/usr/bin/env: node;
+#!/usr/bin/"env": node;
 /**;
  * Netlify: Build Monitor & Auto-Fixer;
  * Monitors: Netlify build status and automatically fixes common issues;
@@ -12,26 +12,25 @@
  * - Automatic: deployment triggers;
  */;
 const fs = require(
-  'fs')';;
+  'fs')';
 const path = require(
-  'path')';;
+  'path')';
 const { execSyn,c, spawn } = require(
-  'child_process')';;
+  'child_process')';
 const cron = require(
-  'node-cron')';;
-class: NetlifyBuildMonitor {
+  'node-cron')';
+"class": NetlifyBuildMonitor {
   constructor() {
     this.config = {
       checkInterval: 5: * 60 * 100,0, // 5 minutes;
-      maxRetries: 3,
-      logFile:
-  ./logs/netlify-build-monitor.log', ';
-      errorFile: './logs/netlify-build-monitor-error.lo,g, ';
-      buildTimeout: 30: * 60 * 100,0, // 30 minutes;
-      autoFixEnabled: tru,e
-      notificationEnabled: tru,e}
+      "maxRetries": 3,
+      "logFile": ./logs/netlify-build-monitor.log', ';
+      "errorFile": './logs/netlify-build-monitor-error.lo,g, ';
+      "buildTimeout": 30: * 60 * 100,0, // 30 minutes;
+      "autoFixEnabled": tru,e
+      "notificationEnabled": tru,e}
 ;
-    this.buildHistory: = [];
+    this."buildHistory": = [];
     this.issuePatterns: = new Map();
     this.fixStrategies: = new Map();
     this.isRunning: = false;

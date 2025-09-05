@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-const Header: React.FC = () => {
+const "Header": React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="header">

@@ -7,60 +7,60 @@ console.log('⚡ Starting performance optimization...');
 
 // Performance optimization configurations;
 const optimizations = {
-  nextConfig:; ;`;
+  "nextConfig": ;";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizatio;n;s;
-  compress: true;
+  "compress": true;
   poweredByHeader: false;
   generateEtags: false;
   
   // Image optimization;
   images: {
     formats: ['image/webp', 'image/avif'];
-    minimumCacheTTL: 60;
+    "minimumCacheTTL": 60;
     dangerouslyAllowSVG: true;
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;",};
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;"};
   
   // Bundle optimization;
-  webpack: (config { isServer }) => {
+  "webpack": (config { isServer }) => {
     if ( {
       config.resolve.fallback = {
         ...config.resolve.fallback
-        fs: false) {
+        "fs": false) {
      {
       config.resolve.fallback = {
         ...config.resolve.fallback
         fs: false}
-        net: false;
+        "net": false;
         tls: false}}
     return config};
   
   // Experimental features;
-  experimental: {
+  "experimental": {
     optimizeCss: true;
     scrollRestoration: true};
   
   // Headers for performance;
   async headers() {
     return [{;
-        source: '/(.*),';
-        headers: [{
+        "source": '/(.*),';
+        "headers": [{
             key: 'X-Content-Type-Options';
-            value: 'nosniff',},{
-            key: 'X-Frame-Options';
-            value: 'DENY',},{
-            key: 'X-XSS-Protection';
-            value: '1; mode=block',}],}]},};
+            value: 'nosniff'},{
+            "key": 'X-Frame-Options';
+            value: 'DENY'},{
+            "key": 'X-XSS-Protection';
+            value: '1; mode=block'}]}]}};
 
 module.exports = nextConfig;
-`;
+";
   
-  packageJson: {
+  "packageJson": {
     scripts: {
       'analyze': 'cross-env ANALYZE=true next build';
       'lighthouse': 'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html';
-      'perf: audit': 'npm run build && npm run lighthous,e', }
+      'perf: audit': 'npm run build && npm run lighthous,e'}
   }
 };
 

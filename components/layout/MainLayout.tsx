@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
+import Header from '../Header';
+import Footer from '../Footer';
 
 interface MainLayoutProps {
-  children: React.ReactNode;
+  "children": React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -27,11 +27,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </Head>
       
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
+        <Header />
         <main className="flex-1">
           {children}
         </main>
-        <EnhancedFooter />
+        <Footer />
       </div>
     </>
   );

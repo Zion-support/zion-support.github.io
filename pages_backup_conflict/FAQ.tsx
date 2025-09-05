@@ -7,7 +7,7 @@ export default function FAQ() {
       <Head>
         <title>FAQ | Zion Tech Group</title>
         <meta name="description" content="FAQ page for Zion Tech Group." />
-        <link rel="canonical" href="https://ziontechgroup.com/faq" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/faq" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">

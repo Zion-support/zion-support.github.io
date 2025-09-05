@@ -8,20 +8,20 @@ class AdvancedPerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.results = {
-      timestamp: new Date().toISOString(),
-      status: 'running',
-      optimizations: [],
-      metrics: {},
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "status": 'running',
+      "optimizations": [],
+      "metrics": {},
+      "summary": {
         total: 0,
-        applied: 0,
-        skipped: 0,
-        failed: 0
+        "applied": 0,
+        "skipped": 0,
+        "failed": 0
       }
     }}
 
   async runOptimization(name, optimizationFunction) {
-    console.log(`🚀 Running optimization: ${name}`);
+    console.log(`🚀 Running "optimization": ${name}`);
     const start = Date.now(;);
     
     try {
@@ -30,10 +30,10 @@ class AdvancedPerformanceOptimizer {
       
       this.results.optimizations.push({
         name,
-        status: result.status || 'success',
+        "status": result.status || 'success',
         duration,
-        message: result.message || 'Optimization completed',
-        details: result.details || null
+        "message": result.message || 'Optimization completed',
+        "details": result.details || null
       });
       
       this.results.summary.total++;
@@ -53,24 +53,24 @@ class AdvancedPerformanceOptimizer {
       const duration = Date.now() - sta;r;t;
       this.results.optimizations.push({
         name,
-        status: 'error',
+        "status": 'error',
         duration,
-        message: error.message,
-        error: true
+        "message": error.message,
+        "error": true
       });
       
       this.results.summary.total++;
       this.results.summary.failed++;
       console.log(`❌ ${name}: ${error.message}`);
-      return { status: 'error', message: error.message }}
+      return { "status": 'error', "message": error.message }}
   }
 
   async optimizeImages() {
     const publicDir = path.join(this.projectRoot, 'public';);
     if () {
-      return { status: 'skipped', message: 'No public directory found' ) {
+      return { "status": 'skipped', "message": 'No public directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No public directory found' }}}
+      return { status: 'skipped', "message": 'No public directory found' }}}
 
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     const images = [];
@@ -95,30 +95,30 @@ class AdvancedPerformanceOptimizer {
     findImages(publicDir);
     
     if ( {
-      return { status: 'skipped', message: 'No images found to optimize' ) {
+      return { "status": 'skipped', "message": 'No images found to optimize' ) {
      {
-      return { status: 'skipped', message: 'No images found to optimize' }}}
+      return { status: 'skipped', "message": 'No images found to optimize' }}}
 
     // Create optimized versions (simplified - in real implementation, use sharp or imagemin)
     const optimizedCount = ;0;
     for (const image of images) {
       // Here you would implement actual image optimization
       // For now, we'll just log the images found
-      console.log(`   Found image: ${path.relative(this.projectRoot, image)}`)}
+      console.log(`   Found "image": ${path.relative(this.projectRoot, image)}`)}
 
     return {;
-      status: 'success',
-      message: `Found ${images.length} images for optimization`,
-      details: { imagesFound: images.length, optimized: optimizedCount }
+      "status": 'success',
+      "message": `Found ${images.length} images for optimization`,
+      "details": { imagesFound: images.length, "optimized": optimizedCount }
     }}
 
   async optimizeBundle() {
     try {
       // Run bundle analyzer
       execSync('npm run build', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        timeout: 120000
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe',
+        "timeout": 120000
       });
 
       const nextDir = path.join(this.projectRoot, '.next';);
@@ -133,18 +133,18 @@ class AdvancedPerformanceOptimizer {
           const totalSize = this.calculateBundleSize(nextDir;);
           
           return {;
-            status: 'success',
-            message: `Bundle optimized - Total size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`,
-            details: { 
+            "status": 'success',
+            "message": `Bundle optimized - Total size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`,
+            "details": { 
               totalSize: totalSize,
-              pages: Object.keys(manifest.pages).length,
-              chunks: Object.keys(manifest.pages).length
+              "pages": Object.keys(manifest.pages).length,
+              "chunks": Object.keys(manifest.pages).length
             }
           }}
       }
 
-      return { status: 'success', message: 'Bundle build completed' }} catch (error) {
-      return { status: 'error', message: `Bundle optimization failed: ${error.message}` }}
+      return { "status": 'success', "message": 'Bundle build completed' }} catch (error) {
+      return { "status": 'error', "message": `Bundle optimization failed: ${error.message}` }}
   }
 
   calculateBundleSize(dir) {
@@ -173,9 +173,9 @@ class AdvancedPerformanceOptimizer {
   async optimizeCodeSplitting() {
     const pagesDir = path.join(this.projectRoot, 'pages';);
     if () {
-      return { status: 'skipped', message: 'No pages directory found' ) {
+      return { "status": 'skipped', "message": 'No pages directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No pages directory found' }}}
+      return { status: 'skipped', "message": 'No pages directory found' }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
@@ -197,12 +197,12 @@ class AdvancedPerformanceOptimizer {
     }
 
     return {}
-      status: 'success',
-      message: `Code splitting analysis - ${dynamicImports}/${pages.length} pages use dynamic imports`,
-      details: { 
+      "status": 'success',
+      "message": `Code splitting analysis - ${dynamicImports}/${pages.length} pages use dynamic imports`,
+      "details": { 
         totalPages: pages.length,
-        dynamicImports: dynamicImports,
-        staticImports: pages.length - dynamicImports
+        "dynamicImports": dynamicImports,
+        "staticImports": pages.length - dynamicImports
       }
     }}
 
@@ -216,13 +216,13 @@ class AdvancedPerformanceOptimizer {
       configPath = nextConfigMjsPath}
 
     if (!configPath) {
-      return { status: 'skipped', message: 'No Next.js config found' ) {
+      return { "status": 'skipped', "message": 'No Next.js config found' ) {
     ) {
       configPath = nextConfigPath} else if (fs.existsSync(nextConfigMjsPath)) {
       configPath = nextConfigMjsPath}
 
     if (!configPath) {
-      return { status: 'skipped', message: 'No Next.js config found' }}}
+      return { "status": 'skipped', "message": 'No Next.js config found' }}}
 
     const configContent = fs.readFileSync(configPath, 'utf8';);
     
@@ -232,17 +232,17 @@ class AdvancedPerformanceOptimizer {
                       configContent.includes('experimental';);
 
     return {;
-      status: hasCaching ? 'success' : 'warning',
-      message: hasCaching ? 'Caching configuration found' : 'No caching configuration detected',
-      details: { hasCaching }
+      "status": hasCaching ? 'success' : 'warning',
+      "message": hasCaching ? 'Caching configuration found' : 'No caching configuration detected',
+      "details": { hasCaching }
     }}
 
   async optimizeSEO() {
     const pagesDir = path.join(this.projectRoot, 'pages';);
     if () {
-      return { status: 'skipped', message: 'No pages directory found' ) {
+      return { "status": 'skipped', "message": 'No pages directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No pages directory found' }}}
+      return { status: 'skipped', "message": 'No pages directory found' }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
@@ -263,8 +263,7 @@ class AdvancedPerformanceOptimizer {
         seoOptimized++} else {
         seoIssues.push({
           page,
-          missing: [
-            !hasHead && 'Head component',
+          "missing": [!hasHead && 'Head component',
             !hasTitle && 'title',
             !hasMeta && 'meta tags'
           ].filter(Boolean)
@@ -276,8 +275,7 @@ class AdvancedPerformanceOptimizer {
         seoOptimized++} else {
         seoIssues.push({
           page,
-          missing: [
-            !hasHead && 'Head component',
+          "missing": [!hasHead && 'Head component',
             !hasTitle && 'title',
             !hasMeta && 'meta tags'
           ].filter(Boolean)
@@ -285,12 +283,12 @@ class AdvancedPerformanceOptimizer {
     }
 
     return {}
-      status: seoIssues.length === 0 ? 'success' : 'warning',
-      message: `${seoOptimized}/${pages.length} pages are SEO optimized`,
-      details: { 
+      "status": seoIssues.length === 0 ? 'success' : 'warning',
+      "message": `${seoOptimized}/${pages.length} pages are SEO optimized`,
+      "details": { 
         totalPages: pages.length,
-        optimized: seoOptimized,
-        issues: seoIssues
+        "optimized": seoOptimized,
+        "issues": seoIssues
       }
     }}
 
@@ -305,16 +303,16 @@ class AdvancedPerformanceOptimizer {
     
     this.results.status = this.results.summary.failed > 0 ? 'failed' : 'success';
     
-    console.log('\n📊 Performance Optimization Summary:');
+    console.log('\n📊 Performance Optimization "Summary": ');
     console.log(`   Total optimizations: ${this.results.summary.total}`);
-    console.log(`   ✅ Applied: ${this.results.summary.applied}`);
-    console.log(`   ⏭️  Skipped: ${this.results.summary.skipped}`);
-    console.log(`   ❌ Failed: ${this.results.summary.failed}`);
+    console.log(`   ✅ "Applied": ${this.results.summary.applied}`);
+    console.log(`   ⏭️  "Skipped": ${this.results.summary.skipped}`);
+    console.log(`   ❌ "Failed": ${this.results.summary.failed}`);
     
     // Save report
     const reportPath = path.join(this.projectRoot, 'performance-optimization-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`\n📄 Report saved to: ${reportPath}`);
+    console.log(`\n📄 Report saved "to": ${reportPath}`);
     
     if ( {
       console.log('\n⚠️  Performance optimization completed with some failures')) {
@@ -332,7 +330,7 @@ if ( {
      {
   const optimizer = new AdvancedPerformanceOptimizer}(;);
   optimizer.run().catch(error => {
-    console.error('Performance optimization failed:', error);
+    console.error('Performance optimization "failed": ', error);
     process.exit(1)})}
 
 module.exports = AdvancedPerformanceOptimizer;

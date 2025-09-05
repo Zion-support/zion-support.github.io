@@ -5,79 +5,66 @@ const path = require('path')
 function improvePerformance() {
   try {
     // Create next.config.js optimizations
-    const nextConfigContent = `/** @type {import('next').NextConfig} */
+    const nextConfigContent = "/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
+  "reactStrictMode": true,
+  "swcMinify": true,
+  "compress": true,
+  "poweredByHeader": false,
+  "generateEtags": false,
   
   // Image optimization
-  images: {
+  "images": {
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
+    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
   
   // Bundle optimization
-  webpack: (config, { dev, isServer }) => {
+  "webpack": (config, { dev, isServer }) => {
     if ( {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        "chunks": 'all',
+        "cacheGroups": {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      }}
+            "name": 'vendors',
+            "chunks": 'all'}}}}
     return confi) {
      {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        "chunks": 'all',
+        "cacheGroups": {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      }}
+            "name": 'vendors',
+            "chunks": 'all'}}}}
     return confi}g},
   
   // Headers for performance
   async headers() {
     return [;
       {
-        source: '/(.*)',
-        headers: [
+        "source": '/(.*)',
+        "headers": [
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            "value": 'nosniff'},
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            "key": 'X-Frame-Options',
+            "value": 'DENY'},
           {
-            key: 'X-XSS-Protection',
-            value: ';1; mode=block',
-          },
+            "key": 'X-XSS-Protection',
+            "value": ';1; mode=block'},
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          }],
-      }]},
-};
+            "key": 'Referrer-Policy',
+            "value": 'origin-when-cross-origin'}]}]}};
 
-module.exports = nextConfig;`;
+module.exports = nextConfig;";
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
       
       console.log('Performance improvements completed')} catch (error) {
-      console.error('Performance improvement failed:', error.message)}
+      console.error('Performance improvement "failed": ', error.message)}
   }
 }
 

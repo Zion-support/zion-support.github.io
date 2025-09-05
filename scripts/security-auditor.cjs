@@ -12,7 +12,7 @@ class SecurityAuditor {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -23,9 +23,9 @@ class SecurityAuditor {
     this.log('🔍 Running npm audit...');
     try {
       const result = execSync('npm audit --audit-level=moderate --json', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
       });
       
       const auditData = JSON.parse(result);
@@ -36,11 +36,11 @@ class SecurityAuditor {
       
       return {
         vulnerabilities,
-        count: vulnerabilityCount,
-        status: vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
+        "count": vulnerabilityCount,
+        "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
       }} catch (error) {
-      this.log(`❌ NPM audit failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ NPM audit "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async checkEnvironmentVariables() {
@@ -57,8 +57,7 @@ class SecurityAuditor {
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
-          const sensitivePatterns = [
-            /API_KEY/i,
+          const sensitivePatterns = [/API_KEY/i,
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -72,9 +71,9 @@ class SecurityAuditor {
               const [key] = line.split('=');
               if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
                 sensitiveVars.push({
-                  file: envFile,
-                  line: index + 1,
-                  variable: key.trim()
+                  "file": envFile,
+                  "line": index + 1,
+                  "variable": key.trim()
                 })}
             }
           })}
@@ -84,12 +83,12 @@ class SecurityAuditor {
       this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
 
       return {
-        envFiles: foundEnvFiles,
+        "envFiles": foundEnvFiles,
         sensitiveVars,
-        status: sensitiveVars.length > 0 ? 'needs_review' : 'secure'
+        "status": sensitiveVars.length > 0 ? 'needs_review' : 'secure'
       }} catch (error) {
-      this.log(`❌ Environment variables check failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Environment variables check "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async checkDependencies() {
@@ -103,8 +102,7 @@ class SecurityAuditor {
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
       // Check for known vulnerable packages
-      const vulnerablePackages = [
-        'lodash',
+      const vulnerablePackages = ['lodash',
         'moment',
         'jquery',
         'express',
@@ -118,12 +116,12 @@ class SecurityAuditor {
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
 
       return {
-        totalDependencies: Object.keys(dependencies).length,
-        vulnerablePackages: foundVulnerable,
-        status: foundVulnerable.length === 0 ? 'secure' : 'needs_review'
+        "totalDependencies": Object.keys(dependencies).length,
+        "vulnerablePackages": foundVulnerable,
+        "status": foundVulnerable.length === 0 ? 'secure' : 'needs_review'
       }} catch (error) {
-      this.log(`❌ Dependencies check failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Dependencies check "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async checkCodeSecurity() {
@@ -132,26 +130,25 @@ class SecurityAuditor {
       const securityIssues = [];
       
       // Check for common security issues in code
-      const patterns = [
-        {
-          name: 'eval() usage',
-          pattern: /eval\s*\(/g,
-          severity: 'high'
+      const patterns = [{
+          "name": 'eval() usage',
+          "pattern": /eval\s*\(/g,
+          "severity": 'high'
         },
         {
-          name: 'innerHTML usage',
-          pattern: /\.innerHTML\s*=/g,
-          severity: 'medium'
+          "name": 'innerHTML usage',
+          "pattern": /\.innerHTML\s*=/g,
+          "severity": 'medium'
         },
         {
-          name: 'dangerouslySetInnerHTML usage',
-          pattern: /dangerouslySetInnerHTML/g,
-          severity: 'medium'
+          "name": 'dangerouslySetInnerHTML usage',
+          "pattern": /dangerouslySetInnerHTML/g,
+          "severity": 'medium'
         },
         {
-          name: 'console.log with sensitive data',
-          pattern: /console\.log\s*\(\s*['"`].*?(password|secret|token|key)['"`]/gi,
-          severity: 'high'
+          "name": 'console.log with sensitive data',
+          "pattern": /console\.log\s*\(\s*['""].*?(password|secret|token|key)['""]/gi,
+          "severity": 'high'
         }
       ];
 
@@ -165,10 +162,10 @@ class SecurityAuditor {
             const matches = content.match(pattern.pattern);
             if (matches) {
               securityIssues.push({
-                file: path.relative(this.projectRoot, file),
-                issue: pattern.name,
-                severity: pattern.severity,
-                count: matches.length
+                "file": path.relative(this.projectRoot, file),
+                "issue": pattern.name,
+                "severity": pattern.severity,
+                "count": matches.length
               })}
           })} catch (error) {
           // Skip files that can't be read
@@ -178,11 +175,11 @@ class SecurityAuditor {
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
 
       return {
-        issues: securityIssues,
-        status: securityIssues.length === 0 ? 'secure' : 'needs_review'
+        "issues": securityIssues,
+        "status": securityIssues.length === 0 ? 'secure' : 'needs_review'
       }} catch (error) {
-      this.log(`❌ Code security check failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Code security check "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   findSourceFiles() {
@@ -214,12 +211,12 @@ class SecurityAuditor {
     this.log('📊 Generating security report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         npmAudit: await this.runNpmAudit(),
-        environmentVariables: await this.checkEnvironmentVariables(),
-        dependencies: await this.checkDependencies(),
-        codeSecurity: await this.checkCodeSecurity()
+        "environmentVariables": await this.checkEnvironmentVariables(),
+        "dependencies": await this.checkDependencies(),
+        "codeSecurity": await this.checkCodeSecurity()
       }
     };
 
@@ -229,7 +226,7 @@ class SecurityAuditor {
     const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Security report generated: ${reportFile}`);
+    this.log(`📄 Security report "generated": ${reportFile}`);
     
     return report}
 
@@ -238,34 +235,34 @@ class SecurityAuditor {
 
     if (analysis.npmAudit && analysis.npmAudit.count > 0) {
       recommendations.push({
-        type: 'npm_audit',
-        priority: 'high',
-        message: `Found ${analysis.npmAudit.count} vulnerabilities. Run 'npm audit fix' to resolve.`,
-        impact: 'Reduces security risks'
+        "type": 'npm_audit',
+        "priority": 'high',
+        "message": `Found ${analysis.npmAudit.count} vulnerabilities. Run 'npm audit fix' to resolve.`,
+        "impact": 'Reduces security risks'
       })}
 
     if (analysis.environmentVariables && analysis.environmentVariables.sensitiveVars.length > 0) {
       recommendations.push({
-        type: 'environment_variables',
-        priority: 'high',
-        message: 'Found potentially sensitive environment variables. Review and secure them.',
-        impact: 'Prevents credential exposure'
+        "type": 'environment_variables',
+        "priority": 'high',
+        "message": 'Found potentially sensitive environment variables. Review and secure them.',
+        "impact": 'Prevents credential exposure'
       })}
 
     if (analysis.dependencies && analysis.dependencies.vulnerablePackages.length > 0) {
       recommendations.push({
-        type: 'dependencies',
-        priority: 'medium',
-        message: 'Found potentially vulnerable packages. Consider updating or replacing them.',
-        impact: 'Reduces security risks'
+        "type": 'dependencies',
+        "priority": 'medium',
+        "message": 'Found potentially vulnerable packages. Consider updating or replacing them.',
+        "impact": 'Reduces security risks'
       })}
 
     if (analysis.codeSecurity && analysis.codeSecurity.issues.length > 0) {
       recommendations.push({
-        type: 'code_security',
-        priority: 'medium',
-        message: 'Found potential security issues in code. Review and fix them.',
-        impact: 'Improves code security'
+        "type": 'code_security',
+        "priority": 'medium',
+        "message": 'Found potential security issues in code. Review and fix them.',
+        "impact": 'Improves code security'
       })}
 
     return recommendations}
@@ -277,14 +274,14 @@ class SecurityAuditor {
       const report = await this.generateSecurityReport();
       
       this.log('🎉 Security audit completed!');
-      this.log(`🔍 Vulnerabilities: ${report.analysis.npmAudit.count || 0}`);
-      this.log(`🔐 Sensitive variables: ${report.analysis.environmentVariables.sensitiveVars.length || 0}`);
-      this.log(`📦 Vulnerable packages: ${report.analysis.dependencies.vulnerablePackages.length || 0}`);
-      this.log(`🔍 Code security issues: ${report.analysis.codeSecurity.issues.length || 0}`);
-      this.log(`💡 Recommendations: ${report.recommendations.length}`);
+      this.log(`🔍 "Vulnerabilities": ${report.analysis.npmAudit.count || 0}`);
+      this.log(`🔐 Sensitive "variables": ${report.analysis.environmentVariables.sensitiveVars.length || 0}`);
+      this.log(`📦 Vulnerable "packages": ${report.analysis.dependencies.vulnerablePackages.length || 0}`);
+      this.log(`🔍 Code security "issues": ${report.analysis.codeSecurity.issues.length || 0}`);
+      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
       
       return report} catch (error) {
-      this.log(`💥 Security audit failed: ${error.message}`);
+      this.log(`💥 Security audit "failed": ${error.message}`);
       throw error}
   }
 }
@@ -295,11 +292,11 @@ if (require.main === module) {
   auditor.run()
     .then((report) => {
       console.log('\n🎉 Security Auditor completed successfully!');
-      console.log(`🔍 Vulnerabilities: ${report.analysis.npmAudit.count || 0}`);
-      console.log(`💡 Recommendations: ${report.recommendations.length}`);
+      console.log(`🔍 "Vulnerabilities": ${report.analysis.npmAudit.count || 0}`);
+      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
       process.exit(0)})
     .catch((error) => {
-      console.error('\n💥 Security Auditor failed:', error.message);
+      console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = SecurityAuditor;

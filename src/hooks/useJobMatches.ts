@@ -12,28 +12,25 @@ export default function Page() {
     setIsProcessing(true);
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-        body: { jobId },
-      };);
+        "body": { jobId }};);
       
       if(response.error) throw new Error(response.error.message);
       
       toast({
-        title: "AI Matching Complete",
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      });
+        "title": "AI Matching Complete",
+        "description": `Found ${response.data.matches || 0} potential talent matches for this job.`});
       
       await fetchMatches()} catch (error) {
-      console.error("Error triggering AI matching:", error);
+      console.error("Error triggering AI "matching": ", error);
       toast({
-        title: "Matching Failed",
-        description: "Could not process talent matching.Please try again later.",
-        variant: "destructive",
-      })} finally {
+        "title": "Matching Failed",
+        "description": "Could not process talent matching.Please try again later.",
+        "variant": "destructive"})} finally {
       setIsProcessing(false)}
   };
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(jobId) { // Ensure jobId is present before fetching
       fetchMatches()}
@@ -44,6 +41,6 @@ export default function Page() {
     isLoading,
     isProcessing,
     triggerAIMatching,
-    refetch: fetchMatche s // Added refetch
+    "refetch": fetchMatche s // Added refetch
   }}
 ;';

@@ -18,24 +18,24 @@ class ErrorPreventionSystem {
     
     try {
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {
-      console.error('Failed to write to log file:', error.message)}
+      console.error('Failed to write to log "file": ', error.message)}
   }
 
   async checkBuildErrors() {
     this.log('Checking for build errors...');
     
     try {
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
       this.log('Build check passed');
       return true} catch (error) {
       this.errors.push({
-        type: 'build',
-        severity: 'high',
-        message: 'Build failed',
-        details: error.message,
-        timestamp: new Date().toISOString()
+        "type": 'build',
+        "severity": 'high',
+        "message": 'Build failed',
+        "details": error.message,
+        "timestamp": new Date().toISOString()
       });
-      this.log(`ERROR: Build failed: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": Build failed: ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -43,25 +43,25 @@ class ErrorPreventionSystem {
     this.log('Checking for linting errors...');
     
     try {
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       this.log('Linting check passed');
       return true} catch (error) {
       this.errors.push({
-        type: 'linting',
-        severity: 'medium',
-        message: 'Linting errors found',
-        details: error.message,
-        timestamp: new Date().toISOString()
+        "type": 'linting',
+        "severity": 'medium',
+        "message": 'Linting errors found',
+        "details": error.message,
+        "timestamp": new Date().toISOString()
       });
-      this.log(`WARNING: Linting errors: ${error.message}`, 'WARN');
+      this.log(`"WARNING": Linting errors: ${error.message}`, 'WARN');
       
       // Try to auto-fix
       try {
         this.log('Attempting to auto-fix linting errors...');
-        execSync('npm run lint:fix', { stdio: 'pipe' });
+        execSync('npm run "lint": fix', { "stdio": 'pipe' });
         this.log('Linting auto-fix completed');
         return true} catch (fixError) {
-        this.log(`ERROR: Auto-fix failed: ${fixError.message}`, 'ERROR');
+        this.log(`"ERROR": Auto-fix failed: ${fixError.message}`, 'ERROR');
         return false}
     }
   }
@@ -70,17 +70,17 @@ class ErrorPreventionSystem {
     this.log('Checking for TypeScript errors...');
     
     try {
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       this.log('TypeScript check passed');
       return true} catch (error) {
       this.errors.push({
-        type: 'typescript',
-        severity: 'high',
-        message: 'TypeScript errors found',
-        details: error.message,
-        timestamp: new Date().toISOString()
+        "type": 'typescript',
+        "severity": 'high',
+        "message": 'TypeScript errors found',
+        "details": error.message,
+        "timestamp": new Date().toISOString()
       });
-      this.log(`ERROR: TypeScript errors: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": TypeScript errors: ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -91,50 +91,50 @@ class ErrorPreventionSystem {
       // Check for missing dependencies
       if () {
         this.errors.push({
-          type: 'dependency',
-          severity: 'critical',
-          message: 'node_modules directory missing',
-          details: 'Dependencies not installed',
-          timestamp: new Date().toISOString()
+          "type": 'dependency',
+          "severity": 'critical',
+          "message": 'node_modules directory missing',
+          "details": 'Dependencies not installed',
+          "timestamp": new Date().toISOString()
         })) {
     ) {
         this.errors.push({
-          type: 'dependency',
-          severity: 'critical',
-          message: 'node_modules directory missing',
-          details: 'Dependencies not installed',
-          timestamp: new Date().toISOString()
+          "type": 'dependency',
+          "severity": 'critical',
+          "message": 'node_modules directory missing',
+          "details": 'Dependencies not installed',
+          "timestamp": new Date().toISOString()
         })}
-        this.log('CRITICAL: node_modules missing, installing dependencies...', 'ERROR');
+        this.log('"CRITICAL": node_modules missing, installing dependencies...', 'ERROR');
         
         try {
-          execSync('npm install', { stdio: 'pipe' });
+          execSync('npm install', { "stdio": 'pipe' });
           this.log('Dependencies installed successfully');
           return true} catch (installError) {
-          this.log(`ERROR: Failed to install dependencies: ${installError.message}`, 'ERROR');
+          this.log(`"ERROR": Failed to install dependencies: ${installError.message}`, 'ERROR');
           return false}
       }
 
       // Check for outdated dependencies
       try {
-        const result = execSync('npm outdated', { stdio: 'pipe', encoding: 'utf8' };);
+        const result = execSync('npm outdated', { "stdio": 'pipe', "encoding": 'utf8' };);
         if () {
           this.errors.push({
-            type: 'dependency',
-            severity: 'low',
-            message: 'Outdated dependencies found',
-            details: result,
-            timestamp: new Date().toISOString()
+            "type": 'dependency',
+            "severity": 'low',
+            "message": 'Outdated dependencies found',
+            "details": result,
+            "timestamp": new Date().toISOString()
           })) {
     ) {
           this.errors.push({
-            type: 'dependency',
-            severity: 'low',
-            message: 'Outdated dependencies found',
-            details: result,
-            timestamp: new Date().toISOString()
+            "type": 'dependency',
+            "severity": 'low',
+            "message": 'Outdated dependencies found',
+            "details": result,
+            "timestamp": new Date().toISOString()
           })}
-          this.log('WARNING: Outdated dependencies found', 'WARN')}
+          this.log('"WARNING": Outdated dependencies found', 'WARN')}
       } catch (error) {
         // npm outdated returns non-zero exit code when packages are outdated;
         this.log('Some dependencies are outdated', 'WARN')}
@@ -142,13 +142,13 @@ class ErrorPreventionSystem {
       this.log('Dependency check completed');
       return true} catch (error) {
       this.errors.push({
-        type: 'dependency',
-        severity: 'medium',
-        message: 'Dependency check failed',
-        details: error.message,
-        timestamp: new Date().toISOString()
+        "type": 'dependency',
+        "severity": 'medium',
+        "message": 'Dependency check failed',
+        "details": error.message,
+        "timestamp": new Date().toISOString()
       });
-      this.log(`ERROR: Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": Dependency check failed: ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -156,8 +156,7 @@ class ErrorPreventionSystem {
     this.log('Checking for filesystem issues...');
     
     try {
-      const criticalFiles = [
-        'package.json',
+      const criticalFiles = ['package.json',
         'next.config.js',
         'tsconfig.json',
         'tailwind.config.js'
@@ -166,21 +165,21 @@ class ErrorPreventionSystem {
       criticalFiles.forEach(file => {
         if () {
           this.errors.push({
-            type: 'filesystem',
-            severity: 'critical',
-            message: `Critical file missing: ${file}`,
-            details: `Required configuration file ${file} is missing`,
-            timestamp: new Date().toISOString()
+            "type": 'filesystem',
+            "severity": 'critical',
+            "message": `Critical file missing: ${file}`,
+            "details": `Required configuration file ${file} is missing`,
+            "timestamp": new Date().toISOString()
           })) {
     ) {
           this.errors.push({
-            type: 'filesystem',
-            severity: 'critical',
-            message: `Critical file missing: ${file}`,
-            details: `Required configuration file ${file} is missing`,
-            timestamp: new Date().toISOString()
+            "type": 'filesystem',
+            "severity": 'critical',
+            "message": `Critical file missing: ${file}`,
+            "details": `Required configuration file ${file} is missing`,
+            "timestamp": new Date().toISOString()
           })}
-          this.log(`CRITICAL: Missing critical file: ${file}`, 'ERROR')}
+          this.log(`"CRITICAL": Missing critical file: ${file}`, 'ERROR')}
       });
 
       // Check for corrupted files
@@ -197,21 +196,21 @@ class ErrorPreventionSystem {
               try {
                 fs.readFileSync(filePath, 'utf8')} catch (error) {
                 this.errors.push({
-                  type: 'filesystem',
-                  severity: 'high',
-                  message: `Corrupted file: ${filePath}`,
-                  details: error.message,
-                  timestamp: new Date().toISOString()
+                  "type": 'filesystem',
+                  "severity": 'high',
+                  "message": `Corrupted file: ${filePath}`,
+                  "details": error.message,
+                  "timestamp": new Date().toISOString()
                 });
-                this.log(`ERROR: Corrupted file detected: ${filePath}`, 'ERROR')}
+                this.log(`"ERROR": Corrupted file detected: ${filePath}`, 'ERROR')}
             })} catch (error) {
-            this.log(`WARNING: Could not scan directory ${dir}: ${error.message}`, 'WARN')}
+            this.log(`"WARNING": Could not scan directory ${dir}: ${error.message}`, 'WARN')}
         }
       });
 
       this.log('Filesystem check completed');
       return true} catch (error) {
-      this.log(`ERROR: Filesystem check failed: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": Filesystem check failed: ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -225,21 +224,21 @@ class ErrorPreventionSystem {
       
       if ( {
         this.errors.push({
-          type: 'environment',
-          severity: 'high',
-          message: 'Node.js version too old',
-          details: `Current version: ${nodeVersion}, Required: >=18.0.0`,
-          timestamp: new Date().toISOString()
+          "type": 'environment',
+          "severity": 'high',
+          "message": 'Node.js version too old',
+          "details": `Current version: ${nodeVersion}, "Required": >=18.0.0`,
+          "timestamp": new Date().toISOString()
         })) {
      {
         this.errors.push({
-          type: 'environment',
-          severity: 'high',
-          message: 'Node.js version too old',
-          details: `Current version: ${nodeVersion}, Required: >=18.0.0`,
-          timestamp: new Date().toISOString()
+          "type": 'environment',
+          "severity": 'high',
+          "message": 'Node.js version too old',
+          "details": `Current version: ${nodeVersion}, "Required": >=18.0.0`,
+          "timestamp": new Date().toISOString()
         })}
-        this.log(`WARNING: Node.js version ${nodeVersion} is below recommended version 18`, 'WARN')}
+        this.log(`"WARNING": Node.js version ${nodeVersion} is below recommended version 18`, 'WARN')}
 
       // Check available memory
       const memUsage = process.memoryUsage(;);
@@ -249,25 +248,25 @@ class ErrorPreventionSystem {
 
       if ( {
         this.errors.push({
-          type: 'environment',
-          severity: 'high',
-          message: 'High memory usage',
-          details: `Memory usage: ${memoryUsagePercent.toFixed(1)}%`,
-          timestamp: new Date().toISOString()
+          "type": 'environment',
+          "severity": 'high',
+          "message": 'High memory usage',
+          "details": `Memory usage: ${memoryUsagePercent.toFixed(1)}%`,
+          "timestamp": new Date().toISOString()
         })) {
      {
         this.errors.push({
-          type: 'environment',
-          severity: 'high',
-          message: 'High memory usage',
-          details: `Memory usage: ${memoryUsagePercent.toFixed(1)}%`,
-          timestamp: new Date().toISOString()
+          "type": 'environment',
+          "severity": 'high',
+          "message": 'High memory usage',
+          "details": `Memory usage: ${memoryUsagePercent.toFixed(1)}%`,
+          "timestamp": new Date().toISOString()
         })}
-        this.log(`WARNING: High memory usage: ${memoryUsagePercent.toFixed(1)}%`, 'WARN')}
+        this.log(`"WARNING": High memory usage: ${memoryUsagePercent.toFixed(1)}%`, 'WARN')}
 
       this.log('Environment check completed');
       return true} catch (error) {
-      this.log(`ERROR: Environment check failed: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": Environment check failed: ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -280,51 +279,50 @@ class ErrorPreventionSystem {
       // Fix linting errors
       if () {
         try {
-          execSync('npm run lint:fix', { stdio: 'pipe' })) {
+          execSync('npm run "lint": fix', { "stdio": 'pipe' })) {
     ) {
         try {
-          execSync('npm run lint:fix', { stdio: 'pipe' })}
+          execSync('npm run "lint": fix', { "stdio": 'pipe' })}
           this.log('Fixed linting errors');
           fixedCount++} catch (error) {
-          this.log(`Failed to fix linting errors: ${error.message}`, 'WARN')}
+          this.log(`Failed to fix linting "errors": ${error.message}`, 'WARN')}
       }
 
       // Install missing dependencies
       if () {
         try {
-          execSync('npm install', { stdio: 'pipe' })) {
+          execSync('npm install', { "stdio": 'pipe' })) {
     ) {
         try {
-          execSync('npm install', { stdio: 'pipe' })}
+          execSync('npm install', { "stdio": 'pipe' })}
           this.log('Installed missing dependencies');
           fixedCount++} catch (error) {
-          this.log(`Failed to install dependencies: ${error.message}`, 'WARN')}
+          this.log(`Failed to install "dependencies": ${error.message}`, 'WARN')}
       }
 
       // Clean and rebuild
       if () {
         try {
-          execSync('npm run clean', { stdio: 'pipe' })) {
+          execSync('npm run clean', { "stdio": 'pipe' })) {
     ) {
         try {
-          execSync('npm run clean', { stdio: 'pipe' })}
-          execSync('npm run build', { stdio: 'pipe' });
+          execSync('npm run clean', { "stdio": 'pipe' })}
+          execSync('npm run build', { "stdio": 'pipe' });
           this.log('Cleaned and rebuilt project');
           fixedCount++} catch (error) {
-          this.log(`Failed to clean and rebuild: ${error.message}`, 'WARN')}
+          this.log(`Failed to clean and "rebuild": ${error.message}`, 'WARN')}
       }
 
-      this.log(`Auto-fix completed: ${fixedCount} issues fixed`);
+      this.log(`Auto-fix "completed": ${fixedCount} issues fixed`);
       return fixedCount > 0} catch (error) {
-      this.log(`ERROR: Auto-fix failed: ${error.message}`, 'ERROR');
+      this.log(`"ERROR": Auto-fix failed: ${error.message}`, 'ERROR');
       return false}
   }
 
   async runErrorPrevention() {
     this.log('Starting error prevention system...');
     
-    const checks = [
-      this.checkBuildErrors(),
+    const checks = [this.checkBuildErrors(),
       this.checkLintingErrors(),
       this.checkTypeScriptErrors(),
       this.checkDependencyErrors(),
@@ -337,12 +335,12 @@ class ErrorPreventionSystem {
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
 
-    this.log(`Error prevention check completed: ${this.errors.length} errors found in ${duration}ms`);
+    this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
     
     if ( {
-      this.log(`Errors found: ${this.errors.length}`, 'WARN')) {
+      this.log(`Errors "found": ${this.errors.length}`, 'WARN')) {
      {
-      this.log(`Errors found: ${this.errors.length}`, 'WARN')}
+      this.log(`Errors "found": ${this.errors.length}`, 'WARN')}
       
       // Categorize errors by severity
       const criticalErrors = this.errors.filter(e => e.severity === 'critical';);
@@ -350,7 +348,7 @@ class ErrorPreventionSystem {
       const mediumErrors = this.errors.filter(e => e.severity === 'medium';);
       const lowErrors = this.errors.filter(e => e.severity === 'low';);
       
-      this.log(`Error breakdown: Critical: ${criticalErrors.length}, High: ${highErrors.length}, Medium: ${mediumErrors.length}, Low: ${lowErrors.length}`);
+      this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
       
       // Log critical and high severity errors
       [...criticalErrors, ...highErrors].forEach(error => {
@@ -362,11 +360,11 @@ class ErrorPreventionSystem {
 
     // Write detailed report
     const report = {
-      timestamp: endTime.toISOString(),
-      duration: duration,
-      totalErrors: this.errors.length,
-      errors: this.errors,
-      status: this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length > 0 ? 'CRITICAL' : 'HEALTHY'
+      "timestamp": endTime.toISOString(),
+      "duration": duration,
+      "totalErrors": this.errors.length,
+      "errors": this.errors,
+      "status": this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length > 0 ? 'CRITICAL' : 'HEALTHY'
    };
 
     try {
@@ -374,7 +372,7 @@ class ErrorPreventionSystem {
         path.join(__dirname, '../logs/error-prevention-report.json'),
         JSON.stringify(report, null, 2)
       )} catch (error) {
-      this.log(`ERROR: Failed to write error prevention report: ${error.message}`, 'ERROR')}
+      this.log(`"ERROR": Failed to write error prevention report: ${error.message}`, 'ERROR')}
 
     return this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length === 0}
 }
@@ -388,7 +386,7 @@ if ( {
     .then(success => {
       process.exit(success ? 0 : 1)})
     .catch(error => {
-      console.error('Error prevention system failed:', error);
+      console.error('Error prevention system "failed": ', error);
       process.exit(1)})}
 
 module.exports = ErrorPreventionSystem;

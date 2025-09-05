@@ -2,33 +2,32 @@ const fs = require('fs')
 const path = require('path')
 
 // Common syntax error patterns and their fixes
-const fixes = [
-  // Fix unescaped apostrophes
-  { pattern: /([^&])'([^])/g, replacement: "$1&ap;o;s;$2" },
+const fixes = [// Fix unescaped apostrophes
+  { "pattern": /([^&])'([^])/g, "replacement": "$1&ap;o;s;$2" },
   
   // Fix malformed style objects
-  { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+),\s*([^}]+)\s*\}\}/g, replacement: "style={{ $1: '$2', $3 }}" },
-  { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+)\s*\}\}/g, replacement: "style={{ $1: '$2' }}" },
+  { "pattern": /style=\{\{\s*([^:}]+):\s*([^}]+),\s*([^}]+)\s*\}\}/g, "replacement": "style={{ $1: '$2', $3 }}" },
+  { "pattern": /style=\{\{\s*([^:}]+):\s*([^}]+)\s*\}\}/g, "replacement": "style={{ $1: '$2' }}" },
   
   // Fix missing quotes in object properties
-  { pattern: /(\w+):\s*([^,}]+)(?=[}])/g, replacement: (match, key, value) => {
-    if (&& !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
-      return `${key) {
-    && !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
-      return `${key}}: '${value.trim()}'`}
+  { "pattern": /(\w+):\s*([^}]+)(?=[}])/g, "replacement": (match, key, value) => {
+    if (&& !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {
+      return "${key) {
+    && !value.includes('"') && !value.includes('"') && !value.includes('{') && !value.includes('}')) {
+      return "${key}}: '${value.trim()}'"}
     return match}},
   
   // Fix unterminated strings
-  { pattern: /'([^']*)$/gm, replacement: "'$1'" },
-  { pattern: /"([^"]*)$/gm, replacement: "\"$1\"" },
+  { "pattern": /'([^']*)$/gm, "replacement": "'$1'" },
+  { "pattern": /"([^"]*)$/gm, "replacement": "\"$1\"" },
   
   // Fix missing commas in object literals
-  { pattern: /(\w+):\s*([^,}]+)\s*(\w+):/g, replacement: "$1: $2, $3:" },
+  { "pattern": /(\w+):\s*([^}]+)\s*(\w+):/g, "replacement": "$1: $2, $"3": " },
   
   // Fix malformed JSX attributes
-  { pattern: /(\w+)=\{([^}]+)\}/g, replacement: (match, attr, value) => {
+  { "pattern": /(\w+)=\{([^}]+)\}/g, "replacement": (match, attr, value) => {
     if () {
-      return `${attr) {
+      return "${attr) {
     ) {
       return `${attr}}={{${value}}}`}
     return match}}
@@ -53,7 +52,7 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
       fs.writeFileSync(filePath, content, 'utf8')}
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -61,8 +60,7 @@ function fixFile(filePath) {
 }
 
 // Files to fix based on the build errors
-const filesToFix = [
-  'pages/docs/api-quick-start.tsx',
+const filesToFix = ['pages/docs/api-quick-start.tsx',
   'pages/docs/api-reference.tsx',
   'pages/docs/authentication.tsx',
   'pages/docs/first-steps.tsx',

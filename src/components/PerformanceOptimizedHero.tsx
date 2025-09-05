@@ -4,14 +4,14 @@ export default function Page($1) {
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page($1) {
-, { icon: Za p, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
+, { "icon": Za p, "text": "Digital Transformation", "color": "from - yellow-500 to - orange - 500" };
   ];
 }) => {;
   const [currentFeature, setCurrentFeature] = useState<any>(0);
   const [isVisible, setIsVisible] = useState<any>(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -31,30 +31,24 @@ return () => clearInterval(interval)}, [features.length]);
 
   const containerVariants = {
 
-  hidden: { opacity: 0,
-  y: 5 0
+  "hidden": { opacity: 0,
+  "y": 5 0
 
 };,
-    visible: {
+    "visible": {
 
-      opacity: 1,;      y: 0,;
-      transition: {
+      opacity: 1,;      "y": 0,;
+      "transition": {
         duration: 0.8,;
-        staggerChildren: 0.2}}};
-
-  ;
-  y: 3 0 ;
-;
+        "staggerChildren": 0.2}}};
+  "y": 3 0 ;
 },;
-    visible: { opacity: 1, y: 0 }};
-
-  ;
-  scale: 0.8 ;
-;
+    "visible": { opacity: 1, "y": 0 }};
+  "scale": 0.8 ;
 },;
-    visible: { opacity: 1, scale: 1 }};
+    "visible": { opacity: 1, "scale": 1 }};
 
-useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
+useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
 return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO title="PerformanceOptimizedHero - Zion Tech Group"
@@ -68,13 +62,12 @@ return ("
           </p>"
           <div className="flex justify-center">"
             <a href="/contact" "
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shado w-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg "hover": shado w-lg transition-all duration-300"
             >
               Get Started,
             </a>
           </div>
-    </div>;,
-  )}
+    </div>;)}
 
 export default PerformanceOptimizedHero;"
 

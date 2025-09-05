@@ -1,6 +1,5 @@
 import React from 'react';"
 import {motion} from 'framer-motion';
-;
 const Tabs = (props) => {};
   return();
     <div className="w-full">";
@@ -13,10 +12,10 @@ const Tabs = (props) => {};
 '
 "
 "`
-              activeTab === tab.id"`'`
-                ? 'bg-white text-gray-900 shadow-sm"`'`'`
-                : 'text-gray-600 hover:text-gray-900'````
-            }`}
+              activeTab === tab.id""'"
+                ? 'bg-white text-gray-900 shadow-sm""'"'"
+                : 'text-gray-600 "hover": text-gray-900'""""
+            }"}
           >;
             {tab.label}
           </button>;
@@ -24,9 +23,9 @@ const Tabs = (props) => {};
       </div>;
       <motion.div;
         key={activeTab}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}";
-        transition={{ duration: 0.2 }}";
+        initial={{ "opacity": 0, "y": 10 }}
+        animate={{ "opacity": 1, "y": 0 }}";
+        transition={{ "duration": 0.2 }}";
         className="mt-4";
       >;
         {tabs.find(tab => tab.id === activeTab)?.content}
@@ -34,17 +33,11 @@ const Tabs = (props) => {};
     </div>;
   );
 };
-;
 export default Tabs;
-;
 export {Tabs};
-;
 export {Tabs};
-;
 export {Tabs};
-;
 export {Tabs};
-;
 export {Tabs};
 
 </motion>;';';

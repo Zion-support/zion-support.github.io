@@ -21,7 +21,7 @@ describe('AIChatAssistant Integration Tests', () => {
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
     fireEvent.click(sendButton);
     
     await waitFor(() => {
@@ -32,8 +32,8 @@ describe('AIChatAssistant Integration Tests', () => {
     
     const input = screen.getByPlaceholderText('Type your message...');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
-    fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
+    fireEvent.keyPress(input, { "key": 'Enter', "code": 'Enter' });
     
     await waitFor(() => {
       expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
@@ -51,9 +51,9 @@ describe('AIChatAssistant Integration Tests', () => {
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
     fireEvent.click(sendButton);
     
     // Wait for AI response
     await waitFor(() => {
-      expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()}, { timeout: 2000 })})});
+      expect(screen.getByText(/I "understand": "Hello AI"/)).toBeInTheDocument()}, { "timeout": 2000 })})});

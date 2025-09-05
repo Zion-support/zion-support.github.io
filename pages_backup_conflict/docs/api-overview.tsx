@@ -5,10 +5,10 @@ import { ArrowLeft, Code, Key, Zap, Shield } from 'lucide-react';
 
 export default function APIOverview() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+    "phone": '+1 302 464 0950',
+    "email": 'kleber@ziontechgroup.com',
+    "address": '364 E Main St STE 1008 Middletown DE 19709',
+    "site": 'https://ziontechgroup.com'
   };
 
   return (
@@ -23,7 +23,7 @@ export default function APIOverview() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -34,7 +34,7 @@ export default function APIOverview() {
           </div>
 
           {/* API Features */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid "md": grid-cols-2 gap-6 mb-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="flex items-center mb-4">
                 <Code className="w-8 h-8 text-blue-600 mr-3" />
@@ -104,13 +104,13 @@ export default function APIOverview() {
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">API Categories</h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid "md": grid-cols-3 gap-6">
               <div className="border border-gray-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Micro SaaS APIs</h3>
                 <p className="text-gray-600 mb-4">
                   APIs for our 150+ micro SaaS applications including cost optimization, analytics, and automation tools.
                 </p>
-                <Link href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-medium">
+                <Link href="/micro-saas" className="text-blue-600 "hover": text-blue-700 font-medium">
                   View Micro SaaS →
                 </Link>
               </div>
@@ -120,7 +120,7 @@ export default function APIOverview() {
                 <p className="text-gray-600 mb-4">
                   Machine learning and AI APIs for natural language processing, computer vision, and predictive analytics.
                 </p>
-                <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                <Link href="/ai-services" className="text-blue-600 "hover": text-blue-700 font-medium">
                   View AI Services →
                 </Link>
               </div>
@@ -130,7 +130,7 @@ export default function APIOverview() {
                 <p className="text-gray-600 mb-4">
                   Infrastructure and enterprise APIs for cloud management, DevOps, and cybersecurity services.
                 </p>
-                <Link href="/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                <Link href="/it-services" className="text-blue-600 "hover": text-blue-700 font-medium">
                   View IT Services →
                 </Link>
               </div>
@@ -143,11 +143,11 @@ export default function APIOverview() {
             <p className="text-gray-600 mb-6">
               Contact our team to get your API access and start integrating our services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get API Access
               </Link>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Contact Support
               </a>
             </div>

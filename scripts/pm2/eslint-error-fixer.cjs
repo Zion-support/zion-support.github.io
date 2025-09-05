@@ -30,21 +30,21 @@ class ESLintErrorFixer {
       level,
       message,
       data,
-      service: 'eslint-error-fixer'
+      "service": 'eslint-error-fixer'
     };
 
     if (level === 'error') {
-      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
+      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {
+      console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {
+      console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {
+      console.log(`[${timestamp}] "DEBUG": ${message}`, data)}
 
     this.writeToLog(logEntry)}
 
   writeToLog(logEntry) {
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
 
     const logFile = path.join(logDir, 'eslint-error-fixer.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
@@ -71,7 +71,7 @@ class ESLintErrorFixer {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true })}
+        fs.mkdirSync(fullPath, { "recursive": true })}
     })}
 
   async performESLintFixes() {
@@ -100,7 +100,7 @@ class ESLintErrorFixer {
       }
 
       await this.generateFixReport();
-      this.log('info', `ESLint fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {
+      this.log('info', `ESLint fixing completed. "Applied": ${this.fixesApplied}, "Failed": ${this.fixesFailed}, "Skipped": ${this.fixesSkipped}`)} catch (error) {
       this.log('error', 'Error during ESLint fixing process', error)}
   }
 
@@ -116,9 +116,9 @@ class ESLintErrorFixer {
       if (this.autoFix) {
         try {
           execSync('npx eslint . --fix --format json', { 
-            cwd: this.projectRoot, 
-            encoding: 'utf8',
-            stdio: 'pipe'
+            "cwd": this.projectRoot, 
+            "encoding": 'utf8',
+            "stdio": 'pipe'
           })} catch (error) {
           // Auto-fix completed, now get remaining errors
         }
@@ -126,9 +126,9 @@ class ESLintErrorFixer {
 
       // Get remaining errors after auto-fix
       const result = execSync('npx eslint . --format json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       if (result) {
@@ -148,13 +148,13 @@ class ESLintErrorFixer {
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {
         errors.push({
-          filePath: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
-          ruleId: 'ESLINT_ERROR',
-          severity: 2,
-          fix: false
+          "filePath": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "ruleId": 'ESLINT_ERROR',
+          "severity": 2,
+          "fix": false
         })}
     });
     
@@ -175,7 +175,7 @@ class ESLintErrorFixer {
       this.fixesSkipped++;
       return}
 
-    this.log('info', `Fixing ESLint errors in: ${filePath}`);
+    this.log('info', `Fixing ESLint errors "in": ${filePath}`);
     
     try {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -214,12 +214,12 @@ class ESLintErrorFixer {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         
         this.fixedFiles.add(filePath);
-        this.log('info', `Successfully fixed ESLint errors in: ${filePath}`);
+        this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
         // Verify the fix
         if (await this.verifyFix(filePath)) {
-          this.log('info', `Fix verification passed for: ${filePath}`)} else {
-          this.log('warn', `Fix verification failed for: ${filePath}`);
+          this.log('info', `Fix verification passed "for": ${filePath}`)} else {
+          this.log('warn', `Fix verification failed "for": ${filePath}`);
           this.fixesFailed++}
       } else {
         this.fixesSkipped++}
@@ -326,17 +326,17 @@ class ESLintErrorFixer {
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
-      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)}
+      this.log('debug', `Backup "created": ${backupPath}`)} catch (error) {
+      this.log('warn', `Failed to create backup "for": ${filePath}`, error.message)}
   }
 
   async verifyFix(filePath) {
     try {
       // Run ESLint on the fixed file to verify
       const result = execSync(`npx eslint "${filePath}" --format json`, { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       if (result) {
@@ -350,22 +350,22 @@ class ESLintErrorFixer {
 
   async generateFixReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalFixes: this.fixesApplied + this.fixesFailed + this.fixesSkipped,
-        fixesApplied: this.fixesApplied,
-        fixesFailed: this.fixesFailed,
-        fixesSkipped: this.fixesSkipped,
-        successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100
+        "fixesApplied": this.fixesApplied,
+        "fixesFailed": this.fixesFailed,
+        "fixesSkipped": this.fixesSkipped,
+        "successRate": this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100
       },
-      fixedFiles: Array.from(this.fixedFiles),
-      recommendations: this.generateRecommendations()
+      "fixedFiles": Array.from(this.fixedFiles),
+      "recommendations": this.generateRecommendations()
     };
 
     const reportPath = path.join(this.projectRoot, 'error-reports', `eslint-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('info', `ESLint fix report generated: ${reportPath}`);
+    this.log('info', `ESLint fix report "generated": ${reportPath}`);
     return report}
 
   generateRecommendations() {
@@ -373,23 +373,23 @@ class ESLintErrorFixer {
 
     if (this.fixesFailed > 0) {
       recommendations.push({
-        priority: 'high',
-        action: 'Review failed ESLint fixes manually',
-        description: `${this.fixesFailed} ESLint fixes failed and need manual intervention`
+        "priority": 'high',
+        "action": 'Review failed ESLint fixes manually',
+        "description": `${this.fixesFailed} ESLint fixes failed and need manual intervention`
       })}
 
     if (this.fixesApplied > 0) {
       recommendations.push({
-        priority: 'medium',
-        action: 'Run ESLint to verify fixes',
-        description: `${this.fixesApplied} ESLint fixes were applied, verify code quality`
+        "priority": 'medium',
+        "action": 'Run ESLint to verify fixes',
+        "description": `${this.fixesApplied} ESLint fixes were applied, verify code quality`
       })}
 
     if (this.fixesSkipped > 0) {
       recommendations.push({
-        priority: 'low',
-        action: 'Review skipped fixes',
-        description: `${this.fixesSkipped} ESLint errors were skipped during fixing`
+        "priority": 'low',
+        "action": 'Review skipped fixes',
+        "description": `${this.fixesSkipped} ESLint errors were skipped during fixing`
       })}
 
     return recommendations}

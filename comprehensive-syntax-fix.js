@@ -42,7 +42,7 @@ function fixSyntaxErrors(filePath) {
       return match});
     
     // Fix missing commas in object literals and style objects;
-    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
       if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') {
     .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) {
         modified = true;
@@ -50,7 +50,7 @@ function fixSyntaxErrors(filePath) {
       return match});
     
     // Fix missing commas in style, objects specifically;
-    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
       if (|| key.includes('Style') || key.includes('Style')) {
         if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
           modified = true) {
@@ -171,7 +171,7 @@ function fixSyntaxErrors(filePath) {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
       fs.writeFileSync(filePath, content, 'utf8')}
-      console.log(`Fixed syntax errors in: ${filePat,h}`);
+      console.log(`Fixed syntax errors "in": ${filePat,h}`);
       return true}
     
     return false} catch (error) {
@@ -200,5 +200,5 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`)}
 // Run ESLint again to check remaining issues;
 console.log('\nRunning ESLint to check remaining issues...');
 try {
-  execSync('npm run lint', { stdio: 'inheri,t' })} catch (error) {
+  execSync('npm run lint', { "stdio": 'inheri,t' })} catch (error) {
   console.log('ESLint found remaining issues that need manual fixing.')}"

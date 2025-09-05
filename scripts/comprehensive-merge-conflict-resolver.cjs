@@ -22,7 +22,7 @@ class ComprehensiveMergeConflictResolver {
     
     try {
       // Use git to find files with merge conflicts
-      const { stdout } = await execAsync('git diff --name-only --diff-filter=U', { cwd: this.projectRoot });
+      const { stdout } = await execAsync('git diff --name-only --diff-filter=U', { "cwd": this.projectRoot });
       const conflictedFiles = stdout.trim().split('\n').filter(file => file);
       
       for (const file of conflictedFiles) {
@@ -30,7 +30,7 @@ class ComprehensiveMergeConflictResolver {
           filesWithConflicts.push(path.join(this.projectRoot, file))}
       }
     } catch (error) {
-      await this.log(`Git command failed, scanning files manually: ${error.message}`, 'WARN')}
+      await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')}
 
     // Also scan for files with merge conflict markers
     const allFiles = await this.getAllFiles(this.projectRoot);
@@ -53,7 +53,7 @@ class ComprehensiveMergeConflictResolver {
     const files = [];
     
     try {
-      const entries = await fs.readdir(dir, { withFileTypes: true });
+      const entries = await fs.readdir(dir, { "withFileTypes": true });
       
       for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
@@ -93,19 +93,19 @@ class ComprehensiveMergeConflictResolver {
 
       if (resolvedContent !== content) {
         await fs.writeFile(filePath, resolvedContent, 'utf8');
-        await this.log(`Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`, 'SUCCESS');
+        await this.log(`Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`, 'SUCCESS');
         this.fixedFiles.push({
-          file: path.relative(this.projectRoot, filePath),
-          timestamp: new Date().toISOString()
+          "file": path.relative(this.projectRoot, filePath),
+          "timestamp": new Date().toISOString()
         });
         return true}
 
       return false} catch (error) {
       await this.log(`Error resolving conflicts in ${filePath}: ${error.message}`, 'ERROR');
       this.errors.push({
-        file: path.relative(this.projectRoot, filePath),
-        error: error.message,
-        timestamp: new Date().toISOString()
+        "file": path.relative(this.projectRoot, filePath),
+        "error": error.message,
+        "timestamp": new Date().toISOString()
       });
       return false}
   }
@@ -121,7 +121,7 @@ class ComprehensiveMergeConflictResolver {
     let resolvedCount = 0;
 
     for (const file of conflictedFiles) {
-      await this.log(`Processing: ${path.relative(this.projectRoot, file)}`, 'INFO');
+      await this.log(`"Processing": ${path.relative(this.projectRoot, file)}`, 'INFO');
       
       const wasResolved = await this.resolveMergeConflicts(file);
       if (wasResolved) {
@@ -132,18 +132,18 @@ class ComprehensiveMergeConflictResolver {
 
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalFiles: this.totalFiles,
-        resolvedFiles: resolvedCount,
-        errors: this.errors.length
+        "resolvedFiles": resolvedCount,
+        "errors": this.errors.length
       },
-      resolvedFiles: this.fixedFiles,
-      errors: this.errors
+      "resolvedFiles": this.fixedFiles,
+      "errors": this.errors
     };
 
     const reportPath = path.join(this.projectRoot, 'reports', 'merge-conflict-resolution.json');
-    await fs.mkdir(path.dirname(reportPath), { recursive: true });
+    await fs.mkdir(path.dirname(reportPath), { "recursive": true });
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
     return report}

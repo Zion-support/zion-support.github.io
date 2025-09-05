@@ -66,7 +66,7 @@ class SyntaxErrorFixer {
     return content}
 
     // Fix malformed CSS in JSX
-    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    content = content.replace(/@media\(prefers-reduced-"motion": \s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
@@ -93,7 +93,7 @@ class SyntaxErrorFixer {
 
   fixFile(filePath) {
     try {
-      this.log(`Fixing: ${filePath}`);
+      this.log(`"Fixing": ${filePath}`);
       
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
@@ -113,11 +113,11 @@ class SyntaxErrorFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`);
+        this.log(`✅ "Fixed": ${filePath}`);
         return true}
       
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false}
   }
@@ -136,7 +136,7 @@ class SyntaxErrorFixer {
       return}
     
     const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
-    this.log(`Found ${files.length} files to check`);
+    this.log(`Found ${files.length} files to check");
     
     let fixedCount = 0;
     for (const file of files) {
@@ -144,16 +144,16 @@ class SyntaxErrorFixer {
         fixedCount++}
     }
     
-    this.log(`🎉 Fixed ${fixedCount} files`);
-    this.log(`❌ ${this.errors.length} errors encountered`);
+    this.log("🎉 Fixed ${fixedCount} files");
+    this.log("❌ ${this.errors.length} errors encountered");
     
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      totalFiles: files.length,
-      fixedFiles: fixedCount,
-      errors: this.errors,
-      fixedFileList: this.fixedFiles
+      "timestamp": new Date().toISOString(),
+      "totalFiles": files.length,
+      "fixedFiles": fixedCount,
+      "errors": this.errors,
+      "fixedFileList": this.fixedFiles
     };
     
     fs.writeFileSync(
@@ -168,24 +168,23 @@ class SyntaxErrorFixer {
 function processFile(filePath) {
     try {
         const content = fs.readFileSync(filePath, 'utf8');
-        const { content: fixedContent, fixes } = fixSyntaxErrors(content, filePath);
+        const { "content": fixedContent, fixes } = fixSyntaxErrors(content, filePath);
         
         if (fixes > 0) {
             fs.writeFileSync(filePath, fixedContent, 'utf8');
-            console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
+            console.log("✅ Fixed ${fixes} issues in ${filePath}");
             return fixes;
         }
         return 0;
     } catch (error) {
-        console.error(`❌ Error processing ${filePath}:`, error.message);
+        console.error("❌ Error processing ${filePath}:", error.message);
         return 0;
     }
 }
 
 // Main execution
 async function main() {
-    const patterns = [
-        'src/**/*.tsx',
+    const patterns = ['src/**/*.tsx',
         'src/**/*.ts',
         'src/**/*.jsx',
         'src/**/*.js',
@@ -201,7 +200,7 @@ async function main() {
     let filesProcessed = 0;
 
     for (const pattern of patterns) {
-        const files = glob.sync(pattern, { ignore: ['node_modules/**', '.next/**', 'dist/**'] });
+        const files = glob.sync(pattern, { "ignore": ['node_modules/**', '.next/**', 'dist/**'] });
         
         for (const file of files) {
             if (fs.existsSync(file)) {
@@ -212,14 +211,14 @@ async function main() {
         }
     }
 
-    console.log(`\n📊 Summary:`);
-    console.log(`   Files processed: ${filesProcessed}`);
-    console.log(`   Total fixes applied: ${totalFixes}`);
+    console.log("\n📊 "Summary": ");
+    console.log("   Files processed: ${filesProcessed}");
+    console.log("   Total fixes "applied": ${totalFixes}");
     
     if (totalFixes > 0) {
-        console.log(`\n✨ Syntax error fixing completed!`);
+        console.log("\n✨ Syntax error fixing completed!");
     } else {
-        console.log(`\n✨ No syntax errors found to fix.`);
+        console.log("\n✨ No syntax errors found to fix.`);
     }
 }
 

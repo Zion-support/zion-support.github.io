@@ -9,10 +9,10 @@ export default function AIPoweredEmailResponder() {
         <meta name="description" content="Automate inbox triage and draft human-quality replies using governed AI with your tone and policies." />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">AI-Powered Email Responder</h1>
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">AI-Powered Email Responder</h1>
         <p className="mt-4 text-white/80">Reduce response times, improve CSAT, and reclaim focus time by letting AI handle routine emails while humans review exceptions.</p>
 
-        <section className="mt-8 grid md:grid-cols-2 gap-6">
+        <section className="mt-8 grid "md": grid-cols-2 gap-6">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">Features</h2>
             <ul className="list-disc pl-5 text-white/80 space-y-2">
@@ -20,7 +20,7 @@ export default function AIPoweredEmailResponder() {
               <li>Intent/risk classification and PII redaction</li>
               <li>Tone, language, and signature control per brand</li>
               <li>Approval workflows with human-in-the-loop</li>
-              <li>Analytics: SLA, response quality, deflection rate</li>
+              <li>"Analytics": SLA, response quality, deflection rate</li>
             </ul>
           </div>
           <div className="space-y-3">
@@ -41,7 +41,7 @@ export default function AIPoweredEmailResponder() {
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
           <ul className="list-disc pl-5 text-white/80 space-y-2">
-            <li><a className="underline hover:text-blue-300" href="https://workspace.google.com/marketplace" target="_blank" rel="noreferrer">Google Workspace Marketplace</a></li>
+            <li><a className="underline "hover": text-blue-300" href="https://workspace.google.com/marketplace" target="_blank" rel="noreferrer">Google Workspace Marketplace</a></li>
             <li><a className="underline hover:text-blue-300" href="https://www.zendesk.com/apps/" target="_blank" rel="noreferrer">Zendesk Apps Marketplace</a></li>
           </ul>
         </section>

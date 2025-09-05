@@ -106,33 +106,33 @@ export class ContentOptimizer {
 
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
-                type: 'word_count',
-                severity: 'medium',
-                message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
+                "type": 'word_count',
+                "severity": 'medium',
+                "message": `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
             });
         }
 
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
-                type: 'heading_count',
-                severity: 'low',
-                message: `Add more headings to improve content structure.`
+                "type": 'heading_count',
+                "severity": 'low',
+                "message": "Add more headings to improve content structure."
             });
         }
 
         if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
             issues.push({
-                type: 'image_count',
-                severity: 'low',
-                message: `Consider adding images to make content more engaging.`
+                "type": 'image_count',
+                "severity": 'low',
+                "message": "Consider adding images to make content more engaging."
             });
         }
 
         if (metrics.linkCount < this.MIN_LINK_COUNT) {
             issues.push({
-                type: 'link_count',
-                severity: 'low',
-                message: `Add more internal and external links for better SEO.`
+                "type": 'link_count',
+                "severity": 'low',
+                "message": "Add more internal and external links for better SEO."
             });
         }
 
@@ -169,7 +169,7 @@ export class ContentOptimizer {
         // Apply optimizations based on analysis
         if (analysis.issues.length > 0) {
             // Add suggestions as comments
-            const optimizationComments = analysis.suggestions.map(suggestion => `{/*  TODO: ${suggestion}  */};`).join('\n');
+            const optimizationComments = analysis.suggestions.map(suggestion => `{/*  "TODO": ${suggestion}  */};`).join('\n');
             return `${optimizationComments}\n\n${optimizedContent}`;
         }
 

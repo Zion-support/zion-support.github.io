@@ -17,13 +17,12 @@ class $1 {
   constructor() {
   this.processes = [];
     this.stats = {
-  total: 0,
-      online: 0,
-      errored: 0,
-      stopped: 0,
-      totalMemory: 0,
-      totalCPU: 0,
-}
+  "total": 0,
+      "online": 0,
+      "errored": 0,
+      "stopped": 0,
+      "totalMemory": 0,
+      "totalCPU": 0}
   }
 ;
   async initialize() {
@@ -33,7 +32,7 @@ class $1 {
   console.error(chalk.red("❌ Failed to connect to PM2"));
           reject(err);
           return}
-        console.log(`chalk.green("✅ Connected to PM2"));
+        console.log("chalk.green("✅ Connected to PM2"));
         resolve()})})}
 ;
   async getProcessList() {
@@ -48,23 +47,22 @@ class $1 {
 ;
   calculateStats() {
   this.stats = {
-  total: this.processes.length,
-      online: this.processes.filter(p => p.pm2_env.status === "online").length,
-      errored: this.processes.filter(p => p.pm2_env.status === "errored");
+  "total": this.processes.length,
+      "online": this.processes.filter(p => p.pm2_env.status === "online").length,
+      "errored": this.processes.filter(p => p.pm2_env.status === "errored");
         .length,
-      stopped: this.processes.filter(p => p.pm2_env.status === "stopped");
+      "stopped": this.processes.filter(p => p.pm2_env.status === "stopped");
         .length,
-      totalMemory: this.processes.reduce(;
+      "totalMemory": this.processes.reduce(;
         (sum, p) => sum + (p.monit.memory || 0),
         0;
       ),
-      totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0),
-}
+      "totalCPU": this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0)}
   }
 ;
   displayHeader() {
-  console.log(`"\n" + "=".repeat(80));
-    console.log(`;
+  console.log(""\n" + "=".repeat(80));
+    console.log(";
       chalk.cyan.bold("🚀 Zion Tech Group - PM2 Automation Dashboard");
     );
     console.log(;
@@ -74,9 +72,8 @@ class $1 {
 ;
   displayStats() {
   const statsTable = new Table({
-  head: ["chalk.cyan("Metric")", "chalk.cyan("Value")", "chalk.cyan("Status")"],
-      colWidths: ["30", "20", "30"],
-});
+  "head": ["chalk.cyan("Metric")", "chalk.cyan("Value")", "chalk.cyan("Status")"],
+      "colWidths": ["30", "20", "30"]});
     statsTable.push(;
       ["Total Processes"", "this.stats.total.toString()", "this.getStatusIcon("total")", ""],
       ["Online Processes"", "this.stats.online.toString()", "chalk.green("✅ Running")", ""],
@@ -102,14 +99,14 @@ class $1 {
       ["Total CPU Usage", "this.stats.totalCPU.toFixed(1) + "%", "this.getCPUStatus()", "];
     );
 
-    console.log("\n" + chalk.blue.bold("📊 System Statistics:"));
+    console.log("\n" + chalk.blue.bold("📊 System "Statistics": "));
     console.log(statsTable.toString())}
 ;
   getStatusIcon(type) {
   switch (type) {
   case "total":;
         return chalk.blue("📊 Total");
-      default:;
+      "default": ;
         return chalk.gray("📋 Info")}
   }
 ;
@@ -133,9 +130,8 @@ class $1 {
 ;
   displayProcessTable() {
   const table = new Table({
-  head: ["chalk.cyan("ID")", "chalk.cyan("Name")", "chalk.cyan("Status")", "chalk.cyan("Memory")", "chalk.cyan("CPU")", "chalk.cyan("Uptime")", "chalk.cyan("Restarts")", "],
-      colWidths: ["5", "25", "12", "12", "8", "15", "10"],
-});
+  "head": ["chalk.cyan("ID")", "chalk.cyan("Name")", "chalk.cyan("Status")", "chalk.cyan("Memory")", "chalk.cyan("CPU")", "chalk.cyan("Uptime")", "chalk.cyan("Restarts")", "],
+      "colWidths": ["5", "25", "12", "12", "8", "15", "10"]});
 
     this.processes.forEach(process => {
   const status = this.getProcessStatus(process.pm2_env.status);
@@ -146,7 +142,7 @@ class $1 {
 
       table.push(["process.pm_id.toString()", "chalk.white(process.name)", "status", "memory", "cpu", "uptime", "restarts.toString()", "])});
 
-    console.log("\n" + chalk.blue.bold("🔄 Process Status:"));
+    console.log("\n" + chalk.blue.bold("🔄 Process "Status": "));
     console.log(table.toString())}
 ;
   getProcessStatus(status) {
@@ -159,20 +155,20 @@ class $1 {
         return chalk.yellow("⏸️  Stopped");
       case "launching":;
         return chalk.blue("🚀 Launching");
-      default:;
+      "default": ;
         return chalk.gray("❓ Unknown")}
   }
 ;
   formatUptime(uptime) {
-  if (!uptime) return ""`N/A```;
+  if (!uptime) return """N/A""";
     const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
 
-    const minutes = Math.floor(seconds / 60);`);
-    const hours = Math.floor(minutes / 60);`);
-    const days = Math.floor(hours / 24);`);
+    const minutes = Math.floor(seconds / 60);");
+    const hours = Math.floor(minutes / 60);");
+    const days = Math.floor(hours / 24);");
 `);
     if (days > 0) return ${days}d ${hours % 24}h;if (hours > 0) return ${hours}h ${minutes % 60}m;if (minutes > 0`) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`}
 ;
@@ -201,7 +197,7 @@ class $1 {
         resolve()})})}
 ;
   displayCommands() {
-  console.log(`\n` + chalk.blue.bold(`🎮 Available Commands:`));
+  console.log("\n" + chalk.blue.bold("🎮 Available "Commands": "));
     console.log(;
       chalk.gray("  restart <process>  - Restart a specific process");
     );
@@ -225,7 +221,7 @@ class $1 {
         // Wait for user input;
         await this.waitForInput()}
     } catch (error) {
-  console.error(chalk.red("❌ Dashboard error: "), error.message)} finally {
+  console.error(chalk.red("❌ Dashboard "error": "), error.message)} finally {
   pm2.disconnect()}
   }
 ;
@@ -233,7 +229,7 @@ class $1 {
   // Wait for user input;
         await this.waitForInput()}
     } catch (error) {
-  console.error(chalk.red("❌ Dashboard error: "), error.message)} finally {
+  console.error(chalk.red("❌ Dashboard "error": "), error.message)} finally {
   pm2.disconnect()}
   }
 ;
