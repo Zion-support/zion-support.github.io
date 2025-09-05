@@ -185,14 +185,14 @@ export default function CookiePolicyPage() {
                 </div>
               </motion.div>
 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
-                  <button
-                    onClick={() => setCookiePreferences({
-                      necessary: true,
-                      analytics: false,
-                      marketing: false,
-                      functional: false
-                    })}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
+                <button
+                  onClick={() => setCookiePreferences({
+                    necessary: true,
+                    analytics: false,
+                    marketing: false,
+                    functional: false
+                  })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     Reject All
