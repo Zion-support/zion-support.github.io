@@ -2,7 +2,7 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsxtsjsxjs'],
+  pageExtensions: ['tsxts', 'jsxjs'],
   trailingSlash: true,
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],

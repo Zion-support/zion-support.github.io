@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-import LoadingSpinner from './LoadingSpinner',
+import LoadingSpinner from './LoadingSpinner';
 ,
 interface FormData {,
   name: string,
@@ -7,7 +7,7 @@ interface FormData {,
   company: string,
   phone: string,
   service: string,
-  message: string,
+  message: string
 };
 ,
 const ContactForm: React.FC = () => {,
@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {,
     company: '',
     phone: '',
     service: '',
-    message: '',
+    message: ''
   }),
 ,
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -27,8 +27,8 @@ const ContactForm: React.FC = () => {,
     const { name, value } = e.target,
     setFormData(prev => ({,
       ...prev,
-      [name]: value,
-    })),
+      [name]: value
+    }))
   };
 ,
   const handleSubmit = async (e: React.FormEvent) => {,
@@ -46,12 +46,12 @@ const ContactForm: React.FC = () => {,
         company: '',
         phone: '',
         service: '',
-        message: '',
-      }),
+        message: ''
+      })
     } catch {,
-      setSubmitStatus('error'),
+      setSubmitStatus('error')
     } finally {,
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     };
   };
 };

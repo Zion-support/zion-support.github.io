@@ -30,13 +30,13 @@
           total: parseInt(memTotal),
           used: parseInt(memUsed),
           free: parseInt(memFree),
-          usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100),
+          usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
         },
         disk: {,
-          usagePercent: parseInt(diskUsage),
+          usagePercent: parseInt(diskUsage)
         },
         cpu: {,
-          usagePercent: Math.round(cpuUsage),
+          usagePercent: Math.round(cpuUsage)
         };
       };
     } catch (error) {,
@@ -45,7 +45,7 @@
         error: error.message,
         memory: null,
         disk: null,
-        cpu: null,
+        cpu: null
       };
     };
   };
@@ -62,7 +62,7 @@
         online: 0,
         stopped: 0,
         errored: 0,
-        processes: [],
+        processes: []
       };
 ,
       processes.forEach(proc => {,
@@ -72,23 +72,23 @@
           status: status,
           memory: proc.monit?.memory || 0,
           cpu: proc.monit?.cpu || 0,
-          uptime: proc.pm2_env?.uptime || 0,
+          uptime: proc.pm2_env?.uptime || 0
         }),
 ,
         if (status === 'online') processHealth.online++,
         else if (status === 'stopped') processHealth.stopped++,
-        else if (status === 'errored') processHealth.errored++,
+        else if (status === 'errored') processHealth.errored++
       }),
 ,
       return {,
         success: true,
-        health: processHealth,
+        health: processHealth
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        health: null,
+        health: null
       };
     };
   };
@@ -107,14 +107,14 @@
         healthChecks.push({,
           name: 'PM2 App Status',
           status: hasRunningApp ? 'healthy' : 'unhealthy',
-          message: hasRunningApp ? 'Application is running' : 'Application is not running',
-        }),
+          message: hasRunningApp ? 'Application is running' : 'Application is not running'
+        })
       } catch (error) {,
         healthChecks.push({,
           name: 'PM2 App Status',
           status: 'error',
-          message: 'Could not check PM2 status',
-        }),
+          message: 'Could not check PM2 status'
+        })
       };
 ,
       // Check if build files exist,
@@ -122,7 +122,7 @@
       healthChecks.push({,
         name: 'Build Files',
         status: buildExists ? 'healthy' : 'unhealthy',
-        message: buildExists ? 'Build files exist' : 'Build files missing',
+        message: buildExists ? 'Build files exist' : 'Build files missing'
       }),
 ,
       // Check if package.json exists and is valid,
@@ -131,25 +131,25 @@
         healthChecks.push({,
           name: 'Package.json',
           status: 'healthy',
-          message: 'Package.json is valid',
-        }),
+          message: 'Package.json is valid'
+        })
       } catch (error) {,
         healthChecks.push({,
           name: 'Package.json',
           status: 'unhealthy',
-          message: 'Package.json is invalid or missing',
-        }),
+          message: 'Package.json is invalid or missing'
+        })
       };
 ,
       return {,
         success: true,
-        checks: healthChecks,
+        checks: healthChecks
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        checks: [],
+        checks: []
       };
     };
   };
@@ -171,23 +171,23 @@
               name: file,
               size: stats.size,
               sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100,
-              lastModified: stats.mtime,
-            }),
+              lastModified: stats.mtime
+            })
           };
-        }),
+        })
       };
 ,
       return {,
         success: true,
         logFiles: logFiles,
-        totalSize: logFiles.reduce((sum, file) => sum + file.size, 0),
+        totalSize: logFiles.reduce((sum, file) => sum + file.size, 0)
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         logFiles: [],
-        totalSize: 0,
+        totalSize: 0
       };
     };
   };
@@ -201,15 +201,15 @@
         applicationHealth: 'unknown',
         logHealth: 'unknown',
         overallHealth: 'unknown',
-        healthScore: 0,
+        healthScore: 0
       },
       details: {,
         system: systemInfo,
         processes: processInfo,
         application: appInfo,
-        logs: logInfo,
+        logs: logInfo
       },
-      recommendations: [],
+      recommendations: []
     };
 ,
     // Calculate health scores,
@@ -224,13 +224,13 @@
 ,
       if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {,
         report.summary.systemHealth = 'healthy',
-        totalScore += 25,
+        totalScore += 25
       } else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {,
         report.summary.systemHealth = 'warning',
-        totalScore += 15,
+        totalScore += 15
       } else {,
         report.summary.systemHealth = 'unhealthy',
-        totalScore += 5,
+        totalScore += 5
       };
     };
     maxScore += 25,
@@ -240,13 +240,13 @@
       const health = processInfo.health,
       if (health.errored === 0 && health.stopped === 0) {,
         report.summary.processHealth = 'healthy',
-        totalScore += 25,
+        totalScore += 25
       } else if (health.errored === 0) {,
         report.summary.processHealth = 'warning',
-        totalScore += 15,
+        totalScore += 15
       } else {,
         report.summary.processHealth = 'unhealthy',
-        totalScore += 5,
+        totalScore += 5
       };
     };
     maxScore += 25,
@@ -258,13 +258,13 @@
 ,
       if (healthyChecks === totalChecks) {,
         report.summary.applicationHealth = 'healthy',
-        totalScore += 25,
+        totalScore += 25
       } else if (healthyChecks >= totalChecks * 0.5) {,
         report.summary.applicationHealth = 'warning',
-        totalScore += 15,
+        totalScore += 15
       } else {,
         report.summary.applicationHealth = 'unhealthy',
-        totalScore += 5,
+        totalScore += 5
       };
     };
     maxScore += 25,
@@ -274,13 +274,13 @@
       const totalLogSize = logInfo.totalSize / (1024 * 1024), // MB,
       if (totalLogSize < 100) {,
         report.summary.logHealth = 'healthy',
-        totalScore += 25,
+        totalScore += 25
       } else if (totalLogSize < 500) {,
         report.summary.logHealth = 'warning',
-        totalScore += 15,
+        totalScore += 15
       } else {,
         report.summary.logHealth = 'unhealthy',
-        totalScore += 5,
+        totalScore += 5
       };
     };
     maxScore += 25,
@@ -289,11 +289,11 @@
 ,
     // Determine overall health,
     if (report.summary.healthScore >= 80) {,
-      report.summary.overallHealth = 'healthy',
+      report.summary.overallHealth = 'healthy'
     } else if (report.summary.healthScore >= 60) {,
-      report.summary.overallHealth = 'warning',
+      report.summary.overallHealth = 'warning'
     } else {,
-      report.summary.overallHealth = 'unhealthy',
+      report.summary.overallHealth = 'unhealthy'
     };
 ,
     // Generate recommendations,
@@ -302,15 +302,15 @@
         report.recommendations.push({,
           priority: 'high',
           message: 'High memory usage detected',
-          action: 'Consider restarting processes or increasing memory',
-        }),
+          action: 'Consider restarting processes or increasing memory'
+        })
       };
       if (systemInfo.disk?.usagePercent > 80) {,
         report.recommendations.push({,
           priority: 'high',
           message: 'High disk usage detected',
-          action: 'Clean up logs and temporary files',
-        }),
+          action: 'Clean up logs and temporary files'
+        })
       };
     };
 ,
@@ -318,32 +318,32 @@
       report.recommendations.push({,
         priority: 'critical',
         message: 'Errored processes detected',
-        action: 'Restart errored processes and investigate logs',
-      }),
+        action: 'Restart errored processes and investigate logs'
+      })
     };
 ,
     if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {,
       report.recommendations.push({,
         priority: 'medium',
         message: 'Large log files detected',
-        action: 'Implement log rotation or cleanup',
-      }),
+        action: 'Implement log rotation or cleanup'
+      })
     };
 ,
-    return report,
+    return report
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursive: true }),
+        fs.mkdirSync(reportDir, { recursive: true })
       };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`),
+      this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving report: ${error.message}`),
+      this.log(`Error saving report: ${error.message}`)
     };
   };
 ,
@@ -355,7 +355,7 @@
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursive: true }),
+        fs.mkdirSync(logsDir, { recursive: true })
       };
 ,
       // Run all health checks,
@@ -387,15 +387,15 @@
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`),
-        }),
+          this.log(`    Action: ${rec.action}`)
+        })
       } else {,
-        this.log('\n✨ All systems are healthy!'),
+        this.log('\n✨ All systems are healthy!')
       };
-,
+
     } catch (error) {,
       this.log(`❌ Error running health monitor: ${error.message}`),
-      process.exit(1),
+      process.exit(1)
     };
   };
 };
@@ -403,5 +403,5 @@
 // Run the health monitor,
 const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
-  process.exit(1),
+  process.exit(1)
 }),
