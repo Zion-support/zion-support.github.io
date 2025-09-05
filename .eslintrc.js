@@ -1,6 +1,7 @@
 export default {
   extends: [
-    'next/core-web-vitalsnext/typescript'
+    'next/core-web-vitals',
+    'next/typescript'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -10,7 +11,7 @@ export default {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
