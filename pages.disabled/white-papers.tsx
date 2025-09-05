@@ -241,9 +241,7 @@ export default function WhitePapersPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Download our comprehensive white papers on technology trends and best practices.
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
               </p>

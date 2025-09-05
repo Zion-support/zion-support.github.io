@@ -13,11 +13,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-<<<<<<< HEAD
-import Layout from './components/Layout';
-=======
 import Layout from '../components/Layout';
->>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
 
 const courses = [
   {
