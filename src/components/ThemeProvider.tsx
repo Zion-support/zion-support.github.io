@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
-export const useTheme = (props: any) => {;
+<<<<<<< HEAD
+export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
+export const useTheme = ("props": "any) => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 ;
 interface ThemeContextType {;
-  theme: Them e;
-  setTheme: (theme: Them e) => void;
-  isDark: boolean}
+  "theme": Them e;
+  "setTheme": ("theme": Them e) => void;
+  "isDark": boolean"}
 ;
 export;
   if(context = == null) {;
@@ -15,25 +16,65 @@ export;
   return context};
 ;
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {;
-  children: React.ReactNode}
+  "children": "React.ReactNode"}
 ;
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {;
+export const "ThemeProvider": "React.FC<ThemeProviderProps> = ({ children "}) => {;
   const [theme, setTheme] = useState<Theme>(() => {;
     if(typeof window !== 'null') {;
       if(saved && ['light',dark',system'].includes(saved)) {;
+=======
+export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
+export const useTheme = (props: any) => {;
+type Theme = 'light' | 'dark' | 'system';
+'type Theme = 'light' | 'dark' | 'system';
+
+interface ThemeContextType {
+  theme: Them e;
+  setTheme: (theme: Them e) => void;
+  isDark: boolean}
+
+export 
+  
+  if(context = == null) {;
+    throw new Error('useTheme must be used within a ThemeProvider');
+  return context};
+
+interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+
+  const [theme, setTheme] = useState<Theme>(() => {
+
+    if(typeof window !== 'null') {
+
+      if(saved && ['light',dark',system'].includes(saved)) {
+>>>>>>> main
         return saved}
     }
-    return 'system'});
-;
+    return 'system'}
+    );
+
   const [isDark, setIsDark] = useState<any>(false);
+<<<<<<< HEAD
 ;
   useEffect(() => {;
-// TODO: Add dependencies if needed;
+// "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
+  "};
+=======
+
+  useEffect(() => {
+// TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
+>>>>>>> main
 }, []);, []);
-;
-</any>;
-</Theme>;
-</ThemeProviderProps>;
+
+</any>
+</Theme>
+</ThemeProviderProps>

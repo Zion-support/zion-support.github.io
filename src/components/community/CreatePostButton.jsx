@@ -1,17 +1,23 @@
-import React from 'react';
+import React from 'react';'''
 import {Button} from '@/components/ui/button';
+<<<<<<< HEAD
 export default function CreatePostButton;
-export {CreatePostButton}({categoryId}) {return (<Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">;
+export {CreatePostButton}({categoryId}) {return (<Button className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zion-slate-dark">;
       Create New Post;
+    </Button>)"}
+;
+=======
+export default function CreatePostButton()({categoryId}) {return (<Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
+      Create New Post
     </Button>)}
-;
+
+>>>>>>> main
 export {CreatePostButton};
-;
+
 export {CreatePostButton};
-;
+
 export {CreatePostButton};
-;
+
 export {CreatePostButton};
-;
+
 export {CreatePostButton};
-;

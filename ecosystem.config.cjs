@@ -1,85 +1,189 @@
-module.exports = {
-  apps: [
-    {
-      name: 'error-monitor',
-      script: 'automation/error-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      error_file: 'automation/logs/error-monitor-error.log',
-      out_file: 'automation/logs/error-monitor-out.log',
-      log_file: 'automation/logs/error-monitor-combined.log',
-      time: true
-    },
-    {
-      name: 'lint-automation',
-      script: 'automation/lint-automation.js',
-      instances: 1,
-      autorestart: false,
-      watch: false,
-      max_memory_restart: '512M',
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      error_file: 'automation/logs/lint-automation-error.log',
-      out_file: 'automation/logs/lint-automation-out.log',
-      log_file: 'automation/logs/lint-automation-combined.log',
-      time: true
-    },
-    {
-      name: 'build-monitor',
-      script: 'automation/build-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
-    },
-    {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'automation/ci-cd-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      env: {
+<<<<<<< HEAD
+module.exports = { apps: [{ name: "ziontechgroup-web","" script: "npm","" args: "run start","" cwd: "./"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production"},"" log_file: "logs/pm2/preview.log","" error_file: "logs/pm2/preview-error.log","" out_file: "logs/pm2/preview-out.log"}, {"" name: "ci-cd-automation","" script: "scripts/pm2/ci-cd-automation.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "512M"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */1 * * *", / Every hour"" log_file: "logs/pm2/ci-cd-automation.log","" error_file: "logs/pm2/ci-cd-automation-error.log","" out_file: "logs/pm2/ci-cd-automation-out.log"}, {"" name: "continuous-improvement","" script: "scripts/pm2/continuous-improvement.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "512M"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */2 * * *", / Every 2 hours"" log_file: "logs/pm2/continuous-improvement.log","" error_file: "logs/pm2/continuous-improvement-error.log","" out_file: "logs/pm2/continuous-improvement-out.log"}, {"" name: "daily-build-test","" script: "scripts/pm2/daily-build-test.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */1 * * *", / Every hour"" log_file: "logs/pm2/daily-build-test.log","" error_file: "logs/pm2/daily-build-test-error.log","" out_file: "logs/pm2/daily-build-test-out.log"}, {"" name: "quality-checks","" script: "scripts/pm2/quality-checks.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */3 * * *", / Every 3 hours"" log_file: "logs/pm2/quality-checks.log","" error_file: "logs/pm2/quality-checks-error.log","" out_file: "logs/pm2/quality-checks-out.log"}, {"" name: "security-audit","" script: "scripts/pm2/security-audit.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */4 * * *", / Every 4 hours"" log_file: "logs/pm2/security-audit.log","" error_file: "logs/pm2/security-audit-error.log","" out_file: "logs/pm2/security-audit-out.log"}, {"" name: "performance-monitor","" script: "scripts/pm2/performance-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */2 * * *", / Every 2 hours"" log_file: "logs/pm2/performance-monitor.log","" error_file: "logs/pm2/performance-monitor-error.log","" out_file: "logs/pm2/performance-monitor-out.log"}, {"" name: "link-checker","" script: "scripts/pm2/link-checker.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */6 * * *", / Every 6 hours"" log_file: "logs/pm2/link-checker.log","" error_file: "logs/pm2/link-checker-error.log","" out_file: "logs/pm2/link-checker-out.log"}, {"" name: "dependency-updates","" script: "scripts/pm2/dependency-updates.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */6 * * *", / Every 6 hours"" log_file: "logs/pm2/dependency-updates.log","" error_file: "logs/pm2/dependency-updates-error.log","" out_file: "logs/pm2/dependency-updates-out.log"}, {"" name: "health-monitor","" script: "scripts/pm2/health-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" cron_restart: "*/5 * * * *", / Every 5 minutes"" log_file: "logs/pm2/health-monitor.log","" error_file: "logs/pm2/health-monitor-error.log","" out_file: "logs/pm2/health-monitor-out.log"}, {"" name: "error-fixer","" script: "scripts/pm2/error-fixer.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "512M"," env: {" NODE_ENV: "production" },"" cron_restart: "0 */2 * * *", / Every 2 hours"" log_file: "logs/pm2/error-fixer.log","" error_file: "logs/pm2/error-fixer-error.log","" out_file: "logs/pm2/error-fixer-out.log"}, {"" name: "continuous-linter","" script: "scripts/pm2/continuous-linter.cjs","" args: "watch"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "512M"," env: {" NODE_ENV: "production" },"" log_file: "logs/pm2/continuous-linter.log","" error_file: "logs/pm2/continuous-linter-error.log","" out_file: "logs/pm2/continuous-linter-out.log"}, {"" name: "type-checker","" script: "scripts/pm2/type-checker.cjs","" args: "watch"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "512M"," env: {" NODE_ENV: "production" },"" log_file: "logs/pm2/type-checker.log","" error_file: "logs/pm2/type-checker-error.log","" out_file: "logs/pm2/type-checker-out.log"} ]};'"'"
+=======
+module.exports = {}
+  "apps": [{}]
+      name: 'ziontechgroup-web',
+      "script": 'npm',
+      "args": 'run start',
+      "cwd": './',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'},
+      "log_file": 'logs/pm2/preview.log',
+      "error_file": 'logs/pm2/preview-error.log',
+      "out_file": 'logs/pm2/preview-out.log'},
+    {}
+      "name": 'ci-cd-automation',
+      "script": 'scripts/pm2/ci-cd-automation.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '512M',
+      "env": {}
         NODE_ENV: 'production'
       },
-      log_file: './logs/ci-cd.log',
-      out_file: './logs/ci-cd-out.log',
-      error_file: './logs/ci-cd-error.log'
-    },
-    {
-      name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'automation/continuous-improvement.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
-      env: {
+      "cron_restart": '0 */1 * * *', // Every hour;
+      "log_file": 'logs/pm2/ci-cd-automation.log',
+      "error_file": 'logs/pm2/ci-cd-automation-error.log',
+      "out_file": 'logs/pm2/ci-cd-automation-out.log'},
+    {}
+      "name": 'continuous-improvement',
+      "script": 'scripts/pm2/continuous-improvement.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '512M',
+      "env": {}
         NODE_ENV: 'production'
       },
-      log_file: './logs/continuous-improvement.log',
-      out_file: './logs/continuous-improvement-out.log',
-      error_file: './logs/continuous-improvement-error.log'
-    }
-  ]
+      "cron_restart": '0 */2 * * *', // Every 2 hours;
+      "log_file": 'logs/pm2/continuous-improvement.log',
+      "error_file": 'logs/pm2/continuous-improvement-error.log',
+      "out_file": 'logs/pm2/continuous-improvement-out.log'},
+    {}
+      "name": 'daily-build-test',
+      "script": 'scripts/pm2/daily-build-test.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */1 * * *', // Every hour;
+      "log_file": 'logs/pm2/daily-build-test.log',
+      "error_file": 'logs/pm2/daily-build-test-error.log',
+      "out_file": 'logs/pm2/daily-build-test-out.log'},
+    {}
+      "name": 'quality-checks',
+      "script": 'scripts/pm2/quality-checks.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */3 * * *', // Every 3 hours;
+      "log_file": 'logs/pm2/quality-checks.log',
+      "error_file": 'logs/pm2/quality-checks-error.log',
+      "out_file": 'logs/pm2/quality-checks-out.log'},
+    {}
+      "name": 'security-audit',
+      "script": 'scripts/pm2/security-audit.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */4 * * *', // Every 4 hours;
+      "log_file": 'logs/pm2/security-audit.log',
+      "error_file": 'logs/pm2/security-audit-error.log',
+      "out_file": 'logs/pm2/security-audit-out.log'},
+    {}
+      "name": 'performance-monitor',
+      "script": 'scripts/pm2/performance-monitor.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */2 * * *', // Every 2 hours;
+      "log_file": 'logs/pm2/performance-monitor.log',
+      "error_file": 'logs/pm2/performance-monitor-error.log',
+      "out_file": 'logs/pm2/performance-monitor-out.log'},
+    {}
+      "name": 'link-checker',
+      "script": 'scripts/pm2/link-checker.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
+      "log_file": 'logs/pm2/link-checker.log',
+      "error_file": 'logs/pm2/link-checker-error.log',
+      "out_file": 'logs/pm2/link-checker-out.log'},
+    {}
+      "name": 'dependency-updates',
+      "script": 'scripts/pm2/dependency-updates.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
+      "log_file": 'logs/pm2/dependency-updates.log',
+      "error_file": 'logs/pm2/dependency-updates-error.log',
+      "out_file": 'logs/pm2/dependency-updates-out.log'},
+    {}
+      "name": 'health-monitor',
+      "script": 'scripts/pm2/health-monitor.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '*/5 * * * *', // Every 5 minutes;
+      "log_file": 'logs/pm2/health-monitor.log',
+      "error_file": 'logs/pm2/health-monitor-error.log',
+      "out_file": 'logs/pm2/health-monitor-out.log'},
+    {}
+      "name": 'error-fixer',
+      "script": 'scripts/pm2/error-fixer.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '512M',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "cron_restart": '0 */2 * * *', // Every 2 hours;
+      "log_file": 'logs/pm2/error-fixer.log',
+      "error_file": 'logs/pm2/error-fixer-error.log',
+      "out_file": 'logs/pm2/error-fixer-out.log'},
+    {}
+      "name": 'continuous-linter',
+      "script": 'scripts/pm2/continuous-linter.cjs',
+      "args": 'watch',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '512M',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/pm2/continuous-linter.log',
+      "error_file": 'logs/pm2/continuous-linter-error.log',
+      "out_file": 'logs/pm2/continuous-linter-out.log'},
+    {}
+      "name": 'type-checker',
+      "script": 'scripts/pm2/type-checker.cjs',
+      "args": 'watch',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '512M',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/pm2/type-checker.log',
+      "error_file": 'logs/pm2/type-checker-error.log',
+      "out_file": 'logs/pm2/type-checker-out.log'};
+  ];
 };
+>>>>>>> main
