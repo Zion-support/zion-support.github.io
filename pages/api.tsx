@@ -4,6 +4,50 @@ import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
 export default function APIPage() {
+  const apiFeatures = [
+    {
+      title: "RESTful APIs",
+      description: "Clean, intuitive REST API endpoints for easy integration",
+      icon: Code,
+      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
+    },
+    {
+      title: "Comprehensive Documentation",
+      description: "Detailed API documentation with examples and guides",
+      icon: Book,
+      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
+    },
+    {
+      title: "High Performance",
+      description: "Fast, reliable APIs built for scale and speed",
+      icon: Zap,
+      features: ["Low Latency", "High Throughput", "Global CDN"]
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with authentication and encryption",
+      icon: Shield,
+      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
+    },
+    {
+      title: 'Authentication & Security',
+      description: 'Secure API access with multiple authentication methods',
+      icon: Shield,
+      features: ['API Key authentication', 'JWT tokens', 'OAuth 2.0', 'Rate limiting']
+    },
+    {
+      title: 'Real-time Updates',
+      description: 'WebSocket support for real-time data streaming',
+      icon: Zap,
+      features: ['WebSocket connections', 'Real-time notifications', 'Live data updates', 'Event streaming']
+    },
+    {
+      title: 'Comprehensive Documentation',
+      description: 'Interactive API documentation with examples and testing',
+      icon: Book,
+      features: ['Interactive docs', 'Code examples', 'Testing interface', 'SDK generation']
+    }
+  ];
 
   const apiEndpoints = [{
     method: 'GET',
@@ -54,43 +98,8 @@ export default function APIPage() {
     responses: [
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
-  }]
-  const apiFeaturesDetailed = [{
-    title: 'RESTful API Design',
-    description: 'Clean, intuitive REST API endpoints following industry best practices',
-    icon: Code,
-    features: ['RESTful principles', 'Consistent naming', 'HTTP status codes', 'Resource-based URLs']
-  },
-  {
-    title: 'Authentication & Security',
-    description: 'Secure API access with multiple authentication methods',
-    icon: Shield,
-    features: ['API Key authentication', 'JWT tokens', 'OAuth 2.0', 'Rate limiting']
-  },
-  {
-    title: 'Real-time Updates',
-    description: 'WebSocket support for real-time data streaming',
-    icon: Zap,
-    features: ['WebSocket connections', 'Real-time notifications', 'Live data updates', 'Event streaming']
-  },
-  {
-    title: 'Comprehensive Documentation',
-    description: 'Interactive API documentation with examples and testing',
-    icon: Book,
-    features: ['Interactive docs', 'Code examples', 'Testing interface', 'SDK generation']
-  },
-  {
-    title: 'Monitoring & Analytics',
-    description: 'Advanced monitoring and analytics for API usage',
-    icon: BarChart3,
-    features: ['Usage analytics', 'Performance metrics', 'Error tracking', 'Custom dashboards']
-  },
-  {
-    title: 'Scalability & Performance',
-    description: 'Built for high performance and scalability',
-    icon: Server,
-    features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
-  }]
+  }];
+
   const sdkLanguages = [
     { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
     { name: 'Python', icon: 'PY', color: 'bg-blue-500' },

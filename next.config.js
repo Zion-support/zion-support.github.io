@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */',
 const nextConfig = {}
   reactStrictMode: true,
-  images: {,}
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
+  images: {
     domains: ['localhost'],
+    unoptimized: true
   },
   env: {,}
     CUSTOM_KEY: process.env.CUSTOM_KEY,
@@ -10,14 +14,8 @@ const nextConfig = {}
   eslint: {,}
     ignoreDuringBuilds: true,
   },
-  typescript: {,}
-    ignoreBuildErrors: true,
-  },
-  async rewrites() {}
-    return [{}
-      source: '/api/:path*,',
-      destination: '/api/:path*'';,
-;    }];,
+  typescript: {
+    ignoreBuildErrors: true
   }
 };,
 

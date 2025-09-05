@@ -13,7 +13,7 @@ const codeExamples = [
   }
 })
 const data = await response.json()
-`
+  }`
   },
   {
     language: 'Python',
@@ -32,7 +32,7 @@ data = {
 }
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
-`
+  }`
   }
 ]
 
