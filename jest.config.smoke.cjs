@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
@@ -8,30 +7,26 @@ const createJestConfig = nextJest({
 const config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
   testMatch: [
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
   ],
-  collectCoverage: false,
-  verbose: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
 };
 
 module.exports = createJestConfig(config);
-=======
-module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  collectCoverage: false,
-  verbose: true,
-  testTimeout: 10000,
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
