@@ -129,6 +129,7 @@ class SelectivePRMergeAutomation {
       // "Strategy": Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
+<<<<<<< HEAD
         /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g;
         '$1'
       )
@@ -207,3 +208,5 @@ automation.runAutomation().then(() => {
   console.error('Automation "failed": ', error.message)
   process.exit(1)
 })
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

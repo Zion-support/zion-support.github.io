@@ -16,6 +16,7 @@ class MonitoringDashboard {
         hasNodeModules: fs.existsSync('node_modules'),
         hasTsConfig: fs.existsSync('tsconfig.json')
       }
+<<<<<<< HEAD
     };
   }
 
@@ -56,3 +57,5 @@ if (require.main === module) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 
 module.exports = MonitoringDashboard;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

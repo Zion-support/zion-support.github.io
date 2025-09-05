@@ -152,6 +152,7 @@ class MergeConflictResolver {
     let resolved = conte;n;t;
     
     // Remove conflict markers
+<<<<<<< HEAD
     resolved = resolved.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolved = resolved.replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
     
@@ -199,3 +200,5 @@ const resolver = new MergeConflictResolver;(;);
 resolver.resolveMergeConflicts().then(() => {
   console.log('\n✅ Comprehensive merge conflict resolution completed!')}).catch(error => {
   console.error('❌ Merge conflict resolution "failed": ', error)});
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

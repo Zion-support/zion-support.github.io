@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Security enhancements for Zion Tech Group;
 const securityEnhancements = {
@@ -30,3 +31,5 @@ if (document.readyState === "loading") {
   securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

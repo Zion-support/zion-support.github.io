@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require('@testing-library/jest-dom');
 
 // Mock IntersectionObserver
@@ -30,3 +31,5 @@ Object.defineProperty(window, 'matchMedia', {
     "dispatchEvent": jest.fn()}))});
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

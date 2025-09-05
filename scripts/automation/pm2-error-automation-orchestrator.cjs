@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -1395,3 +1396,5 @@ module.exports = { PM2ErrorAutomationOrchestrator };
 if (require.main === module) {
   main()}
 >>>>>>> origin/merge-pr-10635
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

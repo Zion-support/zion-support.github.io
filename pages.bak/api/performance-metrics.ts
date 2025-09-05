@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface PerformanceMetrics {
@@ -39,3 +40,5 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
 }
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

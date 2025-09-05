@@ -17,6 +17,7 @@ class AutomationSuiteRunner {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
+<<<<<<< HEAD
       fs.mkdirSync(this.reportsDir, { "recursive": true });
       fs.mkdirSync(this.reportsDir, { recursive: true });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
@@ -342,3 +343,5 @@ if (require.main === module) {
 }
 
 module.exports = AutomationSuiteRunner;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

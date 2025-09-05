@@ -32,6 +32,7 @@ class SimpleMergeResolver {
       let resolvedContent = content;
       
       // Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
       resolvedContent = resolvedContent.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
       
       // Remove any remaining conflict markers
@@ -85,3 +86,5 @@ if (require.main === module) {
   main().catch(console.error)}
 
 module.exports = SimpleMergeResolver;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

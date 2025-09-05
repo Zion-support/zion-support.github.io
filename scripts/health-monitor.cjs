@@ -13,6 +13,7 @@ class HealthMonitor {
     console.log('🏥 Running health checks...');
     for (const check of this.checks) {
       try {
+<<<<<<< HEAD
         const result = execSync(check.command, { "encoding": 'utf8' };);
         const result = execSync(check.command, { encoding: 'utf8' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
@@ -23,3 +24,5 @@ class HealthMonitor {
 }
 
 new HealthMonitor().runChecks();
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

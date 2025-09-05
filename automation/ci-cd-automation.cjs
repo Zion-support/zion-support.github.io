@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class CICDAutomation {
   constructor() {
+<<<<<<< HEAD
 this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     this.ensureLogDir();
   }
 
@@ -21,7 +27,10 @@ this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');ursor/migrat
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
 console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     fs.appendFileSync(this.logFile, logMessage);
   }
 
@@ -37,7 +46,10 @@ console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
     }
   }
 
+<<<<<<< HEAD
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   async runBuild() {
     try {
       this.log('Running build...');
@@ -50,6 +62,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
     }
   }
 
+<<<<<<< HEAD
 async runLint() {
     try {
       this.log('Running lint...');
@@ -58,10 +71,13 @@ async runLint() {
       return true;
     } catch (error) {
       this.log(`Lint "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
 
+<<<<<<< HEAD
 async runTypeCheck() {
     try {
       this.log('Running type check...');
@@ -70,16 +86,22 @@ async runTypeCheck() {
       return true;
     } catch (error) {
       this.log(`Type check "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
 
+<<<<<<< HEAD
 async runCIPipeline() {
     this.log('Starting CI/CD pipeline...');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     
     const results = {
       "lint": await this.runLint(),
       "typeCheck": await this.runTypeCheck(),
+<<<<<<< HEAD
 "test": await this.runTests(),
       "build": await this.runBuild()
     };
@@ -112,6 +134,8 @@ async runCIPipeline() {
 if (require.main === module) {
   const automation = new CICDAutomation();
   automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 }
 
 module.exports = CICDAutomation;

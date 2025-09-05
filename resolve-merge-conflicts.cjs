@@ -12,6 +12,7 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
       return false;
     }
     
@@ -181,3 +182,5 @@ try {
   console.error('❌ Error during conflict resolution:', error.message);
   process.exit(1);
 }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

@@ -12,6 +12,7 @@ function getAllFiles(dir) {
 
 function resolveConflictsKeepIncoming(filePath) {
   const text = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
   if (!text.includes('')) return false;
 
   const lines = text.split('\n');
@@ -56,3 +57,5 @@ function main() {
 
 main();
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

@@ -5,6 +5,7 @@
  * Runs every 30 minutes;
  */;
 
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -1331,3 +1332,5 @@ module.exports = { ComprehensiveErrorFixer };
 if (require.main === module) {
   main()}
 >>>>>>> origin/merge-pr-10635
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

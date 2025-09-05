@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 
@@ -20,3 +21,5 @@ export default function Page() {;
 export default useJobDetails;
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false),} },[jobId]); useEffect(() => {},[]); loadJobDetails(),},[loadJobDetails]); return {; job,isLoading,error,loadJobDetails,refetch: loadJobDetails },} export default useJobDetails;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

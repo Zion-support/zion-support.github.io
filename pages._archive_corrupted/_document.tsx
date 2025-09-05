@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"
 import { Html, Head, Main, NextScript } from "next/document"
 
@@ -26,3 +27,5 @@ export default function Document() {
 }
 import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" /> >>>>>>> origin/merge-pr-11208 </Head> <body> <Main /> <NextScript /> </body> </Html> ) }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

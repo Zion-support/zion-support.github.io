@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const jobOpenings = [{
     id: 1,
@@ -125,7 +126,7 @@ const benefits = [{
   }
 ];
 
-const $1 = [
+const values = [
   "Innovation and creativity",
   "Collaboration and teamwork",
   "Continuous learning",
@@ -136,7 +137,7 @@ const $1 = [
 
 export default function TalentPage() {
   return (
-<MainLayout 
+<Layout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -353,6 +354,6 @@ export default function TalentPage() {
                   </div>
                   </section>
                   </div>
-                  </MainLayout>
+                  </Layout>
   );
 }

@@ -7,6 +7,7 @@ const { execSync } = require('child_process');
 console.log('🚀 Advanced Automation Suite');
 console.log('');
 
+<<<<<<< HEAD
 // Function to create ESLint configuration fix
 function fixESLintConfiguration() {
   console.log('\n🔧 Fixing ESLint Configuration...');
@@ -725,3 +726,5 @@ main().catch(console.error);
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

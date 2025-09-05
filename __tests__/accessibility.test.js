@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { test, expect } = require('@playwright/test');
 
 const { test, expect } = require('@playwright/test')';
@@ -179,3 +180,5 @@ const { test,expect } = require('@playwright/test')';; test.describe('Accessibil
     expect(count).toBeGreaterThanOrEqual(0);
   });
 });
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

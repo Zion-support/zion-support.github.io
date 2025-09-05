@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // LinkedIn automation placeholder - implement actual functionality
 export const linkedinAutomation = {
   "run": () => {
@@ -8,3 +9,5 @@ export const linkedinAutomation = {
 
 export default linkedinAutomation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

@@ -13,6 +13,7 @@ console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, 'logs', 'error-prevention-monitor.log')}
 
   log(message) {
@@ -765,3 +766,5 @@ if (require.main === module) {
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 monitor.run();
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

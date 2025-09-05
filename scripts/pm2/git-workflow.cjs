@@ -170,6 +170,7 @@ class GitWorkflow {
           let content = fs.readFileSync(file, 'utf8');
           
           // Remove conflict markers and keep both versions (simplified)
+<<<<<<< HEAD
           content = content.replace(/\n/g, '');
           content = content.replace(/\n/g, '');
           content = content.replace(/>>>>>>> .*\n/g, '');
@@ -308,3 +309,5 @@ if (require.main === module) {
 }
 
 module.exports = GitWorkflow;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

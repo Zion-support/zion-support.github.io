@@ -61,6 +61,7 @@ class ErrorMonitorFixer {
       const relativePath = path.relative(this.projectRoot, filePath);
 
       // Check for common syntax errors
+<<<<<<< HEAD
       const syntaxIssues = [{ "pattern": //, "message": 'Merge conflict markers found' },
         { "pattern": //, "message": 'Merge conflict markers found' },
         { "pattern": />>>>>>>/, "message": 'Merge conflict markers found' },
@@ -301,3 +302,5 @@ if (require.main === module) {
   monitor.run().catch(console.error)}
 
 module.exports = ErrorMonitorFixer;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

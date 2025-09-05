@@ -183,6 +183,7 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
+<<<<<<< HEAD
         content.includes('') ||
         content.includes('') ||
         content.includes('>>>>>>> ')
@@ -383,3 +384,5 @@ class CompleteImprovementSuite {
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

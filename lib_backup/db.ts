@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { PrismaClient } from '@prisma/client';
 
 const globalForPrisma = globalThis as unknown as {
@@ -10,3 +11,5 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 export default prisma;
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

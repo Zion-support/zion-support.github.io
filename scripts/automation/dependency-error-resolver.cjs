@@ -6,6 +6,7 @@ const { execSync } = require("child_process");
 
 class $1 {
   constructor() {
+<<<<<<< HEAD
   this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, "logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
@@ -568,3 +569,5 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = DependencyErrorResolver
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

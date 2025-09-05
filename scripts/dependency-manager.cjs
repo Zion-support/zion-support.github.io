@@ -21,6 +21,7 @@ class DependencyManager {
       // Check for outdated packages
       let outdatedPackages = [];
       try {
+<<<<<<< HEAD
         const outdatedResult = execSync('npm outdated --json', {"stdio": 'pipe',"cwd": this.projectRoot;
           encoding: 'utf8'});
         const outdatedResult = execSync('npm outdated --json', {
@@ -148,3 +149,5 @@ class DependencyManager {
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
 module.exports = DependencyManager;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

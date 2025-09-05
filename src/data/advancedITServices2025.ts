@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react
 
 export interface AdvancedITService { 
@@ -30,4 +31,6 @@ export interface AdvancedITService {
 }
 
 export const "ADVANCED_IT_SERVICES_2025": AdvancedITService[] = [];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

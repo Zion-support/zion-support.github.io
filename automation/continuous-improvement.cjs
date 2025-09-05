@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class ContinuousImprovement {
   constructor() {
+<<<<<<< HEAD
 this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     this.ensureLogDir();
   }
 
@@ -21,6 +27,7 @@ this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');ursor/
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -33,11 +40,16 @@ console.log(message);
       return true;
     } catch (error) {
       this.log(`Security audit found "issues": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
 
+<<<<<<< HEAD
 async runDependencyUpdate() {ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     try {
       this.log('Checking for dependency updates...');
       execSync('npm outdated', { "stdio": 'pipe' });
@@ -49,6 +61,7 @@ async runDependencyUpdate() {ursor/migrate-github-actions-to-pm2-and-clean-up-f0
     }
   }
 
+<<<<<<< HEAD
 async runPerformanceCheck() {
     try {
       this.log('Running performance check...');
@@ -63,10 +76,13 @@ async runPerformanceCheck() {
       }
     } catch (error) {
       this.log(`Performance check "failed": ${error.message}`);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
 
+<<<<<<< HEAD
   async runCodeQualityCheck() {
     try {
       this.log('Running code quality check...');
@@ -120,6 +136,8 @@ async runImprovementCycle() {
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 }
 
 module.exports = ContinuousImprovement;

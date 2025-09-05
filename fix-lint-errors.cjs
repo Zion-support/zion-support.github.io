@@ -11,6 +11,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, "utf8");
     
     // Remove merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]*/g, "");
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?>>>>>>> [^\n]*/g, "");
     
@@ -141,3 +142,5 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

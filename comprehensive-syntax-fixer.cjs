@@ -44,6 +44,7 @@ const criticalFiles = [
 function fixMergeConflicts(content) {
   // Remove merge conflict markers
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '')
     .replace(/[\s\S]*?>>>>>>> [^\n]+/g, '')
     .replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
@@ -148,3 +149,5 @@ try {
 }
 
 console.log('\n🎉 Comprehensive syntax fixer completed!');
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

@@ -13,6 +13,7 @@ class SEOOptimizer {
     console.log(`[${timestamp}] [${level}] ${message}`);
   }
 
+<<<<<<< HEAD
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
 // File extensions to analyze
@@ -209,3 +210,5 @@ if (require.main === module) {
 }
 
 module.exports = SEOOptimizer;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

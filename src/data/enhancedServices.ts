@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ProductListing {
   "id": string;
   title: string;
@@ -70,4 +71,6 @@ export const SERVICE_CATEGORIES = ["AI Automation
   "Cloud Solutions
   "Cybersecurity"
 ];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

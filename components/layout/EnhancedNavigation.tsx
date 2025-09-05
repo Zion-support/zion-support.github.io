@@ -16,6 +16,7 @@ const "EnhancedNavigation": React.FC = () => {
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+<<<<<<< HEAD
 <div className="text-xl font-bold text-gray-800">Logo</div>
           <div className="hidden md:flex space-x-8>
             <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
@@ -74,3 +75,5 @@ const "EnhancedNavigation": React.FC = () => {
 };
 
 export default EnhancedNavigation;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

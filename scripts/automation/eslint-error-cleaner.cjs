@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
+<<<<<<< HEAD
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -781,3 +782,5 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = ESLintErrorCleaner
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

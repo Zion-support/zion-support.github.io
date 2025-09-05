@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType<unknown> }>
   fallback?: React.ReactNode
   [key: string]: unknown
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 }
 
 export const "LazyComponent": React.FC<LazyComponentProps> = ({

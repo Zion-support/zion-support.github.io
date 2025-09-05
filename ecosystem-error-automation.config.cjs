@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 >>>>>>> origin/merge-pr-10635
 module.exports = {
@@ -217,3 +218,5 @@ module.exports = {
 >>>>>>> origin/merge-pr-10629
 };
 >>>>>>> origin/merge-pr-10635
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

@@ -13,6 +13,7 @@ class QuickMergeFix {
 
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
     content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
     
     // Clean up any remaining markers
@@ -64,3 +65,5 @@ class QuickMergeFix {
 // Run the fix
 const fixer = new QuickMergeFix();
 fixer.run().catch(console.error);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

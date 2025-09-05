@@ -7,6 +7,7 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/[\s\S]*?/g, '');
@@ -58,3 +59,5 @@ filesToClean.forEach(file => {
 });
 
 console.log('Comprehensive merge conflict cleanup completed!');
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

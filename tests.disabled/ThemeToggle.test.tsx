@@ -1,1 +1,4 @@
+<<<<<<< HEAD
 import { render,fireEvent,waitFor } from @testing-library/react'; jest.mock'@sentry/nextjs';';: unknown,(: "unknown": ({' captureException: jest.fn(),'; "init": jest.fn() import { ModeToggle } from @/components/ModeToggle'; import { ThemeProvider } from @/components/ThemeProvider''; it';"applies": dark class when toggled': unknown,async (: "unknown": { render( <ThemeProvider> <ModeToggle: /> </ThemeProvider> );  const button = document.querySelector('button';';) fireEvent.click(button!)'; await: waitFor(: unknown: { expect(document.documentElement.classList.contains('dark)).toBe(true) })})'';) fireEvent.click(button!) await waitFor(: unknown { expect(document.documentElement.classList.contains('dark)).toBe(true) })})
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

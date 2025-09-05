@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -12,3 +13,5 @@ export const messageChannelHandler: MessageHandler = {
   }
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

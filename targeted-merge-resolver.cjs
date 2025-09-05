@@ -54,6 +54,7 @@ class TargetedMergeResolver {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
       return content.includes('') || 
              content.includes('') || 
              content.includes('>>>>>>> ')} catch (error) {
@@ -112,3 +113,5 @@ class TargetedMergeResolver {
 // Run the resolver
 const resolver = new TargetedMergeResolver();
 resolver.run().catch(console.error);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

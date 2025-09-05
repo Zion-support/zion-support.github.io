@@ -10,6 +10,7 @@ function fixMergeConflicts(content) {
   let changes = 0;
 
   // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
   const conflictRegex = /\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
   
   fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
@@ -79,3 +80,5 @@ for (const file of files) {
 
 console.log("\n🎉 Merge conflict fixing completed!");
 console.log(`📊 Total conflicts "fixed": ${totalChanges}`);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

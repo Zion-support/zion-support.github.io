@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   "apps": [    // Main Error Detection and Fixing Service
     {
       name: 'error-detection-service',
@@ -420,3 +421,5 @@ module.exports = {
   }
 >>>>>>> origin/merge-pr-10644
 };
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

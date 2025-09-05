@@ -97,6 +97,7 @@ async function resolveMergeConflicts(prNumber) {
           let content = fs.readFileSync(file, 'utf8';);
           
           // Remove conflict markers and keep both versions where possible
+<<<<<<< HEAD
           content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n/g, (match, headContent, incomingContent) => {
             // For most files, prefer the incoming content (newer changes)
             return incomingContent});
@@ -305,3 +306,5 @@ async function main() {
 }
 
 main();
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

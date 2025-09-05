@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset';
@@ -55,3 +56,5 @@ import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextA
     expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.');
   });
 });
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

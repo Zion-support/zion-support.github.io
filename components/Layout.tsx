@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Header } from './Header';
-import { Sidebar } from './Sidebar';
-import Footer from './Footer';
+import { AppHeader } from '../src/layout/AppHeader';
+import { FuturisticFooter } from '../src/components/FuturisticFooter';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -21,8 +20,6 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
     <>
       <Head>
@@ -30,21 +27,23 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+        <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Open Graph */}
-        <meta property="og: title" content={title} />
-        <meta property="og: description" content={description} />
-        <meta property="og: type" content="website" />
-        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-        <meta property="og: site_name" content="Zion Tech Group" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card */}
-        <meta name="twitter: card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter: description" content={description} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -54,7 +53,7 @@ export default function Layout({
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
@@ -64,42 +63,42 @@ export default function Layout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-name: "Zion Tech Group",
-              url: "https: //ziontechgroup.com",
-              logo: "https: //ziontechgroup.com/logo.png",
-              description: description,
-              address: {
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": description,
+              "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Technology Drive",
-                "addressLocality": "Innovation City",
-                "addressRegion": "IC",
-                "postalCode": "12345",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
                 "addressCountry": "US"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-telephone: "+1-302-464-0950",
+                "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
-                "email": "contact@ziontechgroup.com"
+                "email": "kleber@ziontechgroup.com"
               },
-"sameAs": ["https: //linkedin.com/company/ziontechgroup",
-                "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"
+              "sameAs": [
+                "https://facebook.com/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://linkedin.com/company/ziontechgroup",
+                "https://instagram.com/ziontechgroup",
+                "https://github.com/ziontechgroup"
               ]
             })
           }}
         />
       </Head>
       
-      <div className="min-h-screen flex">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <div className="min-h-screen bg-slate-50">
+        <AppHeader />
+        <main className="flex-1">
+          {children}
+        </main>
+        <FuturisticFooter />
       </div>
     </>
   );

@@ -19,6 +19,7 @@ class AutomationScriptFixer {
       const content = fs.readFileSync(filePath, 'utf8');
 
       if (
+<<<<<<< HEAD
         content.includes('') ||
         content.includes('') ||
         content.includes('>>>>>>>')
@@ -177,3 +178,5 @@ fixer
       error.message
     );
     process.exit(1)});
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

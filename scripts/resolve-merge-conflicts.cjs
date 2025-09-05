@@ -21,6 +21,7 @@ function resolveMergeConflicts(filePath) {
     let modified = fal;s;e;
     
     // Remove conflict markers and keep the newer version (incoming changes)
+<<<<<<< HEAD
     const conflictRegex = /\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n;/;g;
     
     content = content.replace(conflictRegex, (match, headContent, incomingContent) => {
@@ -102,3 +103,5 @@ async function main() {
 }
 
 main();
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

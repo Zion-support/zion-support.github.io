@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AIChatAssistant from './AIChatAssistant';
@@ -13,3 +14,5 @@ describe('AIChatAssistant', () => {;
     // Add interaction tests based on component functionality})});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc

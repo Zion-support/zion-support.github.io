@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const { execSync } = require("child_process");
 class TestAutomation {
@@ -25,3 +26,5 @@ if (arg === "coverage") {
   testAutomation.runTests()}
 const { execSync } = require("child_process"); class TestAutomation { runTests() { try { console.log("Running test suite..."); execSync("npm test -- --passWithNoTests",{ stdio: "inherit" }); console.log("Tests completed successfully")} catch (error) { console.error("Tests failed:",error.message)} } runCoverage() { try { console.log("Running test coverage..."); execSync("npm test -- --coverage --passWithNoTests",{ stdio: "inherit" }); console.log("Coverage analysis completed")} catch (error) { console.error("Coverage analysis failed:",error.message)} } } const testAutomation = new TestAutomation(); const arg = process.argv[2]; if (arg === "coverage") { testAutomation.runCoverage()} else { testAutomation.runTests()}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-76dc
