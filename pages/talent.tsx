@@ -150,7 +150,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl "md": text-6xl font-bold mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
                 Join Our Team
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -178,7 +178,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -186,7 +186,7 @@ export default function TalentPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
@@ -224,7 +224,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -262,7 +262,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -274,13 +274,13 @@ export default function TalentPage() {
               {jobOpenings.map((job, index) => (
                 <motion.div
                   key={job.id}
-                  className="bg-white border border-gray-200 rounded-lg p-8 "hover": shadow-lg transition-shadow duration-300"
+                  className="bg-white border border-gray-200 rounded-lg p-8 hover: shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
                   viewport={{ "once": true }}
                 >
-                  <div className="flex flex-col "lg": flex-row lg:items-center lg:justify-between mb-6">
+                  <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
                         {job.title}
@@ -305,7 +305,7 @@ export default function TalentPage() {
                     </div>
                     <Link
                       href={`/talent/${job.id}`}
-                      className="mt-4 "lg": mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
+                      className="mt-4 lg: mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
                       Apply Now
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -316,7 +316,7 @@ export default function TalentPage() {
                     {job.description}
                   </p>
                   
-                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                       <ul className="space-y-1">
@@ -355,7 +355,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Don&apos;t See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">

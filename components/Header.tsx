@@ -18,7 +18,14 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Building,
+  Heart,
+  TrendingUp,
+  ShoppingCart,
+  BookOpen,
+  Car,
+  Cpu
 } from 'lucide-react';
 
 const navigation = [{
@@ -26,36 +33,70 @@ const navigation = [{
     "href": '/services',
     "icon": Settings,
     "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '50+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '40+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '60+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '150+' }
     ]
   },
   {
     "name": 'Solutions',
     "href": '/solutions',
     "icon": Shield,
-    "children": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
-      { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
-      { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
-      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings }
+    "children": [
+      { name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield, "count": '25+' },
+      { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket, "count": '15+' },
+      { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3, "count": '20+' },
+      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings, "count": '30+' },
+      { "name": 'AI & Machine Learning', "href": '/solutions/ai-ml', "icon": Brain, "count": '35+' },
+      { "name": 'Blockchain & Web3', "href": '/solutions/blockchain', "icon": Shield, "count": '10+' },
+      { "name": 'IoT & Edge Computing', "href": '/solutions/iot', "icon": Network, "count": '15+' },
+      { "name": 'Quantum Computing', "href": '/solutions/quantum', "icon": Cpu, "count": '5+' }
+    ]
+  },
+  {
+    "name": 'Industries',
+    "href": '/industries',
+    "icon": Building,
+    "children": [
+      { name: 'Healthcare', "href": '/industries/healthcare', "icon": Heart, "count": '20+' },
+      { "name": 'Finance & FinTech', "href": '/industries/finance', "icon": TrendingUp, "count": '25+' },
+      { "name": 'E-commerce & Retail', "href": '/industries/retail', "icon": ShoppingCart, "count": '15+' },
+      { "name": 'Manufacturing', "href": '/industries/manufacturing', "icon": Settings, "count": '18+' },
+      { "name": 'Education', "href": '/industries/education', "icon": BookOpen, "count": '12+' },
+      { "name": 'Transportation', "href": '/industries/transportation', "icon": Car, "count": '10+' },
+      { "name": 'Real Estate', "href": '/industries/real-estate', "icon": Building, "count": '8+' },
+      { "name": 'Government', "href": '/industries/government', "icon": Shield, "count": '15+' }
     ]
   },
   {
     "name": 'Resources',
     "href": '/resources',
     "icon": FileText,
-    "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
-      { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
-      { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
+    "children": [
+      { name: 'Documentation', "href": '/docs', "icon": FileText, "count": '100+' },
+      { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3, "count": '50+' },
+      { "name": 'Blog & Insights', "href": '/blog', "icon": MessageSquare, "count": '200+' },
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings, "count": '75+' },
+      { "name": 'White Papers', "href": '/whitepapers', "icon": FileText, "count": '25+' },
+      { "name": 'Webinars', "href": '/webinars', "icon": Globe, "count": '30+' },
+      { "name": 'Tutorials', "href": '/tutorials', "icon": BookOpen, "count": '150+' },
+      { "name": 'Support Center', "href": '/support', "icon": MessageSquare, "count": '24/7' }
     ]
   },
   {
-    "name": 'About',
+    "name": 'Company',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'About Us', "href": '/about', "icon": Users },
+      { "name": 'Our Team', "href": '/about#team', "icon": Users },
+      { "name": 'Careers', "href": '/careers', "icon": Rocket },
+      { "name": 'Partners', "href": '/partners', "icon": Network },
+      { "name": 'News & Press', "href": '/news', "icon": FileText },
+      { "name": 'Investor Relations', "href": '/investors', "icon": TrendingUp },
+      { "name": 'Contact Us', "href": '/contact', "icon": Phone }
+    ]
   },
   {
     "name": 'Contact',
@@ -82,7 +123,7 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col "sm": flex-row justify-between items-center text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -116,12 +157,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden "lg": flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
@@ -146,7 +187,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                           >
                             <div className="flex items-center space-x-3">
                               <child.icon className="w-4 h-4" />
@@ -168,7 +209,7 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden "lg": flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
@@ -186,7 +227,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className=""lg": hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -199,14 +240,14 @@ export default function Header() {
               initial={{ "opacity": 0, "height": 0 }}
               animate={{ "opacity": 1, "height": 'auto' }}
               exit={{ "opacity": 0, "height": 0 }}
-              className=""lg": hidden border-t border-gray-200 bg-white"
+              className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
                       onClick={closeMenu}
                     >
                       <item.icon className="w-4 h-4" />
@@ -218,7 +259,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             onClick={closeMenu}
                           >
                             <div className="flex items-center space-x-2">
@@ -241,14 +282,14 @@ export default function Header() {
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg "hover": bg-blue-50 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Get Quote
                   </Link>
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Free Consultation

@@ -34,7 +34,9 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Rocket,
+  DollarSign
 } from 'lucide-react';
 
 const itServices = [{
@@ -201,12 +203,130 @@ const itServices = [{
     "category": 'Governance'
   },
   {
-    "title": 'IT Compliance & Regulatory',
-    "description": 'Compliance management for various regulatory requirements and standards.',
+    "title": 'Quantum Computing Infrastructure',
+    "description": 'Quantum computing infrastructure setup and integration for advanced computational needs.',
+    "icon": Cpu,
+    "features": ['Quantum Hardware Setup', 'Quantum Software Integration', 'Hybrid Classical-Quantum Systems', 'Quantum Algorithm Development'],
+    "pricing": '$100,000 - $1,000,000/project',
+    "category": 'Quantum Computing',
+    "popular": true
+  },
+  {
+    "title": 'Edge Computing Solutions',
+    "description": 'Distributed edge computing infrastructure for real-time processing and low-latency applications.',
+    "icon": Network,
+    "features": ['Edge Node Deployment', 'Real-time Processing', 'Latency Optimization', 'Distributed Management'],
+    "pricing": '$25,000 - $150,000/setup',
+    "category": 'Edge Computing',
+    "popular": true
+  },
+  {
+    "title": 'Blockchain Infrastructure Services',
+    "description": 'Complete blockchain infrastructure setup and management for enterprise applications.',
     "icon": Shield,
-    "features": ['Compliance Assessment', 'Regulatory Reporting', 'Policy Development', 'Audit Support'],
-    "pricing": '$8,000 - $40,000/project',
-    "category": 'Compliance'
+    "features": ['Blockchain Network Setup', 'Smart Contract Deployment', 'Node Management', 'Security Hardening'],
+    "pricing": '$30,000 - $200,000/project',
+    "category": 'Blockchain',
+    "popular": true
+  },
+  {
+    "title": 'IoT Infrastructure Management',
+    "description": 'Comprehensive IoT infrastructure setup, monitoring, and management services.',
+    "icon": Globe,
+    "features": ['IoT Device Management', 'Data Collection', 'Real-time Monitoring', 'Predictive Maintenance'],
+    "pricing": '$15,000 - $100,000/setup',
+    "category": 'IoT',
+    "popular": true
+  },
+  {
+    "title": '5G Network Implementation',
+    "description": '5G network infrastructure design, implementation, and optimization services.',
+    "icon": Wifi,
+    "features": ['5G Network Design', 'Antenna Installation', 'Performance Optimization', 'Coverage Analysis'],
+    "pricing": '$50,000 - $500,000/project',
+    "category": '5G Networks',
+    "popular": true
+  },
+  {
+    "title": 'AI Infrastructure Setup',
+    "description": 'Complete AI infrastructure setup including GPU clusters, ML pipelines, and model deployment.',
+    "icon": Brain,
+    "features": ['GPU Cluster Setup', 'ML Pipeline Development', 'Model Deployment', 'Performance Optimization'],
+    "pricing": '$40,000 - $300,000/setup',
+    "category": 'AI Infrastructure',
+    "popular": true
+  },
+  {
+    "title": 'Green IT Solutions',
+    "description": 'Sustainable IT infrastructure and energy-efficient computing solutions.',
+    "icon": Sprout,
+    "features": ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    "pricing": '$20,000 - $150,000/project',
+    "category": 'Green IT',
+    "popular": true
+  },
+  {
+    "title": 'Zero Trust Security Architecture',
+    "description": 'Complete zero trust security implementation for modern enterprise environments.',
+    "icon": Lock,
+    "features": ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    "pricing": '$25,000 - $200,000/implementation',
+    "category": 'Zero Trust',
+    "popular": true
+  },
+  {
+    "title": 'Hyperconverged Infrastructure',
+    "description": 'Hyperconverged infrastructure solutions for simplified data center management.',
+    "icon": Server,
+    "features": ['HCI Implementation', 'Storage Virtualization', 'Compute Virtualization', 'Management Automation'],
+    "pricing": '$30,000 - $250,000/setup',
+    "category": 'HCI',
+    "popular": true
+  },
+  {
+    "title": 'IT Service Management (ITSM)',
+    "description": 'Complete IT service management implementation with ITSM best practices.',
+    "icon": Settings,
+    "features": ['Service Catalog', 'Incident Management', 'Change Management', 'Service Level Management'],
+    "pricing": '$15,000 - $100,000/implementation',
+    "category": 'ITSM',
+    "popular": true
+  },
+  {
+    "title": 'Digital Transformation Consulting',
+    "description": 'Comprehensive digital transformation strategy and implementation consulting.',
+    "icon": Rocket,
+    "features": ['Digital Strategy', 'Process Automation', 'Technology Modernization', 'Change Management'],
+    "pricing": '$50,000 - $500,000/project',
+    "category": 'Digital Transformation',
+    "popular": true
+  },
+  {
+    "title": 'IT Compliance & Risk Management',
+    "description": 'Comprehensive IT compliance and risk management services for regulatory requirements.',
+    "icon": Shield,
+    "features": ['Compliance Assessment', 'Risk Analysis', 'Policy Development', 'Audit Support'],
+    "pricing": '$20,000 - $150,000/project',
+    "category": 'Compliance',
+    "popular": true
+  },
+  {
+    "title": 'IT Cost Optimization',
+    "description": 'Strategic IT cost optimization and resource utilization improvement services.',
+    "icon": DollarSign,
+    "features": ['Cost Analysis', 'Resource Optimization', 'Vendor Negotiation', 'ROI Improvement'],
+    "pricing": '$10,000 - $75,000/project',
+    "category": 'Cost Optimization',
+    "popular": true
+  },
+  {
+    "title": 'IT Innovation Lab Setup',
+    "description": 'Complete IT innovation lab setup for research, development, and proof-of-concept projects.',
+    "icon": Rocket,
+    "features": ['Lab Infrastructure', 'Technology Stack', 'Development Environment', 'Innovation Framework'],
+    "pricing": '$25,000 - $200,000/setup',
+    "category": 'Innovation',
+    "popular": true
   },
   {
     "title": 'AI-Powered IT Operations (AIOps)',
@@ -460,17 +580,17 @@ export default function ITServicesPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Server className="h-16 w-16 text-green-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md: text-6xl font-bold">
                 IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get IT Consultation
               </Link>
@@ -492,7 +612,7 @@ export default function ITServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -506,7 +626,7 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -514,7 +634,7 @@ export default function ITServicesPage() {
                   whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-green-600 group-"hover": text-emerald-600 transition-colors">
+                    <div className="text-green-600 group-hover: text-emerald-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
@@ -547,7 +667,7 @@ export default function ITServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-green-600 "hover": bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-green-600 hover: bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -569,7 +689,7 @@ export default function ITServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Technologies We Work With
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -583,7 +703,7 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -615,7 +735,7 @@ export default function ITServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our IT Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -664,7 +784,7 @@ export default function ITServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Support Levels
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -705,7 +825,7 @@ export default function ITServicesPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-                      ? 'bg-green-600 "hover": bg-green-700 text-white'
+                      ? 'bg-green-600 hover: bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -727,13 +847,13 @@ export default function ITServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
