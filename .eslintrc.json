@@ -5,12 +5,26 @@
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "globals": {
+    "IntersectionObserver": "readonly",
+    "HTMLElement": "readonly",
+    "HTMLButtonElement": "readonly",
+    "KeyboardEvent": "readonly",
+    "HTMLImageElement": "readonly",
+    "alert": "readonly"
+  },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
-    "no-undef": "off"
+    "no-undef": "error",
+    "react/no-unescaped-entities": "off"
   },
   "ignorePatterns": [
     "node_modules/",
