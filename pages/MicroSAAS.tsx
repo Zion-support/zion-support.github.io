@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -93,5 +92,3 @@ export default function MicroSAAS() {
     </>
   );
 }
-=======
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

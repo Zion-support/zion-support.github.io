@@ -102,16 +102,9 @@ const footerSections = [
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { title: 'White Papers', href: '/white-papers', icon: FileText },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-<<<<<<< HEAD
       { title: 'API Documentation', href: '/api-docs', icon: Code },
       { title: 'Training', href: '/training', icon: BookOpen },
       { title: 'FAQ', href: '/faq', icon: MessageSquare }
-=======
-      { title: 'Webinars', href: '/webinars', icon: Video },
-      { title: 'Events', href: '/events', icon: Calendar },
-      { title: 'API Documentation', href: '/api-docs', icon: Code },
-      { title: 'Documentation', href: '/docs', icon: FileText }
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   },
   {
@@ -122,15 +115,9 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
-<<<<<<< HEAD
       { title: 'Contact', href: '/contact', icon: MessageSquare },
       { title: 'Privacy Policy', href: '/privacy', icon: Lock },
       { title: 'Terms of Service', href: '/terms', icon: FileText }
-=======
-      { title: 'Contact', href: '/contact', icon: Phone },
-      { title: 'Pricing', href: '/pricing', icon: DollarSign },
-      { title: 'Support', href: '/support', icon: MessageSquare }
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   },
   {
@@ -142,13 +129,8 @@ const footerSections = [
       { title: 'Status Page', href: '/status', icon: BarChart3 },
       { title: 'Community', href: '/community', icon: Users },
       { title: 'Training', href: '/training', icon: BookOpen },
-<<<<<<< HEAD
       { title: 'Free Consultation', href: '/consultation', icon: Calendar },
       { title: 'Get Quote', href: '/quote', icon: FileText }
-=======
-      { title: 'FAQ', href: '/faq', icon: HelpCircle },
-      { title: 'Contact Support', href: '/contact', icon: Phone }
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   }
 ];

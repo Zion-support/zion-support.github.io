@@ -2,12 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
-import Layout from './components/Layout';
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
+import Layout from '../components/Layout';
 import { 
   Brain, 
   Zap, 
@@ -15,15 +10,10 @@ import {
   ArrowRight,
   CheckCircle,
   Phone,
-<<<<<<< HEAD
   Mail,
-  MapPin
-=======
-  Atom,
   MapPin,
-  Zap,
+  Atom,
   Users,
-  Shield,
   Gamepad2,
   Wifi,
   Laptop,
@@ -32,8 +22,8 @@ import {
   PieChart,
   ClipboardList,
   TreePine,
-  Droplets
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
+  Droplets,
+  TrendingUp
 } from 'lucide-react';
 
 const aiServices = [
@@ -53,7 +43,6 @@ const aiServices = [
   },
   {
     id: 3,
-<<<<<<< HEAD
     title: 'Computer Vision',
     description: 'Image and video analysis solutions for various industries.',
     icon: Shield,
@@ -2211,7 +2200,6 @@ export default function AIServicesPage() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2232,44 +2220,6 @@ export default function AIServicesPage() {
       </main>
 
       <Footer />
-=======
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let our AI experts help you implement the perfect solution for your business needs.
-                Get a free consultation and custom quote today.
-              </p>
-              <div className="mb-8">
-                <p className="text-lg text-blue-100 mb-2">
-                  📞 <strong>Call us:</strong> +1 302 464 0950
-                </p>
-                <p className="text-lg text-blue-100 mb-2">
-                  📧 <strong>Email us:</strong> kleber@ziontechgroup.com
-                </p>
-                <p className="text-lg text-blue-100">
-                  📍 <strong>Visit us:</strong> 364 E Main St STE 1008 Middletown DE 19709
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free AI Consultation
-                </Link>
-                <Link href="/micro-saas" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Explore Micro SaaS
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     </>
   );
 }

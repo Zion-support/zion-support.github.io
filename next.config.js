@@ -1,19 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
-  output: 'export',
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  
-  // Performance optimizations
-=======
   swcMinify: true,
->>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,

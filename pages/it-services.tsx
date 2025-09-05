@@ -1,22 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail, LinkIcon, TestTube, Wrench } from 'lucide-react';
 import Layout from '../components/Layout';
-=======
-import { motion } from 'framer-motion';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { 
-  Cpu, 
-  Shield, 
-  Cloud, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
->>>>>>> 957bdd045b2f6b572bc67ae198e0b79701b01c6c
 
 const itServices = [
   {
