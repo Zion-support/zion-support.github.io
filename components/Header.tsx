@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { }
+import { 
   Menu, 
   X, 
   Search, 
@@ -35,21 +35,21 @@ import { }
   Calendar,
   Award,
   Lock,
-  Database;
+  Database
 } from 'lucide-react';
 
-const navigation = []
-  {}
+const navigation = [
+  {
     name: 'Services',
     href: '/services',
     icon: Settings,
-    children: []
-      {}
+    children: [
+      {
         name: 'AI Services',
         href: '/ai-services',
         icon: Brain,
         description: 'Advanced AI solutions and machine learning platforms',
-        children: []
+        children: [
           { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
           { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
           { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
@@ -57,15 +57,15 @@ const navigation = []
           { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
           { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
           { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' };
-        ];
+          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+        ]
       },
-      {}
+      {
         name: 'IT Services',
         href: '/it-services',
         icon: CpuIcon,
         description: 'Comprehensive IT infrastructure and support',
-        children: []
+        children: [
           { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
           { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
           { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
@@ -73,15 +73,15 @@ const navigation = []
           { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
           { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
           { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' };
-        ];
+          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+        ]
       },
-      {}
+      {
         name: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
         description: 'Innovative micro software-as-a-service solutions',
-        children: []
+        children: [
           { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
           { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
           { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
@@ -89,10 +89,10 @@ const navigation = []
           { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
           { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
           { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' };
-        ];
+          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+        ]
       },
-      {}
+      {
         name: 'Cloud & DevOps',
         href: '/services/cloud-devops',
         icon: Cloud,

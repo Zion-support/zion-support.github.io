@@ -26,8 +26,6 @@ const accessibilityFeatures = [
     description: "Features to support users with visual impairments",
     icon: Eye,
     features: [
-      "High contrast color schemes",
-      "Scalable text and interface elements",
       "Screen reader compatibility",
       "Alternative text for images",
       "Keyboard navigation support"
@@ -148,40 +146,37 @@ export default function AccessibilityPage() {
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Accessibility Features
+                Comprehensive Accessibility Features
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive accessibility solutions designed to make your digital products inclusive for all users
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We implement a wide range of accessibility features to ensure your digital products are usable by everyone
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {accessibilityFeatures.map((feature, index) => (
                 <motion.div
-                  key={feature.title}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-12 w-12 text-blue-600 mr-4" />
-                    <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                  <div className="text-blue-600 mb-4">
+                    <feature.icon className="w-8 h-8" />
                   </div>
-                  
-                  <p className="text-gray-600 mb-6">{feature.description}</p>
-                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {feature.description}
+                  </p>
                   <ul className="space-y-2">
-                    {feature.features.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    {feature.features.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -192,36 +187,37 @@ export default function AccessibilityPage() {
           </div>
         </section>
 
-        {/* Compliance Standards */}
+        {/* Compliance Standards Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Compliance Standards
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We ensure your products meet international accessibility standards and legal requirements
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {complianceStandards.map((standard, index) => (
                 <motion.div
-                  key={standard.name}
-                  className="bg-gray-50 p-8 rounded-lg text-center"
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300"
                 >
-                  <standard.icon className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{standard.name}</h3>
-                  <p className="text-gray-600 mb-4">{standard.description}</p>
-                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="text-blue-600 mb-4">
+                    <standard.icon className="w-12 h-12 mx-auto" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {standard.name}
+                  </h3>
+                  <p className="text-gray-600 mb-3">
+                    {standard.description}
+                  </p>
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     {standard.level}
                   </span>
                 </motion.div>
@@ -230,43 +226,40 @@ export default function AccessibilityPage() {
           </div>
         </section>
 
-        {/* Testing Tools */}
+        {/* Testing Tools Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Testing & Validation
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive testing approaches to ensure your accessibility implementation is effective
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive testing approaches to ensure accessibility compliance
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testingTools.map((tool, index) => (
                 <motion.div
-                  key={tool.name}
-                  className="bg-white p-8 rounded-lg shadow-lg"
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="flex items-center mb-4">
-                    <tool.icon className="h-12 w-12 text-purple-600 mr-4" />
-                    <h3 className="text-xl font-bold text-gray-900">{tool.name}</h3>
+                  <div className="text-blue-600 mb-6">
+                    <tool.icon className="w-16 h-16 mx-auto" />
                   </div>
-                  
-                  <p className="text-gray-600 mb-6">{tool.description}</p>
-                  
-                  <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {tool.name}
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    {tool.description}
+                  </p>
+                  <ul className="space-y-3 text-left">
+                    {tool.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -279,11 +272,10 @@ export default function AccessibilityPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              className="text-center"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">

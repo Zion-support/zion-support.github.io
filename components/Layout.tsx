@@ -13,6 +13,7 @@ interface LayoutProps {
   noIndex?: boolean;
   canonical?: string;
 }
+
 export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -38,20 +39,21 @@ export default function Layout({
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href={canonical || 'https://ziontechgroup.com'} />
         
-        {/* Open Graph */};
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
         
-        {/* Twitter Card */};
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonical || 'https://ziontechgroup.com'} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImage} />
         
-        {/* Favicon */};
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -83,28 +85,23 @@ export default function Layout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
+                "telephone": "+1-302-555-0123",
                 "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": []
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-              ];
-            });
-          }};
+                "availableLanguage": "English"
+              }
+            })
+          }}
         />
       </Head>
       
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-gray-50">
         <Header onMenuClick={handleMenuClick} />
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         <main className="flex-1">
-          {children};
+          {children}
         </main>
         <Footer />
       </div>
     </>
   );
-};
+}

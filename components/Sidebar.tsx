@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { }
+import { 
   Home, 
   Briefcase, 
   Target, 
@@ -22,37 +22,37 @@ import { }
   Cpu as CpuIcon,
   Lock,
   Network,
-  Monitor;
+  Monitor
 } from 'lucide-react';
 
-interface SidebarProps {}
+interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-};
-export function Sidebar({ isOpen, onClose }: SidebarProps) {}
+}
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {}
-    setExpandedSections(prev => )
-      prev.includes(section);
-        ? prev.filter(s => s !== section);
-        : [...prev, section];
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
     );
   };
 
-  const navigationItems = []
-    {}
+  const navigationItems = [
+    {
       label: 'Home',
       href: '/',
-      icon: Home;
+      icon: Home
     },
-    {}
+    {
       label: 'Services',
       href: '/services',
       icon: Briefcase,
       hasSubmenu: true,
-      submenu: []
+      submenu: [
         { label: 'All Services', href: '/services' },
         { label: 'AI Services', href: '/ai-services', icon: Brain },
         { label: 'IT Services', href: '/it-services', icon: Shield },
@@ -64,30 +64,30 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {}
         { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
         { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
         { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
-        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor },
-      ];
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
+      ]
     },
-    {}
+    {
       label: 'Solutions',
       href: '/solutions',
       icon: Target,
       hasSubmenu: true,
-      submenu: []
+      submenu: [
         { label: 'All Solutions', href: '/solutions' },
         { label: 'Enterprise', href: '/solutions/enterprise', icon: Building2 },
         { label: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
         { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
         { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
         { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe },
-      ];
+        { label: 'Government', href: '/solutions/government', icon: Globe }
+      ]
     },
-    {}
+    {
       label: 'Industries',
       href: '/industries',
       icon: Building2,
       hasSubmenu: true,
-      submenu: []
+      submenu: [
         { label: 'All Industries', href: '/industries' },
         { label: 'Healthcare', href: '/industries/healthcare', icon: Heart },
         { label: 'Finance', href: '/industries/finance', icon: DollarSign },
@@ -95,9 +95,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {}
         { label: 'Government', href: '/industries/government', icon: Globe },
         { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
         { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      ];
+      ]
     },
-    {}
+    {
       label: 'Resources',
       href: '/resources',
       icon: FileText,
