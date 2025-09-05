@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 import { 
   TrendingUp,
   Building,
@@ -35,6 +36,52 @@ const values = [
     icon: Users,
     title: 'Collaboration',
     description: 'We believe in the power of collaboration, working closely with our clients to achieve their goals.'
+  }
+];
+
+const team = [
+  {
+    name: 'Kleber Santos',
+    position: 'CEO & Founder',
+    bio: 'Technology visionary with 15+ years of experience in AI and cloud solutions.'
+  },
+  {
+    name: 'Sarah Chen',
+    position: 'CTO',
+    bio: 'AI and machine learning expert leading our technical innovation initiatives.'
+  },
+  {
+    name: 'Michael Rodriguez',
+    position: 'Head of Engineering',
+    bio: 'Full-stack developer and cloud architecture specialist with expertise in scalable systems.'
+  },
+  {
+    name: 'Emily Johnson',
+    position: 'Head of Design',
+    bio: 'UX/UI designer focused on creating intuitive and engaging user experiences.'
+  }
+];
+
+const achievements = [
+  {
+    number: '500+',
+    label: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries'
+  },
+  {
+    number: '50+',
+    label: 'Happy Clients',
+    description: 'Long-term partnerships with satisfied customers'
+  },
+  {
+    number: '15+',
+    label: 'Years Experience',
+    description: 'Combined expertise in technology solutions'
+  },
+  {
+    number: '99%',
+    label: 'Client Satisfaction',
+    description: 'Consistently high ratings and positive feedback'
   }
 ];
 

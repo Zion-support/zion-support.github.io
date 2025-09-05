@@ -1,8 +1,8 @@
-import React from 'react';
 import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Head from 'next/head';
 import {
   FileText,
   Download,
@@ -15,19 +15,8 @@ import {
   BookOpen,
   Star,
   Clock,
-  Tag
-} from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Tag, 
-  ExternalLink 
+  Tag,
+  ExternalLink
 } from 'lucide-react';
 
 const whitePapers = [
@@ -198,7 +187,7 @@ export default function WhitePapersPage() {
   const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
 
   return (
-    <MainLayout
+    <Layout
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -224,25 +213,6 @@ export default function WhitePapersPage() {
                   Papers
                 </span>
               </h1>
-    <>
-      <Head>
-        <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Download our comprehensive white papers on technology trends and best practices." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Download our comprehensive white papers on technology trends and best practices.
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
@@ -582,40 +552,6 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact us for custom research and analysis tailored to your specific needs.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/research"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View All Research
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-    </MainLayout>
+    </Layout>
   );
 }

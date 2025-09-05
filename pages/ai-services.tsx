@@ -59,7 +59,10 @@ import {
   ClipboardList,
   TreePine,
   Droplets,
-  Gamepad2
+  Gamepad2,
+  Stethoscope,
+  Trophy,
+  FlaskConical
 } from 'lucide-react';
 
 const contactInfo = {

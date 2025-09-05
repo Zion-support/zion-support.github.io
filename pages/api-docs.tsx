@@ -20,7 +20,7 @@ import {
   Cloud
 } from 'lucide-react';
 
-const apiFeatures = [
+const endpoints = [
   {
     name: 'AI Email Responder',
     method: 'POST',
