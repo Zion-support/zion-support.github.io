@@ -1,22 +1,22 @@
-const nextConfig = {;
+const nextConfig = {,
   reactStrictMode: true,;
   compress: true,;
   poweredByHeader: false,;
-  // output: 'export', // Commented out to fix middleware and API routes issues;
+  // output: 'export', // Commented out to fix middleware and API routes issues,
   eslint: { ignoreDuringBuilds: true ,},;
   typescript: { ignoreBuildErrors: true ,},;
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],;
-  // Performance optimizations;
-  experimental: {;
+  // Performance optimizations,
+  experimental: {,
     scrollRestoration: true,;
     optimizeCss: true,;
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion'];
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion'],
   },;
-  // Exclude problematic directories from file watching;
-  webpack: (config, { dev, isServer }) => {;
-    if (dev) {;
-      config.watchOptions = {;
-        ignored: [;
+  // Exclude problematic directories from file watching,
+  webpack: (config, { dev, isServer }) => {,
+    if (dev) {,
+      config.watchOptions = {,
+        ignored: [,
           '**/node_modules/**',;
           '**/backup*/**',;
           '**/disabled*/**',;
@@ -60,21 +60,21 @@ const nextConfig = {;
           '**/temp_broken_files/**',;
           '**/temp_working/**',;
           '**/tests.disabled/**',;
-          '**/zion-os.disabled/**';
-        ];
+          '**/zion-os.disabled/**',
+        ],
       };
     };
-    // Production optimizations;
-    if (!dev && !isServer) {;
-      config.optimization.splitChunks = {;
+    // Production optimizations,
+    if (!dev && !isServer) {,
+      config.optimization.splitChunks = {,
         chunks: 'all',;
-        cacheGroups: {;
-          vendor: {;
+        cacheGroups: {,
+          vendor: {,
             test: /[\/]node_modules[\/]/,;
             name: 'vendors',;
             chunks: 'all',;
           },;
-          common: {;
+          common: {,
             name: 'common',;
             minChunks: 2,;
             chunks: 'all',;
@@ -83,75 +83,75 @@ const nextConfig = {;
         },;
       };
     };
-    return config;
+    return config,
   },;
-  // Image optimization;
-  images: {;
+  // Image optimization,
+  images: {,
     unoptimized: true,;
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
     formats: ['image/webp', 'image/avif'],;
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],;
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],;
-    minimumCacheTTL: 31536000, // 1 year;
+    minimumCacheTTL: 31536000, // 1 year,
     dangerouslyAllowSVG: true,;
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",;
+    contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox,",;
   },;
-  env: {;
+  env: {,
     CUSTOM_KEY: process.env.CUSTOM_KEY,;
   },;
-  // Headers for security and performance;
-  async headers() {;
-    return [;
-      {;
+  // Headers for security and performance,
+  async headers() {,
+    return [,
+      {,
         source: '/(.*)',;
-        headers: [;
-          {;
+        headers: [,
+          {,
             key: 'X-Content-Type-Options',;
             value: 'nosniff',;
           },;
-          {;
+          {,
             key: 'X-Frame-Options',;
             value: 'DENY',;
           },;
-          {;
+          {,
             key: 'X-XSS-Protection',;
-            value: '1; mode=block',;
+            value: '1, mode=block',;
           },;
-          {;
+          {,
             key: 'Referrer-Policy',;
             value: 'origin-when-cross-origin',;
           },;
         ],;
       },;
-      {;
+      {,
         source: '/static/(.*)',;
-        headers: [;
-          {;
+        headers: [,
+          {,
             key: 'Cache-Control',;
             value: 'public, max-age=31536000, immutable',;
           },;
         ],;
       },;
-    ];
+    ],
   },;
-  // Redirects for SEO;
-  async redirects() {;
-    return [;
-      {;
+  // Redirects for SEO,
+  async redirects() {,
+    return [,
+      {,
         source: '/home',;
         destination: '/',;
         permanent: true,;
       },;
-    ];
+    ],
   },;
-  async rewrites() {;
-    return [;
-      {;
+  async rewrites() {,
+    return [,
+      {,
         source: '/api/:path*',;
         destination: '/api/:path*',;
       },;
-    ];
+    ],
   },;
 };
-;
-export default nextConfig;
+,
+export default nextConfig,

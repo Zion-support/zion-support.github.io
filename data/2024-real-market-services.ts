@@ -1,55 +1,55 @@
-import React from 'react';
-import { ServiceVariant } from "../types/service-variants";
-;
-export interface RealMarketService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+import React from 'react',
+import { ServiceVariant } from "../types/service-variants",
+,
+export interface RealMarketService {,
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
+  contactInfo: {,
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   ,};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 ,};
-export const realMarketServices: RealMarketService[] = [;
-  {;
+export const realMarketServices: RealMarketService[] = [,
+  {,
     id: "ai-business-intelligence-pro",;
     name: "AI Business Intelligence Pro",;
     tagline: "Transform data into actionable insights with AI",;
     price: "$299",;
     period: "/month",;
     description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.",;
-    features: [;
+    features: [,
       "Real-time data analytics dashboard",;
       "AI-powered trend prediction",;
       "Custom KPI tracking and alerts",;
@@ -59,7 +59,7 @@ export const realMarketServices: RealMarketService[] = [;
       "Executive summary automation",;
       "Mobile-responsive interface",;
       "White-label reporting",;
-      "API access for custom integrations";
+      "API access for custom integrations",
     ],;
     popular: true,;
     icon: "📊",;
@@ -80,17 +80,17 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$29.48B market",;
     growthRate: "15.7% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {,
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";
+      website: "https://ziontechgroup.com",
     ,},;
     realImplementation: true,;
     implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.",;
     launchDate: "2024-03-01",;
     customers: 1800,;
     rating: 4.7,;
-    reviews: 950;
+    reviews: 950,
   ,};
-];
+],

@@ -1,23 +1,23 @@
-const nextConfig = {;
+const nextConfig = {,
   reactStrictMode: true,;
   eslint: { ignoreDuringBuilds: true ,},;
   typescript: { ignoreBuildErrors: true ,},;
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],;
   trailingSlash: true,;
-  // Image optimization;
-  images: {;
+  // Image optimization,
+  images: {,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
     formats: ['image/webp', 'image/avif'],;
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],;
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],;
     minimumCacheTTL: 31536000,;
   },;
-  // Webpack configuration;
-  webpack: (config, { dev, isServer }) => {;
-    // Exclude problematic directories from file watching in dev mode;
-    if (dev) {;
-      config.watchOptions = {;
-        ignored: [;
+  // Webpack configuration,
+  webpack: (config, { dev, isServer }) => {,
+    // Exclude problematic directories from file watching in dev mode,
+    if (dev) {,
+      config.watchOptions = {,
+        ignored: [,
           '**/node_modules/**',;
           '**/.git/**',;
           '**/pages_backup*/**',;
@@ -49,14 +49,14 @@ const nextConfig = {;
           '**/performance-*.sh',;
           '**/performance-*.html',;
           '**/performance-*.md',;
-          '**/performance-*.txt';
+          '**/performance-*.txt',
         ],;
         poll: 1000,;
         aggregateTimeout: 300,;
       };
     };
-    return config;
+    return config,
   };
 };
-;
-export default nextConfig;
+,
+export default nextConfig,
