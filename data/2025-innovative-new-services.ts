@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface InnovativeNewService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovativeNewServices2025: InnovativeNewService[] = [
@@ -51,16 +51,11 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
     features: [
-      'AI-powered contract analysis and risk assessment',
-      'Automated compliance checking',
-      'Legal document summarization',
-      'Risk scoring and alerts',
-      'Template generation and customization',
-      'Multi-language support',
-      'Integration with legal management systems',
-      'Audit trail and version control',
-      'Real-time collaboration tools',
-      'Mobile-responsive interface'
+      'AI-powered contract analysis and risk assessmentAutomated compliance checking',
+      'Legal document summarizationRisk scoring and alerts',
+      'Template generation and customizationMulti-language support',
+      'Integration with legal management systemsAudit trail and version control',
+      'Real-time collaboration toolsMobile-responsive interface'
     ],
     popular: true,
     icon: '⚖️',
@@ -104,16 +99,11 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Next-generation communication platform using quantum key distribution and post-quantum cryptography to ensure unbreakable security.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography algorithms',
-      'End-to-end encryption',
-      'Real-time threat detection',
-      'Multi-channel communication support',
-      'Compliance with NIST standards',
-      'API for third-party integrations',
-      'Advanced audit logging',
-      'Zero-knowledge architecture',
-      'Global quantum network access'
+      'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+      'End-to-end encryptionReal-time threat detection',
+      'Multi-channel communication supportCompliance with NIST standards',
+      'API for third-party integrationsAdvanced audit logging',
+      'Zero-knowledge architectureGlobal quantum network access'
     ],
     popular: true,
     icon: '🔐',
@@ -157,16 +147,11 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes medical images, lab results, and patient data to provide accurate diagnostic insights and treatment recommendations.',
     features: [
-      'AI-powered medical image analysis',
-      'Diagnostic accuracy validation',
-      'Patient data integration',
-      'Treatment recommendation engine',
-      'Clinical decision support',
-      'HIPAA compliance',
-      'Multi-modality imaging support',
-      'Real-time analysis',
-      'Integration with EHR systems',
-      'Mobile diagnostic tools'
+      'AI-powered medical image analysisDiagnostic accuracy validation',
+      'Patient data integrationTreatment recommendation engine',
+      'Clinical decision supportHIPAA compliance',
+      'Multi-modality imaging supportReal-time analysis',
+      'Integration with EHR systemsMobile diagnostic tools'
     ],
     popular: true,
     icon: '🏥',
@@ -210,16 +195,11 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Intelligent supply chain platform that automatically optimizes inventory, routes, and logistics using AI and machine learning.',
     features: [
-      'AI-powered demand forecasting',
-      'Autonomous inventory optimization',
-      'Route optimization algorithms',
-      'Real-time supply chain monitoring',
-      'Predictive maintenance alerts',
-      'Supplier performance analytics',
-      'Cost optimization recommendations',
-      'Sustainability tracking',
-      'Multi-warehouse management',
-      'Integration with ERP systems'
+      'AI-powered demand forecastingAutonomous inventory optimization',
+      'Route optimization algorithmsReal-time supply chain monitoring',
+      'Predictive maintenance alertsSupplier performance analytics',
+      'Cost optimization recommendationsSustainability tracking',
+      'Multi-warehouse managementIntegration with ERP systems'
     ],
     popular: true,
     icon: '🚚',
@@ -263,16 +243,11 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced financial trading platform leveraging quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading.',
     features: [
-      'Quantum-powered market analysis',
-      'Ultra-fast algorithmic trading',
-      'Real-time risk assessment',
-      'Portfolio optimization algorithms',
-      'Market prediction models',
-      'Compliance monitoring',
-      'Multi-exchange integration',
-      'Advanced analytics dashboard',
-      'API for custom strategies',
-      '24/7 market monitoring'
+      'Quantum-powered market analysisUltra-fast algorithmic trading',
+      'Real-time risk assessmentPortfolio optimization algorithms',
+      'Market prediction modelsCompliance monitoring',
+      'Multi-exchange integrationAdvanced analytics dashboard',
+      'API for custom strategies24/7 market monitoring'
     ],
     popular: true,
     icon: '📈',
@@ -306,4 +281,4 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9,
     reviews: 6
   }
-];
+],

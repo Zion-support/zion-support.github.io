@@ -1,59 +1,59 @@
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Sparkles, ArrowRight } from "@/components/icons";
-import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Sparkles, ArrowRight } from "@/components/icons",
+import { supabase } from "@/integrations/supabase/client",
+import { Badge } from "@/components/ui/badge",
 
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
-    min: number;
-    max: number;
-  };
-  keyPoints: string[];
+    min: number,
+    max: number
+  },
+  keyPoints: string[]
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string;
-  };
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string
+  },
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
-        setTitle(e.target.value);
-        break;
+        setTitle(e.target.value),
+        break,
       case 'category':
-        setCategory(e.target.value);
-        break;
+        setCategory(e.target.value),
+        break,
       case 'keyFeatures':
-        setKeyFeatures(e.target.value);
-        break;
+        setKeyFeatures(e.target.value),
+        break,
       case 'targetAudience':
-        setTargetAudience(e.target.value);
-        break;
+        setTargetAudience(e.target.value),
+        break
     }
-  };
+  },
 
   const handleGenerate = async () => {
     if (!title || !category) {
@@ -61,51 +61,51 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
-      });
-      return;
+      }),
+      return,
     }
 
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
-      });
+      }),
 
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message),
       }
       
       if (data.error) {
-        throw new Error(data.error);
+        throw new Error(data.error),
       }
 
-      setGeneratedContent(data.generated);
+      setGeneratedContent(data.generated),
       toast({
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
-      });
+      }),
     } catch (error) {
-      console.error("Error generating content:", error);
+      console.error("Error generating content:", error),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-      });
+      }),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
+      onApplyGenerated(generatedContent),
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
-      });
+      }),
     }
-  };
+  },
 
   return (
     <div className="space-y-6">
@@ -249,5 +249,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </Card>
       )}
     </div>
-  );
+  ),
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function AiFinancialPlanningPlatform() {
 	return (
@@ -21,7 +21,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			canonical="https://ziontechgroup.com/ai-financial-planning-platform"
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
-	);
+	)
 }

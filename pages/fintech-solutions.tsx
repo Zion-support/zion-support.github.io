@@ -1,5 +1,5 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function FintechSolutions() {
 	return (
@@ -20,7 +20,7 @@ export default function FintechSolutions() {
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
-			canonical="https://ziontechgroup.com/fintech-solutions"
+			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
-	);
+	)
 }

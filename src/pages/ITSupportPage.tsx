@@ -1,5 +1,5 @@
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {
@@ -15,7 +15,7 @@ export default function ITSupportPage() {
     {
       title: "Multi-Channel Support",
       description: "Get help via phone, chat, or onsite visits tailored to your needs.",
-      icon: <Phone className="h-8 w-8" />}];
+      icon: <Phone className="h-8 w-8" />}],
 
   const testimonials = [
     {
@@ -27,7 +27,7 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-      avatar: "/placeholder.svg"}];
+      avatar: "/placeholder.svg"}],
 
   return (
     <ServiceLandingTemplate
@@ -40,5 +40,5 @@ export default function ITSupportPage() {
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  );
+  ),
 }

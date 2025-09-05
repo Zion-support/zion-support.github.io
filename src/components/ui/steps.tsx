@@ -1,13 +1,13 @@
 
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
-  status: "incomplete" | "current" | "complete";
-  label: string;
-  description?: string;
-  className?: string;
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string,
+  className?: string
 }
 
 export function Step({
@@ -58,30 +58,30 @@ export function Step({
         )}
       </div>
     </li>
-  );
+  ),
 }
 
 interface StepsProps {
-  currentStep: number;
-  className?: string;
-  children: React.ReactNode;
+  currentStep: number,
+  className?: string,
+  children: React.ReactNode
 }
 
 export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = React.Children.toArray(children),
   
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-          if (!React.isValidElement(child)) return null;
+          if (!React.isValidElement(child)) return null,
           
-          let status: "incomplete" | "current" | "complete" = "incomplete";
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          if (index < currentStep) status = "complete",
+          if (index === currentStep) status = "current",
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status});
+            status}),
         })}
       </ol>
       
@@ -95,5 +95,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }

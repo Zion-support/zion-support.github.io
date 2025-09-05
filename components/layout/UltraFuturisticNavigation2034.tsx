@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -24,14 +24,14 @@ import {
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2,
   Handshake, LifeBuoy, Activity,
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -106,7 +106,7 @@ const serviceCategories = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -117,7 +117,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -126,7 +126,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -134,39 +134,35 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
+],
 
 const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized',
-  'Quantum Security Certified',
-  'AI Ethics Compliant'
-];
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant'
+],
 
 export default function UltraFuturisticNavigation2034() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)
+  },
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
   return (
     <>
@@ -384,5 +380,5 @@ export default function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
+  ),
 }

@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Monitor, Brain, Cpu, Zap, Shield, Globe, 
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredITAssetManagement = () => {
   const features = [
@@ -35,7 +35,7 @@ const AIPoweredITAssetManagement = () => {
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const assetTypes = [
     "Hardware devices (servers, workstations, mobile devices)",
@@ -44,7 +44,7 @@ const AIPoweredITAssetManagement = () => {
     "Cloud resources and virtual machines",
     "Security devices and appliances",
     "Peripheral devices and accessories"
-  ];
+  ],
 
   const benefits = [
     {
@@ -71,7 +71,7 @@ const AIPoweredITAssetManagement = () => {
       value: "200%",
       description: "Increased operational efficiency"
     }
-  ];
+  ],
 
   const capabilities = [
     "Automated asset discovery and inventory",
@@ -82,7 +82,7 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization",
     "Cost allocation and tracking",
     "Integration with existing IT tools"
-  ];
+  ],
 
   return (
     <>
@@ -296,7 +296,7 @@ const AIPoweredITAssetManagement = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your IT Asset Management?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -316,7 +316,7 @@ const AIPoweredITAssetManagement = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default AIPoweredITAssetManagement;
+export default AIPoweredITAssetManagement,

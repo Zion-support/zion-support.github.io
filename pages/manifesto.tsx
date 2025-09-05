@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import React from 'react';
+import Head from 'next/head',
+import React from 'react',
 
 export default function ManifestoPage(): JSX.Element {
   return (
@@ -34,7 +34,7 @@ export default function ManifestoPage(): JSX.Element {
             <h2 id="problem-with-traditional-marketplaces">The Problem with Traditional Marketplaces</h2>
             <ul>
               <li><strong>Platform Rent-Seeking</strong>: Centralized fees and policy risk diminish creator upside and user choice.</li>
-              <li><strong>Captive Reputation</strong>: Profiles and reviews are siloed; your hard-won credibility is non-portable.</li>
+              <li><strong>Captive Reputation</strong>: Profiles and reviews are siloed, your hard-won credibility is non-portable.</li>
               <li><strong>Low-Trust Transactions</strong>: Disputes, fraud, and misalignment waste time and undermine collaboration.</li>
               <li><strong>Data as Leverage</strong>: User data is harvested to entrench moats rather than empower the people who generate it.</li>
             </ul>
@@ -57,5 +57,5 @@ export default function ManifestoPage(): JSX.Element {
         </div>
       </main>
     </>
-  );
+  ),
 }

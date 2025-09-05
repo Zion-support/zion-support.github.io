@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 
 type Props = {
-  category: string;
-  level: string;
-  isFree: string;
-  onChange: (next: { category: string; level: string; isFree: string }) => void;
-};
+  category: string,
+  level: string,
+  isFree: string,
+  onChange: (next: { category: string, level: string, isFree: string }) => void,
+},
 
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
   return (
@@ -41,5 +41,5 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         <option value="false">Paid</option>
       </select>
     </div>
-  );
+  ),
 }

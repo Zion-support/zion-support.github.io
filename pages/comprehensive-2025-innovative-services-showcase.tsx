@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, CheckCircle, Globe,
   Search, Grid, List, Star as StarIcon,
   Phone, Mail, MapPin
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
-import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',
 
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
 
   // Combine all services
-  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices];
+  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
@@ -38,38 +38,37 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
     { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
-  ];
+  ],
 
   const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace('$', '').replace(',', ''));
-    if (numPrice < 1000) return 'budget';
-    if (numPrice < 5000) return 'mid';
-    return 'enterprise';
-  };
+    const numPrice = parseFloat(price.replace('$', '').replace(, '')),
+    if (numPrice < 1000) return 'budget',
+    if (numPrice < 5000) return 'mid',
+    return 'enterprise',
+  },
 
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
-      return matchesSearch && matchesCategory && matchesPrice;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
+      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange,
+      return matchesSearch && matchesCategory && matchesPrice,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return 0;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
       }
-    });
+    }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -79,7 +78,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -90,14 +89,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -283,7 +282,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 {filteredServices.length} Services Found
               </h2>
               <p className="text-white/60">
-                Showing results for &quot;{searchTerm || 'all services'}&quot; in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+                Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
               </p>
             </div>
 
@@ -294,9 +293,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                    setPriceRange('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
+                    setPriceRange('all'),
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
@@ -469,5 +468,5 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
-import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
-import { educationElearning2025 } from '../../data/education-elearning-2025';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react',
+import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',
+import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025',
+import { blockchainWeb32025 } from '../../data/blockchain-web3-2025',
+import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025',
+import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025',
+import { fintechFinancial2025 } from '../../data/fintech-financial-2025',
+import { educationElearning2025 } from '../../data/education-elearning-2025',
 
 const ComprehensiveServicesShowcase2025 = () => {
   const serviceCategories = [
@@ -60,7 +60,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -81,7 +81,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -251,7 +251,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -271,7 +271,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+},
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025,

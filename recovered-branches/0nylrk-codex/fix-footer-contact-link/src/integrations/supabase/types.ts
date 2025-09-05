@@ -2178,7 +2178,7 @@ export type Database = {
     }
     Functions: {
       check_users_needing_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey never>
         Returns: {
           user_id: string
           email: string
@@ -2191,7 +2191,7 @@ export type Database = {
         }[]
       }
       complete_referral: {
-        Args: { _referred_id: string; _user_type: string }
+        Args: { _referred_id: string, _user_type: string }
         Returns: undefined
       }
       create_notification: {
@@ -2205,7 +2205,7 @@ export type Database = {
         Returns: string
       }
       create_scheduled_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey never>
         Returns: undefined
       }
       flag_suspicious_content: {
@@ -2226,7 +2226,7 @@ export type Database = {
         Returns: string
       }
       generate_fraud_report: {
-        Args: { year: number; month: number }
+        Args: { year: number, month: number }
         Returns: string
       }
       generate_referral_code: {
@@ -2234,11 +2234,11 @@ export type Database = {
         Returns: string
       }
       get_api_key_user_id: {
-        Args: { key_prefix: string; provided_key: string }
+        Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
       get_current_tenant_id: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey never>
         Returns: string
       }
       get_event_distribution: {
@@ -2254,7 +2254,7 @@ export type Database = {
         Returns: string
       }
       schedule_email_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey never>
         Returns: number
       }
       trigger_resume_scoring: {
@@ -2262,11 +2262,11 @@ export type Database = {
         Returns: undefined
       }
       update_onboarding_milestone: {
-        Args: { _user_id: string; _milestone: string; _status: boolean }
+        Args: { _user_id: string, _milestone: string, _status: boolean }
         Returns: undefined
       }
       verify_api_key: {
-        Args: { provided_key: string; stored_hash: string }
+        Args: { provided_key: string, stored_hash: string }
         Returns: boolean
       }
     }
@@ -2304,8 +2304,7 @@ export type Tables<
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
       Row: infer R
@@ -2330,8 +2329,7 @@ export type TablesInsert<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
     }
@@ -2353,8 +2351,7 @@ export type TablesUpdate<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
     }
@@ -2376,8 +2373,7 @@ export type Enums<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
-> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -2391,8 +2387,7 @@ export type CompositeTypes<
     schema: keyof Database
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
-> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]

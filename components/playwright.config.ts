@@ -1,4 +1,4 @@
-import { defineConfig } from @playwright/test';
+import { defineConfig } from @playwright/test',
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: http://localhost:3000',    // Ensures that the trace viewer assets are downloaded, useful for debugging.
@@ -19,4 +19,4 @@ default defineConfig({
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   },
   // ]
-});
+}),

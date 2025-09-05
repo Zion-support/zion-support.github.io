@@ -1,19 +1,19 @@
-"use client";
+"use client",
 
-import { useState } from "react";
+import { useState } from "react",
 
 interface AIService {
-  id: string;
-  name: string;
-  description: string;
-  technicalSpecs: string[];
-  useCases: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  integration: string[];
+  id: string,
+  name: string,
+  description: string,
+  technicalSpecs: string[],
+  useCases: string[],
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  features: string[],
+  integration: string[]
 }
 
 const aiServices: AIService[] = [
@@ -189,10 +189,10 @@ const aiServices: AIService[] = [
       "Cloud services"
     ]
   }
-];
+],
 
 export default function AISolutionsPage() {
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<string | null>(null),
 
   return (
     <div className="space-y-8">
@@ -340,11 +340,11 @@ export default function AISolutionsPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

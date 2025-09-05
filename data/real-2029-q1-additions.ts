@@ -1,11 +1,11 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',
 
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
@@ -15,7 +15,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-		features: ['Policy suites', 'Jailbreak corpora', 'Regression gates', 'Dashboard & alerts'],
+		features: ['Policy suitesJailbreak corpora', 'Regression gatesDashboard & alerts'],
 		popular: true,
 		icon: '🛡️',
 		color: 'from-rose-600 to-red-700',
@@ -27,11 +27,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '45 minutes',
 		category: 'AI & Machine Learning',
 		realService: true,
-		technology: ['OpenAI compatible', 'Policy engines', 'Embeddings'],
-		integrations: ['Slack', 'PagerDuty'],
-		useCases: ['Safety testing', 'Compliance checks', 'Release gating'],
+		technology: ['OpenAI compatiblePolicy engines', 'Embeddings'],
+		integrations: ['SlackPagerDuty'],
+		useCases: ['Safety testingCompliance checks', 'Release gating'],
 		roi: 'Reduce incident risk by 70% in first quarter',
-		competitors: ['Lakera', 'Guardrails'],
+		competitors: ['LakeraGuardrails'],
 		marketSize: '$3.2B AI Safety',
 		growthRate: '35% CAGR',
 		variant: 'ai-futuristic',
@@ -50,7 +50,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.',
-		features: ['Idle detection', 'Schedule generator', 'IaC export', 'Alerting'],
+		features: ['Idle detectionSchedule generator', 'IaC exportAlerting'],
 		popular: true,
 		icon: '💸',
 		color: 'from-emerald-600 to-teal-700',
@@ -62,11 +62,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'Cloud & FinOps',
 		realService: true,
-		technology: ['AWS/GCP/Azure APIs', 'Terraform'],
-		integrations: ['Datadog', 'Slack'],
-		useCases: ['Cost reduction', 'Budget governance'],
+		technology: ['AWS/GCP/Azure APIsTerraform'],
+		integrations: ['DatadogSlack'],
+		useCases: ['Cost reductionBudget governance'],
 		roi: '10–35% cloud savings in 3 months',
-		competitors: ['Zesty', 'CAST AI'],
+		competitors: ['ZestyCAST AI'],
 		marketSize: '$18B FinOps',
 		growthRate: '19% CAGR',
 		variant: 'quantum-holographic',
@@ -85,7 +85,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$79',
 		period: '/month',
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.',
-		features: ['Slow query capture', 'Index suggestions', 'Impact simulation', 'Capacity forecast'],
+		features: ['Slow query captureIndex suggestions', 'Impact simulationCapacity forecast'],
 		popular: false,
 		icon: '🗄️',
 		color: 'from-indigo-600 to-violet-700',
@@ -97,11 +97,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Observability',
 		realService: true,
-		technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
-		integrations: ['Grafana', 'Datadog'],
-		useCases: ['Performance tuning', 'Incident prevention'],
+		technology: ['PostgresMySQL', 'OpenTelemetry'],
+		integrations: ['GrafanaDatadog'],
+		useCases: ['Performance tuningIncident prevention'],
 		roi: '20–50% p95 reduction month 1',
-		competitors: ['Percona PMM', 'Datadog APM'],
+		competitors: ['Percona PMMDatadog APM'],
 		marketSize: '$7B DB Ops',
 		growthRate: '12% CAGR',
 		variant: 'quantum',
@@ -113,4 +113,4 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 9
 	}
-];
+],

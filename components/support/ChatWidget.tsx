@@ -1,58 +1,58 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react',
+import { X } from 'lucide-react',
 
 type ChatMessage = {
-  role: 'user' | 'assistant' | 'system';
-  content: string;
-  timestamp?: number;
-};
+  role: 'user' | 'assistant' | 'system',
+  content: string,
+  timestamp?: number
+},
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '';
-  const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem('zion_support_session_id', id);
-  return id;
+  if (typeof window === 'undefined') return '',
+  const existing = window.localStorage.getItem('zion_support_session_id'),
+  if (existing) return existing,
+  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`,
+  window.localStorage.setItem('zion_support_session_id', id),
+  return id,
 }
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [messages, setMessages] = useState<ChatMessage[]>([]),
+  const [input, setInput] = useState(''),
+  const [isLoading, setIsLoading] = useState(false),
+  const [failedIntents, setFailedIntents] = useState(0),
+  const [showEscalation, setShowEscalation] = useState(false),
+  const sessionIdRef = useRef<string>(''),
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),
 
   useEffect(() => {
-    sessionIdRef.current = generateSessionId();
-  }, []);
+    sessionIdRef.current = generateSessionId(),
+  }, []),
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }]);
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }]),
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length]),
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+  }, [messages]),
 
   const quickReplies = useMemo(
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
+    () => ['How do I hire?How do I get matched?', 'Billing help'],
     []
-  );
+  ),
 
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })});
+        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })}),
     } catch {}
   }
 
@@ -61,20 +61,20 @@ export default function ChatWidget() {
       await fetch('/api/support/escalate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })});
-      setShowEscalation(true);
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+      setShowEscalation(true),
     } catch {}
   }
 
   async function onSend(messageText?: string) {
-    const text = (messageText ?? input).trim();
-    if (!text) return;
+    const text = (messageText ?? input).trim(),
+    if (!text) return,
 
-    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() };
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text });
+    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
+    setMessages((prev) => [...prev, newUserMessage]),
+    setInput(''),
+    setIsLoading(true),
+    await logEvent('message/user', { content: text }),
 
     try {
       const res = await fetch('/api/support/chat', {
@@ -82,35 +82,35 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
-      const data = await res.json();
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})}),
+      const data = await res.json(),
 
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
           content: data.assistantMessage,
-          timestamp: Date.now()};
-        setMessages((prev) => [...prev, assistantMessage]);
-        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta });
+          timestamp: Date.now()},
+        setMessages((prev) => [...prev, assistantMessage]),
+        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta }),
       }
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-          const next = n + 1;
+          const next = n + 1,
           if (next >= 3) {
-            escalateSupport('Failed to match user intent 3+ times');
+            escalateSupport('Failed to match user intent 3+ times'),
           }
-          return next;
-        });
+          return next,
+        }),
       } else if (data?.meta?.intentMatched === true) {
-        setFailedIntents(0);
+        setFailedIntents(0),
       }
     } catch (e) {
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }]);
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }]),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
   }
 
@@ -181,8 +181,8 @@ export default function ChatWidget() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-                      onSend();
+                      e.preventDefault(),
+                      onSend(),
                     }
                   }}
                   placeholder="Ask a question…"
@@ -209,5 +209,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  );
+  ),
 }

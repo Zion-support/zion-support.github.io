@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -11,16 +11,13 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	const features = [
-		'Golden datasets and synthetic evals',
-		'Hallucination and grounding score',
-		'Toxicity, bias and safety metrics',
-		'LLM version comparison reports',
-		'CI quality gates and webhooks',
-		'Latency and cost KPIs with budgets'
-	];
+		'Golden datasets and synthetic evalsHallucination and grounding score',
+		'Toxicity, bias and safety metricsLLM version comparison reports',
+		'CI quality gates and webhooksLatency and cost KPIs with budgets'
+	],
 
 	return (
 		<QuantumHolographicMatrixBackground>
@@ -89,5 +86,5 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-	);
+	),
 }

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -10,20 +10,20 @@ import {
   Zap, Atom, Database, Cloud, Lock, Code,
   Phone, Mail, MapPin, ExternalLink, ChevronDown,
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',
 
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -116,37 +116,36 @@ const serviceCategories = [
     services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-500/20 to-red-500/20'
   }
-];
+],
 
 export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
+  const [viewMode, setViewMode] = useState('grid'),
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    return matchesSearch && matchesCategory;
-  });
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
+    return matchesSearch && matchesCategory,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':
-        return b.customers - a.customers;
-      default:
-        return b.popular ? 1 : -1;
+        return b.customers - a.customers,
+      default: return b.popular ? 1 : -1
     }
-  });
+  }),
 
   return (
     <>
@@ -524,8 +523,8 @@ export default function Revolutionary2025ServicesShowcase() {
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
                   }}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
@@ -588,7 +587,7 @@ export default function Revolutionary2025ServicesShowcase() {
                   </button>
                 </Link>
                 <Link href={contactInfo.website}>
-                  <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300 text-lg">
+                  <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover: border-purple-500 hover:text-purple-400 transition-all duration-300 text-lg">
                     Visit Website
                   </button>
                 </Link>
@@ -598,5 +597,5 @@ export default function Revolutionary2025ServicesShowcase() {
         </section>
       </div>
     </>
-  );
+  )
 }

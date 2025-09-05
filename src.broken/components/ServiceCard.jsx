@@ -1,37 +1,37 @@
-import React from "react";
-import { Heart } from "lucide-react";
-import { toast } from "sonner";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
+import React from "react",
+import { Heart } from "lucide-react",
+import { toast } from "sonner",
+import { useLocation, useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useAppDispatch } from "@/store/hooks",
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice",
 
 export default function ServiceCard({ service, onSelect }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
-  const dispatch = useAppDispatch();
+  const navigate = useNavigate(),
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const dispatch = useAppDispatch(),
 
   const handleClick = () => {
     if (onSelect) {
-      onSelect(service.id);
+      onSelect(service.id),
     }
-  };
+  },
 
   const handleSave = (e) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
+      toast.info('Log in to save favorites'),
+      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
+      return,
     }
-    dispatch(addToWishlist({ id: service.id, type: 'service', data: service }));
+    dispatch(addToWishlist({ id: service.id, type: 'service', data: service })),
     fetch(`${getApiUrl()}/wishlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: service.id, type: 'service' })
-    }).catch(() => {});
-  };
+    }).catch(() => {}),
+  },
 
   return (
     <div
@@ -48,5 +48,5 @@ export default function ServiceCard({ service, onSelect }) {
       </button>
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>
-  );
+  ),
 }

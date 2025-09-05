@@ -1,8 +1,8 @@
-"use client";
+"use client",
 
 interface LoadingSpinnerProps {
-  size?: "small" | "medium" | "large";
-  className?: string;
+  size?: "small" | "medium" | "large",
+  className?: string,
 }
 
 export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {
@@ -10,13 +10,13 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     small: "w-4 h-4",
     medium: "w-8 h-8",
     large: "w-12 h-12"
-  };
+  },
 
   return (
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">
       <svg
         className="animate-spin text-blue-500"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http: //www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         aria-hidden="true"
@@ -37,5 +37,5 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
       </svg>
       <span className="sr-only">Loading...</span>
     </div>
-  );
+  )
 }

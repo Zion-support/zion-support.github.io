@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Zap, Sparkles, Shield, 
   Phone, Mail, MapPin, Globe, ArrowRight,
@@ -10,14 +10,14 @@ import {
   Target, Microscope, Cpu, Database, Cloud, Lock,
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity,
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -60,7 +60,7 @@ const serviceCategories = [
       { name: 'Legal Document Automation', href: '/legal-document-automation', price: '$399/month' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -71,7 +71,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageSquare },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -80,7 +80,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -88,25 +88,21 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
+],
 
 const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized',
-  'Quantum Security Certified',
-  'AI Ethics Compliant'
-];
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant'
+],
 
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
-];
+],
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -326,10 +322,10 @@ export default function UltraFuturisticFooter2034() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+                <span>&copy, 2024 Zion Tech Group. All rights reserved.</span>
                 <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
               </div>
@@ -343,5 +339,5 @@ export default function UltraFuturisticFooter2034() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

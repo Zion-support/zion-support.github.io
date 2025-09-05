@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import React from 'react',
+import Head from 'next/head',
+import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 
 export default function ApiObservabilityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability')),
+  if (!service) return null,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -50,6 +50,6 @@ export default function ApiObservabilityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 

@@ -1,4 +1,4 @@
-"use client";
+"use client",
 
 export default function AIAutomationPage() {
   return (
@@ -205,7 +205,7 @@ export default function AIAutomationPage() {
         <p className="opacity-90 mb-6 max-w-2xl mx-auto">
           Let our AI experts analyze your processes and create a customized automation strategy that will transform your operations.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Automation Consultation"
             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -221,5 +221,5 @@ export default function AIAutomationPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

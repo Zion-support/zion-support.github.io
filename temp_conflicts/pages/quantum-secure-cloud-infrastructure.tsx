@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
+import SEO from '../components/SEO',
 
 const QuantumSecureCloudInfrastructure: React.FC = () => {
   const features = [
@@ -15,7 +15,7 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
     "Quantum-secure access controls",
     "Quantum-resistant certificate management",
     "Quantum-safe data transmission"
-  ];
+  ],
 
   const benefits = [
     "Future-proof security against quantum attacks",
@@ -23,13 +23,13 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
     "Compliance with quantum security regulations",
     "Enhanced data protection",
     "Competitive security advantage"
-  ];
+  ],
 
   const pricing = {
     starter: "$1,499/month",
     professional: "$2,999/month",
     enterprise: "Custom pricing"
-  };
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -224,7 +224,7 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-2xl shadow-emerald-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover: from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-2xl shadow-emerald-500/25"
             >
               Secure Your Cloud Today
             </motion.button>
@@ -232,10 +232,10 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumSecureCloudInfrastructure;
+export default QuantumSecureCloudInfrastructure,
 export default function QuantumSecureCloudInfrastructure() {
 	return (
 		<ServiceLanding
@@ -254,7 +254,7 @@ export default function QuantumSecureCloudInfrastructure() {
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
-			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
+			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
-	);
+	)
 }

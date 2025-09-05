@@ -1,18 +1,18 @@
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Bell, Settings } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { useNavigate } from "react-router-dom",
+import { ChevronLeft, Bell, Settings } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
 
 interface MobileHeaderProps {
-  title: string;
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
+  title: string,
+  showBack?: boolean,
+  showNotifications?: boolean,
+  showSettings?: boolean,
+  className?: string,
+  onNotificationsClick?: () => void,
+  onSettingsClick?: () => void
 }
 
 export function MobileHeader({
@@ -23,7 +23,7 @@ export function MobileHeader({
   className,
   onNotificationsClick,
   onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(),
 
   return (
     <header className={cn(
@@ -71,5 +71,5 @@ export function MobileHeader({
         </div>
       </div>
     </header>
-  );
+  ),
 }

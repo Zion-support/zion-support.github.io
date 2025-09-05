@@ -1,24 +1,24 @@
-import fs from 'fs';
-import path from 'path';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import fs from 'fs',
+import path from 'path',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 export async function getStaticProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'economy', 'optimizer');
-  let latest: string | null = null;
-  let top: any[] = [];
+  const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),
+  let latest: string | null = null,
+  let top: any[] = [],
   if (fs.existsSync(dir)) {
-    const latestPath = path.join(dir, 'latest.json');
+    const latestPath = path.join(dir, 'latest.json'),
     if (fs.existsSync(latestPath)) {
-      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest; } catch {}
+      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
     }
     if (latest) {
-      const p = path.join(dir, `${latest}.json`);
+      const p = path.join(dir, `${latest}.json`),
       if (fs.existsSync(p)) {
-        try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || []; } catch {}
+        try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
       }
     }
   }
-  return { props: { latest, top } };
+  return { props: { latest, top } },
 }
 
 export default function OptimizerPage({ latest, top }: any) {
@@ -61,5 +61,5 @@ export default function OptimizerPage({ latest, top }: any) {
         ) : null}
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

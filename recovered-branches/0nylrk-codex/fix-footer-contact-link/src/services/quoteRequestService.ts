@@ -1,6 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { supabase } from "@/integrations/supabase/client",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)
@@ -13,14 +13,14 @@ export const quoteRequestService = {
           display_name
         )
       `)
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false }),
     
-    if (error) throw error;
+    if (error) throw error,
     
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
+      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[],
   },
   
   // Get quote requests for a specific talent
@@ -29,10 +29,10 @@ export const quoteRequestService = {
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false }),
     
-    if (error) throw error;
-    return data as QuoteRequest[];
+    if (error) throw error,
+    return data as QuoteRequest[],
   },
   
   // Get a single quote request by id
@@ -46,22 +46,22 @@ export const quoteRequestService = {
         )
       `)
       .eq('id', id)
-      .single();
+      .single(),
     
-    if (error) throw error;
+    if (error) throw error,
     
     return {
       ...data,
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest,
   },
   
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status };
+    const updates: any = { status },
     
     // If marking as responded, set replied_at
     if (status === 'responded') {
-      updates.replied_at = new Date().toISOString();
+      updates.replied_at = new Date().toISOString(),
     }
     
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -70,10 +70,10 @@ export const quoteRequestService = {
         .from('quote_requests')
         .select('viewed_at')
         .eq('id', id)
-        .single();
+        .single(),
       
       if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString();
+        updates.viewed_at = new Date().toISOString(),
       }
     }
     
@@ -81,10 +81,10 @@ export const quoteRequestService = {
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
-      .select();
+      .select(),
     
-    if (error) throw error;
-    return data[0] as QuoteRequest;
+    if (error) throw error,
+    return data[0] as QuoteRequest,
   },
   
   // Archive/Unarchive a quote request
@@ -93,10 +93,10 @@ export const quoteRequestService = {
       .from('quote_requests')
       .update({ is_archived: isArchived })
       .eq('id', id)
-      .select();
+      .select(),
     
-    if (error) throw error;
-    return data[0] as QuoteRequest;
+    if (error) throw error,
+    return data[0] as QuoteRequest,
   },
   
   // Delete a quote request
@@ -104,9 +104,9 @@ export const quoteRequestService = {
     const { error } = await supabase
       .from('quote_requests')
       .delete()
-      .eq('id', id);
+      .eq('id', id),
     
-    if (error) throw error;
-    return true;
+    if (error) throw error,
+    return true,
   }
-};
+},

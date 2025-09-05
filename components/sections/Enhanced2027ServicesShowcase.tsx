@@ -1,70 +1,58 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
   Rocket, Shield, Target, CheckCircle, ExternalLink,
   Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+} from 'lucide-react',
+import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations',
+import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas',
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services',
 
 const Enhanced2027ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState('name'),
 
   // Combine all 2027 services
   const all2027Services = [
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027,
     ...emergingTech2027Services
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))],
 
   // Filter and sort services
   const filteredServices = all2027Services
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
-        default:
-          return 0;
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),
+        default: return 0
       }
-    });
+    }),
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'AI & Machine Learning': 'from-purple-500 to-indigo-600',
-      'Quantum Computing': 'from-blue-500 to-cyan-600',
-      'Emerging Technology': 'from-green-500 to-emerald-600',
-      'Business Operations': 'from-orange-500 to-red-600',
-      'Cybersecurity': 'from-red-500 to-pink-600',
-      'Enterprise IT': 'from-indigo-500 to-purple-600',
-      'Healthcare & Biotechnology': 'from-emerald-500 to-teal-600',
-      'Financial Technology': 'from-yellow-500 to-orange-600',
-      'Space Technology': 'from-violet-500 to-purple-600',
-      'Neural Technology': 'from-pink-500 to-rose-600',
-      'Materials Science': 'from-cyan-500 to-blue-600',
-      'Environmental Technology': 'from-teal-500 to-green-600'
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
+    },
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600',
+  },
 
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -80,9 +68,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       'Neural Technology': <Brain className="w-5 h-5" />,
       'Materials Science': <Atom className="w-5 h-5" />,
       'Environmental Technology': <Rocket className="w-5 h-5" />
-    };
-    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />;
-  };
+    },
+    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />,
+  },
 
   return (
     <section className="py-20 bg-gray-900">
@@ -364,8 +352,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
+                setSearchTerm(''),
+                setSelectedCategory('all'),
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
@@ -382,7 +370,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -409,7 +397,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+},
 
-export default Enhanced2027ServicesShowcase;
+export default Enhanced2027ServicesShowcase,

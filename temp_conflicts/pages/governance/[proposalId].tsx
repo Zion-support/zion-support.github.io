@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
 
 export default function ProposalDetailPage() {
-  const router = useRouter();
-  const { proposalId } = router.query;
+  const router = useRouter(),
+  const { proposalId } = router.query,
 
   return (
     <>
@@ -19,11 +19,11 @@ export default function ProposalDetailPage() {
         )}
         <p className="text-lg mb-4">Review the proposal details and cast your vote.</p>
         <div className="mt-4">
-          <a href="/governance" className="text-blue-600 hover:underline">
+          <a href="/governance" className="text-blue-600 hover: underline">
             ← Back to Governance
           </a>
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
+import type { NextApiRequest, NextApiResponse } from 'next',
+import v1 from '../../../data/api-docs/v1',
 
 function toPostman() {
   return {
@@ -20,10 +20,10 @@ function toPostman() {
     ),
     variable: [
       { key: 'baseUrl', value: 'https://api.zion.os' },
-      { key: 'token', value: '' }]};
+      { key: 'token', value: '' }]},
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Content-Type', 'application/json');
-  res.status(200).json(toPostman());
+  res.setHeader('Content-Typeapplication/json'),
+  res.status(200).json(toPostman()),
 }

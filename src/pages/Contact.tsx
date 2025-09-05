@@ -1,79 +1,78 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { useState } from 'react',
+import { Header } from '@/components/Header',
+import { SEO } from '@/components/SEO',
+import { GradientHeading } from '@/components/GradientHeading',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Card } from '@/components/ui/card',
+import { toast } from '@/components/ui/use-toast',
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
+  TooltipTrigger} from '@/components/ui/tooltip',
+import z from 'zod',
+import { ChatAssistant } from '@/components/ChatAssistant',
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+    message: ''}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    message?: string;
-  }>({});
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+    name?: string,
+    email?: string,
+    message?: string,
+  }>({}),
+  const [isChatOpen, setIsChatOpen] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
-  };
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+    setErrors((prev) => ({ ...prev, [name]: undefined })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    logInfo('[ContactForm] handleSubmit triggered.');
-    logInfo('[ContactForm] formData:', { data: formData });
+    e.preventDefault(),
+    logInfo('[ContactForm] handleSubmit triggered.'),
+    logInfo('[ContactForm] formData:', { data: formData }),
 
     const schema = z.object({
       name: z.string().min(2, 'Name must be at least 2 characters'),
       email: z.string().email('Invalid email address'),
-      message: z.string().min(10, 'Message must be at least 10 characters')});
+      message: z.string().min(10, 'Message must be at least 10 characters')}),
 
-    const result = schema.safeParse(formData);
-    logInfo('[ContactForm] Zod validation result:', { data: result });
+    const result = schema.safeParse(formData),
+    logInfo('[ContactForm] Zod validation result:', { data: result }),
 
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
+      const fieldErrors: Record<string string> = {},
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
+          fieldErrors[err.path[0] as string] = err.message,
         }
       }
-      setErrors(fieldErrors);
-      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again';
-      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } });
+      setErrors(fieldErrors),
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again',
+      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } }),
       toast({
         title: 'Form Validation Error',
         description: validationErrorMsg,
-        variant: 'destructive'});
-      return;
+        variant: 'destructive'}),
+      return,
     }
 
-    setErrors({});
-    setIsSubmitting(true);
-    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).');
+    setErrors({}),
+    setIsSubmitting(true),
+    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).'),
 
     try {
       fetch('/api/contact', {
@@ -81,56 +80,56 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)})
         .then(async (res) => {
-          logInfo('[ContactForm] API response status:', { data: res.status });
-          const responseBody = await res.text(); // Read as text first to avoid JSON parse error if not JSON
-          logInfo('[ContactForm] API response body:', { data: responseBody });
+          logInfo('[ContactForm] API response status:', { data: res.status }),
+          const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
+          logInfo('[ContactForm] API response body:', { data: responseBody }),
 
           // Note: setIsSubmitting(false) is called within then/catch of the promise.
           // If fetch itself or .then/.catch structure has a synchronous error,
           // the outer try/catch will handle it.
 
           if (!res.ok) {
-            let errorData = { error: `Request failed with status ${res.status}` };
+            let errorData = { error: `Request failed with status ${res.status}` },
             try {
-              errorData = JSON.parse(responseBody);
+              errorData = JSON.parse(responseBody),
             } catch (parseError) {
-              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError });
+              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError }),
             }
-            logErrorToProduction('[ContactForm] API error response:', { data: errorData });
+            logErrorToProduction('[ContactForm] API error response:', { data: errorData }),
             // This throw will be caught by the .catch block below
-            throw new Error(errorData.error || 'Failed to send message');
+            throw new Error(errorData.error || 'Failed to send message'),
           }
 
-          setIsSubmitting(false); // Moved here for success path
-          logInfo('[ContactForm] Message submission successful.');
+          setIsSubmitting(false), // Moved here for success path
+          logInfo('[ContactForm] Message submission successful.'),
           toast({
             title: 'Message Sent',
             description:
-              "We've received your message and will get back to you soon."});
-          setSubmitted(true);
-          setTimeout(() => setSubmitted(false), 2000);
-          setFormData({ name: '', email: '', message: '' });
+              "We've received your message and will get back to you soon."}),
+          setSubmitted(true),
+          setTimeout(() => setSubmitted(false), 2000),
+          setFormData({ name: '', email: '', message: '' }),
         })
         .catch((err) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
-          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err });
-          setIsSubmitting(false);
+          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
+          setIsSubmitting(false),
           toast({
             title: 'Submission Error',
             description: err.message || 'An unexpected error occurred during submission.',
-            variant: 'destructive'});
-        });
+            variant: 'destructive'}),
+        }),
     } catch (error) {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
       // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
-      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error });
-      setIsSubmitting(false);
+      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error }),
+      setIsSubmitting(false),
       toast({
         title: 'Critical Submission Error',
         description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
-        variant: 'destructive'});
+        variant: 'destructive'}),
     }
-  };
+  },
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -142,24 +141,23 @@ export default function Contact() {
           headers: {
             'Content-Type': 'application/json'},
           body: JSON.stringify({
-            messages: [{ role: 'user', content: message }]})},
-      );
+            messages: [{ role: 'user', content: message }]})}),
 
       if (!response.ok) {
-        throw new Error('Failed to get response from AI assistant');
+        throw new Error('Failed to get response from AI assistant'),
       }
 
-      return Promise.resolve();
+      return Promise.resolve(),
     } catch (error) {
-      logErrorToProduction('Error in AI chat', error);
+      logErrorToProduction('Error in AI chat', error),
       toast({
         title: 'Chat Error',
         description:
           'There was an error communicating with our AI assistant. Please try again.',
-        variant: 'destructive'});
-      return Promise.resolve();
+        variant: 'destructive'}),
+      return Promise.resolve(),
     }
-  };
+  },
 
   const offices = [
     {
@@ -171,7 +169,7 @@ export default function Contact() {
       name: 'East Coast Office',
       address: '456 Innovation Street, New York, NY 10001',
       phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com'}];
+      email: 'commercial@ziontechgroup.com'}],
 
   return (
     <>
@@ -436,13 +434,11 @@ export default function Contact() {
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
           starterQuestions={[
-            'How do I list a product?',
-            'What services does Zion offer?',
-            'Where can I view pricing plans?',
-            'How do I create an account?',
+            'How do I list a product?What services does Zion offer?',
+            'Where can I view pricing plans?How do I create an account?',
             'Can I talk to a human representative?']}
         />
       )}
     </>
-  );
+  ),
 }

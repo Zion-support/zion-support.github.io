@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, 
@@ -12,14 +12,14 @@ import {
   Smartphone, BarChart3, Palette, Camera, Video,
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -66,7 +66,7 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-];
+],
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -79,7 +79,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -88,7 +88,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-];
+],
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -99,7 +99,7 @@ const resources = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
   { name: 'Webinars', href: '/webinars', icon: Video }
-];
+],
 
 const company = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -110,7 +110,7 @@ const company = [
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
@@ -119,7 +119,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-];
+],
 
 const footerSections = [
   {
@@ -166,7 +166,7 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   }
-];
+],
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -358,7 +358,7 @@ export default function UltraFuturisticFooter2029V2() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -372,5 +372,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"};
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},
 
 export default function ZionOSPage() {
   return (
@@ -355,7 +355,7 @@ export default function ZionOSPage() {
               Join the future of sovereign, AI-powered digital economies. 
               Deploy in minutes, scale infinitely.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4">
                 Start Deployment
               </Link>
@@ -367,5 +367,5 @@ export default function ZionOSPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,48 +1,47 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react',
+import { motion } from 'framer-motion',
 
 interface UltraAdvancedFuturisticBackgroundV2Props {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode,
+  className?: string
 }
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children, 
+  children,
   className = '' 
 }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = canvasRef.current,
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
-    let animationFrameId: number;
+    let animationFrameId: number,
     let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+      maxLife: number
+    }> = [],
 
     const colors = [
-      '#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080',
-      '#8000ff', '#ff8000', '#0080ff', '#ff0080', '#80ff00'
-    ];
+      '#00ffff#ff00ff', '#ffff00#00ff00', '#ff0080#8000ff', '#ff8000#0080ff', '#ff0080#80ff00'
+    ],
 
     // Initialize particles
     const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 150; i++) {
+      particles = [],
+      for (let i = 0, i < 150, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -52,50 +51,50 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
           maxLife: 100
-        });
+        }),
       }
-    };
+    },
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, canvas.width / 2
-      );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ),
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),
+      gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)'),
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)'),
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.life--,
 
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1,
+        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1,
 
         // Reset particle if it dies
         if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-          particle.life = particle.maxLife;
-          particle.color = colors[Math.floor(Math.random() * colors.length)];
+          particle.x = Math.random() * canvas.width,
+          particle.y = Math.random() * canvas.height,
+          particle.life = particle.maxLife,
+          particle.color = colors[Math.floor(Math.random() * colors.length)],
         }
 
         // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.globalAlpha = alpha;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        const alpha = particle.life / particle.maxLife,
+        ctx.globalAlpha = alpha,
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
@@ -103,75 +102,75 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) + 
               Math.pow(particle.y - otherParticle.y, 2)
-            );
+            ),
             if (distance < 100) {
-              ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.stroke();
+              ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`,
+              ctx.lineWidth = 1,
+              ctx.beginPath(),
+              ctx.moveTo(particle.x, particle.y),
+              ctx.lineTo(otherParticle.x, otherParticle.y),
+              ctx.stroke(),
             }
           }
-        });
-      });
+        }),
+      }),
 
       // Draw quantum matrix overlay
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 0.5;
+      ctx.globalAlpha = 0.1,
+      ctx.strokeStyle = '#00ffff',
+      ctx.lineWidth = 0.5,
       
       // Vertical lines
-      for (let x = 0; x < canvas.width; x += 50) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
+      for (let x = 0, x < canvas.width, x += 50) {
+        ctx.beginPath(),
+        ctx.moveTo(x, 0),
+        ctx.lineTo(x, canvas.height),
+        ctx.stroke(),
       }
       
       // Horizontal lines
-      for (let y = 0; y < canvas.height; y += 50) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
+      for (let y = 0, y < canvas.height, y += 50) {
+        ctx.beginPath(),
+        ctx.moveTo(0, y),
+        ctx.lineTo(canvas.width, y),
+        ctx.stroke(),
       }
 
       // Draw holographic circles
-      ctx.globalAlpha = 0.05;
-      for (let i = 0; i < 5; i++) {
-        const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
-        const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
-        const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
+      ctx.globalAlpha = 0.05,
+      for (let i = 0, i < 5, i++) {
+        const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100,
+        const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100,
+        const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50,
         
-        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-        ctx.stroke();
+        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`,
+        ctx.lineWidth = 2,
+        ctx.beginPath(),
+        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2),
+        ctx.stroke(),
       }
 
-      animationFrameId = requestAnimationFrame(updateParticles);
-    };
+      animationFrameId = requestAnimationFrame(updateParticles),
+    },
 
     // Handle resize
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    };
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight,
+      initParticles(),
+    },
 
-    window.addEventListener('resize', handleResize);
-    initParticles();
-    updateParticles();
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    updateParticles(),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
+        cancelAnimationFrame(animationFrameId),
       }
-    };
-  }, []);
+    },
+  }, []),
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -305,7 +304,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         {children}
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default UltraAdvancedFuturisticBackgroundV2;
+export default UltraAdvancedFuturisticBackgroundV2,

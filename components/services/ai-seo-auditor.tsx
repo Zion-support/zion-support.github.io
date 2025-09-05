@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function Placeholder() {
   return (
@@ -15,5 +15,5 @@ export default function Placeholder() {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
+  ),
 }

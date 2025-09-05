@@ -6,7 +6,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+},
 
 // Global test setup
 beforeEach(() => {

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "AI Autonomous Business Manager - Zion Tech Group",
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"};
+  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},
 
 export default function AIBusinessManagerPage() {
   return (
@@ -278,7 +278,7 @@ export default function AIBusinessManagerPage() {
         {/* CTA Section */}
         <section className="text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">
               Ready to Automate Your Business Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -297,5 +297,5 @@ export default function AIBusinessManagerPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const ApiDevelopmentChat: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const ApiDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ApiDevelopmentChat;
+export default ApiDevelopmentChat,

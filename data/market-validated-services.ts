@@ -1,26 +1,26 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface MarketValidatedService {
-	id: string;
-	name: string;
-	tagline: string;
-	price: string;
-	period: string;
-	description: string;
-	features: string[];
-	category: string;
-	link: string;
-	variant?: ServiceVariant;
-	rating?: number;
-	customers?: number;
-	trialDays?: number;
-	setupTime?: string;
+	id: string,
+	name: string,
+	tagline: string,
+	price: string,
+	period: string,
+	description: string,
+	features: string[],
+	category: string,
+	link: string,
+	variant?: ServiceVariant,
+	rating?: number,
+	customers?: number,
+	trialDays?: number,
+	setupTime?: string,
 	contactInfo: {
-		mobile: string;
-		email: string;
-		address: string;
-		website?: string;
-	};
+		mobile: string,
+		email: string,
+		address: string,
+		website?: string
+	},
 }
 
 const contactInfo = {
@@ -28,7 +28,7 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
@@ -40,10 +40,8 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		period: '/month',
 		description: 'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
 		features: [
-			'RAG over your docs with hybrid search',
-			'Guardrails: PII/PHI redaction, jailbreak detection',
-			'Human handoff + conversation analytics',
-			'Slack/Teams/Widget channels'],
+			'RAG over your docs with hybrid searchGuardrails: PII/PHI redaction, jailbreak detection',
+			'Human handoff + conversation analyticsSlack/Teams/Widget channels'],
 		category: 'AI & Assistants',
 		link: 'https://ziontechgroup.com/ai-assistant',
 		variant: 'ai-futuristic',
@@ -61,10 +59,8 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		period: '/month',
 		description: 'Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.',
 		features: [
-			'Eval datasets/versioning',
-			'Policy and toxicity checks',
-			'Latency and cost KPIs',
-			'Prompt/version diff and alerts'],
+			'Eval datasets/versioningPolicy and toxicity checks',
+			'Latency and cost KPIsPrompt/version diff and alerts'],
 		category: 'AI & MLOps',
 		link: 'https://ziontechgroup.com/ai-evals',
 		variant: 'quantum-holographic',
@@ -82,10 +78,8 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		period: '/month',
 		description: 'Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.',
 		features: [
-			'Hybrid vector+BM25 + reranker',
-			'Chunking strategies + citations',
-			'Toolformer-style agents',
-			'Eval suite and drift monitoring'],
+			'Hybrid vector+BM25 + rerankerChunking strategies + citations',
+			'Toolformer-style agentsEval suite and drift monitoring'],
 		category: 'AI & Search',
 		link: 'https://ziontechgroup.com/agentic-rag',
 		variant: 'quantum-matrix',
@@ -104,7 +98,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
-		features: ['Auth/Z misconfig checks', 'OWASP Top 10 tests', 'CI gate', 'Fix guidance'],
+		features: ['Auth/Z misconfig checksOWASP Top 10 tests', 'CI gateFix guidance'],
 		category: 'Enterprise IT - Security',
 		link: 'https://ziontechgroup.com/api-security-scanner',
 		variant: 'cyberpunk',
@@ -121,7 +115,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
-		features: ['OTel traces/metrics/logs', 'SLOs & error budgets', 'Alerting', 'Dashboards'],
+		features: ['OTel traces/metrics/logsSLOs & error budgets', 'AlertingDashboards'],
 		category: 'Enterprise IT - Observability',
 		link: 'https://ziontechgroup.com/api-observability',
 		variant: 'holographic',
@@ -140,7 +134,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
-		features: ['Auto rightsizing', 'Idle cleanup', 'Spot orchestration', 'Anomaly detection'],
+		features: ['Auto rightsizingIdle cleanup', 'Spot orchestrationAnomaly detection'],
 		category: 'Enterprise IT - FinOps',
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
 		variant: 'quantum',
@@ -157,7 +151,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$79',
 		period: '/month',
 		description: 'Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
-		features: ['Slow query ranking', 'AI index advice', 'Pool tuning', 'SLA/SLO dashboards'],
+		features: ['Slow query rankingAI index advice', 'Pool tuningSLA/SLO dashboards'],
 		category: 'Enterprise IT - Data',
 		link: 'https://ziontechgroup.com/database-performance-monitor',
 		variant: 'neural-quantum',
@@ -174,7 +168,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$499',
 		period: '/month',
 		description: 'Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
-		features: ['Automated backups', 'Failover & replication', 'Performance tuning', 'SLA & support'],
+		features: ['Automated backupsFailover & replication', 'Performance tuningSLA & support'],
 		category: 'Enterprise IT - Data',
 		link: 'https://ziontechgroup.com/managed-postgres-ha',
 		variant: 'holographic-advanced',
@@ -193,7 +187,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
-		features: ['Global synthetic checks', 'Error budgets & burn rates', 'On-call & escalations', 'Incident runbooks'],
+		features: ['Global synthetic checksError budgets & burn rates', 'On-call & escalationsIncident runbooks'],
 		category: 'Enterprise IT - SRE',
 		link: 'https://ziontechgroup.com/uptime-slo-monitor',
 		variant: 'quantum-cyberpunk',
@@ -210,7 +204,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
-		features: ['Expiry alerts', 'Issuer checks', 'Auto-renew validation', 'Inventory export'],
+		features: ['Expiry alertsIssuer checks', 'Auto-renew validationInventory export'],
 		category: 'Enterprise IT - Security',
 		link: 'https://ziontechgroup.com/tls-certificate-monitor',
 		variant: 'default',
@@ -227,7 +221,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
-		features: ['Change detection', 'Misconfig alerts', 'TTL insights', 'Export & audit'],
+		features: ['Change detectionMisconfig alerts', 'TTL insightsExport & audit'],
 		category: 'Enterprise IT - Networking',
 		link: 'https://ziontechgroup.com/domain-dns-monitor',
 		variant: 'default',
@@ -246,7 +240,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.',
-		features: ['HTML/Markdown to PDF', 'Headers/footers', 'Watermarks', 'Async webhooks'],
+		features: ['HTML/Markdown to PDFHeaders/footers', 'WatermarksAsync webhooks'],
 		category: 'Micro SaaS',
 		link: 'https://ziontechgroup.com/pdf-render-api',
 		variant: 'holographic-matrix',
@@ -263,7 +257,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
-		features: ['RUM collection', 'CWV dashboards', 'Waterfall analysis', 'Alerts & webhooks'],
+		features: ['RUM collectionCWV dashboards', 'Waterfall analysisAlerts & webhooks'],
 		category: 'Micro SaaS',
 		link: 'https://ziontechgroup.com/browser-performance-monitor',
 		variant: 'quantum-holographic',
@@ -280,7 +274,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.',
-		features: ['Edge evaluation', 'Targeting & segments', 'Experiments', 'SDKs & audit'],
+		features: ['Edge evaluationTargeting & segments', 'ExperimentsSDKs & audit'],
 		category: 'Micro SaaS',
 		link: 'https://ziontechgroup.com/feature-flags-edge',
 		variant: 'quantum-holographic',
@@ -297,7 +291,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
-		features: ['Cron & schedules', 'Retries & DLQs', 'Logs & traces', 'Alerts & webhooks'],
+		features: ['Cron & schedulesRetries & DLQs', 'Logs & tracesAlerts & webhooks'],
 		category: 'Micro SaaS',
 		link: 'https://ziontechgroup.com/serverless-cron-manager',
 		variant: 'default',
@@ -316,7 +310,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
-		features: ['Control mapping', 'Evidence collection', 'Change tracking', 'Export & auditor access'],
+		features: ['Control mappingEvidence collection', 'Change trackingExport & auditor access'],
 		category: 'Enterprise IT - Compliance',
 		link: 'https://ziontechgroup.com/soc2-evidence-automation',
 		variant: 'holographic-neural',
@@ -333,7 +327,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
-		features: ['DDQs and questionnaires', 'Risk scoring', 'Continuous monitoring', 'Dashboards & export'],
+		features: ['DDQs and questionnairesRisk scoring', 'Continuous monitoringDashboards & export'],
 		category: 'Enterprise IT - Compliance',
 		link: 'https://ziontechgroup.com/vendor-risk-automation',
 		variant: 'quantum-entanglement',
@@ -352,7 +346,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
-		features: ['Capture & inspect', 'Replay with backoff', 'Signature verification', 'Forwarding rules'],
+		features: ['Capture & inspectReplay with backoff', 'Signature verificationForwarding rules'],
 		category: 'Micro SaaS',
 		link: 'https://ziontechgroup.com/webhook-relay-replay',
 		variant: 'cyberpunk-holographic',
@@ -369,7 +363,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.',
-		features: ['WORM retention', 'Export APIs', 'Fine-grained access', 'Tamper evidence'],
+		features: ['WORM retentionExport APIs', 'Fine-grained accessTamper evidence'],
 		category: 'Enterprise IT - Security',
 		link: 'https://ziontechgroup.com/audit-log-vault',
 		variant: 'quantum-neural',
@@ -388,7 +382,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$129',
 		period: '/month',
 		description: 'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
-		features: ['Natural TTS/ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
+		features: ['Natural TTS/ASRRouting & handoff', 'CRM syncAnalytics'],
 		category: 'AI & Assistants',
 		link: 'https://ziontechgroup.com/ai-phone-agent',
 		variant: 'quantum-holographic-advanced',
@@ -407,7 +401,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		price: '$89',
 		period: '/month',
 		description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
-		features: ['Managed vector DB', 'Ingestion pipelines', 'Metadata filters', 'Access controls'],
+		features: ['Managed vector DBIngestion pipelines', 'Metadata filtersAccess controls'],
 		category: 'AI & Search',
 		link: 'https://ziontechgroup.com/vector-search-starter',
 		variant: 'quantum',
@@ -416,5 +410,5 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		trialDays: 14,
 		setupTime: '2 hours',
 		contactInfo
-	}];
+	}],
 

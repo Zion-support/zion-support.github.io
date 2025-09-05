@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
 const AboutPage: React.FC = () => {
   const values = [
@@ -43,9 +43,9 @@ const AboutPage: React.FC = () => {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
   ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
+} from 'lucide-react',
+import SmartHeader from '../components/SmartHeader',
+import SmartFooter from '../components/SmartFooter',
 
 export default function AboutPage() {
   const stats = [
@@ -53,7 +53,7 @@ export default function AboutPage() {
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
-  ];
+  ],
 
   const values = [
     {
@@ -80,7 +80,7 @@ export default function AboutPage() {
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
     }
-  ];
+  ],
 
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
@@ -89,7 +89,7 @@ export default function AboutPage() {
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
-  ];
+  ],
 
   const team = [
     {
@@ -120,7 +120,7 @@ export default function AboutPage() {
       image: '/api/placeholder/150/150',
       color: 'from-red-500 to-orange-500'
     }
-  ];
+  ],
 
   const milestones = [
     {
@@ -153,11 +153,11 @@ export default function AboutPage() {
       title: 'Future Vision',
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
-  ];
+  ],
 
-import React from 'react';
-import Head from 'next/head';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Button from '../components/ui/Button',
 
 export default function AboutPage() {
   return (
@@ -190,7 +190,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <section className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>
               <ul className="text-gray-300 space-y-2">
@@ -212,7 +212,7 @@ export default function AboutPage() {
         </div>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default AboutPage;
+export default AboutPage,

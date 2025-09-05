@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import Head from 'next/head',
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 const Services = () => {
   const services = [
@@ -47,7 +47,7 @@ const Services = () => {
       href: "/services/mobile-development",
       features: ["iOS Development", "Android Development", "Cross-Platform Apps", "App Store Optimization"]
     }
-  ];
+  ],
 
   return (
     <EnhancedLayout>
@@ -94,13 +94,13 @@ const Services = () => {
           <p className="text-blue-100 mb-6">
             Let's discuss how our technology services can transform your business.
           </p>
-          <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
             Contact Us Today
           </Link>
         </div>
       </main>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default Services;
+export default Services,

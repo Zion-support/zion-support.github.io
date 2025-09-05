@@ -1,14 +1,14 @@
 
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async",
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  canonical?: string;
-  noindex?: boolean;
+  title: string,
+  description: string,
+  keywords?: string,
+  ogImage?: string,
+  ogUrl?: string,
+  canonical?: string,
+  noindex?: boolean
 }
 
 export function SEO({
@@ -20,8 +20,8 @@ export function SEO({
   ogUrl,
   canonical,
   noindex}: SEOProps) {
-  const siteTitle = "Zion - The Future of Tech & AI Marketplace";
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace",
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
   return (
     <Helmet>
@@ -49,5 +49,5 @@ export function SEO({
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>
-  );
+  ),
 }

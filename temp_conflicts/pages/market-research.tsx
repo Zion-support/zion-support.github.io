@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react',
 
 export default function MarketResearchPage() {
   const marketSegments = [
@@ -11,17 +11,13 @@ export default function MarketResearchPage() {
       marketSize: '$15.7B',
       growthRate: '23.4% CAGR',
       keyTrends: [
-        'Generative AI adoption accelerating',
-        'AI-powered automation increasing',
-        'Natural language processing growth',
-        'Computer vision applications expanding'
+        'Generative AI adoption acceleratingAI-powered automation increasing',
+        'Natural language processing growthComputer vision applications expanding'
       ],
-      topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
+      topPlayers: ['OpenAIAnthropic', 'Google AIMicrosoft Azure AI'],
       opportunities: [
-        'AI content generation tools',
-        'Predictive analytics platforms',
-        'Automated customer service',
-        'Intelligent process automation'
+        'AI content generation toolsPredictive analytics platforms',
+        'Automated customer serviceIntelligent process automation'
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className="w-8 h-8 text-white" />
@@ -31,17 +27,13 @@ export default function MarketResearchPage() {
       marketSize: '$8.9B',
       growthRate: '18.7% CAGR',
       keyTrends: [
-        'Real-time analytics demand',
-        'Cloud database migration',
-        'Data privacy regulations',
-        'Performance optimization focus'
+        'Real-time analytics demandCloud database migration',
+        'Data privacy regulationsPerformance optimization focus'
       ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
+      topPlayers: ['DataDogNew Relic', 'SolarWindsSplunk'],
       opportunities: [
-        'Database performance monitoring',
-        'Real-time analytics dashboards',
-        'Data visualization tools',
-        'Query optimization platforms'
+        'Database performance monitoringReal-time analytics dashboards',
+        'Data visualization toolsQuery optimization platforms'
       ],
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className="w-8 h-8 text-white" />
@@ -51,17 +43,13 @@ export default function MarketResearchPage() {
       marketSize: '$12.3B',
       growthRate: '21.2% CAGR',
       keyTrends: [
-        'Zero-trust security adoption',
-        'Multi-factor authentication growth',
-        'API security concerns',
-        'Compliance requirements increasing'
+        'Zero-trust security adoptionMulti-factor authentication growth',
+        'API security concernsCompliance requirements increasing'
       ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+      topPlayers: ['OktaAuth0', 'Ping IdentityOneLogin'],
       opportunities: [
-        'Identity verification platforms',
-        'API security gateways',
-        'Compliance monitoring tools',
-        'Threat detection systems'
+        'Identity verification platformsAPI security gateways',
+        'Compliance monitoring toolsThreat detection systems'
       ],
       color: 'from-green-500 to-emerald-600',
       icon: <Target className="w-8 h-8 text-white" />
@@ -71,17 +59,13 @@ export default function MarketResearchPage() {
       marketSize: '$22.1B',
       growthRate: '19.8% CAGR',
       keyTrends: [
-        'Self-service BI adoption',
-        'Real-time data integration',
-        'Mobile BI growth',
-        'Predictive analytics demand'
+        'Self-service BI adoptionReal-time data integration',
+        'Mobile BI growthPredictive analytics demand'
       ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+      topPlayers: ['TableauPower BI', 'LookerQlik'],
       opportunities: [
-        'Custom dashboard builders',
-        'Data integration platforms',
-        'Mobile analytics solutions',
-        'Predictive modeling tools'
+        'Custom dashboard buildersData integration platforms',
+        'Mobile analytics solutionsPredictive modeling tools'
       ],
       color: 'from-orange-500 to-red-600',
       icon: <Activity className="w-8 h-8 text-white" />
@@ -91,17 +75,13 @@ export default function MarketResearchPage() {
       marketSize: '$6.8B',
       growthRate: '24.1% CAGR',
       keyTrends: [
-        'Microservices architecture growth',
-        'API-first development',
-        'Rate limiting importance',
-        'Developer experience focus'
+        'Microservices architecture growthAPI-first development',
+        'Rate limiting importanceDeveloper experience focus'
       ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+      topPlayers: ['KongTyk', 'AWS API GatewayAzure API Management'],
       opportunities: [
-        'API rate limiting services',
-        'Developer portal platforms',
-        'API analytics tools',
-        'Webhook management systems'
+        'API rate limiting servicesDeveloper portal platforms',
+        'API analytics toolsWebhook management systems'
       ],
       color: 'from-indigo-500 to-purple-600',
       icon: <Globe className="w-8 h-8 text-white" />
@@ -111,79 +91,63 @@ export default function MarketResearchPage() {
       marketSize: '$9.4B',
       growthRate: '20.5% CAGR',
       keyTrends: [
-        'Privacy-compliant tracking',
-        'Real-time user insights',
-        'Conversion optimization focus',
-        'Mobile app analytics growth'
+        'Privacy-compliant trackingReal-time user insights',
+        'Conversion optimization focusMobile app analytics growth'
       ],
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+      topPlayers: ['HotjarFullStory', 'MixpanelAmplitude'],
       opportunities: [
-        'Heatmap and session recording',
-        'A/B testing platforms',
-        'User journey mapping tools',
-        'Conversion funnel analytics'
+        'Heatmap and session recordingA/B testing platforms',
+        'User journey mapping toolsConversion funnel analytics'
       ],
       color: 'from-teal-500 to-cyan-600',
       icon: <Users className="w-8 h-8 text-white" />
     }
-  ];
+  ],
 
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
-      examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
+      examples: ['SalesforceMicrosoft', 'OracleSAP'],
       strengths: [
-        'Extensive resources and R&D',
-        'Established customer base',
-        'Comprehensive feature sets',
-        'Global presence and support'
+        'Extensive resources and R&DEstablished customer base',
+        'Comprehensive feature setsGlobal presence and support'
       ],
       weaknesses: [
-        'High pricing and complexity',
-        'Slow innovation cycles',
-        'Difficult customization',
-        'Long implementation times'
+        'High pricing and complexitySlow innovation cycles',
+        'Difficult customizationLong implementation times'
       ],
       marketShare: '45-60%',
       pricing: 'High ($1000+/month)'
     },
     {
       company: 'Mid-Market Leaders',
-      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'],
+      examples: ['HubSpotAtlassian', 'SlackZoom'],
       strengths: [
-        'Balanced features and pricing',
-        'Strong user experience',
-        'Active community support',
-        'Regular feature updates'
+        'Balanced features and pricingStrong user experience',
+        'Active community supportRegular feature updates'
       ],
       weaknesses: [
-        'Limited customization options',
-        'Growing complexity over time',
-        'Dependency on integrations',
-        'Scalability challenges'
+        'Limited customization optionsGrowing complexity over time',
+        'Dependency on integrationsScalability challenges'
       ],
       marketShare: '25-35%',
       pricing: 'Medium ($100-500/month)'
     },
     {
       company: 'Micro SaaS Innovators',
-      examples: ['Zapier', 'Notion', 'Airtable', 'Linear'],
+      examples: ['ZapierNotion', 'AirtableLinear'],
       strengths: [
-        'Focused feature sets',
-        'Fast innovation cycles',
-        'Affordable pricing',
-        'Easy implementation'
+        'Focused feature setsFast innovation cycles',
+        'Affordable pricingEasy implementation'
       ],
       weaknesses: [
-        'Limited feature scope',
-        'Smaller support teams',
-        'Integration dependencies',
-        'Market volatility risk'
+        'Limited feature scopeSmaller support teams',
+        'Integration dependenciesMarket volatility risk'
       ],
       marketShare: '15-25%',
       pricing: 'Low ($10-100/month)'
     }
-  ];
+  ],
 
   const marketTrends = [
     {
@@ -192,10 +156,8 @@ export default function MarketResearchPage() {
       impact: 'High',
       timeline: '2024-2026',
       examples: [
-        'AI-powered content generation',
-        'Intelligent automation',
-        'Predictive analytics',
-        'Natural language interfaces'
+        'AI-powered content generationIntelligent automation',
+        'Predictive analyticsNatural language interfaces'
       ],
       opportunities: 'AI integration services, custom AI models, AI consulting'
     },
@@ -205,10 +167,8 @@ export default function MarketResearchPage() {
       impact: 'High',
       timeline: '2024-2027',
       examples: [
-        'GDPR compliance tools',
-        'Privacy analytics platforms',
-        'Data anonymization services',
-        'Consent management systems'
+        'GDPR compliance toolsPrivacy analytics platforms',
+        'Data anonymization servicesConsent management systems'
       ],
       opportunities: 'Privacy compliance tools, data governance platforms, audit services'
     },
@@ -218,10 +178,8 @@ export default function MarketResearchPage() {
       impact: 'Medium',
       timeline: '2024-2026',
       examples: [
-        'API management platforms',
-        'Developer experience tools',
-        'API analytics and monitoring',
-        'Integration platforms'
+        'API management platformsDeveloper experience tools',
+        'API analytics and monitoringIntegration platforms'
       ],
       opportunities: 'API development tools, integration services, developer portals'
     },
@@ -231,30 +189,24 @@ export default function MarketResearchPage() {
       impact: 'Medium',
       timeline: '2024-2025',
       examples: [
-        'Real-time dashboards',
-        'Live collaboration tools',
-        'Instant notifications',
-        'Streaming analytics'
+        'Real-time dashboardsLive collaboration tools',
+        'Instant notificationsStreaming analytics'
       ],
       opportunities: 'Real-time platforms, streaming services, live collaboration tools'
     }
-  ];
+  ],
 
   const pricingStrategies = [
     {
       strategy: 'Value-Based Pricing',
       description: 'Pricing based on customer value and ROI',
       pros: [
-        'Higher profit margins',
-        'Customer alignment',
-        'Scalable pricing model',
-        'Competitive differentiation'
+        'Higher profit marginsCustomer alignment',
+        'Scalable pricing modelCompetitive differentiation'
       ],
       cons: [
-        'Complex pricing structure',
-        'Customer education required',
-        'Value measurement challenges',
-        'Pricing optimization needed'
+        'Complex pricing structureCustomer education required',
+        'Value measurement challengesPricing optimization needed'
       ],
       bestFor: 'Enterprise solutions, high-value services, ROI-focused products'
     },
@@ -262,16 +214,12 @@ export default function MarketResearchPage() {
       strategy: 'Usage-Based Pricing',
       description: 'Pricing based on actual usage or consumption',
       pros: [
-        'Fair pricing model',
-        'Easy to understand',
-        'Scalable with growth',
-        'Low barrier to entry'
+        'Fair pricing modelEasy to understand',
+        'Scalable with growthLow barrier to entry'
       ],
       cons: [
-        'Revenue predictability challenges',
-        'Complex billing systems',
-        'Usage optimization needed',
-        'Customer cost management'
+        'Revenue predictability challengesComplex billing systems',
+        'Usage optimization neededCustomer cost management'
       ],
       bestFor: 'API services, storage platforms, compute resources'
     },
@@ -279,20 +227,16 @@ export default function MarketResearchPage() {
       strategy: 'Freemium Model',
       description: 'Free basic tier with paid premium features',
       pros: [
-        'Low customer acquisition cost',
-        'Viral growth potential',
-        'Large user base',
-        'Easy market entry'
+        'Low customer acquisition costViral growth potential',
+        'Large user baseEasy market entry'
       ],
       cons: [
-        'Low conversion rates',
-        'Revenue per user challenges',
-        'Support cost management',
-        'Feature differentiation needed'
+        'Low conversion ratesRevenue per user challenges',
+        'Support cost managementFeature differentiation needed'
       ],
       bestFor: 'Consumer tools, productivity apps, collaboration platforms'
     }
-  ];
+  ],
 
   const investmentInsights = [
     {
@@ -319,7 +263,7 @@ export default function MarketResearchPage() {
       change: '-0.8 years YoY',
       description: 'Average time for SaaS companies to reach profitability'
     }
-  ];
+  ],
 
   return (
     <>
@@ -515,7 +459,7 @@ export default function MarketResearchPage() {
                   {/* Examples */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <div className="text-sm text-gray-300">{analysis.examples.join(', ')}</div>
+                    <div className="text-sm text-gray-300">{analysis.examples.join()}</div>
                   </div>
 
                   {/* Market Share & Pricing */}
@@ -694,7 +638,7 @@ export default function MarketResearchPage() {
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               size="lg"
@@ -714,5 +658,5 @@ export default function MarketResearchPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

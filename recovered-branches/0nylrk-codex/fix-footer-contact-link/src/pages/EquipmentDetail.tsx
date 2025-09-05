@@ -1,38 +1,38 @@
 
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
 
 interface EquipmentSpecification {
-  name: string;
-  value: string;
+  name: string,
+  value: string
 }
 
 interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
+  returnPolicy?: string
 }
 
 // Sample data - in a real app this would come from an API
@@ -40,7 +40,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
     name: "Pro Camera X1000",
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
+    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
@@ -124,16 +124,16 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty",
     returnPolicy: "21-day return policy for items in original condition"
   }
-};
+},
 
 export default function EquipmentDetail() {
-  const { equipmentId } = useParams() as { equipmentId?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
+  const { equipmentId } = useParams() as { equipmentId?: string },
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [quantity, setQuantity] = useState(1),
+  const [isAdding, setIsAdding] = useState(false),
   
   // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
+  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
   
   if (!equipment) {
     return (
@@ -149,32 +149,32 @@ export default function EquipmentDetail() {
         </div>
         <Footer />
       </>
-    );
+    ),
   }
 
   const handleAddToCart = () => {
-    setIsAdding(true);
+    setIsAdding(true),
     
     // Simulate API call
     setTimeout(() => {
-      setIsAdding(false);
+      setIsAdding(false),
       toast({
         title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`});
-    }, 800);
-  };
+        description: `${quantity}x ${equipment.name} added to your cart.`}),
+    }, 800),
+  },
 
   const handleBuyNow = () => {
-    setIsAdding(true);
+    setIsAdding(true),
     
     // Simulate API call
     setTimeout(() => {
-      setIsAdding(false);
+      setIsAdding(false),
       toast({
         title: "Proceeding to checkout",
-        description: `Preparing your order for ${equipment.name}.`});
-    }, 800);
-  };
+        description: `Preparing your order for ${equipment.name}.`}),
+    }, 800),
+  },
 
   return (
     <>
@@ -423,5 +423,5 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

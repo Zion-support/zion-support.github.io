@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const TechnicalDocumentationChat: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const TechnicalDocumentationChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default TechnicalDocumentationChat;
+export default TechnicalDocumentationChat,

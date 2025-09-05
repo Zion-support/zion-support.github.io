@@ -1,19 +1,19 @@
-import React from "react";
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import Image from "next/image";
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import Image from "next/image",
 
 interface ListingCardProps {
-  id?: string;
-  title: string;
-  description: string;
-  images?: string[];
-  category: string;
-  tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string; };
-  className?: string;
-  profileType?: 'service' | 'talent';
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent',
 }
 
 export function ListingCard({ 
@@ -29,7 +29,7 @@ export function ListingCard({
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1'),
 
   return (
     <Link
@@ -81,5 +81,5 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  );
+  ),
 }

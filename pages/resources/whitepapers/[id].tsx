@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
@@ -16,10 +16,8 @@ const whitepapers = {
     content: {
       executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       keyTopics: [
-        'Understanding Autonomous Systems',
-        'Implementation Strategies',
-        'Best Practices & Case Studies',
-        'Future Trends & Predictions'
+        'Understanding Autonomous SystemsImplementation Strategies',
+        'Best Practices & Case StudiesFuture Trends & Predictions'
       ],
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
@@ -35,10 +33,8 @@ const whitepapers = {
     content: {
       executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
       keyTopics: [
-        'Ethical AI Principles',
-        'Implementation Guidelines',
-        'Risk Assessment & Mitigation',
-        'Compliance & Governance'
+        'Ethical AI PrinciplesImplementation Guidelines',
+        'Risk Assessment & MitigationCompliance & Governance'
       ],
       targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
     }
@@ -54,21 +50,19 @@ const whitepapers = {
     content: {
       executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       keyTopics: [
-        'ROI Calculation Methods',
-        'Cost-Benefit Analysis',
-        'Success Metrics & KPIs',
-        'Investment Justification Strategies'
+        'ROI Calculation MethodsCost-Benefit Analysis',
+        'Success Metrics & KPIsInvestment Justification Strategies'
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
   }
-};
+},
 
 export default function WhitepaperPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
   
-  const whitepaper = whitepapers[id as keyof typeof whitepapers];
+  const whitepaper = whitepapers[id as keyof typeof whitepapers],
 
   if (!whitepaper) {
     return (
@@ -77,13 +71,13 @@ export default function WhitepaperPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Whitepaper Not Found</h1>
             <p className="text-white/80 mb-8">The requested whitepaper could not be found.</p>
-            <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+            <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
               Back to Resources
             </Link>
           </div>
         </main>
       </div>
-    );
+    )
   }
 
   return (
@@ -200,7 +194,7 @@ export default function WhitepaperPage() {
                 <p className="text-white/80 mb-6">
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
                     Contact Us
                   </Link>
@@ -214,5 +208,5 @@ export default function WhitepaperPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

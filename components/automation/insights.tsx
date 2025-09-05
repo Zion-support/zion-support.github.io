@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useState } from 'react',
+import Head from 'next/head',
 
 export default function AutomationInsightsPage() {
-  const [intel, setIntel] = useState<any>(null);
-  const [talentMd, setTalentMd] = useState<string>('');
+  const [intel, setIntel] = useState<any>(null),
+  const [talentMd, setTalentMd] = useState<string>(''),
 
   useEffect(() => {
-    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {});
-  }, []);
+    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),
+    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {}),
+  }, []),
 
   return (
     <div>
@@ -50,5 +50,5 @@ export default function AutomationInsightsPage() {
         )}
       </section>
     </div>
-  );
+  ),
 }
