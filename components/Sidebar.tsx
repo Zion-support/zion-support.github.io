@@ -24,16 +24,13 @@ import {
   Network,
   Monitor
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -108,9 +105,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
-        { label: 'Documentation', href: '/docs' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/whitepapers' },
+        { label: 'Webinars', href: '/webinars' },
         { label: 'Tutorials', href: '/tutorials' },
         { label: 'Guides', href: '/guides' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
       ]
     },
     {
@@ -125,6 +127,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
       ]
+    }
+  ];
     },
     {
       label: 'Support',
@@ -147,7 +151,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
+  ];
+  const isActive = (href: string) => {
+    return router.pathname === href;
+  };
     { label: 'Search', href: '/search', icon: Search },
+    { label: 'Sitemap', href: '/sitemap', icon: Search },
     { label: 'Newsletter', href: '/newsletter', icon: Mail },
   ];
 
@@ -164,7 +173,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
@@ -186,7 +194,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-
         {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
@@ -198,7 +205,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             />
           </div>
         </div>
-
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
@@ -217,21 +223,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  
                   {item.hasSubmenu && (
                     <button
                       onClick={() => toggleSection(item.label)}
                       className="p-2 hover:bg-gray-800 rounded-lg"
                     >
-                      <ChevronRight 
+                      <ChevronRight
                         className={`w-4 h-4 transition-transform ${
                           expandedSections.includes(item.label) ? 'rotate-90' : ''
-                        }`} 
+                        }`}
                       />
                     </button>
                   )}
                 </div>
-
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
                   <div className="ml-8 mt-2 space-y-1">
                     {item.submenu?.map((subItem, subIndex) => (
@@ -253,6 +257,65 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 )}
               </div>
             ))}
+          </div>
+        </nav>
+
+        <nav className="p-4">
+          <div className="space-y-2">
+            {navigationItems.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div key={index}>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                      }`}
+                      onClick={onClose}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {item.hasSubmenu && (
+                      <button
+                        onClick={() => toggleSection(item.label)}
+                        className="p-2 hover:bg-gray-800 rounded-lg"
+                      >
+                        <ChevronRight 
+                          className={`w-4 h-4 transition-transform ${
+                            expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+
+                  {item.hasSubmenu && expandedSections.includes(item.label) && (
+                    <div className="ml-8 mt-2 space-y-1">
+                      {item.submenu?.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href}
+                          className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                            isActive(subItem.href)
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                          <span>{subItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </nav>
 
@@ -282,6 +345,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <p className="mb-2">Need help?</p>
             <p className="text-blue-400">contact@ziontechgroup.com</p>
             <p className="text-blue-400">+1 (555) 123-4567</p>
+            <p className="text-blue-400">kleber@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 302 464 0950</p>
           </div>
         </div>
       </div>

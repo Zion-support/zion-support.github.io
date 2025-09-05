@@ -1,9 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { 
+  BookOpen, 
+  ArrowRight,
+  Search,
+  FileText,
+  Code,
+  Settings,
+  Users,
+  Globe,
+  Download,
+  ExternalLink,
+  ChevronRight,
+  Filter
+} from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
+import Layout from '../components/Layout';
 import SimpleLayout from '../components/SimpleLayout';
 
+ursor/website-audit-and-update-with-deployment-9cae
 const categories = [
   {
     title: 'Getting Started',
@@ -55,6 +72,7 @@ const categories = [
   }
 ];
 
+ursor/website-audit-and-update-with-deployment-9cae
 const popularDocs = [
   { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
   { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
@@ -62,6 +80,7 @@ const popularDocs = [
   { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
 ];
 
+ursor/website-audit-and-update-with-deployment-9cae
 export default function DocsPage() {
   return (
     <SimpleLayout
@@ -77,6 +96,7 @@ export default function DocsPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
+ursor/website-audit-and-update-with-deployment-9cae
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -112,6 +132,7 @@ export default function DocsPage() {
           </div>
         </section>
 
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Search Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -133,6 +154,7 @@ export default function DocsPage() {
           </div>
         </section>
 
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Popular Docs */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -150,6 +172,7 @@ export default function DocsPage() {
               </p>
             </motion.div>
 
+ursor/website-audit-and-update-with-deployment-9cae
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {popularDocs.map((doc, index) => (
                 <motion.div
@@ -183,6 +206,7 @@ export default function DocsPage() {
           </div>
         </section>
 
+ursor/website-audit-and-update-with-deployment-9cae
         {/* Categories Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -200,6 +224,7 @@ export default function DocsPage() {
               </p>
             </motion.div>
 
+ursor/website-audit-and-update-with-deployment-9cae
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {categories.map((category, index) => (
                 <motion.div
@@ -219,6 +244,7 @@ export default function DocsPage() {
                     </div>
                   </div>
 
+ursor/website-audit-and-update-with-deployment-9cae
                   <div className="space-y-4">
                     {category.docs.map((doc, docIndex) => (
                       <div key={docIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -234,6 +260,7 @@ export default function DocsPage() {
                     ))}
                   </div>
 
+ursor/website-audit-and-update-with-deployment-9cae
                   <Link
                     href="#"
                     className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
@@ -247,6 +274,7 @@ export default function DocsPage() {
           </div>
         </section>
 
+ursor/website-audit-and-update-with-deployment-9cae
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -280,6 +308,10 @@ export default function DocsPage() {
           </div>
         </section>
       </div>
+    </MainLayout>
+    </Layout>
     </SimpleLayout>
+ursor/website-audit-and-update-with-deployment-9cae
   );
 }
+
