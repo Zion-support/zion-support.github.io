@@ -6,12 +6,31 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+<<<<<<< HEAD
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
+=======
+    "start": "next start -p 3000",
+    "lint": "eslint . --max-warnings 1000",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest --config jest.config.cjs",
+    "test:smoke": "jest --config jest.config.smoke.cjs",
+    "clean": "rm -rf .next out dist",
+    "check": "npm run lint && npm run type-check && npm run test:smoke",
+    "pm2:start": "pm2 start ecosystem.config.cjs --update-env",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs --lines 200"
+  },
+  "pm2": {
+    "ecosystem": "ecosystem.maintenance.cjs"
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
   },
   "dependencies": {
     "next": "^14.0.0",

@@ -1,15 +1,23 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import globals from 'globals';
 =======
 import react from 'eslint-plugin-react';
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
+=======
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
 import tsparser from '@typescript-eslint/parser';
 <<<<<<< HEAD
 
 export default [
+  { ignores: ['dist/**', 'out/**', '.next/**', 'node_modules/**', '*.config.js', '*.config.cjs', 'scripts/**', 'tools/**', 'pm2-automation/**', 'automation/**', 'deployment/**', 'e2e/**', 'ci-cd-reports/**', 'build-reports/**', 'all-automations-reports/**', 'error-prevention-reports/**', 'link-reports/**', 'lint-target/**', 'api-disabled/**', 'api.disabled/**', 'api.disabled.temp/**', 'components.disabled/**', 'components.disabled_full/**', 'corrupted_files_backup_2/**', 'broken_files_backup/**', 'ai-optimization-backups/**', 'disabled-api/**', 'data/**', 'hooks/**', 'lib/**', 'services/**', 'public/**', 'styles/**', 'server/**', 'netlify/**', 'middleware.ts', 'middleware.security.ts', 'cypress.config.ts', 'jest.config.jsx', 'jest.setup.js', 'jest.setup.jsx', 'next.config.analyze.js', 'next.config.analyzer.js', 'deployment/next.config.js', 'deployments/**', '*.cjs', '*.js', '*.sh', '*.md', '*.txt', '*.log', '*.backup', '*.disabled', '*.minimal', '*.working', '*.temp', '*.cache', '*.lock', '*.toml', '*.html', '*.json', '*.yaml', '*.yml', '*.xml', '*.csv', '*.sql', '*.py', '*.rb', '*.php', '*.java', '*.cpp', '*.c', '*.h', '*.hpp', '*.cs', '*.vb', '*.swift', '*.kt', '*.scala', '*.go', '*.rs', '*.dart', '*.r', '*.m', '*.mm', '*.pl', '*.pm', '*.t', '*.pod', '*.podspec', '*.xcconfig', '*.pbxproj', '*.xcodeproj', '*.xcworkspace', '*.storyboard', '*.xib', '*.nib', '*.strings', '*.lproj', '*.bundle', '*.framework', '*.dylib', '*.a', '*.so', '*.dll', '*.exe', '*.app', '*.ipa', '*.apk', '*.deb', '*.rpm', '*.msi', '*.dmg', '*.pkg', '*.zip', '*.tar', '*.gz', '*.bz2', '*.xz', '*.7z', '*.rar', '*.iso', '*.img', '*.bin', '*.hex', '*.elf', '*.o', '*.obj', '*.lib', '*.exp', '*.pdb', '*.map', '*.sym', '*.dwarf', '*.stabs', '*.coff', '*.pe', '*.macho', '*.fat', '*.universal', '*.bundle', '*.framework', '*.dylib', '*.a', '*.so', '*.dll', '*.exe', '*.app', '*.ipa', '*.apk', '*.deb', '*.rpm', '*.msi', '*.dmg', '*.pkg', '*.zip', '*.tar', '*.gz', '*.bz2', '*.xz', '*.7z', '*.rar', '*.iso', '*.img', '*.bin', '*.hex', '*.elf', '*.o', '*.obj', '*.lib', '*.exp', '*.pdb', '*.map', '*.sym', '*.dwarf', '*.stabs', '*.coff', '*.pe', '*.macho', '*.fat', '*.universal'] },
   {
     ignores: [
 =======
@@ -30,6 +38,7 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+<<<<<<< HEAD
       ecmaVersion: 'latest',
       sourceType: 'module',
       parser: typescriptParser,
@@ -342,12 +351,57 @@ export default [{
       'no-console': 'warn',
       'no-undef': 'error'
     }
+=======
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    settings: { react: { version: '18.3' } },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'no-unused-vars': 'warn',
+      'no-undef': 'off',
+      'no-console': 'off',
+      'no-debugger': 'warn',
+      'prefer-const': 'warn',
+      'no-var': 'warn',
+      'no-unreachable': 'warn',
+      'no-duplicate-case': 'warn',
+      'no-empty': 'warn',
+      'no-extra-semi': 'warn',
+      'no-func-assign': 'warn',
+      'no-invalid-regexp': 'warn',
+      'no-irregular-whitespace': 'warn',
+      'no-obj-calls': 'warn',
+      'no-sparse-arrays': 'warn',
+      'no-unexpected-multiline': 'warn',
+      'no-unreachable': 'warn',
+      'use-isnan': 'warn',
+      'valid-typeof': 'warn',
+    },
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
@@ -357,6 +411,7 @@ export default [{
         sourceType: 'module',
       },
     },
+<<<<<<< HEAD
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
@@ -364,11 +419,22 @@ export default [{
     },
     rules: {
       ...tseslint.configs.recommended.rules,
+=======
+    settings: { react: { version: '18.3' } },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
@@ -1058,4 +1124,28 @@ export default [{
   },
 >>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
+=======
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-undef': 'off',
+      'no-console': 'off',
+      'no-debugger': 'warn',
+      'prefer-const': 'warn',
+      'no-var': 'warn',
+      'no-unreachable': 'warn',
+      'no-duplicate-case': 'warn',
+      'no-empty': 'warn',
+      'no-extra-semi': 'warn',
+      'no-func-assign': 'warn',
+      'no-invalid-regexp': 'warn',
+      'no-irregular-whitespace': 'warn',
+      'no-obj-calls': 'warn',
+      'no-sparse-arrays': 'warn',
+      'no-unexpected-multiline': 'warn',
+      'no-unreachable': 'warn',
+      'use-isnan': 'warn',
+      'valid-typeof': 'warn',
+    },
+  },
+>>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
 ];

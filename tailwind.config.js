@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -34,26 +33,14 @@ module.exports = {
           800: '#1e293b',
           900: '#0f172a',
         },
-        accent: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
-        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-up': 'slideUp 0.3s ease-out',
         'bounce-slow': 'bounce 2s infinite',
       },
       keyframes: {
@@ -62,18 +49,11 @@ module.exports = {
           '100%': { opacity: '1' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
     },
   },
-  plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@tailwindcss/forms'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@tailwindcss/typography'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
+  plugins: [],
+}
