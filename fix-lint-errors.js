@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Skip node_modules, .git, and other common directories}; if (!['node_modules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};
 // Function to fix common syntax errors;
 function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/g, (match, p1) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}; return p1 + ',\n }};
@@ -16,6 +17,19 @@ async function $1() {; // Get all TypeScript/JavaScript files; const files = awa
 };
 };
 // Function to fix common syntax errors;
+=======
+
+      // Skip node_modules, .git, and other common directories};
+      if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+        files = files.concat(findFiles(fullPath, extensions))
+      };
+    } else if (extensions.some(ext => item.endsWith(ext))) {};
+      files.push(fullPath)
+};
+
+// Function to fix common syntax errors,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 function fixSyntaxErrors(content) {};
   let fixed = content,
   // Fix missing semicolons at end of lines (basic, cases),
@@ -29,9 +43,17 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
       fixed = "import _React from 'react',\n" + fixed,"
+<<<<<<< HEAD
 };
 };
   // Common Next.js patterns;
+=======
+
+    };
+  };
+  // Common Next.js patterns,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
     fixed = "import { useRouter } from 'next/router',\n" + fixed,"
 };
@@ -41,17 +63,27 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,"
 };
+<<<<<<< HEAD
 };
 // Function to remove unused variables;
 function removeUnusedVariables(content) {;
   // Remove common unused variable patterns};
 };
 // Main function;
+=======
+
+// Function to remove unused variables,
+function removeUnusedVariables(content) {,
+  // Remove common unused variable patterns};
+};
+// Main function,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _console.log(`✅ Fixe: d: ${file}`)
       };
     } catch (error) {};
       errorCount++,
@@ -59,18 +91,27 @@ function main() {};
 };
 };
   try {};
-    execSync('npm run lint', { stdio: 'pipe' }),',
+    execSync('npm run lint', { stdi: o: 'pipe' }),',
     _console.log('✅ All lint errors fixed!'),'
   } catch (error) {};
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         return match.replace(imports, cleanImports)};
+<<<<<<< HEAD
       return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
   const cleanImports = imports.trim().split(/\s+/).join();
+=======
+
+      return match,
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
+  // Check if imports have proper commas,
+    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,
+  const cleanImports = imports.trim().split(/\s+/).join(),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       return match.replace(imports, cleanImports)};
   );
   // Fix missing semicolons after variable declarations;
@@ -100,6 +141,13 @@ async function $1() {;
     } catch (error) {;
   console.error(`Error processing ${file}:`, error.message);
       errorCount++};
+<<<<<<< HEAD
 };
 ;
+=======
+  };
+,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+

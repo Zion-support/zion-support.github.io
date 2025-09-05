@@ -1,17 +1,17 @@
 
-import React from "react";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { cn } from "@/lib/utils";
+import React from "react",
+import Link from "next/link",
+import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils",
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
 
 interface QuickAccessProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -44,22 +44,22 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/community"
     },
     {
-      title: t('home.tool_mobile_app', 'Mobile App'),
-      description: t('home.tool_mobile_app_desc', 'Zion on the go'),
+      title: t('home.tool_mobile_appMobile App'),
+      description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-  ];
+  ],
 
   return (
     <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-            {t('home.quick_access_title', 'Quick Access')}
+            {t('home.quick_access_titleQuick Access')}
           </h2>
           <p className="text-zion-slate-light text-lg">
-            {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
+            {t('home.quick_access_subtitleJump directly to our most popular features')}
           </p>
         </div>
         
@@ -84,7 +84,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 
-export default QuickAccess;
+export default QuickAccess,

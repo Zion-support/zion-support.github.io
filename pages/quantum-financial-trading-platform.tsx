@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -35,6 +35,6 @@ export default function QuantumFinancialTradingPlatformPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

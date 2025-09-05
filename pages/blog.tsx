@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function BlogPage() {
 	return (
@@ -14,5 +14,5 @@ export default function BlogPage() {
 				<p className="text-gray-300">Insights, guides, and announcements. New content coming soon.</p>
 			</section>
 		</Layout>
-	);
+	),
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 ];
 ;
@@ -14,6 +15,21 @@ export default function ServicesPage() {;
       keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation";
     >;
       <div className="min-h-screen bg-gray-50">;
+=======
+
+
+  };
+],
+,
+export default function ServicesPage() {,
+  return (,
+    <Layout,
+      title="Our Services - Zion Tech Group",
+      description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",
+      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",
+    >,
+      <div className="min-h-screen bg-gray-50">,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
         {/* Hero Section */};
                     {/* Header */};
                     <div className="flex items-center mb-6">;
@@ -28,17 +44,27 @@ export default function ServicesPage() {;
                     {/* Description */};
                     <p className="text-gray-600 mb-6">{service.description}</p>;
                     {/* Services List */};
+<<<<<<< HEAD
                     <div className="mb-6">;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>;
                       <ul className="space-y-2">;
                         {service.services.map((item, idx) => (;
                           <li key={idx} className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />;
+=======
+                    <div className="mb-6">,
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
+                      <ul className="space-y-2">,
+                        {service.services.map((item, idx) => (,
+                          <li key={idx} className="flex items-center text-sm text-gray-600">,
+                            <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                             {item};
                     {/* CTA */};
                     <Link;
                       href={service.href};
                       Explore {service.title};
+<<<<<<< HEAD
                       <ArrowRight className="w-4 h-4 ml-2" />;
                     </Link>;
                   </div>;
@@ -47,4 +73,16 @@ export default function ServicesPage() {;
             </div>;
           </div>;
         </section>;
+=======
+                      <ArrowRight className="w-4 h-4 ml-2" />,
+                    </Link>,
+                  </div>,
+                </motion.div>,
+              ))};
+            </div>,
+          </div>,
+        </section>,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
         {/* Why Choose Us */};
+

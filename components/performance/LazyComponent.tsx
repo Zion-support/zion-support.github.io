@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -14,3 +15,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
+=======
+import React from 'react',
+},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

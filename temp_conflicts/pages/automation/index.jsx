@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import Head from 'next/head',
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 const Talent = () => {
   const openPositions = [
@@ -65,7 +65,7 @@ const Talent = () => {
       skills: ["Product Strategy", "Agile", "User Research", "Data Analysis", "Stakeholder Management"],
       href: "/talent/product-manager"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -98,7 +98,7 @@ const Talent = () => {
       description: "Generous parental leave, sabbaticals, and wellness programs",
       icon: "⚖️"
     }
-  ];
+  ],
 
   const values = [
     {
@@ -117,7 +117,7 @@ const Talent = () => {
       title: "Impact Driven",
       description: "We focus on solutions that make a real difference"
     }
-  ];
+  ],
 
   return (
     <EnhancedLayout>
@@ -260,7 +260,7 @@ const Talent = () => {
             We're always looking for talented individuals. Send us your resume and let's discuss 
             how you can contribute to our mission.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Send Resume
             </Link>
@@ -271,7 +271,7 @@ const Talent = () => {
         </div>
       </main>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default Talent;
+export default Talent,

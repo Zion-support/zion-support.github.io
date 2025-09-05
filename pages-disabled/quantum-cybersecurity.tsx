@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Eye, AlertTriangle, Zap, Cpu, 
   Database, Globe, ArrowRight, CheckCircle, Star, Users
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function QuantumCybersecurityPage() {
   const features = [
@@ -46,7 +46,7 @@ export default function QuantumCybersecurityPage() {
       description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
   const benefits = [
     "Protect against quantum computing attacks with future-proof encryption",
@@ -55,7 +55,7 @@ export default function QuantumCybersecurityPage() {
     "24/7 monitoring and automated incident response",
     "Scalable security that grows with your business",
     "Expert security team available around the clock"
-  ];
+  ],
 
   const threats = [
     {
@@ -78,7 +78,7 @@ export default function QuantumCybersecurityPage() {
       description: "Malicious software that encrypts data and demands payment",
       solution: "Real-time detection, automated backup, and rapid recovery"
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -130,7 +130,7 @@ export default function QuantumCybersecurityPage() {
       ],
       popular: false
     }
-  ];
+  ],
 
   return (
     <>
@@ -454,7 +454,7 @@ export default function QuantumCybersecurityPage() {
             <p className="text-xl text-blue-100 mb-8">
               Don't wait until it's too late. Protect your business with quantum-resistant cybersecurity today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -474,5 +474,5 @@ export default function QuantumCybersecurityPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 
 type Props = {
-  message: string;
-  onJoin?: () => void;
-  canJoin?: boolean;
-};
+  message: string,
+  onJoin?: () => void,
+  canJoin?: boolean
+},
 
 export default function InviteBanner({ message, onJoin, canJoin = true }: Props) {
   return (
@@ -16,5 +16,5 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
         </button>
       )}
     </div>
-  );
+  ),
 }

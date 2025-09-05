@@ -3,10 +3,10 @@ import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -16,4 +16,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Layout;
+=======
+export default Layout;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function DiversityInclusionPage() {
 	return (
@@ -19,5 +19,5 @@ export default function DiversityInclusionPage() {
 				</ul>
 			</div>
 		</div>
-	);
+	),
 }

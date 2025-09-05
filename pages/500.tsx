@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function Custom500() {
   return (
@@ -8,7 +8,7 @@ export default function Custom500() {
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
         <meta name="description" content="Something went wrong on our end. We're working to fix it." />
-        <meta property="og:title" content="500 - Server Error" />
+        <meta property="og: title" content="500 - Server Error" />
         <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
       </Head>
       
@@ -22,7 +22,7 @@ export default function Custom500() {
               Server Error
             </h2>
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
-              Something went wrong on our end. We&apos;re working to fix it. 
+              Something went wrong on our end. We're working to fix it. 
               Please try again in a few moments.
             </p>
           </div>
@@ -59,5 +59,5 @@ export default function Custom500() {
         </div>
       </div>
     </>
-  );
+  )
 }

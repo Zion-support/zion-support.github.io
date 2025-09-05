@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 // Type definitions for performance APIs
 declare global {
   interface PerformanceEntry {
@@ -69,3 +70,7 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   return metrics;
 }
+=======
+},
+export default usePerformanceMonitor,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

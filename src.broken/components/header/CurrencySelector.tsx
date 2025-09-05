@@ -1,20 +1,20 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
-import { DollarSign } from 'lucide-react';
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',
+import { DollarSign } from 'lucide-react',
 
-const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
+const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
   { code: 'USD', symbol: '$' },
   { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }];
+  { code: 'GBP', symbol: '£' }],
 
 export function CurrencySelector() {
-  const { currency, setCurrency } = useCurrency();
+  const { currency, setCurrency } = useCurrency(),
 
   return (
     <DropdownMenu>
@@ -36,5 +36,5 @@ export function CurrencySelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ),
 }

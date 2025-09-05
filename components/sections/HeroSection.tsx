@@ -1,9 +1,9 @@
-'use client';
+'use client',
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react',
 
 const HeroSection: React.FC = () => {
   const stats = [
@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Zap, value: '24/7', label: 'Support Available' }
-  ];
+  ],
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -157,7 +157,7 @@ const HeroSection: React.FC = () => {
         </motion.div>
       </motion.div>
     </section>
-  );
-};
+  ),
+},
 
-export default HeroSection;
+export default HeroSection,

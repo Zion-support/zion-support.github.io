@@ -1,12 +1,12 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
+import { ChevronDown, ChevronUp } from "lucide-react",
+import { Slider } from "@/components/ui/slider",
+import { PriceFilterProps } from "@/types/filters",
 
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
-    setPriceRange([values[0], values[1]]);
-  };
+    setPriceRange([values[0], values[1]]),
+  },
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -39,5 +39,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         </div>
       )}
     </div>
-  );
+  ),
 }

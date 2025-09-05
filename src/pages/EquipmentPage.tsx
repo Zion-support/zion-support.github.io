@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
-import { ProductListing } from '@/types/listings';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
-import { useCurrency } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
+import { ProductListing } from '@/types/listings',
+import { SkeletonCard } from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import Spinner from '@/components/ui/spinner',
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 // Enhanced initial equipment with more variety
@@ -125,7 +125,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     location: "Sunnyvale, CA",
     availability: "In Stock"
   }
-];
+],
 
 // Market insights component
 const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
@@ -155,7 +155,7 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-);
+),
 
 // Filter controls
 const EquipmentFilterControls = ({
@@ -184,11 +184,11 @@ const EquipmentFilterControls = ({
       {showRecommended ? "All Equipment" : "Recommended"}
     </Button>
   </div>
-);
+),
 
 // Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing; onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency();
+const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency(),
   return (
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -226,18 +226,18 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
         </div>
       </CardContent>
     </Card>
-  );
-};
+  ),
+},
 
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
-);
+),
 
 // Error fallback component
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
+function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
   return (
     <div className="container py-8">
       <Card className="border-red-200 bg-red-50">
@@ -259,87 +259,87 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error; r
         </CardContent>
       </Card>
     </div>
-  );
+  ),
 }
 
 // Main component
 function EquipmentPageContent() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
+  const router = useRouter(),
+  const [sortBy, setSortBy] = useState('newest'),
+  const [filterCategory, setFilterCategory] = useState(''),
+  const [showRecommended, setShowRecommended] = useState(false),
 
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
-    return `equipment-${filterCategory}-${showRecommended}`;
-  }, [filterCategory, showRecommended]);
+    return `equipment-${filterCategory}-${showRecommended}`,
+  }, [filterCategory, showRecommended]),
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     // Simulate realistic API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = 150;
+      const VIRTUAL_DATASET_SIZE = 150,
       const baseVirtualEquipment = generateDatacenterEquipment(
         VIRTUAL_DATASET_SIZE,
         INITIAL_EQUIPMENT.length,
         dataSeed
-      );
+      ),
       let fullVirtualDataset: ProductListing[] = [
         ...INITIAL_EQUIPMENT,
         ...baseVirtualEquipment
-      ];
+      ],
 
       // Deduplicate by ID in case of overlaps
-      const dedupMap = new Map<string, ProductListing>();
+      const dedupMap = new Map<string ProductListing>(),
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
-          dedupMap.set(item.id, item);
+          dedupMap.set(item.id, item),
         }
       }
-      fullVirtualDataset = Array.from(dedupMap.values());
+      fullVirtualDataset = Array.from(dedupMap.values()),
 
       // Apply category filtering
-      let processedDataset = fullVirtualDataset;
+      let processedDataset = fullVirtualDataset,
       if (filterCategory) {
-        processedDataset = processedDataset.filter(e => e.category === filterCategory);
+        processedDataset = processedDataset.filter(e => e.category === filterCategory),
       }
 
       // Apply recommended filtering
       if (showRecommended) {
-        processedDataset = getRecommendedEquipment(processedDataset);
+        processedDataset = getRecommendedEquipment(processedDataset),
       }
 
       // Sort the processed dataset
       processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
-            return (a.price || 0) - (b.price || 0);
+            return (a.price || 0) - (b.price || 0),
           case 'price-high':
-            return (b.price || 0) - (a.price || 0);
+            return (b.price || 0) - (a.price || 0),
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0);
+            return (b.rating || 0) - (a.rating || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
-      });
+      }),
 
       // Slice for pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const items = processedDataset.slice(startIndex, endIndex);
+      const startIndex = (page - 1) * limit,
+      const endIndex = startIndex + limit,
+      const items = processedDataset.slice(startIndex, endIndex),
 
       return {
         items,
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
-      };
+      },
     } catch (error) {
-      logErrorToProduction('Error in fetchEquipment:', { data: error });
-      throw new Error('Failed to load equipment data. Please try again.');
+      logErrorToProduction('Error in fetchEquipment:', { data: error }),
+      throw new Error('Failed to load equipment data. Please try again.'),
     }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]);
+  }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
     items: equipment,
@@ -352,33 +352,33 @@ function EquipmentPageContent() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12);
+  } = useInfiniteScrollPagination(fetchEquipment, 12),
 
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      refresh();
-    }, 100); // Small delay to prevent rapid successive refreshes
+      refresh(),
+    }, 100), // Small delay to prevent rapid successive refreshes
 
-    return () => clearTimeout(timeoutId);
-  }, [sortBy, filterCategory, showRecommended, refresh]);
+    return () => clearTimeout(timeoutId),
+  }, [sortBy, filterCategory, showRecommended, refresh]),
 
   const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null;
-    return getEquipmentMarketStats(equipment);
-  }, [equipment]);
+    if (equipment.length === 0) return null,
+    return getEquipmentMarketStats(equipment),
+  }, [equipment]),
 
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"];
-  }, []);
+    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"],
+  }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   // Loading state
   if (loading && equipment.length === 0) {
@@ -392,7 +392,7 @@ function EquipmentPageContent() {
         </motion.div>
         <EquipmentLoadingGrid />
       </div>
-    );
+    ),
   }
 
   // Error state
@@ -414,7 +414,7 @@ function EquipmentPageContent() {
           </div>
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -462,12 +462,12 @@ function EquipmentPageContent() {
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
-                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item));
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item)),
                     } catch {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/equipment/${item.id}`);
+                  router.push(`/equipment/${item.id}`),
                 }}
               />
             </motion.div>
@@ -521,7 +521,7 @@ function EquipmentPageContent() {
         )}
       </AnimatePresence>
     </div>
-  );
+  ),
 }
 
 // Main export with error boundary
@@ -530,5 +530,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  );
+  ),
 }

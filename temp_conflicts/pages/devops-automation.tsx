@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react',
 
 export default function DevOpsAutomationPage() {
   const features = [
@@ -30,7 +30,7 @@ export default function DevOpsAutomationPage() {
       description: 'Real-time performance insights and optimization',
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -39,12 +39,9 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 5 repositories',
-        'Basic CI/CD pipelines',
-        'GitHub integration',
-        'Email notifications',
-        'Basic security scanning',
-        'Community support'
+        'Up to 5 repositoriesBasic CI/CD pipelines',
+        'GitHub integrationEmail notifications',
+        'Basic security scanningCommunity support'
       ],
       popular: false,
       cta: 'Start Free Trial',
@@ -56,14 +53,10 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'Ideal for growing development teams',
       features: [
-        'Up to 25 repositories',
-        'Advanced CI/CD workflows',
-        'Multi-cloud deployment',
-        'Slack & Teams integration',
-        'Advanced security suite',
-        'Priority support',
-        'Custom pipelines',
-        'Team collaboration'
+        'Up to 25 repositoriesAdvanced CI/CD workflows',
+        'Multi-cloud deploymentSlack & Teams integration',
+        'Advanced security suitePriority support',
+        'Custom pipelinesTeam collaboration'
       ],
       popular: true,
       cta: 'Start Free Trial',
@@ -75,20 +68,16 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'For large-scale development operations',
       features: [
-        'Unlimited repositories',
-        'Enterprise CI/CD',
-        'Advanced IaC automation',
-        'Custom integrations',
-        '24/7 dedicated support',
-        'SLA guarantees',
-        'On-premise options',
-        'Custom security policies'
+        'Unlimited repositoriesEnterprise CI/CD',
+        'Advanced IaC automationCustom integrations',
+        '24/7 dedicated supportSLA guarantees',
+        'On-premise optionsCustom security policies'
       ],
       popular: false,
       cta: 'Contact Sales',
       color: 'border-gray-600 hover:border-blue-500'
     }
-  ];
+  ],
 
   const marketComparison = [
     {
@@ -96,26 +85,26 @@ export default function DevOpsAutomationPage() {
       pricing: 'Free + $0.008/min',
       repositories: 'Unlimited',
       rating: '4.6/5',
-      pros: ['GitHub native', 'Good free tier'],
-      cons: ['Expensive for teams', 'Limited features']
+      pros: ['GitHub nativeGood free tier'],
+      cons: ['Expensive for teamsLimited features']
     },
     {
       competitor: 'GitLab CI/CD',
       pricing: '$19/user/month',
       repositories: 'Unlimited',
       rating: '4.4/5',
-      pros: ['Integrated platform', 'Good CI/CD'],
-      cons: ['User-based pricing', 'Limited integrations']
+      pros: ['Integrated platformGood CI/CD'],
+      cons: ['User-based pricingLimited integrations']
     },
     {
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
       rating: '4.2/5',
-      pros: ['Completely free', 'Highly customizable'],
-      cons: ['Requires maintenance', 'No managed service']
+      pros: ['Completely freeHighly customizable'],
+      cons: ['Requires maintenanceNo managed service']
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -139,7 +128,7 @@ export default function DevOpsAutomationPage() {
       content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
       rating: 5
     }
-  ];
+  ],
 
   const automationExamples = [
     {
@@ -166,7 +155,7 @@ export default function DevOpsAutomationPage() {
       icon: '🏗️',
       color: 'from-purple-500 to-indigo-600'
     }
-  ];
+  ],
 
   return (
     <>
@@ -426,7 +415,7 @@ export default function DevOpsAutomationPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
               Ready to Automate Your DevOps?
             </h2>
@@ -455,5 +444,5 @@ export default function DevOpsAutomationPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

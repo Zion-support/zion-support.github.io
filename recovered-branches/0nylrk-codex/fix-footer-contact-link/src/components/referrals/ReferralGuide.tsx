@@ -1,5 +1,5 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 export function ReferralGuide() {
   const steps = [
@@ -14,7 +14,7 @@ export function ReferralGuide() {
       description: "Once they complete their profile setup, your referral is confirmed"},
     {
       title: "You earn rewards",
-      description: "Rewards are issued based on the type of user who completes onboarding"}];
+      description: "Rewards are issued based on the type of user who completes onboarding"}],
 
   return (
     <Card>
@@ -38,5 +38,5 @@ export function ReferralGuide() {
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

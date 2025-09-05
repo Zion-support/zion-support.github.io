@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from './layout/Layout',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
   Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Homepage2026: React.FC = () => {
   return (
@@ -226,7 +226,7 @@ const Homepage2026: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
                   Robust infrastructure solutions for modern digital businesses. 
-                  Edge computing, zero trust security, and hybrid cloud management for enterprise-grade performance.
+                  Edge computing, zero trust security, and hybrid cloud management for enterprise-grade window.window.window.performance.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -339,7 +339,7 @@ const Homepage2026: React.FC = () => {
               {/* Contact Information */}
               <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
                 <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
-                <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="grid md: grid-cols-2 gap-6 text-left">
                   <div className="flex items-center space-x-3">
                     <Globe className="w-5 h-5 text-blue-400" />
                     <div>
@@ -400,7 +400,7 @@ const Homepage2026: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2026;
+export default Homepage2026,

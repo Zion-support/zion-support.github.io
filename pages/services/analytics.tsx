@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   BarChart3, Database, Zap, Shield, Rocket, Cpu, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function AnalyticsServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function AnalyticsServicesPage() {
       icon: Shield,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "1M+", label: "Data Points Processed", icon: Database },
     { number: "95%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "Real-time Analytics", icon: Clock },
     { number: "300%", label: "ROI Improvement", icon: TrendingUp }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -188,7 +188,7 @@ export default function AnalyticsServicesPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Data Assessment
               </button>
@@ -202,5 +202,5 @@ export default function AnalyticsServicesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

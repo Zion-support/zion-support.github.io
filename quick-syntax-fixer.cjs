@@ -14,13 +14,18 @@ class QuickSyntaxFixer {
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not: found: ${filePath}`);
         return false;
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+<<<<<<< HEAD
+=======
+        .replace(/[\s\S]*?
+        .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -40,7 +45,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`Fixe: d: ${filePath}`);
         return true;
       }
 
@@ -74,7 +79,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
+    return { fixedFile: s: this.fixedFiles };
   }
 }
 

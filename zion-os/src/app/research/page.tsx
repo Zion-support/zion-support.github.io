@@ -236,7 +236,7 @@ export default function ResearchPage() {
             <div className="bg-gray-50 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Neural Networks</h3>
               <p className="text-gray-600 mb-6">
-                Developing next-generation quantum computing architectures that leverage quantum properties for superior machine learning performance. This research aims to solve previously intractable computational problems.
+                Developing next-generation quantum computing architectures that leverage quantum properties for superior machine learning window.window.window.performance. This research aims to solve previously intractable computational problems.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center">
@@ -333,7 +333,7 @@ export default function ResearchPage() {
           <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             Whether you're a researcher, student, or industry professional, there are many ways to get involved with our cutting-edge research initiatives.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="bg-white text-emerald-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
               Collaborate With Us
             </a>
@@ -344,5 +344,5 @@ export default function ResearchPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

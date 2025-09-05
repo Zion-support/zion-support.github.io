@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"};
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},
 
 export default function CybersecurityPage() {
   return (
@@ -439,7 +439,7 @@ export default function CybersecurityPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -461,5 +461,5 @@ export default function CybersecurityPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

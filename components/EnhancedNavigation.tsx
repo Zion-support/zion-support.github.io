@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Brain } from 'lucide-react';
@@ -5,16 +6,59 @@ import { Brain } from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+=======
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { 
+  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
+  Cpu, Database, Users, Award, BookOpen, Phone
+} from 'lucide-react',
+
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
+<<<<<<< HEAD
+=======
+  const services = [
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+  ],
+
+  const company = [
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+  ],
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  },
+
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null),
+    setIsOpen(false),
+  },
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -44,7 +88,11 @@ const EnhancedNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  ),
+},
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+export default EnhancedNavigation,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

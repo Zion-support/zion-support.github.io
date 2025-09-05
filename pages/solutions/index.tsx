@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const SolutionsPage: NextPage = () => {
   const solutions = [
@@ -202,7 +202,7 @@ const SolutionsPage: NextPage = () => {
         }
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
@@ -362,7 +362,7 @@ const SolutionsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Schedule Consultation
             </Link>
@@ -390,7 +390,7 @@ const SolutionsPage: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default SolutionsPage;
+export default SolutionsPage,

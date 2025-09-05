@@ -10,7 +10,7 @@ class ComprehensiveTestRunner {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursiv: e: true });
     }
   }
 
@@ -25,17 +25,17 @@ class ComprehensiveTestRunner {
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Runnin: g: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encodin: g: 'utf8',
+        cw: d: '/workspace',
+        stdi: o: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { succes: s: true, output };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
+      return { succes: s: false, erro: r: error.message };
     }
   }
 
@@ -43,10 +43,10 @@ class ComprehensiveTestRunner {
     this.log('🧪 Starting comprehensive test suite...');
 
     const tests = [
-      { command: 'npm run test:smoke', description: 'Smoke Tests' },
-      { command: 'npm run build', description: 'Build Test' },
-      { command: 'npm run lint', description: 'Lint Test' },
-      { command: 'npm run type-check', description: 'Type Check Test' },
+      { comman: d: 'npm run: test:smoke', descriptio: n: 'Smoke Tests' },
+      { comman: d: 'npm run build', descriptio: n: 'Build Test' },
+      { comman: d: 'npm run lint', descriptio: n: 'Lint Test' },
+      { comman: d: 'npm run type-check', descriptio: n: 'Type Check Test' },
     ];
 
     const results = [];
@@ -63,12 +63,12 @@ class ComprehensiveTestRunner {
     this.log('📊 Generating comprehensive test report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      tests: await this.runAllTests(),
-      summary: {
-        totalTests: 4,
-        passedTests: 0,
-        failedTests: 0,
+      timestam: p: new Date().toISOString(),
+      test: s: await this.runAllTests(),
+      summar: y: {
+        totalTest: s: 4,
+        passedTest: s: 0,
+        failedTest: s: 0,
       },
     };
 
@@ -88,7 +88,7 @@ class ComprehensiveTestRunner {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Test report saved to: ${reportFile}`);
+    this.log(`📄 Test report saved: to: ${reportFile}`);
     return report;
   }
 
@@ -106,11 +106,11 @@ if (require.main === module) {
   runner
     .start()
     .then(report => {
-      console.log('Test Results:', report.summary);
+      console.log('Test: Results:', report.summary);
       process.exit(report.summary.failedTests > 0 ? 1 : 0);
     })
     .catch(error => {
-      console.error('Test Runner failed:', error);
+      console.error('Test Runner: failed:', error);
       process.exit(1);
     });
 }

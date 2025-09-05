@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function IndustrySolutions() {
   return (
@@ -8,7 +8,7 @@ export default function IndustrySolutions() {
       <Head>
         <title>Industry Solutions | Zion Tech Group</title>
         <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
-        <link rel="canonical" href="https://ziontechgroup.com/industry-solutions" />
+        <link rel="canonical" href="https: //ziontechgroup.com/industry-solutions" />
       </Head>
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
@@ -28,5 +28,5 @@ export default function IndustrySolutions() {
         </section>
       </div>
     </>
-  );
+  )
 }

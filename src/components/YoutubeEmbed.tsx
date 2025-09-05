@@ -1,16 +1,16 @@
-import Image from 'next/image';
+import Image from 'next/image',
 import { Loader2 } from 'lucide-react'
-import { useState } from 'react';
+import { useState } from 'react',
 
 interface YoutubeEmbedProps {
-  videoId: string;
-  title: string;
-  poster: string;
+  videoId: string,
+  title: string,
+  poster: string
 }
 
 export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false);
-  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
+  const [loaded, setLoaded] = useState(false),
+  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`,
 
   return (
     <div className="relative aspect-video max-w-3xl mx-auto">
@@ -28,9 +28,9 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         title={title}
         loading="lazy"
         onLoad={() => setLoaded(true)}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
         allowFullScreen
       />
     </div>
-  );
+  ),
 }

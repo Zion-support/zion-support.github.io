@@ -1,27 +1,27 @@
 export interface Service {
-  id: string;
-  name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
-  description: string;
-  features: string[];
+  id: string,
+  name: string,
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
+  description: string,
+  features: string[],
   pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
+    starter: string,
+    professional: string,
+    enterprise: string,
+    custom?: string
+  },
+  technologyStack: string[],
+  benefits: string[],
+  useCases: string[],
+  status: 'active' | 'beta' | 'coming-soon',
+  priority: number,
+  demoUrl?: string,
+  documentationUrl?: string,
   contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
+    email: string,
+    phone: string,
+    address: string
+  },
 }
 
 export const services: Service[] = [
@@ -32,12 +32,9 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.',
     features: [
-      'Real-time code completion and suggestions',
-      'Automated code review and optimization',
-      'Multi-language support (Python, JavaScript, Go, Rust)',
-      'Security vulnerability detection',
-      'Code documentation generation',
-      'Integration with popular IDEs',
+      'Real-time code completion and suggestionsAutomated code review and optimization',
+      'Multi-language support (Python, JavaScript, Go, Rust)Security vulnerability detection',
+      'Code documentation generationIntegration with popular IDEs',
       'Custom model fine-tuning for enterprise codebases'
     ],
     pricing: {
@@ -46,19 +43,15 @@ export const services: Service[] = [
       enterprise: '$299/month',
       custom: 'Contact for enterprise pricing'
     },
-    technologyStack: ['OpenAI GPT-4', 'Claude 3', 'Python', 'React', 'Node.js', 'PostgreSQL'],
+    technologyStack: ['OpenAI GPT-4Claude 3', 'PythonReact', 'Node.jsPostgreSQL'],
     benefits: [
-      'Reduce development time by 40-60%',
-      'Improve code quality and security',
-      'Lower maintenance costs',
-      'Accelerate team onboarding',
+      'Reduce development time by 40-60%Improve code quality and security',
+      'Lower maintenance costsAccelerate team onboarding',
       '24/7 AI assistance'
     ],
     useCases: [
-      'Software development teams',
-      'Startups and scale-ups',
-      'Enterprise development',
-      'Freelance developers',
+      'Software development teamsStartups and scale-ups',
+      'Enterprise developmentFreelance developers',
       'Educational institutions'
     ],
     status: 'active',
@@ -77,12 +70,9 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.',
     features: [
-      'Multi-format content generation (blogs, emails, social media)',
-      'Brand voice training and consistency',
-      'SEO optimization and keyword research',
-      'Multi-language content creation',
-      'Plagiarism detection and originality scoring',
-      'Content performance analytics',
+      'Multi-format content generation (blogs, emails, social media)Brand voice training and consistency',
+      'SEO optimization and keyword researchMulti-language content creation',
+      'Plagiarism detection and originality scoringContent performance analytics',
       'Team collaboration and approval workflows'
     ],
     pricing: {
@@ -90,19 +80,15 @@ export const services: Service[] = [
       professional: '$149/month',
       enterprise: '$399/month'
     },
-    technologyStack: ['GPT-4', 'Claude 3', 'BERT', 'React', 'FastAPI', 'MongoDB'],
+    technologyStack: ['GPT-4Claude 3', 'BERTReact', 'FastAPIMongoDB'],
     benefits: [
-      '10x faster content creation',
-      'Consistent brand messaging',
-      'Improved SEO performance',
-      'Cost-effective content marketing',
+      '10x faster content creationConsistent brand messaging',
+      'Improved SEO performanceCost-effective content marketing',
       'Scalable content operations'
     ],
     useCases: [
-      'Marketing agencies',
-      'E-commerce businesses',
-      'Content creators',
-      'Enterprise marketing teams',
+      'Marketing agenciesE-commerce businesses',
+      'Content creatorsEnterprise marketing teams',
       'Educational institutions'
     ],
     status: 'active',
@@ -120,12 +106,9 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.',
     features: [
-      'Automated data preprocessing and cleaning',
-      'Predictive modeling and forecasting',
-      'Natural language query interface',
-      'Real-time data streaming analytics',
-      'Custom dashboard builder',
-      'Anomaly detection and alerting',
+      'Automated data preprocessing and cleaningPredictive modeling and forecasting',
+      'Natural language query interfaceReal-time data streaming analytics',
+      'Custom dashboard builderAnomaly detection and alerting',
       'Integration with 100+ data sources'
     ],
     pricing: {
@@ -133,19 +116,15 @@ export const services: Service[] = [
       professional: '$199/month',
       enterprise: '$599/month'
     },
-    technologyStack: ['Python', 'TensorFlow', 'PyTorch', 'React', 'FastAPI', 'Apache Kafka'],
+    technologyStack: ['PythonTensorFlow', 'PyTorchReact', 'FastAPIApache Kafka'],
     benefits: [
-      'Uncover hidden patterns in data',
-      'Make data-driven decisions faster',
-      'Reduce manual analysis time by 80%',
-      'Predict future trends accurately',
+      'Uncover hidden patterns in dataMake data-driven decisions faster',
+      'Reduce manual analysis time by 80%Predict future trends accurately',
       'Real-time business intelligence'
     ],
     useCases: [
-      'Financial services',
-      'Healthcare analytics',
-      'E-commerce optimization',
-      'Supply chain management',
+      'Financial servicesHealthcare analytics',
+      'E-commerce optimizationSupply chain management',
       'Marketing analytics'
     ],
     status: 'active',
@@ -165,12 +144,9 @@ export const services: Service[] = [
     category: 'IT Services',
     description: 'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.',
     features: [
-      '24/7 network monitoring and support',
-      'Cybersecurity threat detection and response',
-      'Cloud infrastructure management (AWS, Azure, GCP)',
-      'Backup and disaster recovery',
-      'Help desk and user support',
-      'Technology roadmap planning',
+      '24/7 network monitoring and supportCybersecurity threat detection and response',
+      'Cloud infrastructure management (AWS, Azure, GCP)Backup and disaster recovery',
+      'Help desk and user supportTechnology roadmap planning',
       'Compliance and audit support'
     ],
     pricing: {
@@ -178,19 +154,15 @@ export const services: Service[] = [
       professional: '$149/month per user',
       enterprise: '$199/month per user'
     },
-    technologyStack: ['Microsoft 365', 'AWS', 'Azure', 'Cisco', 'Fortinet', 'Veeam'],
+    technologyStack: ['Microsoft 365AWS', 'AzureCisco', 'FortinetVeeam'],
     benefits: [
-      'Reduce IT costs by 25-40%',
-      'Improve system uptime to 99.9%',
-      'Enhanced security posture',
-      'Predictable monthly costs',
+      'Reduce IT costs by 25-40%Improve system uptime to 99.9%',
+      'Enhanced security posturePredictable monthly costs',
       'Access to enterprise-grade tools'
     ],
     useCases: [
-      'Small to medium businesses',
-      'Healthcare organizations',
-      'Financial services',
-      'Manufacturing companies',
+      'Small to medium businessesHealthcare organizations',
+      'Financial servicesManufacturing companies',
       'Professional services firms'
     ],
     status: 'active',
@@ -208,12 +180,9 @@ export const services: Service[] = [
     category: 'IT Services',
     description: 'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.',
     features: [
-      'Vulnerability assessment and scanning',
-      'Penetration testing (web, mobile, network)',
-      'Social engineering testing',
-      'Security policy review and development',
-      'Compliance gap analysis (SOC2, ISO27001, HIPAA)',
-      'Incident response planning',
+      'Vulnerability assessment and scanningPenetration testing (web, mobile, network)',
+      'Social engineering testingSecurity policy review and development',
+      'Compliance gap analysis (SOC2, ISO27001, HIPAA)Incident response planning',
       'Security awareness training'
     ],
     pricing: {
@@ -221,19 +190,15 @@ export const services: Service[] = [
       professional: '$5,999/comprehensive',
       enterprise: '$12,999/enterprise'
     },
-    technologyStack: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
+    technologyStack: ['NessusMetasploit', 'Burp SuiteWireshark', 'Custom tools'],
     benefits: [
-      'Identify security gaps before attackers',
-      'Meet compliance requirements',
-      'Reduce cyber risk exposure',
-      'Improve incident response capabilities',
+      'Identify security gaps before attackersMeet compliance requirements',
+      'Reduce cyber risk exposureImprove incident response capabilities',
       'Protect brand reputation'
     ],
     useCases: [
-      'Financial institutions',
-      'Healthcare organizations',
-      'E-commerce businesses',
-      'Government agencies',
+      'Financial institutionsHealthcare organizations',
+      'E-commerce businessesGovernment agencies',
       'Educational institutions'
     ],
     status: 'active',
@@ -253,12 +218,9 @@ export const services: Service[] = [
     category: 'Micro SAAS',
     description: 'Automated invoice processing and accounts payable solution with AI-powered data extraction and approval workflows.',
     features: [
-      'AI-powered invoice data extraction',
-      'Automated approval workflows',
-      'Multi-currency support',
-      'Integration with accounting software',
-      'Real-time payment tracking',
-      'Custom approval rules',
+      'AI-powered invoice data extractionAutomated approval workflows',
+      'Multi-currency supportIntegration with accounting software',
+      'Real-time payment trackingCustom approval rules',
       'Mobile app for approvals'
     ],
     pricing: {
@@ -266,19 +228,15 @@ export const services: Service[] = [
       professional: '$49/month',
       enterprise: '$99/month'
     },
-    technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'],
+    technologyStack: ['ReactNode.js', 'PostgreSQLOpenAI API', 'Stripe'],
     benefits: [
-      'Reduce invoice processing time by 90%',
-      'Eliminate manual data entry errors',
-      'Improve cash flow management',
-      'Enhance audit trail compliance',
+      'Reduce invoice processing time by 90%Eliminate manual data entry errors',
+      'Improve cash flow managementEnhance audit trail compliance',
       'Mobile-first approval process'
     ],
     useCases: [
-      'Small businesses',
-      'Accounting firms',
-      'Property management',
-      'Construction companies',
+      'Small businessesAccounting firms',
+      'Property managementConstruction companies',
       'Healthcare practices'
     ],
     status: 'active',
@@ -296,12 +254,9 @@ export const services: Service[] = [
     category: 'Micro SAAS',
     description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.',
     features: [
-      'AI-powered task prioritization',
-      'Resource allocation optimization',
-      'Real-time collaboration tools',
-      'Time tracking and reporting',
-      'Integration with popular tools',
-      'Mobile and desktop apps',
+      'AI-powered task prioritizationResource allocation optimization',
+      'Real-time collaboration toolsTime tracking and reporting',
+      'Integration with popular toolsMobile and desktop apps',
       'Custom workflow automation'
     ],
     pricing: {
@@ -309,19 +264,15 @@ export const services: Service[] = [
       professional: '$25/month per user',
       enterprise: '$35/month per user'
     },
-    technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'],
+    technologyStack: ['ReactNode.js', 'PostgreSQLRedis', 'Socket.io'],
     benefits: [
-      'Increase team productivity by 30%',
-      'Better resource utilization',
-      'Improved project delivery times',
-      'Enhanced team collaboration',
+      'Increase team productivity by 30%Better resource utilization',
+      'Improved project delivery timesEnhanced team collaboration',
       'Data-driven decision making'
     ],
     useCases: [
-      'Software development teams',
-      'Marketing agencies',
-      'Construction projects',
-      'Event planning',
+      'Software development teamsMarketing agencies',
+      'Construction projectsEvent planning',
       'Consulting firms'
     ],
     status: 'active',
@@ -341,12 +292,9 @@ export const services: Service[] = [
     category: 'Blockchain',
     description: 'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.',
     features: [
-      'Comprehensive security analysis',
-      'Gas optimization recommendations',
-      'Formal verification methods',
-      'Vulnerability assessment',
-      'Compliance checking',
-      'Post-deployment monitoring',
+      'Comprehensive security analysisGas optimization recommendations',
+      'Formal verification methodsVulnerability assessment',
+      'Compliance checkingPost-deployment monitoring',
       'Emergency response support'
     ],
     pricing: {
@@ -354,19 +302,15 @@ export const services: Service[] = [
       professional: '$15,000/audit',
       enterprise: '$50,000/audit'
     },
-    technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
+    technologyStack: ['SolidityVyper', 'FoundrySlither', 'Mythril'],
     benefits: [
-      'Prevent costly security breaches',
-      'Optimize gas costs by 20-40%',
-      'Build investor confidence',
-      'Meet regulatory requirements',
+      'Prevent costly security breachesOptimize gas costs by 20-40%',
+      'Build investor confidenceMeet regulatory requirements',
       'Protect user funds'
     ],
     useCases: [
-      'DeFi protocols',
-      'NFT marketplaces',
-      'DAO governance',
-      'Enterprise blockchain',
+      'DeFi protocolsNFT marketplaces',
+      'DAO governanceEnterprise blockchain',
       'Token launches'
     ],
     status: 'active',
@@ -386,12 +330,9 @@ export const services: Service[] = [
     category: 'IoT & Edge',
     description: 'Comprehensive IoT monitoring and management platform with edge computing capabilities for industrial and commercial applications.',
     features: [
-      'Real-time device monitoring',
-      'Edge computing processing',
-      'Predictive maintenance alerts',
-      'Data visualization dashboards',
-      'Integration with industrial protocols',
-      'Scalable device management',
+      'Real-time device monitoringEdge computing processing',
+      'Predictive maintenance alertsData visualization dashboards',
+      'Integration with industrial protocolsScalable device management',
       'Custom alert rules'
     ],
     pricing: {
@@ -399,19 +340,15 @@ export const services: Service[] = [
       professional: '$25/device/month',
       enterprise: '$50/device/month'
     },
-    technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'],
+    technologyStack: ['PythonMQTT', 'KubernetesInfluxDB', 'Grafana'],
     benefits: [
-      'Reduce equipment downtime by 60%',
-      'Lower maintenance costs',
-      'Improve operational efficiency',
-      'Real-time operational insights',
+      'Reduce equipment downtime by 60%Lower maintenance costs',
+      'Improve operational efficiencyReal-time operational insights',
       'Scalable IoT infrastructure'
     ],
     useCases: [
-      'Manufacturing facilities',
-      'Smart buildings',
-      'Agriculture monitoring',
-      'Energy management',
+      'Manufacturing facilitiesSmart buildings',
+      'Agriculture monitoringEnergy management',
       'Transportation logistics'
     ],
     status: 'active',
@@ -431,12 +368,9 @@ export const services: Service[] = [
     category: 'Cloud & DevOps',
     description: 'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.',
     features: [
-      'Automated CI/CD pipelines',
-      'Infrastructure as Code (Terraform)',
-      'Multi-cloud deployment',
-      'Container orchestration',
-      'Monitoring and alerting',
-      'Security scanning',
+      'Automated CI/CD pipelinesInfrastructure as Code (Terraform)',
+      'Multi-cloud deploymentContainer orchestration',
+      'Monitoring and alertingSecurity scanning',
       'Cost optimization'
     ],
     pricing: {
@@ -444,19 +378,15 @@ export const services: Service[] = [
       professional: '$299/month',
       enterprise: '$799/month'
     },
-    technologyStack: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
+    technologyStack: ['DockerKubernetes', 'TerraformJenkins', 'Prometheus'],
     benefits: [
-      'Deploy 10x faster',
-      'Reduce deployment errors by 90%',
-      'Lower infrastructure costs',
-      'Improve team productivity',
+      'Deploy 10x fasterReduce deployment errors by 90%',
+      'Lower infrastructure costsImprove team productivity',
       'Enhanced security posture'
     ],
     useCases: [
-      'Software development teams',
-      'Startups and scale-ups',
-      'Enterprise IT',
-      'DevOps consulting',
+      'Software development teamsStartups and scale-ups',
+      'Enterprise ITDevOps consulting',
       'Cloud migration projects'
     ],
     status: 'active',
@@ -476,12 +406,9 @@ export const services: Service[] = [
     category: 'Data & Analytics',
     description: 'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.',
     features: [
-      'Real-time data ingestion',
-      'Advanced analytics and ML',
-      'Data governance and security',
-      'Self-service BI tools',
-      'Data lineage tracking',
-      'Performance optimization',
+      'Real-time data ingestionAdvanced analytics and ML',
+      'Data governance and securitySelf-service BI tools',
+      'Data lineage trackingPerformance optimization',
       'Multi-cloud support'
     ],
     pricing: {
@@ -489,19 +416,15 @@ export const services: Service[] = [
       professional: '$499/month',
       enterprise: '$1,299/month'
     },
-    technologyStack: ['Snowflake', 'Apache Airflow', 'dbt', 'Tableau', 'Python'],
+    technologyStack: ['SnowflakeApache Airflow', 'dbtTableau', 'Python'],
     benefits: [
-      'Unified data platform',
-      'Real-time analytics',
-      'Scalable architecture',
-      'Cost-effective storage',
+      'Unified data platformReal-time analytics',
+      'Scalable architectureCost-effective storage',
       'Enhanced data security'
     ],
     useCases: [
-      'Business intelligence',
-      'Customer analytics',
-      'Financial reporting',
-      'Supply chain analytics',
+      'Business intelligenceCustomer analytics',
+      'Financial reportingSupply chain analytics',
       'Marketing attribution'
     ],
     status: 'active',
@@ -513,16 +436,16 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+],
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)
+},
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)
+},
 
 export const getCategories = () => {
-  return Array.from(new Set(services.map(service => service.category)));
-};
+  return Array.from(new Set(services.map(service => service.category))),
+},

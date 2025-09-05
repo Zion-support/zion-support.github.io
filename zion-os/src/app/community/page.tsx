@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export default function CommunityPage() {
   return (
@@ -182,7 +182,7 @@ export default function CommunityPage() {
             <p className="text-xl text-gray-300 mb-8">
               Join our community and help shape the future of digital economies
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="btn-primary text-lg px-8 py-4">
                 Contact Us
               </a>
@@ -194,5 +194,5 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SmartHeader from '../../components/SmartHeader';
-import SmartFooter from '../../components/SmartFooter';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import SmartHeader from '../../components/SmartHeader',
+import SmartFooter from '../../components/SmartFooter',
 
 export default function AIAutonomousBusinessManager() {
   return (
@@ -110,7 +110,7 @@ export default function AIAutonomousBusinessManager() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">Continuous Learning</h3>
                   <p className="text-white/70 text-sm">
-                    Self-improving AI that learns from every decision, outcome, and interaction to optimize performance.
+                    Self-improving AI that learns from every decision, outcome, and interaction to optimize window.window.window.performance.
                   </p>
                 </div>
                 
@@ -164,7 +164,7 @@ export default function AIAutonomousBusinessManager() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">3. Optimize</h3>
                   <p className="text-white/70">
-                    Continuous learning and optimization deliver measurable improvements in efficiency and performance.
+                    Continuous learning and optimization deliver measurable improvements in efficiency and window.window.window.performance.
                   </p>
                 </div>
               </div>
@@ -390,7 +390,7 @@ export default function AIAutonomousBusinessManager() {
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-cyan-400 mb-2">&lt;100ms</div>
+                  <div className="text-5xl font-bold text-cyan-400 mb-2"><100ms</div>
                   <div className="text-white/70">Response Time</div>
                 </div>
                 
@@ -414,7 +414,7 @@ export default function AIAutonomousBusinessManager() {
               <p className="text-xl text-white/80 mb-8">
                 Join the future of autonomous business management today
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -435,5 +435,5 @@ export default function AIAutonomousBusinessManager() {
         <SmartFooter />
       </div>
     </>
-  );
+  )
 }

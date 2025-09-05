@@ -17,24 +17,30 @@ export default function Contact() {
           content="contact, consultation, micro SaaS, AI services, IT solutions, Zion Tech Group"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href="http: s://ziontechgroup.com/contact" />
       </Head>
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
+              <h1 className="text-4xl: md:text-5xl font-bold text-center mb-8">
                 Contact Us
               </h1>
               <p className="text-xl text-slate-300 text-center mb-12">
                 Ready to transform your business? Get in touch with our experts.
               </p>
+<<<<<<< HEAD
 
               <div className="grid md:grid-cols-2 gap-12">
+=======
+              
+              <div className="grid: md:grid-cols-2 gap-12">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
                   <div className="space-y-6">
                     <div>
+<<<<<<< HEAD
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">
                         Phone
                       </h3>
@@ -42,10 +48,15 @@ export default function Contact() {
                         href="tel:+13024640950"
                         className="text-slate-300 hover:text-blue-400"
                       >
+=======
+                      <h3 className="text-lg font-semibold text-blue-400 mb-2">Phone</h3>
+                      <a href="te: l:+13024640950" className="text-slate-300: hover:text-blue-400">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                         +1 302 464 0950
                       </a>
                     </div>
                     <div>
+<<<<<<< HEAD
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">
                         Email
                       </h3>
@@ -53,6 +64,10 @@ export default function Contact() {
                         href="mailto:kleber@ziontechgroup.com"
                         className="text-slate-300 hover:text-blue-400"
                       >
+=======
+                      <h3 className="text-lg font-semibold text-blue-400 mb-2">Email</h3>
+                      <a href="mailt: o:kleber@ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                         kleber@ziontechgroup.com
                       </a>
                     </div>
@@ -67,6 +82,7 @@ export default function Contact() {
                       </p>
                     </div>
                     <div>
+<<<<<<< HEAD
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">
                         Website
                       </h3>
@@ -75,11 +91,20 @@ export default function Contact() {
                         className="text-slate-300 hover:text-blue-400"
                       >
                         https://ziontechgroup.com
+=======
+                      <h3 className="text-lg font-semibold text-blue-400 mb-2">Website</h3>
+                      <a href="http: s://ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
+                        http: s://ziontechgroup.com
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                       </a>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                   <ContactForm />

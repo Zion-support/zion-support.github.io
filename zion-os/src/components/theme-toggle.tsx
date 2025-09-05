@@ -1,10 +1,10 @@
-"use client";
+"use client",
 
-import { useTheme } from "@/components/theme-provider";
-import { Moon, Sun, Monitor } from "lucide-react";
+import { useTheme } from "@/components/theme-provider",
+import { Moon, Sun, Monitor } from "lucide-react",
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme(),
 
   return (
     <div className="flex items-center gap-2">
@@ -48,5 +48,5 @@ export function ThemeToggle() {
         </button>
       </div>
     </div>
-  );
+  ),
 }

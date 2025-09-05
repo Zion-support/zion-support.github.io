@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react',
+import { motion } from 'framer-motion',
 
 const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true),
+  }, []),
 
   if (!isClient) {
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-    );
+    ),
   }
 
   return (
@@ -191,11 +191,11 @@ const UltraFuturisticBackground2047: React.FC = () => {
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%),
         }
       `}</style>
     </>
-  );
-};
+  ),
+},
 
-export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047,

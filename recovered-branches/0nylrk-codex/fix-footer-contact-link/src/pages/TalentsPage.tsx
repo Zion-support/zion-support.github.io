@@ -1,5 +1,5 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
 
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
@@ -102,7 +102,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2023-10-15T13:45:00.000Z",
     aiScore: 94,
     rating: 4.9,
-    reviewCount: 21}];
+    reviewCount: 21}],
 
 // Filter options specific to talents
 const TALENT_FILTERS = [
@@ -111,7 +111,7 @@ const TALENT_FILTERS = [
   { label: 'DevOps', value: 'devops' },
   { label: 'Security', value: 'security' },
   { label: 'Development', value: 'development' },
-  { label: 'Consulting', value: 'consulting' }];
+  { label: 'Consulting', value: 'consulting' }],
 
 export default function TalentsPage() {
   return (
@@ -123,5 +123,5 @@ export default function TalentsPage() {
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />
-  );
+  ),
 }

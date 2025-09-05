@@ -1,4 +1,4 @@
-import { TokenConfig } from "./types";
+import { TokenConfig } from "./types",
 
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
   symbol: "ZION$",
@@ -13,4 +13,4 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
     boost_profile: 100,
     promote_job: 150,
     resume_ai_optimization: 80,
-    featured_badge: 200}};
+    featured_badge: 200}},

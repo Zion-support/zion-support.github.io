@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
 export default function CloudAutomationHub() {
-  const [logs, setLogs] = useState<any[]>([]);
+  const [logs, setLogs] = useState<any[]>([]),
 
   useEffect(() => {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
-      .catch(() => setLogs([]));
-  }, []);
+      .catch(() => setLogs([])),
+  }, []),
 
   return (
     <div className="space-y-6">
@@ -46,9 +46,9 @@ export default function CloudAutomationHub() {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
+        <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-  );
+  )
 }

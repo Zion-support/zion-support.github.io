@@ -212,7 +212,7 @@ const ContentCategorizer: React.FC = () => {
   ];
 
   const filteredItems = useMemo(() => {
-    let filtered = contentItems.filter(item => {
+    const filtered = contentItems.filter(item => {
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -492,7 +492,7 @@ const ContentCategorizer: React.FC = () => {
                 <a 
                   href={item.href} 
                   target="_blank" 
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium"
                 >
                   Open Content

@@ -11,14 +11,14 @@ const app = Fastify({ logger: true });
 
 await app.register(cors, {
   origin: (origin, cb) => {
-    const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim());
+    const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
   },
-  methods: ['GET', 'POST', 'OPTIONS']
+  methods: ['GETPOST', 'OPTIONS']
 });
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });

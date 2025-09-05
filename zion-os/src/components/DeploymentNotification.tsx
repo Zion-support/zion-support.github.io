@@ -1,8 +1,8 @@
-"use client";
+"use client",
 
-import { useState } from "react";
+import { useState } from "react",
 import { 
-  Rocket, 
+  Rocket,
   CheckCircle, 
   AlertCircle, 
   Clock, 
@@ -17,30 +17,30 @@ import {
   Building2,
   Users,
   Zap
-} from "lucide-react";
+} from "lucide-react",
 
 interface DeploymentUpdate {
-  id: string;
-  type: 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available';
-  title: string;
-  message: string;
-  timestamp: string;
-  instanceName?: string;
-  vertical?: string;
-  governanceType?: string;
-  domain?: string;
-  progress?: number;
+  id: string,
+  type: 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available',
+  title: string,
+  message: string,
+  timestamp: string,
+  instanceName?: string,
+  vertical?: string,
+  governanceType?: string,
+  domain?: string,
+  progress?: number,
   actions?: {
-    label: string;
-    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
-    href?: string;
-  }[];
+    label: string,
+    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',
+    href?: string
+  }[],
 }
 
 interface DeploymentNotificationProps {
-  updates: DeploymentUpdate[];
-  onDismiss?: (id: string) => void;
-  onAction?: (id: string, action: string) => void;
+  updates: DeploymentUpdate[],
+  onDismiss?: (id: string) => void,
+  onAction?: (id: string, action: string) => void
 }
 
 export default function DeploymentNotification({ 
@@ -48,67 +48,67 @@ export default function DeploymentNotification({
   onDismiss, 
   onAction 
 }: DeploymentNotificationProps) {
-  const [expanded, setExpanded] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(null),
 
   const getUpdateIcon = (type: string) => {
     switch (type) {
-      case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />;
-      case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />;
-      case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />;
-      case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
-      default: return <Rocket className="w-5 h-5 text-gray-400" />;
+      case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />,
+      case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />,
+      case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />,
+      case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />,
+      case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />,
+      default: return <Rocket className="w-5 h-5 text-gray-400" />
     }
-  };
+  },
 
   const getUpdateColor = (type: string) => {
     switch (type) {
-      case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10';
-      case 'deployment_completed': return 'border-green-500/30 bg-green-500/10';
-      case 'deployment_failed': return 'border-red-500/30 bg-red-500/10';
-      case 'instance_ready': return 'border-purple-500/30 bg-purple-500/10';
-      case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10';
-      default: return 'border-white/20 bg-white/5';
+      case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10',
+      case 'deployment_completed': return 'border-green-500/30 bg-green-500/10',
+      case 'deployment_failed': return 'border-red-500/30 bg-red-500/10',
+      case 'instance_ready': return 'border-purple-500/30 bg-purple-500/10',
+      case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10',
+      default: return 'border-white/20 bg-white/5'
     }
-  };
+  },
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
-      default: return <Globe className="w-4 h-4 text-gray-400" />;
+      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />,
+      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />,
+      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />,
+      case "GOV": return <Users className="w-4 h-4 text-red-400" />,
+      default: return <Globe className="w-4 h-4 text-gray-400" />
     }
-  };
+  },
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
-      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
-      default: return <Users className="w-4 h-4 text-gray-400" />;
+      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />,
+      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />,
+      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />,
+      default: return <Users className="w-4 h-4 text-gray-400" />
     }
-  };
+  },
 
   const formatTimestamp = (timestamp: string) => {
-    const date = new Date(timestamp);
-    const now = new Date();
-    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
+    const date = new Date(timestamp),
+    const now = new Date(),
+    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60)),
     
-    if (diffInMinutes < 1) return 'Just now';
-    if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
-    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
-    return date.toLocaleDateString();
-  };
+    if (diffInMinutes < 1) return 'Just now',
+    if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
+    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
+    return date.toLocaleDateString(),
+  },
 
   const handleAction = (updateId: string, action: string) => {
     if (onAction) {
-      onAction(updateId, action);
+      onAction(updateId, action),
     }
-  };
+  },
 
-  if (updates.length === 0) return null;
+  if (updates.length === 0) return null,
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">
@@ -218,7 +218,7 @@ export default function DeploymentNotification({
         </div>
       ))}
     </div>
-  );
+  ),
 }
 
 // Example usage with mock data
@@ -255,16 +255,16 @@ export function DeploymentNotificationExample() {
         { label: "Manage", action: "configure", href: "/admin/instances" }
       ]
     }
-  ]);
+  ]),
 
   const handleDismiss = (id: string) => {
-    setUpdates(prev => prev.filter(update => update.id !== id));
-  };
+    setUpdates(prev => prev.filter(update => update.id !== id))
+  },
 
   const handleAction = (id: string, action: string) => {
-    console.log(`Action ${action} for update ${id}`);
+    // // // console.log(`Action ${action} for update ${id}`),
     // Handle different actions here
-  };
+  },
 
   return (
     <DeploymentNotification
@@ -272,5 +272,5 @@ export function DeploymentNotificationExample() {
       onDismiss={handleDismiss}
       onAction={handleAction}
     />
-  );
+  ),
 }

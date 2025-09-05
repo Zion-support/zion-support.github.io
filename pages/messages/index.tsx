@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import EmptyState from '../../components/ui/EmptyState',
 
 const Messages: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Messages: NextPage = () => {
         secondaryAction={{ label: 'Browse services', href: '/services' }}
       />
     </div>
-  );
-};
+  ),
+},
 
-export default Messages;
+export default Messages,

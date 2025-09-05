@@ -1,16 +1,16 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
-import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
-import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
-import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
-import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services';
-import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech';
-import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions';
-import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
-import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
-import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react',
+import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031',
+import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031',
+import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030',
+import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services',
+import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech',
+import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions',
+import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech',
+import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas',
+import { researchDevelopmentServices2030 } from '../../data/2030-research-development',
 
 export default function FuturisticServices2030Page() {
   const contactInfo = {
@@ -18,7 +18,7 @@ export default function FuturisticServices2030Page() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const all2030Services = [
     ...futuristicAIServices2030,
@@ -27,7 +27,7 @@ export default function FuturisticServices2030Page() {
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -72,7 +72,7 @@ export default function FuturisticServices2030Page() {
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions'
     }
-  ];
+  ],
 
   return (
     <>
@@ -321,5 +321,5 @@ export default function FuturisticServices2030Page() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>
-  );
+  ),
 }

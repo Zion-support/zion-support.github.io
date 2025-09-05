@@ -8,6 +8,7 @@ interface NavItem {
   children?: NavItem[];
 }
 
+<<<<<<< HEAD
 interface InteractiveNavigationProps {
   items: NavItem[];
   className?: string;
@@ -126,3 +127,6 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
 };
 
 export default InteractiveNavigation;
+=======
+export default InteractiveNavigation;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

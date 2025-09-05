@@ -1,9 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore
-import data from '../../data/remote-roles.json';
+import data from '../../data/remote-roles.json',
 
 export default function RemoteRolesPage() {
-  const items: any[] = (data?.items || []).slice(0, 60);
+  const items: any[] = (data?.items || []).slice(0, 60),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -21,5 +21,5 @@ export default function RemoteRolesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

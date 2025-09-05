@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
@@ -19,3 +20,9 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
+=======
+        {description && <meta name="description" content={description} />},
+      {children},
+    </>)
+},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

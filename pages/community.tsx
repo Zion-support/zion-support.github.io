@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function CommunityPage() {
 	return (
@@ -13,7 +13,7 @@ export default function CommunityPage() {
 			<div className="max-w-5xl mx-auto space-y-8">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
 				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>
-				<div className="grid md:grid-cols-2 gap-6">
+				<div className="grid md: grid-cols-2 gap-6">
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>
 						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
@@ -30,5 +30,5 @@ export default function CommunityPage() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

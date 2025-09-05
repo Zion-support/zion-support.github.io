@@ -5,6 +5,7 @@ const path = require('path');
 
 console.log('🔧 Fixing syntax errors...');
 
+<<<<<<< HEAD
 // Files with known syntax issues
 const filesToFix = [
   '/workspace/lib/analytics.ts',
@@ -34,6 +35,46 @@ function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       console.log(`Skipping non-existent file: ${filePath}`);
       return false;
+=======
+    
+    // Fix common syntax errors
+    // Remove extra commas and semicolons
+    content = content.replace(/;/g, ';');
+    content = content.replace(/,(\s*[;}])/g, '$1');
+    content = content.replace(/,(\s*\/\/)/g, '$1');
+    content = content.replace(/,(\s*\/\*)/g, '$1');
+    
+    // Fix JSX syntax issues
+    content = content.replace(/,(\s*<)/g, '$1');
+    content = content.replace(/,(\s*{)/g, '$1');
+    content = content.replace(/,(\s*})/g, '$1');
+    
+    // Fix object syntax
+    content = content.replace(/,(\s*})/g, '$1');
+    content = content.replace(/,(\s*])/g, '$1');
+    
+    // Fix function parameters
+    content = content.replace(/,(\s*\))/g, '$1');
+    
+    // Fix class names with spaces
+    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
+    
+    // Fix hover states
+    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
+    
+    // Fix focus states
+    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
+    
+    // Fix group hover
+    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
+    
+    // Fix not-sr-only
+    content = content.replace(/not-sr-only/g, 'not-sr-only');
+    
+    // Fix missing imports
+    if (content.includes('React') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
@@ -65,8 +106,17 @@ export const placeholder = 'placeholder';
 export const placeholder = 'placeholder';
 `;
       }
+<<<<<<< HEAD
 
       fs.writeFileSync(filePath, newContent);
+=======
+    }
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixe: d: ${filePath}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       return true;
     }
 

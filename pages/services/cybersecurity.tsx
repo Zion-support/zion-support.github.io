@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Eye, Zap, Cpu, Database, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function CybersecurityServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function CybersecurityServicesPage() {
       icon: Zap,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
     { number: "24/7", label: "Security Monitoring", icon: Eye },
     { number: "0", label: "Security Breaches", icon: Lock },
     { number: "500+", label: "Protected Systems", icon: CheckCircle }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -188,7 +188,7 @@ export default function CybersecurityServicesPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Security Assessment
               </button>
@@ -202,5 +202,5 @@ export default function CybersecurityServicesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

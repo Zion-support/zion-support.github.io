@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 
 const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -51,12 +51,12 @@ const EnhancedFooter = () => {
       <div className="border-t border-gray-700 py-6">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-300 text-sm">
-            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+            <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  ),
+},
 
-export default EnhancedFooter;
+export default EnhancedFooter,

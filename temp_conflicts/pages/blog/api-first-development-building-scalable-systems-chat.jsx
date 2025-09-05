@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
   return (
@@ -16,7 +16,7 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default ApiFirstDevelopmentBuildingScalableSystemsChat;
+export default ApiFirstDevelopmentBuildingScalableSystemsChat,

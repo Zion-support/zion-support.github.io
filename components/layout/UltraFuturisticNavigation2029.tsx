@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -11,14 +11,14 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -132,7 +132,7 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]
   }
-];
+],
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home },
@@ -143,23 +143,23 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: Phone }
-];
+],
 
 export default function UltraFuturisticNavigation2029() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [scrolled, setScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setScrolled(window.scrollY > 50),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <>
@@ -394,5 +394,5 @@ export default function UltraFuturisticNavigation2029() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  );
+  ),
 }

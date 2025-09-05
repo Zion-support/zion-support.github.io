@@ -1,14 +1,14 @@
-import React from 'react';
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
+import React from 'react',
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types',
 
 interface SidebarProps {
-  spec: ApiDocsSpec;
-  activeEndpointId?: string;
-  onSelectEndpoint: (endpointId: string) => void;
-  selectedVersion: string;
-  onChangeVersion: (v: string) => void;
-  visibilityFilter: Visibility | 'all';
-  onChangeVisibility: (v: Visibility | 'all') => void;
+  spec: ApiDocsSpec,
+  activeEndpointId?: string,
+  onSelectEndpoint: (endpointId: string) => void,
+  selectedVersion: string,
+  onChangeVersion: (v: string) => void,
+  visibilityFilter: Visibility | 'all',
+  onChangeVisibility: (v: Visibility | 'all') => void
 }
 
 export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
@@ -58,5 +58,5 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
         ))}
       </nav>
     </aside>
-  );
+  ),
 }

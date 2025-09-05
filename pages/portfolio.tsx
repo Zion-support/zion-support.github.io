@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function PortfolioPage() {
   const projects = [
@@ -76,22 +76,22 @@ export default function PortfolioPage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: Rocket },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },
     { number: "2500%", label: "Average ROI", icon: TrendingUp }
-  ];
+  ],
 
-  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"];
+  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"],
 
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+    : projects.filter(project => project.category === selectedCategory),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -258,7 +258,7 @@ export default function PortfolioPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
@@ -272,5 +272,5 @@ export default function PortfolioPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import equipment from '@/data/equipment.json';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import EnhancedLayout from '@/components/layout/EnhancedLayout',
+import equipment from '@/data/equipment.json',
 
 const EquipmentDetail: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const items = equipment as any[];
-  const item = items.find((e) => e.slug === slug);
+  const router = useRouter(),
+  const { slug } = router.query as { slug?: string },
+  const items = equipment as any[],
+  const item = items.find((e) => e.slug === slug),
 
   if (!item) {
     return (
@@ -19,10 +19,10 @@ const EquipmentDetail: NextPage = () => {
         </Head>
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
-          <Link href="/products"><a className="text-blue-600 hover:underline">Back to Equipment</a></Link>
+          <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
-    );
+    )
   }
 
   return (
@@ -46,13 +46,13 @@ const EquipmentDetail: NextPage = () => {
           <div className="text-sm opacity-70">Daily Rate</div>
           <div className="text-xl font-semibold">${item.dailyRateUsd}/day</div>
           <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item.name)}`}>
-            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Request Quote</a>
+            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
           </Link>
           <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link>
         </aside>
       </div>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default EquipmentDetail;
+export default EquipmentDetail,
