@@ -64,18 +64,18 @@ const aiServices = [
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
     category: 'Analytics',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Intelligent Chatbot System',
     description: 'AI-powered customer support with natural conversation capabilities.',
     icon: MessageSquare,
     features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Computer Vision Solutions',
     description: 'Image and video analysis using deep learning and computer vision.',
     icon: Eye,
@@ -83,7 +83,7 @@ const aiServices = [
     pricing: '$3,000 - $15,000 project',
     category: 'Computer Vision'
   },
-  {}
+  {
     title: 'AI Content Generation',
     description: 'Automated content creation using advanced language models.',
     icon: FileText,
@@ -91,7 +91,7 @@ const aiServices = [
     pricing: '$1,500 - $8,000/month',
     category: 'Content'
   },
-  {}
+  {
     title: 'Voice AI Assistant',
     description: 'Voice-controlled AI assistant with speech recognition and synthesis.',
     icon: Mic,
@@ -99,16 +99,16 @@ const aiServices = [
     pricing: '$2,500 - $12,000 project',
     category: 'Voice'
   },
-  {}
+  {
     title: 'AI-Powered Fraud Detection',
     description: 'Real-time fraud detection using machine learning and behavioral analytics.',
     icon: Shield,
     features: ['Real-time Analysis', 'Behavioral Patterns', 'Risk Scoring', 'Automated Alerts'],
     pricing: '$5,000 - $25,000 setup',
     category: 'Security',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Drug Discovery Platform',
     description: 'Accelerated drug discovery using AI for molecular design and optimization.',
     icon: Heart,
@@ -116,7 +116,7 @@ const aiServices = [
     pricing: '$50,000 - $200,000 project',
     category: 'Healthcare'
   },
-  {}
+  {
     title: 'AI Financial Modeling',
     description: 'Advanced financial modeling and risk assessment using machine learning.',
     icon: TrendingUp,
@@ -124,7 +124,7 @@ const aiServices = [
     pricing: '$10,000 - $50,000 project',
     category: 'Finance'
   },
-  {}
+  {
     title: 'AI Supply Chain Optimization',
     description: 'Intelligent supply chain management with predictive analytics and automation.',
     icon: Network,
@@ -132,7 +132,7 @@ const aiServices = [
     pricing: '$15,000 - $75,000 project',
     category: 'Logistics'
   },
-  {}
+  {
     title: 'AI-Powered Recommendation Engine',
     description: 'Personalized recommendation system for e-commerce and content platforms.',
     icon: Target,
@@ -140,7 +140,7 @@ const aiServices = [
     pricing: '$3,000 - $15,000 setup',
     category: 'E-commerce'
   },
-  {}
+  {
     title: 'AI Social Media Manager',
     description: 'Automated social media management with content creation and scheduling.',
     icon: Globe,
@@ -148,16 +148,16 @@ const aiServices = [
     pricing: '$500 - $2,500/month',
     category: 'Marketing'
   },
-  {}
+  {
     title: 'AI-Powered Code Review Assistant',
     description: 'Automated code review with security analysis, performance optimization, and best practices enforcement.',
     icon: Code,
     features: ['Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Automated Fixes'],
     pricing: '$1,200 - $5,000/month',
     category: 'Development',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Customer Sentiment Analytics',
     description: 'Real-time customer sentiment analysis across all communication channels.',
     icon: Heart,
@@ -165,7 +165,7 @@ const aiServices = [
     pricing: '$800 - $3,500/month',
     category: 'Analytics'
   },
-  {}
+  {
     title: 'AI-Powered Document Processing',
     description: 'Intelligent document extraction, classification, and data processing using OCR and NLP.',
     icon: FileText,
@@ -173,7 +173,7 @@ const aiServices = [
     pricing: '$1,500 - $7,000/month',
     category: 'Document Management'
   },
-  {}
+  {
     title: 'AI Predictive Maintenance',
     description: 'Predictive maintenance for industrial equipment using IoT sensors and machine learning.',
     icon: Settings,
@@ -181,7 +181,7 @@ const aiServices = [
     pricing: '$5,000 - $25,000/setup',
     category: 'Industrial IoT'
   },
-  {}
+  {
     title: 'AI-Powered Legal Document Analysis',
     description: 'Automated legal document review, contract analysis, and compliance checking.',
     icon: Shield,
@@ -189,7 +189,7 @@ const aiServices = [
     pricing: '$3,000 - $15,000/month',
     category: 'Legal Tech'
   },
-  {}
+  {
     title: 'AI Real Estate Valuation',
     description: 'Automated property valuation using market data, location analysis, and predictive modeling.',
     icon: Home,
@@ -197,7 +197,7 @@ const aiServices = [
     pricing: '$2,000 - $10,000/month',
     category: 'Real Estate'
   },
-  {}
+  {
     title: 'AI-Powered HR Recruitment',
     description: 'Intelligent candidate screening, resume analysis, and interview scheduling.',
     icon: Users,
@@ -205,7 +205,7 @@ const aiServices = [
     pricing: '$1,000 - $5,000/month',
     category: 'HR Tech'
   },
-  {}
+  {
     title: 'AI Energy Optimization',
     description: 'Smart energy management for buildings and facilities using AI optimization.',
     icon: Zap,
@@ -213,7 +213,7 @@ const aiServices = [
     pricing: '$2,500 - $12,000/setup',
     category: 'Energy Management'
   },
-  {}
+  {
     title: 'AI-Powered Quality Control',
     description: 'Automated quality inspection using computer vision and machine learning.',
     icon: Eye,
@@ -221,7 +221,7 @@ const aiServices = [
     pricing: '$4,000 - $20,000/setup',
     category: 'Manufacturing'
   },
-  {}
+  {
     title: 'AI Customer Churn Prediction',
     description: 'Predict customer churn and implement retention strategies using machine learning.',
     icon: TrendingUp,
@@ -229,7 +229,7 @@ const aiServices = [
     pricing: '$1,500 - $8,000/month',
     category: 'Customer Analytics'
   },
-  {}
+  {
     title: 'AI-Powered Translation Services',
     description: 'Real-time translation with context awareness and industry-specific terminology.',
     icon: Globe,
@@ -237,7 +237,7 @@ const aiServices = [
     pricing: '$500 - $2,500/month',
     category: 'Language Services'
   },
-  {}
+  {
     title: 'AI Code Review Assistant',
     description: 'Automated code review and quality assurance using AI analysis.',
     icon: Code,
@@ -245,7 +245,7 @@ const aiServices = [
     pricing: '$2,000 - $10,000 setup',
     category: 'Development'
   },
-  {}
+  {
     title: 'AI Document Processing',
     description: 'Intelligent document extraction, classification, and data processing.',
     icon: FileText,
@@ -253,7 +253,7 @@ const aiServices = [
     pricing: '$1,500 - $8,000/month',
     category: 'Document Management'
   },
-  {}
+  {
     title: 'AI Video Analytics',
     description: 'Advanced video analysis for security, marketing, and business intelligence.',
     icon: Video,
@@ -1632,19 +1632,21 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Sentiment Analysis', 'Personalization', 'Automation', 'Experience Optimization'],
     pricing: '$199 - $1,999/month',
     category: 'Customer Experience AI',
-    popular: true;
-  };
+    popular: true
+  }
 ];
 
-const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },]
+const industries = [
+  { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
   { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
-  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' };
+  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
 ];
 
-const benefits = [{}]
+const benefits = [
+  {
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
