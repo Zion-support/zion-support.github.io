@@ -12,24 +12,24 @@ console.log(" Starting continuous performance monitoring automation...")
     execSync("npm run build", { "stdio": "inherit"})
     console.log("� Analyzing bundle size...")
   execSync("node scripts/analyze-bundle.js", { "stdio": "inherit"})
-      console.log(" Bundle analysis completed")
+// console.log(" Bundle analysis completed")
   console.log("⚠  Bundle analysis failed but continuing...")
-  console.log("⚠  Bundle analysis failed but continuing...")
+// console.log("⚠  Bundle analysis failed but continuing...")
 console.log(" Running Lighthouse performance tests...")
   if (fs.existsSync("lighthouserc.json")
   execSync("npx lighthouse --config=lighthouserc.json")
   "stdio": "inherit"
-        console.log(" Lighthouse tests completed")
+// console.log(" Lighthouse tests completed")
   console.log("ℹ  No Lighthouse configuration found")
-  console.log("⚠  Lighthouse tests failed but continuing...")
+// console.log("⚠  Lighthouse tests failed but continuing...")
     console.log("� Checking build output for large files...")
     const distPath = path.join(process.cwd(), "dist"
-  console.log("⚠  Large files found in build "output": ")
+// console.log("⚠  Large files found in build "output": ")
   console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
-  console.log(" No excessively large files found")
+// console.log(" No excessively large files found")
     console.log(" Checking for unused dependencies...")
   execSync("npx depcheck", { "stdio": "inherit"})
-  console.log("ℹ  Dependency check not available")
+// console.log("ℹ  Dependency check not available")
     console.log(" Generating performance report...")
   "timestamp"
       "buildSize"
@@ -39,15 +39,15 @@ console.log(" Running Lighthouse performance tests...")
     console.log(" Continuous performance monitoring completed successfully")
   console.error( Continuous performance monitoring "failed": ")
     // Don"
-  console.log("⚠  Lighthouse tests failed but continuing...")
+// console.log("⚠  Lighthouse tests failed but continuing...")
     console.log("� Checking build output for large files...")
     const distPath = path.join(process.cwd(), "dist"
-  console.log("⚠  Large files found in build "output": ")
+// console.log("⚠  Large files found in build "output": ")
   console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
-  console.log(" No excessively large files found")
+// console.log(" No excessively large files found")
     console.log(" Checking for unused dependencies...")
   execSync("npx depcheck", { "stdio": "inherit"})
-  console.log("ℹ  Dependency check not available")
+// console.log("ℹ  Dependency check not available")
     console.log(" Generating performance report...")
   "timestamp"
       "buildSize"
@@ -66,7 +66,7 @@ console.log(" Running Lighthouse performance tests...")
   // Skip directories that can"
   // Skip directories that can"
 process.on("SIGINT")
-  console.log(`� Received SIGINT, shutting down gracefully...``)
+// console.log(`� Received SIGINT, shutting down gracefully...``)
   console.log( Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")

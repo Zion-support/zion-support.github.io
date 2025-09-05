@@ -18,7 +18,8 @@ class SimpleMonitor {}
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
 '
@@ -41,7 +42,7 @@ class SimpleMonitor {}
     try {}
   // TODO: Implement;
 };
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);`
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
     } catch (err) {``}
       console.error('Failed to write to error file:', err.message);'
     };
@@ -63,22 +64,22 @@ class SimpleMonitor {}
       
       const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
       
-      this.log(`System Health Check:`);`
-      this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);`
-      this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`);`
-      this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`);`
-      this.log(`  - Platform: ${health.platform}`);`
-      this.log(`  - Node Version: ${health.nodeVersion}`);`
+      this.log(`System Health Check:`);
+      this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);
+      this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`);
+      this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`);
+      this.log(`  - Platform: ${health.platform}`);
+      this.log(`  - Node Version: ${health.nodeVersion}`);
       
       return health;
       
     } catch (error) {}
-      this.error(`Health check failed: ${error.message}`);`
+      this.error(`Health check failed: ${error.message}`);
       return null;
     };
   };
   async start() {}
-    this.log(`Starting ${this.processName}...`);`
+    this.log(`Starting ${this.processName}...`);
     
     // Run initial health check;
     await this.checkSystemHealth();
@@ -91,7 +92,7 @@ class SimpleMonitor {}
       await this.checkSystemHealth();
     }, interval);
     
-    this.log(`${this.processName} started successfully`);`
+    this.log(`${this.processName} started successfully`);
   };
 };
 // Start the automation if this script is run directly;
@@ -100,6 +101,7 @@ if (require.main === module) {}
   monitor.start().catch(error => {)``}
     console.error('Simple monitor failed to start:', error);'
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = SimpleMonitor;'

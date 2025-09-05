@@ -23,5 +23,6 @@ const "ServicesIndex"""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"""
               className="block p-6 bg-white rounded-lg shadow-md "hover": shadow-lg transition-shadow"""
               <h3 className="text-lg font-semibold text-gray-900""]"
-export default defineConfig({ plugins: [react()],test: { environment: "jsdom",,},,}); `; fs.writeFileSync("vitest.config.ts",content); console.log("Fixed vitest.config.ts")} ; console.log("Starting critical file fixes..."); try { fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig(); fixVitestConfig(); console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:""`})
+export default defineConfig({ plugins: [react()],test: { environment: "jsdom",,},,}
+}); `; fs.writeFileSync("vitest.config.ts",content); console.log("Fixed vitest.config.ts")} ; console.log("Starting critical file fixes..."); try { fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig(); fixVitestConfig(); console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:""`})
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

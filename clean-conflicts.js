@@ -44,6 +44,7 @@ filesToClean.forEach(file => {
   if (fs.existsSync(file)) {
     cleanMergeConflicts(file);
   }
+}
 });
 
 console.log('✅ Merge conflict cleanup complete!');

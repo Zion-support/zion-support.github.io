@@ -11,7 +11,8 @@ export const renderWithProviders = (ui, options = {}) => {
     </ThemeProvider>
   );
 
-  return render(ui, { wrapper: Wrapper, ...renderOptions });
+  return render(ui, { wrapper: Wrapper, ...renderOptions }
+});
 };
 
 export const mockNextRouter = () => ({
@@ -22,8 +23,10 @@ export const mockNextRouter = () => ({
   pathname: '/',
   query: {},
   asPath: '/',
+}
 });
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides
+}
 });

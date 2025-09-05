@@ -9,5 +9,8 @@ describe('Page', () => {;''}
 </Page>
     render(<Page />);
 </Page>'
-import { render, screen, describe, it, expect } from 'lucide-react'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});'
+import { render, screen, describe, it, expect } from 'lucide-react'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}
+}); ; it('displays correct content',() => {; render(<Page />)}
+}); ; it('handles user interactions',() => {; render(<Page />)}),}
+});'
 </Page>'

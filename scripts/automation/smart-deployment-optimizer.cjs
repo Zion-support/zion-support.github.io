@@ -14,9 +14,9 @@ console.log("" Starting Smart Deployment Optimizer...")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
   console.log(""No historical deployment data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-  console.log(""No historical deployment data found, starting fresh")
+// console.log(""No historical deployment data found, starting fresh")
   console.log(" Running smart deployment optimization at ${new Date().toISOString()}"
-  console.log("No historical deployment data found, starting fresh")
+// console.log("No historical deployment data found, starting fresh")
       console.log(" Smart deployment optimization completed successfully")
   console.error(" Smart deployment optimization "failed": ")
       console.log(" Smart deployment optimization completed successfully")
@@ -48,8 +48,8 @@ console.log("" Starting Smart Deployment Optimizer...")
   "type": "dependency_optimization"
           "priority": "
           "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})
-          "action": `Use tree-shaking or replace with lighter alternatives``
-  console.log("� Optimizing bundle size...")
+          "action": `Use tree-shaking or replace with lighter alternatives
+// console.log("� Optimizing bundle size...")
   console.log("� Optimizing bundle size...")
       execSync("npm run build", { "stdio": "pipe"})
   "timestamp"
@@ -58,7 +58,7 @@ console.log("" Starting Smart Deployment Optimizer...")
   "timestamp"
           "size"
           "files"
-        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB``
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB
   "timestamp"
           "size"
           "files"
@@ -67,16 +67,17 @@ console.log("" Starting Smart Deployment Optimizer...")
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-  console.log(""⚠ Build analysis "failed": ")
+// console.log(""⚠ Build analysis "failed": ")
   console.log(" Analyzing deployment patterns...")
-        new Date(build.timestamp) >});"
+        new Date(build.timestamp) >}
+});"
 "
         console.log( Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB"
   "type": "bundle_size"
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-  console.log(""⚠ Build analysis "failed": ")
+// console.log(""⚠ Build analysis "failed": ")
   console.log(" Analyzing deployment patterns...")
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
@@ -113,7 +114,7 @@ console.log("" Starting Smart Deployment Optimizer...")
         "action": "Implement pre-deployment quality gates and automated testing"
   console.log("🧪 Testing optimized build..."")
       execSync("npm run type-check", { "stdio": "pipe"})
-      console.log("" Type checking passed")
+// console.log("" Type checking passed")
       console.log(" Type checking passed")
       execSync("npm run lint", { "stdio": "pipe"})
       console.log(" Linting passed")
@@ -132,7 +133,7 @@ console.log("" Starting Smart Deployment Optimizer...")
   "type": "html_optimization"
               "priority": "low","description": HTML optimization issues: ${issues.join(", "})
               "action": "Add missing HTML meta tags and optimize structure"
-  console.log(`⚠ Build testing "failed": "`)
+// console.log(`⚠ Build testing "failed": "`)
   console.log(" Generating deployment optimization report..."")
   "timestamp"
       "summary"
@@ -145,7 +146,7 @@ console.log("" Starting Smart Deployment Optimizer...")
       this.reportDir,deployment-optimization-${Date.now()}.json"
     const historicalPath = path.join(this.reportDir, "deployment-history.json")
       process.cwd(),deployment-optimization-report.json"
-  console.log("⚠ Build testing "failed": ")
+// console.log("⚠ Build testing "failed": ")
   console.log(" Generating deployment optimization report...")
   "timestamp"
       "summary"

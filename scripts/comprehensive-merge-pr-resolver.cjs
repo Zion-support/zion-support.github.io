@@ -141,7 +141,8 @@ async function main() {
     // Try to build
     console.log('\n🔨 Testing build...');
     try {
-      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' });
+      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
       console.log('✅ Build successful!');
     } catch (error) {
       console.log('⚠️  Build still has issues, but conflicts were resolved');
@@ -151,11 +152,14 @@ async function main() {
     // Check git status
     console.log('\n📊 Checking git status...');
     try {
-      const gitStatus = execSync('git status --porcelain', { cwd: '/workspace', encoding: 'utf8' });
+      const gitStatus = execSync('git status --porcelain', { cwd: '/workspace', encoding: 'utf8' }
+});
       if (gitStatus.trim()) {
         console.log('📝 Staging and committing changes...');
-        execSync('git add .', { cwd: '/workspace' });
-        execSync('git commit -m "fix: Resolve merge conflicts and syntax errors"', { cwd: '/workspace' });
+        execSync('git add .', { cwd: '/workspace' }
+});
+        execSync('git commit -m "fix: Resolve merge conflicts and syntax errors"', { cwd: '/workspace' }
+});
         console.log('✅ Changes committed');
       } else {
         console.log('✅ No changes to commit');
@@ -167,7 +171,8 @@ async function main() {
     // Check for open PRs (if GitHub CLI is available)
     console.log('\n🔍 Checking for open PRs...');
     try {
-      const prs = execSync('gh pr list --state open', { cwd: '/workspace', encoding: 'utf8' });
+      const prs = execSync('gh pr list --state open', { cwd: '/workspace', encoding: 'utf8' }
+});
       if (prs.trim()) {
         console.log('📋 Open PRs found:');
         console.log(prs);
@@ -179,7 +184,8 @@ async function main() {
             const number = prNumber.replace('#', '');
             try {
               console.log(`🔄 Merging PR #${number}...`);
-              execSync(`gh pr merge ${number} --merge`, { cwd: '/workspace' });
+              execSync(`gh pr merge ${number} --merge`, { cwd: '/workspace' }
+});
               console.log(`✅ PR #${number} merged successfully`);
             } catch (error) {
               console.log(`⚠️  Failed to merge PR #${number}:`, error.message);
@@ -196,7 +202,8 @@ async function main() {
     // Pull latest changes
     console.log('\n📥 Pulling latest changes from remote...');
     try {
-      execSync('git pull origin main', { cwd: '/workspace' });
+      execSync('git pull origin main', { cwd: '/workspace' }
+});
       console.log('✅ Latest changes pulled');
     } catch (error) {
       console.log('⚠️  Failed to pull changes:', error.message);
@@ -205,7 +212,8 @@ async function main() {
     // Push changes
     console.log('\n🚀 Pushing changes to main branch...');
     try {
-      execSync('git push origin main', { cwd: '/workspace' });
+      execSync('git push origin main', { cwd: '/workspace' }
+});
       console.log('✅ Changes pushed to main branch');
     } catch (error) {
       console.log('⚠️  Failed to push changes:', error.message);

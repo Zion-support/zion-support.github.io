@@ -12,15 +12,17 @@ class AdvancedMonitoringSystem {}
     process.on('uncaughtException', (error) => {}
       console.error('Uncaught Exception:', error);
       this.logError('uncaughtException', error.message);
-    });
+    }
+});
 
     process.on('unhandledRejection', (reason, promise) => {}
       console.error('Unhandled Rejection at:', promise, 'reason:', reason);
       this.logError('unhandledRejection', reason);
-    });
+    }
+});
   };
   logError(type, message) {}
-    console.error(`Error collecting ${type}:`, message);`
+    console.error(`Error collecting ${type}:`, message);
     this.metrics[type] = {}
       count: (this.metrics[type]?.count || 0) + 1,
       lastError: new Date().toISOString(),
@@ -52,7 +54,7 @@ class AdvancedMonitoringSystem {}
     
     const reportFile = path.join(process.cwd(), 'monitoring-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    console.log(`Monitoring report saved to: ${reportFile}`);`
+    console.log(`Monitoring report saved to: ${reportFile}`);
   };
 };
 module.exports = AdvancedMonitoringSystem;

@@ -63,7 +63,8 @@ export class PerformanceTracker {
     if (!this.metrics.has(name)) {
       this.metrics.set(name, []);
     }
-    this.metrics.get(name).push({ value, timestamp });
+    this.metrics.get(name).push({ value, timestamp }
+});
     
     // Keep only last 1000 entries
     const entries = this.metrics.get(name);
@@ -94,7 +95,8 @@ export class PerformanceTracker {
           value: avg,
           threshold,
           severity: 'warning'
-        });
+        }
+});
       }
     }
     
@@ -147,15 +149,17 @@ export class ErrorTracker {
   }
 }
 
-export const errorTracker = new ErrorTracker();`
+export const errorTracker = new ErrorTracker();
   };
 
   Object.entries(monitoringFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
+});
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Create advanced caching system
@@ -267,15 +271,17 @@ export class MemoryCache {
   }
 }
 
-export const memoryCache = new MemoryCache();`
+export const memoryCache = new MemoryCache();
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
+});
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Create API optimization utilities
@@ -373,15 +379,17 @@ export class ResponseOptimizer {
   }
 }
 
-export const responseOptimizer = new ResponseOptimizer();`
+export const responseOptimizer = new ResponseOptimizer();
   };
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
+});
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Create database optimization utilities
@@ -491,7 +499,8 @@ export class ConnectionPool {
         }
       };
       checkForConnection();
-    });
+    }
+});
   }
 
   releaseConnection(connection) {
@@ -518,15 +527,17 @@ export class ConnectionPool {
   }
 }
 
-export const connectionPool = new ConnectionPool();`
+export const connectionPool = new ConnectionPool();
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
+});
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Main execution
@@ -566,11 +577,12 @@ async function main() {
     };
     
     fs.writeFileSync('/workspace/ecosystem.config.js', 
-      `module.exports = ${JSON.stringify(pm2Config, null, 2)};`);
+      `module.exports = ${JSON.stringify(pm2Config, null, 2)};);
     console.log('✅ Created PM2 ecosystem configuration');
     
     // Create logs directory
-    fs.mkdirSync('/workspace/logs', { recursive: true });
+    fs.mkdirSync('/workspace/logs', { recursive: true }
+});
     console.log('✅ Created logs directory');
     
     console.log('\n🎉 Advanced app improvements completed successfully!');

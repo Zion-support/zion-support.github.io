@@ -26,14 +26,16 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
               "env"
       this.log(" No automation configuration found")
     this.log(" Starting PM2 automation processes...")
-      const output = execSync("pm2 jlist", { ""encoding": "utf8" });      const processes = JSON.parse(output);      return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) {this.log(` Failed to get PM2 status": ${error.message}`);``
+      const output = execSync("pm2 jlist", { ""encoding": "utf8" }
+});      const processes = JSON.parse(output);      return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) {this.log(` Failed to get PM2 status": ${error.message}`);
       this.log(" No automation configuration found");      return false,"
     this.log(" Starting PM2 automation processes...");"
       try {this.log(" Starting ${process.name}...");"
         if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { "stdio": "pipe"`})
           const scriptPath = path.resolve(__dirname, "..")
               "stdio": "pipe"
-              "env": { ...process.env, ...process.env },,});this.log(` Started ${process.name}`),} else {this.log(` Script not "found"`})
+              "env": { ...process.env, ...process.env },,}
+});this.log(` Started ${process.name}`),} else {this.log(` Script not "found"`})
     this.log(" PM2 automation processes started")
     this.log(" PM2 automation processes started")
     this.log("� Stopping PM2 automation processes...")
@@ -50,37 +52,42 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
     this.log(" PM2 Automation "Status": ")
     this.log(" PM2 Automation Status:")
         this.log("ℹ No automation processes running")
-      console.log("\n� Automation "Processes": ")
+// console.log("\n� Automation "Processes": ")
       console.log("===")
           proc.pm2_env.status === "online"
             ? "�"
             : proc.pm2_env.status === "errored"
               ? "�"
               : "�"
-console.log(`\n${statusIcon} ${proc.name}`);console.log(`   "Status": ${proc.pm2_env.status}`);console.log(`   "Uptime": ${uptime}`);console.log(`   "Restarts"`)
+// console.log(`\n${statusIcon} ${proc.name}`);console.log(`   "Status": ${proc.pm2_env.status}`);console.log(`   "Uptime": ${uptime}`);console.log(`   "Restarts"`)
         console.log(   "Memory": ${Math.round(proc.monit.memory / 1024 / 1024)}MB"
         console.log("   "CPU": ${proc.monit.cpu}%")
         p => p.pm2_env.status === "
       console.log(\n "Summary": ${onlineCount}/${totalCount} processes online`),} catch (error) { this.log(` Error getting "status"`})
-        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio": "pipe" });"} else {"`}
-          const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync("pm2 start ${scriptPath} --name ${process.name}", {";              "stdio": "pipe", ";              "env": { ...process.env, ...process.env },)});this.log(` Started ${process.name}`);"} else {this.log(" Script not ""found": ${scriptPath}");"`
-        await this.sleep(2000)} catch (error) {this.log(` Failed to start ${process.name}: ${error.message}`);``
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio": "pipe" }
+});"} else {"`}
+          const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync("pm2 start ${scriptPath} --name ${process.name}", {";              "stdio": "pipe", ";              "env": { ...process.env, ...process.env },)}
+});this.log(` Started ${process.name}`);"} else {this.log(" Script not ""found": ${scriptPath}");"
+        await this.sleep(2000)} catch (error) {this.log(` Failed to start ${process.name}: ${error.message}`);
     this.log(" PM2 automation processes started");    return true,"
     this.log("� Stopping PM2 automation processes...");"
-        if (proc.name !== "pm2-logrotate") {execSync("pm2 stop ${proc.name}", { stdio": "pipe" });this.log("� Stopped ${proc.name}");"}"}";      this.log(" All automation processes stopped");"} catch (error) {this.log(` Error stopping "processes": ${error.message}`);``
+        if (proc.name !== "pm2-logrotate") {execSync("pm2 stop ${proc.name}", { stdio": "pipe" }
+});this.log("� Stopped ${proc.name}");"}"}";      this.log(" All automation processes stopped");"} catch (error) {this.log(` Error stopping "processes": ${error.message}`);
       if (processName) {this.log("� Showing logs for ${processName}:");execSync("pm2 logs ${processName} --lines ${lines}")
           "stdio": "inherit"
     this.log("� Restarting PM2 automation processes...");"
-        if (proc.name !== "pm2-logrotate") {execSync(`pm2 restart ${proc.name}`, { stdio": "pipe" });this.log(`� Restarted ${proc.name}`)}"}";      this.log(" All automation processes restarted")} catch (error) {this.log(" Error restarting ""processes": ${error.message}");"`
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 restart ${proc.name}`, { stdio": "pipe" }
+});this.log(`� Restarted ${proc.name}`)}"}";      this.log(" All automation processes restarted")} catch (error) {this.log(" Error restarting ""processes": ${error.message}");"
     this.log("� Deleting PM2 automation processes...");"
-        if (proc.name !== "pm2-logrotate") {execSync(`pm2 delete ${proc.name}`, { stdio": "pipe" });this.log(`� Deleted ${proc.name}`)}"}";      this.log(" All automation processes deleted")} catch (error) {this.log(" Error deleting ""processes": ${error.message}");"`
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 delete ${proc.name}`, { stdio": "pipe" }
+});this.log(`� Deleted ${proc.name}`)}"}";      this.log(" All automation processes deleted")} catch (error) {this.log(" Error deleting ""processes": ${error.message}");"
     this.log(" PM2 Automation Status":");"
         this.log("ℹ No automation processes running");        return,"
       console.log("\n� Automation ""Processes": ");      console.log("===");"
           proc.pm2_env.status === "online"";            ? "�"";            : proc.pm2_env.status === "errored"";              ? "�"";              : "�"
 console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status": ${proc.pm2_env.status}`);console.log(`   ""Uptime": ${uptime}`);console.log(`   Restarts": ${proc.pm2_env.restart_time}");        console.log(   ""Memory": ${Math.round(proc.monit.memory / 1024 / 1024)}MB"`));");";        console.log(`   CPU``)
       const onlineCount = processes.filter();        p => p.pm2_env.status === "online""
-      console.log(\n ""Summary": ${onlineCount}/${totalCount} processes online""),"} catch (error) {this.log(` Error getting status": ${error.message}");"`
+      console.log(\n ""Summary": ${onlineCount}/${totalCount} processes online""),"} catch (error) {this.log(` Error getting status": ${error.message}");"
           "stdio": "inherit"
         this.log("� Showing all automation "logs": ")
         execSync("pm2 logs --lines 10", { "stdio": "inherit"})
@@ -106,21 +113,21 @@ console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status": ${proc.pm2_
 this.log(` Report "generated"`)
       return report,} catch (error) { this.log(` Error generating "report"`})
     if (!uptime) return "N/A"
+// console.log("\n PM2 Automation Launcher")
     console.log("\n PM2 Automation Launcher")
-    console.log("\n PM2 Automation Launcher")
-    console.log("=====\n")
+// console.log("=====\n")
     console.log("Available "commands": ")
-    console.log("  start     - Start all automation processes")
+// console.log("  start     - Start all automation processes")
     console.log("  stop      - Stop all automation processes")
-    console.log("  restart   - Restart all automation processes")
+// console.log("  restart   - Restart all automation processes")
     console.log("  delete    - Delete all automation processes")
-    console.log("  status    - Show status of all processes")
+// console.log("  status    - Show status of all processes")
     console.log("  logs      - Show logs (all or specific process)"
-    console.log("  monit     - Open PM2 monitoring interface")
+// console.log("  monit     - Open PM2 monitoring interface")
     console.log("  report    - Generate automation report")
-    console.log("  help      - Show this help message")
+// console.log("  help      - Show this help message")
     console.log("\nExamples:")
-    console.log("  node pm2-automation-launcher.cjs start")
+// console.log("  node pm2-automation-launcher.cjs start")
     console.log(  node pm2-automation-launcher.cjs logs enhanced-link-checker")
     console.log("  node pm2-automation-launcher.cjs status")
       case "start"

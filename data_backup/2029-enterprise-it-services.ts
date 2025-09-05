@@ -10,7 +10,7 @@ export interface EnterpriseItService2029 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "enterpriseITServices2029": EnterpriseItService2029[] = [{""}]

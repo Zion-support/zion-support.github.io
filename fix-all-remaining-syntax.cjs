@@ -56,14 +56,15 @@ function fixSyntaxErrors(filePath) {}
       if (fix.pattern.test(content)) {}
         content = content.replace(fix.pattern, fix.replacement);
         modified = true};
-    });
+    }
+});
 
     if (modified) {}
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors "in": ${filePath}`);`
+      console.log(`Fixed syntax errors "in": ${filePath}`);
       return true};
     return false} catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message);`
+    console.error(`Error processing ${filePath}:`, error.message);
     return false};
 };
 // Get all TypeScript/JavaScript files in pages directory;
@@ -89,6 +90,7 @@ console.log('Starting comprehensive syntax error fixes...');
 pagesFiles.forEach(file => {})
   if (fixSyntaxErrors(file)) {}
     fixedCount++};
+}
 });
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);`
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

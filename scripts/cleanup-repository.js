@@ -116,7 +116,7 @@ import { glob } from 'glob'''
       !file.includes('performance-report.json''')
       !file.includes('quality-report.json''')
       !file.includes('security-audit-report.json''')
-  console.log('🧹 Starting repository cleanup...''')
+// console.log('🧹 Starting repository cleanup...''')
   console.log('\n✨ Repository cleanup completed!''')
   console.log('\n� Next "steps"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"
