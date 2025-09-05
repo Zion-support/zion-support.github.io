@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
+=======
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
@@ -19,7 +25,7 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -48,21 +54,25 @@ serve(async (req) => {
     const data = await response.json(),
     
     if (data.error) {
-      throw new Error(data.error.message),
+      throw new Error(data.error.message)
     }
 
     const assistantMessage = data.choices[0].message.content,
 
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
+<<<<<<< HEAD
     // // // console.log('AI chat interaction logged'),
+=======
+    // console.log('AI chat interaction logged');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     return new Response(JSON.stringify({ message: assistantMessage }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in ai-chat function:', error),
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 }),

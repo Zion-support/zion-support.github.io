@@ -40,7 +40,7 @@ export interface Conversation {
 export interface ConversationContextData {
   title?: string,
   description?: string,
-  image_url?: string,
+  image_url?: string
 }
 
 // Define the shape of the messaging context

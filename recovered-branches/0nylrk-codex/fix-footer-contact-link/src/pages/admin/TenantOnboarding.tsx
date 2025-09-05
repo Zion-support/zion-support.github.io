@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,41 +15,69 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
 import { Switch } from "@/components/ui/switch",
-
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
+=======
+import React, { useState } from &quot;react&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Navigate } from &quot;react-router-dom&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
+import { toast } from &quot;sonner&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Switch } from &quot;@/components/ui/switch&quot;;
+
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState(&quot;company&quot;);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   const [formData, setFormData] = useState({
-    brand_name: "",
-    subdomain: "",
-    logo_url: "",
-    primary_color: "#9b87f5",
-    theme_preset: "light",
-    company_size: "",
-    industry: "",
-    custom_domain: "",
+    brand_name: "&quot;,
+    subdomain: "&quot;,
+    logo_url: "&quot;,
+    primary_color: &quot;#9b87f5&quot;,
+    theme_preset: &quot;light&quot;,
+    company_size: "&quot;,
+    industry: "&quot;,
+    custom_domain: "&quot;,
     is_co_branded: true
   }),
   
   // Check if user has admin role
+<<<<<<< HEAD
   const isAdmin = user?.role === "admin",
   
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
+=======
+  const isAdmin = user?.role === &quot;admin&quot;;
+  
+  if (!isAdmin) {
+    return <Navigate to=&quot;/unauthorized&quot; />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
   
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
   
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked })),
+    setFormData(prev => ({ ...prev, [name]: checked }))
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -61,10 +90,17 @@ export default function TenantOnboarding() {
       
       // Create landing page copy
       const landingPageCopy = {
+<<<<<<< HEAD
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
       },
+=======
+        headline: &quot;AI Hiring Assistant&quot;,
+        subtitle: `Find the best talent for your ${formData.industry || &quot;company&quot;}`,
+        cta: &quot;Get Started&quot;
+      };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       // Submit to Supabase
       const { data, error } = await supabase
@@ -87,45 +123,50 @@ export default function TenantOnboarding() {
       
       if (error) throw error,
       
-      toast.success("Tenant created successfully!", {
+      toast.success(&quot;Tenant created successfully!&quot;, {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
       
       // Reset form
       setFormData({
-        brand_name: "",
-        subdomain: "",
-        logo_url: "",
-        primary_color: "#9b87f5",
-        theme_preset: "light",
-        company_size: "",
-        industry: "",
-        custom_domain: "",
+        brand_name: "&quot;,
+        subdomain: "&quot;,
+        logo_url: "&quot;,
+        primary_color: &quot;#9b87f5&quot;,
+        theme_preset: &quot;light&quot;,
+        company_size: "&quot;,
+        industry: "&quot;,
+        custom_domain: "&quot;,
         is_co_branded: true
-      }),
+      })
       
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
+=======
+      console.error(&quot;Error creating tenant:&quot;, error);
+      toast.error(&quot;Failed to create tenant&quot;, { 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         description: error.message 
-      }),
+      })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   return (
     <>
       <SEO 
-        title="Tenant Onboarding - Zion AI Marketplace"
-        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
+        title=&quot;Tenant Onboarding - Zion AI Marketplace&quot;
+        description=&quot;Onboard a new white-label tenant to the Zion AI Marketplace platform.&quot;
       />
       <Header />
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col space-y-6">
+      <main className=&quot;flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;flex flex-col space-y-6&quot;>
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Tenant Onboarding</h1>
-            <p className="text-muted-foreground mt-2">
+            <h1 className=&quot;text-3xl font-bold tracking-tight&quot;>Tenant Onboarding</h1>
+            <p className=&quot;text-muted-foreground mt-2&quot;>
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
           </div>
@@ -138,185 +179,185 @@ export default function TenantOnboarding() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                  <TabsList className="mb-4 grid grid-cols-3 w-full">
-                    <TabsTrigger value="company">Company Info</TabsTrigger>
-                    <TabsTrigger value="branding">Branding</TabsTrigger>
-                    <TabsTrigger value="domain">Domain Setup</TabsTrigger>
+              <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+                <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
+                  <TabsList className=&quot;mb-4 grid grid-cols-3 w-full&quot;>
+                    <TabsTrigger value=&quot;company&quot;>Company Info</TabsTrigger>
+                    <TabsTrigger value=&quot;branding&quot;>Branding</TabsTrigger>
+                    <TabsTrigger value=&quot;domain&quot;>Domain Setup</TabsTrigger>
                   </TabsList>
                   
-                  <TabsContent value="company" className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="brand_name">Company Name</Label>
+                  <TabsContent value=&quot;company&quot; className=&quot;space-y-4&quot;>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;brand_name&quot;>Company Name</Label>
                       <Input
-                        id="brand_name"
-                        name="brand_name"
+                        id=&quot;brand_name&quot;
+                        name=&quot;brand_name&quot;
                         value={formData.brand_name}
                         onChange={handleInputChange}
-                        placeholder="Acme Corporation"
+                        placeholder=&quot;Acme Corporation&quot;
                         required
                       />
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="industry">Industry</Label>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;industry&quot;>Industry</Label>
                       <Select 
-                        name="industry" 
+                        name=&quot;industry&quot; 
                         value={formData.industry} 
-                        onValueChange={(value) => handleSelectChange("industry", value)}
+                        onValueChange={(value) => handleSelectChange(&quot;industry&quot;, value)}
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select industry" />
+                          <SelectValue placeholder=&quot;Select industry&quot; />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="technology">Technology</SelectItem>
-                          <SelectItem value="healthcare">Healthcare</SelectItem>
-                          <SelectItem value="finance">Finance</SelectItem>
-                          <SelectItem value="education">Education</SelectItem>
-                          <SelectItem value="retail">Retail</SelectItem>
-                          <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                          <SelectItem value="services">Professional Services</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          <SelectItem value=&quot;technology&quot;>Technology</SelectItem>
+                          <SelectItem value=&quot;healthcare&quot;>Healthcare</SelectItem>
+                          <SelectItem value=&quot;finance&quot;>Finance</SelectItem>
+                          <SelectItem value=&quot;education&quot;>Education</SelectItem>
+                          <SelectItem value=&quot;retail&quot;>Retail</SelectItem>
+                          <SelectItem value=&quot;manufacturing&quot;>Manufacturing</SelectItem>
+                          <SelectItem value=&quot;services&quot;>Professional Services</SelectItem>
+                          <SelectItem value=&quot;other&quot;>Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="company_size">Company Size</Label>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;company_size&quot;>Company Size</Label>
                       <Select 
-                        name="company_size" 
+                        name=&quot;company_size&quot; 
                         value={formData.company_size} 
-                        onValueChange={(value) => handleSelectChange("company_size", value)}
+                        onValueChange={(value) => handleSelectChange(&quot;company_size&quot;, value)}
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select company size" />
+                          <SelectValue placeholder=&quot;Select company size&quot; />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="1-10">1-10 employees</SelectItem>
-                          <SelectItem value="11-50">11-50 employees</SelectItem>
-                          <SelectItem value="51-200">51-200 employees</SelectItem>
-                          <SelectItem value="201-500">201-500 employees</SelectItem>
-                          <SelectItem value="501-1000">501-1000 employees</SelectItem>
-                          <SelectItem value="1000+">1000+ employees</SelectItem>
+                          <SelectItem value=&quot;1-10&quot;>1-10 employees</SelectItem>
+                          <SelectItem value=&quot;11-50&quot;>11-50 employees</SelectItem>
+                          <SelectItem value=&quot;51-200&quot;>51-200 employees</SelectItem>
+                          <SelectItem value=&quot;201-500&quot;>201-500 employees</SelectItem>
+                          <SelectItem value=&quot;501-1000&quot;>501-1000 employees</SelectItem>
+                          <SelectItem value=&quot;1000+&quot;>1000+ employees</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </TabsContent>
                   
-                  <TabsContent value="branding" className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="logo_url">Logo URL</Label>
+                  <TabsContent value=&quot;branding&quot; className=&quot;space-y-4&quot;>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;logo_url&quot;>Logo URL</Label>
                       <Input
-                        id="logo_url"
-                        name="logo_url"
+                        id=&quot;logo_url&quot;
+                        name=&quot;logo_url&quot;
                         value={formData.logo_url}
                         onChange={handleInputChange}
-                        placeholder="https://example.com/logo.png"
+                        placeholder=&quot;https://example.com/logo.png&quot;
                       />
-                      <p className="text-xs text-muted-foreground">
+                      <p className=&quot;text-xs text-muted-foreground&quot;>
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="primary_color">Primary Brand Color</Label>
-                      <div className="flex items-center gap-2">
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;primary_color&quot;>Primary Brand Color</Label>
+                      <div className=&quot;flex items-center gap-2&quot;>
                         <Input
-                          id="primary_color"
-                          name="primary_color"
-                          type="color"
+                          id=&quot;primary_color&quot;
+                          name=&quot;primary_color&quot;
+                          type=&quot;color&quot;
                           value={formData.primary_color}
                           onChange={handleInputChange}
-                          className="w-12 p-1 h-10"
+                          className=&quot;w-12 p-1 h-10&quot;
                         />
                         <Input
-                          name="primary_color"
+                          name=&quot;primary_color&quot;
                           value={formData.primary_color}
                           onChange={handleInputChange}
-                          placeholder="#9b87f5"
+                          placeholder=&quot;#9b87f5&quot;
                         />
                       </div>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="theme_preset">Theme Preset</Label>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;theme_preset&quot;>Theme Preset</Label>
                       <Select 
-                        name="theme_preset" 
+                        name=&quot;theme_preset&quot; 
                         value={formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+                        onValueChange={(value) => handleSelectChange(&quot;theme_preset&quot;, value)}
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select theme" />
+                          <SelectValue placeholder=&quot;Select theme&quot; />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="light">Light</SelectItem>
-                          <SelectItem value="dark">Dark</SelectItem>
-                          <SelectItem value="corporate">Corporate</SelectItem>
-                          <SelectItem value="startup">Startup</SelectItem>
-                          <SelectItem value="neon">Neon</SelectItem>
+                          <SelectItem value=&quot;light&quot;>Light</SelectItem>
+                          <SelectItem value=&quot;dark&quot;>Dark</SelectItem>
+                          <SelectItem value=&quot;corporate&quot;>Corporate</SelectItem>
+                          <SelectItem value=&quot;startup&quot;>Startup</SelectItem>
+                          <SelectItem value=&quot;neon&quot;>Neon</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="space-y-0.5">
-                        <Label htmlFor="is_co_branded">Co-branding</Label>
-                        <p className="text-xs text-muted-foreground">
-                          Show "Powered by Zion AI" in the footer and elsewhere
+                    <div className=&quot;flex items-center justify-between&quot;>
+                      <div className=&quot;space-y-0.5&quot;>
+                        <Label htmlFor=&quot;is_co_branded&quot;>Co-branding</Label>
+                        <p className=&quot;text-xs text-muted-foreground&quot;>
+                          Show &quot;Powered by Zion AI&quot; in the footer and elsewhere
                         </p>
                       </div>
                       <Switch
-                        id="is_co_branded"
+                        id=&quot;is_co_branded&quot;
                         checked={formData.is_co_branded}
-                        onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
+                        onCheckedChange={(checked) => handleSwitchChange(&quot;is_co_branded&quot;, checked)}
                       />
                     </div>
                   </TabsContent>
                   
-                  <TabsContent value="domain" className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="subdomain">Subdomain</Label>
-                      <div className="flex items-center">
+                  <TabsContent value=&quot;domain&quot; className=&quot;space-y-4&quot;>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;subdomain&quot;>Subdomain</Label>
+                      <div className=&quot;flex items-center&quot;>
                         <Input
-                          id="subdomain"
-                          name="subdomain"
+                          id=&quot;subdomain&quot;
+                          name=&quot;subdomain&quot;
                           value={formData.subdomain}
                           onChange={handleInputChange}
-                          placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"}
-                          className="rounded-r-none"
+                          placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : &quot;company&quot;}
+                          className=&quot;rounded-r-none&quot;
                         />
-                        <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
+                        <div className=&quot;bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground&quot;>
                           .ziontechmarketplace.com
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground">
+                      <p className=&quot;text-xs text-muted-foreground&quot;>
                         Leave blank to auto-generate from company name
                       </p>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
+                    <div className=&quot;space-y-2&quot;>
+                      <Label htmlFor=&quot;custom_domain&quot;>Custom Domain (Optional)</Label>
                       <Input
-                        id="custom_domain"
-                        name="custom_domain"
+                        id=&quot;custom_domain&quot;
+                        name=&quot;custom_domain&quot;
                         value={formData.custom_domain}
                         onChange={handleInputChange}
-                        placeholder="hire.yourcompany.com"
+                        placeholder=&quot;hire.yourcompany.com&quot;
                       />
-                      <p className="text-xs text-muted-foreground">
+                      <p className=&quot;text-xs text-muted-foreground&quot;>
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.
                       </p>
                     </div>
                   </TabsContent>
                 </Tabs>
                 
-                <div className="flex justify-end space-x-2">
-                  <Button type="button" variant="outline" onClick={() => window.history.back()}>
+                <div className=&quot;flex justify-end space-x-2&quot;>
+                  <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={() => window.history.back()}>
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Creating..." : "Create Tenant"}
+                  <Button type=&quot;submit&quot; disabled={isSubmitting}>
+                    {isSubmitting ? &quot;Creating...&quot; : &quot;Create Tenant&quot;}
                   </Button>
                 </div>
               </form>
@@ -326,5 +367,5 @@ export default function TenantOnboarding() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

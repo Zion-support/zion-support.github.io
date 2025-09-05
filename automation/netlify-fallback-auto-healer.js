@@ -4,7 +4,11 @@
 // This is a local fallback when the main function is unavailable
 
 exports.handler = async (_event, _context) => {
+<<<<<<< HEAD
     // // // console.log('auto-healer fallback executed locally'),
+=======
+    // console.log('auto-healer fallback executed locally');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     try {
         // Basic fallback logic
@@ -17,7 +21,7 @@ exports.handler = async (_event, _context) => {
             })
         },
         
-        return result,
+        return result
     } catch (error) {
         console.error('Fallback execution error:', error),
         return {
@@ -26,6 +30,6 @@ exports.handler = async (_event, _context) => {
                 error: 'Fallback execution failed',
                 message: error.message
             })
-        },
+        }
     }
 },

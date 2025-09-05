@@ -1,7 +1,6 @@
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image',
 import { cn } from '@/lib/utils',
-
 interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {
   src: string,
   alt?: string,
@@ -27,18 +26,18 @@ export function ImageWithRetry({
 
   const handleError = () => {
     setFailed(true),
-    setCurrentSrc(fallbackSrc),
+    setCurrentSrc(fallbackSrc)
   },
 
   const handleRetry = () => {
     setFailed(false),
-    setCurrentSrc(src),
+    setCurrentSrc(src)
   },
 
   const fill = !('width' in props) && !('height' in props),
 
   return (
-    <div className="relative inline-block">
+    <div className=&quot;relative inline-block&quot;>
       <Image
         {...props}
         src={currentSrc}
@@ -49,7 +48,7 @@ export function ImageWithRetry({
       />
       {failed && (
         <button
-          type="button"
+          type=&quot;button&quot;
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
         >
@@ -57,7 +56,7 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
-  ),
+  )
 }
 
 export default ImageWithRetry,

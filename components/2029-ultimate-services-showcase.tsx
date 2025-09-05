@@ -16,7 +16,6 @@ import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas',
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions',
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
-
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -68,7 +67,7 @@ export default function UltimateServicesShowcase2029() {
       (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service.price.replace(/[$]/g, '')) < 30000) ||
       (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000),
     
-    return matchesCategory && matchesSearch && matchesPrice,
+    return matchesCategory && matchesSearch && matchesPrice
   }),
 
   const containerVariants = {
@@ -171,13 +170,13 @@ export default function UltimateServicesShowcase2029() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
-              </Link>
+              </a>
               <Link
                 href="/pricing"
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}
@@ -354,7 +353,7 @@ export default function UltimateServicesShowcase2029() {
                     >
                       Learn More
                       <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-                    </Link>
+                    </a>
                   </div>
 
                   {/* Hover Effect */}
@@ -376,7 +375,7 @@ export default function UltimateServicesShowcase2029() {
                 onClick={() => {
                   setSelectedCategory('all'),
                   setSearchTerm(''),
-                  setSelectedPriceRange('all'),
+                  setSelectedPriceRange('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
@@ -410,7 +409,7 @@ export default function UltimateServicesShowcase2029() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
-              </Link>
+              </a>
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
@@ -428,5 +427,5 @@ export default function UltimateServicesShowcase2029() {
 
       <UltraFuturisticFooter2029 />
     </>
-  ),
+  )
 }

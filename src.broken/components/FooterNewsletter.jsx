@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button',
 import { useToast } from '@/hooks/use-toast',
 import { apiClient } from '@/utils/apiClient',
 import { Loader2 } from 'lucide-react',
-
 export function FooterNewsletter() {
   const [email, setEmail] = useState(''),
   const [honeypot, setHoneypot] = useState(''),
@@ -24,48 +23,48 @@ export function FooterNewsletter() {
 
       if (res.ok) {
         toast.success('Subscribed!'),
-        setEmail(''),
+        setEmail('')
       } else {
         const data = await res.json().catch(() => ({})),
-        toast.error(data.error || 'Subscription failed'),
+        toast.error(data.error || 'Subscription failed')
       }
     } catch (err) {
-      toast.error(err.message || 'Subscription failed'),
+      toast.error(err.message || 'Subscription failed')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
+      className=&quot;flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2&quot;
     >
       <Input
-        type="email"
-        placeholder="Enter your email"
-        className="flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+        type=&quot;email&quot;
+        placeholder=&quot;Enter your email&quot;
+        className=&quot;flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple&quot;
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
       {/* Honeypot field */}
       <input
-        type="text"
+        type=&quot;text&quot;
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex="-1"
-        autoComplete="off"
+        tabIndex=&quot;-1&quot;
+        autoComplete=&quot;off&quot;
         style={{ display: 'none' }}
       />
       <Button
-        type="submit"
+        type=&quot;submit&quot;
         disabled={isSubmitting}
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+        className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple&quot;
       >
         {isSubmitting ? (
           <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
             Subscribing...
           </>
         ) : (
@@ -73,5 +72,5 @@ export function FooterNewsletter() {
         )}
       </Button>
     </form>
-  ),
+  )
 }

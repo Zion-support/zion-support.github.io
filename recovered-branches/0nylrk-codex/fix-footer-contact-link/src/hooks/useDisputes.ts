@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
 import { toast } from "sonner",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from &quot;@/types/disputes&quot;;
+import { toast } from &quot;sonner&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useDisputes() {
   const { user } = useAuth(),
   const [disputes, setDisputes] = useState<Dispute[]>([]),
@@ -14,14 +22,14 @@ export function useDisputes() {
   const fetchDisputes = async () => {
     if (!user) {
       setIsLoading(false),
-      return,
+      return
     }
 
     try {
       setIsLoading(true),
       
       const { data, error: fetchError } = await supabase
-        .from("disputes")
+        .from(&quot;disputes&quot;)
         .select(`
           *,
           project:projects(
@@ -34,7 +42,11 @@ export function useDisputes() {
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
+<<<<<<< HEAD
         .order("created_at", { ascending: false }),
+=======
+        .order(&quot;created_at&quot;, { ascending: false });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (fetchError) throw fetchError,
       
@@ -50,20 +62,26 @@ export function useDisputes() {
       })),
       
       setDisputes(transformedData as Dispute[]),
-      setError(null),
+      setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching disputes:", err),
       setError("Failed to fetch disputes: " + err.message),
       toast.error("Failed to fetch disputes")
+=======
+      console.error(&quot;Error fetching disputes:&quot;, err);
+      setError(&quot;Failed to fetch disputes: &quot; + err.message);
+      toast.error(&quot;Failed to fetch disputes&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
-        .from("disputes")
+        .from(&quot;disputes&quot;)
         .select(`
           *,
           project:projects(
@@ -76,8 +94,13 @@ export function useDisputes() {
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
+<<<<<<< HEAD
         .eq("id", disputeId)
         .single(),
+=======
+        .eq(&quot;id&quot;, disputeId)
+        .single();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
@@ -89,11 +112,17 @@ export function useDisputes() {
           ...data.project,
           title: data.project?.job?.title || 'Untitled Project'
         }
-      } as Dispute,
+      } as Dispute
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching dispute:", err),
       toast.error("Failed to fetch dispute details"),
-      return null,
+      return null
+=======
+      console.error(&quot;Error fetching dispute:&quot;, err);
+      toast.error(&quot;Failed to fetch dispute details&quot;);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -104,13 +133,18 @@ export function useDisputes() {
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
+<<<<<<< HEAD
       toast.error("You must be logged in to create a dispute"),
-      return null,
+      return null
+=======
+      toast.error(&quot;You must be logged in to create a dispute&quot;);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     try {
       const { data, error } = await supabase
-        .from("disputes")
+        .from(&quot;disputes&quot;)
         .insert({
           ...disputeData,
           raised_by: user.id
@@ -120,23 +154,38 @@ export function useDisputes() {
 
       if (error) throw error,
       
+<<<<<<< HEAD
       toast.success("Dispute submitted successfully"),
       fetchDisputes(), // Refresh the list
+=======
+      toast.success(&quot;Dispute submitted successfully&quot;);
+      fetchDisputes(); // Refresh the list
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
-      return data as Dispute,
+      return data as Dispute
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error creating dispute:", err),
       toast.error("Failed to submit dispute"),
-      return null,
+      return null
+=======
+      console.error(&quot;Error creating dispute:&quot;, err);
+      toast.error(&quot;Failed to submit dispute&quot;);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
-        .from("disputes")
+        .from(&quot;disputes&quot;)
         .update({ status })
+<<<<<<< HEAD
         .eq("id", disputeId),
+=======
+        .eq(&quot;id&quot;, disputeId);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
@@ -148,11 +197,17 @@ export function useDisputes() {
       ),
       
       toast.success(`Dispute status updated to ${status}`),
-      return true,
+      return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error updating dispute status:", err),
       toast.error("Failed to update dispute status"),
-      return false,
+      return false
+=======
+      console.error(&quot;Error updating dispute status:&quot;, err);
+      toast.error(&quot;Failed to update dispute status&quot;);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -162,14 +217,18 @@ export function useDisputes() {
   ): Promise<boolean> => {
     try {
       const { error } = await supabase
-        .from("disputes")
+        .from(&quot;disputes&quot;)
         .update({
           status: 'resolved',
           resolved_at: new Date().toISOString(),
           resolution_summary: resolution.summary,
           resolution_type: resolution.resolution_type
         })
+<<<<<<< HEAD
         .eq("id", disputeId),
+=======
+        .eq(&quot;id&quot;, disputeId);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
@@ -188,45 +247,70 @@ export function useDisputes() {
         )
       ),
       
+<<<<<<< HEAD
       toast.success("Dispute resolved successfully"),
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error resolving dispute:", err),
       toast.error("Failed to resolve dispute"),
-      return false,
+      return false
+=======
+      toast.success(&quot;Dispute resolved successfully&quot;);
+      return true;
+    } catch (err: any) {
+      console.error(&quot;Error resolving dispute:&quot;, err);
+      toast.error(&quot;Failed to resolve dispute&quot;);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
       const { data, error } = await supabase
-        .from("dispute_messages")
+        .from(&quot;dispute_messages&quot;)
         .select(`
           *,
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
+<<<<<<< HEAD
         .eq("dispute_id", disputeId)
         .order("created_at", { ascending: true }),
+=======
+        .eq(&quot;dispute_id&quot;, disputeId)
+        .order(&quot;created_at&quot;, { ascending: true });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
-      return data as DisputeMessage[],
+      return data as DisputeMessage[]
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching dispute messages:", err),
       toast.error("Failed to fetch messages"),
-      return [],
+      return []
+=======
+      console.error(&quot;Error fetching dispute messages:&quot;, err);
+      toast.error(&quot;Failed to fetch messages&quot;);
+      return [];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
+<<<<<<< HEAD
       toast.error("You must be logged in to send a message"),
-      return false,
+      return false
+=======
+      toast.error(&quot;You must be logged in to send a message&quot;);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     try {
       const { error } = await supabase
-        .from("dispute_messages")
+        .from(&quot;dispute_messages&quot;)
         .insert({
           dispute_id: disputeId,
           user_id: user.id,
@@ -236,19 +320,28 @@ export function useDisputes() {
       
       if (error) throw error,
       
+<<<<<<< HEAD
       toast.success("Message sent successfully"),
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error sending message:", err),
       toast.error("Failed to send message"),
-      return false,
+      return false
+=======
+      toast.success(&quot;Message sent successfully&quot;);
+      return true;
+    } catch (err: any) {
+      console.error(&quot;Error sending message:&quot;, err);
+      toast.error(&quot;Failed to send message&quot;);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   // Fetch disputes when component mounts or user changes
   useEffect(() => {
     if (user) {
-      fetchDisputes(),
+      fetchDisputes()
     }
   }, [user]),
 
@@ -263,5 +356,5 @@ export function useDisputes() {
     resolveDispute,
     getDisputeMessages,
     addDisputeMessage
-  },
+  }
 }

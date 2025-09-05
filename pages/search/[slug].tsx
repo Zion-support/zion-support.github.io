@@ -29,7 +29,7 @@ interface BaseSearchResult {
   },
   tags?: string[],
   category?: string,
-  date?: string,
+  date?: string
 }
 
 interface ProductSearchResult extends BaseSearchResult {
@@ -72,7 +72,7 @@ interface OfflineFilters {
   category?: string,
   minPrice?: number,
   maxPrice?: number,
-  minRating?: number,
+  minRating?: number
 }
 
 function offlineSearch(
@@ -142,31 +142,31 @@ function offlineSearch(
   let all = [...productResults, ...talentResults, ...blogResults],
 
   if (filters.category) {
-    all = all.filter(r => r.category === filters.category),
+    all = all.filter(r => r.category === filters.category)
   }
   if (typeof filters.minPrice === 'number') {
     all = all.filter(r => {
       if (r.type === 'product') {
-        return (r.price ?? 0) >= filters.minPrice!,
+        return (r.price ?? 0) >= filters.minPrice!
       }
-      return true,
-    }),
+      return true
+    })
   }
   if (typeof filters.maxPrice === 'number') {
     all = all.filter(r => {
       if (r.type === 'product') {
-        return (r.price ?? 0) <= filters.maxPrice!,
+        return (r.price ?? 0) <= filters.maxPrice!
       }
-      return true,
-    }),
+      return true
+    })
   }
   if (typeof filters.minRating === 'number') {
     all = all.filter(r => {
       if (r.type === 'product' || r.type === 'talent') {
-        return (r.rating ?? 0) >= filters.minRating!,
+        return (r.rating ?? 0) >= filters.minRating!
       }
-      return true,
-    }),
+      return true
+    })
   }
 
   if (filters.sortBy && filters.sortBy !== 'relevance') {
@@ -175,31 +175,31 @@ function offlineSearch(
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0,
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0,
-          return aPrice - bPrice,
+          return aPrice - bPrice
         }),
         break,
       case 'price_desc':
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0,
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0,
-          return bPrice - aPrice,
+          return bPrice - aPrice
         }),
         break,
       case 'rating':
         all.sort((a, b) => {
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0,
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0,
-          return bRating - aRating,
+          return bRating - aRating
         }),
         break,
       default: break
     }
   } else {
-    all.sort((a, b) => a.title.localeCompare(b.title)),
+    all.sort((a, b) => a.title.localeCompare(b.title))
   }
   const start = (page - 1) * limit,
   const paginated = all.slice(start, start + limit),
-  return { results: paginated, totalCount: all.length },
+  return { results: paginated, totalCount: all.length }
 }
 
 export default function SearchResultsPage({
@@ -241,7 +241,7 @@ export default function SearchResultsPage({
       const response = await fetch(`/api/search?${params.toString()}`),
 
       if (!response.ok) {
-        throw new Error(`Search API error: ${response.status}`),
+        throw new Error(`Search API error: ${response.status}`)
       }
 
       const data = await response.json(),
@@ -250,9 +250,9 @@ export default function SearchResultsPage({
       setTotalResults(data.totalCount || data.results?.length || 0),
 
       if (page === 1) {
-        setResults(data.results || []),
+        setResults(data.results || [])
       } else {
-        setResults((prev) => [...prev, ...(data.results || [])]),
+        setResults((prev) => [...prev, ...(data.results || [])])
       }
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error }),
@@ -264,12 +264,12 @@ export default function SearchResultsPage({
         minRating: minRating ? Number(minRating) : undefined}),
       setTotalResults(offline.totalCount),
       if (page === 1) {
-        setResults(offline.results),
+        setResults(offline.results)
       } else {
-        setResults((prev) => [...prev, ...offline.results]),
+        setResults((prev) => [...prev, ...offline.results])
       }
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -279,16 +279,16 @@ export default function SearchResultsPage({
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true}),
-      setCurrentPage(1),
+      setCurrentPage(1)
     }
   },
 
   useEffect(() => {
     if (debouncedQuery.trim()) {
-      fetchResults(debouncedQuery, 1),
+      fetchResults(debouncedQuery, 1)
     } else {
       setResults([]),
-      setTotalResults(0),
+      setTotalResults(0)
     }
   }, [debouncedQuery]),
 
@@ -296,7 +296,7 @@ export default function SearchResultsPage({
   const loadMore = () => {
     const nextPage = currentPage + 1,
     setCurrentPage(nextPage),
-    fetchResults(searchQuery, nextPage),
+    fetchResults(searchQuery, nextPage)
   },
 
   const categories = Array.from(
@@ -308,24 +308,24 @@ export default function SearchResultsPage({
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-      return false,
+      return false
     }
     if (minPrice && r.type === 'product') {
       if ((r.price ?? 0) < Number(minPrice)) {
-        return false,
+        return false
       }
     }
     if (maxPrice && r.type === 'product') {
       if ((r.price ?? 0) > Number(maxPrice)) {
-        return false,
+        return false
       }
     }
     if (minRating && (r.type === 'product' || r.type === 'talent')) {
       if ((r.rating ?? 0) < Number(minRating)) {
-        return false,
+        return false
       }
     }
-    return true,
+    return true
   }),
 
   // Group results by type for better display
@@ -333,7 +333,7 @@ export default function SearchResultsPage({
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [],
       acc[result.type]!.push(result),
-      return acc,
+      return acc
     },
     {} as Record<string SearchResult[]>),
 
@@ -342,7 +342,7 @@ export default function SearchResultsPage({
       case 'product':
       case 'equipment':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <ProductCard
               product={{
                 id: result.id,
@@ -366,7 +366,7 @@ export default function SearchResultsPage({
         ),
       case 'talent':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <TalentCard
               talent={{
                 id: result.id,
@@ -382,10 +382,10 @@ export default function SearchResultsPage({
                 is_verified: false,
                 availability_type: 'available'}}
               onViewProfile={(id: string) => {
-                router.push(`/talent/${id}`),
+                router.push(`/talent/${id}`)
               }}
               onRequestHire={(talent) => {
-                router.push(`/talent/${talent.id}?action=hire`),
+                router.push(`/talent/${talent.id}?action=hire`)
               }}
               isAuthenticated={isAuthenticated}
             />
@@ -393,7 +393,7 @@ export default function SearchResultsPage({
         ),
       case 'category':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <CategoryCard
               title={result.title}
               description={result.description || ''}
@@ -405,94 +405,94 @@ export default function SearchResultsPage({
         return (
           <div
             key={result.id}
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
+            className=&quot;p-4 bg-white dark:bg-gray-800 rounded-lg shadow&quot;
+            data-testid=&quot;result-card&quot;
           >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
+            <h3 className=&quot;font-semibold&quot;>{result.title}</h3>
+            <p className=&quot;text-gray-600 dark:text-gray-200&quot;>
               {result.description}
             </p>
           </div>
-        ),
+        )
     }
   },
 
   return (
     <>
       <SEO
-        title={`Search Results for "${query}" - Zion Marketplace`}
+        title={`Search Results for &quot;${query}&quot; - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
         canonical={`https://app.ziontechgroup.com/search/${slug}`}
       />
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className=&quot;min-h-screen bg-gray-50 dark:bg-gray-900&quot;>
         <div
-          className="container mx-auto px-4 py-8"
-          data-testid="search-results"
+          className=&quot;container mx-auto px-4 py-8&quot;
+          data-testid=&quot;search-results&quot;
         >
           {/* Search Header */}
-          <div className="mb-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="flex-1">
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className=&quot;mb-8&quot;>
+            <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4&quot;>
+              <div className=&quot;flex-1&quot;>
+                <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white mb-2&quot;>
                   Search Results
                 </h1>
                 <p
-                  className="text-gray-600 dark:text-gray-200"
-                  data-testid="results-count"
+                  className=&quot;text-gray-600 dark:text-gray-200&quot;
+                  data-testid=&quot;results-count&quot;
                 >
                   {filteredResults.length > 0
-                    ? `Found ${filteredResults.length} results for "${query}"`
-                    : `No results found for "${query}"`}
+                    ? `Found ${filteredResults.length} results for &quot;${query}&quot;`
+                    : `No results found for &quot;${query}&quot;`}
                 </p>
               </div>
 
               {/* Search Input */}
-              <div className="relative w-full lg:w-96">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+              <div className=&quot;relative w-full lg:w-96&quot;>
+                <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200&quot; />
                 <Input
-                  type="text"
+                  type=&quot;text&quot;
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search marketplace..."
-                  className="pl-10"
+                  placeholder=&quot;Search marketplace...&quot;
+                  className=&quot;pl-10&quot;
                 />
               </div>
             </div>
 
             {/* Controls */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-2 flex-wrap">
+            <div className=&quot;flex flex-wrap items-center justify-between gap-4 mt-6&quot;>
+              <div className=&quot;flex items-center gap-2 flex-wrap&quot;>
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center gap-2"
-                  data-testid="filter-button"
+                  variant=&quot;outline&quot;
+                  size=&quot;sm&quot;
+                  className=&quot;flex items-center gap-2&quot;
+                  data-testid=&quot;filter-button&quot;
                 >
-                  <Filter className="h-4 w-4" />
+                  <Filter className=&quot;h-4 w-4&quot; />
                   Filters
                 </Button>
 
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                  data-testid="sort-select"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
+                  data-testid=&quot;sort-select&quot;
                 >
-                  <option value="relevance">Relevance</option>
-                  <option value="newest">Newest</option>
-                  <option value="price_asc">Price: Low to High</option>
-                  <option value="price_desc">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
+                  <option value=&quot;relevance&quot;>Relevance</option>
+                  <option value=&quot;newest&quot;>Newest</option>
+                  <option value=&quot;price_asc&quot;>Price: Low to High</option>
+                  <option value=&quot;price_desc&quot;>Price: High to Low</option>
+                  <option value=&quot;rating&quot;>Highest Rated</option>
                 </select>
 
                 <select
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
                 >
-                  <option value="all">All Categories</option>
+                  <option value=&quot;all&quot;>All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
                       {c}
@@ -500,51 +500,51 @@ export default function SearchResultsPage({
                   ))}
                 </select>
 
-                <div className="flex items-center gap-1">
+                <div className=&quot;flex items-center gap-1&quot;>
                   <input
-                    type="number"
-                    placeholder="Min $"
+                    type=&quot;number&quot;
+                    placeholder=&quot;Min $&quot;
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
                   />
                   <span>-</span>
                   <input
-                    type="number"
-                    placeholder="Max $"
+                    type=&quot;number&quot;
+                    placeholder=&quot;Max $&quot;
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
                   />
                 </div>
 
                 <select
                   value={minRating}
                   onChange={(e) => setMinRating(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
                 >
-                  <option value="">All Ratings</option>
-                  <option value="4">4★ & up</option>
-                  <option value="3">3★ & up</option>
-                  <option value="2">2★ & up</option>
+                  <option value="&quot;>All Ratings</option>
+                  <option value=&quot;4&quot;>4★ & up</option>
+                  <option value=&quot;3&quot;>3★ & up</option>
+                  <option value=&quot;2">2★ & up</option>
                 </select>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2&quot;>
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size="sm"
+                  size=&quot;sm&quot;
                   onClick={() => setViewMode('grid')}
-                  data-testid="view-mode-grid"
+                  data-testid=&quot;view-mode-grid"
                   className={viewMode === 'grid' ? 'active' : ''}
                 >
-                  <Grid className="h-4 w-4" />
+                  <Grid className="h-4 w-4&quot; />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size="sm"
+                  size=&quot;sm&quot;
                   onClick={() => setViewMode('list')}
-                  data-testid="view-mode-list"
+                  data-testid=&quot;view-mode-list"
                   className={viewMode === 'list' ? 'active' : ''}
                 >
                   <List className="h-4 w-4" />
@@ -556,13 +556,13 @@ export default function SearchResultsPage({
           {/* Loading State */}
           {loading && results.length === 0 && (
             <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600&quot;></div>
             </div>
           )}
 
           {/* Empty State */}
           {!loading && filteredResults.length === 0 && (
-            <div data-testid="search-empty-state">
+            <div data-testid=&quot;search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
           )}
@@ -612,7 +612,7 @@ export default function SearchResultsPage({
         </div>
       </div>
     </>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps<
@@ -641,13 +641,13 @@ export const getServerSideProps: GetServerSideProps<
       const data = await response.json(),
       results = data.results || [],
       totalCount = data.totalCount || results.length,
-      logInfo(`Server-side fetch successful: ${results.length} results`),
+      logInfo(`Server-side fetch successful: ${results.length} results`)
     } else {
       logErrorToProduction(
         `Search API error: ${response.status} ${response.statusText}`),
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
       results = offline.results,
-      totalCount = offline.totalCount,
+      totalCount = offline.totalCount
     }
 
     return {
@@ -655,7 +655,7 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: results,
         query,
         slug,
-        totalCount}},
+        totalCount}}
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error }),
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
@@ -665,6 +665,6 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: offline.results,
         query,
         slug,
-        totalCount: offline.totalCount}},
+        totalCount: offline.totalCount}}
   }
 },

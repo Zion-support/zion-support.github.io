@@ -9,7 +9,6 @@ import { useResume } from '@/hooks/useResume',
 import { Alert, AlertDescription } from '@/components/ui/alert',
 import { zodResolver } from '@hookform/resolvers/zod',
 import { format } from 'date-fns',
-
 import { CertificationsList } from './CertificationsList',
 import { CertificationFormFields } from './CertificationFormFields',
 import { CertificationFormValues, certificationSchema } from './types',
@@ -30,7 +29,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
+    return format(dateValue, 'yyyy-MM-dd')
   },
 
   const form = useForm<CertificationFormValues>({
@@ -57,9 +56,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         credential_url: data.credential_url},
 
       if (editingId) {
-        success = await updateCertification(editingId, certData),
+        success = await updateCertification(editingId, certData)
       } else {
-        success = await addCertification(resumeId, certData),
+        success = await addCertification(resumeId, certData)
       }
 
       if (success) {
@@ -70,7 +69,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           expiration_date: '',
           credential_id: '',
           credential_url: ''}),
-        setEditingId(null),
+        setEditingId(null)
       }
     } catch (err: any) {
       setError(err.message || 'An error occurred')
@@ -82,7 +81,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form.reset({
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date)}),
+      expiration_date: formatDateValue(cert.expiration_date)})
   },
 
   const handleDelete = async (id: string) => {
@@ -92,10 +91,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   },
 
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
-        <p className="text-muted-foreground">
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Certifications & Licenses</h2>
+        <p className=&quot;text-muted-foreground&quot;>
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
@@ -108,21 +107,21 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         />
       )}
 
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className=&quot;bg-muted/40 p-6 rounded-lg&quot;>
+        <h3 className=&quot;text-md font-medium mb-4&quot;>
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className=&quot;space-y-4&quot;>
             <CertificationFormFields form={form} />
 
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            {error && <Alert variant=&quot;destructive&quot;><AlertDescription>{error}</AlertDescription></Alert>}
 
-            <div className="flex justify-between pt-2">
+            <div className=&quot;flex justify-between pt-2&quot;>
               <Button
-                type="button"
-                variant="outline"
+                type=&quot;button&quot;
+                variant=&quot;outline&quot;
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
@@ -132,22 +131,22 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-                      credential_url: ''}),
+                      credential_url: ''})
                   } else {
-                    onBack(),
+                    onBack()
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              <div className=&quot;flex gap-2&quot;>
+                <Button type=&quot;submit&quot; disabled={isLoading}>
+                  {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
 
-                <Button type="button" onClick={onComplete}>
+                <Button type=&quot;button&quot; onClick={onComplete}>
                   Next
                 </Button>
               </div>
@@ -156,5 +155,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </Form>
       </div>
     </div>
-  ),
+  )
 }

@@ -10,7 +10,7 @@ async function getFile(owner, repo, path, token) {
   }),
   if (resp.status === 404) return null,
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`),
-  return resp.json(),
+  return resp.json()
 }
 
 async function upsertFile({ owner, repo, path, content, message, token }) {
@@ -31,9 +31,9 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   }),
   if (!resp.ok) {
     const text = await resp.text(),
-    throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`),
+    throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`)
   }
-  return resp.json(),
+  return resp.json()
 }
 
 module.exports = { upsertFile },

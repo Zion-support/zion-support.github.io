@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -9,7 +10,19 @@ import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
 import { PageViewsChart } from "@/components/analytics/PageViewsChart",
 import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
 import { ExportPanel } from "@/components/analytics/ExportPanel",
+=======
+import React, { useState } from &quot;react&quot;;
+import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { AnalyticsContainer } from &quot;@/components/analytics/AnalyticsContainer&quot;;
+import { AnalyticsSummary } from &quot;@/components/analytics/AnalyticsSummary&quot;;
+import { PageViewsTable } from &quot;@/components/analytics/PageViewsTable&quot;;
+import { UserBehaviorStats } from &quot;@/components/analytics/UserBehaviorStats&quot;;
+import { PageViewsChart } from &quot;@/components/analytics/PageViewsChart&quot;;
+import { ConversionAnalysisChart } from &quot;@/components/analytics/ConversionAnalysisChart&quot;;
+import { ExportPanel } from &quot;@/components/analytics/ExportPanel&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d'),
   
@@ -34,7 +47,7 @@ export default function Analytics() {
       data?.forEach(view => {
         const date = new Date(view.created_at).toISOString().split('T')[0],
         if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },
-        viewsByDate[date].views++,
+        viewsByDate[date].views++
       }),
       
       // Fill in missing dates
@@ -45,13 +58,13 @@ export default function Analytics() {
         const dateStr = date.toISOString().split('T')[0],
         
         if (viewsByDate[dateStr]) {
-          result.push(viewsByDate[dateStr]),
+          result.push(viewsByDate[dateStr])
         } else {
-          result.push({ date: dateStr, views: 0 }),
+          result.push({ date: dateStr, views: 0 })
         }
       }
       
-      return result.sort((a, b) => a.date.localeCompare(b.date)),
+      return result.sort((a, b) => a.date.localeCompare(b.date))
     }
   }),
   
@@ -77,14 +90,14 @@ export default function Analytics() {
         const conversionType = item.metadata?.conversionType || 'unknown',
         
         if (!conversionsByType[conversionType]) {
-          conversionsByType[conversionType] = {},
+          conversionsByType[conversionType] = {}
         }
         
         if (!conversionsByType[conversionType][date]) {
-          conversionsByType[conversionType][date] = 0,
+          conversionsByType[conversionType][date] = 0
         }
         
-        conversionsByType[conversionType][date]++,
+        conversionsByType[conversionType][date]++
       }),
       
       // Get all dates in range
@@ -92,7 +105,7 @@ export default function Analytics() {
       for (let i = 0, i < days, i++) {
         const date = new Date(),
         date.setDate(date.getDate() - i),
-        dates.push(date.toISOString().split('T')[0]),
+        dates.push(date.toISOString().split('T')[0])
       }
       dates.sort(),
       
@@ -101,11 +114,11 @@ export default function Analytics() {
         const result = { date },
         
         Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] || 0,
+          result[type] = conversionsByType[type][date] || 0
         }),
         
-        return result,
-      }),
+        return result
+      })
     }
   }),
 
@@ -113,7 +126,7 @@ export default function Analytics() {
     <AnalyticsContainer>
       <AnalyticsSummary />
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
         <PageViewsChart
           data={pageViewTrends || []}
           timeRange={timeRange}
@@ -122,11 +135,11 @@ export default function Analytics() {
         <PageViewsTable />
       </div>
       
-      <div className="mb-6">
+      <div className=&quot;mb-6&quot;>
         <UserBehaviorStats />
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
         <ConversionAnalysisChart 
           data={conversionData || []} 
           timeRange={timeRange}
@@ -135,5 +148,5 @@ export default function Analytics() {
         <ExportPanel />
       </div>
     </AnalyticsContainer>
-  ),
+  )
 }

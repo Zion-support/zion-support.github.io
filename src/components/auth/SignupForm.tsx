@@ -11,8 +11,6 @@ import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils',
 import { fireEvent } from '@/lib/analytics',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const signupSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
   email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
@@ -24,8 +22,13 @@ const signupSchema = z.object({
     .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
+<<<<<<< HEAD
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
+=======
+  message: &quot;Passwords don't match&quot;,
+  path: [&quot;confirmPassword&quot;]});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 type SignupFormData = z.infer<typeof signupSchema>,
 
@@ -91,14 +94,14 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               isValidating: false,
               error: error?.message || null
             }
-          })),
-        }, 300),
+          }))
+        }, 300)
       }
     }),
 
     return () => {
-      Object.values(timeouts).forEach(clearTimeout),
-    },
+      Object.values(timeouts).forEach(clearTimeout)
+    }
   }, [watchedFields, touchedFields, trigger, errors]),
 
   const getFieldValidationIcon = (fieldName: string) => {
@@ -108,18 +111,30 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     if (!isTouched) return null,
     
     if (state?.isValidating) {
+<<<<<<< HEAD
       return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
     }
     
     if (state?.isValid && !state?.error) {
-      return <CheckCircle className="h-4 w-4 text-green-500" />,
+      return <CheckCircle className="h-4 w-4 text-green-500" />
     }
     
     if (state?.error) {
-      return <AlertCircle className="h-4 w-4 text-red-500" />,
+      return <AlertCircle className="h-4 w-4 text-red-500" />
+=======
+      return <Loader2 className=&quot;h-4 w-4 animate-spin text-blue-500&quot; />;
     }
     
-    return null,
+    if (state?.isValid && !state?.error) {
+      return <CheckCircle className=&quot;h-4 w-4 text-green-500&quot; />;
+    }
+    
+    if (state?.error) {
+      return <AlertCircle className=&quot;h-4 w-4 text-red-500&quot; />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+    }
+    
+    return null
   },
 
   const getFieldClasses = (fieldName: string) => {
@@ -140,7 +155,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
     }
     
-    return '',
+    return ''
   },
 
   const getPasswordStrength = (password: string) => {
@@ -156,15 +171,15 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     
     strength = checks.filter(Boolean).length,
     
-    const labels = ['Very WeakWeak', 'FairGood', 'Strong'],
-    const colors = ['bg-red-500bg-orange-500', 'bg-yellow-500bg-blue-500', 'bg-green-500'],
+    const labels = ['Very WeakWeakFairGoodStrong'],
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'],
     
     return {
       strength,
       label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
       percentage: (strength / 5) * 100
-    },
+    }
   },
 
   const passwordStrength = getPasswordStrength(watchedFields.password || ''),
@@ -188,37 +203,42 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         if (result.error.includes('already registered') || result.error.includes('already exists')) {
           setError('email', { 
             message: 'An account with this email already exists. Please try logging in instead.' 
-          }),
+          })
         } else if (result.error.includes('invalid email')) {
           setError('email', { 
             message: 'Please enter a valid email address.' 
-          }),
+          })
         } else if (result.error.includes('weak password')) {
           setError('password', { 
             message: 'Password is too weak. Please choose a stronger password.' 
-          }),
+          })
         } else {
           setError('root', { 
             message: result.error 
-          }),
+          })
         }
         
         onError?.(result.error),
-        return,
+        return
       }
 
       // Success
       toast({
-        title: "Account Created Successfully!",
+        title: &quot;Account Created Successfully!&quot;,
         description: result.emailVerificationRequired 
+<<<<<<< HEAD
           ? "Please check your email to verify your account before logging in."
           : "You can now log in to your account."}),
+=======
+          ? &quot;Please check your email to verify your account before logging in.&quot;
+          : &quot;You can now log in to your account.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
       reset(),
       fireEvent('signup_success'),
       onSuccess?.({
         email: data.email,
-        emailVerificationRequired: result.emailVerificationRequired ?? false}),
+        emailVerificationRequired: result.emailVerificationRequired ?? false})
 
     } catch (error: any) {
       logErrorToProduction('Unexpected signup error:', { data: error }),
@@ -229,98 +249,102 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       onError?.(errorMessage),
 
       toast({
-        title: "Signup Failed",
+        title: &quot;Signup Failed&quot;,
         description: errorMessage,
-        variant: "destructive"}),
+<<<<<<< HEAD
+        variant: "destructive"})
+=======
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
       {/* Name Field */}
-      <div className="space-y-2">
-        <Label htmlFor="name" className="text-sm font-medium">
-          Full Name <span className="text-red-500">*</span>
+      <div className=&quot;space-y-2&quot;>
+        <Label htmlFor=&quot;name&quot; className=&quot;text-sm font-medium&quot;>
+          Full Name <span className=&quot;text-red-500&quot;>*</span>
         </Label>
-        <div className="relative">
+        <div className=&quot;relative&quot;>
           <Input
-            id="name"
-            type="text"
-            placeholder="Enter your full name"
+            id=&quot;name&quot;
+            type=&quot;text&quot;
+            placeholder=&quot;Enter your full name&quot;
             {...register('name')}
             disabled={isSubmitting}
             className={cn('pr-10', getFieldClasses('name'))}
           />
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <div className=&quot;absolute inset-y-0 right-0 flex items-center pr-3&quot;>
             {getFieldValidationIcon('name')}
           </div>
         </div>
         {errors.name && (
-          <p className="text-sm text-red-600 flex items-center gap-1">
-            <AlertCircle className="h-3 w-3" />
+          <p className=&quot;text-sm text-red-600 flex items-center gap-1&quot;>
+            <AlertCircle className=&quot;h-3 w-3&quot; />
             {errors.name.message}
           </p>
         )}
       </div>
 
       {/* Email Field */}
-      <div className="space-y-2">
-        <Label htmlFor="email" className="text-sm font-medium">
-          Email Address <span className="text-red-500">*</span>
+      <div className=&quot;space-y-2&quot;>
+        <Label htmlFor=&quot;email&quot; className=&quot;text-sm font-medium&quot;>
+          Email Address <span className=&quot;text-red-500&quot;>*</span>
         </Label>
-        <div className="relative">
+        <div className=&quot;relative&quot;>
           <Input
-            id="email"
-            type="email"
-            placeholder="Enter your email address"
+            id=&quot;email&quot;
+            type=&quot;email&quot;
+            placeholder=&quot;Enter your email address&quot;
             {...register('email')}
             disabled={isSubmitting}
             className={cn('pr-10', getFieldClasses('email'))}
-            autoComplete="email"
+            autoComplete=&quot;email&quot;
           />
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <div className=&quot;absolute inset-y-0 right-0 flex items-center pr-3&quot;>
             {getFieldValidationIcon('email')}
           </div>
         </div>
         {errors.email && (
-          <p className="text-sm text-red-600 flex items-center gap-1">
-            <AlertCircle className="h-3 w-3" />
+          <p className=&quot;text-sm text-red-600 flex items-center gap-1&quot;>
+            <AlertCircle className=&quot;h-3 w-3&quot; />
             {errors.email.message}
           </p>
         )}
       </div>
 
       {/* Password Field with Strength Meter */}
-      <div className="space-y-2">
-        <Label htmlFor="password" className="text-sm font-medium">
-          Password <span className="text-red-500">*</span>
+      <div className=&quot;space-y-2&quot;>
+        <Label htmlFor=&quot;password&quot; className=&quot;text-sm font-medium&quot;>
+          Password <span className=&quot;text-red-500&quot;>*</span>
         </Label>
-        <div className="relative">
+        <div className=&quot;relative&quot;>
           <Input
-            id="password"
+            id=&quot;password&quot;
             type={showPassword ? 'text' : 'password'}
-            placeholder="Create a strong password"
+            placeholder=&quot;Create a strong password&quot;
             {...register('password')}
             disabled={isSubmitting}
             className={cn('pr-20', getFieldClasses('password'))}
-            autoComplete="new-password"
+            autoComplete=&quot;new-password&quot;
           />
-          <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
+          <div className=&quot;absolute inset-y-0 right-0 flex items-center gap-1 pr-3&quot;>
             {getFieldValidationIcon('password')}
             <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="h-7 w-7 p-0"
+              type=&quot;button&quot;
+              variant=&quot;ghost&quot;
+              size=&quot;sm&quot;
+              className=&quot;h-7 w-7 p-0&quot;
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Hide password' : 'Show password'}
             >
               {showPassword ? (
-                <EyeOff className="h-4 w-4" />
+                <EyeOff className=&quot;h-4 w-4&quot; />
               ) : (
-                <Eye className="h-4 w-4" />
+                <Eye className=&quot;h-4 w-4&quot; />
               )}
             </Button>
           </div>
@@ -328,8 +352,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         
         {/* Password Strength Meter */}
         {watchedFields.password && (
-          <div className="space-y-2">
-            <div className="flex justify-between text-xs">
+          <div className=&quot;space-y-2&quot;>
+            <div className=&quot;flex justify-between text-xs&quot;>
               <span>Password Strength</span>
               <span className={cn('font-medium', 
                 passwordStrength.strength >= 4 ? 'text-green-600' :
@@ -339,14 +363,14 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
                 {passwordStrength.label}
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className=&quot;w-full bg-gray-200 rounded-full h-2&quot;>
               <div 
                 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
                 style={{ width: `${passwordStrength.percentage}%` }}
               />
             </div>
-            <div className="text-xs text-gray-600 space-y-1">
-              <div className="grid grid-cols-2 gap-1">
+            <div className=&quot;text-xs text-gray-600 space-y-1&quot;>
+              <div className=&quot;grid grid-cols-2 gap-1&quot;>
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
                   ✓ 8+ characters
                 </span>
@@ -368,49 +392,49 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         )}
         
         {errors.password && (
-          <p className="text-sm text-red-600 flex items-center gap-1">
-            <AlertCircle className="h-3 w-3" />
+          <p className=&quot;text-sm text-red-600 flex items-center gap-1&quot;>
+            <AlertCircle className=&quot;h-3 w-3&quot; />
             {errors.password.message}
           </p>
         )}
       </div>
 
       {/* Confirm Password Field */}
-      <div className="space-y-2">
-        <Label htmlFor="confirmPassword" className="text-sm font-medium">
-          Confirm Password <span className="text-red-500">*</span>
+      <div className=&quot;space-y-2&quot;>
+        <Label htmlFor=&quot;confirmPassword&quot; className=&quot;text-sm font-medium&quot;>
+          Confirm Password <span className=&quot;text-red-500&quot;>*</span>
         </Label>
-        <div className="relative">
+        <div className=&quot;relative&quot;>
           <Input
-            id="confirmPassword"
+            id=&quot;confirmPassword&quot;
             type={showConfirmPassword ? 'text' : 'password'}
-            placeholder="Confirm your password"
+            placeholder=&quot;Confirm your password&quot;
             {...register('confirmPassword')}
             disabled={isSubmitting}
             className={cn('pr-20', getFieldClasses('confirmPassword'))}
-            autoComplete="new-password"
+            autoComplete=&quot;new-password&quot;
           />
-          <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
+          <div className=&quot;absolute inset-y-0 right-0 flex items-center gap-1 pr-3&quot;>
             {getFieldValidationIcon('confirmPassword')}
             <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="h-7 w-7 p-0"
+              type=&quot;button&quot;
+              variant=&quot;ghost&quot;
+              size=&quot;sm&quot;
+              className=&quot;h-7 w-7 p-0&quot;
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
             >
               {showConfirmPassword ? (
-                <EyeOff className="h-4 w-4" />
+                <EyeOff className=&quot;h-4 w-4&quot; />
               ) : (
-                <Eye className="h-4 w-4" />
+                <Eye className=&quot;h-4 w-4&quot; />
               )}
             </Button>
           </div>
         </div>
         {errors.confirmPassword && (
-          <p className="text-sm text-red-600 flex items-center gap-1">
-            <AlertCircle className="h-3 w-3" />
+          <p className=&quot;text-sm text-red-600 flex items-center gap-1&quot;>
+            <AlertCircle className=&quot;h-3 w-3&quot; />
             {errors.confirmPassword.message}
           </p>
         )}
@@ -418,21 +442,21 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
 
       {/* Global Error */}
       {errors.root && (
-        <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0" />
+        <div className=&quot;p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2&quot;>
+          <AlertCircle className=&quot;h-4 w-4 flex-shrink-0&quot; />
           {errors.root.message}
         </div>
       )}
 
       {/* Submit Button */}
       <Button 
-        type="submit" 
-        className="w-full py-3" 
+        type=&quot;submit&quot; 
+        className=&quot;w-full py-3&quot; 
         disabled={isSubmitting || !isValid}
       >
         {isSubmitting ? (
           <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
             Creating Account...
           </>
         ) : (
@@ -440,5 +464,5 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         )}
       </Button>
     </form>
-  ),
+  )
 }

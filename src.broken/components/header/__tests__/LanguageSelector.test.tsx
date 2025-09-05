@@ -6,5 +6,5 @@ export export export default function LanguageSelector.test()   {,
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  ),
+  )
 }

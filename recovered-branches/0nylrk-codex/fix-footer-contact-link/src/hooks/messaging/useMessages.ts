@@ -3,7 +3,6 @@ import { UserProfile, UserDetails } from '@/types/auth',
 import { supabase } from '@/integrations/supabase/client',
 import { Message, Conversation } from '@/types/messaging',
 import { toast } from '@/hooks/use-toast',
-
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null,
 
@@ -47,12 +46,12 @@ export function useMessages(
       ),
       
       if (unreadMessages.length > 0) {
-        await markAsRead(conversationId),
+        await markAsRead(conversationId)
       }
     } catch (error) {
-      console.error('Error fetching messages:', error),
+      console.error('Error fetching messages:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -86,21 +85,28 @@ export function useMessages(
       
       // Update active messages if this conversation is selected
       if (activeConversation && activeConversation.id === conversationId) {
-        setActiveMessages(prev => [...prev, data as Message]),
+        setActiveMessages(prev => [...prev, data as Message])
       }
       
       // Update conversations list
       await fetchConversations(),
       
       // Return the sent message
-      return data,
+      return data
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
+<<<<<<< HEAD
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
-      }),
+      })
+=======
+        title: &quot;Failed to send message&quot;,
+        description: &quot;Please try again later&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -147,10 +153,10 @@ export function useMessages(
         return updatedConversations.reduce(
           (total, conv) => total + (conv.unread_count || 0), 
           0
-        ),
-      }),
+        )
+      })
     } catch (error) {
-      console.error('Error marking messages as read:', error),
+      console.error('Error marking messages as read:', error)
     }
   },
 
@@ -158,5 +164,5 @@ export function useMessages(
     loadMessages,
     sendMessage,
     markAsRead
-  },
+  }
 }

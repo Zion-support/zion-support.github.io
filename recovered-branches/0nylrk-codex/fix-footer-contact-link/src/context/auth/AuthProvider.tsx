@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -7,7 +8,18 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
+=======
+import React, { useEffect } from &quot;react&quot;;
+import { supabase, getFromProfiles } from &quot;../../integrations/supabase/client&quot;;
+import { useAuthOperations } from &quot;../../hooks/useAuthOperations&quot;;
+import { AuthContext } from &quot;./AuthContext&quot;;
+import { cleanupAuthState } from &quot;../../utils/authUtils&quot;;
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuthState } from &quot;./useAuthState&quot;;
+import { useAuthEventHandlers } from &quot;./useAuthEventHandlers&quot;;
+import { mapProfileToUser } from &quot;./profileMapper&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -33,12 +45,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
-    return loginImpl({ email, password }),
+    return loginImpl({ email, password })
   },
 
   // Wrapper for signup to match the AuthContextType interface
   const signup = async (email: string, password: string, userData?: any) => {
-    return signupImpl({ email, password, display_name: userData }),
+    return signupImpl({ email, password, display_name: userData })
   },
 
   useEffect(() => {
@@ -60,38 +72,47 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
-                handleSignedIn(mappedUser),
+                handleSignedIn(mappedUser)
               }
             } else if (error) {
+<<<<<<< HEAD
               console.error("Error fetching user profile:", error),
-              setUser(null),
+              setUser(null)
             }
           } catch (error) {
             console.error("Error fetching user profile:", error),
-            setUser(null),
+            setUser(null)
+=======
+              console.error(&quot;Error fetching user profile:&quot;, error);
+              setUser(null);
+            }
+          } catch (error) {
+            console.error(&quot;Error fetching user profile:&quot;, error);
+            setUser(null);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           }
         } else {
           setUser(null),
           
           // Show logout toast when user logs out
           if (event === 'SIGNED_OUT') {
-            handleSignedOut(),
+            handleSignedOut()
           }
         }
-        setIsLoading(false),
+        setIsLoading(false)
       }
     ),
 
     // Initial session check
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     }),
 
     return () => {
-      subscription.unsubscribe(),
-    },
+      subscription.unsubscribe()
+    }
   }, [navigate]),
 
   const authContextValue = {
@@ -114,5 +135,5 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     <AuthContext.Provider value={authContextValue}>
       {children}
     </AuthContext.Provider>
-  ),
+  )
 },

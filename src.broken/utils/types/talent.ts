@@ -13,7 +13,7 @@ export type TalentTranslations = {
   title?: FieldTranslations,
   summary?: FieldTranslations,
   bio?: FieldTranslations,
-  category?: FieldTranslations,
+  category?: FieldTranslations
 },
 
 export type TalentProfile = {
@@ -49,5 +49,5 @@ export type TalentFilters = {
   minRate?: number,
   maxRate?: number,
   region?: string[],
-  minRating?: number,
+  minRating?: number
 },

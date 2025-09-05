@@ -27,7 +27,7 @@ interface PerformanceMetrics {
     effectiveType: string,
     downlink: number,
     rtt: number
-  },
+  }
 }
 
 interface PerformanceRecommendation {
@@ -60,7 +60,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         impact: 'High impact on user perception of site speed',
         solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources',
         category: 'performance'
-      }),
+      })
     }
 
     // LCP recommendations
@@ -73,7 +73,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         impact: 'High impact on user experience and Core Web Vitals',
         solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time',
         category: 'performance'
-      }),
+      })
     }
 
     // CLS recommendations
@@ -86,7 +86,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         impact: 'Medium impact on user experience and visual stability',
         solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content',
         category: 'user-experience'
-      }),
+      })
     }
 
     // Memory usage recommendations
@@ -99,7 +99,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         impact: 'Medium impact on long-term performance and stability',
         solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo',
         category: 'performance'
-      }),
+      })
     }
 
     // Network recommendations
@@ -112,10 +112,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         impact: 'High impact on all performance metrics',
         solution: 'Implement service workers, optimize bundle size, use progressive loading',
         category: 'performance'
-      }),
+      })
     }
 
-    return recs,
+    return recs
   }, []),
 
   const measurePerformance = useCallback(async () => {
@@ -125,8 +125,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
-          window.addEventListener('load', resolve, { once: true }),
-        }),
+          window.addEventListener('load', resolve, { once: true })
+        })
       }
 
       // Wait a bit more for any async operations
@@ -141,14 +141,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           const observer = new PerformanceObserver((list) => {
             const entries = list.getEntries(),
             const lastEntry = entries[entries.length - 1],
-            resolve(lastEntry.startTime),
+            resolve(lastEntry.startTime)
           }),
           observer.observe({ entryTypes: ['largest-contentful-paint'] }),
           
           // Fallback timeout
-          setTimeout(() => resolve(0), 5000),
+          setTimeout(() => resolve(0), 5000)
         } else {
-          resolve(0),
+          resolve(0)
         }
       }),
 
@@ -166,11 +166,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
       setMetrics(metrics),
       setRecommendations(generateRecommendations(metrics)),
-      setLastUpdate(new Date()),
+      setLastUpdate(new Date())
     } catch {
       // Performance measurement failed
     } finally {
-      setIsMonitoring(false),
+      setIsMonitoring(false)
     }
   }, [generateRecommendations]),
 
@@ -182,7 +182,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     if (metrics.cls > 0.1) score -= 15,
     if (metrics.ttfb > 600) score -= 20,
     
-    return Math.max(0, score),
+    return Math.max(0, score)
   },
 
   const getScoreColor = (score: number): string => {
@@ -200,16 +200,16 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
-        <div className="animate-pulse">
-          <div className="h-4 bg-gray-700 rounded w-1/3 mb-4"></div>
-          <div className="space-y-3">
-            <div className="h-3 bg-gray-700 rounded"></div>
-            <div className="h-3 bg-gray-700 rounded w-5/6"></div>
-            <div className="h-3 bg-gray-700 rounded w-4/6"></div>
+        <div className=&quot;animate-pulse&quot;>
+          <div className=&quot;h-4 bg-gray-700 rounded w-1/3 mb-4&quot;></div>
+          <div className=&quot;space-y-3&quot;>
+            <div className=&quot;h-3 bg-gray-700 rounded&quot;></div>
+            <div className=&quot;h-3 bg-gray-700 rounded w-5/6&quot;></div>
+            <div className=&quot;h-3 bg-gray-700 rounded w-4/6&quot;></div>
           </div>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -219,56 +219,56 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
     >
       {/* Header */}
-      <div className="p-4 bg-gray-800/50 border-b border-gray-700">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
-              <Activity className="w-5 h-5 text-blue-400" />
+      <div className=&quot;p-4 bg-gray-800/50 border-b border-gray-700&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <div className=&quot;flex items-center space-x-3&quot;>
+            <div className=&quot;p-2 bg-blue-500/20 rounded-lg&quot;>
+              <Activity className=&quot;w-5 h-5 text-blue-400&quot; />
             </div>
             <div>
-              <h3 className="text-white font-semibold">Performance Monitor</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className=&quot;text-white font-semibold&quot;>Performance Monitor</h3>
+              <p className=&quot;text-gray-400 text-sm&quot;>
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </p>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className=&quot;flex items-center space-x-2&quot;>
             <button
               onClick={() => setShowDetails(!showDetails)}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
+              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors&quot;
               title={showDetails ? 'Hide details' : 'Show details'}
             >
-              <BarChart3 className="w-4 h-4" />
+              <BarChart3 className=&quot;w-4 h-4&quot; />
             </button>
             <button
               onClick={updatePerformanceData}
               disabled={isLoading}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
-              title="Refresh data"
+              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50&quot;
+              title=&quot;Refresh data&quot;
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
+              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors&quot;
               title={isExpanded ? 'Collapse' : 'Expand'}
             >
-              <Settings className="w-4 h-4" />
+              <Settings className=&quot;w-4 h-4&quot; />
             </button>
           </div>
         </div>
       </div>
 
       {/* Overall Score */}
-      <div className="p-4">
-        <div className="text-center mb-6">
+      <div className=&quot;p-4&quot;>
+        <div className=&quot;text-center mb-6&quot;>
           <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${getOverallScoreBg(performanceData.overallScore)} mb-3`}>
             <span className={`text-2xl font-bold ${getOverallScoreColor(performanceData.overallScore)}`}>
               {performanceData.overallScore}
             </span>
           </div>
-          <h4 className="text-white font-semibold mb-1">Performance Score</h4>
-          <p className="text-gray-400 text-sm">
+          <h4 className=&quot;text-white font-semibold mb-1&quot;>Performance Score</h4>
+          <p className=&quot;text-gray-400 text-sm&quot;>
             {performanceData.overallScore >= 90 ? 'Excellent' : 
              performanceData.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
           </p>
@@ -276,29 +276,29 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
               {/* Metrics */}
               {metrics && (
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Core Web Vitals</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">FCP</span>
+                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Core Web Vitals</h3>
+                  <div className=&quot;space-y-3&quot;>
+                    <div className=&quot;flex justify-between items-center&quot;>
+                      <span className=&quot;text-gray-300&quot;>FCP</span>
                       <span className={`font-mono ${metrics.fcp > 2000 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.fcp.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">LCP</span>
+                    <div className=&quot;flex justify-between items-center&quot;>
+                      <span className=&quot;text-gray-300&quot;>LCP</span>
                       <span className={`font-mono ${metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.lcp.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">CLS</span>
+                    <div className=&quot;flex justify-between items-center&quot;>
+                      <span className=&quot;text-gray-300&quot;>CLS</span>
                       <span className={`font-mono ${metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.cls.toFixed(3)}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">TTFB</span>
+                    <div className=&quot;flex justify-between items-center&quot;>
+                      <span className=&quot;text-gray-300&quot;>TTFB</span>
                       <span className={`font-mono ${metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.ttfb.toFixed(0)}ms
                       </span>
@@ -309,24 +309,24 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
               {/* Memory Usage */}
               {metrics?.memoryUsage && (
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Memory Usage</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">Used</span>
-                      <span className="font-mono text-cyan-400">
+                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Memory Usage</h3>
+                  <div className=&quot;space-y-2&quot;>
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-gray-300&quot;>Used</span>
+                      <span className=&quot;font-mono text-cyan-400&quot;>
                         {(metrics.memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(1)}MB
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">Total</span>
-                      <span className="font-mono text-blue-400">
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-gray-300&quot;>Total</span>
+                      <span className=&quot;font-mono text-blue-400&quot;>
                         {(metrics.memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(1)}MB
                       </span>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className=&quot;w-full bg-gray-700 rounded-full h-2&quot;>
                       <div 
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300"
+                        className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300&quot;
                         style={{ 
                           width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%` 
                         }}
@@ -338,24 +338,24 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
               {/* Network Info */}
               {metrics?.networkInfo && (
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Network</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">Type</span>
-                      <span className="font-mono text-green-400 capitalize">
+                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Network</h3>
+                  <div className=&quot;space-y-2&quot;>
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-gray-300&quot;>Type</span>
+                      <span className=&quot;font-mono text-green-400 capitalize&quot;>
                         {metrics.networkInfo.effectiveType}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">Speed</span>
-                      <span className="font-mono text-blue-400">
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-gray-300&quot;>Speed</span>
+                      <span className=&quot;font-mono text-blue-400&quot;>
                         {metrics.networkInfo.downlink.toFixed(1)}Mbps
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">RTT</span>
-                      <span className="font-mono text-purple-400">
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-gray-300&quot;>RTT</span>
+                      <span className=&quot;font-mono text-purple-400&quot;>
                         {metrics.networkInfo.rtt}ms
                       </span>
                     </div>
@@ -365,13 +365,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
               {/* Recommendations */}
               {recommendations.length > 0 && (
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Recommendations</h3>
-                  <div className="space-y-3">
+                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Recommendations</h3>
+                  <div className=&quot;space-y-3&quot;>
                     {recommendations.map((rec) => (
-                      <div key={rec.id} className="border-l-4 border-cyan-500 pl-3">
-                        <div className="flex items-start justify-between">
-                          <h4 className="font-medium text-white text-sm">{rec.title}</h4>
+                      <div key={rec.id} className=&quot;border-l-4 border-cyan-500 pl-3&quot;>
+                        <div className=&quot;flex items-start justify-between&quot;>
+                          <h4 className=&quot;font-medium text-white text-sm&quot;>{rec.title}</h4>
                           <span className={`text-xs px-2 py-1 rounded ${
                             rec.priority === 'high' ? 'bg-red-500/20 text-red-400' :
                             rec.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
@@ -380,8 +380,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                             {rec.priority}
                           </span>
                         </div>
-                        <p className="text-gray-400 text-xs mt-1">{rec.description}</p>
-                        <p className="text-cyan-400 text-xs mt-1">{rec.solution}</p>
+                        <p className=&quot;text-gray-400 text-xs mt-1&quot;>{rec.description}</p>
+                        <p className=&quot;text-cyan-400 text-xs mt-1&quot;>{rec.solution}</p>
                       </div>
                     ))}
                   </div>
@@ -389,16 +389,16 @@ const EnhancedPerformanceMonitor: React.FC = () => {
               )}
 
               {/* Action Buttons */}
-              <div className="flex space-x-3">
+              <div className=&quot;flex space-x-3&quot;>
                 <button
                   onClick={measurePerformance}
                   disabled={isMonitoring}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                  className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2&quot;
                 >
                   {isMonitoring ? (
-                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    <RefreshCw className=&quot;w-4 h-4 animate-spin&quot; />
                   ) : (
-                    <BarChart3 className="w-4 h-4" />
+                    <BarChart3 className=&quot;w-4 h-4&quot; />
                   )}
                   <span>{isMonitoring ? 'Measuring...' : 'Measure Performance'}</span>
                 </button>
@@ -408,7 +408,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  ),
+  )
 },
 
 export default EnhancedPerformanceMonitor,

@@ -1,5 +1,4 @@
 import { TokenConfig } from "./types",
-
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
   symbol: "ZION$",
   usdPerToken: 0.05, // 100 ZION$ = $5 credit

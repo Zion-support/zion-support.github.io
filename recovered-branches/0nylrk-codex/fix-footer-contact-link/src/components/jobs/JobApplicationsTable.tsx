@@ -1,14 +1,24 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
+=======
+import { useState } from &quot;react&quot;;
+import { JobApplication, ApplicationStatus } from &quot;@/types/jobs&quot;;
+import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   ApplicationsTable,
   EmptyState,
   ErrorState,
   LoadingState,
   ScoreDialog
+<<<<<<< HEAD
 } from "./applications",
+=======
+} from &quot;./applications&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface JobApplicationsTableProps {
   jobId: string
@@ -35,10 +45,10 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       // If it's not already viewed, mark it as viewed
       const application = applications.find(app => app.id === applicationId),
       if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId),
+        await markApplicationAsViewed(applicationId)
       }
     } finally {
-      setProcessingId(null),
+      setProcessingId(null)
     }
   },
 
@@ -56,15 +66,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   },
 
   if (isLoading) {
-    return <LoadingState />,
+    return <LoadingState />
   }
 
   if (error) {
-    return <ErrorState error={error} />,
+    return <ErrorState error={error} />
   }
 
   if (applications.length === 0) {
-    return <EmptyState />,
+    return <EmptyState />
   }
 
   return (
@@ -84,5 +94,5 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onScoreUpdated={handleScoreUpdated}
       />
     </>
-  ),
+  )
 }

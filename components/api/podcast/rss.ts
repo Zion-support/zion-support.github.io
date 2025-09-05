@@ -1,14 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcast', 'episodes.json'),
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH),
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8'),
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,15 +27,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
       <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
+      <guid isPermaLink=&quot;false&quot;>${e.id}</guid>
       <pubDate>${pubDate}</pubDate>
+<<<<<<< HEAD
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`,
+    </item>`
+=======
+      <enclosure url=&quot;${audioUrl}&quot; length=&quot;0&quot; type=&quot;audio/mpeg&quot; />
+    </item>`;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     })
     .join('\n'),
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
   <channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
@@ -48,5 +52,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 </rss>`,
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8'),
-  return res.status(200).json({ ok: true, path: '/podcast.xml' }),
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }

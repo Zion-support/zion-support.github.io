@@ -1,24 +1,31 @@
+<<<<<<< HEAD
 import React from "react",
 import { Moon, Sun } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/context/ThemeContext",
+=======
+import React from &quot;react&quot;;
+import { Moon, Sun } from &quot;lucide-react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { useTheme } from &quot;@/context/ThemeContext&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function ThemeToggle(): JSX.Element {
   const { mode, toggleTheme } = useTheme(),
 
   return (
     <Button
-      aria-label="Toggle theme"
+      aria-label=&quot;Toggle theme&quot;
       onClick={toggleTheme}
-      variant="ghost"
-      size="icon"
+      variant=&quot;ghost&quot;
+      size=&quot;icon&quot;
     >
-      {mode === "dark" ? (
-        <Sun className="h-5 w-5" />
+      {mode === &quot;dark&quot; ? (
+        <Sun className=&quot;h-5 w-5&quot; />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className=&quot;h-5 w-5&quot; />
       )}
-      <span className="sr-only">Toggle theme</span>
+      <span className=&quot;sr-only&quot;>Toggle theme</span>
     </Button>
-  ),
+  )
 }

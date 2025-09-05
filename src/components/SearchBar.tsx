@@ -8,7 +8,6 @@ import { SearchSuggestion } from '@/types/search',
 import { slugify } from '@/lib/slugify',
 import { useDebounce } from '@/hooks/useDebounce',
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',
-
 /**
  * SearchBar component props
  */
@@ -50,29 +49,29 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     if (!debounced) {
       setSuggestions([]),
       setHighlightedIndex(-1),
-      return,
+      return
     }
     const controller = new AbortController(),
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch suggestions'),
-        return res.json(),
+        return res.json()
       })
       .then(data => {
         if (Array.isArray(data)) {
-          setSuggestions(data.slice(0, 5)),
+          setSuggestions(data.slice(0, 5))
         } else {
-          setSuggestions([]),
+          setSuggestions([])
         }
-        setHighlightedIndex(-1),
+        setHighlightedIndex(-1)
       })
       .catch(() => setSuggestions([])),
-    return () => controller.abort(),
+    return () => controller.abort()
   }, [debounced]),
 
   useOnClickOutside(containerRef, () => {
     setFocused(false),
-    setHighlightedIndex(-1),
+    setHighlightedIndex(-1)
   }),
 
   const handleSelect = (suggestion: SearchSuggestion) => {
@@ -84,52 +83,52 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     fireEvent('search', { search_term: suggestion.text }),
     setFocused(false),
     setHighlightedIndex(-1),
-    inputRef.current?.blur(),
+    inputRef.current?.blur()
   },
 
   return (
     <div
-      className="relative w-full"
+      className=&quot;relative w-full&quot;
       ref={containerRef}
-      role="combobox"
+      role=&quot;combobox&quot;
       aria-expanded={focused && suggestions.length > 0}
-      aria-haspopup="listbox"
+      aria-haspopup=&quot;listbox&quot;
       aria-controls={listId}
-      data-testid="search-bar"
+      data-testid=&quot;search-bar&quot;
     >
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
+      <div className=&quot;relative&quot;>
+        <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate&quot; />
         <Input
           ref={inputRef}
-          type="text"
-          id="main-search-input"
-          name="search"
+          type=&quot;text&quot;
+          id=&quot;main-search-input&quot;
+          name=&quot;search&quot;
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={(e) => {
             setFocused(true),
             // Ensure the input receives focus properly
-            e.target.setSelectionRange(e.target.value.length, e.target.value.length),
+            e.target.setSelectionRange(e.target.value.length, e.target.value.length)
           }}
           onBlur={(e) => {
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement,
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
               setFocused(false),
-              setHighlightedIndex(-1),
+              setHighlightedIndex(-1)
             }
           }}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
+          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
+          aria-autocomplete=&quot;list&quot;
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="search"
+          autoComplete=&quot;search&quot;
           onKeyDown={(e) => {
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
-                inputRef.current?.blur(),
+                inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key === 'Enter' && value.trim()) {
@@ -137,9 +136,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 fireEvent('search', { search_term: value }),
                 router.push(`/search?q=${encodeURIComponent(value)}`),
                 setFocused(false),
-                inputRef.current?.blur(),
+                inputRef.current?.blur()
               }
-              return,
+              return
             }
 
             switch (e.key) {
@@ -154,7 +153,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               case 'Enter':
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
                   e.preventDefault(),
-                  handleSelect(suggestions[highlightedIndex]),
+                  handleSelect(suggestions[highlightedIndex])
                 } else if (value.trim()) {
                   // This case should ideally be handled by the form's onSubmit,
                   // but if SearchBar is used standalone, this provides a fallback.
@@ -162,7 +161,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                   fireEvent('search', { search_term: value }),
                   router.push(`/search?q=${encodeURIComponent(value)}`),
                   setFocused(false),
-                  inputRef.current?.blur(),
+                  inputRef.current?.blur()
                 }
                 break,
               case 'Escape':
@@ -177,11 +176,11 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            className=&quot;absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white&quot;
             onClick={() => onChange('')}
-            aria-label="Clear search"
+            aria-label=&quot;Clear search&quot;
           >
-            <X className="h-4 w-4" />
+            <X className=&quot;h-4 w-4&quot; />
           </button>
         )}
       </div>
@@ -194,5 +193,5 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         listId={listId}
       />
     </div>
-  ),
+  )
 }

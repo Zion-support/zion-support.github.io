@@ -6,39 +6,39 @@ const AboutPage: React.FC = () => {
   const values = [
     {
       icon: Brain,
-      title: "Innovation First",
-      description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
-      color: "from-purple-500 to-pink-500"
+      title: &quot;Innovation First&quot;,
+      description: &quot;We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.&quot;,
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
       icon: Shield,
-      title: "Trust & Security",
-      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
-      color: "from-red-500 to-orange-500"
+      title: &quot;Trust & Security&quot;,
+      description: &quot;Building secure, reliable solutions that our clients can depend on for their most critical operations.&quot;,
+      color: &quot;from-red-500 to-orange-500&quot;
     },
     {
       icon: Users,
-      title: "Human-Centric",
-      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.",
-      color: "from-blue-500 to-cyan-500"
+      title: &quot;Human-Centric&quot;,
+      description: &quot;Technology should serve humanity, enhancing human capabilities and improving quality of life.&quot;,
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
       icon: Globe,
-      title: "Global Impact",
-      description: "Creating solutions that address global challenges and benefit communities worldwide.",
-      color: "from-green-500 to-emerald-500"
+      title: &quot;Global Impact&quot;,
+      description: &quot;Creating solutions that address global challenges and benefit communities worldwide.&quot;,
+      color: &quot;from-green-500 to-emerald-500&quot;
     },
     {
       icon: Rocket,
-      title: "Excellence",
-      description: "Maintaining the highest standards of quality and performance in everything we deliver.",
-      color: "from-indigo-500 to-purple-500"
+      title: &quot;Excellence&quot;,
+      description: &quot;Maintaining the highest standards of quality and performance in everything we deliver.&quot;,
+      color: &quot;from-indigo-500 to-purple-500&quot;
     },
     {
       icon: Heart,
-      title: "Integrity",
-      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
-      color: "from-pink-500 to-rose-500"
+      title: &quot;Integrity&quot;,
+      description: &quot;Operating with transparency, honesty, and ethical principles in all our business relationships.&quot;,
+      color: &quot;from-pink-500 to-rose-500&quot;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
@@ -46,7 +46,6 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
@@ -158,38 +157,38 @@ export default function AboutPage() {
 import React from 'react',
 import Head from 'next/head',
 import Button from '../components/ui/Button',
-
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>About | Zion Tech Group</title>
-        <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
+        <meta name=&quot;description&quot; content=&quot;About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/about&quot; />
       </Head>
 
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>
-            <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>
+      <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white&quot;>
+        <div className=&quot;max-w-6xl mx-auto space-y-10&quot;>
+          <header className=&quot;text-center&quot;>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4&quot;>About Zion Tech Group</h1>
+            <p className=&quot;text-gray-300 text-lg&quot;>We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>
           </header>
 
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-              <div className="text-sm text-gray-400 mb-2">What we do</div>
-              <div className="text-gray-200">200+ production-ready services across AI, DevOps, Security, Cloud, and Data.</div>
+          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            <div className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
+              <div className=&quot;text-sm text-gray-400 mb-2&quot;>What we do</div>
+              <div className=&quot;text-gray-200&quot;>200+ production-ready services across AI, DevOps, Security, Cloud, and Data.</div>
             </div>
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-              <div className="text-sm text-gray-400 mb-2">How we deliver</div>
-              <div className="text-gray-200">Template-driven deployments, SLAs, clear pricing, and measurable ROI.</div>
+            <div className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
+              <div className=&quot;text-sm text-gray-400 mb-2&quot;>How we deliver</div>
+              <div className=&quot;text-gray-200&quot;>Template-driven deployments, SLAs, clear pricing, and measurable ROI.</div>
             </div>
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-              <div className="text-sm text-gray-400 mb-2">Who we serve</div>
-              <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>
+            <div className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
+              <div className=&quot;text-sm text-gray-400 mb-2&quot;>Who we serve</div>
+              <div className=&quot;text-gray-200&quot;>Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>
             </div>
           </section>
 
+<<<<<<< HEAD
           <section className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>
@@ -198,14 +197,24 @@ export default function AboutPage() {
                 <li>E-mail: <a className="text-purple-300" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></li>
                 <li>Address: <span className="text-gray-200">364 E Main St STE 1008 Middletown DE 19709</span></li>
                 <li>Website: <a className="text-cyan-300" href="https://ziontechgroup.com">ziontechgroup.com</a></li>
+=======
+          <section className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
+            <div className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
+              <h2 className=&quot;text-2xl font-semibold mb-3&quot;>Contact</h2>
+              <ul className=&quot;text-gray-300 space-y-2&quot;>
+                <li>Mobile: <a className=&quot;text-cyan-300&quot; href=&quot;tel:+13024640950&quot;>+1 302 464 0950</Link></li>
+                <li>E-mail: <a className=&quot;text-purple-300&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</Link></li>
+                <li>Address: <span className=&quot;text-gray-200&quot;>364 E Main St STE 1008 Middletown DE 19709</span></li>
+                <li>Website: <a className=&quot;text-cyan-300&quot; href=&quot;https://ziontechgroup.com&quot;>ziontechgroup.com</Link></li>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               </ul>
             </div>
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-              <h2 className="text-2xl font-semibold mb-3">Get Started</h2>
-              <p className="text-gray-300 mb-4">Book a consultation to map your roadmap to shipped outcomes.</p>
-              <div className="flex gap-3">
-                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
-                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>
+            <div className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
+              <h2 className=&quot;text-2xl font-semibold mb-3&quot;>Get Started</h2>
+              <p className=&quot;text-gray-300 mb-4&quot;>Book a consultation to map your roadmap to shipped outcomes.</p>
+              <div className=&quot;flex gap-3&quot;>
+                <Button href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Talk to Sales</Button>
+                <Button href=&quot;/pricing&quot; variant=&quot;outline&quot; className=&quot;border border-gray-600 text-gray-200&quot;>Pricing</Button>
               </div>
             </div>
           </section>

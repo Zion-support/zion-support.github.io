@@ -7,21 +7,21 @@ export default function AutomationStatusPage() {
     fetch('/automation/status.json')
       .then((r) => r.json())
       .then((j) => setStatus(j))
-      .catch(() => setStatus(null)),
+      .catch(() => setStatus(null))
   }, []),
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>
+    <div className=&quot;space-y-4&quot;>
+      <h1 className=&quot;text-xl font-semibold&quot;>Autonomous Automation Status</h1>
       {status ? (
-        <div className="rounded-lg border p-4 text-sm">
+        <div className=&quot;rounded-lg border p-4 text-sm&quot;>
           <div>Last Run: {new Date(status.runAt || '').toLocaleString() || '—'}</div>
           <div>Health: {status.ok ? 'OK' : 'Unknown'}</div>
-          <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
+          <div className=&quot;mt-2&quot;><a className=&quot;underline&quot; href=&quot;/metrics/latest.json&quot;>View latest metrics JSON</a></div>
         </div>
       ) : (
-        <div className="text-sm text-gray-500">No status available yet.</div>
+        <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
       )}
     </div>
-  ),
+  )
 }

@@ -14,7 +14,7 @@ interface SearchResult {
   pricing?: {
     starter?: string,
     enterprise?: string
-  },
+  }
 }
 
 interface SearchProps {
@@ -28,7 +28,7 @@ interface SearchProps {
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
   onResultSelect,
-  placeholder = "Search revolutionary services...",
+  placeholder = &quot;Search revolutionary services...&quot;,
   className = "",
   showFilters = true
 }) => {
@@ -39,9 +39,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]),
   const [searchHistory, setSearchHistory] = useState<string[]>([]),
   const [popularSearches] = useState([
-    'AI ConsciousnessQuantum Computing',
-    'CybersecurityBusiness Intelligence',
-    'Space TechnologyAutonomous Systems'
+    'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]),
 
   // Mock search results - in real app, this would come from API
@@ -54,7 +52,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
-      features: ['Emotional IntelligenceSelf-Awareness', 'Consciousness Evolution'],
+      features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
     },
     {
@@ -65,7 +63,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
-      features: ['Quantum SupremacyAI Integration', 'Hybrid Computing'],
+      features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
     },
     {
@@ -76,7 +74,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
-      features: ['Quantum ResistanceThreat Prediction', 'AI Security'],
+      features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
   ],
@@ -113,7 +111,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                                    result.type.toLowerCase().includes(filter.toLowerCase())
                                  ),
             
-            return matchesQuery && matchesFilters,
+            return matchesQuery && matchesFilters
           }),
 
           // Sort by relevance
@@ -121,8 +119,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           
           setResults(sortedResults),
           setShowResults(true),
-          setIsSearching(false),
-        }, 300),
+          setIsSearching(false)
+        }, 300)
       }, 300),
       [selectedFilters]
     ),
@@ -130,7 +128,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   ),
 
   useEffect(() => {
-    debouncedSearch(query),
+    debouncedSearch(query)
   }, [query, debouncedSearch]),
 
   // Handle search input change
@@ -172,7 +170,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
     setSearchHistory(newHistory),
-    localStorage.setItem('zion-search-history', JSON.stringify(newHistory)),
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
   },
 
   // Load search history from localStorage
@@ -180,9 +178,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     const savedHistory = localStorage.getItem('zion-search-history'),
     if (savedHistory) {
       try {
-        setSearchHistory(JSON.parse(savedHistory)),
+        setSearchHistory(JSON.parse(savedHistory))
       } catch (error) {
-        console.error('Failed to parse search history:', error),
+        console.error('Failed to parse search history:', error)
       }
     }
   }, []),
@@ -193,7 +191,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
-    ),
+    )
   },
 
   // Handle result selection
@@ -207,7 +205,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const clearSearch = () => {
     setQuery(''),
     setShowResults(false),
-    setResults([]),
+    setResults([])
   },
 
   return (
@@ -215,30 +213,30 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
           <input
-            type="text"
+            type=&quot;text"
             value={query}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300&quot;
             onFocus={() => setShowResults(true)}
           />
           
           {/* Clear Button */}
           {query && (
             <button
-              type="button"
+              type=&quot;button"
               onClick={clearSearch}
               className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
             >
-              <X className="w-4 h-4" />
+              <X className="w-4 h-4&quot; />
             </button>
           )}
           
           {/* Search Button */}
           <button
-            type="submit"
+            type=&quot;submit"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
           >
             Search
@@ -383,7 +381,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
-                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+                  <div className="text-gray-400 mb-2&quot;>No results found for &quot;{query}"</div>
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
@@ -434,7 +432,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 // Debounce utility function
@@ -445,8 +443,8 @@ function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait),
-  },
+    timeout = setTimeout(() => func(...args), wait)
+  }
 }
 
 export default EnhancedSearch,

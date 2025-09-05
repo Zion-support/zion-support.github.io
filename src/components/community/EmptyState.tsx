@@ -14,12 +14,12 @@ interface EmptyStateProps {
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
-    <div className="text-center py-16">
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
-        <MessageSquare className="h-10 w-10 text-zion-purple" />
+    <div className=&quot;text-center py-16&quot;>
+      <div className=&quot;bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex&quot;>
+        <MessageSquare className=&quot;h-10 w-10 text-zion-purple&quot; />
       </div>
-      <h2 className="text-xl font-medium mb-2">{title}</h2>
-      <p className="text-muted-foreground mb-6">{subtitle}</p>
+      <h2 className=&quot;text-xl font-medium mb-2&quot;>{title}</h2>
+      <p className=&quot;text-muted-foreground mb-6&quot;>{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -35,7 +35,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         </Tooltip>
       </TooltipProvider>
     </div>
-  ),
+  )
 },
 
 export default EmptyState,

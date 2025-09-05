@@ -1,6 +1,5 @@
 import React from 'react',
 import type { Room } from 'livekit-client',
-
 type Props = {
   room: Room | null,
   onLeave: () => void,
@@ -17,37 +16,37 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const toggleMic = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled),
-    setMicEnabled(enabled),
+    setMicEnabled(enabled)
   },
 
   const toggleCam = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled),
-    setCamEnabled(enabled),
+    setCamEnabled(enabled)
   },
 
   const toggleScreenShare = async () => {
     if (!room) return,
     try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing),
-      setSharing(enabled),
+      setSharing(enabled)
     } catch (e) {
-      console.warn('Screen share failed', e),
+      console.warn('Screen share failed', e)
     }
   },
 
   return (
-    <div className="flex items-center gap-3">
+    <div className=&quot;flex items-center gap-3&quot;>
       <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
         {micEnabled ? 'Mute' : 'Unmute'}
       </button>
       <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>
         {camEnabled ? 'Stop Video' : 'Start Video'}
       </button>
-      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
+      <button onClick={toggleScreenShare} className=&quot;px-4 py-2 rounded bg-gray-700 text-white&quot;>
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>
-      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
+      <button onClick={onLeave} className=&quot;px-4 py-2 rounded bg-red-600 text-white&quot;>Leave</button>
     </div>
-  ),
+  )
 }

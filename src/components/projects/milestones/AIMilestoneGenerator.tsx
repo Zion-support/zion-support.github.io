@@ -11,7 +11,6 @@ import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns',
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
 import { Badge } from '@/components/ui/badge',
-
 interface AIMilestoneGeneratorProps {
   scope: string,
   startDate: string,
@@ -34,7 +33,7 @@ export function AIMilestoneGenerator({
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
-      return,
+      return
     }
 
     const input: MilestoneInput = {
@@ -50,7 +49,7 @@ export function AIMilestoneGenerator({
     generatedMilestones.forEach((_, index: number) => {
       initialSelection[index] = true
     }),
-    setSelectedMilestones(initialSelection),
+    setSelectedMilestones(initialSelection)
   },
 
   const handleAddToProject = () => {
@@ -60,14 +59,14 @@ export function AIMilestoneGenerator({
     
     onAddMilestones(selectedMilestonesList),
     clearGeneratedMilestones(),
-    setSelectedMilestones({}),
+    setSelectedMilestones({})
   },
 
   const toggleMilestoneSelection = (index: number) => {
     setSelectedMilestones(prev => ({
       ...prev,
       [index]: !prev[index]
-    })),
+    }))
   },
 
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
@@ -76,32 +75,32 @@ export function AIMilestoneGenerator({
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy'),
+      return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString,
+      return dateString
     }
   },
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium flex items-center">
-          <Sparkles className="w-5 h-5 mr-2 text-primary" />
+    <div className=&quot;space-y-4&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h3 className=&quot;text-lg font-medium flex items-center&quot;>
+          <Sparkles className=&quot;w-5 h-5 mr-2 text-primary&quot; />
           AI Milestone Generator
         </h3>
         <Button
-          variant="outline"
+          variant=&quot;outline&quot;
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
           {isGenerating ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
               Generating...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className=&quot;mr-2 h-4 w-4&quot; />
               Generate Milestones
             </>
           )}
@@ -110,9 +109,9 @@ export function AIMilestoneGenerator({
 
       {generatedMilestones.length > 0 && (
         <Card>
-          <CardContent className="pt-6">
-            <div className="flex justify-between items-center mb-4">
-              <p className="text-sm text-muted-foreground">
+          <CardContent className=&quot;pt-6&quot;>
+            <div className=&quot;flex justify-between items-center mb-4&quot;>
+              <p className=&quot;text-sm text-muted-foreground&quot;>
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
               <Button 
@@ -123,48 +122,48 @@ export function AIMilestoneGenerator({
               </Button>
             </div>
 
-            <Accordion type="multiple" className="w-full">
+            <Accordion type=&quot;multiple&quot; className=&quot;w-full&quot;>
               {generatedMilestones.map((milestone, index) => (
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center flex-1">
+                <AccordionItem value={`item-${index}`} key={index} className=&quot;border p-2 rounded-md mb-2&quot;>
+                  <div className=&quot;flex items-center justify-between&quot;>
+                    <div className=&quot;flex items-center flex-1&quot;>
                       <input
-                        type="checkbox"
+                        type=&quot;checkbox&quot;
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] || false}
                         onChange={() => toggleMilestoneSelection(index)}
-                        className="mr-2 w-4 h-4 rounded text-primary"
+                        className=&quot;mr-2 w-4 h-4 rounded text-primary&quot;
                       />
-                      <AccordionTrigger className="hover:no-underline flex-1 text-left">
-                        <div className="flex items-center">
-                          <span className="font-medium">{milestone.title}</span>
-                          <Badge variant="secondary" className="ml-2 flex items-center">
-                            <Sparkles className="w-3 h-3 mr-1" />
+                      <AccordionTrigger className=&quot;hover:no-underline flex-1 text-left&quot;>
+                        <div className=&quot;flex items-center&quot;>
+                          <span className=&quot;font-medium&quot;>{milestone.title}</span>
+                          <Badge variant=&quot;secondary&quot; className=&quot;ml-2 flex items-center&quot;>
+                            <Sparkles className=&quot;w-3 h-3 mr-1&quot; />
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-                      variant="ghost"
-                      size="sm"
+                      variant=&quot;ghost&quot;
+                      size=&quot;sm&quot;
                       onClick={(e) => {
                         e.stopPropagation(),
-                        handleAddSingleMilestone(milestone),
+                        handleAddSingleMilestone(milestone)
                       }}
-                      className="mr-2"
+                      className=&quot;mr-2&quot;
                     >
-                      <Plus className="h-4 w-4" />
+                      <Plus className=&quot;h-4 w-4&quot; />
                     </Button>
                   </div>
                   <AccordionContent>
-                    <div className="pl-6 space-y-2">
-                      <p className="text-sm">{milestone.description}</p>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar className="w-4 h-4 mr-1" />
+                    <div className=&quot;pl-6 space-y-2&quot;>
+                      <p className=&quot;text-sm&quot;>{milestone.description}</p>
+                      <div className=&quot;flex items-center text-sm text-muted-foreground&quot;>
+                        <Calendar className=&quot;w-4 h-4 mr-1&quot; />
                         Due: {formatDate(milestone.dueDate)}
                       </div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className=&quot;text-sm text-muted-foreground&quot;>
                         Estimated effort: {milestone.estimatedHours} hours
                       </div>
                     </div>
@@ -176,5 +175,5 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
-  ),
+  )
 }

@@ -9,7 +9,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio',
 import { useAuth } from '@/hooks/useAuth',
 import { MessageBubble } from './MessageBubble',
 import { DateDivider } from './DateDivider',
-
 export function ConversationDetailView() {
   const { user } = useAuth(),
   const { 
@@ -24,17 +23,17 @@ export function ConversationDetailView() {
   
   useEffect(() => {
     if (activeConversation) {
-      loadMessages(activeConversation.id),
+      loadMessages(activeConversation.id)
     }
-    inputRef.current?.focus(),
+    inputRef.current?.focus()
   }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [activeMessages]),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   
   const send = async () => {
@@ -42,7 +41,7 @@ export function ConversationDetailView() {
 
     await sendMessage(activeConversation.id, messageText),
     setMessageText(''),
-    inputRef.current?.focus(),
+    inputRef.current?.focus()
   },
 
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -59,14 +58,14 @@ export function ConversationDetailView() {
   
   if (!activeConversation) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
-        <p className="text-zion-slate text-center max-w-md">
+      <div className=&quot;flex-1 flex flex-col items-center justify-center p-8&quot;>
+        <MessageSquare className=&quot;h-16 w-16 text-zion-purple/40 mb-4&quot; />
+        <h3 className=&quot;text-xl font-medium text-white mb-2&quot;>No Conversation Selected</h3>
+        <p className=&quot;text-zion-slate text-center max-w-md&quot;>
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    ),
+    )
   }
   
   // Group messages by date
@@ -77,12 +76,12 @@ export function ConversationDetailView() {
     const existingGroup = groupedMessages.find(group => group.date === messageDate),
     
     if (existingGroup) {
-      existingGroup.messages.push(message),
+      existingGroup.messages.push(message)
     } else {
       groupedMessages.push({
         date: messageDate,
         messages: [message]
-      }),
+      })
     }
   }),
   
@@ -90,24 +89,24 @@ export function ConversationDetailView() {
     (activeConversation.context_data.title || activeConversation.context_data.description),
 
   return (
-    <div className="flex-1 flex flex-col h-full">
+    <div className=&quot;flex-1 flex flex-col h-full&quot;>
       {/* Header */}
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
+      <div className=&quot;p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30&quot;>
+        <div className=&quot;flex items-center gap-3&quot;>
+          <Avatar className=&quot;h-10 w-10 border border-zion-purple/20&quot;>
             <AvatarImage 
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
             />
-            <AvatarFallback className="bg-zion-blue-dark text-white">
+            <AvatarFallback className=&quot;bg-zion-blue-dark text-white&quot;>
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div>
-            <div className="font-medium text-white">
+            <div className=&quot;font-medium text-white&quot;>
               {activeConversation.other_user.name}
             </div>
-            <div className="text-xs text-zion-slate">
+            <div className=&quot;text-xs text-zion-slate&quot;>
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
@@ -118,31 +117,31 @@ export function ConversationDetailView() {
       
       {/* Context information (if available) */}
       {hasContextData && (
-        <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
-          <div className="text-sm text-zion-slate flex items-start gap-3">
+        <div className=&quot;p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10&quot;>
+          <div className=&quot;text-sm text-zion-slate flex items-start gap-3&quot;>
             {activeConversation.context_data && activeConversation.context_data.image_url && (
-              <div className="w-16 h-16 flex-shrink-0">
-                <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
+              <div className=&quot;w-16 h-16 flex-shrink-0&quot;>
+                <AspectRatio ratio={1/1} className=&quot;rounded bg-zion-blue-dark/30 overflow-hidden&quot;>
                   <img
                     src={activeConversation.context_data.image_url}
-                    alt={activeConversation.context_data.title || "Context"}
-                    className="object-cover"
-                    loading="lazy"
+                    alt={activeConversation.context_data.title || &quot;Context&quot;}
+                    className=&quot;object-cover&quot;
+                    loading=&quot;lazy&quot;
                   />
                 </AspectRatio>
               </div>
             )}
             <div>
-              <div className="font-medium text-white mb-1">
+              <div className=&quot;font-medium text-white mb-1&quot;>
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :
                  'Regarding:'}
               </div>
-              <div className="text-zion-cyan font-medium">
+              <div className=&quot;text-zion-cyan font-medium&quot;>
                 {activeConversation.context_data && activeConversation.context_data.title}
               </div>
               {activeConversation.context_data && activeConversation.context_data.description && (
-                <div className="text-xs text-zion-slate mt-1 line-clamp-2">
+                <div className=&quot;text-xs text-zion-slate mt-1 line-clamp-2&quot;>
                   {activeConversation.context_data.description}
                 </div>
               )}
@@ -152,16 +151,16 @@ export function ConversationDetailView() {
       )}
       
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className=&quot;flex-1 overflow-y-auto p-4 space-y-4&quot;>
         {groupedMessages.length === 0 ? (
-          <div className="text-center text-zion-slate py-12">
+          <div className=&quot;text-center text-zion-slate py-12&quot;>
             <p>No messages yet. Start the conversation!</p>
           </div>
         ) : (
           groupedMessages.map((group, groupIndex) => (
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
-              <div className="space-y-3">
+              <div className=&quot;space-y-3&quot;>
                 {group.messages.map((message) => (
                   <MessageBubble
                     key={message.id}
@@ -177,19 +176,24 @@ export function ConversationDetailView() {
       </div>
       
       {/* Input */}
-      <div className="p-3 border-t border-zion-purple/20">
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">
+      <div className=&quot;p-3 border-t border-zion-purple/20&quot;>
+        <form onSubmit={handleSendMessage} className=&quot;flex items-start gap-2&quot;>
           <textarea
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            placeholder=&quot;Type a message...&quot;
+            className=&quot;flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan&quot;
             ref={inputRef}
           />
           <Button 
+<<<<<<< HEAD
             type="submit"
             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
+=======
+            type=&quot;submit&quot;
+            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
             Send
           </Button>

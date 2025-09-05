@@ -18,7 +18,7 @@ export function useTranslationService() {
     content: string,
     contentType: ContentType = 'general',
     sourceLanguage: SupportedLanguage = 'en',
-    targetLanguages: SupportedLanguage[] = ['enes', 'ptar']
+    targetLanguages: SupportedLanguage[] = ['enesptar']
   ): Promise<TranslationResponse> => {
     setIsTranslating(true),
     
@@ -43,10 +43,10 @@ export function useTranslationService() {
           ar: ''
         },
         initialTranslations[sourceLanguage] = content,
-        return { translations: initialTranslations, error: error.message },
+        return { translations: initialTranslations, error: error.message }
       }
       
-      return { translations: data.translations },
+      return { translations: data.translations }
     } catch (err) {
       setIsTranslating(false),
       console.error('Translation service error:', err),
@@ -62,7 +62,7 @@ export function useTranslationService() {
       return { 
         translations: initialTranslations,
         error: err instanceof Error ? err.message : 'Unknown translation error' 
-      },
+      }
     }
   },
   
@@ -75,5 +75,5 @@ export function useTranslationService() {
     translateContent,
     isTranslating,
     getTranslation
-  },
+  }
 }

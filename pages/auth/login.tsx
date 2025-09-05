@@ -64,7 +64,7 @@ const LoginPage = () => {
           setError(sessionError as any), // Cast to any if type is too strict
         } else {
           logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
-          setUser(session?.user ?? null),
+          setUser(session?.user ?? null)
         }
       } catch (e) {
         if (mounted) {
@@ -90,16 +90,22 @@ const LoginPage = () => {
         setUser(session?.user ?? null),
         // If auth state changes after initial check, ensure sessionChecked is true
         // This handles cases like login/logout in another tab.
+<<<<<<< HEAD
         if (!sessionChecked && event !== "INITIAL_SESSION") {
            setSessionChecked(true),
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
+=======
+        if (!sessionChecked && event !== &quot;INITIAL_SESSION&quot;) {
+           setSessionChecked(true);
+           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
       }),
       
       return () => { // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
         authListener?.subscription?.unsubscribe()
-      },
+      }
     },
 
     const unsubscribePromise = checkSessionAndListen(),
@@ -108,8 +114,8 @@ const LoginPage = () => {
       mounted = false,
       clearTimeout(sessionTimeoutId), // Clear timeout on unmount
       logInfo('LoginPage: Unmounting, cleaning up auth listener.'),
-      unsubscribePromise.then(cleanup => cleanup && cleanup()),
-    },
+      unsubscribePromise.then(cleanup => cleanup && cleanup())
+    }
   }, []), // Run only once on mount
 
   // Effect for handling redirection AFTER session is checked and user state is updated
@@ -123,22 +129,22 @@ const LoginPage = () => {
       
       if (router.query.returnTo && typeof router.query.returnTo === 'string') {
         try {
-          returnTo = decodeURIComponent(router.query.returnTo),
+          returnTo = decodeURIComponent(router.query.returnTo)
         } catch (e) {
           logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo }),
-          returnTo = '/dashboard',
+          returnTo = '/dashboard'
         }
       }
       
       // Prevent redirecting back to auth pages or creating loops
-      const authPages = ['/auth/login/auth/register', '/login/signup', '/auth/forgot-password'],
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'],
       if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
-        returnTo = '/dashboard',
+        returnTo = '/dashboard'
       }
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
-        returnTo = '/dashboard',
+        returnTo = '/dashboard'
       }
       
       logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
@@ -152,17 +158,17 @@ const LoginPage = () => {
         }
       }, 100), // Small delay to let session stabilize
       
-      return () => clearTimeout(redirectTimer),
+      return () => clearTimeout(redirectTimer)
     }
     
     // Return undefined for all other cases
-    return undefined,
+    return undefined
   }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router
 
   const handleResendVerification = async () => {
     if (!email) {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
-      return,
+      return
     }
     
     setIsResendingVerification(true),
@@ -175,15 +181,15 @@ const LoginPage = () => {
       
       if (response.ok) {
         setVerificationEmailSent(true),
-        setError(null),
+        setError(null)
       } else {
         const data = await response.json(),
-        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError),
+        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError)
       }
     } catch (err) {
-      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError),
+      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
     } finally {
-      setIsResendingVerification(false),
+      setIsResendingVerification(false)
     }
   },
 
@@ -191,7 +197,7 @@ const LoginPage = () => {
     e.preventDefault(),
     if (!proactiveResendEmail) {
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
-      return,
+      return
     }
 
     setIsProactivelyResending(true),
@@ -205,14 +211,14 @@ const LoginPage = () => {
 
       const data = await response.json(),
       if (response.ok) {
-        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` }),
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
       } else {
-        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' }),
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })
       }
     } catch (err) {
-      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' }),
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })
     } finally {
-      setIsProactivelyResending(false),
+      setIsProactivelyResending(false)
     }
   },
 
@@ -236,8 +242,13 @@ const LoginPage = () => {
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
+<<<<<<< HEAD
                                                  signInError.message?.toLowerCase().includes('confirm'),
         // As per issue description, check for a specific error code "email_not_verified"
+=======
+                                                 signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code &quot;email_not_verified&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified',
 
@@ -251,22 +262,22 @@ const LoginPage = () => {
           
           // Auto-resend verification email
           setTimeout(() => {
-            handleResendVerification(),
-          }, 1000),
+            handleResendVerification()
+          }, 1000)
         } else {
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
-                  displayMessage = 'Invalid email or password. Please try again.',
+                  displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
-                  displayMessage = 'Network error. Please check your internet connection and try again.',
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
-                  displayMessage = 'Your account has been disabled. Please contact support.',
+                  displayMessage = 'Your account has been disabled. Please contact support.'
               }
               // Add more specific checks here if needed for other Supabase error messages
           }
-          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError),
+          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError)
         }
       } else if (data.user) {
         logInfo('Supabase sign-in successful, user:', { data: data.user }),
@@ -275,20 +286,20 @@ const LoginPage = () => {
       } else {
         // Should not happen if signInError is null and data.user is null
         logWarn('Supabase sign-in returned no error but no user.'),
-        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError),
+        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
       }
     } catch (catchedError: any) {
       logErrorToProduction('Exception during Supabase sign-in:', { data: catchedError }),
       // Check if the caught error is a network error
       let exceptionMessage = 'An unexpected error occurred. Please try again.',
       if (catchedError.message && catchedError.message.toLowerCase().includes('networkerror when attempting to fetch resource')) {
-        exceptionMessage = 'Network error. Please check your internet connection and try again.',
+        exceptionMessage = 'Network error. Please check your internet connection and try again.'
       } else if (catchedError.message) {
-        exceptionMessage = catchedError.message,
+        exceptionMessage = catchedError.message
       }
-      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError),
+      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -296,9 +307,9 @@ const LoginPage = () => {
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
-        router.push(`/verify-status?email=${encodeURIComponent(email)}`),
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000),
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
@@ -307,13 +318,17 @@ const LoginPage = () => {
 
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
+<<<<<<< HEAD
     logInfo('LoginPage: Rendering "Checking authentication..."'),
+=======
+    logInfo('LoginPage: Rendering &quot;Checking authentication...&quot;');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Checking authentication...</p>
-          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
+          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
         </div>
       </div>
     )
@@ -322,13 +337,17 @@ const LoginPage = () => {
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
+<<<<<<< HEAD
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
+=======
+    logInfo('LoginPage: Rendering &quot;Already Logged In / Redirecting...&quot;');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
-          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Already Logged In</h2>
+          <p className=&quot;text-gray-600 mb-4&quot;>Redirecting to your dashboard...</p>
         </div>
       </div>
     )
@@ -349,11 +368,11 @@ const LoginPage = () => {
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+        <meta name=&quot;description&quot; content=&quot;Sign in to your Zion Tech Marketplace account&quot; />
       </Head>
       
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <Card className="w-full max-w-md">
+      <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8&quot;>
+        <Card className=&quot;w-full max-w-md&quot;>
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
@@ -361,20 +380,20 @@ const LoginPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleLogin} className=&quot;space-y-4&quot;>
               {error && (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-sm text-red-600">{error.message}</p>
+                <div className=&quot;p-3 bg-red-50 border border-red-200 rounded-md&quot;>
+                  <p className=&quot;text-sm text-red-600&quot;>{error.message}</p>
                 </div>
               )}
               
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
+              <div className=&quot;space-y-2&quot;>
+                <label htmlFor=&quot;email&quot; className=&quot;text-sm font-medium&quot;>
                   Email
                 </label>
                 <Input
-                  id="email"
-                  type="email"
+                  id=&quot;email&quot;
+                  type=&quot;email&quot;
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -382,13 +401,13 @@ const LoginPage = () => {
                 />
               </div>
               
-              <div className="space-y-2">
-                <label htmlFor="password" className="text-sm font-medium">
+              <div className=&quot;space-y-2&quot;>
+                <label htmlFor=&quot;password&quot; className=&quot;text-sm font-medium&quot;>
                   Password
                 </label>
                 <Input
-                  id="password"
-                  type="password"
+                  id=&quot;password&quot;
+                  type=&quot;password&quot;
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -396,15 +415,19 @@ const LoginPage = () => {
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
+              <Button type=&quot;submit&quot; className=&quot;w-full&quot; disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>
             
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
+            <div className=&quot;mt-6 text-center&quot;>
+              <p className=&quot;text-sm text-gray-600&quot;>
                 Don't have an account?{' '}
+<<<<<<< HEAD
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
+=======
+                <Link href=&quot;/auth/register&quot; className=&quot;text-blue-600 hover:underline&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   Sign up
                 </Link>
               </p>

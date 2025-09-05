@@ -4,7 +4,6 @@ import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
 import { useRecordActivity } from './useRecordActivity',
-
 export const useUploadDeliverable = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -23,8 +22,13 @@ export const useUploadDeliverable = () => {
         .eq('id', milestoneId)
         .single(),
       
+<<<<<<< HEAD
       if (fetchError) throw fetchError,
       if (!milestone) throw new Error("Milestone not found"),
+=======
+      if (fetchError) throw fetchError;
+      if (!milestone) throw new Error(&quot;Milestone not found&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       // For this example, instead of actually uploading files (which would require storage setup),
       // we'll just store the file metadata in the deliverables JSONB field
@@ -55,20 +59,30 @@ export const useUploadDeliverable = () => {
         `Deliverable added: ${file.name}`
       ),
       
+<<<<<<< HEAD
       toast.success("Deliverable added successfully"),
+=======
+      toast.success(&quot;Deliverable added successfully&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
-      return newDeliverable,
+      return newDeliverable
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error uploading deliverable:", err),
       toast.error("Failed to upload deliverable: " + err.message),
       return null
+=======
+      console.error(&quot;Error uploading deliverable:&quot;, err);
+      toast.error(&quot;Failed to upload deliverable: &quot; + err.message);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
   return {
     uploadDeliverable,
     isSubmitting
-  },
+  }
 },

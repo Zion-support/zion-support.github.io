@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions", 
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
+=======
+import React, { useState, useEffect, useRef } from &quot;react&quot;;
+import { Search, X } from &quot;lucide-react&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { AutocompleteSuggestions } from &quot;@/components/search/AutocompleteSuggestions&quot;; 
+import { SearchSuggestion } from &quot;@/types/search&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -15,7 +23,7 @@ interface EnhancedSearchInputProps {
 export function EnhancedSearchInput({ 
   value,
   onChange, 
-  placeholder = "Search...", 
+  placeholder = &quot;Search...&quot;, 
   searchSuggestions 
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false),
@@ -28,7 +36,7 @@ export function EnhancedSearchInput({
     if (!value) {
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
-      return,
+      return
     }
     
     const filtered = searchSuggestions.filter(suggestion => 
@@ -39,7 +47,7 @@ export function EnhancedSearchInput({
     filtered.sort((a, b) => {
       const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
       const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
-      return aStartsWith - bStartsWith,
+      return aStartsWith - bStartsWith
     }),
     
     setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
@@ -53,9 +61,15 @@ export function EnhancedSearchInput({
       }
     }
     
+<<<<<<< HEAD
     document.addEventListener("mousedown", handleClickOutside),
-    return () => document.removeEventListener("mousedown", handleClickOutside),
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []),
+=======
+    document.addEventListener(&quot;mousedown&quot;, handleClickOutside);
+    return () => document.removeEventListener(&quot;mousedown&quot;, handleClickOutside);
+  }, []);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion),
@@ -64,26 +78,26 @@ export function EnhancedSearchInput({
   },
   
   return (
-    <div className="relative w-full" ref={containerRef}>
-      <div className="relative">
+    <div className=&quot;relative w-full&quot; ref={containerRef}>
+      <div className=&quot;relative&quot;>
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
         />
         <Input
           ref={inputRef}
-          type="text"
+          type=&quot;text&quot;
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
         />
         {value && (
           <button 
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;
             onClick={() => onChange('')}
           >
-            <X className="h-4 w-4" />
+            <X className=&quot;h-4 w-4&quot; />
           </button>
         )}
       </div>
@@ -95,5 +109,5 @@ export function EnhancedSearchInput({
         visible={isFocused}
       />
     </div>
-  ),
+  )
 }

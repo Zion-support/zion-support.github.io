@@ -3,10 +3,9 @@ import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
 import { createServerClient } from '../../utils/supabase/server',
-
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
-  versions?: Array<{ id: string, label: string, data: ResumeData }>,
+  versions?: Array<{ id: string, label: string, data: ResumeData }>
 },
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
@@ -17,32 +16,32 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData,
     const found = versions.find(v => v.id === selectedVersionId),
-    return found?.data || initialData,
+    return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
 
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <label className="text-sm">Theme</label>
+    <div className=&quot;relative&quot;>
+      <div className=&quot;flex items-center justify-between mb-4&quot;>
+        <div className=&quot;flex items-center gap-3&quot;>
+          <label className=&quot;text-sm&quot;>Theme</label>
           <select
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+            className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
           >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
+            <option value=&quot;light&quot;>Light</option>
+            <option value=&quot;dark&quot;>Dark</option>
           </select>
 
           {versions.length > 0 && (
             <>
-              <label className="text-sm ml-4">Version</label>
+              <label className=&quot;text-sm ml-4&quot;>Version</label>
               <select
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+                className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
               >
-                <option value="current">Current</option>
+                <option value=&quot;current&quot;>Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))}
@@ -54,11 +53,11 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
-      <div className="mx-auto">
+      <div className=&quot;mx-auto&quot;>
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -70,7 +69,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return {
       redirect: {
         destination: '/auth',
-        permanent: false}},
+        permanent: false}}
   }
 
   // Placeholder: fetch resume data for the logged-in user and versions if any
@@ -78,8 +77,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
     summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
-    skills: ['AI EngineeringPrompt Design', 'TypeScriptNode.js', 'Next.js'],
-    technologies: ['OpenAISupabase', 'PostgresVercel', 'Docker'],
+    skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
+    technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
       {
         title: 'Senior AI Engineer',
@@ -98,5 +97,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
 
-  return { props: { initialData, versions } },
+  return { props: { initialData, versions } }
 },

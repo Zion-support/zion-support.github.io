@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import type { QuoteRequest, QuoteStatus } from &quot;@/types/quotes&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)
@@ -20,7 +25,7 @@ export const quoteRequestService = {
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[],
+      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   },
   
   // Get quote requests for a specific talent
@@ -32,7 +37,7 @@ export const quoteRequestService = {
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
-    return data as QuoteRequest[],
+    return data as QuoteRequest[]
   },
   
   // Get a single quote request by id
@@ -52,7 +57,7 @@ export const quoteRequestService = {
     
     return {
       ...data,
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest,
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   },
   
   // Update quote request status
@@ -61,7 +66,7 @@ export const quoteRequestService = {
     
     // If marking as responded, set replied_at
     if (status === 'responded') {
-      updates.replied_at = new Date().toISOString(),
+      updates.replied_at = new Date().toISOString()
     }
     
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -73,7 +78,7 @@ export const quoteRequestService = {
         .single(),
       
       if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString(),
+        updates.viewed_at = new Date().toISOString()
       }
     }
     
@@ -84,7 +89,7 @@ export const quoteRequestService = {
       .select(),
     
     if (error) throw error,
-    return data[0] as QuoteRequest,
+    return data[0] as QuoteRequest
   },
   
   // Archive/Unarchive a quote request
@@ -96,7 +101,7 @@ export const quoteRequestService = {
       .select(),
     
     if (error) throw error,
-    return data[0] as QuoteRequest,
+    return data[0] as QuoteRequest
   },
   
   // Delete a quote request
@@ -107,6 +112,6 @@ export const quoteRequestService = {
       .eq('id', id),
     
     if (error) throw error,
-    return true,
+    return true
   }
 },

@@ -3,18 +3,25 @@ import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button',
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
+<<<<<<< HEAD
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
+=======
+  &quot;I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.&quot;,
+  &quot;Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.&quot;,
+  &quot;I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.&quot;,
+  &quot;I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.&quot;,
+  &quot;While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.&quot;
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function SupportChatbot() {
   const [open, setOpen] = useState(false),
@@ -23,7 +30,7 @@ export function SupportChatbot() {
   const [typing, setTyping] = useState(false),
   const endRef = useRef<HTMLDivElement | null>(null),
 
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }), }, [messages]),
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
   const sendMessage = async (text: string) => {
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
@@ -58,8 +65,13 @@ export function SupportChatbot() {
         const data = await res.json().catch(() => ({})),
         const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '',
         const finalMsg = message.trim() ||
+<<<<<<< HEAD
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
-        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }]),
+        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }])
+=======
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || &quot;I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.&quot;);
+        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }]);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } else if (res.body) {
         const botId = Date.now().toString() + '-a',
         setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]),
@@ -80,40 +92,49 @@ export function SupportChatbot() {
               line = line.replace(/^data:\s*/, ''),
               if (line === '[DONE]') {
                 done = true,
-                break,
+                break
               }
               try {
                 const json = JSON.parse(line),
                 const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '',
                 if (token) {
                   accumulated += token,
-                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m)),
+                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))
                 }
               } catch (_) {
                 // ignore parse errors
               }
             }
           }
-          buffer = lines[lines.length - 1] || '',
+          buffer = lines[lines.length - 1] || ''
         }
         const final = accumulated.trim() ||
+<<<<<<< HEAD
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
-        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m)),
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
+=======
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || &quot;I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.&quot;);
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
       
       // Provide a helpful fallback response instead of generic error
+<<<<<<< HEAD
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.",
+=======
+      const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || &quot;I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       const errorMsg: Msg = { 
         id: Date.now().toString() + '-e', 
         role: 'assistant', 
         message: fallbackResponse
       },
-      setMessages(prev => [...prev, errorMsg]),
+      setMessages(prev => [...prev, errorMsg])
     } finally {
       setLoading(false),
-      setTyping(false),
+      setTyping(false)
     }
   },
 
@@ -121,48 +142,55 @@ export function SupportChatbot() {
     return (
       <Button 
         onClick={() => setOpen(true)} 
+<<<<<<< HEAD
         size="icon" 
         variant="outline" 
         className="fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40" 
         aria-label="Open help chat"
+=======
+        size=&quot;icon&quot; 
+        variant=&quot;outline&quot; 
+        className=&quot;fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40&quot; 
+        aria-label=&quot;Open help chat&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       >
-        <MessageSquare className="h-5 w-5" />
+        <MessageSquare className=&quot;h-5 w-5&quot; />
       </Button>
     )
   }
 
   return (
-    <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
-      <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
-        <span className="text-white font-medium">Help Bot</span>
+    <div className=&quot;fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40&quot;>
+      <div className=&quot;bg-zion-blue-dark p-2 flex justify-between items-center&quot;>
+        <span className=&quot;text-white font-medium&quot;>Help Bot</span>
         <Button
-          variant="ghost"
-          size="icon"
-          className="text-white"
+          variant=&quot;ghost&quot;
+          size=&quot;icon&quot;
+          className=&quot;text-white&quot;
           onClick={() => setOpen(false)}
-          aria-label="Close help bot"
+          aria-label=&quot;Close help bot&quot;
         >
-          <X className="h-5 w-5" />
+          <X className=&quot;h-5 w-5&quot; />
         </Button>
       </div>
-      <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
+      <div className=&quot;flex-1 overflow-y-auto p-3 space-y-4&quot; style={{ maxHeight: '400px' }}>
         {messages.length === 0 && (
           <ChatMessage 
-            role="assistant" 
-            message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
+            role=&quot;assistant&quot; 
+            message=&quot;Hi! I'm here to help you with questions about Zion. What can I assist you with today?&quot; 
           />
         )}
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
         ))}
         {typing && (
-          <ChatMessage role="assistant" message="..." />
+          <ChatMessage role=&quot;assistant&quot; message=&quot;...&quot; />
         )}
         <div ref={endRef} />
       </div>
-      <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+      <div className=&quot;p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30&quot;>
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
-  ),
+  )
 }

@@ -1,116 +1,127 @@
 
+<<<<<<< HEAD
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+import { ProductListingCard } from &quot;@/components/ProductListingCard&quot;;
+import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Link } from &quot;react-router-dom&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface FeaturedListingsSectionProps {
-  showTitle?: boolean,
+  showTitle?: boolean
 }
 
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
   const featuredListings = [
     {
-      id: "advanced-nlp-model",
-      title: "Advanced NLP Model for Text Analysis",
-      description: "State-of-the-art natural language processing with 98% accuracy",
+      id: &quot;advanced-nlp-model&quot;,
+      title: &quot;Advanced NLP Model for Text Analysis&quot;,
+      description: &quot;State-of-the-art natural language processing with 98% accuracy&quot;,
       price: 4999,
-      currency: "$",
-      category: "AI Models",
-      tags: ["AI", "NLP", "Machine Learning"],
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-11-15T14:48:00.000Z",
+      currency: &quot;$&quot;,
+      category: &quot;AI Models&quot;,
+      tags: [&quot;AI&quot;, &quot;NLP&quot;, &quot;Machine Learning&quot;],
+      images: [&quot;https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500&quot;],
+      createdAt: &quot;2023-11-15T14:48:00.000Z&quot;,
       rating: 4.8,
       reviewCount: 124,
       author: {
-        name: "TechAI Labs",
-        id: "tech-ai-labs",
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
+        name: &quot;TechAI Labs&quot;,
+        id: &quot;tech-ai-labs&quot;,
+        avatarUrl: &quot;https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format&quot;
       }
     },
     {
-      id: "image-generation-service",
-      title: "AI Image Generation Service",
-      description: "Create stunning visuals with our advanced AI image generator",
+      id: &quot;image-generation-service&quot;,
+      title: &quot;AI Image Generation Service&quot;,
+      description: &quot;Create stunning visuals with our advanced AI image generator&quot;,
       price: 2499,
-      currency: "$",
-      category: "Content Creation",
-      tags: ["AI", "Images", "Generation"],
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-10-20T11:15:00.000Z",
+      currency: &quot;$&quot;,
+      category: &quot;Content Creation&quot;,
+      tags: [&quot;AI&quot;, &quot;Images&quot;, &quot;Generation&quot;],
+      images: [&quot;https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500&quot;],
+      createdAt: &quot;2023-10-20T11:15:00.000Z&quot;,
       rating: 4.7,
       reviewCount: 89,
       author: {
-        name: "VisualAI",
-        id: "visual-ai"
+        name: &quot;VisualAI&quot;,
+        id: &quot;visual-ai&quot;
       }
     },
     {
-      id: "fullstack-ai-dev",
-      title: "Full-Stack AI Development",
-      description: "End-to-end development for AI-powered applications",
+      id: &quot;fullstack-ai-dev&quot;,
+      title: &quot;Full-Stack AI Development&quot;,
+      description: &quot;End-to-end development for AI-powered applications&quot;,
       price: null, // Custom pricing
-      currency: "$",
-      category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-12-15T09:45:00.000Z",
+      currency: &quot;$&quot;,
+      category: &quot;Services&quot;,
+      tags: [&quot;Development&quot;, &quot;Full-stack&quot;, &quot;AI&quot;],
+      images: [&quot;https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500&quot;],
+      createdAt: &quot;2023-12-15T09:45:00.000Z&quot;,
       rating: 4.9,
       reviewCount: 56,
       author: {
-        name: "DataMinds Consulting",
-        id: "dataminds-consulting"
+        name: &quot;DataMinds Consulting&quot;,
+        id: &quot;dataminds-consulting&quot;
       }
     },
     {
-      id: "sentiment-analysis-api",
-      title: "Sentiment Analysis API",
-      description: "Real-time sentiment analysis for social media monitoring",
+      id: &quot;sentiment-analysis-api&quot;,
+      title: &quot;Sentiment Analysis API&quot;,
+      description: &quot;Real-time sentiment analysis for social media monitoring&quot;,
       price: 1299,
-      currency: "$",
-      category: "APIs",
-      tags: ["API", "Sentiment", "Analytics"],
-      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2024-01-05T11:15:00.000Z",
+      currency: &quot;$&quot;,
+      category: &quot;APIs&quot;,
+      tags: [&quot;API&quot;, &quot;Sentiment&quot;, &quot;Analytics&quot;],
+      images: [&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500&quot;],
+      createdAt: &quot;2024-01-05T11:15:00.000Z&quot;,
       rating: 4.6,
       reviewCount: 72,
       author: {
-        name: "SocialAI",
-        id: "social-ai"
+        name: &quot;SocialAI&quot;,
+        id: &quot;social-ai&quot;
       }
     }],
 
   return (
-    <section id="featured" className="py-12 px-4 bg-zion-blue-dark">
-      <div className="container mx-auto">
+    <section id=&quot;featured&quot; className=&quot;py-12 px-4 bg-zion-blue-dark&quot;>
+      <div className=&quot;container mx-auto&quot;>
         {showTitle && (
-          <div className="text-center mb-12">
-            <GradientHeading className="text-3xl md:text-4xl font-bold mb-4">
+          <div className=&quot;text-center mb-12&quot;>
+            <GradientHeading className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>
               Featured Listings
             </GradientHeading>
-            <p className="text-zion-slate-light max-w-3xl mx-auto">
+            <p className=&quot;text-zion-slate-light max-w-3xl mx-auto&quot;>
               Discover our handpicked selection of top AI products and services
             </p>
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
           {featuredListings.map((listing) => (
             <ProductListingCard
               key={listing.id}
               listing={listing}
-              view="grid"
+              view=&quot;grid&quot;
               onRequestQuote={() => {}}
             />
           ))}
         </div>
         
-        <div className="mt-10 text-center">
+        <div className=&quot;mt-10 text-center&quot;>
           <Button 
+<<<<<<< HEAD
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
+=======
+            className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             asChild
           >
-            <Link to="/marketplace">View All Listings</Link>
+            <Link to=&quot;/marketplace&quot;>View All Listings</Link>
           </Button>
         </div>
       </div>

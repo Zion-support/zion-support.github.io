@@ -54,7 +54,7 @@ export interface ListFilters {
   source?: MonitoredSource,
   userId?: string,
   label?: GptClassificationLabel,
-  status?: FraudReviewStatus,
+  status?: FraudReviewStatus
 }
 
 export interface MonthlyReport {
@@ -67,5 +67,5 @@ export interface MonthlyReport {
   },
   bySource: Record<MonitoredSource number>,
   falsePositives: number, // count of IGNORED actions
-  topReasons: Array<{ reason: string, count: number }>,
+  topReasons: Array<{ reason: string, count: number }>
 }

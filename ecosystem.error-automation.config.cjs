@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

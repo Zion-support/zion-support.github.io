@@ -36,11 +36,11 @@ const WhitelabelContext = createContext<WhitelabelContextType | null>(null),
 export const useWhitelabel = (): WhitelabelContextType => {
   const context = useContext(WhitelabelContext),
   if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider'),
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
   }
   // Cast is used here because the context default is `null` until provided by
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.
-  return context as WhitelabelContextType,
+  return context as WhitelabelContextType
 },
 
 interface WhitelabelProviderProps {
@@ -60,9 +60,9 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         brandName: tenant.brand_name,
         themePreset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
-        tenant: tenant}),
+        tenant: tenant})
     } else if (!isLoading) {
-      setContextValue(defaultContext),
+      setContextValue(defaultContext)
     }
   }, [tenant, isLoading]),
 
@@ -70,6 +70,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
-  ),
+  )
 },
 

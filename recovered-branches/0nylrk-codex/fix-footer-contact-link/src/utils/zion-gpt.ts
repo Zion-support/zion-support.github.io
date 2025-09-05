@@ -3,7 +3,6 @@
 // This file handles interaction with the fine-tuned ZionGPT model
 
 import { supabase } from '@/integrations/supabase/client',
-
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',
 
 export type ZionGPTUsage = {
@@ -45,7 +44,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       }
     }
     
-    return data.id as ModelVersion,
+    return data.id as ModelVersion
   } catch (error) {
     console.error('Error fetching active model:', error),
     return 'gpt-3.5-turbo', // Fallback to base model
@@ -71,7 +70,7 @@ export async function logModelUsage(
         feature: feature,
         user_id: userId || null,
         timestamp: new Date().toISOString()
-      }),
+      })
       
   } catch (error) {
     console.error('Error logging model usage:', error),
@@ -123,12 +122,12 @@ export async function callZionGPT({
         data.tokensUsed,
         `${purpose}-generation`,
         userId
-      ),
+      )
     }
     
-    return data.completion,
+    return data.completion
   } catch (error) {
     console.error('Error calling ZionGPT:', error),
-    throw error,
+    throw error
   }
 }

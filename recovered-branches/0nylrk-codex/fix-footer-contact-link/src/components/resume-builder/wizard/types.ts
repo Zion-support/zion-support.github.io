@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 import { Resume } from "@/types/resume",
+=======
+import { Resume } from &quot;@/types/resume&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface StepProps {
   id: string,
   label: string
@@ -12,7 +16,7 @@ export interface NavigationButtonsProps {
   isNextDisabled?: boolean,
   backLabel?: string,
   nextLabel?: string,
-  isLoading?: boolean,
+  isLoading?: boolean
 }
 
 export interface ResumeProgressProps {

@@ -37,11 +37,15 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education added", "Your education has been added to your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Education added", "Your education has been added to your resume")
+=======
+      return showSuccessToast(&quot;Education added&quot;, &quot;Your education has been added to your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add education'),
+      return handleResumeError(e, 'Could not add education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -72,11 +76,15 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education updated", "Your education has been updated"),
+<<<<<<< HEAD
+      return showSuccessToast("Education updated", "Your education has been updated")
+=======
+      return showSuccessToast(&quot;Education updated&quot;, &quot;Your education has been updated&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update education'),
+      return handleResumeError(e, 'Could not update education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -97,11 +105,15 @@ export function useEducation() {
       
       if (error) throw error,
       
-      return showSuccessToast("Education deleted", "Your education has been removed from your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume")
+=======
+      return showSuccessToast(&quot;Education deleted&quot;, &quot;Your education has been removed from your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete education'),
+      return handleResumeError(e, 'Could not delete education')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -111,5 +123,5 @@ export function useEducation() {
     addEducation,
     updateEducation,
     deleteEducation
-  },
+  }
 }

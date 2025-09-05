@@ -24,9 +24,9 @@ export default function PasswordCheckerPage() {
 
   useEffect(() => {
     if (password) {
-      analyzePassword(password),
+      analyzePassword(password)
     } else {
-      resetAnalysis(),
+      resetAnalysis()
     }
   }, [password]),
 
@@ -36,7 +36,11 @@ export default function PasswordCheckerPage() {
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
       numbers: /\d/.test(pass),
+<<<<<<< HEAD
       symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass),
+=======
+      symbols: /[!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?]/.test(pass),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass)
     },
@@ -62,41 +66,41 @@ export default function PasswordCheckerPage() {
     // Set strength text and color
     if (score >= 90) {
       setStrengthText('Very Strong'),
-      setStrengthColor('text-green-400'),
+      setStrengthColor('text-green-400')
     } else if (score >= 70) {
       setStrengthText('Strong'),
-      setStrengthColor('text-green-400'),
+      setStrengthColor('text-green-400')
     } else if (score >= 50) {
       setStrengthText('Moderate'),
-      setStrengthColor('text-yellow-400'),
+      setStrengthColor('text-yellow-400')
     } else if (score >= 30) {
       setStrengthText('Weak'),
-      setStrengthColor('text-orange-400'),
+      setStrengthColor('text-orange-400')
     } else {
       setStrengthText('Very Weak'),
-      setStrengthColor('text-red-400'),
+      setStrengthColor('text-red-400')
     }
 
     // Generate suggestions
-    generateSuggestions(newChecks, pass),
+    generateSuggestions(newChecks, pass)
   },
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-      'password123456', '123456789qwerty', 'abc123password123',
-      'adminletmein', 'welcomemonkey', 'dragonmaster', 'hello'
+      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
     ],
-    return commonPasswords.includes(pass.toLowerCase()),
+    return commonPasswords.includes(pass.toLowerCase())
   },
 
   const hasSequentialChars = (pass: string) => {
-    const sequences = ['123abc', 'qweasd', 'zxc789', '456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq)),
+    const sequences = ['123abcqweasdzxc789456'],
+    return sequences.some(seq => pass.toLowerCase().includes(seq))
   },
 
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [],
     
+<<<<<<< HEAD
     if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
     if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
@@ -104,11 +108,20 @@ export default function PasswordCheckerPage() {
     if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"'),
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
+=======
+    if (!checks.length) suggestions.push('Make your password at least 8 characters long');
+    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
+    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
+    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
+    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
+    if (!checks.noCommon) suggestions.push('Avoid common passwords like &quot;password&quot; or &quot;123456&quot;');
+    if (!checks.noSequential) suggestions.push('Avoid sequential characters like &quot;123&quot; or &quot;abc"');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
     
-    setSuggestions(suggestions),
+    setSuggestions(suggestions)
   },
 
   const resetAnalysis = () => {
@@ -124,7 +137,7 @@ export default function PasswordCheckerPage() {
       noCommon: false,
       noSequential: false
     }),
-    setSuggestions([]),
+    setSuggestions([])
   },
 
   const generateStrongPassword = () => {
@@ -140,13 +153,13 @@ export default function PasswordCheckerPage() {
     
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
-      result += charset[Math.floor(Math.random() * charset.length)],
+      result += charset[Math.floor(Math.random() * charset.length)]
     }
     
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join(''),
     setGeneratedPassword(result),
-    setPassword(result),
+    setPassword(result)
   },
 
   const copyToClipboard = (text: string) => {
@@ -158,24 +171,30 @@ export default function PasswordCheckerPage() {
     if (strength >= 70) return 'bg-green-400',
     if (strength >= 50) return 'bg-yellow-400',
     if (strength >= 30) return 'bg-orange-400',
-    return 'bg-red-400',
+    return 'bg-red-400'
   },
 
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
       <CheckCircle className="w-5 h-5 text-green-400" />
     ) : (
+<<<<<<< HEAD
       <XCircle className="w-5 h-5 text-red-400" />
     )
   },
+=======
+      <XCircle className="w-5 h-5 text-red-400&quot; />
+    );
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
     <>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
-        <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords." />
-        <meta property="og:title" content="Password Strength Checker - Zion Tech Group" />
-        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
+        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
       </Head>
 
       {/* Hero Section */}
@@ -223,16 +242,16 @@ export default function PasswordCheckerPage() {
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Enter Password
                   </label>
-                  <div className="relative">
+                  <div className="relative&quot;>
                     <input
                       type={showPassword ? 'text' : 'password'}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Type your password here..."
-                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      placeholder=&quot;Type your password here..."
+                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent&quot;
                     />
                     <button
-                      type="button"
+                      type=&quot;button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
                     >
@@ -256,11 +275,11 @@ export default function PasswordCheckerPage() {
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-300">Generated Password:</span>
+                      <span className="text-sm text-gray-300&quot;>Generated Password:</span>
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
-                        variant="outline"
-                        size="sm"
+                        variant=&quot;outline&quot;
+                        size=&quot;sm"
                         className="border-gray-600 text-gray-300 hover:bg-gray-600"
                       >
                         <Copy className="w-4 h-4 mr-2" />
@@ -501,17 +520,17 @@ export default function PasswordCheckerPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              href="/contact"
-              size="lg"
+              href="/contact&quot;
+              size=&quot;lg"
               className="bg-white text-indigo-600 hover:bg-gray-100"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-              href="/pricing"
-              variant="outline"
-              size="lg"
+              href="/pricing&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"
             >
               View Pricing

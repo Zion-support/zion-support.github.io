@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils/auth',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
@@ -12,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     mrr: 82000,
     yoyGrowth: 1.85,
     completedProjects: 3275,
-    globalReach: ['USEU', 'APACLATAM'],
+    globalReach: ['USEUAPACLATAM'],
     funnel: [
       { stage: 'Visitors', value: 250000 },
       { stage: 'Leads', value: 38000 },
@@ -22,5 +21,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' },
       { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }]},
 
-  res.status(200).json(data),
+  res.status(200).json(data)
 }

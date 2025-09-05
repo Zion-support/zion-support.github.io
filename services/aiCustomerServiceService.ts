@@ -72,7 +72,7 @@ export interface CustomerServiceMetrics {
     ticketsResolved: number,
     averageResolutionTime: number,
     customerSatisfaction: number
-  }>,
+  }>
 }
 
 export interface CustomerServiceRequest {
@@ -112,14 +112,14 @@ export class AICustomerServiceService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`Create ticket API error: ${response.statusText}`),
+        throw new Error(`Create ticket API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
-      return data,
+      return data
     } catch (error) {
       console.error('Error creating ticket:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -130,7 +130,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Get ticket API error: ${response.statusText}`),
+        throw new Error(`Get ticket API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
@@ -141,10 +141,10 @@ export class AICustomerServiceService {
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg,
-          timestamp: new Date(msg.timestamp)}))},
+          timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error getting ticket:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -157,7 +157,7 @@ export class AICustomerServiceService {
         body: JSON.stringify(updates)}),
 
       if (!response.ok) {
-        throw new Error(`Update ticket API error: ${response.statusText}`),
+        throw new Error(`Update ticket API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
@@ -168,10 +168,10 @@ export class AICustomerServiceService {
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg,
-          timestamp: new Date(msg.timestamp)}))},
+          timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error updating ticket:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -184,16 +184,16 @@ export class AICustomerServiceService {
         body: JSON.stringify(message)}),
 
       if (!response.ok) {
-        throw new Error(`Add message API error: ${response.statusText}`),
+        throw new Error(`Add message API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
       return {
         ...data,
-        timestamp: new Date(data.timestamp)},
+        timestamp: new Date(data.timestamp)}
     } catch (error) {
       console.error('Error adding message:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -205,16 +205,16 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`AI response API error: ${response.statusText}`),
+        throw new Error(`AI response API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
       return {
         ...data,
-        generatedAt: new Date(data.generatedAt)},
+        generatedAt: new Date(data.generatedAt)}
     } catch (error) {
       console.error('Error generating AI response:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -225,16 +225,16 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Get customer profile API error: ${response.statusText}`),
+        throw new Error(`Get customer profile API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
       return {
         ...data,
-        lastContact: new Date(data.lastContact)},
+        lastContact: new Date(data.lastContact)}
     } catch (error) {
       console.error('Error getting customer profile:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -245,13 +245,13 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Get metrics API error: ${response.statusText}`),
+        throw new Error(`Get metrics API error: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       console.error('Error getting metrics:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -263,7 +263,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Search tickets API error: ${response.statusText}`),
+        throw new Error(`Search tickets API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
@@ -274,10 +274,10 @@ export class AICustomerServiceService {
         resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,
         conversationHistory: ticket.conversationHistory.map((msg: any) => ({
           ...msg,
-          timestamp: new Date(msg.timestamp)}))})),
+          timestamp: new Date(msg.timestamp)}))}))
     } catch (error) {
       console.error('Error searching tickets:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -289,13 +289,13 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response.statusText}`),
+        throw new Error(`Auto assign tickets API error: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       console.error('Error auto-assigning tickets:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -308,14 +308,14 @@ export class AICustomerServiceService {
         body: JSON.stringify({ timeframe, format })}),
 
       if (!response.ok) {
-        throw new Error(`Generate report API error: ${response.statusText}`),
+        throw new Error(`Generate report API error: ${response.statusText}`)
       }
 
       const data = await response.json(),
-      return data.downloadUrl,
+      return data.downloadUrl
     } catch (error) {
       console.error('Error generating report:', error),
-      throw error,
+      throw error
     }
   }
 }

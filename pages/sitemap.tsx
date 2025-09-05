@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function SitemapPage() {
   const mainPages = [
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
@@ -62,71 +61,71 @@ export default function SitemapPage() {
   ],
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
-        <meta property="og:title" content="Sitemap | Zion Tech Group" />
-        <meta property="og:description" content="Complete website sitemap and navigation guide." />
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+        <meta name=&quot;description&quot; content=&quot;Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Sitemap | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Complete website sitemap and navigation guide.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/sitemap&quot; />
       </Head>
 
       <SmartHeader />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
               Site Map
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
               Navigate our comprehensive website and discover all the AI-powered technology solutions, 
               resources, and information available at Zion Tech Group.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <a
-                href="#main-pages"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                href=&quot;#main-pages&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;
               >
                 Explore Site
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
               <a
-                href="/search"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                href=&quot;/search&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
               >
                 Search Site
-                <Search className="w-5 h-5 ml-2" />
-              </a>
+                <Search className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Main Pages */}
-      <section id="main-pages" className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section id=&quot;main-pages&quot; className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               Main Pages
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Core pages that provide essential information about our company and services
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
             {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
@@ -134,19 +133,19 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className=&quot;group&quot;
               >
                 <Link
                   href={page.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className=&quot;flex items-center justify-between mb-4&quot;>
+                    <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
                       {page.label}
                     </h3>
-                    <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                    <ChevronRight className=&quot;w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>
+                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{page.description}</p>
                 </Link>
               </motion.div>
             ))}
@@ -155,24 +154,24 @@ export default function SitemapPage() {
       </section>
 
       {/* Service Categories */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               Service Categories
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Browse our comprehensive range of technology solutions organized by category
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -180,19 +179,19 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className=&quot;group&quot;
               >
                 <Link
                   href={category.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className=&quot;flex items-center justify-between mb-4&quot;>
+                    <h3 className=&quot;text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
                       {category.label}
                     </h3>
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>
+                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{category.description}</p>
                 </Link>
               </motion.div>
             ))}
@@ -201,24 +200,24 @@ export default function SitemapPage() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               Featured Services
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Our most popular and innovative technology solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -226,19 +225,19 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className=&quot;group&quot;
               >
                 <Link
                   href={service.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+                  className=&quot;block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">
+                  <div className=&quot;flex items-center justify-between mb-3&quot;>
+                    <h3 className=&quot;text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate&quot;>
                       {service.label}
                     </h3>
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
+                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0&quot; />
                   </div>
-                  <p className="text-white/60 text-xs">{service.category}</p>
+                  <p className=&quot;text-white/60 text-xs&quot;>{service.category}</p>
                 </Link>
               </motion.div>
             ))}
@@ -247,24 +246,24 @@ export default function SitemapPage() {
       </section>
 
       {/* Resources & Tools */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               Resources & Tools
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
             {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
@@ -272,19 +271,19 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className=&quot;group&quot;
               >
                 <Link
                   href={resource.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+                  className=&quot;block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className=&quot;flex items-center justify-between mb-3&quot;>
+                    <h3 className=&quot;text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
                       {resource.label}
                     </h3>
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
                   </div>
-                  <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>
+                  <p className=&quot;text-white/60 text-xs leading-relaxed&quot;>{resource.description}</p>
                 </Link>
               </motion.div>
             ))}
@@ -293,24 +292,24 @@ export default function SitemapPage() {
       </section>
 
       {/* External Resources */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               External Resources
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
             {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -318,22 +317,22 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className=&quot;group&quot;
               >
                 <a
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  target=&quot;_blank&quot;
+                  rel=&quot;noopener noreferrer&quot;
+                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className=&quot;flex items-center justify-between mb-4&quot;>
+                    <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
                       {link.label}
                     </h3>
-                    <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
+                    <ExternalLink className=&quot;w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>
-                </a>
+                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{link.description}</p>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -341,24 +340,24 @@ export default function SitemapPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-4xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className=&quot;mb-16&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
               Contact Information
             </h2>
-            <p className="text-white/60 text-center max-w-2xl mx-auto">
+            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
               Get in touch with us for consultations, support, or to start your project
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
             {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
@@ -366,17 +365,17 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+                className=&quot;text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl&quot;
               >
-                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>{contact.type}</h3>
                 <a
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                  className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium&quot;
                 >
                   {contact.value}
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -384,34 +383,38 @@ export default function SitemapPage() {
       </section>
 
       {/* Quick Navigation */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+=======
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Need Help Finding Something?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Use our search functionality or contact us directly for assistance
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <Link
-                href="/search"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                href=&quot;/search&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
               >
                 Search Site
-                <Search className="w-5 h-5 ml-2" />
+                <Search className=&quot;w-5 h-5 ml-2&quot; />
               </Link>
               <Link
-                href="/contact"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
               >
                 Contact Support
-                <Mail className="w-5 h-5 ml-2" />
+                <Mail className=&quot;w-5 h-5 ml-2&quot; />
               </Link>
             </div>
           </motion.div>

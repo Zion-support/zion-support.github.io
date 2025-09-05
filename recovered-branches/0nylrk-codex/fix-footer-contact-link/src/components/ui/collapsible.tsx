@@ -1,4 +1,4 @@
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
+import * as CollapsiblePrimitive from &quot;@radix-ui/react-collapsible&quot;
 
 const Collapsible = CollapsiblePrimitive.Root
 

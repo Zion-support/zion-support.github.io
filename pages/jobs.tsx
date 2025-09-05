@@ -1,7 +1,6 @@
 import type { NextPage } from 'next',
 import Seo from '../components/seo/Seo',
 import { JobPostingJsonLd } from 'next-seo',
-
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
@@ -21,7 +20,7 @@ const Jobs: NextPage = () => {
 
   return (
     <div>
-      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
+      <Seo title=&quot;Jobs&quot; description=&quot;Open roles at Zion Tech Solutions.&quot; />
       <JobPostingJsonLd
         datePosted={job.datePosted}
         description={job.description}
@@ -38,7 +37,7 @@ const Jobs: NextPage = () => {
         <p>{job.description}</p>
       </main>
     </div>
-  ),
+  )
 },
 
 export default Jobs,

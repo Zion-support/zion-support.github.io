@@ -31,28 +31,28 @@ export interface MarketplaceProps {
 
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Market Insights</h3>
+  <Card className=&quot;bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6&quot;>
+    <CardContent className=&quot;p-6&quot;>
+      <div className=&quot;flex items-center gap-2 mb-4&quot;>
+        <TrendingUp className=&quot;h-5 w-5 text-blue-400&quot; />
+        <h3 className=&quot;text-lg font-semibold&quot;>Market Insights</h3>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
+      <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-blue-400&quot;>${Math.round(stats.averagePrice)}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Price</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
-          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-green-400&quot;>{stats.averageRating.toFixed(1)}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Rating</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.totalProducts}</div>
-          <div className="text-sm text-muted-foreground">Products</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-purple-400&quot;>{stats.totalProducts}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Products</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-yellow-400">{stats.categoriesCount}</div>
-          <div className="text-sm text-muted-foreground">Categories</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-yellow-400&quot;>{stats.categoriesCount}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Categories</div>
         </div>
       </div>
     </CardContent>
@@ -103,14 +103,14 @@ const FilterControls: React.FC<{
   setShowRecommended,
   loading
 }) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
+  <div className=&quot;flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative&quot;>
+    {loading && <Spinner className=&quot;absolute right-4 top-4 h-4 w-4 text-primary&quot; />}
+    <div className=&quot;flex items-center gap-2&quot;>
+      <Filter className=&quot;h-4 w-4 text-muted-foreground&quot; />
       <select
         value={filterCategory}
         onChange={(e) => setFilterCategory(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
+        className=&quot;bg-background border border-border px-3 py-2 rounded&quot;
       >
         <option value="">All Categories</option>
         {categories.map(category => (
@@ -124,30 +124,30 @@ const FilterControls: React.FC<{
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
+        className="bg-background border border-border px-3 py-2 rounded&quot;
       >
-        <option value="newest">Newest First</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="rating">Highest Rated</option>
-        <option value="popular">Most Popular</option>
-        <option value="ai-score">AI Score</option>
+        <option value=&quot;newest&quot;>Newest First</option>
+        <option value=&quot;price-low&quot;>Price: Low to High</option>
+        <option value=&quot;price-high&quot;>Price: High to Low</option>
+        <option value=&quot;rating&quot;>Highest Rated</option>
+        <option value=&quot;popular&quot;>Most Popular</option>
+        <option value=&quot;ai-score">AI Score</option>
       </select>
     </div>
 
     <div className="flex items-center gap-2">
-      <span className="text-sm">$</span>
+      <span className="text-sm&quot;>$</span>
       <input
-        type="number"
+        type=&quot;number"
         value={priceRange[0]}
         min={MIN_PRICE}
         max={priceRange[1]}
         onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
+        className="w-20 bg-background border border-border px-2 py-1 rounded&quot;
       />
       <span>-</span>
       <input
-        type="number"
+        type=&quot;number"
         value={priceRange[1]}
         min={priceRange[0]}
         max={MAX_PRICE}
@@ -157,9 +157,9 @@ const FilterControls: React.FC<{
     </div>
 
     <div className="flex items-center gap-2">
-      <span className="text-sm">AI ≥</span>
+      <span className="text-sm&quot;>AI ≥</span>
       <input
-        type="number"
+        type=&quot;number"
         value={minAiScore}
         min={0}
         max={100}
@@ -188,22 +188,22 @@ const FilterControls: React.FC<{
       <select
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
+        className="bg-background border border-border px-3 py-2 rounded&quot;
       >
-        <option value="">Any Availability</option>
+        <option value="&quot;>Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
       </select>
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className=&quot;flex items-center gap-2&quot;>
       <select
         value={filterLocation}
         onChange={(e) => setFilterLocation(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
+        className=&quot;bg-background border border-border px-3 py-2 rounded&quot;
       >
-        <option value="">All Locations</option>
+        <option value="&quot;>All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
@@ -211,13 +211,13 @@ const FilterControls: React.FC<{
     </div>
 
     <Button
-      variant={showRecommended ? "default" : "outline"}
-      size="sm"
+      variant={showRecommended ? &quot;default&quot; : &quot;outline&quot;}
+      size=&quot;sm"
       onClick={() => setShowRecommended(!showRecommended)}
       className="flex items-center gap-2"
     >
-      <Sparkles className="h-4 w-4" />
-      {showRecommended ? "All Products" : "Recommended"}
+      <Sparkles className="h-4 w-4&quot; />
+      {showRecommended ? &quot;All Products&quot; : &quot;Recommended&quot;}
     </Button>
   </div>
 ),
@@ -250,20 +250,27 @@ export default function Marketplace() {
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true), // Use the new auth modal
-      return,
+      return
     }
 
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
+<<<<<<< HEAD
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
-      return,
+      return
+=======
+        title: &quot;Admin Access Required&quot;,
+        description: &quot;Only administrators can add products to the marketplace. Please contact an administrator.&quot;,
+        variant: &quot;destructive&quot;});
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     // Navigate to admin products page
-    router.push('/admin/products'),
+    router.push('/admin/products')
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
@@ -292,7 +299,7 @@ export default function Marketplace() {
       logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) }),
 
       if (showRecommended) {
-        items = items.filter((p) => p.rating != null && p.rating >= 4.3),
+        items = items.filter((p) => p.rating != null && p.rating >= 4.3)
       }
 
       items = items.filter((p) => {
@@ -308,7 +315,7 @@ export default function Marketplace() {
           rating >= minRating &&
           (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
           (!filterAvailability || availability === filterAvailability.toLowerCase())
-        ),
+        )
       }),
 
       items.sort((a, b) => {
@@ -346,13 +353,14 @@ export default function Marketplace() {
         items: paginatedItems,
         hasMore: endIndex < items.length,
         total: items.length
-      },
+      }
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
       logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
       
       // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
+<<<<<<< HEAD
         logErrorToProduction("403 Forbidden error - authentication issue"),
         // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
       } else if (err.response?.status === 500) {
@@ -360,7 +368,17 @@ export default function Marketplace() {
         toast({
           title: "Server Error", 
           description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"}),
+          variant: "destructive"})
+=======
+        logErrorToProduction(&quot;403 Forbidden error - authentication issue&quot;);
+        // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
+      } else if (err.response?.status === 500) {
+        logErrorToProduction(&quot;500 Server error&quot;);
+        toast({
+          title: &quot;Server Error&quot;, 
+          description: &quot;The marketplace is temporarily unavailable. Please try again later.&quot;,
+          variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } else {
         handleApiError(err), // This might show a toast or log to Sentry
       }
@@ -388,7 +406,7 @@ export default function Marketplace() {
       // On initial mount, useInfiniteScrollPagination handles the first load.
       // We don't want to call refresh() here immediately if it's the very first render
       // unless specifically needed. The new effect below handles re-mounts.
-      return,
+      return
     }
     logInfo('Filters changed, initiating refresh. Filters:', { filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation }),
     isRefreshingAfterFilterChange.current = true, // Set flag before refresh
@@ -403,7 +421,7 @@ export default function Marketplace() {
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
     refresh(),
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
-    firstRenderRef.current = true,
+    firstRenderRef.current = true
   }, [refresh]), // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
@@ -413,7 +431,7 @@ export default function Marketplace() {
       scrollToTop(),
       isRefreshingAfterFilterChange.current = false, // Reset flag
       // Optionally, provide user feedback about the filter change
-      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' }),
+      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' })
     }
   }, [products, loading, scrollToTop, toast]), // Depends on products and loading state
 
@@ -425,34 +443,34 @@ export default function Marketplace() {
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category))).length
-    },
+    }
   }, [products]),
 
   // Get unique categories and other filter values
   const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)))
   }, []),
   const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)))
   }, []).filter(Boolean) as string[],
   const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean))),
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)))
   }, []).filter(Boolean) as string[],
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800),
+      setShowScrollTop(window.scrollY > 800)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   // Loading state with skeleton
   if (loading && products.length === 0) {
     return (
-      <div className="container py-8" data-testid="marketplace-loading">
+      <div className="container py-8&quot; data-testid=&quot;marketplace-loading">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -471,7 +489,7 @@ export default function Marketplace() {
           ))}
         </div>
       </div>
-    ),
+    )
   }
 
   // Error state with retry
@@ -485,7 +503,7 @@ export default function Marketplace() {
           </Button>
         </div>
       </div>
-    ),
+    )
   }
 
   // Empty state (only show when not loading and no products)
@@ -507,7 +525,7 @@ export default function Marketplace() {
         
         <ProductsEmptyState />
       </div>
-    ),
+    )
   }
 
   // Main marketplace render
@@ -575,12 +593,12 @@ export default function Marketplace() {
 
       {/* Product Grid */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6&quot;
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode=&quot;popLayout">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -590,7 +608,7 @@ export default function Marketplace() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-              className="relative group"
+              className="relative group&quot;
             >
               <ProductCard
                 product={{
@@ -616,16 +634,22 @@ export default function Marketplace() {
                     return, // Stop further execution
                   }
                   try {
-                    await router.push(`/checkout/${product.id}`),
+                    await router.push(`/checkout/${product.id}`)
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
+<<<<<<< HEAD
                       title: "Navigation Error",
                       description: "Could not navigate to checkout. Please try again.",
                       variant: "destructive"}),
+=======
+                      title: &quot;Navigation Error&quot;,
+                      description: &quot;Could not navigate to checkout. Please try again.&quot;,
+                      variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-                    throw error,
+                    throw error
                   }
                 }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
@@ -699,5 +723,5 @@ export default function Marketplace() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }

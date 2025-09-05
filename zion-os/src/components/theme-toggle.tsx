@@ -48,5 +48,5 @@ export function ThemeToggle() {
         </button>
       </div>
     </div>
-  ),
+  )
 }

@@ -26,33 +26,33 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onRetry
 }) => {
   return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+    <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>
       {error ? (
-        <div className="p-8 text-center text-amber-500">
+        <div className=&quot;p-8 text-center text-amber-500&quot;>
           <p>{error}</p>
           <Button 
-            variant="outline" 
-            size="sm" 
-            className="mt-2"
+            variant=&quot;outline&quot; 
+            size=&quot;sm&quot; 
+            className=&quot;mt-2&quot;
             onClick={onRetry}
           >
             Try Again
           </Button>
         </div>
       ) : loading ? (
-        <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        <div className=&quot;p-4 space-y-4&quot;>
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
         </div>
       ) : notifications.length === 0 ? (
-        <div className="p-8">
+        <div className=&quot;p-8&quot;>
           <EmptyState
-            icon={<Bell className="h-8 w-8" />}
-            title="No Notifications"
-            description="You're all caught up."
+            icon={<Bell className=&quot;h-8 w-8&quot; />}
+            title=&quot;No Notifications&quot;
+            description=&quot;You're all caught up.&quot;
             action={{ text: 'Refresh', onClick: onRetry }}
-            className="border-none bg-transparent"
+            className=&quot;border-none bg-transparent&quot;
           />
         </div>
       ) : (
@@ -66,5 +66,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ))
       )}
     </ScrollArea>
-  ),
+  )
 },

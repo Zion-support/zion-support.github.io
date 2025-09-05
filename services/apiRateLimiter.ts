@@ -28,7 +28,7 @@ export interface RateLimitStats {
     minute: number,
     hour: number,
     day: number
-  },
+  }
 }
 
 export interface APIKey {
@@ -72,10 +72,10 @@ export class APIRateLimiterService {
         body: JSON.stringify(rule)}),
 
       if (!response.ok) {
-        throw new Error(`Failed to create rate limit rule: ${response.statusText}`),
+        throw new Error(`Failed to create rate limit rule: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock response for demo
       return {
@@ -83,7 +83,7 @@ export class APIRateLimiterService {
         id: `rule_${Date.now()}`,
         createdAt: new Date(),
         updatedAt: new Date()
-      },
+      }
     }
   }
 
@@ -94,10 +94,10 @@ export class APIRateLimiterService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`),
+        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock rules for demo
       return [
@@ -133,7 +133,7 @@ export class APIRateLimiterService {
           createdAt: new Date(),
           updatedAt: new Date()
         }
-      ],
+      ]
     }
   }
 
@@ -147,22 +147,22 @@ export class APIRateLimiterService {
         body: JSON.stringify(updates)}),
 
       if (!response.ok) {
-        throw new Error(`Failed to update rate limit rule: ${response.statusText}`),
+        throw new Error(`Failed to update rate limit rule: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),
       if (!existingRule) {
-        throw new Error('Rule not found'),
+        throw new Error('Rule not found')
       }
       
       return {
         ...existingRule,
         ...updates,
         updatedAt: new Date()
-      },
+      }
     }
   }
 
@@ -174,11 +174,11 @@ export class APIRateLimiterService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`),
+        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`)
       }
     } catch (error) {
       console.error('Failed to delete rate limit rule:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -190,10 +190,10 @@ export class APIRateLimiterService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`),
+        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock stats for demo
       return [
@@ -223,7 +223,7 @@ export class APIRateLimiterService {
             day: 650
           }
         }
-      ],
+      ]
     }
   }
 
@@ -237,10 +237,10 @@ export class APIRateLimiterService {
         body: JSON.stringify({ name, permissions, rateLimit })}),
 
       if (!response.ok) {
-        throw new Error(`Failed to create API key: ${response.statusText}`),
+        throw new Error(`Failed to create API key: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock API key creation for demo
       return {
@@ -252,7 +252,7 @@ export class APIRateLimiterService {
         createdAt: new Date(),
         lastUsed: new Date(),
         isActive: true
-      },
+      }
     }
   }
 
@@ -263,10 +263,10 @@ export class APIRateLimiterService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response.statusText}`),
+        throw new Error(`Failed to fetch API keys: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock API keys for demo
       return [
@@ -302,7 +302,7 @@ export class APIRateLimiterService {
           lastUsed: new Date(),
           isActive: true
         }
-      ],
+      ]
     }
   }
 
@@ -313,10 +313,10 @@ export class APIRateLimiterService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch violations: ${response.statusText}`),
+        throw new Error(`Failed to fetch violations: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Mock violations for demo
       return [
@@ -340,7 +340,7 @@ export class APIRateLimiterService {
           ipAddress: '10.0.0.50',
           userAgent: 'ZionMobileApp/1.0'
         }
-      ],
+      ]
     }
   }
 
@@ -361,7 +361,7 @@ export class APIRateLimiterService {
       total: number,
       byReason: Record<string number>,
       recent: RateLimitViolation[]
-    },
+    }
   }> {
     const stats = await this.getRateLimitStats(),
     const rules = await this.getRateLimitRules(),
@@ -373,7 +373,7 @@ export class APIRateLimiterService {
 
     const violationsByReason = violations.reduce((acc, violation) => {
       acc[violation.reason] = (acc[violation.reason] || 0) + 1,
-      return acc,
+      return acc
     }, {} as Record<string number>),
 
     return {
@@ -397,7 +397,7 @@ export class APIRateLimiterService {
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
       }
-    },
+    }
   }
 }
 
@@ -408,9 +408,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 25,
     period: '/month',
     features: [
-      'Up to 10 rate limit rulesBasic rate limiting',
-      'API key managementEmail notifications',
-      '7-day data retentionBasic analytics'
+      'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics'
     ]
   },
   professional: {
@@ -418,10 +416,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 79,
     period: '/month',
     features: [
-      'Up to 50 rate limit rulesAdvanced rate limiting',
-      'Unlimited API keysReal-time monitoring',
-      'Slack and webhook notifications30-day data retention',
-      'Advanced analyticsCustom dashboards',
+      'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards',
       'API access'
     ]
   },
@@ -430,10 +425,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199,
     period: '/month',
     features: [
-      'Unlimited rate limit rulesEnterprise-grade rate limiting',
-      'Advanced security featuresMultiple notification channels',
-      '1-year data retentionCustom integrations',
-      'White-label optionsPriority support',
+      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support',
       'SLA guarantee'
     ]
   }

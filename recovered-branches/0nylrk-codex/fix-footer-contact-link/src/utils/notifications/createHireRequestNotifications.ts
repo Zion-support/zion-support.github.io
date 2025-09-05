@@ -1,7 +1,6 @@
 
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-
 /**
  * Creates a hire request notification for admin and talent
  */
@@ -16,11 +15,19 @@ export async function createHireRequestNotifications({
 }: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 
+<<<<<<< HEAD
     : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
+=======
+    : &quot;project&quot;;
+  
+  const summaryText = projectSummary 
+    ? `: &quot;${projectSummary}&quot;` 
+    : "";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create notification for talent
   const talentNotification = await createNotification({
@@ -51,11 +58,11 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-    },
+    }
   }
   
   return {
     success: talentNotification.success,
     talentNotification
-  },
+  }
 }

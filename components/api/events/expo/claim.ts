@@ -5,6 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { address, signature } = req.body || {},
   if (!address || !signature) return res.status(400).json({ error: 'Missing address or signature' }),
   // In production: verify signature, mint or issue POAP
+<<<<<<< HEAD
   // // // console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…'),
-  return res.status(200).json({ ok: true }),
+  return res.status(200).json({ ok: true })
+=======
+  // console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…');
+  return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }

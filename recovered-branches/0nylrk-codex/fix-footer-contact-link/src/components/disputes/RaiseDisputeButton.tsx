@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+=======
+import React, { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   Dialog,
   DialogContent,
@@ -8,23 +13,36 @@ import {
   DialogTitle,
   DialogDescription,
   DialogOverlay
+<<<<<<< HEAD
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
-
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
   className?: string
+=======
+} from &quot;@/components/ui/dialog&quot;;
+import { DisputeForm } from &quot;./DisputeForm&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import { ShieldAlert } from &quot;lucide-react&quot;;
+
+interface RaiseDisputeButtonProps {
+  projectId: string;
+  milestoneId?: string;
+  variant?: &quot;default&quot; | &quot;outline&quot; | &quot;secondary&quot; | &quot;destructive&quot; | &quot;ghost&quot; | &quot;link&quot;;
+  size?: &quot;default&quot; | &quot;sm&quot; | &quot;lg&quot; | &quot;icon&quot;;
+  className?: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export function RaiseDisputeButton({ 
   projectId,
   milestoneId, 
-  variant = "outline", 
+  variant = &quot;outline&quot;, 
   size,
   className 
 }: RaiseDisputeButtonProps) {
@@ -33,7 +51,7 @@ export function RaiseDisputeButton({
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
-    navigate(`/dashboard/disputes/${disputeId}`),
+    navigate(`/dashboard/disputes/${disputeId}`)
   },
   
   return (
@@ -44,12 +62,12 @@ export function RaiseDisputeButton({
         className={className} 
         onClick={() => setIsDialogOpen(true)}
       >
-        <ShieldAlert className="h-4 w-4 mr-2" />
+        <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
         Raise Dispute
       </Button>
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[550px]">
+        <DialogContent className=&quot;sm:max-w-[550px]&quot;>
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
@@ -66,5 +84,5 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  ),
+  )
 }

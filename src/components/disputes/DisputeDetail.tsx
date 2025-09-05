@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { useDisputes } from "@/hooks/useDisputes",
@@ -19,13 +20,36 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "sonner",
+=======
+import React, { useState, useEffect } from &quot;react&quot;;
+import { useRouter } from 'next/router';
+import { useDisputes } from &quot;@/hooks/useDisputes&quot;;
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+ Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
+} from &quot;@/types/disputes&quot;;
 
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Separator } from &quot;@/components/ui/separator&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { format, formatDistanceToNow } from &quot;date-fns&quot;;
+import { Alert, AlertDescription, AlertTitle } from &quot;@/components/ui/alert&quot;;
+import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { toast } from &quot;sonner&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function DisputeDetail() {
   const router = useRouter(),
   const { disputeId } = router.query as { disputeId?: string },
   const { user } = useAuth(),
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
 
+<<<<<<< HEAD
   const [dispute, setDispute] = useState<Dispute | null>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -40,6 +64,22 @@ export function DisputeDetail() {
 
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === "admin",
+=======
+  const [dispute, setDispute] = useState<Dispute | null>(null);
+  const [messages, setMessages] = useState<DisputeMessage[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [message, setMessage] = useState("&quot;);
+  const [adminNote, setAdminNote] = useState("&quot;);
+  const [isSending, setIsSending] = useState(false);
+  const [resolution, setResolution] = useState<{ summary: string; resolution_type: ResolutionType }>({
+  summary: "&quot;,
+  resolution_type: &quot;compromise&quot;});
+   
+  const [activeTab, setActiveTab] = useState(&quot;overview&quot;);
+
+  // Check if user is admin (placeholder - implement proper admin check)
+  const isAdmin = user?.userType === &quot;admin&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   useEffect(() => {
     if (!disputeId) return,
@@ -49,23 +89,34 @@ export function DisputeDetail() {
       try {
         const disputeData = await getDisputeById(disputeId),
         if (!disputeData) {
+<<<<<<< HEAD
           toast.error("Dispute not found"),
           router.push("/dashboard/disputes"),
-          return,
+          return
+=======
+          toast.error(&quot;Dispute not found&quot;);
+          router.push(&quot;/dashboard/disputes&quot;);
+          return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
-        setMessages(messagesData),
+        setMessages(messagesData)
       } catch (error) {
+<<<<<<< HEAD
         logErrorToProduction('Error loading dispute data:', { data: error }),
-        toast.error("Failed to load dispute"),
+        toast.error("Failed to load dispute")
+=======
+        logErrorToProduction('Error loading dispute data:', { data: error });
+        toast.error(&quot;Failed to load dispute&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    loadDisputeData(),
+    loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
   const handleStatusChange = async (status: DisputeStatus) => {
@@ -74,9 +125,13 @@ export function DisputeDetail() {
     const success = await updateDisputeStatus(disputeId, status),
     if (success) {
       // Update the dispute object with the new status
-      setDispute({ ...dispute!, status: status }),
+      setDispute({ ...dispute!, status: status })
     } else {
-      toast.error("Failed to update dispute status"),
+<<<<<<< HEAD
+      toast.error("Failed to update dispute status")
+=======
+      toast.error(&quot;Failed to update dispute status&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -84,21 +139,34 @@ export function DisputeDetail() {
     if (!disputeId) return,
     
     if (!resolution.summary) {
+<<<<<<< HEAD
       toast.error("Please provide a resolution summary"),
-      return,
+      return
+=======
+      toast.error(&quot;Please provide a resolution summary&quot;);
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     const success = await resolveDispute(disputeId, {
       summary: resolution.summary,
+<<<<<<< HEAD
       resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
+=======
+      resolution_type: (resolution.resolution_type as ResolutionType) || &quot;compromise&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     if (success && dispute) {
       setDispute({
         ...dispute,
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString()}),
+        resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute"),
+<<<<<<< HEAD
+      toast.error("Failed to resolve dispute")
+=======
+      toast.error(&quot;Failed to resolve dispute&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -110,75 +178,89 @@ export function DisputeDetail() {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
+<<<<<<< HEAD
         const updatedMessages = await getDisputeMessages(disputeId),
         setMessages(updatedMessages),
-        setMessage(""),
+        setMessage("")
+=======
+        const updatedMessages = await getDisputeMessages(disputeId);
+        setMessages(updatedMessages);
+        setMessage("&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
     } catch (error) {
-      logErrorToProduction('Error sending message:', { data: error }),
+      logErrorToProduction('Error sending message:', { data: error })
     } finally {
-      setIsSending(false),
+      setIsSending(false)
     }
   },
 
   if (isLoading) {
     return (
-      <div className="p-8 text-center">
-        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
+      <div className=&quot;p-8 text-center&quot;>
+        <div className=&quot;w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full&quot;></div>
         <p>Loading dispute details...</p>
       </div>
-    ),
+    )
   }
 
   if (!dispute) {
     return (
-      <div className="p-8 text-center">
+      <div className=&quot;p-8 text-center&quot;>
         <p>Dispute not found</p>
-        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
+        <Button onClick={() => router.push(&quot;/dashboard/disputes&quot;)} className=&quot;mt-4&quot;>
           Back to Disputes
         </Button>
       </div>
-    ),
+    )
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
       case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
+=======
+      case &quot;open&quot;: return &quot;default&quot;;
+      case &quot;under_review&quot;: return &quot;secondary&quot;;
+      case &quot;resolved&quot;: return &quot;outline&quot;; // Changed from &quot;success&quot; to &quot;outline&quot;
+      case &quot;closed&quot;: return &quot;outline&quot;;
+      default: return &quot;default&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   return (
-    <div className="container mx-auto p-4 space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+    <div className=&quot;container mx-auto p-4 space-y-6&quot;>
+      <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-bold">Dispute Case</h1>
+          <div className=&quot;flex items-center gap-2&quot;>
+            <h1 className=&quot;text-2xl font-bold&quot;>Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
-          <p className="text-muted-foreground">
+          <p className=&quot;text-muted-foreground&quot;>
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
         </div>
         
-        <div className="flex gap-2">
-          <Button variant="outline" onClick={() => router.push("/dashboard/disputes")}>
+        <div className="flex gap-2&quot;>
+          <Button variant=&quot;outline&quot; onClick={() => router.push(&quot;/dashboard/disputes&quot;)}>
             Back to List
           </Button>
-          {isAdmin && dispute?.status === "open" && (
-            <Button onClick={() => handleStatusChange("under_review")}>
+          {isAdmin && dispute?.status === &quot;open&quot; && (
+            <Button onClick={() => handleStatusChange(&quot;under_review&quot;)}>
               Start Review
             </Button>
           )}
         </div>
       </div>
 
-      {dispute.status === "resolved" && dispute.resolution_summary && (
+      {dispute.status === &quot;resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
@@ -191,14 +273,14 @@ export function DisputeDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-6">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="messages">Messages</TabsTrigger>
-              <TabsTrigger value="attachments">Attachments</TabsTrigger>
-              {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
+            <TabsList className="mb-6&quot;>
+              <TabsTrigger value=&quot;overview&quot;>Overview</TabsTrigger>
+              <TabsTrigger value=&quot;messages&quot;>Messages</TabsTrigger>
+              <TabsTrigger value=&quot;attachments&quot;>Attachments</TabsTrigger>
+              {isAdmin && <TabsTrigger value=&quot;admin&quot;>Admin Notes</TabsTrigger>}
             </TabsList>
             
-            <TabsContent value="overview" className="space-y-6">
+            <TabsContent value=&quot;overview" className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -220,8 +302,8 @@ export function DisputeDetail() {
                   </div>
                   
                   <div>
-                    <h3 className="font-medium">Project</h3>
-                    <p>{dispute.project?.title || "Unknown Project"}</p>
+                    <h3 className="font-medium&quot;>Project</h3>
+                    <p>{dispute.project?.title || &quot;Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
                   
@@ -235,24 +317,24 @@ export function DisputeDetail() {
                   <div>
                     <h3 className="font-medium">Timeline</h3>
                     <ul className="space-y-2 mt-2">
-                      <li className="flex gap-2 items-center">
-                        <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
-                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                      <li className="flex gap-2 items-center&quot;>
+                        <Badge variant=&quot;outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center&quot;>1</Badge>
+                        <span>Created on {format(new Date(dispute.created_at), &quot;MMM d, yyyy 'at' h:mm a&quot;)}</span>
                       </li>
                       
-                      {dispute.status !== "open" && (
-                        <li className="flex gap-2 items-center">
-                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
+                      {dispute.status !== &quot;open" && (
+                        <li className="flex gap-2 items-center&quot;>
+                          <Badge variant=&quot;outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
                           <span>Under review</span>
                         </li>
                       )}
                       
                       {dispute.resolved_at && (
-                        <li className="flex gap-2 items-center">
-                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
-                            {dispute.status !== "open" ? "3" : "2"}
+                        <li className="flex gap-2 items-center&quot;>
+                          <Badge variant=&quot;outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center&quot;>
+                            {dispute.status !== &quot;open&quot; ? &quot;3&quot; : &quot;2&quot;}
                           </Badge>
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                          <span>Resolved on {format(new Date(dispute.resolved_at), &quot;MMM d, yyyy 'at' h:mm a&quot;)}</span>
                         </li>
                       )}
                     </ul>
@@ -260,7 +342,7 @@ export function DisputeDetail() {
                 </CardContent>
               </Card>
               
-              {dispute.status === "resolved" && (
+              {dispute.status === &quot;resolved" && (
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -269,7 +351,7 @@ export function DisputeDetail() {
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
                     {dispute.resolution_type && (
-                      <div className="mt-4">
+                      <div className="mt-4&quot;>
                         <Badge>
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>
@@ -280,7 +362,7 @@ export function DisputeDetail() {
               )}
             </TabsContent>
             
-            <TabsContent value="messages" className="space-y-6">
+            <TabsContent value=&quot;messages" className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
@@ -327,23 +409,23 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          ),
+                          )
                         })
                     )}
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <div className="w-full space-y-4">
+                  <div className="w-full space-y-4&quot;>
                     <Textarea
-                      placeholder="Type your message here..."
+                      placeholder=&quot;Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       className="min-h-[100px]"
                       disabled={isSending}
                     />
-                    <div className="flex justify-end">
+                    <div className="flex justify-end&quot;>
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
-                        {isSending ? "Sending..." : "Send Message"}
+                        {isSending ? &quot;Sending...&quot; : &quot;Send Message&quot;}
                       </Button>
                     </div>
                   </div>
@@ -351,7 +433,7 @@ export function DisputeDetail() {
               </Card>
             </TabsContent>
             
-            <TabsContent value="attachments">
+            <TabsContent value=&quot;attachments">
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -360,14 +442,14 @@ export function DisputeDetail() {
                 <CardContent>
                   <div className="text-center py-12">
                     <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                    <p className="text-muted-foreground">No attachments available</p>
+                    <p className="text-muted-foreground&quot;>No attachments available</p>
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
             
             {isAdmin && (
-              <TabsContent value="admin" className="space-y-6">
+              <TabsContent value=&quot;admin" className="space-y-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Admin Actions</CardTitle>
@@ -376,37 +458,37 @@ export function DisputeDetail() {
                   <CardContent className="space-y-6">
                     <div>
                       <h3 className="font-medium mb-2">Change Status</h3>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2&quot;>
                         <Button 
-                          variant="outline" 
-                          onClick={() => handleStatusChange("open")}
-                          disabled={dispute.status === "open"}
+                          variant=&quot;outline&quot; 
+                          onClick={() => handleStatusChange(&quot;open&quot;)}
+                          disabled={dispute.status === &quot;open&quot;}
                         >
                           Mark as Open
                         </Button>
                         <Button 
-                          variant="outline" 
-                          onClick={() => handleStatusChange("under_review")}
-                          disabled={dispute.status === "under_review"}
+                          variant=&quot;outline&quot; 
+                          onClick={() => handleStatusChange(&quot;under_review&quot;)}
+                          disabled={dispute.status === &quot;under_review&quot;}
                         >
                           Mark as Under Review
                         </Button>
                         <Button 
-                          variant="outline" 
-                          onClick={() => handleStatusChange("closed")}
-                          disabled={dispute.status === "closed"}
+                          variant=&quot;outline&quot; 
+                          onClick={() => handleStatusChange(&quot;closed&quot;)}
+                          disabled={dispute.status === &quot;closed&quot;}
                         >
                           Close Dispute
                         </Button>
                       </div>
                     </div>
                     
-                    {dispute.status !== "resolved" && (
+                    {dispute.status !== &quot;resolved" && (
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
-                        <div className="space-y-4">
+                        <div className="space-y-4&quot;>
                           <Textarea
-                            placeholder="Enter resolution summary..."
+                            placeholder=&quot;Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
                             className="min-h-[100px]"
@@ -416,14 +498,14 @@ export function DisputeDetail() {
                             <div>
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
-                                className="w-full p-2 border rounded"
-                                value={resolution.resolution_type || ""}
+                                className="w-full p-2 border rounded&quot;
+                                value={resolution.resolution_type || "&quot;}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
                               >
-                                <option value="client_favor">In Client's Favor</option>
-                                <option value="talent_favor">In Talent's Favor</option>
-                                <option value="compromise">Compromise</option>
-                                <option value="dismissed">Dismissed</option>
+                                <option value=&quot;client_favor&quot;>In Client's Favor</option>
+                                <option value=&quot;talent_favor&quot;>In Talent's Favor</option>
+                                <option value=&quot;compromise&quot;>Compromise</option>
+                                <option value=&quot;dismissed&quot;>Dismissed</option>
                               </select>
                             </div>
                           </div>
@@ -434,53 +516,53 @@ export function DisputeDetail() {
                     )}
                     
                     <div>
-                      <h3 className="font-medium mb-2">Admin Notes</h3>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                      <h3 className=&quot;font-medium mb-2&quot;>Admin Notes</h3>
+                      <div className=&quot;space-y-4 max-h-[300px] overflow-y-auto p-2&quot;>
                         {messages
                           .filter(msg => msg.is_admin_note)
                           .map((msg) => (
-                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
-                            <div className="flex items-center justify-between mb-2">
-                              <div className="flex items-center gap-2">
-                                <Avatar className="h-6 w-6">
-                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"} />
+                          <div key={msg.id} className=&quot;bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900&quot;>
+                            <div className=&quot;flex items-center justify-between mb-2&quot;>
+                              <div className=&quot;flex items-center gap-2&quot;>
+                                <Avatar className=&quot;h-6 w-6&quot;>
+                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || &quot;Admin avatar&quot;} />
                                   <AvatarFallback>
                                     {msg.user_profile?.display_name?.[0] || 'A'}
                                   </AvatarFallback>
                                 </Avatar>
-                                <span className="text-sm font-medium">
+                                <span className=&quot;text-sm font-medium&quot;>
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
                               </div>
-                              <span className="text-xs opacity-70">
+                              <span className=&quot;text-xs opacity-70&quot;>
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>
                             </div>
-                            <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
+                            <p className=&quot;whitespace-pre-wrap text-sm&quot;>{msg.message}</p>
                           </div>
                         ))}
                         
                         {!messages.some(msg => msg.is_admin_note) && (
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
+                          <p className=&quot;text-sm text-muted-foreground italic&quot;>No admin notes yet</p>
                         )}
                       </div>
                       
-                      <Separator className="my-4" />
+                      <Separator className=&quot;my-4&quot; />
                       
-                      <div className="space-y-4">
+                      <div className=&quot;space-y-4&quot;>
                         <Textarea
-                          placeholder="Add an admin note (only visible to administrators)..."
+                          placeholder=&quot;Add an admin note (only visible to administrators)...&quot;
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
                         <Button
-                          variant="outline"
+                          variant=&quot;outline&quot;
                           onClick={() => {
                             if (adminNote.trim()) {
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
-                                setAdminNote(""),
-                              }),
+                                setAdminNote("")
+                              })
                             }
                           }}
                         >
@@ -508,8 +590,8 @@ export function DisputeDetail() {
                 </Avatar>
                 <div>
                   <p className="font-medium">Client</p>
-                  <p className="text-sm text-muted-foreground">
-                    {dispute.client_profile?.display_name || "Unknown Client"}
+                  <p className="text-sm text-muted-foreground&quot;>
+                    {dispute.client_profile?.display_name || &quot;Unknown Client"}
                   </p>
                 </div>
               </div>
@@ -525,8 +607,8 @@ export function DisputeDetail() {
                 </Avatar>
                 <div>
                   <p className="font-medium">Talent</p>
-                  <p className="text-sm text-muted-foreground">
-                    {dispute.talent_profile?.display_name || "Unknown Talent"}
+                  <p className="text-sm text-muted-foreground&quot;>
+                    {dispute.talent_profile?.display_name || &quot;Unknown Talent"}
                   </p>
                 </div>
               </div>
@@ -543,8 +625,8 @@ export function DisputeDetail() {
                 <span className="font-mono">{dispute.id}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
-                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+                <span className="font-medium&quot;>Created:</span>
+                <span>{format(new Date(dispute.created_at), &quot;MMM d, yyyy")}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Status:</span>
@@ -553,13 +635,13 @@ export function DisputeDetail() {
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
-                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+                <span className="font-medium&quot;>Raised by:</span>
+                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? &quot;Client&quot; : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? &quot;Talent&quot; : &quot;Unknown"}</span>
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
     </div>
-  ),
+  )
 }

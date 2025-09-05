@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useState } from "react",
+=======
+import React, { createContext, useContext, useState } from &quot;react&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface SidebarContextType {
   isOpen: boolean,
@@ -37,5 +41,5 @@ export function SidebarProvider({
         {children}
       </div>
     </SidebarContext.Provider>
-  ),
+  )
 }

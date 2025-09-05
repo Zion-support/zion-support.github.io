@@ -4,10 +4,16 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle
+<<<<<<< HEAD
 } from "@/components/ui/dialog",
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+=======
+} from &quot;@/components/ui/dialog&quot;;
+import { JobApplication } from &quot;@/types/jobs&quot;;
+import { ApplicationScoreCard } from &quot;../ApplicationScoreCard&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ScoreDialogProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -23,7 +29,7 @@ export function ScoreDialog({
 }: ScoreDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className=&quot;sm:max-w-md&quot;>
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
@@ -35,5 +41,5 @@ export function ScoreDialog({
         )}
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

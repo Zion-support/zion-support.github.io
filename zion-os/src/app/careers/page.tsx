@@ -12,8 +12,7 @@ export default function CareersPage() {
       type: 'Full-time',
       description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
       requirements: [
-        'PhD in Computer Science, AI, or related field5+ years experience in AI research',
-        'Expertise in machine learning and neural networksExperience with quantum computing concepts']},
+        'PhD in Computer Science, AI, or related field5+ years experience in AI researchExpertise in machine learning and neural networksExperience with quantum computing concepts']},
     {
       title: 'Quantum Computing Engineer',
       department: 'Quantum Solutions',
@@ -21,8 +20,7 @@ export default function CareersPage() {
       type: 'Full-time',
       description: 'Develop next-generation quantum algorithms and quantum computing infrastructure.',
       requirements: [
-        'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computing',
-        'Knowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']},
+        'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computingKnowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']},
     {
       title: 'Full-Stack Developer',
       department: 'Engineering',
@@ -30,8 +28,7 @@ export default function CareersPage() {
       type: 'Full-time',
       description: 'Build scalable web applications and APIs for our AI-powered platforms.',
       requirements: [
-        '3+ years experience in full-stack developmentProficiency in React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, GCP, Azure)Knowledge of database design and optimization']},
+        '3+ years experience in full-stack developmentProficiency in React, Node.js, and TypeScriptExperience with cloud platforms (AWS, GCP, Azure)Knowledge of database design and optimization']},
     {
       title: 'Cybersecurity Specialist',
       department: 'Security',
@@ -39,8 +36,7 @@ export default function CareersPage() {
       type: 'Full-time',
       description: 'Implement and maintain advanced security protocols for our AI systems.',
       requirements: [
-        '5+ years experience in cybersecurityExpertise in threat detection and prevention',
-        'Knowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}],
+        '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}],
 
   const benefits = [
     {

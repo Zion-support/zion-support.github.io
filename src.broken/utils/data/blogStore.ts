@@ -1,16 +1,15 @@
 import fs from 'fs',
 import path from 'path',
 import { BlogPost } from '@/utils/types/blog',
-
 const DATA_DIR = path.resolve(process.cwd(), 'datablog'),
 const POSTS_PATH = path.resolve(DATA_DIR, 'posts.json'),
 
 function ensureStore(): void {
   if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true }),
+    fs.mkdirSync(DATA_DIR, { recursive: true })
   }
   if (!fs.existsSync(POSTS_PATH)) {
-    fs.writeFileSync(POSTS_PATH, JSON.stringify([], null, 2), 'utf8'),
+    fs.writeFileSync(POSTS_PATH, JSON.stringify([], null, 2), 'utf8')
   }
 }
 
@@ -18,15 +17,15 @@ export function readPosts(): BlogPost[] {
   ensureStore(),
   try {
     const raw = fs.readFileSync(POSTS_PATH, 'utf8'),
-    return JSON.parse(raw) as BlogPost[],
+    return JSON.parse(raw) as BlogPost[]
   } catch (e) {
-    return [],
+    return []
   }
 }
 
 export function writePosts(posts: BlogPost[]): void {
   ensureStore(),
-  fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8'),
+  fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8')
 }
 
 export function findPostBySlug(slug: string): BlogPost | undefined {
@@ -43,28 +42,28 @@ export function upsertPost(post: BlogPost): BlogPost {
   if (idx >= 0) {
     posts[idx] = post
   } else {
-    posts.unshift(post),
+    posts.unshift(post)
   }
   writePosts(posts),
-  return post,
+  return post
 }
 
 export function listPublishedPosts(): BlogPost[] {
   return readPosts()
     .filter((p) => p.status === 'published')
-    .sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())),
+    .sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()))
 }
 
 export function listAllAuthors(): string[] {
-  return Array.from(new Set(readPosts().map((p) => p.author).filter(Boolean))),
+  return Array.from(new Set(readPosts().map((p) => p.author).filter(Boolean)))
 }
 
 export function listAllTopics(): string[] {
-  return Array.from(new Set(readPosts().flatMap((p) => p.topics || []))),
+  return Array.from(new Set(readPosts().flatMap((p) => p.topics || [])))
 }
 
 export function listAllTags(): string[] {
-  return Array.from(new Set(readPosts().flatMap((p) => p.tags || []))),
+  return Array.from(new Set(readPosts().flatMap((p) => p.tags || [])))
 }
 
 export function incrementMetric(id: string, metric: keyof BlogPost['metrics']): BlogPost | undefined {

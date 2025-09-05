@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid',
 import { readJsonFile, writeJsonFile } from '../../utils/db',
 import type { Conversation, Message } from '../../utils/types',
 import { rateLimit } from '../../utils/rateLimit',
-
 const FILE = 'conversations.json',
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,14 +12,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { conversationId, sender, text, attachments } = req.body || {},
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
       res.status(400).json({ error: 'Invalid message' }),
-      return,
+      return
     }
 
     const conversations = readJsonFile<Conversation[]>(FILE, []),
     const idx = conversations.findIndex((c) => c.id === String(conversationId)),
     if (idx === -1) {
       res.status(404).json({ error: 'Conversation not found' }),
-      return,
+      return
     }
 
     const now = new Date().toISOString(),
@@ -38,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writeJsonFile<Conversation[]>(FILE, conversations),
 
     res.status(201).json({ message: msg }),
-    return,
+    return
   }
 
   if (req.method === 'GET') {
@@ -47,12 +46,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const conv = conversations.find((c) => c.id === String(conversationId)),
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' }),
-      return,
+      return
     }
     res.status(200).json({ conversation: conv }),
-    return,
+    return
   }
 
   res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed'),
+  res.status(405).end('Method Not Allowed')
 }

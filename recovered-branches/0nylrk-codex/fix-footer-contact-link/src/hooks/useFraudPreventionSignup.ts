@@ -3,7 +3,6 @@ import { useState, useCallback } from 'react',
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',
 import { supabase } from '@/integrations/supabase/client',
 import { toast } from '@/hooks/use-toast',
-
 export function useFraudPreventionSignup() {
   const [isCheckingFraud, setIsCheckingFraud] = useState(false),
   
@@ -15,7 +14,7 @@ export function useFraudPreventionSignup() {
       return data.ip
     } catch (error) {
       console.error('Error getting IP:', error),
-      return undefined,
+      return undefined
     }
   },
   
@@ -29,7 +28,11 @@ export function useFraudPreventionSignup() {
       const fraudCheck = await checkSignupPatterns(email, ipAddress),
       
       if (fraudCheck.isSuspicious) {
+<<<<<<< HEAD
         // // // console.log('Suspicious signup detected:', fraudCheck.reasons),
+=======
+        // console.log('Suspicious signup detected:', fraudCheck.reasons);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
@@ -45,7 +48,7 @@ export function useFraudPreventionSignup() {
         }),
         
         if (error) {
-          console.error('Error creating fraud flag:', error),
+          console.error('Error creating fraud flag:', error)
         }
         
         // Depending on how strict we want to be, we could block the signup
@@ -55,28 +58,35 @@ export function useFraudPreventionSignup() {
           r.includes('suspicious email domain')
         )) {
           toast({
+<<<<<<< HEAD
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
-          return false,
+          return false
+=======
+            title: &quot;Signup blocked&quot;,
+            description: &quot;This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.&quot;,
+            variant: &quot;destructive&quot;});
+          return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         // Otherwise, allow but flag for review
-        return true,
+        return true
       }
       
       // No suspicious patterns found
-      return true,
+      return true
     } catch (error) {
       console.error('Error in fraud check:', error),
       // On error, allow the signup but log the error
-      return true,
+      return true
     } finally {
-      setIsCheckingFraud(false),
+      setIsCheckingFraud(false)
     }
   }, []),
   
   return {
     isCheckingFraud,
-    checkFraudBeforeSignup},
+    checkFraudBeforeSignup}
 }

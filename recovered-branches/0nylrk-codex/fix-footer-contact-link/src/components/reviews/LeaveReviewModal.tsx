@@ -1,17 +1,29 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
+=======
+  DialogTrigger} from &quot;@/components/ui/dialog&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { ReviewForm } from &quot;./ReviewForm&quot;;
+import { useReviews } from &quot;@/hooks/useReviews&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
@@ -30,7 +42,7 @@ export function LeaveReviewModal({
   const [open, setOpen] = useState(isOpen),
   
   useEffect(() => {
-    setOpen(isOpen),
+    setOpen(isOpen)
   }, [isOpen]),
   
   const handleOpenChange = (open: boolean) => {
@@ -46,25 +58,25 @@ export function LeaveReviewModal({
       const { project_id, reviewee_id, ...updates } = formValues,
       const success = await updateReview(userReview.id, updates),
       if (success) {
-        handleOpenChange(false),
+        handleOpenChange(false)
       }
-      return success,
+      return success
     } else {
       // Create new review
       const success = await submitReview(formValues),
       if (success) {
-        handleOpenChange(false),
+        handleOpenChange(false)
       }
-      return success,
+      return success
     }
   },
   
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-md">
+      <DialogContent className=&quot;max-w-md&quot;>
         <DialogHeader>
           <DialogTitle>
-            {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
+            {userReview ? &quot;Edit Your Review&quot; : `Rate Your Experience with ${revieweeName}`}
           </DialogTitle>
           <DialogDescription>
             Your feedback helps build a trustworthy community. It will be visible after moderation.
@@ -81,5 +93,5 @@ export function LeaveReviewModal({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

@@ -7,19 +7,19 @@ const REWARDS = [
 
 export default function RewardsPage() {
   return (
-    <div className="container max-w-xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Rewards</h1>
-      <ul className="space-y-4">
+    <div className=&quot;container max-w-xl py-10&quot;>
+      <h1 className=&quot;text-3xl font-bold mb-6&quot;>Rewards</h1>
+      <ul className=&quot;space-y-4&quot;>
         {REWARDS.map((r) => (
-          <li key={r.id} className="flex justify-between items-center border rounded-md p-4">
+          <li key={r.id} className=&quot;flex justify-between items-center border rounded-md p-4&quot;>
             <div>
-              <p className="font-medium">{r.title}</p>
-              <p className="text-sm text-muted-foreground">{r.cost} pts</p>
+              <p className=&quot;font-medium&quot;>{r.title}</p>
+              <p className=&quot;text-sm text-muted-foreground&quot;>{r.cost} pts</p>
             </div>
-            <Gift className="h-5 w-5" />
+            <Gift className=&quot;h-5 w-5&quot; />
           </li>
         ))}
       </ul>
     </div>
-  ),
+  )
 }

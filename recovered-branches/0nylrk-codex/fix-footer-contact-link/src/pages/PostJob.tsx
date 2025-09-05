@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -7,28 +8,38 @@ import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
+=======
+import { Header } from &quot;@/components/header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { JobPostingForm } from &quot;@/components/jobs&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Navigate } from &quot;react-router-dom&quot;;
+import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth(),
   const isMobile = useIsMobile(),
   
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse">Loading...</div>
+      <div className=&quot;flex items-center justify-center min-h-screen&quot;>
+        <div className=&quot;animate-pulse&quot;>Loading...</div>
       </div>
-    ),
+    )
   }
   
   return (
     <>
       <SEO 
-        title="Post a Job | Zion AI Marketplace" 
-        description="Post a job to find the perfect AI talent for your project." 
+        title=&quot;Post a Job | Zion AI Marketplace&quot; 
+        description=&quot;Post a job to find the perfect AI talent for your project.&quot; 
       />
       <Header />
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
-        <Card className="border shadow-md">
+        <Card className=&quot;border shadow-md&quot;>
           <CardHeader>
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>
             <CardDescription>
@@ -42,7 +53,7 @@ export default function PostJob() {
       </main>
       <Footer />
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
-      {isMobile && <div className="h-16"></div>}
+      {isMobile && <div className=&quot;h-16&quot;></div>}
     </>
-  ),
+  )
 }

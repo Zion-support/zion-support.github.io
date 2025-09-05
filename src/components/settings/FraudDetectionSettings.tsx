@@ -9,11 +9,18 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
+<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
+=======
+  AccordionTrigger} from &quot;@/components/ui/accordion&quot;;
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
@@ -31,98 +38,109 @@ export function FraudDetectionSettings() {
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
       toast({
+<<<<<<< HEAD
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated."}),
+        description: "Your fraud detection preferences have been updated."})
+=======
+        title: &quot;Settings saved&quot;,
+        description: &quot;Your fraud detection preferences have been updated.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       logErrorToProduction('Error saving preferences:', { data: error }),
       toast({
+<<<<<<< HEAD
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
+=======
+        title: &quot;Error&quot;,
+        description: &quot;Failed to save your preferences. Please try again.&quot;,
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsSaving(false),
+      setIsSaving(false)
     }
   },
 
   return (
-    <Card className="mb-8">
-      <CardHeader className="space-y-1">
-        <div className="flex items-center gap-2">
-          <ShieldAlert className="h-5 w-5 text-amber-500" />
-          <CardTitle className="text-xl">Fraud & Abuse Protection</CardTitle>
+    <Card className=&quot;mb-8&quot;>
+      <CardHeader className=&quot;space-y-1&quot;>
+        <div className=&quot;flex items-center gap-2&quot;>
+          <ShieldAlert className=&quot;h-5 w-5 text-amber-500&quot; />
+          <CardTitle className=&quot;text-xl&quot;>Fraud & Abuse Protection</CardTitle>
         </div>
         <CardDescription>
           Configure privacy settings related to fraud detection and abuse prevention on the platform
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
+        <div className=&quot;space-y-6&quot;>
+          <div className=&quot;space-y-4&quot;>
+            <div className=&quot;flex items-center justify-between&quot;>
               <div>
-                <Label className="font-medium" htmlFor="message-scanning">
+                <Label className=&quot;font-medium&quot; htmlFor=&quot;message-scanning&quot;>
                   Message Content Scanning
                 </Label>
-                <p className="text-sm text-muted-foreground">
+                <p className=&quot;text-sm text-muted-foreground&quot;>
                   Scan message content for potentially harmful or abusive material
                 </p>
               </div>
               <Switch
-                id="message-scanning"
-                aria-label="Message scanning"
+                id=&quot;message-scanning&quot;
+                aria-label=&quot;Message scanning&quot;
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
             
-            <div className="flex items-center justify-between">
+            <div className=&quot;flex items-center justify-between&quot;>
               <div>
-                <Label className="font-medium" htmlFor="activity-monitoring">
+                <Label className=&quot;font-medium&quot; htmlFor=&quot;activity-monitoring&quot;>
                   Activity Monitoring
                 </Label>
-                <p className="text-sm text-muted-foreground">
+                <p className=&quot;text-sm text-muted-foreground&quot;>
                   Monitor account activity for suspicious patterns
                 </p>
               </div>
               <Switch
-                id="activity-monitoring"
-                aria-label="Activity monitoring"
+                id=&quot;activity-monitoring&quot;
+                aria-label=&quot;Activity monitoring&quot;
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
             
-            <div className="flex items-center justify-between">
+            <div className=&quot;flex items-center justify-between&quot;>
               <div>
-                <Label className="font-medium" htmlFor="ai-analysis">
+                <Label className=&quot;font-medium&quot; htmlFor=&quot;ai-analysis&quot;>
                   AI-powered Analysis
                 </Label>
-                <p className="text-sm text-muted-foreground">
+                <p className=&quot;text-sm text-muted-foreground&quot;>
                   Use AI to analyze content and behavior for potential fraud
                 </p>
               </div>
               <Switch
-                id="ai-analysis"
-                aria-label="AI analysis"
+                id=&quot;ai-analysis&quot;
+                aria-label=&quot;AI analysis&quot;
                 checked={aiAnalysisEnabled}
                 onCheckedChange={setAiAnalysisEnabled}
               />
             </div>
           </div>
           
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-sm font-medium">
-                <div className="flex items-center gap-2">
-                  <Info className="h-4 w-4" />
+          <Accordion type=&quot;single&quot; collapsible className=&quot;w-full&quot;>
+            <AccordionItem value=&quot;item-1&quot;>
+              <AccordionTrigger className=&quot;text-sm font-medium&quot;>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <Info className=&quot;h-4 w-4&quot; />
                   About Fraud Detection
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                <p className="mb-2">
+              <AccordionContent className=&quot;text-sm text-muted-foreground&quot;>
+                <p className=&quot;mb-2&quot;>
                   The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes:
                 </p>
-                <ul className="list-disc pl-5 space-y-1 mb-2">
+                <ul className=&quot;list-disc pl-5 space-y-1 mb-2&quot;>
                   <li>Pattern detection in messages and job postings</li>
                   <li>AI-powered content analysis</li>
                   <li>Monitoring for suspicious account activities</li>
@@ -135,17 +153,17 @@ export function FraudDetectionSettings() {
             </AccordionItem>
           </Accordion>
           
-          <div className="pt-2">
+          <div className=&quot;pt-2&quot;>
             <Button 
               onClick={handleSavePreferences}
               disabled={isSaving}
-              className="bg-zion-purple hover:bg-zion-purple-light"
+              className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
             >
-              {isSaving ? "Saving..." : "Save Preferences"}
+              {isSaving ? &quot;Saving...&quot; : &quot;Save Preferences&quot;}
             </Button>
           </div>
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

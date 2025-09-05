@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from &quot;lucide-react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ResourceItem {
   id: string,
   title: string,
@@ -19,7 +26,7 @@ export function PartnerResources() {
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className=&quot;h-10 w-10 text-zion-purple&quot; />,
       url: '#'
     },
     {
@@ -27,7 +34,7 @@ export function PartnerResources() {
       title: 'Brand Guidelines',
       description: 'How to properly use our brand assets in your content',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className=&quot;h-10 w-10 text-zion-cyan&quot; />,
       url: '#'
     },
     {
@@ -35,7 +42,7 @@ export function PartnerResources() {
       title: 'Social Media Banners',
       description: 'Pre-designed graphics for your social channels',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className=&quot;h-10 w-10 text-zion-purple&quot; />,
       url: '#'
     },
     {
@@ -43,7 +50,7 @@ export function PartnerResources() {
       title: 'Promotional Video',
       description: 'Short explainer video about Zion AI Marketplace',
       type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
+      icon: <FileVideo className=&quot;h-10 w-10 text-red-500&quot; />,
       url: '#'
     },
     {
@@ -51,7 +58,7 @@ export function PartnerResources() {
       title: 'Email Templates',
       description: 'Ready-to-use email templates for your audience',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className=&quot;h-10 w-10 text-zion-cyan&quot; />,
       url: '#'
     },
     {
@@ -59,7 +66,7 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className=&quot;h-10 w-10 text-zion-cyan&quot; />,
       url: '#'
     }
   ],
@@ -67,14 +74,19 @@ export function PartnerResources() {
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
-      title: "Download started",
+      title: &quot;Download started&quot;,
       description: `Downloading ${resource.title}`,
-      variant: "default"}),
+<<<<<<< HEAD
+      variant: "default"})
   },
+=======
+      variant: &quot;default&quot;});
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
+    <div className=&quot;space-y-6&quot;>
+      <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
         <CardHeader>
           <CardTitle>Marketing Resources</CardTitle>
           <CardDescription>
@@ -82,22 +94,22 @@ export function PartnerResources() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
             {resources.map((resource) => (
-              <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="mb-4">
+              <Card key={resource.id} className=&quot;bg-zion-blue border-zion-blue-light overflow-hidden&quot;>
+                <CardContent className=&quot;p-6 flex flex-col items-center text-center&quot;>
+                  <div className=&quot;mb-4&quot;>
                     {resource.icon}
                   </div>
-                  <h3 className="font-semibold text-white mb-1">{resource.title}</h3>
-                  <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>
+                  <h3 className=&quot;font-semibold text-white mb-1&quot;>{resource.title}</h3>
+                  <p className=&quot;text-xs text-zion-slate-light mb-4&quot;>{resource.description}</p>
                   <Button 
                     onClick={() => handleDownload(resource)}
-                    size="sm"
-                    variant="outline"
-                    className="w-full flex items-center gap-2"
+                    size=&quot;sm&quot;
+                    variant=&quot;outline&quot;
+                    className=&quot;w-full flex items-center gap-2&quot;
                   >
-                    <Download className="h-4 w-4" />
+                    <Download className=&quot;h-4 w-4&quot; />
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -107,17 +119,17 @@ export function PartnerResources() {
         </CardContent>
       </Card>
 
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
         <CardHeader>
           <CardTitle>Promotion Guidelines</CardTitle>
           <CardDescription>
             Best practices for promoting the Zion AI Marketplace
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold text-white">Do's</h3>
-            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
+        <CardContent className=&quot;space-y-4&quot;>
+          <div className=&quot;space-y-2&quot;>
+            <h3 className=&quot;text-lg font-semibold text-white&quot;>Do's</h3>
+            <ul className=&quot;list-disc pl-5 space-y-1 text-zion-slate-light&quot;>
               <li>Use our official brand assets from the resources provided</li>
               <li>Share your unique referral link in your content</li>
               <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li>
@@ -126,9 +138,9 @@ export function PartnerResources() {
             </ul>
           </div>
 
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold text-white">Don'ts</h3>
-            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
+          <div className=&quot;space-y-2&quot;>
+            <h3 className=&quot;text-lg font-semibold text-white&quot;>Don'ts</h3>
+            <ul className=&quot;list-disc pl-5 space-y-1 text-zion-slate-light&quot;>
               <li>Make unrealistic promises about earnings or results</li>
               <li>Use manipulative or misleading marketing tactics</li>
               <li>Spam your referral link across unrelated content</li>
@@ -139,19 +151,23 @@ export function PartnerResources() {
         </CardContent>
       </Card>
 
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>
           <CardDescription>
             Need help with your affiliate marketing? Contact our partner support team.
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col items-center text-center py-6">
-          <p className="text-zion-slate-light mb-4">
+        <CardContent className=&quot;flex flex-col items-center text-center py-6&quot;>
+          <p className=&quot;text-zion-slate-light mb-4&quot;>
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
             Feel free to reach out if you have questions about promotions, resources, or payment.
           </p>
+<<<<<<< HEAD
           <Button className="bg-zion-purple hover: bg-zion-purple-dark">
+=======
+          <Button className=&quot;bg-zion-purple hover:bg-zion-purple-dark&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             Contact Partner Support
           </Button>
         </CardContent>

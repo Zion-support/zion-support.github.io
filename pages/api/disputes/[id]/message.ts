@@ -11,9 +11,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const dispute = await getDisputeById(id),
     if (!dispute) return res.status(404).json({ error: 'Not found' }),
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId),
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }),
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
     }
     const { body } = req.body || {},
     if (!body || typeof body !== 'string') return res.status(400).json({ error: 'Message body required' }),
@@ -26,9 +26,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       createdAt: now}),
     dispute.updatedAt = now,
     await upsertDispute(dispute),
-    return res.status(201).json({ dispute }),
+    return res.status(201).json({ dispute })
   }
 
   res.setHeader('AllowPOST'),
-  return res.status(405).end('Method Not Allowed'),
+  return res.status(405).end('Method Not Allowed')
 }

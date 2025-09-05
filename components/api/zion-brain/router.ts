@@ -20,10 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } }),
 
-    return res.status(200).json({ ...result, routed }),
+    return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = Date.now() - started,
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } }),
-    return res.status(500).json({ error: 'Router failure' }),
+    return res.status(500).json({ error: 'Router failure' })
   }
 }

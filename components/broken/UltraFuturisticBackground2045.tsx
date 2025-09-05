@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2045Props {
   children: React.ReactNode
 }
@@ -42,7 +41,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
-      }),
+      })
     }
 
     // Animation loop
@@ -86,7 +85,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             alpha: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
-          },
+          }
         }
       }),
 
@@ -106,12 +105,12 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             ctx.moveTo(particle1.x, particle1.y),
             ctx.lineTo(particle2.x, particle2.y),
             ctx.stroke(),
-            ctx.restore(),
+            ctx.restore()
           }
-        }),
+        })
       }),
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     animate(),
@@ -119,33 +118,33 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-      window.removeEventListener('resize', handleResize),
-    },
+      window.removeEventListener('resize', handleResize)
+    }
   }, []),
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className=&quot;relative min-h-screen bg-black overflow-hidden&quot;>
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
         style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
       />
 
       {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
+      <div className=&quot;fixed inset-0 pointer-events-none z-10&quot;>
         {/* Animated Grid */}
         <motion.div
-          className="absolute inset-0 opacity-20"
+          className=&quot;absolute inset-0 opacity-20&quot;
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -164,7 +163,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
         {/* Floating Neon Shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg&quot;
           animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1],
@@ -177,7 +176,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
 
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full&quot;
           animate={{
             rotate: [360, 0],
             scale: [1, 1.2, 1],
@@ -190,7 +189,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
 
         <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45"
+          className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45&quot;
           animate={{
             rotate: [45, 405],
             scale: [1, 1.15, 1],
@@ -204,7 +203,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
         {/* Additional floating elements */}
         <motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full"
+          className=&quot;absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full&quot;
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]}}
@@ -216,7 +215,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
 
         <motion.div
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12"
+          className=&quot;absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12&quot;
           animate={{
             rotate: [12, 372],
             scale: [1, 1.1, 1]}}
@@ -229,7 +228,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
         {/* Energy Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50"
+          className=&quot;absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50&quot;
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
@@ -242,7 +241,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
 
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50"
+          className=&quot;absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50&quot;
           animate={{
             scale: [1, 1.8, 1],
             opacity: [0.4, 0.9, 0.4],
@@ -256,20 +255,20 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       </div>
 
       {/* Gradient Overlays */}
-      <div className="fixed inset-0 pointer-events-none z-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
+      <div className=&quot;fixed inset-0 pointer-events-none z-20&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10&quot; />
+        <div className=&quot;absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5&quot; />
       </div>
 
       {/* Content */}
-      <div className="relative z-30">
+      <div className=&quot;relative z-30&quot;>
         {children}
       </div>
 
       {/* Animated Border Effects */}
-      <div className="fixed inset-0 pointer-events-none z-40">
+      <div className=&quot;fixed inset-0 pointer-events-none z-40&quot;>
         <motion.div
-          className="absolute inset-0 border border-transparent"
+          className=&quot;absolute inset-0 border border-transparent&quot;
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent)',
             backgroundSize: '200% 100%'
@@ -284,7 +283,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2045,

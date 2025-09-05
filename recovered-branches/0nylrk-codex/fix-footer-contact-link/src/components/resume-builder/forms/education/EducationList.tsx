@@ -1,7 +1,6 @@
 
 import { Education } from '@/types/resume',
 import { EducationItem } from './EducationItem',
-
 interface EducationListProps {
   educationEntries: Education[],
   onEdit: (education: Education) => void,
@@ -10,12 +9,12 @@ interface EducationListProps {
 
 export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
-    return null,
+    return null
   }
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Education</h3>
+    <div className=&quot;space-y-4&quot;>
+      <h3 className=&quot;text-md font-medium&quot;>Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem 
           key={edu.id} 
@@ -25,5 +24,5 @@ export function EducationList({ educationEntries, onEdit, onDelete }: EducationL
         />
       ))}
     </div>
-  ),
+  )
 }

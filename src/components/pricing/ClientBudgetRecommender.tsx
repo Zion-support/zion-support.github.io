@@ -1,15 +1,27 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import React, { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
+<<<<<<< HEAD
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
+=======
+} from &quot;@/services/pricingSuggestionService&quot;;
+import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Sparkles } from 'lucide-react'
 
 interface ClientBudgetRecommenderProps {
@@ -34,7 +46,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -48,11 +60,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-      setSuggestion(result),
+      setSuggestion(result)
     } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', { data: error }),
+      logErrorToProduction('Error generating budget suggestion:', { data: error })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -64,37 +76,37 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-          suggestionType: "client",
+          suggestionType: &quot;client&quot;,
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
-        }),
+        })
       }
     }
   },
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type="button"
-            variant="outline"
+            type=&quot;button&quot;
+            variant=&quot;outline&quot;
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className="w-full"
+            className=&quot;w-full&quot;
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+            <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType="hourly"
+            rateType=&quot;hourly&quot;
           />
         )}
       </div>
     </div>
-  ),
+  )
 },

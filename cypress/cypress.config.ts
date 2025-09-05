@@ -1,5 +1,4 @@
 import { defineConfig } from 'cypress',
-
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port
@@ -9,10 +8,10 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.family === 'chromium') {
-          launchOptions.args.push('--disable-ipv6'),
+          launchOptions.args.push('--disable-ipv6')
         }
-        return launchOptions,
-      }),
+        return launchOptions
+      })
     },
     env: {
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',

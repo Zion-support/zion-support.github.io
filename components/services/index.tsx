@@ -61,7 +61,7 @@ export default function ServicesIndexPage() {
     const service = s as { category?: string },
     const rawCat = (service.category || '').trim(),
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
-    byCategory[mapped].push(s),
+    byCategory[mapped].push(s)
   }
 
   React.useEffect(() => {
@@ -76,15 +76,15 @@ export default function ServicesIndexPage() {
       // Rating
       if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false,
       // Delivery time (not available in data, simulate pass-through)
-      return true,
+      return true
     }),
-    setFiltered(next),
+    setFiltered(next)
   }, [filters, services]),
 
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>(),
     services.forEach((s) => s.categories.forEach((c) => set.add(c))),
-    return Array.from(set),
+    return Array.from(set)
   }, [services]),
 
   const handleRequestQuote = (service: ServiceItem) => {
@@ -104,26 +104,26 @@ export default function ServicesIndexPage() {
         email: values.email})}),
     if (!res.ok) {
       const err = await res.json().catch(() => ({})),
-      throw new Error(err?.message || 'Failed to submit'),
+      throw new Error(err?.message || 'Failed to submit')
     }
   },
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+    <UltraFuturisticBackground variant=&quot;quantum&quot; intensity={1.5}>
       <Head>
         <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+        <meta name=&quot;description&quot; content=&quot;Discover curated IT services. Request quotes with AI-assisted summaries.&quot; />
       </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
+      <div className=&quot;relative&quot;>
+        <div className=&quot;absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500&quot; />
+        <div className=&quot;flex flex-col sm:flex-row gap-6&quot;>
           <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
+          <div className=&quot;flex-1&quot;>
+            <div className=&quot;mb-4 flex items-center justify-between&quot;>
+              <h1 className=&quot;text-2xl font-semibold text-white&quot;>Services</h1>
+              <div className=&quot;text-sm text-white/70&quot;>{filtered.length} results</div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
               {filtered.map((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
               ))}
@@ -139,7 +139,7 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  ),
+  )
 },
 
 export default ServicesPage,

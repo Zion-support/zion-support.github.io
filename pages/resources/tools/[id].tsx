@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { useRouter } from 'next/router',
-
 export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
@@ -59,9 +58,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Comprehensive evaluation frameworkIndustry benchmarking',
-        'Actionable recommendationsProgress tracking',
-        'Resource library access'
+        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     },
     {
@@ -117,9 +114,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        '5-level maturity frameworkMulti-dimensional assessment',
-        'Gap analysis toolsTransformation roadmap',
-        'Progress tracking'
+        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     },
     {
@@ -184,9 +179,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Industry benchmark databasePerformance gap analysis',
-        'Trend analysis toolsAction planning framework',
-        'Progress tracking'
+        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
   ],
@@ -199,16 +192,21 @@ export default function ToolResourcePage() {
         <Head>
           <title>Tool Resource Not Found | Zion Tech Group</title>
         </Head>
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-          <main className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
-              <p className="text-xl text-white/80 mb-8">
+        <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+          <main className=&quot;container mx-auto px-6 py-12&quot;>
+            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+              <h1 className=&quot;text-4xl font-bold mb-6 text-white&quot;>Tool Resource Not Found</h1>
+              <p className=&quot;text-xl text-white/80 mb-8&quot;>
                 The tool resource you're looking for doesn't exist.
               </p>
               <Link 
+<<<<<<< HEAD
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+                href=&quot;/resources&quot;
+                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               >
                 ← Back to Resources
               </Link>
@@ -223,76 +221,81 @@ export default function ToolResourcePage() {
     <>
       <Head>
         <title>{tool.title} | Zion Tech Group - Tool Resource</title>
-        <meta name="description" content={tool.description} />
-        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
-        <meta property="og:description" content={tool.description} />
+        <meta name=&quot;description&quot; content={tool.description} />
+        <meta property=&quot;og:title&quot; content={`${tool.title} | Zion Tech Group`} />
+        <meta property=&quot;og:description&quot; content={tool.description} />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            <nav className=&quot;mb-8&quot;>
+              <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                 ← Back to Resources
               </Link>
             </nav>
             
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+            <header className=&quot;mb-12&quot;>
+              <div className=&quot;mb-6&quot;>
+                <span className=&quot;px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30&quot;>
                   {tool.type}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
-              <p className="text-xl text-white/80 mb-4">{tool.description}</p>
-              <div className="flex items-center gap-4 text-white/60">
+              <h1 className=&quot;text-4xl font-bold mb-4 text-white&quot;>{tool.title}</h1>
+              <p className=&quot;text-xl text-white/80 mb-4&quot;>{tool.description}</p>
+              <div className=&quot;flex items-center gap-4 text-white/60&quot;>
                 <span>Estimated time: {tool.estimatedTime}</span>
               </div>
             </header>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              <div className="lg:col-span-2">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+            <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12&quot;>
+              <div className=&quot;lg:col-span-2&quot;>
+                <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
                   <div 
-                    className="prose prose-invert max-w-none"
+                    className=&quot;prose prose-invert max-w-none&quot;
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                   />
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
-                  <ul className="space-y-3">
+              <div className=&quot;space-y-6&quot;>
+                <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20&quot;>
+                  <h3 className=&quot;font-semibold text-green-400 text-lg mb-4&quot;>Key Features</h3>
+                  <ul className=&quot;space-y-3&quot;>
                     {tool.features.map((feature, index) => (
-                      <li key={index} className="text-white/80 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <li key={index} className=&quot;text-white/80 flex items-center gap-3&quot;>
+                        <div className=&quot;w-2 h-2 bg-green-400 rounded-full&quot;></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
-                  <div className="space-y-3">
+                <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20&quot;>
+                  <h3 className=&quot;font-semibold text-blue-400 text-lg mb-4&quot;>Tool Details</h3>
+                  <div className=&quot;space-y-3&quot;>
                     <div>
-                      <span className="text-white/60 text-sm">Type:</span>
-                      <p className="text-white font-medium">{tool.type}</p>
+                      <span className=&quot;text-white/60 text-sm&quot;>Type:</span>
+                      <p className=&quot;text-white font-medium&quot;>{tool.type}</p>
                     </div>
                     <div>
-                      <span className="text-white/60 text-sm">Time Required:</span>
-                      <p className="text-white font-medium">{tool.estimatedTime}</p>
+                      <span className=&quot;text-white/60 text-sm&quot;>Time Required:</span>
+                      <p className=&quot;text-white font-medium&quot;>{tool.estimatedTime}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="text-center">
+            <div className=&quot;text-center&quot;>
               <Link 
+<<<<<<< HEAD
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+                href=&quot;/contact&quot;
+                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               >
                 Get Started with Your Project
               </Link>

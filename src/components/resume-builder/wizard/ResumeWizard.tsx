@@ -8,7 +8,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button',
 import { Resume } from '@/types/resume',
-
 // Import components
 import { ResumeProgress } from './ResumeProgress',
 import { EmptyResumeState } from './EmptyResumeState',
@@ -18,7 +17,6 @@ import { ResumeStepContent } from './ResumeStepContent',
 import { useResumeProgress } from './useResumeProgress',
 import { ResumeVersionSelector } from './ResumeVersionSelector',
 import { RESUME_STEPS } from './constants',
-
 export function ResumeWizard() {
   const { user } = useAuth(),
   const { 
@@ -37,7 +35,7 @@ export function ResumeWizard() {
   
   useEffect(() => {
     if (user) {
-      fetchResume(),
+      fetchResume()
     }
   }, [user, fetchResume]),
   
@@ -45,7 +43,7 @@ export function ResumeWizard() {
     const resumeId = await createResume({ title: title.trim() }),
     if (resumeId) {
       await fetchResume(resumeId),
-      setShowNewResumeForm(false),
+      setShowNewResumeForm(false)
     }
   },
   
@@ -54,7 +52,7 @@ export function ResumeWizard() {
     if (currentIndex < RESUME_STEPS.length - 1) {
       const nextStep = RESUME_STEPS[currentIndex + 1],
       if (nextStep) {
-        setActiveTab(nextStep.id),
+        setActiveTab(nextStep.id)
       }
     }
   },
@@ -64,7 +62,7 @@ export function ResumeWizard() {
     if (currentIndex > 0) {
       const prevStep = RESUME_STEPS[currentIndex - 1],
       if (prevStep) {
-        setActiveTab(prevStep.id),
+        setActiveTab(prevStep.id)
       }
     }
   },
@@ -75,24 +73,24 @@ export function ResumeWizard() {
   
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className=&quot;flex justify-center items-center h-64&quot;>
+        <Loader2 className=&quot;h-8 w-8 animate-spin text-primary&quot; />
       </div>
-    ),
+    )
   }
   
   if (error) {
     return (
-      <Alert variant="destructive" className="mb-6">
-        <AlertCircle className="h-4 w-4" />
+      <Alert variant=&quot;destructive&quot; className=&quot;mb-6&quot;>
+        <AlertCircle className=&quot;h-4 w-4&quot; />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
-    ),
+    )
   }
   
   if (!resume && !showNewResumeForm) {
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />,
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   
   if (showNewResumeForm) {
@@ -102,31 +100,31 @@ export function ResumeWizard() {
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />
-    ),
+    )
   }
   
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4&quot;>
+        <h1 className=&quot;text-2xl font-bold&quot;>Resume Builder</h1>
+        <div className=&quot;flex gap-4 flex-wrap items-center&quot;>
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button 
             onClick={() => setShowNewResumeForm(true)}
-            variant="outline"
-            size="sm"
-            className="gap-2"
+            variant=&quot;outline&quot;
+            size=&quot;sm&quot;
+            className=&quot;gap-2&quot;
           >
-            <FilePlus className="h-4 w-4" /> 
+            <FilePlus className=&quot;h-4 w-4&quot; /> 
             Create New
           </Button>
         </div>
       </div>
       
       <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
+        <CardContent className=&quot;pt-6&quot;>
+          <div className=&quot;flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6&quot;>
+            <h2 className=&quot;text-xl font-semibold&quot;>{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           
@@ -149,5 +147,5 @@ export function ResumeWizard() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

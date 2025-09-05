@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -15,16 +16,40 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import { z } from &quot;zod&quot;;
+import { Loader2 } from &quot;lucide-react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Form } from &quot;@/components/ui/form&quot;;
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from &quot;@/components/ui/dialog&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { GeneratedMilestone } from &quot;@/hooks/useMilestoneGenerator&quot;;
+import { generateContract } from &quot;../utils/contractUtils&quot;;
+import { ProjectDetailsFields } from &quot;./ProjectDetailsFields&quot;;
+import { PaymentTermsFields } from &quot;./PaymentTermsFields&quot;;
+import { AdditionalClausesFields } from &quot;./AdditionalClausesFields&quot;;
+import { DeploymentOptions } from &quot;@/types/smart-contracts&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required"),
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
+  projectName: z.string().min(1, &quot;Project name is required&quot;),
+  scopeSummary: z.string().min(10, &quot;Scope summary should be at least 10 characters&quot;),
   startDate: z.date({
-    required_error: "Start date is required"}),
+    required_error: &quot;Start date is required&quot;}),
   endDate: z.date().optional(),
+<<<<<<< HEAD
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
   paymentAmount: z.string().min(1, "Payment amount is required"),
   additionalClauses: z.array(z.string()).default([])}),
+=======
+  paymentTerms: z.enum([&quot;hourly&quot;, &quot;fixed&quot;, &quot;milestone&quot;]),
+  paymentAmount: z.string().min(1, &quot;Payment amount is required&quot;),
+  additionalClauses: z.array(z.string()).default([])});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export type ContractFormValues = z.infer<typeof formSchema>,
 
@@ -54,20 +79,26 @@ export function ContractForm({
   const form = useForm<ContractFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialValues || {
-      projectName: "",
-      scopeSummary: "",
+      projectName: "&quot;,
+      scopeSummary: "&quot;,
       startDate: new Date(),
+<<<<<<< HEAD
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
+=======
+      paymentTerms: talent.hourly_rate ? &quot;hourly&quot; : &quot;fixed&quot;,
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "&quot;,
+      additionalClauses: [&quot;nda&quot;, &quot;ip&quot;]}});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
         const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey]),
-      }),
+        form.setValue(typedKey, initialValues[typedKey])
+      })
     }
   }, [initialValues, form]),
   
@@ -75,10 +106,10 @@ export function ContractForm({
   useEffect(() => {
     if (onFormValuesChange) {
       const subscription = form.watch((value) => {
-        onFormValuesChange(value as ContractFormValues),
+        onFormValuesChange(value as ContractFormValues)
       }),
       
-      return () => subscription.unsubscribe(),
+      return () => subscription.unsubscribe()
     }
   }, [form, onFormValuesChange]),
   
@@ -86,14 +117,25 @@ export function ContractForm({
     setGeneratedMilestones(milestones),
     
     // If payment terms isn't already set to milestone, update it
+<<<<<<< HEAD
     if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone"),
+      form.setValue("paymentTerms", "milestone")
     }
     
     toast({
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`}),
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
+=======
+    if (form.getValues(&quot;paymentTerms&quot;) !== &quot;milestone&quot;) {
+      form.setValue(&quot;paymentTerms&quot;, &quot;milestone&quot;);
+    }
+    
+    toast({
+      title: &quot;Milestones Generated&quot;,
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`});
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true),
@@ -105,15 +147,23 @@ export function ContractForm({
         generatedMilestones
       ),
       
-      onContractGenerated(contract),
+      onContractGenerated(contract)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating contract:", error),
       toast({
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
+=======
+      console.error(&quot;Error generating contract:&quot;, error);
+      toast({
+        title: &quot;Contract Generation Failed&quot;,
+        description: error instanceof Error ? error.message : &quot;Something went wrong. Please try again.&quot;,
+        variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   },
   
@@ -127,7 +177,7 @@ export function ContractForm({
       </DialogHeader>
     
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
           <ProjectDetailsFields 
             form={form} 
           />
@@ -143,25 +193,25 @@ export function ContractForm({
           />
           
           <Button 
-            type="submit" 
+            type=&quot;submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}
           >
             {isGenerating ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin&quot; />
                 Generating Contract...
               </>
             ) : (
-              "Generate Contract"
+              &quot;Generate Contract"
             )}
           </Button>
         </form>
       </Form>
       
-      <DialogFooter className="gap-2 flex-wrap mt-4">
+      <DialogFooter className="gap-2 flex-wrap mt-4&quot;>
         <Button 
-          variant="outline" 
+          variant=&quot;outline" 
           onClick={() => form.reset()}
           disabled={isGenerating}
         >
@@ -169,5 +219,5 @@ export function ContractForm({
         </Button>
       </DialogFooter>
     </>
-  ),
+  )
 }

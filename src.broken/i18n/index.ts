@@ -3,10 +3,8 @@ import { initReactI18next } from 'react-i18next',
 import LanguageDetector from 'i18next-browser-languagedetector',
 import { safeStorage } from '../utils/safeStorage',
 import Cookies from 'js-cookie',
-
 import enTranslation from '../../public/locales/en-US/common.json',
 import esTranslation from '../../public/locales/es-ES/common.json',
-
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -31,7 +29,7 @@ i18n
     nonExplicitSupportedLngs: false, // Don't auto-detect non-explicit languages
     initImmediate: false, // Initialize synchronously to avoid missing key warnings
     detection: {
-      order: ['cookielocalStorage', 'navigator'],
+      order: ['cookielocalStoragenavigator'],
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']

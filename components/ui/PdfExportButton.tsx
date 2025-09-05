@@ -1,5 +1,4 @@
 import React from 'react',
-
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>,
   fileName?: string,
@@ -21,14 +20,19 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     } as any,
 
-    html2pdf().set(opt).from(element).save(),
+    html2pdf().set(opt).from(element).save()
   },
 
   return (
     <button
       onClick={onClick}
+<<<<<<< HEAD
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
+=======
+      className=&quot;no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover:bg-blue-700 focus:outline-none&quot;
+      aria-label=&quot;Download as PDF&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     >
       Download as PDF
     </button>

@@ -17,7 +17,6 @@ import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume',
 import { usePortfolio } from '@/hooks/usePortfolio',
 import { useAuth } from '@/hooks/useAuth',
-
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -77,34 +76,34 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       let success = false,
       
       if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData),
+        success = await updateProject(project.id, projectData)
       } else {
         const projectId = await addProject(projectData),
-        success = !!projectId,
+        success = !!projectId
       }
       
       if (success) {
         onSuccess(),
-        form.reset(),
+        form.reset()
       }
     } catch (error) {
-      logErrorToProduction('Error saving project:', { data: error }),
+      logErrorToProduction('Error saving project:', { data: error })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-4&quot;>
         <FormField
           control={form.control}
-          name="title"
+          name=&quot;title&quot;
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
+                <Input placeholder=&quot;E.g., AI Chatbot, E-commerce Website&quot; {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,14 +112,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         
         <FormField
           control={form.control}
-          name="description"
+          name=&quot;description&quot;
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea 
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
+                  placeholder=&quot;Describe what the project does and your role in it...&quot;
+                  className=&quot;min-h-[100px]&quot;
                   {...field} 
                 />
               </FormControl>
@@ -131,30 +130,30 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         
         <FormField
           control={form.control}
-          name="technologies"
+          name=&quot;technologies&quot;
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+                <Input placeholder=&quot;React, Node.js, MongoDB, etc. (comma separated)&quot; {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <FormField
             control={form.control}
-            name="github_url"
+            name=&quot;github_url&quot;
             render={({ field }: { field: any }) => (
               <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
+                <FormLabel className=&quot;flex items-center gap-2&quot;>
+                  <Github className=&quot;h-4 w-4&quot; />
                   GitHub URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
+                  <Input placeholder=&quot;https://github.com/yourusername/project&quot; {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -163,15 +162,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           
           <FormField
             control={form.control}
-            name="demo_url"
+            name=&quot;demo_url&quot;
             render={({ field }: { field: any }) => (
               <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Link className="h-4 w-4" />
+                <FormLabel className=&quot;flex items-center gap-2&quot;>
+                  <Link className=&quot;h-4 w-4&quot; />
                   Demo URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="https://your-project-demo.com" {...field} />
+                  <Input placeholder=&quot;https://your-project-demo.com&quot; {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -181,15 +180,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         
         <FormField
           control={form.control}
-          name="image_url"
+          name=&quot;image_url&quot;
           render={({ field }: { field: any }) => (
             <FormItem>
-              <FormLabel className="flex items-center gap-2">
-                <FileImage className="h-4 w-4" />
+              <FormLabel className=&quot;flex items-center gap-2&quot;>
+                <FileImage className=&quot;h-4 w-4&quot; />
                 Screenshot URL
               </FormLabel>
               <FormControl>
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
+                <Input placeholder=&quot;https://example.com/screenshot.jpg&quot; {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -198,16 +197,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         
         {/* Future file upload field would go here */}
         
-        <div className="flex justify-end space-x-2 pt-4">
-          <Button type="button" variant="outline" onClick={onCancel}>
+        <div className=&quot;flex justify-end space-x-2 pt-4&quot;>
+          <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={onCancel}>
             Cancel
           </Button>
-          <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          <Button type=&quot;submit&quot; disabled={isLoading}>
+            {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
             {isEditing ? 'Update' : 'Add'} Project
           </Button>
         </div>
       </form>
     </Form>
-  ),
+  )
 }

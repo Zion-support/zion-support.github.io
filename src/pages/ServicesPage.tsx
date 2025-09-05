@@ -12,33 +12,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
 import { SERVICES } from '@/data/servicesData',
 import { useCurrency } from '@/hooks/useCurrency',
-
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
 
 // Market insights component
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
-  <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">${(stats.averagePrice / 1000).toFixed(1)}k</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
+  <Card className=&quot;bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6&quot;>
+    <CardContent className=&quot;p-6&quot;>
+      <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-green-400&quot;>${(stats.averagePrice / 1000).toFixed(1)}k</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Price</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">{stats.averageRating}</div>
-          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-blue-400&quot;>{stats.averageRating}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Rating</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.totalServices}</div>
-          <div className="text-sm text-muted-foreground">Total Services</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-purple-400&quot;>{stats.totalServices}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Total Services</div>
         </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.availableServices}</div>
-          <div className="text-sm text-muted-foreground">Available Now</div>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-2xl font-bold text-orange-400&quot;>{stats.availableServices}</div>
+          <div className=&quot;text-sm text-muted-foreground&quot;>Available Now</div>
         </div>
       </div>
-      <div className="mt-4 text-center text-sm text-muted-foreground">
+      <div className=&quot;mt-4 text-center text-sm text-muted-foreground&quot;>
         Premium Services ({stats.premiumServices}) • AI Score Avg: {stats.averageAIScore}
       </div>
     </CardContent>
@@ -56,28 +55,28 @@ const ServiceFilterControls = ({
   setShowRecommended,
   loading
 }: any) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+  <div className=&quot;flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative&quot;>
+    {loading && <Spinner className=&quot;absolute right-4 top-4 h-4 w-4 text-primary&quot; />}
+    <div className=&quot;flex items-center gap-2&quot;>
+      <Filter className=&quot;h-4 w-4 text-muted-foreground&quot; />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className=&quot;bg-background border border-border px-3 py-2 rounded&quot;>
         <option value="">All Categories</option>
         {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-        <option value="newest">Newest First</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="rating">Highest Rated</option>
-        <option value="ai-score">AI Score</option>
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded&quot;>
+        <option value=&quot;newest&quot;>Newest First</option>
+        <option value=&quot;price-low&quot;>Price: Low to High</option>
+        <option value=&quot;price-high&quot;>Price: High to Low</option>
+        <option value=&quot;rating&quot;>Highest Rated</option>
+        <option value=&quot;ai-score&quot;>AI Score</option>
       </select>
     </div>
-    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
-      <Star className="h-4 w-4 mr-1" />
-      {showRecommended ? "All Services" : "Recommended"}
+    <Button variant={showRecommended ? &quot;default&quot; : &quot;outline&quot;} size=&quot;sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Star className="h-4 w-4 mr-1&quot; />
+      {showRecommended ? &quot;All Services&quot; : &quot;Recommended"}
     </Button>
   </div>
 ),
@@ -95,36 +94,36 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 text-yellow-500 fill-current" />
               <span className="text-sm font-medium">{service.rating}</span>
-              <span className="text-xs text-muted-foreground">({service.reviewCount})</span>
+              <span className="text-xs text-muted-foreground&quot;>({service.reviewCount})</span>
             </div>
             {service.aiScore && service.aiScore > 85 && (
-              <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700">
+              <Badge variant=&quot;secondary" className="text-xs bg-purple-100 text-purple-700">
                 AI Score: {service.aiScore}
               </Badge>
             )}
           </div>
-          <div className="flex items-center gap-2 mt-2">
-            <Badge variant="secondary" className="text-xs">{service.author.name}</Badge>
+          <div className="flex items-center gap-2 mt-2&quot;>
+            <Badge variant=&quot;secondary" className="text-xs">{service.author.name}</Badge>
           </div>
         </div>
         <div className="text-right">
-          <div className="text-xl font-bold text-green-600">{formatPrice(service.price ?? 0)}</div>
-          <Badge variant={service.availability === "Available" ? "default" : "outline"} className="text-xs">
+          <div className="text-xl font-bold text-green-600&quot;>{formatPrice(service.price ?? 0)}</div>
+          <Badge variant={service.availability === &quot;Available&quot; ? &quot;default&quot; : &quot;outline"} className="text-xs">
             {service.availability}
           </Badge>
         </div>
       </div>
       <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{service.description}</p>
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">{service.category}</span>
-        <Button size="sm" onClick={onViewDetails}>
+        <span className="text-sm font-medium&quot;>{service.category}</span>
+        <Button size=&quot;sm" onClick={onViewDetails}>
           <ShoppingCart className="h-4 w-4 mr-1" />
           Contact
         </Button>
       </div>
     </CardHeader>
   </Card>
-),
+)
 },
 
 // Loading grid
@@ -159,11 +158,11 @@ export default function ServicesPage() {
     let filteredServices = allServices,
     
     if (filterCategory) {
-      filteredServices = filteredServices.filter(s => s.category === filterCategory),
+      filteredServices = filteredServices.filter(s => s.category === filterCategory)
     }
     
     if (showRecommended) {
-      filteredServices = getRecommendedServices(filteredServices),
+      filteredServices = getRecommendedServices(filteredServices)
     }
     
     filteredServices.sort((a, b) => {
@@ -188,7 +187,7 @@ export default function ServicesPage() {
       items,
       hasMore: endIndex < filteredServices.length || page < 10,
       total: filteredServices.length
-    },
+    }
   }, [sortBy, filterCategory, showRecommended, totalGenerated]),
 
   const {
@@ -205,23 +204,23 @@ export default function ServicesPage() {
 
   useEffect(() => {
     refresh(),
-    setTotalGenerated(0),
+    setTotalGenerated(0)
   }, [sortBy, filterCategory, showRecommended]),
 
   const marketStats = useMemo(() => {
     if (services.length === 0) return null,
-    return getServicesMarketStats(services),
+    return getServicesMarketStats(services)
   }, [services]),
 
   const categories = useMemo(() => {
-    return Array.from(new Set(services.map(s => s.category).filter(Boolean))),
+    return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
   }, [services]),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   if (loading && services.length === 0) {
@@ -235,7 +234,7 @@ export default function ServicesPage() {
         </motion.div>
         <ServicesLoadingGrid />
       </div>
-    ),
+    )
   }
 
   if (error) {
@@ -245,7 +244,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
       </div>
-    ),
+    )
   }
 
   return (
@@ -276,8 +275,8 @@ export default function ServicesPage() {
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-        <AnimatePresence mode="popLayout">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6&quot; initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode=&quot;popLayout">
           {services.map((item, index) => (
             <motion.div
               key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
@@ -314,5 +313,5 @@ export default function ServicesPage() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }

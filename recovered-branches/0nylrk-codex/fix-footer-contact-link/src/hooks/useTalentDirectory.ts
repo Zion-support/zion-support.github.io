@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents",
 import { useUIState } from "./talent/useUIState",
+=======
+import { useAuthStatus } from &quot;./talent/useAuthStatus&quot;;
+import { useTalentData } from &quot;./talent/useTalentData&quot;;
+import { useFilterTalents } from &quot;./talent/useFilterTalents&quot;;
+import { useUIState } from &quot;./talent/useUIState&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
@@ -91,5 +98,5 @@ export function useTalentDirectory() {
     clearFilters,
     toggleSection,
     handleToggleSave
-  },
+  }
 }

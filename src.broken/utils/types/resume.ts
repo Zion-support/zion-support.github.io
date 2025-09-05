@@ -38,7 +38,7 @@ export type PortfolioProject = {
 export type ResumeDocument = {
   id: string
   ownerUserId?: string
-  name: string // e.g., "DevOps Resume"
+  name: string // e.g., &quot;DevOps Resume&quot;
   personalSummary: string
   skills: string[]
   work: WorkExperience[]

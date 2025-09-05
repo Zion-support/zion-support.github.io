@@ -1,7 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
-
 export default function AIAutomationTrends2025() {
   return (
     <>
@@ -225,19 +224,19 @@ export default function AIAutomationTrends2025() {
                   className='px-4 py-2 bg-blue-600 hover: bg-blue-700 rounded-lg text-white transition-colors'
                 >
                   Twitter
-                </a>
+                </Link>
                 <a
                   href='#'
                   className='px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors'
                 >
                   LinkedIn
-                </a>
+                </Link>
                 <a
                   href='#'
                   className='px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors'
                 >
                   Email
-                </a>
+                </Link>
               </div>
             </div>
           </div>

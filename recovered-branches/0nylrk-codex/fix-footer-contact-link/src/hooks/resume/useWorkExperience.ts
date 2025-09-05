@@ -36,11 +36,15 @@ export function useWorkExperience() {
       
       if (error) throw error,
       
-      return showSuccessToast("Work experience added", "Your work experience has been added to your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+=======
+      return showSuccessToast(&quot;Work experience added&quot;, &quot;Your work experience has been added to your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add work experience'),
+      return handleResumeError(e, 'Could not add work experience')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -70,11 +74,15 @@ export function useWorkExperience() {
       
       if (error) throw error,
       
-      return showSuccessToast("Work experience updated", "Your work experience has been updated"),
+<<<<<<< HEAD
+      return showSuccessToast("Work experience updated", "Your work experience has been updated")
+=======
+      return showSuccessToast(&quot;Work experience updated&quot;, &quot;Your work experience has been updated&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update work experience'),
+      return handleResumeError(e, 'Could not update work experience')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -95,11 +103,15 @@ export function useWorkExperience() {
       
       if (error) throw error,
       
-      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
+=======
+      return showSuccessToast(&quot;Work experience deleted&quot;, &quot;Your work experience has been removed from your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete work experience'),
+      return handleResumeError(e, 'Could not delete work experience')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -109,5 +121,5 @@ export function useWorkExperience() {
     addWorkExperience,
     updateWorkExperience,
     deleteWorkExperience
-  },
+  }
 }

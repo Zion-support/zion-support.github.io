@@ -34,7 +34,7 @@ export function AIEnhancementPanel({
   const handleGenerate = async () => {
     const result = await enhanceContent(options),
     if (result) {
-      setGeneratedContent(result),
+      setGeneratedContent(result)
     }
   },
 
@@ -44,46 +44,46 @@ export function AIEnhancementPanel({
   ) => {
     setOptions({
       ...options,
-      [field]: e.target.value}),
+      [field]: e.target.value})
   },
 
   const handleApply = () => {
     onApply(generatedContent),
-    if (onClose) onClose(),
+    if (onClose) onClose()
   },
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
-    setTimeout(() => setCopied(false), 2000),
+    setTimeout(() => setCopied(false), 2000)
   },
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className=&quot;w-full max-w-2xl mx-auto&quot;>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
+        <CardTitle className=&quot;flex items-center gap-2&quot;>
+          <Sparkles className=&quot;h-5 w-5 text-primary&quot; />
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className=&quot;space-y-4&quot;>
         {/* Input area */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Content to enhance</label>
+        <div className=&quot;space-y-2&quot;>
+          <label className=&quot;text-sm font-medium&quot;>Content to enhance</label>
           <Textarea
-            placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
+            placeholder=&quot;Enter your content to enhance...&quot;
+            className=&quot;min-h-[100px]&quot;
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
           />
         </div>
 
         {/* Context input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
+        <div className=&quot;space-y-2&quot;>
+          <label className=&quot;text-sm font-medium&quot;>Context (optional)</label>
           <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
+            placeholder=&quot;Add any relevant context to guide the AI...&quot;
+            className=&quot;min-h-[60px]&quot;
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
           />
@@ -91,10 +91,10 @@ export function AIEnhancementPanel({
 
         {/* Instructions input (optional) */}
         {showInstructions && (
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Special instructions (optional)</label>
+          <div className=&quot;space-y-2&quot;>
+            <label className=&quot;text-sm font-medium&quot;>Special instructions (optional)</label>
             <Input
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              placeholder=&quot;E.g., 'Make it more conversational' or 'Focus on leadership skills'&quot;
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
             />
@@ -104,17 +104,17 @@ export function AIEnhancementPanel({
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
-          className="w-full" 
+          className=&quot;w-full&quot; 
           disabled={isEnhancing || !options.content && !options.context}
         >
           {isEnhancing ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className=&quot;mr-2 h-4 w-4&quot; />
               Generate Enhanced Content
             </>
           )}
@@ -122,27 +122,27 @@ export function AIEnhancementPanel({
 
         {/* Output area */}
         {generatedContent && (
-          <div className="space-y-2 mt-4">
-            <div className="flex justify-between items-center">
-              <label className="text-sm font-medium">Generated content</label>
+          <div className=&quot;space-y-2 mt-4&quot;>
+            <div className=&quot;flex justify-between items-center&quot;>
+              <label className=&quot;text-sm font-medium&quot;>Generated content</label>
               <Button 
-                variant="ghost" 
-                size="sm" 
+                variant=&quot;ghost&quot; 
+                size=&quot;sm&quot; 
                 onClick={handleCopy}
-                className="h-8"
+                className=&quot;h-8&quot;
               >
                 {copied ? (
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>
+                  <><Check className=&quot;h-4 w-4 mr-1&quot; /> Copied</>
                 ) : (
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
+                  <><Copy className=&quot;h-4 w-4 mr-1&quot; /> Copy</>
                 )}
               </Button>
             </div>
-            <div className="relative">
+            <div className=&quot;relative&quot;>
               <Textarea
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]"
+                className=&quot;min-h-[200px]&quot;
               />
             </div>
           </div>
@@ -150,9 +150,9 @@ export function AIEnhancementPanel({
       </CardContent>
       
       {generatedContent && (
-        <CardFooter className="flex justify-between">
+        <CardFooter className=&quot;flex justify-between&quot;>
           {onClose && (
-            <Button variant="outline" onClick={onClose}>
+            <Button variant=&quot;outline&quot; onClick={onClose}>
               Cancel
             </Button>
           )}
@@ -162,5 +162,5 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
-  ),
+  )
 }

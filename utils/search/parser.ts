@@ -16,26 +16,26 @@ function extractBudget(text: string): { minBudgetUsd?: number, maxBudgetUsd?: nu
   const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower),
   if (perHour) {
     const max = parseInt(perHour[1], 10),
-    return { maxBudgetUsd: max },
+    return { maxBudgetUsd: max }
   }
   const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower),
   if (under) {
     const max = parseInt(under[2], 10),
-    return { maxBudgetUsd: max },
+    return { maxBudgetUsd: max }
   }
   const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower),
   if (between) {
     const min = parseInt(between[2], 10),
     const max = parseInt(between[4], 10),
-    return { minBudgetUsd: min, maxBudgetUsd: max },
+    return { minBudgetUsd: min, maxBudgetUsd: max }
   }
   const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower),
   if (range) {
     const min = parseInt(range[1], 10),
     const max = parseInt(range[2], 10),
-    return { minBudgetUsd: min, maxBudgetUsd: max },
+    return { minBudgetUsd: min, maxBudgetUsd: max }
   }
-  return {},
+  return {}
 }
 
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
@@ -60,11 +60,11 @@ function extractLocation(text: string): string | undefined {
   const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[.\s]/.exec(lower),
   if (inMatch) return inMatch[1].trim(),
   if (/remote/.test(lower)) return 'remote',
-  return undefined,
+  return undefined
 }
 
 const COMMON_SKILLS = [
-  'reactnext.js', 'nodetypescript', 'javascriptpython', 'awsgcp', 'azurekubernetes', 'devopsdocker', 'terraformrag', 'langchainopenai', 'nlppytorch', 'rustpostgresql'
+  'reactnext.jsnodetypescriptjavascriptpythonawsgcp', 'azurekubernetesdevopsdockerterraformraglangchainopenai', 'nlppytorchrustpostgresql'
 ],
 
 function extractSkills(text: string): string[] {
@@ -76,9 +76,9 @@ function extractSkills(text: string): string[] {
   // rudimentary skill tokenization
   const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean),
   for (const t of tokens) {
-    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t),
+    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t)
   }
-  return Array.from(found),
+  return Array.from(found)
 }
 
 function extractKeywords(text: string): string[] {
@@ -87,7 +87,7 @@ function extractKeywords(text: string): string[] {
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
-    .filter((w) => w.length > 2 && !['showme', 'withand', 'forthe', 'aan', 'toby', 'ofunder', 'overin'].includes(w)),
+    .filter((w) => w.length > 2 && !['showmewithandfortheaan', 'tobyofunderoverin'].includes(w))
 }
 
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
@@ -130,8 +130,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,
-      keywords: base.keywords},
+      keywords: base.keywords}
   } catch {
-    return base,
+    return base
   }
 }

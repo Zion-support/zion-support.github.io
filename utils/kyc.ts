@@ -41,15 +41,15 @@ export interface KycProfile {
   flags?: string[], // e.g., ["mismatch","duplicate_ip"]
   lastUpdatedAt: string, // ISO
   createdAt: string, // ISO
-  auditTrail: Array<{ at: string, by: string, action: string, details?: Record<string unknown> }>,
+  auditTrail: Array<{ at: string, by: string, action: string, details?: Record<string unknown> }>
 }
 
 export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
   if (role === 'client') {
-    return ['government_id_frontgovernment_id_back', 'selfie'],
+    return ['government_id_frontgovernment_id_backselfie']
   }
   if (role === 'enterprise') {
-    return ['government_id_frontgovernment_id_back', 'selfiebusiness_registration', 'tax_certificate'],
+    return ['government_id_frontgovernment_id_backselfiebusiness_registrationtax_certificate']
   }
   return ['government_id_frontgovernment_id_back'], // talent
 }
@@ -58,11 +58,11 @@ export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind
   if (role === 'talent') {
     return ['academic_certificate']
   }
-  return ['proof_of_address'],
+  return ['proof_of_address']
 }
 
 export function canShowVerifiedBadge(profile?: KycProfile): boolean {
-  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match',
+  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match'
 }
 
 export function getBadgeLabels(profile?: KycProfile): string[] {
@@ -80,14 +80,14 @@ export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boole
   const required = profile.role ? getRequiredDocuments(profile.role) : [],
   const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind)),
   for (const req of required) {
-    if (!uploadedKinds.has(req)) missing.push(`document:${req}`),
+    if (!uploadedKinds.has(req)) missing.push(`document:${req}`)
   }
   if (profile.role === 'client' || profile.role === 'enterprise') {
-    if (!profile.fullLegalName) missing.push('fullLegalName'),
+    if (!profile.fullLegalName) missing.push('fullLegalName')
   }
   if (profile.role === 'enterprise') {
     if (!profile.businessName) missing.push('businessName'),
-    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber'),
+    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')
   }
-  return { ok: missing.length === 0, missing },
+  return { ok: missing.length === 0, missing }
 }

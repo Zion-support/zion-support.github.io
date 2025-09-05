@@ -40,7 +40,7 @@ export interface MonitoringConfig {
     email: boolean,
     slack: boolean,
     webhook: boolean
-  },
+  }
 }
 
 export class PerformanceMonitorService {
@@ -63,13 +63,13 @@ export class PerformanceMonitorService {
         body: JSON.stringify({ url })}),
 
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`),
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockMetrics(url),
+      return this.generateMockMetrics(url)
     }
   }
 
@@ -80,13 +80,13 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`),
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Generate mock historical data
-      return this.generateMockHistoricalData(url, days),
+      return this.generateMockHistoricalData(url, days)
     }
   }
 
@@ -100,11 +100,11 @@ export class PerformanceMonitorService {
         body: JSON.stringify(config)}),
 
       if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`),
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`)
       }
     } catch (error) {
       console.error('Failed to set monitoring config:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -116,13 +116,13 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`),
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Generate mock alerts
-      return this.generateMockAlerts(url),
+      return this.generateMockAlerts(url)
     }
   }
 
@@ -159,11 +159,9 @@ export class PerformanceMonitorService {
         dates
       },
       recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold content',
-        'Minimize render-blocking resourcesUse a CDN for static assets',
-        'Enable compression for text-based resources'
+        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'
       ]
-    },
+    }
   }
 
   private generateMockMetrics(url: string): PerformanceMetrics {
@@ -182,7 +180,7 @@ export class PerformanceMonitorService {
       accessibilityScore: Math.floor(Math.random() * 20) + 80,
       bestPracticesScore: Math.floor(Math.random() * 20) + 80,
       seoScore: Math.floor(Math.random() * 20) + 80
-    },
+    }
   }
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -208,10 +206,10 @@ export class PerformanceMonitorService {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      }),
+      })
     }
 
-    return data,
+    return data
   }
 
   private generateMockAlerts(url?: string): PerformanceAlert[] {
@@ -240,7 +238,7 @@ export class PerformanceMonitorService {
       }
     ],
 
-    return url ? alerts.filter(a => a.url === url) : alerts,
+    return url ? alerts.filter(a => a.url === url) : alerts
   }
 }
 
@@ -251,9 +249,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 19,
     period: '/month',
     features: [
-      'Monitor up to 5 URLs5-minute monitoring frequency',
-      'Basic performance metricsEmail alerts',
-      '7-day data retentionBasic reporting'
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
   },
   professional: {
@@ -261,10 +257,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 49,
     period: '/month',
     features: [
-      'Monitor up to 25 URLs1-minute monitoring frequency',
-      'Advanced performance metricsEmail, Slack, and webhook alerts',
-      '30-day data retentionAdvanced reporting and analytics',
-      'Custom thresholdsAPI access'
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
     ]
   },
   enterprise: {
@@ -272,10 +265,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149,
     period: '/month',
     features: [
-      'Monitor unlimited URLsReal-time monitoring',
-      'All performance metricsMultiple notification channels',
-      '1-year data retentionCustom dashboards',
-      'White-label reportingPriority support',
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
   }

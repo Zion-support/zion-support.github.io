@@ -1,5 +1,4 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',
-
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
@@ -16,9 +15,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
 		features: [
-			'LLM reply drafts with tone controlsIntent routing and SLA prediction',
-			'Smart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)',
-			'PII redaction and governanceDashboard with analytics and coaching'
+			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		],
 		popular: true,
 		icon: '📧',
@@ -31,9 +28,9 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Gmail/O365 APIsOpenAI/Groq', 'Next.js'],
-		integrations: ['GmailOutlook', 'SalesforceHubSpot', 'Zendesk'],
-		useCases: ['Inbound triageFollow-ups', 'NPS outreach'],
+		technology: ['Gmail/O365 APIsOpenAI/GroqNext.js'],
+		integrations: ['GmailOutlookSalesforceHubSpotZendesk'],
+		useCases: ['Inbound triageFollow-upsNPS outreach'],
 		roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
 		competitors: ['Superhuman AIFront Workflows'],
 		marketSize: '$10B+ communications AI',
@@ -55,9 +52,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.',
 		features: [
-			'Link shortener and branded domainsUTM builder and traffic quality scoring',
-			'Multi-touch attribution and deduplicationAutomated payouts and tax forms',
-			'Fraud and bot detectionPartner portal and reports'
+			'Link shortener and branded domainsUTM builder and traffic quality scoringMulti-touch attribution and deduplicationAutomated payouts and tax formsFraud and bot detectionPartner portal and reports'
 		],
 		popular: true,
 		icon: '🔗',
@@ -70,8 +65,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'Workers/Edge'],
-		integrations: ['StripeShopify', 'WooCommerce'],
+		technology: ['Next.jsPostgreSQLWorkers/Edge'],
+		integrations: ['StripeShopifyWooCommerce'],
 		useCases: ['Partner programsInfluencer payouts'],
 		roi: 'Grow partner-attributed revenue by 10–30%',
 		competitors: ['Impact.com (complex)Tune (enterprise)'],
@@ -94,9 +89,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.',
 		features: [
-			'Portal and RMA workflowsLabel generation and tracking',
-			'Warehousing and disposition updatesRefunds and exchanges automation',
-			'Fraud checks and abuse controlsAnalytics and cohort reports'
+			'Portal and RMA workflowsLabel generation and trackingWarehousing and disposition updatesRefunds and exchanges automationFraud checks and abuse controlsAnalytics and cohort reports'
 		],
 		popular: false,
 		icon: '📦',
@@ -109,8 +102,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsStripe', 'Shippo'],
-		integrations: ['ShopifyKlaviyo', 'Gorgias'],
+		technology: ['Next.jsStripeShippo'],
+		integrations: ['ShopifyKlaviyoGorgias'],
 		useCases: ['Returns and exchangesWarehouse ops'],
 		roi: 'Cut support tickets by 35% and improve retention',
 		competitors: ['Loop ReturnsReturnly'],
@@ -133,9 +126,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Create beautiful mobile surveys with skip logic, A/B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.',
 		features: [
-			'Branching logic designerEmbeddable SDK and JS snippet',
-			'Real-time analytics and funnelsWebhook exports and CSV',
-			'Email/SMS invite campaignsConsent and PII redaction'
+			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSVEmail/SMS invite campaignsConsent and PII redaction'
 		],
 		popular: false,
 		icon: '📱',
@@ -148,9 +139,9 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsTwilio', 'PostgreSQL'],
-		integrations: ['SegmentHubSpot', 'Slack'],
-		useCases: ['NPS/CSATIn-app feedback', 'Research studies'],
+		technology: ['Next.jsTwilioPostgreSQL'],
+		integrations: ['SegmentHubSpotSlack'],
+		useCases: ['NPS/CSATIn-app feedbackResearch studies'],
 		roi: 'Improve survey completion by 2-3x on mobile',
 		competitors: ['TypeformSurvicate'],
 		marketSize: '$5B survey tech',
@@ -172,9 +163,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'No-cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.',
 		features: [
-			'Pageviews, sessions, and cohortsEvents and conversions',
-			'Source/medium attributionFunnel and retention views',
-			'Custom dashboardsCSV and webhook export'
+			'Pageviews, sessions, and cohortsEvents and conversionsSource/medium attributionFunnel and retention viewsCustom dashboardsCSV and webhook export'
 		],
 		popular: false,
 		icon: '📊',
@@ -187,8 +176,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'ClickHouse (optional)'],
-		integrations: ['ShopifyWordPress', 'Webflow'],
+		technology: ['Next.jsPostgreSQLClickHouse (optional)'],
+		integrations: ['ShopifyWordPressWebflow'],
 		useCases: ['Funnel analysisCampaign attribution'],
 		roi: 'Faster insights with low overhead',
 		competitors: ['PlausibleFathom'],

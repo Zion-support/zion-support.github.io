@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button',
 import { Progress } from '@/components/ui/progress',
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface BundleInfo {
   totalSize: number,
   gzippedSize: number,
@@ -29,7 +27,7 @@ export function BundleAnalyzer() {
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
   if (!isAllowed) {
-    return null,
+    return null
   }
 
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),
@@ -49,7 +47,7 @@ export function BundleAnalyzer() {
     if (!show) return,
 
     setIsVisible(true),
-    collectBundleInfo(),
+    collectBundleInfo()
   }, []),
 
   const collectBundleInfo = async () => {
@@ -82,7 +80,7 @@ export function BundleAnalyzer() {
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
-          cached}),
+          cached})
       }),
 
       // Estimate gzipped size (roughly 70% of original)
@@ -98,18 +96,18 @@ export function BundleAnalyzer() {
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error }),
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
-      setIsCollecting(false),
+      setIsCollecting(false)
     }
   },
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
     const k = 1024,
-    const sizes = ['BKB', 'MBGB'],
+    const sizes = ['BKBMBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   },
 
   const getSizeColor = (size: number) => {
@@ -123,113 +121,113 @@ export function BundleAnalyzer() {
     localStorage.setItem('bundle-analyzer', (!current).toString()),
     setIsVisible(!current),
     if (!current) {
-      collectBundleInfo(),
+      collectBundleInfo()
     }
   },
 
   if (!shouldShow) {
-    return null,
+    return null
   }
 
   if (!isVisible) {
     return (
-      <div className="fixed bottom-20 right-4 z-50">
+      <div className=&quot;fixed bottom-20 right-4 z-50&quot;>
         <Button
-          variant="outline"
-          size="sm"
+          variant=&quot;outline&quot;
+          size=&quot;sm&quot;
           onClick={toggleAnalyzer}
-          className="bg-background/80 backdrop-blur-sm"
+          className=&quot;bg-background/80 backdrop-blur-sm&quot;
         >
-          <Package className="w-4 h-4 mr-2" />
+          <Package className=&quot;w-4 h-4 mr-2&quot; />
           Bundle Analyzer
         </Button>
       </div>
-    ),
+    )
   }
 
   return (
-    <div className="fixed bottom-20 right-4 z-50 w-96">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
-              <Package className="w-4 h-4 mr-2" />
+    <div className=&quot;fixed bottom-20 right-4 z-50 w-96&quot;>
+      <Card className=&quot;bg-background/95 backdrop-blur-sm border shadow-lg&quot;>
+        <CardHeader className=&quot;pb-2&quot;>
+          <div className=&quot;flex items-center justify-between&quot;>
+            <CardTitle className=&quot;text-sm flex items-center&quot;>
+              <Package className=&quot;w-4 h-4 mr-2&quot; />
               Bundle Analyzer
             </CardTitle>
-            <div className="flex gap-2">
+            <div className=&quot;flex gap-2&quot;>
               <Button
-                variant="ghost"
-                size="sm"
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className="h-6 w-6 p-0"
+                className=&quot;h-6 w-6 p-0&quot;
               >
-                <Zap className="w-3 h-3" />
+                <Zap className=&quot;w-3 h-3&quot; />
               </Button>
               <Button
-                variant="ghost"
-                size="sm"
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
                 onClick={toggleAnalyzer}
-                className="h-6 w-6 p-0"
+                className=&quot;h-6 w-6 p-0&quot;
               >
                 ✕
               </Button>
             </div>
           </div>
         </CardHeader>
-        <CardContent className="pt-0 space-y-3">
+        <CardContent className=&quot;pt-0 space-y-3&quot;>
           {bundleInfo ? (
             <>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="flex justify-between">
+              <div className=&quot;grid grid-cols-2 gap-2 text-xs&quot;>
+                <div className=&quot;flex justify-between&quot;>
                   <span>Total Size:</span>
                   <Badge className={getSizeColor(bundleInfo.totalSize)}>
                     {formatSize(bundleInfo.totalSize)}
                   </Badge>
                 </div>
-                <div className="flex justify-between">
+                <div className=&quot;flex justify-between&quot;>
                   <span>Gzipped:</span>
-                  <Badge variant="outline">
+                  <Badge variant=&quot;outline&quot;>
                     {formatSize(bundleInfo.gzippedSize)}
                   </Badge>
                 </div>
-                <div className="flex justify-between">
+                <div className=&quot;flex justify-between&quot;>
                   <span>Chunks:</span>
-                  <Badge variant="outline">{bundleInfo.chunkCount}</Badge>
+                  <Badge variant=&quot;outline&quot;>{bundleInfo.chunkCount}</Badge>
                 </div>
-                <div className="flex justify-between">
+                <div className=&quot;flex justify-between&quot;>
                   <span>Avg Load:</span>
-                  <Badge variant="outline">
+                  <Badge variant=&quot;outline&quot;>
                     {bundleInfo.loadTime.toFixed(0)}ms
                   </Badge>
                 </div>
               </div>
 
               <div>
-                <div className="flex justify-between items-center text-xs mb-1">
+                <div className=&quot;flex justify-between items-center text-xs mb-1&quot;>
                   <span>Cache Hit Rate</span>
                   <span>{bundleInfo.cacheHitRate.toFixed(1)}%</span>
                 </div>
-                <Progress value={bundleInfo.cacheHitRate} className="h-2" />
+                <Progress value={bundleInfo.cacheHitRate} className=&quot;h-2&quot; />
               </div>
 
               <div>
-                <div className="text-xs font-medium mb-2">Largest Chunks:</div>
-                <div className="space-y-1">
+                <div className=&quot;text-xs font-medium mb-2&quot;>Largest Chunks:</div>
+                <div className=&quot;space-y-1&quot;>
                   {chunks.map((chunk, index) => (
-                    <div key={chunk.name} className="flex justify-between items-center text-xs">
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="w-4 text-muted-foreground">{index + 1}.</span>
-                        <span className="truncate" title={chunk.name}>
+                    <div key={chunk.name} className=&quot;flex justify-between items-center text-xs&quot;>
+                      <div className=&quot;flex items-center gap-2 flex-1 min-w-0&quot;>
+                        <span className=&quot;w-4 text-muted-foreground&quot;>{index + 1}.</span>
+                        <span className=&quot;truncate&quot; title={chunk.name}>
                           {chunk.name}
                         </span>
                         {chunk.cached && (
-                          <Badge variant="outline" className="text-xs px-1 py-0">
+                          <Badge variant=&quot;outline&quot; className=&quot;text-xs px-1 py-0&quot;>
                             cached
                           </Badge>
                         )}
                       </div>
-                      <Badge className={getSizeColor(chunk.size)} variant="outline">
+                      <Badge className={getSizeColor(chunk.size)} variant=&quot;outline&quot;>
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -238,19 +236,19 @@ export function BundleAnalyzer() {
               </div>
 
               {bundleInfo.totalSize > 1000000 && (
-                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
-                  <AlertTriangle className="w-3 h-3 text-yellow-600" />
+                <div className=&quot;flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs&quot;>
+                  <AlertTriangle className=&quot;w-3 h-3 text-yellow-600&quot; />
                   <span>Bundle size is large. Consider code splitting.</span>
                 </div>
               )}
             </>
           ) : (
-            <div className="text-xs text-muted-foreground">
+            <div className=&quot;text-xs text-muted-foreground&quot;>
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>
           )}
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 } 

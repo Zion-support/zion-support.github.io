@@ -35,7 +35,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className=&quot;w-5 h-5&quot; />,
     description: 'Plans and average market prices',
     children: [
       { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
@@ -45,7 +45,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className=&quot;w-5 h-5&quot; />,
     description: 'Guides, reports and tools',
     children: [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
@@ -57,7 +57,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Contact',
     href: '/contact',
-    icon: <Phone className="w-5 h-5" />,
+    icon: <Phone className=&quot;w-5 h-5&quot; />,
     description: 'Talk to our team',
     featured: true,
     children: [
@@ -68,7 +68,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
     href: '/services',
-    icon: <Grid className="w-5 h-5" />,
+    icon: <Grid className=&quot;w-5 h-5&quot; />,
     description: 'Browse by category',
     badge: 'New',
     children: [
@@ -82,7 +82,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className=&quot;w-5 h-5&quot; />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
@@ -105,7 +105,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className=&quot;w-5 h-5&quot; />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     featured: true,
@@ -131,7 +131,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS Solutions',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className=&quot;w-5 h-5&quot; />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Hot',
     featured: true,
@@ -156,7 +156,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className=&quot;w-5 h-5&quot; />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     featured: true,
@@ -182,7 +182,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className=&quot;w-5 h-5&quot; />,
     description: 'Advanced enterprise infrastructure and security',
     badge: 'Enterprise',
     featured: true,
@@ -200,7 +200,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className=&quot;w-5 h-5&quot; />,
     description: 'Industry-specific technology solutions',
     badge: 'Industry',
     children: [
@@ -217,7 +217,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className=&quot;w-5 h-5&quot; />,
     description: 'Documentation, support, and learning resources',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -232,6 +232,7 @@ const navigationItems: NavigationItem[] = [
 ],
 
 const quickActions = [
+<<<<<<< HEAD
   { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
   { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/demo', icon: <Video className="w-4 h-4" /> },
@@ -242,6 +243,18 @@ const quickActions = [
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
 ],
+=======
+  { name: 'Get Started', href: '/contact', icon: <ArrowRight className=&quot;w-4 h-4&quot; />, primary: true },
+  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className=&quot;w-4 h-4&quot; /> },
+  { name: 'Book Demo', href: '/demo', icon: <Video className=&quot;w-4 h-4&quot; /> },
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className=&quot;w-4 h-4&quot; /> },
+  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className=&quot;w-4 h-4&quot; /> },
+  { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className=&quot;w-4 h-4&quot; /> },
+  { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className=&quot;w-4 h-4&quot; /> },
+  { name: 'Documentation', href: '/docs', icon: <BookOpen className=&quot;w-4 h-4&quot; /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className=&quot;w-4 h-4&quot; /> }
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const UltraFuturisticNavigation2035: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -250,11 +263,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const toggleDropdown = (name: string) => {
@@ -262,53 +275,53 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   },
 
   const closeDropdowns = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null)
   },
 
   const closeMobileMenu = () => {
     setIsOpen(false),
-    closeDropdowns(),
+    closeDropdowns()
   },
 
   return (
-    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav aria-label=&quot;Primary&quot; className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' 
         : 'bg-transparent'
     }`}>
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         <div className={`absolute inset-0 transition-opacity duration-300 ${
           isScrolled ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
+          <div className=&quot;absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95&quot; />
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5&quot; />
         </div>
       </div>
 
-      <div className="relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+      <div className=&quot;relative z-10&quot;>
+        <div className=&quot;container mx-auto px-4&quot;>
+          <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-white" />
+            <Link href=&quot;/&quot; className=&quot;flex items-center gap-3 group&quot;>
+              <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
+                <Brain className=&quot;w-6 h-6 text-white&quot; />
               </div>
               <div>
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <div className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                   Zion Tech Group
                 </div>
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>
+                <div className=&quot;text-xs text-gray-400&quot;>Revolutionary Technology</div>
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className=&quot;hidden lg:flex items-center gap-8&quot;>
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className=&quot;relative group&quot;>
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                    className=&quot;flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400&quot;
                   >
                     {item.icon}
                     <span>{item.name}</span>
@@ -338,21 +351,21 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
+                        className=&quot;absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden&quot;
                         onMouseLeave={closeDropdowns}
                       >
-                        <div className="p-6">
-                          <div className="flex items-center gap-3 mb-4">
+                        <div className=&quot;p-6&quot;>
+                          <div className=&quot;flex items-center gap-3 mb-4&quot;>
                             {item.icon}
                             <div>
-                              <h3 className="font-semibold text-white">{item.title || item.name}</h3>
+                              <h3 className=&quot;font-semibold text-white&quot;>{item.title || item.name}</h3>
                               {item.description && (
-                                <p className="text-sm text-gray-400">{item.description}</p>
+                                <p className=&quot;text-sm text-gray-400&quot;>{item.description}</p>
                               )}
                             </div>
                           </div>
                           
-                          <div className="space-y-2">
+                          <div className=&quot;space-y-2&quot;>
                             {item.children?.map((child) => (
                               <Link
                                 key={child.name}
@@ -364,15 +377,15 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeDropdowns}
                               >
-                                {child.featured && <Star className="w-4 h-4 text-cyan-400" />}
-                                <div className="flex-1">
-                                  <div className="font-medium">{child.name}</div>
+                                {child.featured && <Star className=&quot;w-4 h-4 text-cyan-400&quot; />}
+                                <div className=&quot;flex-1&quot;>
+                                  <div className=&quot;font-medium&quot;>{child.name}</div>
                                   {child.description && (
-                                    <div className="text-sm opacity-75">{child.description}</div>
+                                    <div className=&quot;text-sm opacity-75&quot;>{child.description}</div>
                                   )}
                                 </div>
-                                <ArrowRight className="w-4 h-4 opacity-50" />
-                              </Link>
+                                <ArrowRight className=&quot;w-4 h-4 opacity-50&quot; />
+                              </a>
                             ))}
                           </div>
                         </div>
@@ -384,9 +397,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             </div>
 
             {/* Right Side Actions */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className=&quot;hidden lg:flex items-center gap-4&quot;>
               {/* Quick Actions */}
-              <div className="flex items-center gap-2">
+              <div className=&quot;flex items-center gap-2&quot;>
                 {quickActions.map((action) => (
                   <Link
                     key={action.name}
@@ -399,19 +412,19 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   >
                     {action.icon}
                     <span>{action.name}</span>
-                  </Link>
+                  </a>
                 ))}
               </div>
 
               {/* Contact Info */}
-              <div className="flex items-center gap-4 text-sm text-gray-400">
-                <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">
-                  <Phone className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.mobile}</span>
+              <div className=&quot;flex items-center gap-4 text-sm text-gray-400&quot;>
+                <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200&quot;>
+                  <Phone className=&quot;w-4 h-4&quot; />
+                  <span className=&quot;hidden xl:inline&quot;>{contactInfo.mobile}</span>
                 </a>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">
-                  <Mail className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.email}</span>
+                <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center gap-2 hover:text-purple-400 transition-colors duration-200&quot;>
+                  <Mail className=&quot;w-4 h-4&quot; />
+                  <span className=&quot;hidden xl:inline&quot;>{contactInfo.email}</span>
                 </a>
               </div>
             </div>
@@ -419,10 +432,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-              aria-label="Toggle mobile menu"
+              className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
+              aria-label=&quot;Toggle mobile menu&quot;
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
             </button>
           </div>
         </div>
@@ -435,18 +448,18 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
+              className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50&quot;
             >
-              <div className="container mx-auto px-4 py-6">
-                <div className="space-y-6">
+              <div className=&quot;container mx-auto px-4 py-6&quot;>
+                <div className=&quot;space-y-6&quot;>
                   {/* Mobile Navigation Items */}
                   {navigationItems.map((item) => (
                     <div key={item.name}>
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200"
+                        className=&quot;flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200&quot;
                       >
-                        <div className="flex items-center gap-3">
+                        <div className=&quot;flex items-center gap-3&quot;>
                           {item.icon}
                           <span>{item.name}</span>
                           {item.badge && (
@@ -473,7 +486,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml-6 mt-2 space-y-2"
+                            className=&quot;ml-6 mt-2 space-y-2&quot;
                           >
                             {item.children?.map((child) => (
                               <Link
@@ -486,11 +499,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeMobileMenu}
                               >
-                                <div className="font-medium">{child.name}</div>
+                                <div className=&quot;font-medium&quot;>{child.name}</div>
                                 {child.description && (
-                                  <div className="text-sm opacity-75 mt-1">{child.description}</div>
+                                  <div className=&quot;text-sm opacity-75 mt-1&quot;>{child.description}</div>
                                 )}
-                              </Link>
+                              </a>
                             ))}
                           </motion.div>
                         )}
@@ -499,8 +512,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   ))}
 
                   {/* Mobile Quick Actions */}
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3">
+                  <div className=&quot;pt-4 border-t border-gray-800/50&quot;>
+                    <div className=&quot;space-y-3&quot;>
                       {quickActions.map((action) => (
                         <Link
                           key={action.name}
@@ -514,25 +527,25 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         >
                           {action.icon}
                           <span>{action.name}</span>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
 
                   {/* Mobile Contact Info */}
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3 text-sm text-gray-400">
-                      <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Phone className="w-4 h-4" />
+                  <div className=&quot;pt-4 border-t border-gray-800/50&quot;>
+                    <div className=&quot;space-y-3 text-sm text-gray-400&quot;>
+                      <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200&quot;>
+                        <Phone className=&quot;w-4 h-4&quot; />
                         <span>{contactInfo.mobile}</span>
                       </a>
-                      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Mail className="w-4 h-4" />
+                      <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200&quot;>
+                        <Mail className=&quot;w-4 h-4&quot; />
                         <span>{contactInfo.email}</span>
                       </a>
-                      <div className="flex items-center gap-3 p-3 rounded-lg">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{contactInfo.address}</span>
+                      <div className=&quot;flex items-center gap-3 p-3 rounded-lg&quot;>
+                        <MapPin className=&quot;w-4 h-4&quot; />
+                        <span className=&quot;text-sm&quot;>{contactInfo.address}</span>
                       </div>
                     </div>
                   </div>
@@ -543,7 +556,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         </AnimatePresence>
       </div>
     </nav>
-  ),
+  )
 },
 
 export default UltraFuturisticNavigation2035,

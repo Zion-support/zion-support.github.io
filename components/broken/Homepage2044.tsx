@@ -7,7 +7,6 @@ import {
   ChevronDown, CheckCircle, Users, Award, Clock
 } from 'lucide-react',
 import { Service } from '../types',
-
 // Import our new revolutionary services
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
@@ -15,12 +14,10 @@ import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-servi
 import { innovative2025AIAutonomousEcosystemV3 } from '../data/2025-innovative-ai-autonomous-ecosystem-v3',
 import { emerging2025TechBreakthroughsV4 } from '../data/2025-emerging-tech-breakthroughs-v4',
 import { advanced2025ITInfrastructureServicesV2 } from '../data/2025-advanced-it-infrastructure-services-v2',
-
 // Import our new 2025 real enterprise AI services
 import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services',
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',
-
 // Lazy load new components for better performance
 const ServiceCard = lazy(() => import('./ServiceCard')),
 const TestimonialsSection = lazy(() => import('./TestimonialsSection')),
@@ -31,10 +28,10 @@ const ServiceCard = lazy(() => import('./ServiceCard')),
 
 // Loading skeleton component
 const LoadingSkeleton = () => (
-  <div className="animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+  <div className=&quot;animate-pulse&quot;>
+    <div className=&quot;h-8 bg-gray-700 rounded mb-4&quot;></div>
+    <div className=&quot;h-4 bg-gray-700 rounded mb-2&quot;></div>
+    <div className=&quot;h-4 bg-gray-700 rounded w-3/4&quot;></div>
   </div>
 ),
 
@@ -74,7 +71,7 @@ const Homepage2044: React.FC = () => {
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    ),
+    )
   }, [selectedCategory, allRevolutionaryServices]),
 
   const categories = useMemo(() => [
@@ -87,6 +84,7 @@ const Homepage2044: React.FC = () => {
   ], []),
 
   const features = useMemo(() => [
+<<<<<<< HEAD
     { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum Neural Networks 2044", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-2044", color: "from-blue-500 to-cyan-500" },
     { icon: Shield, title: "Quantum Cybersecurity 2044", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-2044", color: "from-red-500 to-orange-500" },
@@ -101,36 +99,52 @@ const Homepage2044: React.FC = () => {
     { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" },
     { number: "200+", label: "Countries Served", icon: Globe, description: "Global reach" }
   ], []),
+=======
+    { icon: Brain, title: &quot;AI Consciousness Evolution 2044&quot;, description: &quot;Next-generation AI consciousness with emotional intelligence&quot;, href: &quot;/ai-consciousness-evolution-2044&quot;, color: &quot;from-purple-500 to-pink-500&quot; },
+    { icon: Atom, title: &quot;Quantum Neural Networks 2044&quot;, description: &quot;Quantum-powered AI with consciousness integration&quot;, href: &quot;/quantum-neural-network-platform-2044&quot;, color: &quot;from-blue-500 to-cyan-500&quot; },
+    { icon: Shield, title: &quot;Quantum Cybersecurity 2044&quot;, description: &quot;Quantum-resistant security with AI consciousness&quot;, href: &quot;/quantum-cybersecurity-platform-2044&quot;, color: &quot;from-red-500 to-orange-500&quot; },
+    { icon: Rocket, title: &quot;Space Resource Intelligence 2044&quot;, description: &quot;AI-powered space exploration with consciousness&quot;, href: &quot;/space-resource-intelligence-2044&quot;, color: &quot;from-indigo-500 to-purple-500&quot; },
+    { icon: Cpu, title: &quot;Autonomous Business Intelligence 2044&quot;, description: &quot;Fully autonomous AI business intelligence&quot;, href: &quot;/ai-autonomous-business-intelligence-2044&quot;, color: &quot;from-emerald-500 to-teal-500&quot; },
+    { icon: Database, title: &quot;Quantum Cloud Infrastructure 2044&quot;, description: &quot;Quantum-powered cloud with consciousness&quot;, href: &quot;/quantum-cloud-infrastructure-2044&quot;, color: &quot;from-yellow-500 to-orange-500&quot; }
+  ];
+
+  const stats = useMemo(() => [
+    { number: &quot;2000+&quot;, label: &quot;Revolutionary Services&quot;, icon: Star, description: &quot;Cutting-edge solutions&quot; },
+    { number: &quot;99.99%&quot;, label: &quot;Uptime Guarantee&quot;, icon: TrendingUp, description: &quot;Reliable performance&quot; },
+    { number: &quot;24/7&quot;, label: &quot;AI Support Available&quot;, icon: Brain, description: &quot;Always there for you&quot; },
+    { number: &quot;200+&quot;, label: &quot;Countries Served&quot;, icon: Globe, description: &quot;Global reach&quot; }
+  ], []);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcta_click', { cta_type: 'get_started' }),
+      (window as any).gtag('eventcta_click', { cta_type: 'get_started' })
     }
-    window.location.href = '/revolutionary-2044-pricing-showcase',
+    window.location.href = '/revolutionary-2044-pricing-showcase'
   }, []),
 
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' }),
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' })
     }
-    window.location.href = '/services',
+    window.location.href = '/services'
   }, []),
 
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventservice_click', { service_name: service.name }),
+      (window as any).gtag('eventservice_click', { service_name: service.name })
     }
-    window.location.href = service.slug,
+    window.location.href = service.slug
   }, []),
 
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId),
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventcategory_filter', { category: categoryId }),
+      (window as any).gtag('eventcategory_filter', { category: categoryId })
     }
   }, []),
 
@@ -142,14 +156,14 @@ const Homepage2044: React.FC = () => {
     },
 
     if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(initializePage),
+      (window as any).requestIdleCallback(initializePage)
     } else {
-      setTimeout(initializePage, 100),
+      setTimeout(initializePage, 100)
     }
     
     // Auto-rotate featured services with better performance
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+      setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000),
     
     // Track mouse movement for parallax effects with throttling
@@ -158,9 +172,9 @@ const Homepage2044: React.FC = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           setMousePosition({ x: e.clientX, y: e.clientY }),
-          ticking = false,
+          ticking = false
         }),
-        ticking = true,
+        ticking = true
       }
     },
     
@@ -171,7 +185,7 @@ const Homepage2044: React.FC = () => {
       const scrollTop = window.pageYOffset,
       const docHeight = document.body.offsetHeight - window.innerHeight,
       const scrollPercent = (scrollTop / docHeight) * 100,
-      setScrollProgress(scrollPercent),
+      setScrollProgress(scrollPercent)
     },
     
     window.addEventListener('scroll', handleScroll, { passive: true }),
@@ -179,59 +193,59 @@ const Homepage2044: React.FC = () => {
     return () => {
       clearInterval(interval),
       window.removeEventListener('mousemove', handleMouseMove),
-      window.removeEventListener('scroll', handleScroll),
-    },
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, []),
 
   // Loading state
   if (isLoading) {
     return (
       <Layout>
-        <div className="min-h-screen flex items-center justify-center">
+        <div className=&quot;min-h-screen flex items-center justify-center&quot;>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center"
+            className=&quot;text-center&quot;
           >
-            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
+            <div className=&quot;w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4&quot;></div>
+            <p className=&quot;text-cyan-400 text-lg&quot;>Loading Zion Tech Group...</p>
           </motion.div>
         </div>
       </Layout>
-    ),
+    )
   }
 
   return (
     <Layout>
       {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
+      <div className=&quot;fixed top-0 left-0 w-full h-1 bg-gray-800 z-50&quot;>
         <motion.div
-          className="h-full bg-gradient-to-r from-cyan-500 to-purple-600"
+          className=&quot;h-full bg-gradient-to-r from-cyan-500 to-purple-600&quot;
           style={{ width: `${scrollProgress}%` }}
           transition={{ duration: 0.1 }}
         />
       </div>
 
       {/* Main Content */}
-      <main className="relative z-10">
+      <main className=&quot;relative z-10&quot;>
         {/* Hero Section */}
         <section 
-          className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
+          className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;
+          aria-labelledby=&quot;hero-heading&quot;
         >
           {/* Enhanced Animated Background with Performance Optimizations */}
-          <div className="absolute inset-0 -z-10">
+          <div className=&quot;absolute inset-0 -z-10&quot;>
             {/* Floating orbs with neon effects - optimized for performance */}
-            <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]"></div>
-            <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000 shadow-[0_0_100px_rgba(168,85,247,0.5)]"></div>
-            <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500 shadow-[0_0_100px_rgba(16,185,129,0.5)]"></div>
+            <div className=&quot;absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]&quot;></div>
+            <div className=&quot;absolute bottom-20 right-20 w-[500px] h-[500px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000 shadow-[0_0_100px_rgba(168,85,247,0.5)]&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500 shadow-[0_0_100px_rgba(16,185,129,0.5)]&quot;></div>
             
             {/* Optimized animated particles - reduced count for better performance */}
-            <div className="absolute inset-0">
+            <div className=&quot;absolute inset-0&quot;>
               {[...Array(10)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]"
+                  className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]&quot;
                   animate={{
                     x: [0, 150, 0],
                     y: [0, -150, 0],
@@ -241,7 +255,7 @@ const Homepage2044: React.FC = () => {
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
-                    ease: "easeInOut"
+                    ease: &quot;easeInOut&quot;
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
@@ -251,8 +265,8 @@ const Homepage2044: React.FC = () => {
             </div>
 
             {/* Grid pattern with neon glow */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0" style={{
+            <div className=&quot;absolute inset-0 opacity-20&quot;>
+              <div className=&quot;absolute inset-0&quot; style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
                 backgroundSize: '60px 60px'
               }}></div>
@@ -260,7 +274,7 @@ const Homepage2044: React.FC = () => {
 
             {/* Floating geometric shapes - optimized animations */}
             <motion.div
-              className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
+              className=&quot;absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45&quot;
               animate={{
                 rotate: [45, 405],
                 scale: [1, 1.2, 1],
@@ -268,157 +282,157 @@ const Homepage2044: React.FC = () => {
               transition={{
                 duration: 10,
                 repeat: Infinity as any,
-                ease: "linear"
+                ease: &quot;linear&quot;
               }}
             />
             <motion.div
-              className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
+              className=&quot;absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full&quot;
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity as any,
-                ease: "easeInOut"
+                ease: &quot;easeInOut&quot;
               }}
             />
           </div>
         </div>
       </Layout>
-    ),
+    )
   }
 
   return (
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
-        <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
-        <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name=&quot;description&quot; content=&quot;Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group&quot; />
+        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
         
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Zion Tech Group - Revolutionary 2044 Technology Solutions&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions.&quot; />
+        <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.jpg&quot; />
         
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ziontechgroup.com/" />
-        <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
-        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta property=&quot;twitter:url&quot; content=&quot;https://ziontechgroup.com/&quot; />
+        <meta property=&quot;twitter:title&quot; content=&quot;Zion Tech Group - Revolutionary 2044 Technology Solutions&quot; />
+        <meta property=&quot;twitter:description&quot; content=&quot;Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions.&quot; />
+        <meta property=&quot;twitter:image&quot; content=&quot;https://ziontechgroup.com/og-image.jpg&quot; />
         
         {/* Structured Data */}
         <script
-          type="application/ld+json"
+          type=&quot;application/ld+json&quot;
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+              &quot;@context&quot;: &quot;https://schema.org&quot;,
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;Zion Tech Group&quot;,
+              &quot;description&quot;: &quot;Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions&quot;,
+              &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
+              &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
+              &quot;sameAs&quot;: [
+                &quot;https://linkedin.com/company/ziontechgroup&quot;,
+                &quot;https://twitter.com/ziontechgroup&quot;,
+                &quot;https://github.com/ziontechgroup&quot;
               ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "availableLanguage": "English"
+              &quot;contactPoint&quot;: {
+                &quot;@type&quot;: &quot;ContactPoint&quot;,
+                &quot;contactType&quot;: &quot;customer service&quot;,
+                &quot;availableLanguage&quot;: &quot;English&quot;
               }
             })
           }}
         />
         
         {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+        <link rel=&quot;preload&quot; href=&quot;/fonts/inter-var.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossOrigin=&quot;anonymous&quot; />
+        <link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.googleapis.com&quot; />
+        <link rel=&quot;dns-prefetch&quot; href=&quot;//cdn.jsdelivr.net&quot; />
       </Head>
 
             <motion.h1
-              id="hero-heading"
-              className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
+              id=&quot;hero-heading&quot;
+              className=&quot;text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none&quot;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: &quot;easeOut&quot; }}
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+              <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]&quot;>
                 Zion Tech Group
               </span>
             </motion.h1>
             
             <motion.p
-              className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
+              className=&quot;text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light&quot;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: &quot;easeOut&quot; }}
             >
               Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
+              className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.4, ease: &quot;easeOut&quot; }}
             >
               <button 
-                className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden"
+                className=&quot;group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden&quot;
                 onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group revolutionary services"
+                aria-label=&quot;Get started with Zion Tech Group revolutionary services&quot;
               >
-                <span className="relative z-10 flex items-center">
+                <span className=&quot;relative z-10 flex items-center&quot;>
                   Experience the Future
-                  <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ArrowRight className=&quot;w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300&quot; />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl&quot;></div>
               </button>
               <button 
-                className="px-12 py-6 border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-xl shadow-[0_0_30px_rgba(6,182,212,0.3)] backdrop-blur-sm"
+                className=&quot;px-12 py-6 border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-xl shadow-[0_0_30px_rgba(6,182,212,0.3)] backdrop-blur-sm&quot;
                 onClick={handleWatchDemo}
-                aria-label="Explore our revolutionary services"
+                aria-label=&quot;Explore our revolutionary services&quot;
               >
-                <span className="flex items-center">
+                <span className=&quot;flex items-center&quot;>
                   Explore Services
-                  <Play className="w-7 h-7 ml-4" />
+                  <Play className=&quot;w-7 h-7 ml-4&quot; />
                 </span>
               </button>
             </motion.div>
 
             {/* Enhanced Stats Section */}
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
+              className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20&quot;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.6, ease: &quot;easeOut&quot; }}
             >
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center group cursor-pointer"
+                  className=&quot;text-center group cursor-pointer&quot;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                    <stat.icon className="w-8 h-8 text-cyan-400" />
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300&quot;>
+                    <stat.icon className=&quot;w-8 h-8 text-cyan-400&quot; />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                     {stat.number}
                   </div>
-                  <div className="text-lg font-semibold text-gray-300 mb-1">
+                  <div className=&quot;text-lg font-semibold text-gray-300 mb-1&quot;>
                     {stat.label}
                   </div>
-                  <div className="text-sm text-gray-500">
+                  <div className=&quot;text-sm text-gray-500&quot;>
                     {stat.description}
                   </div>
                 </motion.div>
@@ -427,22 +441,22 @@ const Homepage2044: React.FC = () => {
 
             {/* Featured Service Showcase */}
             <motion.div
-              className="max-w-6xl mx-auto"
+              className=&quot;max-w-6xl mx-auto&quot;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.6, ease: &quot;easeOut&quot; }}
             >
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">
+              <div className=&quot;text-center mb-12&quot;>
+                <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
                   Featured Revolutionary Services
                 </h2>
-                <p className="text-xl text-gray-400">
+                <p className=&quot;text-xl text-gray-400&quot;>
                   Experience the future of technology with our cutting-edge solutions
                 </p>
               </div>
 
               {/* Category Filter */}
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>
                 {categories.map((category) => (
                   <button
                     key={category.id}
@@ -453,13 +467,13 @@ const Homepage2044: React.FC = () => {
                         : 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
                     }`}
                   >
-                    <category.icon className="w-4 h-4" />
+                    <category.icon className=&quot;w-4 h-4&quot; />
                     {category.name}
                   </button>
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                 {getFilteredServices().slice(0, 6).map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -473,19 +487,19 @@ const Homepage2044: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className=&quot;relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50&quot;>
+                      <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
                       
-                      <div className="relative z-10">
-                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mb-6">
-                          <feature.icon className="w-8 h-8 text-white" />
+                      <div className=&quot;relative z-10&quot;>
+                        <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mb-6&quot;>
+                          <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                         </div>
                         
-                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                        <h3 className=&quot;text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                           {feature.title}
                         </h3>
                         
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>
                           {feature.description}
                         </p>
                       </div>
@@ -497,56 +511,56 @@ const Homepage2044: React.FC = () => {
           </section>
 
         {/* Enhanced Features Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/50">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/50&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-bold text-white mb-6">
-                Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
+              <h2 className=&quot;text-5xl font-bold text-white mb-6&quot;>
+                Revolutionary <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>Features</span>
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
                 Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  className="group relative"
+                  className=&quot;group relative&quot;
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
                 >
-                  <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+                  <div className=&quot;relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50&quot;>
                     <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 rounded-3xl group-hover:opacity-10 transition-opacity duration-300`}></div>
                     
-                    <div className="relative z-10">
+                    <div className=&quot;relative z-10&quot;>
                       <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
-                        <feature.icon className="w-8 h-8 text-white" />
+                        <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                       </div>
                       
-                      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                      <h3 className=&quot;text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                         {feature.title}
                       </h3>
                       
-                      <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                      <p className=&quot;text-gray-400 text-sm leading-relaxed mb-6&quot;>
                         {feature.description}
                       </p>
                       
                       <a
                         href={feature.href}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:gap-2"
+                        className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:gap-2&quot;
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300" />
+                        <ArrowRight className=&quot;w-4 h-4 transition-transform duration-300&quot; />
                       </a>
                     </div>
                   </div>
@@ -557,39 +571,39 @@ const Homepage2044: React.FC = () => {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
+        <section className=&quot;py-20 px-4&quot;>
+          <div className=&quot;max-w-6xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-5xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 mb-12 max-w-3xl mx-auto&quot;>
                 Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;>
                 <button 
-                  className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus:outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
+                  className=&quot;group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus:outline-none focus:ring-4 focus:ring-purple-500/50 text-xl&quot;
                   onClick={handleGetStarted}
                 >
-                  <span className="flex items-center">
+                  <span className=&quot;flex items-center&quot;>
                     Start Your Journey
-                    <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <Rocket className=&quot;w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300&quot; />
                   </span>
                 </button>
                 
                 <button 
-                  className="px-12 py-6 border-2 border-purple-400 text-purple-400 font-bold rounded-3xl hover:bg-purple-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-xl"
+                  className=&quot;px-12 py-6 border-2 border-purple-400 text-purple-400 font-bold rounded-3xl hover:bg-purple-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-xl&quot;
                   onClick={handleWatchDemo}
                 >
-                  <span className="flex items-center">
+                  <span className=&quot;flex items-center&quot;>
                     Schedule Demo
-                    <Play className="w-7 h-7 ml-4" />
+                    <Play className=&quot;w-7 h-7 ml-4&quot; />
                   </span>
                 </button>
               </div>
@@ -598,7 +612,7 @@ const Homepage2044: React.FC = () => {
         </main>
       </Layout>
     </>
-  ),
+  )
 },
 
 export default Homepage2044,

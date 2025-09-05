@@ -2,7 +2,6 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-
 export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -44,28 +43,28 @@ export default function DocsPage() {
     {
       title: 'API Status',
       description: 'Check service availability and performance',
-      icon: <CheckCircle className="w-6 h-6" />,
+      icon: <CheckCircle className=&quot;w-6 h-6&quot; />,
       href: '/status',
       color: 'text-green-400'
     },
     {
       title: 'SDK Downloads',
       description: 'Get the latest SDKs and client libraries',
-      icon: <Download className="w-6 h-6" />,
+      icon: <Download className=&quot;w-6 h-6&quot; />,
       href: '/downloads',
       color: 'text-blue-400'
     },
     {
       title: 'Support Portal',
       description: 'Get help from our technical support team',
-      icon: <ExternalLink className="w-6 h-6" />,
+      icon: <ExternalLink className=&quot;w-6 h-6&quot; />,
       href: '/support',
       color: 'text-purple-400'
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers and users',
-      icon: <ExternalLink className="w-6 h-6" />,
+      icon: <ExternalLink className=&quot;w-6 h-6&quot; />,
       href: '/community',
       color: 'text-yellow-400'
     }
@@ -75,7 +74,7 @@ export default function DocsPage() {
     const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
 
   const getDifficultyColor = (difficulty: string) => {
@@ -92,32 +91,32 @@ export default function DocsPage() {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
-    }),
+    })
   },
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Documentation | Zion Tech Group</title>
-        <meta name="description" content="Guides and references for Zion Tech Group AI, platform, and IT services." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs" />
+        <meta name=&quot;description&quot; content=&quot;Guides and references for Zion Tech Group AI, platform, and IT services.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/docs&quot; />
       </Head>
 
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Documentation</h1>
-            <p className="text-slate-300 mt-4">Quick links, references, and integration guides for our services.</p>
+      <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;max-w-6xl mx-auto space-y-10&quot;>
+          <div className=&quot;text-center&quot;>
+            <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Documentation</h1>
+            <p className=&quot;text-slate-300 mt-4&quot;>Quick links, references, and integration guides for our services.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
             {sections.map((s) => (
-              <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50">
-                <h2 className="text-xl font-semibold mb-4 text-white">{s.title}</h2>
-                <ul className="space-y-2">
+              <Card key={s.title} className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+                <h2 className=&quot;text-xl font-semibold mb-4 text-white&quot;>{s.title}</h2>
+                <ul className=&quot;space-y-2&quot;>
                   {s.links.map((l) => (
                     <li key={l.name}>
-                      <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
+                      <a href={l.href} className=&quot;text-cyan-400 hover:underline&quot;>{l.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -125,26 +124,26 @@ export default function DocsPage() {
             ))}
           </div>
 
-          <Card className="p-6 bg-black/40 border border-gray-700/50">
-            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+          <Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+            <h2 className=&quot;text-xl font-semibold mb-4 text-white&quot;>External References</h2>
+            <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300&quot;>
               {external.map((e) => (
-                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+                <li key={e.name}><a href={e.url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-cyan-400 hover:underline&quot;>{e.name}</a></li>
               ))}
             </ul>
           </Card>
 
-          <Card className="p-6 bg-black/40 border border-gray-700/50">
-            <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
-              <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
-              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
-              <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+          <Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+            <h2 className=&quot;text-xl font-semibold mb-4 text-white&quot;>Need help?</h2>
+            <div className=&quot;flex flex-col sm:flex-row gap-3&quot;>
+              <Button href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-cyan-600 to-blue-600 text-white&quot;>Contact Support</Button>
+              <Button href={contact.website} variant=&quot;outline&quot; className=&quot;border-gray-600 text-gray-200&quot;>Visit Website</Button>
+              <a className=&quot;text-cyan-400&quot; href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
+              <a className=&quot;text-purple-400&quot; href={`mailto:${contact.email}`}>{contact.email}</a>
             </div>
           </Card>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

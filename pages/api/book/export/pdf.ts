@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
-
 export const config = {
   api: {
     bodyParser: {
@@ -9,13 +8,13 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' }),
-    return,
+    return
   }
 
   const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' },
   if (!html) {
     res.status(400).json({ error: 'Missing html' }),
-    return,
+    return
   }
 
   const browser = await puppeteer.launch({
@@ -28,11 +27,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
-    res.status(200).send(pdfBuffer),
+    res.status(200).send(pdfBuffer)
+=======
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.pdf&quot;');
+    res.status(200).send(pdfBuffer);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
     try { await browser.close() } catch {}
-    res.status(500).json({ error: e?.message || 'Failed to render PDF' }),
+    res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   }
 }

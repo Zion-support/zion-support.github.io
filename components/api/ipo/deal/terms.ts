@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { readJsonFile } from '../../../../utils/api/storage',
 import { requireSuperadminApi } from '../../../../utils/api/auth',
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return,
   const terms = readJsonFile('deal/terms.json', {
@@ -10,5 +9,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     valuationCap: '$80,000,000',
     discount: '20%',
     leadInvestor: 'TBD'}),
-  res.status(200).json(terms),
+  res.status(200).json(terms)
 }

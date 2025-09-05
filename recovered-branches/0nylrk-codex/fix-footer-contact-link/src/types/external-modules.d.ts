@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -9,12 +10,25 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+=======
+declare module &quot;cmdk&quot;;
+declare module &quot;@radix-ui/react-context-menu&quot;;
+declare module &quot;vaul&quot;;
+declare module &quot;@radix-ui/react-hover-card&quot;;
+declare module &quot;input-otp&quot;;
+declare module &quot;react-markdown&quot;;
+declare module &quot;@radix-ui/react-menubar&quot;;
+declare module &quot;@radix-ui/react-navigation-menu&quot;;
+declare module &quot;react-resizable-panels&quot;;
+declare module &quot;@radix-ui/react-toggle-group&quot;;
+declare module &quot;@radix-ui/react-toggle&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date,
-    to?: Date,
+    to?: Date
   }
 
   // Minimal placeholder for the DayPicker component used in the app
@@ -222,7 +236,7 @@ declare module 'lucide-react' {
   export const XCircle: LucideIcon,
   export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon },
-  export default icons,
+  export default icons
 }
 declare module 'child_process',
 declare module 'date-fns',

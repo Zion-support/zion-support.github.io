@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { cleanupAuthState } from "@/utils/authUtils",
 import type { UserProfile } from "@/types/auth",
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { cleanupAuthState } from &quot;@/utils/authUtils&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
@@ -13,11 +19,15 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
       await supabase.auth.signOut({ scope: 'global' }),
       
       // Update state
-      setUser(null),
+      setUser(null)
     } catch (error) {
-      console.error("Error during logout:", error),
+<<<<<<< HEAD
+      console.error("Error during logout:", error)
+=======
+      console.error(&quot;Error during logout:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
-  return { logout },
+  return { logout }
 },

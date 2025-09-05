@@ -16,11 +16,17 @@ function main() {
   for (const [rel, name] of abis) {
     const p = path.join(artifactsDir, rel, `${name}.json`),
     if (fs.existsSync(p)) {
+<<<<<<< HEAD
       const json = JSON.parse(fs.readFileSync(p, 'utf8')),
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-      // // // console.log('Exported ABI for', name),
+      // // // console.log('Exported ABI for', name)
+=======
+      const json = JSON.parse(fs.readFileSync(p, 'utf8'));
+      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
+      // console.log('Exported ABI for', name);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } else {
-      console.warn('Missing artifact for', name),
+      console.warn('Missing artifact for', name)
     }
   }
 }

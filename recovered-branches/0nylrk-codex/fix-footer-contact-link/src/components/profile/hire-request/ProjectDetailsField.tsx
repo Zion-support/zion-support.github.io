@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
 import { FormValues } from "./useHireRequestForm",
+=======
+import React from &quot;react&quot;;
+import { UseFormReturn } from &quot;react-hook-form&quot;;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from &quot;@/components/ui/form&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { FormValues } from &quot;./useHireRequestForm&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
 }
@@ -13,20 +21,20 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
     <FormField
       control={form.control}
-      name="projectOverview"
+      name=&quot;projectOverview&quot;
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-white">Project Overview</FormLabel>
+          <FormLabel className=&quot;text-white&quot;>Project Overview</FormLabel>
           <FormControl>
             <Textarea 
-              placeholder="Describe your project, goals, and requirements" 
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              placeholder=&quot;Describe your project, goals, and requirements&quot; 
+              className=&quot;bg-zion-blue border-zion-blue-light text-white min-h-[120px]&quot;
               {...field} 
             />
           </FormControl>
-          <FormMessage className="text-red-400" />
+          <FormMessage className=&quot;text-red-400&quot; />
         </FormItem>
       )}
     />
-  ),
+  )
 }

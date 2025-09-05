@@ -18,8 +18,8 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   if (timestamps.length > MAX_REQUESTS) {
     res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString()),
     res.status(429).json({ error: 'Rate limit exceeded. Please try again later.' }),
-    return false,
+    return false
   }
 
-  return true,
+  return true
 }

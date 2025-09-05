@@ -2,7 +2,6 @@
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
-
 export const useRecordActivity = () => {
   const { user } = useAuth(),
   
@@ -33,14 +32,19 @@ export const useRecordActivity = () => {
       
       if (error) throw error,
       
-      return data,
+      return data
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error recording activity:", err),
-      return null,
+      return null
+=======
+      console.error(&quot;Error recording activity:&quot;, err);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
   
   return {
     recordMilestoneActivity
-  },
+  }
 },

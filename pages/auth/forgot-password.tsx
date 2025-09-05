@@ -1,12 +1,11 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const ForgotPassword: NextPage = () => {
   return (
     <div>
       <Head>
         <title>ForgotPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ForgotPassword page" />
+        <meta name=&quot;description&quot; content=&quot;ForgotPassword page&quot; />
       </Head>
       
       <main>

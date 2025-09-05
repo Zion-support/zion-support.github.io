@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getServerSupabase } from '../../../utils/supabase/server',
-
 function sanitizeCode(input: string): string {
-  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''),
+  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({ ok: true, code, status: 'pending', mock: true }),
+      return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
     }
 
     const supabase = getServerSupabase(),
@@ -43,8 +42,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (error) return res.status(500).json({ error: error.message }),
 
-    return res.status(200).json({ ok: true, code, status: 'pending' }),
+    return res.status(200).json({ ok: true, code, status: 'pending' })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message }),
+    return res.status(500).json({ error: e?.message })
   }
 }

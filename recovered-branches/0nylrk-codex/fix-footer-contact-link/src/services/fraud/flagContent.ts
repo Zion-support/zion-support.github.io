@@ -3,7 +3,6 @@
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
 import { FlagResult } from './types',
-
 /**
  * Flag content for review
  */
@@ -18,7 +17,11 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
+<<<<<<< HEAD
     // // // console.log('Flagging content for review:', {
+=======
+    // console.log('Flagging content for review:', {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       userId,
       contentType,
       contentId,
@@ -41,12 +44,12 @@ export const flagContent = async (
     
     if (error) throw error,
     
-    return { success: true },
+    return { success: true }
   } catch (error) {
     console.error('Error flagging content:', error),
     return { 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
-    },
+    }
   }
 },

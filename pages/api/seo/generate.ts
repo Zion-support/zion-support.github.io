@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' }),
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
   const { prompt, region, service } = req.body || {},
   if (!prompt) return res.status(400).json({ error: 'Missing prompt' }),
@@ -38,15 +37,15 @@ Tone: professional, modern, trustworthy`,
     const faqResp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{&quot;q&quot;:"&quot;,&quot;a&quot;:"&quot;}], focus on buyer concerns for the topic.' },
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
 
     let faq: Array<{ q: string, a: string }> = [],
     try {
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]'),
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
-      faq = [],
+      faq = []
     }
 
     const h1 = prompt,
@@ -60,9 +59,9 @@ Tone: professional, modern, trustworthy`,
         bodyHtml: content,
         region: region || undefined,
         service: service || undefined,
-        faq}}),
+        faq}})
   } catch (e) {
     console.error(e),
-    return res.status(500).json({ error: 'Failed to generate landing page' }),
+    return res.status(500).json({ error: 'Failed to generate landing page' })
   }
 }

@@ -1,12 +1,11 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const DataAnalyticsImplementation: NextPage = () => {
   return (
     <div>
       <Head>
         <title>DataAnalyticsImplementation - Zion Tech Solutions</title>
-        <meta name="description" content="DataAnalyticsImplementation page" />
+        <meta name=&quot;description&quot; content=&quot;DataAnalyticsImplementation page&quot; />
       </Head>
       
       <main>

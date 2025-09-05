@@ -7,7 +7,6 @@ import {
   DialogTitle} from '@/components/ui/dialog',
 import { AIEnhancementPanel } from './AIEnhancementPanel',
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-
 interface AIEnhancementDialogProps {
   title: string,
   isOpen: boolean,
@@ -32,7 +31,7 @@ export function AIEnhancementDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className=&quot;max-w-3xl&quot;>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
@@ -44,5 +43,5 @@ export function AIEnhancementDialog({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

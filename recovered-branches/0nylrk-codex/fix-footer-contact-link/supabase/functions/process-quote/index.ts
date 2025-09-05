@@ -1,11 +1,16 @@
 
+<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
-
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
+=======
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.7.1&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
@@ -35,7 +40,7 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -51,11 +56,15 @@ serve(async (req) => {
         const token = authHeader.replace('Bearer ', ''),
         const { data: { user }, error } = await supabase.auth.getUser(token),
         if (!error && user) {
-          userId = user.id,
+          userId = user.id
         }
       }
     } catch (authError) {
+<<<<<<< HEAD
       // // // console.log("Auth error:", authError),
+=======
+      // console.log(&quot;Auth error:&quot;, authError);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       // Continue without user identity
     }
 
@@ -97,11 +106,15 @@ serve(async (req) => {
         
         const aiResult = await openAIResponse.json(),
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
-          aiAnalysis = aiResult.choices[0].message.content,
+          aiAnalysis = aiResult.choices[0].message.content
         }
       }
     } catch (openAIError) {
+<<<<<<< HEAD
       console.error("OpenAI error:", openAIError),
+=======
+      console.error(&quot;OpenAI error:&quot;, openAIError);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       // Continue without AI analysis
     }
     
@@ -129,11 +142,11 @@ serve(async (req) => {
     if (error) throw error,
     
     return new Response(JSON.stringify({ success: true, data }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in process-quote function:', error),
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 }),

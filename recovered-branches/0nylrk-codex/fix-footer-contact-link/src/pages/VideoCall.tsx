@@ -7,7 +7,6 @@ import { SEO } from '@/components/SEO',
 import { VideoCallRoom } from '@/components/video/VideoCallRoom',
 import { Button } from '@/components/ui/button',
 import { toast } from 'sonner',
-
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -36,24 +35,37 @@ export default function VideoCall() {
     setIsJoining(true),
     // Simulate connection delay
     setTimeout(() => {
+<<<<<<< HEAD
       setHasJoined(true),
       setIsJoining(false),
       toast.success("Call joined", {
+=======
+      setHasJoined(true);
+      setIsJoining(false);
+      toast.success(&quot;Call joined&quot;, {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         description: `You have joined meeting room ${roomId}`
-      }),
-    }, 1500),
+      })
+    }, 1500)
   },
 
   const handleLeaveCall = () => {
+<<<<<<< HEAD
     setHasJoined(false),
     toast.info("Call ended", {
       description: "You have left the meeting"
     }),
+=======
+    setHasJoined(false);
+    toast.info(&quot;Call ended&quot;, {
+      description: &quot;You have left the meeting&quot;
+    });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // Navigate back after a short delay
     setTimeout(() => {
-      navigate(-1),
-    }, 1500),
+      navigate(-1)
+    }, 1500)
   },
   
   const simulateUserJoining = () => {
@@ -68,30 +80,30 @@ export default function VideoCall() {
     
     if (!participants.find(p => p.id === randomUser.id)) {
       setParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
+      toast(`${randomUser.name} joined the call`)
     }
   },
 
   return (
     <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+      <SEO title={`Video Call - Room ${roomId}`} description=&quot;Zion video call&quot; />
       <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
+      <main className=&quot;container mx-auto py-8 min-h-[calc(100vh-200px)]&quot;>
         {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+          <div className=&quot;flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8&quot;>
+            <h1 className=&quot;text-3xl font-bold mb-6 text-white&quot;>Join Video Call</h1>
+            <p className=&quot;text-zion-slate-light mb-8&quot;>Room ID: {roomId}</p>
             <Button 
               onClick={handleJoinCall} 
               disabled={isJoining}
-              size="lg"
-              className="bg-zion-purple hover:bg-zion-purple-light"
+              size=&quot;lg&quot;
+              className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
             >
-              {isJoining ? "Connecting..." : "Join Call"}
+              {isJoining ? &quot;Connecting...&quot; : &quot;Join Call&quot;}
             </Button>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className=&quot;space-y-4&quot;>
             <VideoCallRoom 
               roomId={roomId || ''} 
               participants={participants}
@@ -99,8 +111,8 @@ export default function VideoCall() {
             />
             
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">
-              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+            <div className=&quot;flex justify-center mt-4&quot;>
+              <Button variant=&quot;outline&quot; onClick={simulateUserJoining} className=&quot;text-sm&quot;>
                 Simulate user joining (demo only)
               </Button>
             </div>
@@ -109,5 +121,5 @@ export default function VideoCall() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

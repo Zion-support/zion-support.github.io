@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high' | 'ultra',
@@ -66,14 +65,14 @@ export default function UltraQuantumHolographicBackground({
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight
-      }),
+      })
     },
 
     updateDimensions(),
     window.addEventListener('resize', updateDimensions),
     setIsVisible(true),
 
-    return () => window.removeEventListener('resize', updateDimensions),
+    return () => window.removeEventListener('resize', updateDimensions)
   }, []),
 
   useEffect(() => {
@@ -107,7 +106,7 @@ export default function UltraQuantumHolographicBackground({
         this.color = [colors.primary, colors.secondary, colors.tertiary, colors.accent][Math.floor(Math.random() * 4)],
         this.life = Math.random() * 100,
         this.maxLife = 100,
-        this.type = ['quantumholographic', 'energymatrix'][Math.floor(Math.random() * 4)] as any,
+        this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
       }
 
       update() {
@@ -122,17 +121,17 @@ export default function UltraQuantumHolographicBackground({
         // Quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * dimensions.width,
-          this.y = Math.random() * dimensions.height,
+          this.y = Math.random() * dimensions.height
         }
 
         // Holographic flicker
         if (this.type === 'holographic' && Math.random() < 0.1) {
-          this.size *= 0.8,
+          this.size *= 0.8
         }
 
         // Energy pulse
         if (this.type === 'energy') {
-          this.size = Math.sin(Date.now() * 0.01) * 2 + 3,
+          this.size = Math.sin(Date.now() * 0.01) * 2 + 3
         }
 
         // Matrix rain effect
@@ -140,7 +139,7 @@ export default function UltraQuantumHolographicBackground({
           this.vy += 0.1,
           if (this.y > dimensions.height) {
             this.y = -10,
-            this.vy = Math.random() * 2 + 1,
+            this.vy = Math.random() * 2 + 1
           }
         }
       }
@@ -167,7 +166,7 @@ export default function UltraQuantumHolographicBackground({
               ctx.strokeStyle = this.color,
               ctx.lineWidth = 0.5,
               ctx.globalAlpha = alpha * (0.3 / i),
-              ctx.stroke(),
+              ctx.stroke()
             }
             break,
 
@@ -204,10 +203,10 @@ export default function UltraQuantumHolographicBackground({
             ctx.fillStyle = this.color,
             ctx.font = `${this.size * 2}px monospace`,
             ctx.fillText('01', this.x, this.y),
-            break,
+            break
         }
 
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
@@ -243,7 +242,7 @@ export default function UltraQuantumHolographicBackground({
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
-          particles[index] = new Particle(),
+          particles[index] = new Particle()
         }
       }),
 
@@ -262,7 +261,7 @@ export default function UltraQuantumHolographicBackground({
             ctx.beginPath(),
             ctx.moveTo(p1.x, p1.y),
             ctx.lineTo(p2.x, p2.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -277,25 +276,25 @@ export default function UltraQuantumHolographicBackground({
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, dimensions.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       for (let y = 0, y < dimensions.height, y += gridSize) {
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(dimensions.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
 
-      animationId = requestAnimationFrame(animate),
+      animationId = requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
       if (animationId) {
-        cancelAnimationFrame(animationId),
+        cancelAnimationFrame(animationId)
       }
-    },
+    }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),
 
   return (
@@ -303,7 +302,7 @@ export default function UltraQuantumHolographicBackground({
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
         style={{
           background: colors.background,
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`
@@ -311,10 +310,10 @@ export default function UltraQuantumHolographicBackground({
       />
 
       {/* Holographic Overlay Effects */}
-      <div className="fixed inset-0 z-10 pointer-events-none">
+      <div className=&quot;fixed inset-0 z-10 pointer-events-none&quot;>
         {/* Quantum Field Lines */}
         <motion.div
-          className="absolute inset-0"
+          className=&quot;absolute inset-0&quot;
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
@@ -326,16 +325,16 @@ export default function UltraQuantumHolographicBackground({
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
 
         {/* Holographic Scan Lines */}
-        <div className="absolute inset-0 opacity-20">
+        <div className=&quot;absolute inset-0 opacity-20&quot;>
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
+              className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent&quot;
               style={{
                 top: i * 4,
                 color: colors.primary
@@ -348,7 +347,7 @@ export default function UltraQuantumHolographicBackground({
                 duration: 2,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: &quot;easeInOut&quot;
               }}
             />
           ))}
@@ -356,7 +355,7 @@ export default function UltraQuantumHolographicBackground({
 
         {/* Quantum Fluctuations */}
         <motion.div
-          className="absolute inset-0"
+          className=&quot;absolute inset-0&quot;
           animate={{
             boxShadow: [
               `inset 0 0 100px ${colors.primary}20`,
@@ -368,33 +367,33 @@ export default function UltraQuantumHolographicBackground({
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-20">
+      <div className=&quot;relative z-20&quot;>
         {children}
       </div>
 
       {/* Quantum Noise Effect */}
-      <div className="fixed inset-0 z-30 pointer-events-none opacity-5">
+      <div className=&quot;fixed inset-0 z-30 pointer-events-none opacity-5&quot;>
         <motion.div
-          className="absolute inset-0"
+          className=&quot;absolute inset-0&quot;
           animate={{
             background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+              `url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E&quot;)`,
+              `url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E&quot;)`
             ]
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
       </div>
     </div>
-  ),
+  )
 }

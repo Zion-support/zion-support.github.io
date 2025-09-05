@@ -11,7 +11,7 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   const url = new URL(window.location.href),
   const r = url.searchParams.get('role'),
   if (r === 'talent' || r === 'admin') return r,
-  return 'client',
+  return 'client'
 }
 
 export default function ProjectMilestonesPage() {
@@ -24,7 +24,7 @@ export default function ProjectMilestonesPage() {
   const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
-    setRole(getRoleFromEnvOrQuery()),
+    setRole(getRoleFromEnvOrQuery())
   }, []),
 
   // Demo cookie-based auth to hit API successfully
@@ -33,7 +33,7 @@ export default function ProjectMilestonesPage() {
     try {
       const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1',
       document.cookie = `x-user-id=${userId}, path=/`,
-      document.cookie = `x-user-role=${role}, path=/`,
+      document.cookie = `x-user-role=${role}, path=/`
     } catch {}
   }, [role]),
 
@@ -45,22 +45,22 @@ export default function ProjectMilestonesPage() {
       setError(null),
       try {
         const data = await fetchMilestones(projectId as string),
-        if (!cancelled) setMilestones(data.milestones || []),
+        if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones')
       } finally {
-        if (!cancelled) setLoading(false),
+        if (!cancelled) setLoading(false)
       }
     })(),
     return () => {
-      cancelled = true,
-    },
+      cancelled = true
+    }
   }, [projectId]),
 
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return,
     const res = await createMilestone(projectId as string, payload),
-    setMilestones((prev) => [res.milestone, ...prev]),
+    setMilestones((prev) => [res.milestone, ...prev])
   },
 
   const handleAction = async (
@@ -75,39 +75,39 @@ export default function ProjectMilestonesPage() {
       paid: 'Paid'},
     const status = map[action],
     const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
-    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m))),
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
   },
 
   return (
     <div>
       <Head>
         <title>Project Milestones</title>
-        <meta name="description" content="Track project deliverables and milestone payments" />
+        <meta name=&quot;description&quot; content=&quot;Track project deliverables and milestone payments&quot; />
       </Head>
 
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold">Milestones</h1>
-          <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+      <div className=&quot;max-w-5xl mx-auto px-4 py-8&quot;>
+        <div className=&quot;mb-6&quot;>
+          <h1 className=&quot;text-2xl font-bold&quot;>Milestones</h1>
+          <p className=&quot;text-sm text-gray-600&quot;>Project: {projectId as string}</p>
         </div>
 
         {role !== 'talent' && (
-          <div className="mb-8 p-4 rounded bg-gray-50 border">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-lg font-semibold">Add Milestone</h2>
-              <span className="text-xs text-gray-500">Role: {role}</span>
+          <div className=&quot;mb-8 p-4 rounded bg-gray-50 border&quot;>
+            <div className=&quot;flex items-center justify-between mb-3&quot;>
+              <h2 className=&quot;text-lg font-semibold&quot;>Add Milestone</h2>
+              <span className=&quot;text-xs text-gray-500&quot;>Role: {role}</span>
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
         )}
 
         {loading && <div>Loading milestones...</div>}
-        {error && <div className="text-red-600">{error}</div>}
+        {error && <div className=&quot;text-red-600&quot;>{error}</div>}
 
         {!loading && !error && (
-          <div className="space-y-4">
+          <div className=&quot;space-y-4&quot;>
             {milestones.length === 0 && (
-              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+              <div className=&quot;text-gray-600&quot;>No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )}
             {milestones.map((m) => (
               <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
@@ -115,8 +115,13 @@ export default function ProjectMilestonesPage() {
           </div>
         )}
 
+<<<<<<< HEAD
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
+=======
+        <div className=&quot;mt-12 text-xs text-gray-500&quot;>
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on Paid &rarr; capture via Stripe/PayPal/Escrow.
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         </div>
       </div>
     </div>

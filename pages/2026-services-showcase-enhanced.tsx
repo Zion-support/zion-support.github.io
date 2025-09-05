@@ -13,7 +13,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',
-
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -111,25 +110,25 @@ export default function Services2026ShowcaseEnhancedPage() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
-        filtered = filtered.filter(service => service.category.includes('AI')),
+        filtered = filtered.filter(service => service.category.includes('AI'))
       } else if (selectedCategory === 'quantum') {
-        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging')),
+        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
-        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT')),
+        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'))
       } else if (selectedCategory === 'micro-saas') {
-        filtered = filtered.filter(service => service.category.includes('SaaS')),
+        filtered = filtered.filter(service => service.category.includes('SaaS'))
       } else if (selectedCategory === 'healthcare') {
-        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech')),
+        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech'))
       } else if (selectedCategory === 'financial') {
-        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading')),
+        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
-        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT')),
+        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
       }
     }
 
@@ -141,8 +140,8 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,
         if (selectedPriceRange === 'premium') return price >= 20000,
-        return true,
-      }),
+        return true
+      })
     }
 
     // Sort services
@@ -162,7 +161,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       }
     }),
 
-    return filtered,
+    return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   // Service statistics
@@ -178,75 +177,75 @@ export default function Services2026ShowcaseEnhancedPage() {
   },
 
   return (
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-      <div className="min-h-screen">
+    <UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
-          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
-          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
-          <link rel="icon" href="/favicon.svg" />
+          <meta name=&quot;description&quot; content=&quot;Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security&quot; />
+          <link rel=&quot;icon&quot; href=&quot;/favicon.svg&quot; />
           
           {/* Open Graph */}
-          <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta property=&quot;og:title&quot; content=&quot;Enhanced 2026 Services Showcase - Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services.&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/2026-services-showcase-enhanced&quot; />
+          <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.svg&quot; />
           
           {/* Twitter */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
-          <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+          <meta name=&quot;twitter:title&quot; content=&quot;Enhanced 2026 Services Showcase - Zion Tech Group&quot; />
+          <meta name=&quot;twitter:description&quot; content=&quot;Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services.&quot; />
+          <meta name=&quot;twitter:image&quot; content=&quot;https://ziontechgroup.com/og-image.svg&quot; />
         </Head>
 
         {/* Enhanced Header Section */}
-        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
-          <div className="max-w-7xl mx-auto relative z-10 text-center">
+        <section className=&quot;relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30&quot;></div>
+          <div className=&quot;max-w-7xl mx-auto relative z-10 text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
                 Enhanced 2026 Services Showcase
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
                 Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.
               </p>
               
               {/* Service Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4 mb-12&quot;>
                 {Object.entries(serviceStats).map(([key, value]) => (
                   <motion.div
                     key={key}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
-                    className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
+                    className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30&quot;
                   >
-                    <div className="text-3xl font-bold text-cyan-400">{value}</div>
-                    <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                    <div className=&quot;text-3xl font-bold text-cyan-400&quot;>{value}</div>
+                    <div className=&quot;text-sm text-gray-400 capitalize&quot;>{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Contact Information */}
-              <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="flex items-center justify-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
+              <div className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto&quot;>
+                <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-4&quot;>Ready to Transform Your Business?</h3>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 text-sm&quot;>
+                  <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                    <Phone className=&quot;w-4 h-4 text-purple-400&quot; />
                     <span>{contactInfo.mobile}</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Mail className="w-4 h-4 text-purple-400" />
+                  <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                    <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
                     <span>{contactInfo.email}</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <MapPin className="w-4 h-4 text-purple-400" />
-                    <span className="text-center">{contactInfo.address}</span>
+                  <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                    <MapPin className=&quot;w-4 h-4 text-purple-400&quot; />
+                    <span className=&quot;text-center&quot;>{contactInfo.address}</span>
                   </div>
                 </div>
               </div>
@@ -255,30 +254,30 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Search and Filters */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
+            <div className=&quot;bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8&quot;>
               {/* Search Bar */}
-              <div className="relative mb-6">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <div className=&quot;relative mb-6&quot;>
+                <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
                 <input
-                  type="text"
-                  placeholder="Search for services, technologies, or use cases..."
+                  type=&quot;text&quot;
+                  placeholder=&quot;Search for services, technologies, or use cases...&quot;
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className=&quot;w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
                 />
               </div>
 
               {/* Filters and Controls */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6&quot;>
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500&quot;
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
@@ -290,11 +289,11 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500&quot;
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
@@ -306,11 +305,11 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* Sort Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500&quot;
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
@@ -322,15 +321,15 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* View Mode Toggle */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
-                  <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>View Mode</label>
+                  <div className=&quot;flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1&quot;>
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                         viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
-                      <Grid className="w-4 h-4 mx-auto" />
+                      <Grid className=&quot;w-4 h-4 mx-auto&quot; />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
@@ -338,17 +337,17 @@ export default function Services2026ShowcaseEnhancedPage() {
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
-                      <List className="w-4 h-4 mx-auto" />
+                      <List className=&quot;w-4 h-4 mx-auto&quot; />
                     </button>
                   </div>
                 </div>
               </div>
 
               {/* Results Count */}
-              <div className="text-center">
-                <p className="text-gray-400">
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
-                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
+              <div className=&quot;text-center&quot;>
+                <p className=&quot;text-gray-400&quot;>
+                  Showing <span className=&quot;text-cyan-400 font-semibold&quot;>{filteredServices.length}</span> of{' '}
+                  <span className=&quot;text-cyan-400 font-semibold&quot;>{all2026Services.length}</span> services
                 </p>
               </div>
             </div>
@@ -356,19 +355,19 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <AnimatePresence mode="wait">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
+            <AnimatePresence mode=&quot;wait&quot;>
               {filteredServices.length === 0 ? (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="text-center py-20"
+                  className=&quot;text-center py-20&quot;
                 >
-                  <div className="text-6xl mb-4">🔍</div>
-                  <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>
-                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+                  <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                  <h3 className=&quot;text-2xl font-semibold text-gray-300 mb-2&quot;>No services found</h3>
+                  <p className=&quot;text-gray-400&quot;>Try adjusting your search criteria or filters</p>
                 </motion.div>
               ) : (
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
@@ -383,90 +382,90 @@ export default function Services2026ShowcaseEnhancedPage() {
                     >
                       <UltraFuturisticCard
                         variant={mapServiceVariantToCardVariant(service.variant)}
-                        className="h-full"
+                        className=&quot;h-full&quot;
                       >
-                        <div className="p-6">
+                        <div className=&quot;p-6&quot;>
                           {/* Service Header */}
-                          <div className="flex items-start justify-between mb-4">
-                            <div className="text-4xl">{service.icon}</div>
+                          <div className=&quot;flex items-start justify-between mb-4&quot;>
+                            <div className=&quot;text-4xl&quot;>{service.icon}</div>
                             {service.popular && (
-                              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                              <div className=&quot;bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium&quot;>
                                 Popular
                               </div>
                             )}
                           </div>
 
                           {/* Service Title and Tagline */}
-                          <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                          <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.tagline}</p>
 
                           {/* Price */}
-                          <div className="mb-4">
-                            <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
-                            <span className="text-gray-400">{service.period}</span>
+                          <div className=&quot;mb-4&quot;>
+                            <span className=&quot;text-3xl font-bold text-cyan-400&quot;>{service.price}</span>
+                            <span className=&quot;text-gray-400&quot;>{service.period}</span>
                           </div>
 
                           {/* Description */}
-                          <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                          <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-3&quot;>{service.description}</p>
 
                           {/* Key Features */}
-                          <div className="mb-4">
-                            <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
-                            <ul className="space-y-1">
+                          <div className=&quot;mb-4&quot;>
+                            <h4 className=&quot;text-sm font-semibold text-gray-200 mb-2&quot;>Key Features:</h4>
+                            <ul className=&quot;space-y-1&quot;>
                               {service.features.slice(0, 3).map((feature, idx) => (
-                                <li key={idx} className="flex items-center text-xs text-gray-400">
-                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                <li key={idx} className=&quot;flex items-center text-xs text-gray-400&quot;>
+                                  <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                                   {feature}
                                 </li>
                               ))}
                             </ul>
                             {service.features.length > 3 && (
-                              <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
+                              <p className=&quot;text-xs text-gray-500 mt-1&quot;>+{service.features.length - 3} more features</p>
                             )}
                           </div>
 
                           {/* Service Stats */}
-                          <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
-                            <div className="text-center">
-                              <div className="text-cyan-400 font-semibold">{service.rating}★</div>
-                              <div className="text-gray-400">{service.reviews} reviews</div>
+                          <div className=&quot;grid grid-cols-3 gap-2 mb-4 text-xs&quot;>
+                            <div className=&quot;text-center&quot;>
+                              <div className=&quot;text-cyan-400 font-semibold&quot;>{service.rating}★</div>
+                              <div className=&quot;text-gray-400&quot;>{service.reviews} reviews</div>
                             </div>
-                            <div className="text-center">
-                              <div className="text-purple-400 font-semibold">{service.customers}</div>
-                              <div className="text-gray-400">customers</div>
+                            <div className=&quot;text-center&quot;>
+                              <div className=&quot;text-purple-400 font-semibold&quot;>{service.customers}</div>
+                              <div className=&quot;text-gray-400&quot;>customers</div>
                             </div>
-                            <div className="text-center">
-                              <div className="text-green-400 font-semibold">{service.trialDays}d</div>
-                              <div className="text-gray-400">trial</div>
+                            <div className=&quot;text-center&quot;>
+                              <div className=&quot;text-green-400 font-semibold&quot;>{service.trialDays}d</div>
+                              <div className=&quot;text-gray-400&quot;>trial</div>
                             </div>
                           </div>
 
                           {/* Market Position */}
-                          <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
-                            <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
-                            <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
+                          <div className=&quot;mb-4 p-3 bg-gray-800/30 rounded-lg&quot;>
+                            <h4 className=&quot;text-xs font-semibold text-gray-200 mb-1&quot;>Market Position:</h4>
+                            <p className=&quot;text-xs text-gray-400 line-clamp-2&quot;>{service.marketPosition}</p>
                           </div>
 
                           {/* ROI */}
-                          <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
-                            <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
-                            <p className="text-xs text-green-300">{service.roi}</p>
+                          <div className=&quot;mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg&quot;>
+                            <h4 className=&quot;text-xs font-semibold text-green-400 mb-1&quot;>ROI Promise:</h4>
+                            <p className=&quot;text-xs text-green-300&quot;>{service.roi}</p>
                           </div>
 
                           {/* Action Buttons */}
-                          <div className="flex space-x-2">
+                          <div className=&quot;flex space-x-2&quot;>
                             <Button
-                              variant="primary"
-                              size="sm"
-                              className="flex-1"
+                              variant=&quot;primary&quot;
+                              size=&quot;sm&quot;
+                              className=&quot;flex-1&quot;
                               onClick={() => window.open(service.link, '_blank')}
                             >
                               Learn More
-                              <ArrowRight className="w-4 h-4 ml-1" />
+                              <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
                             </Button>
                             <Button
-                              variant="secondary"
-                              size="sm"
+                              variant=&quot;secondary&quot;
+                              size=&quot;sm&quot;
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)}
                             >
                               Contact
@@ -483,40 +482,40 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Footer CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
+              className=&quot;bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30&quot;
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <Button
-                  variant="primary"
-                  size="lg"
+                  variant=&quot;primary&quot;
+                  size=&quot;lg&quot;
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className=&quot;w-5 h-5 mr-2&quot; />
                   Schedule Consultation
                 </Button>
                 <Button
-                  variant="secondary"
-                  size="lg"
+                  variant=&quot;secondary&quot;
+                  size=&quot;lg&quot;
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className=&quot;w-5 h-5 mr-2&quot; />
                   Call Now
                 </Button>
               </div>
-              <div className="mt-8 text-sm text-gray-400">
+              <div className=&quot;mt-8 text-sm text-gray-400&quot;>
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
                 <p>{contactInfo.address}</p>
               </div>
@@ -525,5 +524,5 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  ),
+  )
 }

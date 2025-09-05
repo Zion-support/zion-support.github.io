@@ -1,6 +1,5 @@
 // Jest setup file
-import '@testing-library/jest-dom';
-
+import '@testing-library/jest-dom',
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
@@ -18,29 +17,29 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
       },
-      isFallback: false,
-    };
-  },
-}));
+      isFallback: false
+    }
+  }
+})),
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
-  },
-}));
+    return <img {...props} />
+  }
+})),
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-    return <a href={href} {...props}>{children}</a>;
-  },
-}));
+    return <a href={href} {...props}>{children}</a>
+  }
+})),
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -53,9 +52,9 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    dispatchEvent: jest.fn()
+  }))
+}),
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -63,7 +62,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+},
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -71,10 +70,10 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+},
 
 // Global test setup
 beforeEach(() => {
   // Reset all mocks before each test
-  jest.clearAllMocks();
-});
+  jest.clearAllMocks()
+}),

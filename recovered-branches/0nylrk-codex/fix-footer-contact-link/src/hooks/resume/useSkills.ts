@@ -32,11 +32,15 @@ export function useSkills() {
       
       if (error) throw error,
       
-      return showSuccessToast("Skill added", "Your skill has been added to your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Skill added", "Your skill has been added to your resume")
+=======
+      return showSuccessToast(&quot;Skill added&quot;, &quot;Your skill has been added to your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add skill'),
+      return handleResumeError(e, 'Could not add skill')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -57,11 +61,15 @@ export function useSkills() {
       
       if (error) throw error,
       
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume"),
+<<<<<<< HEAD
+      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+=======
+      return showSuccessToast(&quot;Skill deleted&quot;, &quot;Your skill has been removed from your resume&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete skill'),
+      return handleResumeError(e, 'Could not delete skill')
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -70,5 +78,5 @@ export function useSkills() {
     error,
     addSkill,
     deleteSkill
-  },
+  }
 }

@@ -2,18 +2,17 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 import PDFDocument from 'pdfkit',
-
-const usersPath = path.join(process.cwd(), 'datalearn', 'users.json'),
-const coursesPath = path.join(process.cwd(), 'datalearn', 'courses.json'),
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8')),
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('AllowGET'),
-    return res.status(405).end('Method Not Allowed'),
+    return res.status(405).end('Method Not Allowed')
   }
 
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },
@@ -26,8 +25,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!course) return res.status(404).json({ error: 'Course not found' }),
     if (!user) return res.status(404).json({ error: 'User not found' }),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
+=======
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename=&quot;${courseId}-certificate.pdf&quot;`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 }),
     // Pipe to response
@@ -57,8 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
 
-    doc.end(),
+    doc.end()
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' }),
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
 }

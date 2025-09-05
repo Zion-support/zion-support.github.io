@@ -31,7 +31,7 @@ export interface PortfolioAsset {
     monthlyReturn: number,
     yearlyReturn: number,
     totalReturn: number
-  },
+  }
 }
 
 export interface PortfolioPerformance {
@@ -176,14 +176,14 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.portfolio,
+      return data.portfolio
     } catch (error) {
       console.error('Error analyzing portfolio:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -197,14 +197,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.recommendations || [],
+      return data.recommendations || []
     } catch (error) {
       console.error('Error getting investment recommendations:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -218,14 +218,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.plan,
+      return data.plan
     } catch (error) {
       console.error('Error creating financial plan:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -236,14 +236,14 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.goals || [],
+      return data.goals || []
     } catch (error) {
       console.error('Error tracking financial goals:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -254,14 +254,14 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.analysis,
+      return data.analysis
     } catch (error) {
       console.error('Error getting market analysis:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -286,14 +286,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify({ targetAllocation })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.rebalancing,
+      return data.rebalancing
     } catch (error) {
       console.error('Error rebalancing portfolio:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -313,14 +313,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify({ userId, targetAge, desiredIncome })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.calculation,
+      return data.calculation
     } catch (error) {
       console.error('Error calculating retirement needs:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -340,14 +340,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify({ userId, taxYear })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.optimization,
+      return data.optimization
     } catch (error) {
       console.error('Error getting tax optimization strategies:', error),
-      throw error,
+      throw error
     }
   }
 
@@ -368,14 +368,14 @@ export class AIFinancialAdvisorService {
         body: JSON.stringify({ userId, reportType })}),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json(),
-      return data.report,
+      return data.report
     } catch (error) {
       console.error('Error generating financial report:', error),
-      throw error,
+      throw error
     }
   }
 }

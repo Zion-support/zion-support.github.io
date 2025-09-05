@@ -12,30 +12,30 @@ export interface Ultimate2026Service {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
-    id: "2026-ultimate-service",
-    name: "2026 Ultimate Service Platform",
-    tagline: "The ultimate platform for 2026",
-    price: "$699/month",
-    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
+    id: &quot;2026-ultimate-service&quot;,
+    name: &quot;2026 Ultimate Service Platform&quot;,
+    tagline: &quot;The ultimate platform for 2026&quot;,
+    price: &quot;$699/month&quot;,
+    description: &quot;The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.&quot;,
     features: [
-      "Ultimate platform",
-      "All technologies",
-      "Maximum capabilities",
-      "Premium features",
-      "24/7 support"
+      &quot;Ultimate platform&quot;,
+      &quot;All technologies&quot;,
+      &quot;Maximum capabilities&quot;,
+      &quot;Premium features&quot;,
+      &quot;24/7 support&quot;
     ],
-    link: "/services/2026-ultimate-service",
-    category: "Ultimate 2026 Services",
+    link: &quot;/services/2026-ultimate-service&quot;,
+    category: &quot;Ultimate 2026 Services&quot;,
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: &quot;+1 302 464 0950&quot;,
+      email: &quot;kleber@ziontechgroup.com&quot;,
+      address: &quot;364 E Main St STE 1008 Middletown DE 19709&quot;
     }
   }
 ],

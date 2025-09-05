@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { Project, ProjectStatus } from "@/types/projects",
 import { toast } from "sonner",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Project, ProjectStatus } from &quot;@/types/projects&quot;;
+import { toast } from &quot;sonner&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useProjects() {
   const { user } = useAuth(),
   const [projects, setProjects] = useState<Project[]>([]),
@@ -13,7 +21,7 @@ export function useProjects() {
   const fetchProjects = async () => {
     if (!user) {
       setIsLoading(false),
-      return,
+      return
     }
 
     try {
@@ -23,19 +31,28 @@ export function useProjects() {
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
-        .from("projects")
+        .from(&quot;projects&quot;)
         .select(`
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
+<<<<<<< HEAD
         .order("created_at", { ascending: false }),
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
-        query = query.eq("talent_id", user.id),
+        query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" || user.userType === "buyer") {
-        query = query.eq("client_id", user.id),
+        query = query.eq("client_id", user.id)
+=======
+        .order(&quot;created_at&quot;, { ascending: false });
+      
+      if (user.userType === &quot;jobSeeker&quot; || user.userType === &quot;creator&quot;) {
+        query = query.eq(&quot;talent_id&quot;, user.id);
+      } else if (user.userType === &quot;employer&quot; || user.userType === &quot;buyer&quot;) {
+        query = query.eq(&quot;client_id&quot;, user.id);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       const { data, error: fetchError } = await query,
@@ -52,28 +69,39 @@ export function useProjects() {
       })),
       
       setProjects(transformedData as Project[]),
-      setError(null),
+      setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
       toast.error("Failed to fetch projects")
+=======
+      console.error(&quot;Error fetching projects:&quot;, err);
+      setError(&quot;Failed to fetch projects: &quot; + err.message);
+      toast.error(&quot;Failed to fetch projects&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
-        .from("projects")
+        .from(&quot;projects&quot;)
         .select(`
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
+<<<<<<< HEAD
         .eq("id", projectId)
         .single(),
+=======
+        .eq(&quot;id&quot;, projectId)
+        .single();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
@@ -86,20 +114,30 @@ export function useProjects() {
         } : undefined
       },
       
-      return transformedProject as Project,
+      return transformedProject as Project
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching project:", err),
       toast.error("Failed to fetch project details"),
-      return null,
+      return null
+=======
+      console.error(&quot;Error fetching project:&quot;, err);
+      toast.error(&quot;Failed to fetch project details&quot;);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
-        .from("projects")
+        .from(&quot;projects&quot;)
         .update({ status })
+<<<<<<< HEAD
         .eq("id", projectId),
+=======
+        .eq(&quot;id&quot;, projectId);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       if (error) throw error,
       
@@ -109,18 +147,24 @@ export function useProjects() {
       ),
       
       toast.success(`Project status updated to ${status}`),
-      return true,
+      return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error updating project status:", err),
       toast.error("Failed to update project status"),
-      return false,
+      return false
+=======
+      console.error(&quot;Error updating project status:&quot;, err);
+      toast.error(&quot;Failed to update project status&quot;);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   // Fetch projects when component mounts or user changes
   useEffect(() => {
     if (user) {
-      fetchProjects(),
+      fetchProjects()
     }
   }, [user]),
 
@@ -131,5 +175,5 @@ export function useProjects() {
     refetch: fetchProjects,
     getProjectById,
     updateProjectStatus
-  },
+  }
 }

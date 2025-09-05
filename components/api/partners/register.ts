@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { createPartner } from "../../../utils/api/partnerAuth",
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST"),
-    return res.status(405).json({ error: "Method Not Allowed" }),
+    return res.status(405).json({ error: "Method Not Allowed" })
+=======
+import type { NextApiRequest, NextApiResponse } from &quot;next&quot;;
+import { createPartner } from &quot;../../../utils/api/partnerAuth&quot;;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== &quot;POST&quot;) {
+    res.setHeader(&quot;Allow&quot;, &quot;POST&quot;);
+    return res.status(405).json({ error: &quot;Method Not Allowed&quot; });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {},
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" }),
+<<<<<<< HEAD
+    return res.status(400).json({ error: "Missing required fields" })
+=======
+    return res.status(400).json({ error: &quot;Missing required fields&quot; });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   try {
     const { partner, apiKey } = await createPartner({
@@ -26,8 +39,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         useCaseType: partner.useCaseType,
         createdAt: partner.createdAt},
       apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`}),
+      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
   } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" }),
+<<<<<<< HEAD
+    return res.status(500).json({ error: "Failed to create partner" })
+=======
+    return res.status(500).json({ error: &quot;Failed to create partner&quot; });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }

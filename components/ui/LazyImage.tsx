@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react',
 import { motion } from 'framer-motion',
-
 interface LazyImageProps {
   src: string,
   alt: string,
@@ -29,21 +28,21 @@ export const LazyImage: React.FC<LazyImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true),
-          observer.disconnect(),
+          observer.disconnect()
         }
       },
       { threshold }
     ),
 
     if (imgRef.current) {
-      observer.observe(imgRef.current),
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect(),
+    return () => observer.disconnect()
   }, [threshold]),
 
   const handleLoad = () => {
-    setIsLoaded(true),
+    setIsLoaded(true)
   },
 
   return (
@@ -68,13 +67,13 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full object-cover"
-          loading="lazy"
+          className="w-full h-full object-cover&quot;
+          loading=&quot;lazy"
           style={{ width, height }}
         />
       )}
     </div>
-  ),
+  )
 },
 
 export default LazyImage,

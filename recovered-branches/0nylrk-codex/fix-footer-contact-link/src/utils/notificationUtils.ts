@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
-
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+
+type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Creates a notification for a user and optionally sends an email notification
@@ -44,13 +49,13 @@ export async function createNotification({
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
         body: { user_id: userId, notification_id: notificationId }
-      }),
+      })
     }
     
-    return { success: true, notificationId: data },
+    return { success: true, notificationId: data }
   } catch (error) {
     console.error('Error creating notification:', error),
-    return { success: false, error },
+    return { success: false, error }
   }
 }
 
@@ -76,11 +81,19 @@ export async function createHireRequestNotifications({
 }) {
   const projectInfo = projectType 
     ? `${projectType} project` 
+<<<<<<< HEAD
     : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
+=======
+    : &quot;project&quot;;
+  
+  const summaryText = projectSummary 
+    ? `: &quot;${projectSummary}&quot;` 
+    : "";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create notification for talent
   const talentNotification = await createNotification({
@@ -111,13 +124,13 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-    },
+    }
   }
   
   return {
     success: talentNotification.success,
     talentNotification
-  },
+  }
 }
 
 /**
@@ -156,7 +169,7 @@ export async function createOnboardingNotification({
         message = 'Set your availability to help clients know when you can work',
         actionUrl = '/profile/settings',
         actionText = 'Set Availability',
-        break,
+        break
     }
   } else {
     switch (missingMilestone) {
@@ -177,7 +190,7 @@ export async function createOnboardingNotification({
         message = 'Invite talent to speed up your hiring process',
         actionUrl = '/talent',
         actionText = 'Find Talent',
-        break,
+        break
     }
   }
   
@@ -189,7 +202,7 @@ export async function createOnboardingNotification({
     sendEmail: false,
     actionUrl,
     actionText
-  }),
+  })
 }
 
 /**
@@ -218,14 +231,14 @@ export async function createSystemNotification({
     sendEmail,
     actionUrl,
     actionText
-  }),
+  })
 }
 
 /**
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
-  const types: NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],
   const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {
@@ -253,5 +266,5 @@ export async function createTestNotification(userId: string) {
     sendEmail: true,
     actionUrl: actions[randomType].url,
     actionText: actions[randomType].text
-  }),
+  })
 }

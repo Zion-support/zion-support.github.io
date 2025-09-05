@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { GeneratedMilestone } from &quot;@/hooks/useMilestoneGenerator&quot;;
+import { ContractFormValues } from &quot;../components/ContractForm&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface Milestone {
   title: string,
   description: string,
@@ -29,7 +36,7 @@ export async function generateContract(
       }))
     : [],
   
-  const { data, error } = await supabase.functions.invoke("generate-contract", {
+  const { data, error } = await supabase.functions.invoke(&quot;generate-contract&quot;, {
     body: {
       talentName: talent.full_name,
       clientName: clientName,
@@ -44,12 +51,16 @@ export async function generateContract(
   }),
   
   if (error) {
-    throw error,
+    throw error
   }
   
   if (data.success && data.contract) {
-    return data.contract,
+    return data.contract
   } else {
-    throw new Error("Failed to generate contract"),
+<<<<<<< HEAD
+    throw new Error("Failed to generate contract")
+=======
+    throw new Error(&quot;Failed to generate contract&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }

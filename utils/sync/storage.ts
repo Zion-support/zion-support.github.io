@@ -6,7 +6,7 @@ const DATA_DIR = path.join(process.cwd(), "data", "multiverse"),
 const STATE_PATH = path.join(DATA_DIR, "state.json"),
 
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true }),
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
 }
 
 function defaultConfig(): InstanceConfig {
@@ -17,7 +17,7 @@ function defaultConfig(): InstanceConfig {
     paused: false,
     scope: "full",
     peers: [],
-    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)},
+    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)}
 }
 
 function defaultState(): MultiverseState {
@@ -27,7 +27,7 @@ function defaultState(): MultiverseState {
     seenEventIds: {},
     latestVersionByEntityId: {},
     proposalMerkleById: {},
-    events: []},
+    events: []}
 }
 
 export function readState(): MultiverseState {
@@ -35,7 +35,7 @@ export function readState(): MultiverseState {
   if (!fs.existsSync(STATE_PATH)) {
     const initial = defaultState(),
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
-    return initial,
+    return initial
   }
   const raw = fs.readFileSync(STATE_PATH, "utf8"),
   try {
@@ -48,17 +48,17 @@ export function readState(): MultiverseState {
     parsed.latestVersionByEntityId = parsed.latestVersionByEntityId || {},
     parsed.proposalMerkleById = parsed.proposalMerkleById || {},
     parsed.events = parsed.events || [],
-    return parsed,
+    return parsed
   } catch {
     const initial = defaultState(),
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
-    return initial,
+    return initial
   }
 }
 
 export function writeState(state: MultiverseState): void {
   ensureDataDir(),
-  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2)),
+  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2))
 }
 
 export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {
@@ -73,13 +73,13 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   }
 
   if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version,
+    state.latestVersionByEntityId[entityId] = event.version
   }
 
   state.events.push(event),
   state.seenEventIds[event.eventId] = true,
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0),
-  return state,
+  return state
 }
 
 export function getEntityId(event: SyncEvent): string {
@@ -107,7 +107,7 @@ export function filterEventsByScope(
     return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")
   }
   if (scope === "marketplace") {
-    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry"),
+    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
   }
-  return events,
+  return events
 }

@@ -1,12 +1,11 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const AutoUpdate20250808t161020249z: NextPage = () => {
   return (
     <div>
       <Head>
         <title>AutoUpdate20250808t161020249z - Zion Tech Solutions</title>
-        <meta name="description" content="AutoUpdate20250808t161020249z page" />
+        <meta name=&quot;description&quot; content=&quot;AutoUpdate20250808t161020249z page&quot; />
       </Head>
       
       <main>

@@ -1,16 +1,28 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+=======
+import React, { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
+<<<<<<< HEAD
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
+=======
+} from &quot;@/services/pricingSuggestionService&quot;;
+import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Sparkles } from &quot;lucide-react&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -33,7 +45,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -47,11 +59,15 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-      setSuggestion(result),
+      setSuggestion(result)
     } catch (error) {
-      console.error("Error generating budget suggestion:", error),
+<<<<<<< HEAD
+      console.error("Error generating budget suggestion:", error)
+=======
+      console.error(&quot;Error generating budget suggestion:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -67,33 +83,33 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
-        }),
+        })
       }
     }
   },
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type="button"
-            variant="outline"
+            type=&quot;button&quot;
+            variant=&quot;outline&quot;
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className="w-full"
+            className=&quot;w-full&quot;
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+            <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType="hourly"
+            rateType=&quot;hourly&quot;
           />
         )}
       </div>
     </div>
-  ),
+  )
 },

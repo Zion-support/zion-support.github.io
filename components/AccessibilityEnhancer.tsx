@@ -1,11 +1,21 @@
 import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
+const AccessibilityEnhancer: React.FC = () => {
+=======
 const: AccessibilityEnhancer: React.FC = () => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   useEffect(() => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
+<<<<<<< HEAD
+    skipLink.className =
+      'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+=======
     skipLink.className = 'sr-only: focus:not-sr-only: focus:absolute: focus:top-4: focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
@@ -25,6 +35,7 @@ const: AccessibilityEnhancer: React.FC = () => {
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -34,7 +45,11 @@ const: AccessibilityEnhancer: React.FC = () => {
     document.body.appendChild(liveRegion);
 
     // Announce page changes
+<<<<<<< HEAD
+    const announcePageChange = (message: string) => {
+=======
     const announcePageChange = (messag: e: string) => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
@@ -51,12 +66,20 @@ const: AccessibilityEnhancer: React.FC = () => {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
 
+<<<<<<< HEAD
+      window.history.pushState = function (...args) {
+=======
       window.history.pushState = function(...args) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
         originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
 
+<<<<<<< HEAD
+      window.history.replaceState = function (...args) {
+=======
       window.history.replaceState = function(...args) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
@@ -66,8 +89,11 @@ const: AccessibilityEnhancer: React.FC = () => {
 
     // Cleanup
     return () => {
+<<<<<<< HEAD
+=======
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('keydown', handleKeyDown);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
@@ -80,6 +106,9 @@ const: AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
+<<<<<<< HEAD
+export default AccessibilityEnhancer;
+=======
 // Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
@@ -120,3 +149,4 @@ if (typeof document !== 'undefined') {
 }
 
 export default AccessibilityEnhancer;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

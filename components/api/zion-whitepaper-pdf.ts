@@ -8,15 +8,20 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.moveDown(),
   doc.fontSize(11).fillColor('#222222').text(content, {
     width: 480,
-    align: 'left'}),
+    align: 'left'})
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = (req.query.edition as string) || 'full',
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full',
 
+<<<<<<< HEAD
   res.setHeader('Content-Typeapplication/pdf'),
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`),
+=======
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;zion-protocol-${edition}.pdf&quot;`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const doc = new (PDFDocument as any)({ autoFirstPage: false }),
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`,
@@ -41,5 +46,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.addPage(),
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
-  doc.end(),
+  doc.end()
 }

@@ -1,5 +1,4 @@
 import { ApiDocsSpec } from './types',
-
 const baseUrl = 'https: //api.zion.os',
 
 const v1: ApiDocsSpec = {
@@ -24,9 +23,15 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['emailpassword'] },
           responseBodySchema: { type: 'object', properties: { token: { type: 'string' }, expiresIn: { type: 'number' } } },
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json()),` },
             { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.ospassword':'***'})\nprint(resp.json())` }],
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{&quot;email&quot;:&quot;user@zion.os&quot;,&quot;password&quot;:&quot;***&quot;}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json());` },
+            { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           errors: [
             { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }],
           versions: ['v1']},
@@ -41,9 +46,15 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } }, required: ['coderedirect_uri'] },
           responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } },
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json()),` },
             { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODEredirect_uri':'https://app.partner.com/callback'}).json()` }],
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{&quot;code&quot;:&quot;AUTH_CODE&quot;,&quot;redirect_uri&quot;:&quot;https://app.partner.com/callback&quot;}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json());` },
+            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()` }],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           versions: ['v1']}]},
     {
       id: 'talent',
@@ -98,9 +109,15 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } }, required: ['jobIdmilestones'] },
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, status: { type: 'string' } } },
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json()),` },
             { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123milestones':[{'title':'Designamount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` }],
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{&quot;jobId&quot;:&quot;JOB123&quot;,&quot;milestones&quot;:[{&quot;title&quot;:&quot;Design&quot;,&quot;amount&quot;:1000}]}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json());` },
+            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` }],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           versions: ['v1']}]},
     {
       id: 'messages',
@@ -117,9 +134,15 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['tobody'] },
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } },
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json()),` },
             { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }],
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{&quot;to&quot;:&quot;USER123&quot;,&quot;body&quot;:&quot;Hello&quot;}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json());` },
+            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           versions: ['v1']}]},
     {
       id: 'wallet',

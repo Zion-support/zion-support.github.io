@@ -13,7 +13,6 @@ import {
   FormControl,
   FormMessage} from '@/components/ui/form',
 import { useFeatureFlags } from '@/context/FeatureFlagContext',
-
 interface CartItem {
   id: string,
   name: string,
@@ -41,14 +40,14 @@ export default function CheckoutV2() {
     const sku = searchParams.get('sku'),
     if (sku) {
       setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]),
-      return,
+      return
     }
     const stored = safeStorage.getItem('cart'),
     if (stored) {
       try {
-        setItems(JSON.parse(stored) as CartItem[]),
+        setItems(JSON.parse(stored) as CartItem[])
       } catch {
-        setItems([]),
+        setItems([])
       }
     }
   }, [searchParams]),
@@ -75,17 +74,17 @@ export default function CheckoutV2() {
         track('new-checkout-v2: conversion')
       }
     } catch (err) {
-      console.error('Payment failed', err),
+      console.error('Payment failed', err)
     }
   },
 
   return (
-    <div className="container max-w-2xl py-10 border-2 border-dashed rounded-md">
-      <h1 className="text-3xl font-bold mb-6">Checkout v2</h1>
-      <div className="grid gap-6">
+    <div className=&quot;container max-w-2xl py-10 border-2 border-dashed rounded-md&quot;>
+      <h1 className=&quot;text-3xl font-bold mb-6&quot;>Checkout v2</h1>
+      <div className=&quot;grid gap-6&quot;>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField name="name" control={form.control} render={({ field }) => (
+          <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-4&quot;>
+            <FormField name=&quot;name&quot; control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
@@ -94,16 +93,16 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
+            <FormField name=&quot;email&quot; control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input type=&quot;email&quot; {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
+            <FormField name=&quot;address&quot; control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Address</FormLabel>
                 <FormControl>
@@ -112,7 +111,7 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
+            <FormField name=&quot;city&quot; control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>City</FormLabel>
                 <FormControl>
@@ -121,7 +120,7 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
+            <FormField name=&quot;country&quot; control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
                 <FormControl>
@@ -130,12 +129,12 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <div className="border-t pt-4">
-              <div className="flex justify-between font-semibold mb-4">
+            <div className=&quot;border-t pt-4&quot;>
+              <div className=&quot;flex justify-between font-semibold mb-4&quot;>
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
-              <Button className="w-full" type="submit">
+              <Button className=&quot;w-full&quot; type=&quot;submit&quot;>
                 Pay with Stripe (test)
               </Button>
             </div>
@@ -143,5 +142,5 @@ export default function CheckoutV2() {
         </Form>
       </div>
     </div>
-  ),
+  )
 }

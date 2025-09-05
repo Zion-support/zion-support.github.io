@@ -3,7 +3,6 @@ import { createDispute, readAllDisputes } from '../../../utils/fsdb',
 import { parseUserFromRequest } from '../../../utils/auth',
 import { DisputeCase, DisputeReason } from '../../../types/disputes',
 import { generateCaseId } from '../../../utils/fsdb',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
 
@@ -13,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
-    return res.status(200).json({ disputes: filtered }),
+    return res.status(200).json({ disputes: filtered })
   }
 
   if (req.method === 'POST') {
@@ -29,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       description} = req.body || {},
 
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
-      return res.status(400).json({ error: 'Missing required fields' }),
+      return res.status(400).json({ error: 'Missing required fields' })
     }
 
     const id = generateCaseId(),
@@ -50,9 +49,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: []},
 
     await createDispute(dispute),
-    return res.status(201).json({ dispute }),
+    return res.status(201).json({ dispute })
   }
 
   res.setHeader('AllowGET,POST'),
-  return res.status(405).end('Method Not Allowed'),
+  return res.status(405).end('Method Not Allowed')
 }

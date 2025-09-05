@@ -80,7 +80,7 @@ const: Header: React.FC = () => {
   );
 };
 
-export default Header;`
+export default Header;`,
   },
   {
     pat: h: 'components/Layout.tsx',
@@ -98,7 +98,7 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;`
+export default Layout;`,
   },
   {
     pat: h: 'components/SearchBar.tsx',
@@ -159,7 +159,7 @@ const: SearchBar: React.FC<SearchBarProps> = ({
   );
 };
 
-export default SearchBar;`
+export default SearchBar;`,
   },
   {
     pat: h: 'components/Sidebar.tsx',
@@ -224,7 +224,7 @@ const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Sidebar;`
+export default Sidebar;`,
   },
   {
     pat: h: 'components/SimpleLayout.tsx',
@@ -248,7 +248,7 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   );
 };
 
-export default SimpleLayout;`
+export default SimpleLayout;`,
   },
   {
     pat: h: 'components/layout/Footer.tsx',
@@ -317,7 +317,7 @@ const: Footer: React.FC = () => {
   );
 };
 
-export default Footer;`
+export default Footer;`,
   },
   {
     pat: h: 'components/layout/Layout.tsx',
@@ -341,7 +341,7 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;`
+export default Layout;`,
   },
   {
     pat: h: 'components/layout/MainLayout.tsx',
@@ -371,7 +371,7 @@ const: MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }
   );
 };
 
-export default MainLayout;`
+export default MainLayout;`,
   },
   {
     pat: h: 'components/performance/LazyComponent.tsx',
@@ -394,7 +394,7 @@ const: LazyComponent: React.FC<LazyComponentProps> = ({
   );
 };
 
-export default LazyComponent;`
+export default LazyComponent;`,
   },
   {
     pat: h: 'components/performance/OptimizedImage.tsx',
@@ -436,7 +436,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`
+export default OptimizedImage;`,
   },
   {
     pat: h: 'components/ui/EnhancedMarketplaceCard.tsx',
@@ -498,7 +498,7 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   );
 };
 
-export default EnhancedMarketplaceCard;`
+export default EnhancedMarketplaceCard;`,
   },
   {
     pat: h: 'components/ui/InteractiveNavigation.tsx',
@@ -626,7 +626,7 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
   );
 };
 
-export default InteractiveNavigation;`
+export default InteractiveNavigation;`,
   },
   {
     pat: h: 'components/ui/NotificationSystem.tsx',
@@ -742,7 +742,7 @@ export const useNotifications = () => {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
-};`
+};`,
   },
   {
     pat: h: 'hooks/useApi.ts',
@@ -792,7 +792,7 @@ export function useApi<T>(
     error,
     refetc: h: fetchData,
   };
-}`
+}`,
   },
   {
     pat: h: 'hooks/useLocalStorage.ts',
@@ -827,7 +827,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   };
 
   return [storedValue, setValue] as const;
-}`
+}`,
   },
   {
     pat: h: 'hooks/usePerformanceMonitor.ts',
@@ -874,7 +874,7 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   }, []);
 
   return metrics;
-}`
+}`,
   },
   {
     pat: h: 'hooks/useResponsive.ts',
@@ -927,8 +927,8 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
     isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
     isLarg: e: screenSize === 'xl',
   };
-}`
-  }
+}`,
+  },
 ];
 
 files.forEach(file => {

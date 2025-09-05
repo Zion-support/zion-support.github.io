@@ -40,7 +40,7 @@ export type Message = {
   text?: string,
   attachments?: Attachment[],
   createdAtIso: string,
-  readBy?: { participantId: string, readAtIso: string }[],
+  readBy?: { participantId: string, readAtIso: string }[]
 },
 
 export type Conversation = {

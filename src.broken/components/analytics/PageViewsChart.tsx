@@ -5,5 +5,5 @@ export function PageViewsChart() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  ),
+  )
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react',
 import EnhancedLayout from '../layout/EnhancedLayout',
-
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education',
 
 export type ProposalForm = {
@@ -30,7 +29,7 @@ export default function ProposalGenerator() {
   const [statusMessage, setStatusMessage] = useState(''),
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value })),
+    setForm((prev) => ({ ...prev, [key]: value }))
   }
 
   async function handleGenerate() {
@@ -44,12 +43,12 @@ export default function ProposalGenerator() {
       const data = await res.json(),
       setDraftMarkdown(data.markdown || ''),
       setDraftJson(data.json || null),
-      setStatusMessage('Draft ready. You can edit and export.'),
+      setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e),
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
-      setIsGenerating(false),
+      setIsGenerating(false)
     }
   }
 
@@ -65,10 +64,10 @@ export default function ProposalGenerator() {
           meta: form})}),
       const data = await res.json(),
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
-      setStatusMessage('Exported. Files saved.'),
+      setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e),
-      setStatusMessage('Export failed'),
+      setStatusMessage('Export failed')
     }
   }
 
@@ -80,30 +79,30 @@ export default function ProposalGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
       const data = await res.json(),
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`),
+      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
     } catch (e) {
       console.error(e),
-      setStatusMessage('Submission failed'),
+      setStatusMessage('Submission failed')
     }
   }
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+        <div className=&quot;space-y-4&quot;>
           <div>
-            <label className="block text-sm font-medium">Target institution</label>
+            <label className=&quot;block text-sm font-medium&quot;>Target institution</label>
             <input
-              className="w-full border rounded px-3 py-2"
+              className=&quot;w-full border rounded px-3 py-2&quot;
               value={form.targetInstitution}
               onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
+              placeholder=&quot;UNDP / World Bank / ILO&quot;
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Type</label>
+            <label className=&quot;block text-sm font-medium&quot;>Type</label>
             <select
-              className="w-full border rounded px-3 py-2"
+              className=&quot;w-full border rounded px-3 py-2&quot;
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
             >
@@ -114,104 +113,108 @@ export default function ProposalGenerator() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium">Regional scope</label>
+            <label className=&quot;block text-sm font-medium&quot;>Regional scope</label>
             <input
-              className="w-full border rounded px-3 py-2"
+              className=&quot;w-full border rounded px-3 py-2&quot;
               value={form.regionalScope}
               onChange={(e) => handleChange('regionalScope', e.target.value)}
-              placeholder="Global / Africa / LATAM / APAC / EU / ..."
+              placeholder=&quot;Global / Africa / LATAM / APAC / EU / ...&quot;
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Budget / Resolution goals</label>
+            <label className=&quot;block text-sm font-medium&quot;>Budget / Resolution goals</label>
             <textarea
-              className="w-full border rounded px-3 py-2 min-h-[80px]"
+              className=&quot;w-full border rounded px-3 py-2 min-h-[80px]&quot;
               value={form.budgetOrGoals}
               onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
+<<<<<<< HEAD
               placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
+=======
+              placeholder=&quot;$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Supporting multiverse(s)</label>
+            <label className=&quot;block text-sm font-medium&quot;>Supporting multiverse(s)</label>
             <input
-              className="w-full border rounded px-3 py-2"
+              className=&quot;w-full border rounded px-3 py-2&quot;
               value={form.supportingMultiverses}
               onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
+              placeholder=&quot;Eg. Zion.ai, Zion.ID, Zion.Work&quot;
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
             <div>
-              <label className="block text-sm font-medium">Language</label>
+              <label className=&quot;block text-sm font-medium&quot;>Language</label>
               <input
-                className="w-full border rounded px-3 py-2"
+                className=&quot;w-full border rounded px-3 py-2&quot;
                 value={form.language}
                 onChange={(e) => handleChange('language', e.target.value)}
-                placeholder="English / French / Spanish / Arabic / ..."
+                placeholder=&quot;English / French / Spanish / Arabic / ...&quot;
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">GPT Prompt Assist</label>
+              <label className=&quot;block text-sm font-medium&quot;>GPT Prompt Assist</label>
               <textarea
-                className="w-full border rounded px-3 py-2 min-h-[80px]"
+                className=&quot;w-full border rounded px-3 py-2 min-h-[80px]&quot;
                 value={form.customPrompt}
                 onChange={(e) => handleChange('customPrompt', e.target.value)}
               />
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className=&quot;flex gap-2&quot;>
             <button
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+              className=&quot;px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50&quot;
               onClick={handleGenerate}
               disabled={isGenerating}
             >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
+              className=&quot;px-4 py-2 bg-emerald-600 text-white rounded&quot;
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
-              className="px-4 py-2 bg-purple-600 text-white rounded"
+              className=&quot;px-4 py-2 bg-purple-600 text-white rounded&quot;
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+          {statusMessage && <p className=&quot;text-sm text-gray-600&quot;>{statusMessage}</p>}
           {exportLinks && (
-            <div className="text-sm space-y-1">
+            <div className=&quot;text-sm space-y-1&quot;>
               {exportLinks.pdfUrl && (
                 <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
+                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.pdfUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>PDF</a>
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.mdUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Markdown</a>
                 </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.jsonUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>JSON</a>
                 </div>
               )}
             </div>
           )}
         </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium">Draft (Markdown)</label>
+        <div className=&quot;space-y-2&quot;>
+          <label className=&quot;block text-sm font-medium&quot;>Draft (Markdown)</label>
           <textarea
-            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
+            className=&quot;w-full border rounded px-3 py-2 min-h-[520px] font-mono&quot;
             value={draftMarkdown}
             onChange={(e) => setDraftMarkdown(e.target.value)}
           />
         </div>
       </div>
     </div>
-  ),
+  )
 }

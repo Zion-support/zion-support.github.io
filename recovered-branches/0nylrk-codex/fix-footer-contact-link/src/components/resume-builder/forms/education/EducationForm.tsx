@@ -7,7 +7,6 @@ import { format } from 'date-fns',
 import { EducationFormProps } from './types',
 import { EducationList } from './EducationList',
 import { EducationFormFields } from './EducationFormFields',
-
 export function EducationForm({ 
   resumeId,
   educationEntries, 
@@ -21,7 +20,7 @@ export function EducationForm({
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
+    return format(dateValue, 'yyyy-MM-dd')
   },
 
   const handleAddOrUpdate = async (data: any) => {
@@ -37,13 +36,13 @@ export function EducationForm({
 
     let success,
     if (editingId) {
-      success = await updateEducation(editingId, educationData),
+      success = await updateEducation(editingId, educationData)
     } else {
-      success = await addEducation(resumeId, educationData),
+      success = await addEducation(resumeId, educationData)
     }
 
     if (success) {
-      setEditingId(null),
+      setEditingId(null)
     }
   },
 
@@ -60,17 +59,17 @@ export function EducationForm({
 
   const handleCancel = () => {
     if (editingId) {
-      setEditingId(null),
+      setEditingId(null)
     } else {
-      onBack(),
+      onBack()
     }
   },
 
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Education</h2>
+        <p className=&quot;text-muted-foreground&quot;>
           Add your educational background and academic achievements.
         </p>
       </div>
@@ -81,8 +80,8 @@ export function EducationForm({
         onDelete={handleDelete}
       />
 
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className=&quot;bg-muted/40 p-6 rounded-lg&quot;>
+        <h3 className=&quot;text-md font-medium mb-4&quot;>
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
 
@@ -94,12 +93,12 @@ export function EducationForm({
       </div>
 
       {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
+        <div className=&quot;flex justify-end&quot;>
+          <Button type=&quot;button&quot; onClick={onComplete}>
             Next
           </Button>
         </div>
       )}
     </div>
-  ),
+  )
 }

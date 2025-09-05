@@ -26,7 +26,7 @@ export interface Dispute {
   talent_profile?: {
     display_name: string,
     avatar_url?: string
-  },
+  }
 }
 
 export interface DisputeMessage {
@@ -39,7 +39,7 @@ export interface DisputeMessage {
   user_profile?: {
     display_name: string,
     avatar_url?: string
-  },
+  }
 }
 
 export interface DisputeAttachment {

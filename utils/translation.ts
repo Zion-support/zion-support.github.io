@@ -1,5 +1,4 @@
 import i18n from './i18n',
-
 export type TranslationMap = Record<string string | undefined>,
 
 export function getWithFallback(map: TranslationMap, preferred: string): string | undefined {
@@ -12,9 +11,9 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ text, targets })}),
   if (!res.ok) throw new Error('Translation API failed'),
-  return res.json(),
+  return res.json()
 }
 
 export function getSelectedLanguage(): string {
-  return i18n.resolvedLanguage || i18n.language || 'en',
+  return i18n.resolvedLanguage || i18n.language || 'en'
 }

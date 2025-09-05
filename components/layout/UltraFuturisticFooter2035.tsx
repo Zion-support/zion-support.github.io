@@ -21,7 +21,7 @@ const footerSections = [
   {
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
+    icon: <Star className=&quot;w-5 h-5 text-yellow-400&quot; />,
     links: [
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', featured: true },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', featured: true },
@@ -47,7 +47,7 @@ const footerSections = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms and solutions',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
+    icon: <Brain className=&quot;w-5 h-5 text-cyan-400&quot; />,
     links: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
@@ -63,7 +63,7 @@ const footerSections = [
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
+    icon: <Atom className=&quot;w-5 h-5 text-blue-400&quot; />,
     links: [
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
@@ -81,7 +81,7 @@ const footerSections = [
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure solutions',
-    icon: <Shield className="w-5 h-5 text-purple-400" />,
+    icon: <Shield className=&quot;w-5 h-5 text-purple-400&quot; />,
     links: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
@@ -96,7 +96,7 @@ const footerSections = [
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
+    icon: <Rocket className=&quot;w-5 h-5 text-emerald-400&quot; />,
     links: [
       { name: 'AI Content Generator', href: '/ai-content-generator' },
       { name: 'AI Code Review', href: '/ai-code-review' },
@@ -111,7 +111,7 @@ const footerSections = [
   {
     title: 'Industry Solutions',
     description: 'Industry-specific technology solutions',
-    icon: <Building className="w-5 h-5 text-orange-400" />,
+    icon: <Building className=&quot;w-5 h-5 text-orange-400&quot; />,
     links: [
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
       { name: 'Financial Services', href: '/financial-solutions' },
@@ -126,7 +126,7 @@ const footerSections = [
   {
     title: 'Resources',
     description: 'Documentation, support, and learning',
-    icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
+    icon: <BookOpen className=&quot;w-5 h-5 text-cyan-400&quot; />,
     links: [
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api-documentation' },
@@ -143,6 +143,7 @@ const footerSections = [
 ],
 
 const socialLinks = [
+<<<<<<< HEAD
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
@@ -150,22 +151,31 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ],
+=======
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className=&quot;w-5 h-5&quot; /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className=&quot;w-5 h-5&quot; /> },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className=&quot;w-5 h-5&quot; /> },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className=&quot;w-5 h-5&quot; /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className=&quot;w-5 h-5&quot; /> },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className=&quot;w-5 h-5&quot; /> }
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }),
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   },
 
   return (
-    <footer className="relative bg-black text-white overflow-hidden">
+    <footer className=&quot;relative bg-black text-white overflow-hidden&quot;>
       {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
+      <div className=&quot;absolute inset-0&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black&quot; />
+        <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5&quot; />
         
         {/* Animated grid */}
         <motion.div
-          className="absolute inset-0 opacity-5"
+          className=&quot;absolute inset-0 opacity-5&quot;
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
@@ -183,60 +193,60 @@ const UltraFuturisticFooter2035: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-10">
+      <div className=&quot;relative z-10&quot;>
         {/* Main Footer Content */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+        <div className=&quot;container mx-auto px-4 py-20&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8&quot;>
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div className=&quot;lg:col-span-2&quot;>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-6"
+                className=&quot;space-y-6&quot;
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-white" />
+                <div className=&quot;flex items-center gap-3&quot;>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center&quot;>
+                    <Brain className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    <h3 className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                       Zion Tech Group
                     </h3>
-                    <p className="text-sm text-gray-400">Revolutionary Technology Solutions</p>
+                    <p className=&quot;text-sm text-gray-400&quot;>Revolutionary Technology Solutions</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed max-w-md">
+                <p className=&quot;text-gray-300 leading-relaxed max-w-md&quot;>
                   Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
                   Transform your business with our revolutionary technology.
                 </p>
 
                 {/* Contact Info */}
-                <div className="space-y-3">
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
-                    <Phone className="w-4 h-4" />
+                <div className=&quot;space-y-3&quot;>
+                  <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200&quot;>
+                    <Phone className=&quot;w-4 h-4&quot; />
                     <span>{contactInfo.mobile}</span>
                   </a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200">
-                    <Mail className="w-4 h-4" />
+                  <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200&quot;>
+                    <Mail className=&quot;w-4 h-4&quot; />
                     <span>{contactInfo.email}</span>
                   </a>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
+                  <div className=&quot;flex items-center gap-3 text-gray-300&quot;>
+                    <MapPin className=&quot;w-4 h-4&quot; />
+                    <span className=&quot;text-sm&quot;>{contactInfo.address}</span>
                   </div>
                 </div>
 
                 {/* Social Links */}
-                <div className="flex items-center gap-4">
+                <div className=&quot;flex items-center gap-4&quot;>
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
                       href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+                      target=&quot;_blank&quot;
+                      rel=&quot;noopener noreferrer&quot;
+                      className=&quot;p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110&quot;
                     >
                       {social.icon}
                     </a>
@@ -252,14 +262,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="space-y-4"
+                className=&quot;space-y-4&quot;
               >
-                <div className="flex items-center gap-2">
+                <div className=&quot;flex items-center gap-2&quot;>
                   {section.icon}
-                  <h4 className="font-semibold text-white">{section.title}</h4>
+                  <h4 className=&quot;font-semibold text-white&quot;>{section.title}</h4>
                 </div>
-                <p className="text-sm text-gray-400">{section.description}</p>
-                <ul className="space-y-2">
+                <p className=&quot;text-sm text-gray-400&quot;>{section.description}</p>
+                <ul className=&quot;space-y-2&quot;>
                   {section.links.map((link) => (
                     <li key={link.name}>
                       <Link
@@ -271,7 +281,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                         }`}
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -284,31 +294,36 @@ const UltraFuturisticFooter2035: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 pt-8 border-t border-gray-800/50"
+            className=&quot;mt-16 pt-8 border-t border-gray-800/50&quot;
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-sm text-gray-400">
+            <div className=&quot;flex flex-col md:flex-row items-center justify-between gap-4&quot;>
+              <div className=&quot;text-sm text-gray-400&quot;>
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
               
-              <div className="flex items-center gap-6 text-sm text-gray-400">
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+              <div className=&quot;flex items-center gap-6 text-sm text-gray-400&quot;>
+                <Link href=&quot;/privacy&quot; className=&quot;hover:text-white transition-colors duration-200&quot;>
                   Privacy Policy
-                </Link>
-                <Link href="/terms" className="hover:text-white transition-colors duration-200">
+                </a>
+                <Link href=&quot;/terms&quot; className=&quot;hover:text-white transition-colors duration-200&quot;>
                   Terms of Service
-                </Link>
-                <Link href="/cookies" className="hover:text-white transition-colors duration-200">
+                </a>
+                <Link href=&quot;/cookies&quot; className=&quot;hover:text-white transition-colors duration-200&quot;>
                   Cookie Policy
-                </Link>
+                </a>
               </div>
 
               <button
                 onClick={scrollToTop}
+<<<<<<< HEAD
                 className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Scroll to top"
+=======
+                className=&quot;p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110&quot;
+                aria-label=&quot;Scroll to top&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               >
-                <ArrowUp className="w-5 h-5" />
+                <ArrowUp className=&quot;w-5 h-5&quot; />
               </button>
             </div>
           </motion.div>

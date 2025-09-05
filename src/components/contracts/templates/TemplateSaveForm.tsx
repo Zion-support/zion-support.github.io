@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -11,10 +12,27 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
-
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean()}),
+=======
+import { useState } from &quot;react&quot;;
+import { useForm, type ControllerRenderProps } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import { z } from &quot;zod&quot;;
+import { Loader2 } from 'lucide-react'
+import { ContractFormValues } from &quot;@/components/contracts/components/ContractForm&quot;;
+import { ContractTemplate } from &quot;@/types/contracts&quot;;
+import { useContractTemplates } from &quot;@/hooks/useContractTemplates&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from &quot;@/components/ui/form&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Switch } from &quot;@/components/ui/switch&quot;;
+
+const formSchema = z.object({
+  title: z.string().min(1, &quot;Title is required&quot;),
+  isDefault: z.boolean()});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 type FormValues = z.infer<typeof formSchema>,
 
@@ -53,31 +71,36 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
-          isDefault: values.isDefault}),
+          isDefault: values.isDefault})
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
-          isDefault: values.isDefault}),
+          isDefault: values.isDefault})
       }
       
-      onComplete(),
+      onComplete()
     } finally {
-      setSaving(false),
+      setSaving(false)
     }
   },
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4&quot;>
         <FormField
           control={form.control}
+<<<<<<< HEAD
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
+=======
+          name=&quot;title&quot;
+          render={({ field }: { field: ControllerRenderProps<FormValues, &quot;title&quot;> }) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="Enter template name" />
+                <Input {...field} placeholder=&quot;Enter template name&quot; />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -86,13 +109,18 @@ export function TemplateSaveForm({
         
         <FormField
           control={form.control}
+<<<<<<< HEAD
           name="isDefault"
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
+=======
+          name=&quot;isDefault&quot;
+          render={({ field }: { field: ControllerRenderProps<FormValues, &quot;isDefault"> }) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
+              <FormLabel className="cursor-pointer&quot;>Set as default template</FormLabel>
               <FormControl>
                 <Switch
-                  aria-label="Default template"
+                  aria-label=&quot;Default template"
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />
@@ -102,22 +130,22 @@ export function TemplateSaveForm({
           )}
         />
         
-        <div className="flex gap-2 justify-end">
-          <Button type="button" variant="outline" onClick={onCancel}>
+        <div className="flex gap-2 justify-end&quot;>
+          <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={onCancel}>
             Cancel
           </Button>
-          <Button type="submit" disabled={saving}>
+          <Button type=&quot;submit" disabled={saving}>
             {saving ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin&quot; />
                 Saving...
               </>
             ) : (
-              `${editTemplate ? "Update" : "Save"} Template`
+              `${editTemplate ? &quot;Update&quot; : &quot;Save"} Template`
             )}
           </Button>
         </div>
       </form>
     </Form>
-  ),
+  )
 }

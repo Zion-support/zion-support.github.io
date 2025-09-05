@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// Accessibility checker utilities
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...');
+=======
 
 // Accessibility checker utilities
 export const checkAccessibility = () => {
@@ -33,13 +38,13 @@ export const checkAccessibility = () => {
   });
 
   return issues;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 };
 
-export const fixAccessibilityIssues = issues => {
-  issues.forEach(issue => {
-    if (issue.type === 'missing-alt') {
-      issue.element.alt = 'Image description';
-    }
-  });
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

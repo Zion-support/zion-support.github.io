@@ -46,7 +46,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
-        canvas.height = rect.height,
+        canvas.height = rect.height
       }
     },
 
@@ -106,7 +106,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
                  type === 'holographic' ? colors.holographic :
                  type === 'neon' ? colors.primary : colors.secondary,
           type
-        }),
+        })
       }
     },
 
@@ -126,7 +126,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = 1,
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -147,7 +147,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.beginPath(),
         ctx.moveTo(x, 0),
         ctx.lineTo(x, canvas.height),
-        ctx.stroke(),
+        ctx.stroke()
       }
       
       // Horizontal lines
@@ -155,7 +155,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.beginPath(),
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
-        ctx.stroke(),
+        ctx.stroke()
       }
     },
 
@@ -178,7 +178,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = strength * 2,
             ctx.moveTo(nodes[i].x, nodes[i].y),
             ctx.lineTo(nodes[j].x, nodes[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
@@ -242,7 +242,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`,
           ctx.lineWidth = 2,
-          ctx.stroke(),
+          ctx.stroke()
         }
       }),
       
@@ -256,11 +256,11 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2),
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`,
           ctx.lineWidth = 2,
-          ctx.stroke(),
+          ctx.stroke()
         }
       }
       
-      animationFrameId = requestAnimationFrame(animate),
+      animationFrameId = requestAnimationFrame(animate)
     },
 
     initParticles(),
@@ -268,46 +268,46 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 
     return () => {
       window.removeEventListener('resize', resizeCanvas),
-      cancelAnimationFrame(animationFrameId),
-    },
+      cancelAnimationFrame(animationFrameId)
+    }
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className=&quot;relative w-full h-full overflow-hidden&quot;>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
         style={{ zIndex: -1 }}
       />
       
       {/* Additional CSS-based effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
+        <div className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse&quot;></div>
+        <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000&quot;></div>
+        <div className=&quot;absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500&quot;></div>
         
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700"></div>
+            <div className=&quot;absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping&quot;></div>
+            <div className=&quot;absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300&quot;></div>
+            <div className=&quot;absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700&quot;></div>
           </>
         )}
         
         {/* Holographic elements */}
         {enableHolographic && (
           <>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin&quot; style={{ animationDuration: '20s' }}></div>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin&quot; style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
           </>
         )}
       </div>
       
       {children}
     </div>
-  ),
+  )
 },
 
 export default UltraAdvancedFuturisticBackground,

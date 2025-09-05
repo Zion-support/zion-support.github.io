@@ -21,7 +21,7 @@ export interface Review {
   reviewer_profile?: {
     display_name: string,
     avatar_url?: string
-  },
+  }
 }
 
 export interface ReviewReport {

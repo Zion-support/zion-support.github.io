@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2043: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -52,12 +51,12 @@ const UltraFuturisticBackground2043: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.3,
         color: colors[Math.floor(Math.random() * colors.length)],
         life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50},
+        maxLife: Math.random() * 100 + 50}
     },
 
     // Initialize particles
     for (let i = 0, i < 100, i++) {
-      particles.push(createParticle()),
+      particles.push(createParticle())
     }
 
     // Animation loop
@@ -79,7 +78,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         // Update life
         particle.life--,
         if (particle.life <= 0) {
-          particles[index] = createParticle(),
+          particles[index] = createParticle()
         }
 
         // Draw particle
@@ -89,7 +88,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Draw connecting lines between nearby particles
@@ -107,105 +106,105 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, []),
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       {/* Canvas background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
       />
 
       {/* Enhanced floating orbs */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {/* Primary orb */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          className=&quot;absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl&quot;
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
 
         {/* Secondary orb */}
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
+          className=&quot;absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl&quot;
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 2
           }}
         />
 
         {/* Tertiary orb */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"
+          className=&quot;absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl&quot;
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 4
           }}
         />
 
         {/* Additional orbs */}
         <motion.div
-          className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"
+          className=&quot;absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl&quot;
           animate={{
             scale: [1.3, 1, 1.3],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 9,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 1
           }}
         />
 
         <motion.div
-          className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl"
+          className=&quot;absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl&quot;
           animate={{
             scale: [1, 1.4, 1],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 11,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 3
           }}
         />
       </div>
 
       {/* Enhanced grid pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className=&quot;absolute inset-0 opacity-10&quot;>
         <div 
-          className="absolute inset-0"
+          className=&quot;absolute inset-0&quot;
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -217,61 +216,61 @@ const UltraFuturisticBackground2043: React.FC = () => {
       </div>
 
       {/* Floating geometric shapes */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {/* Triangle */}
         <motion.div
-          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
+          className=&quot;absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45&quot;
           animate={{
             rotate: [45, 405],
             opacity: [0.2, 0.6, 0.2]}}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
 
         {/* Square */}
         <motion.div
-          className="absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20"
+          className=&quot;absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20&quot;
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1]}}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
 
         {/* Circle */}
         <motion.div
-          className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
+          className=&quot;absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full&quot;
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 2
           }}
         />
       </div>
 
       {/* Energy waves */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute inset-0 border border-cyan-500/10 rounded-full"
+            className=&quot;absolute inset-0 border border-cyan-500/10 rounded-full&quot;
             animate={{
               scale: [1, 1.5, 2, 2.5],
               opacity: [0.3, 0.2, 0.1, 0]}}
             transition={{
               duration: 6,
               repeat: Infinity,
-              ease: "easeOut",
+              ease: &quot;easeOut&quot;,
               delay: i * 2
             }}
           />
@@ -279,11 +278,11 @@ const UltraFuturisticBackground2043: React.FC = () => {
       </div>
 
       {/* Quantum particles */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400/60 rounded-full"
+            className=&quot;absolute w-1 h-1 bg-cyan-400/60 rounded-full&quot;
             animate={{
               x: [0, Math.random() * 200 - 100],
               y: [0, Math.random() * 200 - 100],
@@ -293,7 +292,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
-              ease: "easeInOut"
+              ease: &quot;easeInOut&quot;
             }}
             style={{
               left: `${Math.random() * 100}%`,
@@ -303,20 +302,20 @@ const UltraFuturisticBackground2043: React.FC = () => {
       </div>
 
       {/* Consciousness energy field */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
+          className=&quot;absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5&quot;
           animate={{
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2043,

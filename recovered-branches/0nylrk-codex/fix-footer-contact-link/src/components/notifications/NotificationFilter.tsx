@@ -14,19 +14,19 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   onFilterChange
 }) => {
   return (
-    <div className="border-b border-zion-blue-light">
+    <div className=&quot;border-b border-zion-blue-light&quot;>
       <Tabs 
         defaultValue={filter} 
         onValueChange={(value) => onFilterChange(value as FilterType)}
       >
-        <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">
-          <TabsTrigger value="all" className="text-xs">All</TabsTrigger>
-          <TabsTrigger value="unread" className="text-xs">Unread</TabsTrigger>
-          <TabsTrigger value="onboarding" className="text-xs">Onboarding</TabsTrigger>
-          <TabsTrigger value="messages" className="text-xs">Messages</TabsTrigger>
-          <TabsTrigger value="system" className="text-xs">System</TabsTrigger>
+        <TabsList className=&quot;bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full&quot;>
+          <TabsTrigger value=&quot;all&quot; className=&quot;text-xs&quot;>All</TabsTrigger>
+          <TabsTrigger value=&quot;unread&quot; className=&quot;text-xs&quot;>Unread</TabsTrigger>
+          <TabsTrigger value=&quot;onboarding&quot; className=&quot;text-xs&quot;>Onboarding</TabsTrigger>
+          <TabsTrigger value=&quot;messages&quot; className=&quot;text-xs&quot;>Messages</TabsTrigger>
+          <TabsTrigger value=&quot;system&quot; className=&quot;text-xs&quot;>System</TabsTrigger>
         </TabsList>
       </Tabs>
     </div>
-  ),
+  )
 },

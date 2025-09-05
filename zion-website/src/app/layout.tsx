@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AIartificial intelligence', 'technologyinnovation', 'quantum computingautonomous systems', 'business solutionszion tech'],
+  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -40,10 +40,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
-        <main className="min-h-screen">
+        <main className=&quot;min-h-screen&quot;>
           {children}
         </main>
         <Footer />

@@ -11,12 +11,18 @@ interface ChatMessage {
 }
 
 interface AIChatbotProps {
-  className?: string,
+  className?: string
 }
 
+<<<<<<< HEAD
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false),
   const [isMinimized, setIsMinimized] = useState(false),
+=======
+const AIChatbot: React.FC<AIChatbotProps> = ({ className = "&quot; }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
@@ -31,11 +37,11 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const inputRef = useRef<HTMLInputElement>(null),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
 
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [messages]),
 
   // AI response simulation
@@ -46,6 +52,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
     
     const responses = [
+<<<<<<< HEAD
       "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
       "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",
       "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",
@@ -53,20 +60,37 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ],
+=======
+      &quot;That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.&quot;,
+      &quot;I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.&quot;,
+      &quot;Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.&quot;,
+      &quot;I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.&quot;,
+      &quot;That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.&quot;,
+      &quot;Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team.&quot;
+    ];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],
     
     // Add some context-aware responses
     let finalResponse: string = randomResponse,
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
+<<<<<<< HEAD
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?"
     } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
-      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?",
+      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"
     } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?",
+      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"
+=======
+      finalResponse = &quot;Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?&quot;;
+    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
+      finalResponse = &quot;Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?&quot;;
+    } else if (userMessage.toLowerCase().includes('quantum')) {
+      finalResponse = &quot;Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
-    return finalResponse!,
+    return finalResponse!
   },
 
   const handleSendMessage = async () => {
@@ -93,7 +117,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     },
 
     setMessages([...messages, botMessage]),
-    setIsTyping(false),
+    setIsTyping(false)
   },
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -104,16 +128,25 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   },
 
   const quickReplies = [
+<<<<<<< HEAD
     "Tell me about AI services",
     "Quantum computing pricing",
     "Business solutions",
     "Contact sales team",
     "Technical support"
   ],
+=======
+    &quot;Tell me about AI services&quot;,
+    &quot;Quantum computing pricing&quot;,
+    &quot;Business solutions&quot;,
+    &quot;Contact sales team&quot;,
+    &quot;Technical support"
+  ];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
-    setTimeout(() => handleSendMessage(), 100),
+    setTimeout(() => handleSendMessage(), 100)
   },
 
   return (
@@ -259,14 +292,14 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 
                 {/* Chat Input */}
                 <div className="p-4 border-t border-white/10">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2&quot;>
                     <input
                       ref={inputRef}
-                      type="text"
+                      type=&quot;text&quot;
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
-                      placeholder="Type your message..."
+                      placeholder=&quot;Type your message..."
                       className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
                     />
                     <button
@@ -284,7 +317,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 export default AIChatbot,

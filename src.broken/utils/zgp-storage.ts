@@ -1,7 +1,6 @@
 import fs from 'fs',
 import path from 'path',
 import { v4 as uuidv4 } from 'uuid',
-
 export type ZgpFunding = { amount: number, currency: string } | null,
 
 export type ZgpProposalVersion = {
@@ -40,7 +39,7 @@ export type ZgpTemplate = {
     codeModuleAffected: string,
     votingOptions: string[],
     fundingNeeded: ZgpFunding
-  },
+  }
 },
 
 const DATA_DIR = path.join(process.cwd(), 'data'),
@@ -49,28 +48,28 @@ const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json'),
 
 function ensureDataFilesExist(): void {
   if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true }),
+    fs.mkdirSync(DATA_DIR, { recursive: true })
   }
   if (!fs.existsSync(PROPOSALS_FILE)) {
-    fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2)),
+    fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2))
   }
 }
 
 export function loadTemplates(): ZgpTemplate[] {
   const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8'),
-  return JSON.parse(raw) as ZgpTemplate[],
+  return JSON.parse(raw) as ZgpTemplate[]
 }
 
 export function listProposals(): ZgpProposal[] {
   ensureDataFilesExist(),
   const raw = fs.readFileSync(PROPOSALS_FILE, 'utf8'),
   const data = JSON.parse(raw) as { proposals: ZgpProposal[] },
-  return data.proposals || [],
+  return data.proposals || []
 }
 
 export function saveProposals(proposals: ZgpProposal[]): void {
   ensureDataFilesExist(),
-  fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2)),
+  fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2))
 }
 
 export function generateProposalNumber(templateCode: string, existing: ZgpProposal[]): string {
@@ -81,7 +80,7 @@ export function generateProposalNumber(templateCode: string, existing: ZgpPropos
   const yyyymmdd = `${y}${m}${d}`,
   const sameDay = existing.filter(p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd)),
   const seq = sameDay.length + 1,
-  return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`,
+  return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`
 }
 
 export function createProposal(params: {
@@ -98,7 +97,7 @@ export function createProposal(params: {
   const templates = loadTemplates(),
   const template = templates.find(t => t.id === params.templateId),
   if (!template) {
-    throw new Error('Template not found'),
+    throw new Error('Template not found')
   }
   const id = uuidv4(),
   const proposalNumber = generateProposalNumber(template.code, proposals),
@@ -122,7 +121,7 @@ export function createProposal(params: {
     latestVersion: 1},
   proposals.push(proposal),
   saveProposals(proposals),
-  return proposal,
+  return proposal
 }
 
 export function getProposalById(id: string): ZgpProposal | undefined {
@@ -165,5 +164,5 @@ export function updateProposal(id: string, update: {
 
   proposals[index] = next,
   saveProposals(proposals),
-  return next,
+  return next
 }

@@ -1,6 +1,5 @@
 import Head from 'next/head',
 import React from 'react',
-
 export default function Update202508150111() {
   return (
     <>
@@ -8,7 +7,7 @@ export default function Update202508150111() {
         <title>Autonomous Update — 2025: 08: 15: 0111 | Zion Tech Group</title>
         <meta
           name='description'
-          content="Autonomous update from Zion Tech Group's AI systems covering AI innovation and automation breakthroughs."
+          content=&quot;Autonomous update from Zion Tech Group's AI systems covering AI innovation and automation breakthroughs.&quot;
         />
         <meta
           property='og:title'
@@ -16,7 +15,7 @@ export default function Update202508150111() {
         />
         <meta
           property='og:description'
-          content="Autonomous update from Zion Tech Group's AI systems."
+          content=&quot;Autonomous update from Zion Tech Group's AI systems.&quot;
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>

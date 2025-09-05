@@ -4,7 +4,6 @@ import ProgressBar from '../../components/learn/ProgressBar',
 import Quiz from '../../components/learn/Quiz',
 import CertificatePreview from '../../components/learn/CertificatePreview',
 import CoachWidget from '../../components/learn/CoachWidget',
-
 export default function CourseView() {
   const router = useRouter(),
   const { courseId } = router.query as { courseId: string },
@@ -25,9 +24,9 @@ export default function CourseView() {
       setCourse(courseData.course),
       const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
       setProgress(cp),
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null),
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
     }
-    load(),
+    load()
   }, [courseId]),
 
   const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
@@ -43,12 +42,12 @@ export default function CourseView() {
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
     }),
     const data = await resp.json(),
-    setProgress(data.progress),
+    setProgress(data.progress)
   }
 
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
-    if (currentLessonId) markLessonComplete(currentLessonId),
+    if (currentLessonId) markLessonComplete(currentLessonId)
   }
 
   async function onFinalQuizComplete(score: number) {
@@ -60,21 +59,21 @@ export default function CourseView() {
   if (!course) return <div>Loading...</div>,
 
   return (
-    <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4">
+    <div className=&quot;grid lg:grid-cols-3 gap-6&quot;>
+      <div className=&quot;lg:col-span-2 space-y-4&quot;>
         <div>
-          <h1 className="text-2xl font-semibold">{course.title}</h1>
-          <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
-          <div className="mt-3">
+          <h1 className=&quot;text-2xl font-semibold&quot;>{course.title}</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>{course.category} • {course.level}</div>
+          <div className=&quot;mt-3&quot;>
             <ProgressBar value={progress.percent || 0} />
-            <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
+            <div className=&quot;text-xs text-gray-500 mt-1&quot;>Progress: {progress.percent || 0}%</div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-4">
-          <aside className="lg:col-span-2 border rounded p-3 h-max">
-            <div className="font-medium mb-2">Lessons</div>
-            <ul className="space-y-2">
+        <div className=&quot;grid lg:grid-cols-5 gap-4&quot;>
+          <aside className=&quot;lg:col-span-2 border rounded p-3 h-max&quot;>
+            <div className=&quot;font-medium mb-2&quot;>Lessons</div>
+            <ul className=&quot;space-y-2&quot;>
               {course.lessons?.map((l: any) => (
                 <li key={l.id}>
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
@@ -85,29 +84,29 @@ export default function CourseView() {
             </ul>
           </aside>
 
-          <section className="lg:col-span-3 space-y-4">
+          <section className=&quot;lg:col-span-3 space-y-4&quot;>
             {currentLesson ? (
-              <div className="border rounded p-4">
-                <div className="font-medium">{currentLesson.title}</div>
-                <div className="mt-2 text-sm whitespace-pre-line">{currentLesson.content}</div>
+              <div className=&quot;border rounded p-4&quot;>
+                <div className=&quot;font-medium&quot;>{currentLesson.title}</div>
+                <div className=&quot;mt-2 text-sm whitespace-pre-line&quot;>{currentLesson.content}</div>
                 {currentLesson.quiz?.questions?.length ? (
-                  <div className="mt-4">
+                  <div className=&quot;mt-4&quot;>
                     <Quiz questions={currentLesson.quiz.questions} onComplete={onModuleQuizComplete} />
                   </div>
                 ) : (
-                  <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+                  <button className=&quot;mt-3 px-4 py-2 bg-green-600 text-white rounded&quot; onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
                 )}
               </div>
             ) : (
-              <div className="text-sm text-gray-500">Select a lesson</div>
+              <div className=&quot;text-sm text-gray-500&quot;>Select a lesson</div>
             )}
 
             {course.finalQuiz?.questions?.length ? (
-              <div className="border rounded p-4">
-                <div className="font-medium mb-2">Final Certification Quiz</div>
+              <div className=&quot;border rounded p-4&quot;>
+                <div className=&quot;font-medium mb-2&quot;>Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
-                  <div className="mt-3 text-green-700">Passed! You can download your certificate below.</div>
+                  <div className=&quot;mt-3 text-green-700&quot;>Passed! You can download your certificate below.</div>
                 )}
               </div>
             ) : null}
@@ -119,14 +118,14 @@ export default function CourseView() {
         </div>
       </div>
 
-      <div className="space-y-4">
+      <div className=&quot;space-y-4&quot;>
         <CoachWidget />
-        <div className="border rounded p-3">
-          <div className="font-medium">Profile Boost</div>
-          <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
-          <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
+        <div className=&quot;border rounded p-3&quot;>
+          <div className=&quot;font-medium&quot;>Profile Boost</div>
+          <div className=&quot;text-sm text-gray-600 mt-1&quot;>Opt-in to boost your visibility in matches when certified skills apply.</div>
+          <button className=&quot;mt-2 px-3 py-2 bg-indigo-600 text-white rounded&quot; onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
         </div>
       </div>
     </div>
-  ),
+  )
 }

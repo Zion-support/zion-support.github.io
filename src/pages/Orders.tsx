@@ -12,7 +12,6 @@ import {
 import { Badge } from '@/components/ui/badge',
 import Skeleton from '@/components/ui/skeleton',
 import { EmptyState } from '@/components/ui/empty-state',
-
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
@@ -23,21 +22,21 @@ export default function OrdersPage() {
     switch (status) {
       case 'in_escrow':
         return (
-          <Badge variant="warning" className="flex items-center gap-1">
-            <Clock className="h-3 w-3" /> In Escrow
+          <Badge variant=&quot;warning&quot; className=&quot;flex items-center gap-1&quot;>
+            <Clock className=&quot;h-3 w-3&quot; /> In Escrow
           </Badge>
         ),
       case 'released':
       case 'completed':
         return (
-          <Badge variant="success" className="flex items-center gap-1">
-            <CheckCircle2 className="h-3 w-3" /> Released
+          <Badge variant=&quot;success&quot; className=&quot;flex items-center gap-1&quot;>
+            <CheckCircle2 className=&quot;h-3 w-3&quot; /> Released
           </Badge>
         ),
       case 'disputed':
         return (
-          <Badge variant="destructive" className="flex items-center gap-1">
-            <ShieldAlert className="h-3 w-3" /> Disputed
+          <Badge variant=&quot;destructive&quot; className=&quot;flex items-center gap-1&quot;>
+            <ShieldAlert className=&quot;h-3 w-3&quot; /> Disputed
           </Badge>
         ),
       default:
@@ -46,8 +45,8 @@ export default function OrdersPage() {
   },
 
   return (
-    <div className="container max-w-4xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Order History</h1>
+    <div className=&quot;container max-w-4xl py-10&quot;>
+      <h1 className=&quot;text-3xl font-bold mb-6&quot;>Order History</h1>
       {isLoading ? (
         <Table>
           <TableHeader>
@@ -62,20 +61,20 @@ export default function OrdersPage() {
           <TableBody>
             {Array.from({ length: 3 }).map((_, i) => (
               <TableRow key={i}>
-                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-16" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                <TableCell><Skeleton className=&quot;h-4 w-20&quot; /></TableCell>
+                <TableCell><Skeleton className=&quot;h-4 w-24&quot; /></TableCell>
+                <TableCell><Skeleton className=&quot;h-4 w-16&quot; /></TableCell>
+                <TableCell><Skeleton className=&quot;h-4 w-20&quot; /></TableCell>
+                <TableCell><Skeleton className=&quot;h-4 w-24&quot; /></TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-          icon={<FileText className="h-10 w-10" />}
-          title="No Orders"
-          description="You haven't purchased anything yet."
+          icon={<FileText className=&quot;h-10 w-10&quot; />}
+          title=&quot;No Orders&quot;
+          description=&quot;You haven't purchased anything yet.&quot;
         />
       ) : (
         <Table>
@@ -91,14 +90,14 @@ export default function OrdersPage() {
           <TableBody>
             {orders.map((order) => (
               <TableRow key={order.orderId}>
-                <TableCell className="font-medium">{order.orderId}</TableCell>
+                <TableCell className=&quot;font-medium&quot;>{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
                     href={`/orders/${order.orderId}`} // Changed to href
-                    className="text-zion-purple underline"
+                    className=&quot;text-zion-purple underline&quot;
                   >
                     View
                   </Link>
@@ -109,5 +108,5 @@ export default function OrdersPage() {
         </Table>
       )}
     </div>
-  ),
+  )
 }

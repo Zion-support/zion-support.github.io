@@ -11,13 +11,13 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' }),
-    return,
+    return
   }
 
   const { project } = req.body as { project: any },
   if (!project?.meta || !Array.isArray(project?.chapters)) {
     res.status(400).json({ error: 'Invalid payload' }),
-    return,
+    return
   }
 
   const tmpPath = `/tmp/${randomUUID()}.epub`,
@@ -28,15 +28,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
 
   try {
+<<<<<<< HEAD
     await new Epub(options, tmpPath).promise,
     const buf = await fs.readFile(tmpPath),
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
-    res.status(200).send(buf),
+    res.status(200).send(buf)
+=======
+    await new Epub(options, tmpPath).promise;
+    const buf = await fs.readFile(tmpPath);
+    res.setHeader('Content-Type', 'application/epub+zip');
+    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.epub&quot;');
+    res.status(200).send(buf);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build EPUB' }),
+    res.status(500).json({ error: e?.message || 'Failed to build EPUB' })
   } finally {
-    try { await fs.unlink(tmpPath), } catch {}
+    try { await fs.unlink(tmpPath) } catch {}
   }
 }
 
@@ -45,7 +53,7 @@ function chapterToHtml(text: string): string {
   return text
     .split(/\n\n+/)
     .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n'),
+    .join('\n')
 }
 
 function escapeHtml(s: string): string {
@@ -54,5 +62,5 @@ function escapeHtml(s: string): string {
     .replace(/</g, '<')
     .replace(/>/g, '>')
     .replace(/"/g, '"')
-    .replace(/'/g, '&#039,'),
+    .replace(/'/g, '&#039,')
 }

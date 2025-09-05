@@ -20,7 +20,7 @@ const defaultContext: MessagingContextType = {
   loadMessages: async () => {}
 },
 
-// "createContext" may be untyped if React type definitions are missing.
+// &quot;createContext&quot; may be untyped if React type definitions are missing.
 // To avoid TS2347 when the definitions are unavailable, we cast the default
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
@@ -32,9 +32,9 @@ export function useMessaging(): MessagingContextType {
   // Cast to avoid type errors when React type definitions are missing
   const context = useContext(MessagingContext) as MessagingContextType,
   if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider'),
+    throw new Error('useMessaging must be used within a MessagingProvider')
   }
-  return context,
+  return context
 }
 
 // Provider component
@@ -66,17 +66,17 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (conversations.length > 0) {
       const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),
-      setUnreadCount(count),
+      setUnreadCount(count)
     }
   }, [conversations, setUnreadCount]),
 
   // Fetch conversations when user changes
   useEffect(() => {
     if (user) {
-      fetchConversations(),
+      fetchConversations()
     } else {
       setConversations([]),
-      setUnreadCount(0),
+      setUnreadCount(0)
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]),
 
@@ -100,5 +100,5 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
     <MessagingContext.Provider value={contextValue}>
       {children}
     </MessagingContext.Provider>
-  ),
+  )
 }

@@ -1,6 +1,6 @@
 /**
  * ESM Polyfill for Next.js 15 + React 19 build compatibility
- * Fixes "Module not found: ESM packages need to be imported" errors
+ * Fixes &quot;Module not found: ESM packages need to be imported&quot; errors
  */
 
 // Force proper ESM resolution for problematic packages
@@ -16,28 +16,28 @@ if (typeof window === 'undefined') {
       if (request.startsWith('lodash/')) {
         const lodashModule = request.replace('lodash/lodash-es/'),
         try {
-          return originalResolveFilename.call(this, lodashModule, parent, isMain, options),
+          return originalResolveFilename.call(this, lodashModule, parent, isMain, options)
         } catch (e) {
           // Fallback to original if lodash-es module doesn't exist
-          return originalResolveFilename.call(this, request, parent, isMain, options),
+          return originalResolveFilename.call(this, request, parent, isMain, options)
         }
       }
       
       // Map lodash to lodash-es
       if (request === 'lodash') {
         try {
-          return originalResolveFilename.call(this, 'lodash-es', parent, isMain, options),
+          return originalResolveFilename.call(this, 'lodash-es', parent, isMain, options)
         } catch (e) {
-          return originalResolveFilename.call(this, request, parent, isMain, options),
+          return originalResolveFilename.call(this, request, parent, isMain, options)
         }
       }
       
-      return originalResolveFilename.call(this, request, parent, isMain, options),
-    },
+      return originalResolveFilename.call(this, request, parent, isMain, options)
+    }
   } catch (error: unknown) {
     // Ignore errors in serverless environments where Module might not be available
     const errorMessage = error instanceof Error ? error.message : 'Unknown error',
-    console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage),
+    console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage)
   }
 }
 
@@ -52,22 +52,22 @@ if (typeof window !== 'undefined') {
       if (id.startsWith('lodash/')) {
         const esmModule = id.replace('lodash/lodash-es/'),
         try {
-          return originalImport(esmModule),
+          return originalImport(esmModule)
         } catch (e) {
-          return originalImport(id),
+          return originalImport(id)
         }
       }
       
       if (id === 'lodash') {
         try {
-          return originalImport('lodash-es'),
+          return originalImport('lodash-es')
         } catch (e) {
-          return originalImport(id),
+          return originalImport(id)
         }
       }
       
-      return originalImport(id),
-    },
+      return originalImport(id)
+    }
   }
 }
 

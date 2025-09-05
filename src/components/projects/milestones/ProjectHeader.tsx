@@ -12,19 +12,19 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(), // Changed from useNavigate to useRouter
   
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
-      <div className="flex items-center">
+    <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b&quot;>
+      <div className=&quot;flex items-center&quot;>
         <Button 
-          variant="ghost" 
-          size="sm" 
-          className="mr-2"
+          variant=&quot;ghost&quot; 
+          size=&quot;sm&quot; 
+          className=&quot;mr-2&quot;
           onClick={() => router.back()} // Changed to router.back()
         >
-          <ArrowLeft className="h-4 w-4 mr-1" />
+          <ArrowLeft className=&quot;h-4 w-4 mr-1&quot; />
           Back
         </Button>
-        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>
+        <h1 className=&quot;text-2xl md:text-3xl font-bold truncate max-w-xl&quot;>{title}</h1>
       </div>
     </div>
-  ),
+  )
 }

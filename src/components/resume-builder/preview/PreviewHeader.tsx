@@ -5,7 +5,6 @@ import { PdfExportButton } from '../PdfExportButton',
 import { Resume } from '@/types/resume',
 import { useState } from 'react',
 import { useIsMobile } from '@/hooks/use-mobile',
-
 interface PreviewHeaderProps {
   resume: Resume,
   onBack: () => void
@@ -47,18 +46,18 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     // Remove the temporary style element after printing
     setTimeout(() => {
       document.head.removeChild(style),
-      setIsPrinting(false),
-    }, 1000),
+      setIsPrinting(false)
+    }, 1000)
   },
 
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
       <Button 
-        variant="outline" 
+        variant=&quot;outline&quot; 
         onClick={onBack} 
-        className="gap-2 no-print"
+        className=&quot;gap-2 no-print&quot;
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft className=&quot;h-4 w-4&quot; />
         Back
       </Button>
       
@@ -66,20 +65,20 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         <PdfExportButton resume={resume} />
         
         <Button 
-          variant="outline" 
+          variant=&quot;outline&quot; 
           onClick={handleBrowserPrint} 
           disabled={isPrinting}
-          className="gap-2"
+          className=&quot;gap-2&quot;
         >
-          <FileText className="h-4 w-4" />
+          <FileText className=&quot;h-4 w-4&quot; />
           Print
         </Button>
         
-        <Button variant="outline" className="gap-2">
-          <Link className="h-4 w-4" />
+        <Button variant=&quot;outline&quot; className=&quot;gap-2&quot;>
+          <Link className=&quot;h-4 w-4&quot; />
           Add to Profile
         </Button>
       </div>
     </div>
-  ),
+  )
 }

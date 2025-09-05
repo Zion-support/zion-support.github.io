@@ -1,30 +1,39 @@
 /* eslint-disable no-console */
 import fs from 'fs',
 import path from 'path',
-
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 
 async function post(url: string, body: any) {
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),
-  return await res.json(),
+  return await res.json()
 }
 
 async function main() {
-  const seedsPath = path.join(process.cwd(), 'datapage-metadata', 'seo-seeds.json'),
+  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),
   if (!fs.existsSync(seedsPath)) {
+<<<<<<< HEAD
     // // // console.log('No seeds file found at', seedsPath),
-    process.exit(0),
+    process.exit(0)
+=======
+    // console.log('No seeds file found at', seedsPath);
+    process.exit(0);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,
-  const outDir = path.join(process.cwd(), 'datapage-metadata', 'seo'),
+  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
   fs.mkdirSync(outDir, { recursive: true }),
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s),
     if (gen?.slug && gen?.payload) {
+<<<<<<< HEAD
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
-      // // // console.log('Generated', gen.slug),
+      // // // console.log('Generated', gen.slug)
+=======
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      // console.log('Generated', gen.slug);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }
 }
 
-main().catch((e) => { console.error(e), process.exit(1), }),
+main().catch((e) => { console.error(e), process.exit(1) }),

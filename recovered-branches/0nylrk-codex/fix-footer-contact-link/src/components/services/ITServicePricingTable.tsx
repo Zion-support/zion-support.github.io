@@ -1,11 +1,11 @@
 
+<<<<<<< HEAD
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
-
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
@@ -14,6 +14,23 @@ export function ITServicePricingTable() {
   }>({
     key: "country",
     direction: "ascending"}),
+=======
+import { useState, useMemo } from &quot;react&quot;;
+import { onsiteServicePricing, CountryPricing } from &quot;@/data/onsiteServicePricing&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
+import { Globe, Search, ArrowUpDown } from &quot;lucide-react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState("&quot;);
+  const [sortConfig, setSortConfig] = useState<{
+    key: keyof CountryPricing;
+    direction: &quot;ascending&quot; | &quot;descending&quot;;
+  }>({
+    key: &quot;country&quot;,
+    direction: &quot;ascending&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
@@ -22,39 +39,53 @@ export function ITServicePricingTable() {
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
+      )
     }
     
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1,
+<<<<<<< HEAD
+        return sortConfig.direction === "ascending" ? -1 : 1
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1,
+        return sortConfig.direction === "ascending" ? 1 : -1
+=======
+        return sortConfig.direction === &quot;ascending&quot; ? -1 : 1;
       }
-      return 0,
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === &quot;ascending&quot; ? 1 : -1;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      }
+      return 0
     }),
     
-    return filteredData,
+    return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
       direction: 
+<<<<<<< HEAD
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
-          : "ascending"}),
+          : "ascending"})
   },
+=======
+        sortConfig.key === key && sortConfig.direction === &quot;ascending&quot; 
+          ? &quot;descending&quot; 
+          : &quot;ascending"});
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light&quot; />
           <Input
-            placeholder="Search by country..."
+            placeholder=&quot;Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
@@ -66,20 +97,20 @@ export function ITServicePricingTable() {
         <Table>
           <TableHeader className="bg-zion-blue">
             <TableRow>
-              <TableHead className="text-zion-cyan font-medium">
+              <TableHead className="text-zion-cyan font-medium&quot;>
                 <Button 
-                  variant="ghost" 
-                  onClick={() => handleSort("country")}
+                  variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead className="text-right text-zion-cyan font-medium">
+              <TableHead className="text-right text-zion-cyan font-medium&quot;>
                 <Button 
-                  variant="ghost" 
-                  onClick={() => handleSort("pricePerIncident")}
+                  variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Price Per Incident</span>
@@ -110,5 +141,5 @@ export function ITServicePricingTable() {
         </Table>
       </div>
     </div>
-  ),
+  )
 }

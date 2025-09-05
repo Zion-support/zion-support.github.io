@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,13 +15,31 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { useTranslationService } from "@/hooks/useTranslationService",
+=======
+import React, { useState, useEffect } from 'react';
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { toast } from &quot;@/components/ui/use-toast&quot;;
+import { useTranslation } from &quot;react-i18next&quot;;
+import { AlertTriangle, Check, Globe, Search, Loader2 } from &quot;lucide-react&quot;;
+import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
+import { useLanguage, SupportedLanguage } from &quot;@/context/LanguageContext&quot;;
+import { useTranslationService } from &quot;@/hooks/useTranslationService&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function TranslationManager() {
   const { t, i18n } = useTranslation(),
   const isMobile = useIsMobile(),
   const { supportedLanguages } = useLanguage(),
   const { translateContent, isTranslating } = useTranslationService(),
   
+<<<<<<< HEAD
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
   const [translations, setTranslations] = useState<Record<string any>>({}),
@@ -28,6 +47,15 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null),
   const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
   const [isSaving, setIsSaving] = useState(false),
+=======
+  const [selectedNamespace, setSelectedNamespace] = useState(&quot;translation&quot;);
+  const [searchQuery, setSearchQuery] = useState("&quot;);
+  const [translations, setTranslations] = useState<Record<string, any>>({});
+  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
+  const [editingKey, setEditingKey] = useState<string | null>(null);
+  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
+  const [isSaving, setIsSaving] = useState(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
@@ -42,15 +70,15 @@ export default function TranslationManager() {
           return Object.keys(obj).reduce((acc, key) => {
             const pre = prefix.length ? `${prefix}.` : '',
             if (typeof obj[key] === 'object' && obj[key] !== null) {
-              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`)),
+              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
-              acc[`${pre}${key}`] = obj[key],
+              acc[`${pre}${key}`] = obj[key]
             }
-            return acc,
-          }, {} as Record<string string>),
+            return acc
+          }, {} as Record<string string>)
         },
         
-        currentTranslations[lang.code] = flattenObject(res),
+        currentTranslations[lang.code] = flattenObject(res)
       }
     }),
     
@@ -59,10 +87,10 @@ export default function TranslationManager() {
     // Get all unique keys across all languages
     const allKeys = new Set<string>(),
     Object.values(currentTranslations).forEach(langTranslations => {
-      Object.keys(langTranslations).forEach(key => allKeys.add(key)),
+      Object.keys(langTranslations).forEach(key => allKeys.add(key))
     }),
     
-    setFilteredKeys(Array.from(allKeys)),
+    setFilteredKeys(Array.from(allKeys))
   }, [selectedNamespace, i18n]),
   
   // Filter keys based on search query
@@ -71,10 +99,10 @@ export default function TranslationManager() {
       // Get all unique keys across all languages
       const allKeys = new Set<string>(),
       Object.values(translations).forEach(langTranslations => {
-        Object.keys(langTranslations).forEach(key => allKeys.add(key)),
+        Object.keys(langTranslations).forEach(key => allKeys.add(key))
       }),
       setFilteredKeys(Array.from(allKeys)),
-      return,
+      return
     }
     
     const query = searchQuery.toLowerCase().trim(),
@@ -87,12 +115,12 @@ export default function TranslationManager() {
           key.toLowerCase().includes(query) || 
           (typeof value === 'string' && value.toLowerCase().includes(query))
         ) {
-          filtered.push(key),
+          filtered.push(key)
         }
-      }),
+      })
     }),
     
-    setFilteredKeys([...new Set(filtered)]),
+    setFilteredKeys([...new Set(filtered)])
   }, [searchQuery, translations]),
   
   const handleEdit = (key: string) => {
@@ -101,13 +129,13 @@ export default function TranslationManager() {
     // Initialize edited translations for this key
     const initialEdits: Record<SupportedLanguage string> = {} as Record<SupportedLanguage string>,
     supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] || '',
+      initialEdits[lang.code] = translations[lang.code]?.[key] || ''
     }),
     
     setEditedTranslations({
       ...editedTranslations,
       [key]: initialEdits
-    }),
+    })
   },
   
   const handleSave = (key: string) => {
@@ -120,9 +148,9 @@ export default function TranslationManager() {
       
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {},
+          updatedTranslations[lang.code] = {}
         }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code],
+        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
       }),
       
       setTranslations(updatedTranslations),
@@ -130,10 +158,17 @@ export default function TranslationManager() {
       setIsSaving(false),
       
       toast({
+<<<<<<< HEAD
         title: t("translation.saved"),
-        description: t("translation.changes_saved")}),
-    }, 1000),
+        description: t("translation.changes_saved")})
+    }, 1000)
   },
+=======
+        title: t(&quot;translation.saved&quot;),
+        description: t(&quot;translation.changes_saved&quot;)});
+    }, 1000);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source
@@ -152,8 +187,13 @@ export default function TranslationManager() {
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
+<<<<<<< HEAD
         variant: "destructive"}),
-      return,
+      return
+=======
+        variant: &quot;destructive&quot;});
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     try {
@@ -167,8 +207,13 @@ export default function TranslationManager() {
         toast({
           title: t('translation.translation_failed'),
           description: error,
+<<<<<<< HEAD
           variant: "destructive"}),
-        return,
+        return
+=======
+          variant: &quot;destructive&quot;});
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // Update edited translations with auto-translated content
@@ -179,18 +224,22 @@ export default function TranslationManager() {
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated')}),
+        description: t('translation.content_translated')})
     } catch (error) {
       console.error(`Error translating key ${key}:`, error),
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"}),
+<<<<<<< HEAD
+        variant: "destructive"})
+=======
+        variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
   
   const handleCancel = () => {
-    setEditingKey(null),
+    setEditingKey(null)
   },
   
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
@@ -200,7 +249,7 @@ export default function TranslationManager() {
         ...editedTranslations[key],
         [lang]: value
       }
-    }),
+    })
   },
   
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
@@ -226,24 +275,24 @@ export default function TranslationManager() {
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground&quot; />
                   <Input
-                    type="search"
+                    type=&quot;search"
                     placeholder={t('translation.search_placeholder')}
-                    className="pl-8"
+                    className="pl-8&quot;
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
                 <Tabs 
-                  defaultValue="translation" 
+                  defaultValue=&quot;translation" 
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto&quot;
                 >
                   <TabsList>
-                    <TabsTrigger value="translation">General</TabsTrigger>
-                    <TabsTrigger value="admin">Admin</TabsTrigger>
+                    <TabsTrigger value=&quot;translation&quot;>General</TabsTrigger>
+                    <TabsTrigger value=&quot;admin">Admin</TabsTrigger>
                   </TabsList>
                 </Tabs>
               </div>
@@ -292,9 +341,9 @@ export default function TranslationManager() {
                                 </div>
                               ))}
                             </div>
-                            <div className="flex gap-2 mt-4">
+                            <div className="flex gap-2 mt-4&quot;>
                               <Button 
-                                size="sm" 
+                                size=&quot;sm" 
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >
@@ -305,21 +354,21 @@ export default function TranslationManager() {
                                   </>
                                 ) : (
                                   <>
-                                    <Check className="mr-2 h-4 w-4" />
+                                    <Check className="mr-2 h-4 w-4&quot; />
                                     {t('general.save')}
                                   </>
                                 )}
                               </Button>
                               <Button 
-                                size="sm" 
-                                variant="outline" 
+                                size=&quot;sm&quot; 
+                                variant=&quot;outline&quot; 
                                 onClick={handleCancel}
                               >
                                 {t('general.cancel')}
                               </Button>
                               <Button
-                                size="sm"
-                                variant="secondary"
+                                size=&quot;sm&quot;
+                                variant=&quot;secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >
@@ -355,11 +404,11 @@ export default function TranslationManager() {
                             </div>
                           </div>
                         )}
-                        <div className="p-3 flex items-center justify-end">
+                        <div className="p-3 flex items-center justify-end&quot;>
                           {editingKey === key ? null : (
                             <Button
-                              size="sm"
-                              variant="outline"
+                              size=&quot;sm&quot;
+                              variant=&quot;outline"
                               onClick={() => handleEdit(key)}
                             >
                               {t('translation.edit')}
@@ -377,5 +426,5 @@ export default function TranslationManager() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

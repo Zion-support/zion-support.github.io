@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
@@ -7,6 +8,16 @@ import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
+=======
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
+import { JobData, MatchResult } from &quot;./types.ts&quot;;
+import { normalizeSkillsWithAI, findBestMatches } from &quot;./ai-matcher.ts&quot;;
+
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) || "&quot;;
+const supabaseAnonKey = Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;) || "&quot;;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Main function to process job-talent matching
@@ -30,10 +41,15 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     
     // Use OpenAI to find best matches
     const bestMatches = await findBestMatches(jobDetails, talents),
-    return bestMatches,
+    return bestMatches
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in processJobMatching:", error),
-    throw error,
+    throw error
+=======
+    console.error(&quot;Error in processJobMatching:&quot;, error);
+    throw error;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 
@@ -45,7 +61,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
   const matchInsertPromises = matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
-      .from("job_talent_matches")
+      .from(&quot;job_talent_matches&quot;)
       .insert({
         job_id: jobId,
         talent_id: match.talentId,
@@ -55,18 +71,18 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       }),
     
     if (matchError) {
-      console.error(`Error storing match for talent ${match.talentId}:`, matchError),
+      console.error(`Error storing match for talent ${match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
         _user_id: match.talentId,
-        _title: "New Job Match",
-        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,
-        _type: "job_match",
+        _title: &quot;New Job Match&quot;,
+        _message: `A new job &quot;${jobTitle}&quot; matches your skills. Check it out!`,
+        _type: &quot;job_match&quot;,
         _related_id: jobId
-      }),
+      })
     }
   }),
   
-  await Promise.all(matchInsertPromises),
+  await Promise.all(matchInsertPromises)
 }

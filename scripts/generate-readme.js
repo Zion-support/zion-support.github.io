@@ -100,17 +100,27 @@ function generateReadme() {
   if (fs.existsSync(outputPath)) {
     const existingContent = fs.readFileSync(outputPath, 'utf8'),
     if (existingContent.length > 1000) {
+<<<<<<< HEAD
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
-      return,
+      return
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-  // // // console.log(`✅ README generated at: ${outputPath}`),
+  // // // console.log(`✅ README generated at: ${outputPath}`)
+=======
+      // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.');
+      return;
+    }
+  }
+
+  fs.writeFileSync(outputPath, README_TEMPLATE);
+  // console.log(`✅ README generated at: ${outputPath}`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 if (require.main === module) {
-  generateReadme(),
+  generateReadme()
 }
 
 module.exports = { generateReadme },

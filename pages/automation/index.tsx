@@ -1,12 +1,11 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const Index: NextPage = () => {
   return (
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
+        <meta name=&quot;description&quot; content=&quot;Index page&quot; />
       </Head>
       
       <main>

@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Creates a notification for a user and optionally sends an email notification
@@ -34,12 +39,12 @@ export async function createNotification({
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
         body: { user_id: userId, notification_id: notificationId }
-      }),
+      })
     }
     
-    return { success: true, notificationId: data },
+    return { success: true, notificationId: data }
   } catch (error) {
     console.error('Error creating notification:', error),
-    return { success: false, error },
+    return { success: false, error }
   }
 }

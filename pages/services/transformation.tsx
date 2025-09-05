@@ -7,75 +7,82 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
-
 export default function DigitalTransformationPage() {
   const services = [
     {
-      title: "Digital Strategy & Roadmap",
-      description: "Comprehensive digital transformation strategy and implementation planning",
-      features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
-      price: "From $15,000",
+      title: &quot;Digital Strategy & Roadmap&quot;,
+      description: &quot;Comprehensive digital transformation strategy and implementation planning&quot;,
+      features: [&quot;Technology Assessment&quot;, &quot;Change Management&quot;, &quot;ROI Planning&quot;, &quot;Implementation Roadmap&quot;],
+      price: &quot;From $15,000&quot;,
       icon: Rocket,
-      color: "from-yellow-500 to-orange-500"
+      color: &quot;from-yellow-500 to-orange-500&quot;
     },
     {
-      title: "Legacy System Modernization",
-      description: "Transform outdated systems into modern, scalable solutions",
-      features: ["System Analysis", "Migration Planning", "Data Migration", "Performance Optimization"],
-      price: "From $25,000",
+      title: &quot;Legacy System Modernization&quot;,
+      description: &quot;Transform outdated systems into modern, scalable solutions&quot;,
+      features: [&quot;System Analysis&quot;, &quot;Migration Planning&quot;, &quot;Data Migration&quot;, &quot;Performance Optimization&quot;],
+      price: &quot;From $25,000&quot;,
       icon: Cpu,
-      color: "from-blue-500 to-cyan-500"
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
-      title: "Process Automation",
-      description: "AI-powered automation for improved efficiency and productivity",
-      features: ["Workflow Analysis", "RPA Implementation", "Integration", "Monitoring"],
-      price: "From $12,000",
+      title: &quot;Process Automation&quot;,
+      description: &quot;AI-powered automation for improved efficiency and productivity&quot;,
+      features: [&quot;Workflow Analysis&quot;, &quot;RPA Implementation&quot;, &quot;Integration&quot;, &quot;Monitoring&quot;],
+      price: &quot;From $12,000&quot;,
       icon: Zap,
-      color: "from-purple-500 to-pink-500"
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
-      title: "Change Management",
-      description: "Comprehensive change management and training programs",
-      features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
-      price: "From $8,000",
+      title: &quot;Change Management&quot;,
+      description: &quot;Comprehensive change management and training programs&quot;,
+      features: [&quot;Stakeholder Engagement&quot;, &quot;Training Programs&quot;, &quot;Communication Strategy&quot;, &quot;Success Metrics&quot;],
+      price: &quot;From $8,000&quot;,
       icon: Users,
-      color: "from-emerald-500 to-teal-500"
+      color: &quot;from-emerald-500 to-teal-500&quot;
     }
   ],
 
   const stats = [
+<<<<<<< HEAD
     { number: "500+", label: "Transformations Completed", icon: Rocket },
     { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
     { number: "300%", label: "ROI Improvement", icon: Star },
     { number: "24/7", label: "Support Available", icon: Clock }
   ],
+=======
+    { number: &quot;500+&quot;, label: &quot;Transformations Completed&quot;, icon: Rocket },
+    { number: &quot;40%&quot;, label: &quot;Average Cost Reduction&quot;, icon: TrendingUp },
+    { number: &quot;300%&quot;, label: &quot;ROI Improvement&quot;, icon: Star },
+    { number: &quot;24/7&quot;, label: &quot;Support Available&quot;, icon: Clock }
+  ];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>Digital Transformation Services - Zion Tech Group</title>
-        <meta name="description" content="End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services." />
-        <meta property="og:title" content="Digital Transformation Services - Zion Tech Group" />
-        <meta property="og:description" content="End-to-end digital transformation solutions for modern businesses." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/transformation" />
+        <meta name=&quot;description&quot; content=&quot;End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Digital Transformation Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;End-to-end digital transformation solutions for modern businesses.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/transformation&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className=&quot;mb-8&quot;
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6&quot;>
               Digital Transformation
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed&quot;>
               End-to-end digital transformation solutions that modernize your business
             </p>
           </motion.div>
@@ -84,24 +91,24 @@ export default function DigitalTransformationPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
+            className=&quot;mb-12&quot;
           >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            <p className=&quot;text-lg text-white/70 max-w-2xl mx-auto mb-8&quot;>
               From strategy development to implementation, we guide businesses through complete 
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+            <button className=&quot;px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto&quot;>
               Start Transformation
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </button>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className=&quot;py-16 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -109,13 +116,13 @@ export default function DigitalTransformationPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className=&quot;text-center&quot;
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-orange-400" />
+                <div className=&quot;w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
+                  <stat.icon className=&quot;w-8 h-8 text-orange-400&quot; />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/70">{stat.label}</div>
+                <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.number}</div>
+                <div className=&quot;text-white/70&quot;>{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -123,22 +130,22 @@ export default function DigitalTransformationPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Digital Transformation Services</h2>
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -146,24 +153,24 @@ export default function DigitalTransformationPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
+                className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300&quot;
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/70 mb-6">{service.description}</p>
-                <ul className="space-y-3 mb-6">
+                <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{service.title}</h3>
+                <p className=&quot;text-white/70 mb-6&quot;>{service.description}</p>
+                <ul className=&quot;space-y-3 mb-6&quot;>
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-white/80">
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                    <li key={feature} className=&quot;flex items-center text-white/80&quot;>
+                      <CheckCircle className=&quot;w-5 h-5 text-orange-400 mr-3 flex-shrink-0&quot; />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-orange-400">{service.price}</span>
-                  <button className="px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                <div className=&quot;flex items-center justify-between&quot;>
+                  <span className=&quot;text-2xl font-bold text-orange-400&quot;>{service.price}</span>
+                  <button className=&quot;px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105&quot;>
                     Get Started
                   </button>
                 </div>
@@ -174,25 +181,30 @@ export default function DigitalTransformationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+=======
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className=&quot;px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 Transformation Assessment
               </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
                 View Success Stories
               </button>
             </div>

@@ -74,7 +74,7 @@ export function FeatureShowcase() {
   const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true)
   }, []),
 
   const getColorClasses = (color: string) => {
@@ -86,7 +86,7 @@ export function FeatureShowcase() {
       yellow: "from-yellow-500 to-yellow-600",
       indigo: "from-indigo-500 to-indigo-600"
     },
-    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600",
+    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600"
   },
 
   return (
@@ -216,5 +216,5 @@ export function FeatureShowcase() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

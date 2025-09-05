@@ -1,26 +1,26 @@
-import * as React from "react"
-import type { CSSProperties } from "react"
-import { TooltipProvider } from "@/components/ui/tooltip"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { cn } from "@/lib/utils"
-import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+import * as React from &quot;react&quot;
+import type { CSSProperties } from &quot;react&quot;
+import { TooltipProvider } from &quot;@/components/ui/tooltip&quot;
+import { useIsMobile } from &quot;@/hooks/use-mobile&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import type { SidebarContext as SidebarContextType, SidebarState } from &quot;../sidebar.types&quot;
 
-const SIDEBAR_COOKIE_NAME = "sidebar:state"
+const SIDEBAR_COOKIE_NAME = &quot;sidebar:state&quot;
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_KEYBOARD_SHORTCUT = "b"
+const SIDEBAR_KEYBOARD_SHORTCUT = &quot;b&quot;
 
 const SidebarContext = React.createContext<SidebarContextType | null>(null)
 
 export function useSidebar(): SidebarContextType {
   const context = React.useContext(SidebarContext)
   if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.")
+    throw new Error(&quot;useSidebar must be used within a SidebarProvider.&quot;)
   }
 
   return context as SidebarContextType
 }
 
-export interface SidebarProviderProps extends React.ComponentProps<"div"> {
+export interface SidebarProviderProps extends React.ComponentProps<&quot;div&quot;> {
   defaultOpen?: boolean
   open?: boolean
   onOpenChange?: (open: boolean) => void
@@ -51,7 +51,7 @@ export const SidebarProvider = React.forwardRef<
     const open = openProp ?? _open
     const setOpen = React.useCallback(
       (value: boolean | ((value: boolean) => boolean)) => {
-        const openState = typeof value === "function" ? value(open) : value
+        const openState = typeof value === &quot;function&quot; ? value(open) : value
         if (setOpenProp) {
           setOpenProp(openState)
         } else {
@@ -83,13 +83,13 @@ export const SidebarProvider = React.forwardRef<
         }
       }
 
-      window.addEventListener("keydown", handleKeyDown)
-      return () => window.removeEventListener("keydown", handleKeyDown)
+      window.addEventListener(&quot;keydown&quot;, handleKeyDown)
+      return () => window.removeEventListener(&quot;keydown&quot;, handleKeyDown)
     }, [toggleSidebar])
 
-    // We add a state so that we can do data-state="expanded" or "collapsed".
+    // We add a state so that we can do data-state=&quot;expanded&quot; or &quot;collapsed&quot;.
     // This makes it easier to style the sidebar with Tailwind classes.
-    const state = open ? "expanded" : "collapsed" as SidebarState
+    const state = open ? &quot;expanded&quot; : &quot;collapsed&quot; as SidebarState
 
     const contextValue = React.useMemo(
       (): SidebarContextType => ({
@@ -109,12 +109,12 @@ export const SidebarProvider = React.forwardRef<
           <div
               style={
               {
-                "--sidebar-width": "16rem",
-                "--sidebar-width-icon": "3rem",
+                &quot;--sidebar-width&quot;: &quot;16rem&quot;,
+                &quot;--sidebar-width-icon&quot;: &quot;3rem&quot;,
                 ...style} as CSSProperties
               }
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+              &quot;group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar&quot;,
               className
             )}
             ref={ref}
@@ -127,6 +127,6 @@ export const SidebarProvider = React.forwardRef<
     )
   }
 )
-SidebarProvider.displayName = "SidebarProvider"
+SidebarProvider.displayName = &quot;SidebarProvider&quot;
 
 export { SidebarContext }

@@ -19,20 +19,20 @@ export default function Assistant() {
     const faq = Object.keys(faqs).find(key => lower.includes(key)),
     if (faq) {
       setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
-      return,
+      return
     }
     // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]),
+    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
 
   return (
-    <div className="min-h-full h-full w-full flex flex-col bg-white">
-      <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
-        <span className="font-semibold">{brand}</span>
-        <span className="text-gray-400">Applicant Assistant</span>
-        {tenantId && <span className="ml-auto text-xs text-gray-400">Tenant: {tenantId.slice(0, 8)}</span>}
+    <div className=&quot;min-h-full h-full w-full flex flex-col bg-white&quot;>
+      <div className=&quot;px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2&quot;>
+        <span className=&quot;font-semibold&quot;>{brand}</span>
+        <span className=&quot;text-gray-400&quot;>Applicant Assistant</span>
+        {tenantId && <span className=&quot;ml-auto text-xs text-gray-400&quot;>Tenant: {tenantId.slice(0, 8)}</span>}
       </div>
-      <div className="flex-1 overflow-auto p-4 space-y-3">
+      <div className=&quot;flex-1 overflow-auto p-4 space-y-3&quot;>
         {messages.map((m, idx) => (
           <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
             {m.content}
@@ -40,17 +40,22 @@ export default function Assistant() {
         ))}
       </div>
       <form
+<<<<<<< HEAD
         className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput(''), } }}
+        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
+=======
+        className=&quot;p-3 border-t flex gap-2&quot;
+        onSubmit={(e) => { e.preventDefault(); if (input.trim()) { handleAsk(input.trim()); setInput(''); } }}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       >
         <input
-          className="flex-1 border rounded px-3 py-2 text-sm"
-          placeholder="Ask about the role..."
+          className=&quot;flex-1 border rounded px-3 py-2 text-sm&quot;
+          placeholder=&quot;Ask about the role...&quot;
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
+        <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>
       </form>
     </div>
-  ),
+  )
 }

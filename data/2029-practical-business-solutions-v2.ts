@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface PracticalBusinessSolution2029 {
   id: string,
   name: string,
@@ -51,10 +50,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
     features: [
-      'Real-time data analyticsPredictive business modeling',
-      'Automated report generationCustom dashboard creation',
-      'Data visualization toolsBusiness trend analysis',
-      'Performance benchmarkingROI tracking automation',
+      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation',
       'Market opportunity identificationCompetitive intelligence'
     ],
     popular: true,
@@ -98,10 +94,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
     features: [
-      'AI-powered personalizationCustomer journey mapping',
-      'Real-time optimizationMulti-channel integration',
-      'Behavioral analyticsPredictive customer insights',
-      'Automated A/B testingCustomer sentiment analysis',
+      'AI-powered personalizationCustomer journey mappingReal-time optimizationMulti-channel integrationBehavioral analyticsPredictive customer insightsAutomated A/B testingCustomer sentiment analysis',
       'Loyalty program optimizationRevenue optimization'
     ],
     popular: true,
@@ -145,10 +138,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.',
     features: [
-      'AI demand forecastingInventory optimization',
-      'Supply chain risk managementReal-time monitoring',
-      'Cost optimizationSupplier performance tracking',
-      'Logistics optimizationSustainability tracking',
+      'AI demand forecastingInventory optimizationSupply chain risk managementReal-time monitoringCost optimizationSupplier performance trackingLogistics optimizationSustainability tracking',
       'Compliance automationPerformance analytics'
     ],
     popular: true,
@@ -192,10 +182,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Next-generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data-driven HR strategies that drive business success.',
     features: [
-      'AI-powered recruitmentEmployee engagement analytics',
-      'Turnover predictionPerformance optimization',
-      'Skills gap analysisTraining recommendations',
-      'Diversity and inclusion trackingCompliance automation',
+      'AI-powered recruitmentEmployee engagement analyticsTurnover predictionPerformance optimizationSkills gap analysisTraining recommendationsDiversity and inclusion trackingCompliance automation',
       'Employee sentiment analysisHR analytics dashboard'
     ],
     popular: true,
@@ -239,10 +226,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real-time financial insights for better business decisions.',
     features: [
-      'AI cash flow optimizationFinancial risk prediction',
-      'Automated accountingReal-time financial insights',
-      'Budget optimizationExpense tracking automation',
-      'Financial forecastingTax optimization',
+      'AI cash flow optimizationFinancial risk predictionAutomated accountingReal-time financial insightsBudget optimizationExpense tracking automationFinancial forecastingTax optimization',
       'Compliance monitoringPerformance analytics'
     ],
     popular: true,
@@ -286,10 +270,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.',
     features: [
-      'AI campaign optimizationContent personalization',
-      'Customer behavior predictionMarketing workflow automation',
-      'ROI optimizationMulti-channel campaign management',
-      'A/B testing automationCustomer segmentation',
+      'AI campaign optimizationContent personalizationCustomer behavior predictionMarketing workflow automationROI optimizationMulti-channel campaign managementA/B testing automationCustomer segmentation',
       'Lead scoring automationPerformance analytics'
     ],
     popular: true,
@@ -333,10 +314,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
     features: [
-      'AI workflow optimizationProject risk prediction',
-      'Task automationTeam collaboration tools',
-      'Resource optimizationTimeline prediction',
-      'Quality assurance automationProgress tracking',
+      'AI workflow optimizationProject risk predictionTask automationTeam collaboration toolsResource optimizationTimeline predictionQuality assurance automationProgress tracking',
       'Communication optimizationPerformance analytics'
     ],
     popular: true,
@@ -380,10 +358,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description: 'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.',
     features: [
-      'AI lead scoringCustomer behavior prediction',
-      'Sales process optimizationRevenue optimization',
-      'Pipeline managementForecasting automation',
-      'Customer insightsSales training optimization',
+      'AI lead scoringCustomer behavior predictionSales process optimizationRevenue optimizationPipeline managementForecasting automationCustomer insightsSales training optimization',
       'Performance trackingROI analytics'
     ],
     popular: true,
@@ -421,7 +396,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 ],
 
 export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular),
+  return practicalBusinessSolutions2029.filter(service => service.popular)
 },
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
@@ -431,6 +406,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
-    return price >= minPrice && price <= maxPrice,
-  }),
+    return price >= minPrice && price <= maxPrice
+  })
 },

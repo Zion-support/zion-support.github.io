@@ -32,14 +32,14 @@ export function SafeImage({
   const handleError = () => {
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc),
-      setHasError(true),
+      setHasError(true)
     } else if (!hasError && src.startsWith('/')) {
       // Try serving the image directly through our custom API route
       const fallbackUrl = `/api/image${src}`,
       setCurrentSrc(fallbackUrl),
-      setHasError(true),
+      setHasError(true)
     } else if (!hasError) {
-      setHasError(true),
+      setHasError(true)
     }
   },
 
@@ -49,12 +49,12 @@ export function SafeImage({
       <div 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
-        role="img"
+        role=&quot;img&quot;
         aria-label={alt}
       >
-        <ImageIcon className="w-6 h-6" />
+        <ImageIcon className=&quot;w-6 h-6&quot; />
       </div>
-    ),
+    )
   }
 
   return (
@@ -69,5 +69,5 @@ export function SafeImage({
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
     />
-  ),
+  )
 } 

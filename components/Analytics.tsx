@@ -1,10 +1,26 @@
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
+=======
 import Head from 'next/head';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
 interface AnalyticsProps {
   trackingId?: string;
 }
 
+<<<<<<< HEAD
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && trackingId) {
+      // Analytics initialized with tracking ID
+    }
+  }, [trackingId]);
+
+  return null;
+};
+
+export default Analytics;
+=======
 const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
@@ -124,3 +140,4 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
 };
 
 export default Analytics;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

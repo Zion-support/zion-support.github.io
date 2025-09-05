@@ -21,7 +21,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="inline-flex text-blue-500">
+          <span className=&quot;inline-flex text-blue-500&quot;>
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
@@ -30,5 +30,5 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  ),
+  )
 }

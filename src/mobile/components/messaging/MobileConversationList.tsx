@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -6,7 +7,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+=======
+import React from &quot;react&quot;;
+import { Card } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { Search } from 'lucide-react'
+import { Input } from &quot;@/components/ui/input&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface Conversation {
   id: string,
   name: string,
@@ -29,37 +39,37 @@ export function MobileConversationList({
   onSelectConversation
 }: MobileConversationListProps) {
   return (
-    <div className="space-y-4">
-      <div className="px-4 mb-2">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+    <div className=&quot;space-y-4&quot;>
+      <div className=&quot;px-4 mb-2&quot;>
+        <div className=&quot;relative&quot;>
+          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground&quot; />
           <Input
-            placeholder="Search messages..."
-            className="pl-9"
+            placeholder=&quot;Search messages...&quot;
+            className=&quot;pl-9&quot;
           />
         </div>
       </div>
       
-      <div className="px-4 pb-4 space-y-2">
-        <div className="flex space-x-2">
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
+      <div className=&quot;px-4 pb-4 space-y-2&quot;>
+        <div className=&quot;flex space-x-2&quot;>
+          <Badge variant=&quot;secondary&quot; className=&quot;rounded-full px-3&quot;>All</Badge>
+          <Badge variant=&quot;outline&quot; className=&quot;rounded-full px-3&quot;>Unread</Badge>
+          <Badge variant=&quot;outline&quot; className=&quot;rounded-full px-3&quot;>Interviews</Badge>
+          <Badge variant=&quot;outline&quot; className=&quot;rounded-full px-3&quot;>Projects</Badge>
         </div>
       </div>
       
-      <div className="space-y-2 pb-24">
+      <div className=&quot;space-y-2 pb-24&quot;>
         {conversations.map((conversation) => (
           <div
             key={conversation.id}
             className={cn(
-              "px-4",
-              activeConversation === conversation.id && "bg-primary/5"
+              &quot;px-4&quot;,
+              activeConversation === conversation.id && &quot;bg-primary/5&quot;
             )}
             onClick={() => onSelectConversation(conversation.id)}
           >
-            <div className="flex items-center gap-3 py-3 cursor-pointer">
+            <div className=&quot;flex items-center gap-3 py-3 cursor-pointer&quot;>
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
                 <AvatarFallback>
@@ -67,33 +77,33 @@ export function MobileConversationList({
                 </AvatarFallback>
               </Avatar>
               
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="font-medium truncate">{conversation.name}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+              <div className=&quot;flex-1 min-w-0&quot;>
+                <div className=&quot;flex justify-between items-baseline&quot;>
+                  <h3 className=&quot;font-medium truncate&quot;>{conversation.name}</h3>
+                  <span className=&quot;text-xs text-muted-foreground whitespace-nowrap ml-2&quot;>
                     {conversation.timestamp}
                   </span>
                 </div>
                 
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-muted-foreground truncate">
+                <div className=&quot;flex justify-between items-center&quot;>
+                  <p className=&quot;text-sm text-muted-foreground truncate&quot;>
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
                   </p>
                   
                   {conversation.unreadCount > 0 && (
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                    <Badge className=&quot;ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full&quot;>
                       {conversation.unreadCount}
                     </Badge>
                   )}
                 </div>
               </div>
             </div>
-            <div className="border-t border-border ml-12"></div>
+            <div className=&quot;border-t border-border ml-12&quot;></div>
           </div>
         ))}
       </div>
     </div>
-  ),
+  )
 }

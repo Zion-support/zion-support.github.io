@@ -1,71 +1,14 @@
 import React, { useEffect } from 'react',
 
 interface PerformanceData {
+  loadTime: number,
   domContentLoaded: number,
-  loadComplete: number,
-  totalLoadTime: number,
   firstPaint: number,
-  firstContentfulPaint: number,
-  resourceCount: number,
-  memory?: {
-    used: number,
-    total: number,
-    limit: number,
-  } | null,
-}
-
-interface PerformanceData {
-  loadTime: number;
-  domContentLoaded: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-}
-
-// Extend Window interface to include performance API
-declare global {
-  interface Window {
-    performance: Performance;
-  }
-  
-  interface Performance {
-    getEntriesByType(_type: string): PerformanceEntry[];
-    memory?: {
-      usedJSHeapSize: number;
-      totalJSHeapSize: number;
-      jsHeapSizeLimit: number;
-    };
-  }
-  
-  interface PerformanceEntry {
-    name: string;
-    startTime: number;
-  }
-  
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number;
-    domContentLoadedEventEnd: number;
-    loadEventStart: number;
-    loadEventEnd: number;
-    fetchStart: number;
-  }
-}
-
-interface PerformanceData {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalLoadTime: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  resourceCount: number;
-  memory: {
-    used: number;
-    total: number;
-    limit: number;
-  } | null;
+  firstContentfulPaint: number
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void;
+  onPerformanceData?: (data: PerformanceData) => void
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
@@ -78,27 +21,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      };
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+      },
       
       if (onPerformanceData) {
-        onPerformanceData(performanceData),
+        onPerformanceData(performanceData)
       }
-    };
+    },
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance(),
+      measurePerformance()
     } else {
-      window.addEventListener('load', measurePerformance),
+      window.addEventListener('load', measurePerformance)
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance),
-    },
+      window.removeEventListener('load', measurePerformance)
+    }
   }, [onPerformanceData]),
 
-  return null,
+  return null
 },
 
 export default PerformanceMonitor,

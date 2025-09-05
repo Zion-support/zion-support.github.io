@@ -6,7 +6,7 @@ export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId),
   const transactions = tokenStore.getTransactions(userId),
   const config = tokenStore.getConfig(),
-  return { wallet, transactions, config },
+  return { wallet, transactions, config }
 }
 
 export function earnTokens(
@@ -28,7 +28,7 @@ export function earnTokens(
     metadata,
     createdAt: new Date().toISOString()},
   tokenStore.addTransaction(tx),
-  return tx,
+  return tx
 }
 
 export function burnTokens(
@@ -51,7 +51,7 @@ export function burnTokens(
     metadata,
     createdAt: new Date().toISOString()},
   tokenStore.addTransaction(tx),
-  return tx,
+  return tx
 }
 
 export function issueTokens(
@@ -61,7 +61,7 @@ export function issueTokens(
 ): TokenTransaction {
   const tx = earnTokens(userId, amount, reason),
   tx.type = "issue",
-  return tx,
+  return tx
 }
 
 export function revokeTokens(
@@ -71,21 +71,21 @@ export function revokeTokens(
 ): TokenTransaction {
   const tx = burnTokens(userId, amount, reason),
   tx.type = "revoke",
-  return tx,
+  return tx
 }
 
 export function handleAction(userId: string, action: string, metadata?: Record<string any>): TokenTransaction {
   const { earnRules } = tokenStore.getConfig(),
   const amount = earnRules[action],
   if (!amount) throw new Error("Unknown action"),
-  return earnTokens(userId, amount, action, metadata),
+  return earnTokens(userId, amount, action, metadata)
 }
 
 export function burnForFeature(userId: string, feature: string, metadata?: Record<string any>): TokenTransaction {
   const { burnRules } = tokenStore.getConfig(),
   const amount = burnRules[feature],
   if (!amount) throw new Error("Unknown feature"),
-  return burnTokens(userId, amount, feature, metadata),
+  return burnTokens(userId, amount, feature, metadata)
 }
 
 export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction, usd: number } {
@@ -93,18 +93,18 @@ export function redeemToCredits(userId: string, amount: number): { tx: TokenTran
   const tx = burnTokens(userId, amount, "redeem_credits"),
   tx.type = "redeem",
   const usd = parseFloat((amount * usdPerToken).toFixed(2)),
-  return { tx, usd },
+  return { tx, usd }
 }
 
 export function getAllTransactions() {
-  return tokenStore.getTransactions(),
+  return tokenStore.getTransactions()
 }
 
 export function getConfig() {
-  return tokenStore.getConfig(),
+  return tokenStore.getConfig()
 }
 
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig(),
-  tokenStore.setConfig({ ...current, ...partial }),
+  tokenStore.setConfig({ ...current, ...partial })
 }

@@ -4,7 +4,6 @@ import { PortfolioProject } from '@/types/resume',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from '@/hooks/use-toast',
-
 export function usePortfolio() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -14,7 +13,7 @@ export function usePortfolio() {
   const fetchProjects = useCallback(async () => {
     if (!user) {
       setError('You must be logged in to access portfolio projects'),
-      return [],
+      return []
     }
     
     setIsLoading(true),
@@ -30,13 +29,13 @@ export function usePortfolio() {
       if (error) throw error,
       
       setProjects(data || []),
-      return data || [],
+      return data || []
     } catch (e: any) {
       console.error('Error fetching portfolio projects:', e),
       setError(e.message),
-      return [],
+      return []
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   }, [user]),
   
@@ -68,23 +67,35 @@ export function usePortfolio() {
       if (error) throw error,
       
       toast({
+<<<<<<< HEAD
         title: "Project added",
         description: "Your project has been added to your portfolio"
       }),
+=======
+        title: &quot;Project added&quot;,
+        description: &quot;Your project has been added to your portfolio&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       await fetchProjects(),
-      return data.id,
+      return data.id
     } catch (e: any) {
       console.error('Error adding portfolio project:', e),
       setError(e.message),
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not add project: ${e.message}`,
+<<<<<<< HEAD
         variant: "destructive"
       }),
-      return null,
+      return null
+=======
+        variant: &quot;destructive&quot;
+      });
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -115,23 +126,35 @@ export function usePortfolio() {
       if (error) throw error,
       
       toast({
+<<<<<<< HEAD
         title: "Project updated",
         description: "Your portfolio project has been updated"
       }),
+=======
+        title: &quot;Project updated&quot;,
+        description: &quot;Your portfolio project has been updated&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       await fetchProjects(),
-      return true,
+      return true
     } catch (e: any) {
       console.error('Error updating portfolio project:', e),
       setError(e.message),
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not update project: ${e.message}`,
+<<<<<<< HEAD
         variant: "destructive"
       }),
-      return false,
+      return false
+=======
+        variant: &quot;destructive&quot;
+      });
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -154,23 +177,35 @@ export function usePortfolio() {
       if (error) throw error,
       
       toast({
+<<<<<<< HEAD
         title: "Project deleted",
         description: "Your portfolio project has been deleted"
       }),
+=======
+        title: &quot;Project deleted&quot;,
+        description: &quot;Your portfolio project has been deleted&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       setProjects(projects.filter(p => p.id !== projectId)),
-      return true,
+      return true
     } catch (e: any) {
       console.error('Error deleting portfolio project:', e),
       setError(e.message),
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not delete project: ${e.message}`,
+<<<<<<< HEAD
         variant: "destructive"
       }),
-      return false,
+      return false
+=======
+        variant: &quot;destructive&quot;
+      });
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -182,5 +217,5 @@ export function usePortfolio() {
     addProject,
     updateProject,
     deleteProject
-  },
+  }
 }

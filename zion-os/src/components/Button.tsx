@@ -3,7 +3,6 @@
 import React, { forwardRef } from 'react',
 import Link from 'next/link',
 import LoadingSpinner from './LoadingSpinner',
-
 interface ButtonProps {
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost',
@@ -77,7 +76,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({
       <Link href={href} className={classes}>
         {content}
       </Link>
-    ),
+    )
   }
   
   return (
@@ -91,7 +90,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({
     >
       {content}
     </button>
-  ),
+  )
 }),
 
 Button.displayName = 'Button',
@@ -100,19 +99,19 @@ export default Button,
 
 // Specialized button variants
 export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {
-  return <Button {...props} variant="primary" />,
+  return <Button {...props} variant="primary" />
 }
 
 export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {
-  return <Button {...props} variant="secondary" />,
+  return <Button {...props} variant="secondary" />
 }
 
 export function OutlineButton(props: Omit<ButtonProps 'variant'>) {
-  return <Button {...props} variant="outline" />,
+  return <Button {...props} variant="outline" />
 }
 
 export function GhostButton(props: Omit<ButtonProps 'variant'>) {
-  return <Button {...props} variant="ghost" />,
+  return <Button {...props} variant="ghost" />
 }
 
 // Icon button variant
@@ -125,7 +124,7 @@ export function IconButton({
     <Button {...props} icon={icon} iconPosition="left" size="sm">
       {children}
     </Button>
-  ),
+  )
 }
 
 // Floating action button
@@ -144,5 +143,5 @@ export function FloatingActionButton({
       size="lg"
       rounded="full"
     />
-  ),
+  )
 }

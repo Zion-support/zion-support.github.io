@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface AdvancedFintechSolution2025 {
   id: string,
   name: string,
@@ -50,10 +49,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
     features: [
-      'Alternative data analysisMachine learning models',
-      'Real-time scoringRisk prediction',
-      'Fraud detectionCompliance reporting',
-      'API integrationCustom scoring models',
+      'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',
       'Performance analyticsRegulatory compliance'
     ],
     popular: true,
@@ -96,10 +92,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',
     features: [
-      'Cross-border paymentsReal-time settlement',
-      'Multi-currency supportSmart contracts',
-      'Compliance toolsAPI integration',
-      'Transaction monitoringFraud prevention',
+      'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud prevention',
       'Regulatory reportingCost optimization'
     ],
     popular: true,
@@ -142,10 +135,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
     features: [
-      'Quantum algorithmsPortfolio optimization',
-      'Risk modelingOption pricing',
-      'Monte Carlo simulationQuantum machine learning',
-      'Real-time calculationsAPI access',
+      'Quantum algorithmsPortfolio optimizationRisk modelingOption pricingMonte Carlo simulationQuantum machine learningReal-time calculationsAPI access',
       'Custom modelsPerformance analytics'
     ],
     popular: false,
@@ -188,10 +178,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
     features: [
-      'AI risk assessmentAutomated underwriting',
-      'Predictive modelingClaims prediction',
-      'Fraud detectionPolicy optimization',
-      'Customer segmentationCompliance tools',
+      'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance tools',
       'API integrationPerformance analytics'
     ],
     popular: true,
@@ -234,10 +221,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
     features: [
-      'Regulatory monitoringAutomated reporting',
-      'Compliance trackingRisk assessment',
-      'Audit trailsPolicy management',
-      'Training modulesAPI integration',
+      'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integration',
       'Real-time updatesPerformance analytics'
     ],
     popular: false,

@@ -1,11 +1,10 @@
 import OpenAI from 'openai',
-
 export type ClientBudgetRequest = {
   title: string,
   category: string,
   timelineWeeks?: number, // e.g., 2 for a 2-week contract
   scope?: string, // brief description or scope size
-  experienceLevel?: 'junior' | 'mid' | 'senior',
+  experienceLevel?: 'junior' | 'mid' | 'senior'
 },
 
 export type TalentRateRequest = {
@@ -38,21 +37,21 @@ export type TalentRateSuggestion = {
 function roundMoney(value: number): number {
   if (!isFinite(value)) return 0,
   // Round to nearest $5 for cleaner display
-  return Math.max(0, Math.round(value / 5) * 5),
+  return Math.max(0, Math.round(value / 5) * 5)
 }
 
 function clampRange(min: number, max: number): { min: number, max: number } {
   if (min > max) {
-    return { min: max, max: min },
+    return { min: max, max: min }
   }
-  return { min, max },
+  return { min, max }
 }
 
 function inferExperienceLevelFromYears(years?: number): 'junior' | 'mid' | 'senior' {
   if (typeof years !== 'number') return 'mid',
   if (years < 2) return 'junior',
   if (years < 6) return 'mid',
-  return 'senior',
+  return 'senior'
 }
 
 function locationCostIndex(location: string): number {
@@ -108,7 +107,7 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
     confidence: 'Medium',
     rationale: `Estimated using heuristics. Baseline hourly ${hourly.toFixed(0)} derived from skills (${skills.join()}) and experience (${exp}). ${hours} hours over ${weeks} weeks.`,
     modelUsed: 'heuristic-v1',
-    source: 'heuristic'},
+    source: 'heuristic'}
 }
 
 function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {
@@ -129,7 +128,7 @@ function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggest
     confidence: 'Medium',
     rationale: `Heuristic estimate using skills (${skills.join()}) baseline, experience (${expLevel}) and location index (${locality.toFixed(2)}).`,
     modelUsed: 'heuristic-v1',
-    source: 'heuristic'},
+    source: 'heuristic'}
 }
 
 async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {
@@ -150,7 +149,7 @@ Contract:
 Constraints:
 - Assume remote contractor.
 - Use current global market rates.
-- currency must be "USD".
+- currency must be &quot;USD&quot;.
 - min and max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
@@ -180,9 +179,9 @@ Constraints:
     suggestion.min = range.min,
     suggestion.max = range.max,
 
-    return suggestion,
+    return suggestion
   } catch (error) {
-    return null,
+    return null
   }
 }
 
@@ -200,7 +199,7 @@ Candidate:
 
 Constraints:
 - Consider global averages and location factor.
-- currency must be "USD".
+- currency must be &quot;USD&quot;.
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
@@ -231,9 +230,9 @@ Constraints:
     suggestion.min = range.min,
     suggestion.max = range.max,
 
-    return suggestion,
+    return suggestion
   } catch (error) {
-    return null,
+    return null
   }
 }
 
@@ -253,7 +252,7 @@ export async function generateClientBudgetSuggestion(input: ClientBudgetRequest)
     confidence,
     rationale: `${llm.rationale} Heuristic cross-check around $${roundMoney((heuristic.min + heuristic.max) / 2)} for sanity.`,
     modelUsed: llm.modelUsed,
-    source: 'hybrid'},
+    source: 'hybrid'}
 }
 
 export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {
@@ -273,5 +272,5 @@ export async function generateTalentRateSuggestion(input: TalentRateRequest): Pr
     confidence,
     rationale: `${llm.rationale} Heuristic cross-check for consistency with location and experience bands.`,
     modelUsed: llm.modelUsed,
-    source: 'hybrid'},
+    source: 'hybrid'}
 }

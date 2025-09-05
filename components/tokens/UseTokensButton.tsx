@@ -5,8 +5,8 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
   const [open, setOpen] = useState(false),
   return (
     <>
-      <button onClick={() => setOpen(true)} className="enhanced-button enhanced-button-primary">Use Tokens</button>
+      <button onClick={() => setOpen(true)} className=&quot;enhanced-button enhanced-button-primary&quot;>Use Tokens</button>
       <UseTokensModal isOpen={open} onClose={() => setOpen(false)} serviceId={serviceId} defaultType={defaultType} />
     </>
-  ),
+  )
 }

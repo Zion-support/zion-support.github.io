@@ -2,7 +2,7 @@
  * Environment Polyfill for Browser
  * 
  * This polyfill ensures that process.env is always available in the browser environment.
- * It prevents the "Cannot read properties of undefined (reading 'env')" error.
+ * It prevents the &quot;Cannot read properties of undefined (reading 'env')&quot; error.
  */
 
 // Define safe defaults for environment variables
@@ -24,24 +24,24 @@ const createProcessObject = () => ({
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
-    (globalThis as any).process = createProcessObject(),
+    (globalThis as any).process = createProcessObject()
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-    (globalThis as any).process.env = { ...defaultEnv },
+    (globalThis as any).process.env = { ...defaultEnv }
   }
 }
 
 // Ensure process is available on window
 if (typeof window !== 'undefined') {
   if (typeof (window as any).process === 'undefined') {
-    (window as any).process = createProcessObject(),
+    (window as any).process = createProcessObject()
   } else if (typeof (window as any).process.env === 'undefined') {
-    (window as any).process.env = { ...defaultEnv },
+    (window as any).process.env = { ...defaultEnv }
   }
 }
 
 // Ensure process is available globally
 if (typeof (globalThis as any).process === 'undefined') {
-  (globalThis as any).process = createProcessObject(),
+  (globalThis as any).process = createProcessObject()
 }
 
 // Export a safe environment accessor
@@ -54,19 +54,19 @@ export const safeEnv = {
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {
-    return (globalThis as any).process.env[key],
+    return (globalThis as any).process.env[key]
   }
-  return defaultValue,
+  return defaultValue
 }
 
 // Check if we're in development mode safely
 export function isDevelopment(): boolean {
-  return getEnv('NODE_ENV') === 'development',
+  return getEnv('NODE_ENV') === 'development'
 }
 
 // Check if we're in production mode safely
 export function isProduction(): boolean {
-  return getEnv('NODE_ENV') === 'production',
+  return getEnv('NODE_ENV') === 'production'
 }
 
 // Export the polyfilled process object
@@ -76,6 +76,10 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
+<<<<<<< HEAD
 // // // console.log('✅ Environment polyfill loaded successfully'),
+=======
+// console.log('✅ Environment polyfill loaded successfully');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export default safeEnv,

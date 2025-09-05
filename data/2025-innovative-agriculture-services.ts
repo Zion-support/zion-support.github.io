@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface InnovativeAgricultureService {
   id: string,
   name: string,
@@ -57,10 +56,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
     features: [
-      'AI-powered crop monitoringIrrigation optimization',
-      'Yield predictionReal-time monitoring',
-      'Performance analyticsIntegration capabilities',
-      'Custom monitoring modelsMulti-field support',
+      'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',
       'Compliance management'
     ],
     popular: true,
@@ -98,10 +94,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [
-      'Quantum optimization algorithmsCrop planning optimization',
-      'Resource allocationReal-time adaptation',
-      'Performance analyticsCost optimization',
-      'Efficiency analysisRegulatory compliance',
+      'Quantum optimization algorithmsCrop planning optimizationResource allocationReal-time adaptationPerformance analyticsCost optimizationEfficiency analysisRegulatory compliance',
       'Multi-crop support'
     ],
     popular: false,
@@ -139,10 +132,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced food safety monitoring platform that uses AI to detect contamination, monitor quality, and ensure food safety compliance for food producers and processors.',
     features: [
-      'AI-powered contamination detectionQuality monitoring',
-      'Safety complianceReal-time alerts',
-      'Performance analyticsIntegration capabilities',
-      'Custom monitoring rulesMulti-facility support',
+      'AI-powered contamination detectionQuality monitoringSafety complianceReal-time alertsPerformance analyticsIntegration capabilitiesCustom monitoring rulesMulti-facility support',
       'Compliance management'
     ],
     popular: true,
@@ -180,10 +170,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
     features: [
-      'Blockchain-based trackingSupply chain transparency',
-      'Product authenticationReal-time monitoring',
-      'Compliance verificationPerformance analytics',
-      'Multi-party collaborationAPI integration',
+      'Blockchain-based trackingSupply chain transparencyProduct authenticationReal-time monitoringCompliance verificationPerformance analyticsMulti-party collaborationAPI integration',
       'Mobile app support'
     ],
     popular: false,
@@ -221,10 +208,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
     features: [
-      'AI-powered climate controlCrop growth monitoring',
-      'Environmental optimizationReal-time control',
-      'Performance analyticsIntegration capabilities',
-      'Custom growing protocolsMulti-tier support',
+      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support',
       'Compliance management'
     ],
     popular: true,

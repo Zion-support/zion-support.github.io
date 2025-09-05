@@ -1,13 +1,18 @@
 
+<<<<<<< HEAD
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+=======
+import { ProfileData } from &quot;@/types/profile&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   
   // If this is already a TalentProfile, just return it
   if (profile.professional_title !== undefined) {
-    return profile,
+    return profile
   }
   
   // Convert ProfileData to TalentProfile
@@ -27,5 +32,5 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourlyRate || 0,
     rating_count: profile.reviewCount || 0,
     average_rating: profile.rating || 0
-  },
+  }
 }

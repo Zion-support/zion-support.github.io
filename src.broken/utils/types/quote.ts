@@ -22,5 +22,5 @@ export type QuoteFilters = {
   startDate?: string | null, // ISO
   endDate?: string | null, // ISO
   talentSlug?: string | 'All',
-  search?: string,
+  search?: string
 },

@@ -12,10 +12,15 @@ export const OfflineIndicator = () => {
       setIsOnline(online),
       
       if (!online) {
-        setShowOfflineAlert(true),
+        setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
+<<<<<<< HEAD
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000),
+        setTimeout(() => setShowOfflineAlert(false), 3000)
+=======
+        // Show brief &quot;back online&quot; message then hide
+        setTimeout(() => setShowOfflineAlert(false), 3000);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
     },
 
@@ -28,20 +33,20 @@ export const OfflineIndicator = () => {
 
     return () => {
       window.removeEventListener('online', updateOnlineStatus),
-      window.removeEventListener('offline', updateOnlineStatus),
-    },
+      window.removeEventListener('offline', updateOnlineStatus)
+    }
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
 
   return (
-    <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
-      <Alert variant={isOnline ? "default" : "destructive"}>
-        <div className="flex items-center gap-2">
+    <div className=&quot;fixed top-4 right-4 z-50 max-w-sm pointer-events-none&quot;>
+      <Alert variant={isOnline ? &quot;default&quot; : &quot;destructive&quot;}>
+        <div className=&quot;flex items-center gap-2&quot;>
           {isOnline ? (
-            <Wifi className="h-4 w-4" />
+            <Wifi className=&quot;h-4 w-4&quot; />
           ) : (
-            <WifiOff className="h-4 w-4" />
+            <WifiOff className=&quot;h-4 w-4&quot; />
           )}
           <AlertDescription>
             {isOnline ? (
@@ -53,5 +58,5 @@ export const OfflineIndicator = () => {
         </div>
       </Alert>
     </div>
-  ),
+  )
 }, 

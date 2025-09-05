@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react',
 import dynamic from 'next/dynamic',
-
 const isClient = typeof window !== 'undefined',
 
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,
-  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void,
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 },
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
@@ -16,7 +15,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   useEffect(() => {
     if (!isOpen) {
       setError(null),
-      setLoading(false),
+      setLoading(false)
     }
   }, [isOpen]),
 
@@ -60,12 +59,12 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       if (!verifyRes.ok) throw new Error('Failed to verify signature'),
 
       onLoggedIn?.({ address, chain: 'evm' }),
-      onClose(),
+      onClose()
     } catch (e: any) {
       console.error(e),
       setError(e?.message || 'Wallet connection failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [onClose, onLoggedIn]),
 
@@ -75,7 +74,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     try {
       const provider = (window as any)?.solana,
       if (!provider || !provider.isPhantom) {
-        throw new Error('Phantom not found. Install the Phantom extension'),
+        throw new Error('Phantom not found. Install the Phantom extension')
       }
       const resp = await provider.connect(),
       const publicKey: string = resp.publicKey.toString(),
@@ -96,37 +95,42 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature'),
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
-      onClose(),
+      onClose()
     } catch (e: any) {
       console.error(e),
       setError(e?.message || 'Phantom connection failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [onClose, onLoggedIn]),
 
   if (!isOpen) return null,
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <div className="w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl">
-        <div className="mb-4">
-          <h2 className="text-lg font-semibold">Connect your wallet</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">No gas needed. We will verify your ownership with a signed message.</p>
+    <div className=&quot;fixed inset-0 z-50 flex items-center justify-center bg-black/60&quot;>
+      <div className=&quot;w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl&quot;>
+        <div className=&quot;mb-4&quot;>
+          <h2 className=&quot;text-lg font-semibold&quot;>Connect your wallet</h2>
+          <p className=&quot;text-sm text-gray-500 dark:text-gray-400&quot;>No gas needed. We will verify your ownership with a signed message.</p>
         </div>
         {error && (
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+          <div className=&quot;mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300&quot;>{error}</div>
         )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+        <div className=&quot;space-y-3&quot;>
+          <button onClick={handleEvmConnect} disabled={loading} className=&quot;w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black&quot;>
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+          <button onClick={handlePhantomConnect} disabled={loading} className=&quot;w-full rounded-lg bg-purple-600 text-white py-2.5&quot;>
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
         </div>
+<<<<<<< HEAD
         <div className="mt-4 flex justify-end">
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
+=======
+        <div className=&quot;mt-4 flex justify-end&quot;>
+          <button onClick={onClose} className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>Cancel</button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         </div>
       </div>
     </div>
@@ -135,5 +139,5 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null,
-  return <ModalInner {...props} />,
+  return <ModalInner {...props} />
 }

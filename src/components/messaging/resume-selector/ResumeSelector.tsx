@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -12,7 +13,22 @@ import { UploadSection } from './UploadSection',
 import { SelectResumeSection } from './SelectResumeSection',
 import { ResumeOption, ResumeSelectorProps } from './types',
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import React, { useState, useEffect } from 'react';
+import { Button } from &quot;@/components/ui/button&quot;;
+import { RadioGroup, RadioGroupItem } from &quot;@/components/ui/radio-group&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Plus, Loader2 } from 'lucide-react'
+import { useResume } from &quot;@/hooks/useResume&quot;;
+import { exportResumeToPDF } from &quot;@/utils/pdfExport&quot;;
+import { toast } from &quot;@/components/ui/use-toast&quot;;
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
@@ -28,15 +44,15 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     const loadResumes = async () => {
       setIsLoading(true),
       try {
-        await fetchResume(),
+        await fetchResume()
       } catch (error) {
-        logErrorToProduction('Error loading resumes:', { data: error }),
+        logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    loadResumes(),
+    loadResumes()
   }, [fetchResume]),
   
   // Update resume options when resume data changes
@@ -54,7 +70,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       // Pre-select the most recent resume
       if (options.length > 0 && selectedOption === 'recent' && options[0]) {
         setSelectedResume(options[0]),
-        onResumeSelected(options[0]),
+        onResumeSelected(options[0])
       }
     }
   }, [resume, selectedOption, onResumeSelected]),
@@ -68,9 +84,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       onResumeSelected(resumeOptions[0])
     } else if (value === 'select') {
       // Reset selection until user chooses
-      setSelectedResume(null),
+      setSelectedResume(null)
     } else if (value === 'upload') {
-      setSelectedResume(null),
+      setSelectedResume(null)
     }
   },
   
@@ -91,11 +107,19 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
+<<<<<<< HEAD
           title: "Invalid file type",
           description: "Please upload a PDF file",
           variant: "destructive"
         }),
-        return,
+        return
+=======
+          title: &quot;Invalid file type&quot;,
+          description: &quot;Please upload a PDF file&quot;,
+          variant: &quot;destructive&quot;
+        });
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // Create a custom resume option
@@ -108,14 +132,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       setCustomFile(file),
       setSelectedResume(customOption),
-      onResumeSelected(customOption),
+      onResumeSelected(customOption)
     }
   },
   
   // Handle resume download
   const handleDownloadResume = async () => {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
-      return,
+      return
     }
     
     try {
@@ -135,47 +159,59 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       URL.revokeObjectURL(url),
       
       toast({
+<<<<<<< HEAD
         title: "Success!",
-        description: "Your resume has been downloaded."}),
+        description: "Your resume has been downloaded."})
+=======
+        title: &quot;Success!&quot;,
+        description: &quot;Your resume has been downloaded.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       logErrorToProduction('Error downloading PDF:', { data: error }),
       toast({
+<<<<<<< HEAD
         title: "Download failed",
         description: "There was an error downloading your resume.",
         variant: "destructive"
-      }),
+      })
+=======
+        title: &quot;Download failed&quot;,
+        description: &quot;There was an error downloading your resume.&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
-  // Handle "Generate Resume Now" button
+  // Handle &quot;Generate Resume Now&quot; button
   const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio_blank'),
+    window.open('/dashboard/talent/portfolio_blank')
   },
   
   return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
+    <div className=&quot;space-y-4&quot;>
+      <h3 className=&quot;text-lg font-medium text-white&quot;>Attach Resume</h3>
       
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-        className="space-y-3"
+        className=&quot;space-y-3&quot;
       >
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="recent" id="recent" />
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <RadioGroupItem value=&quot;recent&quot; id=&quot;recent&quot; />
+          <Label htmlFor=&quot;recent&quot; className=&quot;text-white&quot;>Use most recent AI Resume</Label>
         </div>
         
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="select" id="select" />
-          <Label htmlFor="select" className="text-white">Select from saved versions</Label>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <RadioGroupItem value=&quot;select&quot; id=&quot;select&quot; />
+          <Label htmlFor=&quot;select&quot; className=&quot;text-white&quot;>Select from saved versions</Label>
         </div>
         
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="upload" id="upload" />
-          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <RadioGroupItem value=&quot;upload&quot; id=&quot;upload&quot; />
+          <Label htmlFor=&quot;upload&quot; className=&quot;text-white&quot;>Upload a custom resume (PDF)</Label>
         </div>
       </RadioGroup>
       
@@ -206,16 +242,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       )}
       
       {/* Generate Resume Now button */}
-      <div className="flex justify-between items-center pt-2">
+      <div className=&quot;flex justify-between items-center pt-2&quot;>
         <Button 
-          variant="outline"
+          variant=&quot;outline&quot;
           onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20"
+          className=&quot;text-zion-purple border-zion-purple/20&quot;
         >
-          <Plus className="h-4 w-4 mr-2" />
+          <Plus className=&quot;h-4 w-4 mr-2&quot; />
           Generate Resume Now
         </Button>
       </div>
     </div>
-  ),
+  )
 }

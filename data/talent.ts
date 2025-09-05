@@ -9,7 +9,7 @@ export const TALENT_PROFILES = [
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
-    skills: ['ReactNode.js', 'TypeScript'],
+    skills: ['ReactNode.jsTypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
     hourlyRateUsd: 75,

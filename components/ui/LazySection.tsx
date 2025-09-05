@@ -30,7 +30,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 },
       default:
-        return { opacity: 0, y: 50 },
+        return { opacity: 0, y: 50 }
     }
   },
 
@@ -45,7 +45,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 1, x: 0 },
       default:
-        return { opacity: 1, y: 0 },
+        return { opacity: 1, y: 0 }
     }
   },
 
@@ -54,12 +54,12 @@ export const LazySection: React.FC<LazySectionProps> = ({
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay, ease: &quot;easeOut&quot; }}
       className={className}
     >
       {children}
     </motion.div>
-  ),
+  )
 },
 
 export default LazySection,

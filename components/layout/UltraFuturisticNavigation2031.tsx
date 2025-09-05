@@ -121,30 +121,30 @@ export default function UltraFuturisticNavigation2031() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50),
+      setScrolled(window.scrollY > 50)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-cyan-400" />
+      <div className=&quot;bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm&quot;>
+        <div className=&quot;max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0&quot;>
+          <div className=&quot;flex items-center space-x-6&quot;>
+            <div className=&quot;flex items-center space-x-2&quot;>
+              <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
               <span>{contactInfo.mobile}</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-purple-400" />
+            <div className=&quot;flex items-center space-x-2&quot;>
+              <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
               <span>{contactInfo.email}</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <MapPin className="w-4 h-4 text-pink-400" />
-            <span className="text-xs">{contactInfo.address}</span>
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <MapPin className=&quot;w-4 h-4 text-pink-400&quot; />
+            <span className=&quot;text-xs&quot;>{contactInfo.address}</span>
           </div>
         </div>
       </div>
@@ -155,57 +155,57 @@ export default function UltraFuturisticNavigation2031() {
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex justify-between items-center h-20&quot;>
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center space-x-3"
+              className=&quot;flex items-center space-x-3&quot;
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Rocket className="w-6 h-6 text-white" />
+              <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center&quot;>
+                <Rocket className=&quot;w-6 h-6 text-white&quot; />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <div className=&quot;hidden sm:block&quot;>
+                <h1 className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Zion Tech Group
                 </h1>
-                <p className="text-xs text-gray-400">2031 Future Technology</p>
+                <p className=&quot;text-xs text-gray-400&quot;>2031 Future Technology</p>
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {mainNavigation.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative group"
+                  className=&quot;relative group&quot;
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                    className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400&quot;
                   >
-                    <item.icon className="w-4 h-4" />
+                    <item.icon className=&quot;w-4 h-4&quot; />
                     <span>{item.name}</span>
-                  </Link>
+                  </a>
                   
                   {/* Hover effect */}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+                  <div className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full&quot;></div>
                 </motion.div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                className=&quot;px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
               >
                 Get Started
               </motion.button>
@@ -213,45 +213,45 @@ export default function UltraFuturisticNavigation2031() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
-                className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                className=&quot;px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
               >
                 Contact Us
               </motion.button>
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className=&quot;lg:hidden&quot;>
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-white transition-colors duration-200"
+                className=&quot;text-gray-300 hover:text-white transition-colors duration-200&quot;
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
               </motion.button>
             </div>
           </div>
         </div>
 
         {/* Service Categories Bar */}
-        <div className="hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center space-x-8 py-3">
+        <div className=&quot;hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+            <div className=&quot;flex items-center justify-center space-x-8 py-3&quot;>
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative group"
+                  className=&quot;relative group&quot;
                   onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
                 >
-                  <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">
-                    <category.icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
-                    <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+                  <button className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400&quot;>
+                    <category.icon className=&quot;w-4 h-4&quot; />
+                    <span className=&quot;text-sm font-medium&quot;>{category.title.split(' ')[0]}</span>
+                    <ChevronDown className=&quot;w-3 h-3 transition-transform duration-200 group-hover:rotate-180&quot; />
                   </button>
 
                   {/* Dropdown Menu */}
@@ -262,38 +262,38 @@ export default function UltraFuturisticNavigation2031() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                        className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden&quot;
                       >
-                        <div className="p-4">
-                          <div className="mb-3">
-                            <h3 className="text-lg font-semibold text-white mb-1">{category.title}</h3>
-                            <p className="text-sm text-gray-400">{category.description}</p>
+                        <div className=&quot;p-4&quot;>
+                          <div className=&quot;mb-3&quot;>
+                            <h3 className=&quot;text-lg font-semibold text-white mb-1&quot;>{category.title}</h3>
+                            <p className=&quot;text-sm text-gray-400&quot;>{category.description}</p>
                           </div>
-                          <div className="space-y-3">
+                          <div className=&quot;space-y-3&quot;>
                             {category.services.map((service, serviceIndex) => (
                               <motion.div
                                 key={service.name}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
-                                className="group cursor-pointer"
+                                className=&quot;group cursor-pointer&quot;
                               >
                                 <Link
                                   href={service.href}
-                                  className="block p-3 rounded-xl bg-gray-900/50 hover:bg-gradient-to-r hover:from-cyan-900/20 hover:to-purple-900/20 border border-transparent hover:border-cyan-500/30 transition-all duration-200"
+                                  className=&quot;block p-3 rounded-xl bg-gray-900/50 hover:bg-gradient-to-r hover:from-cyan-900/20 hover:to-purple-900/20 border border-transparent hover:border-cyan-500/30 transition-all duration-200&quot;
                                 >
-                                  <div className="flex items-start justify-between">
-                                    <div className="flex-1">
-                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                  <div className=&quot;flex items-start justify-between&quot;>
+                                    <div className=&quot;flex-1&quot;>
+                                      <h4 className=&quot;font-medium text-white group-hover:text-cyan-400 transition-colors duration-200&quot;>
                                         {service.name}
                                       </h4>
-                                      <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                                      <p className=&quot;text-sm text-gray-400 mt-1&quot;>{service.description}</p>
                                     </div>
-                                    <div className="text-right">
-                                      <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+                                    <div className=&quot;text-right&quot;>
+                                      <span className=&quot;text-sm font-semibold text-cyan-400&quot;>{service.price}</span>
                                     </div>
                                   </div>
-                                </Link>
+                                </a>
                               </motion.div>
                             ))}
                           </div>
@@ -316,38 +316,38 @@ export default function UltraFuturisticNavigation2031() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden"
+            className=&quot;fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden&quot;
           >
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-8">
-                <h2 className="text-xl font-bold text-white">Menu</h2>
+            <div className=&quot;p-6&quot;>
+              <div className=&quot;flex justify-between items-center mb-8&quot;>
+                <h2 className=&quot;text-xl font-bold text-white&quot;>Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className=&quot;text-gray-400 hover:text-white transition-colors duration-200&quot;
                 >
-                  <X className="w-6 h-6" />
+                  <X className=&quot;w-6 h-6&quot; />
                 </button>
               </div>
 
-              <div className="space-y-6">
+              <div className=&quot;space-y-6&quot;>
                 {mainNavigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400"
+                    className=&quot;flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400&quot;
                   >
-                    <item.icon className="w-5 h-5" />
-                    <span className="text-lg">{item.name}</span>
-                  </Link>
+                    <item.icon className=&quot;w-5 h-5&quot; />
+                    <span className=&quot;text-lg&quot;>{item.name}</span>
+                  </a>
                 ))}
 
-                <div className="pt-6 border-t border-gray-800">
-                  <div className="space-y-4">
-                    <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
+                <div className=&quot;pt-6 border-t border-gray-800&quot;>
+                  <div className=&quot;space-y-4&quot;>
+                    <button className=&quot;w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200&quot;>
                       Get Started
                     </button>
-                    <button className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200">
+                    <button className=&quot;w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200&quot;>
                       Contact Us
                     </button>
                   </div>
@@ -359,7 +359,11 @@ export default function UltraFuturisticNavigation2031() {
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
+<<<<<<< HEAD
       <div className="h-32 lg: h-40"></div>
+=======
+      <div className=&quot;h-32 lg:h-40&quot;></div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     </>
   )
 }

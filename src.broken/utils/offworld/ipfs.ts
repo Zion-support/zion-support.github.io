@@ -1,7 +1,6 @@
 import fs from 'fs',
 import path from 'path',
 import { Readable } from 'stream',
-
 // Lazy imports to keep optional deps optional
 let Web3Storage: any,
 let getFilesFromPath: any,
@@ -16,11 +15,11 @@ async function lazyLoadDeps() {
   } catch {}
   try {
     const ipfsHttp = await import('ipfs-http-client'),
-    createIpfsClient = (ipfsHttp as any).create || ipfsHttp,
+    createIpfsClient = (ipfsHttp as any).create || ipfsHttp
   } catch {}
   try {
     const pinata = await import('@pinata/sdk'),
-    PinataSDK = (pinata as any).default || pinata,
+    PinataSDK = (pinata as any).default || pinata
   } catch {}
 }
 
@@ -44,7 +43,7 @@ function bufferToStream(buffer: Buffer): Readable {
 
 export async function addJSON(content: unknown): Promise<IpfsResult> {
   const json = Buffer.from(JSON.stringify(content, null, 2)),
-  return addBuffer(json, 'data.json'),
+  return addBuffer(json, 'data.json')
 }
 
 export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult> {
@@ -56,7 +55,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
     const client = new Web3Storage({ token: web3Token }),
     const fileLike = new File([buffer], filename),
     const cid = await client.put([fileLike], { wrapWithDirectory: false }),
-    return { cid, provider: 'web3.storage' },
+    return { cid, provider: 'web3.storage' }
   }
 
   // 2) Try Pinata
@@ -69,7 +68,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       : new PinataSDK(pinataApiKey, pinataSecret),
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
       pinataMetadata: { name: filename }} as any),
-    return { cid: res.IpfsHash, provider: 'pinata' },
+    return { cid: res.IpfsHash, provider: 'pinata' }
   }
 
   // 3) Try local IPFS
@@ -77,10 +76,10 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
   if (createIpfsClient) {
     const ipfs = createIpfsClient({ url: ipfsUrl }),
     const { cid } = await ipfs.add({ path: filename, content: buffer }),
-    return { cid: cid.toString(), provider: 'local-ipfs' },
+    return { cid: cid.toString(), provider: 'local-ipfs' }
   }
 
-  return { cid: '', provider: 'none' },
+  return { cid: '', provider: 'none' }
 }
 
 export async function addDirectory(dirPath: string): Promise<IpfsResult> {
@@ -99,20 +98,20 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
           const full = path.join(current, entry.name),
           const rel = path.posix.join(base, entry.name),
           if (entry.isDirectory()) {
-            walk(full, rel),
+            walk(full, rel)
           } else {
             const data = fs.readFileSync(full),
-            files.push(new File([data], rel)),
+            files.push(new File([data], rel))
           }
         }
       }
       walk(dirPath),
       const cid = await client.put(files, { wrapWithDirectory: true }),
-      return { cid, provider: 'web3.storage' },
+      return { cid, provider: 'web3.storage' }
     } else {
       const files = await getFilesFromPath(dirPath),
       const cid = await client.put(files, { wrapWithDirectory: true }),
-      return { cid, provider: 'web3.storage' },
+      return { cid, provider: 'web3.storage' }
     }
   }
 
@@ -128,10 +127,10 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
         const full = path.join(dir, entry.name),
         const rel = path.posix.join(base, entry.name),
         if (entry.isDirectory()) {
-          yield* walk(full, rel),
+          yield* walk(full, rel)
         } else {
           const content = fs.readFileSync(full),
-          yield { path: rel, content },
+          yield { path: rel, content }
         }
       }
     }
@@ -140,13 +139,13 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
     let rootCid = '',
     for await (const res of ipfs.addAll(files, { wrapWithDirectory: true, pin: true })) {
       if (res.path === '') rootCid = res.cid?.toString?.() || rootCid,
-      rootCid = res.cid?.toString?.() || rootCid,
+      rootCid = res.cid?.toString?.() || rootCid
     }
-    if (rootCid) return { cid: rootCid, provider: 'local-ipfs' },
+    if (rootCid) return { cid: rootCid, provider: 'local-ipfs' }
   }
 
   // As a last resort, try Pinata pinByHash after local add (requires prior add)
-  return { cid: '', provider: 'none' },
+  return { cid: '', provider: 'none' }
 }
 
 export async function publishManifesto(topic: string, message: string): Promise<boolean> {
@@ -156,9 +155,9 @@ export async function publishManifesto(topic: string, message: string): Promise<
   try {
     const ipfs = createIpfsClient({ url: ipfsUrl }),
     await ipfs.pubsub.publish(topic, new TextEncoder().encode(message)),
-    return true,
+    return true
   } catch {
-    return false,
+    return false
   }
 }
 

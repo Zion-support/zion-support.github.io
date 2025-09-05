@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
+=======
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
@@ -15,14 +20,14 @@ interface Milestone {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY'),
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set'),
+      throw new Error('OPENAI_API_KEY is not set')
     }
 
     // Parse request body
@@ -66,7 +71,7 @@ serve(async (req) => {
       ${additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
       ${additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
       ${additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
-      `,
+      `
     }
 
     // Add milestone information if available
@@ -81,13 +86,13 @@ serve(async (req) => {
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
         - Estimated Work: ${milestone.estimatedHours} hours
-        `,
+        `
       }),
       
       prompt += `
       
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
-      `,
+      `
     }
 
     prompt += `
@@ -114,7 +119,7 @@ serve(async (req) => {
     const data = await response.json(),
     
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate contract'),
+      throw new Error(data.error?.message || 'Failed to generate contract')
     }
 
     const contract = data.choices[0].message.content.trim(),
@@ -123,7 +128,7 @@ serve(async (req) => {
       success: true, 
       contract 
     }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }}),
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error generating contract:', error),
     return new Response(
@@ -134,6 +139,6 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-    ),
+    )
   }
 }),

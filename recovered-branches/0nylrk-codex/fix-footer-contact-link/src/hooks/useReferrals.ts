@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from &quot;@/types/referrals&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function useReferrals() {
   const { user } = useAuth(),
@@ -22,7 +30,7 @@ export function useReferrals() {
       fetchReferralCode(),
       fetchReferralStats(),
       fetchReferrals(),
-      fetchRewards(),
+      fetchRewards()
     }
   }, [user]),
 
@@ -36,15 +44,24 @@ export function useReferrals() {
         .single(),
 
       if (error) {
+<<<<<<< HEAD
         console.error("Error fetching referral code:", error),
-        return,
+        return
+=======
+        console.error(&quot;Error fetching referral code:&quot;, error);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
-      setReferralCode(data),
+      setReferralCode(data)
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error),
+<<<<<<< HEAD
+      console.error("Error in fetchReferralCode:", error)
+=======
+      console.error(&quot;Error in fetchReferralCode:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -60,9 +77,13 @@ export function useReferrals() {
         
       if (error) throw error,
       
-      setReferrals(data || []),
+      setReferrals(data || [])
     } catch (error) {
-      console.error("Error fetching referrals:", error),
+<<<<<<< HEAD
+      console.error("Error fetching referrals:", error)
+=======
+      console.error(&quot;Error fetching referrals:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -78,9 +99,13 @@ export function useReferrals() {
         
       if (error) throw error,
       
-      setRewards(data || []),
+      setRewards(data || [])
     } catch (error) {
-      console.error("Error fetching rewards:", error),
+<<<<<<< HEAD
+      console.error("Error fetching rewards:", error)
+=======
+      console.error(&quot;Error fetching rewards:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -110,7 +135,7 @@ export function useReferrals() {
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0,
       
       const totalRewards = rewards ? rewards.reduce((sum, item) => {
-        return sum + (item.amount || 0),
+        return sum + (item.amount || 0)
       }, 0) : 0,
       
       setStats({
@@ -118,10 +143,14 @@ export function useReferrals() {
         pendingReferrals,
         completedReferrals,
         totalRewards
-      }),
+      })
       
     } catch (error) {
-      console.error("Error fetching referral stats:", error),
+<<<<<<< HEAD
+      console.error("Error fetching referral stats:", error)
+=======
+      console.error(&quot;Error fetching referral stats:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -129,10 +158,17 @@ export function useReferrals() {
     try {
       if (!user) {
         toast({
+<<<<<<< HEAD
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
-        return,
+        return
+=======
+          title: &quot;Authentication required&quot;,
+          description: &quot;You need to be logged in to generate a referral code&quot;,
+          variant: &quot;destructive&quot;});
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
@@ -142,29 +178,47 @@ export function useReferrals() {
       if (error) throw error,
 
       toast({
+<<<<<<< HEAD
         title: "Success!",
         description: "Your referral code has been generated",
         variant: "success"}),
+=======
+        title: &quot;Success!&quot;,
+        description: &quot;Your referral code has been generated&quot;,
+        variant: &quot;success&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
       // Refresh the code
       fetchReferralCode(),
       
-      return data,
+      return data
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Error generating referral code:", error),
       toast({
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"}),
+        variant: "destructive"})
+=======
+      console.error(&quot;Error generating referral code:&quot;, error);
+      toast({
+        title: &quot;Error generating code&quot;,
+        description: error.message || &quot;There was a problem generating your referral code&quot;,
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   // Get the referral link for the current user
   const getReferralLink = () => {
+<<<<<<< HEAD
     if (!referralCode) return "",
+=======
+    if (!referralCode) return "&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     const baseUrl = window.location.origin,
-    return `${baseUrl}/?ref=${referralCode.code}`,
+    return `${baseUrl}/?ref=${referralCode.code}`
   },
 
   // Copy the referral link to clipboard
@@ -173,19 +227,31 @@ export function useReferrals() {
     if (link) {
       navigator.clipboard.writeText(link),
       toast({
+<<<<<<< HEAD
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        variant: "success"}),
+        variant: "success"})
     } else {
       toast({
         title: "Cannot copy link",
         description: "Please generate a referral code first",
-        variant: "destructive"}),
+        variant: "destructive"})
+=======
+        title: &quot;Copied!&quot;,
+        description: &quot;Referral link copied to clipboard&quot;,
+        variant: &quot;success&quot;});
+    } else {
+      toast({
+        title: &quot;Cannot copy link&quot;,
+        description: &quot;Please generate a referral code first&quot;,
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   // Share on social media platforms
   const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
+<<<<<<< HEAD
     const link = getReferralLink(),
     const text = "Join Zion AI marketplace for AI talent and opportunities!",
     
@@ -194,7 +260,18 @@ export function useReferrals() {
         title: "Cannot share",
         description: "Please generate a referral code first",
         variant: "destructive"}),
-      return,
+      return
+=======
+    const link = getReferralLink();
+    const text = &quot;Join Zion AI marketplace for AI talent and opportunities!&quot;;
+    
+    if (!link) {
+      toast({
+        title: &quot;Cannot share&quot;,
+        description: &quot;Please generate a referral code first&quot;,
+        variant: &quot;destructive"});
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     let shareUrl = '',
@@ -208,11 +285,11 @@ export function useReferrals() {
         break,
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`,
-        break,
+        break
     }
     
     if (shareUrl) {
-      window.open(shareUrl, '_blank'),
+      window.open(shareUrl, '_blank')
     }
   },
 
@@ -229,5 +306,5 @@ export function useReferrals() {
     fetchReferralStats,
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-  },
+  }
 }

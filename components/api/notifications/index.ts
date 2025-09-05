@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (error) {
         // Fallback to 0 on error (e.g., table missing)
-        return res.status(200).json({ count: 0 }),
+        return res.status(200).json({ count: 0 })
       }
 
       const count = (data as any)?.length || 0, // when head:true, data is empty, Supabase SDK returns count differently in v2
@@ -35,19 +35,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false),
-        return res.status(200).json({ count: exactCount || 0 }),
+        return res.status(200).json({ count: exactCount || 0 })
       }
 
-      return res.status(200).json({ count }),
+      return res.status(200).json({ count })
     }
 
     // Build query based on filter
     let query = supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false }),
 
     if (filter === 'unread') {
-      query = query.eq('read_status', false),
-    } else if (['systemonboarding', 'quotematch'].includes(filter)) {
-      query = query.eq('type', filter as NotificationType),
+      query = query.eq('read_status', false)
+    } else if (['systemonboardingquotematch'].includes(filter)) {
+      query = query.eq('type', filter as NotificationType)
     }
 
     const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1),
@@ -73,11 +73,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
           read_status: false,
           related_action: '/status'}],
-      return res.status(200).json({ notifications: fallback }),
+      return res.status(200).json({ notifications: fallback })
     }
 
-    return res.status(200).json({ notifications: data as NotificationItem[] }),
+    return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' }),
+    return res.status(500).json({ error: 'Unexpected error' })
   }
 }

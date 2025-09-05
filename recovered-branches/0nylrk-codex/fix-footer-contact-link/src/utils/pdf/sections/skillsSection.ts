@@ -2,7 +2,6 @@
 import { jsPDF } from 'jspdf',
 import { Skill } from '@/types/resume',
 import { PdfThemeColors } from '../themeConfig',
-
 export function addSkillsSection(
   doc: jsPDF,
   skills: Skill[],
@@ -26,10 +25,10 @@ export function addSkillsSection(
   const skillsByCategory = skills.reduce((acc, skill) => {
     const category = skill.category || 'Other',
     if (!acc[category]) {
-      acc[category] = [],
+      acc[category] = []
     }
     acc[category].push(skill),
-    return acc,
+    return acc
   }, {} as Record<string typeof skills>),
   
   doc.setFontSize(11),
@@ -44,8 +43,8 @@ export function addSkillsSection(
     const skillLines = doc.splitTextToSize(skillsText, 160),
     doc.text(skillLines, 30, yPos + 5),
     
-    yPos += (skillLines.length * 5) + 10,
+    yPos += (skillLines.length * 5) + 10
   }
   
-  return yPos + 5,
+  return yPos + 5
 }

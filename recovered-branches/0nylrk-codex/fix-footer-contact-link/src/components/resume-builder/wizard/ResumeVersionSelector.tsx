@@ -13,7 +13,6 @@ import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',
 import { Resume } from '@/types/resume',
 import { useResume } from '@/hooks/useResume',
-
 interface ResumeVersionSelectorProps {
   currentResume: Resume,
   onResumeChange: (resumeId: string) => void
@@ -34,28 +33,28 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId),
         onResumeChange(resumeId),
         setSaveDialogOpen(false),
-        setNewResumeTitle(''),
+        setNewResumeTitle('')
       }
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
+    <div className=&quot;flex items-center gap-2&quot;>
+      <span className=&quot;text-sm text-muted-foreground&quot;>Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
+          <Button variant=&quot;outline&quot; size=&quot;sm&quot; className=&quot;gap-2&quot;>
             {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />
+            <ChevronDown className=&quot;h-4 w-4&quot; />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align=&quot;end&quot;>
           {existingResumes.map((resume) => (
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-              className="cursor-pointer"
+              className=&quot;cursor-pointer&quot;
             >
               {resume.basic_info.title}
             </DropdownMenuItem>
@@ -63,29 +62,29 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DropdownMenuSeparator />
           <DropdownMenuItem 
             onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
+            className=&quot;cursor-pointer&quot;
           >
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus className=&quot;h-4 w-4 mr-2&quot; />
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className=&quot;sm:max-w-md&quot;>
           <DialogHeader>
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
-          <div className="py-4">
+          <div className=&quot;py-4&quot;>
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-              placeholder="Enter resume title (e.g. DevOps Resume)"
+              placeholder=&quot;Enter resume title (e.g. DevOps Resume)&quot;
             />
           </div>
           <DialogFooter>
             <Button 
-              variant="outline" 
+              variant=&quot;outline&quot; 
               onClick={() => setSaveDialogOpen(false)}
             >
               Cancel
@@ -93,15 +92,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button 
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-              className="gap-2"
+              className=&quot;gap-2&quot;
             >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
+              {isLoading && <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />}
+              <Save className=&quot;h-4 w-4&quot; />
               Save
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
-  ),
+  )
 }

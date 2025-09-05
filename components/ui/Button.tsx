@@ -1,6 +1,5 @@
 import React from 'react',
 import Link from 'next/link',
-
 interface ButtonProps {
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline',
@@ -46,12 +45,12 @@ const Button: React.FC<ButtonProps> = ({
     <>
       {/* Shine effect for primary buttons */}
       {variant === 'primary' && (
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000" />
+        <div className=&quot;absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000&quot; />
       )}
       
-      {icon && iconPosition === 'left' && <span className="mr-2 transition-transform duration-200 group-hover:scale-110">{icon}</span>}
-      <span className="relative z-10">{children}</span>
-      {icon && iconPosition === 'right' && <span className="ml-2 transition-transform duration-200 group-hover:scale-110">{icon}</span>}
+      {icon && iconPosition === 'left' && <span className=&quot;mr-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}
+      <span className=&quot;relative z-10&quot;>{children}</span>
+      {icon && iconPosition === 'right' && <span className=&quot;ml-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}
     </>
   ),
 
@@ -59,8 +58,13 @@ const Button: React.FC<ButtonProps> = ({
     return (
       <Link href={href} className={classes} style={style}>
         {content}
+<<<<<<< HEAD
       </Link>
-    ),
+    )
+=======
+      </a>
+    );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   return (
@@ -73,7 +77,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {content}
     </button>
-  ),
+  )
 },
 
 export default Button,
