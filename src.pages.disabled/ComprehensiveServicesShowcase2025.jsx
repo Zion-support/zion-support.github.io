@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/ComprehensiveServicesShowcase2025.jsx import React from 'react'; export default ComprehensiveServicesShowcase2025; Sparkles,ArrowRight,CheckCircle,Phone,Mail,MapPin,TrendingUp,Play,Download,ExternalLink,Search} from "lucide - react"; const ComprehensiveServicesShowcase2025 = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const allServices = [...CUTTING_EDGE_SERVICES_2025,...SPECIALIZED_INDUSTRY_SOLUTIONS_2025]; const categories = ["all",...Array.from (new Set (allServices.map (service => service.category) ) ) ]; const industries = ["all",...Array.from (new Set (SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map (service => service.industry) ) ) ]; import React from 'react'; export default ComprehensiveServicesShowcase2025; Sparkles,ArrowRight,CheckCircle,Phone,Mail,MapPin,TrendingUp,Play,Download,ExternalLink,Search} from "lucide - react"; const ComprehensiveServicesShowcase2025 = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const allServices = [...CUTTING_EDGE_SERVICES_2025,...SPECIALIZED_INDUSTRY_SOLUTIONS_2025]; const categories = ["all",...Array.from (new Set (allServices.map (service => service.category) ) ) ]; const industries = ["all",...Array.from (new Set (SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map (service => service.industry) ) ) ];"";
+import React from 'react';
+
+interface ComprehensiveServicesShowcase2025Props {
+  // Add props here as needed
+}
+
+export default function ComprehensiveServicesShowcase2025({ }: ComprehensiveServicesShowcase2025Props) {
+  return (
+    <div>
+      <h1>ComprehensiveServicesShowcase2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-export const securityConfig = { "csp": { 'default-src': ["self"],'script-src': ["self","unsafe-inline","unsafe-eval"],'style-src': ["self","unsafe-inline"],'img-src': ["self",""data": ",""https": "],'connect-src': ["self"],'font-src': ["self"],'object-src': ["none"],'media-src': ["self"],'frame-src': ["none"] };,"headers": { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin','Permissions-Policy': 'camera=(),microphone=(),geolocation=()' },"rateLimit": { windowMs: 15 * 60 * 1000,"max": '100 },"validation": { maxLength: 1000,"allowedTags": ['p','br','strong','em','u'],"sanitize": 'true' } }; export default securityConfig;
+import React from 'react';
+
+interface SecurityProps {
+  // Add props here as needed
+}
+
+export default function Security({ }: SecurityProps) {
+  return (
+    <div>
+      <h1>Security</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

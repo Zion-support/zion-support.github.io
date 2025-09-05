@@ -1,1 +1,14 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ "dir": './}) const customJestConfig = { "setupFilesAfterEnv": '[',<rootDir>/jest.setup.js'],"testEnvironment": 'jsdom,"moduleNameMapper": {,^@/(.*)$': '<rootDir>/$1},"collectCoverageFrom": '[',components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/** ' ],"testPathIgnorePatterns": [&apos;<rootDir>/.next/,<rootDir>/node_modules/&apos;,<rootDir>/out/ &apos;,<rootDir>/__tests__.disabled/&apos;,<rootDir>/tests.disabled/ &apos;,<rootDir>/src_backup/&apos;,<rootDir>/test.disabled/ &apos;,<rootDir>/plugins.disabled/&apos;,<rootDir>/supabase.disabled/ &apos;,<rootDir>/dao/&apos;,<rootDir>/pages.disabled/'; ]} ; module.exports = createJestConfig(customJestConfig)
+import React from 'react';
+
+interface Jest.configProps {
+  // Add props here as needed
+}
+
+export default function Jest.config({ }: Jest.configProps) {
+  return (
+    <div>
+      <h1>Jest.config</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

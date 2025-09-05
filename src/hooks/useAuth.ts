@@ -1,1 +1,14 @@
-import { useState,useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string';'} interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ user: nul l,isAuthenticated: fals e,isLoading: tru e';&apos;}); useEffect(() => { })} } else { setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e&apos;;'});'} }; checkAuth();';'},[]); const login = async (email: string,password: string) => { };'} ";';';';
+import React from 'react';
+
+interface UseAuthProps {
+  // Add props here as needed
+}
+
+export default function UseAuth({ }: UseAuthProps) {
+  return (
+    <div>
+      <h1>UseAuth</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

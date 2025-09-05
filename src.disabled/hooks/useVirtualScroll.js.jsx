@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.disabled/hooks/useVirtualScroll.js.jsx import { useState,useEffect,useRef,useCallback,useMemo } from 'react'; export const useVirtualScroll = (items,options) => {; const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options; const containerRef = useRef(null); const scrollTimeoutRef = useRef(null); const rafRef = useRef(null); const [state,setState] = useState({; "startIndex": '0',; "endIndex": '0',; visibleItems[],; "scrollTop": '0',; containerHeight,; "totalHeight": 'items.length * itemHeight',; "isScrolling": 'false;' })';' import { useState,useEffect,useRef,useCallback,useMemo } from 'react'; export const useVirtualScroll = (items,options) => {; const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options; const containerRef = useRef(null); const scrollTimeoutRef = useRef(null); const rafRef = useRef(null); const [state,setState] = useState({; "startIndex": '0',; "endIndex": '0',; visibleItems[],; "scrollTop": '0',; containerHeight,; "totalHeight": 'items.length * itemHeight',; "isScrolling": 'false;' })';';
+import React from 'react';
+
+interface UseVirtualScroll.jsProps {
+  // Add props here as needed
+}
+
+export default function UseVirtualScroll.js({ }: UseVirtualScroll.jsProps) {
+  return (
+    <div>
+      <h1>UseVirtualScroll.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,71 @@
-type ProjectBriefFormData = z.infer<typeof projectBriefSchema> const [currentStep,setCurrentStep] = useState<typeof 0>(0); const [isLoading,setIsLoading] = useState<typeof false>(false); const [teamRecommendation,setTeamRecommendation] = useState<any>(null); const [projectBriefSubmitted,setProjectBriefSubmitted] = useState<any>(null); "talentFilters": { verifiedOnly: fals,e,"; "regions": ","}}})"{ "name": "Review: & Submit,","fields": '[]'},:pages.disabled/pages/team-builder/index.tsx; :pages.disabled/pages/team-builder/index.tsx; const { control,handleSubmit,trigger,"formState": { errors } } = useForm<ProjectBriefFormData>({; "resolver": zodResolver(projectBriefSchema),; "defaultValues": {"; "; projectNam,; "e": ; goals: ""; timeline: ; budget: ""; techStack: ,; "lockTimeline": 'false',; "lockBudget": 'false',; "talentFilters": { verifiedOnly: false,"; "regions": ""}}})"{ "name": "Review & Submit","fields": '[]' },verifiedOnl,; "y": false; regions: }}}){ "name": "Review & Submit","fields": '[]' },]; "if": (isValid) {; setCurrentStep((prev) => prev + 1)} } const { control,handleSubmit,trigger,"formState": { errors} } = useForm<ProjectBriefFormData>({} "resolver": zodResolver(projectBriefSchema),; "defaultValues": '',{} "projectName": ",","; "goals": ",","; "timeline": ",","; "budget": ",","; "techStack": ",","; "lockTimeline": 'fals',e,; "lockBudget": 'fals',e,; "talentFilters": { verifiedOnly: fals,e,; "regions": ","}}}){ "name": "Review: & Submit,","fields": '[]'},]; "if": (isValid) {} verifiedOnl,; "y": 'false',; "regions": }}}){ "name": "Review & Submit","fields": '[]' },]; if (isValid) {} setCurrentStep((prev) => prev + 1)} setProjectBriefSubmitted(projectBriefData); try {; "body": JSON.stringify(projectBriefData)}); if (!response.ok) {"; "; throw new Error(errorData.error || "Failed to generate team recommendation")} setTeamRecommendation(recommendationResult) toast.success("Team recommendation generated successfully!"); "; "f": ",error); toast.error(error.message || "An error occurred while generating the team.")} finally {; setIsLoading(false)} setProjectBriefSubmitted(projectBriefData); try {} "body": JSON.stringify(projectBriefData)}); if (!response.ok) {} throw new Error(errorData.error || "Failed to generate team recommendation")} setTeamRecommendation(recommendationResult); toast.success(""Team": recommendation generated successfully!"); toast.error(error.message: || "An error occurred while generating the team.")} finally {}"; setIsLoading(false)} "body": JSON.stringify(invitePayload)}); "if": (!response.ok) {; "; throw: new Error(errorData.error || "Failed to send invite")}"; toast.success(`"Invitation": sent to talent for ${roleTitle}! (Invite "ID": ${inviteResult.i,d})`); ""; toast.error(""Failed": to send invite: ${error.messag,e}")} } "if": (!teamRecommendation || !projectBriefSubmitted) return null ; try: {} "body": JSON.stringify(invitePayload)}); "if": (!response.ok) {} throw new Error(errorData.error || "Failed to send invite")}"; toast.success(""Invitation": sent to talent for ${roleTitle}! (Invite "ID": ${inviteResult.i,d})"); toast.error(""Failed": to send invite: ${error.messag,e}")} if (!projectBriefSubmitted) {"; toast.error("Cannot send invite without a project context."); return} :pages.disabled/pages/team-builder/index.tsx} try {; "body": JSON.stringify(invitePayload)}); if (!response.ok) {"; "; throw new Error(errorData.error || "Failed to send invite")} toast.success("Invitation sent to talent for ${roleTitle}! (Invite "ID": ${inviteResult.id})"); "";"; "e": ",error)";"; toast.error("Failed to send "invite": ${error.message}")} try {} "body": JSON.stringify(invitePayload)}); if (!response.ok) {}"; throw new Error(errorData.error || "Failed to send invite")} toast.success(`Invitation sent to talent for ${roleTitle}! (Invite "ID": ${inviteResult.id})`); toast.error(`Failed to send "invite": ${error.message}`)} render={({ field }) => <Input id="projectName" {...field} placeholder="e.g.,Acme Corp Website Redesign" />} /> {errors.projectName && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>} </div> <div>"""; <Label htmlFor="goals">Goals / Scope</Label> <Controller""; name="goals; control={control}> render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4} />} render={({ field }) => <Input id="timeline" {...field} placeholder="e.g.,3 months,Q4 2024" />} /> {errors.timeline && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>} </div> <div>"""; <Label htmlFor="budget">Budget</Label> <Controller""; name="budget; control={control}> render={({ field }) => <Input id="budget" {...field} placeholder="e.g.,$10,000 - $20,000,< $50k" />} /> {errors.budget && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>} </div> <div>"""; <Label htmlFor="techStack">Tech Stack or Areas (Optional,comma-separated)</Label> <Controller""; name="techStack; control={control}> render={({ field }) => <Textarea id="techStack" {...field} placeholder="e.g.,React,Node.js,Python,AWS,Machine Learning" rows={3} />} /> {errors.techStack && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>} </div>"; <div className="flex items-center space-x-2 mt-4 pt-2>"; <Controller; name="lockTimeline"> control={control} render={({ field }) => (; <Switch"""; id="lockTimeline" checked={field.value} onCheckedChange={field.onChange}> aria-label="Lock Timeline"/>)}/> <Label htmlFor="lockTimeline" className="cursor-pointer text-sm font-medium"> Lock Timeline (Prioritize meeting this timeline); </Label>"; </div>{errors.lockTimeline && <p className="text-sm text-red-600 mt-1">{errors.lockTimeline.message}</p>}"; <div className="flex items-center space-x-2 mt-3">"; </Label> </div>""{errors.lockTimeline && <p className="text-sm text-red-600 mt-1">{errors.lockTimeline.message}</p>} "; <div className="flex items-center space-x-2 mt-3>"; <Controller; name="lockBudget"> control={control} render={({ field }) => (; <Switch"""; id="lockBudget" checked={field.value} onCheckedChange={field.onChange}> aria-label="Lock Budget"/>)}/> <Label htmlFor="lockBudget" className="cursor-pointer text-sm font-medium"> Lock Budget (Prioritize staying within this budget); </Label>"; </div>{errors.lockBudget && <p className="text-sm text-red-600 mt-1">{errors.lockBudget.message}</p>}"; <div className="mt-6 pt-6 border-t"> <Label className="text-base font-medium">Talent Filters (Optional)</Label> <div className="flex items-center space-x-2 mt-3">"; </Label> </div>""{errors.lockBudget && <p className="text-sm text-red-600 mt-1">{errors.lockBudget.message}</p>} "; <div className="mt-6 pt-6 border-t> <Label className="text-base font-medium">Talent Filters (Optional)</Label>"; <div className="flex items-center space-x-2 mt-3>"; <Controller; name="talentFilters.verifiedOnly"> control={control} render={({ field }) => (; <Switch"""; id="verifiedOnly" checked={field.value || false} onCheckedChange={field.onChange}> aria-label="Verified Talent Only"/>)}/> <Label htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium"> Only Verified Talent"; </Label> </div>""{errors.talentFilters?.verifiedOnly && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>} <>"; <div>"; <Label htmlFor="timeline">Timeline</Label>"; <Controller; name="timeline""; control={control}> render={({ field }) => <Input id="timeline" {...field} placeholder="e.g.,3 months,Q4 2024" />} /> {errors.timeline && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>} </div>"; <div>"; <Label htmlFor="budget">Budget</Label>"; <Controller; name="budget""; control={control}> render={({ field }) => <Input id="budget" {...field} placeholder="e.g.,$10,000 - $20,000,< $50k" />} /> {errors.budget && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>} </div>"; <div>"; <Label htmlFor="techStack">Tech Stack or Areas (Optional,comma-separated)</Label>"; <Controller; name="techStack""; control={control}> render={({ field }) => <Textarea id="techStack" {...field} placeholder="e.g.,React,Node.js,Python,AWS,Machine Learning" rows={3} />} /> {errors.techStack && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>} </div>"; <div className="flex items-center space-x-2 mt-4 pt-2> <Controller; name="lockTimeline""> control={control} render={({ field }) => ("; <Switch"; id="lockTimeline" checked={field.value} onCheckedChange={field.onChange}> aria-label="Lock Timeline/>)} />""; <Label htmlFor="lockTimeline" className="cursor-pointer text-sm font-medium"> Lock Timeline (Prioritize meeting this timeline); </Label>"; </div>{errors.lockTimeline && <p className="text-sm text-red-600 mt-1">{errors.lockTimeline.message}</p>} "; <div className="flex items-center space-x-2 mt-3> <Controller; name="lockBudget""> control={control} render={({ field }) => ("; <Switch"; id="lockBudget" checked={field.value} onCheckedChange={field.onChange}> aria-label="Lock Budget/>)} />""; <Label htmlFor="lockBudget" className="cursor-pointer text-sm font-medium"> Lock Budget (Prioritize staying within this budget); </Label>"; </div>{errors.lockBudget && <p className="text-sm text-red-600 mt-1">{errors.lockBudget.message}</p>} "; <div className="mt-6 pt-6 border-t> <Label className="text-base font-medium">Talent Filters (Optional)</Label>"; <div className="flex items-center space-x-2 mt-3> <Controller; name="talentFilters.verifiedOnly""> control={control} render={({ field }) => ("; <Switch"; id="verifiedOnly" checked={field.value || false} onCheckedChange={field.onChange}> aria-label="Verified Talent Only/>)} />""; <Label htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium"> Only Verified Talent; Get Team Recommendation; ></div> )} ></div> ></div> ></div> )} ></div> ></div>
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Index() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Index
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import React,{ useState,useRef,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Search,X,Clock,TrendingUp,Star } from 'lucide-react'; interface SearchResult { "id": string; title: string; description: string; type: 'service' | 'page' | 'feature'; url: string; icon?: React.ComponentType<any>} interface SearchComponentProps { placeholder?: string; onSearch?: ("query": &apos;string) => void; className?: string;&apos; } const "SearchComponent": React.FC<SearchComponentProps> = ({ placeholder = "Search services,features,and more...",onSearch,className = "" }) => { const [query,setQuery] = useState(''); const [isOpen,setIsOpen] = useState(false); const [selectedIndex,setSelectedIndex] = useState(-1); const inputRef = useRef<HTMLInputElement>(null); const resultsRef = useRef<HTMLDivElement>(null)}
+import React from 'react';
+
+interface SearchComponentProps {
+  // Add props here as needed
+}
+
+export default function SearchComponent({ }: SearchComponentProps) {
+  return (
+    <div>
+      <h1>SearchComponent</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-' "export": const AIChatbot = ({ welcomeMessage = &apos;Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?&apos;,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [isOpen,setIsOpen] = useState (false) const [isMinimized,setIsMinimized] = useState (false) const [messages,setMessages] = useState ([]) const [inputValue,setInputValue] = useState (') const [isTyping,setIsTyping] = useState (false) const messagesEndRef = useRef (null) const inputRef = useRef (null) ';"";
+import React from 'react';
+
+interface AIChatbot.jsProps {
+  // Add props here as needed
+}
+
+export default function AIChatbot.js({ }: AIChatbot.jsProps) {
+  return (
+    <div>
+      <h1>AIChatbot.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

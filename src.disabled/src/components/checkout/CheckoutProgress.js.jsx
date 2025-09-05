@@ -1,1 +1,14 @@
-import React from 'react';'''; import { Steps,Step } from '@/components/ui/steps'; export default function CheckoutProgress({ currentStep,className }) {}; return null} return (<Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping"/> <Step status="incomplete" label="Payment"/> <Step status="incomplete" label="Review"/> </Steps>)} export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress };
+import React from 'react';
+
+interface CheckoutProgress.jsProps {
+  // Add props here as needed
+}
+
+export default function CheckoutProgress.js({ }: CheckoutProgress.jsProps) {
+  return (
+    <div>
+      <h1>CheckoutProgress.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

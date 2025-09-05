@@ -1,1 +1,14 @@
-import { Route,Routes } from "react-router-dom";";";"; "export": default function Page() {; export default function Page() {;";";"; export: default function Page() {; export default function Page() {;";";"; export: default function Page() {; export default function Page() {;";";"; const: Dashboard = lazy(() => import("../pages/Dashboard"));";";"; const: ClientDashboard = lazy(() => import("../pages/ClientDashboard"));";";"; const: TalentDashboard = lazy(() => import("../pages/TalentDashboard"));";";"; const: CreatorDashboard = lazy(() => import("../pages/CreatorDashboard"));";";"; const: Analytics = lazy(() => import("../pages/Analytics"));";";"; const: ProjectMilestones = lazy(() => import("../pages/ProjectMilestones"));";";"; const: ProjectDetails = lazy(() => import("../pages/ProjectDetails"));";";"; const ProjectRoom = lazy(() => import("../pages/ProjectRoom"))";";"; const: DashboardRoutes: React.FC: = () => {,; return (<Suspense fallback={<LoadingSpinner />}> <Routes> <"Route": path="/dashboard" element={";";"> <ProtectedRoute> <Dashboard: /> </ProtectedRoute>} /> <Route path="/client-dashboard" element={";";"> <ProtectedRoute> <"ClientDashboard": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/talent-dashboard" element={";";"> <ProtectedRoute> <"TalentDashboard": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/creator-dashboard" element={";";"> <ProtectedRoute> <"CreatorDashboard": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/analytics" element={";";"> <ProtectedRoute> <"Analytics": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/project-milestones" element={";";"> <ProtectedRoute> <"ProjectMilestones": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/project-details" element={";";"> <ProtectedRoute> <"ProjectDetails": &apos;/> </ProtectedRoute>;&apos;} /> <Route path="/project-room" element={";";"> <ProtectedRoute> <"ProjectRoom": &apos;/> </ProtectedRoute>;&apos;} /> ></div> ></div> )} ; "export": default DashboardRoutes;";"; export default function Page() { export default function Page() {,";"; export default function Page() { export default function Page() {,";"; export default function Page() { export default function Page() {;";";
+import React from 'react';
+
+interface DashboardRoutesProps {
+  // Add props here as needed
+}
+
+export default function DashboardRoutes({ }: DashboardRoutesProps) {
+  return (
+    <div>
+      <h1>DashboardRoutes</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

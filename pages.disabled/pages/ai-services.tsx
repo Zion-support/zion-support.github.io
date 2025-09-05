@@ -1,1 +1,71 @@
-import React from 'react'; import Link from 'next/link'; export default function AIServices() { const services = [{ "name": 'AI Customer Support Automation',"description": 'Chatbots,triage,knowledge mining and human-in-the-loop escalation.',"pricing": '$2k–$8k setup,$0.02–$0.2/session',"features": [ 'Intelligent chatbot development and training','Automated ticket triage and routing','Knowledge base mining and optimization','Seamless human agent handoff' ] },{ "name": &apos;Predictive Analytics & Forecasting&apos;,"description": 'Time-series forecasts for demand,revenue,churn and supply risk.',"pricing": '$4k–$20k project',"features": ['Advanced time-series forecasting models','Demand and revenue prediction','Customer churn analysis and prevention','Supply chain risk assessment' ] },{ "name": &apos;GenAI Content & SEO Automation&apos;,"description": 'Editorial-quality drafts,briefs,clustering and internal linking suggestions.',"pricing": '$1k–$6k/month',"features": ['High-quality content generation','SEO-optimized content briefs','Content clustering and organization','Automated internal linking strategies' ] },{ "name": 'Computer Vision Solutions',"description": 'Image recognition,object detection,and visual analytics for business applications.',"pricing": '$5k–$25k project',"features": ['Custom image classification models','Real-time object detection','Visual quality inspection systems','Automated document processing' ] },{ "name": 'Natural Language Processing',"description": 'Text analysis,sentiment detection,and language understanding for business intelligence.',"pricing": '$3k–$15k project',"features": ['Advanced text analysis and classification','Sentiment analysis and emotion detection','Named entity recognition','Custom language model fine-tuning' ] },{ "name": 'AI-Powered Business Intelligence',"description": 'Automated insights,anomaly detection,and intelligent reporting for data-driven decisions.',"pricing": '$6k–$30k project',"features": ['Automated insight generation','Anomaly detection and alerting','Intelligent dashboard creation','Predictive business analytics' ] } ]; return ( <main style={{ "background": '#f8fafc',"minHeight": 'calc(100vh - 120px)' }}> <div style={{ "maxWidth": '1200',"margin": '0 auto',"padding": '24px 16px' }}> <div style={{ "textAlign": 'center',"marginBottom": '48' }}> <h1 style={{ "fontSize": '36',"fontWeight": '800',"marginBottom": '16',"color": '#0b1220' }}> AI Services </h1> <p style={{ "fontSize": '18',"color": '#64748b',"maxWidth": '600',"margin": '0 auto' }}> Transform your business with cutting-edge artificial intelligence solutions tailored to your specific needs. </p> </div> <div style={{ "display": 'grid',"gridTemplateColumns": 'repeat(auto-fit,minmax(350px,1fr))',"gap": '24',"marginBottom": '48' }}> {services.map((service,index) => ( <div key={index} style={{ "background": 'white',"borderRadius": '16',"padding": '24',"border": '1px solid rgba(0,0,0,0.08)',"boxShadow": '0 1px 3px rgba(0,0,0,0.1)' }}> <h3 style={{ "fontSize": '20',"fontWeight": '700',"marginBottom": '12',"color": '#0b1220' }}> {service.name} </h3> <p style={{ "color": '#64748b',"marginBottom": '16',"lineHeight": '1.6' }}> {service.description} </p> <div style={{ "marginBottom": '16' }}> <strong style={{ "color": '#2563eb',"fontSize": '16' }}>{service.pricing}</strong> </div> <ul style={{ "listStyle": 'none',"padding": '0',"marginBottom": '20' }}> {service.features.map((feature,featureIndex) => ( <li key={featureIndex} style={{ "padding": '4px 0',"color": '#475569',"fontSize": '14',"display": 'flex',"alignItems": 'flex-start' }}> <span style={{ "color": '#22d3ee',"marginRight": '8',"marginTop": '2' }}>✓</span> {feature} </li> ))} </ul> <Link href="/contact" style={{ "display": 'inline-block',"background": '#22d3ee',"color": '#0b1220',"padding": '10px 16px',"borderRadius": '8',"fontWeight": '600',"textDecoration": 'none',"textAlign": 'center',"width": '100%' }}> Get Started </Link> </div> ))} </div> <div style={{ "background": 'linear-gradient(135deg,#8b5cf6 0%,#7c3aed 100%)',"borderRadius": '16',"padding": '32',"textAlign": 'center',"color": 'white',"marginBottom": '32' }}> <h2 style={{ "fontSize": '24',"fontWeight": '700',"marginBottom": '12' }}> AI Strategy & Consulting </h2> <p style={{ "fontSize": '16',"marginBottom": '20',"opacity": '0.9' }}> Not sure where to start with AI? Our experts will help you develop a comprehensive AI strategy. </p> <Link href="/contact" style={{ "display": 'inline-block',"background": 'white',"color": '#7c3aed',"padding": '12px 24px',"borderRadius": '8',"fontWeight": '600',"textDecoration": 'none' }}> Schedule Consultation </Link> </div> <div style={{ "background": 'white',"borderRadius": '16',"padding": '32',"border": '1px solid rgba(0,0,0,0.08)',"textAlign": 'center' }}> <h2 style={{ "fontSize": '24',"fontWeight": '700',"marginBottom": '12',"color": '#0b1220' }}> Why Choose Zion Tech Group for AI? </h2> <div style={{ "display": 'grid',"gridTemplateColumns": 'repeat(auto-fit,minmax(250px,1fr))',"gap": '24',"marginTop": '24' }}> <div> <h3 style={{ "fontSize": '18',"fontWeight": '600',"marginBottom": '8',"color": '#0b1220' }}>Expert Team</h3> <p style={{ "color": '#64748b',"fontSize": '14' }}>Certified AI engineers with deep expertise in machine learning and data science.</p> </div> <div> <h3 style={{ "fontSize": '18',"fontWeight": '600',"marginBottom": '8',"color": '#0b1220' }}>Proven Results</h3> <p style={{ "color": '#64748b',"fontSize": '14' }}>Successfully delivered AI solutions for businesses across various industries.</p> </div> <div> <h3 style={{ "fontSize": '18',"fontWeight": '600',"marginBottom": '8',"color": '#0b1220' }}>End-to-End Support</h3> <p style={{ "color": '#64748b',"fontSize": '14' }}>From strategy and development to deployment and ongoing maintenance.</p> </div> </div> </div> </div> </main> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Aiservices() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Aiservices - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Aiservices
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import React,{ useState,useRef,useEffect } from 'react'; import { Link } from 'react-router-dom'; import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from 'lucide-react'; import { useAuth } from "../../hooks/useAuth"; export const UserMenu = () => {; const [isOpen,setIsOpen] = useState(false); const menuRef = useRef(null); const { user,logout } = useAuth(); useEffect(() => {; const handleClickOutside = (event) => {; if(menuRef.current && !menuRef.current.contains(event.target)) {; setIsOpen(false)}}; document.addEventListener('mousedown',handleClickOutside); return () => document.removeEventListener('mousedown',handleClickOutside)},[]); const handleLogout = async () => {; try {; await logout(); setIsOpen(false)}; catch(error) {}}}}
+import React from 'react';
+
+interface UserMenu.jsProps {
+  // Add props here as needed
+}
+
+export default function UserMenu.js({ }: UserMenu.jsProps) {
+  return (
+    <div>
+      <h1>UserMenu.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

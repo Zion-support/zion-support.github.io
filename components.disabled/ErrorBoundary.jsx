@@ -1,1 +1,14 @@
-const Component = () => {; import React from "react"; "class": ErrorBoundary extends React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  // Add props here as needed
+}
+
+export default function ErrorBoundary({ }: ErrorBoundaryProps) {
+  return (
+    <div>
+      <h1>ErrorBoundary</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

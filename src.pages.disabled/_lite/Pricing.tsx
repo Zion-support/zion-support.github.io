@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/_lite/Pricing.tsx import React from 'react'; export default function Pricing() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Pricing</h1>";" <p className="text-gray-300">Contact us for a tailored quote.</p>;" </div>;";" );";" };";" import React from 'react'; export default function Pricing() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Pricing</h1>";" <p className="text-gray-300">Contact us for a tailored quote.</p>;" </div>;";" );";" };";""";
+import React from 'react';
+
+interface PricingProps {
+  // Add props here as needed
+}
+
+export default function Pricing({ }: PricingProps) {
+  return (
+    <div>
+      <h1>Pricing</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

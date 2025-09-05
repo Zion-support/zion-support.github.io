@@ -1,1 +1,14 @@
-import React,{ useState } from 'react' import { motion,AnimatePresence } from &apos;framer-motionimport { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from lucide-reactinterface EnhancedContactIntegrationProps { onClose: () => void serviceTitle?: string &apos;;&apos;} export const EnhancedContactIntegration: Reac t.FC<EnhancedContactIntegrationProps> = ({ onClose,serviceTitle };) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState<contact| schedule&apos; | 'support'>('contact') const contactInfo = { phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https:' </contact> </string> </EnhancedContactIntegrationProps>;';';
+import React from 'react';
+
+interface EnhancedContactIntegrationProps {
+  // Add props here as needed
+}
+
+export default function EnhancedContactIntegration({ }: EnhancedContactIntegrationProps) {
+  return (
+    <div>
+      <h1>EnhancedContactIntegration</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,29 @@
-import React from';react' "interface": AdminLayoutProps {'; children: React.ReactNod,e} "export": function AdminLayout({ children }: AdminLayoutProps) { "return": ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm "hover": bg-accent' > {item.titl,e} </Link> ))} </nav> </aside> <"main": className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout'';'';
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation"
+}: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      {children}
+    </>
+  );
+}

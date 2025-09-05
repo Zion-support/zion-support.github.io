@@ -1,35 +1,14 @@
-export interface RealServiceQ22025 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
-  category?: string}
-export const "realServicesQ22025": RealServiceQ22025[] = [{
-    id:,
-  q2-service-1',
-    "name": 'Q2 Service 1,
-    tagline:,
-  Second quarter service offering',
-    "price": '$299,
-    "features": [,
-  Core features',
-  'Standard performance',
-  'Basic integration'],
-    "category": 'Q2 Services
-  },
-  {
-    id:,
-  q2-service-2',
-    "name": 'Q2 Service 2,
-    tagline:,
-  Advanced Q2 solutions',
-    "price": '$499,
-    "features": [,
-  Advanced features',
-  'Enhanced performance',
-  'Full integration'],
-    "category": 'Q2 Services
+import React from 'react';
+
+interface Realservicesq22025Props {
+  // Add props here as needed
 }
-];
-export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
+
+export default function Realservicesq22025({ }: Realservicesq22025Props) {
+  return (
+    <div>
+      <h1>Realservicesq22025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

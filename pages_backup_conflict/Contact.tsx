@@ -1,25 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 
-export default function Contact() {
+interface ContactProps {
+  // Add props here as needed
+}
+
+export default function Contact({ }: ContactProps) {
   return (
-    <>
-      <Head>
-        <title>Contact Us | Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your technology needs. Contact us today!" />
-        <link rel="canonical" href=""https": //ziontechgroup.com/contact" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
-          <div className="text-center space-y-4">
-            <p className="text-xl text-gray-600">Phone: +1 302 464 0950</p>
-            <p className="text-xl text-gray-600">Email: kleber@ziontechgroup.com</p>
-            <p className="text-xl text-gray-600">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
-        </div>
-      </div>
-    </>
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
-import React from 'react'; import Head from 'next/head'; export default function Contact() { return ( <> <Head> <title>Contact Us | Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group for your technology needs. Contact us today!" /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1> <div className="text-center space-y-4"> <p className="text-xl text-gray-600">Phone: +1 302 464 0950</p> <p className="text-xl text-gray-600">Email: kleber@ziontechgroup.com</p> <p className="text-xl text-gray-600">Address: 364 E Main St STE 1008,Middletown DE 19709</p> </div> </div> </div> </> )}

@@ -1,1 +1,71 @@
-import React from 'react'; import Layout from '../../components/Layout'; import { Cloud,Server,Database,Shield,Zap,ArrowRight,CheckCircle } from 'lucide-react'; const features = [ { icon: Cloud,title: 'Cloud Migration',description: 'Seamlessly migrate your infrastructure to AWS,Azure,or Google Cloud with zero downtime.' },{ icon: Server,title: 'Infrastructure as Code',description: 'Automate infrastructure provisioning and management using Terraform,Ansible,and CloudFormation.' },{ icon: Database,title: 'Database Management',description: 'Optimize database performance,implement backup strategies,and ensure data integrity.' },{ icon: Shield,title: &apos;Security & Compliance&apos;,description: 'Implement robust security measures and maintain compliance with industry standards.' },{ icon: Zap,title: 'CI/CD Pipelines',description: 'Build automated deployment pipelines for faster,more reliable software delivery.' } ]; const services = [ 'Cloud Architecture Design','Container Orchestration (Kubernetes)','Microservices Implementation',&apos;Monitoring & Logging Setup&apos;,'Disaster Recovery Planning','Performance Optimization','Cost Optimization','Security Hardening' ]; export default function CloudDevOpsPage() { return ( <Layout title="Cloud & DevOps Services - Zion Tech Group" description="Expert cloud migration,infrastructure automation,and DevOps solutions. Transform your operations with scalable,secure cloud infrastructure." > <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"> {} <section className="relative py-20 overflow-hidden"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center"> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"> Cloud & DevOps <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Solutions </span> </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Accelerate your digital transformation with our comprehensive cloud migration,infrastructure automation,and DevOps expertise. Build,deploy,and scale with confidence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center"> Get Started <ArrowRight className="w-5 h-5 ml-2" /> </button> <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium"> View Case Studies </button> </div> </div> </div> </section> {} <section className="py-20"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-4xl font-bold text-white mb-4"> Comprehensive Cloud & DevOps Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> From cloud migration to continuous deployment,we provide end-to-end solutions that modernize your infrastructure and accelerate your development cycles. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {features.map((feature,index) => ( <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors"> <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"> <feature.icon className="w-6 h-6 text-white" /> </div> <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3> <p className="text-gray-300">{feature.description}</p> </div> ))} </div> </div> </section> {} <section className="py-20 bg-gray-800/30"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto"> <h2 className="text-3xl font-bold text-white text-center mb-12"> Our Cloud & DevOps Expertise </h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {services.map((service,index) => ( <div key={index} className="flex items-center space-x-3"> <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /> <span className="text-gray-300 text-lg">{service}</span> </div> ))} </div> </div> </div> </section> {} <section className="py-20"> <div className="container mx-auto px-4"> <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"> <h2 className="text-4xl font-bold text-white mb-6"> Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"> Let our cloud and DevOps experts help you build a scalable,secure,and efficient infrastructure that grows with your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium"> Schedule Consultation </button> <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium"> Download Whitepaper </button> </div> </div> </div> </section> </div> </Layout> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Clouddevops() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Clouddevops - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Clouddevops
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

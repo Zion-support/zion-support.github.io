@@ -1,1 +1,71 @@
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { motion } from 'framer-motion'; import { Home,ArrowLeft,Search,HelpCircle } from 'lucide-react'; export default function Custom404() { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <Head> <title>404 - Page Not Found | Zion Tech Group</title> <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." /> </Head> <div className="max-w-4xl mx-auto px-4 text-center"> <motion.div initial={{ opacity: 0,y: 20 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} > {} <div className="mb-8"> <motion.div className="text-9xl font-bold text-blue-600 mb-4" animate={{ scale: [1,1.1,1],rotate: [0,5,-5,0] }} transition={{ duration: 2,repeat: Infinity,repeatType: "reverse" }} > 404 </motion.div> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Oops! Page Not Found </h1> <p className="text-xl text-gray-600 mb-8"> The page you're looking for doesn't exist or has been moved. </p> </div> {} <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"> <Link href="/" className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors" > <Home className="w-5 h-5" /> Go Home </Link> <button onClick={() => window.history.back()} className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors" > <ArrowLeft className="w-5 h-5" /> Go Back </button> </div> {} <div className="bg-white rounded-lg shadow-lg p-8"> <h2 className="text-2xl font-bold text-gray-900 mb-6"> Popular Pages </h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> <Link href="/services" className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group" > <div className="text-center"> <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200"> <Search className="w-6 h-6 text-blue-600" /> </div> <h3 className="font-semibold text-gray-900 group-hover:text-blue-600"> Our Services </h3> <p className="text-sm text-gray-600"> Explore our AI and technology solutions </p> </div> </Link> <Link href="/about" className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group" > <div className="text-center"> <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200"> <HelpCircle className="w-6 h-6 text-blue-600" /> </div> <h3 className="font-semibold text-gray-900 group-hover:text-blue-600"> About Us </h3> <p className="text-sm text-gray-600"> Learn about our company and mission </p> </div> </Link> <Link href="/contact" className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group" > <div className="text-center"> <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200"> <HelpCircle className="w-6 h-6 text-blue-600" /> </div> <h3 className="font-semibold text-gray-900 group-hover:text-blue-600"> Contact Us </h3> <p className="text-sm text-gray-600"> Get in touch with our team </p> </div> </Link> </div> </div> {} <div className="mt-8 text-center"> <p className="text-gray-600"> Still can't find what you're looking for?{' '} <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium"> Contact our support team </Link> </p> </div> </motion.div> </div> </div> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function NotFound() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>404 - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              404
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

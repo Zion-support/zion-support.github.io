@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/_lite/About.tsx import React from 'react'; export default function About() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">About</h1>";" <p className="text-gray-300">We build cutting-edge technology solutions.</p>;" </div>;";" );";" };";" import React from 'react'; export default function About() {; return (; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">About</h1>";" <p className="text-gray-300">We build cutting-edge technology solutions.</p>;" </div>;";" );";" };";""";
+import React from 'react';
+
+interface AboutProps {
+  // Add props here as needed
+}
+
+export default function About({ }: AboutProps) {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

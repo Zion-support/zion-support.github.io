@@ -1,26 +1,14 @@
-export async /**;
- * register function;*/
- * @param {*} params - Function parameters;*/
- * @returns {*} Function return value;*/
- */;
-function register () {
-  try {
-    try {
-     try { const res = await fetch ('/api / auth / register', { "method": 'POST', "headers": { 'Content - Type': 'application / json' } catch (error) {
-    console.error ('Error in "register": ', error) }
-} catch (error) {
-    console.error ('Error in "register": ', error) }
-} catch (error) { console.error ('Error in "register": ', error)  } }, "body": JSO N.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } }; export async /**;
- * forgotPassword function;*/
- * @param {*} params - Function parameters;*/
- * @returns {*} Function return value;*/
- */;
-function forgotPassword () {
-  try {
-    try {
-     try {' const res = await fetch ('/api / auth / forgot', { "method": 'POST', "headers": { 'Content - Type': 'application / json' } catch (error) {'
-    console.error ('Error in "forgotPassword": ', error) }
-} catch (error) {
-    console.error ('Error in "forgotPassword": ', error) }
-} catch (error) { console.error ('Error in "forgotPassword": ', error)  } }, "body": JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in "forgotPassword": ', error)  } }, "body": JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({};) ) ';";";
-export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function register () { try { try { try { const res = await fetch ('/api / auth / register',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } },body: JSO N.stringify ({ name,email,password })}) const data = await res.json () .catch ( () => ({}) ) return { res,data } }; export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function forgotPassword () { try { try { try {' const res = await fetch ('/api / auth / forgot',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) {' console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({};) ) ';";";
+import React from 'react';
+
+interface AuthProps {
+  // Add props here as needed
+}
+
+export default function Auth({ }: AuthProps) {
+  return (
+    <div>
+      <h1>Auth</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

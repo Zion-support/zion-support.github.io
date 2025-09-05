@@ -1,1 +1,14 @@
-import React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const AdvancedInnovativeServicesShowcase2025 = () => {}}; const [selectedCategory,setSelectedCategory] = useState('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState('name'); const categories = [; 'all',; &apos;Legal Tech & Compliance&apos;,; &apos;Quantum Computing & Security&apos;,; &apos;Healthcare & Biotech&apos;,; &apos;Energy & Sustainability&apos;,; 'Cybersecurity',; &apos;Fintech & Trading&apos;,; &apos;Quantum Computing & AI&apos;,; &apos;Supply Chain & Logistics&apos;,; &apos;Edge Computing & IoT&apos;,; &apos;Marketing & Automation&apos;,; 'Quantum Technology',; &apos;AI & Machine Learning&apos;,; &apos;AI & Analytics&apos;,; &apos;AI & Customer Experience&apos;; ]; const allServices = [; ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),; ...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),; ...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' })); ]; const filteredServices = allServices .filter(service => selectedCategory === 'all' || service.category === selectedCategory); .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase()))); .sort((a,b) => {}; return a.name.localeCompare(b.name)} }); const getCategoryIcon = (category) => {}; export { AdvancedInnovativeServicesShowcase2025 }; export { AdvancedInnovativeServicesShowcase2025 }; export { AdvancedInnovativeServicesShowcase2025 }; export { AdvancedInnovativeServicesShowcase2025 }; export { AdvancedInnovativeServicesShowcase2025 }}}}
+import React from 'react';
+
+interface AdvancedInnovativeServicesShowcase2025Props {
+  // Add props here as needed
+}
+
+export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
+  return (
+    <div>
+      <h1>AdvancedInnovativeServicesShowcase2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

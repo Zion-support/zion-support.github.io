@@ -1,25 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigationdynamic from '../components/Navigation.dynamic';
 
-describe('Navigationdynamic', () => {
-  test('renders without crashing', () => {
-    render(<Navigationdynamic />);
-    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()});
+interface Navigation.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<Navigationdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<Navigationdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<Navigationdynamic />);
-    // Add styling tests if needed
-  })});
+export default function Navigation.dynamic.test({ }: Navigation.dynamic.testProps) {
+  return (
+    <div>
+      <h1>Navigation.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

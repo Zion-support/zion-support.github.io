@@ -1,28 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 
-export default function Terms() {
+interface TermsProps {
+  // Add props here as needed
+}
+
+export default function Terms({ }: TermsProps) {
   return (
-    <>
-      <Head>
-        <title>Terms | Zion Tech Group</title>
-        <meta name="description" content="Terms page for Zion Tech Group." />
-        <link rel="canonical" href=""https": //ziontechgroup.com/terms" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Terms</h1>
-          <p className="text-xl text-center text-gray-600 mb-12">
-            Terms information for Zion Tech Group.
-          </p>
-          <div className="text-center">
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
+    <div>
+      <h1>Terms</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
-import React from 'react'; import Head from 'next/head'; export default function Terms() { return ( <> <Head> <title>Terms | Zion Tech Group</title> <meta name="description" content="Terms page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Terms</h1> <p className="text-xl text-center text-gray-600 mb-12"> Terms information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}

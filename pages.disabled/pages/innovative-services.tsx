@@ -1,1 +1,71 @@
-import React from "react"; import Head from "next/head"; import Link from "next/link"; import { ; ArrowRight,; Award,; CheckCircle,; Zap,; Shield,; Brain,; Bot,; Eye,; MessageSquare,; BarChart3,; Globe,; Lock,; Cpu,; Smartphone,; Code,; Target,; TrendingUp,; Users,; Clock,; DollarSign,; Phone} from "lucide-react"; export default function InnovativeServices() {; const services = [; {; "id": '1',; "name": "AI-Powered Email Automation Suite",; "description": "Intelligent email marketing platform with advanced segmentation,personalization,and automated workflows.",; "icon": 'MessageSquare',; "features": [; "Advanced AI-driven segmentation",; "Dynamic content personalization",; "Automated A/B testing",; "Real-time analytics dashboard",; "Multi-channel integration"; ],; "pricing": "$299 - $1,999/month",; "delivery": "2-4 weeks",; "category": "AI Automation",; "benefits": "Increase email engagement by 300% and reduce manual work by 80%",; "roi": "Expected ROI: 400-600% within 6 months"},; {; "id": '2',; "name": "Smart Inventory Management System",; "description": "AI-driven inventory optimization with predictive analytics and automated reordering capabilities.",; "icon": 'BarChart3',; "features": [; "Predictive demand forecasting",; "Automated reorder points",; "Real-time inventory tracking",; "Multi-location management",; "Integration with major e-commerce platforms"; ],; "pricing": "$199 - $1,299/month",; "delivery": "3-5 weeks",; "category": "AI Analytics",; "benefits": "Reduce inventory costs by 25% and prevent stockouts by 95%",; "roi": "Expected ROI: 250-400% within 4 months"},; {; "id": '3',; "name": "AI Customer Support Chatbot",; "description": "Advanced conversational AI that handles customer inquiries with human-like understanding and response.",; "icon": 'Bot',; "features": [; "Natural language processing",; "Multi-language support",; "Integration with CRM systems",; "24/7 availability",; "Escalation to human agents"; ],; "pricing": "$149 - $899/month",; "delivery": "2-3 weeks",; "category": "AI Customer Service",; "benefits": "Reduce support costs by 60% and improve response time by 90%",; "roi": "Expected ROI: 300-500% within 3 months"},; {; "id": '4',; "name": "Blockchain Document Verification",; "description": "Immutable document verification system using blockchain technology for secure and tamper-proof records.",; "icon": 'Shield',; "features": [; "Blockchain-based verification",; "Digital signatures",; "Audit trail",; "Multi-party verification",; "API integration"; ],; "pricing": "$399 - $2,499/month",; "delivery": "4-6 weeks",; "category": "Blockchain Security",; "benefits": "Eliminate document fraud and reduce verification time by 70%",; "roi": "Expected ROI: 200-350% within 6 months"},; {; "id": '5',; "name": "IoT Device Management Platform",; "description": "Comprehensive IoT device monitoring,management,and analytics platform for connected devices.",; "icon": 'Cpu',; "features": [; "Real-time device monitoring",; "Predictive maintenance",; "Device lifecycle management",; "Security monitoring",; "Custom dashboards"; ],; "pricing": "$299 - $1,999/month",; "delivery": "5-8 weeks",; "category": "IoT Solutions",; "benefits": "Reduce device downtime by 40% and optimize maintenance costs by 30%",; "roi": "Expected ROI: 180-300% within 8 months"},; {; "id": '6',; "name": "AI-Powered Social Media Manager",; "description": "Intelligent social media management with content creation,scheduling,and performance optimization.",; "icon": 'Globe',; "features": [; "AI content generation",; "Optimal posting times",; "Engagement analytics",; "Multi-platform management",; "Brand voice consistency"; ],; "pricing": "$199 - $1,299/month",; "delivery": "2-4 weeks",; "category": "AI Marketing",; "benefits": "Increase social media engagement by 250% and save 15 hours/week",; "roi": "Expected ROI: 350-500% within 4 months"},; {; "id": '7',; "name": "Smart Contract Development Platform",; "description": "No-code platform for creating,deploying,and managing smart contracts on multiple blockchains.",; "icon": 'Code',; "features": [; "Visual contract builder",; "Multi-blockchain support",; "Automated testing",; "Deployment management",; "Contract monitoring"; ],; "pricing": "$499 - $3,999/month",; "delivery": "6-10 weeks",; "category": "Blockchain Development",; "benefits": "Reduce development time by 80% and eliminate coding errors",; "roi": "Expected ROI: 400-700% within 6 months"},; {; "id": '8',; "name": "AI-Powered Lead Scoring System",; "description": "Advanced lead qualification and scoring system using machine learning to identify high-value prospects.",; "icon": 'Target',; "features": [; "Machine learning algorithms",; "Behavioral analysis",; "Lead prioritization",; "CRM integration",; "Real-time scoring"; ],; "pricing": "$249 - $1,499/month",; "delivery": "3-5 weeks",; "category": "AI Sales",; "benefits": "Increase conversion rates by 200% and reduce sales cycle by 35%",; "roi": "Expected ROI: 300-450% within 5 months"},; {; "id": '9',; "name": "Quantum-Safe Encryption Service",; "description": "Future-proof encryption solution using quantum-resistant algorithms to protect against quantum computing threats.",; "icon": 'Lock',; "features": [; "Quantum-resistant algorithms",; "End-to-end encryption",; "Key management",; "Compliance ready",; "API integration"; ],; "pricing": "$999 - $7,999/month",; "delivery": "8-12 weeks",; "category": "Quantum Security",; "benefits": "Future-proof security and meet compliance requirements",; "roi": "Expected ROI: 150-250% within 12 months"},; {; "id": '10',; "name": "AI-Powered Code Review Assistant",; "description": "Intelligent code analysis and review system that identifies bugs,security vulnerabilities,and optimization opportunities.",; "icon": 'Code',; "features": [; "Automated code analysis",; "Security vulnerability detection",; "Performance optimization suggestions",; "Code quality metrics",; "Integration with development tools"; ],; "pricing": "$199 - $1,299/month",; "delivery": "3-5 weeks",; "category": "AI Development",; "benefits": "Reduce bugs by 70% and improve code quality by 50%",; "roi": "Expected ROI: 250-400% within 4 months"} ]; return (; <> <Head> <title>Innovative Services - Zion Tech Group></div> <meta name="description" content="Cutting-edge micro SaaS,IT,and AI services that drive innovation and business growth." /> <meta name="viewport" content="width=device-width,initial-scale=1" /> ></div> <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"> {} <section className="py-20 px-4"> <div className="max-w-6xl mx-auto text-center"> <h1 className="text-5xl font-bold text-gray-900 mb-6"> Innovative Technology Services; ></div> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Discover our cutting-edge micro SaaS,IT,and AI solutions designed to transform your business ; and drive unprecedented growth in the digital age.; ></div> <div className="flex justify-center space-x-4"> <Link href="/contact"; className="inline-flex items-center px-8 py-3 bg-blue-600 "hover": bg-blue-700 text-white font-medium rounded-lg transition-colors"> <span>Get Started></div> <ArrowRight className="w-5 h-5 ml-2" /> ></div> <Link href="/services"; className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors"> <span>View All Services></div> ></div> ></div> ></div> ></div> {} <section className="py-16 px-4"> <div className="max-w-7xl mx-auto"> <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Innovative Services></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-8"> {services.map((service) => {; const IconComponent = service.icon; return (; <div key={service.id} className="bg-white p-8 rounded-lg shadow-md "hover": shadow-lg transition-shadow"> <div className="flex items-center mb-4"> <IconComponent className="w-12 h-12 text-blue-600 mr-4" /> <div> <h3 className="text-xl font-semibold text-gray-900">{service.name}></div> <span className="text-sm text-blue-600 font-medium">{service.category}></div> ></div> ></div> <p className="text-gray-600 mb-4">{service.description}></div> <div className="mb-4"> <h4 className="font-semibold text-gray-900 mb-2">Key "Features": ></div> <ul className="text-sm text-gray-600 space-y-1"> {service.features.map((feature,index) => (; <li key={index} className="flex items-center"> <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /> {feature} ></div> ))} ></div> ></div> <div className="border-t pt-4 space-y-2"> <div className="flex items-center justify-between"> <span className="text-sm font-medium text-gray-700">"Pricing": ></div> <span className="text-sm font-bold text-green-600">{service.pricing}></div> ></div> <div className="flex items-center justify-between"> <span className="text-sm font-medium text-gray-700">"Delivery": ></div> <span className="text-sm text-gray-600">{service.delivery}></div> ></div> <div className="flex items-center justify-between"> <span className="text-sm font-medium text-gray-700">Expected "ROI": ></div> <span className="text-sm font-bold text-blue-600">{service.roi}></div> ></div> ></div> <div className="mt-4 p-3 bg-blue-50 rounded-lg"> <p className="text-sm text-blue-800 font-medium">{service.benefits}></div> ></div> <Link href="/contact"; className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 "hover": bg-blue-700 text-white font-medium rounded-lg transition-colors"> <span>Get Quote></div> <ArrowRight className="w-4 h-4 ml-2" /> ></div> ></div> )})} ></div> ></div> ></div> {} <section className="bg-blue-600 text-white py-20 px-4"> <div className="max-w-6xl mx-auto text-center"> <h2 className="text-4xl font-bold mb-6">Ready to Innovate?></div> <p className="text-xl mb-8 max-w-3xl mx-auto"> Transform your business with our cutting-edge technology solutions. ; Contact us today to discuss your project requirements.; ></div> <div className="grid "md": grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4" /> <h3 className="font-semibold mb-2">Phone></div> <p>+1 302 464 0950></div> ></div> <div className="text-center"> <MessageSquare className="w-8 h-8 mx-auto mb-4" /> <h3 className="font-semibold mb-2">Email></div> <p>kleber@ziontechgroup.com></div> ></div> <div className="text-center"> <Globe className="w-8 h-8 mx-auto mb-4" /> <h3 className="font-semibold mb-2">Website></div> <p>https: ></div> ></div> <Link href="/contact"; className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors"> <span>Contact Us Today></div> <ArrowRight className="w-5 h-5 ml-2" /> ></div> ></div> ></div> ></div> ></div> )}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Innovativeservices() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Innovativeservices - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Innovativeservices
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

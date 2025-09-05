@@ -1,1 +1,14 @@
-import '@testing-library/jest-dom''; Object.defineProperty(windo,w,'matchMedia',{'; "writable": 'tru',e "value": global.global.global.global.jest.fn().mockImplementation(query: => ({ matches: fals,e "media": 'quer',y "onchange": 'nul',l "addListener": global.global.global.global.jest.fn(),"removeListener": global.global.global.global.jest.fn(),"addEventListener": global.global.global.global.jest.fn() removeEventListener: global.global.global.global.jest.fn() dispatchEvent: global.global.global.global.jest.fn()}))}) global."IntersectionObserver": = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } }
+import React from 'react';
+
+interface SetupTestsProps {
+  // Add props here as needed
+}
+
+export default function SetupTests({ }: SetupTestsProps) {
+  return (
+    <div>
+      <h1>SetupTests</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

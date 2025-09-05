@@ -1,1 +1,14 @@
-import React,{ useMemo,useState } from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import { Search,; ArrowRight,; DollarSign,; ExternalLink,; Workflow,; MessageSquare,; Globe,; Brain,; Shield,; Cloud,; Cpu,; Zap,; Rocket,; Heart,; Lock,; Users,; BarChart3,; Target,; TrendingUp,; Award,; Star,; CheckCircle,; Clock,; Phone,; Mail,; MapPin} from 'lucide-react'; import SEO from '@/components/SEO'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2026,SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026'; const "Services2026": React.FC = (): JSX.Element => {; const [query,setQuery] = useState(''); const [selectedCategory,setSelectedCategory] = useState('all'); const [sortBy,setSortBy] = useState('innovation'); const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026,...SPECIALIZED_SERVICES_2026]; const categories = [; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'all',"name": 'All Services',"icon": 'GitFork',"count": 'allServices.length' },; { "id": &apos;AI & Analytics&apos;,"name": &apos;AI & Analytics&apos;,"icon": 'Brain',"count": allServices.filter(s => s.category === &apos;AI & Analytics&apos;).length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'Quantum Computing',"name": 'Quantum Computing',"icon": 'Zap',"count": allServices.filter(s => s.category === 'Quantum Computing').length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'Cybersecurity',"name": 'Cybersecurity',"icon": 'Shield',"count": allServices.filter(s => s.category === 'Cybersecurity').length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'IoT & Edge Computing',"name": &apos;IoT & Edge&apos;,"icon": 'Cpu',"count": allServices.filter(s => s.category === &apos;IoT & Edge Computing&apos;).length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'AI & Content',"name": &apos;AI & Content&apos;,"icon": 'MessageSquare',"count": allServices.filter(s => s.category === &apos;AI & Content&apos;).length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'Digital Twin',"name": 'Digital Twin',"icon": 'Rocket',"count": allServices.filter(s => s.category === 'Digital Twin').length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'AI & HR',"name": &apos;AI & HR&apos;,"icon": 'Users',"count": allServices.filter(s => s.category === &apos;AI & HR&apos;).length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'Sustainability',"name": 'Sustainability',"icon": 'Heart',"count": allServices.filter(s => s.category === 'Sustainability').length },; { "id": unknownanyanyanyanyanyanyanyanyanyanyanyany'AI & IoT',"name": &apos;AI & IoT&apos;,"icon": 'BarChart3',"count": allServices.filter(s => s.category === &apos;AI & IoT&apos;).length }; ]; const filteredAndSorted = useMemo(() => {}}})
+import React from 'react';
+
+interface Services2026Props {
+  // Add props here as needed
+}
+
+export default function Services2026({ }: Services2026Props) {
+  return (
+    <div>
+      <h1>Services2026</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

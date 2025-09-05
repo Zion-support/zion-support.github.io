@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousWorkflow.jsx import React from 'react'; export default AIAutonomousWorkflow; const AIAutonomousWorkflow = () => { return (<> <Helmet> <title > AI Autonomous Workflow Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous workflow platform that automates business processes,optimizes workflows,and provides intelligent workflow management with advanced AI capabilities." / / /> <meta name="keywords" content="AI workflow,autonomous workflow,workflow automation,business process automation,AI workflow management" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousWorkflow; const AIAutonomousWorkflow = () => { return (<> <Helmet> <title > AI Autonomous Workflow Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous workflow platform that automates business processes,optimizes workflows,and provides intelligent workflow management with advanced AI capabilities." / / / /> <meta name="keywords" content="AI workflow,autonomous workflow,workflow automation,business process automation,AI workflow management" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousWorkflowProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousWorkflow({ }: AIAutonomousWorkflowProps) {
+  return (
+    <div>
+      <h1>AIAutonomousWorkflow</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

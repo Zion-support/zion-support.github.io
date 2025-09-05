@@ -1,1 +1,14 @@
-import React from 'react';'''; import { ENHANCED_SERVICES,ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Brain,Shield,Database,Briefcase,DollarSign,Heart,GraduationCap,Truck,Home,Zap,Users,BarChart3,Lock,TrendingUp,CheckCircle,Star,Globe,Clock,Mail,Phone,MapPin import { Link } from 'react-router-dom'; const ServiceCategory = ({ category,services }) => {} const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase())); if(categoryServices.length === 0); return null; const getCategoryIcon = (categoryName) => {; const iconMap = {; &apos;AI & Machine Learning&apos;: <Brain className="w-6 h-6"/>,; &apos;Cybersecurity & Compliance&apos;: <Shield className="w-6 h-6"/>,; &apos;Data & Analytics&apos;: <Database className="w-6 h-6"/>,; 'Business Process': <Briefcase className="w-6 h-6"/>,; &apos;Marketing & Sales&apos;: <TrendingUp className="w-6 h-6"/>,; 'Financial Services': <DollarSign className="w-6 h-6"/>,; &apos;Healthcare & Life Sciences&apos;: <Heart className="w-6 h-6"/>,; &apos;Education & Training&apos;: <GraduationCap className="w-6 h-6"/>,; &apos;Supply Chain & Logistics&apos;: <Truck className="w-6 h-6"/>,; &apos;Real Estate & Property&apos;: <Home className="w-6 h-6"/>,; &apos;Legal & Compliance&apos;: <Lock className="w-6 h-6"/>,; export { ServiceCategory }; export { ServiceCategory }; export { ServiceCategory }; export { ServiceCategory }; export { ServiceCategory }; export default Component}}}
+import React from 'react';
+
+interface EnhancedServicesOverviewProps {
+  // Add props here as needed
+}
+
+export default function EnhancedServicesOverview({ }: EnhancedServicesOverviewProps) {
+  return (
+    <div>
+      <h1>EnhancedServicesOverview</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

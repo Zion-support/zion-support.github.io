@@ -1,1 +1,14 @@
-<<<<<<< HEAD import React from 'react'; import {Header} from "@/components/Header";";";" import {Footer} from "@/components/Footer";";";" import SEO from "@/components/SEO";";";" import {GradientHeading} from "@/components/GradientHeading";";" export default function About($1) {;";" return (<>";";" <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion&apos;s mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion,AI marketplace,tech platform,mission,vision,team" canonical=""https": ";';';';'; </SEO>;';'; ======= import React from 'react'; import {Header} from "@/components/Header";";";" import {Footer} from "@/components/Footer";";";" import SEO from "@/components/SEO";";";" import {GradientHeading} from "@/components/GradientHeading";";" export default function About($1) {;";" return (<>";";" <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion&apos;s mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion,AI marketplace,tech platform,mission,vision,team" canonical="https:";';';';'; </SEO>;';'; >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+import React from 'react';
+
+interface About.jsProps {
+  // Add props here as needed
+}
+
+export default function About.js({ }: About.jsProps) {
+  return (
+    <div>
+      <h1>About.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

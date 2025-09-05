@@ -1,1 +1,14 @@
-import React from 'react';'''; import { BillingDashboard } from '@/components/enterprise/billing/BillingDashboard';'''; import { useAuth } from '@/hooks/useAuth';'''; import { useRouter } from 'next/router';'''; import { SEO } from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} const { user } = useAuth(); const router = useRouter(); const hasBillingAccess =''; user?.role === 'enterprise_admin' ||''; (user?.permissions && user.permissions.includes('billing_access')); if (!hasBillingAccess) {} '; if (typeof window !== 'null') {} '; ''; '''; router.push('/unauthorized')} return null} return(); <ProtectedRoute> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <BillingDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling };
+import React from 'react';
+
+interface EnterpriseBilling.jsProps {
+  // Add props here as needed
+}
+
+export default function EnterpriseBilling.js({ }: EnterpriseBilling.jsProps) {
+  return (
+    <div>
+      <h1>EnterpriseBilling.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

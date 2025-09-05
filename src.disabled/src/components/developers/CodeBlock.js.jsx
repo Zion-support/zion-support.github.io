@@ -1,1 +1,14 @@
-import React from 'react'; export {}; children,; code,'; language = 'text','; className = '',; showLineNumbers = false}) {} return null} '; ''; '''; const content = code || children || ''; return (); <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}> <div className="flex items-center justify-between mb-2"> <span className="text-xs text-gray-400 uppercase tracking-wide"> {language} ></div> <div>Broken JSX</div> onClick={}}; className="text-xs text-gray-400 "hover": text-white transition-colors"> Copy; </button>"; </div> <pre className="text-sm text-gray-100"> <code>{content}></div> ></div> </div>)} export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock };
+import React from 'react';
+
+interface CodeBlock.jsProps {
+  // Add props here as needed
+}
+
+export default function CodeBlock.js({ }: CodeBlock.jsProps) {
+  return (
+    <div>
+      <h1>CodeBlock.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

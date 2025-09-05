@@ -1,1 +1,14 @@
-import React,{useState} from 'react'; import {cn} from '@/lib/utils'; &apos; export function ImageWithRetry($1) {}; const [currentSrc,setCurrentSrc] = useState(src); const [failed,setFailed] = useState(false); const handleError = (props) => {};; setFailed(true); setCurrentSrc(fallbackSrc)}; const handleRetry = (props) => {};; setFailed(false); setCurrentSrc(src)}; return(<div className = {}; &apos;; ' " cn('relative inline-block',; className)}>; {}; <img loading="lazy" {...props} src={currentSrc} onError={handleError}/ / />";" {failed && (<button type="button" onClick={handleRetry} className = {}; '; ' " cn('absolute bottom-1 right-1 text-xs underline',; retryClassName)}>; Retry; </button>)}; </div>)}; export {ImageWithRetry}; export default ImageWithRetry; ; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry;" export default ImageWithRetry;";" export default ImageWithRetry;";" ";"; ;';';
+import React from 'react';
+
+interface ImageWithRetryProps {
+  // Add props here as needed
+}
+
+export default function ImageWithRetry({ }: ImageWithRetryProps) {
+  return (
+    <div>
+      <h1>ImageWithRetry</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

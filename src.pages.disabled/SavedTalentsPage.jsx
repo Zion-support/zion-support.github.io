@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/SavedTalentsPage.jsx import React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) { import React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) {'';
+import React from 'react';
+
+interface SavedTalentsPageProps {
+  // Add props here as needed
+}
+
+export default function SavedTalentsPage({ }: SavedTalentsPageProps) {
+  return (
+    <div>
+      <h1>SavedTalentsPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

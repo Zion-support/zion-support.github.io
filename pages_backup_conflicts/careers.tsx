@@ -1,1 +1,14 @@
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link';    import { Users,MapPin,Clock,Briefcase,Heart,Zap,Award,Globe } from 'lucide-react';   import SEO from '../components/SEO'; import { Card } from '../components/ui/Card'; import { Button } from '../components/ui/Button'; import { Badge } from '../components/ui/Badge'; import { Users,ArrowRight,CheckCircle,Star,MapPin,Clock,Briefcase,Heart,Lightbulb,Zap,Globe,Award,Coffee,Home} from 'lucide-react'; 
+import React from 'react';
+
+interface CareersProps {
+  // Add props here as needed
+}
+
+export default function Careers({ }: CareersProps) {
+  return (
+    <div>
+      <h1>Careers</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

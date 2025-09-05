@@ -1,1 +1,14 @@
-import { useEffect } from 'react'; import { useRouter } from 'next/router'; import { useSelector } from 'react-redux'; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router.push('/login?next=/community/new')}},[isLoggedIn,router]); if(!isLoggedIn) {; return null}; return <Component {...props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth;
+import React from 'react';
+
+interface WithAuth.jsProps {
+  // Add props here as needed
+}
+
+export default function WithAuth.js({ }: WithAuth.jsProps) {
+  return (
+    <div>
+      <h1>WithAuth.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-import React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = React.forwardRef(''; ({ className,src,alt = '',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
+import React from 'react';
+
+interface Avatar.jsProps {
+  // Add props here as needed
+}
+
+export default function Avatar.js({ }: Avatar.jsProps) {
+  return (
+    <div>
+      <h1>Avatar.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"
+import React from 'react';
+
+interface ProductActions.jsProps {
+  // Add props here as needed
+}
+
+export default function ProductActions.js({ }: ProductActions.jsProps) {
+  return (
+    <div>
+      <h1>ProductActions.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

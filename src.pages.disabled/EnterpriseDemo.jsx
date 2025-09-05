@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/EnterpriseDemo.jsx import React from 'react'; "export default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s enterprise solutions for AI hiring,talent management,and marketplace services." keywords="enterprise demo,AI hiring demo,talent management demo,Zion enterprise" canonical=""https": import React from 'react'; "export default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion & apos;s enterprise solutions for AI hiring,talent management,and marketplace services." keywords="enterprise demo,AI hiring demo,talent management demo,Zion enterprise" canonical=""https": "";
+import React from 'react';
+
+interface EnterpriseDemoProps {
+  // Add props here as needed
+}
+
+export default function EnterpriseDemo({ }: EnterpriseDemoProps) {
+  return (
+    <div>
+      <h1>EnterpriseDemo</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
