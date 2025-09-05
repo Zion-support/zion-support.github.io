@@ -1,42 +1,43 @@
-// Service finder utility
-// Provides a simple lookup across known service collections at runtime.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: number;
+  features: string[];
+}
 
-type BasicService = {
-  title: string;
-  description?: string;
-  category?: string;
-  pricing?: string;
+export const findService = (query: string, services: Service[]): Service[] => {
+  const searchTerm = query.toLowerCase();
+  return services.filter(service => 
+    service.name.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm)
+  );
 };
 
-// Lazy imports to avoid increasing bundle size unnecessarily
-async function loadCatalogs(): Promise<BasicService[][]> {
-  try {
-    const catalogs: BasicService[][] = [];
-    // Only import lightweight catalogs that definitely exist in the repo
-    const micro = await import('../pages/micro-saas');
-    const ai = await import('../pages/ai-services');
-    const it = await import('../pages/it-services');
-    // Defensive extraction for default/named exports
-    const microList: BasicService[] = (micro.microSaaSProducts || micro.default?.microSaaSProducts || []);
-    const aiList: BasicService[] = (ai.services || ai.default?.services || ai.aiServices || []);
-    const itList: BasicService[] = (it.itServices || it.default?.itServices || []);
-    catalogs.push(microList, aiList, itList);
-    return catalogs;
-  } catch {
-    return [];
-  }
-}
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase()
+  );
+};
 
-export async function findService(serviceName: string): Promise<BasicService | null> {
-  if (!serviceName) return null;
-  const name = serviceName.toLowerCase();
-  const catalogs = await loadCatalogs();
-  for (const list of catalogs) {
-    for (const svc of list) {
-      if (svc?.title && svc.title.toLowerCase() === name) {
-        return svc;
-      }
-    }
-  }
+export default {
+  findService,
+  getServicesByCategory
+};
+=======
+<<<<<<< HEAD
+=======
+// Service finder utility
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
   return null;
-}
+};
+>>>>>>> main
+>>>>>>> main
+export const findService = (_serviceName: string) => { return null};
+>>>>>>> main

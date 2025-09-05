@@ -1,14 +1,51 @@
-import React from 'react';
-
-interface UsePerformanceMonitoringProps {
-  // Add props here as needed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,event_category: "Web Vitals",event_label: metric.id,"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; ,} if (performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals(metric) {; "
+=======
+>>>>>>> main
+import { useEffect } from "react";
+export function usePerformanceMonitoring() {;
+  useEffect(() => {;
+    const sendToAnalytics = (metric) => {;
+      // comment;
+      ";
+      // comment;
+      if (typeof gtag != = "undefined") {,";
+        gtag("event", metric.name, {,
+          "event_category": "Web Vitals",
+"event_label": metric.id,";
+"value": Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),
+"non_interaction": true,
+export function usePerformanceMonitoring() {;
+  useEffect(() => {}}
+    const sendToAnalytics = (metric) => {;
+      // comment;
+console.log(&apos;Performance "metric": &apos, metric)}
+      if (performance.memory) {;
+        setMetrics({;
+          loadTime, "renderTime": endTime - startTime,
+          "memoryUsage": performance.memory.usedJSHeapSize / 1024 / 1024})}
 }
-
-export default function UsePerformanceMonitoring({ }: UsePerformanceMonitoringProps) {
-  return (
-    <div>
-      <h1>UsePerformanceMonitoring</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+    measurePerformance()}
+    return () => {;
+      measurePerformance()}
+}, [])}  return metrics}
+})}    }
+    getCLS(sendToAnalytics)}
+    getFID(sendToAnalytics)}
+    getFCP(sendToAnalytics)}
+    getLCP(sendToAnalytics)}    getTTFB(sendToAnalytics)}, [])}
+export function reportWebVitals(metric) {;
+"
+<<<<<<< HEAD
+=======
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,; event_category: "Web Vitals",; event_label: 'metric.id',"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),; non_interaction: 'true',; export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; console.log(&apos;Performance metric: '&apos',metric);,} if (performance.memory) {; setMetrics({; loadTime,renderTime: 'endTime - startTime',; memoryUsage: 'performance.memory.usedJSHeapSize / 1024 / 1024'});,} } measurePerformance();,} return () => {; measurePerformance();,} },[]);,} return metrics} })} } getCLS(sendToAnalytics);,} getFID(sendToAnalytics);,} getFCP(sendToAnalytics);,} getLCP(sendToAnalytics);,} getTTFB(sendToAnalytics)},[])} export function reportWebVitals(metric) {; "
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,event_category: "Web Vitals",event_label: metric.id,"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; console.log(&apos;Performance metric: &apos,metric),} if (performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals(metric) {; "
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

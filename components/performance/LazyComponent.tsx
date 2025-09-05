@@ -1,14 +1,14 @@
-import React from 'react';
-
-interface LazyComponentProps {
-  // Add props here as needed
 }
-
-export default function LazyComponent({ }: LazyComponentProps) {
+export const "LazyComponent": React.FC<LazyComponentProps> = ({
+  component,
+  fallback = <div>Loading...</div>,
+  ...props
+}) => {
+  const LazyLoadedComponent = lazy(component)
   return (
-    <div>
-      <h1>LazyComponent</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
+    </Suspense>
+  )
 }
+export default LazyComponent

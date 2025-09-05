@@ -11,8 +11,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-    });
-    const handleSubmit = (e) => {
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -22,10 +20,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-            message: ''
-        });
-        setIsFormOpen(false);
-    };
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,

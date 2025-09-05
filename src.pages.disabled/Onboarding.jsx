@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface OnboardingProps {
-  // Add props here as needed
-}
-
-export default function Onboarding({ }: OnboardingProps) {
-  return (
-    <div>
-      <h1>Onboarding</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< \"HEAD\": src.pages.disabled/Onboarding.jsx import React from \'react\'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ; import React from \'react\'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () \';\';
+=======
+<<<<<<< "HEAD": src.pages.disabled/Onboarding.jsx import _React from 'react'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ; import _React from 'react'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ';';
+>>>>>>> main

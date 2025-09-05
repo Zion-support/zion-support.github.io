@@ -1,1 +1,2 @@
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+>>>>>>> main
+>>>>>>> main

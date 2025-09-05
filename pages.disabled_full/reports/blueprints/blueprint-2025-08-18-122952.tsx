@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface Blueprint20250818122952Props {
-  // Add props here as needed
-}
-
-export default function Blueprint20250818122952({ }: Blueprint20250818122952Props) {
-  return (
-    <div>
-      <h1>Blueprint20250818122952</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+>>>>>>> main

@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface Jest.configProps {
-  // Add props here as needed
-}
-
-export default function Jest.config({ }: Jest.configProps) {
-  return (
-    <div>
-      <h1>Jest.config</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
