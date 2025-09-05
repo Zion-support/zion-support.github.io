@@ -3,8 +3,11 @@ const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -67,6 +70,7 @@ const fixes = [// Fix missing semicolons in import statements
     "replacement": '    </div>\n  );\n}'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Fixing final syntax errors...');
 =======
 
@@ -76,6 +80,9 @@ console.log('🔧 Fixing final syntax errors...');
 =======
 console.log('🔧 Fixing final syntax errors...');
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+console.log('🔧 Fixing final syntax errors...');
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -87,6 +94,7 @@ const filesToFix = [
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.log(`File not found: ${filePath}`);
         return 0;
     }
@@ -95,6 +103,10 @@ function fixFile(filePath) {
         return;
     }
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+        return;
+    }
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     fixes.forEach(fix => {
@@ -131,9 +143,12 @@ function walkDirectory(dir) {
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     let fixes = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
@@ -169,6 +184,7 @@ function walkDirectory(dir) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return fixes;
 }
 =======
@@ -181,11 +197,16 @@ function walkDirectory(dir) {
     return fixes;
 }
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+    return fixes;
+}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 console.log(`\n📊 Summary:`);
@@ -195,6 +216,8 @@ console.log(`   Total fixes applied: ${totalFixes}`);
 if (totalFixes > 0) {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -218,6 +241,7 @@ const path = require('path')
     "replacement"
     "replacement"
 <<<<<<< HEAD
+<<<<<<< HEAD
     "replacement"
 =======
     console.log('\n✅ Final syntax error fixing completed!');
@@ -228,3 +252,6 @@ const path = require('path')
 =======
     "replacement"
 >>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
+=======
+    "replacement"
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

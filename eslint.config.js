@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
       },
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -15,6 +16,12 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+=======
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
@@ -50,6 +57,7 @@ export default [
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
+<<<<<<< HEAD
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
@@ -261,6 +269,8 @@ export default [
       'corrupted-files-backup/',
       'corrupted-files-backup/**/*',
       'cypress_backup/',
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
       'src_backup_temp/',
       'src.pages.disabled/',
       'src.disabled/',
@@ -354,11 +364,14 @@ export default [
       'components/ui/',
       '*.cjs',
       '*.js',
+<<<<<<< HEAD
       'cypress_backup/**/*',
       'middleware/',
       'middleware/**/*',
       'zion_academy/',
       'zion_academy/**/*',
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
@@ -654,6 +667,7 @@ export default [
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
+<<<<<<< HEAD
       '*.tgz',
       '*.tar.gz',
       '*.zip',
@@ -758,6 +772,8 @@ export default [
       'no-undef': 'off',
     },
   },
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
       'ultimate-*.js',
       'ultimate-*.cjs',
       'targeted-*.cjs',
@@ -928,12 +944,18 @@ export default [
         jest: 'readonly',
         fireEvent: 'readonly',
         render: 'readonly',
+<<<<<<< HEAD
         screen: 'readonly'
       }
+=======
+        screen: 'readonly',
+      },
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn'
     }
     },
@@ -955,3 +977,8 @@ export default [
 ];
 ];
 ];
+=======
+    },
+  }
+];
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

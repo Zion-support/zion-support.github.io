@@ -230,11 +230,13 @@ const values = [
   "Continuous learning",
   "Work-life balance",
   "Diversity and inclusion",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
   "Client success focus"
 ];
-
 export default function TalentPage() {
   return (
     <MainLayout,
@@ -305,7 +307,6 @@ export default function TalentPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -356,7 +357,6 @@ export default function TalentPage() {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -429,7 +429,6 @@ export default function TalentPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -442,7 +441,6 @@ export default function TalentPage() {
                 <motion.div
                   key={index}
         </section>
-
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -549,7 +547,6 @@ export default function TalentPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -568,7 +565,6 @@ export default function TalentPage() {
       </section>
     </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

@@ -36,8 +36,11 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -70,6 +73,7 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
     }
@@ -170,13 +174,17 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
+            timestamp: new Date().toISOString()
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     return errors;
   }
   parseESLintErrors(output) {
@@ -191,12 +199,19 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     return errors;
   }
   updateHealthStatus() {
@@ -217,6 +232,9 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -233,14 +251,19 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD
 
 
+=======
+      console.log('✅ Error fixer completed');
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
     }
@@ -266,8 +289,11 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(

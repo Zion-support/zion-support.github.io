@@ -1,5 +1,23 @@
 import React from 'react';
+<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+import { motion } from 'framer-motion';
+import { 
+  GraduationCap, 
+  BookOpen, 
+  Play, 
+  Clock, 
+  Star, 
+  Users, 
+  Award, 
+  ArrowRight,
+  CheckCircle,
+  Target,
+  Zap
+} from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 
 const Page = () => {
   return (
@@ -15,6 +33,10 @@ const Page = () => {
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD
 };
 
 export default Page;
+=======
+}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

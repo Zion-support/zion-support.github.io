@@ -20,5 +20,9 @@ describe('AccessibilityEnhancerdynamic', () => {
   test('applies correct styling', () => {
     render(<AccessibilityEnhancerdynamic />);
   });
+<<<<<<< HEAD
 });
 });
+=======
+});
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

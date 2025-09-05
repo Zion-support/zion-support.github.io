@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
@@ -9,10 +10,23 @@ export default function LoginPage() {
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
+=======
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
+import Layout from '../components/Layout';
+
+export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
+<<<<<<< HEAD
     console.log('Login attempt:', formData);
   };
 
@@ -21,13 +35,23 @@ export default function LoginPage() {
       ...formData,
       [e.target.name]: e.target.value
     });
+=======
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
   };
 
   return (
     <Layout
       title="Login - Zion Tech Group"
+<<<<<<< HEAD
       description="Sign in to your Zion Tech Group account to access our services and dashboard."
       keywords="login, sign in, account, dashboard"
+=======
+      description="Access your Zion Tech Group account to manage your services and projects."
+      keywords="login, account, access, dashboard, services"
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
     >
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -110,12 +134,17 @@ export default function LoginPage() {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
+<<<<<<< HEAD
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+=======
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
                     Remember me
                   </label>
                 </div>
 
                 <div className="text-sm">
+<<<<<<< HEAD
                   <a href="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">
                     Forgot your password?
                   </a>
@@ -171,6 +200,59 @@ export default function LoginPage() {
               </div>
             </div>
           </motion.form>
+=======
+                  <Link href="/forgot-password" className="text-blue-600 hover:text-blue-700 font-semibold">
+                    Forgot password?
+                  </Link>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold flex items-center justify-center disabled:opacity-50"
+              >
+                {isLoading ? (
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                ) : (
+                  <>
+                    Sign In
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </button>
+            </form>
+
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                </div>
+              </div>
+
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                  Google
+                </button>
+                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                  Microsoft
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{' '}
+                <Link href="/register" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Sign up here
+                </Link>
+              </p>
+            </div>
+          </motion.div>
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
         </div>
       </div>
     </Layout>

@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -215,4 +219,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
