@@ -9,37 +9,37 @@ export default function Blockchain() {
       icon: Shield,
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for various blockchain platforms.',
-      features: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Custom Blockchains']
+      features: ['EthereumPolygonBinance Smart ChainCustom Blockchains']
     },
     {
       icon: DollarSign,
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols.',
-      features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics']
+      features: ['DEX DevelopmentYield FarmingLiquidity PoolsToken Economics']
     },
     {
       icon: Users,
       title: 'NFT Marketplace',
       description: 'Complete NFT marketplace solutions with minting and trading.',
-      features: ['Minting Platform', 'Auction System', 'Royalty Management', 'Metadata Storage']
+      features: ['Minting PlatformAuction SystemRoyalty ManagementMetadata Storage']
     },
     {
       icon: Lock,
       title: 'Security Audits',
       description: 'Comprehensive security analysis for blockchain applications.',
-      features: ['Code Review', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Check']
+      features: ['Code ReviewVulnerability AssessmentPenetration TestingCompliance Check']
     },
     {
       icon: Globe,
       title: 'Cross-Chain Solutions',
       description: 'Interoperability solutions for multi-blockchain ecosystems.',
-      features: ['Bridge Development', 'Cross-Chain Swaps', 'Asset Migration', 'Universal Protocols']
+      features: ['Bridge DevelopmentCross-Chain SwapsAsset MigrationUniversal Protocols']
     },
     {
       icon: BarChart3,
       title: 'Blockchain Analytics',
       description: 'Data analysis and insights for blockchain transactions.',
-      features: ['Transaction Tracking', 'Pattern Analysis', 'Risk Assessment', 'Compliance Reporting']
+      features: ['Transaction TrackingPattern AnalysisRisk AssessmentCompliance Reporting']
     }
   ];
 

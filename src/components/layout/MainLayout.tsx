@@ -4,18 +4,18 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 ;
-interface LayoutProps {,
+interface LayoutProps {;
   children: React.ReactNode,
   title?: string,
   description?: string,
   keywords?: string,
-  showSidebar?: boolean,
+  showSidebar?: boolean
 };
-export default function MainLayout({;
-  children,;
-  title = "Zion Tech Group - Leading AI & Technology Solutions",;
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",;
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",;
+export default function MainLayout({,
+  children,
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
   showSidebar = false
 }: LayoutProps) {,
   const [sidebarOpen, setSidebarOpen] = useState(false),

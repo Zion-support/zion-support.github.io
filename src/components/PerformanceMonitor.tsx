@@ -7,15 +7,15 @@ interface PerformanceMetrics {,
   memoryUsage: number,
   networkSpeed: number,
   isOnline: boolean,
-  timestamp: number,
+  timestamp: number
 };
 const PerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({,
-    pageLoadTime: 0,;
-    memoryUsage: 0,;
-    networkSpeed: 0,;
-    isOnline: navigator.onLine,;
-    timestamp: Date.now(),
+    pageLoadTime: 0,
+    memoryUsage: 0,
+    networkSpeed: 0,
+    isOnline: navigator.onLine,
+    timestamp: Date.now()
   }),
   const [isVisible, setIsVisible] = useState(false),
   const location = useLocation(),
@@ -28,9 +28,9 @@ const PerformanceMonitor: React.FC = () => {,
         if (perfData) {,
           const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
           setMetrics(prev => ({,
-            ...prev,;
-            pageLoadTime: loadTime,;
-            timestamp: Date.now(),
+            ...prev,
+            pageLoadTime: loadTime,
+            timestamp: Date.now()
           }))
         };
       };
@@ -42,8 +42,8 @@ const PerformanceMonitor: React.FC = () => {,
         const memory = (performance as any).memory,
         const usedMemory = memory.usedJSHeapSize / 1024 / 1024, // Convert to MB,
         setMetrics(prev => ({,
-          ...prev,;
-          memoryUsage: Math.round(usedMemory * 100) / 100,
+          ...prev,
+          memoryUsage: Math.round(usedMemory * 100) / 100
         }))
       };
     };
@@ -54,15 +54,15 @@ const PerformanceMonitor: React.FC = () => {,
         const connection = (navigator as any).connection,
         if (connection.effectiveType) {,
           const speedMap: { [key: string]: number } = {,
-            'slow-2g': 0.5,;
-            '2g': 1,;
-            '3g': 3,;
-            '4g': 10,;
+            'slow-2g': 0.5,
+            '2g': 1,
+            '3g': 3,
+            '4g': 10,
             '5g': 100
           };
           setMetrics(prev => ({,
-            ...prev,;
-            networkSpeed: speedMap[connection.effectiveType] || 0,
+            ...prev,
+            networkSpeed: speedMap[connection.effectiveType] || 0
           }))
         };
       };
@@ -143,28 +143,24 @@ const PerformanceMonitor: React.FC = () => {,
                 <span className="text-white">,
                   Network: {metrics.networkSpeed > 0 ? `${metrics.networkSpeed}Mbps` : 'N/A'};
                 </span>,
-              </>,
-            ) : (,
+              </>) : (,
               <>,
                 <WifiOff className="w-4 h-4 text-red-400" />,
                 <span className="text-white text-red-400">Offline</span>,
-              </>,
-            )};
+              </>)};
           </div>,
           {metrics.pageLoadTime > 3000 && (,
             <div className="text-xs text-yellow-400 bg-yellow-400/10 p-2 rounded">,
               ⚠️ Slow page load detected,
-            </div>,
-          )};
+            </div>)};
           {metrics.memoryUsage > 100 && (,
             <div className="text-xs text-orange-400 bg-orange-400/10 p-2 rounded">,
               ⚠️ High memory usage,
-            </div>,
-          )};
+            </div>)};
         </div>,
       </div>,
     </div>,
   )
 };
 ,
-export default PerformanceMonitor;
+export default PerformanceMonitor,

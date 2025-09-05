@@ -3,16 +3,8 @@ const path = require('path');
 
 const pages = [
   '',
-  '/about',
-  '/services',
-  '/ai-services',
-  '/micro-saas',
-  '/cybersecurity',
-  '/blockchain',
-  '/contact',
-  '/pricing',
-  '/faq',
-  '/terms'
+  '/about/services/ai-services/micro-saas/cybersecurity/blockchain/contact/pricing',
+  '/faq/terms'
 ];
 
 const baseUrl = 'https://ziontechgroup.com';
@@ -28,7 +20,7 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
+  fs.writeFileSync(path.join(process.cwd(), 'publicsitemap.xml'), sitemap);
   console.log('Sitemap generated successfully!');
 };
 

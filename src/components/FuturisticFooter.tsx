@@ -1,70 +1,70 @@
 import React from 'react';
 import * as React from 'react','',
 import Link from 'next/link','',
-import { motion } from 'framer-motion',',
+import { motion } from 'framer-motion;
 import {};
   // TODO: Implement;
 };
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  CheckCircle,;
-  Shield,;
-  Award,;
+  Phone;
+  Mail;
+  MapPin,
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Award,
   Zap,'
-} from 'lucide-react',',
+} from 'lucide-react,
 const FuturisticFooter: React.FC = () => {};
   const currentYear = new Date().getFullYear(),
 ,
   const footerSections = [],
     {'};
-      title: 'Services',',
+      title: 'Services,
       links: ['],
         { name: 'AI Services', href: '/ai-services' },'',
         { name: 'IT Services', href: '/it-services' },'',
         { name: 'Micro SaaS', href: '/micro-saas' },'',
         { name: 'All Services', href: '/services' }']
       ]
-    },;
+    },
     {'};
-      title: 'Solutions',',
+      title: 'Solutions,
       links: ['],
         { name: 'Enterprise Solutions', href: '/solutions' },'',
         { name: 'Industry Solutions', href: '/industries' },'',
         { name: 'Custom Development', href: '/custom-development' },'',
         { name: 'Consulting', href: '/consulting' }']
       ]
-    },;
+    },
     {'};
-      title: 'Company',',
+      title: 'Company,
       links: ['],
         { name: 'About Us', href: '/about' },'',
         { name: 'Our Team', href: '/team' },'',
         { name: 'Careers', href: '/careers' },'',
         { name: 'Partners', href: '/partners' }']
       ]
-    },;
+    },
     {'};
-      title: 'Resources',',
+      title: 'Resources,
       links: ['],
         { name: 'Blog', href: '/blog' },'',
         { name: 'Case Studies', href: '/case-studies' },'',
         { name: 'White Papers', href: '/white-papers' },'',
         { name: 'Documentation', href: '/docs' }']
       ]
-    },;
+    },
     {'};
-      title: 'Support',',
+      title: 'Support,
       links: ['],
         { name: 'Help Center', href: '/help' },'',
         { name: 'Contact Us', href: '/contact' },'',
         { name: 'FAQ', href: '/faq' },'',
         { name: 'Support Center', href: '/support' }']
       ]
-    },;
+    },
     {'};
-      title: 'Legal',',
+      title: 'Legal,
       links: ['],
         { name: 'Privacy Policy', href: '/privacy' },'',
         { name: 'Terms of Service', href: '/terms' },'',

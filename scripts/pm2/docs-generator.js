@@ -27,7 +27,7 @@ class DocsGenerator {
     try {
       this.log('📝 Generating README.md...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const readmeContent = `# ${packageJson.name}
 
 ${packageJson.description || 'A modern web application built with Next.js'}

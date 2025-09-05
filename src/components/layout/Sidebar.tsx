@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
   Brain;
   Cloud;
-  Shield,
+  Shield;
   Code,
   Database,
   Network,

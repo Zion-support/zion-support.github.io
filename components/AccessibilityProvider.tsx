@@ -38,7 +38,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     reducedMotion,
     toggleHighContrast,
     toggleLargeText,
-    toggleReducedMotion,
+    toggleReducedMotion
   };
 
   return (
