@@ -10,17 +10,15 @@ import {
   Users,
   Settings,
   HelpCircle,
-<<<<<<< HEAD
-  Phone,
-  Mail,
-  MapPin,
-  Building2,
-  User,
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   LogOut,
   User,
-  Search
+  Search,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Network,
+  Zap
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -28,7 +26,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const navigation = [
+const navigationItems = [
   {
     label: 'Dashboard',
     href: '/dashboard',
@@ -39,10 +37,12 @@ const navigation = [
     href: '/services',
     icon: Briefcase,
     children: [
-      { label: 'AI Services', href: '/ai-services' },
-      { label: 'IT Services', href: '/it-services' },
-      { label: 'Micro SaaS', href: '/micro-saas' },
-      { label: 'Cybersecurity', href: '/cybersecurity' }
+      { label: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+      { label: 'Cybersecurity', href: '/it-services', icon: Shield },
+      { label: 'Cloud Infrastructure', href: '/it-services', icon: Cloud },
+      { label: 'Custom Development', href: '/services', icon: Code },
+      { label: 'System Integration', href: '/services', icon: Network },
+      { label: 'Digital Transformation', href: '/services', icon: Zap }
     ]
   },
   {
@@ -56,16 +56,13 @@ const navigation = [
     icon: Settings
   },
   {
-    label: 'Help',
+    label: 'Help & Support',
     href: '/help',
     icon: HelpCircle
   }
 ];
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-<<<<<<< HEAD
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleExpanded = (label: string) => {
@@ -75,7 +72,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, label]
     );
   };
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 
   useEffect(() => {
     if (isOpen) {
@@ -89,13 +85,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen]);
 
-<<<<<<< HEAD
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
-
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   return (
     <AnimatePresence>
       {isOpen && (
@@ -108,139 +97,120 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-<<<<<<< HEAD
-
-=======
           
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-<<<<<<< HEAD
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-          >
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                    <Building2 className="w-8 h-8 text-white" />
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-=======
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
           >
             <div className="flex flex-col h-full">
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b">
-                <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Zap className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech</span>
+                </div>
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
 
-              {/* Navigation */}
-              <nav className="flex-1 overflow-y-auto py-4">
-                <div className="px-4 space-y-2">
-                  {navigation.map((item) => {
-                    const IconComponent = item.icon;
-                    const isExpanded = expandedItems.includes(item.label);
-                    
-                    return (
-                      <div key={item.label}>
-                        <div className="flex items-center">
-                          <Link
-                            href={item.href}
-                            className="flex items-center flex-1 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                          >
-                            <IconComponent className="h-5 w-5 mr-3" />
-                            <span className="font-medium">{item.label}</span>
-                          </Link>
-                          
-                          {item.children && (
-                            <button
-                              onClick={() => toggleExpanded(item.label)}
-                              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                            >
-                              {isExpanded ? (
-                                <ChevronDown className="h-4 w-4" />
-                              ) : (
-                                <ChevronRight className="h-4 w-4" />
-                              )}
-                            </button>
-                          )}
-                        </div>
-                        
-                        {/* Children */}
-                        {item.children && isExpanded && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="ml-8 mt-2 space-y-1"
-                          >
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.label}
-                                href={child.href}
-                                className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </div>
-                    );
-                  })}
+              {/* Search */}
+              <div className="p-6 border-b border-gray-200">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
                 </div>
-<<<<<<< HEAD
               </div>
 
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-3" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-3" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-start text-gray-600">
-                    <MapPin className="w-4 h-4 mr-3 mt-1" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-=======
+              {/* Navigation */}
+              <nav className="flex-1 overflow-y-auto p-6">
+                <ul className="space-y-2">
+                  {navigationItems.map((item, index) => (
+                    <li key={index}>
+                      {item.children ? (
+                        <div>
+                          <button
+                            onClick={() => toggleExpanded(item.label)}
+                            className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                          >
+                            <div className="flex items-center space-x-3">
+                              <item.icon className="h-5 w-5" />
+                              <span className="font-medium">{item.label}</span>
+                            </div>
+                            {expandedItems.includes(item.label) ? (
+                              <ChevronDown className="h-4 w-4" />
+                            ) : (
+                              <ChevronRight className="h-4 w-4" />
+                            )}
+                          </button>
+                          
+                          <AnimatePresence>
+                            {expandedItems.includes(item.label) && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="ml-6 mt-2 space-y-1"
+                              >
+                                {item.children.map((child, childIndex) => (
+                                  <Link
+                                    key={childIndex}
+                                    href={child.href}
+                                    onClick={onClose}
+                                    className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                                  >
+                                    <child.icon className="h-4 w-4" />
+                                    <span>{child.label}</span>
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={onClose}
+                          className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                        >
+                          <item.icon className="h-5 w-5" />
+                          <span className="font-medium">{item.label}</span>
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
               </nav>
 
-              {/* Footer */}
-              <div className="border-t p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center">
+              {/* User Section */}
+              <div className="p-6 border-t border-gray-200">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
                     <User className="h-5 w-5 text-gray-600" />
                   </div>
-                  <div className="flex-1">
+                  <div>
                     <p className="text-sm font-medium text-gray-900">John Doe</p>
-                    <p className="text-xs text-gray-500">john@example.com</p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+                    <p className="text-xs text-gray-500">john@ziontechgroup.com</p>
                   </div>
-                  <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <LogOut className="h-5 w-5" />
-                  </button>
                 </div>
+                
+                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                  <LogOut className="h-5 w-5" />
+                  <span className="font-medium">Sign Out</span>
+                </button>
               </div>
             </div>
           </motion.div>

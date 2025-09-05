@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Users,
   Clock,
@@ -9,21 +9,12 @@ import {
   BarChart3,
   Building,
   Cloud,
-  Shield
-=======
-import { motion } from 'framer-motion';
-import { 
+  Shield,
   TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Building, 
   Brain, 
-  Shield, 
   Zap,
   ArrowRight,
   Star
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
