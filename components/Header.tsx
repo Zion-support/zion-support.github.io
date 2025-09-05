@@ -28,32 +28,64 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const navigation = [{
-=======
 const navigation = [
   {
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     name: 'Services',
     href: '/services',
     children: [
       { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure and DevOps' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence and analytics' }
+    ]
+  },
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+      { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+      { name: 'Finance', href: '/solutions/finance', description: 'Financial technology solutions' },
+      { name: 'Retail', href: '/solutions/retail', description: 'Retail and e-commerce solutions' },
+      { name: 'Education', href: '/solutions/education', description: 'Educational technology solutions' },
+      { name: 'Government', href: '/solutions/government', description: 'Government and public sector solutions' }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare technology' },
+      { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
+      { name: 'Education', href: '/industries/education', description: 'Educational institutions' },
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing and industrial' },
+      { name: 'Retail', href: '/industries/retail', description: 'Retail and e-commerce' },
+      { name: 'Government', href: '/industries/government', description: 'Government agencies' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories and projects' },
+      { name: 'White Papers', href: '/white-papers', description: 'In-depth research and analysis' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational webinars and demos' },
+      { name: 'Help Center', href: '/help', description: 'Support and documentation' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
     ]
   },
   { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ];
 
-const $1 = {
+const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
-<<<<<<< HEAD
-=======
 
 interface HeaderProps {
   className?: string;
@@ -67,7 +99,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 
   useEffect(() => {
     const handleScroll = () => {

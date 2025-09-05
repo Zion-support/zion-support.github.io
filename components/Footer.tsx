@@ -25,31 +25,36 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const $1 = {
-=======
 const services = {
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'AI Code Review Assistant', href: '/ai-services#ai-code-review' },
+    { name: 'AI Customer Sentiment Analytics', href: '/ai-services#ai-sentiment' },
+    { name: 'AI-Powered Document Processing', href: '/ai-services#ai-document-processing' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-    { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'Zero Trust Security Architecture', href: '/it-services#zero-trust' },
+    { name: 'Edge Computing Infrastructure', href: '/it-services#edge-computing' },
+    { name: 'Quantum-Safe Cryptography', href: '/it-services#quantum-safe' },
+    { name: '5G Network Implementation', href: '/it-services#5g-network' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain' },
+    { name: 'AI Infrastructure Management', href: '/it-services#ai-infrastructure' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'AI-Powered Code Review Assistant', href: '/micro-saas#ai-code-review' },
+    { name: 'Blockchain Payment Gateway', href: '/micro-saas#blockchain-payment' },
+    { name: 'IoT Device Management Platform', href: '/micro-saas#iot-management' },
+    { name: 'AI-Powered SEO Optimizer', href: '/micro-saas#ai-seo' },
+    { name: 'Virtual Event Platform', href: '/micro-saas#virtual-events' },
+    { name: 'AI Customer Success Platform', href: '/micro-saas#ai-customer-success' }
   ]
 };
 

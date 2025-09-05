@@ -148,6 +148,95 @@ const aiServices = [
     category: 'Marketing'
   },
   {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices enforcement.',
+    icon: Code,
+    features: ['Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Automated Fixes'],
+    pricing: '$1,200 - $5,000/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'AI Customer Sentiment Analytics',
+    description: 'Real-time customer sentiment analysis across all communication channels.',
+    icon: Heart,
+    features: ['Multi-channel Analysis', 'Real-time Alerts', 'Trend Analysis', 'Actionable Insights'],
+    pricing: '$800 - $3,500/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'AI-Powered Document Processing',
+    description: 'Intelligent document extraction, classification, and data processing using OCR and NLP.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$1,500 - $7,000/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Predictive maintenance for industrial equipment using IoT sensors and machine learning.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Automated legal document review, contract analysis, and compliance checking.',
+    icon: Shield,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'AI Real Estate Valuation',
+    description: 'Automated property valuation using market data, location analysis, and predictive modeling.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Real Estate'
+  },
+  {
+    title: 'AI-Powered HR Recruitment',
+    description: 'Intelligent candidate screening, resume analysis, and interview scheduling.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'AI Energy Optimization',
+    description: 'Smart energy management for buildings and facilities using AI optimization.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Optimization Algorithms', 'Cost Reduction', 'Sustainability Metrics'],
+    pricing: '$2,500 - $12,000/setup',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Automated quality inspection using computer vision and machine learning.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Metrics', 'Real-time Monitoring', 'Process Optimization'],
+    pricing: '$4,000 - $20,000/setup',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'AI Customer Churn Prediction',
+    description: 'Predict customer churn and implement retention strategies using machine learning.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Retention Strategies', 'Customer Segmentation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Translation Services',
+    description: 'Real-time translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Multi-language Support', 'Context Awareness', 'Industry Terminology', 'Real-time Processing'],
+    pricing: '$500 - $2,500/month',
+    category: 'Language Services'
+  },
+  {
     title: 'AI Code Review Assistant',
     description: 'Automated code review and quality assurance using AI analysis.',
     icon: Code,
