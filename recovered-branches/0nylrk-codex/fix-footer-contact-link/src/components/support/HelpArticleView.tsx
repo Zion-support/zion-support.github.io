@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -25,10 +26,18 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 =======
   const [feedbackGiven, setFeedbackGiven] = useState<&quot;helpful&quot; | &quot;not-helpful&quot; | null>(null);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React, {_useState} from "react";
+
+interface HelpArticleViewProps {_articleId: string;}
+
+export function HelpArticleView(_{_articleId}: HelpArticleViewProps) {_const [feedbackGiven, _setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Find the article in all categories
   let article,
   for (const category of HELP_CATEGORIES) {
+<<<<<<< HEAD
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -43,11 +52,21 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 <<<<<<< HEAD
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
+=======
+    const _found = category.articles.find(a => a.id === articleId);
+    if (found) {
+      article = found;
+      break;}
+  }
+  
+  if (!article) {_return <div>Article not found</div>;}
+  
+  const _handleFeedback = (_type: "helpful" | "not-helpful") => {_setFeedbackGiven(type);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
-    // In a real implementation, this would send feedback to the server
+    // In a real implementation, _this would send feedback to the server
     toast({
-      title: "Thank you for your feedback!",
-      description: type === "helpful" 
+      title: "Thank you for your feedback!", _description: type === "helpful" 
         ? "We're glad this article was helpful." 
         : "We'll work on improving this article."})
   },
@@ -66,6 +85,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   
   return (
     <div>
+<<<<<<< HEAD
       <Card className=&quot;p-6&quot;>
         <h2 className=&quot;text-2xl font-bold mb-4&quot;>{article.title}</h2>
         
@@ -76,6 +96,18 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         <div className=&quot;prose dark:prose-invert max-w-none mb-8&quot;>
           {article.content.split(&quot;\n&quot;).map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
+=======
+      <Card className="p-6">
+        <h2 className="text-2xl font-bold mb-4">{_article.title}</h2>
+        
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">
+          <span>Last updated: {_formatDate(article.lastUpdated)}</span>
+        </div>
+        
+        <div className="prose dark:prose-invert max-w-none mb-8">
+          {_article.content.split("\n").map(_(paragraph, _idx) => (
+            <p key={idx}>{_paragraph}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           ))}
         </div>
         
@@ -87,22 +119,38 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             
             <div className=&quot;flex items-center space-x-3&quot;>
               <Button
+<<<<<<< HEAD
                 variant=&quot;outline&quot;
                 size=&quot;sm&quot;
                 className={feedbackGiven === &quot;helpful&quot; ? &quot;bg-green-100 dark:bg-green-900/30&quot; : "&quot;}
                 onClick={() => handleFeedback(&quot;helpful")}
                 disabled={feedbackGiven !== null}
+=======
+                variant="outline"
+                size="sm"
+                className={_feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
+                onClick={_() => handleFeedback("helpful")}
+                disabled={_feedbackGiven !== null}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <ThumbsUp className="h-4 w-4 mr-2&quot; />
                 Yes
               </Button>
               
               <Button
+<<<<<<< HEAD
                 variant=&quot;outline&quot;
                 size=&quot;sm"
                 className={feedbackGiven === "not-helpful&quot; ? &quot;bg-red-100 dark:bg-red-900/30&quot; : "&quot;}
                 onClick={() => handleFeedback(&quot;not-helpful&quot;)}
                 disabled={feedbackGiven !== null}
+=======
+                variant="outline"
+                size="sm"
+                className={_feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+                onClick={_() => handleFeedback("not-helpful")}
+                disabled={_feedbackGiven !== null}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <ThumbsDown className=&quot;h-4 w-4 mr-2&quot; />
                 No
@@ -110,9 +158,15 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>
           </div>
           
+<<<<<<< HEAD
           {feedbackGiven === &quot;not-helpful&quot; && (
             <div className=&quot;mt-4 bg-zion-blue-dark p-4 rounded-md&quot;>
               <p className=&quot;text-sm text-zion-slate-light mb-2&quot;>
+=======
+          {_feedbackGiven === "not-helpful" && (
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
+              <p className="text-sm text-zion-slate-light mb-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 We're sorry this article wasn't helpful. Please contact our support team for further assistance.
               </p>
               <Button size=&quot;sm&quot; className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;>
@@ -126,6 +180,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   )
 }
 
+<<<<<<< HEAD
 function formatDate(date: string): string {
 <<<<<<< HEAD
   return new Date(date).toLocaleDateString("en-US", {
@@ -140,4 +195,8 @@ function formatDate(date: string): string {
     day: &quot;numeric&quot;
   });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+function formatDate(_date: string): string {_return new Date(date).toLocaleDateString("en-US", _{
+    year: "numeric", _month: "long", _day: "numeric"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

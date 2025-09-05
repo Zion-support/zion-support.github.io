@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const Page: NextPage = () => {
   return (
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+
+const Page: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>Auto Update 2025-08-08T17-37-01-527Z</title>

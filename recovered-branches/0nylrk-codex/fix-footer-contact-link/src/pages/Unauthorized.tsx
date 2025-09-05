@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -15,6 +16,10 @@ import { ShieldAlert } from &quot;lucide-react&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function Unauthorized() {
   return (
+=======
+
+export default function Unauthorized() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12&quot;>
@@ -51,5 +56,9 @@ export default function Unauthorized() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -12,9 +13,15 @@ import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+=======
+
+export default function AIMatcherPage() {_const _navigate = useNavigate();
+  const [selectedCategory, _setSelectedCategory] = useState<string>("all");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleMatchSelect = (match: MatchResult) => {
+  const _handleMatchSelect = (_match: MatchResult) => {
     // Get the item type from the category
+<<<<<<< HEAD
     let itemType = "service",
     const category = match.item.category.toLowerCase(),
     
@@ -68,6 +75,22 @@ export default function AIMatcherPage() {
       }
     })
   },
+=======
+    let _itemType = "service";
+    const _category = match.item.category.toLowerCase();
+    
+    if (category.includes("talent") || category === "engineering" || 
+        category === "data science" || category === "development") {
+      itemType = "talent";} else if (category.includes("equipment") || category === "hardware") {_itemType = "equipment";}
+    
+    toast({_title: "Match Selected", _description: `You've selected ${match.item.title}`});
+    
+    // Navigate to the quote request page with the selected item
+    navigate("/request-quote", {_state: { 
+        serviceType: itemType, _specificItem: match.item}
+    });
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -86,9 +109,15 @@ export default function AIMatcherPage() {
               <label className=&quot;block text-sm font-medium text-zion-slate-light mb-2&quot;>
                 I'm looking for:
               </label>
+<<<<<<< HEAD
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;>
                   <SelectValue placeholder=&quot;All Categories&quot; />
+=======
+              <Select value={_selectedCategory} onValueChange={_setSelectedCategory}>
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  <SelectValue placeholder="All Categories" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </SelectTrigger>
                 <SelectContent className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
                   <SelectItem value=&quot;all&quot; className=&quot;text-white&quot;>All Categories</SelectItem>
@@ -100,8 +129,13 @@ export default function AIMatcherPage() {
             </div>
             
             <AIMatchmaker 
+<<<<<<< HEAD
               serviceType={selectedCategory === &quot;all&quot; ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
+=======
+              serviceType={_selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={_handleMatchSelect}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
         </div>

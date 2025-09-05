@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -40,6 +41,17 @@ export default function WhitelabelManager() {
     return <Navigate to=&quot;/unauthorized&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React, {_useState} from 'react';
+
+export default function WhitelabelManager() {_const { user} = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
+  
+  // Check if user has admin role
+  const _isAdmin = user?.role === "admin";
+  
+  if (!isAdmin) {_return <Navigate to="/unauthorized" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -57,11 +69,19 @@ export default function WhitelabelManager() {
             </p>
           </div>
 
+<<<<<<< HEAD
           <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
             <TabsList className=&quot;mb-8&quot;>
               <TabsTrigger value=&quot;tenants&quot;>Tenants</TabsTrigger>
               <TabsTrigger value=&quot;create&quot;>Create New</TabsTrigger>
               <TabsTrigger value=&quot;docs&quot;>Documentation</TabsTrigger>
+=======
+          <Tabs value={_activeTab} onValueChange={_setActiveTab} className="w-full">
+            <TabsList className="mb-8">
+              <TabsTrigger value="tenants">Tenants</TabsTrigger>
+              <TabsTrigger value="create">Create New</TabsTrigger>
+              <TabsTrigger value="docs">Documentation</TabsTrigger>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </TabsList>
             
             <TabsContent value=&quot;tenants&quot; className=&quot;space-y-6&quot;>

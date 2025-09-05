@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
@@ -13,9 +14,24 @@ export default function ApiPerformanceTestingPage() {
 				<div className=&quot;max-w-6xl mx-auto&quot;>
 					<h1 className=&quot;text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent&quot;>API Performance Testing</h1>
 					<p className=&quot;mt-4 text-gray-300 max-w-3xl&quot;>Load, latency, reliability and regression testing for APIs with synthetic traffic generation, SLO tracking, distributed load injectors, and CI/CD integration. Benchmark providers, catch performance drift, and ship with confidence.</p>
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+
+export default function ApiPerformanceTestingPage() {_const _features = [
+		'k6/Gatling-compatible test runner', _'SLO-aware latency reports', _'Regression baselines per endpoint', _'CI checks and PR annotations', _'Synthetic traffic for staging'
+	];
+
+	return (_<div className="relative isolate">
+			<section className="px-6 lg:px-10 py-16 lg:py-24">
+				<div className="max-w-6xl mx-auto">
+					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">API Performance Testing</h1>
+					<p className="mt-4 text-gray-300 max-w-3xl">Load, _latency, _reliability and regression testing for APIs with synthetic traffic generation, _SLO tracking, _distributed load injectors, _and CI/CD integration. Benchmark providers, _catch performance drift, _and ship with confidence.</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 					<div className=&quot;mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
 						{[
+<<<<<<< HEAD
 							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },
 							{ title: 'SLO Dashboards', desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.' },
 							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' },
@@ -25,6 +41,12 @@ export default function ApiPerformanceTestingPage() {
 							<div key={f.title} className=&quot;rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur&quot;>
 								<h3 className=&quot;text-lg font-semibold text-white&quot;>{f.title}</h3>
 								<p className=&quot;mt-2 text-sm text-gray-300&quot;>{f.desc}</p>
+=======
+							{ title: 'Distributed Load', _desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.'}, _{_title: 'SLO Dashboards', _desc: 'Track p50/p95/p99 latency, _error budgets, _and throughput trends over time.'}, _{_title: 'Protocol Coverage', _desc: 'HTTP/REST, _GraphQL, _gRPC, _WebSocket, _and streaming APIs.'}, _{_title: 'Regression Gates', _desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.'}, _{_title: 'Realistic Traffic', _desc: 'Custom scenarios, _auth flows, _test data seeding, _and user think time.'}, _{_title: 'Reports & Export', _desc: 'Beautiful HTML/CSV exports, _signed artifacts, _and webhook notifications.'}].map((f) => (
+							<div key={_f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+								<h3 className="text-lg font-semibold text-white">{_f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300">{_f.desc}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 							</div>
 						))}
 					</div>

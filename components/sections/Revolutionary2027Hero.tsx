@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react',
@@ -13,17 +14,29 @@ const Revolutionary2027Hero = () => {
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
   ],
+=======
+import React from 'react';
+import Link from 'next/link';
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+const _Revolutionary2027Hero = () => {_const _floatingIcons = [
+    { icon: Brain, _delay: 0, _position: 'top-20 left-20'},
+    {_icon: Rocket, _delay: 0.5, _position: 'top-40 right-32'},
+    {_icon: TestTube, _delay: 1, _position: 'bottom-40 left-32'},
+    {_icon: Globe, _delay: 1.5, _position: 'bottom-20 right-20'},
+    {_icon: Microscope, _delay: 2, _position: 'top-1/2 left-10'},
+    {_icon: Lock, _delay: 2.5, _position: 'top-1/2 right-10'},
+    {_icon: Atom, _delay: 3, _position: 'bottom-1/3 left-1/2'},
+    {_icon: Sparkles, _delay: 3.5, _position: 'top-1/3 right-1/2'}
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _containerVariants = {_hidden: { opacity: 0},
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
     }
   },
 
+<<<<<<< HEAD
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -33,10 +46,16 @@ const Revolutionary2027Hero = () => {
         duration: 0.8,
         ease: &quot;easeOut&quot; as const
       }
+=======
+  const _itemVariants = {_hidden: { opacity: 0, _y: 30},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.8, _ease: "easeOut" as const}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
   return (
+<<<<<<< HEAD
     <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900&quot;>
       {/* Enhanced Background Effects */}
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]&quot;></div>
@@ -46,12 +65,24 @@ const Revolutionary2027Hero = () => {
       {/* Animated Grid Pattern */}
       <div className=&quot;absolute inset-0 opacity-20&quot;>
         <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot;></div>
+=======
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+      {_/* Enhanced Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
+      
+      {_/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </div>
 
-      {/* Floating Icons */}
-      {floatingIcons.map((item, index) => (
+      {_/* Floating Icons */}
+      {_floatingIcons.map(_(item, _index) => (
         <motion.div
           key={index}
+<<<<<<< HEAD
           className={`absolute ${item.position} text-purple-400/30`}
           animate={{
             y: [0, -20, 0],
@@ -62,11 +93,19 @@ const Revolutionary2027Hero = () => {
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
           }}
+=======
+          className={_`absolute ${item.position} text-purple-400/30`}
+          animate={_{
+            y: [0, _-20, _0], _rotate: [0, _5, _-5, _0]}}
+          transition={_{
+            duration: 4, _delay: item.delay, _repeat: Infinity, _ease: "easeInOut"}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <item.icon className=&quot;w-8 h-8&quot; />
         </motion.div>
       ))}
 
+<<<<<<< HEAD
       {/* Main Content */}
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
         <motion.div
@@ -79,6 +118,20 @@ const Revolutionary2027Hero = () => {
           <motion.div variants={itemVariants} className=&quot;space-y-6&quot;>
             <h1 className=&quot;text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight&quot;>
               <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+=======
+      {_/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          variants={_containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-8"
+        >
+          {_/* Main Heading */}
+          <motion.div variants={_itemVariants} className="space-y-6">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Future
               </span>
               <br />
@@ -93,19 +146,33 @@ const Revolutionary2027Hero = () => {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           {/* Subtitle */}
           <motion.div variants={itemVariants} className=&quot;max-w-4xl mx-auto&quot;>
             <p className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed&quot;>
+=======
+          {_/* Subtitle */}
+          <motion.div variants={_itemVariants} className="max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Experience the next generation of AI, quantum computing, and emerging technologies. 
               Transform your business with solutions that were once science fiction.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           {/* Key Features */}
           <motion.div variants={itemVariants} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto&quot;>
             <div className=&quot;bg-gradient-to-br from-purple-900/30 to-purple-800/30 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6&quot;>
               <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
                 <Brain className=&quot;w-6 h-6 text-white&quot; />
+=======
+          {_/* Key Features */}
+          <motion.div variants={_itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/30 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
               <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Quantum AI</h3>
               <p className=&quot;text-gray-300 text-sm&quot;>Consciousness simulation and neural computing</p>
@@ -128,8 +195,13 @@ const Revolutionary2027Hero = () => {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+=======
+          {_/* CTA Buttons */}
+          <motion.div variants={_itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Link 
               href=&quot;https://ziontechgroup.com/services&quot;
               className=&quot;group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25&quot;
@@ -147,11 +219,19 @@ const Revolutionary2027Hero = () => {
             </a>
           </motion.div>
 
+<<<<<<< HEAD
           {/* Stats */}
           <motion.div variants={itemVariants} className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8&quot;>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2&quot;>500+</div>
               <div className=&quot;text-gray-400 text-sm&quot;>Revolutionary Services</div>
+=======
+          {_/* Stats */}
+          <motion.div variants={_itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-gray-400 text-sm">Revolutionary Services</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2&quot;>$50T+</div>
@@ -169,8 +249,9 @@ const Revolutionary2027Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {_/* Scroll Indicator */}
       <motion.div
+<<<<<<< HEAD
         className=&quot;absolute bottom-8 left-1/2 transform -translate-x-1/2&quot;
         animate={{
           y: [0, 10, 0]}}
@@ -179,9 +260,17 @@ const Revolutionary2027Hero = () => {
           repeat: Infinity,
           ease: &quot;easeInOut&quot;
         }}
+=======
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        animate={_{
+          y: [0, _10, _0]}}
+        transition={_{
+          duration: 2, _repeat: Infinity, _ease: "easeInOut"}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
         <div className=&quot;w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center&quot;>
           <motion.div
+<<<<<<< HEAD
             className=&quot;w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2&quot;
             animate={{
               y: [0, 12, 0]}}
@@ -190,10 +279,18 @@ const Revolutionary2027Hero = () => {
               repeat: Infinity,
               ease: &quot;easeInOut&quot;
             }}
+=======
+            className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
+            animate={_{
+              y: [0, _12, _0]}}
+            transition={_{
+              duration: 2, _repeat: Infinity, _ease: "easeInOut"}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </div>
       </motion.div>
 
+<<<<<<< HEAD
       {/* Particle Effects */}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {[...Array(20)].map((_, i) => (
@@ -201,15 +298,21 @@ const Revolutionary2027Hero = () => {
             key={i}
             className=&quot;absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full&quot;
             style={{
+=======
+      {_/* Particle Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        {_[...Array(20)].map(_(_, _i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
+            style={_{
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
-            animate={{
-              y: [0, -100],
-              opacity: [0, 1, 0]}}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2}}
+              top: `${_Math.random() * 100}%`}}
+            animate={_{
+              y: [0, _-100], _opacity: [0, _1, _0]}}
+            transition={_{
+              duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2}}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",
@@ -26,6 +27,14 @@ export default function ServiceOnboarding() {
     return <Navigate to=&quot;/login&quot; replace />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React from "react";
+
+export default function ServiceOnboarding() {_const { user, _isLoading} = useAuth();
+
+  // If not authenticated, redirect to login
+  if (!isLoading && !user) {_return <Navigate to="/login" replace />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>

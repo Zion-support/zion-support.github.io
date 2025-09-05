@@ -1,15 +1,21 @@
 
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react'
 import { SkillItemProps } from './types',
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
+=======
+
+export const _SkillItem = (_{_skill, _category, _onDelete}: SkillItemProps) => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <Badge 
       key={skill.id} 
       variant=&quot;secondary&quot;
       className=&quot;flex items-center gap-1 py-1.5 px-3&quot;
     >
+<<<<<<< HEAD
       {skill.name}
       {skill.proficiency && (
         <span className=&quot;ml-1 text-xs opacity-60&quot;>({skill.proficiency}/5)</span>
@@ -20,6 +26,18 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         className=&quot;h-5 w-5 p-0 ml-1&quot;
         onClick={() => onDelete(skill.id!, category)}
         aria-label=&quot;Delete skill&quot;
+=======
+      {_skill.name}
+      {_skill.proficiency && (
+        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
+      )}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-5 w-5 p-0 ml-1"
+        onClick={_() => onDelete(skill.id!, _category)}
+        aria-label="Delete skill"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
         <Trash2 className=&quot;h-3 w-3&quot; />
       </Button>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -30,9 +31,17 @@ interface BrowseFiltersProps {
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]),
+=======
+import React, {_useState} from "react";
+
+interface BrowseFiltersProps {_type: "jobs" | "talents";}
+
+export function BrowseFilters(_{_type}: BrowseFiltersProps) {_const [activeFilters, _setActiveFilters] = useState<string[]>([]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const addFilter = (filter: string) => {
+  const _addFilter = (_filter: string) => {
     if (!activeFilters.includes(filter)) {
+<<<<<<< HEAD
       setActiveFilters([...activeFilters, filter])
     }
   },
@@ -40,6 +49,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
+=======
+      setActiveFilters([...activeFilters, _filter]);}
+  };
+  
+  const _removeFilter = (_filter: string) => {_setActiveFilters(activeFilters.filter(f => f !== filter));};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className=&quot;space-y-3&quot;>
@@ -54,11 +69,19 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SheetTrigger>
             <SheetContent side=&quot;bottom&quot; className=&quot;h-[85vh] rounded-t-xl&quot;>
               <SheetHeader>
+<<<<<<< HEAD
                 <SheetTitle>Filter {type === &quot;jobs&quot; ? &quot;Jobs&quot; : &quot;Talents&quot;}</SheetTitle>
               </SheetHeader>
               
               <div className=&quot;py-6 space-y-6&quot;>
                 {type === &quot;jobs&quot; ? (
+=======
+                <SheetTitle>Filter {_type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
+              </SheetHeader>
+              
+              <div className="py-6 space-y-6">
+                {_type === "jobs" ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <>
                     <div className=&quot;space-y-2&quot;>
                       <Label>Job Type</Label>
@@ -94,11 +117,19 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className=&quot;space-y-2&quot;>
                       <Label>Experience (years)</Label>
                       <Slider
+<<<<<<< HEAD
                         aria-label=&quot;Years of experience&quot;
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
                         className=&quot;my-4&quot;
+=======
+                        aria-label="Years of experience"
+                        defaultValue={[0, _10]}
+                        max={_20}
+                        step={_1}
+                        className="my-4"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       />
                       <div className=&quot;flex justify-between text-xs text-muted-foreground&quot;>
                         <span>0+ years</span>
@@ -151,8 +182,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               </div>
               
               <SheetFooter>
+<<<<<<< HEAD
                 <Button variant=&quot;outline&quot; className=&quot;w-full&quot;>Reset</Button>
                 <Button className=&quot;w-full&quot; onClick={() => addFilter(&quot;Experience: 3+ years&quot;)}>Apply Filters</Button>
+=======
+                <Button variant="outline" className="w-full">Reset</Button>
+                <Button className="w-full" onClick={_() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -168,16 +204,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SelectContent>
           </Select>
           
-          {activeFilters.map((filter) => (
-            <Badge 
+          {_activeFilters.map(_(filter) => (_<Badge 
               key={filter} 
               variant=&quot;secondary&quot;
               className=&quot;flex items-center gap-1&quot;
             >
-              {filter}
+              {_filter}
               <X 
+<<<<<<< HEAD
                 className=&quot;h-3 w-3 cursor-pointer&quot; 
                 onClick={() => removeFilter(filter)} 
+=======
+                className="h-3 w-3 cursor-pointer" 
+                onClick={_() => removeFilter(filter)} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </Badge>
           ))}

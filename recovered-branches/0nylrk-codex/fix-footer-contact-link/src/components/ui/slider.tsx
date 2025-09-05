@@ -1,19 +1,28 @@
 import * as React from &quot;react&quot;
 import * as SliderPrimitive from &quot;@radix-ui/react-slider&quot;
 
+<<<<<<< HEAD
 import { cn } from &quot;@/lib/utils&quot;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-const Slider = React.forwardRef<
+const _Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
->(({ className, ...props }, ref) => (
+>(_({_className, _...props}, _ref) => (
   <SliderPrimitive.Root
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       &quot;relative flex w-full touch-none select-none items-center&quot;,
       className
+=======
+    ref={_ref}
+    className={_cn(
+      "relative flex w-full touch-none select-none items-center", _className
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     )}
-    {...props}
+    {_...props}
   >
     <SliderPrimitive.Track className=&quot;relative h-2 w-full grow overflow-hidden rounded-full bg-secondary&quot;>
       <SliderPrimitive.Range className=&quot;absolute h-full bg-primary&quot; />
@@ -23,4 +32,4 @@ const Slider = React.forwardRef<
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-export { Slider }
+export {_Slider}

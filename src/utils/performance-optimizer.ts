@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 // Performance optimizer utilities
+<<<<<<< HEAD
 =======
 
 // Performance optimization utilities
@@ -24,3 +25,8 @@ export const optimizeBundleSize = () => {
 };
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export const _optimizeImages = () => {};
+
+export const _lazyLoadComponents = () => {};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
@@ -12,10 +13,16 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
+=======
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import {_Rocket, _Brain, _Shield, _Zap, _Target, _Atom, _Cpu, _Lock, _Cloud, _Settings, _Eye, _Award, _Clock, _Heart, _Lightbulb, _Search, _Grid, _List, _TrendingUp, _User, _ShoppingCart, _Bell, _HelpCircle, _FileText, _Video, _Headphones, _Code, _Database, _Network, _Server, _Monitor, _Smartphone, _Camera, _Gamepad2, _Palette, _Music, _Film, _BookOpenCheck, _Building, _MessageCircle, _Sparkles, _ArrowRight, _CheckCircle, _Star, _Globe, _Satellite} from 'lucide-react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-const SpaceTechnologyPage: React.FC = () => {
-  const spaceServices = [
+const SpaceTechnologyPage: React.FC = () => {_const _spaceServices = [
     {
+<<<<<<< HEAD
       id: 'space-resource-mining',
       name: 'Space Resource Mining',
       description: 'Advanced mining operations for extraterrestrial resources',
@@ -109,10 +116,28 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className=&quot;w-6 h-6&quot; />
     }
   ],
+=======
+      id: 'space-resource-mining', _name: 'Space Resource Mining', _description: 'Advanced mining operations for extraterrestrial resources', _features: ['Asteroid Mining', _'Resource Extraction', _'Processing Automation', _'Transport Logistics'], _price: '$4, _999', _period: 'month', _popular: true, _icon: <Rocket className="w-8 h-8" />},
+    {_id: 'ai-powered-space-tech', _name: 'AI-Powered Space Technology', _description: 'Intelligent space systems with autonomous capabilities', _features: ['Autonomous Navigation', _'AI Mission Control', _'Predictive Analytics', _'Real-time Optimization'], _price: '$3, _999', _period: 'month', _popular: false, _icon: <Brain className="w-8 h-8" />},
+    {_id: 'brain-computer-interface', _name: 'Brain-Computer Interface', _description: 'Neural interface technology for space applications', _features: ['Neural Control', _'Cognitive Enhancement', _'Remote Operation', _'Safety Protocols'], _price: '$3, _499', _period: 'month', _popular: false, _icon: <Cpu className="w-8 h-8" />},
+    {_id: 'autonomous-vehicle-ai', _name: 'Autonomous Vehicle AI', _description: 'AI-powered autonomous systems for space vehicles', _features: ['Path Planning', _'Obstacle Avoidance', _'Mission Execution', _'Adaptive Learning'], _price: '$2, _999', _period: 'month', _popular: false, _icon: <Settings className="w-8 h-8" />},
+    {_id: 'quantum-space-communications', _name: 'Quantum Space Communications', _description: 'Secure quantum communication for space missions', _features: ['Quantum Encryption', _'Interplanetary Links', _'Secure Data Transfer', _'Quantum Networks'], _price: '$3, _799', _period: 'month', _popular: false, _icon: <Globe className="w-8 h-8" />},
+    {_id: 'space-infrastructure', _name: 'Space Infrastructure', _description: 'Comprehensive space infrastructure solutions', _features: ['Orbital Stations', _'Lunar Bases', _'Mars Colonies', _'Sustainable Systems'], _price: '$5, _999', _period: 'month', _popular: false, _icon: <Building className="w-8 h-8" />}
+  ];
 
-  return (
-    <Layout>
+  const _spaceCapabilities = [
+    {_title: 'Space Exploration', _description: 'Advanced exploration technologies and systems', _icon: <Rocket className="w-6 h-6" />},
+    {_title: 'Resource Extraction', _description: 'Mining and processing of space resources', _icon: <Target className="w-6 h-6" />},
+    {_title: 'AI Integration', _description: 'Intelligent systems for space operations', _icon: <Brain className="w-6 h-6" />},
+    {_title: 'Quantum Technology', _description: 'Quantum computing for space applications', _icon: <Atom className="w-6 h-6" />},
+    {_title: 'Autonomous Systems', _description: 'Self-operating space technologies', _icon: <Settings className="w-6 h-6" />},
+    {_title: 'Sustainable Development', _description: 'Eco-friendly space infrastructure', _icon: <Heart className="w-6 h-6" />}
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<Layout>
       <SEO 
+<<<<<<< HEAD
         title=&quot;Space Technology Solutions - Zion Tech Group&quot;
         description=&quot;Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier.&quot;
         keywords=&quot;space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications&quot;
@@ -122,10 +147,21 @@ const SpaceTechnologyPage: React.FC = () => {
         {/* Hero Section */}
         <section className=&quot;min-h-[60vh] flex items-center justify-center px-4 py-20&quot;>
           <div className=&quot;text-center max-w-4xl mx-auto&quot;>
+=======
+        title="Space Technology Solutions - Zion Tech Group"
+        description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, _explore the final frontier."
+        keywords="space technology, _space mining, _AI space systems, _brain-computer interface, _autonomous vehicles, _quantum space communications"
+      />
+      
+      <main className="relative z-10">
+        {_/* Hero Section */}
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent&quot;>
                 Space Technology
@@ -152,6 +188,7 @@ const SpaceTechnologyPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
         {/* Space Capabilities */}
         <section className=&quot;py-20 px-4 bg-gradient-to-b from-black to-gray-900&quot;>
           <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -161,6 +198,17 @@ const SpaceTechnologyPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Space Capabilities */}
+        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
                 Space Capabilities
@@ -170,6 +218,7 @@ const SpaceTechnologyPage: React.FC = () => {
               </p>
             </motion.div>
             
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
@@ -187,12 +236,32 @@ const SpaceTechnologyPage: React.FC = () => {
                     <h3 className=&quot;text-xl font-semibold text-white&quot;>{capability.title}</h3>
                   </div>
                   <p className=&quot;text-gray-300&quot;>{capability.description}</p>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_spaceCapabilities.map((capability, _index) => (
+                <motion.div
+                  key={capability.title}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
+                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-purple-500/20 rounded-lg mr-3">
+                      {_capability.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{_capability.title}</h3>
+                  </div>
+                  <p className="text-gray-300">{_capability.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Space Services */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -202,6 +271,17 @@ const SpaceTechnologyPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Space Services */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
                 Space Services
@@ -211,28 +291,39 @@ const SpaceTechnologyPage: React.FC = () => {
               </p>
             </motion.div>
             
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {spaceServices.map((service, index) => (
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_spaceServices.map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
+                  className={_`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                     service.popular 
                       ? 'border-purple-500 shadow-lg shadow-purple-500/25' 
-                      : 'border-gray-700 hover:border-purple-500'
-                  }`}
+                      : 'border-gray-700 hover:border-purple-500'}`}
                 >
+<<<<<<< HEAD
                   {service.popular && (
                     <div className=&quot;absolute -top-3 left-1/2 transform -translate-x-1/2&quot;>
                       <span className=&quot;bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold&quot;>
+=======
+                  {_service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         Most Popular
                       </span>
                     </div>
                   )}
                   
+<<<<<<< HEAD
                   <div className=&quot;text-center mb-6&quot;>
                     <div className=&quot;inline-flex p-3 bg-purple-500/20 rounded-full mb-4&quot;>
                       {service.icon}
@@ -250,6 +341,25 @@ const SpaceTechnologyPage: React.FC = () => {
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                         <CheckCircle className=&quot;w-5 h-5 text-purple-400 mr-3 flex-shrink-0&quot; />
                         {feature}
+=======
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
+                      {_service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{_service.name}</h3>
+                    <p className="text-gray-300 mb-4">{_service.description}</p>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">
+                      {_service.price}
+                      <span className="text-lg text-gray-400">/{_service.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {_service.features.map(_(feature, _featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                        {_feature}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </li>
                     ))}
                   </ul>
@@ -266,14 +376,20 @@ const SpaceTechnologyPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 bg-gradient-to-b from-gray-900 to-black&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+=======
+        {_/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
             >
 <<<<<<< HEAD
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">

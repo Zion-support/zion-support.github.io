@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 // Initialize Supabase client
@@ -15,12 +16,19 @@ const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;;
 const supabaseServiceKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;;
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
 
-serve(async (req) => {
-  try {
+// Initialize Supabase client
+const _supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
+const _supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+const _supabase = createClient(supabaseUrl, supabaseServiceKey);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+serve(_async (req) => {_try {
     // Authenticate the request - should be called by a cron job or authorized system only
 <<<<<<< HEAD
     if (req.method === "POST") {
+<<<<<<< HEAD
       const body = await req.json(),
       const cronSecret = body.secret,
 =======
@@ -37,10 +45,18 @@ serve(async (req) => {
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot; }});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      const _body = await req.json();
+      const _cronSecret = body.secret;
+      
+      if (cronSecret !== Deno.env.get("CRON_SECRET")) {
+        return new Response(JSON.stringify({ error: "Unauthorized"}), {_status: 401, _headers: { "Content-Type": "application/json"}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
     
     // Call the process-retention-emails function
+<<<<<<< HEAD
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
       method: &quot;POST&quot;,
       headers: {
@@ -78,5 +94,15 @@ serve(async (req) => {
 =======
       headers: { &quot;Content-Type&quot;: &quot;application/json&quot; }});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+    const _response = await fetch(_`${_supabaseUrl}/functions/v1/process-retention-emails`, _{_method: "POST", _headers: {
+        "Content-Type": "application/json", _"Authorization": `Bearer ${supabaseServiceKey}`}});
+
+    const _result = await response.json();
+
+    return new Response(JSON.stringify({_success: true, _message: "Daily retention process executed", _result}), {_status: 200, _headers: { "Content-Type": "application/json"}});
+  } catch (error) {_return new Response(JSON.stringify({
+      success: false, _error: error.message}), {_status: 500, _headers: { "Content-Type": "application/json"}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }),

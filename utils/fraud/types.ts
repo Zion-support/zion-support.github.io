@@ -2,6 +2,7 @@ export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'rev
 
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS',
 
+<<<<<<< HEAD
 export interface FraudEvent {
   id: string,
   userId: string | null,
@@ -23,18 +24,43 @@ export interface GptClassification {
   reason: string,
   confidence: number, // 0..1
 }
+=======
+export interface FraudEvent {_id: string;
+  userId: string | null;
+  source: MonitoredSource;
+  content: string | null;
+  metadata: Record<string, _unknown> | null;
+  ipAddress: string | null;
+  createdAt: string; // ISO string}
+
+export interface HeuristicEvaluation {_flagged: boolean;
+  reasons: string[];
+  severity: 'low' | 'medium' | 'high';}
+
+export interface GptClassification {_label: GptClassificationLabel;
+  reason: string;
+  confidence: number; // 0..1}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED',
 
+<<<<<<< HEAD
 export interface StoredFraudRecord extends FraudEvent {
   heuristic: HeuristicEvaluation,
   gpt?: GptClassification,
   autoHidden: boolean,
   status: FraudReviewStatus
 }
+=======
+export interface StoredFraudRecord extends FraudEvent {_heuristic: HeuristicEvaluation;
+  gpt?: GptClassification;
+  autoHidden: boolean;
+  status: FraudReviewStatus;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE',
 
+<<<<<<< HEAD
 export interface AdminActionRecord {
   id: string,
   fraudId: string,
@@ -68,4 +94,31 @@ export interface MonthlyReport {
   bySource: Record<MonitoredSource number>,
   falsePositives: number, // count of IGNORED actions
   topReasons: Array<{ reason: string, count: number }>
+=======
+export interface AdminActionRecord {_id: string;
+  fraudId: string;
+  action: AdminActionType;
+  adminId: string | null;
+  reason: string | null;
+  createdAt: string; // ISO}
+
+export interface PrivacySettings {_userId: string;
+  monitoringContentAnalysisOptOut: boolean;
+  updatedAt: string; // ISO}
+
+export interface ListFilters {_source?: MonitoredSource;
+  userId?: string;
+  label?: GptClassificationLabel;
+  status?: FraudReviewStatus;}
+
+export interface MonthlyReport {_month: string; // YYYY-MM
+  totals: {
+    all: number;
+    safe: number;
+    suspicious: number;
+    dangerous: number;};
+  bySource: Record<MonitoredSource, number>;
+  falsePositives: number; // count of IGNORED actions
+  topReasons: Array<{_reason: string; count: number}>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

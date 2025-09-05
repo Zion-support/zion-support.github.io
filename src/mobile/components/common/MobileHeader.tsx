@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -44,18 +45,51 @@ export function MobileHeader({
               variant=&quot;ghost&quot; 
               size=&quot;icon&quot; 
               className=&quot;mr-2&quot; 
+=======
+import React from "react";
+
+interface MobileHeaderProps {_title: string;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+  onSettingsClick?: () => void;}
+
+export function MobileHeader(_{_title, _showBack = false, _showNotifications = false, _showSettings = false, _className, _onNotificationsClick, _onSettingsClick}: MobileHeaderProps) {_const _router = useRouter();
+
+  return (
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border", _className
+    )}>
+      <div className="flex items-center justify-between h-14 px-4">
+        <div className="flex items-center">
+          {_showBack && (_<Button 
+              variant="ghost" 
+              size="icon" 
+              className="mr-2" 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               onClick={() => router.back()}
             >
               <ChevronLeft className=&quot;h-5 w-5&quot; />
               <span className=&quot;sr-only&quot;>Back</span>
             </Button>
           )}
+<<<<<<< HEAD
           <h1 className=&quot;text-lg font-medium leading-none truncate&quot;>
             {title}
           </h1>
         </div>
         <div className=&quot;flex items-center space-x-2&quot;>
           {showNotifications && (
+=======
+          <h1 className="text-lg font-medium leading-none truncate">
+            {_title}
+          </h1>
+        </div>
+        <div className="flex items-center space-x-2">
+          {_showNotifications && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Button 
               variant=&quot;ghost&quot; 
               size=&quot;icon&quot;
@@ -65,7 +99,7 @@ export function MobileHeader({
               <span className=&quot;sr-only&quot;>Notifications</span>
             </Button>
           )}
-          {showSettings && (
+          {_showSettings && (
             <Button 
               variant=&quot;ghost&quot; 
               size=&quot;icon&quot;

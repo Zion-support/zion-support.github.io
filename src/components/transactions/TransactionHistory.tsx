@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -67,15 +68,46 @@ export function TransactionHistory() {
     queryKey: ['transactions', user?.id, filter],
     queryFn: async () => {
       if (!user) return [],
+=======
+import React, {_useState, _useEffect} from "react";
+import Skeleton from "@/components/ui/skeleton";
+
+
+interface Transaction {_id: string;
+  user_id: string;
+  provider_id: string;
+  service_id: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled';
+  in_escrow: boolean;
+  created_at: string;
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+  provider?: {
+    display_name?: string;};
+  service?: {_title?: string;};
+}
+
+export function TransactionHistory() {_const { user} = useAuth();
+  const {_toast} = useToast();
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(_() => (safeStorage.getItem('transaction_filter') as any) || 'all'
+  );
+
+  useEffect__(() => {_safeStorage.setItem('transaction_filter', _filter);}, [filter]);
+  
+  const {_data: transactions, _isLoading, _error, _refetch} = useQuery(_{_queryKey: ['transactions', _user?.id, _filter], _queryFn: async () => {
+      if (!user) return [];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Build the query based on filters
-      let query = supabase
+      let _query = supabase
         .from('transactions')
         .select(`
-          *,
-          provider:profiles!provider_id(display_name),
-          service:services(title)
+          *, _provider:profiles!provider_id(display_name), _service:services(title)
         `)
+<<<<<<< HEAD
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
       
       if (filter === 'pending') {
@@ -89,20 +121,36 @@ export function TransactionHistory() {
       query = query.order('created_at', { ascending: false }),
       
       const { data, error } = await query,
+=======
+        .or(`user_id.eq.${user.id},provider_id.eq.${_user.id}`);
+      
+      if (filter === 'pending') {_query = query.eq('status', _'pending');} else if (filter === 'completed') {_query = query.eq('status', _'released');} else if (filter === 'escrow') {_query = query.eq('in_escrow', _true);}
+      
+      query = query.order('created_at', {_ascending: false});
+      
+      const {_data, _error} = await query;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       return data as Transaction[]
     },
     enabled: !!user}),
 
+<<<<<<< HEAD
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
       }),
+=======
+  const _handleManageTransaction = async (_transactionId: string, _action: 'release' | 'refund' | 'cancel') => {_try {
+      const { data, _error} = await supabase.functions.invoke('manage-transaction', {_body: { transactionId, _action}
+      });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
         title: "Success",
@@ -125,11 +173,17 @@ export function TransactionHistory() {
         description: error instanceof Error ? error.message : &quot;Failed to update transaction&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      toast({_title: "Success", _description: (data as any)?.message || "Transaction updated successfully"});
+      
+      refetch();
+    } catch (error) {_logErrorToProduction('Error managing transaction:', _{ data: error});
+      toast({_title: "Error", _description: error instanceof Error ? error.message : "Failed to update transaction", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
   
-  const getStatusBadge = (status: string, inEscrow: boolean) => {
-    switch(status) {
+  const _getStatusBadge = (_status: string, _inEscrow: boolean) => {_switch(status) {
       case 'in_escrow':
         return (
           <Badge variant=&quot;outline&quot; className=&quot;bg-yellow-500/20 text-yellow-500 border-yellow-500&quot;>
@@ -181,6 +235,7 @@ export function TransactionHistory() {
           <Badge variant=&quot;outline&quot; className=&quot;bg-gray-500/20 text-gray-500 border-gray-500&quot;>
             <AlertCircle className=&quot;w-3 h-3 mr-1&quot; /> Unknown
           </Badge>
+<<<<<<< HEAD
         )
     }
   }, 
@@ -200,6 +255,22 @@ export function TransactionHistory() {
           <p className=&quot;mb-4&quot;>{error.message}</p>
           <Button onClick={() => refetch()} variant=&quot;outline&quot;>
             <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />
+=======
+        );}
+  }; 
+
+  const {_formatPrice} = useCurrency();
+
+  const _formatCurrency = (_amount: number) => {_return formatPrice(amount);};
+
+  if (error) {_return (_<div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
+        <div className="text-center text-zion-slate-light">
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>
+          <p className="mb-4">{error.message}</p>
+          <Button onClick={_() => refetch()} variant="outline">
+            <RefreshCcw className="mr-2 h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Try Again
           </Button>
         </div>
@@ -207,48 +278,84 @@ export function TransactionHistory() {
     )
   }
 
+<<<<<<< HEAD
   return (
     <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden&quot;>
       <div className=&quot;p-6&quot;>
         <div className=&quot;flex items-center justify-between mb-6&quot;>
           <h2 className=&quot;text-2xl font-bold text-white&quot;>Transaction History</h2>
+=======
+  return (_<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           
           <div className=&quot;flex space-x-2&quot;>
             <Button 
+<<<<<<< HEAD
               size=&quot;sm&quot; 
               variant={filter === 'all' ? 'default' : 'outline'} 
               onClick={() => setFilter('all')}
               className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+=======
+              size="sm" 
+              variant={_filter === 'all' ? 'default' : 'outline'} 
+              onClick={_() => setFilter('all')}
+              className={_filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               All
             </Button>
             <Button 
+<<<<<<< HEAD
               size=&quot;sm&quot; 
               variant={filter === 'pending' ? 'default' : 'outline'} 
               onClick={() => setFilter('pending')}
               className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+=======
+              size="sm" 
+              variant={_filter === 'pending' ? 'default' : 'outline'} 
+              onClick={_() => setFilter('pending')}
+              className={_filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Pending
             </Button>
             <Button 
+<<<<<<< HEAD
               size=&quot;sm&quot; 
               variant={filter === 'completed' ? 'default' : 'outline'} 
               onClick={() => setFilter('completed')}
               className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+=======
+              size="sm" 
+              variant={_filter === 'completed' ? 'default' : 'outline'} 
+              onClick={_() => setFilter('completed')}
+              className={_filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Completed
             </Button>
             <Button 
+<<<<<<< HEAD
               size=&quot;sm&quot; 
               variant={filter === 'escrow' ? 'default' : 'outline'} 
               onClick={() => setFilter('escrow')}
               className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+=======
+              size="sm" 
+              variant={_filter === 'escrow' ? 'default' : 'outline'} 
+              onClick={_() => setFilter('escrow')}
+              className={_filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Escrow
             </Button>
           </div>
         </div>
         
+<<<<<<< HEAD
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
             <div key={i} className=&quot;mb-4&quot;>
@@ -256,6 +363,15 @@ export function TransactionHistory() {
                 <CardHeader className=&quot;pb-2&quot;>
                   <Skeleton className=&quot;h-6 w-3/4 bg-zion-blue-light&quot; />
                   <Skeleton className=&quot;h-4 w-1/4 bg-zion-blue-light mt-2&quot; />
+=======
+        {_isLoading ? (
+          Array(3).fill(0).map(_(_, _i) => (
+            <div key={i} className="mb-4">
+              <Card className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader className="pb-2">
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </CardHeader>
                 <CardContent>
                   <div className=&quot;flex justify-between mb-2&quot;>
@@ -270,6 +386,7 @@ export function TransactionHistory() {
               </Card>
             </div>
           ))
+<<<<<<< HEAD
         ) : transactions && transactions.length > 0 ? (
           <div className=&quot;space-y-4&quot;>
             {transactions.map((transaction) => {
@@ -280,8 +397,19 @@ export function TransactionHistory() {
               const canRelease = !isClient && isPending && isInEscrow,
               const canCancel = isClient && isPending,
               const canRefund = isClient && transaction.status === 'released',
+=======
+        ) : transactions && transactions.length > 0 ? (_<div className="space-y-4">
+            {_transactions.map((transaction) => {
+              const _isClient = user?.id === transaction.user_id;
+              const _isPending =
+                transaction.status === 'pending' || transaction.status === 'in_escrow';
+              const _isInEscrow = transaction.in_escrow;
+              const _canRelease = !isClient && isPending && isInEscrow;
+              const _canCancel = isClient && isPending;
+              const _canRefund = isClient && transaction.status === 'released';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               
-              const counterpartyName = isClient 
+              const _counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
 
@@ -290,21 +418,31 @@ export function TransactionHistory() {
                   <CardHeader className=&quot;pb-3&quot;>
                     <div className=&quot;flex justify-between items-start&quot;>
                       <div>
+<<<<<<< HEAD
                         <CardTitle className=&quot;text-white text-lg&quot;>
                           {transaction.service?.title || 'Service Payment'}
                         </CardTitle>
                         <CardDescription className=&quot;text-zion-slate-light&quot;>
                           {isClient ? (
                             <span>Payment to <span className=&quot;text-zion-purple&quot;>{counterpartyName}</span></span>
+=======
+                        <CardTitle className="text-white text-lg">
+                          {_transaction.service?.title || 'Service Payment'}
+                        </CardTitle>
+                        <CardDescription className="text-zion-slate-light">
+                          {_isClient ? (
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                           ) : (
                             <span>Payment from <span className=&quot;text-zion-cyan&quot;>Client</span></span>
                           )}
                         </CardDescription>
                       </div>
                       
-                      {getStatusBadge(transaction.status, transaction.in_escrow)}
+                      {_getStatusBadge(transaction.status, _transaction.in_escrow)}
                     </div>
                   </CardHeader>
+<<<<<<< HEAD
                   <CardContent className=&quot;pb-3&quot;>
                     <div className=&quot;flex justify-between items-center mb-1&quot;>
                       <span className=&quot;text-zion-slate-light&quot;>Amount:</span>
@@ -329,6 +467,32 @@ export function TransactionHistory() {
                         </span>
                         <span className=&quot;text-zion-slate-light&quot;>
                           {new Date(
+=======
+                  <CardContent className="pb-3">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-zion-slate-light">Amount:</span>
+                      <span className="text-white font-medium text-lg">
+                        {_formatCurrency(transaction.amount)}
+                      </span>
+                    </div>
+                    
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-zion-slate-light">Date:</span>
+                      <span className="text-zion-slate-light">
+                        {_new Date(transaction.created_at).toLocaleDateString()} 
+                        ({_formatDistanceToNow(new Date(transaction.created_at), _{ addSuffix: true})})
+                      </span>
+                    </div>
+                    
+                    {_(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+                      <div className="flex justify-between items-center text-sm mt-1">
+                        <span className="text-zion-slate-light">
+                          {transaction.completed_at ? 'Completed:' : 
+                           transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
+                        </span>
+                        <span className="text-zion-slate-light">
+                          {_new Date(
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             transaction.completed_at || 
                             transaction.refunded_at || 
                             transaction.cancelled_at!
@@ -337,34 +501,58 @@ export function TransactionHistory() {
                       </div>
                     )}
                   </CardContent>
+<<<<<<< HEAD
                   <CardFooter className=&quot;flex justify-end gap-2 bg-zion-blue/20 pt-3&quot;>
                     {canRelease && (
                       <Button 
                         onClick={() => handleManageTransaction(transaction.id, 'release')}
                         size=&quot;sm&quot;
                         className=&quot;bg-green-600 hover:bg-green-700 text-white&quot;
+=======
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">
+                    {_canRelease && (_<Button 
+                        onClick={() => handleManageTransaction(transaction.id, _'release')}
+                        size="sm"
+                        className="bg-green-600 hover:bg-green-700 text-white"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <CheckCircle2 className=&quot;mr-1 h-4 w-4&quot; /> Release Funds
                       </Button>
                     )}
                     
+<<<<<<< HEAD
                     {canRefund && (
                       <Button 
                         onClick={() => handleManageTransaction(transaction.id, 'refund')}
                         size=&quot;sm&quot;
                         variant=&quot;outline&quot;
                         className=&quot;text-zion-slate-light border-zion-blue-light&quot;
+=======
+                    {_canRefund && (_<Button 
+                        onClick={() => handleManageTransaction(transaction.id, _'refund')}
+                        size="sm"
+                        variant="outline"
+                        className="text-zion-slate-light border-zion-blue-light"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <RefreshCcw className=&quot;mr-1 h-4 w-4&quot; /> Request Refund
                       </Button>
                     )}
                     
+<<<<<<< HEAD
                     {canCancel && (
                       <Button 
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
                         size=&quot;sm&quot;
                         variant=&quot;outline&quot;
                         className=&quot;text-red-400 border-red-400/30 hover:bg-red-400/10&quot;
+=======
+                    {_canCancel && (_<Button 
+                        onClick={() => handleManageTransaction(transaction.id, _'cancel')}
+                        size="sm"
+                        variant="outline"
+                        className="text-red-400 border-red-400/30 hover:bg-red-400/10"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <XCircle className=&quot;mr-1 h-4 w-4&quot; /> Cancel
                       </Button>
@@ -380,9 +568,15 @@ export function TransactionHistory() {
               <ArrowRight className=&quot;h-8 w-8 text-zion-slate-light&quot; />
               <ArrowLeft className=&quot;h-8 w-8 text-zion-slate-light -ml-4&quot; />
             </div>
+<<<<<<< HEAD
             <h3 className=&quot;text-xl font-medium text-white mb-2&quot;>No transactions found</h3>
             <p className=&quot;text-zion-slate-light max-w-md mx-auto&quot;>
               {filter !== 'all' 
+=======
+            <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
+            <p className="text-zion-slate-light max-w-md mx-auto">
+              {_filter !== 'all' 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
                 : &quot;You haven't made any transactions yet. Once you make a payment or receive one, it will appear here.&quot;}
             </p>

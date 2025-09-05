@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -43,9 +44,17 @@ import { Footer } from &quot;@/components/Footer&quot;;
 const forgotPasswordSchema = z.object({
   email: z.string().email(&quot;Please enter a valid email&quot;)});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
+
+// Form validation schema
+const _forgotPasswordSchema = z.object({_email: z.string().email("Please enter a valid email")});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
+<<<<<<< HEAD
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
@@ -61,6 +70,18 @@ export default function ForgotPassword() {
     await resetPassword(data.email),
     setSubmitted(true)
   },
+=======
+export default function ForgotPassword() {_const { resetPassword, _isLoading} = useAuth();
+  const [submitted, setSubmitted] = useState(false);
+  
+  // Initialize react-hook-form
+  const _form = useForm({_resolver: zodResolver(forgotPasswordSchema), _defaultValues: {
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
+
+  // Form submission handler
+  const _onSubmit = async (_data: ForgotPasswordFormValues) => {_await resetPassword(data.email);
+    setSubmitted(true);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -78,7 +99,7 @@ export default function ForgotPassword() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              {submitted ? (
+              {_submitted ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <Mail className="h-6 w-6 text-zion-purple" />
@@ -98,11 +119,19 @@ export default function ForgotPassword() {
                 </div>
               ) : (
                 <Form {...form}>
+<<<<<<< HEAD
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
                     <FormField
                       control={form.control}
                       name=&quot;email"
                       render={({ field }) => (
+=======
+                  <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={_form.control}
+                      name="email"
+                      render={_(_{ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                           <FormControl>
@@ -110,7 +139,7 @@ export default function ForgotPassword() {
                               <Input
                                 placeholder=&quot;you@example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                                {...field}
+                                {_...field}
                               />
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                             </div>
@@ -121,11 +150,19 @@ export default function ForgotPassword() {
                     />
 
                     <Button
+<<<<<<< HEAD
                       type=&quot;submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                       disabled={isLoading}
                     >
                       {isLoading ? &quot;Sending...&quot; : &quot;Reset Password"}
+=======
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={_isLoading}
+                    >
+                      {_isLoading ? "Sending..." : "Reset Password"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Button>
 
                     <div className="text-center&quot;>

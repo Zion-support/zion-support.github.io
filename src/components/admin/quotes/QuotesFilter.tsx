@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -52,19 +53,46 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       <CardContent className=&quot;p-6&quot;>
         <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4 items-end&quot;>
           <div className=&quot;relative&quot;>
+=======
+import React from "react";
+import type {_DateRange} from "react-day-picker";
+import type {_QuoteStatus} from "@/types/quotes";
+
+interface QuotesFilterProps {_searchQuery: string;
+  setSearchQuery: (_value: string) => void;
+  statusFilter: QuoteStatus | 'all';
+  setStatusFilter: (_value: QuoteStatus | 'all') => void;
+  archiveFilter: 'active' | 'archived' | 'all';
+  setArchiveFilter: (_value: 'active' | 'archived' | 'all') => void;
+  dateRange: DateRange | undefined;
+  setDateRange: (_range: DateRange | undefined) => void;
+  onReset: () => void;}
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = (_{_searchQuery, _setSearchQuery, _statusFilter, _setStatusFilter, _archiveFilter, _setArchiveFilter, _dateRange, _setDateRange, _onReset}) => {_return (_<Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
+      <CardContent className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+          <div className="relative">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Input
               placeholder=&quot;Search quotes...&quot;
               className=&quot;pl-10 bg-zion-blue border-zion-blue-light text-white&quot;
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={_(e) => setSearchQuery(e.target.value)}
             />
           </div>
           
           <div>
+<<<<<<< HEAD
             <p className=&quot;text-zion-slate-light text-sm mb-2&quot;>Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
               <SelectTrigger className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
                 <SelectValue placeholder=&quot;Status&quot; />
+=======
+            <p className="text-zion-slate-light text-sm mb-2">Status</p>
+            <Select value={_statusFilter} onValueChange={_(_value: unknown) => setStatusFilter(value)}>
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Status" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </SelectTrigger>
               <SelectContent className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;>
                 <SelectItem value=&quot;all&quot;>All Statuses</SelectItem>
@@ -78,10 +106,17 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
           </div>
           
           <div>
+<<<<<<< HEAD
             <p className=&quot;text-zion-slate-light text-sm mb-2&quot;>Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
               <SelectTrigger className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
                 <SelectValue placeholder=&quot;Archive Status&quot; />
+=======
+            <p className="text-zion-slate-light text-sm mb-2">Archive</p>
+            <Select value={_archiveFilter} onValueChange={_(_value: unknown) => setArchiveFilter(value)}>
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Archive Status" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </SelectTrigger>
               <SelectContent className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;>
                 <SelectItem value=&quot;active&quot;>Active Only</SelectItem>
@@ -99,12 +134,21 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   variant=&quot;outline&quot;
                   className=&quot;w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white&quot;
                 >
+<<<<<<< HEAD
                   <Calendar className=&quot;mr-2 h-4 w-4 text-zion-slate-light&quot; />
                   {dateRange?.from ? (
                     dateRange.to ? (
                       <>
                         {format(dateRange.from, &quot;LLL dd, y&quot;)} -{&quot; &quot;}
                         {format(dateRange.to, &quot;LLL dd, y&quot;)}
+=======
+                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />
+                  {_dateRange?.from ? (
+                    dateRange.to ? (
+                      <>
+                        {format(dateRange.from, _"LLL dd, _y")} -{_" "}
+                        {_format(dateRange.to, _"LLL dd, _y")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </>
                     ) : (
                       format(dateRange.from, &quot;LLL dd, y&quot;)
@@ -117,11 +161,19 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               <PopoverContent className=&quot;w-auto p-0 bg-zion-blue-dark border-zion-blue-light&quot; align=&quot;start&quot;>
                 <CalendarComponent
                   initialFocus
+<<<<<<< HEAD
                   mode=&quot;range&quot;
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+=======
+                  mode="range"
+                  defaultMonth={_dateRange?.from}
+                  selected={_dateRange}
+                  onSelect={_setDateRange}
+                  numberOfMonths={_2}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </PopoverContent>
             </Popover>
@@ -130,9 +182,15 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         
         <div className=&quot;mt-4 flex justify-end&quot;>
           <Button 
+<<<<<<< HEAD
             variant=&quot;outline&quot; 
             onClick={onReset}
             className=&quot;border-zion-blue-light text-zion-slate-light&quot;
+=======
+            variant="outline" 
+            onClick={_onReset}
+            className="border-zion-blue-light text-zion-slate-light"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <RefreshCw className=&quot;mr-2 h-4 w-4&quot; /> Reset Filters
           </Button>

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Resume } from '@/types/resume',
 import { useFetchResume } from './useFetchResume',
@@ -18,9 +19,21 @@ export function useResume() {
   const skillsOperations = useSkills(),
   const certOperations = useCertifications(),
   const resumeListOperations = useResumeList(),
+=======
+
+export function useResume() {_const [resume, _setResume] = useState<Resume | null>(null);
+  
+  const _fetchResumeOperations = useFetchResume();
+  const _resumeActions = useResumeActions();
+  const _workOperations = useWorkExperience();
+  const _educationOperations = useEducation();
+  const _skillsOperations = useSkills();
+  const _certOperations = useCertifications();
+  const _resumeListOperations = useResumeList();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Determine overall loading state
-  const isLoading = 
+  const _isLoading = 
     fetchResumeOperations.isLoading || 
     resumeActions.isLoading || 
     workOperations.isLoading || 
@@ -30,7 +43,7 @@ export function useResume() {
     resumeListOperations.isLoading,
   
   // Determine overall error state (use first non-null error)
-  const error = 
+  const _error = 
     fetchResumeOperations.error || 
     resumeActions.error || 
     workOperations.error || 
@@ -40,6 +53,7 @@ export function useResume() {
     resumeListOperations.error,
   
   // Override the fetch resume function to update local state
+<<<<<<< HEAD
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume(resumeId),
     if (result) {
@@ -80,6 +94,22 @@ export function useResume() {
     updateCertification: certOperations.updateCertification,
     deleteCertification: certOperations.deleteCertification
   }
+=======
+  const _fetchResume = async (_resumeId?: string) => {
+    const _result = await fetchResumeOperations.fetchResume(resumeId);
+    if (result) {
+      setResume(result);}
+    return result;
+  };
+  
+  return {_// State
+    isLoading, _error, _resume: resume || fetchResumeOperations.resume, _resumes: resumeListOperations.resumes, _// Basic resume operations
+    fetchResume, _createResume: resumeActions.createResume, _updateBasicInfo: resumeActions.updateBasicInfo, _setActiveResume: resumeActions.setActiveResume, _// Work experience operations
+    addWorkExperience: workOperations.addWorkExperience, _updateWorkExperience: workOperations.updateWorkExperience, _deleteWorkExperience: workOperations.deleteWorkExperience, _// Education operations
+    addEducation: educationOperations.addEducation, _updateEducation: educationOperations.updateEducation, _deleteEducation: educationOperations.deleteEducation, _// Skills operations
+    addSkill: skillsOperations.addSkill, _deleteSkill: skillsOperations.deleteSkill, _// Certifications operations
+    addCertification: certOperations.addCertification, _updateCertification: certOperations.updateCertification, _deleteCertification: certOperations.deleteCertification};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 // Export all hooks

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
@@ -18,6 +19,17 @@ export function ContactSection() {
             <GradientHeading>Get In Touch</GradientHeading>
             <p className=&quot;mt-4 text-zion-slate-light text-xl mb-8&quot;>
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
+=======
+
+export function ContactSection() {_return (
+    <section className="py-20 bg-zion-blue" id="contact">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <GradientHeading>Get In Touch</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">
+              We have the equipment, _the parts, _and the maintenance services ready for you — right now. Contact us today.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
             <div className=&quot;flex items-center mb-6&quot;>
               <div className=&quot;mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan&quot;>

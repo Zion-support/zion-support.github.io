@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -32,16 +33,30 @@ export function UpcomingInterviewsCard() {
       try {
         const interviews = await fetchInterviews(),
         const now = new Date(),
+=======
+import React, {_useEffect, _useState} from "react";
+
+export function UpcomingInterviewsCard() {_const { fetchInterviews} = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect__(() => {_const _loadInterviews = async () => {
+      setIsLoading(true);
+      try {
+        const _interviews = await fetchInterviews();
+        const _now = new Date();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         
         // Filter for confirmed interviews in the future
-        const upcoming = interviews
+        const _upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-          .sort((a, b) => 
+          .sort(_(a, _b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
+<<<<<<< HEAD
           .slice(0, 3), // Take only the next 3 interviews
         
         setUpcomingInterviews(upcoming)
@@ -55,13 +70,24 @@ export function UpcomingInterviewsCard() {
         setIsLoading(false)
       }
     },
+=======
+          .slice(0, _3); // Take only the next 3 interviews
+        
+        setUpcomingInterviews(upcoming);} catch (error) {} finally {_setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
   if (isLoading) {
     return (
       <Card className=&quot;bg-zion-blue-dark/40 border-zion-blue-light&quot;>
+=======
+  if (isLoading) {_return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <CardHeader>
           <CardTitle className=&quot;text-lg flex items-center&quot;>
             <Video className=&quot;h-5 w-5 mr-2 text-zion-purple&quot; />
@@ -69,6 +95,7 @@ export function UpcomingInterviewsCard() {
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className=&quot;space-y-4&quot;>
             {[1, 2].map(i => (
               <div key={i} className=&quot;flex items-center gap-3 animate-pulse&quot;>
@@ -76,6 +103,15 @@ export function UpcomingInterviewsCard() {
                 <div className=&quot;flex-1&quot;>
                   <div className=&quot;h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2&quot;></div>
                   <div className=&quot;h-3 w-1/2 bg-zion-blue-light/30 rounded&quot;></div>
+=======
+          <div className="space-y-4">
+            {[1, _2].map(i => (
+              <div key={i} className="flex items-center gap-3 animate-pulse">
+                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
+                <div className="flex-1">
+                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>
+                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </div>
             ))}
@@ -85,9 +121,14 @@ export function UpcomingInterviewsCard() {
     )
   }
 
+<<<<<<< HEAD
   if (upcomingInterviews.length === 0) {
     return (
       <Card className=&quot;bg-zion-blue-dark/40 border-zion-blue-light&quot;>
+=======
+  if (upcomingInterviews.length === 0) {_return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <CardHeader>
           <CardTitle className=&quot;text-lg flex items-center&quot;>
             <Video className=&quot;h-5 w-5 mr-2 text-zion-purple&quot; />
@@ -104,8 +145,12 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card className=&quot;bg-zion-blue-dark/40 border-zion-blue-light&quot;>
@@ -116,6 +161,7 @@ export function UpcomingInterviewsCard() {
         </CardTitle>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className=&quot;space-y-4&quot;>
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date),
@@ -125,18 +171,36 @@ export function UpcomingInterviewsCard() {
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date(),
             const isStartingSoon = 
+=======
+        <div className="space-y-4">
+          {_upcomingInterviews.map(interview => {
+            const _interviewDate = parseISO(interview.scheduled_date);
+            const _formattedDate = format(interviewDate, _'EEE, _MMM d');
+            const _formattedTime = format(interviewDate, _'h:mm a');
+            
+            // Determine if interview is happening soon (within 30 minutes)
+            const _now = new Date();
+            const _isStartingSoon = 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
             return (
+<<<<<<< HEAD
               <div key={interview.id} className=&quot;flex items-center gap-3&quot;>
                 <Avatar className=&quot;h-10 w-10 bg-zion-purple/10&quot;>
                   {interview.client_avatar || interview.talent_avatar ? (
+=======
+              <div key={interview.id} className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {_interview.client_avatar || interview.talent_avatar ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     <img 
                       src={interview.client_avatar || interview.talent_avatar} 
-                      alt={interview.client_name || interview.talent_name}
+                      alt={_interview.client_name || interview.talent_name}
                     />
                   ) : (
+<<<<<<< HEAD
                     <div className=&quot;flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium&quot;>
                       {(interview.client_name || interview.talent_name || &quot;U&quot;).charAt(0)}
                     </div>
@@ -149,13 +213,33 @@ export function UpcomingInterviewsCard() {
                     </p>
                     {isStartingSoon && (
                       <span className=&quot;text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse&quot;>
+=======
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
+                      {_(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    </div>
+                  )}
+                </Avatar>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start">
+                    <p className="font-medium line-clamp-1">
+                      {_interview.title || "Interview"}
+                    </p>
+                    {_isStartingSoon && (
+                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         Soon
                       </span>
                     )}
                   </div>
+<<<<<<< HEAD
                   <div className=&quot;flex items-center text-sm text-muted-foreground&quot;>
                     <Clock className=&quot;h-3 w-3 mr-1&quot; />
                     {formattedDate} at {formattedTime}
+=======
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {_formattedDate} at {_formattedTime}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </div>

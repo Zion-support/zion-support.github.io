@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -62,19 +63,48 @@ export default function CompanyWorkspace() {
     return <Navigate to=&quot;/unauthorized&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React from "react";
+
+export default function CompanyWorkspace() {_const { companySlug} = useParams() as {_companySlug?: string};
+  const {_user} = useAuth();
+  const {_company, _isLoading, _error} = useCompanyWorkspace(companySlug);
+  const {_isWhitelabel, _tenant, _brandName} = useWhitelabel();
+  
+  if (isLoading) {_return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
+      </div>
+    );}
+  
+  if (error || !company) {_return <Navigate to="/not-found" />;}
+  
+  // In white-label mode, use the tenant's theme instead of the company's theme
+  const _effectiveTheme = isWhitelabel ? {_primaryColor: tenant?.primary_color || company.theme?.primaryColor, _backgroundColor: company.theme?.backgroundColor || 'var(--background)', _textColor: company.theme?.textColor || 'var(--foreground)'} : company.theme;
+  
+  // Check if user has access to this company workspace
+  const _hasAccess = true; // For demo purposes, always grant access
+
+  if (!hasAccess) {_return <Navigate to="/unauthorized" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <ProtectedRoute>
       <SEO 
-        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
+        title={_`${company.name} Workspace - ${_isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description={_`${company.name}'s dedicated workspace ${_isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
       <Header 
-        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
-        customTheme={effectiveTheme}
+        customLogo={_isWhitelabel ? tenant?.logo_url : company.logoUrl}
+        customTheme={_effectiveTheme}
       />
+<<<<<<< HEAD
       <main className=&quot;min-h-screen&quot; style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
         <CompanyDashboard company={company} />
+=======
+      <main className="min-h-screen" style={_{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)'}}>
+        <CompanyDashboard company={_company} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </main>
       <Footer />
     </ProtectedRoute>

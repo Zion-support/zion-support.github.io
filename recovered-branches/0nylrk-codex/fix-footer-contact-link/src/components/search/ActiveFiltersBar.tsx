@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
@@ -19,18 +20,20 @@ interface ActiveFiltersBarProps {
   onRemoveRating: () => void,
   onClearSearch: () => void
 }
+=======
+import React from "react";
 
-export function ActiveFiltersBar({
-  selectedProductTypes,
-  selectedLocations,
-  selectedAvailability,
-  selectedRating,
-  searchQuery,
-  onRemoveFilter,
-  onRemoveRating,
-  onClearSearch
-}: ActiveFiltersBarProps) {
-  const hasActiveFilters = 
+interface ActiveFiltersBarProps {_selectedProductTypes: string[];
+  selectedLocations: string[];
+  selectedAvailability: string[];
+  selectedRating: number | null;
+  searchQuery: string;
+  onRemoveFilter: (_filterType: string, _value: string) => void;
+  onRemoveRating: () => void;
+  onClearSearch: () => void;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ActiveFiltersBar(_{_selectedProductTypes, _selectedLocations, _selectedAvailability, _selectedRating, _searchQuery, _onRemoveFilter, _onRemoveRating, _onClearSearch}: ActiveFiltersBarProps) {_const _hasActiveFilters = 
     selectedProductTypes.length > 0 || 
     selectedLocations.length > 0 || 
     selectedAvailability.length > 0 || 
@@ -48,51 +51,85 @@ export function ActiveFiltersBar({
           className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
           onClick={onClearSearch}
         >
+<<<<<<< HEAD
           Search: {searchQuery}
           <X className=&quot;h-3 w-3&quot; />
+=======
+          Search: {_searchQuery}
+          <X className="h-3 w-3" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </ClickableBadge>
       )}
       
-      {selectedProductTypes.map(type => (
+      {_selectedProductTypes.map(_type => (
         <ClickableBadge 
           key={`type-${type}`}
+<<<<<<< HEAD
           className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
           onClick={() => onRemoveFilter('productTypes', type)}
         >
           {type}
           <X className=&quot;h-3 w-3&quot; />
+=======
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={_() => onRemoveFilter('productTypes', _type)}
+        >
+          {_type}
+          <X className="h-3 w-3" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </ClickableBadge>
       ))}
       
-      {selectedLocations.map(location => (
+      {_selectedLocations.map(_location => (
         <ClickableBadge 
           key={`location-${location}`}
+<<<<<<< HEAD
           className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
           onClick={() => onRemoveFilter('locations', location)}
         >
           {location}
           <X className=&quot;h-3 w-3&quot; />
+=======
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={_() => onRemoveFilter('locations', _location)}
+        >
+          {_location}
+          <X className="h-3 w-3" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </ClickableBadge>
       ))}
       
-      {selectedAvailability.map(availability => (
+      {_selectedAvailability.map(_availability => (
         <ClickableBadge 
           key={`availability-${availability}`}
+<<<<<<< HEAD
           className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
           onClick={() => onRemoveFilter('availability', availability)}
         >
           {availability}
           <X className=&quot;h-3 w-3&quot; />
+=======
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={_() => onRemoveFilter('availability', _availability)}
+        >
+          {_availability}
+          <X className="h-3 w-3" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </ClickableBadge>
       ))}
       
-      {selectedRating !== null && (
+      {_selectedRating !== null && (
         <ClickableBadge 
           className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
           onClick={onRemoveRating}
         >
+<<<<<<< HEAD
           {selectedRating}+ Stars
           <X className=&quot;h-3 w-3&quot; />
+=======
+          {_selectedRating}+ Stars
+          <X className="h-3 w-3" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </ClickableBadge>
       )}
     </div>

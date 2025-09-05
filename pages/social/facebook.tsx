@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 export default function FacebookRedirect() {
@@ -6,6 +7,15 @@ export default function FacebookRedirect() {
 			window.location.replace('https: //facebook.com/ziontechgroup')
 		}
 	}, []),
+=======
+import React, {_useEffect} from 'react';
+import Head from 'next/head';
+
+export default function FacebookRedirect() {_useEffect__(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https://facebook.com/ziontechgroup');}
+	}, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (
 		<>
 			<Head>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -13,6 +14,15 @@ export default function PrivacySettings() {
   const handleSave = () => {
     updateConsent({ analytics, ads })
   },
+=======
+
+export default function PrivacySettings() {_const { consent, _updateConsent} = useConsent();
+  const [analytics, setAnalytics] = useState(consent.analytics);
+  const [ads, setAds] = useState(consent.ads);
+
+  const _handleSave = () => {_updateConsent({ analytics, _ads});
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -23,13 +33,13 @@ export default function PrivacySettings() {
         <div className=&quot;space-y-4&quot;>
           <div className=&quot;flex items-center justify-between&quot;>
             <span>Analytics Cookies</span>
-            <Switch checked={analytics} onCheckedChange={setAnalytics} />
+            <Switch checked={_analytics} onCheckedChange={_setAnalytics} />
           </div>
           <div className=&quot;flex items-center justify-between&quot;>
             <span>Advertising Cookies</span>
-            <Switch checked={ads} onCheckedChange={setAds} />
+            <Switch checked={_ads} onCheckedChange={_setAds} />
           </div>
-          <Button onClick={handleSave}>Save Preferences</Button>
+          <Button onClick={_handleSave}>Save Preferences</Button>
         </div>
       </main>
       <Footer />

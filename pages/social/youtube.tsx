@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 export default function YouTubeRedirect() {
@@ -6,6 +7,15 @@ export default function YouTubeRedirect() {
 			window.location.replace('https: //youtube.com/@ziontechgroup')
 		}
 	}, []),
+=======
+import React, {_useEffect} from 'react';
+import Head from 'next/head';
+
+export default function YouTubeRedirect() {_useEffect__(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https://youtube.com/@ziontechgroup');}
+	}, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (
 		<>
 			<Head>

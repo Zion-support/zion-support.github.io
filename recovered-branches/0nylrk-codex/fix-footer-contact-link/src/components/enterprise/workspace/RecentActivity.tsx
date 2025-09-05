@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -50,6 +51,22 @@ export function RecentActivity() {
     switch (type) {
 <<<<<<< HEAD
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
+=======
+import React from "react";
+
+export function RecentActivity() {_// Mock activity data
+  const _activities = [
+    {
+      id: "act-1", _user: "Michael Chen", _action: "posted a new job", _target: "Senior React Developer", _timestamp: "1h ago", _type: "job"},
+    {_id: "act-2", _user: "Sarah Wilson", _action: "shortlisted", _target: "5 candidates for UI/UX Designer", _timestamp: "3h ago", _type: "candidate"},
+    {_id: "act-3", _user: "David Johnson", _action: "scheduled an interview with", _target: "Alex Morgan", _timestamp: "Yesterday", _type: "interview"},
+    {_id: "act-4", _user: "Emily Davis", _action: "added comments to", _target: "Frontend Developer application", _timestamp: "2d ago", _type: "comment"}
+  ];
+
+  const _getBadgeForType = (_type: string) => {_switch (type) {
+      case "job":
+        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "candidate":
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,
       case "interview":
@@ -57,6 +74,7 @@ export function RecentActivity() {
       case "comment":
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>,
       default:
+<<<<<<< HEAD
         return <Badge variant="outline">Activity</Badge>
 =======
       case &quot;job&quot;:
@@ -72,13 +90,17 @@ export function RecentActivity() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
+=======
+        return <Badge variant="outline">Activity</Badge>;}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  return (
-    <Card>
+  return (_<Card>
       <CardHeader>
         <CardTitle>Recent Activity</CardTitle>
         <CardDescription>Latest actions from your team</CardDescription>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className=&quot;p-0&quot;>
         <div className=&quot;divide-y divide-border&quot;>
           {activities.map((activity) => (
@@ -96,6 +118,25 @@ export function RecentActivity() {
                   <div className=&quot;flex items-center gap-2 mt-1 sm:mt-0&quot;>
                     {getBadgeForType(activity.type)}
                     <span className=&quot;text-xs text-muted-foreground&quot;>{activity.timestamp}</span>
+=======
+      <CardContent className="p-0">
+        <div className="divide-y divide-border">
+          {_activities.map((activity) => (
+            <div key={activity.id} className="p-4 flex items-start gap-3">
+              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+                {_activity.user.charAt(0)}
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm">
+                    <span className="font-medium">{_activity.user}</span>{_" "}
+                    {_activity.action}{_" "}
+                    <span className="font-medium">{_activity.target}</span>
+                  </p>
+                  <div className="flex items-center gap-2 mt-1 sm:mt-0">
+                    {_getBadgeForType(activity.type)}
+                    <span className="text-xs text-muted-foreground">{_activity.timestamp}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </div>

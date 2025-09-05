@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -21,6 +22,15 @@ export function ClientDashboard() {
       <section className=&quot;mt-4&quot;>
         <Button className=&quot;w-full py-6&quot; size=&quot;lg&quot;>
           <Plus className=&quot;mr-2 h-5 w-5&quot; /> Post a New Job
+=======
+import React from "react";
+
+export function ClientDashboard() {_return (
+    <div className="space-y-6 px-4 pb-24">
+      <section className="mt-4">
+        <Button className="w-full py-6" size="lg">
+          <Plus className="mr-2 h-5 w-5" /> Post a New Job
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </Button>
       </section>
       

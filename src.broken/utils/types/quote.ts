@@ -1,6 +1,7 @@
 export type AdminQuoteStatus = 'New' | 'In Review' | 'Responded' | 'Accepted' | 'Closed',
 export type TalentQuoteStatus = 'New' | 'Viewed' | 'Replied',
 
+<<<<<<< HEAD
 export type QuoteRequest = {
   id: string,
   talentSlug: string, // maps to TALENT_PROFILES.slug
@@ -24,3 +25,24 @@ export type QuoteFilters = {
   talentSlug?: string | 'All',
   search?: string
 },
+=======
+export type QuoteRequest = {_id: string;
+  talentSlug: string; // maps to TALENT_PROFILES.slug
+  talentName: string;
+  requesterName: string;
+  summary: string;
+  budgetUsd: number;
+  timeline?: string;
+  createdAt: string; // ISO date
+  adminStatus: AdminQuoteStatus;
+  talentStatus: TalentQuoteStatus;
+  unread: boolean;
+  archived?: boolean;
+  details?: string;};
+
+export type QuoteFilters = {_status?: AdminQuoteStatus | 'All';
+  startDate?: string | null; // ISO
+  endDate?: string | null; // ISO
+  talentSlug?: string | 'All';
+  search?: string;};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

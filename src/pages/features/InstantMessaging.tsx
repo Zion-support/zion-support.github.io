@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -30,6 +31,13 @@ export default function InstantMessaging() {
     &quot;url&quot;: &quot;https://app.ziontechgroup.com/features/instant-messaging&quot;
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+import Link from 'next/link';
+
+export default function InstantMessaging() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Instant Messaging", _"description": "Chat in real time with clients and freelancers using Socket.IO based messaging.", _"url": "https://app.ziontechgroup.com/features/instant-messaging"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -39,10 +47,15 @@ export default function InstantMessaging() {
         keywords=&quot;real-time messaging, Socket.IO chat, project communication&quot;
         canonical=&quot;https://app.ziontechgroup.com/features/instant-messaging&quot;
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
+<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+=======
+        type="application/ld+json"
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ></script>
       <Header />
 <<<<<<< HEAD

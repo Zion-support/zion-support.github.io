@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, {_ReactNode} from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
+<<<<<<< HEAD
 interface LayoutProps {
   childre: n: ReactNode;
 }
@@ -9,6 +10,12 @@ interface LayoutProps {
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className=&quot;min-h-screen flex flex-col&quot;>
+=======
+interface LayoutProps {_children: ReactNode;}
+
+const Layout: React.FC<LayoutProps> = (_{_children}) => {_return (
+    <div className="min-h-screen flex flex-col">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Header />
 <<<<<<< HEAD
       <main className="flex-1">{children}</main>

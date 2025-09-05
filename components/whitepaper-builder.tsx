@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link',
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper',
@@ -16,26 +17,56 @@ export default function WhitepaperBuilderPage() {
       <div className=&quot;flex flex-col gap-2&quot;>
         <h1 className=&quot;text-3xl font-bold&quot;>Zion Protocol Whitepaper</h1>
         <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Investor and Developer editions. Toggle, review, and download as PDF.</p>
+=======
+import React, {_useMemo, _useState} from 'react';
+import Link from 'next/link';
+import type {_WhitepaperEdition} from '../utils/whitepaper/zionWhitepaper';
+
+export default function WhitepaperBuilderPage() {_const [edition, _setEdition] = useState<WhitepaperEdition>('full');
+  const _sections = useMemo__(() => getWhitepaperSections(edition), _[edition]);
+
+  const _downloadHref = useMemo__(() => {
+    if (edition === 'full') return '/docs/zion-protocol.pdf';
+    return `/api/zion-whitepaper-pdf?edition=${edition}`;
+  }, [edition]);
+
+  return (_<div className="space-y-6">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
+        <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, _review, _and download as PDF.</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </div>
 
       <div className=&quot;flex flex-wrap gap-3 items-center&quot;>
         <label className=&quot;font-medium&quot;>Edition</label>
         <select
+<<<<<<< HEAD
           value={edition}
           onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
           className=&quot;border rounded px-3 py-2 bg-white dark:bg-black&quot;
+=======
+          value={_edition}
+          onChange={_(e) => setEdition(e.target.value as WhitepaperEdition)}
+          className="border rounded px-3 py-2 bg-white dark:bg-black"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <option value=&quot;full&quot;>Full</option>
           <option value=&quot;investor&quot;>Investor</option>
           <option value=&quot;developer&quot;>Developer</option>
         </select>
+<<<<<<< HEAD
         <Link href={downloadHref} legacyBehavior>
           <a className=&quot;ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90&quot;>
+=======
+        <Link href={_downloadHref} legacyBehavior>
+          <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Download PDF
           </a>
         </a>
       </div>
 
+<<<<<<< HEAD
       <div className=&quot;rounded border p-4 bg-gray-50 dark:bg-gray-900&quot;>
         <h2 className=&quot;text-xl font-semibold mb-2&quot;>Operator Prompt</h2>
         <pre className=&quot;whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200&quot;>{OPERATOR_PROMPT}</pre>
@@ -47,6 +78,19 @@ export default function WhitepaperBuilderPage() {
             <h2 className=&quot;text-2xl font-bold&quot;>{s.title}</h2>
             {s.subtitle ? <p className=&quot;text-gray-500&quot;>{s.subtitle}</p> : null}
             <article className=&quot;prose dark:prose-invert max-w-none whitespace-pre-wrap&quot;>{s.contentMd}</article>
+=======
+      <div className="rounded border p-4 bg-gray-50 dark:bg-gray-900">
+        <h2 className="text-xl font-semibold mb-2">Operator Prompt</h2>
+        <pre className="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200">{_OPERATOR_PROMPT}</pre>
+      </div>
+
+      <div className="space-y-10">
+        {_sections.map(_(s) => (
+          <section key={s.id} className="space-y-2">
+            <h2 className="text-2xl font-bold">{_s.title}</h2>
+            {_s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
+            <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{_s.contentMd}</article>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </section>
         ))}
       </div>

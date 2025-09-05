@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -38,6 +39,23 @@ export default function PublishProduct() {
 =======
     return <Navigate to=&quot;/login&quot; state={{ from: '/publish' }} replace />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+
+export default function PublishProduct() {_const { isAuthenticated, _isLoading} = useAuth();
+  
+  // Show loading while checking authentication
+  if (isLoading) {_return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+        <div className="animate-pulse text-zion-purple text-lg">
+          Loading...
+        </div>
+      </div>
+    );}
+  
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {_return <Navigate to="/login" state={{ from: '/publish'}} replace />;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 
   return (

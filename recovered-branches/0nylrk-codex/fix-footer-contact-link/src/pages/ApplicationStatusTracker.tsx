@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -19,6 +20,10 @@ import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
+=======
+
+function ApplicationStatusTrackerContent() {_const _isMobile = useIsMobile();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -42,7 +47,7 @@ function ApplicationStatusTrackerContent() {
                 <Inbox className=&quot;mr-2 h-5 w-5&quot; /> Your Applications
               </CardTitle>
             </CardHeader>
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>
+            <CardContent className={_`p-${isMobile ? '3' : '6'}`}>
               <ApplicationsTracker />
             </CardContent>
           </Card>
@@ -52,12 +57,15 @@ function ApplicationStatusTrackerContent() {
   )
 }
 
-export default function ApplicationStatusTracker() {
-  return (
+export default function ApplicationStatusTracker() {_return (
     <ProtectedRoute>
       <AppLayout>
         <ApplicationStatusTrackerContent />
       </AppLayout>
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

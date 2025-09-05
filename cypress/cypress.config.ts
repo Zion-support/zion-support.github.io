@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'cypress',
 export default defineConfig({
   e2e: {
@@ -12,20 +13,29 @@ export default defineConfig({
         }
         return launchOptions
       })
+=======
+
+export default defineConfig({_e2e: {
+    baseUrl: 'http://localhost:3000', _// Standard Next.js port
+    supportFile: 'cypress/support/e2e.ts', _experimentalModifyObstructiveThirdPartyCode: true, _// Disable IPv6 in Chromium-based browsers to avoid socket errors
+    setupNodeEvents(on, _config) {
+      on(_'before:browser:launch', _(browser = {}, _launchOptions) => {_if (browser.family === 'chromium') {
+          launchOptions.args.push('--disable-ipv6');}
+        return launchOptions;
+      });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     },
-    env: {
-      CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
-      CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
-      CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',
-      EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',
-      EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123',
-      TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
-      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'},
+    env: {_CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', _CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123', _CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User', _EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com', _EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123', _TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User', _STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'},
     defaultCommandTimeout: 10000
   },
   reporter: 'junit',
+<<<<<<< HEAD
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true
   }
 }),
+=======
+  reporterOptions: {_mochaFile: 'cypress/results/junit-[hash].xml', _toConsole: true}
+});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

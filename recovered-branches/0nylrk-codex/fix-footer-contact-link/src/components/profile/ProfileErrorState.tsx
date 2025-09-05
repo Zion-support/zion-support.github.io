@@ -6,6 +6,7 @@ import { Link } from "react-router-dom",
 import { ArrowLeft } from "lucide-react",
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Button } from &quot;@/components/ui/button&quot;;
 import { Link } from &quot;react-router-dom&quot;;
 import { ArrowLeft } from &quot;lucide-react&quot;;
@@ -19,6 +20,14 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className=&quot;min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4&quot;>
       <div className=&quot;text-red-400 mb-4 text-xl&quot;>{error || &quot;Something went wrong&quot;}</div>
+=======
+
+interface ProfileErrorStateProps {_error: string | null;}
+
+export function ProfileErrorState(_{_error}: ProfileErrorStateProps) {_return (
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
+      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Button asChild>
 <<<<<<< HEAD
         <Link to="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">

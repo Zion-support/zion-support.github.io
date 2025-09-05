@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, {_useState, _useEffect} from 'react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 import Link from 'next/link';
-import { Brain } from 'lucide-react';
 
+<<<<<<< HEAD
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +29,14 @@ const EnhancedNavigation: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
+=======
+const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useState(false);
+  const [isScrolled, _setIsScrolled] = useState(false);
+
+  useEffect__(() => {
+    const _handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
@@ -60,12 +72,16 @@ const EnhancedNavigation: React.FC = () => {
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
+<<<<<<< HEAD
         : 'bg-transparent'
     }`}>
 <<<<<<< HEAD
+=======
+        : 'bg-transparent'}`}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">

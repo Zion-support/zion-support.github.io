@@ -8,6 +8,7 @@ import { Download } from 'lucide-react',
 import { Resume } from "@/types/resume",
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardContent } from &quot;@/components/ui/card&quot;;
 import { Badge } from &quot;@/components/ui/badge&quot;;
 import { Button } from &quot;@/components/ui/button&quot;;
@@ -38,30 +39,64 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             onClick={onDownload} 
             disabled={isLoading}
             className=&quot;h-8 w-8 p-0&quot;
+=======
+
+interface ResumePreviewCardProps {_resume: Resume;
+  onDownload: () => void;
+  isLoading: boolean;}
+
+export function ResumePreviewCard(_{_resume, _onDownload, _isLoading}: ResumePreviewCardProps) {_return (
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
+      <CardContent className="p-4">
+        <div className="flex justify-between items-start mb-2">
+          <div>
+            <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
+            {_resume.basic_info.headline && (
+              <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
+            )}
+          </div>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            onClick={_onDownload} 
+            disabled={_isLoading}
+            className="h-8 w-8 p-0"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <Download className=&quot;h-4 w-4 text-zion-cyan&quot; />
             <span className=&quot;sr-only&quot;>Download Resume</span>
           </Button>
         </div>
         
+<<<<<<< HEAD
         {resume.basic_info.summary && (
           <p className=&quot;text-xs text-zion-slate line-clamp-2 mb-2&quot;>
+=======
+        {_resume.basic_info.summary && (
+          <p className="text-xs text-zion-slate line-clamp-2 mb-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             {resume.basic_info.summary}
           </p>
         )}
         
+<<<<<<< HEAD
         {resume.skills && resume.skills.length > 0 && (
           <div className=&quot;flex flex-wrap gap-1 mt-2&quot;>
             {resume.skills.slice(0, 5).map((skill, index) => (
+=======
+        {_resume.skills && resume.skills.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {resume.skills.slice(0, _5).map(_(skill, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <Badge 
                 key={index} 
                 variant=&quot;outline&quot;
                 className=&quot;bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs&quot;
               >
-                {skill.name}
+                {_skill.name}
               </Badge>
             ))}
-            {resume.skills.length > 5 && (
+            {_resume.skills.length > 5 && (
               <Badge 
                 variant=&quot;outline&quot;
                 className=&quot;bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs&quot;

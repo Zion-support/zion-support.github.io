@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
@@ -13,17 +14,17 @@ export const useRecordActivity = () => {
     comment?: string
   ) => {
     if (!user) return null,
+=======
+
+export const _useRecordActivity = () => {_const { user} = useAuth();
+  
+  const _recordMilestoneActivity = async (_milestoneId: string, _action: string, _previousStatus: string | null, _newStatus: string, _comment?: string) => {_if (!user) return null;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     try {
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from('milestone_activities')
-        .insert({
-          milestone_id: milestoneId,
-          user_id: user.id,
-          action,
-          previous_status: previousStatus,
-          new_status: newStatus,
-          comment})
+        .insert({_milestone_id: milestoneId, _user_id: user.id, _action, _previous_status: previousStatus, _new_status: newStatus, _comment})
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
@@ -32,6 +33,7 @@ export const useRecordActivity = () => {
       
       if (error) throw error,
       
+<<<<<<< HEAD
       return data
     } catch (err: any) {
 <<<<<<< HEAD
@@ -48,3 +50,11 @@ export const useRecordActivity = () => {
     recordMilestoneActivity
   }
 },
+=======
+      return data;
+    } catch (err: unknown) {_return null;}
+  };
+  
+  return {_recordMilestoneActivity};
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

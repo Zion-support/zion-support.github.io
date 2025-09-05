@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -45,13 +46,30 @@ export default function CreatePostPage() {
     categoryId: initialCategory || &quot;project-help&quot;
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import PostForm from "@/components/community/PostForm";
 
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
+interface PostFormValues {_title: string;
+  content: string;
+  categoryId: ForumCategory;
+  tags: string;}
+
+export default function CreatePostPage() {_const _navigate = useNavigate();
+  const { toast} = useToast();
+  const [searchParams] = useSearchParams();
+  
+  // Get category from window.URL query params if available
+  const _initialCategory = searchParams.get("category") as ForumCategory | null;
+  
+  const initialValues: Partial<PostFormValues> = {_categoryId: initialCategory || "project-help"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _handleSubmit = async (_values: PostFormValues) => {_try {
       // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
+      // For now, _we'll just simulate a successful post creation
       
       // Parse tags into an array
+<<<<<<< HEAD
 <<<<<<< HEAD
       const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       
@@ -83,6 +101,17 @@ export default function CreatePostPage() {
         variant: &quot;destructive&quot;
       });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      const _tagsArray = values.tags.split(", _").map(tag => tag.trim());
+      
+      toast({
+        title: "Post created", _description: "Your post has been published successfully"});
+      
+      // Redirect to the forum category
+      navigate(`/community/category/${_values.categoryId}`);
+    } catch (error) {_toast({
+        title: "Error", _description: "There was a problem creating your post", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
@@ -105,7 +134,7 @@ export default function CreatePostPage() {
         
         <h1 className=&quot;text-3xl font-bold mb-8&quot;>Create New Post</h1>
         
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+        <PostForm initialValues={_initialValues} onSubmit={_handleSubmit} />
       </div>
     </AppLayout>
   )

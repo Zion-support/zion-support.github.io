@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 export default function SitemapPage() {
@@ -12,6 +13,22 @@ export default function SitemapPage() {
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
 	],
+=======
+import React from 'react';
+import Head from 'next/head';
+
+export default function SitemapPage() {_const _links = [
+		{ name: 'Home', _href: '/'},
+		{_name: 'Services', _href: '/services'},
+		{_name: 'All Services Showcase', _href: '/comprehensive-services-showcase-2025'},
+		{_name: 'Pricing', _href: '/pricing'},
+		{_name: 'Market Pricing', _href: '/market-pricing'},
+		{_name: 'Services Advertising', _href: '/services-advertising'},
+		{_name: 'Resources', _href: '/resources'},
+		{_name: 'Support', _href: '/support'},
+		{_name: 'Contact', _href: '/contact'}
+	];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (
 		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
 			<Head>
@@ -19,11 +36,19 @@ export default function SitemapPage() {
 				<meta name=&quot;description&quot; content=&quot;Quick links to the main routes and pages.&quot; />
 				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/sitemap&quot; />
 			</Head>
+<<<<<<< HEAD
 			<div className=&quot;max-w-4xl mx-auto space-y-6&quot;>
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Sitemap</h1>
 				<ul className=&quot;grid sm:grid-cols-2 gap-3&quot;>
 					{links.map(l => (
 						<li key={l.href} className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><a className=&quot;text-cyan-300&quot; href={l.href}>{l.name}</a></li>
+=======
+			<div className="max-w-4xl mx-auto space-y-6">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sitemap</h1>
+				<ul className="grid sm:grid-cols-2 gap-3">
+					{_links.map(l => (
+						<li key={l.href} className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><a className="text-cyan-300" href={_l.href}>{_l.name}</a></li>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 					))}
 				</ul>
 			</div>

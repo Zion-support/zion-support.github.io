@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -14,13 +15,20 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/t
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
 import { Alert, AlertDescription } from &quot;@/components/ui/alert&quot;;
 import { Badge } from &quot;@/components/ui/badge&quot;;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 import CodeBlock from &quot;./CodeBlock&quot;;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function ApiDocumentation() {
   return (
     <Card className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
+=======
+export function ApiDocumentation() {_return (
+    <Card className="bg-zinc-900 border-zinc-800 text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <CardHeader>
         <CardTitle className=&quot;text-xl flex items-center&quot;>
           <BookOpen className=&quot;mr-2&quot; size={20} /> API Documentation
@@ -49,6 +57,7 @@ export function ApiDocumentation() {
           
           <TabsContent value=&quot;jobs&quot; className=&quot;space-y-6&quot;>
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;GET&quot;
               endpoint=&quot;/api/jobs&quot;
               description=&quot;List all available jobs with optional filtering.&quot;
@@ -87,16 +96,47 @@ headers = {
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'},
+=======
+              method="GET"
+              endpoint="/api/jobs"
+              description="List all available jobs with optional filtering."
+              note=""
+              params={_[
+                { name: "page", _type: "integer", _description: "Page number for pagination (default: 1)"},
+                {_name: "limit", _type: "integer", _description: "Number of results per page (default: 20, _max: 100)"},
+                {_name: "category", _type: "string", _description: "Filter by job category"},
+                {_name: "skills", _type: "string[]", _description: "Filter by required skills (comma-separated)"},
+                {_name: "status", _type: "string", _description: "Filter by job status (new, _active, _closed)"}
+              ]}
+              codeExamples={_{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`, _javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', _{
+  method: 'GET', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+
+response = requests.get(
+    'https://api.ziontechgroup.com/v1/jobs',
+    params={_'limit': 10, _'category': 'development'},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     headers=headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
   &quot;data&quot;: [
     {
+<<<<<<< HEAD
       &quot;id&quot;: &quot;job_abc123&quot;,
       &quot;title&quot;: &quot;Senior React Developer&quot;,
       &quot;description&quot;: &quot;We need an experienced React developer...&quot;,
@@ -118,11 +158,23 @@ print(data)`
     &quot;page&quot;: 1,
     &quot;limit&quot;: 10
   }
+=======
+      "id": "job_abc123", _"title": "Senior React Developer", _"description": "We need an experienced React developer...", _"category": "development", _"skills": ["react", _"typescript", _"node.js"], _"budget": {
+        "min": 5000, _"max": 10000, _"currency": "USD"},
+      "status": "active",
+      "client_id": "user_xyz789",
+      "created_at": "2025-05-15T10:30:00Z"
+    },
+    // More jobs...
+  ],
+  "meta": {_"total": 42, _"page": 1, _"limit": 10}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }`
               }}
             />
             
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;GET&quot;
               endpoint=&quot;/api/jobs/:id&quot;
               description=&quot;Get detailed information about a specific job.&quot;
@@ -161,18 +213,41 @@ const data = await response.json();
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+=======
+              method="GET"
+              endpoint="/api/jobs/:id"
+              description="Get detailed information about a specific job."
+              note=""
+              params={_[
+                { name: "id", _type: "string", _description: "The job ID", _required: true}
+              ]}
+              codeExamples={_{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`, _javascript: `const jobId = 'job_abc123';
+const _response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {_method: 'GET', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 job_id = 'job_abc123'
 response = requests.get(
-    f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
+    f'https://api.ziontechgroup.com/v1/jobs/{_job_id}',
     headers=headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
+<<<<<<< HEAD
   &quot;data&quot;: {
     &quot;id&quot;: &quot;job_abc123&quot;,
     &quot;title&quot;: &quot;Senior React Developer&quot;,
@@ -189,12 +264,23 @@ print(data)`
     &quot;created_at&quot;: &quot;2025-05-15T10:30:00Z&quot;,
     &quot;deadline&quot;: &quot;2025-06-30T23:59:59Z&quot;,
     &quot;application_count&quot;: 12
+=======
+  "data": {
+    "id": "job_abc123", _"title": "Senior React Developer", _"description": "We need an experienced React developer...", _"category": "development", _"skills": ["react", _"typescript", _"node.js"], _"budget": {
+      "min": 5000, _"max": 10000, _"currency": "USD"},
+    "status": "active",
+    "client_id": "user_xyz789",
+    "created_at": "2025-05-15T10:30:00Z",
+    "deadline": "2025-06-30T23:59:59Z",
+    "application_count": 12
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }`
               }}
             />
             
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;POST&quot;
               endpoint=&quot;/api/jobs&quot;
               description=&quot;Create a new job listing.&quot;
@@ -240,10 +326,40 @@ print(data)`
       max: 10000,
       currency: 'USD'
     },
+=======
+              method="POST"
+              endpoint="/api/jobs"
+              description="Create a new job listing."
+              note="Requires jobs:write scope"
+              params={_[
+                { name: "title", _type: "string", _description: "Job title", _required: true},
+                {_name: "description", _type: "string", _description: "Detailed job description", _required: true},
+                {_name: "category", _type: "string", _description: "Job category", _required: true},
+                {_name: "skills", _type: "string[]", _description: "Required skills", _required: true},
+                {_name: "budget.min", _type: "number", _description: "Minimum budget"},
+                {_name: "budget.max", _type: "number", _description: "Maximum budget"},
+                {_name: "budget.currency", _type: "string", _description: "Currency code (default: USD)"},
+                {_name: "deadline", _type: "string", _description: "Job deadline (ISO date string)"}
+              ]}
+              codeExamples={_{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "title": "Senior React Developer", _"description": "We need an experienced React developer...", _"category": "development", _"skills": ["react", _"typescript", _"node.js"], _"budget": {
+      "min": 5000, _"max": 10000, _"currency": "USD"},
+    "deadline": "2025-06-30T23:59:59Z"
+  }'`,
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {_method: 'POST', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'},
+  body: JSON.stringify({_title: 'Senior React Developer', _description: 'We need an experienced React developer...', _category: 'development', _skills: ['react', _'typescript', _'node.js'], _budget: {
+      min: 5000, _max: 10000, _currency: 'USD'},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     deadline: '2025-06-30T23:59:59Z'
   })
 }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const data = await response.json(),
 // // // console.log(data),`,
@@ -265,6 +381,17 @@ payload = {
         'max': 10000,
         'currency': 'USD'
     },
+=======
+const _data = await response.json();
+`,
+                python: `import requests
+import json
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+
+payload = {_'title': 'Senior React Developer', _'description': 'We need an experienced React developer...', _'category': 'development', _'skills': ['react', _'typescript', _'node.js'], _'budget': {
+        'min': 5000, _'max': 10000, _'currency': 'USD'},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     'deadline': '2025-06-30T23:59:59Z'
 }
 
@@ -277,8 +404,9 @@ response = requests.post(
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
+<<<<<<< HEAD
   &quot;data&quot;: {
     &quot;id&quot;: &quot;job_def456&quot;,
     &quot;title&quot;: &quot;Senior React Developer&quot;,
@@ -294,6 +422,15 @@ print(data)`
     &quot;client_id&quot;: &quot;user_xyz789&quot;,
     &quot;created_at&quot;: &quot;2025-05-16T14:22:10Z&quot;,
     &quot;deadline&quot;: &quot;2025-06-30T23:59:59Z&quot;
+=======
+  "data": {
+    "id": "job_def456", _"title": "Senior React Developer", _"description": "We need an experienced React developer...", _"category": "development", _"skills": ["react", _"typescript", _"node.js"], _"budget": {
+      "min": 5000, _"max": 10000, _"currency": "USD"},
+    "status": "new",
+    "client_id": "user_xyz789",
+    "created_at": "2025-05-16T14:22:10Z",
+    "deadline": "2025-06-30T23:59:59Z"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }`
               }}
@@ -302,6 +439,7 @@ print(data)`
           
           <TabsContent value=&quot;talent&quot; className=&quot;space-y-6&quot;>
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;GET&quot;
               endpoint=&quot;/api/talent&quot;
               description=&quot;List talent profiles with optional filtering.&quot;
@@ -339,16 +477,46 @@ headers = {
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'},
+=======
+              method="GET"
+              endpoint="/api/talent"
+              description="List talent profiles with optional filtering."
+              note=""
+              params={_[
+                { name: "page", _type: "integer", _description: "Page number for pagination (default: 1)"},
+                {_name: "limit", _type: "integer", _description: "Number of results per page (default: 20, _max: 100)"},
+                {_name: "skills", _type: "string[]", _description: "Filter by skills (comma-separated)"},
+                {_name: "availability", _type: "string", _description: "Filter by availability status"}
+              ]}
+              codeExamples={_{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react, _typescript" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`, _javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react, _typescript', _{
+  method: 'GET', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+
+response = requests.get(
+    'https://api.ziontechgroup.com/v1/talent',
+    params={_'skills': 'react, _typescript'},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     headers=headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
   &quot;data&quot;: [
     {
+<<<<<<< HEAD
       &quot;id&quot;: &quot;talent_abc123&quot;,
       &quot;display_name&quot;: &quot;Jane Smith&quot;,
       &quot;headline&quot;: &quot;Senior Frontend Developer&quot;,
@@ -364,11 +532,18 @@ print(data)`
     &quot;page&quot;: 1,
     &quot;limit&quot;: 20
   }
+=======
+      "id": "talent_abc123", _"display_name": "Jane Smith", _"headline": "Senior Frontend Developer", _"skills": ["react", _"typescript", _"javascript"], _"availability": "available", _"average_rating": 4.8, _"rating_count": 15},
+    // More talent profiles...
+  ],
+  "meta": {_"total": 28, _"page": 1, _"limit": 20}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }`
               }}
             />
             
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;GET&quot;
               endpoint=&quot;/api/talent/:id&quot;
               description=&quot;Get detailed information about a specific talent profile.&quot;
@@ -407,18 +582,41 @@ const data = await response.json();
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+=======
+              method="GET"
+              endpoint="/api/talent/:id"
+              description="Get detailed information about a specific talent profile."
+              note=""
+              params={_[
+                { name: "id", _type: "string", _description: "The talent ID", _required: true}
+              ]}
+              codeExamples={_{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`, _javascript: `const talentId = 'talent_abc123';
+const _response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {_method: 'GET', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 talent_id = 'talent_abc123'
 response = requests.get(
-    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
+    f'https://api.ziontechgroup.com/v1/talent/{_talent_id}',
     headers=headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
+<<<<<<< HEAD
   &quot;data&quot;: {
     &quot;id&quot;: &quot;talent_abc123&quot;,
     &quot;display_name&quot;: &quot;Jane Smith&quot;,
@@ -443,6 +641,15 @@ print(data)`
         &quot;issuing_organization&quot;: &quot;Amazon Web Services&quot;,
         &quot;issue_date&quot;: &quot;2024-01-15&quot;
       }
+=======
+  "data": {
+    "id": "talent_abc123", _"display_name": "Jane Smith", _"headline": "Senior Frontend Developer", _"bio": "10+ years of experience in frontend development...", _"skills": ["react", _"typescript", _"javascript", _"css", _"html"], _"availability": "available", _"average_rating": 4.8, _"rating_count": 15, _"portfolio": [
+      {
+        "id": "proj_123", _"title": "E-commerce Platform", _"description": "Built a modern e-commerce platform using React...", _"technologies": ["react", _"redux", _"node.js"], _"image_url": "https://example.com/portfolio/123.jpg"}
+    ],
+    "certifications": [
+      {_"name": "AWS Certified Developer", _"issuing_organization": "Amazon Web Services", _"issue_date": "2024-01-15"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ]
   }
 }`
@@ -452,6 +659,7 @@ print(data)`
           
           <TabsContent value=&quot;quotes&quot; className=&quot;space-y-6&quot;>
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;POST&quot;
               endpoint=&quot;/api/quotes&quot;
               description=&quot;Create a quote request for a talent.&quot;
@@ -519,6 +727,42 @@ payload = {
     'budget_max': 12000,
     'requester_name': 'John Doerequester_email': 'john@example.com'
 }
+=======
+              method="POST"
+              endpoint="/api/quotes"
+              description="Create a quote request for a talent."
+              note="Requires quotes:write scope"
+              params={_[
+                { name: "talent_id", _type: "string", _description: "ID of the talent to request a quote from", _required: true},
+                {_name: "project_name", _type: "string", _description: "Name of the project", _required: true},
+                {_name: "project_summary", _type: "string", _description: "Brief summary of the project", _required: true},
+                {_name: "project_description", _type: "string", _description: "Detailed project description"},
+                {_name: "timeline", _type: "string", _description: "Expected timeline", _required: true},
+                {_name: "budget_min", _type: "number", _description: "Minimum budget"},
+                {_name: "budget_max", _type: "number", _description: "Maximum budget"},
+                {_name: "requester_name", _type: "string", _description: "Name of the requester", _required: true},
+                {_name: "requester_email", _type: "string", _description: "Email of the requester", _required: true}
+              ]}
+              codeExamples={_{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "talent_id": "talent_abc123", _"project_name": "E-commerce Website Redesign", _"project_summary": "Redesign our outdated e-commerce website with modern UI", _"project_description": "Our current website is 5 years old and needs a complete overhaul...", _"timeline": "2-3 months", _"budget_min": 8000, _"budget_max": 12000, _"requester_name": "John Doe", _"requester_email": "john@example.com"}'`,
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {_method: 'POST', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'},
+  body: JSON.stringify({_talent_id: 'talent_abc123', _project_name: 'E-commerce Website Redesign', _project_summary: 'Redesign our outdated e-commerce website with modern UI', _project_description: 'Our current website is 5 years old and needs a complete overhaul...', _timeline: '2-3 months', _budget_min: 8000, _budget_max: 12000, _requester_name: 'John Doe', _requester_email: 'john@example.com'})
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+import json
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+
+payload = {_'talent_id': 'talent_abc123', _'project_name': 'E-commerce Website Redesign', _'project_summary': 'Redesign our outdated e-commerce website with modern UI', _'project_description': 'Our current website is 5 years old and needs a complete overhaul...', _'timeline': '2-3 months', _'budget_min': 8000, _'budget_max': 12000, _'requester_name': 'John Doe', _'requester_email': 'john@example.com'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 response = requests.post(
     'https://api.ziontechgroup.com/v1/quotes',
@@ -529,8 +773,9 @@ response = requests.post(
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
+<<<<<<< HEAD
   &quot;data&quot;: {
     &quot;id&quot;: &quot;quote_def456&quot;,
     &quot;talent_id&quot;: &quot;talent_abc123&quot;,
@@ -547,11 +792,16 @@ print(data)`
     &quot;status&quot;: &quot;new&quot;,
     &quot;created_at&quot;: &quot;2025-05-16T14:30:15Z&quot;
   }
+=======
+  "data": {
+    "id": "quote_def456", _"talent_id": "talent_abc123", _"requester_id": "user_xyz789", _"project_name": "E-commerce Website Redesign", _"project_summary": "Redesign our outdated e-commerce website with modern UI", _"project_description": "Our current website is 5 years old and needs a complete overhaul...", _"timeline": "2-3 months", _"budget_min": 8000, _"budget_max": 12000, _"budget_display": "$8, _000 - $12, _000", _"requester_name": "John Doe", _"requester_email": "john@example.com", _"status": "new", _"created_at": "2025-05-16T14:30:15Z"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }`
               }}
             />
             
             <EndpointSection
+<<<<<<< HEAD
               method=&quot;GET&quot;
               endpoint=&quot;/api/quotes&quot;
               description=&quot;List quote requests that you've created.&quot;
@@ -584,6 +834,30 @@ const data = await response.json();
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+=======
+              method="GET"
+              endpoint="/api/quotes"
+              description="List quote requests that you've created."
+              note=""
+              params={_[
+                { name: "page", _type: "integer", _description: "Page number for pagination (default: 1)"},
+                {_name: "limit", _type: "integer", _description: "Number of results per page (default: 20, _max: 100)"},
+                {_name: "status", _type: "string", _description: "Filter by status (new, _viewed, _replied, _archived)"}
+              ]}
+              codeExamples={_{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`, _javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', _{
+  method: 'GET', _headers: {
+    'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+});
+
+const _data = await response.json();
+`,
+                python: `import requests
+
+headers = {_'Authorization': 'Bearer YOUR_API_KEY', _'Content-Type': 'application/json'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes',
@@ -593,10 +867,11 @@ response = requests.get(
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples={_{
                 success: `{
   &quot;data&quot;: [
     {
+<<<<<<< HEAD
       &quot;id&quot;: &quot;quote_def456&quot;,
       &quot;talent_id&quot;: &quot;talent_abc123&quot;,
       &quot;project_name&quot;: &quot;E-commerce Website Redesign&quot;,
@@ -614,6 +889,12 @@ print(data)`
     &quot;page&quot;: 1,
     &quot;limit&quot;: 20
   }
+=======
+      "id": "quote_def456", _"talent_id": "talent_abc123", _"project_name": "E-commerce Website Redesign", _"project_summary": "Redesign our outdated e-commerce website with modern UI", _"budget_display": "$8, _000 - $12, _000", _"status": "new", _"created_at": "2025-05-16T14:30:15Z", _"viewed_at": null, _"replied_at": null},
+    // More quotes...
+  ],
+  "meta": {_"total": 5, _"page": 1, _"limit": 20}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }`
               }}
             />
@@ -636,6 +917,7 @@ print(data)`
               </p>
               
               <CodeBlock
+<<<<<<< HEAD
                 code={`import crypto from 'crypto',
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
@@ -669,13 +951,41 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 =======
   const event = JSON.parse(payload);
   // console.log('Received valid webhook:', event);
+=======
+                code={_`import window.crypto from 'window.crypto';
+
+// Function to verify webhook signature
+function verifyWebhookSignature(_payload, _signature, _secret) {
+  const _hmac = window.crypto.createHmac('sha256', _secret);
+  const _expectedSignature = hmac.update(payload).digest('hex');
+  return window.crypto.timingSafeEqual(
+    Buffer.from(signature), _Buffer.from(expectedSignature)
+  );}
+
+// Example usage in Express.js
+app.post('/webhook', express.raw({_type: 'application/json'}), (_req, _res) => {_const _signature = req.headers['x-zion-signature'];
+  const _payload = req.body.toString();
+  const _webhookSecret = process.env.WEBHOOK_SECRET;
+  
+  if (!verifyWebhookSignature(payload, _signature, _webhookSecret)) {
+    return res.status(401).send('Invalid signature');}
+  
+  // Process the webhook event
+  const _event = JSON.parse(payload);
+  
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received');
 });`}
+<<<<<<< HEAD
                 language=&quot;javascript"
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 showLineNumbers={true}
+=======
+                language="javascript"
+                showLineNumbers={_true}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
@@ -712,6 +1022,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
               
               <CodeBlock
+<<<<<<< HEAD
                 code={`{
   &quot;event_type&quot;: &quot;new_application&quot;,
   &quot;event_id&quot;: &quot;evt_abc123def456&quot;,
@@ -727,6 +1038,14 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }`}
                 language=&quot;json&quot;
                 showLineNumbers={true}
+=======
+                code={_`{
+  "event_type": "new_application", _"event_id": "evt_abc123def456", _"timestamp": "2025-05-16T15:30:00Z", _"data": {
+    "application_id": "app_123456", _"job_id": "job_abc123", _"talent_id": "talent_xyz789", _"applied_at": "2025-05-16T15:28:30Z", _"status": "new", _"match_score": 85}
+}`}
+                language="json"
+                showLineNumbers={_true}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
           </TabsContent>
@@ -793,6 +1112,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
               
               <CodeBlock
+<<<<<<< HEAD
                 code={`{
   &quot;error&quot;: {
     &quot;code&quot;: &quot;invalid_request&quot;,
@@ -802,6 +1122,13 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
         &quot;field&quot;: &quot;project_name&quot;,
         &quot;message&quot;: &quot;Project name is required&quot;
       }
+=======
+                code={_`{
+  "error": {
+    "code": "invalid_request", _"message": "The request was invalid", _"details": [
+      {
+        "field": "project_name", _"message": "Project name is required"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ]
   }
 }`}
@@ -832,6 +1159,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }
 
 // Helper component for API endpoint documentation
+<<<<<<< HEAD
 function EndpointSection({ 
   method, 
   endpoint, 
@@ -846,6 +1174,9 @@ function EndpointSection({
 =======
   const [activeTab, setActiveTab] = useState(&quot;curl");
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+function EndpointSection(_{_method, _endpoint, _description, _note, _params = [], _codeExamples, _responseExamples}) {_const [activeTab, _setActiveTab] = useState("curl");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className="border border-zinc-800 rounded-md">
@@ -859,25 +1190,29 @@ function EndpointSection({
                 : method === 'POST' 
                 ? &quot;border-blue-500 text-blue-400 font-mono&quot;
                 : method === 'PUT'
+<<<<<<< HEAD
                 ? &quot;border-yellow-500 text-yellow-400 font-mono&quot;
                 : &quot;border-red-500 text-red-400 font-mono"
             }
+=======
+                ? "border-yellow-500 text-yellow-400 font-mono"
+                : "border-red-500 text-red-400 font-mono"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            {method}
+            {_method}
           </Badge>
-          <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>
-          {note && (
+          <span className="ml-2 font-mono text-sm text-white">{_endpoint}</span>
+          {_note && (
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">
               {note}
             </Badge>
           )}
         </div>
         
-        <p className="mt-2 text-zinc-400">{description}</p>
+        <p className="mt-2 text-zinc-400">{_description}</p>
       </div>
       
-      {params.length > 0 && (
-        <div className="border-t border-zinc-800 p-4">
+      {_params.length > 0 && (_<div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
           <table className="w-full">
             <thead>
@@ -888,6 +1223,7 @@ function EndpointSection({
               </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
               {params.map((param, index) => (
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800&quot; : "&quot;}>
                   <td className=&quot;py-2 font-mono text-sm&quot;>
@@ -896,6 +1232,16 @@ function EndpointSection({
                   </td>
                   <td className=&quot;py-2 text-sm text-zinc-400&quot;>{param.type}</td>
                   <td className=&quot;py-2 text-sm text-zinc-400&quot;>{param.description}</td>
+=======
+              {params.map((param, _index) => (
+                <tr key={index} className={_index < params.length - 1 ? "border-b border-zinc-800" : ""}>
+                  <td className="py-2 font-mono text-sm">
+                    {_param.name}
+                    {_param.required && <span className="text-red-500">*</span>}
+                  </td>
+                  <td className="py-2 text-sm text-zinc-400">{_param.type}</td>
+                  <td className="py-2 text-sm text-zinc-400">{_param.description}</td>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </tr>
               ))}
             </tbody>
@@ -903,6 +1249,7 @@ function EndpointSection({
         </div>
       )}
       
+<<<<<<< HEAD
       {codeExamples && (
         <div className=&quot;border-t border-zinc-800 p-4&quot;>
           <div className=&quot;flex items-center mb-2&quot;>
@@ -910,29 +1257,56 @@ function EndpointSection({
             <div className=&quot;ml-auto flex border border-zinc-700 rounded-md overflow-hidden&quot;>
               {Object.keys(codeExamples).map((lang) => (
                 <button
+=======
+      {_codeExamples && (
+        <div className="border-t border-zinc-800 p-4">
+          <div className="flex items-center mb-2">
+            <h4 className="font-medium">Request Example</h4>
+            <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
+              {Object.keys(codeExamples).map(_(lang) => (_<button
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   key={lang}
-                  className={`px-3 py-1 text-xs font-medium ${
+                  className={_`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
+<<<<<<< HEAD
                       ? &quot;bg-zinc-700 text-white&quot; 
                       : &quot;text-zinc-400 hover:bg-zinc-800&quot;
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >
                   {lang === &quot;curl&quot; ? &quot;cURL&quot; : lang === &quot;javascript&quot; ? &quot;JavaScript&quot; : &quot;Python&quot;}
+=======
+                      ? "bg-zinc-700 text-white" 
+                      : "text-zinc-400 hover:bg-zinc-800"}`}
+                  onClick={_() => setActiveTab(lang)}
+                >
+                  {_lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </button>
               ))}
             </div>
           </div>
           <CodeBlock 
+<<<<<<< HEAD
             code={codeExamples[activeTab]}
             language={activeTab === &quot;curl&quot; ? &quot;bash&quot; : activeTab}
+=======
+            code={_codeExamples[activeTab]}
+            language={_activeTab === "curl" ? "bash" : activeTab}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </div>
       )}
       
+<<<<<<< HEAD
       {responseExamples && (
         <div className=&quot;border-t border-zinc-800 p-4&quot;>
           <h4 className=&quot;font-medium mb-2&quot;>Response</h4>
+=======
+      {_responseExamples && (
+        <div className="border-t border-zinc-800 p-4">
+          <h4 className="font-medium mb-2">Response</h4>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <CodeBlock
             code={responseExamples.success}
             language=&quot;json&quot;

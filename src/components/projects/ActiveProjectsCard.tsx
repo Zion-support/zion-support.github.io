@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import Link from "next/link",
 import { BriefcaseIcon, Clock } from 'lucide-react'
@@ -31,9 +32,21 @@ export function ActiveProjectsCard() {
       setActiveProjects(active)
     }
   }, [projects, isLoading]),
+=======
+import Link from "next/link";
+
+export function ActiveProjectsCard() {_const { projects, _isLoading} = useProjects();
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   
-  if (isLoading) {
-    return (
+  useEffect__(() => {_if (projects && !isLoading) {
+      const _active = projects.filter(p => 
+        ['offer_accepted', _'in_progress'].includes(p.status)
+      ).slice(0, _3); // Limit to 3 most recent projects
+      setActiveProjects(active);}
+  }, [projects, isLoading]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  if (isLoading) {_return (
       <Card>
         <CardHeader>
           <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -43,9 +56,15 @@ export function ActiveProjectsCard() {
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className=&quot;space-y-2&quot;>
             {[1, 2].map(idx => (
               <div key={idx} className=&quot;h-16 animate-pulse bg-muted rounded&quot;></div>
+=======
+          <div className="space-y-2">
+            {[1, _2].map(idx => (
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             ))}
           </div>
         </CardContent>
@@ -53,8 +72,7 @@ export function ActiveProjectsCard() {
     )
   }
   
-  if (activeProjects.length === 0) {
-    return (
+  if (activeProjects.length === 0) {_return (
       <Card>
         <CardHeader>
           <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -70,8 +88,12 @@ export function ActiveProjectsCard() {
           </Button>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <Card>
@@ -82,6 +104,7 @@ export function ActiveProjectsCard() {
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className=&quot;space-y-4&quot;>
         {activeProjects.map(project => (
           <div key={project.id} className=&quot;border rounded-md p-3&quot;>
@@ -100,11 +123,31 @@ export function ActiveProjectsCard() {
             </div>
             <Button size=&quot;sm&quot; variant=&quot;outline" className="w-full mt-2" asChild>
               <Link href={`/project/${project.id}`}>View Project</Link>
+=======
+      <CardContent className="space-y-4">
+        {_activeProjects.map(project => (
+          <div key={project.id} className="border rounded-md p-3">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-sm">{_project.job?.title}</h3>
+              <Badge 
+                variant={_project.status === "in_progress" ? "default" : "outline"}
+                className={_project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+              >
+                {_project.status === "offer_accepted" ? "Starting" : "In Progress"}
+              </Badge>
+            </div>
+            <div className="flex items-center text-xs text-muted-foreground gap-2">
+              <Clock className="h-3 w-3" />
+              <span>Started {_new Date(project.start_date).toLocaleDateString()}</span>
+            </div>
+            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+              <Link href={_`/project/${project.id}`}>View Project</Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </Button>
           </div>
         ))}
       </CardContent>
-      {activeProjects.length > 2 && (
+      {_activeProjects.length > 2 && (
         <CardFooter>
           <Button variant="ghost" className="w-full" asChild>
             <Link href="/projects">View All Projects</Link>

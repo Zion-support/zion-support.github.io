@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import Link from 'next/link',
 import ContentCategorizer from '../../components/ContentCategorizer',
 export default function ReportsIndex() {
   return (
     <div className=&quot;min-h-screen bg-slate-950 text-white&quot;>
       <main className=&quot;container mx-auto px-4 py-12 max-w-7xl&quot;>
+=======
+import Link from 'next/link';
+import ContentCategorizer from '../../components/ContentCategorizer';
+
+export default function ReportsIndex() {_return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <main className="container mx-auto px-4 py-12 max-w-7xl">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         {/* Header */}
         <div className=&quot;mb-8&quot;>
           <h1 className=&quot;text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
@@ -14,11 +23,15 @@ export default function ReportsIndex() {
           </p>
         </div>
 
-        {/* Content Categorizer Component */}
+        {_/* Content Categorizer Component */}
         <ContentCategorizer />
 
+<<<<<<< HEAD
         {/* Back to Home */}
 <<<<<<< HEAD
+=======
+        {_/* Back to Home */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
 =======

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -60,11 +61,30 @@ export default function ProfileDetail() {
           setError("Profile ID is missing."),
           return
         }
+=======
+import {_MapPin, _Clock, _Link as LinkIcon, _Github, _Twitter, _Linkedin, _CheckCircle2, _Mail, _Phone, _Globe} from "lucide-react";
 
-        const { data, error } = await supabase
+export default function ProfileDetail() {_// useParams is typed as `any` in this environment due to missing type
+  // definitions, _so avoid passing a type argument to prevent TS2347.
+  const { profileId} = useParams();
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect__(() => {_const _fetchProfile = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing.");
+          return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+        const {_data, _error} = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
           .single(),
 =======
           setError(&quot;Profile ID is missing.&quot;);
@@ -111,10 +131,26 @@ export default function ProfileDetail() {
         setIsLoading(false)
       }
     },
+=======
+          .single();
+
+        if (error) {_throw new Error(error.message);}
+
+        if (!data) {_setError("Profile not found.");
+          return;}
+
+        setProfileData(data);
+      } catch (err: unknown) {_setError(err.message || "Failed to fetch profile.");
+        toast({
+          title: "Error", _description: err.message || "Failed to fetch profile.", _variant: "destructive"});
+      } finally {_setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     fetchProfile()
   }, [profileId]),
 
+<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className=&quot;min-h-screen flex items-center justify-center&quot;>
@@ -126,11 +162,22 @@ export default function ProfileDetail() {
   if (error) {
     return (
       <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+=======
+  if (isLoading) {_return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Loading profile...</p>
+      </div>
+    );}
+
+  if (error) {_return (
+      <div className="min-h-screen flex items-center justify-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <p>Error: {error}</p>
       </div>
     )
   }
 
+<<<<<<< HEAD
   if (!profileData) {
     return (
       <div className=&quot;min-h-screen flex items-center justify-center&quot;>
@@ -138,10 +185,18 @@ export default function ProfileDetail() {
       </div>
     )
   }
+=======
+  if (!profileData) {_return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Profile not found.</p>
+      </div>
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
       <SEO
+<<<<<<< HEAD
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || &quot;Check out this talent's profile on Zion!&quot;}
       />
@@ -157,11 +212,29 @@ export default function ProfileDetail() {
                   <Avatar className=&quot;w-20 h-20&quot;>
                     {profileData.profile_picture_url ? (
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+=======
+        title={_`${profileData.full_name} | Zion AI Marketplace`}
+        description={_profileData.bio || "Check out this talent's profile on Zion!"}
+      />
+      <Header />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">
+          {_/* Main Content */}
+          <div className="col-span-12 lg:col-span-8">
+            {_/* Profile Header */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-20 h-20">
+                    {_profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={_profileData.full_name} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ) : (
-                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                      <AvatarFallback>{_profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
                   </Avatar>
                   <div>
+<<<<<<< HEAD
                     <CardTitle className=&quot;text-2xl font-bold text-white flex items-center gap-2&quot;>
                       {profileData.full_name}
                       {profileData.is_verified && (
@@ -169,10 +242,20 @@ export default function ProfileDetail() {
                       )}
                     </CardTitle>
                     <CardDescription className=&quot;text-zion-cyan&quot;>{profileData.professional_title}</CardDescription>
+=======
+                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                      {_profileData.full_name}
+                      {_profileData.is_verified && (
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                      )}
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{_profileData.professional_title}</CardDescription>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 <div className=&quot;flex flex-wrap gap-4 text-sm&quot;>
                   {profileData.location && (
                     <div className=&quot;flex items-center text-zion-slate-light&quot;>
@@ -188,6 +271,23 @@ export default function ProfileDetail() {
                   )}
                   {profileData.hourly_rate && (
                     <div className=&quot;text-white font-bold&quot;>
+=======
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {_profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {_profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {_profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ${profileData.hourly_rate}
                       <span className=&quot;text-zion-slate-light font-normal&quot;>/hr</span>
                     </div>
@@ -196,36 +296,63 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
+<<<<<<< HEAD
             {/* About Section */}
             <Card className=&quot;mb-6 bg-zion-blue border-zion-blue-light&quot;>
+=======
+            {_/* About Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardHeader>
                 <CardTitle className=&quot;text-xl font-bold text-white&quot;>About Me</CardTitle>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 <p className=&quot;text-zion-slate-light&quot;>{profileData.bio || &quot;No bio provided.&quot;}</p>
               </CardContent>
             </Card>
 
             {/* Skills Section */}
             <Card className=&quot;mb-6 bg-zion-blue border-zion-blue-light&quot;>
+=======
+                <p className="text-zion-slate-light">{_profileData.bio || "No bio provided."}</p>
+              </CardContent>
+            </Card>
+
+            {_/* Skills Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardHeader>
                 <CardTitle className=&quot;text-xl font-bold text-white&quot;>Skills</CardTitle>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 <div className=&quot;flex flex-wrap gap-2&quot;>
                   {profileData.skills?.map((skill: string, index: number) => (
                     <Badge key={index} className=&quot;bg-zion-blue-light text-zion-slate-light border-none&quot;>{skill}</Badge>
                   )) || <p className=&quot;text-zion-slate-light&quot;>No skills provided.</p>}
+=======
+                <div className="flex flex-wrap gap-2">
+                  {_profileData.skills?.map(_(skill: string, _index: number) => (
+                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{_skill}</Badge>
+                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </CardContent>
             </Card>
 
+<<<<<<< HEAD
             {/* Experience Section */}
             <Card className=&quot;mb-6 bg-zion-blue border-zion-blue-light&quot;>
+=======
+            {_/* Experience Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardHeader>
                 <CardTitle className=&quot;text-xl font-bold text-white&quot;>Experience</CardTitle>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 {profileData.experience ? (
                   profileData.experience.map((exp: any, index: number) => (
                     <div key={index} className=&quot;mb-4&quot;>
@@ -233,6 +360,14 @@ export default function ProfileDetail() {
                       <p className=&quot;text-zion-cyan&quot;>{exp.company}</p>
                       <p className=&quot;text-sm text-zion-slate-light&quot;>{exp.start_date} - {exp.end_date || &quot;Present&quot;}</p>
                       <p className=&quot;text-zion-slate-light&quot;>{exp.description}</p>
+=======
+                {_profileData.experience ? (_profileData.experience.map((exp: unknown, _index: number) => (
+                    <div key={index} className="mb-4">
+                      <h4 className="font-bold text-white">{_exp.title}</h4>
+                      <p className="text-zion-cyan">{_exp.company}</p>
+                      <p className="text-sm text-zion-slate-light">{_exp.start_date} - {_exp.end_date || "Present"}</p>
+                      <p className="text-zion-slate-light">{_exp.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   ))
                 ) : (
@@ -241,12 +376,18 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
+<<<<<<< HEAD
             {/* Portfolio Section */}
             <Card className=&quot;mb-6 bg-zion-blue border-zion-blue-light&quot;>
+=======
+            {_/* Portfolio Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardHeader>
                 <CardTitle className=&quot;text-xl font-bold text-white&quot;>Portfolio</CardTitle>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 {profileData.portfolio_links ? (
                   <div className=&quot;flex flex-col gap-3&quot;>
                     {profileData.portfolio_links.map((link: any, index: number) => (
@@ -260,6 +401,20 @@ export default function ProfileDetail() {
                         <LinkIcon className=&quot;h-4 w-4&quot; />
                         {link.title || link.url}
                       </Link>
+=======
+                {_profileData.portfolio_links ? (_<div className="flex flex-col gap-3">
+                    {profileData.portfolio_links.map((link: unknown, _index: number) => (
+                      <a
+                        key={index}
+                        href={_link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zion-cyan hover:text-white flex items-center gap-2"
+                      >
+                        <LinkIcon className="h-4 w-4" />
+                        {_link.title || link.url}
+                      </a>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ))}
                   </div>
                 ) : (
@@ -269,16 +424,18 @@ export default function ProfileDetail() {
             </Card>
           </div>
 
+<<<<<<< HEAD
           {/* Sidebar with HireNowCTA */}
           <div className=&quot;col-span-4 lg:col-span-1&quot;>
+=======
+          {_/* Sidebar with HireNowCTA */}
+          <div className="col-span-4 lg:col-span-1">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
-              }}
+              talentProfile={_{
+                id: profileData?.id || '', _full_name: profileData?.full_name || '', _professional_title: profileData?.professional_title || '', _hourly_rate: profileData?.hourly_rate || 0}}
             />
+<<<<<<< HEAD
             {/* Contact Information */}
             <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6&quot;>
               <h3 className=&quot;text-xl font-bold mb-4&quot;>Contact</h3>
@@ -299,6 +456,28 @@ export default function ProfileDetail() {
                   <div className=&quot;flex items-center gap-2 text-zion-slate-light&quot;>
                     <Globe className=&quot;h-4 w-4&quot; />
                     <a href={profileData.website} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-zion-cyan&quot;>
+=======
+            {_/* Contact Information */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <div className="flex flex-col space-y-3">
+                {_profileData.email && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Mail className="h-4 w-4" />
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{_profileData.email}</a>
+                  </div>
+                )}
+                {_profileData.phone && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Phone className="h-4 w-4" />
+                    <span>{profileData.phone}</span>
+                  </div>
+                )}
+                {_profileData.website && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Globe className="h-4 w-4" />
+                    <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       Website
                     </Link>
                   </div>
@@ -306,6 +485,7 @@ export default function ProfileDetail() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Social Links */}
             <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6&quot;>
               <h3 className=&quot;text-xl font-bold mb-4&quot;>Social</h3>
@@ -313,18 +493,39 @@ export default function ProfileDetail() {
                 {profileData.github_url && (
                   <a href={profileData.github_url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan&quot;>
                     <Github className=&quot;h-4 w-4&quot; />
+=======
+            {_/* Social Links */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Social</h3>
+              <div className="flex flex-col space-y-3">
+                {_profileData.github_url && (
+                  <a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Github className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     GitHub
                   </Link>
                 )}
+<<<<<<< HEAD
                 {profileData.twitter_url && (
                   <a href={profileData.twitter_url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan&quot;>
                     <Twitter className=&quot;h-4 w-4&quot; />
+=======
+                {_profileData.twitter_url && (
+                  <a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Twitter className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     Twitter
                   </Link>
                 )}
+<<<<<<< HEAD
                 {profileData.linkedin_url && (
                   <a href={profileData.linkedin_url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan&quot;>
                     <Linkedin className=&quot;h-4 w-4&quot; />
+=======
+                {_profileData.linkedin_url && (
+                  <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Linkedin className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     LinkedIn
                   </Link>
                 )}

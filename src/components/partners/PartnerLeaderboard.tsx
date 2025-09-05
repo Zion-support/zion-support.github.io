@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -19,11 +20,21 @@ interface LeaderboardEntry {
   earnings: number,
   badges: string[]
 }
+=======
 
-export function PartnerLeaderboard() {
-  // Placeholder data - would come from API in real implementation
+interface LeaderboardEntry {_id: string;
+  rank: number;
+  name: string;
+  avatar?: string;
+  referrals: number;
+  earnings: number;
+  badges: string[];}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function PartnerLeaderboard() {_// Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
+<<<<<<< HEAD
       id: &quot;1&quot;,
       rank: 1,
       name: &quot;AI Tech Guru&quot;,
@@ -69,10 +80,18 @@ export function PartnerLeaderboard() {
       badges: [&quot;newcomer"]
     }
   ],
+=======
+      id: "1", _rank: 1, _name: "AI Tech Guru", _avatar: "", _// window.URL would be here
+      referrals: 178, _earnings: 4500, _badges: ["gold", _"trending"]},
+    {_id: "2", _rank: 2, _name: "Machine Learning Hub", _avatar: "", _referrals: 145, _earnings: 3625, _badges: ["silver"]},
+    {_id: "3", _rank: 3, _name: "Neural Networks Pro", _avatar: "", _referrals: 124, _earnings: 3100, _badges: ["bronze"]},
+    {_id: "4", _rank: 4, _name: "AI Career Insights", _avatar: "", _referrals: 98, _earnings: 2450, _badges: []},
+    {_id: "5", _rank: 5, _name: "Deep Learning Daily", _avatar: "", _referrals: 87, _earnings: 2175, _badges: ["newcomer"]}
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Function to render rank badge
-  const renderRankBadge = (rank: number) => {
-    switch(rank) {
+  const _renderRankBadge = (_rank: number) => {_switch(rank) {
       case 1:
         return <Trophy className="h-5 w-5 text-yellow-500" />,
       case 2:
@@ -96,35 +115,35 @@ export function PartnerLeaderboard() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {leaderboard.length > 0 ? (
+            {_leaderboard.length > 0 ? (
               leaderboard.map(entry => (
                 <div 
                   key={entry.id} 
-                  className={`flex items-center justify-between p-3 rounded-md ${
+                  className={_`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-                  }`}
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'}`}
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
-                      {renderRankBadge(entry.rank)}
+                      {_renderRankBadge(entry.rank)}
                     </div>
                     <Avatar className="h-10 w-10 border border-zion-blue-light">
-                      <AvatarImage src={entry.avatar} alt={entry.name} />
+                      <AvatarImage src={_entry.avatar} alt={_entry.name} />
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">
-                        {entry.name.substring(0, 2).toUpperCase()}
+                        {_entry.name.substring(0, _2).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <div className="font-medium text-white">{entry.name}</div>
-                      <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>
+                      <div className="font-medium text-white">{_entry.name}</div>
+                      <div className="text-xs text-zion-slate-light">{_entry.referrals} referrals</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="text-right">
-                      <div className="font-semibold text-white">${entry.earnings}</div>
+                      <div className="font-semibold text-white">${_entry.earnings}</div>
                       <div className="text-xs text-zion-slate-light">earned</div>
                     </div>
+<<<<<<< HEAD
                     <div className="flex gap-1&quot;>
                       {entry.badges.includes(&quot;gold&quot;) && (
                         <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400&quot;>
@@ -133,6 +152,16 @@ export function PartnerLeaderboard() {
                       )}
                       {entry.badges.includes(&quot;trending&quot;) && (
                         <Badge variant=&quot;outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+=======
+                    <div className="flex gap-1">
+                      {_entry.badges.includes("gold") && (
+                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
+                          Elite
+                        </Badge>
+                      )}
+                      {_entry.badges.includes("trending") && (
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                           Trending
                         </Badge>
                       )}

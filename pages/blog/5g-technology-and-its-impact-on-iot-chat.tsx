@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div>
       <Head>
         <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
@@ -15,7 +23,11 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href=&quot;/blog&quot;><a>Back to Blog</Link></Link>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
+=======
+  );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default Chat5gTechnologyAndItsImpactOnIotChat,

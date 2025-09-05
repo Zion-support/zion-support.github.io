@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 const WebApplicationDevelopmentChat: NextPage = () => {
   return (
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const WebApplicationDevelopmentChat: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div>
       <Head>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
@@ -15,7 +23,11 @@ const WebApplicationDevelopmentChat: NextPage = () => {
         <a href=&quot;/services&quot;>Back to Services</a>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
+=======
+  );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default WebApplicationDevelopmentChat,

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 =======
@@ -23,6 +24,21 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
               <span className=&quot;text-zion-slate-light&quot;>{skill.name}</span>
               {skill.endorsements && (
                 <span className=&quot;text-sm text-zion-slate&quot;>
+=======
+
+interface ProfileSkillsProps {_skills: ProfileSkill[];}
+
+export function ProfileSkills(_{_skills}: ProfileSkillsProps) {_return (_<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {skills.map((skill, _index) => (
+          <div key={index} className="flex flex-col">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-zion-slate-light">{_skill.name}</span>
+              {_skill.endorsements && (
+                <span className="text-sm text-zion-slate">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   {skill.endorsements} endorsements
                 </span>
               )}
@@ -30,8 +46,13 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
             
             <div className=&quot;h-2 w-full bg-zion-blue-light rounded-full overflow-hidden&quot;>
               <div 
+<<<<<<< HEAD
                 className=&quot;h-full bg-gradient-to-r from-zion-purple to-zion-cyan&quot; 
                 style={{ width: `${(skill.level / 5) * 100}%` }}
+=======
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+                style={_{ width: `${(skill.level / 5) * 100}%` }}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
           </div>

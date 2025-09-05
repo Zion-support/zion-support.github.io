@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -28,6 +29,12 @@ function HiringTrackerContent() {
   const jobId = router.query.jobId as string;
   const [activeTab, setActiveTab] = useState<string>(&quot;kanban&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+function HiringTrackerContent() {_const _router = useRouter();
+  const _jobId = router.query.jobId as string;
+  const [activeTab, _setActiveTab] = useState<string>("kanban");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -54,12 +61,21 @@ function HiringTrackerContent() {
             <TabsTrigger value=&quot;analytics&quot;>Analytics</TabsTrigger>
           </TabsList>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;kanban&quot; className=&quot;mt-6&quot;>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
           <TabsContent value=&quot;analytics&quot; className=&quot;mt-6&quot;>
             <HiringAnalytics jobId={jobId} />
+=======
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={_jobId} />
+          </TabsContent>
+          
+          <TabsContent value="analytics" className="mt-6">
+            <HiringAnalytics jobId={_jobId} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </TabsContent>
         </Tabs>
       </main>
@@ -67,10 +83,13 @@ function HiringTrackerContent() {
   )
 }
 
-export default function HiringTracker() {
-  return (
+export default function HiringTracker() {_return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

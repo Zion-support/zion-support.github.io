@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -77,9 +78,41 @@ export default function ContentGenerator() {
           includeImage: contentType === 'blog' ? includeImage : false
         }
       }),
+=======
+import React, {_useState, _useEffect} from 'react';
+
+export default function ContentGenerator() {_const { user, _isLoading} = useAuth();
+  const _router = useRouter();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [topic, setTopic] = useState('');
+  const [keywords, setKeywords] = useState('');
+  const [autoPublish, setAutoPublish] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [previewContent, setPreviewContent] = useState<any>(null);
+  const [testEmail, setTestEmail] = useState('');
+
+  useEffect__(() => {_if (!isLoading && !user) {
+      router.push("/login?redirect=/content-generator");}
+  }, [user, isLoading, router]);
+
+  const _generateContent = async () => {_setIsGenerating(true);
+    setPreviewContent(null);
+    
+    try {
+      const _keywordsArray = keywords.split(', _').map(k => k.trim()).filter(k => k.length > 0);
+      const { data, _error} = await supabase.functions.invoke('generate-seo-content', {_body: {
+          contentType, _userPrompt: customPrompt || topic, _// Use customPrompt if available, _else topic
+          keywords: keywordsArray, _// autoPublish and includeImage are not explicitly used by 'generate-seo-content'
+          // but we can leave them here; the backend will ignore them if not needed.
+          autoPublish, _includeImage: contentType === 'blog' ? includeImage : false}
+      });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
@@ -129,9 +162,29 @@ export default function ContentGenerator() {
           testEmail
         }
       }),
+=======
+      setPreviewContent(data); // Expecting {_generatedContent: "..."}
+      toast.success(`Content for "${_contentType}" generated successfully!`);
+    } catch (error) {_logErrorToProduction('Error generating content:', _{ data: error});
+      toast.error("Failed to generate content. Please try again.");
+    } finally {_setIsGenerating(false);}
+  };
+
+  const _sendTestNewsletter = async () => {_if (!testEmail) {
+      toast.error("Please enter a test email address");
+      return;}
+    
+    if (!previewContent) {_toast.error("Generate newsletter content first");
+      return;}
+    
+    try {_const { data, _error} = await supabase.functions.invoke('send-newsletter', {_body: {
+          subject: previewContent.subject, _previewText: previewContent.previewText, _body: previewContent.body, _testMode: true, _testEmail}
+      });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
+<<<<<<< HEAD
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
 <<<<<<< HEAD
@@ -141,23 +194,30 @@ export default function ContentGenerator() {
       logErrorToProduction('Error sending test newsletter:', { data: error });
       toast.error(&quot;Failed to send test newsletter. Please try again.&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      toast.success(`Test newsletter sent to ${_testEmail}!`);
+    } catch (error) {_logErrorToProduction('Error sending test newsletter:', _{ data: error});
+      toast.error("Failed to send test newsletter. Please try again.");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
   // Check if user is still loading
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <>
         <Header />
         <div className=&quot;min-h-screen bg-zion-blue flex items-center justify-center&quot;>
           <div className=&quot;animate-pulse text-white&quot;>Loading...</div>
         </div>
       </>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  return (
-    <>
+  return (_<>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue py-12&quot;>
         <div className=&quot;container mx-auto px-4&quot;>
@@ -172,12 +232,21 @@ export default function ContentGenerator() {
                     Configure what type of content you want to generate.
                   </CardDescription>
                 </CardHeader>
+<<<<<<< HEAD
                 <CardContent className=&quot;space-y-6&quot;>
                   <div className=&quot;space-y-2&quot;>
                     <Label htmlFor=&quot;contentType&quot; className=&quot;text-white&quot;>Content Type</Label>
                     <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
                       <SelectTrigger id=&quot;contentType&quot; className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;>
                         <SelectValue placeholder=&quot;Select content type&quot; />
+=======
+                <CardContent className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="contentType" className="text-white">Content Type</Label>
+                    <Select value={_contentType} onValueChange={_(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
+                      <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
+                        <SelectValue placeholder="Select content type" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </SelectTrigger>
                       <SelectContent className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
                         <SelectItem value=&quot;blog&quot; className=&quot;text-white&quot;>Blog Post</SelectItem>
@@ -191,6 +260,7 @@ export default function ContentGenerator() {
                   <div className=&quot;space-y-2&quot;>
                     <Label htmlFor=&quot;topic&quot; className=&quot;text-white&quot;>Main Topic / User Prompt</Label>
                     <Input
+<<<<<<< HEAD
                       id=&quot;topic&quot;
                       placeholder={
                         contentType === 'blog' ? &quot;e.g., Benefits of AI in Marketing&quot; :
@@ -201,74 +271,117 @@ export default function ContentGenerator() {
                       className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
+=======
+                      id="topic"
+                      placeholder={_contentType === 'blog' ? "e.g., _Benefits of AI in Marketing" :
+                        contentType === 'serviceDescription' ? "e.g., _AI-Powered Chatbot Solutions" :
+                        contentType === 'faq' ? "e.g., _How does AI improve customer service?" :
+                        "e.g., _May Platform Updates" // Newsletter or default}
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      value={_topic}
+                      onChange={_(_e) => setTopic(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </div>
 
                   <div className=&quot;space-y-2&quot;>
                     <Label htmlFor=&quot;keywords&quot; className=&quot;text-white&quot;>Keywords (Optional, comma-separated)</Label>
                     <Input
+<<<<<<< HEAD
                       id=&quot;keywords&quot;
                       placeholder=&quot;e.g., AI, machine learning, SEO&quot;
                       className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
                       value={keywords}
                       onChange={(e) => setKeywords(e.target.value)}
+=======
+                      id="keywords"
+                      placeholder="e.g., AI, machine learning, SEO"
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      value={_keywords}
+                      onChange={_(_e) => setKeywords(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </div>
                   
                   <div className=&quot;space-y-2&quot;>
                     <Label htmlFor=&quot;customPrompt&quot; className=&quot;text-white&quot;>Detailed Instructions / Custom Prompt (Optional)</Label>
                     <Textarea
+<<<<<<< HEAD
                       id=&quot;customPrompt&quot;
                       placeholder=&quot;Optionally provide more detailed instructions or a full custom prompt for the AI...&quot;
                       className=&quot;bg-zion-blue border border-zion-blue-light text-white min-h-[100px]&quot;
                       value={customPrompt}
                       onChange={(e) => setCustomPrompt(e.target.value)}
+=======
+                      id="customPrompt"
+                      placeholder="Optionally provide more detailed instructions or a full custom prompt for the AI..."
+                      className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
+                      value={_customPrompt}
+                      onChange={_(_e) => setCustomPrompt(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </div>
                   
-                  {contentType === 'blog' && (
+                  {_contentType === 'blog' && (
                     <>
                       <div className=&quot;flex items-center justify-between&quot;>
                         <Label htmlFor=&quot;autoPublish&quot; className=&quot;text-white&quot;>Auto-Publish</Label>
                         <Switch
                           id=&quot;autoPublish&quot;
                           checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
+                          onCheckedChange={_setAutoPublish}
                         />
                       </div>
                       
                       <div className=&quot;flex items-center justify-between&quot;>
                         <Label htmlFor=&quot;includeImage&quot; className=&quot;text-white&quot;>Generate Image Prompt</Label>
                         <Switch
+<<<<<<< HEAD
                           id=&quot;includeImage&quot;
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
+=======
+                          id="includeImage"
+                          checked={_includeImage}
+                          onCheckedChange={_setIncludeImage}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         />
                       </div>
                     </>
                   )}
                   
+<<<<<<< HEAD
                   {contentType === 'newsletter' && (
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;testEmail&quot; className=&quot;text-white&quot;>Test Email</Label>
+=======
+                  {_contentType === 'newsletter' && (_<div className="space-y-2">
+                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       <Input
                         id=&quot;testEmail&quot;
                         type=&quot;email&quot;
                         placeholder=&quot;your@email.com&quot;
                         className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
                         value={testEmail}
-                        onChange={(e) => setTestEmail(e.target.value)}
+                        onChange={_(e) => setTestEmail(e.target.value)}
                       />
                     </div>
                   )}
                 </CardContent>
                 <CardFooter>
                   <Button
+<<<<<<< HEAD
                     onClick={generateContent}
                     disabled={isGenerating}
                     className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
+=======
+                    onClick={_generateContent}
+                    disabled={_isGenerating}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
-                    {isGenerating ? (
+                    {_isGenerating ? (
                       <>
                         <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                         Generating...
@@ -290,6 +403,7 @@ export default function ContentGenerator() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
                   {isGenerating ? (
                     <div className=&quot;flex flex-col items-center justify-center py-12&quot;>
                       <Loader2 className=&quot;h-8 w-8 animate-spin text-zion-purple mb-4&quot; />
@@ -311,6 +425,29 @@ export default function ContentGenerator() {
                             className=&quot;bg-zion-blue-light hover:bg-zion-blue text-white&quot;
                           >
                             Send Test to {testEmail || &quot;your email&quot;}
+=======
+                  {_isGenerating ? (
+                    <div className="flex flex-col items-center justify-center py-12">
+                      <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4" />
+                      <p className="text-zion-slate-light">Generating content...</p>
+                    </div>
+                  ) : previewContent && previewContent.generatedContent ? (
+                    // Simplified preview for all content types for this subtask
+                    <ScrollArea className="h-[500px] pr-4">
+                      <h2 className="text-2xl font-bold text-white mb-4">Generated Content ({contentType})</h2>
+                      <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
+                        {_previewContent.generatedContent}
+                      </pre>
+                      {_/* Specific handling for newsletter test send can be re-added if needed */}
+                      {_contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
+                        <div className="mt-4 flex justify-end">
+                          <Button
+                            onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly
+                            disabled={_!testEmail}
+                            className="bg-zion-blue-light hover:bg-zion-blue text-white"
+                          >
+                            Send Test to {_testEmail || "your email"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                           </Button>
                         </div>
                       )}

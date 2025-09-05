@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -33,9 +34,17 @@ const formSchema = z.object({
   title: z.string().min(3, &quot;Title must be at least 3 characters&quot;),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
+=======
+import React, {_useState} from "react";
+import z from "zod";
+
+
+const _formSchema = z.object({_title: z.string().min(3, _"Title must be at least 3 characters"), _keyFeatures: z.string(), _targetAudience: z.string()});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type FormData = z.infer<typeof formSchema>,
 
+<<<<<<< HEAD
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
@@ -82,9 +91,32 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 =======
       const description = response ? (response as any).description : &quot;Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+interface ServiceDescriptionFormProps {_onDescriptionGenerated: (_description: string) => void;}
+
+export function ServiceDescriptionForm(_{_onDescriptionGenerated}: ServiceDescriptionFormProps) {_const { toast} = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const _form = useForm<FormData>({_resolver: zodResolver(formSchema), _defaultValues: {
+      title: "", _keyFeatures: "", _targetAudience: ""}});
+
+  const _handleSubmit = async (_data: FormData) => {_setIsLoading(true);
+    
+    try {
+      const { data: response, _error} = await supabase.functions.invoke('generate-service-description', {_body: { 
+          title: data.title, _keyFeatures: data.keyFeatures, _targetAudience: data.targetAudience}
+      });
+
+      if (error) {_throw new Error(error.message);}
+      
+      if (response && (response as any).error) {_throw new Error((response as any).error);}
+
+      const _description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       onDescriptionGenerated(description),
       
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
         title: "Description Generated",
@@ -113,6 +145,13 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       setIsLoading(false)
     }
   },
+=======
+      toast({_title: "Description Generated", _description: "Your professional service description has been created."});
+    } catch (error) {_logErrorToProduction('Error generating description:', _{ data: error});
+      toast({_title: "Generation Failed", _description: error instanceof Error ? error.message : "Failed to generate description. Please try again.", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -126,20 +165,36 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4&quot;>
             <FormField
               control={form.control}
               name=&quot;title"
               render={({ field }: { field: any }) => (
+=======
+        <Form {_...form}>
+          <form onSubmit={_form.handleSubmit(handleSubmit)} className="space-y-4">
+            <FormField
+              control={_form.control}
+              name="title"
+              render={_(_{ field}: {_field: unknown}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <FormItem>
                   <FormLabel className="text-zion-slate-light&quot;>Service Title</FormLabel>
                   <FormControl>
                     <Input
+<<<<<<< HEAD
                       {...field}
                       placeholder=&quot;e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white&quot;
                       disabled={isLoading}
+=======
+                      {_...field}
+                      placeholder="e.g. Professional Web Design Services"
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </FormControl>
                   <FormMessage />
@@ -148,17 +203,30 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name=&quot;keyFeatures"
               render={({ field }: { field: any }) => (
+=======
+              control={_form.control}
+              name="keyFeatures"
+              render={_(_{ field}: {_field: unknown}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <FormItem>
                   <FormLabel className="text-zion-slate-light&quot;>Key Features</FormLabel>
                   <FormControl>
                     <Textarea
+<<<<<<< HEAD
                       {...field}
                       placeholder=&quot;Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20&quot;
                       disabled={isLoading}
+=======
+                      {_...field}
+                      placeholder="Enter key features, separated by commas"
+                      className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
+                      disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </FormControl>
                   <FormMessage />
@@ -167,17 +235,30 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name=&quot;targetAudience"
               render={({ field }: { field: any }) => (
+=======
+              control={_form.control}
+              name="targetAudience"
+              render={_(_{ field}: {_field: unknown}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <FormItem>
                   <FormLabel className="text-zion-slate-light&quot;>Target Audience</FormLabel>
                   <FormControl>
                     <Input
+<<<<<<< HEAD
                       {...field}
                       placeholder=&quot;e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white&quot;
                       disabled={isLoading}
+=======
+                      {_...field}
+                      placeholder="e.g. Small businesses, Startups, E-commerce brands"
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   </FormControl>
                   <FormMessage />
@@ -186,11 +267,16 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <Button 
+<<<<<<< HEAD
               type=&quot;submit"
               disabled={isLoading}
+=======
+              type="submit"
+              disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
             >
-              {isLoading ? (
+              {_isLoading ? (
                 <>
                   <Loader className="mr-2 h-4 w-4 animate-spin" />
                   Generating Description...

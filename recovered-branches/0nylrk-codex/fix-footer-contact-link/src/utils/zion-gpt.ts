@@ -2,6 +2,7 @@
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
+<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client',
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',
 
@@ -20,19 +21,35 @@ export interface ModelConfig {
   purpose: string,
   active: boolean
 }
+=======
+
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+
+export type ZionGPTUsage = {_modelId: string;
+  tokensUsed: number;
+  cost: number;
+  timestamp: Date;};
+
+export interface ModelConfig {_id: ModelVersion;
+  version: number;
+  createdAt: string;
+  baseModel: string;
+  purpose: string;
+  active: boolean;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 // Get the latest active model ID for a specific purpose
-export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {
-  try {
-    const { data, error } = await supabase
+export async function getActiveModelId(_purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {_try {
+    const { data, _error} = await supabase
       .from('model_versions')
       .select('id')
       .eq('purpose', purpose)
       .eq('active', true)
-      .order('version', { ascending: false })
+      .order('version', {_ascending: false})
       .limit(1)
       .single(),
     
+<<<<<<< HEAD
     if (error || !data) {
       console.warn('Failed to fetch active model, falling back to default', error),
       // Fallback to default models
@@ -60,10 +77,28 @@ export async function logModelUsage(
 ): Promise<void> {
   try {
     const cost = calculateCost(modelId, tokensUsed),
+=======
+    if (error || !data) {_// Fallback to default models
+      switch(purpose) {
+        case 'job': return 'zion-job-generator-v1';
+        case 'resume': return 'zion-resume-enhancer-v1';
+        case 'support': return 'zion-support-v1';
+        default: return 'gpt-3.5-turbo';}
+    }
+    
+    return data.id as ModelVersion;
+  } catch (error) {_return 'gpt-3.5-turbo'; // Fallback to base model}
+}
+
+// Log usage of the fine-tuned model
+export async function logModelUsage(_modelId: string, _tokensUsed: number, _feature: string, _userId?: string): Promise<void> {_try {
+    const _cost = calculateCost(modelId, _tokensUsed);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     await supabase
       .from('model_usage_logs')
       .insert({
+<<<<<<< HEAD
         model_id: modelId,
         tokens_used: tokensUsed,
         cost: cost,
@@ -112,22 +147,49 @@ export async function callZionGPT({
         temperature
       }
     }),
+=======
+        model_id: modelId, _tokens_used: tokensUsed, _cost: cost, _feature: feature, _user_id: userId || null, _timestamp: new Date().toISOString()});
+      
+  } catch (error) {_// Non-blocking - we don't want to fail the main operation}
+}
+
+// Calculate approximate cost based on token usage
+function calculateCost(_modelId: string, _tokens: number): number {_// These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
+  const _ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008; // Higher for fine-tuned models
+  return tokens * ratePerToken;}
+
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT(_{_prompt, _purpose, _maxTokens = 500, _temperature = 0.7, _userId}: {_prompt: string;
+  purpose: 'job' | 'resume' | 'support';
+  maxTokens?: number;
+  temperature?: number;
+  userId?: string;}): Promise<string> {_try {
+    // Dynamically get the proper model ID based on purpose
+    const _modelId = await getActiveModelId(purpose);
+    
+    // Call the edge function that will use the model
+    const { data, _error} = await supabase.functions.invoke(_'zion-gpt', _{_body: {
+        prompt, _modelId, _maxTokens, _temperature}
+    });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     if (error) throw error,
     
     // Log usage for analytics
-    if (data.tokensUsed) {
-      await logModelUsage(
-        modelId, 
-        data.tokensUsed,
-        `${purpose}-generation`,
+    if (data.tokensUsed) {_await logModelUsage(
+        modelId, _data.tokensUsed, _`${purpose}-generation`,
         userId
       )
     }
     
+<<<<<<< HEAD
     return data.completion
   } catch (error) {
     console.error('Error calling ZionGPT:', error),
     throw error
   }
+=======
+    return data.completion;
+  } catch (error) {_throw error;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

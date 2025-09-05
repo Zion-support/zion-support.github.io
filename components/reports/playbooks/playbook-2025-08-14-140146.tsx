@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 export default function Page() {
   return (
     <div className=&quot;min-h-screen bg-slate-950 text-white&quot;>
+=======
+import Head from 'next/head';
+
+export default function Page() {_return (
+    <div className="min-h-screen bg-slate-950 text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Head>
         <title>Playbook — Autonomous Delivery</title>
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />

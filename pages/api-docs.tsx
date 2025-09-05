@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 export default function ApiDocsPage() {
   return (
+=======
+import React from 'react';
+import Head from 'next/head';
+
+export default function ApiDocsPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
@@ -18,5 +25,9 @@ export default function ApiDocsPage() {
         <p className=&quot;text-gray-300&quot;>See <a href=&quot;/api-docs&quot; className=&quot;text-cyan-400 underline&quot;>API Documentation</Link> for the full reference.</p>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

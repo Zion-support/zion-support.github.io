@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -15,6 +16,8 @@ import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
 import { QuoteFormData } from "@/types/quotes",
 import { Sparkles } from "lucide-react",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export function QuoteRequestForm() {
   const navigate = useNavigate(),
@@ -39,13 +42,20 @@ import { Sparkles } from &quot;lucide-react&quot;;
 
 export type QuoteRequestSteps = &quot;service&quot; | &quot;details&quot; | &quot;timeline&quot; | &quot;budget&quot; | &quot;summary&quot;;
 
+<<<<<<< HEAD
 export function QuoteRequestForm() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>(&quot;service&quot;);
+=======
+export function QuoteRequestForm() {_const _navigate = useNavigate();
+  const { toast} = useToast();
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   const [isSubmitting, setIsSubmitting] = useState(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
+<<<<<<< HEAD
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: "&quot;,
     serviceCategory: "&quot;,
@@ -79,6 +89,21 @@ export function QuoteRequestForm() {
 <<<<<<< HEAD
       case "service": setCurrentStep("details"),
         break,
+=======
+  const [formData, setFormData] = useState<QuoteFormData>({_serviceType: "", _serviceCategory: "", _specificItem: null, _projectName: "", _projectDescription: "", _startDate: undefined, _endDate: undefined, _timeline: "flexible", _budget: {
+      amount: 0, _type: "fixed"},
+    contactInfo: {_name: "", _email: "", _phone: "", _company: ""}
+  });
+  
+  const _updateFormData = (_data: Partial<QuoteFormData>) => {_setFormData(prev => ({
+      ...prev, _...data}));
+  };
+  
+  const _handleNext = () => {_switch (currentStep) {
+      case "service":
+        setCurrentStep("details");
+        break;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "details":
         setCurrentStep("timeline"),
         break,
@@ -103,6 +128,7 @@ export function QuoteRequestForm() {
         break;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       default:
+<<<<<<< HEAD
         break
     }
   },
@@ -112,6 +138,15 @@ export function QuoteRequestForm() {
 <<<<<<< HEAD
       case "details": setCurrentStep("service"),
         break,
+=======
+        break;}
+  };
+  
+  const _handleBack = () => {_switch (currentStep) {
+      case "details":
+        setCurrentStep("service");
+        break;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "timeline":
         setCurrentStep("details"),
         break,
@@ -136,6 +171,7 @@ export function QuoteRequestForm() {
         break;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       default:
+<<<<<<< HEAD
         break
     }
   },
@@ -208,6 +244,41 @@ export function QuoteRequestForm() {
         return <BudgetStep formData={formData} updateFormData={updateFormData} />;
       case &quot;summary&quot;:
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+=======
+        break;}
+  };
+  
+  const _handleSubmit = async () => {_setIsSubmitting(true);
+    
+    try {
+      // In a real application, _you would send the data to your backend
+      
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, _1500));
+      
+      toast({
+        title: "Quote Request Submitted", _description: "We've received your request and will get back to you soon."});
+      
+      // Redirect to confirmation page or homepage
+      navigate("/");
+    } catch (error) {_toast({
+        title: "Submission Failed", _description: "There was an error submitting your request. Please try again.", _variant: "destructive"});
+    } finally {_setIsSubmitting(false);}
+  };
+  
+  const _renderStepContent = () => {_switch (currentStep) {
+      case "service":
+        return <ServiceTypeStep formData={formData} updateFormData={_updateFormData} />;
+      case "details":
+        return <ProjectDetailsStep formData={_formData} updateFormData={_updateFormData} />;
+      case "timeline":
+        return <TimelineStep formData={_formData} updateFormData={_updateFormData} />;
+      case "budget":
+        return <BudgetStep formData={_formData} updateFormData={_updateFormData} />;
+      case "summary":
+        return <SummaryStep formData={_formData} updateFormData={_updateFormData} />;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       default:
         return null;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -228,6 +299,7 @@ export function QuoteRequestForm() {
           </div>
         </div>
         
+<<<<<<< HEAD
         <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light mb-8&quot;>
           <CardContent className=&quot;px-6 py-8&quot;>
             <StepProgress currentStep={currentStep} />
@@ -238,6 +310,18 @@ export function QuoteRequestForm() {
             
             <div className=&quot;flex justify-between mt-8&quot;>
               {currentStep !== &quot;service&quot; && (
+=======
+        <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">
+          <CardContent className="px-6 py-8">
+            <StepProgress currentStep={_currentStep} />
+            
+            <div className="mt-8">
+              {_renderStepContent()}
+            </div>
+            
+            <div className="flex justify-between mt-8">
+              {_currentStep !== "service" && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <Button
                   variant=&quot;outline&quot;
                   onClick={handleBack}
@@ -247,7 +331,11 @@ export function QuoteRequestForm() {
                 </Button>
               )}
               
+<<<<<<< HEAD
               {currentStep !== &quot;summary&quot; ? (
+=======
+              {_currentStep !== "summary" ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <Button 
                   onClick={handleNext}
                   className=&quot;ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
@@ -256,11 +344,19 @@ export function QuoteRequestForm() {
                 </Button>
               ) : (
                 <Button 
+<<<<<<< HEAD
                   onClick={handleSubmit}
                   disabled={isSubmitting}
                   className=&quot;ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                 >
                   {isSubmitting ? &quot;Submitting...&quot; : &quot;Submit Request&quot;}
+=======
+                  onClick={_handleSubmit}
+                  disabled={_isSubmitting}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  {_isSubmitting ? "Submitting..." : "Submit Request"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </Button>
               )}
             </div>

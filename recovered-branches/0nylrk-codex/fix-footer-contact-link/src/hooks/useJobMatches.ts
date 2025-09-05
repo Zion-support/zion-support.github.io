@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -21,6 +22,18 @@ export function useJobMatches(jobId: string) {
     try {
       const { data, error } = await supabase
         .from(&quot;job_talent_matches&quot;)
+=======
+
+export function useJobMatches(_jobId: string) {_const [matches, _setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [isProcessing, _setIsProcessing] = useState(false);
+
+  const _fetchMatches = async () => {
+    setIsLoading(true);
+    try {
+      const { data, _error} = await supabase
+        .from("job_talent_matches")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
           talent_profile:talent_id(
@@ -38,6 +51,7 @@ export function useJobMatches(jobId: string) {
         `)
 <<<<<<< HEAD
         .eq("job_id", jobId)
+<<<<<<< HEAD
         .order("match_score", { ascending: false }),
 =======
         .eq(&quot;job_id&quot;, jobId)
@@ -70,9 +84,25 @@ export function useJobMatches(jobId: string) {
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
         body: { jobId }}),
+=======
+        .order("match_score", {_ascending: false});
+
+      if (error) throw error;
+      setMatches(data || []);
+    } catch (error) {_toast({
+        title: "Error", _description: "Failed to load matched talents. Please try again later.", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
+  };
+
+  const _triggerAIMatching = async () => {_setIsProcessing(true);
+    try {
+      const _response = await supabase.functions.invoke('job-talent-matcher', _{
+        body: { jobId}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (response.error) throw new Error(response.error.message),
       
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
         title: "AI Matching Complete",
@@ -113,4 +143,18 @@ export function useJobMatches(jobId: string) {
     isProcessing,
     triggerAIMatching
   }
+=======
+      toast({_title: "AI Matching Complete", _description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
+      
+      // Refresh the matches list
+      await fetchMatches();
+    } catch (error) {_toast({
+        title: "Matching Failed", _description: "Could not process talent matching. Please try again later.", _variant: "destructive"});
+    } finally {_setIsProcessing(false);}
+  };
+
+  useEffect__(() => {_fetchMatches();}, [jobId]);
+
+  return {_matches, _isLoading, _isProcessing, _triggerAIMatching};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

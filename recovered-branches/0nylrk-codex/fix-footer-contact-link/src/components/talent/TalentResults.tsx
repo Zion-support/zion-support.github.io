@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -48,26 +49,53 @@ export function TalentResults({
 }: TalentResultsProps) {
   return (
     <div className=&quot;flex-1&quot;>
+=======
+import React from "react";
+
+interface TalentResultsProps {_filteredTalents: TalentProfile[];
+  isLoading: boolean;
+  viewProfile: (_id: string) => void;
+  handleRequestHire: (_talent: TalentProfile) => void;
+  savedTalents: string[];
+  handleToggleSave: (_id: string, _isSaved: boolean) => void;
+  isAuthenticated: boolean;
+  activeFiltersProps: {
+    selectedSkills: string[];
+    toggleSkill: (_skill: string) => void;
+    selectedAvailability: string[];
+    toggleAvailability: (_availability: string) => void;
+    selectedRegions: string[];
+    toggleRegion: (_region: string) => void;
+    priceRange: [number, _number];
+    setPriceRange: (_range: [number, _number]) => void;
+    experienceRange: [number, _number];
+    setExperienceRange: (_range: [number, _number]) => void;
+    clearFilters: () => void;}
+}
+
+export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _handleRequestHire, _savedTalents, _handleToggleSave, _isAuthenticated, _activeFiltersProps}: TalentResultsProps) {_return (
+    <div className="flex-1">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
+      <ActiveFilters {_...activeFiltersProps} />
       
-      {/* Results count */}
+      {_/* Results count */}
       <ResultsHeader 
-        isLoading={isLoading} 
-        resultCount={filteredTalents.length} 
+        isLoading={_isLoading} 
+        resultCount={_filteredTalents.length} 
       />
       
-      {/* Talents grid */}
+      {_/* Talents grid */}
       <TalentGrid 
-        talents={filteredTalents}
-        isLoading={isLoading}
-        onTalentClick={viewProfile}
-        viewProfile={viewProfile}
-        handleRequestHire={handleRequestHire}
-        savedTalentIds={savedTalents}
-        onToggleSave={handleToggleSave}
-        isAuthenticated={isAuthenticated}
-        clearFilters={activeFiltersProps.clearFilters}
+        talents={_filteredTalents}
+        isLoading={_isLoading}
+        onTalentClick={_viewProfile}
+        viewProfile={_viewProfile}
+        handleRequestHire={_handleRequestHire}
+        savedTalentIds={_savedTalents}
+        onToggleSave={_handleToggleSave}
+        isAuthenticated={_isAuthenticated}
+        clearFilters={_activeFiltersProps.clearFilters}
       />
     </div>
   )

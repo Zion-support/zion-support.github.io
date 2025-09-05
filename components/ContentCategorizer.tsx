@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
@@ -38,10 +39,44 @@ const ContentCategorizer: React.FC = () => {
   const [selectedRelevance, setSelectedRelevance] = useState('all'),
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
+=======
+import React, {_useState, _useEffect, _useMemo} from 'react';
+import {_Search, _Filter, _Calendar, _Tag, _TrendingUp, _Shield, _Code, _BookOpen, _Zap, _AlertTriangle, _Lightbulb, _Settings, _BarChart3, _Globe, _Database, _Cpu, _Rocket, _Brain} from 'lucide-react';
 
-  // Sample content data - in a real implementation, this would come from an API
+interface ContentItem {_id: string;
+  title: string;
+  href: string;
+  desc: string;
+  category: string;
+  subcategory?: string;
+  date: string;
+  relevance: 'high' | 'medium' | 'low';
+  tags: string[];
+  source: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';}
+
+interface ContentCategory {_id: string;
+  name: string;
+  icon: unknown;
+  description: string;
+  color: string;
+  count: number;
+  subcategories?: string[];}
+
+const ContentCategorizer: React.FC = () => {_const [searchTerm, _setSearchTerm] = useState('');
+  const [selectedCategory, _setSelectedCategory] = useState('all');
+  const [selectedSubcategory, _setSelectedSubcategory] = useState('all');
+  const [selectedType, _setSelectedType] = useState('all');
+  const [selectedDateRange, _setSelectedDateRange] = useState('all');
+  const [selectedRelevance, _setSelectedRelevance] = useState('all');
+  const [sortBy, _setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, _setSortOrder] = useState<'asc' | 'desc'>('desc');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  // Sample content data - in a real implementation, _this would come from an API
   const contentItems: ContentItem[] = [
     {
+<<<<<<< HEAD
       id: '1',
       title: 'Structured Data Audit Report',
       href: '/reports/structured-data-audit.json',
@@ -227,14 +262,78 @@ const ContentCategorizer: React.FC = () => {
     // Sort items
     filtered.sort((a, b) => {
       let comparison = 0,
+=======
+      id: '1', _title: 'Structured Data Audit Report', _href: '/reports/structured-data-audit.json', _desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.', _category: 'seo', _subcategory: 'structured-data', _date: '2025-08-19', _relevance: 'high', _tags: ['seo', _'json-ld', _'schema', _'audit'], _source: 'autonomous-auditor', _type: 'report'},
+    {_id: '2', _title: 'Security Vulnerability Scan Results', _href: '/reports/security-scan-2025-08-19', _desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.', _category: 'security', _subcategory: 'vulnerability-scan', _date: '2025-08-19', _relevance: 'high', _tags: ['security', _'vulnerability', _'scan', _'remediation'], _source: 'security-scanner', _type: 'security'},
+    {_id: '3', _title: 'AI Model Performance Update', _href: '/reports/ai-model-performance-2025-08-19', _desc: 'Latest performance metrics and optimization insights for deployed AI models.', _category: 'ai', _subcategory: 'performance', _date: '2025-08-19', _relevance: 'high', _tags: ['ai', _'performance', _'optimization', _'metrics'], _source: 'ai-monitor', _type: 'update'},
+    {_id: '4', _title: 'Feature Deployment Summary', _href: '/reports/feature-deployment-2025-08-19', _desc: 'Overview of newly deployed features and their impact on user experience.', _category: 'features', _subcategory: 'deployment', _date: '2025-08-19', _relevance: 'medium', _tags: ['features', _'deployment', _'ux', _'impact'], _source: 'deployment-tracker', _type: 'feature'},
+    {_id: '5', _title: 'System Health Dashboard', _href: '/reports/system-health-2025-08-19', _desc: 'Real-time system performance metrics and infrastructure health status.', _category: 'monitoring', _subcategory: 'system-health', _date: '2025-08-19', _relevance: 'medium', _tags: ['monitoring', _'performance', _'infrastructure', _'health'], _source: 'health-monitor', _type: 'report'},
+    {_id: '6', _title: 'User Behavior Insights', _href: '/reports/user-behavior-2025-08-19', _desc: 'Analysis of user interaction patterns and engagement optimization opportunities.', _category: 'analytics', _subcategory: 'user-behavior', _date: '2025-08-19', _relevance: 'high', _tags: ['analytics', _'user-behavior', _'engagement', _'optimization'], _source: 'behavior-analyzer', _type: 'insight'}
+  ];
+
+  const categories: ContentCategory[] = [
+    {_id: 'all', _name: 'All Content', _icon: Globe, _description: 'Complete collection of autonomous content', _color: 'from-blue-500 to-cyan-500', _count: contentItems.length},
+    {_id: 'seo', _name: 'SEO & Analytics', _icon: BarChart3, _description: 'Search optimization and performance analytics', _color: 'from-green-500 to-emerald-500', _count: contentItems.filter(item => item.category === 'seo').length, _subcategories: ['structured-data', _'performance', _'technical-seo']},
+    {_id: 'security', _name: 'Security & Compliance', _icon: Shield, _description: 'Security assessments and compliance reports', _color: 'from-red-500 to-orange-500', _count: contentItems.filter(item => item.category === 'security').length, _subcategories: ['vulnerability-scan', _'compliance', _'threat-detection']},
+    {_id: 'ai', _name: 'AI & Machine Learning', _icon: Brain, _description: 'AI model performance and insights', _color: 'from-purple-500 to-pink-500', _count: contentItems.filter(item => item.category === 'ai').length, _subcategories: ['performance', _'training', _'deployment']},
+    {_id: 'features', _name: 'Feature Updates', _icon: Zap, _description: 'New features and system updates', _color: 'from-yellow-500 to-orange-500', _count: contentItems.filter(item => item.category === 'features').length, _subcategories: ['deployment', _'enhancements', _'roadmap']},
+    {_id: 'monitoring', _name: 'System Monitoring', _icon: Cpu, _description: 'Infrastructure and system health', _color: 'from-indigo-500 to-purple-500', _count: contentItems.filter(item => item.category === 'monitoring').length, _subcategories: ['system-health', _'performance', _'infrastructure']},
+    {_id: 'analytics', _name: 'User Analytics', _icon: TrendingUp, _description: 'User behavior and engagement insights', _color: 'from-teal-500 to-cyan-500', _count: contentItems.filter(item => item.category === 'analytics').length, _subcategories: ['user-behavior', _'engagement', _'conversion']}
+  ];
+
+  const _contentTypes = [
+    {_id: 'all', _name: 'All Types', _icon: Globe},
+    {_id: 'report', _name: 'Reports', _icon: BookOpen},
+    {_id: 'update', _name: 'Updates', _icon: Zap},
+    {_id: 'insight', _name: 'Insights', _icon: Lightbulb},
+    {_id: 'guide', _name: 'Guides', _icon: Code},
+    {_id: 'security', _name: 'Security', _icon: Shield},
+    {_id: 'feature', _name: 'Features', _icon: TrendingUp}
+  ];
+
+  const _dateRanges = [
+    {_id: 'all', _name: 'All Time'},
+    {_id: 'today', _name: 'Today'},
+    {_id: 'week', _name: 'This Week'},
+    {_id: 'month', _name: 'This Month'},
+    {_id: 'quarter', _name: 'This Quarter'}
+  ];
+
+  const _relevanceLevels = [
+    {_id: 'all', _name: 'All Relevance', _color: 'text-gray-400'},
+    {_id: 'high', _name: 'High Priority', _color: 'text-green-400'},
+    {_id: 'medium', _name: 'Medium Priority', _color: 'text-yellow-400'},
+    {_id: 'low', _name: 'Low Priority', _color: 'text-red-400'}
+  ];
+
+  const _filteredItems = useMemo__(() => {_let _filtered = contentItems.filter(item => {
+      const _matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const _matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const _matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
+      const _matchesType = selectedType === 'all' || item.type === selectedType;
+      const _matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+      
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;});
+
+    // Sort items
+    filtered.sort(_(a, _b) => {_let _comparison = 0;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       switch (sortBy) {
         case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
           break,
         case 'relevance':
+<<<<<<< HEAD
           const relevanceOrder = { high: 3, medium: 2, low: 1 },
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,
+=======
+          const _relevanceOrder = { high: 3, _medium: 2, _low: 1};
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          break;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         case 'title':
           comparison = a.title.localeCompare(b.title),
           break
@@ -245,6 +344,7 @@ const ContentCategorizer: React.FC = () => {
     return filtered
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category),
     return cat ? cat.icon : Globe
@@ -292,28 +392,77 @@ const ContentCategorizer: React.FC = () => {
         {/* Advanced Filter Controls */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}
+=======
+  const _getCategoryIcon = (_category: string) => {_const _cat = categories.find(c => c.id === category);
+    return cat ? cat.icon : Globe;};
+
+  const _getRelevanceColor = (_relevance: string) => {_switch (relevance) {
+      case 'high': return 'text-green-400';
+      case 'medium': return 'text-yellow-400';
+      case 'low': return 'text-red-400';
+      default: return 'text-gray-400';}
+  };
+
+  const _getTypeIcon = (_type: string) => {_const _typeInfo = contentTypes.find(t => t.id === type);
+    return typeInfo ? typeInfo.icon : Globe;};
+
+  const _clearAllFilters = () => {_setSearchTerm('');
+    setSelectedCategory('all');
+    setSelectedSubcategory('all');
+    setSelectedType('all');
+    setSelectedDateRange('all');
+    setSelectedRelevance('all');};
+
+  return (_<div className="space-y-6">
+      {_/* Search and Advanced Filters */}
+      <div className="space-y-4">
+        {_/* Search Bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
+          <input
+            type="text"
+            placeholder="Search content by title, _description, _tags, _or keywords..."
+            value={_searchTerm}
+            onChange={_(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+          />
+        </div>
+
+        {_/* Advanced Filter Controls */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {_/* Category Filter */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
             <select
+<<<<<<< HEAD
               value={selectedCategory}
               onChange={(e) => {
                 setSelectedCategory(e.target.value),
                 setSelectedSubcategory('all')
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+=======
+              value={_selectedCategory}
+              onChange={_(_e) => {
+                setSelectedCategory(e.target.value);
+                setSelectedSubcategory('all');}}
+              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name} ({category.count})
+              {_categories.map(category => (
+                <option key={category.id} value={_category.id}>
+                  {_category.name} ({_category.count})
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Subcategory Filter */}
+          {_/* Subcategory Filter */}
           <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select
+<<<<<<< HEAD
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
@@ -322,44 +471,67 @@ const ContentCategorizer: React.FC = () => {
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
+=======
+              value={_selectedSubcategory}
+              onChange={_(_e) => setSelectedSubcategory(e.target.value)}
+              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+            >
+              <option value="all">All Subcategories</option>
+              {_selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
+                <option key={sub} value={_sub}>
+                  {_sub.replace('-', _' ').replace(/\b\w/g, _l => l.toUpperCase())}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Content Type Filter */}
+          {_/* Content Type Filter */}
           <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select
+<<<<<<< HEAD
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+=======
+              value={_selectedType}
+              onChange={_(_e) => setSelectedType(e.target.value)}
+              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              {contentTypes.map(type => (
-                <option key={type.id} value={type.id}>
-                  {type.name}
+              {_contentTypes.map(type => (
+                <option key={type.id} value={_type.id}>
+                  {_type.name}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Relevance Filter */}
+          {_/* Relevance Filter */}
           <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select
+<<<<<<< HEAD
               value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+=======
+              value={_selectedRelevance}
+              onChange={_(_e) => setSelectedRelevance(e.target.value)}
+              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              {relevanceLevels.map(level => (
-                <option key={level.id} value={level.id}>
-                  {level.name}
+              {_relevanceLevels.map(level => (
+                <option key={level.id} value={_level.id}>
+                  {_level.name}
                 </option>
               ))}
             </select>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Sort Controls and Clear Filters */}
         <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -369,52 +541,85 @@ const ContentCategorizer: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
                 className=&quot;px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;
+=======
+        {_/* Sort Controls and Clear Filters */}
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <label className="text-sm text-white/70">Sort by:</label>
+              <select
+                value={_sortBy}
+                onChange={_(_e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
+                className="px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <option value=&quot;date&quot;>Date</option>
                 <option value=&quot;relevance&quot;>Relevance</option>
                 <option value=&quot;title&quot;>Title</option>
               </select>
               <button
+<<<<<<< HEAD
                 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;
+=======
+                onClick={_() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                className="p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
-                {sortOrder === 'asc' ? '↑' : '↓'}
+                {_sortOrder === 'asc' ? '↑' : '↓'}
               </button>
             </div>
           </div>
           
           <button
+<<<<<<< HEAD
             onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+=======
+            onClick={_clearAllFilters}
+            className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             Clear All Filters
           </button>
         </div>
       </div>
 
-      {/* Category Pills */}
+      {_/* Category Pills */}
       <div>
+<<<<<<< HEAD
         <div className=&quot;flex flex-wrap gap-2&quot;>
           {categories.map(category => (
+=======
+        <div className="flex flex-wrap gap-2">
+          {_categories.map(_category => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
+              onClick={_() => setSelectedCategory(category.id)}
+              className={_`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
                 selectedCategory === category.id
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300'
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'
-              }`}
+                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'}`}
             >
+<<<<<<< HEAD
               <category.icon className=&quot;w-4 h-4&quot; />
               {category.name}
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
                 {category.count}
+=======
+              <category.icon className="w-4 h-4" />
+              {_category.name}
+              <span className="text-xs bg-white/10 px-2 py-1 rounded-full">
+                {_category.count}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </span>
             </button>
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Results Summary */}
       <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -433,11 +638,28 @@ const ContentCategorizer: React.FC = () => {
           const CategoryIcon = getCategoryIcon(item.category),
           const TypeIcon = getTypeIcon(item.type),
           const category = categories.find(c => c.id === item.category),
+=======
+      {_/* Results Summary */}
+      <div className="text-sm text-white/60">
+        Showing {_filteredItems.length} of {_contentItems.length} items
+        {_searchTerm && ` matching "${searchTerm}"`}
+        {_selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {_selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+      </div>
+
+      {_/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {_filteredItems.map(_(item) => {
+          const _CategoryIcon = getCategoryIcon(item.category);
+          const _TypeIcon = getTypeIcon(item.type);
+          const _category = categories.find(c => c.id === item.category);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           
           return (
             <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
               <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
               
+<<<<<<< HEAD
               {/* Header with Category and Type */}
               <div className=&quot;flex items-center justify-between mb-3&quot;>
                 <div className=&quot;flex items-center gap-2&quot;>
@@ -471,11 +693,47 @@ const ContentCategorizer: React.FC = () => {
                 ))}
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
+=======
+              {_/* Header with Category and Type */}
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <div className={_`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
+                    <CategoryIcon className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-xs text-white/60 uppercase tracking-wider">
+                    {_category?.name}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-white/50">
+                  <TypeIcon className="w-3 h-3" />
+                  {_item.type}
+                </div>
+              </div>
+
+              {_/* Title and Description */}
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
+                {_item.title}
+              </h3>
+              <p className="text-sm text-white/75 mb-4 leading-relaxed">
+                {_item.desc}
+              </p>
+
+              {_/* Tags */}
+              <div className="flex flex-wrap gap-1 mb-4">
+                {_item.tags.slice(0, _3).map(_(tag, _index) => (
+                  <span key={index} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
+                    {_tag}
+                  </span>
+                ))}
+                {_item.tags.length > 3 && (
+                  <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     +{item.tags.length - 3}
                   </span>
                 )}
               </div>
 
+<<<<<<< HEAD
               {/* Metadata */}
               <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -496,6 +754,27 @@ const ContentCategorizer: React.FC = () => {
                 <a 
                   href={item.href} 
 <<<<<<< HEAD
+=======
+              {_/* Metadata */}
+              <div className="flex items-center justify-between text-xs text-white/50 mb-4">
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {_item.date}
+                </span>
+                <span className={_`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
+                  <TrendingUp className="w-3 h-3" />
+                  {_item.relevance} priority
+                </span>
+              </div>
+
+              {_/* Source and Action */}
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-white/40">
+                  Source: {_item.source}
+                </span>
+                <a 
+                  href={_item.href} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium"
@@ -514,12 +793,21 @@ const ContentCategorizer: React.FC = () => {
         })}
       </div>
 
+<<<<<<< HEAD
       {/* No Results */}
       {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
           <p className=&quot;text-white/50 mb-4&quot;>
+=======
+      {_/* No Results */}
+      {_filteredItems.length === 0 && (
+        <div className="text-center py-12">
+          <div className="text-white/40 text-6xl mb-4">🔍</div>
+          <h3 className="text-xl font-semibold text-white/70 mb-2">No content found</h3>
+          <p className="text-white/50 mb-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Try adjusting your search terms or filters to find what you're looking for.
           </p>
           <button

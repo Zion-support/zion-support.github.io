@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 =======
 import React from &quot;react&quot;;
@@ -10,6 +11,12 @@ export function EnterpriseTrustBadges() {
   return (
 <<<<<<< HEAD
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
+=======
+import React from "react";
+
+export function EnterpriseTrustBadges() {_return (
+    <section className="py-10 px-4 md:px-6 border-t border-b border-border">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8">
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>
@@ -42,5 +49,9 @@ export function EnterpriseTrustBadges() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

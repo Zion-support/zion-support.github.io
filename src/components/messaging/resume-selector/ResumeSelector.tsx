@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -51,31 +52,59 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         setIsLoading(false)
       }
     },
+=======
+import React, {_useState, _useEffect} from 'react';
+
+export function ResumeSelector(_{_onResumeSelected}: ResumeSelectorProps) {_const [selectedOption, _setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selectedResume, _setSelectedResume] = useState<ResumeOption | null>(null);
+  const [resumeOptions, _setResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFile, _setCustomFile] = useState<File | null>(null);
+  const [isLoading, _setIsLoading] = useState(false);
+  
+  const { resume, _fetchResume} = useResume();
+  
+  // Fetch resume data when component mounts
+  useEffect__(() => {_const _loadResumes = async () => {
+      setIsLoading(true);
+      try {
+        await fetchResume();} catch (error) {_logErrorToProduction('Error loading resumes:', _{ data: error});
+      } finally {_setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     loadResumes()
   }, [fetchResume]),
   
   // Update resume options when resume data changes
-  useEffect(() => {
-    if (resume) {
+  useEffect__(() => {_if (resume) {
       const options: ResumeOption[] = [{
+<<<<<<< HEAD
         id: resume.id || 'current',
         title: resume.basic_info.title,
         type: 'ai_resume',
         resume: resume
       }],
+=======
+        id: resume.id || 'current', _title: resume.basic_info.title, _type: 'ai_resume', _resume: resume}];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       setResumeOptions(options),
       
       // Pre-select the most recent resume
+<<<<<<< HEAD
       if (options.length > 0 && selectedOption === 'recent' && options[0]) {
         setSelectedResume(options[0]),
         onResumeSelected(options[0])
       }
+=======
+      if (options.length > 0 && selectedOption === 'recent' && options[0]) {_setSelectedResume(options[0]);
+        onResumeSelected(options[0]);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }, [resume, selectedOption, onResumeSelected]),
   
   // Handle radio option change
+<<<<<<< HEAD
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
     setSelectedOption(value),
     
@@ -103,10 +132,31 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
+=======
+  const _handleOptionChange = (_value: 'recent' | 'select' | 'upload') => {_setSelectedOption(value);
+    
+    if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
+      setSelectedResume(resumeOptions[0]);
+      onResumeSelected(resumeOptions[0]);} else if (value === 'select') {_// Reset selection until user chooses
+      setSelectedResume(null);} else if (value === 'upload') {_setSelectedResume(null);}
+  };
+  
+  // Handle resume selection change
+  const _handleResumeSelect = (_resumeId: string) => {_const _selected = resumeOptions.find(opt => opt.id === resumeId);
+    if (selected) {
+      setSelectedResume(selected);
+      onResumeSelected(selected);}
+  };
+  
+  // Handle custom file upload
+  const _handleFileUpload = (_e: React.ChangeEvent<HTMLInputElement>) => {_if (e.target.files && e.target.files[0]) {
+      const _file = e.target.files[0];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: "Invalid file type",
           description: "Please upload a PDF file",
@@ -118,17 +168,24 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           description: &quot;Please upload a PDF file&quot;,
           variant: &quot;destructive&quot;
         });
+=======
+          title: "Invalid file type", _description: "Please upload a PDF file", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // Create a custom resume option
+<<<<<<< HEAD
       const customOption: ResumeOption = {
         id: 'custom-upload',
         title: file.name,
         type: 'custom_upload',
         file: file
       },
+=======
+      const customOption: ResumeOption = {_id: 'custom-upload', _title: file.name, _type: 'custom_upload', _file: file};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       setCustomFile(file),
       setSelectedResume(customOption),
@@ -137,6 +194,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   },
   
   // Handle resume download
+<<<<<<< HEAD
   const handleDownloadResume = async () => {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
       return
@@ -198,6 +256,42 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
         className=&quot;space-y-3&quot;
+=======
+  const _handleDownloadResume = async () => {_if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
+      return;}
+    
+    try {_setIsLoading(true);
+      const _pdfBlob = await exportResumeToPDF(selectedResume.resume);
+      
+      // Create download link
+      const _url = window.URL.createObjectURL(pdfBlob);
+      const _link = document.createElement('a');
+      link.href = url;
+      link.download = `${selectedResume.title || 'Resume'}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      
+      // Clean up
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      toast({_title: "Success!", _description: "Your resume has been downloaded."});
+    } catch (error) {_logErrorToProduction('Error downloading PDF:', _{ data: error});
+      toast({_title: "Download failed", _description: "There was an error downloading your resume.", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
+  };
+  
+  // Handle "Generate Resume Now" button
+  const _handleGenerateResume = () => {_window.open('/dashboard/talent/portfolio', _'_blank');};
+  
+  return (_<div className="space-y-4">
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
+      
+      <RadioGroup 
+        value={_selectedOption} 
+        onValueChange={_(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
+        className="space-y-3"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
         <div className=&quot;flex items-center space-x-2&quot;>
           <RadioGroupItem value=&quot;recent&quot; id=&quot;recent&quot; />
@@ -215,38 +309,47 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </div>
       </RadioGroup>
       
-      {/* Resume selection options based on radio selection */}
-      {selectedOption === 'recent' && resume && (
+      {_/* Resume selection options based on radio selection */}
+      {_selectedOption === 'recent' && resume && (
         <ResumePreviewCard
           resume={resume}
-          onDownload={handleDownloadResume}
-          isLoading={isLoading}
+          onDownload={_handleDownloadResume}
+          isLoading={_isLoading}
         />
       )}
       
-      {selectedOption === 'select' && (
+      {_selectedOption === 'select' && (
         <SelectResumeSection
           resumeOptions={resumeOptions}
-          selectedResume={selectedResume}
-          handleResumeSelect={handleResumeSelect}
-          handleDownloadResume={handleDownloadResume}
-          isLoading={isLoading}
+          selectedResume={_selectedResume}
+          handleResumeSelect={_handleResumeSelect}
+          handleDownloadResume={_handleDownloadResume}
+          isLoading={_isLoading}
         />
       )}
       
-      {selectedOption === 'upload' && (
+      {_selectedOption === 'upload' && (
         <UploadSection
           customFile={customFile}
-          onFileUpload={handleFileUpload}
+          onFileUpload={_handleFileUpload}
         />
       )}
       
+<<<<<<< HEAD
       {/* Generate Resume Now button */}
       <div className=&quot;flex justify-between items-center pt-2&quot;>
         <Button 
           variant=&quot;outline&quot;
           onClick={handleGenerateResume}
           className=&quot;text-zion-purple border-zion-purple/20&quot;
+=======
+      {_/* Generate Resume Now button */}
+      <div className="flex justify-between items-center pt-2">
+        <Button 
+          variant="outline"
+          onClick={_handleGenerateResume}
+          className="text-zion-purple border-zion-purple/20"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <Plus className=&quot;h-4 w-4 mr-2&quot; />
           Generate Resume Now

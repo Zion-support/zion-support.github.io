@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -43,10 +44,65 @@ export default function SpaceTechnologyAIPlatform() {
       enableHolographic={true}
       enableQuantumEffects={true}
       enableNeuralNetwork={true}
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {_Satellite, _ArrowRight, _CheckCircle, _Star, _TrendingUp, _Globe, _Zap, _Shield, _Users, _Rocket, _Phone, _Mail, _MapPin, _Brain, _Sparkles} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+
+export default function SpaceTechnologyAIPlatform() {_const _contactInfo = {
+    mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+
+  const _features = [
+    'AI-powered satellite operations',
+    'Autonomous space exploration',
+    'Space data analytics',
+    'Satellite constellation management',
+    'Space debris tracking',
+    'Real-time monitoring',
+    'Predictive maintenance',
+    'Mission planning tools',
+    'API access',
+    'Expert consultation'
+  ];
+
+  const _useCases = [
+    'Satellite operations',
+    'Space exploration',
+    'Earth observation',
+    'Space debris monitoring',
+    'Mission planning',
+    'Space research'
+  ];
+
+  const _integrations = [
+    'NASA APIs', 'ESA APIs', 'Satellite ground stations', 
+    'GIS systems', 'Slack', 'Microsoft Teams', 'Custom applications'
+  ];
+
+  const _competitors = [
+    'Maxar ($5000-50000/month)',
+    'Planet Labs ($1000-10000/month)',
+    'Airbus Defence ($10000-100000/month)',
+    'Lockheed Martin', 'Boeing', 'Northrop Grumman'
+  ];
+
+  return (_<UltraAdvancedFuturisticBackground 
+      intensity="extreme" 
+      colorScheme="neural-network"
+      particleCount={_500}
+      animationSpeed={_2.5}
+      enableHolographic={_true}
+      enableQuantumEffects={_true}
+      enableNeuralNetwork={_true}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     >
       <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
+<<<<<<< HEAD
           <meta name=&quot;description&quot; content=&quot;Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.&quot; />
           <meta name=&quot;keywords&quot; content=&quot;space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems&quot; />
           <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
@@ -54,10 +110,20 @@ export default function SpaceTechnologyAIPlatform() {
           <meta property=&quot;og:description&quot; content=&quot;AI-powered space exploration and satellite operations&quot; />
           <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/space-technology-ai-platform&quot; />
           <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/space-technology-ai-platform&quot; />
+=======
+          <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, _satellite operations, _and space data analysis." />
+          <meta name="keywords" content="space technology, _AI space exploration, _satellite operations, _space data analytics, _autonomous space systems" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta property="og:title" content="Space Technology AI Platform - Zion Tech Group" />
+          <meta property="og:description" content="AI-powered space exploration and satellite operations" />
+          <meta property="og:url" content="https://ziontechgroup.com/space-technology-ai-platform" />
+          <link rel="canonical" href="https://ziontechgroup.com/space-technology-ai-platform" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </Head>
 
         <EnhancedNavigation2026 />
 
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className=&quot;pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30&quot;></div>
@@ -67,6 +133,17 @@ export default function SpaceTechnologyAIPlatform() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Hero Section */}
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <div className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6&quot;>
                 <Sparkles className=&quot;w-4 h-4 text-blue-400&quot; />
@@ -83,23 +160,37 @@ export default function SpaceTechnologyAIPlatform() {
               
               <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable 
-                autonomous space exploration, satellite operations, and space data analysis.
+                autonomous space exploration, _satellite operations, _and space data analysis.
               </p>
 
               <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12&quot;>
                 <motion.div
+<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className=&quot;flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200&quot;
                 >
                   <span className=&quot;text-2xl font-bold&quot;>$3,999</span>
+=======
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
+                >
+                  <span className="text-2xl font-bold">$3, _999</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <span>/month</span>
                 </motion.div>
                 
                 <motion.div
+<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className=&quot;flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200&quot;
+=======
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <span>7-Day Free Trial</span>
                   <ArrowRight className=&quot;w-5 h-5&quot; />
@@ -124,6 +215,7 @@ export default function SpaceTechnologyAIPlatform() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -133,6 +225,17 @@ export default function SpaceTechnologyAIPlatform() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent&quot;>
@@ -144,6 +247,7 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index) => (
                 <motion.div
@@ -153,15 +257,32 @@ export default function SpaceTechnologyAIPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className=&quot;group relative&quot;
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_features.map((feature, _index) => (
+                <motion.div
+                  key={feature}
+                  initial={_{ opacity: 0, _scale: 0.8, _y: 20}}
+                  whileInView={_{ opacity: 1, _scale: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
+                  className="group relative"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500&quot;></div>
                   <div className=&quot;relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300&quot;>
                     <div className=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4&quot;>
                       <Satellite className=&quot;w-6 h-6 text-white&quot; />
                     </div>
+<<<<<<< HEAD
                     <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature}</h3>
                     <p className=&quot;text-gray-400&quot;>
                       Advanced AI-powered {feature.toLowerCase()} for enhanced space operations and exploration.
+=======
+                    <h3 className="text-xl font-bold text-white mb-3">{_feature}</h3>
+                    <p className="text-gray-400">
+                      Advanced AI-powered {_feature.toLowerCase()} for enhanced space operations and exploration.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </p>
                   </div>
                 </motion.div>
@@ -170,6 +291,7 @@ export default function SpaceTechnologyAIPlatform() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Market Position Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -179,6 +301,17 @@ export default function SpaceTechnologyAIPlatform() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Market Position Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>
@@ -192,6 +325,7 @@ export default function SpaceTechnologyAIPlatform() {
 
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -204,6 +338,20 @@ export default function SpaceTechnologyAIPlatform() {
                     <div key={index} className=&quot;flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700&quot;>
                       <div className=&quot;w-3 h-3 bg-red-500 rounded-full&quot;></div>
                       <span className=&quot;text-gray-300&quot;>{competitor}</span>
+=======
+                initial={_{ opacity: 0, _x: -20}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.6}}
+                viewport={_{ once: true}}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
+                <div className="space-y-4">
+                  {_competitors.map(_(competitor, _index) => (
+                    <div key={index} className="flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <span className="text-gray-300">{_competitor}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   ))}
                 </div>
@@ -216,11 +364,19 @@ export default function SpaceTechnologyAIPlatform() {
               </motion.div>
 
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className=&quot;space-y-6&quot;
+=======
+                initial={_{ opacity: 0, _x: 20}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.6}}
+                viewport={_{ once: true}}
+                className="space-y-6"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Market Statistics</h3>
                 <div className=&quot;grid grid-cols-2 gap-4&quot;>
@@ -246,6 +402,7 @@ export default function SpaceTechnologyAIPlatform() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -255,6 +412,17 @@ export default function SpaceTechnologyAIPlatform() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className=&quot;text-center mb-16&quot;
+=======
+        {_/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent&quot;>
@@ -266,6 +434,7 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -275,15 +444,32 @@ export default function SpaceTechnologyAIPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className=&quot;group relative&quot;
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_useCases.map(_(useCase, _index) => (
+                <motion.div
+                  key={useCase}
+                  initial={_{ opacity: 0, _scale: 0.8, _y: 20}}
+                  whileInView={_{ opacity: 1, _scale: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
+                  className="group relative"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500&quot;></div>
                   <div className=&quot;relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300&quot;>
                     <div className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4&quot;>
                       <Globe className=&quot;w-6 h-6 text-white&quot; />
                     </div>
+<<<<<<< HEAD
                     <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{useCase}</h3>
                     <p className=&quot;text-gray-400&quot;>
                       Leverage AI-powered space technology to optimize {useCase.toLowerCase()} and drive innovation.
+=======
+                    <h3 className="text-xl font-bold text-white mb-3">{_useCase}</h3>
+                    <p className="text-gray-400">
+                      Leverage AI-powered space technology to optimize {_useCase.toLowerCase()} and drive innovation.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </p>
                   </div>
                 </motion.div>
@@ -292,14 +478,20 @@ export default function SpaceTechnologyAIPlatform() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+=======
+        {_/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent&quot;>
@@ -312,6 +504,7 @@ export default function SpaceTechnologyAIPlatform() {
               
               <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8&quot;>
                 <motion.a
+<<<<<<< HEAD
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -326,6 +519,22 @@ export default function SpaceTechnologyAIPlatform() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className=&quot;flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200&quot;
+=======
+                  href={_`tel:${contactInfo.mobile}`}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call {_contactInfo.mobile}</span>
+                </motion.a>
+                
+                <motion.a
+                  href={_`mailto:${contactInfo.email}`}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <Mail className=&quot;w-5 h-5&quot; />
                   <span>Email Us</span>
@@ -335,6 +544,7 @@ export default function SpaceTechnologyAIPlatform() {
               <div className=&quot;p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20&quot;>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
                   <div>
+<<<<<<< HEAD
                     <Phone className=&quot;w-6 h-6 text-blue-400 mx-auto mb-2&quot; />
                     <p className=&quot;text-white font-medium&quot;>{contactInfo.mobile}</p>
                   </div>
@@ -345,6 +555,18 @@ export default function SpaceTechnologyAIPlatform() {
                   <div>
                     <MapPin className=&quot;w-6 h-6 text-purple-400 mx-auto mb-2&quot; />
                     <p className=&quot;text-white font-medium&quot;>{contactInfo.address}</p>
+=======
+                    <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                    <p className="text-white font-medium">{_contactInfo.mobile}</p>
+                  </div>
+                  <div>
+                    <Mail className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
+                    <p className="text-white font-medium">{_contactInfo.email}</p>
+                  </div>
+                  <div>
+                    <MapPin className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                    <p className="text-white font-medium">{_contactInfo.address}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeAIService {
   id: string,
   name: string,
@@ -35,23 +36,48 @@ export interface InnovativeAIService {
   reviews: number,
   marketSize: string,
   growthRate: string
+=======
+export interface InnovativeAIService {_id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+    enterprise: number;};
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
+  useCases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  marketSize: string;
+  growthRate: string;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 export const innovativeAIServicesV2: InnovativeAIService[] = [
-  {
-    id: 'ai-emotional-intelligence-platform',
-    name: 'AI Emotional Intelligence Platform',
-    tagline: 'Advanced AI that understands and responds to human emotions',
-    description: 'Revolutionary AI platform that analyzes emotional context, sentiment, and behavioral patterns to provide empathetic and contextually appropriate responses.',
-    category: 'AI & Consciousness',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '2 hours',
-      enterprise: 1299
-    },
+  {_id: 'ai-emotional-intelligence-platform', _name: 'AI Emotional Intelligence Platform', _tagline: 'Advanced AI that understands and responds to human emotions', _description: 'Revolutionary AI platform that analyzes emotional context, _sentiment, _and behavioral patterns to provide empathetic and contextually appropriate responses.', _category: 'AI & Consciousness', _price: {
+      monthly: 299, _yearly: 2990, _currency: 'USD', _trialDays: 14, _setupTime: '2 hours', _enterprise: 1299},
     features: [
       'Emotional state recognitionSentiment analysis engineBehavioral pattern learningContext-aware responsesMulti-modal emotion detectionPersonality profilingEmotional intelligence scoringReal-time adaptation',
       'Custom emotion modelsAPI for integration'
@@ -85,20 +111,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$35B emotional AI market',
     growthRate: '45% annually'
   },
-  {
-    id: 'quantum-ai-fusion-platform',
-    name: 'Quantum AI Fusion Platform',
-    tagline: 'Quantum computing meets artificial intelligence',
-    description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.',
-    category: 'Quantum & AI',
-    price: {
-      monthly: 499,
-      yearly: 4990,
-      currency: 'USD',
-      trialDays: 7,
-      setupTime: '4 hours',
-      enterprise: 1999
-    },
+  {_id: 'quantum-ai-fusion-platform', _name: 'Quantum AI Fusion Platform', _tagline: 'Quantum computing meets artificial intelligence', _description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.', _category: 'Quantum & AI', _price: {
+      monthly: 499, _yearly: 4990, _currency: 'USD', _trialDays: 7, _setupTime: '4 hours', _enterprise: 1999},
     features: [
       'Quantum-AI hybrid algorithmsComplex problem solvingOptimization enginesQuantum machine learningHybrid classical-quantum processingReal-time quantum simulationsCustom quantum circuitsAdvanced analytics dashboard',
       'API for quantum operationsMulti-qubit support'
@@ -132,20 +146,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$8.5B quantum computing market',
     growthRate: '55% annually'
   },
-  {
-    id: 'ai-autonomous-ecosystem-manager',
-    name: 'AI Autonomous Ecosystem Manager',
-    tagline: 'Self-managing AI systems that evolve and adapt',
-    description: 'Revolutionary AI platform that creates, manages, and evolves autonomous AI systems that can learn, adapt, and optimize themselves without human intervention.',
-    category: 'AI & Consciousness',
-    price: {
-      monthly: 399,
-      yearly: 3990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '6 hours',
-      enterprise: 1599
-    },
+  {_id: 'ai-autonomous-ecosystem-manager', _name: 'AI Autonomous Ecosystem Manager', _tagline: 'Self-managing AI systems that evolve and adapt', _description: 'Revolutionary AI platform that creates, _manages, _and evolves autonomous AI systems that can learn, _adapt, _and optimize themselves without human intervention.', _category: 'AI & Consciousness', _price: {
+      monthly: 399, _yearly: 3990, _currency: 'USD', _trialDays: 14, _setupTime: '6 hours', _enterprise: 1599},
     features: [
       'Autonomous AI creationSelf-optimization algorithmsEvolutionary learning systemsMulti-agent coordinationAutomatic problem solvingSelf-healing capabilitiesPerformance monitoringResource optimization',
       'Custom AI trainingEcosystem analytics'
@@ -179,20 +181,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$25B autonomous AI market',
     growthRate: '38% annually'
   },
-  {
-    id: 'multimodal-ai-orchestrator',
-    name: 'Multimodal AI Orchestrator',
-    tagline: 'Seamlessly integrate text, image, audio, and video AI',
-    description: 'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, context-aware intelligence and automation.',
-    category: 'AI & Consciousness',
-    price: {
-      monthly: 249,
-      yearly: 2490,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '3 hours',
-      enterprise: 999
-    },
+  {_id: 'multimodal-ai-orchestrator', _name: 'Multimodal AI Orchestrator', _tagline: 'Seamlessly integrate text, _image, _audio, _and video AI', _description: 'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, _context-aware intelligence and automation.', _category: 'AI & Consciousness', _price: {
+      monthly: 249, _yearly: 2490, _currency: 'USD', _trialDays: 21, _setupTime: '3 hours', _enterprise: 999},
     features: [
       'Multi-modal AI integrationCross-modal understandingUnified AI orchestrationContext-aware processingReal-time multimodal analysisCustom model trainingAPI for all modalitiesAdvanced analytics',
       'Performance optimizationScalable architecture'
@@ -226,20 +216,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$42B multimodal AI market',
     growthRate: '32% annually'
   },
-  {
-    id: 'ai-ethics-governance-platform',
-    name: 'AI Ethics & Governance Platform',
-    tagline: 'Ensure responsible and ethical AI development',
-    description: 'Comprehensive platform that helps organizations develop, deploy, and monitor AI systems with built-in ethical considerations, bias detection, and governance controls.',
-    category: 'AI & Consciousness',
-    price: {
-      monthly: 179,
-      yearly: 1790,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2 hours',
-      enterprise: 699
-    },
+  {_id: 'ai-ethics-governance-platform', _name: 'AI Ethics & Governance Platform', _tagline: 'Ensure responsible and ethical AI development', _description: 'Comprehensive platform that helps organizations develop, _deploy, _and monitor AI systems with built-in ethical considerations, _bias detection, _and governance controls.', _category: 'AI & Consciousness', _price: {
+      monthly: 179, _yearly: 1790, _currency: 'USD', _trialDays: 30, _setupTime: '2 hours', _enterprise: 699},
     features: [
       'Bias detection and mitigationEthical AI guidelinesGovernance frameworksCompliance monitoringTransparency toolsAccountability trackingRisk assessmentAudit trails',
       'Policy managementTraining and education'

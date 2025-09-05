@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 =======
@@ -29,12 +30,27 @@ const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) as string;
 const supabaseKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
 
-serve(async (req) => {
-  // Handle CORS for browser requests
+interface CreateWebhookRequest {_name: string;
+  url: string;
+  eventTypes: string[];
+  secret?: string;}
+
+interface WebhookTestRequest {_webhookId: string;
+  eventType: string;}
+
+// Create a Supabase client
+const _supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
+const _supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
+const _supabase = createClient(supabaseUrl, supabaseKey);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+serve(_async (req) => {_// Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
-    return new Response('ok', {
+    return new Response('ok', _{
       headers: {
+<<<<<<< HEAD
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
   }
 
@@ -90,13 +106,52 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
+=======
+        'Access-Control-Allow-Origin': '*', _'Access-Control-Allow-Methods': 'POST, _GET, _OPTIONS', _'Access-Control-Allow-Headers': 'authorization, _x-client-info, _apikey, _content-type'}});
+  }
+
+  try {_// Extract auth token from request
+    const _authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      return new Response(JSON.stringify({ error: 'Missing authorization header'}), {_status: 401, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    // Verify the token with Supabase auth
+    const _token = authHeader.replace('Bearer ', '');
+    const {_data: { user}, error: authError } = await supabase.auth.getUser(token);
+    
+    if (authError || !user) {_return new Response(JSON.stringify({ error: 'Unauthorized'}), {_status: 401, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    // Parse window.URL to determine action
+    const _url = new window.URL(req.url);
+    const _path = url.pathname.split('/').pop();
+
+    // Handle different actions
+    if (req.method === 'POST') {_if (path === 'create') {
+        const { name, _url, _eventTypes, _secret} = await req.json() as CreateWebhookRequest;
+        return await createWebhook(user.id, name, url, eventTypes, secret);
+      } else if (path === 'toggle') {_const { webhookId, _isActive} = await req.json();
+        return await toggleWebhook(user.id, webhookId, isActive);
+      } else if (path === 'test') {_const { webhookId, _eventType} = await req.json() as WebhookTestRequest;
+        return await testWebhook(user.id, webhookId, eventType);
+      } else if (path === 'delete') {_const { webhookId} = await req.json();
+        return await deleteWebhook(user.id, webhookId);
+      }
+    } else if (req.method === 'GET') {_if (path === 'webhooks') {
+        return await getUserWebhooks(user.id);}
+    }
+
+    return new Response(JSON.stringify({_error: 'Invalid action'}), {_status: 400, _headers: { 'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }),
 
-async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
-  try {
-    const { data, error } = await supabase
+async function createWebhook(_userId: string, _name: string, _url: string, _eventTypes: string[], _secret?: string) {_try {
+    const { data, _error} = await supabase
       .from('webhook_configs')
+<<<<<<< HEAD
       .insert({
         user_id: userId,
         name,
@@ -124,15 +179,25 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
+=======
+      .insert({_user_id: userId, _name, _url, _event_types: eventTypes, _secret})
+      .select('id, name, url, event_types, is_active, created_at');
+
+    if (error) {_return new Response(JSON.stringify({ error: 'Failed to create webhook'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    return new Response(JSON.stringify({_webhook: data[0], _message: 'Webhook created successfully'}), {_status: 201, _headers: { 'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }
 
-async function getUserWebhooks(userId: string) {
-  try {
-    const { data, error } = await supabase
+async function getUserWebhooks(_userId: string) {_try {
+    const { data, _error} = await supabase
       .from('webhook_configs')
       .select('id, name, url, event_types, is_active, created_at, last_triggered_at')
       .eq('user_id', userId)
+<<<<<<< HEAD
       .order('created_at', { ascending: false }),
 
     if (error) {
@@ -150,28 +215,40 @@ async function getUserWebhooks(userId: string) {
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
+=======
+      .order('created_at', {_ascending: false});
+
+    if (error) {_return new Response(JSON.stringify({ error: 'Failed to fetch webhooks'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    return new Response(JSON.stringify({_webhooks: data}), {_status: 200, _headers: { 'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }
 
-async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {
-  try {
-    const { data, error } = await supabase
+async function toggleWebhook(_userId: string, _webhookId: string, _isActive: boolean) {_try {
+    const { data, _error} = await supabase
       .from('webhook_configs')
-      .update({ is_active: isActive })
+      .update({_is_active: isActive})
       .eq('id', webhookId)
       .eq('user_id', userId)
       .select('id, name, is_active'),
 
+<<<<<<< HEAD
     if (error || !data || data.length === 0) {
       console.error('Error toggling webhook:', error),
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
         headers: { 'Content-Type': 'application/json' }})
+=======
+    if (error || !data || data.length === 0) {_return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found'}), {_status: error ? 500 : 404, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
 
-    return new Response(JSON.stringify({
-      message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,
+    return new Response(JSON.stringify({_message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,
       webhook: data[0]
+<<<<<<< HEAD
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -180,18 +257,22 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
+=======
+    }), {_status: 200, _headers: { 'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }
 
-async function deleteWebhook(userId: string, webhookId: string) {
-  try {
-    const { data, error } = await supabase
+async function deleteWebhook(_userId: string, _webhookId: string) {_try {
+    const { data, _error} = await supabase
       .from('webhook_configs')
       .delete()
       .eq('id', webhookId)
       .eq('user_id', userId)
       .select('id'),
 
+<<<<<<< HEAD
     if (error) {
       console.error('Error deleting webhook:', error),
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
@@ -216,19 +297,29 @@ async function deleteWebhook(userId: string, webhookId: string) {
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
+=======
+    if (error) {_return new Response(JSON.stringify({ error: 'Failed to delete webhook'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    if (!data || data.length === 0) {_return new Response(JSON.stringify({ error: 'Webhook not found'}), {_status: 404, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    return new Response(JSON.stringify({_message: 'Webhook deleted successfully', _id: webhookId}), {_status: 200, _headers: { 'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }
 
-async function testWebhook(userId: string, webhookId: string, eventType: string) {
-  try {
+async function testWebhook(_userId: string, _webhookId: string, _eventType: string) {_try {
     // Verify webhook exists and belongs to user
-    const { data: webhook, error: webhookError } = await supabase
+    const { data: webhook, _error: webhookError} = await supabase
       .from('webhook_configs')
       .select('url, secret')
       .eq('id', webhookId)
       .eq('user_id', userId)
       .single(),
 
+<<<<<<< HEAD
     if (webhookError || !webhook) {
       return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
@@ -254,10 +345,28 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         headers,
         body: JSON.stringify(testPayload)
       }),
+=======
+    if (webhookError || !webhook) {_return new Response(JSON.stringify({ error: 'Webhook not found or access denied'}), {_status: 404, _headers: { 'Content-Type': 'application/json'}});
+    }
+
+    // Create test payload based on event type
+    const _testPayload = createTestPayload(eventType);
+    
+    // Add signature if secret is provided
+    const headers: Record<string, string> = {_'Content-Type': 'application/json'};
+    
+    if (webhook.secret) {_const _signature = await createWebhookSignature(JSON.stringify(testPayload), _webhook.secret);
+      headers['X-Zion-Signature'] = signature;}
+
+    // Make the request to the webhook window.URL
+    try {_const _webhookResponse = await fetch(webhook.url, _{
+        method: 'POST', _headers, _body: JSON.stringify(testPayload)});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       // Update last triggered timestamp
       await supabase
         .from('webhook_configs')
+<<<<<<< HEAD
         .update({ last_triggered_at: new Date().toISOString() })
         .eq('id', webhookId),
 
@@ -295,11 +404,30 @@ async function createWebhookSignature(payload: string, secret: string) {
     'raw',
     encoder.encode(secret),
     { name: 'HMAC', hash: 'SHA-256' },
+=======
+        .update({_last_triggered_at: new Date().toISOString()})
+        .eq('id', webhookId);
+
+      // Return the response status and body
+      const _responseText = await webhookResponse.text();
+      return new Response(JSON.stringify({_message: 'Test webhook sent', _status: webhookResponse.status, _statusText: webhookResponse.statusText, _responseBody: responseText.substring(0, _500) // Limit response body size}), {_status: 200, _headers: { 'Content-Type': 'application/json'}});
+    } catch (fetchError) {_return new Response(JSON.stringify({ 
+        error: 'Failed to send test webhook', _details: fetchError.message}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+    }
+  } catch (error) {_return new Response(JSON.stringify({ error: 'Internal server error'}), {_status: 500, _headers: { 'Content-Type': 'application/json'}});
+  }
+}
+
+async function createWebhookSignature(_payload: string, _secret: string) {_// Create HMAC signature using SHA-256
+  const _encoder = new TextEncoder();
+  const _key = await window.crypto.subtle.importKey(
+    'raw', _encoder.encode(secret), _{ name: 'HMAC', _hash: 'SHA-256'},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     false,
     ['sign']
   ),
   
-  const signature = await crypto.subtle.sign(
+  const _signature = await window.crypto.subtle.sign(
     'HMAC',
     key,
     encoder.encode(payload)
@@ -311,14 +439,20 @@ async function createWebhookSignature(payload: string, secret: string) {
     .join('')
 }
 
+<<<<<<< HEAD
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString(),
   const eventId = crypto.randomUUID(),
+=======
+function createTestPayload(_eventType: string) {_const _timestamp = new Date().toISOString();
+  const _eventId = window.crypto.randomUUID();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Create different test payload based on event type
   switch (eventType) {
     case 'new_application':
       return {
+<<<<<<< HEAD
         event_type: 'new_application',
         event_id: eventId,
         timestamp,
@@ -331,26 +465,22 @@ function createTestPayload(eventType: string) {
           match_score: 85
         }
       },
+=======
+        event_type: 'new_application', _event_id: eventId, _timestamp, _data: {
+          application_id: window.crypto.randomUUID(), _job_id: window.crypto.randomUUID(), _talent_id: window.crypto.randomUUID(), _applied_at: timestamp, _status: 'new', _match_score: 85}
+      };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     case 'quote_received':
-      return {
-        event_type: 'quote_received',
-        event_id: eventId,
-        timestamp,
-        data: {
-          quote_id: crypto.randomUUID(),
-          talent_id: crypto.randomUUID(),
-          client_id: crypto.randomUUID(),
-          amount: {
-            min: 1000,
-            max: 2000,
-            currency: 'USD'
-          },
+      return {_event_type: 'quote_received', _event_id: eventId, _timestamp, _data: {
+          quote_id: window.crypto.randomUUID(), _talent_id: window.crypto.randomUUID(), _client_id: window.crypto.randomUUID(), _amount: {
+            min: 1000, _max: 2000, _currency: 'USD'},
           created_at: timestamp
         }
       },
     
     case 'milestone_approved':
+<<<<<<< HEAD
       return {
         event_type: 'milestone_approved',
         event_id: eventId,
@@ -388,5 +518,20 @@ function createTestPayload(eventType: string) {
           message: 'This is a test webhook event'
         }
       }
+=======
+      return {_event_type: 'milestone_approved', _event_id: eventId, _timestamp, _data: {
+          milestone_id: window.crypto.randomUUID(), _project_id: window.crypto.randomUUID(), _title: 'Test Milestone', _amount: 500, _approved_at: timestamp}
+      };
+      
+    case 'talent_hired':
+      return {_event_type: 'talent_hired', _event_id: eventId, _timestamp, _data: {
+          project_id: window.crypto.randomUUID(), _talent_id: window.crypto.randomUUID(), _client_id: window.crypto.randomUUID(), _job_id: window.crypto.randomUUID(), _created_at: timestamp, _status: 'offer_accepted'}
+      };
+      
+    default:
+      return {_event_type: 'test_event', _event_id: eventId, _timestamp, _data: {
+          message: 'This is a test webhook event'}
+      };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }

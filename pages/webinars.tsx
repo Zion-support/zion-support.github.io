@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 export default function WebinarsPage() {
 	return (
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+
+export default function WebinarsPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		<>
 			<SEO title=&quot;Webinars | Zion Tech Group&quot; description=&quot;Upcoming webinars and on-demand sessions.&quot; canonical=&quot;/webinars&quot; />
 			<div className=&quot;container mx-auto px-4 py-16&quot;>
@@ -9,5 +16,9 @@ export default function WebinarsPage() {
 				<p className=&quot;text-gray-300&quot;>No upcoming webinars at this time. Check back soon.</p>
 			</div>
 		</>
+<<<<<<< HEAD
 	)
 }
+=======
+	);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

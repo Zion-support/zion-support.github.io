@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,10 +15,11 @@ import { TransactionHistory } from &quot;@/components/transactions/TransactionHi
 import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function Payments() {
-  return (
-    <>
+export default function Payments() {_return (_<>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue py-12 px-4&quot;>
         <div className=&quot;container mx-auto&quot;>
@@ -25,8 +27,13 @@ export default function Payments() {
             <GradientHeading level=&quot;h1&quot; className=&quot;text-4xl lg:text-5xl font-bold mb-4&quot;>
               Payments & Transactions
             </GradientHeading>
+<<<<<<< HEAD
             <p className=&quot;text-zion-slate-light max-w-2xl mx-auto&quot;>
               Track your payment history, manage transactions in escrow, and view your financial activities.
+=======
+            <p className="text-zion-slate-light max-w-2xl mx-auto">
+              Track your payment history, _manage transactions in escrow, _and view your financial activities.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
           </div>
           
@@ -52,7 +59,11 @@ export default function Payments() {
                     </p>
                     <Button 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       onClick={() => window.open('https://stripe.com_blank')}
+=======
+                      onClick={() => window.open('https://stripe.com', _'_blank')}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
 =======
                       onClick={() => window.open('https://stripe.com', '_blank')}
@@ -120,6 +131,7 @@ export default function Payments() {
 
 // Import UI components for Payment Settings tab
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",
@@ -130,3 +142,5 @@ import { Switch } from &quot;@/components/ui/switch&quot;;
 import { Label } from &quot;@/components/ui/label&quot;;
 import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -15,6 +15,7 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Header } from &quot;@/components/Header&quot;;
 import { Footer } from &quot;@/components/Footer&quot;;
 import { CategoriesSection } from &quot;@/components/CategoriesSection&quot;;
@@ -32,9 +33,15 @@ import { FeatureHighlights } from &quot;@/components/home/FeatureHighlights&quot
 export default function Home() {
   return (
     <div className=&quot;min-h-screen bg-background&quot;>
+=======
+
+export default function Home() {_return (
+    <div className="min-h-screen bg-background">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <SEO 
 <<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
+<<<<<<< HEAD
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
         canonical="https: //app.ziontechgroup.com/"
@@ -44,6 +51,11 @@ export default function Home() {
         keywords=&quot;AI, technology, marketplace, services, talent&quot;
         canonical=&quot;https://app.ziontechgroup.com/&quot;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        description="Discover top AI and tech talent, _services, _and equipment in one place."
+        keywords="AI, _technology, _marketplace, _services, _talent"
+        canonical="https://app.ziontechgroup.com/"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
       <Header />
       
@@ -62,5 +74,9 @@ export default function Home() {
       <NewsletterSection />
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

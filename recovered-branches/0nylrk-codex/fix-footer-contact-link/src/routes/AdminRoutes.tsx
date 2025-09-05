@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -17,6 +18,8 @@ import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 import { Fragment } from &quot;react&quot;;
 import { Route, Routes } from &quot;react-router-dom&quot;;
 import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 // Admin Pages
 import QuoteManager from &quot;@/pages/admin/QuoteManager&quot;;
@@ -29,9 +32,13 @@ import FraudDetection from &quot;@/pages/admin/FraudDetection&quot;;
 import TokenManager from &quot;@/pages/admin/TokenManager&quot;;
 import IntegrationsPage from &quot;@/pages/admin/IntegrationsPage&quot;;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const AdminRoutes = () => {
   return (
+=======
+const _AdminRoutes = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <Routes>
       <Route
         path=&quot;/admin/quotes&quot;
@@ -43,72 +50,112 @@ const AdminRoutes = () => {
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/reviews&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/reviews"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <ReviewsModeration />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/whitelabel&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/whitelabel"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <WhitelabelManager />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/partners&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/partners"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <PartnerManager />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/app-metadata&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/app-metadata"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <AppMetadataManager />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/support-requests&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/support-requests"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <SupportRequests />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/fraud-detection&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/fraud-detection"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FraudDetection />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/tokens&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/tokens"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <TokenManager />
           </ProtectedRoute>
         }
       />
       
       <Route
+<<<<<<< HEAD
         path=&quot;/admin/integrations&quot;
         element={
           <ProtectedRoute adminOnly={true}>
+=======
+        path="/admin/integrations"
+        element={_<ProtectedRoute adminOnly={true}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <IntegrationsPage />
           </ProtectedRoute>
         }

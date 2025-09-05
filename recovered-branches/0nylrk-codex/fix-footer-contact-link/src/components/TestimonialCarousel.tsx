@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   Carousel,
   CarouselContent,
@@ -57,6 +58,21 @@ export function TestimonialCarousel() {
         <div className=&quot;text-center mb-12&quot;>
           <h3 className=&quot;text-3xl font-bold text-white mb-3&quot;>What Our Users Say</h3>
           <p className=&quot;text-zion-slate-light text-lg max-w-2xl mx-auto&quot;>
+=======
+import {_Carousel, _CarouselContent, _CarouselItem, _CarouselNext, _CarouselPrevious} from "@/components/ui/carousel";
+
+const _testimonials = [
+  {_quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!", _author: "Sarah Chen", _role: "CTO, _DataMind Solutions", _avatar: "https://i.pravatar.cc/150?img=32", _company: "DataMind"},
+  {_quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.", _author: "Michael Rodriguez", _role: "IT Director, _GlobalTech", _avatar: "https://i.pravatar.cc/150?img=12", _company: "GlobalTech"},
+  {_quote: "As an AI developer, _Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.", _author: "Aanya Patel", _role: "Independent AI Consultant", _avatar: "https://i.pravatar.cc/150?img=28", _company: "AI Systems"},
+  {_quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.", _author: "Thomas Klein", _role: "Operations Manager, _EcoTech Systems", _avatar: "https://i.pravatar.cc/150?img=67", _company: "EcoTech"}];
+
+export function TestimonialCarousel() {_return (_<section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
@@ -64,6 +80,7 @@ export function TestimonialCarousel() {
         <div className=&quot;max-w-5xl mx-auto px-8&quot;>
           <Carousel
             opts={{
+<<<<<<< HEAD
               align: &quot;start&quot;,
               loop: true}}
             className=&quot;w-full&quot;
@@ -85,6 +102,28 @@ export function TestimonialCarousel() {
                       <div className=&quot;flex-1&quot;>
                         <Quote className=&quot;h-10 w-10 text-zion-cyan opacity-30 mb-3&quot; />
                         <p className=&quot;text-white text-lg mb-6&quot;>&quot;{testimonial.quote}&quot;</p>
+=======
+              align: "start", _loop: true}}
+            className="w-full"
+          >
+            <CarouselContent>
+              {_testimonials.map((testimonial, _index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">
+                      <div className="flex-shrink-0 flex flex-col items-center">
+                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+                          <img src={_testimonial.avatar} alt={_testimonial.author} />
+                        </Avatar>
+                        <div className="text-center md:text-left">
+                          <p className="font-bold text-zion-cyan">{_testimonial.author}</p>
+                          <p className="text-zion-slate-light text-sm">{_testimonial.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
+                        <p className="text-white text-lg mb-6">"{_testimonial.quote}"</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     </CardContent>
                   </Card>

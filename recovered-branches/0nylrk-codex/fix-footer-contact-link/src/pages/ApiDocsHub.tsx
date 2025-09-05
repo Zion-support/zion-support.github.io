@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
@@ -72,6 +73,41 @@ export function ApiDocsHub() {
               <div className=&quot;flex items-center text-zion-cyan&quot;>
                 <span className=&quot;mr-2&quot;>View documentation</span>
                 <ArrowRight className=&quot;h-4 w-4&quot; />
+=======
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+
+export function ApiDocsHub() {_const _sections = [
+    {
+      title: "Getting Started", _description: "Learn how to authenticate and make your first API request", _icon: BookOpen, _path: "/developers/docs/getting-started", _color: "from-blue-500 to-cyan-500"},
+    {_title: "API Reference", _description: "Detailed documentation for all available endpoints", _icon: Code, _path: "/developers/docs/reference", _color: "from-purple-500 to-pink-500"},
+    {_title: "Webhooks", _description: "Subscribe to events and receive real-time updates", _icon: Webhook, _path: "/developers/docs/webhooks", _color: "from-green-500 to-emerald-500"},
+    {_title: "Sample Code", _description: "Examples in JavaScript, _Python, _and Node.js", _icon: Zap, _path: "/developers/docs/samples", _color: "from-yellow-500 to-orange-500"},
+    {_title: "Error Codes & Rate Limits", _description: "Understanding API errors and rate limiting", _icon: AlertCircle, _path: "/developers/docs/errors", _color: "from-red-500 to-rose-500"}];
+
+  return (_<ApiDocsLayout>
+      <div className="max-w-4xl">
+        <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>
+        <p className="text-zinc-400 text-lg mb-12">
+          Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {_sections.map((section) => (
+            <Link 
+              key={section.path} 
+              to={_section.path}
+              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
+            >
+              <div className={_`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
+                <section.icon className="h-6 w-6 text-white" />
+              </div>
+              <h2 className="text-xl font-semibold text-white mb-2">{_section.title}</h2>
+              <p className="text-zinc-400 mb-4">{_section.description}</p>
+              <div className="flex items-center text-zion-cyan">
+                <span className="mr-2">View documentation</span>
+                <ArrowRight className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             </Link>
           ))}

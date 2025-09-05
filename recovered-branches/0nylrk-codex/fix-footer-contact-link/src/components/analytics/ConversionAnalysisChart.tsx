@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
@@ -14,9 +15,15 @@ interface ConversionAnalysisProps {
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
+=======
+import React from "react";
 
-export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
-  const dataKeys = data && data.length > 0
+interface ConversionAnalysisProps {_data: Array<Record<string, _any>>;
+  timeRange: string;
+  onTimeRangeChange: (_range: string) => void;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ConversionAnalysisChart(_{_data, _timeRange, _onTimeRangeChange}: ConversionAnalysisProps) {_const _dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
 
@@ -30,10 +37,17 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         <AnalyticsChart
           title="&quot;
           data={data || []}
+<<<<<<< HEAD
           dataKeys={dataKeys}
           type=&quot;bar"
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+=======
+          dataKeys={_dataKeys}
+          type="bar"
+          timeRange={_timeRange}
+          onTimeRangeChange={_onTimeRangeChange}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         />
       </CardContent>
     </Card>

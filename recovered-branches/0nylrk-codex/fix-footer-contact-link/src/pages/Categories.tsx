@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { CategoriesSection } from "@/components/CategoriesSection",
@@ -13,6 +14,10 @@ import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function Categories() {
   return (
+=======
+
+export default function Categories() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue&quot;>
@@ -28,7 +33,7 @@ export default function Categories() {
           </div>
           
           {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false} />
+          <CategoriesSection showTitle={_false} />
         </div>
       </div>
       <Footer />

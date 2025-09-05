@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react',
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 
-export default function AutomationPage() {
-  const features = [
+export default function AutomationPage() {_const _features = [
     {
+<<<<<<< HEAD
       icon: <Workflow className=&quot;w-8 h-8 text-white&quot; />,
       title: 'Workflow Automation',
       description: 'Create complex workflows with drag-and-drop interface'
@@ -30,6 +35,22 @@ export default function AutomationPage() {
   const benefits = [
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
   ],
+=======
+      icon: <Workflow className="w-8 h-8 text-white" />, _title: 'Workflow Automation', _description: 'Create complex workflows with drag-and-drop interface'},
+    {_icon: <Bot className="w-8 h-8 text-white" />, _title: 'AI-Powered Bots', _description: 'Intelligent automation agents that learn and adapt'},
+    {_icon: <BarChart3 className="w-8 h-8 text-white" />, _title: 'Process Analytics', _description: 'Real-time insights into your automation performance'},
+    {_icon: <Zap className="w-8 h-8 text-white" />, _title: 'Smart Triggers', _description: 'Automated responses based on events and conditions'}
+  ];
+
+  const _benefits = [
+    'Reduce manual tasks by 80%',
+    'Improve process accuracy',
+    'Scale operations efficiently',
+    '24/7 automated operations',
+    'Real-time monitoring',
+    'Custom integration support'
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -38,12 +59,21 @@ export default function AutomationPage() {
         <meta name=&quot;description&quot; content=&quot;AI-powered workflow automation platform that streamlines your business processes and increases efficiency.&quot; />
       </Head>
 
+<<<<<<< HEAD
       <div className=&quot;min-h-screen bg-black&quot;>
         {/* Hero Section */}
         <section className=&quot;pt-32 pb-20 relative overflow-hidden&quot;>
           <div className=&quot;absolute inset-0&quot;>
             <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
             <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
+=======
+      <div className="min-h-screen bg-black">
+        {_/* Hero Section */}
+        <section className="pt-32 pb-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
@@ -75,11 +105,19 @@ export default function AutomationPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className=&quot;py-24&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-20&quot;>
               <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
+=======
+        {_/* Features Section */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Automation Features
               </h2>
               <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
@@ -87,6 +125,7 @@ export default function AutomationPage() {
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {features.map((feature, index) => (
                 <div
@@ -99,6 +138,20 @@ export default function AutomationPage() {
                   </h3>
                   <p className=&quot;text-gray-400 leading-relaxed&quot;>
                     {feature.description}
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {_features.map(_(feature, _index) => (
+                <div
+                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
+                  <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                    {_feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {_feature.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {_feature.description}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </p>
                 </div>
               ))}
@@ -106,14 +159,22 @@ export default function AutomationPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className=&quot;py-24 bg-gray-900&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
+=======
+        {_/* Benefits Section */}
+        <section className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <div>
                 <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
                   Transform Your Business with Automation
                 </h2>
+<<<<<<< HEAD
                 <div className=&quot;space-y-6&quot;>
                   {benefits.map((benefit, index) => (
                     <div key={index} className=&quot;flex items-start&quot;>
@@ -121,6 +182,15 @@ export default function AutomationPage() {
                         <Check className=&quot;w-4 h-4 text-blue-500&quot; />
                       </div>
                       <span className=&quot;text-gray-300 text-lg&quot;>{benefit}</span>
+=======
+                <div className="space-y-6">
+                  {_benefits.map(_(benefit, _index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
+                        <Check className="w-4 h-4 text-blue-500" />
+                      </div>
+                      <span className="text-gray-300 text-lg">{_benefit}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   ))}
                 </div>
@@ -147,8 +217,12 @@ export default function AutomationPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
 <<<<<<< HEAD
+=======
+        {_/* CTA Section */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">

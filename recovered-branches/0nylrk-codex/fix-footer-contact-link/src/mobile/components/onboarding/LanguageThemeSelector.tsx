@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
@@ -51,9 +52,35 @@ export function LanguageThemeSelector() {
         <div className=&quot;grid grid-cols-2 gap-3 mt-4&quot;>
           {languages.map((language) => (
             <Card 
+=======
+import React, {_useState} from "react";
+
+interface Language {_code: string;
+  name: string;
+  flag: string;}
+
+const languages: Language[] = [
+  {_code: "en", _name: "English", _flag: "🇺🇸"},
+  {_code: "es", _name: "Español", _flag: "🇪🇸"},
+  {_code: "fr", _name: "Français", _flag: "🇫🇷"},
+  {_code: "de", _name: "Deutsch", _flag: "🇩🇪"},
+  {_code: "zh", _name: "中文", _flag: "🇨🇳"}];
+
+export function LanguageThemeSelector() {_const { theme, _setTheme} = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+
+  return (_<div className="space-y-8 px-4">
+      <div className="space-y-2">
+        <h2 className="text-xl font-medium">Select your language</h2>
+        <p className="text-muted-foreground">Choose your preferred language</p>
+        
+        <div className="grid grid-cols-2 gap-3 mt-4">
+          {_languages.map((language) => (_<Card 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               key={language.code}
-              className={`cursor-pointer transition-all ${
+              className={_`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
+<<<<<<< HEAD
                   ? &quot;border-primary bg-primary/5&quot; 
                   : &quot;border-border hover:border-primary/40&quot;
               }`}
@@ -66,6 +93,19 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
                   <Check className=&quot;h-4 w-4 text-primary&quot; />
+=======
+                  ? "border-primary bg-primary/5" 
+                  : "border-border hover:border-primary/40"}`}
+              onClick={_() => setSelectedLanguage(language.code)}
+            >
+              <CardContent className="p-3 flex items-center justify-between">
+                <div className="flex items-center">
+                  <span className="text-xl mr-2">{_language.flag}</span>
+                  <span>{_language.name}</span>
+                </div>
+                {_selectedLanguage === language.code && (
+                  <Check className="h-4 w-4 text-primary" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 )}
               </CardContent>
             </Card>
@@ -79,35 +119,57 @@ export function LanguageThemeSelector() {
         
         <div className=&quot;flex gap-3 mt-4&quot;>
           <Card 
-            className={`flex-1 cursor-pointer transition-all ${
+            className={_`flex-1 cursor-pointer transition-all ${
               theme === 'light' 
+<<<<<<< HEAD
                 ? &quot;border-primary bg-primary/5&quot; 
                 : &quot;border-border hover:border-primary/40&quot;
             }`}
             onClick={() => setTheme('light')}
+=======
+                ? "border-primary bg-primary/5" 
+                : "border-border hover:border-primary/40"}`}
+            onClick={_() => setTheme('light')}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <CardContent className=&quot;p-3 flex flex-col items-center justify-center&quot;>
               <Sun className=&quot;h-8 w-8 mb-2&quot; />
               <span>Light</span>
+<<<<<<< HEAD
               {theme === 'light' && (
                 <Check className=&quot;h-4 w-4 text-primary mt-2&quot; />
+=======
+              {_theme === 'light' && (
+                <Check className="h-4 w-4 text-primary mt-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               )}
             </CardContent>
           </Card>
           
           <Card 
-            className={`flex-1 cursor-pointer transition-all ${
+            className={_`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
+<<<<<<< HEAD
                 ? &quot;border-primary bg-primary/5&quot; 
                 : &quot;border-border hover:border-primary/40&quot;
             }`}
             onClick={() => setTheme('dark')}
+=======
+                ? "border-primary bg-primary/5" 
+                : "border-border hover:border-primary/40"}`}
+            onClick={_() => setTheme('dark')}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <CardContent className=&quot;p-3 flex flex-col items-center justify-center&quot;>
               <Moon className=&quot;h-8 w-8 mb-2&quot; />
               <span>Dark</span>
+<<<<<<< HEAD
               {theme === 'dark' && (
                 <Check className=&quot;h-4 w-4 text-primary mt-2&quot; />
+=======
+              {_theme === 'dark' && (
+                <Check className="h-4 w-4 text-primary mt-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               )}
             </CardContent>
           </Card>

@@ -1,44 +1,40 @@
+<<<<<<< HEAD
 export interface ContactInfo {
 <<<<<<< HEAD
 export interface ContactInfo {;
+=======
+export interface ContactInfo {_export interface ContactInfo {;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   phone: string;
   email: string;
   address: string;
-  site: string;
-}
+  site: string;}
 
-export interface Service {
-  title: string;
+export interface Service {_title: string;
   description: string;
   features: string[];
   href: string;
   icon: string;
-  color: string;
-}
+  color: string;}
 
-export interface ServiceCategory {
-  title: string;
+export interface ServiceCategory {_title: string;
   description: string;
   count: number;
   features: string[];
   href: string;
-  color: string;
-}
+  color: string;}
 
-export interface SEOProps {
-  title: string;
+export interface SEOProps {_title: string;
   description: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-  noindex?: boolean;
-}
+  noindex?: boolean;}
 
-export interface LoadingState {
-  isLoading: boolean;
-  error?: string;
-}
+export interface LoadingState {_isLoading: boolean;
+  error?: string;}
 
+<<<<<<< HEAD
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
@@ -146,3 +142,7 @@ export interface SEOProps {
   type?: string
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 }
+=======
+export interface AnimationState {_isLoaded: boolean;
+  hasError: boolean;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

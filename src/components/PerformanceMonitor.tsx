@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
 
-export default function PerformanceMonitor() {
-  return (
+export default function PerformanceMonitor() {_return (
     <div className="performance-monitor">
       <p>Performance Monitor</p>
     </div>
+<<<<<<< HEAD
   );
 }
 =======
@@ -68,3 +68,6 @@ export default function PerformanceMonitor() {
             onClick={() => setIsVisible(false)};
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button",
@@ -35,9 +36,20 @@ interface ReplyFormValues {
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
+=======
+import {_Form, _FormControl, _FormField, _FormItem, _FormMessage} from "@/components/ui/form";
+
+interface ReplyFormProps {_onSubmit: (_content: string) => Promise<void>;
+  parentId?: string;}
+
+interface ReplyFormValues {_content: string;}
+
+export const _ReplyForm = (_{_onSubmit, _parentId}: ReplyFormProps) => {_const [isSubmitting, _setIsSubmitting] = useState(false);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const form = useForm<ReplyFormValues>({
+  const _form = useForm<ReplyFormValues>({
     defaultValues: {
+<<<<<<< HEAD
       content: ""
     }
   }),
@@ -65,17 +77,47 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
                   <FormControl>
                     <Textarea
                       placeholder={parentId ? &quot;Write your reply...&quot; : &quot;Join the discussion..."}
+=======
+      content: ""}
+  });
+
+  const _handleSubmit = async (_values: ReplyFormValues) => {_setIsSubmitting(true);
+    try {
+      await onSubmit(values.content);
+      form.reset();} finally {_setIsSubmitting(false);}
+  };
+
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {_...form}>
+          <form onSubmit={_form.handleSubmit(handleSubmit)}>
+            <FormField
+              control={_form.control}
+              name="content"
+              render={_(_{ field}) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      placeholder={_parentId ? "Write your reply..." : "Join the discussion..."}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       className="min-h-[100px] resize-y"
-                      {...field}
+                      {_...field}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
             <div className="mt-4 flex justify-end&quot;>
               <Button type=&quot;submit&quot; disabled={isSubmitting}>
                 {isSubmitting ? &quot;Submitting...&quot; : &quot;Post Reply"}
+=======
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={_isSubmitting}>
+                {_isSubmitting ? "Submitting..." : "Post Reply"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </Button>
             </div>
           </form>

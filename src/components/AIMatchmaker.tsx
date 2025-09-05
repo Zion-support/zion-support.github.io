@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -38,10 +39,23 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
 
-  const handleSearch = async () => {
+
+interface AIMatchmakerProps {_serviceType?: string;
+  onMatchSelect?: (_match: unknown) => void;
+  className?: string;}
+
+export function AIMatchmaker(_{_serviceType = "", _onMatchSelect, _className}: AIMatchmakerProps) {_const [query, _setQuery] = useState("");
+  const [isMatchmaking, _setIsMatchmaking] = useState(false);
+  const [matches, _setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, _setHasSearched] = useState(false);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _handleSearch = async () => {
     if (!query.trim()) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
@@ -51,6 +65,9 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
         title: &quot;Please enter a description&quot;,
         description: &quot;Tell us what you're looking for so we can find matches.&quot;,
         variant: &quot;destructive&quot;});
+=======
+        title: "Please enter a description", _description: "Tell us what you're looking for so we can find matches.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
@@ -58,20 +75,25 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
     setIsMatchmaking(true),
     setHasSearched(true),
     
+<<<<<<< HEAD
     try {
 <<<<<<< HEAD
       logInfo("Starting AI matching", { data: { query, serviceType } }),
 =======
       logInfo(&quot;Starting AI matching&quot;, { data: { query, serviceType } });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+    try {_logInfo("Starting AI matching", _{ data: { query, _serviceType} });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Get AI matches
-      const results = await findMatches(
+      const _results = await findMatches(
         query,
         serviceType,
         3
       ),
       
+<<<<<<< HEAD
       logInfo('AI matching results:', { data: results }),
       setMatches(results),
       
@@ -101,22 +123,43 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
       setIsMatchmaking(false)
     }
   },
+=======
+      logInfo('AI matching results:', {_data: results});
+      setMatches(results);
+      
+      toast({_title: "Matches Found", _description: `Found ${results.length} matches based on your description.`});
+    } catch (error) {_logErrorToProduction('Error during AI matching:', _{ data: error});
+      toast({_title: "Matching Error", _description: "We couldn't find matches for your request. Please try again.", _variant: "destructive"});
+      // Set empty matches to show no results found UI
+      setMatches([]);
+    } finally {_setIsMatchmaking(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
+  const _handleItemSelect = (_item: unknown) => {_if (onMatchSelect) {
       // Find the original MatchResult that contains this item
+<<<<<<< HEAD
       const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
         onMatchSelect(matchResult)
       }
+=======
+      const _matchResult = matches.find(match => match.item.id === item.id);
+      if (matchResult) {
+        onMatchSelect(matchResult);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
   
   // Extract just the items from each MatchResult
+<<<<<<< HEAD
   const matchItems = matches.map(match => match.item),
+=======
+  const _matchItems = matches.map(match => match.item);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
+    <Card className={_`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
@@ -130,17 +173,23 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
         <div className="space-y-4">
           <div className="space-y-2&quot;>
             <Textarea
+<<<<<<< HEAD
               placeholder=&quot;Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
+=======
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              value={_query}
+              onChange={_(_e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
             <Button 
-              onClick={handleSearch}
-              disabled={isMatchmaking}
+              onClick={_handleSearch}
+              disabled={_isMatchmaking}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
             >
-              {isMatchmaking ? (
+              {_isMatchmaking ? (
                 <>Analyzing your needs...</>
               ) : (
                 <>
@@ -151,13 +200,13 @@ export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }
             </Button>
           </div>
           
-          {hasSearched && (
+          {_hasSearched && (
             <AIMatchingResults 
               matches={matchItems}
-              onSelectMatch={handleItemSelect}
-              isLoading={isMatchmaking}
-              serviceType={serviceType}
-              projectDescription={query}
+              onSelectMatch={_handleItemSelect}
+              isLoading={_isMatchmaking}
+              serviceType={_serviceType}
+              projectDescription={_query}
             />
           )}
         </div>

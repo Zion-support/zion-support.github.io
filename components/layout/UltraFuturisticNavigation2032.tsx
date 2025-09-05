@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -25,82 +26,60 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
+=======
+import React, {_useState, _useEffect} from 'react';
+import Link from 'next/link';
+import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Microscope, _DollarSign, _Home, _Users, _Briefcase, _BookOpen, _MessageCircle, _Star, _TrendingUp, _Target, _Layers, _Cpu, _Database, _Cloud, _Lock, _ShieldCheck, _Earth, _Factory, _Car, _Building, _GraduationCap, _Scale, _Palette, _Camera, _Video, _Music, _Gamepad2, _Heart, _Leaf, _Sun, _Moon, _Wind, _Droplets, _Mountain, _Code, _Wrench, _Smartphone, _BarChart3, _Eye, _Network, _Server, _HardDrive, _Monitor, _Laptop, _Watch, _Headphones, _Speaker, _Mic, _Keyboard, _Mouse, _CpuIcon, _DatabaseIcon, _CloudIcon, _LockIcon, _ShieldIcon, _GlobeIcon, _ZapIcon, _SparklesIcon, _BrainIcon, _AtomIcon, _MenuIcon, _CloseIcon, _ChevronRightIcon} from 'lucide-react';
 
-const serviceCategories = [
-  {
-    title: '🧠 AI & Consciousness 2030',
-    icon: BrainIcon,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
-    description: 'Next-generation AI consciousness and emotional intelligence',
-    services: [
-      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
-      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+const _serviceCategories = [
+  {_title: '🧠 AI & Consciousness 2030', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and emotional intelligence', _services: [
+      { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
+      {_name: 'AI Emotional Intelligence Platform', _href: '/ai-emotional-intelligence-platform', _description: 'Real-time emotion analysis and response', _price: '$3, _999/month'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator', _description: 'Multi-model creativity fusion', _price: '$5, _999/month'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager', _description: 'Fully autonomous business operations', _price: '$12, _999/month'}
     ]
   },
-  {
-    title: '⚛️ Quantum & Emerging Tech 2030',
-    icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
-    description: 'Quantum computing and beyond',
-    services: [
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' },
-      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' },
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' },
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
+  {_title: '⚛️ Quantum & Emerging Tech 2030', _icon: AtomIcon, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable quantum encryption', _price: '$15, _999/month'},
+      {_name: 'Biotech DNA Computing Platform', _href: '/biotech-dna-computing-platform', _description: 'DNA-based computation', _price: '$25, _999/month'},
+      {_name: 'Neuromorphic Computing Platform', _href: '/neuromorphic-computing-platform', _description: 'Brain-inspired computing', _price: '$899/month'},
+      {_name: 'Photonic Computing Infrastructure', _href: '/photonic-computing-infrastructure', _description: 'Light-speed computing', _price: '$699/month'}
     ]
   },
-  {
-    title: '🚀 Space & Metaverse 2030',
-    icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
-    description: 'Space exploration and digital reality',
-    services: [
-      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
-      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' },
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' },
-      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
+  {_title: '🚀 Space & Metaverse 2030', _icon: Rocket, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Space exploration and digital reality', _services: [
+      { name: 'Space Mining Automation Platform', _href: '/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$45, _999/month'},
+      {_name: 'Metaverse Development Platform', _href: '/metaverse-development-platform', _description: 'Build immersive virtual worlds', _price: '$499/month'},
+      {_name: 'Virtual Event Hologram Platform', _href: '/virtual-event-hologram-platform', _description: 'Immersive holographic events', _price: '$799/month'},
+      {_name: 'AI Predictive Health Analytics', _href: '/ai-predictive-health-analytics', _description: 'Predictive health outcomes', _price: '$7, _999/month'}
     ]
   },
-  {
-    title: '⚙️ Enterprise IT 2030',
-    icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' },
-      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
+  {_title: '⚙️ Enterprise IT 2030', _icon: CpuIcon, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+      { name: 'Autonomous DevOps Platform', _href: '/autonomous-devops-platform', _description: 'Fully autonomous DevOps', _price: '$799/month'},
+      {_name: 'Zero Trust Network Architecture', _href: '/zero-trust-network-architecture', _description: 'Never trust, _always verify', _price: '$599/month'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration', _description: 'Distributed edge computing', _price: '$449/month'},
+      {_name: 'AI-Powered IT Operations Center', _href: '/ai-it-operations-center', _description: 'Intelligent IT operations', _price: '$699/month'}
     ]
   },
-  {
-    title: '🎯 Business Solutions 2030',
-    icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Practical business solutions with AI',
-    services: [
-      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },
-      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' },
-      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' },
-      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' }
+  {_title: '🎯 Business Solutions 2030', _icon: Target, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Practical business solutions with AI', _services: [
+      { name: 'AI Business Intelligence Suite', _href: '/ai-business-intelligence-suite', _description: 'Intelligent business insights', _price: '$299/month'},
+      {_name: 'AI Customer Success Automation', _href: '/ai-customer-success-automation', _description: 'Automate customer success', _price: '$199/month'},
+      {_name: 'Blockchain Supply Chain Transparency', _href: '/blockchain-supply-chain-transparency', _description: 'End-to-end traceability', _price: '$399/month'},
+      {_name: 'AI Meeting Transcriber Pro', _href: '/ai-meeting-transcriber-pro', _description: 'Professional transcription', _price: '$149/month'}
     ]
   },
-  {
-    title: '🔬 Research & Development 2030',
-    icon: Microscope,
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    description: 'Breakthrough research solutions',
-    services: [
-      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' },
-      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
+  {_title: '🔬 Research & Development 2030', _icon: Microscope, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
+      { name: 'Swarm Robotics Orchestration', _href: '/swarm-robotics-orchestration', _description: 'Coordinate robot swarms', _price: '$449/month'},
+      {_name: 'Brain-Computer Interface Platform', _href: '/brain-computer-interface-platform', _description: 'Direct neural interface', _price: '$1, _299/month'},
+      {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform', _description: 'Quantum-enhanced ML', _price: '$2, _999/month'},
+      {_name: 'Synthetic Biology Automation Platform', _href: '/synthetic-biology-automation-platform', _description: 'Automate biology research', _price: '$3, _999/month'}
     ]
   }
 ],
 
+<<<<<<< HEAD
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -154,6 +133,58 @@ export default function UltraFuturisticNavigation2032() {
                 <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
                 <a href={`mailto:${contactInfo.email}`} className=&quot;hover:text-purple-400 transition-colors&quot;>
                   {contactInfo.email}
+=======
+const _mainNavigation = [
+  {_name: 'Home', _href: '/', _icon: Home},
+  {_name: 'Services', _href: '/services', _icon: Briefcase},
+  {_name: 'Solutions', _href: '/solutions', _icon: Layers},
+  {_name: 'Pricing', _href: '/pricing', _icon: DollarSign},
+  {_name: 'Resources', _href: '/resources', _icon: BookOpen},
+  {_name: 'Case Studies', _href: '/case-studies', _icon: TrendingUp},
+  {_name: 'Blog', _href: '/blog', _icon: MessageCircle},
+  {_name: 'Contact', _href: '/contact', _icon: MessageCircle}
+];
+
+const _companyLinks = [
+  {_name: 'About Us', _href: '/about'},
+  {_name: 'Careers', _href: '/careers'},
+  {_name: 'News', _href: '/news'},
+  {_name: 'Partners', _href: '/partners'},
+  {_name: 'Support', _href: '/support'},
+  {_name: 'Status', _href: '/status'}
+];
+
+export default function UltraFuturisticNavigation2032() {_const [isOpen, _setIsOpen] = useState(false);
+  const [activeCategory, _setActiveCategory] = useState<number | null>(null);
+  const [isScrolled, _setIsScrolled] = useState(false);
+
+  useEffect__(() => {
+    const _handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);};
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const _toggleMenu = () => setIsOpen(!isOpen);
+  const _closeMenu = () => setIsOpen(false);
+
+  return (_<>
+      {_/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-2 text-sm">
+            <div className="flex items-center space-x-6 text-gray-300">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <a href={_`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                  {_contactInfo.mobile}
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-purple-400" />
+                <a href={_`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                  {_contactInfo.email}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </a>
               </div>
             </div>
@@ -173,10 +204,11 @@ export default function UltraFuturisticNavigation2032() {
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      {_/* Main Navigation */}
+      <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+<<<<<<< HEAD
           : 'bg-transparent'
       }`}>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -185,6 +217,15 @@ export default function UltraFuturisticNavigation2032() {
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
                 <Rocket className=&quot;w-7 h-7 text-white&quot; />
+=======
+          : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {_/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-7 h-7 text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
               <div>
                 <div className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -194,6 +235,7 @@ export default function UltraFuturisticNavigation2032() {
               </div>
             </a>
 
+<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {mainNavigation.map((item) => (
@@ -211,10 +253,30 @@ export default function UltraFuturisticNavigation2032() {
               <div className=&quot;relative group&quot;>
                 <button className=&quot;text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group&quot;>
                   <Briefcase className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />
+=======
+            {_/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {_mainNavigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={_item.href}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
+                >
+                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  <span>{_item.name}</span>
+                </Link>
+              ))}
+              
+              {_/* Services Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">
+                  <Briefcase className="w-4 h-4 group-hover:scale-110 transition-transform" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <span>Services</span>
                   <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform&quot; />
                 </button>
                 
+<<<<<<< HEAD
                 {/* Mega Menu */}
                 <div className=&quot;absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4&quot;>
                   <div className=&quot;bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20&quot;>
@@ -236,15 +298,46 @@ export default function UltraFuturisticNavigation2032() {
                                 key={serviceIndex}
                                 href={service.href}
                                 className=&quot;block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group&quot;
+=======
+                {_/* Mega Menu */}
+                <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                  <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
+                    <div className="grid grid-cols-2 gap-8">
+                      {_serviceCategories.map(_(category, _index) => (_<div key={index} className="space-y-4">
+                          <div className="flex items-center space-x-3">
+                            <div className={_`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
+                              <category.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-semibold text-white">{_category.title}</h3>
+                              <p className="text-sm text-gray-400">{_category.description}</p>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            {_category.services.map((service, _serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={_service.href}
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               >
                                 <div className=&quot;flex items-center justify-between&quot;>
                                   <div>
+<<<<<<< HEAD
                                     <div className=&quot;text-white group-hover:text-cyan-400 transition-colors font-medium&quot;>
                                       {service.name}
                                     </div>
                                     <div className=&quot;text-sm text-gray-400&quot;>{service.description}</div>
                                   </div>
                                   <div className=&quot;text-cyan-400 font-semibold text-sm&quot;>{service.price}</div>
+=======
+                                    <div className="text-white group-hover:text-cyan-400 transition-colors font-medium">
+                                      {_service.name}
+                                    </div>
+                                    <div className="text-sm text-gray-400">{_service.description}</div>
+                                  </div>
+                                  <div className="text-cyan-400 font-semibold text-sm">{_service.price}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                                 </div>
                               </a>
                             ))}
@@ -257,28 +350,43 @@ export default function UltraFuturisticNavigation2032() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <Link href=&quot;/contact&quot;>
                 <button className=&quot;px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl&quot;>
+=======
+            {_/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link href="/contact">
+                <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   Get Started
                 </button>
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {_/* Mobile Menu Button */}
             <button
+<<<<<<< HEAD
               onClick={toggleMenu}
               className=&quot;lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors&quot;
             >
               {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+=======
+              onClick={_toggleMenu}
+              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+            >
+              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {_/* Mobile Menu */}
       <AnimatePresence>
+<<<<<<< HEAD
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
@@ -294,6 +402,22 @@ export default function UltraFuturisticNavigation2032() {
                   <div className=&quot;flex items-center space-x-3&quot;>
                     <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center&quot;>
                       <Rocket className=&quot;w-6 h-6 text-white&quot; />
+=======
+        {_isOpen && (_<motion.div
+            initial={{ opacity: 0, _x: '100%'}}
+            animate={_{ opacity: 1, _x: 0}}
+            exit={_{ opacity: 0, _x: '100%'}}
+            transition={_{ duration: 0.3}}
+            className="fixed inset-0 z-50 lg:hidden"
+          >
+            <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={_closeMenu} />
+            <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+                      <Rocket className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                     <div>
                       <div className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -301,6 +425,7 @@ export default function UltraFuturisticNavigation2032() {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <button onClick={closeMenu} className=&quot;p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50&quot;>
                     <X className=&quot;w-6 h-6&quot; />
                   </button>
@@ -325,14 +450,41 @@ export default function UltraFuturisticNavigation2032() {
                     <button
                       onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
                       className=&quot;w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors&quot;
+=======
+                  <button onClick={_closeMenu} className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50">
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {_/* Mobile Navigation */}
+                <div className="space-y-6">
+                  {_mainNavigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={_item.href}
+                      onClick={_closeMenu}
+                      className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50"
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span>{_item.name}</span>
+                    </Link>
+                  ))}
+
+                  {_/* Services Accordion */}
+                  <div className="space-y-2">
+                    <button
+                      onClick={_() => setActiveCategory(activeCategory === 0 ? null : 0)}
+                      className="w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     >
                       <span className=&quot;flex items-center space-x-3&quot;>
                         <Briefcase className=&quot;w-5 h-5&quot; />
                         <span>Services</span>
                       </span>
-                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />
+                      <ChevronRightIcon className={_`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />
                     </button>
                     
+<<<<<<< HEAD
                     {activeCategory === 0 && (
                       <div className=&quot;pl-8 space-y-2&quot;>
                         {serviceCategories.map((category, index) => (
@@ -347,6 +499,20 @@ export default function UltraFuturisticNavigation2032() {
                               >
                                 {service.name}
                               </a>
+=======
+                    {_activeCategory === 0 && (_<div className="pl-8 space-y-2">
+                        {serviceCategories.map((category, _index) => (_<div key={index} className="space-y-2">
+                            <div className="text-sm font-medium text-cyan-400 py-2">{_category.title}</div>
+                            {_category.services.map((service, _serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={_service.href}
+                                onClick={_closeMenu}
+                                className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+                              >
+                                {_service.name}
+                              </Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             ))}
                           </div>
                         ))}
@@ -354,6 +520,7 @@ export default function UltraFuturisticNavigation2032() {
                     )}
                   </div>
 
+<<<<<<< HEAD
                   {/* Company Links */}
                   <div className=&quot;pt-4 border-t border-gray-700/50&quot;>
                     <div className=&quot;text-sm font-medium text-gray-400 mb-3&quot;>Company</div>
@@ -367,10 +534,26 @@ export default function UltraFuturisticNavigation2032() {
                         >
                           {link.name}
                         </a>
+=======
+                  {_/* Company Links */}
+                  <div className="pt-4 border-t border-gray-700/50">
+                    <div className="text-sm font-medium text-gray-400 mb-3">Company</div>
+                    <div className="space-y-2">
+                      {_companyLinks.map(_(link) => (
+                        <Link
+                          key={link.name}
+                          href={_link.href}
+                          onClick={_closeMenu}
+                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+                        >
+                          {_link.name}
+                        </Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ))}
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   {/* Contact Info */}
                   <div className=&quot;pt-4 border-t border-gray-700/50&quot;>
                     <div className=&quot;text-sm font-medium text-gray-400 mb-3&quot;>Contact</div>
@@ -386,14 +569,38 @@ export default function UltraFuturisticNavigation2032() {
                       <div className=&quot;flex items-center space-x-2&quot;>
                         <MapPin className=&quot;w-4 h-4 text-pink-400&quot; />
                         <span className=&quot;text-xs&quot;>{contactInfo.address}</span>
+=======
+                  {_/* Contact Info */}
+                  <div className="pt-4 border-t border-gray-700/50">
+                    <div className="text-sm font-medium text-gray-400 mb-3">Contact</div>
+                    <div className="space-y-2 text-sm text-gray-400">
+                      <div className="flex items-center space-x-2">
+                        <Phone className="w-4 h-4 text-cyan-400" />
+                        <span>{_contactInfo.mobile}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Mail className="w-4 h-4 text-purple-400" />
+                        <span>{_contactInfo.email}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="w-4 h-4 text-pink-400" />
+                        <span className="text-xs">{_contactInfo.address}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   {/* CTA Button */}
                   <div className=&quot;pt-4&quot;>
                     <Link href=&quot;/contact&quot; onClick={closeMenu}>
                       <button className=&quot;w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200&quot;>
+=======
+                  {_/* CTA Button */}
+                  <div className="pt-4">
+                    <Link href="/contact" onClick={_closeMenu}>
+                      <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         Get Started Today
                       </button>
                     </a>
@@ -405,8 +612,13 @@ export default function UltraFuturisticNavigation2032() {
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot; />
+=======
+      {_/* Spacer for fixed navigation */}
+      <div className="h-20" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </>
   )
 }

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 export default function Custom500() {
   return (
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Custom500() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
@@ -68,5 +76,9 @@ export default function Custom500() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

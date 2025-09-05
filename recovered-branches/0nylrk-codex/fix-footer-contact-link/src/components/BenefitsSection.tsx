@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
@@ -38,12 +39,25 @@ export function BenefitsSection() {
     <section className=&quot;py-20 bg-zion-blue-light&quot;>
       <div className=&quot;container mx-auto px-4&quot;>
         <div className=&quot;text-center mb-16&quot;>
+=======
+
+const _benefits = [
+  {_title: "AI-Powered Matchmaking", _description: "Our advanced algorithms match your needs with the perfect service providers or products, _saving you time and ensuring optimal results.", _icon: <Bot className="w-8 h-8" />},
+  {_title: "Global Availability", _description: "Access a worldwide network of tech talents, _products, _and services to find the best solutions regardless of geographic limitations.", _icon: <Globe className="w-8 h-8" />},
+  {_title: "24/7 Support", _description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", _icon: <Clock className="w-8 h-8" />},
+  {_title: "Cost Reduction", _description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", _icon: <TrendingDown className="w-8 h-8" />}];
+
+export function BenefitsSection() {_return (_<section className="py-20 bg-zion-blue-light">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <GradientHeading>Why Zion?</GradientHeading>
           <p className=&quot;text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto&quot;>
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </div>
         
+<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto&quot;>
           {benefits.map((benefit, index) => (
             <FeatureCard
@@ -52,6 +66,16 @@ export function BenefitsSection() {
               description={benefit.description}
               icon={benefit.icon}
               className=&quot;bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300&quot;
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {benefits.map((benefit, _index) => (
+            <FeatureCard
+              key={index}
+              title={_benefit.title}
+              description={_benefit.description}
+              icon={_benefit.icon}
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           ))}
         </div>

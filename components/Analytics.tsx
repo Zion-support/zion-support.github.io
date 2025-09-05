@@ -1,19 +1,24 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 <<<<<<< HEAD
 =======
 import Head from 'next/head';
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+import React, {_useEffect} from 'react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-interface AnalyticsProps {
-  trackingId?: string;
-}
+interface AnalyticsProps {_trackingId?: string;}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
+=======
+const Analytics: React.FC<AnalyticsProps> = (_{_trackingId}) => {_useEffect__(() => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     if (typeof window !== 'undefined' && trackingId) {
-      // Analytics initialized with tracking ID
-    }
+      // Analytics initialized with tracking ID}
   }, [trackingId]);
 
   return null;

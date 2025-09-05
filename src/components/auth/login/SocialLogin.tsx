@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",
@@ -19,6 +20,14 @@ export function SocialLogin() {
     setIsLoading(true),
     window.location.href = '/auth/google'
   },
+=======
+
+export function SocialLogin() {_const [isLoading, _setIsLoading] = useState(false);
+
+  const _handleGoogle = () => {
+    setIsLoading(true);
+    window.location.href = '/auth/google';};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;mt-6&quot;>
@@ -33,6 +42,7 @@ export function SocialLogin() {
 
       <div className=&quot;mt-6 grid grid-cols-4 gap-3&quot;>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
@@ -42,6 +52,17 @@ export function SocialLogin() {
           <span className=&quot;sr-only&quot;>Sign in with Google</span>
           {isLoading ? (
             <Loader2 className=&quot;h-5 w-5 animate-spin&quot; />
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_handleGoogle}
+          disabled={_isLoading}
+        >
+          <span className="sr-only">Sign in with Google</span>
+          {_isLoading ? (
+            <Loader2 className="h-5 w-5 animate-spin" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           ) : (
             <svg className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
               <path d=&quot;M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z&quot; fill=&quot;#EA4335&quot; />
@@ -52,21 +73,37 @@ export function SocialLogin() {
           )}
         </Button>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
           onClick={() => openAuthPopup('facebook')}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_() => openAuthPopup('facebook')}
+          disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <span className=&quot;sr-only&quot;>Sign in with Facebook</span>
           <Facebook className=&quot;h-5 w-5&quot; />
         </Button>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
           onClick={() => openAuthPopup('twitter')}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_() => openAuthPopup('twitter')}
+          disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <span className=&quot;sr-only&quot;>Sign in with Twitter</span>
           <Twitter className=&quot;h-5 w-5&quot; />

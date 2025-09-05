@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Moon, Sun } from &quot;lucide-react&quot;
 import { Button } from &quot;@/components/ui/button&quot;
 
@@ -25,6 +26,21 @@ export function ModeToggle() {
     >
       {theme === &quot;dark&quot; ? (
         <Sun className=&quot;h-5 w-5 text-yellow-300&quot; />
+=======
+
+// Create a simplified theme hook for offline mode
+const _useTheme = () => (_{_theme: "dark", _setTheme: (theme: string) =>});
+
+export function ModeToggle() {_const { theme, _setTheme} = useTheme();
+
+  return (_<Button
+      variant="ghost"
+      size="icon"
+      onClick={_() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      {_theme === "dark" ? (
+        <Sun className="h-5 w-5 text-yellow-300" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ) : (
         <Moon className=&quot;h-5 w-5 text-slate-300&quot; />
       )}

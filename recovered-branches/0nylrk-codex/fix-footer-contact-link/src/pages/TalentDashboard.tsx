@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -45,6 +46,11 @@ function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState(&quot;job-matches&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+function TalentDashboardContent() {_const { user} = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -74,11 +80,12 @@ function TalentDashboardContent() {
           </div>
         </div>
 
-        {/* Project Offer Banner - Show pending offers */}
+        {_/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
         <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
           <div>
+<<<<<<< HEAD
             <Card className=&quot;mb-8&quot;>
               <CardHeader className=&quot;pb-2&quot;>
                 <div className=&quot;flex items-center justify-between&quot;>
@@ -89,12 +96,29 @@ function TalentDashboardContent() {
                       ) : (
                         <div className=&quot;flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase&quot;>
                           {user?.displayName?.charAt(0) || &quot;U&quot;}
+=======
+            <Card className="mb-8">
+              <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-12 w-12 border">
+                      {_user?.avatarUrl ? (
+                        <img src={user.avatarUrl} alt={_user.displayName || "User"} />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
+                          {_user?.displayName?.charAt(0) || "U"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         </div>
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
                       <CardTitle>{user?.displayName || &quot;User&quot;}</CardTitle>
                       <CardDescription>{user?.headline || &quot;AI Professional&quot;}</CardDescription>
+=======
+                      <CardTitle>{_user?.displayName || "User"}</CardTitle>
+                      <CardDescription>{_user?.headline || "AI Professional"}</CardDescription>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   </div>
                   <Badge className=&quot;bg-green-100 text-green-800&quot;>Online</Badge>
@@ -126,11 +150,16 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
             
-            {/* New Onboarding Progress Tracker */}
+            {_/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             
+<<<<<<< HEAD
             {/* Upcoming Interviews Card */}
             <div className=&quot;mt-8&quot;>
+=======
+            {_/* Upcoming Interviews Card */}
+            <div className="mt-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <UpcomingInterviewsCard />
             </div>
             
@@ -161,11 +190,19 @@ function TalentDashboardContent() {
             </Card>
           </div>
           
+<<<<<<< HEAD
           <div className=&quot;lg:col-span-2&quot;>
             <Tabs defaultValue=&quot;job-matches&quot; onValueChange={setActiveTab}>
               <TabsList className=&quot;mb-6&quot;>
                 <TabsTrigger value=&quot;job-matches&quot; className=&quot;flex items-center&quot;>
                   <BriefcaseIcon className=&quot;h-4 w-4 mr-2&quot; />
+=======
+          <div className="lg:col-span-2">
+            <Tabs defaultValue="job-matches" onValueChange={_setActiveTab}>
+              <TabsList className="mb-6">
+                <TabsTrigger value="job-matches" className="flex items-center">
+                  <BriefcaseIcon className="h-4 w-4 mr-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value=&quot;applications&quot;>My Applications</TabsTrigger>
@@ -208,10 +245,13 @@ function TalentDashboardContent() {
   )
 }
 
-export default function TalentDashboard() {
-  return (
+export default function TalentDashboard() {_return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

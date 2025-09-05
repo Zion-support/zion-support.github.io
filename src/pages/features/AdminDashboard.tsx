@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -30,6 +31,13 @@ export default function AdminDashboard() {
     &quot;url&quot;: &quot;https://app.ziontechgroup.com/features/admin-dashboard&quot;
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+import Link from 'next/link';
+
+export default function AdminDashboard() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Admin Dashboard", _"description": "Monitor marketplace activity, _manage listings and view analytics in one place.", _"url": "https://app.ziontechgroup.com/features/admin-dashboard"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -39,10 +47,15 @@ export default function AdminDashboard() {
         keywords=&quot;admin dashboard, analytics, manage listings&quot;
         canonical=&quot;https://app.ziontechgroup.com/features/admin-dashboard&quot;
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
+<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+=======
+        type="application/ld+json"
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ></script>
       <Header />
       <main className=&quot;bg-background text-white py-12&quot;>

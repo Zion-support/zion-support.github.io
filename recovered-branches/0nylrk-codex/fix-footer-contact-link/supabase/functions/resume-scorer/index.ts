@@ -1,15 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+=======
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
-serve(async (req) => {
-  // Handle CORS preflight requests
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+serve(_async (req) => {_// Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+<<<<<<< HEAD
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -65,6 +71,30 @@ serve(async (req) => {
     // 1. Fetch the application with job details and resume content
     const { data: application, error: appError } = await supabase
       .from(&quot;job_applications&quot;)
+=======
+    return new Response(null, _{ headers: corsHeaders});
+  }
+
+  const _supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+  const _supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const _openAiKey = Deno.env.get("OPENAI_API_KEY") || "";
+  
+  if (!openAiKey) {_return new Response(
+      JSON.stringify({ error: "OpenAI API key is not configured"}),
+      {_status: 500, _headers: { ...corsHeaders, _"Content-Type": "application/json"} }
+    );
+  }
+
+  const _supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+  try {_const { applicationId} = await req.json();
+    
+    if (!applicationId) {_throw new Error("Application ID is required");}
+
+    // 1. Fetch the application with job details and resume content
+    const {_data: application, _error: appError} = await supabase
+      .from("job_applications")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .select(`
         id,
         job_id,
@@ -82,6 +112,7 @@ serve(async (req) => {
       .single();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
     if (appError) {
       throw new Error(`Failed to fetch application: ${appError.message}`)
     }
@@ -100,12 +131,26 @@ serve(async (req) => {
 
     // 2. Fetch resume details if a resume_id is provided
     let resumeContent = "&quot;;
+=======
+    if (appError) {_throw new Error(`Failed to fetch application: ${appError.message}`);
+    }
+
+    if (!application) {_throw new Error("Application not found");}
+
+    // 2. Fetch resume details if a resume_id is provided
+    let _resumeContent = "";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     let resumeSkills: string[] = [];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
+<<<<<<< HEAD
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from(&quot;talent_resumes&quot;)
+=======
+    if (application.resume_id) {_const { data: resume, _error: resumeError} = await supabase
+        .from("talent_resumes")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           summary,
           headline,
@@ -123,6 +168,7 @@ serve(async (req) => {
         .eq(&quot;id&quot;, application.resume_id)
         .single();
         
+<<<<<<< HEAD
       if (resumeError) {
         console.error(&quot;Error fetching resume:&quot;, resumeError);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -149,14 +195,39 @@ serve(async (req) => {
         `,
 =======
           ${resume.resume_skills.map((skill: any) => skill.name).join(&quot;, &quot;)}
+=======
+      if (resumeError) {} else if (resume) {_// Format resume content for analysis
+        resumeContent = `
+          Summary: ${resume.summary || ""}
+          Headline: ${_resume.headline || ""}
+          
+          Work Experience:
+          ${_resume.work_history.map(_(job: unknown) => 
+            `${job.role_title} at ${_job.company_name} (${_new Date(job.start_date).getFullYear()} - ${_job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
+            ${_job.description || ""}`
+          ).join("\n\n")}
+          
+          Education:
+          ${_resume.education.map(_(edu: unknown) => 
+            `${edu.degree} in ${_edu.field_of_study || ""} from ${_edu.institution}`
+          ).join("\n")}
+          
+          Skills:
+          ${_resume.resume_skills.map(_(skill: unknown) => skill.name).join(", _")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         `;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
+<<<<<<< HEAD
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
+=======
+        resumeSkills = resume.resume_skills.map(_(skill: unknown) => skill.name);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
     
     // 3. If no resume content, use talent profile and cover letter
+<<<<<<< HEAD
     if (!resumeContent) {
       resumeContent = `
 <<<<<<< HEAD
@@ -175,11 +246,18 @@ serve(async (req) => {
         Bio: ${application.talent_profile?.bio || "&quot;}
         Cover Letter: ${application.cover_letter || "&quot;}
         Skills: ${application.talent_profile?.skills?.join(&quot;, &quot;) || "&quot;}
+=======
+    if (!resumeContent) {_resumeContent = `
+        Bio: ${application.talent_profile?.bio || ""}
+        Cover Letter: ${_application.cover_letter || ""}
+        Skills: ${_application.talent_profile?.skills?.join(", _") || ""}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       `;
       resumeSkills = application.talent_profile?.skills || [];
     }
 
     // 4. Prepare job details
+<<<<<<< HEAD
     const jobTitle = application.job?.title || "&quot;;
     const jobDescription = application.job?.description || "&quot;;
     const jobSkills = application.job?.skills || [];
@@ -207,9 +285,29 @@ serve(async (req) => {
             Title: ${jobTitle}
             Description: ${jobDescription}
             Required Skills: ${jobSkills.join(&quot;, &quot;)}
+=======
+    const _jobTitle = application.job?.title || "";
+    const _jobDescription = application.job?.description || "";
+    const _jobSkills = application.job?.skills || [];
+
+    // 5. Process using OpenAI to calculate match score
+    const _openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {_method: "POST", _headers: {
+        "Authorization": `Bearer ${openAiKey}`,
+        "Content-Type": "application/json"},
+      body: JSON.stringify({_model: "gpt-4o-mini", _messages: [
+          {
+            role: "system", _content: `You are an expert resume analyzer that compares resumes against job descriptions
+            to determine how well a candidate matches a job. Analyze the resume and job details 
+            provided, _focusing on skills, _experience, _and qualifications.`},
+          {_role: "user", _content: `
+            # Job Details
+            Title: ${jobTitle}
+            Description: ${_jobDescription}
+            Required Skills: ${_jobSkills.join(", _")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             
             # Resume Content
-            ${resumeContent}
+            ${_resumeContent}
             
             Compare the resume to the job description and provide:
             1. A match score between 0-100 (where 100 is a perfect match)
@@ -218,6 +316,7 @@ serve(async (req) => {
             4. A suggestion categorization: &quot;Strongly Recommended&quot;, &quot;Recommended for Review&quot;, or &quot;Low Match&quot;
             
             Respond in JSON format with the following structure:
+<<<<<<< HEAD
             {
               &quot;score&quot;: 75,
               &quot;summary&quot;: &quot;Good match with relevant experience in required technologies.&quot;,
@@ -235,6 +334,13 @@ serve(async (req) => {
                   &quot;score&quot;: 65,
                   &quot;analysis&quot;: &quot;Candidate has relevant degree.&quot;
                 }
+=======
+            {_"score": 75, _"summary": "Good match with relevant experience in required technologies.", _"breakdown": {
+                "skills_match": {
+                  "score": 80, _"matching": ["skill1", _"skill2"], _"missing": ["skill3"]},
+                "experience_match": {_"score": 70, _"analysis": "Candidate has X years experience in relevant field."},
+                "education_match": {_"score": 65, _"analysis": "Candidate has relevant degree."}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               },
               &quot;suggestion&quot;: &quot;Recommended for Review&quot;
             }`
@@ -242,6 +348,7 @@ serve(async (req) => {
         ],
         temperature: 0.5})}),
 
+<<<<<<< HEAD
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json(),
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
@@ -290,10 +397,36 @@ serve(async (req) => {
 
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError.message}`)
+=======
+    if (!openAIResponse.ok) {_const _errorData = await openAIResponse.json();
+      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+    }
+
+    const _aiResult = await openAIResponse.json();
+    let matchResult;
+    
+    try {_// Extract JSON from the response
+      const _content = aiResult.choices[0].message.content;
+      matchResult = JSON.parse(content);
+      
+      // Validate required fields
+      if (!matchResult.score || !matchResult.summary || !matchResult.suggestion) {
+        throw new Error("Invalid response format");}
+    } catch (error) {_throw new Error("Failed to parse AI analysis results");}
+
+    // 6. Update the application with the match results
+    const {_error: updateError} = await supabase
+      .from("job_applications")
+      .update({_match_score: matchResult.score, _match_summary: matchResult.summary, _match_breakdown: matchResult.breakdown, _match_suggestion: matchResult.suggestion, _scored_at: new Date().toISOString()})
+      .eq("id", applicationId);
+
+    if (updateError) {_throw new Error(`Failed to update application with score: ${updateError.message}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
 
     // 7. Return the match results
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({ 
         success: true, 
         matchResult 
@@ -314,6 +447,15 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" } 
+=======
+      JSON.stringify({_success: true, _matchResult}),
+      {_status: 200, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+      }
+    );
+  } catch (error) {_return new Response(
+      JSON.stringify({ error: error.message}),
+      {_status: 500, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     )
   }

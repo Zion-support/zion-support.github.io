@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 const BusinessIntelligenceChat: NextPage = () => {
   return (
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const BusinessIntelligenceChat: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
@@ -15,7 +23,11 @@ const BusinessIntelligenceChat: NextPage = () => {
         <a href=&quot;/blog&quot;>Back to Blog</a>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
+=======
+  );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default BusinessIntelligenceChat,

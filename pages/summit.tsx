@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import React from 'react',
 type Speaker = {
@@ -97,9 +98,75 @@ export default function SummitPage() {
       setSubmitting(false)
     }
   },
+=======
+import Head from 'next/head';
+import React from 'react';
 
-  const livestreamEmbed = () => {
-    if (platform === 'youtube') {
+type Speaker = {_name: string;
+  title: string;
+  avatarUrl: string;
+  bio: string;
+  twitter?: string;
+  linkedin?: string;
+  highlight?: boolean;};
+
+type Partner = {_name: string;
+  logoUrl?: string;};
+
+const _EVENT_START_ISO = '2025-11-12T16:00:00Z';
+
+function useCountdown(_targetIso: string) {_const [remainingMs, _setRemainingMs] = React.useState<number>__(() => {
+    return new Date(targetIso).getTime() - Date.now();});
+
+  React.useEffect__(() => {_const _id = setInterval__(() => {
+      setRemainingMs(new Date(targetIso).getTime() - Date.now());}, 1000);
+    return () => clearInterval(id);
+  }, [targetIso]);
+
+  const _isPast = remainingMs <= 0;
+  const _totalSec = Math.max(0, Math.floor(remainingMs / 1000));
+  const _days = Math.floor(totalSec / 86400);
+  const _hours = Math.floor((totalSec % 86400) / 3600);
+  const _minutes = Math.floor((totalSec % 3600) / 60);
+  const _seconds = totalSec % 60;
+
+  return {_isPast, _days, _hours, _minutes, _seconds};
+}
+
+export default function SummitPage() {_const [platform, _setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
+  const [embedId, _setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
+  const { isPast, _days, _hours, _minutes, _seconds} = useCountdown(EVENT_START_ISO);
+  const [form, setForm] = React.useState({_name: '', _email: '', _role: '', _country: ''});
+  const [submitting, setSubmitting] = React.useState(false);
+  const [result, setResult] = React.useState<{_ok?: boolean; error?: string} | null>(null);
+
+  const speakers: Speaker[] = [
+    {_name: 'Featured Speaker: Your Name', _title: 'Founder, _Zion', _avatarUrl: '/favicon.svg', _bio: 'Visionary behind Zion Protocol — building AI-native digital nations.', _twitter: 'https://twitter.com', _linkedin: 'https://www.linkedin.com', _highlight: true},
+    {_name: 'Alex Rivera', _title: 'Head of Protocol Engineering', _avatarUrl: '/favicon.svg', _bio: 'Leading the architecture of ZionDAO and trust rails.'},
+    {_name: 'Jordan Lee', _title: 'Zion Alumni | AI Fellow', _avatarUrl: '/favicon.svg', _bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.', _twitter: 'https://twitter.com'}];
+
+  const partners: Partner[] = [
+    {_name: 'Gov Partner'},
+    {_name: 'Venture Partner'},
+    {_name: 'University Partner'}];
+
+  const _onSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
+    setSubmitting(true);
+    setResult(null);
+    try {
+      const _res = await fetch('/api/summit/register', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_...form, _source: 'summit-page'})});
+      const _data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Failed');
+      setResult({_ok: true});
+      setForm({_name: '', _email: '', _role: '', _country: ''});
+    } catch (err: unknown) {_setResult({ error: err?.message || 'Unexpected error'});
+    } finally {_setSubmitting(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _livestreamEmbed = () => {_if (platform === 'youtube') {
       return (
         <iframe
           className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
@@ -115,21 +182,32 @@ export default function SummitPage() {
         />
       )
     }
-    if (platform === 'twitch') {
-      return (
+    if (platform === 'twitch') {_return (
         <iframe
+<<<<<<< HEAD
           className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
           src={`https://player.twitch.tv/?channel=${embedId}&parent=${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`}
           title=&quot;Twitch livestream&quot;
+=======
+          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+          src={`https://player.twitch.tv/?channel=${embedId}&parent=${_typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`}
+          title="Twitch livestream"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           allowFullScreen
         />
       )
     }
     return (
       <iframe
+<<<<<<< HEAD
         className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
         src={`https://twitter.com/i/broadcasts/${embedId}`}
         title=&quot;Twitter livestream&quot;
+=======
+        className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+        src={_`https://twitter.com/i/broadcasts/${embedId}`}
+        title="Twitter livestream"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         allowFullScreen
       />
     )
@@ -177,6 +255,7 @@ export default function SummitPage() {
         </section>
       </div>
 
+<<<<<<< HEAD
       <section id=&quot;speakers&quot; className=&quot;mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black&quot;>
         <h2 className=&quot;text-2xl font-bold mb-6&quot;>Speakers</h2>
         <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
@@ -193,6 +272,24 @@ export default function SummitPage() {
               <div className=&quot;mt-3 flex gap-3 text-sm&quot;>
                 {s.twitter && <a className=&quot;underline&quot; href={s.twitter} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Twitter</Link>}
                 {s.linkedin && <a className=&quot;underline&quot; href={s.linkedin} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>LinkedIn</Link>}
+=======
+      <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+        <h2 className="text-2xl font-bold mb-6">Speakers</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {_speakers.map(_(s) => (
+            <div key={s.name} className={_`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
+              <div className="flex items-center gap-4">
+                <img src={_s.avatarUrl} alt={_s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
+                <div>
+                  <div className="font-semibold">{_s.name}</div>
+                  <div className="text-sm opacity-70">{_s.title}</div>
+                </div>
+              </div>
+              <p className="mt-3 text-sm">{_s.bio}</p>
+              <div className="mt-3 flex gap-3 text-sm">
+                {_s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
+                {_s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             </div>
           ))}
@@ -204,10 +301,17 @@ export default function SummitPage() {
           <h2 className=&quot;text-2xl font-bold&quot;>Partners</h2>
           <a href=&quot;#register&quot; className=&quot;px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800&quot;>Become a Sponsor</Link>
         </div>
+<<<<<<< HEAD
         <div className=&quot;mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4&quot;>
           {partners.map((p) => (
             <div key={p.name} className=&quot;h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70&quot;>
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className=&quot;max-h-12&quot; /> : p.name}
+=======
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          {_partners.map(_(p) => (
+            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
+              {_p.logoUrl ? <img src={p.logoUrl} alt={_p.name} className="max-h-12" /> : p.name}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           ))}
         </div>
@@ -218,16 +322,24 @@ export default function SummitPage() {
           <h2 className=&quot;text-2xl font-bold&quot;>Livestream</h2>
           <div className=&quot;flex flex-wrap items-center gap-2&quot;>
             <select
+<<<<<<< HEAD
               aria-label=&quot;Platform&quot;
               className=&quot;px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               value={platform}
               onChange={(e) => setPlatform(e.target.value as any)}
+=======
+              aria-label="Platform"
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              value={_platform}
+              onChange={_(_e) => setPlatform(e.target.value as any)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <option value=&quot;youtube&quot;>YouTube</option>
               <option value=&quot;twitch&quot;>Twitch</option>
               <option value=&quot;twitter&quot;>Twitter</option>
             </select>
             <input
+<<<<<<< HEAD
               aria-label=&quot;Embed ID&quot;
               className=&quot;px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
@@ -249,13 +361,42 @@ export default function SummitPage() {
       <section id=&quot;register&quot; className=&quot;mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black&quot;>
         <h2 className=&quot;text-2xl font-bold mb-4&quot;>Register</h2>
         <form onSubmit={onSubmit} className=&quot;grid md:grid-cols-2 gap-4&quot;>
+=======
+              aria-label="Embed ID"
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              placeholder={_platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
+              value={_embedId}
+              onChange={_(_e) => setEmbedId(e.target.value)}
+            />
+            {_isPast ? (
+              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+            ) : (
+              <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {_hours}h {_minutes}m {_seconds}s</span>
+            )}
+          </div>
+        </div>
+        <div className="mt-4">
+          {_livestreamEmbed()}
+        </div>
+      </section>
+
+      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+        <h2 className="text-2xl font-bold mb-4">Register</h2>
+        <form onSubmit={_onSubmit} className="grid md:grid-cols-2 gap-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <div>
             <label className=&quot;block text-sm mb-1&quot;>Name</label>
             <input
               required
+<<<<<<< HEAD
               className=&quot;w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
+=======
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              value={_form.name}
+              onChange={_(_e) => setForm({ ...form, _name: e.target.value})}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div>
@@ -263,39 +404,68 @@ export default function SummitPage() {
             <input
               type=&quot;email&quot;
               required
+<<<<<<< HEAD
               className=&quot;w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
+=======
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              value={_form.email}
+              onChange={_(_e) => setForm({ ...form, _email: e.target.value})}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div>
             <label className=&quot;block text-sm mb-1&quot;>Role</label>
             <input
               required
+<<<<<<< HEAD
               className=&quot;w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               value={form.role}
               onChange={(e) => setForm({ ...form, role: e.target.value })}
+=======
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              value={_form.role}
+              onChange={_(_e) => setForm({ ...form, _role: e.target.value})}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div>
             <label className=&quot;block text-sm mb-1&quot;>Country</label>
             <input
               required
+<<<<<<< HEAD
               className=&quot;w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent&quot;
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
+=======
+              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              value={_form.country}
+              onChange={_(_e) => setForm({ ...form, _country: e.target.value})}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div className=&quot;md:col-span-2 flex items-center gap-3&quot;>
             <button
+<<<<<<< HEAD
               type=&quot;submit&quot;
               disabled={submitting}
               className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50&quot;
+=======
+              type="submit"
+              disabled={_submitting}
+              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              {submitting ? 'Submitting...' : 'Submit Registration'}
+              {_submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
+<<<<<<< HEAD
             {result?.ok && <span className=&quot;text-green-600&quot;>Thank you! You are registered.</span>}
             {result?.error && <span className=&quot;text-red-600&quot;>{result.error}</span>}
+=======
+            {_result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
+            {_result?.error && <span className="text-red-600">{result.error}</span>}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
         </form>
       </section>

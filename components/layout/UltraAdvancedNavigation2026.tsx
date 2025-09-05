@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -14,82 +15,60 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
+=======
+import React, {_useState, _useEffect} from 'react';
+import Link from 'next/link';
+import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Microscope, _DollarSign, _Home, _Users, _Briefcase, _BookOpen, _MessageCircle} from 'lucide-react';
 
-const serviceCategories = [
-  {
-    title: 'AI & Machine Learning 2026',
-    icon: Brain,
-    color: 'from-purple-600 to-pink-600',
-    description: 'Next-generation AI solutions',
-    services: [
-      { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness', price: '$4,999/month' },
-      { name: 'Autonomous AI Agents', href: '/autonomous-ai-agents-platform-2026', description: 'Create autonomous AI agents', price: '$199/month' },
-      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2026', description: 'Revolutionary healthcare AI', price: '$399/month' },
-      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' }
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+const _serviceCategories = [
+  {_title: 'AI & Machine Learning 2026', _icon: Brain, _color: 'from-purple-600 to-pink-600', _description: 'Next-generation AI solutions', _services: [
+      { name: 'AI Consciousness Simulation', _href: '/ai-consciousness-simulation-platform', _description: 'Simulate human consciousness', _price: '$4, _999/month'},
+      {_name: 'Autonomous AI Agents', _href: '/autonomous-ai-agents-platform-2026', _description: 'Create autonomous AI agents', _price: '$199/month'},
+      {_name: 'AI Healthcare Companion', _href: '/ai-healthcare-companion-2026', _description: 'Revolutionary healthcare AI', _price: '$399/month'},
+      {_name: 'AI Content Creation Revolution', _href: '/ai-content-creation-revolution', _description: 'Unlimited AI content generation', _price: '$599/month'}
     ]
   },
-  {
-    title: 'Quantum Computing & Security',
-    icon: Atom,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Quantum-powered solutions',
-    services: [
-      { name: 'Quantum Neural Interface', href: '/quantum-neural-interface-platform', description: 'Brain-computer interface', price: '$8,999/month' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' },
-      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
+  {_title: 'Quantum Computing & Security', _icon: Atom, _color: 'from-blue-600 to-cyan-600', _description: 'Quantum-powered solutions', _services: [
+      { name: 'Quantum Neural Interface', _href: '/quantum-neural-interface-platform', _description: 'Brain-computer interface', _price: '$8, _999/month'},
+      {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable encryption', _price: '$3, _999/month'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-algorithm-platform', _description: 'Quantum trading algorithms', _price: '$12, _999/month'},
+      {_name: 'Quantum Internet Infrastructure', _href: '/quantum-internet-infrastructure-platform', _description: 'Build the quantum internet', _price: '$15, _999/month'}
     ]
   },
-  {
-    title: 'Emerging Technologies 2026',
-    icon: Sparkles,
-    color: 'from-green-600 to-emerald-600',
-    description: 'Cutting-edge innovations',
-    services: [
-      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform', description: '3D holographic experiences', price: '$2,999/month' },
-      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' },
-      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' },
-      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+  {_title: 'Emerging Technologies 2026', _icon: Sparkles, _color: 'from-green-600 to-emerald-600', _description: 'Cutting-edge innovations', _services: [
+      { name: 'Holographic Metaverse', _href: '/holographic-metaverse-development-platform', _description: '3D holographic experiences', _price: '$2, _999/month'},
+      {_name: 'Space Debris Management', _href: '/space-debris-management-ai-platform', _description: 'AI space safety', _price: '$5, _999/month'},
+      {_name: 'AI Climate Prediction', _href: '/ai-climate-prediction-platform', _description: 'Climate change prediction', _price: '$1, _999/month'},
+      {_name: 'Autonomous Manufacturing', _href: '/autonomous-manufacturing-ai-platform', _description: 'Self-optimizing manufacturing', _price: '$3, _499/month'}
     ]
   },
-  {
-    title: 'Enterprise IT Solutions 2026',
-    icon: Shield,
-    color: 'from-red-600 to-orange-600',
-    description: 'Enterprise-grade solutions',
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture-2026', description: 'Next-gen security', price: 'Custom pricing' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing', price: 'Custom pricing' },
-      { name: '5G Private Networks', href: '/5g-private-network-solutions-2026', description: 'Enterprise 5G', price: 'Custom pricing' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' }
+  {_title: 'Enterprise IT Solutions 2026', _icon: Shield, _color: 'from-red-600 to-orange-600', _description: 'Enterprise-grade solutions', _services: [
+      { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture-2026', _description: 'Next-gen security', _price: 'Custom pricing'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration-2026', _description: 'Intelligent edge computing', _price: 'Custom pricing'},
+      {_name: '5G Private Networks', _href: '/5g-private-network-solutions-2026', _description: 'Enterprise 5G', _price: 'Custom pricing'},
+      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform-2026', _description: 'Enterprise blockchain', _price: 'Custom pricing'}
     ]
   },
-  {
-    title: 'Healthcare & Life Sciences',
-    icon: Microscope,
-    color: 'from-teal-600 to-cyan-600',
-    description: 'Healthcare innovation',
-    services: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4,999/month' },
-      { name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2,499/month' },
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum AI research', price: '$6,999/month' },
-      { name: 'AI Legal Research', href: '/ai-legal-research-platform', description: 'Revolutionary legal tech', price: '$899/month' }
+  {_title: 'Healthcare & Life Sciences', _icon: Microscope, _color: 'from-teal-600 to-cyan-600', _description: 'Healthcare innovation', _services: [
+      { name: 'AI Drug Discovery', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug development', _price: '$4, _999/month'},
+      {_name: 'Autonomous Healthcare AI', _href: '/autonomous-healthcare-ai-platform', _description: 'Self-learning healthcare', _price: '$2, _499/month'},
+      {_name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _description: 'Quantum AI research', _price: '$6, _999/month'},
+      {_name: 'AI Legal Research', _href: '/ai-legal-research-platform', _description: 'Revolutionary legal tech', _price: '$899/month'}
     ]
   },
-  {
-    title: 'Financial Technology',
-    icon: DollarSign,
-    color: 'from-emerald-600 to-green-600',
-    description: 'Fintech solutions',
-    services: [
-      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
-      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' },
-      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' },
-      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+  {_title: 'Financial Technology', _icon: DollarSign, _color: 'from-emerald-600 to-green-600', _description: 'Fintech solutions', _services: [
+      { name: 'Autonomous Supply Chain', _href: '/autonomous-supply-chain-optimization-ai', _description: 'AI supply chain optimization', _price: '$899/month'},
+      {_name: 'Autonomous Marketing AI', _href: '/autonomous-marketing-ai-platform', _description: 'Self-optimizing marketing', _price: '$1, _499/month'},
+      {_name: 'AI Cybersecurity', _href: '/ai-cybersecurity-platform', _description: 'Next-gen security', _price: '$2, _999/month'},
+      {_name: 'AI Business Intelligence', _href: '/autonomous-business-intelligence-network', _description: 'Self-evolving BI', _price: '$1, _299/month'}
     ]
   }
 ],
 
+<<<<<<< HEAD
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -115,76 +94,81 @@ const UltraAdvancedNavigation2026 = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+=======
+const _companyLinks = [
+  {_name: 'Home', _href: '/', _icon: Home},
+  {_name: 'About Us', _href: '/about', _icon: Users},
+  {_name: '2026 Services', _href: '/2026-services-showcase', _icon: Rocket},
+  {_name: 'Innovative 2026', _href: '/2026-innovative-services-showcase', _icon: Zap},
+  {_name: 'Ultimate 2026', _href: '/ultimate-2026-services-showcase', _icon: Sparkles},
+  {_name: '2026 Pricing', _href: '/revolutionary-2026-pricing', _icon: DollarSign},
+  {_name: 'Case Studies', _href: '/case-studies', _icon: Briefcase},
+  {_name: 'Blog & Resources', _href: '/blog', _icon: BookOpen},
+  {_name: 'Careers', _href: '/careers', _icon: Users},
+  {_name: 'Contact', _href: '/contact', _icon: MessageCircle}
+];
 
-  const navigationItems = [
-    {
-      name: 'AI Services',
-      href: '/services?category=ai',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Autonomous AI systems and consciousness interfaces',
-      subItems: [
-        { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
-        { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
-        { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
-        { name: 'AI Education', href: '/services?category=ai-education', description: 'Educational AI systems' },
-        { name: 'AI Legal', href: '/services?category=ai-legal', description: 'Legal AI and compliance' },
-        { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
+const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useState(false);
+  const [isScrolled, _setIsScrolled] = useState(false);
+  const [activeDropdown, _setActiveDropdown] = useState<string | null>(null);
+
+  useEffect__(() => {
+    const _handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);};
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _navigationItems = [
+    {_name: 'AI Services', _href: '/services?category=ai', _icon: Brain, _color: 'from-blue-500 to-cyan-500', _description: 'Autonomous AI systems and consciousness interfaces', _subItems: [
+        { name: 'AI Autonomous Agents', _href: '/services?category=ai-autonomous', _description: 'Fully autonomous AI systems'},
+        {_name: 'AI Consciousness', _href: '/services?category=ai-consciousness', _description: 'Consciousness simulation and interfaces'},
+        {_name: 'AI Healthcare', _href: '/services?category=ai-healthcare', _description: 'Medical AI and diagnostics'},
+        {_name: 'AI Education', _href: '/services?category=ai-education', _description: 'Educational AI systems'},
+        {_name: 'AI Legal', _href: '/services?category=ai-legal', _description: 'Legal AI and compliance'},
+        {_name: 'AI Creative', _href: '/services?category=ai-creative', _description: 'Creative AI and content generation'}
       ]
     },
-    {
-      name: 'Quantum Tech',
-      href: '/services?category=quantum',
-      icon: Atom,
-      color: 'from-purple-500 to-indigo-500',
-      description: 'Quantum computing and space technology',
-      subItems: [
-        { name: 'Quantum Space Tech', href: '/services?category=quantum-space', description: 'Space exploration and communication' },
-        { name: 'Quantum Computing', href: '/services?category=quantum-computing', description: 'Advanced quantum systems' },
-        { name: 'Quantum AI', href: '/services?category=quantum-ai', description: 'Quantum-powered AI' },
-        { name: 'Quantum Security', href: '/services?category=quantum-security', description: 'Quantum encryption and security' }
+    {_name: 'Quantum Tech', _href: '/services?category=quantum', _icon: Atom, _color: 'from-purple-500 to-indigo-500', _description: 'Quantum computing and space technology', _subItems: [
+        { name: 'Quantum Space Tech', _href: '/services?category=quantum-space', _description: 'Space exploration and communication'},
+        {_name: 'Quantum Computing', _href: '/services?category=quantum-computing', _description: 'Advanced quantum systems'},
+        {_name: 'Quantum AI', _href: '/services?category=quantum-ai', _description: 'Quantum-powered AI'},
+        {_name: 'Quantum Security', _href: '/services?category=quantum-security', _description: 'Quantum encryption and security'}
       ]
     },
-    {
-      name: 'Metaverse',
-      href: '/services?category=metaverse',
-      icon: Globe,
-      color: 'from-pink-500 to-rose-500',
-      description: 'Virtual worlds and digital reality',
-      subItems: [
-        { name: 'Metaverse Platforms', href: '/services?category=metaverse-platforms', description: 'Virtual world platforms' },
-        { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },
-        { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },
-        { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+    {_name: 'Metaverse', _href: '/services?category=metaverse', _icon: Globe, _color: 'from-pink-500 to-rose-500', _description: 'Virtual worlds and digital reality', _subItems: [
+        { name: 'Metaverse Platforms', _href: '/services?category=metaverse-platforms', _description: 'Virtual world platforms'},
+        {_name: 'Digital Reality', _href: '/services?category=digital-reality', _description: 'Immersive experiences'},
+        {_name: 'Holographic Tech', _href: '/services?category=holographic', _description: '3D holographic systems'},
+        {_name: 'Consciousness Interface', _href: '/services?category=consciousness-interface', _description: 'Brain-computer interfaces'}
       ]
     },
-    {
-      name: 'Enterprise IT',
-      href: '/services?category=enterprise',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Enterprise solutions and infrastructure',
-      subItems: [
-        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+    {_name: 'Enterprise IT', _href: '/services?category=enterprise', _icon: Zap, _color: 'from-green-500 to-emerald-500', _description: 'Enterprise solutions and infrastructure', _subItems: [
+        { name: 'Cloud Solutions', _href: '/services?category=cloud', _description: 'Cloud infrastructure and services'},
+        {_name: 'Cybersecurity', _href: '/services?category=security', _description: 'Advanced security solutions'},
+        {_name: 'Data Analytics', _href: '/services?category=analytics', _description: 'Business intelligence and analytics'},
+        {_name: 'DevOps', _href: '/services?category=devops', _description: 'Development and operations'}
       ]
     }
   ],
 
+<<<<<<< HEAD
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
+=======
+  const _contactInfo = {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709'};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  return (
-    <>
-      {/* Enhanced Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return (_<>
+      {_/* Enhanced Navigation Bar */}
+      <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
+<<<<<<< HEAD
           : 'bg-transparent'
       }`}>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -194,6 +178,16 @@ const UltraAdvancedNavigation2026 = () => {
               <div className=&quot;relative&quot;>
                 <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
                   <Rocket className=&quot;w-6 h-6 text-white&quot; />
+=======
+          : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {_/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
                 <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
               </div>
@@ -205,6 +199,7 @@ const UltraAdvancedNavigation2026 = () => {
               </div>
             </a>
 
+<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {navigationItems.map((item) => (
@@ -218,10 +213,24 @@ const UltraAdvancedNavigation2026 = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
+=======
+            {_/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {_navigationItems.map((item) => (_<div key={item.name} className="relative group">
+                  <button
+                    onClick={_() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span className="font-medium">{_item.name}</span>
+                    <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''}`} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </button>
 
-                  {/* Dropdown Menu */}
+                  {_/* Dropdown Menu */}
                   <AnimatePresence>
+<<<<<<< HEAD
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -254,18 +263,59 @@ const UltraAdvancedNavigation2026 = () => {
                                 </div>
                                 <div className=&quot;text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200&quot;>
                                   {subItem.description}
+=======
+                    {_activeDropdown === item.name && (_<motion.div
+                        initial={{ opacity: 0, _y: 10, _scale: 0.95}}
+                        animate={_{ opacity: 1, _y: 0, _scale: 1}}
+                        exit={_{ opacity: 0, _y: 10, _scale: 0.95}}
+                        transition={_{ duration: 0.2}}
+                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
+                      >
+                        <div className="p-4">
+                          <div className="flex items-center space-x-3 mb-4">
+                            <div className={_`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                              <item.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-white font-semibold">{_item.name}</h3>
+                              <p className="text-gray-400 text-sm">{_item.description}</p>
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2">
+                            {_item.subItems.map((subItem) => (_<Link
+                                key={subItem.name}
+                                href={_subItem.href}
+                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                onClick={_() => setActiveDropdown(null)}
+                              >
+                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                                  {_subItem.name}
+                                </div>
+                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
+                                  {_subItem.description}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                                 </div>
                               </a>
                             ))}
                           </div>
                           
                           <Link
+<<<<<<< HEAD
                             href={item.href}
                             className=&quot;block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
                             onClick={() => setActiveDropdown(null)}
                           >
                             View All {item.name}
                           </a>
+=======
+                            href={_item.href}
+                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                            onClick={_() => setActiveDropdown(null)}
+                          >
+                            View All {_item.name}
+                          </Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         </div>
                       </motion.div>
                     )}
@@ -273,9 +323,15 @@ const UltraAdvancedNavigation2026 = () => {
                 </div>
               ))}
 
+<<<<<<< HEAD
               {/* Quick Links */}
               <div className=&quot;flex items-center space-x-6&quot;>
                 <Link href=&quot;/services&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
+=======
+              {_/* Quick Links */}
+              <div className="flex items-center space-x-6">
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   All Services
                 </a>
                 <Link href=&quot;/pricing&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
@@ -287,11 +343,19 @@ const UltraAdvancedNavigation2026 = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Contact Info - Desktop */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
                 <Phone className=&quot;w-4 h-4&quot; />
                 <span className=&quot;text-sm font-medium&quot;>{contactInfo.phone}</span>
+=======
+            {_/* Contact Info - Desktop */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm font-medium">{_contactInfo.phone}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
               <Link
                 href=&quot;/contact&quot;
@@ -301,19 +365,27 @@ const UltraAdvancedNavigation2026 = () => {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {_/* Mobile Menu Button */}
             <button
+<<<<<<< HEAD
               onClick={() => setIsOpen(!isOpen)}
               className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
             >
               {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+=======
+              onClick={_() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Navigation Overlay */}
+      {_/* Mobile Navigation Overlay */}
       <AnimatePresence>
+<<<<<<< HEAD
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -336,17 +408,46 @@ const UltraAdvancedNavigation2026 = () => {
                 <div className=&quot;flex items-center space-x-3&quot;>
                   <div className=&quot;w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center&quot;>
                     <Rocket className=&quot;w-5 h-5 text-white&quot; />
+=======
+        {_isOpen && (_<motion.div
+            initial={{ opacity: 0}}
+            animate={_{ opacity: 1}}
+            exit={_{ opacity: 0}}
+            transition={_{ duration: 0.2}}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            onClick={_() => setIsOpen(false)}
+          >
+            <motion.div
+              initial={_{ x: '100%'}}
+              animate={_{ x: 0}}
+              exit={_{ x: '100%'}}
+              transition={_{ duration: 0.3, _ease: 'easeOut'}}
+              className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
+              onClick={_(_e) => e.stopPropagation()}
+            >
+              {_/* Mobile Menu Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <Rocket className="w-5 h-5 text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                   <span className=&quot;text-white font-bold text-lg&quot;>Menu</span>
                 </div>
                 <button
+<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}
                   className=&quot;p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
+=======
+                  onClick={_() => setIsOpen(false)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <X className=&quot;w-6 h-6&quot; />
                 </button>
               </div>
 
+<<<<<<< HEAD
               {/* Mobile Navigation Items */}
               <div className=&quot;space-y-4&quot;>
                 {navigationItems.map((item) => (
@@ -373,36 +474,84 @@ const UltraAdvancedNavigation2026 = () => {
                         >
                           {subItem.name}
                         </a>
+=======
+              {_/* Mobile Navigation Items */}
+              <div className="space-y-4">
+                {_navigationItems.map(_(item) => (_<div key={item.name} className="border-b border-gray-700/50 pb-4">
+                    <Link
+                      href={_item.href}
+                      className="flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2"
+                      onClick={_() => setIsOpen(false)}
+                    >
+                      <div className={_`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}>
+                        <item.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-medium">{_item.name}</span>
+                    </Link>
+                    
+                    {_/* Mobile Sub-items */}
+                    <div className="mt-3 ml-11 space-y-2">
+                      {_item.subItems.slice(0, _3).map(_(subItem) => (_<Link
+                          key={subItem.name}
+                          href={_subItem.href}
+                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
+                          onClick={_() => setIsOpen(false)}
+                        >
+                          {_subItem.name}
+                        </Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ))}
                     </div>
                   </div>
                 ))}
 
+<<<<<<< HEAD
                 {/* Quick Links */}
                 <div className=&quot;space-y-3 pt-4&quot;>
                   <Link
                     href=&quot;/services&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
+=======
+                {_/* Quick Links */}
+                <div className="space-y-3 pt-4">
+                  <Link
+                    href="/services"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    onClick={_() => setIsOpen(false)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     All Services
                   </a>
                   <Link
+<<<<<<< HEAD
                     href=&quot;/pricing&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
+=======
+                    href="/pricing"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    onClick={_() => setIsOpen(false)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Pricing
                   </a>
                   <Link
+<<<<<<< HEAD
                     href=&quot;/contact&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
+=======
+                    href="/contact"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    onClick={_() => setIsOpen(false)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Contact
                   </a>
                 </div>
 
+<<<<<<< HEAD
                 {/* Contact Info - Mobile */}
                 <div className=&quot;pt-6 border-t border-gray-700/50 space-y-3&quot;>
                   <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
@@ -425,6 +574,30 @@ const UltraAdvancedNavigation2026 = () => {
                     href=&quot;/contact&quot;
                     className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
                     onClick={() => setIsOpen(false)}
+=======
+                {_/* Contact Info - Mobile */}
+                <div className="pt-6 border-t border-gray-700/50 space-y-3">
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <Phone className="w-4 h-4" />
+                    <span className="text-sm">{_contactInfo.phone}</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <Mail className="w-4 h-4" />
+                    <span className="text-sm">{_contactInfo.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-sm">{_contactInfo.address}</span>
+                  </div>
+                </div>
+
+                {_/* Get Started Button - Mobile */}
+                <div className="pt-4">
+                  <Link
+                    href="/contact"
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                    onClick={_() => setIsOpen(false)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Get Started Today
                   </a>
@@ -435,8 +608,13 @@ const UltraAdvancedNavigation2026 = () => {
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot;></div>
+=======
+      {_/* Spacer for fixed navigation */}
+      <div className="h-20"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </>
   )
 }

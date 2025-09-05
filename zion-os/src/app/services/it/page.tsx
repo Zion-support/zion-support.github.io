@@ -1,5 +1,4 @@
-export default function ITServicesPage() {
-  return (
+export default function ITServicesPage() {_return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-600 to-blue-600 py-20">
@@ -20,7 +19,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Contact Info Banner */}
+      {_/* Contact Info Banner */}
       <div className="bg-zinc-800 py-4">
         <div className="container mx-auto px-6 text-center text-sm">
           <span className="mr-8">📱 +1 302 464 0950</span>
@@ -29,12 +28,12 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* IT Services Grid */}
+      {_/* IT Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* Cloud Infrastructure */}
+            {_/* Cloud Infrastructure */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">☁️</div>
               <h2 className="text-3xl font-bold mb-4">Cloud Infrastructure</h2>
@@ -81,7 +80,7 @@ export default function ITServicesPage() {
               </a>
             </div>
 
-            {/* DevOps & CI/CD */}
+            {_/* DevOps & CI/CD */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">🚀</div>
               <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>
@@ -128,7 +127,7 @@ export default function ITServicesPage() {
               </a>
             </div>
 
-            {/* Cybersecurity */}
+            {_/* Cybersecurity */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">🛡️</div>
               <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>
@@ -175,7 +174,7 @@ export default function ITServicesPage() {
               </a>
             </div>
 
-            {/* Data Engineering */}
+            {_/* Data Engineering */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">📈</div>
               <h2 className="text-3xl font-bold mb-4">Data Engineering</h2>
@@ -222,7 +221,7 @@ export default function ITServicesPage() {
               </a>
             </div>
 
-            {/* API Development */}
+            {_/* API Development */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">🔌</div>
               <h2 className="text-3xl font-bold mb-4">API Development</h2>
@@ -269,7 +268,7 @@ export default function ITServicesPage() {
               </a>
             </div>
 
-            {/* Digital Transformation */}
+            {_/* Digital Transformation */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-4xl mb-6">🔄</div>
               <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>
@@ -319,7 +318,7 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-      {/* IT Service Delivery Process */}
+      {_/* IT Service Delivery Process */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -357,7 +356,7 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-      {/* Technology Stack */}
+      {_/* Technology Stack */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -401,7 +400,7 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {_/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>

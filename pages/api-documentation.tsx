@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function APIDocumentationPage() {
 	return (
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function APIDocumentationPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		<Layout>
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -17,5 +25,9 @@ export default function APIDocumentationPage() {
 				<p className=&quot;text-gray-300&quot;>REST and SDK references. Coming soon.</p>
 			</section>
 		</Layout>
+<<<<<<< HEAD
 	)
 }
+=======
+	);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

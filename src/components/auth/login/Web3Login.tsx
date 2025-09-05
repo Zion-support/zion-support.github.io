@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -32,10 +33,21 @@ export function Web3Login() {
 =======
       toast(&quot;Web3 login unavailable&quot;, {
         description: &quot;The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.&quot;});
+=======
+
+export function Web3Login() {_const { loginWithWeb3} = useAuth();
+  const {_isWalletSystemAvailable} = useAppWallet();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const _handleWeb3Login = async () => {_if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", _{
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
+<<<<<<< HEAD
     try {
       setIsLoading(true),
       
@@ -49,12 +61,22 @@ export function Web3Login() {
 =======
         toast(&quot;Web3 wallet not found&quot;, {
           description: &quot;Please install MetaMask or another compatible wallet.&quot;});
+=======
+    try {_setIsLoading(true);
+      
+      // Check if Ethereum provider (e.g., _MetaMask) is available
+      const _ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast("Web3 wallet not found", _{
+          description: "Please install MetaMask or another compatible wallet."});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
+<<<<<<< HEAD
     } catch (error: any) {
 <<<<<<< HEAD
       toast("Login failed", {
@@ -73,6 +95,16 @@ export function Web3Login() {
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
   const buttonTitle = !isWalletSystemAvailable
 <<<<<<< HEAD
+=======
+    } catch (error: unknown) {_toast("Login failed", _{
+        description: error.message || "Failed to connect wallet. Please try again."});
+      logErrorToProduction('Web3 login error:', {_data: error});
+    } finally {_setIsLoading(false);}
+  };
+
+  const _buttonDisabled = isLoading || !isWalletSystemAvailable;
+  const _buttonTitle = !isWalletSystemAvailable
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "",
 =======
@@ -80,6 +112,7 @@ export function Web3Login() {
     : "";
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   let buttonContent,
   if (!isWalletSystemAvailable) {
     buttonContent = (
@@ -89,6 +122,14 @@ export function Web3Login() {
     )
   } else if (isLoading) {
     buttonContent = (
+=======
+  let buttonContent;
+  if (!isWalletSystemAvailable) {_buttonContent = (
+      <>
+        <Wallet className="h-5 w-5 mr-2" /> Web3 Login Unavailable
+      </>
+    );} else if (isLoading) {_buttonContent = (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <span className="flex items-center">
 <<<<<<< HEAD
         <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http: //www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -102,26 +143,34 @@ export function Web3Login() {
         </svg>
         Connecting...
       </span>
+<<<<<<< HEAD
     )
   } else {
     buttonContent = (
+=======
+    );} else {_buttonContent = (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <>
         <Wallet className="h-5 w-5 mr-2" /> Sign in with Web3
         <span className="sr-only&quot;>Sign in with Web3</span>
       </>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Button
       type=&quot;button&quot;
       variant=&quot;outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-      onClick={handleWeb3Login}
-      disabled={buttonDisabled}
-      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
+      onClick={_handleWeb3Login}
+      disabled={_buttonDisabled}
+      title={_buttonTitle || undefined} // Ensure title is not an empty string if not needed
     >
-      {buttonContent}
+      {_buttonContent}
     </Button>
   )
 }

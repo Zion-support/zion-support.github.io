@@ -6,6 +6,7 @@ import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
 =======
 import useSWR from 'swr';
+<<<<<<< HEAD
 import { CategoryCard } from &quot;@/components/CategoryCard&quot;;
 import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
 import { SkeletonCard } from '@/components/ui';
@@ -34,9 +35,30 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
   } catch (err) {
     logErrorToProduction('Categories API fetch failed:', { data: err }),
     return CATEGORIES as CategoryType[]
+=======
+import ErrorBoundary from "@/components/GlobalErrorBoundary";
+
+
+interface CategoryType {_id: string;
+  name: string;
+  slug: string;
+  icon: string;}
+
+const _fetcher = async (url: string): Promise<CategoryType[]> => {_try {
+    const _response = await fetch(url);
+    if (!response.ok) {
+      logErrorToProduction('Categories API error:', _{ data: response.statusText});
+      return CATEGORIES as CategoryType[];
+    }
+    const _data = await response.json();
+    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[];
+  } catch (err) {_logErrorToProduction('Categories API fetch failed:', _{ data: err});
+    return CATEGORIES as CategoryType[];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 },
 
+<<<<<<< HEAD
 export interface CategoriesProps {
   categories?: CategoryType[]
 }
@@ -46,6 +68,13 @@ export default function Categories({ categories: initialCategories = [] }: Categ
     fallbackData: initialCategories}),
   const categories = data || [],
   const isLoading = !data && !error,
+=======
+export interface CategoriesProps {_categories?: CategoryType[];}
+
+export default function Categories(_{_categories: initialCategories = []}: CategoriesProps) {_const { data, _error} = useSWR<CategoryType[]>('/api/categories', fetcher, {_fallbackData: initialCategories});
+  const _categories = data || [];
+  const _isLoading = !data && !error;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -66,6 +95,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
         </div>
 
         <ErrorBoundary>
+<<<<<<< HEAD
           {isLoading && (
             <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6&quot; data-testid=&quot;skeleton-loader&quot;>
               {Array.from({ length: 4 }).map((_, index) => (
@@ -75,10 +105,22 @@ export default function Categories({ categories: initialCategories = [] }: Categ
           )}
           {error && (
             <div className=&quot;text-center text-red-500 py-8&quot;>
+=======
+          {_isLoading && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="skeleton-loader">
+              {Array.from({ length: 4}).map(_(_, _index) => (
+                <SkeletonCard key={_index} />
+              ))}
+            </div>
+          )}
+          {_error && (
+            <div className="text-center text-red-500 py-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <p>Error loading categories: {error.message}</p>
               <p>Please try again later.</p>
             </div>
           )}
+<<<<<<< HEAD
           {!isLoading && !error && categories.length === 0 && (
             <div className=&quot;text-center text-zion-slate-light py-8&quot;>
               <p>No categories yet</p>
@@ -86,14 +128,28 @@ export default function Categories({ categories: initialCategories = [] }: Categ
           )}
           {!isLoading && !error && categories.length > 0 && (
             <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6&quot;>
+=======
+          {_!isLoading && !error && categories.length === 0 && (
+            <div className="text-center text-zion-slate-light py-8">
+              <p>No categories yet</p>
+            </div>
+          )}
+          {_!isLoading && !error && categories.length > 0 && (_<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               {categories.map((category) => {
                 // Use default folder icon for all categories to avoid large bundle
                 return (
                   <CategoryCard
                     key={category.id}
+<<<<<<< HEAD
                     title={category.name}
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
                     icon={<Folder className=&quot;w-6 h-6&quot; />}
+=======
+                    title={_category.name}
+                    description={_`Explore ${category.name.toLowerCase()} in our marketplace`}
+                    icon={_<Folder className="w-6 h-6" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   />
                 )
               })}

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Slider } from "@/components/ui/slider",
 import { Badge } from "@/components/ui/badge",
@@ -40,6 +41,14 @@ export function UsageStats() {
     toast({
       title: &quot;Limits updated&quot;,
       description: &quot;The new usage limits have been saved successfully.&quot;});
+=======
+import React from "react";
+import {_Card, _CardContent, _CardDescription, _CardFooter, _CardHeader, _CardTitle} from "@/components/ui/card";
+
+export function UsageStats() {_const _handleSaveChanges = () => {
+    toast({
+      title: "Limits updated", _description: "The new usage limits have been saved successfully."});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
@@ -66,7 +75,11 @@ export function UsageStats() {
                 <div className=&quot;text-sm font-medium&quot;>Monthly job posting limit</div>
                 <Badge variant=&quot;outline&quot;>25 / 50</Badge>
               </div>
+<<<<<<< HEAD
               <Progress value={50} className=&quot;h-2&quot; />
+=======
+              <Progress value={_50} className="h-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <div className=&quot;grid gap-4&quot;>
               <div className=&quot;grid grid-cols-3 items-center gap-4&quot;>
@@ -78,7 +91,11 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
             <Button size=&quot;sm&quot; onClick={handleSaveChanges}>Save Changes</Button>
+=======
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </CardFooter>
         </Card>
         
@@ -95,7 +112,11 @@ export function UsageStats() {
                 <div className=&quot;text-sm font-medium&quot;>Monthly contact credits</div>
                 <Badge variant=&quot;outline&quot;>178 / 500</Badge>
               </div>
+<<<<<<< HEAD
               <Progress value={35.6} className=&quot;h-2&quot; />
+=======
+              <Progress value={_35.6} className="h-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <div className=&quot;grid gap-4&quot;>
               <div className=&quot;grid grid-cols-3 items-center gap-4&quot;>
@@ -107,7 +128,11 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
             <Button size=&quot;sm&quot; onClick={handleSaveChanges}>Save Changes</Button>
+=======
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </CardFooter>
         </Card>
         
@@ -124,7 +149,11 @@ export function UsageStats() {
                 <div className=&quot;text-sm font-medium&quot;>AI matching credits</div>
                 <Badge variant=&quot;outline&quot;>435 / 1000</Badge>
               </div>
+<<<<<<< HEAD
               <Progress value={43.5} className=&quot;h-2&quot; />
+=======
+              <Progress value={_43.5} className="h-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <div className=&quot;grid gap-4&quot;>
               <div className=&quot;grid grid-cols-3 items-center gap-4&quot;>
@@ -136,7 +165,11 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
             <Button size=&quot;sm&quot; onClick={handleSaveChanges}>Save Changes</Button>
+=======
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </CardFooter>
         </Card>
         
@@ -153,7 +186,11 @@ export function UsageStats() {
                 <div className=&quot;text-sm font-medium&quot;>Monthly budget</div>
                 <Badge variant=&quot;outline&quot;>$1,250 / $5,000</Badge>
               </div>
+<<<<<<< HEAD
               <Progress value={25} className=&quot;h-2&quot; />
+=======
+              <Progress value={_25} className="h-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <div className=&quot;grid gap-4&quot;>
               <div className=&quot;grid grid-cols-3 items-center gap-4&quot;>
@@ -176,7 +213,11 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
             <Button size=&quot;sm&quot; onClick={handleSaveChanges}>Save Changes</Button>
+=======
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </CardFooter>
         </Card>
       </div>

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 =======
 import React from &quot;react&quot;;
@@ -9,9 +10,13 @@ import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 interface FraudTabContentProps {
   tabValue: string
 }
+=======
+import React from "react";
 
-export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
-  switch(tabValue) {
+interface FraudTabContentProps {_tabValue: string;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export const FraudTabContent: React.FC<FraudTabContentProps> = (_{_tabValue}) => {_switch(tabValue) {
     case 'pending':
       return (
 <<<<<<< HEAD
@@ -53,6 +58,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       ),
     
     default:
+<<<<<<< HEAD
       return null
   }
 },
+=======
+      return null;}
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,5 +1,5 @@
-import { Gift } from 'lucide-react'
 
+<<<<<<< HEAD
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
@@ -10,11 +10,26 @@ export default function RewardsPage() {
     <div className=&quot;container max-w-xl py-10&quot;>
       <h1 className=&quot;text-3xl font-bold mb-6&quot;>Rewards</h1>
       <ul className=&quot;space-y-4&quot;>
+=======
+const _REWARDS = [
+  {_id: 'coupon5', _title: '$5 Coupon', _cost: 500},
+  {_id: 'premium-week', _title: 'Premium Week', _cost: 1000},
+  {_id: 'swag-pack', _title: 'Swag Pack', _cost: 2000}];
+
+export default function RewardsPage() {_return (_<div className="container max-w-xl py-10">
+      <h1 className="text-3xl font-bold mb-6">Rewards</h1>
+      <ul className="space-y-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         {REWARDS.map((r) => (
           <li key={r.id} className=&quot;flex justify-between items-center border rounded-md p-4&quot;>
             <div>
+<<<<<<< HEAD
               <p className=&quot;font-medium&quot;>{r.title}</p>
               <p className=&quot;text-sm text-muted-foreground&quot;>{r.cost} pts</p>
+=======
+              <p className="font-medium">{_r.title}</p>
+              <p className="text-sm text-muted-foreground">{_r.cost} pts</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <Gift className=&quot;h-5 w-5&quot; />
           </li>

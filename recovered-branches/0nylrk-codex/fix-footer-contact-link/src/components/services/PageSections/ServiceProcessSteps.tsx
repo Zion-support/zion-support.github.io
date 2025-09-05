@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 export function ServiceProcessSteps() {
   return (
     <div className=&quot;my-20&quot;>
       <h2 className=&quot;text-2xl font-bold text-white text-center mb-12&quot;>How Our IT Onsite Service Works</h2>
+=======
+export function ServiceProcessSteps() {_return (
+    <div className="my-20">
+      <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -38,5 +44,9 @@ export function ServiceProcessSteps() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

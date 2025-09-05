@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
@@ -11,6 +12,11 @@ import { Progress } from &quot;@/components/ui/progress&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function TeamStats() {
   return (
+=======
+import React from "react";
+
+export function TeamStats() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <Card>
       <CardHeader>
         <CardTitle>Team Stats</CardTitle>

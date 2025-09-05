@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -35,6 +36,16 @@ export default function EnterpriseAdmin() {
     return <Navigate to=&quot;/unauthorized&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React from "react";
+
+export default function EnterpriseAdmin() {_const { user} = useAuth();
+  
+  // Check if user has enterprise admin role
+  const _isEnterpriseAdmin = user?.role === "enterprise_admin";
+  
+  if (!isEnterpriseAdmin) {_return <Navigate to="/unauthorized" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <ProtectedRoute>

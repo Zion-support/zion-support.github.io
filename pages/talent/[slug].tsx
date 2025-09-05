@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useRouter } from 'next/router',
@@ -17,12 +18,28 @@ const TalentProfile: NextPage = () => {
 
   return (
     <div className=&quot;space-y-6 pb-20&quot;>
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+
+const TalentProfile: NextPage = () => {_const _router = useRouter();
+  const { slug} = router.query;
+
+  const [responseLog, setResponseLog] = useState<Array<{_action: 'Accept' | 'Decline' | 'Negotiate'; at: string}>>([]);
+
+  const _handleRespond = (_action: 'Accept' | 'Decline' | 'Negotiate') => {_setResponseLog(_(prev) => [...prev, _{ action, _at: new Date().toISOString()}]);
+  };
+
+  return (_<div className="space-y-6 pb-20">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Head>
-        <title>{slug} - Talent - Zion</title>
+        <title>{_slug} - Talent - Zion</title>
       </Head>
 
       <header className=&quot;flex items-start justify-between gap-4&quot;>
         <div>
+<<<<<<< HEAD
           <h1 className=&quot;text-2xl font-semibold&quot;>{slug}</h1>
           <div className=&quot;text-sm opacity-80&quot;>Full-Stack Developer</div>
           <div className=&quot;mt-2 flex gap-1&quot;>
@@ -34,6 +51,19 @@ const TalentProfile: NextPage = () => {
           <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>
           <EnhancedButton variant=&quot;secondary&quot; onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>
           <EnhancedButton variant=&quot;ghost&quot; onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
+=======
+          <h1 className="text-2xl font-semibold">{_slug}</h1>
+          <div className="text-sm opacity-80">Full-Stack Developer</div>
+          <div className="mt-2 flex gap-1">
+            <TrustBadge type="Verified" />
+            <TrustBadge type="Top Rated" />
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <EnhancedButton onClick={_() => handleRespond('Accept')}>Accept</EnhancedButton>
+          <EnhancedButton variant="secondary" onClick={_() => handleRespond('Decline')}>Decline</EnhancedButton>
+          <EnhancedButton variant="ghost" onClick={_() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
       </header>
 
@@ -50,6 +80,7 @@ const TalentProfile: NextPage = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <aside className=&quot;space-y-4&quot;>
           <div className=&quot;border rounded-md p-4&quot;>
             <h3 className=&quot;font-semibold mb-2&quot;>Response Log</h3>
@@ -59,6 +90,17 @@ const TalentProfile: NextPage = () => {
                 <li key={idx} className=&quot;flex items-center justify-between&quot;>
                   <span>{r.action}</span>
                   <span className=&quot;opacity-70&quot;>{new Date(r.at).toLocaleString()}</span>
+=======
+        <aside className="space-y-4">
+          <div className="border rounded-md p-4">
+            <h3 className="font-semibold mb-2">Response Log</h3>
+            <ul className="space-y-1 text-sm">
+              {_responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
+              {_responseLog.map(_(r, _idx) => (
+                <li key={idx} className="flex items-center justify-between">
+                  <span>{_r.action}</span>
+                  <span className="opacity-70">{_new Date(r.at).toLocaleString()}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </li>
               ))}
             </ul>

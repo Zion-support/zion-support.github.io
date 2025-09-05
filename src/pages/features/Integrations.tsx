@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -38,6 +39,17 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected]),
+=======
+import React, {_useEffect} from "react";
+import Link from 'next/link';
+
+export default function IntegrationsFeature() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "API & Integrations", _"description": "Connect Zion with Slack, _your website and other tools via our API and widgets.", _"url": "https://app.ziontechgroup.com/features/integrations"};
+
+  const {_markSlackConnected} = useAdvancedOnboardingStatus();
+
+  useEffect__(() => {_markSlackConnected();}, [markSlackConnected]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -47,10 +59,15 @@ export default function IntegrationsFeature() {
         keywords=&quot;Zion API, Slack integration, embed widget&quot;
         canonical=&quot;https://app.ziontechgroup.com/features/integrations&quot;
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
+<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+=======
+        type="application/ld+json"
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ></script>
       <Header />
 <<<<<<< HEAD

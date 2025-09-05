@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
@@ -13,6 +14,13 @@ export function Footer() {
     <footer className=&quot;bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8&quot;>
       <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+=======
+
+export function Footer() {_return (
+    <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <div>
             <div className=&quot;mb-4&quot;>
               <span className=&quot;text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent&quot;>ZION</span>
@@ -64,9 +72,15 @@ export function Footer() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <h3 className=&quot;text-white font-semibold mb-4 text-lg&quot;>Subscribe to our newsletter</h3>
             <p className=&quot;text-zion-slate mb-4&quot;>
               Stay updated with the latest news on tech, AI, and marketplace opportunities.
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
+            <p className="text-zion-slate mb-4">
+              Stay updated with the latest news on tech, _AI, _and marketplace opportunities.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
             <NewsletterForm />
           </div>

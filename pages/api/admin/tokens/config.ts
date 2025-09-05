@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getConfig } from "../../../../utils/token/service",
 import { tokenStore } from "../../../../utils/token/storage",
@@ -32,4 +33,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(405).json({ error: &quot;Method not allowed&quot; });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import type {_NextApiRequest, _NextApiResponse} from "next";
+
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method === "GET") {
+    return res.status(200).json(getConfig());}
+  if (req.method === "POST") {_const _body = req.body || {};
+    const _current = tokenStore.getConfig();
+    const _updated = {_...current, _...body};
+    tokenStore.setConfig(updated);
+    return res.status(200).json(updated);
+  }
+  return res.status(405).json({_error: "Method not allowed"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

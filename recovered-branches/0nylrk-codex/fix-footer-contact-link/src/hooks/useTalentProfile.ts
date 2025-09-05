@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
@@ -20,9 +21,16 @@ export function useTalentProfile(id: string | undefined) {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
+=======
 
-  useEffect(() => {
-    const fetchProfile = async () => {
+export function useTalentProfile(_id: string | undefined) {_const [profile, _setProfile] = useState<TalentProfileType | null>(null);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [error, _setError] = useState<string | null>(null);
+  const [mockProfileData, _setMockProfileData] = useState<ProfileData | null>(null);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  useEffect__(() => {
+    const _fetchProfile = async () => {
       if (!id) {
 <<<<<<< HEAD
         setError("No profile ID provided"),
@@ -31,13 +39,18 @@ export function useTalentProfile(id: string | undefined) {
 =======
         setError(&quot;No profile ID provided&quot;);
         setIsLoading(false);
+<<<<<<< HEAD
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
+=======
+        return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       setIsLoading(true),
       setError(null),
       
+<<<<<<< HEAD
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
@@ -50,9 +63,21 @@ export function useTalentProfile(id: string | undefined) {
             // Try fetching from ProfileData mock as fallback
             // This is just for development purposes
             const mockProfile = MOCK_PROFILES[id],
+=======
+      try {_// In a real implementation, _we would fetch from Supabase
+        // For now, _we'll use mock data
+        setTimeout__(() => {
+          const _foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
+          
+          if (foundProfile) {
+            setProfile(convertProfileToTalentProfile(foundProfile));} else {_// Try fetching from ProfileData mock as fallback
+            // This is just for development purposes
+            const _mockProfile = MOCK_PROFILES[id];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             if (mockProfile) {
               setMockProfileData(mockProfile),
               // Convert the ProfileData to TalentProfileType
+<<<<<<< HEAD
               const convertedProfile = convertProfileToTalentProfile(mockProfile),
               setProfile(convertedProfile)
             } else {
@@ -77,9 +102,23 @@ export function useTalentProfile(id: string | undefined) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
     },
+=======
+              const _convertedProfile = convertProfileToTalentProfile(mockProfile);
+              setProfile(convertedProfile);} else {_setError("Profile not found");}
+          }
+          setIsLoading(false);
+        }, 800);
+      } catch (err) {_setError("Failed to load profile data");
+        setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     fetchProfile()
   }, [id]),
 
+<<<<<<< HEAD
   return { profile, isLoading, error, mockProfileData }
+=======
+  return {_profile, _isLoading, _error, _mockProfileData};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

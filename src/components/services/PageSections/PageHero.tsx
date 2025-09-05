@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
@@ -11,6 +12,13 @@ export function PageHero() {
     <div className=&quot;text-center mb-12&quot;>
       <GradientHeading className=&quot;mb-4&quot;>Global IT Onsite Services</GradientHeading>
       <p className=&quot;text-xl text-zion-slate-light max-w-3xl mx-auto&quot;>
+=======
+
+export function PageHero() {_return (
+    <div className="text-center mb-12">
+      <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>
+      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide
       </p>
       
@@ -47,5 +55,9 @@ export function PageHero() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

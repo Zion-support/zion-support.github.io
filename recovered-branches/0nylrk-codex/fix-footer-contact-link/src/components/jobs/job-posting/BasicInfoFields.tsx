@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 =======
@@ -51,6 +52,29 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormLabel>Job Title</FormLabel>
             <FormControl>
               <Input placeholder=&quot;e.g. Senior React Developer&quot; {...field} />
+=======
+import React, {_useState} from "react";
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormMessage} from "@/components/ui/form";
+
+interface BasicInfoFieldsProps {_control: Control<any>;}
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = (_{_control}) => {_const [minBudget, _setMinBudget] = useState<string>("");
+  const [maxBudget, _setMaxBudget] = useState<string>("");
+
+  const _handleSuggestionApplied = (_min: number, _max: number) => {
+    setMinBudget(min.toString());
+    setMaxBudget(max.toString());};
+
+  return (_<div className="space-y-4">
+      <FormField
+        control={_control}
+        name="title"
+        render={_({ field}) => (
+          <FormItem>
+            <FormLabel>Job Title</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Senior React Developer" {_...field} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -58,6 +82,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       />
 
       <FormField
+<<<<<<< HEAD
         control={control}
         name=&quot;company&quot;
         render={({ field }) => (
@@ -65,6 +90,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormLabel>Company</FormLabel>
             <FormControl>
               <Input placeholder=&quot;e.g. Acme Corporation&quot; {...field} />
+=======
+        control={_control}
+        name="company"
+        render={_(_{ field}) => (
+          <FormItem>
+            <FormLabel>Company</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Acme Corporation" {_...field} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -72,15 +106,26 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       />
       
       <FormField
+<<<<<<< HEAD
         control={control}
         name=&quot;category&quot;
         render={({ field }) => (
+=======
+        control={_control}
+        name="category"
+        render={_(_{ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <FormItem>
             <FormLabel>Job Category</FormLabel>
             <FormControl>
               <select
+<<<<<<< HEAD
                 className=&quot;flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm&quot;
                 {...field}
+=======
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                {_...field}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <option value="&quot;>Select a category</option>
                 <option value=&quot;development&quot;>Development</option>
@@ -99,13 +144,20 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
         <FormField
+<<<<<<< HEAD
           control={control}
           name=&quot;budgetMin&quot;
           render={({ field: { onChange, ...rest } }) => (
+=======
+          control={_control}
+          name="budgetMin"
+          render={_(_{ field: { onChange, _...rest} }) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
                 <Input
+<<<<<<< HEAD
                   type=&quot;number&quot;
                   placeholder=&quot;e.g. 30&quot;
                   value={minBudget || rest.value}
@@ -114,6 +166,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                     onChange(e)
                   }}
                   {...rest}
+=======
+                  type="number"
+                  placeholder="e.g. 30"
+                  value={_minBudget || rest.value}
+                  onChange={_e => {
+                    setMinBudget(e.target.value);
+                    onChange(e);}}
+                  {_...rest}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </FormControl>
               <FormMessage />
@@ -122,13 +183,20 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         />
 
         <FormField
+<<<<<<< HEAD
           control={control}
           name=&quot;budgetMax&quot;
           render={({ field: { onChange, ...rest } }) => (
+=======
+          control={_control}
+          name="budgetMax"
+          render={_(_{ field: { onChange, _...rest} }) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
                 <Input
+<<<<<<< HEAD
                   type=&quot;number&quot;
                   placeholder=&quot;e.g. 60"
                   value={maxBudget || rest.value}
@@ -137,6 +205,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                     onChange(e)
                   }}
                   {...rest}
+=======
+                  type="number"
+                  placeholder="e.g. 60"
+                  value={_maxBudget || rest.value}
+                  onChange={_e => {
+                    setMaxBudget(e.target.value);
+                    onChange(e);}}
+                  {_...rest}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </FormControl>
               <FormMessage />
@@ -148,15 +225,23 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       <Card>
         <CardContent className="pt-4&quot;>
           <ClientBudgetRecommender
+<<<<<<< HEAD
             jobTitle={control._formValues.title || "&quot;}
             category={control._formValues.category || "&quot;}
             experienceLevel={control._formValues.experienceLevel || "&quot;}
             onSuggestionApplied={handleSuggestionApplied}
+=======
+            jobTitle={_control._formValues.title || ""}
+            category={_control._formValues.category || ""}
+            experienceLevel={_control._formValues.experienceLevel || ""}
+            onSuggestionApplied={_handleSuggestionApplied}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </CardContent>
       </Card>
 
       <FormField
+<<<<<<< HEAD
         control={control}
         name=&quot;location&quot;
         render={({ field }) => (
@@ -164,6 +249,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormLabel>Location</FormLabel>
             <FormControl>
               <Input placeholder=&quot;e.g. Remote, San Francisco, etc.&quot; {...field} />
+=======
+        control={_control}
+        name="location"
+        render={_(_{ field}) => (
+          <FormItem>
+            <FormLabel>Location</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Remote, San Francisco, etc." {_...field} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </FormControl>
             <FormMessage />
           </FormItem>

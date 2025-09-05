@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
@@ -19,6 +20,26 @@ export default function ApiPerformanceTestingPage() {
 							<div key={f} className=&quot;flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10&quot;>
 								<Check className=&quot;w-5 h-5 text-cyan-400 mt-1&quot; />
 								<p className=&quot;text-gray-200&quot;>{f}</p>
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+
+export default function ApiPerformanceTestingPage() {_const _features = [
+		'k6/Gatling-compatible test runner', _'SLO-aware latency reports', _'Regression baselines per endpoint', _'CI checks and PR annotations', _'Synthetic traffic for staging'
+	];
+
+	return (_<>
+			<SEO title="API Performance Testing" description="Load, _latency and regression testing-as-a-service with CI and SLOs." />
+			<main id="main" className="container mx-auto px-4 py-24">
+				<section className="max-w-5xl mx-auto">
+					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
+					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
+					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+						{features.map((f) => (
+							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
+								<Check className="w-5 h-5 text-cyan-400 mt-1" />
+								<p className="text-gray-200">{_f}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 							</div>
 						))}
 					</div>

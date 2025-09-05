@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -18,6 +19,13 @@ import Link from &quot;next/link&quot;;
 export function TalentDashboard() {
   return (
     <div className=&quot;space-y-6 px-4 pb-24&quot;>
+=======
+import React from "react";
+import Link from "next/link";
+
+export function TalentDashboard() {_return (
+    <div className="space-y-6 px-4 pb-24">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <section>
         <div className=&quot;flex items-center justify-between mb-4&quot;>
           <h2 className=&quot;text-lg font-medium&quot;>New Job Matches</h2>
@@ -166,5 +174,9 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

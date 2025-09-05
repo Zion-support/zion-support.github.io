@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Notification {
   id: string,
   user_id: string,
@@ -9,3 +10,14 @@ export interface Notification {
   created_at: string,
   updated_at: string
 }
+=======
+export interface Notification {_id: string;
+  user_id: string;
+  title: string;
+  message: string;
+  type: string;
+  related_id?: string;
+  read: boolean;
+  created_at: string;
+  updated_at: string;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -50,11 +51,28 @@ function ReviewsModerationContent() {
         title: &quot;Error&quot;,
         description: &quot;Failed to load reviews. Please try again later.&quot;,
         variant: &quot;destructive&quot;});
+=======
+
+function ReviewsModerationContent() {_const [activeTab, _setActiveTab] = useState("pending");
+  const [reviews, _setReviews] = useState([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  
+  const _fetchReviews = async () => {
+    setIsLoading(true);
+    try {
+      // In a real application, _you would fetch reviews from an API
+      // For now, _let's simulate a delay and return empty data
+      await new Promise(resolve => setTimeout(resolve, _1000));
+      setReviews([]);
+      setIsLoading(false);} catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error fetching reviews'});
+      toast({_title: "Error", _description: "Failed to load reviews. Please try again later.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       setIsLoading(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
+<<<<<<< HEAD
   useEffect(() => {
     fetchReviews()
   }, [activeTab]),
@@ -62,6 +80,11 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   },
+=======
+  useEffect__(() => {_fetchReviews();}, [activeTab]);
+
+  const _handleRefresh = () => {_fetchReviews();};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -88,17 +111,24 @@ function ReviewsModerationContent() {
             </CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <Tabs defaultValue=&quot;pending&quot; value={activeTab} onValueChange={setActiveTab}>
               <TabsList className=&quot;mb-6&quot;>
                 <TabsTrigger value=&quot;pending&quot;>Pending Reviews</TabsTrigger>
                 <TabsTrigger value=&quot;reported&quot;>Reported Reviews</TabsTrigger>
+=======
+            <Tabs defaultValue="pending" value={_activeTab} onValueChange={_setActiveTab}>
+              <TabsList className="mb-6">
+                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
+                <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </TabsList>
               
               <TabsContent value=&quot;pending&quot; className=&quot;mt-0&quot;>
                 <ReviewsModerationTable 
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
+                  reviews={_reviews}
+                  isLoading={_isLoading}
+                  onRefresh={_handleRefresh}
                 />
               </TabsContent>
               
@@ -119,10 +149,13 @@ function ReviewsModerationContent() {
   )
 }
 
-export default function ReviewsModeration() {
-  return (
+export default function ReviewsModeration() {_return (
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

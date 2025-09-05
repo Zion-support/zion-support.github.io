@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -45,10 +46,17 @@ export default function Contact() {
     subject: "&quot;,
     message: "&quot;
   });
+=======
+import z from "zod";
+
+export default function Contact() {_const [formData, _setFormData] = useState({
+    name: "", _email: "", _subject: "", _message: ""});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -73,12 +81,25 @@ export default function Contact() {
         message: z.string().min(10, &quot;Message must be at least 10 characters&quot;)
       });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {_const { name, _value} = e.target;
+    setFormData(prev => ({_...prev, _[name]: value}));
+  };
+
+  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
+    
+    try {
+      // Basic validation with Zod
+      const _schema = z.object({
+        name: z.string().min(2, _"Name must be at least 2 characters"), _email: z.string().email("Invalid email address"), _subject: z.string().min(2, _"Subject must be at least 2 characters"), _message: z.string().min(10, _"Message must be at least 10 characters")});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       schema.parse(formData),
       
       // Simulate form submission
       setIsSubmitting(true),
       
+<<<<<<< HEAD
       setTimeout(() => {
         setIsSubmitting(false),
         toast({
@@ -131,11 +152,26 @@ export default function Contact() {
           variant: &quot;destructive&quot;
         });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      setTimeout__(() => {_setIsSubmitting(false);
+        toast({
+          title: "Message Sent", _description: "We've received your message and will get back to you soon."});
+        
+        // Reset form
+        setFormData({_name: "", _email: "", _subject: "", _message: ""});
+      }, 1500);
+    } catch (error) {_if (error instanceof z.ZodError) {
+        toast({
+          title: "Form Validation Error", _description: error.errors[0].message, _variant: "destructive"});
+      } else {_toast({
+          title: "An error occurred", _description: "Please try again later", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
   },
 
   // Handle sending messages to the AI chat assistant
+<<<<<<< HEAD
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch(&quot;https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat&quot;, {
@@ -175,11 +211,26 @@ export default function Contact() {
         description: &quot;There was an error communicating with our AI assistant. Please try again.&quot;,
         variant: &quot;destructive&quot;
       });
+=======
+  const _handleSendMessage = async (message: string): Promise<void> => {_try {
+      const _response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", _{
+        method: "POST", _headers: {
+          "Content-Type": "application/json"},
+        body: JSON.stringify({_messages: [{ role: "user", _content: message}] 
+        })});
+      
+      if (!response.ok) {_throw new Error("Failed to get response from AI assistant");}
+      
+      return Promise.resolve();
+    } catch (error) {_toast({
+        title: "Chat Error", _description: "There was an error communicating with our AI assistant. Please try again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return Promise.resolve();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
+<<<<<<< HEAD
   const offices = [
     {
       name: &quot;Headquarters&quot;,
@@ -194,14 +245,26 @@ export default function Contact() {
       email: &quot;commercial@ziontechgroup.com&quot;
     }
   ],
+=======
+  const _offices = [
+    {_name: "Headquarters", _address: "123 Tech Avenue, _San Francisco, _CA 94105", _phone: "+1 302 464 0950", _email: "commercial@ziontechgroup.com"},
+    {_name: "East Coast Office", _address: "456 Innovation Street, _New York, _NY 10001", _phone: "+1 302 464 0950", _email: "commercial@ziontechgroup.com"}
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  return (
-    <AppLayout>
+  return (_<AppLayout>
       <SEO 
+<<<<<<< HEAD
         title=&quot;Contact Zion - Get in Touch&quot; 
         description=&quot;Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform.&quot; 
         keywords=&quot;contact Zion, AI marketplace support, tech platform contact&quot;
         canonical=&quot;https://app.ziontechgroup.com/contact&quot;
+=======
+        title="Contact Zion - Get in Touch" 
+        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
+        keywords="contact Zion, _AI marketplace support, _tech platform contact"
+        canonical="https://app.ziontechgroup.com/contact"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
       <main className=&quot;min-h-screen bg-zion-blue pt-24 pb-20&quot;>
         <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -214,6 +277,7 @@ export default function Contact() {
           
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24&quot;>
             <div>
+<<<<<<< HEAD
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Get in Touch</h2>
               <p className=&quot;text-zion-slate-light text-lg mb-8&quot;>
                 Whether you have a question about our platform, pricing, or anything else, 
@@ -222,21 +286,40 @@ export default function Contact() {
               
               <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
                 <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-4&quot;>
+=======
+              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+              <p className="text-zion-slate-light text-lg mb-8">
+                Whether you have a question about our platform, _pricing, _or anything else, _our team is ready to answer all your questions.
+              </p>
+              
+              <form onSubmit={_handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <div>
                     <label htmlFor=&quot;name&quot; className=&quot;block text-white mb-2&quot;>Your Name</label>
                     <Input 
+<<<<<<< HEAD
                       id=&quot;name&quot;
                       name=&quot;name&quot;
                       value={formData.name}
                       onChange={handleChange}
                       className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                       placeholder=&quot;John Doe&quot;
+=======
+                      id="name"
+                      name="name"
+                      value={_formData.name}
+                      onChange={_handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="John Doe"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       required
                     />
                   </div>
                   <div>
                     <label htmlFor=&quot;email&quot; className=&quot;block text-white mb-2&quot;>Email Address</label>
                     <Input 
+<<<<<<< HEAD
                       id=&quot;email&quot;
                       name=&quot;email&quot;
                       type=&quot;email&quot;
@@ -244,6 +327,15 @@ export default function Contact() {
                       onChange={handleChange}
                       className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                       placeholder=&quot;john@example.com&quot;
+=======
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={_formData.email}
+                      onChange={_handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="john@example.com"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       required
                     />
                   </div>
@@ -252,12 +344,21 @@ export default function Contact() {
                 <div>
                   <label htmlFor=&quot;subject&quot; className=&quot;block text-white mb-2&quot;>Subject</label>
                   <Input 
+<<<<<<< HEAD
                     id=&quot;subject&quot;
                     name=&quot;subject&quot;
                     value={formData.subject}
                     onChange={handleChange}
                     className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                     placeholder=&quot;How can we help you?&quot;
+=======
+                    id="subject"
+                    name="subject"
+                    value={_formData.subject}
+                    onChange={_handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white"
+                    placeholder="How can we help you?"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     required
                   />
                 </div>
@@ -265,27 +366,45 @@ export default function Contact() {
                 <div>
                   <label htmlFor=&quot;message&quot; className=&quot;block text-white mb-2&quot;>Message</label>
                   <Textarea 
+<<<<<<< HEAD
                     id=&quot;message&quot;
                     name=&quot;message&quot;
                     value={formData.message}
                     onChange={handleChange}
                     className=&quot;bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]&quot;
                     placeholder=&quot;Tell us what you'd like to know...&quot;
+=======
+                    id="message"
+                    name="message"
+                    value={_formData.message}
+                    onChange={_handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
+                    placeholder="Tell us what you'd like to know..."
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     required
                   />
                 </div>
                 
                 <Button 
+<<<<<<< HEAD
                   type=&quot;submit&quot; 
                   className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? &quot;Sending...&quot; : &quot;Send Message&quot;}
+=======
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={_isSubmitting}
+                >
+                  {_isSubmitting ? "Sending..." : "Send Message"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </Button>
               </form>
             </div>
             
             <div>
+<<<<<<< HEAD
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Our Offices</h2>
               <div className=&quot;grid grid-cols-1 gap-6&quot;>
                 {offices.map((office, index) => (
@@ -305,6 +424,27 @@ export default function Contact() {
                         <a href={`mailto:${office.email}`} className=&quot;text-zion-cyan hover:underline&quot;>
                           {office.email}
                         </Link>
+=======
+              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
+              <div className="grid grid-cols-1 gap-6">
+                {_offices.map((office, _index) => (
+                  <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
+                    <h3 className="text-xl font-bold text-white mb-3">{_office.name}</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-zion-slate-light">{_office.address}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <span className="text-zion-slate-light">{_office.phone}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <a href={_`mailto:${office.email}`} className="text-zion-cyan hover:underline">
+                          {_office.email}
+                        </a>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     </div>
                   </Card>
@@ -313,6 +453,7 @@ export default function Contact() {
               
               <div className=&quot;mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden&quot;>
                 <iframe 
+<<<<<<< HEAD
                   src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk&quot; 
                   width=&quot;100%&quot; 
                   height=&quot;300&quot; 
@@ -321,6 +462,16 @@ export default function Contact() {
                   loading=&quot;lazy&quot; 
                   referrerPolicy=&quot;no-referrer-when-downgrade&quot;
                   title=&quot;Zion Office Locations&quot;
+=======
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk" 
+                  width="100%" 
+                  height="300" 
+                  style={_{ border: 0}} 
+                  allowFullScreen={_true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zion Office Locations"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 ></iframe>
               </div>
               
@@ -336,8 +487,13 @@ export default function Contact() {
                     </div>
                   </div>
                   <Button
+<<<<<<< HEAD
                     onClick={() => setIsChatOpen(true)}
                     className=&quot;w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
+=======
+                    onClick={_() => setIsChatOpen(true)}
+                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Chat With Our AI Assistant
                   </Button>
@@ -353,8 +509,13 @@ export default function Contact() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row justify-center gap-4&quot;>
               <Button 
+<<<<<<< HEAD
                 onClick={() => setIsChatOpen(true)}
                 className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
+=======
+                onClick={_() => setIsChatOpen(true)}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <MessageSquare className=&quot;mr-2 h-5 w-5&quot; />
                 Chat With AI
@@ -374,18 +535,13 @@ export default function Contact() {
         </div>
       </main>
 
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (
-        <ChatAssistant
+      {_/* Chat Assistant Modal */}
+      {_isChatOpen && (_<ChatAssistant
           isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-          recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Support Bot'
-          }}
-          onSendMessage={handleSendMessage}
+          onClose={_() => setIsChatOpen(false)}
+          recipient={_{
+            id: 'ai-assistant', _name: 'AI Assistant', _avatarUrl: 'https://placehold.co/64x64?text=AI', _role: 'Support Bot'}}
+          onSendMessage={_handleSendMessage}
         />
       )}
     </AppLayout>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Sidebar() {
   return (
     <aside className="sidebar">
@@ -294,3 +295,10 @@ export default function Sidebar() {
 },
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export default function Sidebar() {_return (
+    <aside className="sidebar">
+      <p>Sidebar</p>
+    </aside>
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

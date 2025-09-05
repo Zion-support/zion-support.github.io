@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -50,31 +51,71 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
       <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <PersonalInfoFields form={form} />
+=======
+import React from "react";
+
+export interface HireRequestFormProps {_talent: TalentProfile;
+  onClose: () => void;
+  initialJobTitle?: string;
+  userDetails?: {
+    name?: string;
+    email?: string;
+    id?: string;};
+  onSubmitSuccess?: () => void;
+}
+
+export function HireRequestForm(_{_talent, _onClose, _initialJobTitle, _userDetails, _onSubmitSuccess}: HireRequestFormProps) {_const { form, _isSubmitting, _onSubmit} = useHireRequestForm({_talent, _onClose: onSubmitSuccess || onClose, _initialJobTitle, _userDetails});
+  
+  return (
+    <Form {_...form}>
+      <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <PersonalInfoFields form={_form} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         
-        <ProjectDetailsField form={form} />
-        <TimelineField form={form} />
+        <ProjectDetailsField form={_form} />
+        <TimelineField form={_form} />
         
+<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <BudgetFields form={form} talent={talent} />
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <BudgetFields form={_form} talent={_talent} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         
         <DialogFooter className=&quot;pt-4&quot;>
           <Button 
+<<<<<<< HEAD
             type=&quot;button&quot; 
             variant=&quot;outline&quot; 
             onClick={onClose}
             className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
             disabled={isSubmitting}
+=======
+            type="button" 
+            variant="outline" 
+            onClick={_onClose}
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            disabled={_isSubmitting}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             Cancel
           </Button>
           <Button 
+<<<<<<< HEAD
             type=&quot;submit&quot;
             className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
             disabled={isSubmitting}
+=======
+            type="submit"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            disabled={_isSubmitting}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            {isSubmitting ? (
+            {_isSubmitting ? (
               <>
                 <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                 Submitting...

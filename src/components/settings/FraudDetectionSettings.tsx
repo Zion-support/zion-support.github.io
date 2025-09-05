@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -30,9 +31,22 @@ export function FraudDetectionSettings() {
   
   const handleSavePreferences = async () => {
     if (!user?.id) return,
+=======
+import React, {_useState} from 'react';
+import {_Accordion, _AccordionContent, _AccordionItem, _AccordionTrigger} from "@/components/ui/accordion";
+
+export function FraudDetectionSettings() {_const { user} = useAuth();
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  
+  const _handleSavePreferences = async () => {_if (!user?.id) return;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsSaving(true),
     try {
+<<<<<<< HEAD
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, 1000)),
@@ -61,6 +75,18 @@ export function FraudDetectionSettings() {
       setIsSaving(false)
     }
   },
+=======
+      // In a real implementation, _we would save these preferences to the database
+      // For now, _we'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve, _1000));
+      
+      toast({
+        title: "Settings saved", _description: "Your fraud detection preferences have been updated."});
+    } catch (error) {_logErrorToProduction('Error saving preferences:', _{ data: error});
+      toast({_title: "Error", _description: "Failed to save your preferences. Please try again.", _variant: "destructive"});
+    } finally {_setIsSaving(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card className=&quot;mb-8&quot;>
@@ -86,10 +112,17 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+<<<<<<< HEAD
                 id=&quot;message-scanning&quot;
                 aria-label=&quot;Message scanning&quot;
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
+=======
+                id="message-scanning"
+                aria-label="Message scanning"
+                checked={_messageScanningEnabled}
+                onCheckedChange={_setMessageScanningEnabled}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
             
@@ -103,10 +136,17 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+<<<<<<< HEAD
                 id=&quot;activity-monitoring&quot;
                 aria-label=&quot;Activity monitoring&quot;
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
+=======
+                id="activity-monitoring"
+                aria-label="Activity monitoring"
+                checked={_activityMonitoringEnabled}
+                onCheckedChange={_setActivityMonitoringEnabled}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
             
@@ -120,10 +160,17 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+<<<<<<< HEAD
                 id=&quot;ai-analysis&quot;
                 aria-label=&quot;AI analysis&quot;
                 checked={aiAnalysisEnabled}
                 onCheckedChange={setAiAnalysisEnabled}
+=======
+                id="ai-analysis"
+                aria-label="AI analysis"
+                checked={_aiAnalysisEnabled}
+                onCheckedChange={_setAiAnalysisEnabled}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
           </div>
@@ -155,11 +202,19 @@ export function FraudDetectionSettings() {
           
           <div className=&quot;pt-2&quot;>
             <Button 
+<<<<<<< HEAD
               onClick={handleSavePreferences}
               disabled={isSaving}
               className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
             >
               {isSaving ? &quot;Saving...&quot; : &quot;Save Preferences&quot;}
+=======
+              onClick={_handleSavePreferences}
+              disabled={_isSaving}
+              className="bg-zion-purple hover:bg-zion-purple-light"
+            >
+              {_isSaving ? "Saving..." : "Save Preferences"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </Button>
           </div>
         </div>

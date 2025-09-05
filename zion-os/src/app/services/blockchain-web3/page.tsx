@@ -1,7 +1,6 @@
 "use client",
 
-export default function BlockchainWeb3Page() {
-  return (
+export default function BlockchainWeb3Page() {_return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>
@@ -32,7 +31,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Service Categories */}
+      {_/* Service Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Blockchain Development</h2>
@@ -119,7 +118,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Industry Solutions */}
+      {_/* Industry Solutions */}
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold text-center">Industry-Specific Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -161,7 +160,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Technology Stack */}
+      {_/* Technology Stack */}
       <div className="bg-zinc-900 border border-white/10 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-6 text-center">Technology Stack</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -188,7 +187,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Development Process */}
+      {_/* Development Process */}
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold text-center">Development Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -220,7 +219,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Pricing Tiers */}
+      {_/* Pricing Tiers */}
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold text-center">Service Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -274,7 +273,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {_/* Contact Section */}
       <div className="bg-gradient-to-r from-purple-600 to-orange-600 rounded-lg p-8 text-white text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to Build the Future?</h2>
         <p className="opacity-90 mb-6 max-w-2xl mx-auto">

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 =======
@@ -40,9 +41,22 @@ export const useSocialAuth = () => {
         description: error.message || &quot;An unexpected error occurred&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+export const _useSocialAuth = () => {_const _loginWithGoogle = async () => {
+    try {
+      const { error} = await supabase.auth.signInWithOAuth({_provider: "google"});
+
+      if (error) {_toast({
+          title: "Google login failed", _description: error.message, _variant: "destructive"});
+      }
+    } catch (error: unknown) {_toast({
+        title: "Google login failed", _description: error.message || "An unexpected error occurred", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   const loginWithFacebook = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -75,9 +89,20 @@ export const useSocialAuth = () => {
         description: error.message || &quot;An unexpected error occurred&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _loginWithFacebook = async () => {_try {
+      const { error} = await supabase.auth.signInWithOAuth({_provider: "facebook"});
+
+      if (error) {_toast({
+          title: "Facebook login failed", _description: error.message, _variant: "destructive"});
+      }
+    } catch (error: unknown) {_toast({
+        title: "Facebook login failed", _description: error.message || "An unexpected error occurred", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   const loginWithTwitter = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -110,8 +135,23 @@ export const useSocialAuth = () => {
         description: error.message || &quot;An unexpected error occurred&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _loginWithTwitter = async () => {_try {
+      const { error} = await supabase.auth.signInWithOAuth({_provider: "twitter"});
+
+      if (error) {_toast({
+          title: "Twitter login failed", _description: error.message, _variant: "destructive"});
+      }
+    } catch (error: unknown) {_toast({
+        title: "Twitter login failed", _description: error.message || "An unexpected error occurred", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 },
+=======
+  return {_loginWithGoogle, _loginWithFacebook, _loginWithTwitter};
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

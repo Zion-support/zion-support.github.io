@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { cn } from &quot;@/lib/utils&quot;;
 import { NavLink } from &quot;react-router-dom&quot;;
@@ -21,6 +22,16 @@ export function MainNavigation({ className }: MainNavigationProps) {
       <NavLink
         to=&quot;/&quot;
         className={({ isActive }) =>
+=======
+
+interface MainNavigationProps {_className?: string;}
+
+export function MainNavigation(_{_className}: MainNavigationProps) {_return (
+    <nav className={cn("hidden md:flex items-center space-x-6", _className)}>
+      <NavLink
+        to="/"
+        className={_(_{ isActive}) =>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           cn(
             &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
             isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;
@@ -45,8 +56,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Categories
       </Link>
       <NavLink
+<<<<<<< HEAD
         to=&quot;/partners&quot;
         className={({ isActive }) =>
+=======
+        to="/partners"
+        className={_(_{ isActive}) =>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           cn(
             &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
             isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;
@@ -56,8 +72,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Partner Program
       </NavLink>
       <NavLink
+<<<<<<< HEAD
         to=&quot;/signup&quot;
         className={({ isActive }) =>
+=======
+        to="/signup"
+        className={_(_{ isActive}) =>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           cn(
             &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
             isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;,

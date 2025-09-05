@@ -10,4 +10,8 @@ export * from &quot;./sidebar-group&quot;
 export * from &quot;./sidebar-menu&quot;
 
 // Also export types 
+<<<<<<< HEAD
 export type { SafeRef } from &quot;../sidebar.types&quot;
+=======
+export type {_SafeRef} from "../sidebar.types"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

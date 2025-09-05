@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React from 'react',
 const EquipmentPage = () => {
   return (
     <div className=&quot;container mx-auto px-4 py-8&quot;>
       <h1 className=&quot;text-3xl font-bold mb-6&quot;>Equipment</h1>
       <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+=======
+import React from 'react';
+
+const _EquipmentPage = () => {_return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Equipment</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         {/* Equipment listing placeholder */}
         <div className=&quot;bg-white rounded-lg shadow p-6&quot;>
           <h2 className=&quot;text-xl font-semibold mb-2&quot;>Coming Soon</h2>

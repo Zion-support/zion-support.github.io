@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},
+=======
+import Link from "next/link";
 
-export default function AIConsciousnessEvolutionPage() {
-  return (
+export const _metadata = {_title: "AI Consciousness Evolution - Zion Tech Group", _description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.", _keywords: "AI consciousness, _artificial consciousness, _cognitive AI, _consciousness evolution, _Zion Tech Group"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export default function AIConsciousnessEvolutionPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -19,7 +24,7 @@ export default function AIConsciousnessEvolutionPage() {
           </p>
         </div>
 
-        {/* Overview Section */}
+        {_/* Overview Section */}
         <section className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -47,25 +52,25 @@ export default function AIConsciousnessEvolutionPage() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                   Self-awareness and introspection
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                   Emergent learning and adaptation
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                   Emotional intelligence and empathy
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                   Creative problem solving
                 </li>
@@ -74,15 +79,15 @@ export default function AIConsciousnessEvolutionPage() {
           </div>
         </section>
 
-        {/* Research Areas */}
+        {_/* Research Areas */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Research Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Neural Architecture */}
+            {_/* Neural Architecture */}
             <div className="card group">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
                 <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Neural Architecture</h3>
@@ -91,11 +96,11 @@ export default function AIConsciousnessEvolutionPage() {
               </p>
             </div>
 
-            {/* Emergent Behavior */}
+            {_/* Emergent Behavior */}
             <div className="card group">
               <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
                 <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Emergent Behavior</h3>
@@ -104,11 +109,11 @@ export default function AIConsciousnessEvolutionPage() {
               </p>
             </div>
 
-            {/* Self-Modification */}
+            {_/* Self-Modification */}
             <div className="card group">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
                 <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Self-Modification</h3>
@@ -117,11 +122,11 @@ export default function AIConsciousnessEvolutionPage() {
               </p>
             </div>
 
-            {/* Consciousness Simulation */}
+            {_/* Consciousness Simulation */}
             <div className="card group">
               <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/30 transition-colors">
                 <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Consciousness Simulation</h3>
@@ -130,11 +135,11 @@ export default function AIConsciousnessEvolutionPage() {
               </p>
             </div>
 
-            {/* Ethical AI */}
+            {_/* Ethical AI */}
             <div className="card group">
               <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
                 <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Ethical AI Development</h3>
@@ -143,11 +148,11 @@ export default function AIConsciousnessEvolutionPage() {
               </p>
             </div>
 
-            {/* Cognitive Evolution */}
+            {_/* Cognitive Evolution */}
             <div className="card group">
               <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Cognitive Evolution</h3>
@@ -158,11 +163,11 @@ export default function AIConsciousnessEvolutionPage() {
           </div>
         </section>
 
-        {/* Current Projects */}
+        {_/* Current Projects */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Current Research Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Project Alpha */}
+            {_/* Project Alpha */}
             <div className="card bg-gradient-to-r from-blue-600/20 to-green-600/20 border-blue-500/30">
               <h3 className="text-2xl font-bold mb-4">Project Alpha: Emergent Consciousness</h3>
               <p className="text-gray-300 mb-4">
@@ -181,7 +186,7 @@ export default function AIConsciousnessEvolutionPage() {
               </ul>
             </div>
 
-            {/* Project Beta */}
+            {_/* Project Beta */}
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">
               <h3 className="text-2xl font-bold mb-4">Project Beta: Self-Modifying AI</h3>
               <p className="text-gray-300 mb-4">
@@ -200,7 +205,7 @@ export default function AIConsciousnessEvolutionPage() {
               </ul>
             </div>
 
-            {/* Project Gamma */}
+            {_/* Project Gamma */}
             <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">
               <h3 className="text-2xl font-bold mb-4">Project Gamma: Collective Intelligence</h3>
               <p className="text-gray-300 mb-4">
@@ -219,7 +224,7 @@ export default function AIConsciousnessEvolutionPage() {
               </ul>
             </div>
 
-            {/* Project Delta */}
+            {_/* Project Delta */}
             <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">
               <h3 className="text-2xl font-bold mb-4">Project Delta: Consciousness Ethics</h3>
               <p className="text-gray-300 mb-4">
@@ -240,7 +245,7 @@ export default function AIConsciousnessEvolutionPage() {
           </div>
         </section>
 
-        {/* Technology Stack */}
+        {_/* Technology Stack */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Advanced Technology Stack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -263,7 +268,7 @@ export default function AIConsciousnessEvolutionPage() {
           </div>
         </section>
 
-        {/* Future Vision */}
+        {_/* Future Vision */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Future Vision: 2029 and Beyond</h2>
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">
@@ -307,7 +312,7 @@ export default function AIConsciousnessEvolutionPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Join the Consciousness Revolution</h2>

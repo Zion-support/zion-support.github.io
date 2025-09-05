@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
@@ -34,10 +35,27 @@ export function NewsletterForm() {
       setIsSubmitted(true);
       setEmail("&quot;);
     }, 1000);
+=======
+
+export function NewsletterForm() {_const [email, _setEmail] = useState("");
+  const [isSubmitting, _setIsSubmitting] = useState(false);
+  const [isSubmitted, _setIsSubmitted] = useState(false);
+
+  const _handleSubmit = (_e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout__(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      setEmail("");}, 1000);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
+<<<<<<< HEAD
     <div className=&quot;w-full max-w-md mx-auto&quot;>
       {isSubmitted ? (
         <div className=&quot;text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40&quot;>
@@ -60,6 +78,29 @@ export function NewsletterForm() {
             className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple&quot;
           >
             {isSubmitting ? &quot;Subscribing...&quot; : &quot;Subscribe&quot;}
+=======
+    <div className="w-full max-w-md mx-auto">
+      {_isSubmitted ? (
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+          <p className="text-white font-medium">Thank you for subscribing!</p>
+          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+        </div>
+      ) : (_<form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value={_email}
+            onChange={_(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            required
+          />
+          <Button 
+            type="submit" 
+            disabled={_isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+          >
+            {_isSubmitting ? "Subscribing..." : "Subscribe"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Button>
         </form>
       )}

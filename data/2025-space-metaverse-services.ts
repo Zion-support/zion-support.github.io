@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface SpaceMetaverseService {
   id: string,
   name: string,
@@ -33,23 +34,46 @@ export interface SpaceMetaverseService {
   customers: number,
   rating: number,
   reviews: number
+=======
+export interface SpaceMetaverseService {_id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+    enterprise: string;};
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
+  useCases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
-  {
-    id: 'ai-powered-space-resource-intelligence',
-    name: 'AI-Powered Space Resource Intelligence Platform',
-    tagline: 'Discover and optimize space resources with AI-driven analytics',
-    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',
-    category: 'Space Technology & Resource Intelligence',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2-4 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'ai-powered-space-resource-intelligence', _name: 'AI-Powered Space Resource Intelligence Platform', _tagline: 'Discover and optimize space resources with AI-driven analytics', _description: 'Revolutionary platform that uses AI to analyze space data, _identify valuable resources, _and optimize space exploration and mining operations for maximum efficiency.', _category: 'Space Technology & Resource Intelligence', _price: {
+      monthly: 799, _yearly: 7990, _currency: 'USD', _trialDays: 30, _setupTime: '2-4 weeks', _enterprise: 'Custom pricing'},
     features: [
       'AI-powered resource detectionMulti-spectral data analysis3D mapping and visualizationResource optimization algorithmsReal-time satellite data processingPredictive resource modelingMining operation planningCost-benefit analysis',
       'Regulatory compliance monitoringAPI for space agencies'
@@ -81,20 +105,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.9,
     reviews: 120
   },
-  {
-    id: 'metaverse-development-platform',
-    name: 'Metaverse Development Platform',
-    tagline: 'Build immersive virtual worlds with AI-powered tools',
-    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.',
-    category: 'Metaverse & Virtual Reality',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '1-2 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'metaverse-development-platform', _name: 'Metaverse Development Platform', _tagline: 'Build immersive virtual worlds with AI-powered tools', _description: 'Comprehensive metaverse development platform that enables creators to build, _deploy, _and monetize immersive virtual worlds with AI-powered tools and blockchain integration.', _category: 'Metaverse & Virtual Reality', _price: {
+      monthly: 299, _yearly: 2990, _currency: 'USD', _trialDays: 21, _setupTime: '1-2 weeks', _enterprise: 'Custom pricing'},
     features: [
       'AI-powered world generation3D modeling and animation toolsVirtual reality integrationBlockchain asset managementMulti-user collaborationReal-time rendering engineCustom scripting languageAsset marketplace',
       'Analytics and insightsAPI for developers'
@@ -126,20 +138,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7,
     reviews: 2400
   },
-  {
-    id: 'quantum-space-communications-network',
-    name: 'Quantum Space Communications Network',
-    tagline: 'Ultra-secure space communications with quantum entanglement',
-    description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.',
-    category: 'Quantum Space Communications',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '4-6 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'quantum-space-communications-network', _name: 'Quantum Space Communications Network', _tagline: 'Ultra-secure space communications with quantum entanglement', _description: 'Breakthrough quantum communications network that enables ultra-secure, _high-speed communications between Earth, _satellites, _and space stations using quantum entanglement.', _category: 'Quantum Space Communications', _price: {
+      monthly: 1299, _yearly: 12990, _currency: 'USD', _trialDays: 30, _setupTime: '4-6 weeks', _enterprise: 'Custom pricing'},
     features: [
       'Quantum entanglement communicationsSatellite quantum networksGround station integrationReal-time quantum key distributionMulti-node quantum routingAdvanced quantum protocolsNetwork monitoringSecurity analytics',
       'API for space agenciesCustom quantum protocols'
@@ -171,20 +171,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.9,
     reviews: 65
   },
-  {
-    id: 'ai-powered-space-traffic-management',
-    name: 'AI-Powered Space Traffic Management Platform',
-    tagline: 'Intelligent space traffic control with collision prevention',
-    description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',
-    category: 'Space Traffic Management & Safety',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '2-3 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'ai-powered-space-traffic-management', _name: 'AI-Powered Space Traffic Management Platform', _tagline: 'Intelligent space traffic control with collision prevention', _description: 'Advanced AI platform that monitors, _predicts, _and manages space traffic to prevent collisions, _optimize orbital paths, _and ensure safe space operations.', _category: 'Space Traffic Management & Safety', _price: {
+      monthly: 599, _yearly: 5990, _currency: 'USD', _trialDays: 21, _setupTime: '2-3 weeks', _enterprise: 'Custom pricing'},
     features: [
       'Real-time space traffic monitoringAI-powered collision predictionAutomated collision avoidanceOrbital path optimizationSatellite trackingDebris monitoringRegulatory complianceAdvanced analytics',
       'API for space agenciesMobile monitoring app'
@@ -216,20 +204,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.8,
     reviews: 320
   },
-  {
-    id: 'virtual-reality-enterprise-platform',
-    name: 'Virtual Reality Enterprise Platform',
-    tagline: 'Transform business operations with immersive VR solutions',
-    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
-    category: 'Enterprise VR & Immersive Technology',
-    price: {
-      monthly: 199,
-      yearly: 1990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '1-2 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'virtual-reality-enterprise-platform', _name: 'Virtual Reality Enterprise Platform', _tagline: 'Transform business operations with immersive VR solutions', _description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, _collaboration, _and visualization solutions for improved productivity and engagement.', _category: 'Enterprise VR & Immersive Technology', _price: {
+      monthly: 199, _yearly: 1990, _currency: 'USD', _trialDays: 14, _setupTime: '1-2 weeks', _enterprise: 'Custom pricing'},
     features: [
       'VR training simulationsVirtual collaboration spaces3D visualization toolsCustom VR applicationsMulti-user VR experiencesAnalytics and reportingMobile VR supportAPI for integration',
       'Content management systemEnterprise security features'

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -29,23 +30,48 @@ const CommunityRoutes = () => {
       <Route path=&quot;/community/category/:categoryId&quot; element={<ForumCategoryPage />} />
       <Route path=&quot;/community/post/:postId&quot; element={<ForumPostPage />} />
       <Route path=&quot;/community/profile/:userId&quot; element={<CommunityProfilePage />} />
+=======
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+
+const _CommunityRoutes = () => {_return (
+    <Routes>
+      {/* Public routes */}
+      <Route path="/community" element={_<CommunityPage />} />
+      <Route path="/forum" element={_<CommunityPage />} />
+      <Route path="/community/category/:categoryId" element={_<ForumCategoryPage />} />
+      <Route path="/community/post/:postId" element={_<ForumPostPage />} />
+      <Route path="/community/profile/:userId" element={_<CommunityProfilePage />} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
-      {/* Protected routes */}
+      {_/* Protected routes */}
       <Route
+<<<<<<< HEAD
         path=&quot;/community/create&quot;
         element={
           <ProtectedRoute>
+=======
+        path="/community/create"
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <CreatePostPage />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route
+<<<<<<< HEAD
         path=&quot;/community/edit/:postId&quot;
         element={
           <ProtectedRoute>
+=======
+        path="/community/edit/:postId"
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <EditPostPage />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
     </Routes>
   )

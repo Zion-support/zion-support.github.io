@@ -1,27 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
+=======
+import React, {_ReactNode} from 'react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 import Header from '../Header';
 import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
-interface MainLayoutProps {
-  children: ReactNode;
+interface MainLayoutProps {_children: ReactNode;
   title?: string;
-  description?: string;
-}
+  description?: string;}
 
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title,
-  description,
-}) => {
-  return (
+const MainLayout: React.FC<MainLayoutProps> = (_{_children, _title, _description, _}) => {_return (
     <>
-      <SEOHead title={title} description={description} />
+      <SEOHead title={title} description={_description} />
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">{_children}</main>
         <Footer />
       </div>
     </>

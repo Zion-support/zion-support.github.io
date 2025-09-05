@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
 <<<<<<< HEAD
 import { useEffect, useState } from "react",
@@ -27,13 +28,25 @@ export function BackToTopButton() {
 =======
       setVisible(window.scrollY > 400);
     };
+=======
+
+export function BackToTopButton() {_const [visible, _setVisible] = useState(false);
+
+  useEffect__(() => {
+    const _updateVisibility = () => {
+      setVisible(window.scrollY > 400);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     updateVisibility();
     window.addEventListener(&quot;scroll&quot;, updateVisibility);
     return () => window.removeEventListener(&quot;scroll&quot;, updateVisibility);
   }, []);
 
+<<<<<<< HEAD
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: &quot;smooth&quot; };
+=======
+  const _scrollToTop = () => {_const opts: ScrollToOptions = { top: 0, _behavior: "smooth"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     window.scrollTo(opts);
     document.documentElement.scrollTo(opts);
     document.body.scrollTo(opts);
@@ -42,11 +55,18 @@ export function BackToTopButton() {
 
   return (
     <button
+<<<<<<< HEAD
       aria-label=&quot;Back to top&quot;
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? &quot;opacity-100&quot; : &quot;opacity-0 pointer-events-none&quot;
       }`}
+=======
+      aria-label="Back to top"
+      onClick={_scrollToTop}
+      className={_`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     >
       <ArrowUp className=&quot;h-5 w-5&quot; />
     </button>

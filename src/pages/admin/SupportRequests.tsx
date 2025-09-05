@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -21,9 +22,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &q
 import { Badge } from &quot;@/components/ui/badge&quot;;
 import { Search, Filter } from 'lucide-react'
 import { SEO } from &quot;@/components/SEO&quot;;
+=======
+import React, {_useState} from "react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Mock data for support requests
+<<<<<<< HEAD
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: &quot;SR-1001&quot;,
@@ -116,14 +121,31 @@ export default function SupportRequests() {
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+const _MOCK_SUPPORT_REQUESTS = [
+  {_id: "SR-1001", _user: "john.doe@example.com", _userId: "user-123", _issue: "Cannot access account after password reset", _status: "open", _priority: "high", _createdAt: "2023-12-15T14:30:00Z", _lastUpdated: "2023-12-15T15:45:00Z", _category: "authentication"},
+  {_id: "SR-1002", _user: "sarah.smith@company.co", _userId: "user-456", _issue: "Payment failed but funds were deducted", _status: "in-progress", _priority: "high", _createdAt: "2023-12-14T09:15:00Z", _lastUpdated: "2023-12-15T13:20:00Z", _category: "billing"},
+  {_id: "SR-1003", _user: "tech.guru@startup.io", _userId: "user-789", _issue: "Unable to download invoice PDF", _status: "open", _priority: "medium", _createdAt: "2023-12-15T11:00:00Z", _lastUpdated: "2023-12-15T11:00:00Z", _category: "billing"},
+  {_id: "SR-1004", _user: "developer@codelab.dev", _userId: "user-235", _issue: "API integration documentation is outdated", _status: "open", _priority: "low", _createdAt: "2023-12-13T16:45:00Z", _lastUpdated: "2023-12-13T16:45:00Z", _category: "api"},
+  {_id: "SR-1005", _user: "maria.rodriguez@design.co", _userId: "user-567", _issue: "Dispute with freelancer over delivered work quality", _status: "in-progress", _priority: "high", _createdAt: "2023-12-12T10:30:00Z", _lastUpdated: "2023-12-15T09:15:00Z", _category: "disputes"},
+  {_id: "SR-1006", _user: "alex.wong@datacompany.com", _userId: "user-890", _issue: "Profile verification pending for over 7 days", _status: "resolved", _priority: "medium", _createdAt: "2023-12-08T13:20:00Z", _lastUpdated: "2023-12-15T08:30:00Z", _category: "verification"},
+  {_id: "SR-1007", _user: "jamie.taylor@tech.org", _userId: "user-345", _issue: "Cannot upload portfolio images", _status: "resolved", _priority: "medium", _createdAt: "2023-12-10T15:10:00Z", _lastUpdated: "2023-12-13T11:25:00Z", _category: "profile"}
+];
+
+export default function SupportRequests() {_const [searchQuery, _setSearchQuery] = useState("");
+  const [statusFilter, _setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, _setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, _setCategoryFilter] = useState<string | null>(null);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Apply filters to the request data
-  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+  const _filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery && 
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+<<<<<<< HEAD
       return false
     }
     
@@ -141,11 +163,24 @@ export default function SupportRequests() {
     if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
+=======
+      return false;}
+    
+    // Apply status filter
+    if (statusFilter && request.status !== statusFilter) {_return false;}
+    
+    // Apply priority filter
+    if (priorityFilter && request.priority !== priorityFilter) {_return false;}
+    
+    // Apply category filter
+    if (categoryFilter && request.category !== categoryFilter) {_return false;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     return true
   }),
   
   // Count by status for the summary dashboard
+<<<<<<< HEAD
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
@@ -165,9 +200,19 @@ export default function SupportRequests() {
     setCategoryFilter(null);
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const _inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const _resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const _totalCount = MOCK_SUPPORT_REQUESTS.length;
   
-  return (
-    <>
+  const _resetFilters = () => {_setSearchQuery("");
+    setStatusFilter(null);
+    setPriorityFilter(null);
+    setCategoryFilter(null);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  return (_<>
       <SEO 
         title=&quot;Support Requests | Admin Dashboard&quot;
         description=&quot;Manage and track user support requests and issues&quot;
@@ -190,32 +235,55 @@ export default function SupportRequests() {
           </div>
         </div>
         
+<<<<<<< HEAD
         {/* Status Cards */}
         <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8&quot;>
           <Card>
             <CardHeader className=&quot;pb-2&quot;>
               <CardTitle className=&quot;text-2xl font-bold&quot;>{openCount}</CardTitle>
+=======
+        {_/* Status Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{_openCount}</CardTitle>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
+<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
               <CardTitle className=&quot;text-2xl font-bold&quot;>{inProgressCount}</CardTitle>
+=======
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{_inProgressCount}</CardTitle>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
+<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
               <CardTitle className=&quot;text-2xl font-bold&quot;>{resolvedCount}</CardTitle>
+=======
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{_resolvedCount}</CardTitle>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
+<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
               <CardTitle className=&quot;text-2xl font-bold&quot;>{totalCount}</CardTitle>
+=======
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{_totalCount}</CardTitle>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <CardDescription>Total Requests</CardDescription>
             </CardHeader>
           </Card>
@@ -229,6 +297,7 @@ export default function SupportRequests() {
             <TabsTrigger value=&quot;need-response&quot;>Need Response</TabsTrigger>
           </TabsList>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;all&quot; className=&quot;mt-6&quot;>
             {/* Search and Filters */}
             <div className=&quot;flex flex-col md:flex-row gap-4 mb-6&quot;>
@@ -245,6 +314,24 @@ export default function SupportRequests() {
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
                   <SelectValue placeholder=&quot;Status&quot; />
+=======
+          <TabsContent value="all" className="mt-6">
+            {_/* Search and Filters */}
+            <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Input
+                  placeholder="Search by ID, _user or issue..."
+                  value={_searchQuery}
+                  onChange={_(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+              
+              <Select value={_statusFilter || ""} onValueChange={_value => setStatusFilter(value || null)}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Status" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Statuses</SelectItem>
@@ -254,9 +341,15 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
               
+<<<<<<< HEAD
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
                   <SelectValue placeholder=&quot;Priority&quot; />
+=======
+              <Select value={_priorityFilter || ""} onValueChange={_value => setPriorityFilter(value || null)}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Priority" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Priorities</SelectItem>
@@ -266,9 +359,15 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
               
+<<<<<<< HEAD
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
                   <SelectValue placeholder=&quot;Category&quot; />
+=======
+              <Select value={_categoryFilter || ""} onValueChange={_value => setCategoryFilter(value || null)}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Category" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Categories</SelectItem>
@@ -281,12 +380,17 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
               
+<<<<<<< HEAD
               <Button variant=&quot;outline&quot; onClick={resetFilters} className=&quot;md:w-auto&quot;>
                 <Filter className=&quot;h-4 w-4 mr-2&quot; /> Reset Filters
+=======
+              <Button variant="outline" onClick={_resetFilters} className="md:w-auto">
+                <Filter className="h-4 w-4 mr-2" /> Reset Filters
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </Button>
             </div>
             
-            {/* Support Requests Table */}
+            {_/* Support Requests Table */}
             <Card>
               <CardContent className=&quot;p-0&quot;>
                 <Table>
@@ -304,36 +408,38 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredRequests.map((request) => (
+                    {_filteredRequests.map(_(request) => (
                       <TableRow key={request.id}>
+<<<<<<< HEAD
                         <TableCell className=&quot;font-medium&quot;>{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>
                         <TableCell className=&quot;max-w-xs truncate&quot;>{request.issue}</TableCell>
+=======
+                        <TableCell className="font-medium">{_request.id}</TableCell>
+                        <TableCell>{_request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">{_request.issue}</TableCell>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <TableCell>
-                          <Badge variant={
-                            request.status === 'open' 
+                          <Badge variant={_request.status === 'open' 
                               ? 'default' 
                               : request.status === 'in-progress' 
                               ? 'secondary' 
-                              : 'outline'
-                          }>
-                            {request.status}
+                              : 'outline'}>
+                            {_request.status}
                           </Badge>
                         </TableCell>
                         <TableCell>
-                          <Badge variant={
-                            request.priority === 'high' 
+                          <Badge variant={_request.priority === 'high' 
                               ? 'destructive' 
                               : request.priority === 'medium' 
                               ? 'default' 
-                              : 'outline'
-                          }>
-                            {request.priority}
+                              : 'outline'}>
+                            {_request.priority}
                           </Badge>
                         </TableCell>
-                        <TableCell>{request.category}</TableCell>
-                        <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>
-                        <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
+                        <TableCell>{_request.category}</TableCell>
+                        <TableCell>{_new Date(request.createdAt).toLocaleDateString()}</TableCell>
+                        <TableCell>{_new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
                         <TableCell>
                           <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>View</Button>
                           <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>Assign</Button>

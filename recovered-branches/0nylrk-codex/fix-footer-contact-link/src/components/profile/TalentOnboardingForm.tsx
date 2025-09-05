@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -48,12 +49,18 @@ import {
 import { useAuth } from &quot;@/hooks/useAuth&quot;;
 import { useTalentProfileEnhancer } from &quot;@/hooks/useTalentProfileEnhancer&quot;;
 import { supabase } from &quot;@/integrations/supabase/client&quot;;
+=======
+import React, {_useState} from "react";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
+import {_User, _Briefcase, _Star, _Calendar, _Globe, _DollarSign, _FileText, _Link, _Upload, _ArrowRight, _ArrowLeft, _Trash2, _Plus, _CheckCircle2} from "lucide-react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Define the form schema with validation
-const talentSchema = z.object({
-  // Step 1: Basic Info
+const _talentSchema = z.object({_// Step 1: Basic Info
   basicInfo: z.object({
+<<<<<<< HEAD
     fullName: z.string().min(2, &quot;Name must be at least 2 characters&quot;),
     professionalTitle: z.string().min(2, &quot;Professional title is required&quot;),
     profilePicture: z.any().optional()}),
@@ -81,11 +88,30 @@ const talentSchema = z.object({
     portfolioLinks: z.array(
       z.object({
         url: z.string().url(&quot;Must be a valid URL&quot;).min(5, &quot;URL is required&quot;)})
+=======
+    fullName: z.string().min(2, _"Name must be at least 2 characters"), _professionalTitle: z.string().min(2, _"Professional title is required"), _profilePicture: z.any().optional()}),
+  
+  // Step 2: Experience
+  experience: z.object({_bio: z.string().min(50, _"Bio must be at least 50 characters"), _keyProjects: z.array(
+      z.object({
+        title: z.string().min(2, _"Project title is required"), _description: z.string().min(10, _"Project description is required")})
+    ).min(1, "Add at least one key project"),
+    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
+  
+  // Step 3: Skills & Tech Stack
+  skills: z.object({_skillsList: z.string().min(2, _"Add at least one skill"), _toolsUsed: z.string().optional()}),
+  
+  // Step 4: Availability & Preferences
+  availability: z.object({_availabilityType: z.string().min(1, _"Select your availability"), _timezone: z.string().min(1, _"Timezone is required"), _hourlyRate: z.string().optional(), _portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid window.URL").min(5, _"window.URL is required")})
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ).optional().default([]),
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
+<<<<<<< HEAD
 export function TalentOnboardingForm() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -98,11 +124,23 @@ export function TalentOnboardingForm() {
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   
   const totalSteps = 4,
+=======
+export function TalentOnboardingForm() {_const { user} = useAuth();
+  const _navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
+  const [cvFileName, setCvFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   
-  const form = useForm<TalentFormValues>({
-    resolver: zodResolver(talentSchema),
-    defaultValues: {
+  const {_enhanceProfile, _isGenerating} = useTalentProfileEnhancer();
+  
+  const _totalSteps = 4;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  const _form = useForm<TalentFormValues>({_resolver: zodResolver(talentSchema), _defaultValues: {
       basicInfo: {
+<<<<<<< HEAD
         fullName: user?.displayName || "&quot;,
         professionalTitle: "&quot;,
         profilePicture: undefined},
@@ -118,10 +156,18 @@ export function TalentOnboardingForm() {
         timezone: "&quot;,
         hourlyRate: "&quot;,
         portfolioLinks: [{ url: "&quot; }],
+=======
+        fullName: user?.displayName || "", _professionalTitle: "", _profilePicture: undefined},
+      experience: {_bio: "", _keyProjects: [{ title: "", _description: ""}],
+        yearsOfExperience: ""},
+      skills: {_skillsList: "", _toolsUsed: ""},
+      availability: {_availabilityType: "", _timezone: "", _hourlyRate: "", _portfolioLinks: [{ url: ""}],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         cv: undefined}},
 <<<<<<< HEAD
     mode: "onChange"}),
   
+<<<<<<< HEAD
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
@@ -156,6 +202,23 @@ export function TalentOnboardingForm() {
       setProfilePictureUrl(reader.result as string)
     },
     reader.readAsDataURL(file),
+=======
+  const {_fields: projectFields, _append: appendProject, _remove: removeProject} = 
+    useFieldArray({_name: "experience.keyProjects", _control: form.control});
+    
+  const {_fields: linkFields, _append: appendLink, _remove: removeLink} = 
+    useFieldArray({_name: "availability.portfolioLinks", _control: form.control});
+
+  // Handle profile picture upload
+  const _handleProfilePictureUpload = async (_e: React.ChangeEvent<HTMLInputElement>) => {_const _file = e.target.files?.[0];
+    if (!file) return;
+    
+    // Preview the image
+    const _reader = new FileReader();
+    reader.onloadend = () => {
+      setProfilePictureUrl(reader.result as string);};
+    reader.readAsDataURL(file);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Store the file in the form data
 <<<<<<< HEAD
@@ -167,12 +230,18 @@ export function TalentOnboardingForm() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Handle CV upload
+<<<<<<< HEAD
   const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`,
     const { error: cvError } = await supabase.storage
+=======
+  const _handleCvUpload = async (_file: File) => {_const _fileName = `cv-${user?.id}-${_Date.now()}`;
+    const {_error: cvError} = await supabase.storage
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .from('resumes')
       .upload(fileName, file),
       
+<<<<<<< HEAD
     if (cvError) {
 <<<<<<< HEAD
       console.error("Error uploading CV:", cvError),
@@ -182,9 +251,12 @@ export function TalentOnboardingForm() {
       throw new Error(&quot;Failed to upload CV&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
+=======
+    if (cvError) {_throw new Error("Failed to upload CV");}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
-    // Get the public URL
-    const { data: { publicUrl } } = supabase.storage
+    // Get the public window.URL
+    const {_data: { publicUrl} } = supabase.storage
       .from('resumes')
       .getPublicUrl(fileName),
     

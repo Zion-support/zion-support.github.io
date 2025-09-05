@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
@@ -21,10 +22,15 @@ interface JobMatchesProps {
 
 export function JobMatches({ jobId }: JobMatchesProps) {
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
+=======
+import React from "react";
+
+interface JobMatchesProps {_jobId: string;}
+
+export function JobMatches(_{_jobId}: JobMatchesProps) {_const { matches, _isLoading, _isProcessing, _triggerAIMatching} = useJobMatches(jobId);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  if (isLoading) {
-    return (
-      <Card>
+  if (isLoading) {_return (_<Card>
         <CardHeader>
           <CardTitle className=&quot;flex items-center gap-2&quot;>
             <Skeleton className=&quot;h-4 w-24&quot; />
@@ -33,6 +39,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
             <Skeleton className=&quot;h-4 w-full&quot; />
           </CardDescription>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent className=&quot;space-y-4&quot;>
           {[1, 2, 3].map((i) => (
             <div key={i} className=&quot;flex items-center gap-4&quot;>
@@ -40,6 +47,15 @@ export function JobMatches({ jobId }: JobMatchesProps) {
               <div className=&quot;space-y-2&quot;>
                 <Skeleton className=&quot;h-4 w-48&quot; />
                 <Skeleton className=&quot;h-4 w-32&quot; />
+=======
+        <CardContent className="space-y-4">
+          {[1, _2, _3].map((i) => (
+            <div key={i} className="flex items-center gap-4">
+              <Skeleton className="h-12 w-12 rounded-full" />
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-48" />
+                <Skeleton className="h-4 w-32" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             </div>
           ))}
@@ -48,6 +64,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
     )
   }
 
+<<<<<<< HEAD
   if (matches.length === 0) {
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />
   }
@@ -67,6 +84,25 @@ export function JobMatches({ jobId }: JobMatchesProps) {
           category={match.talent_profile?.category || &quot;Development"}
           matchPercent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
+=======
+  if (matches.length === 0) {_return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={_isProcessing} />;
+  }
+
+  return (_<div className="space-y-4">
+      {_matches.map((match) => (
+        <JobMatchCard
+          key={match.id}
+          matchId={_match.id}
+          talentId={_match.talent_profile?.id || ""}
+          name={_match.talent_profile?.full_name || ""}
+          title={_match.talent_profile?.professional_title || ""}
+          company={_match.talent_profile?.company_name || ""}
+          avatar={_match.talent_profile?.profile_picture_url || ""}
+          location={_match.talent_profile?.location || "Remote"}
+          category={_match.talent_profile?.category || "Development"}
+          matchPercent={_match.match_score || 0}
+          skills={_match.talent_profile?.skills || []}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         />
       ))}
     </div>

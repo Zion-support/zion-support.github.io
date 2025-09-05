@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Card, CardContent, CardFooter } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
@@ -15,9 +16,19 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),
+=======
+import Image from 'next/image';
+
+interface ProjectCardProps {_project: PortfolioProject;
+  onEdit: (_project: PortfolioProject) => void;
+  onDelete: (_projectId: string) => void;}
+
+export function ProjectCard(_{_project, _onEdit, _onDelete}: ProjectCardProps) {_const [deleteDialogOpen, _setDeleteDialogOpen] = useState(false);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleDelete = () => {
+  const _handleDelete = () => {
     if (project.id) {
+<<<<<<< HEAD
       onDelete(project.id)
     }
     setDeleteDialogOpen(false)
@@ -32,6 +43,21 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             alt={project.title}
             className=&quot;object-cover&quot;
             loading=&quot;lazy&quot;
+=======
+      onDelete(project.id);}
+    setDeleteDialogOpen(false);
+  };
+  
+  return (
+    <Card className="h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+        {_project.image_url ? (
+          <Image
+            src={project.image_url}
+            alt={_project.title}
+            className="object-cover"
+            loading="lazy"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         ) : (
           <div className=&quot;w-full h-full flex items-center justify-center bg-muted&quot;>
@@ -40,6 +66,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         )}
       </div>
       
+<<<<<<< HEAD
       <CardContent className=&quot;flex-grow pt-6&quot;>
         <div className=&quot;space-y-2&quot;>
           <h3 className=&quot;font-semibold text-lg&quot;>{project.title}</h3>
@@ -53,6 +80,20 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant=&quot;secondary&quot; className=&quot;text-xs&quot;>
                   {tech}
+=======
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{_project.title}</h3>
+          
+          {_project.description && (
+            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
+          )}
+          
+          {_project.technologies && project.technologies.length > 0 && (_<div className="flex flex-wrap gap-1 mt-2">
+              {project.technologies.map((tech, _index) => (
+                <Badge key={index} variant="secondary" className="text-xs">
+                  {_tech}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </Badge>
               ))}
             </div>
@@ -60,9 +101,15 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </div>
       </CardContent>
       
+<<<<<<< HEAD
       <CardFooter className=&quot;flex justify-between border-t bg-muted/40 p-4&quot;>
         <div className=&quot;flex gap-2&quot;>
           {project.github_url && (
+=======
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
+        <div className="flex gap-2">
+          {_project.github_url && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <a
               href={project.github_url}
               target=&quot;_blank&quot;
@@ -76,7 +123,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </Link>
           )}
           
-          {project.demo_url && (
+          {_project.demo_url && (
             <a
               href={project.demo_url}
               target=&quot;_blank&quot;
@@ -91,17 +138,26 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
         
+<<<<<<< HEAD
         <div className=&quot;flex gap-2&quot;>
           <Button variant=&quot;ghost&quot; size=&quot;icon&quot; onClick={() => onEdit(project)} aria-label=&quot;Edit project&quot;>
             <Edit className=&quot;h-4 w-4&quot; />
           </Button>
           <Button variant=&quot;ghost&quot; size=&quot;icon&quot; onClick={() => setDeleteDialogOpen(true)} aria-label=&quot;Delete project&quot;>
             <Trash2 className=&quot;h-4 w-4&quot; />
+=======
+        <div className="flex gap-2">
+          <Button variant="ghost" size="icon" onClick={_() => onEdit(project)} aria-label="Edit project">
+            <Edit className="h-4 w-4" />
+          </Button>
+          <Button variant="ghost" size="icon" onClick={_() => setDeleteDialogOpen(true)} aria-label="Delete project">
+            <Trash2 className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Button>
         </div>
       </CardFooter>
       
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+      <AlertDialog open={_deleteDialogOpen} onOpenChange={_setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
@@ -111,7 +167,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
             <AlertDialogAction onClick={handleDelete} className=&quot;bg-destructive text-destructive-foreground&quot;>
+=======
+            <AlertDialogAction onClick={_handleDelete} className="bg-destructive text-destructive-foreground">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>

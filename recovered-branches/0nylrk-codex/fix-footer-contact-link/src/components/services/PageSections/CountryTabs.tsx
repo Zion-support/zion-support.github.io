@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -36,6 +37,19 @@ export function CountryTabs({
     <Tabs defaultValue=&quot;featured&quot; className=&quot;w-full&quot;>
       <TabsList className=&quot;bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6&quot;>
         <TabsTrigger value=&quot;featured&quot; className=&quot;data-[state=active]:bg-zion-purple&quot;>
+=======
+
+interface CountryTabsProps {_popularCountries: string[];
+  filteredCountries: CountryPricing[];
+  handleCountrySelect: (_country: CountryPricing) => void;
+  searchQuery: string;
+  setSearchQuery: (_query: string) => void;}
+
+export function CountryTabs(_{_popularCountries, _filteredCountries, _handleCountrySelect, _searchQuery, _setSearchQuery}: CountryTabsProps) {_return (
+    <Tabs defaultValue="featured" className="w-full">
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
+        <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           Featured Countries
         </TabsTrigger>
         <TabsTrigger value=&quot;all&quot; className=&quot;data-[state=active]:bg-zion-purple&quot;>
@@ -57,9 +71,9 @@ export function CountryTabs({
             .map(country => (
               <CountryServiceCard 
                 key={country.country} 
-                country={country} 
-                onSelect={handleCountrySelect}
-                isPopular={true}
+                country={_country} 
+                onSelect={_handleCountrySelect}
+                isPopular={_true}
               />
             ))
           }
@@ -71,34 +85,55 @@ export function CountryTabs({
           <div className=&quot;relative&quot;>
             <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light&quot; />
             <Input
+<<<<<<< HEAD
               type=&quot;text&quot;
               placeholder=&quot;Search by country...&quot;
               className=&quot;pl-10 bg-zion-blue border-zion-blue-light text-white&quot;
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+=======
+              type="text"
+              placeholder="Search by country..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              value={_searchQuery}
+              onChange={_(_e) => setSearchQuery(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
         </div>
         
+<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4&quot;>
           {filteredCountries.slice(0, 12).map(country => (
+=======
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {_filteredCountries.slice(0, _12).map(country => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <CountryServiceCard 
               key={country.country} 
-              country={country} 
-              onSelect={handleCountrySelect}
-              isPopular={popularCountries.includes(country.country)}
+              country={_country} 
+              onSelect={_handleCountrySelect}
+              isPopular={_popularCountries.includes(country.country)}
             />
           ))}
         </div>
         
+<<<<<<< HEAD
         {filteredCountries.length > 12 && (
           <div className=&quot;text-center mt-8&quot;>
             <Button
               onClick={() => document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
               variant=&quot;outline&quot;
               className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
+=======
+        {_filteredCountries.length > 12 && (_<div className="text-center mt-8">
+            <Button
+              onClick={() => document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth'})}
+              variant="outline"
+              className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              View All {filteredCountries.length} Countries
+              View All {_filteredCountries.length} Countries
             </Button>
           </div>
         )}

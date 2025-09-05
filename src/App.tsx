@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function App() {
   return (
     <div className="App">
@@ -46,3 +47,10 @@ export default function App() {,
     </ErrorBoundary>)
 };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+export default function App() {_return (
+    <div className="App">
+      <h1>App Component</h1>
+    </div>
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

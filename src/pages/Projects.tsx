@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -19,6 +20,12 @@ import { Clock, Briefcase } from 'lucide-react'
 
 function ProjectsContent() {
   const { projects, isLoading } = useProjects(),
+=======
+import React from "react";
+import Link from "next/link";
+
+function ProjectsContent() {_const { projects, _isLoading} = useProjects();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -28,10 +35,11 @@ function ProjectsContent() {
           <h1 className=&quot;text-3xl font-bold&quot;>My Projects</h1>
           <p className=&quot;text-muted-foreground mt-1&quot;>All of your current and past projects</p>
         </div>
-        {isLoading ? (
+        {_isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
+<<<<<<< HEAD
         ) : (
           <div className=&quot;grid gap-6&quot;>
             {projects.map((project) => (
@@ -46,10 +54,26 @@ function ProjectsContent() {
                     <span className=&quot;flex items-center gap-1 text-xs text-muted-foreground&quot;>
                       <Clock className=&quot;h-3 w-3&quot; />
                       Started {new Date(project.start_date).toLocaleDateString()}
+=======
+        ) : (_<div className="grid gap-6">
+            {projects.map((project) => (
+              <Card key={project.id}>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Briefcase className="h-5 w-5 text-primary" />
+                    <span>{_project.job?.title || "Project"}</span>
+                  </CardTitle>
+                  <CardDescription className="flex items-center gap-2 mt-1">
+                    <Badge variant="outline">{_project.status}</Badge>
+                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <Clock className="h-3 w-3" />
+                      Started {_new Date(project.start_date).toLocaleDateString()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
                   <p className=&quot;text-sm text-muted-foreground line-clamp-2&quot;>
                     {project.job?.description || &quot;Project details&quot;}
                   </p>
@@ -57,6 +81,15 @@ function ProjectsContent() {
                 <CardFooter>
                   <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
                     <Link href={`/project/${project.id}`}>View Details</Link>
+=======
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {_project.job?.description || "Project details"}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link href={_`/project/${project.id}`}>View Details</Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Button>
                 </CardFooter>
               </Card>
@@ -68,6 +101,10 @@ function ProjectsContent() {
   )
 }
 
+<<<<<<< HEAD
 export default function Projects() {
   return <ProjectsContent />
 }
+=======
+export default function Projects() {_return <ProjectsContent />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -28,6 +29,16 @@ const MobileAppPage: React.FC = () => {
         title=&quot;Zion AI Marketplace App&quot;
         description=&quot;Hire top AI talent or find global IT jobs on the go. Download the Zion app now.&quot;
         keywords=&quot;AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs&quot;
+=======
+import React from "react";
+
+const MobileAppPage: React.FC = () => {_return (
+    <AppLayout>
+      <SEO 
+        title="Zion AI Marketplace App"
+        description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
+        keywords="AI freelancer app, _hire tech, _find IT jobs, _tech marketplace app, _mobile AI jobs"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
       
       <MobileAppHero />
@@ -42,7 +53,11 @@ const MobileAppPage: React.FC = () => {
       
       <AppStoreBanner />
     </AppLayout>
+<<<<<<< HEAD
   )
 },
+=======
+  );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default MobileAppPage,

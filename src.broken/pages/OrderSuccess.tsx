@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import { useSearchParams, Link } from 'react-router-dom',
 
 export default function OrderSuccess() {
   const [params] = useSearchParams(),
   const sessionId = params.get('session_id'),
+=======
+import React from 'react';
+
+export default function OrderSuccess() {_const [params] = useSearchParams();
+  const _sessionId = params.get('session_id');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;min-h-screen flex flex-col items-center justify-center p-6&quot;>

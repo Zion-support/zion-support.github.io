@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -24,19 +25,22 @@ interface FraudFlagsTableProps {
   resetFilters: () => void,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+=======
+import React from "react";
 
-export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
-  flags,
-  isLoading,
-  hasFilters,
-  resetFilters,
-  onAction
-}) => {
-  if (isLoading) {
+interface FraudFlagsTableProps {_flags: FraudFlag[];
+  isLoading: boolean;
+  hasFilters: boolean;
+  resetFilters: () => void;
+  onAction: (_flagId: string, _action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = (_{_flags, _isLoading, _hasFilters, _resetFilters, _onAction}) => {_if (isLoading) {
     return (
       <div className=&quot;flex justify-center items-center h-64&quot;>
         <div className=&quot;animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple&quot;></div>
       </div>
+<<<<<<< HEAD
     )
   }
 
@@ -46,6 +50,14 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 
   return (
     <Table>
+=======
+    );}
+
+  if (flags.length === 0) {_return <EmptyFraudState hasFilters={hasFilters} onResetFilters={_resetFilters} />;
+  }
+
+  return (_<Table>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <TableHeader>
         <TableRow>
           <TableHead>Severity</TableHead>
@@ -60,11 +72,12 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {flags.map((flag) => (
+        {_flags.map((flag) => (
           <TableRow key={flag.id}>
             <TableCell>
-              <SeverityDisplay severity={flag.severity} />
+              <SeverityDisplay severity={_flag.severity} />
             </TableCell>
+<<<<<<< HEAD
             <TableCell className=&quot;font-medium&quot;>
               {flag.user_email || flag.user_id.substring(0, 8)}
             </TableCell>
@@ -78,29 +91,42 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
             <TableCell className=&quot;max-w-xs truncate&quot;>
               {flag.gpt_explanation || (
                 <span className=&quot;text-muted-foreground text-xs&quot;>Not analyzed</span>
+=======
+            <TableCell className="font-medium">
+              {_flag.user_email || flag.user_id.substring(0, _8)}
+            </TableCell>
+            <TableCell className="max-w-xs truncate">
+              {_flag.content_excerpt}
+            </TableCell>
+            <TableCell>
+              <Badge variant="outline">{_flag.content_type}</Badge>
+            </TableCell>
+            <TableCell className="max-w-xs truncate">{_flag.reason}</TableCell>
+            <TableCell className="max-w-xs truncate">
+              {_flag.gpt_explanation || (
+                <span className="text-muted-foreground text-xs">Not analyzed</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               )}
             </TableCell>
             <TableCell>
-              {new Date(flag.timestamp).toLocaleDateString()} {new Date(flag.timestamp).toLocaleTimeString()}
+              {_new Date(flag.timestamp).toLocaleDateString()} {_new Date(flag.timestamp).toLocaleTimeString()}
             </TableCell>
             <TableCell>
-              <Badge variant={
-                flag.status === 'pending'
+              <Badge variant={_flag.status === 'pending'
                   ? 'secondary'
                   : flag.status === 'actioned'
                   ? 'destructive'
                   : flag.status === 'ignored'
                   ? 'outline'
-                  : 'default'
-              }>
-                {flag.status}
+                  : 'default'}>
+                {_flag.status}
               </Badge>
             </TableCell>
             <TableCell>
               <ActionButtons 
-                flagId={flag.id} 
-                status={flag.status} 
-                onAction={onAction} 
+                flagId={_flag.id} 
+                status={_flag.status} 
+                onAction={_onAction} 
               />
             </TableCell>
           </TableRow>

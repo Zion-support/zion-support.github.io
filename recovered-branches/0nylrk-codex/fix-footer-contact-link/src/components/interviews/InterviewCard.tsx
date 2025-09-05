@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -63,19 +64,58 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`
     } else {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
+=======
+import React, {_useState} from "react";
+
+interface InterviewCardProps {_interview: Interview;
+  onRefresh: () => Promise<void>;}
+
+export function InterviewCard(_{_interview, _onRefresh}: InterviewCardProps) {_const { user} = useAuth();
+  const {_respondToInterview, _cancelInterview} = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const _isClient = user?.id === interview.client_id;
+  const _isTalent = user?.id === interview.talent_id;
+
+  // Format interview date and time
+  const _interviewDate = parseISO(interview.scheduled_date);
+  const _formattedDate = format(interviewDate, 'EEEE, MMMM d');
+  const _formattedTime = format(interviewDate, 'h:mm a');
+
+  // Calculate when interview ends
+  const _endTime = new Date(interviewDate);
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
+  const _formattedEndTime = format(endTime, 'h:mm a');
+  
+  const _isInterviewPending = interview.status === 'requested';
+  const _isInterviewConfirmed = interview.status === 'confirmed';
+  const _isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)); // 5 minutes before
+  const _isInterviewPast = isPast(interviewDate);
+  
+  const _getRelativeTime = () => {_if (isPast(interviewDate)) {
+      return `Took place ${formatDistanceToNow(interviewDate)} ago`;
+    } else {_return `Starts in ${formatDistanceToNow(interviewDate)}`;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id, { 
       interview_id: interview.id, 
       status 
     }),
+=======
+  const _handleRespondToInterview = async (_status: 'confirmed' | 'declined' | 'rescheduled') => {_setIsLoading(true);
+    const _success = await respondToInterview(interview.id, _{ 
+      interview_id: interview.id, _status});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
-    if (success) {
-      toast({
+    if (success) {_toast({
         title: `Interview ${status}`,
+<<<<<<< HEAD
         description: `You have successfully ${status} the interview request.`
       }),
       setIsResponseDialogOpen(false),
@@ -93,10 +133,19 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         variant: &quot;destructive&quot;
       });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        description: `You have successfully ${_status} the interview request.`
+      });
+      setIsResponseDialogOpen(false);
+      await onRefresh();
+    } else {_toast({
+        title: "Error", _description: "Failed to respond to the interview request. Please try again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     setIsLoading(false)
   },
 
+<<<<<<< HEAD
   const handleCancelInterview = async () => {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
@@ -126,12 +175,22 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         variant: &quot;destructive&quot;
       });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _handleCancelInterview = async () => {_setIsLoading(true);
+    const _success = await cancelInterview(interview.id);
+    
+    if (success) {
+      toast({
+        title: "Interview cancelled", _description: "The interview has been cancelled successfully."});
+      await onRefresh();
+    } else {_toast({
+        title: "Error", _description: "Failed to cancel the interview. Please try again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     setIsLoading(false)
   },
 
-  const getStatusBadge = () => {
-    switch (interview.status) {
+  const _getStatusBadge = () => {_switch (interview.status) {
       case 'requested':
 <<<<<<< HEAD
         return <Badge className="bg-amber-500">Pending</Badge>,
@@ -167,6 +226,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     }
   },
   
+<<<<<<< HEAD
   const getOtherPartyName = () => {
     if (isClient) {
       return interview.talent_name || 'Talent'
@@ -184,6 +244,21 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         <CardTitle className=&quot;text-lg&quot;>{interview.title}</CardTitle>
         <p className=&quot;text-sm text-muted-foreground&quot;>
           with {getOtherPartyName()}
+=======
+  const _getOtherPartyName = () => {_if (isClient) {
+      return interview.talent_name || 'Talent';} else {_return interview.client_name || 'Client';}
+  };
+
+  return (
+    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2 relative">
+        <div className="absolute right-4 top-4">
+          {_getStatusBadge()}
+        </div>
+        <CardTitle className="text-lg">{_interview.title}</CardTitle>
+        <p className="text-sm text-muted-foreground">
+          with {_getOtherPartyName()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </p>
       </CardHeader>
       
@@ -192,38 +267,67 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           <div className=&quot;flex items-start gap-3&quot;>
             <Clock className=&quot;h-4 w-4 mt-0.5 text-muted-foreground&quot; />
             <div>
+<<<<<<< HEAD
               <p className=&quot;font-medium&quot;>{formattedDate}</p>
               <p className=&quot;text-sm text-muted-foreground&quot;>
                 {formattedTime} - {formattedEndTime} ({interview.duration_minutes} minutes)
               </p>
               <p className=&quot;text-xs text-muted-foreground mt-1&quot;>
                 {getRelativeTime()}
+=======
+              <p className="font-medium">{_formattedDate}</p>
+              <p className="text-sm text-muted-foreground">
+                {_formattedTime} - {_formattedEndTime} ({_interview.duration_minutes} minutes)
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                {_getRelativeTime()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </p>
             </div>
           </div>
 
+<<<<<<< HEAD
           {interview.meeting_platform && (
             <div className=&quot;flex items-center gap-3&quot;>
               <Video className=&quot;h-4 w-4 text-muted-foreground&quot; />
+=======
+          {_interview.meeting_platform && (
+            <div className="flex items-center gap-3">
+              <Video className="h-4 w-4 text-muted-foreground" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <div>
                 <p className=&quot;font-medium capitalize&quot;>{interview.meeting_platform}</p>
               </div>
             </div>
           )}
           
+<<<<<<< HEAD
           {interview.notes && (
             <div className=&quot;flex items-start gap-3&quot;>
               <MessageSquare className=&quot;h-4 w-4 mt-0.5 text-muted-foreground&quot; />
               <p className=&quot;text-sm line-clamp-2&quot;>{interview.notes}</p>
+=======
+          {_interview.notes && (
+            <div className="flex items-start gap-3">
+              <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />
+              <p className="text-sm line-clamp-2">{interview.notes}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           )}
         </div>
       </CardContent>
       
+<<<<<<< HEAD
       <CardFooter className=&quot;pt-2&quot;>
         <div className=&quot;grid grid-cols-1 gap-2 w-full&quot;>
           {/* For clients with pending requests */}
           {isClient && isInterviewPending && (
+=======
+      <CardFooter className="pt-2">
+        <div className="grid grid-cols-1 gap-2 w-full">
+          {_/* For clients with pending requests */}
+          {_isClient && isInterviewPending && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button variant=&quot;outline&quot; size=&quot;sm&quot; className=&quot;w-full&quot;>
@@ -241,8 +345,13 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   <AlertDialogCancel>Go Back</AlertDialogCancel>
                   <AlertDialogAction 
                     onClick={handleCancelInterview} 
+<<<<<<< HEAD
                     disabled={isLoading}
                     className=&quot;bg-destructive text-destructive-foreground hover:bg-destructive/90&quot;
+=======
+                    disabled={_isLoading}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Cancel Interview
                   </AlertDialogAction>
@@ -251,6 +360,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
             </AlertDialog>
           )}
           
+<<<<<<< HEAD
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className=&quot;grid grid-cols-2 gap-2&quot;>
@@ -258,15 +368,24 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                 Respond
               </Button>
               <Button variant=&quot;outline&quot; onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>
+=======
+          {_/* For talents with pending requests */}
+          {_isTalent && isInterviewPending && (_<div className="grid grid-cols-2 gap-2">
+              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={_isLoading}>
+                Respond
+              </Button>
+              <Button variant="outline" onClick={_() => handleRespondToInterview('declined')} disabled={_isLoading}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Decline
               </Button>
             </div>
           )}
           
-          {/* For confirmed interviews */}
-          {isInterviewConfirmed && !isInterviewPast && (
+          {_/* For confirmed interviews */}
+          {_isInterviewConfirmed && !isInterviewPast && (
             <>
               {interview.meeting_link ? (
+<<<<<<< HEAD
                 <Button className=&quot;w-full&quot; asChild disabled={!isInterviewLive}>
                   <a href={interview.meeting_link} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>
                     <Video className=&quot;h-4 w-4 mr-2&quot; /> 
@@ -278,6 +397,19 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                 <Button className=&quot;w-full&quot; disabled={!isInterviewLive}>
                   <Video className=&quot;h-4 w-4 mr-2&quot; /> 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+=======
+                <Button className="w-full" asChild disabled={!isInterviewLive}>
+                  <a href={_interview.meeting_link} target="_blank" rel="noopener noreferrer">
+                    <Video className="h-4 w-4 mr-2" /> 
+                    {_isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                    <ExternalLink className="h-3 w-3 ml-2" />
+                  </a>
+                </Button>
+              ) : (
+                <Button className="w-full" disabled={_!isInterviewLive}>
+                  <Video className="h-4 w-4 mr-2" /> 
+                  {_isInterviewLive ? 'Join Now' : 'Join Meeting'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </Button>
               )}
               
@@ -297,9 +429,15 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   <AlertDialogFooter>
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction 
+<<<<<<< HEAD
                       onClick={handleCancelInterview} 
                       disabled={isLoading}
                       className=&quot;bg-destructive text-destructive-foreground hover:bg-destructive/90&quot;
+=======
+                      onClick={_handleCancelInterview} 
+                      disabled={_isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     >
                       Cancel Interview
                     </AlertDialogAction>
@@ -311,17 +449,23 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
         <DialogContent className=&quot;sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white&quot;>
+=======
+      {_/* Response dialog for talents */}
+      <Dialog open={_isResponseDialogOpen} onOpenChange={_setIsResponseDialogOpen}>
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
           <InterviewResponseForm 
-            interview={interview}
-            onConfirm={() => handleRespondToInterview('confirmed')}
-            onClose={() => setIsResponseDialogOpen(false)}
-            isLoading={isLoading}
+            interview={_interview}
+            onConfirm={_() => handleRespondToInterview('confirmed')}
+            onClose={_() => setIsResponseDialogOpen(false)}
+            isLoading={_isLoading}
           />
         </DialogContent>
       </Dialog>

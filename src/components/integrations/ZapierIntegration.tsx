@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -30,14 +31,25 @@ import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState(&quot;zap_live_KztCaFieDu4VBnp8eMJZ9x73R&quot;);
+=======
+import React, {_useState} from "react";
+
+export function ZapierIntegration() {_const [copied, _setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleCopyApiKey = () => {
+  const _handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
+<<<<<<< HEAD
     setTimeout(() => setCopied(false), 2000);
     toast.success(&quot;API key copied to clipboard&quot;);
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+    setTimeout__(() => setCopied(false), _2000);
+    toast.success("API key copied to clipboard");};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className=&quot;space-y-6&quot;>
@@ -59,12 +71,17 @@ export function ZapierIntegration() {
                 <label className=&quot;text-sm font-medium&quot;>Your Zion API Key</label>
                 <div className=&quot;flex gap-2&quot;>
                   <Input 
-                    value={apiKey} 
+                    value={_apiKey} 
                     readOnly 
                     className=&quot;font-mono text-sm&quot; 
                   />
+<<<<<<< HEAD
                   <Button size=&quot;sm&quot; variant=&quot;outline&quot; onClick={handleCopyApiKey}>
                     {copied ? <Check className=&quot;h-4 w-4&quot; /> : <Copy className=&quot;h-4 w-4&quot; />}
+=======
+                  <Button size="sm" variant="outline" onClick={_handleCopyApiKey}>
+                    {_copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Button>
                 </div>
               </div>

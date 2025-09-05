@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check } from "lucide-react",
 =======
 import { Check } from &quot;lucide-react&quot;;
@@ -9,6 +10,12 @@ export function ServiceIncludes() {
   return (
     <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20&quot;>
       <h2 className=&quot;text-2xl font-bold text-white text-center mb-8&quot;>What's Included in Every Service</h2>
+=======
+
+export function ServiceIncludes() {_return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
+      <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
@@ -84,5 +91,9 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

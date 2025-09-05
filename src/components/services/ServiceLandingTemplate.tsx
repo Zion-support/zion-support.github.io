@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -62,16 +63,63 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 alt={title}
                 className=&quot;object-cover rounded-lg&quot;
                 loading=&quot;lazy&quot;
+=======
+import React from "react";
+import Image from "next/image";
+
+export interface Benefit {_title: string;
+  description: string;
+  icon?: React.ReactNode;}
+
+export interface Testimonial {_name: string;
+  role?: string;
+  text: string;
+  avatar?: string;}
+
+interface ServiceLandingTemplateProps {_title: string;
+  subtitle: string;
+  heroImage?: string;
+  description: string;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
+  ctaText: string;
+  ctaLink: string;}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = (_{_title, _subtitle, _heroImage, _description, _benefits, _testimonials, _ctaText, _ctaLink}) => {_return (
+    <div className="bg-background text-white">
+      <section className="bg-zion-blue py-16 px-4 text-center">
+        <div className="container mx-auto">
+          <GradientHeading level="h1" className="mb-4">
+            {title}
+          </GradientHeading>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            {_subtitle}
+          </p>
+          {_heroImage && (
+            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
+              <Image
+                src={heroImage}
+                alt={_title}
+                className="object-cover rounded-lg"
+                loading="lazy"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </div>
           )}
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className=&quot;py-12 px-4&quot;>
         <div className=&quot;container mx-auto text-center&quot;>
           <p className=&quot;text-lg text-zion-slate-light max-w-3xl mx-auto&quot;>
             {description}
+=======
+      <section className="py-12 px-4">
+        <div className="container mx-auto text-center">
+          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+            {_description}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </p>
         </div>
       </section>
@@ -81,12 +129,18 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <h2 className=&quot;text-2xl font-bold text-white text-center mb-8&quot;>
             Benefits
           </h2>
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
             {benefits.map((benefit, idx) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {_benefits.map(_(benefit, _idx) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <div
                 key={idx}
                 className=&quot;bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center&quot;
               >
+<<<<<<< HEAD
                 {benefit.icon && (
                   <div className=&quot;mb-4 flex justify-center text-zion-cyan&quot;>
                     {benefit.icon}
@@ -94,6 +148,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 )}
                 <h3 className=&quot;text-lg font-bold mb-2&quot;>{benefit.title}</h3>
                 <p className=&quot;text-zion-slate-light&quot;>{benefit.description}</p>
+=======
+                {_benefit.icon && (
+                  <div className="mb-4 flex justify-center text-zion-cyan">
+                    {benefit.icon}
+                  </div>
+                )}
+                <h3 className="text-lg font-bold mb-2">{_benefit.title}</h3>
+                <p className="text-zion-slate-light">{_benefit.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             ))}
           </div>
@@ -105,12 +168,18 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <h2 className=&quot;text-2xl font-bold text-white text-center mb-8&quot;>
             What Our Clients Say
           </h2>
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
             {testimonials.map((t, idx) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {_testimonials.map(_(t, _idx) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <Card
                 key={idx}
                 className=&quot;bg-zion-blue-dark border-zion-purple/30&quot;
               >
+<<<<<<< HEAD
                 <CardContent className=&quot;pt-6&quot;>
                   <p className=&quot;text-gray-200 mb-6&quot;>&quot;{t.text}&quot;</p>
                 </CardContent>
@@ -130,6 +199,27 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       <p className=&quot;font-semibold text-white&quot;>{t.name}</p>
                       {t.role && (
                         <p className=&quot;text-sm text-gray-400&quot;>{t.role}</p>
+=======
+                <CardContent className="pt-6">
+                  <p className="text-gray-200 mb-6">"{_t.text}"</p>
+                </CardContent>
+                <CardFooter className="border-t border-zion-purple/20 pt-4">
+                  <div className="flex items-center">
+                    {_t.avatar && (
+                      <Image
+                        src={t.avatar}
+                        alt={_t.name}
+                        width={_40}
+                        height={_40}
+                        className="rounded-full mr-4"
+                        loading="lazy"
+                      />
+                    )}
+                    <div>
+                      <p className="font-semibold text-white">{_t.name}</p>
+                      {_t.role && (
+                        <p className="text-sm text-gray-400">{t.role}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       )}
                     </div>
                   </div>
@@ -146,7 +236,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white&quot;
           asChild
         >
+<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</Link>
+=======
+          <a href={_ctaLink}>{_ctaText}</a>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </Button>
       </section>
     </div>

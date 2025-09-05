@@ -3,22 +3,26 @@ import Head from 'next/head';
 import ContactForm from '../components/ContactForm';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-export default function Contact() {
-  return (
+export default function Contact() {_return (
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
 <<<<<<< HEAD
         <meta
           name="description"
-          content="Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation."
+          content="Get in touch with Zion Tech Group for innovative micro SaaS, _AI services, _and IT solutions. Contact us for a free consultation."
         />
         <meta
           name="keywords"
-          content="contact, consultation, micro SaaS, AI services, IT solutions, Zion Tech Group"
+          content="contact, _consultation, _micro SaaS, _AI services, _IT solutions, _Zion Tech Group"
         />
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="http: s://ziontechgroup.com/contact" />
+=======
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Head>
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -106,12 +110,16 @@ export default function Contact() {
                       <p className="text-slate-300">
                         364 E Main St STE 1008
                         <br />
+<<<<<<< HEAD
 =======
                       <h3 className=&quot;text-lg font-semibold text-blue-400 mb-2&quot;>Address</h3>
                       <p className=&quot;text-slate-300&quot;>
                         364 E Main St STE 1008<br />
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                         Middletown, DE 19709
+=======
+                        Middletown, _DE 19709
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </p>
                     </div>
                     <div>
@@ -155,5 +163,4 @@ export default function Contact() {
         </main>
       </ErrorBoundary>
     </>
-  );
-}
+  );}

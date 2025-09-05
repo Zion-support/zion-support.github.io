@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -21,29 +22,56 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         className={cn(
           &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;,
           props.className
+=======
+import * as React from "react"
+import type {_CSSProperties} from "react"
+import type {_SafeRef} from "../sidebar.types"
+
+export interface SidebarProps extends React.ComponentProps<"div"> {_side?: "left" | "right"
+  variant?: "sidebar" | "floating" | "inset"
+  collapsible?: "offcanvas" | "icon" | "none"}
+
+export const _Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(_(props, _ref) => {_const { isMobile, _state, _openMobile, _setOpenMobile} = useSidebar()
+
+  if (props.collapsible === "none") {_return (
+      <div
+        className={cn(
+          "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground", _props.className
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         )}
-        ref={ref}
-        {...props}
+        ref={_ref}
+        {_...props}
       >
-        {props.children}
+        {_props.children}
       </div>
     )
   }
 
-  if (isMobile) {
-    return (
-      <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+  if (isMobile) {_return (
+      <Sheet open={openMobile} onOpenChange={_setOpenMobile} {_...props}>
         <SheetContent
+<<<<<<< HEAD
           data-sidebar=&quot;sidebar&quot;
           data-mobile=&quot;true&quot;
           className=&quot;w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden&quot;
           style={
             {
               &quot;--sidebar-width&quot;: &quot;18rem&quot;} as CSSProperties
+=======
+          data-sidebar="sidebar"
+          data-mobile="true"
+          className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
+          style={_{
+              "--sidebar-width": "18rem"} as CSSProperties
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           }
-          side={props.side}
+          side={_props.side}
         >
+<<<<<<< HEAD
           <div className=&quot;flex h-full w-full flex-col&quot;>{props.children}</div>
+=======
+          <div className="flex h-full w-full flex-col">{_props.children}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </SheetContent>
       </Sheet>
     )
@@ -51,15 +79,25 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 
   return (
     <div
+<<<<<<< HEAD
       ref={ref}
       className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       data-state={state}
       data-collapsible={state === &quot;collapsed&quot; ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
+=======
+      ref={_ref}
+      className="group peer hidden md:block text-sidebar-foreground"
+      data-state={_state}
+      data-collapsible={_state === "collapsed" ? props.collapsible : ""}
+      data-variant={_props.variant}
+      data-side={_props.side}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     >
-      {/* This is what handles the sidebar gap on desktop */}
+      {_/* This is what handles the sidebar gap on desktop */}
       <div
+<<<<<<< HEAD
         className={cn(
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear&quot;,
           &quot;group-data-[collapsible=offcanvas]:w-0&quot;,
@@ -80,14 +118,30 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
             ? &quot;p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l&quot;,
           props.className
+=======
+        className={_cn(
+          "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear", _"group-data-[collapsible=offcanvas]:w-0", _"group-data-[side=right]:rotate-180", _props.variant === "floating" || props.variant === "inset"
+            ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
+            : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
         )}
-        {...props}
+      />
+      <div
+        className={_cn(
+          "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left, _right, _width] ease-linear md:flex", _props.side === "left"
+            ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
+            : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]", _// Adjust the padding for floating and inset variants.
+          props.variant === "floating" || props.variant === "inset"
+            ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
+            : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l", _props.className
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        )}
+        {_...props}
       >
         <div
           data-sidebar=&quot;sidebar"
           className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow&quot;
         >
-          {props.children}
+          {_props.children}
         </div>
       </div>
     </div>
@@ -95,8 +149,9 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 })
 Sidebar.displayName = &quot;Sidebar&quot;
 
-export const SidebarRail = React.forwardRef<
+export const _SidebarRail = React.forwardRef<
   HTMLButtonElement,
+<<<<<<< HEAD
   React.ComponentProps<&quot;button&quot;>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
@@ -117,15 +172,31 @@ export const SidebarRail = React.forwardRef<
         &quot;[[data-side=left][data-collapsible=offcanvas]_&]:-right-2&quot;,
         &quot;[[data-side=right][data-collapsible=offcanvas]_&]:-left-2&quot;,
         props.className
+=======
+  React.ComponentProps<"button">
+>(_(props, _ref) => {_const { toggleSidebar} = useSidebar()
+
+  return (
+    <button
+      ref={_ref}
+      data-sidebar="rail"
+      aria-label="Toggle Sidebar"
+      tabIndex={_-1}
+      onClick={_toggleSidebar}
+      title="Toggle Sidebar"
+      className={_cn(
+        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex", _"[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize", _"[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize", _"group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar", _"[[data-side=left][data-collapsible=offcanvas]_&]:-right-2", _"[[data-side=right][data-collapsible=offcanvas]_&]:-left-2", _props.className
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       )}
-      {...props}
+      {_...props}
     />
   )
 })
 SidebarRail.displayName = &quot;SidebarRail&quot;
 
-export const SidebarInset = React.forwardRef<
+export const _SidebarInset = React.forwardRef<
   HTMLDivElement,
+<<<<<<< HEAD
   React.ComponentProps<&quot;main">
 >((props, ref) => {
   return (
@@ -135,8 +206,16 @@ export const SidebarInset = React.forwardRef<
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;,
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;,
         props.className
+=======
+  React.ComponentProps<"main">
+>(_(props, _ref) => {_return (
+    <main
+      ref={ref as SafeRef<HTMLDivElement>}
+      className={_cn(
+        "relative flex min-h-svh flex-1 flex-col bg-background", _"peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow", _props.className
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       )}
-      {...props}
+      {_...props}
     />
   )
 })

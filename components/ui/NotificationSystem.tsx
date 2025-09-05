@@ -1,50 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+=======
+import React, {_createContext, _useContext, _useState, _ReactNode} from 'react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-interface Notification {
-  id: string;
+interface Notification {_id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message: string;
-  duration?: number;
-}
+  duration?: number;}
 
-interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-}
+interface NotificationContextType {_notifications: Notification[];
+  addNotification: (_notification: Omit<Notification, _'id'>) => void;
+  removeNotification: (_id: string) => void;}
 
-const NotificationContext = createContext<NotificationContextType | undefined>(
+const _NotificationContext = createContext<NotificationContextType | undefined>(
   undefined
 );
 
-interface NotificationProviderProps {
-  children: ReactNode;
-}
+interface NotificationProviderProps {_children: ReactNode;}
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({
-  children,
-}) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+export const NotificationProvider: React.FC<NotificationProviderProps> = (_{_children, _}) => {_const [notifications, _setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
+  const _addNotification = (_notification: Omit<Notification, _'id'>) => {
+    const _id = Math.random().toString(36).substr(2, _9);
+    const _newNotification = { ...notification, _id};
 
     setNotifications(prev => [...prev, newNotification]);
 
-    if (notification.duration !== 0) {
-      setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
+    if (notification.duration !== 0) {_setTimeout__(() => {
+        removeNotification(id);}, notification.duration || 5000);
     }
   };
 
-  const removeNotification = (id: string) => {
-    setNotifications(prev =>
+  const _removeNotification = (_id: string) => {_setNotifications(prev =>
       prev.filter(notification => notification.id !== id)
+<<<<<<< HEAD
     );
   };
 =======
@@ -95,13 +88,20 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     }, 3000),
   }, []),
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+    );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <NotificationContext.Provider
-      value={{ notifications, addNotification, removeNotification }}
+      value={_{ notifications, _addNotification, _removeNotification}}
     >
+<<<<<<< HEAD
       {children}
 <<<<<<< HEAD
+=======
+      {_children}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <NotificationContainer />
 =======
       <div className=&quot;fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none&quot;>
@@ -133,57 +133,41 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   );
 };
 
-const NotificationContainer: React.FC = () => {
-  const { notifications, removeNotification } = useNotifications();
+const NotificationContainer: React.FC = () => {_const { notifications, _removeNotification} = useNotifications();
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map(notification => (
+      {_notifications.map(notification => (
         <NotificationItem
           key={notification.id}
-          notification={notification}
-          onRemove={removeNotification}
+          notification={_notification}
+          onRemove={_removeNotification}
         />
       ))}
     </div>
   );
 };
 
-const NotificationItem: React.FC<{
-  notification: Notification;
-  onRemove: (id: string) => void;
-}> = ({ notification, onRemove }) => {
-  const icons = {
-    success: CheckCircle,
-    error: AlertCircle,
-    warning: AlertTriangle,
-    info: Info,
-  };
+const NotificationItem: React.FC<{_notification: Notification;
+  onRemove: (_id: string) => void;}> = (_{_notification, _onRemove}) => {_const _icons = {
+    success: CheckCircle, _error: AlertCircle, _warning: AlertTriangle, _info: Info, };
 
-  const colors = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
-  };
+  const _colors = {_success: 'bg-green-500', _error: 'bg-red-500', _warning: 'bg-yellow-500', _info: 'bg-blue-500', };
 
-  const Icon = icons[notification.type];
+  const _Icon = icons[notification.type];
 
-  return (
-    <div
-      className={
-        colors[notification.type] +
-        ' text-white p-4 rounded-lg shadow-lg max-w-sm'
-      }
+  return (_<div
+      className={_colors[notification.type] +
+        ' text-white p-4 rounded-lg shadow-lg max-w-sm'}
     >
       <div className="flex items-start">
         <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />
         <div className="flex-1">
-          <h4 className="font-semibold">{notification.title}</h4>
-          <p className="text-sm opacity-90">{notification.message}</p>
+          <h4 className="font-semibold">{_notification.title}</h4>
+          <p className="text-sm opacity-90">{_notification.message}</p>
         </div>
         <button
-          onClick={() => onRemove(notification.id)}
+          onClick={_() => onRemove(notification.id)}
           className="ml-3 flex-shrink-0 hover:opacity-75"
         >
           <X className="w-4 h-4" />
@@ -193,13 +177,11 @@ const NotificationItem: React.FC<{
   );
 };
 
-export const useNotifications = () => {
-  const context = useContext(NotificationContext);
+export const _useNotifications = () => {_const _context = useContext(NotificationContext);
   if (context === undefined) {
     throw new Error(
       'useNotifications must be used within a NotificationProvider'
-    );
-  }
+    );}
   return context;
 };
 =======

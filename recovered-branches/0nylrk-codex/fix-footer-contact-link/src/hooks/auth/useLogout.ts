@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { cleanupAuthState } from "@/utils/authUtils",
 import type { UserProfile } from "@/types/auth",
@@ -11,11 +12,17 @@ import type { UserProfile } from &quot;@/types/auth&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
+=======
+import type {_UserProfile} from "@/types/auth";
+
+export const _useLogout = (_setUser: (user: UserProfile | null) => void) => {_const _logout = async () => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     try {
       // Clean up existing auth state
       cleanupAuthState(),
       
       // Sign out
+<<<<<<< HEAD
       await supabase.auth.signOut({ scope: 'global' }),
       
       // Update state
@@ -31,3 +38,14 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
 
   return { logout }
 },
+=======
+      await supabase.auth.signOut({ scope: 'global'});
+      
+      // Update state
+      setUser(null);
+    } catch (error) {}
+  };
+
+  return {_logout};
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

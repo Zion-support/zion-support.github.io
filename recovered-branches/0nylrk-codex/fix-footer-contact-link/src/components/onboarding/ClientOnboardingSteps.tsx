@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
@@ -42,4 +43,17 @@ export function ClientOnboardingSteps() {
   
   return <OnboardingTracker steps={steps} title=&quot;Get Started With Hiring&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+
+export function ClientOnboardingSteps() {_const _onboardingStatus = useOnboardingStatus();
+  
+  const steps: OnboardingStep[] = [
+    {
+      id: "post-job", _label: "Post your first job", _completed: onboardingStatus.jobPosted, _link: "/post-job", _action: "Post Job"},
+    {_id: "invite", _label: "Send invitation to talent", _completed: onboardingStatus.inviteSent, _link: "/talent", _action: "Find Talent"},
+    {_id: "response", _label: "Receive your first application", _completed: onboardingStatus.responseReceived, _link: "/client-dashboard", _action: "Check Dashboard"}];
+  
+  return <OnboardingTracker steps={_steps} title="Get Started With Hiring" />;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

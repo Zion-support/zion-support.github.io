@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 export default function GitHubRedirect() {
@@ -6,6 +7,15 @@ export default function GitHubRedirect() {
 			window.location.replace('https: //github.com/Zion-Holdings')
 		}
 	}, []),
+=======
+import React, {_useEffect} from 'react';
+import Head from 'next/head';
+
+export default function GitHubRedirect() {_useEffect__(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https://github.com/Zion-Holdings');}
+	}, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (
 		<>
 			<Head>

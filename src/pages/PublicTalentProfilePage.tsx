@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -23,10 +24,12 @@ import { HireNowCTA } from &quot;@/components/profile/HireNowCTA&quot;;
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
+export default function ProfilePage() {_// useParams may be untyped in this environment, _so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
+<<<<<<< HEAD
   const router = useRouter(),
   const profileId = router.query.profileId as string,
   const [profileData, setProfileData] = useState<any>(null),
@@ -40,6 +43,20 @@ export default function ProfilePage() {
       try {
         const { data, error } = await supabase
 <<<<<<< HEAD
+=======
+  const _router = useRouter();
+  const _profileId = router.query.profileId as string;
+  const [profileData, _setProfileData] = useState<any>(null);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [isError, _setIsError] = useState(false);
+
+  useEffect__(() => {
+    const _fetchProfile = async () => {
+      setIsLoading(true);
+      setIsError(false);
+      try {
+        const { data, _error} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
@@ -51,6 +68,7 @@ export default function ProfilePage() {
           .single();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
         if (error) {
           throw error
         }
@@ -94,10 +112,36 @@ export default function ProfilePage() {
       </div>
     )
   }
+=======
+        if (error) {_throw error;}
+
+        setProfileData(data);
+      } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error fetching profile'});
+        setIsError(true);
+        toast({_title: "Error", _description: "Failed to load profile. Please try again later.", _variant: "destructive"});
+      } finally {_setIsLoading(false);}
+    };
+
+    if (profileId) {_fetchProfile();}
+  }, [profileId]);
+
+  if (isLoading) {_return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="loading loading-ring loading-lg"></span>
+      </div>
+    );}
+
+  if (isError || !profileData) {_return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
       <SEO
+<<<<<<< HEAD
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || &quot;View the profile of this talented individual.&quot;}
       />
@@ -113,27 +157,60 @@ export default function ProfilePage() {
                   <Avatar className=&quot;w-24 h-24&quot;>
                     {profileData.profile_picture_url ? (
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+=======
+        title={_`${profileData.full_name} | Talent Profile`}
+        description={_profileData.bio || "View the profile of this talented individual."}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">
+          {_/* Main Content Area */}
+          <div className="col-span-12 lg:col-span-8">
+            {_/* Profile Header */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <div className="flex items-start">
+                {_/* Avatar */}
+                <div className="relative mr-4">
+                  <Avatar className="w-24 h-24">
+                    {_profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={_profileData.full_name} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ) : (
-                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                      <AvatarFallback>{_profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
                   </Avatar>
+<<<<<<< HEAD
                   {profileData.is_verified && (
                     <div className=&quot;absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full&quot;>
                       <CheckCircle2 className=&quot;w-5 h-5 text-zion-cyan&quot; />
+=======
+                  {_profileData.is_verified && (
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   )}
                 </div>
 
+<<<<<<< HEAD
                 {/* Main Info */}
                 <div className=&quot;flex-1&quot;>
                   <div className=&quot;flex justify-between items-start&quot;>
                     <div>
                       <h1 className=&quot;text-2xl font-bold text-white&quot;>{profileData.full_name}</h1>
                       <p className=&quot;text-zion-cyan font-medium&quot;>{profileData.professional_title}</p>
+=======
+                {_/* Main Info */}
+                <div className="flex-1">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h1 className="text-2xl font-bold text-white">{_profileData.full_name}</h1>
+                      <p className="text-zion-cyan font-medium">{_profileData.professional_title}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
-                    {/* Add Save/Unsave Button Here */}
+                    {_/* Add Save/Unsave Button Here */}
                   </div>
 
+<<<<<<< HEAD
                   {/* Location & Availability */}
                   <div className=&quot;mt-2 flex flex-wrap gap-3 text-sm&quot;>
                     {profileData.location && (
@@ -145,6 +222,19 @@ export default function ProfilePage() {
                     {profileData.availability && (
                       <div className=&quot;flex items-center text-zion-slate-light&quot;>
                         <Clock className=&quot;h-4 w-4 mr-1&quot; />
+=======
+                  {_/* Location & Availability */}
+                  <div className="mt-2 flex flex-wrap gap-3 text-sm">
+                    {_profileData.location && (
+                      <div className="flex items-center text-zion-slate-light">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        <span>{profileData.location}</span>
+                      </div>
+                    )}
+                    {_profileData.availability && (
+                      <div className="flex items-center text-zion-slate-light">
+                        <Clock className="h-4 w-4 mr-1" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <span>{profileData.availability}</span>
                       </div>
                     )}
@@ -152,6 +242,7 @@ export default function ProfilePage() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className=&quot;mt-4&quot;>
@@ -159,12 +250,21 @@ export default function ProfilePage() {
                   <div className=&quot;flex flex-wrap gap-2&quot;>
                     {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant=&quot;secondary&quot;>{skill}</Badge>
+=======
+              {_/* Skills */}
+              {_profileData.skills && profileData.skills.length > 0 && (_<div className="mt-4">
+                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {profileData.skills.map((skill: string, _index: number) => (
+                      <Badge key={skill + index} variant="secondary">{_skill}</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ))}
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
             {/* Bio Section */}
             <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6&quot;>
               <h2 className=&quot;text-xl font-bold text-white mb-3&quot;>About Me</h2>
@@ -187,6 +287,29 @@ export default function ProfilePage() {
                       <LinkIcon className=&quot;h-4 w-4 mr-2&quot; />
                       {link}
                     </Link>
+=======
+            {_/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+              <p className="text-zion-slate-light">{_profileData.bio || "No bio provided."}</p>
+            </div>
+
+            {_/* Portfolio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
+              <div className="space-y-3">
+                {_profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (_profileData.portfolio_links.map((link: string, _index: number) => (
+                    <a
+                      key={link + index}
+                      href={_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
+                    >
+                      <LinkIcon className="h-4 w-4 mr-2" />
+                      {_link}
+                    </a>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   ))
                 ) : (
                   <p className=&quot;text-zion-slate-light&quot;>No portfolio links provided.</p>
@@ -194,6 +317,7 @@ export default function ProfilePage() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Experience Section */}
             <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6&quot;>
               <h2 className=&quot;text-xl font-bold text-white mb-3&quot;>Experience</h2>
@@ -205,6 +329,19 @@ export default function ProfilePage() {
               <h2 className=&quot;text-xl font-bold text-white mb-3&quot;>Connect</h2>
               <div className=&quot;flex space-x-4&quot;>
                 {profileData.github_link && (
+=======
+            {_/* Experience Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
+              <p className="text-zion-slate-light">{_profileData.experience || "No experience provided."}</p>
+            </div>
+
+            {_/* Social Links */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
+              <div className="flex space-x-4">
+                {_profileData.github_link && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <a
                     href={profileData.github_link}
                     target=&quot;_blank&quot;
@@ -216,7 +353,7 @@ export default function ProfilePage() {
                     <Github className=&quot;h-6 w-6&quot; />
                   </Link>
                 )}
-                {profileData.twitter_link && (
+                {_profileData.twitter_link && (
                   <a
                     href={profileData.twitter_link}
                     target=&quot;_blank&quot;
@@ -228,7 +365,7 @@ export default function ProfilePage() {
                     <Twitter className=&quot;h-6 w-6&quot; />
                   </Link>
                 )}
-                {profileData.linkedin_link && (
+                {_profileData.linkedin_link && (
                   <a
                     href={profileData.linkedin_link}
                     target=&quot;_blank&quot;
@@ -244,17 +381,18 @@ export default function ProfilePage() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Sidebar with HireNowCTA */}
           <div className=&quot;col-span-12 lg:col-span-4 space-y-6&quot;>
+=======
+          {_/* Sidebar with HireNowCTA */}
+          <div className="col-span-12 lg:col-span-4 space-y-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
-              }}
+              talentProfile={_{
+                id: profileData?.id || '', _full_name: profileData?.full_name || '', _professional_title: profileData?.professional_title || '', _hourly_rate: profileData?.hourly_rate || 0}}
             />
-            {/* Placeholder for other sidebar elements */}
+            {_/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>

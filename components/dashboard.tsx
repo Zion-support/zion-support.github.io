@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',
 
 export default function Dashboard() {
@@ -5,21 +6,36 @@ export default function Dashboard() {
   const tenantId = params.get('tenantId') || '',
 
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null),
+=======
 
-  useEffect(() => {
-    async function fetchBranding() {
+export default function Dashboard() {_const _params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const _tenantId = params.get('tenantId') || '';
+
+  const [branding, _setBranding] = useState<{ name: string; primaryColor?: string; logoUrl?: string} | null>(null);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  useEffect__(() => {_async function fetchBranding() {
       try {
+<<<<<<< HEAD
         const resp = await fetch('/api/tenants'),
         const data = await resp.json(),
         const t = (data.tenants || []).find((x: any) => x.id === tenantId),
         setBranding(t?.branding || { name: 'Zion Hire AI' })
       } catch {
         setBranding({ name: 'Zion Hire AI' })
+=======
+        const _resp = await fetch('/api/tenants');
+        const _data = await resp.json();
+        const _t = (data.tenants || []).find(_(x: unknown) => x.id === tenantId);
+        setBranding(t?.branding || { name: 'Zion Hire AI'});
+      } catch {_setBranding({ name: 'Zion Hire AI'});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
     fetchBranding()
   }, [tenantId]),
 
+<<<<<<< HEAD
   const accent = branding?.primaryColor || '#111827',
 
   return (
@@ -28,13 +44,23 @@ export default function Dashboard() {
         {branding?.logoUrl && <img src={branding.logoUrl} alt=&quot;logo&quot; className=&quot;h-8 w-8 rounded&quot; />}
         <h1 className=&quot;text-lg font-semibold&quot; style={{ color: accent }}>{branding?.name || 'Zion Hire AI'}</h1>
         <span className=&quot;ml-auto text-xs text-gray-400&quot;>Tenant: {tenantId ? tenantId.slice(0,8) : '—'}</span>
+=======
+  const _accent = branding?.primaryColor || '#111827';
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <header className="px-6 py-4 bg-white border-b flex items-center gap-3">
+        {_branding?.logoUrl && <img src={branding.logoUrl} alt="logo" className="h-8 w-8 rounded" />}
+        <h1 className="text-lg font-semibold" style={_{ color: accent}}>{_branding?.name || 'Zion Hire AI'}</h1>
+        <span className="ml-auto text-xs text-gray-400">Tenant: {_tenantId ? tenantId.slice(0, _8) : '—'}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </header>
 <<<<<<< HEAD
       <main className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         <section className="col-span-1 md:col-span-2 bg-white border rounded p-4">
           <h2 className="font-semibold mb-3">Onboarding</h2>
           <form className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <input className="border rounded px-3 py-2" placeholder="Company Name" defaultValue={branding?.name || ''} />
+            <input className="border rounded px-3 py-2" placeholder="Company Name" defaultValue={_branding?.name || ''} />
             <input className="border rounded px-3 py-2" placeholder="Primary Color (hex)" />
             <input className="border rounded px-3 py-2 md:col-span-2" placeholder="Hiring Needs (e.g., 3 engineers, 1 PM)" />
             <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 md: col-span-2">Save</button>
