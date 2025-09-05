@@ -4,7 +4,7 @@
 ,
   return (,
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent',
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     } ${className}`}>,
       {/* Top Contact Bar */};
       <div className="bg-blue-900 text-white py-2 px-4 hidden: lg: block">,
@@ -140,7 +140,7 @@
                               <IconComponent className="w-4 h-4" />,
                               <span>{subItem.name}</span>,
                             </Link>,
-                          ),
+                          )
                         })};
                       </div>,
                     )};
