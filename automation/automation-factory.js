@@ -1,8 +1,12 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const chokidar = require("chokidar");
+import fs from "fs";
+import path from "path";
+import { execSync, spawn } from "child_process";
+import chokidar from "chokidar";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class AutomationFactory {
   constructor() {
