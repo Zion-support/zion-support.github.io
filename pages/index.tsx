@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
+import { Brain, Network, Cloud, ArrowRight, Shield, Users, BarChart3, Zap } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const stats = [
@@ -14,21 +14,27 @@ const stats = [
 const services = [
   {
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "Cutting-edge artificial intelligence solutions including machine learning, computer vision, natural language processing, and predictive analytics",
     icon: Brain,
     href: "/ai-services",
+    features: ["Machine Learning", "Computer Vision", "NLP", "Predictive Analytics"],
+    pricing: "From $1,000/month"
   },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, network management, and digital transformation",
     icon: Network,
     href: "/it-services",
+    features: ["Cloud Infrastructure", "Cybersecurity", "Network Management", "Digital Transformation"],
+    pricing: "From $2,000/project"
   },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "Scalable software as a service solutions designed for rapid deployment and maximum efficiency",
     icon: Cloud,
     href: "/micro-saas",
+    features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Real-time Analytics"],
+    pricing: "From $99/month"
   }
 ];
 
@@ -110,9 +116,31 @@ export default function HomePage() {
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-600 mb-4 text-sm md:text-base leading-relaxed">
                     {service.description}
                   </p>
+                  
+                  {/* Features */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <span
+                          key={featureIndex}
+                          className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Pricing */}
+                  <div className="mb-6">
+                    <div className="text-lg font-semibold text-green-600">
+                      {service.pricing}
+                    </div>
+                  </div>
+                  
                   <Link
                     href={service.href}
                     className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
@@ -146,6 +174,124 @@ export default function HomePage() {
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI-First Approach</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We leverage the latest AI technologies to create intelligent solutions that learn, adapt, and improve over time.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Bank-level security and compliance standards ensure your data and systems are protected at all times.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Rapid Deployment</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get your solutions up and running in weeks, not months, with our proven rapid deployment methodology.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Team</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our team of 50+ experts brings decades of experience in AI, cloud computing, and enterprise solutions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <Cloud className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud-Native</h3>
+              <p className="text-gray-600 leading-relaxed">
+                All our solutions are built cloud-first, ensuring scalability, reliability, and cost-effectiveness.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Data-Driven</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We use advanced analytics and machine learning to optimize performance and drive continuous improvement.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
