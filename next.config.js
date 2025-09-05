@@ -1,31 +1,50 @@
+// Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  output: 'export',
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true
+  eslint: { 
+    ignoreDuringBuilds: false,
+    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
   },
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
+  trailingSlash: true,
+  output: 'export',
+  generateBuildId: async () => 'build-' + Date.now(),
+  // Include all page types
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
   
   // Image optimization
   images: {
-    unoptimized: true,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   
   // Webpack optimizations
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle size
+  webpack: (config, { dev, isServer }) => {
+    // Production optimizations
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -35,6 +54,12 @@ const nextConfig = {
             name: 'vendors',
             chunks: 'all',
           },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
+          },
         },
       };
     }
@@ -42,43 +67,42 @@ const nextConfig = {
     return config;
   },
   
-  // Headers for security and performance
+  // Security headers
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
+        ]
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
       {
-        source: '/api/(.*)',
+        source: '/_next/static/(.*)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
     ];
   },
   
-  // Redirects
+  // Redirects for SEO
   async redirects() {
     return [
       {
@@ -88,33 +112,10 @@ const nextConfig = {
       },
     ];
   },
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-  
-  // Output configuration
-  output: 'standalone',
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Base path
-  basePath: '',
-  
-  // Asset prefix
-  assetPrefix: '',
-  
-  // Generate ETags
-  generateEtags: true,
-  
-  // Dist directory
-  distDir: '.next',
-  
-  // Build ID
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
+
+  // Generate sitemap
+  async rewrites() {
+    return [];
   },
 };
 
