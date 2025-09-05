@@ -1,21 +1,14 @@
 const fs = require('fs');
-<<<<<<< HEAD
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
+const path = require('path');
 
 const execAsync = promisify(exec);
-=======
-const { exec } = require('child_process');
-const path = require('path');
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
 
 class CompleteImprovementSuite {
   constructor() {
     this.reportsDir = './automation-reports';
-<<<<<<< HEAD
     this.projectRoot = process.cwd();
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
@@ -140,11 +133,16 @@ class CompleteImprovementSuite {
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
 <<<<<<< HEAD
+<<<<<<< HEAD
         /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
 =======
         /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
         '$1'
+=======
+        /<<<<<<< HEAD\n=======\n=======\n>>>>>>> [a-f0-9]+/g,
+        ''
+>>>>>>> cursor/automate-test-improve-and-merge-code-c51a
       );
 
       // Clean up any remaining markers
