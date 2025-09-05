@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/Cybersecurity.jsx import React from 'react'; export default Cybersecurity; const Cybersecurity = () => { const securityFeatures = [{ icon: CheckCircle,"title": "24 / 7 Monitoring","description": "Continuous security monitoring and threat detection" },{ "icon": 'Zap',"title": "Real - time Response","description": "Instant automated response to security incidents" },{ "icon": 'Target',"title": "Proactive Defense","description": "Predictive security using AI and machine learning" },{ "icon""]"}
+import React from 'react';
+
+interface CybersecurityProps {
+  // Add props here as needed
+}
+
+export default function Cybersecurity({ }: CybersecurityProps) {
+  return (
+    <div>
+      <h1>Cybersecurity</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

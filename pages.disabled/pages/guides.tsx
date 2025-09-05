@@ -1,2 +1,71 @@
-import React from 'react'; import Head from 'next/head'; const "Guides": React.FC = () => {; const guides = [; {; id: 1,; "title": 'Getting Started with Zion AI Marketplace',; "category": 'Beginner',; "description": 'Complete beginner guide to using our AI marketplace platform',; "readTime": '15 min',; "difficulty": 'Beginner',; "tags": ['onboarding','setup','first-steps'],; "featured": 'true',;},; {; "id": '2',; "title": 'Advanced AI Integration Strategies',; "category": 'Advanced',; "description": 'Deep dive into advanced techniques for AI service integration',; "readTime": '45 min',; "difficulty": 'Advanced',; "tags": ['integration','advanced','workflow'],; "featured": 'false',;},; {; "id": '3',; "title": 'Building Scalable AI Solutions',; "category": 'Intermediate',; "description": 'Learn how to architect AI solutions that grow with your business',; "readTime": '30 min',; "difficulty": 'Intermediate',; "tags": ['architecture','scalability','best-practices'],; "featured": 'true',;},; {; "id": '4',; "title": 'AI Ethics and Responsible Development',; "category": 'Intermediate',; "description": 'Essential principles for developing ethical AI systems',; "readTime": '25 min',; "difficulty": 'Intermediate',; "tags": ['ethics','responsible-ai','governance'],; "featured": 'false',;},; {; "id": '5',; "title": 'Optimizing AI Model Performance',; "category": 'Advanced',; "description": 'Practical techniques for improving AI model accuracy and efficiency',; "readTime": '40 min',; "difficulty": 'Advanced',; "tags": ['optimization','performance','ml'],; "featured": 'false',;},; {; "id": '6',; "title": 'Security Best Practices for AI Systems',; "category": 'Intermediate',; "description": 'Comprehensive security guide for AI marketplace implementations',; "readTime": '35 min',; "difficulty": 'Intermediate',; "tags": ['security','compliance','best-practices'],; "featured": 'true',;},; ]; const categories = ['All','Beginner','Intermediate','Advanced']; return (; <> <Head> <title>Guides - Zion AI Marketplace></div> <meta name="description" content="Comprehensive guides for AI integration and marketplace success" /> <meta name="keywords" content="guides,tutorials,AI,marketplace,learning" /> ></div> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Guides & Tutorials; ></div> <p className="text-xl text-gray-300 mt-4"> Master AI integration with our comprehensive guides and tutorials; ></div> ></div> ></div> {} <section className="container mx-auto px-6 py-12"> <h2 className="text-3xl font-bold text-blue-400 mb-8">Featured Guides></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {guides.filter(guide => guide.featured).map((guide) => (; <div key={guide.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 "hover": border-blue-400 transition-colors"> <div className="flex items-center justify-between mb-3"> <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full"> Featured; ></div> <span className="text-xs text-gray-400">{guide.readTime}></div> ></div> <h3 className="text-xl font-semibold text-white mb-3 "hover": text-blue-400 transition-colors cursor-pointer"> {guide.title} ></div> <p className="text-gray-300 text-sm mb-4">{guide.description}></div> <div className="flex items-center justify-between"> <span className="text-xs bg-gray-600 text-gray-300 px-2 py-1 rounded-full"> {guide.difficulty} ></div> <button className="text-blue-400 "hover": text-blue-300 text-sm font-medium"> Read Guide →; ></div> ></div> ></div> ))} ></div> ></div> {} <main className="container mx-auto px-6 py-12"> <h2 className="text-3xl font-bold text-blue-400 mb-8">All Guides></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {guides.map((guide) => (; <article key={guide.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 "hover": border-blue-400 transition-colors group"> <div className="flex items-center justify-between mb-3"")
-</Head>)"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Guides() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Guides - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Guides
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
