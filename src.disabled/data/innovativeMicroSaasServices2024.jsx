@@ -1,1 +1,9 @@
-"export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
+<<<<<<< HEAD
+"export\": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
+=======
+<<<<<<< HEAD
+export: const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [""
+=======
+"export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"
+>>>>>>> main
+>>>>>>> main

@@ -1,10 +1,14 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 <<<<<<< HEAD
+
+=======
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -44,36 +48,28 @@ class $1 {
     await this.collectFromAutomationReports();
     // Collect from error reports;
     await this.collectFromErrorReports();
-
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
     console.log("logMessage);
-
     const logFile = path.join(this.logsPath, "error-analytics-dashboard.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
 ;
   async collectErrorData() {
   this.log("📊 Collecting error data from various sources...");
-
     // Collect from automation reports;
     await this.collectFromAutomationReports();
-
     // Collect from error reports;
     await this.collectFromErrorReports();
-
     // Collect from logs;
     await this.collectFromLogs();
-
     // Collect current project status;
     await this.collectCurrentStatus();
-
     this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors";
     )}
 ;
   async collectFromAutomationReports() {
   if (!fs.existsSync(this.reportsPath)) return;
-
     const files = fs.readdirSync(this.reportsPath);
     for (const file of files) {
   if (file.endsWith(".json")) {
@@ -82,7 +78,6 @@ class $1 {
             path.join(this.reportsPath, "file)", utf8";
           );
           const data = JSON.parse(content);
-
           if (data.timestamp && data.errors) {
   this.processErrorReport(data)}
     for (const file of files) {
@@ -102,7 +97,6 @@ class $1 {
 ;
   async collectFromErrorReports() {
   if (!fs.existsSync(this.errorReportsPath)) return;
-
     const files = fs.readdirSync(this.errorReportsPath);
     for (const file of files) {
   if (file.endsWith(".json")) {
@@ -116,7 +110,6 @@ class $1 {
             path.join(this.errorReportsPath, "file)", utf8";
           );
           const data = JSON.parse(content);
-
           if (data.timestamp && data.errorType) {
   this.processErrorReport(data)}
         } catch (error) {
@@ -134,7 +127,6 @@ class $1 {
     const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log"", "eslint-error-cleaner.log", "build-error-detector.log"", "dependency-error-resolver.log", "config-error-fixer.log"", "error-prevention-monitor.log", "auto-recovery-manager.log"", "critical-error-alert-system.log", ""];
     for (const logFile of logFiles) {
   const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log", "eslint-error-cleaner.log", "build-error-detector.log", "dependency-error-resolver.log", "config-error-fixer.log", "error-prevention-monitor.log", "auto-recovery-manager.log", "critical-error-alert-system.log", "];
-
     for (const logFile of logFiles) {
   const logPath = path.join(this.logsPath, "logFile);
       if (fs.existsSync(logPath)) {
@@ -153,10 +145,9 @@ class $1 {
           line.includes("ERROR");
         ) {
   this.processLogLine(line, path.basename(logPath))}
-=======
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
-
 class ErrorAnalyticsDashboard {
   constructor() {
     this.projectRoot = process.cwd();
@@ -165,13 +156,11 @@ class ErrorAnalyticsDashboard {
     this.dashboardDir = path.join(this.projectRoot, 'error-dashboard');
     this.updateInterval = parseInt(process.env.DASHBOARD_UPDATE_INTERVAL) || 300000; // 5 minutes
     this.analyticsEnabled = process.env.ANALYTICS_ENABLED === 'true';
-    
     // Ensure directories exist
     [this.reportsDir, this.logsDir, this.dashboardDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { "recursive": true })}
     });
-    
     this.analyticsData = {
       "errorTrends": [],
       "fixSuccessRates": [],
@@ -179,27 +168,28 @@ class ErrorAnalyticsDashboard {
       "timeDistribution": {},
       "fileDistribution": {}
     }}
-
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log("[${timestamp}] [${level}] ${message}")}
+<<<<<<< HEAD
+    }
 
+=======
+    console.log("[${timestamp}] [${level}] ${message}")}
+>>>>>>> main
   async collectErrorReports() {
     try {
       const reports = [];
       const files = fs.readdirSync(this.reportsDir);
-      
       for (const file of files) {
         if (file.endsWith('.json')) {
           const filePath = path.join(this.reportsDir, file);
           const content = fs.readFileSync(filePath, 'utf8');
           const report = JSON.parse(content);
           reports.push(report)}
->>>>>>> origin/merge-pr-10644
       }
-      
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
 <<<<<<< HEAD
+=======
   this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}
   }
 ;
@@ -247,7 +237,6 @@ class ErrorAnalyticsDashboard {
 ;
   processErrorReport(data) {
   const timestamp = data.timestamp;
-
     if (data.errors && Array.isArray(data.errors)) {
   data.errors.forEach(error => {
   this.addErrorData(error.type || "unknown", {
@@ -285,7 +274,6 @@ class ErrorAnalyticsDashboard {
   timestamp,
         "count": 1,"source": "log-${logFile}",
         "details": line,
-
     if (line.includes("TypeScript") || line.includes("tsc")) {
   this.addErrorData("typescript", {
   timestamp,
@@ -340,13 +328,11 @@ class ErrorAnalyticsDashboard {
 ;
   analyzeTrends() {
   this.log("📊 Analyzing error trends...");
-
     // Group errors by time periods;
     const now = new Date();
     const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
     const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-
     Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType];
       // Daily trends;
@@ -359,7 +345,6 @@ class ErrorAnalyticsDashboard {
         "sources": [...new Set(dailyErrors.map(e => e.source))]}
       // Weekly trends;
       const weeklyErrors = errors.filter(;
-
       // Weekly trends;
       const weeklyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneWeekAgo;
@@ -380,7 +365,6 @@ class ErrorAnalyticsDashboard {
 ;
   generateInsights() {
   this.log("💡 Generating insights and recommendations...");
-
     const insights = {
   "timestamp": new Date().toISOString(),
       "summary": {
@@ -406,7 +390,6 @@ class ErrorAnalyticsDashboard {
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
           return new Date(e.timestamp) >= oneDayAgo}).length}
     });
-
     return Object.entries(issueCounts);
       .sort(([", "a"], [", "b"]) => b.totalErrors - a.totalErrors);
       .slice(0, 5);
@@ -453,7 +436,6 @@ class ErrorAnalyticsDashboard {
         "category": "git-workflow",
         "action": "Improve branch management and merge strategies",
         "impact": "Reduce development friction and merge conflicts",
-
     // TypeScript errors;
     if (this.trends.daily.typescript?.totalErrors > 10) {
   recommendations.push({
@@ -508,7 +490,6 @@ class ErrorAnalyticsDashboard {
         .map(pattern => ({
   "name": pattern.name,
           "count": (errorMessages.match(pattern.regex) || []).length}))        .filter(p => p.count > 0)});
-
     return patterns}
 ;
   async generateDashboard() {
@@ -528,10 +509,8 @@ class ErrorAnalyticsDashboard {
         "sourceBreakdown": this.generateSourceBreakdown()}}
     const dashboardFile = path.join(;
       this.reportsPath,error-analytics-dashboard.json";
-
   async generateDashboard() {
   this.log("📊 Generating error analytics dashboard...");
-
     const dashboard = {
   "timestamp": new Date().toISOString(),
       "overview": {
@@ -568,7 +547,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
     );
     Object.values(distribution).forEach(d => {
   d.percentage = total > 0 ? Math.round((d.totalErrors / total) * 100) : 0});
-
     return distribution}
 ;
   generateErrorTimeline() {
@@ -591,12 +569,10 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
           return errorDate === dateStr});
         timeline[dateStr][errorType] = errors.reduce(;
           (sum, e) => sum + e.count,
-
     // Last 7 days;
     for (let i = 6; i >= 0; i--) {
   const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
       const dateStr = date.toISOString().split("T")[0];
-
       timeline[dateStr] = {
   "typescript": 0,
         "eslint": 0,
@@ -625,7 +601,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
   if (!sources[error.source]) {
   sources[error.source] = 0}
         sources[error.source] += error.count});
-
     return Object.entries(sources);
       .sort(([", "a"], [", "b"]) => b - a);
       .map((["source", "count"]) => ({ source, count }))}
@@ -646,7 +621,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       );
       this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`;
       );
-
       return {
   "success": true,
         dashboard,
@@ -658,18 +632,15 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
       );
       throw error}
-=======
+>>>>>>> main
       this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
       return []}
   }
-
   analyzeErrorTrends(reports) {
     const trends = [];
     const errorCounts = {};
-    
     for (const report of reports) {
       const date = new Date(report.timestamp).toISOString().split('T')[0];
-      
       if (!errorCounts[date]) {
         errorCounts[date] = {
           "total": 0,
@@ -678,10 +649,8 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
           "build": 0,
           "dependency": 0
         }}
-      
       if (report.totalErrors) {
         errorCounts[date].total += report.totalErrors}
-      
       if (report.checks) {
         if (report.checks.TypeScript && !report.checks.TypeScript.success) {
           errorCounts[date].typescript += report.checks.TypeScript.count || 0}
@@ -693,27 +662,21 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
           errorCounts[date].dependency += report.checks.Dependencies.count || 0}
       }
     }
-    
     for (const [date, counts] of Object.entries(errorCounts)) {
       trends.push({
         date,
         ...counts
       })}
-    
     return trends}
-
   analyzeFixSuccessRates(reports) {
     const fixReports = reports.filter(report => 
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
-    
     const successRates = [];
-    
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
       const fixesApplied = report.fixesApplied || report.resolutionsApplied || 0;
       const remainingIssues = report.remainingErrors || report.remainingIssues || 0;
-      
       if (totalIssues > 0) {
         successRates.push({
           "timestamp": report.timestamp,
@@ -724,9 +687,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
           "type": report.type || 'general'
         })}
     }
-    
     return successRates}
-
   analyzeErrorTypes(reports) {
     const errorTypes = {
       "typescript": 0,
@@ -735,7 +696,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       "dependency": 0,
       "other": 0
     };
-    
     for (const report of reports) {
       if (report.checks) {
         if (report.checks.TypeScript && !report.checks.TypeScript.success) {
@@ -748,9 +708,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
           errorTypes.dependency += report.checks.Dependencies.count || 0}
       }
     }
-    
     return errorTypes}
-
   analyzeTimeDistribution(reports) {
     const timeDistribution = {
       '"00": 00-06:00': 0,
@@ -758,22 +716,17 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       '"12": 00-18:00': 0,
       '"18": 00-24:00': 0
     };
-    
     for (const report of reports) {
       const hour = new Date(report.timestamp).getHours();
-      
       if (hour >= 0 && hour < 6) {
         timeDistribution['"00": 00-06:00']++} else if (hour >= 6 && hour < 12) {
         timeDistribution['"06": 00-12:00']++} else if (hour >= 12 && hour < 18) {
         timeDistribution['"12": 00-18:00']++} else {
         timeDistribution['"18": 00-24:00']++}
     }
-    
     return timeDistribution}
-
   analyzeFileDistribution(reports) {
     const fileDistribution = {};
-    
     for (const report of reports) {
       if (report.checks && report.checks.TypeScript && report.checks.TypeScript.errors) {
         for (const error of report.checks.TypeScript.errors) {
@@ -783,7 +736,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         }
       }
     }
-    
     // Sort by error count and take top 10
     return Object.entries(fileDistribution)
       .sort(([,a], [,b]) => b - a)
@@ -791,7 +743,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj}, {})}
-
   generateDashboardHTML(analyticsData) {
     const html = `
 <!DOCTYPE html>
@@ -859,7 +810,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
             <h1>🚨 Error Analytics Dashboard</h1>
             <p>Real-time insights into project error patterns and automation effectiveness</p>
         </div>
-        
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">${analyticsData.totalErrors}</div>
@@ -878,27 +828,22 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                 <div class="stat-label">ESLint Errors</div>
             </div>
         </div>
-        
         <div class="chart-container">
             <div class="chart-title">Error Trends Over Time</div>
             <canvas id="trendsChart"></canvas>
         </div>
-        
         <div class="chart-container">
             <div class="chart-title">Error Types Distribution</div>
             <canvas id="typesChart"></canvas>
         </div>
-        
         <div class="chart-container">
             <div class="chart-title">Fix Success Rates</div>
             <canvas id="successChart"></canvas>
         </div>
-        
         <div class="last-updated">
             Last "updated": ${new Date().toLocaleString()}
         </div>
     </div>
-
     <script>
         // Error Trends Chart
         const trendsCtx = document.getElementById('trendsChart').getContext('2d');
@@ -923,7 +868,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                 }
             }
         });
-
         // Error Types Chart
         const typesCtx = document.getElementById('typesChart').getContext('2d');
         new Chart(typesCtx, {
@@ -948,7 +892,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                 responsive: true
             }
         });
-
         // Success Rates Chart
         const successCtx = document.getElementById('successChart').getContext('2d');
         new Chart(successCtx, {
@@ -974,32 +917,25 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
     </script>
 </body>
 </html>`;
-
     return html}
-
   async generateAnalyticsReport() {
     this.log('Generating analytics report...');
-    
     try {
       const reports = await this.collectErrorReports();
-      
       if (reports.length === 0) {
         this.log('No reports found for analytics', 'INFO');
         return}
-      
       // Analyze data
       const errorTrends = this.analyzeErrorTrends(reports);
       const fixSuccessRates = this.analyzeFixSuccessRates(reports);
       const errorTypes = this.analyzeErrorTypes(reports);
       const timeDistribution = this.analyzeTimeDistribution(reports);
       const fileDistribution = this.analyzeFileDistribution(reports);
-      
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
       const avgSuccessRate = fixSuccessRates.length > 0 
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
-      
       const analyticsData = {
         totalErrors,
         "fixSuccessRate": avgSuccessRate.toFixed(1),
@@ -1010,40 +946,30 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         fixSuccessRates,
         "lastUpdated": new Date().toISOString()
       };
-      
       // Save analytics data
       const analyticsPath = path.join(this.dashboardDir, 'analytics-data.json');
       fs.writeFileSync(analyticsPath, JSON.stringify(analyticsData, null, 2));
-      
       // Generate HTML dashboard
       const html = this.generateDashboardHTML(analyticsData);
       const dashboardPath = path.join(this.dashboardDir, 'index.html');
       fs.writeFileSync(dashboardPath, html);
-      
       // Update analytics data
       this.analyticsData = analyticsData;
-      
       this.log(`Analytics report "generated": ${dashboardPath}`, 'INFO')} catch (error) {
       this.log(`Failed to generate analytics "report": ${error.message}`, 'ERROR')}
->>>>>>> origin/merge-pr-10644
   }
-
   async startDashboard() {
     this.log('Starting error analytics dashboard...');
-    
     // Generate initial report
     await this.generateAnalyticsReport();
-    
     // Set up periodic updates
     setInterval(async () => {
       try {
         await this.generateAnalyticsReport()} catch (error) {
         this.log(`Error in periodic analytics "update": ${error.message}`, 'ERROR')}
     }, this.updateInterval);
-
     this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
     this.log(`Dashboard available "at": ${path.join(this.dashboardDir, 'index.html')}`)}
-
   getStatus() {
     return {
       "running": true,
@@ -1054,27 +980,25 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
     }}
 }
 <<<<<<< HEAD
+
+=======
 ;
 // Run the automation if called directly;
-=======
-
+>>>>>>> main
 // Main execution
->>>>>>> origin/merge-pr-10644
 if (require.main === module) {
   const dashboard = new ErrorAnalyticsDashboard();
-  
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     dashboard.log('Shutting down error analytics dashboard...');
     process.exit(0)});
-
   process.on('SIGTERM', () => {
     dashboard.log('Shutting down error analytics dashboard...');
     process.exit(0)});
-
   // Start dashboard
   dashboard.startDashboard().catch(error => {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
 module.exports = ErrorAnalyticsDashboard
+>>>>>>> main

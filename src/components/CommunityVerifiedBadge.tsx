@@ -1,5 +1,10 @@
- interface CommunityVerifiedBadgeProps {;
-  "endorsementCount": number;
-   threshold?: number
-   className?: string
-} const "CommunityVerifiedBadge": Reac t.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' };) => { if (endorsementCount < threshold) { return null";
+<<<<<<< HEAD
+interface CommunityVerifiedBadgeProps {; endorsementCount: number; threshold?: number className?: string } const CommunityVerifiedBadge: Reac t.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = &apos; };) => { if (endorsementCount < threshold) { return null&quot;;
+=======
+<<<<<<< HEAD
+interface CommunityVerifiedBadgeProps {; endorsementCount: number; threshold?: number className?: string } const CommunityVerifiedBadge: Reac t.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = " };) => { if (endorsementCount < threshold) { return null";"
+  """
+=======
+interface CommunityVerifiedBadgeProps {; endorsementCount: number; threshold?: number className?: string } const CommunityVerifiedBadge: Reac t.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount,threshold = 3,className = ' };) => { if (endorsementCount < threshold) { return null";""}
+>>>>>>> main
+>>>>>>> main

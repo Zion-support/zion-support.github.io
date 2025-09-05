@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 function fixMergeConflicts(filePath) {
@@ -9,7 +10,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/},\s*]/g, "]");
     content = content.replace(/},\s*\)/g, ")");
     fs.writeFileSync(filePath, content);
-    console.log(`"Fixed": ${filePath}`)} catch (error) {
+    } catch (error) {
   console.error(`Error fixing ${filePath}:`, error.message)}
 }
 ;
@@ -27,6 +28,17 @@ function findAndFixFiles(dir) {
   }
 }
 ;
-console.log("Starting merge conflict resolution...");
+
 findAndFixFiles(".");
-console.log("Merge conflict resolution completed!")
+=======
+<<<<<<< HEAD
+const fs = require("fs");"const path = require("path");function fixMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove merge conflict markers and keep the newer version (after =======)''"
+=======
+const fs = require('fs');
+const path = require('path');
+function fixMergeConflicts(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove merge conflict markers and keep the newer version (after );
+>>>>>>> main
+>>>>>>> main
