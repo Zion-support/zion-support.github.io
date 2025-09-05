@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -18,36 +16,34 @@ const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Zion Tech Group - AI, IT & Micro SaaS Solutions',
   description = 'Leading provider of AI solutions, IT services, and Micro SaaS products. Transform your business with our innovative technology and intelligent automation.',
-  keywords = 'AI solutions, IT services, Micro SaaS, artificial intelligence, cloud computing, cybersecurity, digital transformation, business automation',
-  ogImage = '/og-image.jpg',
+  keywords = 'AI solutions, IT services, Micro SaaS, artificial intelligence, technology consulting, software development, digital transformation',
+  ogImage = '/images/og-image.jpg',
   canonical
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-
   return (
     <>
       <Head>
-        <title>{fullTitle}</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="theme-color" content="#2563eb" />
         
-        {/* Open Graph */}
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={fullTitle} />
+        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
         <meta property="og:site_name" content="Zion Tech Group" />
         
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={fullTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonical || 'https://ziontechgroup.com'} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImage} />
         
         {/* Canonical URL */}
         {canonical && <link rel="canonical" href={canonical} />}
@@ -62,7 +58,6 @@ const Layout: React.FC<LayoutProps> = ({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
         
         {/* Structured Data */}
         <script
@@ -73,26 +68,20 @@ const Layout: React.FC<LayoutProps> = ({
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
+              "logo": "https://ziontechgroup.com/images/logo.png",
               "description": description,
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
                 "addressCountry": "US"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "telephone": "+1-555-0123",
+                "contactType": "customer service"
               },
               "sameAs": [
-                "https://twitter.com/ziontechgroup",
                 "https://linkedin.com/company/ziontechgroup",
-                "https://github.com/ziontechgroup"
+                "https://twitter.com/ziontechgroup"
               ]
             })
           }}
@@ -101,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({
       
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />
@@ -111,4 +100,3 @@ const Layout: React.FC<LayoutProps> = ({
 };
 
 export default Layout;
->>>>>>> fd81623f34e3b84c2b325c5baeabd49310d8e0d9

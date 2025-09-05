@@ -1,466 +1,477 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight,
-  Award,
-  BarChart3,
-  BookOpen,
-  Brain,
-  Building,
-  Calculator,
-  Calendar,
-  Camera,
-  Car,
-  CheckCircle,
-  ChevronDown,
-  Clock,
-  Cloud,
-  Code,
-  CreditCard,
-  Cpu,
-  DollarSign,
-  Eye,
-  FileText,
-  Gamepad2,
-  Globe,
-  GraduationCap,
-  Heart,
-  Home,
-  Lock,
-  Mail,
-  MapPin,
+import { motion, AnimatePresence } from 'framer-motion';
+import {
   Menu,
-  MessageSquare,
-  Music,
-  Network,
-  Phone,
-  Rocket,
-  Settings,
-  Shield,
-  ShoppingCart,
-  Sprout,
-  Star,
-  Target,
-  TrendingUp,
-  Truck,
-  Users,
-  Wifi,
   X,
-  Zap
+  ChevronDown,
+  ArrowRight,
+  Zap,
+  Brain,
+  Server,
+  Code,
+  Users,
+  Phone,
+  Mail,
+  Search,
+  Globe,
+  Shield,
+  Target,
+  Rocket,
+  Lightbulb,
+  Building,
+  Database,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Filter,
+  Workflow,
+  Bot,
+  Microscope,
+  Layers,
+  Eye,
+  MessageSquare,
+  BarChart3,
+  Cpu,
+  Award,
+  Star,
+  Clock,
+  CheckCircle,
+  Target as TargetIcon,
+  TrendingDown,
+  ExternalLink,
+  Document,
+  BookOpen,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Play,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Download,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Lock,
+  Unlock,
+  EyeOff,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2
 } from 'lucide-react';
 
-const navigationItems = [
+const navigation = [
   {
-    title: 'Services',
+    name: 'Services',
     href: '/services',
-    icon: Settings,
-    submenu: [
+    icon: Zap,
+    children: [
       {
-        title: 'AI Services',
+        name: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '30+ cutting-edge AI solutions',
-        popular: true
+        description: 'Intelligent automation and AI solutions'
       },
       {
-        title: 'IT Services',
+        name: 'IT Services',
         href: '/it-services',
-        icon: Network,
-        description: '25+ comprehensive IT services',
-        popular: true
+        icon: Server,
+        description: 'Comprehensive IT infrastructure and support'
       },
       {
-        title: 'Micro SaaS',
+        name: 'Micro SaaS',
         href: '/micro-saas',
-        icon: Cloud,
-        description: '40+ innovative micro SaaS solutions',
-        popular: true
+        icon: Code,
+        description: 'Specialized software solutions'
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions',
-        popular: false
-      },
-      {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Scalable cloud infrastructure',
-        popular: false
-      },
-      {
-        title: 'Data Analytics',
-        href: '/data-analytics',
-        icon: BarChart3,
-        description: 'Advanced analytics platform',
-        popular: false
+        name: 'Consulting',
+        href: '/consulting',
+        icon: Users,
+        description: 'Strategic technology consulting'
       }
     ]
   },
   {
-    title: 'Solutions',
+    name: 'Solutions',
     href: '/solutions',
     icon: Target,
-    submenu: [
+    children: [
       {
-        title: 'Enterprise Solutions',
+        name: 'Enterprise',
         href: '/solutions/enterprise',
         icon: Building,
-        description: 'Comprehensive enterprise solutions'
+        description: 'Large-scale enterprise solutions'
       },
       {
-        title: 'Startup Solutions',
+        name: 'Startup',
         href: '/solutions/startup',
         icon: Rocket,
-        description: 'Rapid deployment for startups'
+        description: 'Startup-focused technology solutions'
       },
       {
-        title: 'Industry Solutions',
+        name: 'Industry',
         href: '/solutions/industry',
-        icon: BarChart3,
+        icon: Globe,
         description: 'Industry-specific solutions'
-      },
-      {
-        title: 'Custom Solutions',
-        href: '/solutions/custom',
-        icon: Settings,
-        description: 'Tailored custom solutions'
       }
     ]
   },
   {
-    title: 'Industries',
-    href: '/industries',
-    icon: Building,
-    submenu: [
-      {
-        title: 'Healthcare',
-        href: '/industries/healthcare',
-        icon: Heart,
-        description: 'Medical AI and health tech'
-      },
-      {
-        title: 'Finance',
-        href: '/industries/finance',
-        icon: DollarSign,
-        description: 'Fintech and financial services'
-      },
-      {
-        title: 'Manufacturing',
-        href: '/industries/manufacturing',
-        icon: Settings,
-        description: 'Industrial automation'
-      },
-      {
-        title: 'Retail',
-        href: '/industries/retail',
-        icon: ShoppingCart,
-        description: 'E-commerce and retail tech'
-      },
-      {
-        title: 'Education',
-        href: '/industries/education',
-        icon: BookOpen,
-        description: 'EdTech solutions'
-      },
-      {
-        title: 'Real Estate',
-        href: '/industries/real-estate',
-        icon: Home,
-        description: 'PropTech innovations'
-      }
-    ]
-  },
-  {
-    title: 'Resources',
+    name: 'Resources',
     href: '/resources',
-    icon: FileText,
-    submenu: [
+    icon: BookOpen,
+    children: [
       {
-        title: 'Blog',
-        href: '/blog',
+        name: 'Documentation',
+        href: '/docs',
         icon: FileText,
-        description: 'Latest insights and trends'
+        description: 'Technical documentation and guides'
       },
       {
-        title: 'Case Studies',
+        name: 'Case Studies',
         href: '/case-studies',
-        icon: BarChart3,
-        description: 'Success stories and results'
+        icon: BarChart,
+        description: 'Success stories and case studies'
       },
       {
-        title: 'White Papers',
+        name: 'Blog',
+        href: '/blog',
+        icon: Edit,
+        description: 'Latest insights and updates'
+      },
+      {
+        name: 'Guides',
+        href: '/guides',
+        icon: BookOpen,
+        description: 'Step-by-step tutorials'
+      },
+      {
+        name: 'White Papers',
         href: '/white-papers',
-<<<<<<< HEAD
-        icon: Document,
-        description: 'In-depth research reports'
-=======
         icon: FileText,
         description: 'In-depth research reports',
         popular: false
-      },
-      {
-        title: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational sessions',
-        popular: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-      },
-      {
-        title: 'Tutorials',
-        href: '/tutorials',
-        icon: BookOpen,
-        description: 'Step-by-step guides'
-      },
-      {
-        title: 'Documentation',
-        href: '/docs',
-        icon: FileText,
-        description: 'Technical documentation'
       }
     ]
   },
   {
-    title: 'Company',
+    name: 'Company',
     href: '/about',
-    icon: Building,
-    submenu: [
+    icon: Users,
+    children: [
       {
-        title: 'About Us',
+        name: 'About Us',
         href: '/about',
-        icon: Building,
-        description: 'Our story and mission'
+        icon: Info,
+        description: 'Learn about our mission and team'
       },
       {
-        title: 'Team',
-        href: '/team',
-        icon: Users,
-        description: 'Meet our experts'
-      },
-      {
-        title: 'Careers',
+        name: 'Careers',
         href: '/careers',
-        icon: Users,
-        description: 'Join our team'
+        icon: Briefcase,
+        description: 'Join our growing team'
       },
       {
-        title: 'Partners',
-        href: '/partners',
-        icon: Globe,
-        description: 'Our partnerships'
-      },
-      {
-        title: 'News',
-        href: '/news',
-        icon: FileText,
-        description: 'Company updates'
-      },
-      {
-        title: 'Press',
-        href: '/press',
-        icon: FileText,
-        description: 'Press releases and media'
+        name: 'Contact',
+        href: '/contact',
+        icon: Phone,
+        description: 'Get in touch with us'
       }
     ]
   }
 ];
 
-const quickLinks = [
-  { title: 'Pricing', href: '/pricing', icon: DollarSign },
-  { title: 'Contact', href: '/contact', icon: Phone },
-  { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 },
-  { title: 'Quote', href: '/quote', icon: FileText },
-  { title: 'API Docs', href: '/api-docs', icon: Code }
-];
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-600 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/contact" className="hover:text-blue-200 transition-colors">
-                Get Free Consultation
-              </Link>
-              <Link href="/pricing" className="hover:text-blue-200 transition-colors">
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
+    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+              <Zap className="w-6 h-6 text-white" />
             </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-500">AI & Technology Solutions</div>
-            </div>
+            <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigation.map((item) => (
               <div
-                key={item.title}
-                className="relative group"
-                onMouseEnter={() => setActiveSubmenu(item.title)}
-                onMouseLeave={() => setActiveSubmenu(null)}
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => setActiveDropdown(item.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                 >
-                  <item.icon className="w-5 h-5" />
-                  <span>{item.title}</span>
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4" />
                 </Link>
 
-                {/* Submenu */}
-                {activeSubmenu === item.title && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
-                  >
-                    <div className="grid grid-cols-1 gap-2">
-                      {item.submenu.map((subItem) => (
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {activeDropdown === item.name && item.children && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
+                    >
+                      {item.children.map((child) => (
                         <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                          key={child.name}
+                          href={child.href}
+                          className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors"
                         >
-                          <subItem.icon className="w-5 h-5 text-blue-600 mt-0.5" />
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2">
-                              <span className="font-medium text-gray-900">{subItem.title}</span>
-                              {subItem.popular && (
-                                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                                  Popular
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-sm text-gray-500 mt-1">{subItem.description}</p>
+                          <child.icon className="w-5 h-5 text-blue-600 mt-0.5" />
+                          <div>
+                            <div className="font-medium text-gray-900">{child.name}</div>
+                            <div className="text-sm text-gray-500">{child.description}</div>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400" />
                         </Link>
                       ))}
-                    </div>
-                  </motion.div>
-                )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
+          </div>
 
-            {/* Quick Links */}
-            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  <link.icon className="w-4 h-4" />
-                  <span>{link.title}</span>
-                </Link>
-              ))}
-            </div>
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-200 py-4"
-          >
-            <div className="space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.title}</span>
-                  </Link>
-                  <div className="ml-7 space-y-2 mt-2">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.title}
-                        href={subItem.href}
-                        className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <subItem.icon className="w-4 h-4" />
-                        <span>{subItem.title}</span>
-                        {subItem.popular && (
-                          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                            Popular
-                          </span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-gray-200">
-                <div className="grid grid-cols-2 gap-2">
-                  {quickLinks.map((link) => (
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden border-t border-gray-200"
+            >
+              <div className="py-4 space-y-2">
+                {navigation.map((item) => (
+                  <div key={item.name}>
                     <Link
-                      key={link.title}
-                      href={link.href}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                      onClick={() => setIsOpen(false)}
+                      href={item.href}
+                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                      onClick={closeMenu}
                     >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.title}</span>
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
                     </Link>
-                  ))}
+                    {item.children && (
+                      <div className="ml-6 space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                            onClick={closeMenu}
+                          >
+                            <child.icon className="w-4 h-4" />
+                            <span>{child.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/contact"
+                    className="block w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Get Started
+                  </Link>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
