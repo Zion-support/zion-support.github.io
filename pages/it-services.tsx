@@ -33,7 +33,8 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -416,6 +417,134 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Security',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Server,
+    features: ['Edge Deployment', 'Low Latency', 'IoT Integration', 'Global Distribution'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgeinfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI/ML Infrastructure Setup',
+    description: 'Complete AI and machine learning infrastructure with GPU clusters and data pipelines.',
+    icon: Cpu,
+    features: ['GPU Clusters', 'Data Pipelines', 'Model Training', 'MLOps Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aimlinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing solutions for optimization, cryptography, and scientific computing.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Hybrid Computing', 'Security Applications', 'Research Support'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumintegration.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Lock,
+    features: ['Blockchain Networks', 'Smart Contracts', 'DApp Development', 'Security Audits'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Complete IoT platform with device management, data analytics, and real-time monitoring.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Security Protocols'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Immersive technology infrastructure for augmented and virtual reality applications.',
+    icon: Monitor,
+    features: ['3D Rendering', 'Spatial Computing', 'Multi-user Support', 'Content Management'],
+    pricing: '$30,000 - $120,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfra.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design and implementation for high-speed connectivity and IoT applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Small Cell Deployment', 'Network Slicing', 'IoT Integration'],
+    pricing: '$40,000 - $200,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient systems and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation for modern businesses.',
+    icon: Rocket,
+    features: ['Strategy Development', 'Process Automation', 'Technology Integration', 'Change Management'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Digital Transformation',
+    popular: true,
+    link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'Compliance & Governance',
+    description: 'IT compliance and governance solutions for regulatory requirements and industry standards.',
+    icon: Shield,
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Seamless management of hybrid cloud environments across multiple cloud providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Security Management'],
+    pricing: '$12,000 - $70,000/project',
+    category: 'Cloud Management',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete IT service management implementation with ITIL best practices and automation.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'ITSM',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Data Privacy & Protection',
+    description: 'Comprehensive data privacy solutions with GDPR, CCPA, and other regulatory compliance.',
+    icon: Lock,
+    features: ['Privacy Impact Assessment', 'Data Mapping', 'Consent Management', 'Breach Response'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Data Privacy',
+    link: 'https://dataprivacy.ziontechgroup.com'
   }
 ];
 

@@ -390,6 +390,142 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'Generative AI Content Studio',
+    description: 'Advanced AI content generation platform for creating high-quality text, images, and videos.',
+    icon: FileText,
+    features: ['Multi-modal Generation', 'Brand Consistency', 'Content Optimization', 'Batch Processing'],
+    pricing: '$199 - $999/month',
+    category: 'Content Generation',
+    popular: true,
+    link: 'https://genaistudio.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Intelligent code generation and completion using advanced language models for developers.',
+    icon: Code,
+    features: ['Code Generation', 'Auto-completion', 'Bug Fixing', 'Documentation Generation'],
+    pricing: '$149 - $699/month',
+    category: 'Development AI',
+    link: 'https://aicodegen.ziontechgroup.com'
+  },
+  {
+    title: 'AI Customer Journey Analytics',
+    description: 'Comprehensive AI analytics for understanding and optimizing customer journey touchpoints.',
+    icon: BarChart3,
+    features: ['Journey Mapping', 'Behavior Prediction', 'Churn Analysis', 'Personalization Insights'],
+    pricing: '$299 - $1,499/month',
+    category: 'Customer Analytics',
+    link: 'https://aijourney.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection system using machine learning for real-time transaction monitoring.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Adaptive Learning'],
+    pricing: '$399 - $1,999/month',
+    category: 'Security AI',
+    link: 'https://aifraud.ziontechgroup.com'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics and automated decision making.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Assessment'],
+    pricing: '$499 - $2,499/month',
+    category: 'Supply Chain AI',
+    link: 'https://aisupplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Advanced medical AI for diagnostic assistance, image analysis, and treatment recommendations.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnostic Support', 'Treatment Planning', 'Drug Discovery'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    link: 'https://aimedical.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Intelligent legal document processing with contract analysis and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Document Summarization'],
+    pricing: '$299 - $1,299/month',
+    category: 'Legal AI',
+    link: 'https://ailegal.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Trading',
+    description: 'Automated trading algorithms with AI-driven market analysis and risk management.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Trading Algorithms', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'FinTech AI',
+    link: 'https://aitrading.ziontechgroup.com'
+  },
+  {
+    title: 'AI Environmental Monitoring',
+    description: 'Smart environmental monitoring using AI for climate analysis and sustainability tracking.',
+    icon: Sprout,
+    features: ['Climate Analysis', 'Pollution Monitoring', 'Sustainability Tracking', 'Predictive Modeling'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental AI',
+    link: 'https://aienvironment.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered HR Analytics',
+    description: 'Intelligent human resources analytics for recruitment, performance, and employee engagement.',
+    icon: Users,
+    features: ['Recruitment AI', 'Performance Analysis', 'Engagement Tracking', 'Retention Prediction'],
+    pricing: '$149 - $799/month',
+    category: 'HR AI',
+    link: 'https://aihr.ziontechgroup.com'
+  },
+  {
+    title: 'AI Real Estate Analysis',
+    description: 'Advanced real estate market analysis with property valuation and investment recommendations.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$199 - $999/month',
+    category: 'Real Estate AI',
+    link: 'https://airealestate.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Advanced multilingual translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Cultural Adaptation', 'Voice Translation'],
+    pricing: '$99 - $499/month',
+    category: 'Language AI',
+    link: 'https://aitranslation.ziontechgroup.com'
+  },
+  {
+    title: 'AI Cybersecurity Intelligence',
+    description: 'Advanced AI-powered cybersecurity with threat hunting and automated response systems.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Automated Response', 'Behavioral Analysis', 'Incident Prediction'],
+    pricing: '$599 - $2,999/month',
+    category: 'Cybersecurity AI',
+    link: 'https://aisecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Research Assistant',
+    description: 'Intelligent research platform for academic and business research with automated insights.',
+    icon: BookOpen,
+    features: ['Literature Review', 'Data Analysis', 'Insight Generation', 'Citation Management'],
+    pricing: '$149 - $699/month',
+    category: 'Research AI',
+    link: 'https://airesearch.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quality Assurance Testing',
+    description: 'Automated software testing with AI-driven test case generation and execution.',
+    icon: CheckCircle,
+    features: ['Test Generation', 'Automated Execution', 'Bug Detection', 'Performance Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Testing AI',
+    link: 'https://aitesting.ziontechgroup.com'
   }
 ];
 

@@ -199,6 +199,179 @@ const microSaaSProducts = [
     link: 'https://meetingscheduler.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Video Clip Maker',
+    description: 'Transform long-form videos into engaging short clips with AI-driven editing and automatic captions.',
+    icon: Video,
+    features: ['AI Video Editing', 'Auto Caption Generation', 'Social Media Optimization', 'Brand Customization'],
+    pricing: '$49 - $199/month',
+    category: 'Video Marketing',
+    popular: true,
+    link: 'https://videoclipmaker.ziontechgroup.com'
+  },
+  {
+    title: 'E-Commerce Return Management',
+    description: 'Automated return processing with label generation, tracking, and analytics for online retailers.',
+    icon: Package,
+    features: ['Auto Return Processing', 'Label Generation', 'Return Analytics', 'Customer Portal'],
+    pricing: '$39 - $149/month',
+    category: 'E-commerce',
+    link: 'https://returnmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Creation Suite',
+    description: 'Comprehensive AI-powered content generation for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Multi-language Support'],
+    pricing: '$79 - $299/month',
+    category: 'Content Creation',
+    link: 'https://aicontent.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile-First Survey Platform',
+    description: 'Interactive survey tool optimized for mobile devices with real-time analytics and engagement features.',
+    icon: MessageSquare,
+    features: ['Mobile Optimization', 'Real-time Analytics', 'Custom Templates', 'CRM Integration'],
+    pricing: '$29 - $129/month',
+    category: 'Customer Feedback',
+    link: 'https://mobilesurvey.ziontechgroup.com'
+  },
+  {
+    title: 'Niche Productivity Planner',
+    description: 'Industry-specific productivity tools with customized dashboards and workflow automation.',
+    icon: Kanban,
+    features: ['Industry Templates', 'Custom Dashboards', 'Workflow Automation', 'Team Collaboration'],
+    pricing: '$39 - $149/month',
+    category: 'Productivity',
+    link: 'https://productivityplanner.ziontechgroup.com'
+  },
+  {
+    title: 'Event Management Dashboard',
+    description: 'Complete event planning platform with ticketing, scheduling, and attendee management.',
+    icon: Calendar,
+    features: ['Event Planning', 'Ticket Sales', 'Attendee Management', 'Post-event Analytics'],
+    pricing: '$59 - $249/month',
+    category: 'Event Management',
+    link: 'https://eventmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Follow-up',
+    description: 'Automated email sequences with AI personalization and behavioral triggers for lead nurturing.',
+    icon: Mail,
+    features: ['AI Personalization', 'Behavioral Triggers', 'A/B Testing', 'Conversion Tracking'],
+    pricing: '$49 - $199/month',
+    category: 'Email Marketing',
+    link: 'https://emailfollowup.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Support & Helpdesk',
+    description: 'Comprehensive support platform with ticket management, live chat, and AI-powered responses.',
+    icon: Headphones,
+    features: ['Ticket Management', 'Live Chat', 'AI Responses', 'Knowledge Base'],
+    pricing: '$69 - $299/month',
+    category: 'Customer Support',
+    popular: true,
+    link: 'https://helpdeskpro.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Talent Matching',
+    description: 'Advanced recruitment platform using AI to match businesses with verified tech professionals.',
+    icon: Users,
+    features: ['AI Matching', 'Skill Verification', 'Project Matching', 'Hiring Analytics'],
+    pricing: '$199 - $799/month',
+    category: 'Recruitment',
+    link: 'https://talentmatcher.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing services for optimization, cryptography, and scientific research.',
+    icon: Cpu,
+    features: ['Quantum Optimization', 'Cryptography', 'Scientific Computing', 'Custom Algorithms'],
+    pricing: '$2,999 - $9,999/month',
+    category: 'Quantum Computing',
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Integration Platform',
+    description: 'Enterprise blockchain solutions with smart contracts, NFTs, and DeFi integrations.',
+    icon: Lock,
+    features: ['Smart Contracts', 'NFT Marketplace', 'DeFi Integration', 'Security Audits'],
+    pricing: '$1,499 - $4,999/month',
+    category: 'Blockchain',
+    link: 'https://blockchain.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Device Management',
+    description: 'Comprehensive IoT platform for device monitoring, data collection, and remote management.',
+    icon: Network,
+    features: ['Device Monitoring', 'Data Analytics', 'Remote Management', 'Security Protocols'],
+    pricing: '$149 - $599/month',
+    category: 'IoT',
+    link: 'https://iotmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Development Platform',
+    description: 'Complete AR/VR development suite with 3D modeling, animation, and deployment tools.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Animation Tools', 'Multi-platform Deployment', 'User Analytics'],
+    pricing: '$299 - $1,299/month',
+    category: 'AR/VR',
+    link: 'https://arvrplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed computing platform for low-latency applications and real-time data processing.',
+    icon: Server,
+    features: ['Low Latency', 'Real-time Processing', 'Global Distribution', 'Auto-scaling'],
+    pricing: '$199 - $999/month',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Review',
+    description: 'Automated code review platform with security scanning, performance analysis, and best practices.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Best Practices', 'Team Collaboration'],
+    pricing: '$99 - $399/month',
+    category: 'Development Tools',
+    link: 'https://codereview.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Orchestration',
+    description: 'Container orchestration platform for microservices with monitoring, scaling, and deployment automation.',
+    icon: Settings,
+    features: ['Container Orchestration', 'Auto-scaling', 'Service Discovery', 'Health Monitoring'],
+    pricing: '$149 - $699/month',
+    category: 'DevOps',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Suite',
+    description: 'Advanced collaboration platform with video conferencing, screen sharing, and project management.',
+    icon: Users,
+    features: ['Video Conferencing', 'Screen Sharing', 'Project Management', 'File Collaboration'],
+    pricing: '$79 - $299/month',
+    category: 'Collaboration',
+    link: 'https://collaboration.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Analytics Dashboard',
+    description: 'Intelligent business intelligence platform with predictive analytics and automated insights.',
+    icon: BarChart3,
+    features: ['Predictive Analytics', 'Automated Insights', 'Custom Dashboards', 'Data Visualization'],
+    pricing: '$199 - $799/month',
+    category: 'Analytics',
+    link: 'https://analytics.ziontechgroup.com'
+  },
+  {
+    title: 'Voice AI Assistant Platform',
+    description: 'Custom voice AI solutions with speech recognition, natural language processing, and multi-language support.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Natural Language Processing', 'Multi-language', 'Custom Training'],
+    pricing: '$299 - $1,199/month',
+    category: 'Voice AI',
+    link: 'https://voiceai.ziontechgroup.com'
+  },
+  {
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
