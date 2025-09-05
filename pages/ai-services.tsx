@@ -401,156 +401,174 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
-    title: 'AI-Powered Fusion Energy Optimization',
-    description: 'AI systems for optimizing nuclear fusion reactor designs and plasma control.',
-    icon: Zap,
-    features: ['Plasma Modeling', 'Reactor Optimization', 'Magnetic Field Control', 'Energy Efficiency'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Fusion Energy',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Consciousness Simulation',
-    description: 'Advanced AI systems for simulating consciousness and cognitive processes.',
-    icon: Brain,
-    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Neural Networks', 'Self-Awareness'],
-    pricing: '$200,000 - $2,000,000/project',
-    category: 'Consciousness AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Time Series Forecasting',
-    description: 'Advanced time series analysis and forecasting for complex multi-variate data.',
-    icon: TrendingUp,
-    features: ['Multi-variate Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Uncertainty Quantification'],
-    pricing: '$25,000 - $200,000/setup',
-    category: 'Time Series AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Molecular Dynamics Simulation',
-    description: 'AI-accelerated molecular dynamics for drug discovery and materials science.',
-    icon: Heart,
-    features: ['Molecular Simulation', 'Drug-Target Interaction', 'Materials Design', 'Quantum Effects'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Molecular AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Gravitational Wave Detection',
-    description: 'AI systems for detecting and analyzing gravitational waves from cosmic events.',
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with autonomous navigation and mission execution capabilities.',
     icon: Rocket,
-    features: ['Signal Processing', 'Noise Filtering', 'Event Classification', 'Source Localization'],
-    pricing: '$60,000 - $600,000/project',
-    category: 'Astrophysics AI',
+    features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Autonomous Systems',
     popular: true
   },
   {
-    title: 'AI-Powered Climate Engineering',
-    description: 'AI systems for climate engineering and geoengineering solutions.',
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Next-generation AI cybersecurity with autonomous threat detection and response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'AI Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Solutions',
+    description: 'AI systems for climate modeling, carbon capture optimization, and environmental monitoring.',
     icon: Sprout,
-    features: ['Climate Modeling', 'Geoengineering Design', 'Impact Assessment', 'Risk Analysis'],
-    pricing: '$80,000 - $800,000/project',
-    category: 'Climate Engineering',
+    features: ['Climate Modeling', 'Carbon Optimization', 'Environmental Monitoring', 'Policy Analysis'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Climate AI',
     popular: true
   },
   {
-    title: 'AI-Powered Neural Architecture Search',
-    description: 'Automated neural network architecture design and optimization using AI.',
-    icon: Network,
-    features: ['Architecture Search', 'Hyperparameter Optimization', 'Model Compression', 'Performance Prediction'],
-    pricing: '$30,000 - $300,000/setup',
-    category: 'AutoML',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Dark Matter Detection',
-    description: 'AI systems for detecting and analyzing dark matter particles and interactions.',
-    icon: Eye,
-    features: ['Particle Detection', 'Signal Analysis', 'Background Rejection', 'Statistical Analysis'],
-    pricing: '$70,000 - $700,000/project',
-    category: 'Particle Physics AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Exoplanet Discovery',
-    description: 'AI systems for discovering and characterizing exoplanets from astronomical data.',
-    icon: Globe,
-    features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment'],
-    pricing: '$45,000 - $450,000/project',
-    category: 'Astrobiology AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Protein Folding Prediction',
-    description: 'Advanced AI for predicting protein structures and folding patterns.',
-    icon: Heart,
-    features: ['Structure Prediction', 'Folding Simulation', 'Function Analysis', 'Drug Design'],
-    pricing: '$35,000 - $350,000/setup',
-    category: 'Structural Biology AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cryptocurrency Mining Optimization',
-    description: 'AI-optimized cryptocurrency mining with energy efficiency and profit maximization.',
-    icon: TrendingUp,
-    features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis'],
-    pricing: '$20,000 - $200,000/setup',
-    category: 'Crypto AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Virtual Reality Content Generation',
-    description: 'AI-generated immersive VR content with realistic physics and interactions.',
-    icon: Monitor,
-    features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering'],
-    pricing: '$25,000 - $250,000/project',
-    category: 'VR AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Augmented Reality Intelligence',
-    description: 'Advanced AR systems with AI-powered object recognition and spatial understanding.',
-    icon: Eye,
-    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness'],
-    pricing: '$30,000 - $300,000/setup',
-    category: 'AR AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Holographic Display Technology',
-    description: 'AI-optimized holographic displays with real-time content generation and interaction.',
-    icon: Monitor,
-    features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Holographic AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Teleportation Simulation',
-    description: 'AI systems for simulating quantum teleportation and quantum communication protocols.',
-    icon: Network,
-    features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction'],
-    pricing: '$55,000 - $550,000/project',
-    category: 'Quantum Communication',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Time Travel Simulation',
-    description: 'AI systems for simulating time travel scenarios and temporal paradoxes.',
-    icon: Clock,
-    features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization'],
-    pricing: '$90,000 - $900,000/project',
-    category: 'Temporal AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Multiverse Exploration',
-    description: 'AI systems for exploring and simulating multiple universe scenarios and theories.',
-    icon: Globe,
-    features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
+    title: 'AI-Powered Space Technology',
+    description: 'AI systems for space exploration, satellite operations, and planetary analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Planetary Analysis', 'Space Weather Prediction'],
     pricing: '$100,000 - $1,000,000/project',
-    category: 'Theoretical Physics AI',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Neurotechnology',
+    description: 'Advanced brain-computer interfaces and neural signal processing systems.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],
+    pricing: '$50,000 - $400,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Cities Platform',
+    description: 'Comprehensive AI platform for smart city management and optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Predictive Analytics', 'Citizen Services'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Precision Medicine',
+    description: 'Personalized medicine using AI for treatment optimization and drug discovery.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Smart farming solutions with AI for crop optimization and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'AgTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Advanced AI systems for financial risk assessment and portfolio optimization.',
+    icon: TrendingUp,
+    features: ['Risk Modeling', 'Portfolio Optimization', 'Market Analysis', 'Fraud Detection'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Creation Suite',
+    description: 'Advanced AI-powered content generation for text, images, videos, and audio.',
+    icon: FileText,
+    features: ['Text Generation', 'Image Creation', 'Video Production', 'Voice Synthesis'],
+    pricing: '$2,000 - $20,000/month',
+    category: 'Content AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Experience Platform',
+    description: 'Comprehensive AI platform for enhancing customer experience across all touchpoints.',
+    icon: Users,
+    features: ['Personalization', 'Sentiment Analysis', 'Predictive Support', 'Omnichannel AI'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'Customer AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Intelligence',
+    description: 'Intelligent supply chain optimization with AI for demand forecasting and logistics.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Route Optimization', 'Supplier Analytics', 'Risk Assessment'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Supply Chain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Technology',
+    description: 'Advanced AI systems for legal research, contract analysis, and case prediction.',
+    icon: BookOpen,
+    features: ['Legal Research', 'Contract Analysis', 'Case Prediction', 'Compliance Monitoring'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Legal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Healthcare Diagnostics',
+    description: 'AI-powered medical diagnostics with image analysis and disease prediction.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Disease Prediction', 'Treatment Recommendations', 'Drug Discovery'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Manufacturing Intelligence',
+    description: 'Smart manufacturing solutions with AI for quality control and process optimization.',
+    icon: Settings,
+    features: ['Quality Control', 'Process Optimization', 'Predictive Maintenance', 'Defect Detection'],
+    pricing: '$30,000 - $250,000/setup',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Education Platform',
+    description: 'Personalized learning platform with AI for adaptive education and skill development.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Skill Assessment', 'Personalized Content', 'Progress Tracking'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'Education AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Intelligence',
+    description: 'AI platform for real estate analysis, property valuation, and market prediction.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Real Estate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy management with AI for optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Renewable Integration', 'Demand Forecasting', 'Grid Management'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Transportation Intelligence',
+    description: 'Intelligent transportation systems with AI for traffic optimization and autonomous vehicles.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Route Planning', 'Autonomous Vehicles', 'Fleet Management'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Transportation AI',
     popular: true
   }
 ];
