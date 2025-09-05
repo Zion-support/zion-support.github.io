@@ -1,5 +1,4 @@
 import fs from 'fs';
-import { execSync } from 'child_process';
 
 // Read sitemap.xml;
 const sitemapContent = fs.readFileSync('sitemap.xml', 'utf8');
