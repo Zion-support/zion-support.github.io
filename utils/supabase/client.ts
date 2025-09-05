@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 export const supabase = {
   "auth": {
     signIn: () => Promise.resolve({ data: null, "error": null }),

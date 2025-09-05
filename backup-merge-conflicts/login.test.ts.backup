@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/login.test.ts.backup
 <<<<<<< HEAD
 import { describe, it, expect } from 'vitest';
 describe('Login', () => {
@@ -9,6 +10,8 @@ describe('Login', () => {
 <<<<<<< HEAD
 const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/auth/login.test.ts
 import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
 <<<<<<< HEAD:backup-merge-conflicts/login.test.ts.backup
 });''

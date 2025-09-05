@@ -1,9 +1,12 @@
+<<<<<<< HEAD:backup-merge-conflicts/ModernLayout.dynamic.jsx.backup
 <<<<<<< HEAD
 const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ModernLayout\' ,
 =======
 <<<<<<< HEAD
 const ModernLayout = dynamic(() => import("./ModernLayout"),{"; loading: () => <p>Loading.</p,>}) export: "default ModernLayout" ,"""
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/ModernLayout.dynamic.jsx
 const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ModernLayout' ,'
 <<<<<<< HEAD:backup-merge-conflicts/ModernLayout.dynamic.jsx.backup
 </p>'

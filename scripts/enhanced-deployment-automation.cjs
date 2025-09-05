@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -196,6 +197,11 @@ deployment.runAll().catch(error => {
   console.error('🚨 Deployment automation "failed": ', error.message);
   process.exit(1)});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -218,7 +224,11 @@ console.log(' Starting Enhanced Deployment Automation...')
     const status = execSync('git status --porcelain', { "encoding"})
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
 <<<<<<< HEAD
+<<<<<<< HEAD
   console.error('� Deployment automation "failed")
 =======
   console.error('� Deployment automation "failed")
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+  console.error('� Deployment automation "failed")
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

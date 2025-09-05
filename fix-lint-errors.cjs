@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
     
     // Clean up any remaining conflict markers
@@ -128,6 +129,8 @@ try {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/axios.ts.backup
 <<<<<<< HEAD:src/lib/axios.ts
 =======
 <<<<<<< HEAD
@@ -8,10 +9,13 @@
 ';
 ';';
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/lib/axios.ts
 export interface AxiosErrorData { message?: string';';,"});,"}) export interface AxiosErrorData { message?: string'} &apos}'
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 export interface AxiosErrorData { message?: "string';';","});,"}) export interface AxiosErrorData { message?: "string'"} &apos}'
+<<<<<<< HEAD:backup-merge-conflicts/axios.ts.backup
 =======
 <<<<<<< HEAD
  export interface AxiosErrorData { message?: string';';,"}
@@ -44,3 +48,6 @@ export interface AxiosErrorData { message?: string&apos;;&apos;,&quot;}),&quot;}
 module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
 export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/lib/axios.ts
+=======
+export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/lib/axios.ts

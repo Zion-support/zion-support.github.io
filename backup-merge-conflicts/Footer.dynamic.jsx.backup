@@ -1,9 +1,12 @@
+<<<<<<< HEAD:backup-merge-conflicts/Footer.dynamic.jsx.backup
 <<<<<<< HEAD
 const Footer = dynamic(() => import(\"./Footer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Footer\' ,
 =======
 <<<<<<< HEAD
 const Footer = dynamic(() => import("./Footer"),{"; loading: () => <p>Loading.</p,>}) export: "default Footer" ,"""
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled_full/Footer.dynamic.jsx
 const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
 <<<<<<< HEAD:backup-merge-conflicts/Footer.dynamic.jsx.backup
 </p>'

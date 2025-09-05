@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -17,6 +18,8 @@ const suite = new ComprehensiveTestDeploy();
 suite.runComprehensiveSuite().catch(console.error);
 =======
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

@@ -11,7 +11,9 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-console": "off",
+    "react/no-unescaped-entities": "warn"
   },
   ignorePatterns: [
     "node_modules/",
@@ -65,6 +67,7 @@ module.exports = {
     "pages.__backup/",
     "pages-disabled/",
     "pages.disabled_auto/"
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.cjs.backup
   ]
 };
 =======
@@ -98,12 +101,18 @@ module.exports = {
         'no-undef': 'off'}},
   ],
   "env": {
+=======
+  ],
+  env: {
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.cjs
     browser: true,
-    "node": true,
-    "es6": true,
-    "dom": true},
-  "globals": {
+    node: true,
+    es6: true,
+    dom: true
+  },
+  globals: {
     KeyboardEvent: 'readonly',
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.cjs.backup
     "HTMLElement": 'readonly',
     "HTMLButtonElement": 'readonly',
     "HTMLAnchorElement": 'readonly',
@@ -119,3 +128,15 @@ module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@type
 =======
 module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.cjs
+=======
+    HTMLElement: 'readonly',
+    HTMLButtonElement: 'readonly',
+    HTMLAnchorElement: 'readonly',
+    MutationObserver: 'readonly',
+    RequestInit: 'readonly',
+    AbortController: 'readonly',
+    fs: 'readonly',
+    CodeQualityChecker: 'readonly'
+  }
+};
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.cjs

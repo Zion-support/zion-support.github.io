@@ -1,19 +1,27 @@
 import js from '@eslint/js';
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import globals from 'globals';
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js
 import react from 'eslint-plugin-react';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 =======
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+=======
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js
 
 export default [
   {
@@ -122,6 +130,7 @@ export default [{
       '*.config.cjs',
       '*.config.mjs',
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -137,16 +146,110 @@ export default [{
       'analyze-*.cjs',
       'code-quality-*.js',
       'components',
+=======
+      'scripts/',
+      'automation/',
+      'automation_backup/',
+      'data_backup/',
+      'pm2-automation/',
+      '__tests__/',
+      'pages.disabled/',
+      'pages.corrupted.*/',
+      'pages.broken/',
+      'pages.bak/',
+      'pages.blog.disabled/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+      'src.pages.disabled/',
+      'src.pages.disabled/**/*',
+      'src_backup_temp/',
+      'src_backup_temp/**/*',
+      'temp_backup/',
+      'temp_backup/**/*',
+      'pages_backup/',
+      'pages_backup/**/*',
+      'pages_backup_conflicts/',
+      'pages_backup_conflicts/**/*',
+      'pages_backup_before_cleanup/',
+      'pages_backup_before_cleanup/**/*',
+      'pages_backup_conflict/',
+      'pages_backup_conflict/**/*',
+      'pages_disabled/',
+      'pages_disabled/**/*',
+      'pages.disabled_auto/',
+      'pages.disabled_auto/**/*',
+      'pages.disabled_full/',
+      'pages.disabled_full/**/*',
+      'pages.old/',
+      'pages.old/**/*',
+      'pages.broken/',
+      'pages.broken/**/*',
+      'pages.corrupted.1756905863/',
+      'pages.corrupted.1756905863/**/*',
+      'pages.disabled.full/',
+      'pages.disabled.full/**/*',
+      'pages_api.disabled/',
+      'pages_api.disabled/**/*',
+      'src.disabled/',
+      'src.disabled/**/*',
+      'components.disabled/',
+      'components.disabled/**/*',
+      'types.disabled/',
+      'types.disabled/**/*',
+      'contracts.disabled/',
+      'contracts.disabled/**/*',
+      'solutions.disabled/',
+      'solutions.disabled/**/*',
+      'zion-os.disabled/',
+      'zion-os.disabled/**/*',
+      'src_backup_temp/',
+      'src_backup_temp/**/*',
+      'temp-backup/',
+      'temp-backup/**/*',
+      'tests.disabled/',
+      'tests.disabled/**/*',
+      'data.disabled/',
+      'data.disabled/**/*',
+      'lib.broken/',
+      'lib.broken/**/*',
+      'lib.disabled/',
+      'lib.disabled/**/*',
+      'api-disabled/',
+      'api-disabled/**/*',
+      'api.disabled/',
+      'api.disabled/**/*',
+      'broken_files_backup/',
+      'broken_files_backup/**/*',
+      'corrupted-files-backup/',
+      'corrupted-files-backup/**/*',
+      'cypress_backup/',
+      'cypress_backup/**/*',
+      'middleware/',
+      'middleware/**/*',
+      'zion_academy/',
+      'zion_academy/**/*',
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.ts',
+      '*.spec.tsx',
+      '*.report.json',
+      'temp_*/',
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js
       'test_build/',
       'tests.disabled/',
-      'pages.disabled/',
       'src.disabled/',
       'components.disabled/',
-      'hooks.disabled/',
       'types.disabled/',
       'contracts.disabled/',
       'solutions.disabled/',
       'zion-os.disabled/',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
       'zion_academy/',
       'automation_backup/',
       'automation/backups/',
@@ -510,19 +613,57 @@ export default [{
       'src.disabled/',
       'src.broken/',
       'src.corrupted/',
-      'pages_backup/',
-      'pages_backup_conflicts/',
-      'pages_disabled/',
-      'pages_api.disabled/',
+=======
+      'src_backup_temp/',
+      'temp-backup/',
+      'tests/',
+      'supabase/',
+      'public/',
+      'server/',
+      'services/',
+      'components.disabled_full/',
+      'data.disabled/',
+      'database/',
       'lib.broken/',
       'lib.disabled/',
       'lib/',
       'lint-target/',
-      'monitoring/',
       'netlify/',
-      'next.config.*.js',
-      'pages.disabled_auto/',
+      'pages-backup/',
+      'pages._quarantine/',
+      'pages.disabled_full/',
       'pages.old/',
+      'api-disabled/',
+      'api.disabled/',
+      'api/',
+      'broken_files_backup/',
+      'corrupted-files-backup/',
+      'cypress_backup/',
+      'middleware/',
+      'pages_backup/',
+      'pages_backup_before_cleanup/',
+      'pages_backup_conflicts/',
+      'pages_backup_conflict/',
+      'pages_disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages.old/',
+      'pages.broken/',
+      'pages.corrupted.1756905863/',
+      'pages.disabled.full/',
+      'pages_api.disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages_backup_conflicts/',
+      'pages_backup_before_cleanup/',
+      'pages_backup_conflict/',
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js
+      'pages_backup/',
+      'pages_api.disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages.old/',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
       'public/',
       'server/',
       'temp-backup/',
@@ -700,6 +841,11 @@ export default [{
       'ux-enhancer.cjs',
       'vite.config-backup.ts',
       'types/empty.ts'
+=======
+      'pages.broken/',
+      'pages.corrupted.1756905863/',
+      'pages.disabled.full/'
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js
     ]
   },
   {
@@ -843,12 +989,17 @@ export default [{
       }
     },
     plugins: {
-      react,
-      'jsx-a11y': jsxA11y,
+      '@typescript-eslint': tseslint,
+      react: react,
+      'react-hooks': reactHooks
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
     }
   },
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
@@ -872,13 +1023,18 @@ export default [{
         jest: 'readonly',
         fireEvent: 'readonly',
         render: 'readonly',
-        screen: 'readonly',
-      },
+        screen: 'readonly'
+      }
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-    },
+      '@typescript-eslint/no-unused-vars': 'warn'
+    }
   }
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 ];
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+=======
+];
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:eslint.config.js

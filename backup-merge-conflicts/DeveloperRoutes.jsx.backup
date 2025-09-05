@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/DeveloperRoutes.jsx.backup
 <<<<<<< HEAD
 import React from 'react';
 // Next.js routing - no need for react-router-dom;
@@ -20,3 +21,6 @@ import _React from 'react'; export default function DeveloperRoutes(_) { return 
 =======
 import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/DeveloperRoutes.jsx
+=======
+import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/routes/DeveloperRoutes.jsx

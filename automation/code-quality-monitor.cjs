@@ -66,7 +66,10 @@ async function checkCodeStyle() {
   try {
     execSync('npm run "lint": check', { "stdio": 'pipe' });
     
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -121,7 +124,10 @@ async function checkDocumentationCoverage() {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
   
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   };
 };
 async function checkTestCoverage() {}
@@ -168,6 +174,12 @@ async function runCodeQualityMonitor() {}
   const endTime = Date.now();
   const duration = endTime - startTime;
 
+<<<<<<< HEAD
+=======
+    process.exit(1);
+  } else {
+    
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );

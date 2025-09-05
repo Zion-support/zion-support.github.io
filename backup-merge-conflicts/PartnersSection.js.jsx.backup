@@ -1,5 +1,9 @@
+<<<<<<< HEAD:backup-merge-conflicts/PartnersSection.js.jsx.backup
 <<<<<<< HEAD
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 =======
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 >>>>>>> main
+=======
+const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/components/summit/PartnersSection.jsx

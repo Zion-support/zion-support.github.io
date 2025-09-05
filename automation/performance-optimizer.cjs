@@ -4,12 +4,19 @@
  * Performance Optimization Script for Zion Tech Group
  * Analyzes and optimizes application performance
  */
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
     if (!config.includes('optimizeCss')) {}
       optimizations.push('Add CSS optimization');
     };
@@ -290,4 +297,7 @@ console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.
 console.log(`\n📄 Report saved to: ${reportPath}`);
 
 process.exit(0);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

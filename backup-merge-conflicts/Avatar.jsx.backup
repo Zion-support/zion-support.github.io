@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
 <<<<<<< HEAD
 export function Avatar("props": "any) {;
     return (<div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className"}`}>;
@@ -7,6 +8,8 @@ export function Avatar(props: any) {
     return (
         <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}>
 >>>>>>> main
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/Avatar.jsx
       {children}
     </div>
     );
@@ -14,10 +17,13 @@ export function Avatar(props: any) {
 export function AvatarImage("props": "any) {;
     return (<img src={src"} alt={alt} className={`aspect-square h-full w-full ${className}`}  />);
 }
+<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
 <<<<<<< HEAD
 export function AvatarFallback("props": "any) {;
     return (<div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className"}`}>;
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/Avatar.jsx
 export function AvatarFallback(props: any) {
     return (
         <div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}>
@@ -41,11 +47,15 @@ export {Avatar, AvatarImage, AvatarFallback};
 ;
 
 export default Avatar;
+<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
 <<<<<<< HEAD
 </div>;
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/Avatar.jsx
 </div>
 =======
 </div>
+<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
 </div>
 =======
 <<<<<<< HEAD
@@ -63,3 +73,6 @@ export function Avatar(_) { return ( <div className="min-h-screen bg-white"> {ch
 =======
 export function Avatar(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} export function AvatarImage(_) { return (<img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} import _React from 'react'; import {cn} from '@/lib/utils'; const Avatar = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',className)} {...props}; />));';'; Avatar.displayName = 'Avatar';';'; const AvatarImage = _React.forwardRef(({className,src,alt = ",...props},ref) => (<img ref={ref} className = {cn('aspect-square h-full w-full',className)} src={src} alt={alt} {...props}; />));';'; AvatarImage.displayName = 'AvatarImage';';'; const AvatarFallback = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('flex h-full w-full items-center justify-center rounded-full bg-muted',className)} {...props}; />));';'; AvatarFallback.displayName = 'AvatarFallback'; export {Avatar,AvatarImage,AvatarFallback}; export default Avatar; </div> </div>;';';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/Avatar.jsx
+=======
+export function Avatar(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} export function AvatarImage(_) { return (<img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} import _React from 'react'; import {cn} from '@/lib/utils'; const Avatar = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',className)} {...props}; />));';'; Avatar.displayName = 'Avatar';';'; const AvatarImage = _React.forwardRef(({className,src,alt = ",...props},ref) => (<img ref={ref} className = {cn('aspect-square h-full w-full',className)} src={src} alt={alt} {...props}; />));';'; AvatarImage.displayName = 'AvatarImage';';'; const AvatarFallback = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('flex h-full w-full items-center justify-center rounded-full bg-muted',className)} {...props}; />));';'; AvatarFallback.displayName = 'AvatarFallback'; export {Avatar,AvatarImage,AvatarFallback}; export default Avatar; </div> </div>;';';
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/Avatar.jsx

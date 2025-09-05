@@ -1,9 +1,12 @@
+<<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.dynamic.jsx.backup
 <<<<<<< HEAD
 const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceMonitor\' ,
 =======
 <<<<<<< HEAD
 const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{"; loading: () => <p>Loading.</p,>}) export: "default PerformanceMonitor" ,"""
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/PerformanceMonitor.dynamic.jsx
 const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
 <<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.dynamic.jsx.backup
 </p>'

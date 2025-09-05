@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 export: interface ComprehensiveService {
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 "export": interface ComprehensiveService {
    id: string;
    name: string;
@@ -31,9 +34,6 @@ export: interface ComprehensiveService {
    mobile: string;
    email: string;
    address: string;
-   website: strin,g} } const CONTACT_INFO = { mobile:
-  +1: 302 464 0950', email: 'kleber@ziontechgroup.co,m, address: ';
-  364: E Main St STE 1008 Middletown DE 19709', website: 'https:''',
 export: interface ComprehensiveService { id: string; name: string; tagline: string; description: string; category,: Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Supply Chain & Logistics' | 'Energy Management' | 'Manufacturing Intelligence' | 'Data Center Management' | 'Legal Tech' | 'Marketing Tech' | 'Education Tech' | 'Real Estate Tech' | 'Travel Tech' | 'Sports Tech' | 'Entertainment Tech'';; price: string; billing: 'month' | 'project' | 'hour';; features: string[]; benefits: string[]; technology: string[]; integrations: string[]; useCases: string[]; targetAudience: string; marketPosition: string; competitors: string[]; roi: string; trialDays: number; setupTime: string; icon: string; color: string; link: string; marketSize: string; growthRate: string; rating?: number; reviews?: number; popular?: boolean; launchDate?: string; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} } const CONTACT_INFO = { mobile: +1: 302 464 0950',email: 'kleber@ziontechgroup.co,m,address: '; 364: E Main St STE 1008 Middletown DE 19709',website: 'https:''';,;
    website: strin,g} } const CONTACT_INFO = { "mobile": +1: 302 464 0950', "email": 'kleber@ziontechgroup.co,m, "address": ';
   364: E Main St STE 1008 Middletown DE 19709', "website": 'https:''',

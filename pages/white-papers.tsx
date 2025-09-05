@@ -197,5 +197,9 @@ export default function WhitePapersPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
+=======
+    </MainLayout>
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/emergingTechServices2025.ts.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -5,6 +6,8 @@
 import React from';react' export: interface EmergingTechService {';
 =======
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/emergingTechServices2025.ts
 import React from';react' "export": interface EmergingTechService {';
 >>>>>>> main
   id: string;
@@ -27,6 +30,7 @@ import React from';react' "export": interface EmergingTechService {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
+<<<<<<< HEAD:backup-merge-conflicts/emergingTechServices2025.ts.backup
 <<<<<<< HEAD
    website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
 =======
@@ -41,3 +45,8 @@ import React from';react' export: interface EmergingTechService {'; id: string; 
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/data/emergingTechServices2025.ts
+=======
+import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: 'strin',g} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''';,;
+   website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
+import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/emergingTechServices2025.ts

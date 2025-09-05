@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/security-tests.ts.backup
+<<<<<<< HEAD:backup-merge-conflicts/security-tests.ts.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/test/security-tests.ts
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/test/security-tests.ts
 // Security test configuration
 export const securityTests = {
   // Check for common security vulnerabilities
@@ -31,6 +34,7 @@ export const securityTests = {
       "csrf": vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v)))
     }}
 };
+<<<<<<< HEAD:backup-merge-conflicts/security-tests.ts.backup
 <<<<<<< HEAD
 =======
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
@@ -44,3 +48,7 @@ export const securityTests = { checkVulnerabilities: async () => { const vulnera
 =======
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/test/security-tests.ts
+=======
+export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
+export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/test/security-tests.ts

@@ -7,6 +7,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';
 import { supabase } from '@/integrations/supabase/client';
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {
@@ -38,6 +39,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
       error: 'null',
     });
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 // Mock Supabase client
 jest.mock('@/integrations/supabase/client', () => ({
   "supabase": {
@@ -71,6 +74,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     (supabase.select as jest.Mock).mockReturnThis();
     (supabase.eq as jest.Mock).mockReturnThis();
     (supabase.single as jest.Mock).mockResolvedValue({
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
       data: { role: 'admin' },
       error: 'null',
@@ -79,6 +83,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   test('should return 405 if method is not POST', async () => {
     const { req, res } = createMocks({ method: 'GET' as RequestMethod });
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
       "data": { role: 'admin' },
       "error": null});
   });
@@ -91,6 +97,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   });
   test('should return 401 if Authorization header is missing', async () => {
     const { req, res } = createMocks({
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
       method: 'POST' as RequestMethod,
       headers: {},
@@ -105,6 +112,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     expect(res._getJSONData().message).toBe(
       'Unauthorized: Missing or invalid token.'
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
       "method": 'POST' as RequestMethod,
       "headers": {
         /* No Authorization header */
@@ -122,6 +131,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   });
   test('should return 401 if token is invalid or user not found', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
       data: { user: null },
       error: new Error('Invalid token'),
@@ -140,6 +150,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     expect(res._getJSONData().message).toBe(
       'Unauthorized: Invalid token or user not found.'
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
       "data": { user: null },
       "error": new Error('Invalid token')});
     const { req, res } = createMocks({
@@ -158,6 +170,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   });
   test('should return 403 if user role is not authorized', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
       data: { user: { id: 'user-id' } },
       error: 'null',
@@ -208,6 +221,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
       body: { inputData: 'mockInputData', syncedData: 'mockSyncedData' },
     });
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
       "data": { user: { id: 'user-id' } },
       "error": null});
     // Mock profile fetch to return a non-authorized role
@@ -251,6 +266,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     expect(res._getJSONData().message).toContain('Missing required parameters');
   });
   test('should return 200 and mock deck data on successful generation', async () => {
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
       data: { user: { id: 'user-id' } },
@@ -270,6 +286,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
       },
     });
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
     // Auth and role are fine
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
       "data": { user: { id: 'user-id' } },
@@ -294,6 +312,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   });
   test('should return 500 if fetching profile fails', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
+<<<<<<< HEAD:backup-merge-conflicts/generate-pitch-deck.test.ts.backup
 <<<<<<< HEAD
       data: { user: { id: 'user-id' } },
       error: 'null',
@@ -324,6 +343,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
       },
     });
 =======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
       "data": { user: { id: 'user-id' } },
       "error": null});
     // Simulate profile fetch error

@@ -1,109 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  CheckCircle,
-  X,
-  ArrowRight,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  BarChart3
-} from 'lucide-react'
-
-const plans = [
-  {
-    name: 'Starter',
-    price: '$99',
-    period: 'per month',
-    description: 'Perfect for small businesses getting started',
-    features: [
-      'Basic AI integration',
-      'Cloud hosting',
-      'Email support',
-      'Standard security',
-      'Basic analytics'
-    ],
-    limitations: [
-      'Limited customization',
-      'No priority support'
-    ],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: '$299',
-    period: 'per month',
-    description: 'Ideal for growing businesses',
-    features: [
-      'Advanced AI capabilities',
-      'Custom integrations',
-      'Priority support',
-      'Enhanced security',
-      'Advanced analytics',
-      'API access',
-      'Custom branding'
-    ],
-    limitations: [],
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: 'contact us',
-    description: 'For large organizations with complex needs',
-    features: [
-      'Full AI suite',
-      'Custom development',
-      '24/7 dedicated support',
-      'Enterprise security',
-      'Custom analytics',
-      'Unlimited integrations',
-      'White-label solutions',
-      'Dedicated account manager'
-    ],
-    limitations: [],
-    popular: false
-  }
-]
-
-const addOns = [
-  {
-    name: 'Additional Storage',
-    price: '$10',
-    period: 'per 100GB/month',
-    description: 'Extra cloud storage for your data'
-  },
-  {
-    name: 'Premium Support',
-    price: '$50',
-    period: 'per month',
-    description: '24/7 priority support and faster response times'
-  },
-  {
-    name: 'Custom Integrations',
-    price: '$200',
-    period: 'per integration',
-    description: 'Custom API integrations with third-party services'
-  }
-]
-
-export default function Pricing() {
-  return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for our technology solutions and services." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+import React from 'react';
+import Head from 'next/head';
+            </h1>
+            <p className="text-xl text-blue-100 mb-8">
+              Choose the perfect plan for your business needs
             </p>
           </div>
 
@@ -197,7 +96,63 @@ export default function Pricing() {
             </Link>
           </div>
         </div>
-      </div>
-    </>
-  )
-}
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our pricing
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-600">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
+              >
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
