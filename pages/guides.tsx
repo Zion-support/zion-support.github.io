@@ -1,5 +1,5 @@
 
-import Link from 'next/link';';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 
@@ -87,16 +87,8 @@ const guides = [
     sections: 16,
     downloads: 1600
   }
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const categories = [
   { name: 'All', count: 24, active: true },
   { name: 'Web Development', count: 6, active: false },
@@ -107,21 +99,16 @@ const categories = [
   { name: 'DevOps', count: 3, active: false }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const popularGuides = [
   { title: 'Getting Started with React', downloads: 3200, category: 'Web Development' },
   { title: 'AWS Security Best Practices', downloads: 2800, category: 'Cloud Computing' },
   { title: 'SQL Performance Optimization', downloads: 2600, category: 'Database' },
   { title: 'RESTful API Design', downloads: 2400, category: 'API Development' }
 ];
-export default function GuidesPage() {
-  return (
-    <Layout
 
 export default function GuidesPage() {
   return (
-    <SimpleLayout
-ursor/website-audit-and-update-with-deployment-9cae
+    <Layout
       title="Guides - Zion Tech Group"
       description="Comprehensive guides covering web development, cloud computing, database design, security, and more. Step-by-step instructions for developers."
       keywords="guides, documentation, web development, cloud computing, database, security, API development, DevOps"
@@ -170,20 +157,49 @@ ursor/website-audit-and-update-with-deployment-9cae
           </div>
         </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
         {/* Categories Filter */}
-
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category, index) => (
+                <button
+                  key={category.name}
+                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                    category.active
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
             </div>
           </div>
         </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
         {/* Popular Guides */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {popularGuides.map((guide, index) => (
+                <motion.div
                   key={guide.title}
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{guide.title}</h3>
+                  <p className="text-gray-600 mb-4">{guide.category}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">{guide.downloads} downloads</span>
+                    <button className="text-blue-600 hover:text-blue-700 font-medium">
+                      Read More
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

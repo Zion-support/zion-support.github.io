@@ -13,7 +13,16 @@ import {
   Video,
   Download,
   ExternalLink,
-  ChevronDown,
+  ChevronDown
+} from 'lucide-react';
+
+const helpSections = [
+  {
+    id: 'getting-started',
+    title: 'Getting Started',
+    icon: BookOpen,
+    articles: [
+      {
         title: 'Understanding Our Services',
         description: 'Overview of all available services and solutions',
         readTime: '7 min read',
@@ -100,11 +109,9 @@ import {
         readTime: '4 min read',
         type: 'Requirements'
       }
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
+    ]
+  }
+];
 
 const helpCategories = [
   {

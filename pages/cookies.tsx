@@ -184,8 +184,15 @@ export default function CookiePolicyPage() {
                   ))}
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
+        {/* Cookie Controls */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
                     onClick={() => setCookiePreferences({
                       necessary: true,

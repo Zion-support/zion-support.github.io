@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { 
   ArrowRight,
   Users,
   Calendar,
@@ -5,7 +7,8 @@
   Video,
   Globe,
   Shield,
-  Zap,
+  Zap
+} from 'lucide-react';
 
 const benefits = [
   {

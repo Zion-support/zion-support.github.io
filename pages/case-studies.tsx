@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -10,13 +9,10 @@ import {
   TrendingUp,
   Users,
   Clock,
-=======
   CheckCircle,
-  Users,
   Building,
   Globe,
   Award,
-  Clock,
   BarChart3,
   Cloud,
   Shield
@@ -35,7 +31,6 @@ const caseStudies = [
     industry: "Healthcare",
     challenge: "Manual patient data processing and diagnosis delays",
     solution: "AI-powered diagnostic platform with real-time analysis",
-=======
     results: [
       "60% reduction in support costs",
       "40% faster response times",
@@ -67,7 +62,6 @@ const caseStudies = [
     icon: Brain
   },
   {
-=======
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
@@ -98,7 +92,6 @@ const caseStudies = [
       "24/7 threat monitoring",
       "50% faster incident response"
     ],
-=======
     technologies: ["IoT", "Data Analytics", "Machine Learning"],
     duration: "10 months",
     team: "20 experts",
@@ -162,12 +155,6 @@ const technologies = [
   "PropTech",
   "SaaS Development",
   "Data Analytics"
-=======
-    duration: "4 months",
-    team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    image: "/images/case-studies/healthcare-security.jpg"
-  }
 ];
 
 const stats = [
@@ -179,8 +166,6 @@ const stats = [
 
 export default function CaseStudiesPage() {
   return (
-    <Layout
-=======
     <MainLayout
       title="Case Studies - Zion Tech Group"
       description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
@@ -238,13 +223,9 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-            </div>
-
+        {/* Case Studies Grid */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
             {filteredCaseStudies.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
@@ -252,26 +233,43 @@ export default function CaseStudiesPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">No case studies found</h3>
                 <p className="text-gray-600">Try selecting a different industry.</p>
-=======
+              </div>
+            )}
+          </div>
+        </section>
+
         {/* Featured Case Studies */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-=======
-              Success 
-              <span className="text-emerald-400"> Stories</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-emerald-100"
-=======
-        {/* Case Studies */}
-        <section className="py-20 bg-gray-50">
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Success 
+                <span className="text-emerald-400"> Stories</span>
+              </h2>
+              <motion.p 
+                className="text-xl mb-8 text-emerald-100"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Discover how we've helped businesses transform through innovative technology solutions.
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Featured Case Studies */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -374,19 +372,17 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-=======
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Start Your Success Story?
               </h2>
@@ -653,8 +649,6 @@ export default function CaseStudies() {
           </div>
         </section>
       </div>
-    </>
-=======
         </section>
       </div>
     </MainLayout>
