@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 export interface AdvancedMicroSaaSService {
   "id": string;
   title: string;
@@ -91,3 +97,5 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     "documentationUrl": 'https://ziontechgroup.com/docs'
   };
 ];
+>>>>>>> main
+>>>>>>> main

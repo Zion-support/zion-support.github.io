@@ -1,14 +1,37 @@
+<<<<<<< HEAD
+const {ActiveFilters} from "@/components/talent/ActiveFilters"; import {ResultsHeader} from "@/components/talent/ResultsHeader"; import {TalentGrid} from "@/components/talent/TalentGrid"; export function TalentResults($1) { return ( <div className="min-h-screen bg-white"> {} <ActiveFilters {.activeFiltersProps} /> {} <ResultsHeader isLoading={isLoading} resultCount={totalCount} /> {} <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters} /> </div> )} export default TalentResults;""
+=======
 import React from 'react';
+import { ActiveFilters } from "@/components/talent/ActiveFilters";
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
 
-interface TalentResultsProps {
-  // Add props here as needed
-}
-
-export default function TalentResults({ }: TalentResultsProps) {
+export function TalentResults({
+  activeFiltersProps,
+  isLoading,
+  totalCount,
+  talents,
+  viewProfile,
+  handleBook,
+  handleMessage,
+  isAuthenticated
+}) {
   return (
-    <div>
-      <h1>TalentResults</h1>
-      <p>This component is currently under development.</p>
+    <div className="min-h-screen bg-white">
+      <ActiveFilters {...activeFiltersProps} />
+      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
+      <TalentGrid 
+        talents={talents} 
+        isLoading={isLoading} 
+        onTalentClick={viewProfile} 
+        handleBook={handleBook} 
+        handleMessage={handleMessage} 
+        isAuthenticated={isAuthenticated} 
+        clearFilters={activeFiltersProps.clearFilters} 
+      />
     </div>
   );
 }
+
+export default TalentResults;
+>>>>>>> main

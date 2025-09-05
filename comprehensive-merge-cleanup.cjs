@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+=======
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
@@ -56,3 +59,4 @@ filesToClean.forEach(file => {})
 console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> main

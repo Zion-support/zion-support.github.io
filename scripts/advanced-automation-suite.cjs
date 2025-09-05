@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("============================");''"
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -581,3 +584,4 @@ main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
+>>>>>>> main

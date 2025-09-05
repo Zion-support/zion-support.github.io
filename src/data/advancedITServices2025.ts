@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 import React from 'react
 export interface AdvancedITService {
   "id": string;
@@ -28,3 +34,5 @@ export interface AdvancedITService {
   customers: number;
 }
 export const "ADVANCED_IT_SERVICES_2025": AdvancedITService[] = [];
+>>>>>>> main
+>>>>>>> main

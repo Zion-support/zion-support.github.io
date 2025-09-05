@@ -1,2 +1,5 @@
-import React from 'react'; import { Route,Routes } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes($1) {; return (; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" ) }"; ;';';'
-</Route>'
+<<<<<<< HEAD
+const React from "react"; import { Route,Routes } from "react-router-dom"; import MobileAppPage from "./pages/MobileAppPage"; import MobileLaunchPage from "./pages/MobileLaunchPage"; import OpenAppRedirect from "./pages/OpenAppRedirect"; ; export default function MobileAppRoutes($1) {; return (; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" ) }"; ;";";'"'"
+=======
+import _React from 'react'; import { Route,Routes } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes(_) {; return (; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" ) }"; ;';';
+>>>>>>> main

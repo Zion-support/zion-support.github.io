@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface ThemeProviderProps {
-  // Add props here as needed
-}
-
-export default function ThemeProvider({ }: ThemeProviderProps) {
-  return (
-    <div>
-      <h1>ThemeProvider</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+const React,{ createContext,useContext,useEffect,useState } from "react"; export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {}}; type Theme = "light" | "dark" | "system"; "type Theme = "light" | "dark" | "system"; interface ThemeContextType {; theme: Theme; setTheme: (theme: Theme) => void} isDark: "boolean"} export ; if(context = == null) {}; return context}; interface ThemeProviderProps extends React.PropsWithChildren<{}> {; children: "React.ReactNode"} export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {; const [theme,setTheme] = useState<Theme>(() => {; if(typeof window !== "null") {; if(saved && ["light",dark",system"].includes(saved)) {; return saved} } return "system"}); const [isDark,setIsDark] = useState(false); useEffect(() => {; return () => {};},[]);,[])}}}"""
+=======
+import _React,{ createContext,useContext,useEffect,useState } from 'react'; export const "ThemeProvider": _React.FC < ThemeProviderProps> = ({ children }) => {}}; type Theme = 'light' | 'dark' | 'system'; 'type Theme = 'light' | 'dark' | 'system'; interface ThemeContextType {; "theme": Theme; setTheme: (theme: Theme) => void} "isDark": 'boolean'} export ; if(context = == null) {}; return context}; interface ThemeProviderProps extends _React.PropsWithChildren<{}> {; "children": '_React.ReactNode'} export const "ThemeProvider": _React.FC<ThemeProviderProps> = ({ children }) => {; const [theme,setTheme] = useState<Theme>(() => {; if(typeof window !== 'null') {; if(saved && ['light',dark',system'].includes(saved)) {; return saved} } return 'system'}); const [isDark,setIsDark] = useState(false); useEffect(() => {; return () => {};},[]);,[])}}}
+>>>>>>> main

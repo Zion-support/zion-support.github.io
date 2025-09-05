@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 export interface ProductListing {
   "id": string;
   title: string;
@@ -68,3 +74,5 @@ export const SERVICE_CATEGORIES = ["AI Automation
   "Cloud Solutions
   "Cybersecurity"
 ];
+>>>>>>> main
+>>>>>>> main

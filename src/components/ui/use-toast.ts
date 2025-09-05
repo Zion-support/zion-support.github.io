@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 import { toast } from 'react-hot-toast'
 interface ToastOptions {
   duration?: number;
@@ -9,3 +15,5 @@ export function useToast() {
   };
   return { showToast };
 };
+>>>>>>> main
+>>>>>>> main

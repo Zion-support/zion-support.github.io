@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 import React from 'react
 export interface AdvancedAIService {
   "id": string;
@@ -24,3 +30,5 @@ export interface AdvancedAIService {
   marketSize?: string;
 }
 export const "ADVANCED_AI_SERVICES_2025": AdvancedAIService[] = [];
+>>>>>>> main
+>>>>>>> main
