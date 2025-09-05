@@ -6,25 +6,18 @@ const AccessibilityEnhancer: React.FC = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-    `;
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Focus management
+    let isUsingMouse = false;
     const handleMouseDown = () => {
+      isUsingMouse = true;
       document.body.classList.add('using-mouse');
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
+        isUsingMouse = false;
         document.body.classList.remove('using-mouse');
       }
     };
