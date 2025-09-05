@@ -6,32 +6,32 @@ import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } fro
 
 const services = [{
     "title": "AI Services",
-    "description": "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
+    "description": "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, computer vision, and advanced AI applications for healthcare, finance, and emerging technologies.",
     "icon": Brain,
     "href": "/ai-services",
-    "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
+    "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Drug Discovery", "Autonomous Vehicles", "Quantum Computing", "Climate Modeling"],
     "pricing": "Starting at $1,000/month",
-    "count": "20+ Services",
+    "count": "40+ Services",
     "popular": true
   },
   {
     "title": "IT Services", 
-    "description": "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
+    "description": "Comprehensive information technology services including cloud infrastructure, cybersecurity, edge computing, 5G networks, blockchain, and next-generation IT solutions.",
     "icon": Network,
     "href": "/it-services",
-    "features": ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
+    "features": ["Cloud Infrastructure", "Zero Trust Security", "Edge Computing", "5G Networks", "Blockchain Infrastructure", "IoT Platforms", "Digital Twins", "Green IT"],
     "pricing": "Starting at $120/hour",
-    "count": "20+ Services",
+    "count": "40+ Services",
     "popular": true
   },
   {
     "title": "Micro SaaS",
-    "description": "Scalable software as a service solutions designed for specific business needs and rapid deployment.",
+    "description": "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
     "icon": Cloud,
     "href": "/micro-saas",
-    "features": ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
+    "features": ["AI-Powered Tools", "Blockchain Analytics", "Smart Energy Management", "Voice AI Assistants", "Predictive Maintenance", "Smart Contracts", "Green Technology", "Advanced Automation"],
     "pricing": "Starting at $29/month",
-    "count": "25+ Products",
+    "count": "45+ Products",
     "popular": true
   }
 ];

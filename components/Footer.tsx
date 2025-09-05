@@ -21,32 +21,35 @@ import {
 } from 'lucide-react';
 
 const services = {
-  'AI Solutions': [{ "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
+  'AI Solutions': [
+    { "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
     { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
     { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
     { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
-    { "name": 'AI Content Generation', "href": '/ai-services#ai-content-generation' },
-    { "name": 'Voice AI Assistant', "href": '/ai-services#voice-ai-assistant' },
-    { "name": 'AI Fraud Detection', "href": '/ai-services#ai-fraud-detection' },
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' }
+    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
+    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
+    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
+    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' }
   ],
-  'IT Services': [{ "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
-    { "name": 'Cybersecurity Solutions', "href": '/it-services#cybersecurity' },
-    { "name": 'Network Infrastructure', "href": '/it-services#network-infrastructure' },
-    { "name": 'Database Management', "href": '/it-services#database-management' },
-    { "name": 'DevOps & CI/CD', "href": '/it-services#devops-cicd' },
-    { "name": 'Data Center Migration', "href": '/it-services#data-center-migration' },
-    { "name": 'IT Asset Management', "href": '/it-services#it-asset-management' },
-    { "name": 'Backup & Disaster Recovery', "href": '/it-services#backup-disaster-recovery' }
+  'IT Services': [
+    { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
+    { "name": 'Zero Trust Security', "href": '/it-services#zero-trust-security' },
+    { "name": 'Edge Computing', "href": '/it-services#edge-computing' },
+    { "name": '5G Network Implementation', "href": '/it-services#5g-networks' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
+    { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
+    { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
+    { "name": 'Green IT Solutions', "href": '/it-services#green-it' }
   ],
-  'Micro SaaS': [{ "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
-    { "name": 'LLM Evaluation Suite', "href": '/micro-saas#llm-evaluation' },
-    { "name": 'Customer Feedback App', "href": '/micro-saas#customer-feedback' },
-    { "name": 'API Rate Limiting', "href": '/micro-saas#api-rate-limiting' },
-    { "name": 'Content Moderation AI', "href": '/micro-saas#content-moderation' },
-    { "name": 'Workflow Automation', "href": '/micro-saas#workflow-automation' },
-    { "name": 'AI Lead Scoring', "href": '/micro-saas#ai-lead-scoring' },
-    { "name": 'Social Media Scheduler', "href": '/micro-saas#social-media-scheduler' }
+  'Micro SaaS': [
+    { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
+    { "name": 'AI Email Responder', "href": '/micro-saas#ai-email-responder' },
+    { "name": 'Voice Meeting Assistant', "href": '/micro-saas#voice-meeting-assistant' },
+    { "name": 'Smart Contract Analyzer', "href": '/micro-saas#smart-contract-analyzer' },
+    { "name": 'Predictive Maintenance AI', "href": '/micro-saas#predictive-maintenance' },
+    { "name": 'Blockchain Analytics', "href": '/micro-saas#blockchain-analytics' },
+    { "name": 'AI SEO Optimizer', "href": '/micro-saas#ai-seo-optimizer' },
+    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' }
   ]
 };
 
