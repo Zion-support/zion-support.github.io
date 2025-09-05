@@ -33,7 +33,10 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Car,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -416,6 +419,178 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Quantum Algorithm Development', 'Hybrid Classical-Quantum Systems'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantuminfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for IoT and real-time applications.',
+    icon: Server,
+    features: ['Edge Data Centers', 'IoT Integration', 'Real-time Processing', 'Distributed Management'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise and carrier networks.',
+    icon: Wifi,
+    features: ['5G Core Network', 'Radio Access Network', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain infrastructure setup and management for various use cases.',
+    icon: Shield,
+    features: ['Blockchain Networks', 'Smart Contract Development', 'Consensus Mechanisms', 'Security Implementation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup with MLOps pipelines and model management.',
+    icon: Brain,
+    features: ['AI Hardware Setup', 'MLOps Pipelines', 'Model Management', 'AI Model Deployment'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle IT Infrastructure',
+    description: 'IT infrastructure for autonomous vehicle systems and fleet management.',
+    icon: Car,
+    features: ['Vehicle Communication Systems', 'Fleet Management', 'Real-time Data Processing', 'Safety Systems'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Autonomous Systems',
+    link: 'https://autonomousinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground station and satellite communication infrastructure for space operations.',
+    icon: Rocket,
+    features: ['Ground Stations', 'Satellite Communication', 'Mission Control Systems', 'Data Processing'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Space Technology',
+    link: 'https://spaceinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Infrastructure for virtual worlds, VR/AR applications, and metaverse platforms.',
+    icon: Globe,
+    features: ['Virtual World Servers', 'VR/AR Infrastructure', 'Avatar Systems', 'Immersive Experiences'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Metaverse',
+    link: 'https://metaverseinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT & Sustainability',
+    description: 'Sustainable IT infrastructure with renewable energy and carbon footprint optimization.',
+    icon: Sprout,
+    features: ['Renewable Energy Integration', 'Carbon Footprint Tracking', 'Energy Optimization', 'Sustainable Hardware'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Zero Trust Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic systems for future-proof security.',
+    icon: Shield,
+    features: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Hybrid Security', 'Migration Planning'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Quantum Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform infrastructure for industrial and smart city applications.',
+    icon: Building,
+    features: ['Digital Twin Creation', 'Real-time Synchronization', 'IoT Integration', 'Analytics Platform'],
+    pricing: '$250,000 - $2,500,000/project',
+    category: 'Digital Twins',
+    link: 'https://digitaltwininfra.ziontechgroup.com'
+  },
+  {
+    title: 'Neuromorphic Computing Infrastructure',
+    description: 'Specialized infrastructure for neuromorphic computing and brain-inspired AI systems.',
+    icon: Brain,
+    features: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Low-power Processing', 'AI Acceleration'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Neuromorphic Computing',
+    link: 'https://neuromorphicinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Holographic Computing Infrastructure',
+    description: 'Infrastructure for holographic displays and 3D visualization systems.',
+    icon: Monitor,
+    features: ['Holographic Displays', '3D Rendering', 'Spatial Computing', 'Immersive Interfaces'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Holographic Computing',
+    link: 'https://holographicinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Biometric Security Infrastructure',
+    description: 'Advanced biometric authentication and security systems infrastructure.',
+    icon: Users,
+    features: ['Multi-modal Biometrics', 'Facial Recognition', 'Behavioral Analytics', 'Privacy Protection'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Biometric Security',
+    link: 'https://biometricinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Satellite Internet Infrastructure',
+    description: 'Low Earth Orbit (LEO) satellite internet infrastructure and ground systems.',
+    icon: Wifi,
+    features: ['LEO Satellite Networks', 'Ground Stations', 'User Terminals', 'Network Management'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Satellite Internet',
+    link: 'https://satelliteinternet.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Data Centers',
+    description: 'Self-managing data centers with AI-powered optimization and maintenance.',
+    icon: Server,
+    features: ['AI-powered Management', 'Predictive Maintenance', 'Energy Optimization', 'Automated Operations'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Autonomous Data Centers',
+    link: 'https://autonomousdatacenters.ziontechgroup.com'
+  },
+  {
+    title: 'Molecular Computing Infrastructure',
+    description: 'Infrastructure for molecular computing and DNA-based data storage systems.',
+    icon: Cpu,
+    features: ['Molecular Processors', 'DNA Storage', 'Biomolecular Computing', 'Hybrid Systems'],
+    pricing: '$5,000,000 - $50,000,000/project',
+    category: 'Molecular Computing',
+    link: 'https://molecularcomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Time-Sensitive Networking',
+    description: 'Ultra-low latency networking infrastructure for real-time applications.',
+    icon: Network,
+    features: ['Deterministic Networking', 'Ultra-low Latency', 'Time Synchronization', 'Real-time Protocols'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Time-Sensitive Networks',
+    link: 'https://tsn.ziontechgroup.com'
   }
 ];
 

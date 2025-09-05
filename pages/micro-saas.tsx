@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -405,6 +406,198 @@ const microSaaSProducts = [
     pricing: '$99 - $499/month',
     category: 'IoT',
     link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Intelligent code review with automated suggestions, security scanning, and performance optimization.',
+    icon: Code,
+    features: ['AI Code Analysis', 'Security Scanning', 'Performance Optimization', 'Team Collaboration'],
+    pricing: '$199 - $999/month',
+    category: 'Development Tools',
+    popular: true,
+    link: 'https://aicodereview.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain data analysis with real-time insights and transaction monitoring.',
+    icon: BarChart3,
+    features: ['Real-time Analytics', 'Transaction Monitoring', 'Smart Contract Analysis', 'DeFi Metrics'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Cloning Platform',
+    description: 'Advanced voice synthesis and cloning technology for content creators and businesses.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Customization', 'API Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Voice AI',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Circuit Design', 'Performance Analysis'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Computing',
+    link: 'https://quantumsim.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with contract templates and compliance checking.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Contract Analysis', 'Legal Research'],
+    pricing: '$199 - $999/month',
+    category: 'Legal Tech',
+    link: 'https://legaldocs.ziontechgroup.com'
+  },
+  {
+    title: 'Metaverse Event Platform',
+    description: 'Virtual event hosting and management platform with immersive 3D environments.',
+    icon: Globe,
+    features: ['3D Environments', 'Virtual Avatars', 'Interactive Features', 'Event Analytics'],
+    pricing: '$499 - $2,499/month',
+    category: 'Metaverse',
+    link: 'https://metaversevents.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'AI diagnostic tool for healthcare professionals with image analysis and symptom checking.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Symptom Analysis', 'Diagnostic Suggestions', 'Patient Records'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Healthcare AI',
+    link: 'https://meddiagnosis.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Fleet management system for autonomous vehicles with route optimization and monitoring.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Route Optimization', 'Predictive Maintenance', 'Safety Analytics'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Autonomous Vehicles',
+    link: 'https://autofleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Monitoring',
+    description: 'Environmental monitoring and climate change tracking with predictive analytics.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Climate Modeling', 'Predictive Analytics', 'Sustainability Reports'],
+    pricing: '$399 - $1,999/month',
+    category: 'Climate Tech',
+    link: 'https://climatemonitor.ziontechgroup.com'
+  },
+  {
+    title: 'Space Mission Planning Software',
+    description: 'Mission planning and satellite constellation management for space operations.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbital Mechanics', 'Satellite Tracking', 'Resource Management'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Space Tech',
+    link: 'https://spacemissions.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for pharmaceutical research and drug development.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trials'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Pharmaceutical AI',
+    link: 'https://drugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'Brain-Computer Interface Development Kit',
+    description: 'SDK and tools for developing brain-computer interface applications.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Thought Recognition', 'Motor Control', 'API Development'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Neurotechnology',
+    link: 'https://bci.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Platform',
+    description: 'Advanced threat detection and response system with machine learning capabilities.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
+    pricing: '$999 - $4,999/month',
+    category: 'Cybersecurity',
+    popular: true,
+    link: 'https://aicybersecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Cryptography Platform',
+    description: 'Quantum-safe encryption and secure communication platform.',
+    icon: Lock,
+    features: ['Quantum Encryption', 'Key Distribution', 'Secure Communication', 'Quantum Randomness'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Quantum Security',
+    link: 'https://quantumcrypto.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Creation Studio',
+    description: 'Complete content creation platform with AI-generated text, images, and videos.',
+    icon: Video,
+    features: ['AI Text Generation', 'Image Creation', 'Video Production', 'Content Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Content Creation',
+    link: 'https://aicontentstudio.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'Fleet management system for autonomous drones with mission planning and monitoring.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Fleet Monitoring', 'Payload Management', 'Regulatory Compliance'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Drone Technology',
+    link: 'https://dronefleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Trading Bot',
+    description: 'Automated trading system with machine learning and real-time market analysis.',
+    icon: TrendingUp,
+    features: ['Algorithmic Trading', 'Market Analysis', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$999 - $4,999/month',
+    category: 'FinTech',
+    link: 'https://tradingbot.ziontechgroup.com'
+  },
+  {
+    title: 'Virtual Reality Training Platform',
+    description: 'Immersive VR training platform for corporate and educational use.',
+    icon: Monitor,
+    features: ['VR Training Modules', 'Progress Tracking', 'Multi-user Support', 'Analytics Dashboard'],
+    pricing: '$299 - $1,499/month',
+    category: 'VR Training',
+    link: 'https://vrtraining.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Supply Chain AI',
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Management Platform',
+    description: 'Distributed computing platform for edge devices and IoT applications.',
+    icon: Server,
+    features: ['Edge Device Management', 'Distributed Processing', 'Real-time Analytics', 'Resource Optimization'],
+    pricing: '$499 - $2,499/month',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'Smart Reminders'],
+    pricing: '$29 - $149/month',
+    category: 'Personal AI',
+    popular: true,
+    link: 'https://personalai.ziontechgroup.com'
   }
 ];
 
