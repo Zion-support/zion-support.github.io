@@ -1,13 +1,13 @@
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Headerdynamic from '../components/Header.dynamic';
 
 describe('Headerdynamic', () => {
   test('renders without crashing', () => {
     render(<Headerdynamic />);
-    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<Headerdynamic />);
@@ -22,5 +22,4 @@ describe('Headerdynamic', () => {
   test('applies correct styling', () => {
     render(<Headerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

@@ -1,8 +1,5 @@
 // generateRandomBlogPost utility,
 export const generateRandomBlogPost = {
   // Placeholder utility functions,
-"init": function() {
-    
-  }
-};
-export default generateRandomBlogPost;
+"init"
+cursor/fix-lint-push-and-merge-to-main-f3c1

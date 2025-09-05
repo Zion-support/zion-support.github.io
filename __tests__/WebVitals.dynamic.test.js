@@ -1,13 +1,13 @@
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WebVitalsdynamic from '../components/WebVitals.dynamic';
 
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
     render(<WebVitalsdynamic />);
-    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<WebVitalsdynamic />);
@@ -22,5 +22,4 @@ describe('WebVitalsdynamic', () => {
   test('applies correct styling', () => {
     render(<WebVitalsdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

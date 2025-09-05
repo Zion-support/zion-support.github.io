@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 
 console.log('🧪 Enhanced Test Runner v2.0');
-console.log('============================');
+console.log('');
 
 const testReport = {
   "timestamp": new Date().toISOString(),
@@ -231,7 +231,7 @@ async function main() {
     
     // Display summary
     log('info', 'Enhanced Test Runner Summary');
-    log('info', '============================');
+    log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);
     log('info', `"Passed": ${testReport.summary.passed}`);
     log('info', `"Failed": ${testReport.summary.failed}`);

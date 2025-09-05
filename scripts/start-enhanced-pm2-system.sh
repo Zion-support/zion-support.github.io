@@ -264,7 +264,7 @@ EOF
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Enhanced PM2 Automation System Startup${NC}"
-    echo "=================================================="
+    echo "="
     echo
     
     # Check prerequisites
