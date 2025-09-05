@@ -7,6 +7,16 @@ interface PerformanceData {
   firstContentfulPaint: number
 }
 
+interface PerformanceData {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+}
+
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
