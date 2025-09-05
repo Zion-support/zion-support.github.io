@@ -7,39 +7,41 @@ import Layout from '../components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1,200+', label: 'Projects Completed' },
+  { number: '150+', label: 'Expert Team Members' },
+  { number: '450+', label: 'Services & Solutions' },
+  { number: '50+', label: 'Countries Served' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions for modern businesses",
+    description: "Revolutionary artificial intelligence solutions transforming industries worldwide",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "Quantum AI", "Neural Interfaces", "Autonomous Systems", "Drug Discovery"],
     pricing: "Starting at $2,000/month",
-    count: "25+ AI Solutions",
+    count: "120+ AI Solutions",
     popular: true
   },
   {
     title: "IT Services",
-    description: "Comprehensive IT solutions to power your digital transformation",
+    description: "Comprehensive IT solutions powering digital transformation and innovation",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
+    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation", "5G Networks", "Edge Computing", "Quantum Computing", "Smart Cities"],
     pricing: "Starting at $1,500/month",
-    count: "18+ IT Solutions",
+    count: "80+ IT Solutions",
     popular: true
   },
   {
     title: "Micro SaaS",
-    description: "Innovative software as a service solutions for specialized business needs",
+    description: "Innovative software-as-a-service solutions for specialized business needs",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["AI Content Marketing", "Smart Lead Management", "Analytics Dashboard", "Workflow Automation", "Customer Support Bot", "Inventory Management", "Email Marketing", "Project Management"],
+    features: ["AI Code Generation", "Blockchain Analytics", "Quantum Simulators", "Voice Cloning", "Metaverse Platforms", "Medical AI", "Autonomous Fleet Management", "Climate Prediction"],
     pricing: "Starting at $19/month",
-    count: "20+ Products",
+    count: "100+ Products",
     popular: true
   }
 ];

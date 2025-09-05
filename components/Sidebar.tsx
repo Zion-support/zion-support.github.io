@@ -65,7 +65,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
         { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
         { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
-        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor },
+        { label: '5G Networks', href: '/services/5g-networks', icon: Network },
+        { label: 'Metaverse Development', href: '/services/metaverse', icon: Monitor },
+        { label: 'Autonomous Systems', href: '/services/autonomous-systems', icon: Car },
+        { label: 'Space Technology', href: '/services/space-technology', icon: Rocket }
       ]
     },
     {

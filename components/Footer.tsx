@@ -50,6 +50,36 @@ const services = {
     { "name": 'AI-Powered Medical Diagnosis', "href": '/micro-saas#ai-medical-diagnosis' },
     { "name": 'Autonomous Vehicle Fleet Management', "href": '/micro-saas#autonomous-vehicle-fleet' },
     { "name": 'AI Climate Change Predictor', "href": '/micro-saas#ai-climate-predictor' }
+  ],
+  'Cloud & DevOps': [
+    { "name": 'Cloud Migration Services', "href": '/services/cloud-migration' },
+    { "name": 'DevOps & CI/CD Pipeline', "href": '/services/devops' },
+    { "name": 'Container Orchestration', "href": '/services/container-orchestration' },
+    { "name": 'Infrastructure as Code', "href": '/services/infrastructure-as-code' },
+    { "name": 'Cloud Cost Optimization', "href": '/services/cloud-cost-optimization' },
+    { "name": 'Multi-Cloud Strategy', "href": '/services/multi-cloud-strategy' },
+    { "name": 'Serverless Architecture', "href": '/services/serverless-architecture' },
+    { "name": 'Cloud Security & Compliance', "href": '/services/cloud-security' }
+  ],
+  'Cybersecurity': [
+    { "name": 'Zero Trust Security', "href": '/services/zero-trust' },
+    { "name": 'Threat Detection & Response', "href": '/services/threat-detection' },
+    { "name": 'Security Operations Center', "href": '/services/soc' },
+    { "name": 'Penetration Testing', "href": '/services/penetration-testing' },
+    { "name": 'Vulnerability Assessment', "href": '/services/vulnerability-assessment' },
+    { "name": 'Security Awareness Training', "href": '/services/security-training' },
+    { "name": 'Compliance & Governance', "href": '/services/compliance' },
+    { "name": 'Incident Response Planning', "href": '/services/incident-response' }
+  ],
+  'Data Analytics': [
+    { "name": 'Business Intelligence', "href": '/services/business-intelligence' },
+    { "name": 'Data Warehousing', "href": '/services/data-warehousing' },
+    { "name": 'Real-time Analytics', "href": '/services/real-time-analytics' },
+    { "name": 'Predictive Analytics', "href": '/services/predictive-analytics' },
+    { "name": 'Data Visualization', "href": '/services/data-visualization' },
+    { "name": 'Machine Learning Models', "href": '/services/ml-models' },
+    { "name": 'Data Lake Solutions', "href": '/services/data-lake' },
+    { "name": 'ETL/ELT Pipelines', "href": '/services/etl-pipelines' }
   ]
 };
 

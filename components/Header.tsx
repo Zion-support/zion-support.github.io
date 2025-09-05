@@ -26,7 +26,10 @@ import {
   BookOpen,
   Zap,
   Video,
-  Car
+  Car,
+  Cpu,
+  Lock,
+  Monitor
 } from 'lucide-react';
 
 const navigation = [{
@@ -34,10 +37,18 @@ const navigation = [{
     "href": '/services',
     "icon": Settings,
     "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '80+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '60+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '70+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '210+' }
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '120+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '80+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '100+' },
+      { "name": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Cloud, "count": '25+' },
+      { "name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": Shield, "count": '30+' },
+      { "name": 'Data Analytics', "href": '/services/data-analytics', "icon": BarChart3, "count": '20+' },
+      { "name": 'Quantum Computing', "href": '/services/quantum-computing', "icon": Cpu, "count": '15+' },
+      { "name": 'Blockchain Solutions', "href": '/services/blockchain', "icon": Lock, "count": '18+' },
+      { "name": 'IoT & Smart Cities', "href": '/services/iot-smart-cities', "icon": Globe, "count": '22+' },
+      { "name": 'Edge Computing', "href": '/services/edge-computing', "icon": Network, "count": '12+' },
+      { "name": 'Digital Twins', "href": '/services/digital-twins', "icon": Monitor, "count": '8+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '450+' }
     ]
   },
   {

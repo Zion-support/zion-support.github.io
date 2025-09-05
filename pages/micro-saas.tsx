@@ -300,6 +300,182 @@ const microSaaSProducts = [
     link: 'https://apidocs.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Code Generator',
+    description: 'Advanced AI code generation with context awareness and multiple language support.',
+    icon: Code,
+    features: ['Multi-language Support', 'Context Awareness', 'Code Optimization', 'Security Scanning'],
+    pricing: '$199 - $999/month',
+    category: 'AI Development',
+    popular: true,
+    link: 'https://aicodegen.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain data analysis with real-time monitoring and insights.',
+    icon: Network,
+    features: ['Real-time Monitoring', 'Transaction Analysis', 'Smart Contract Auditing', 'DeFi Analytics'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation for research and development.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Simulation Engine', 'Algorithm Testing', 'Performance Analysis'],
+    pricing: '$499 - $2,499/month',
+    category: 'Quantum Computing',
+    link: 'https://quantumsim.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Cloning Studio',
+    description: 'Professional voice cloning and synthesis with natural speech generation.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Conversion', 'Emotion Control'],
+    pricing: '$149 - $799/month',
+    category: 'AI Voice',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'Metaverse Development Platform',
+    description: 'Complete metaverse creation tools with 3D environments and avatar systems.',
+    icon: Monitor,
+    features: ['3D World Builder', 'Avatar Creation', 'Virtual Events', 'NFT Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Metaverse',
+    popular: true,
+    link: 'https://metaverse.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'AI medical imaging analysis and diagnostic assistance for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging AI', 'Diagnostic Assistance', 'Patient Data Analysis', 'Treatment Recommendations'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    link: 'https://medai.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete fleet management system for autonomous vehicles with real-time monitoring.',
+    icon: Car,
+    features: ['Fleet Tracking', 'Route Optimization', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$599 - $2,999/month',
+    category: 'Autonomous Vehicles',
+    link: 'https://autofleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Predictor',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Modeling', 'Impact Prediction', 'Carbon Footprint Analysis', 'Sustainability Metrics'],
+    pricing: '$799 - $3,999/month',
+    category: 'Environmental AI',
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Integration', 'AI Automation', 'Energy Optimization', 'Security Monitoring'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Home',
+    popular: true,
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Trading Bot',
+    description: 'Automated cryptocurrency and stock trading with AI-driven market analysis.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Automated Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'FinTech',
+    link: 'https://tradingbot.ziontechgroup.com'
+  },
+  {
+    title: 'Virtual Reality Meeting Platform',
+    description: 'Immersive VR meeting and collaboration platform with spatial audio and avatars.',
+    icon: Video,
+    features: ['VR Meetings', 'Spatial Audio', 'Avatar System', 'Whiteboard Integration'],
+    pricing: '$149 - $799/month',
+    category: 'VR/AR',
+    link: 'https://vrmeetings.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Assistant',
+    description: 'Intelligent legal document analysis and contract review with compliance checking.',
+    icon: FileText,
+    features: ['Document Analysis', 'Contract Review', 'Compliance Checking', 'Legal Research'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Agriculture Monitor',
+    description: 'IoT-based agricultural monitoring with AI crop analysis and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Weather Integration'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech',
+    link: 'https://agrimonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fitness Coach',
+    description: 'Personalized fitness training with AI form analysis and workout optimization.',
+    icon: Heart,
+    features: ['Form Analysis', 'Workout Plans', 'Progress Tracking', 'Nutrition Guidance'],
+    pricing: '$29 - $149/month',
+    category: 'Health & Fitness',
+    popular: true,
+    link: 'https://fitnessai.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification system with zero-knowledge proofs.',
+    icon: Shield,
+    features: ['Identity Verification', 'Zero-Knowledge Proofs', 'Privacy Protection', 'Cross-platform Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Identity Management',
+    link: 'https://identityblockchain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning with AI conversation practice and accent training.',
+    icon: BookOpen,
+    features: ['Conversation Practice', 'Accent Training', 'Grammar Correction', 'Cultural Context'],
+    pricing: '$19 - $99/month',
+    category: 'Education',
+    link: 'https://languageai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart City Management Platform',
+    description: 'Comprehensive smart city infrastructure management with IoT integration.',
+    icon: Building,
+    features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Citizen Services'],
+    pricing: '$999 - $4,999/month',
+    category: 'Smart Cities',
+    link: 'https://smartcity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Creator',
+    description: 'Automated content creation for blogs, social media, and marketing with AI writing.',
+    icon: FileText,
+    features: ['Blog Writing', 'Social Media Posts', 'Marketing Copy', 'SEO Optimization'],
+    pricing: '$79 - $399/month',
+    category: 'Content Creation',
+    popular: true,
+    link: 'https://contentcreator.ziontechgroup.com'
+  },
+  {
+    title: 'Robotic Process Automation Suite',
+    description: 'Complete RPA solution for automating repetitive business processes across industries.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Design', 'Bot Management', 'Analytics Dashboard'],
+    pricing: '$299 - $1,499/month',
+    category: 'Automation',
+    link: 'https://rpa.ziontechgroup.com'
+  },
+  {
     title: 'User Behavior Analytics',
     description: 'Deep user behavior analysis with heatmaps, session recordings, and conversion optimization.',
     icon: TrendingUp,

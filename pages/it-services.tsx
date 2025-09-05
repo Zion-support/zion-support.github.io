@@ -99,6 +99,271 @@ const itServices = [
     link: 'https://itconsulting.ziontechgroup.com'
   },
   {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with continuous verification and monitoring.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Security',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT devices.',
+    icon: Network,
+    features: ['Edge Nodes Deployment', 'Data Processing', 'Real-time Analytics', 'IoT Integration'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network deployment and optimization for enterprise and carrier environments.',
+    icon: Wifi,
+    features: ['5G Core Network', 'Radio Access Network', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$50,000 - $250,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Lock,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Comprehensive IoT platform development and management for connected devices.',
+    icon: Globe,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Security Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin implementation for physical assets and processes with real-time synchronization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Digital Twins',
+    link: 'https://digitaltwins.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup and integration for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Error Correction', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumcomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Smart City Infrastructure',
+    description: 'Comprehensive smart city technology implementation with IoT and AI integration.',
+    icon: Building,
+    features: ['Traffic Management', 'Energy Grid', 'Public Safety', 'Citizen Services'],
+    pricing: '$500,000 - $2,500,000/project',
+    category: 'Smart Cities',
+    link: 'https://smartcityinfra.ziontechgroup.com'
+  },
+  {
+    title: 'DevOps & CI/CD Pipeline',
+    description: 'Complete DevOps implementation with automated CI/CD pipelines and monitoring.',
+    icon: Settings,
+    features: ['CI/CD Automation', 'Container Orchestration', 'Monitoring & Logging', 'Security Integration'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'DevOps',
+    popular: true,
+    link: 'https://devops.ziontechgroup.com'
+  },
+  {
+    title: 'Data Center Modernization',
+    description: 'Complete data center transformation with cloud integration and automation.',
+    icon: Server,
+    features: ['Infrastructure Assessment', 'Cloud Migration', 'Automation', 'Energy Optimization'],
+    pricing: '$75,000 - $375,000/project',
+    category: 'Data Center',
+    link: 'https://datacenter.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway implementation with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway Setup', 'Security Policies', 'Rate Limiting', 'Analytics Dashboard'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices implementation with containerization and service mesh.',
+    icon: Settings,
+    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning and implementation with automated failover.',
+    icon: Shield,
+    features: ['Backup Strategies', 'Failover Systems', 'Recovery Testing', 'Compliance'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://disasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'Identity & Access Management',
+    description: 'Enterprise IAM solution with single sign-on and multi-factor authentication.',
+    icon: Lock,
+    features: ['SSO Implementation', 'MFA Setup', 'User Provisioning', 'Audit Logging'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'IAM',
+    link: 'https://iam.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security Monitoring',
+    description: 'Advanced network security monitoring with threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Incident Response', 'Security Analytics', 'Compliance Reporting'],
+    pricing: '$18,000 - $90,000/project',
+    category: 'Network Security',
+    link: 'https://networksecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Complete cloud migration strategy and implementation for AWS, Azure, and GCP.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Data Transfer', 'Application Modernization', 'Cost Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Cloud Migration',
+    popular: true,
+    link: 'https://cloudmigration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Infrastructure Assessment',
+    description: 'Comprehensive IT infrastructure audit and optimization recommendations.',
+    icon: BarChart3,
+    features: ['Infrastructure Audit', 'Performance Analysis', 'Security Assessment', 'Optimization Plan'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Assessment',
+    link: 'https://infraassessment.ziontechgroup.com'
+  },
+  {
+    title: 'Endpoint Security Management',
+    description: 'Comprehensive endpoint security solution with threat detection and response.',
+    icon: Shield,
+    features: ['Antivirus Management', 'Threat Detection', 'Device Control', 'Compliance Monitoring'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Endpoint Security',
+    link: 'https://endpointsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Network Performance Optimization',
+    description: 'Network performance analysis and optimization for improved speed and reliability.',
+    icon: Network,
+    features: ['Performance Analysis', 'Traffic Optimization', 'QoS Implementation', 'Monitoring Setup'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Network Optimization',
+    link: 'https://networkoptimization.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management',
+    description: 'ITSM implementation with ticketing, asset management, and service catalog.',
+    icon: Settings,
+    features: ['Ticketing System', 'Asset Management', 'Service Catalog', 'Change Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'ITSM',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile Device Management',
+    description: 'Enterprise mobile device management with security and application control.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Security Policies', 'App Management', 'Remote Wipe'],
+    pricing: '$6,000 - $30,000/project',
+    category: 'MDM',
+    link: 'https://mdm.ziontechgroup.com'
+  },
+  {
+    title: 'Backup & Recovery Solutions',
+    description: 'Comprehensive backup and recovery solutions with automated testing and monitoring.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Recovery Testing', 'Disaster Recovery', 'Compliance'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Backup & Recovery',
+    link: 'https://backuprecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT compliance framework implementation with audit support and documentation.',
+    icon: FileText,
+    features: ['Compliance Framework', 'Audit Support', 'Documentation', 'Risk Assessment'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Virtual Desktop Infrastructure',
+    description: 'VDI implementation with secure remote access and application delivery.',
+    icon: Monitor,
+    features: ['Virtual Desktops', 'Application Delivery', 'Security Policies', 'Performance Optimization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'VDI',
+    link: 'https://vdi.ziontechgroup.com'
+  },
+  {
+    title: 'IT Training & Support',
+    description: 'Comprehensive IT training programs and ongoing technical support services.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Certification Programs', 'Support Services', 'Documentation'],
+    pricing: '$100 - $200/hour',
+    category: 'Training & Support',
+    link: 'https://ittraining.ziontechgroup.com'
+  },
+  {
+    title: 'IT Project Management',
+    description: 'Professional IT project management with agile methodologies and best practices.',
+    icon: Kanban,
+    features: ['Project Planning', 'Agile Management', 'Risk Management', 'Quality Assurance'],
+    pricing: '$120 - $250/hour',
+    category: 'Project Management',
+    link: 'https://itpm.ziontechgroup.com'
+  },
+  {
+    title: 'IT Vendor Management',
+    description: 'IT vendor relationship management with contract negotiation and performance monitoring.',
+    icon: Users,
+    features: ['Vendor Selection', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
+    pricing: '$100 - $200/hour',
+    category: 'Vendor Management',
+    link: 'https://itvendor.ziontechgroup.com'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'IT cost analysis and optimization strategies for reduced operational expenses.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Optimization Strategies', 'Budget Planning', 'ROI Analysis'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Cost Optimization',
+    link: 'https://itcostopt.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Consulting',
+    description: 'Strategic IT innovation consulting for digital transformation and emerging technologies.',
+    icon: Rocket,
+    features: ['Technology Roadmap', 'Innovation Strategy', 'Digital Transformation', 'Emerging Tech'],
+    pricing: '$150 - $300/hour',
+    category: 'Innovation',
+    popular: true,
+    link: 'https://itinnovation.ziontechgroup.com'
+  },
+  {
     title: 'DevOps & CI/CD Pipeline',
     description: 'Complete DevOps implementation with automated CI/CD pipelines and infrastructure as code.',
     icon: Cpu,
