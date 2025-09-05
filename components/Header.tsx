@@ -48,6 +48,7 @@ import {
   Filter,
   Workflow,
   Bot,
+  Briefcase,
   Microscope,
   Layers,
   Eye,

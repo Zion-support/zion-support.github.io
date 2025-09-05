@@ -204,7 +204,8 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2
+  DizzyFace2,
+  Briefcase
 } from 'lucide-react';
 
 const navigation = [

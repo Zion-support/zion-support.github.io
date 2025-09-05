@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -217,7 +218,7 @@ export default function AccessibilityPage() {
                   >
                     <div className="flex items-start space-x-4">
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-8 h-8 text-white" />
+                        <feature.icon className="w-8 h-8 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -258,7 +259,7 @@ export default function AccessibilityPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standards.map((standard, index) => (
+              {standardsCompliance.map((standard, index) => (
                   <motion.div
                     key={index}
                     className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
@@ -268,7 +269,7 @@ export default function AccessibilityPage() {
                     viewport={{ once: true }}
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <standard.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {standard.name}
@@ -308,7 +309,7 @@ export default function AccessibilityPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {testingMethods.map((method, index) => (
+              {accessibilityTools.map((method, index) => (
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
