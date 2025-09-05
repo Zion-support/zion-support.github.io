@@ -11,11 +11,9 @@ export default function Home() {
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
-    }, 100);
+      setAnimationState(prev => ({ ...prev, isLoaded: true }))}, 100);
     
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
   if (animationState.hasError) {
     return (
@@ -30,8 +28,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    );
-  }
+    )}
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
@@ -69,25 +66,25 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
-              "address": {
+              name: "Zion Tech Group",
+              url: contact.site,
+              logo: `${contact.site}/favicon.svg`,
+              description: "Leading provider of micro SaaS products, AI services, and IT solutions",
+              address: {
                 "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
+                streetAddress: "364 E Main St STE 1008",
+                addressLocality: "Middletown",
+                addressRegion: "DE",
+                postalCode: "19709",
+                addressCountry: "US"
               },
-              "contactPoint": {
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
-                "email": contact.email
+                telephone: contact.phone,
+                contactType: "customer service",
+                email: contact.email
               },
-              "sameAs": [contact.site]
+              sameAs: [contact.site]
             })
           }}
         />
@@ -253,5 +250,4 @@ export default function Home() {
         </section>
       </main>
     </>
-  );
-}
+  )}

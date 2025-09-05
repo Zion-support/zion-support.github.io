@@ -32,9 +32,7 @@ const PerformanceMonitor: React.FC = () => {,
             pageLoadTime: loadTime,
             timestamp: Date.now()
           }))
-        };
-      };
-    };
+        }}};
 ,
     // Track memory usage,
     const trackMemory = () => {,
@@ -45,8 +43,7 @@ const PerformanceMonitor: React.FC = () => {,
           ...prev,
           memoryUsage: Math.round(usedMemory * 100) / 100
         }))
-      };
-    };
+      }};
 ,
     // Track network speed,
     const trackNetwork = () => {,
@@ -64,9 +61,7 @@ const PerformanceMonitor: React.FC = () => {,
             ...prev,
             networkSpeed: speedMap[connection.effectiveType] || 0
           }))
-        };
-      };
-    };
+        }}};
 ,
     // Initial tracking,
     trackPageLoad(),
@@ -90,8 +85,7 @@ const PerformanceMonitor: React.FC = () => {,
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
       window.removeEventListener('offline', handleOffline)
-    };
-  }, [location.pathname]),
+    }}, [location.pathname]),
 ,
   // Show performance issues,
   useEffect(() => {,
@@ -105,8 +99,7 @@ const PerformanceMonitor: React.FC = () => {,
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
       return () => clearTimeout(timer)
-    };
-  }, [metrics]),
+    }}, [metrics]),
 ,
   if (!isVisible) return null,
 ,
@@ -159,8 +152,7 @@ const PerformanceMonitor: React.FC = () => {,
             </div>)};
         </div>,
       </div>,
-    </div>,
-  )
+    </div>)
 };
 ,
 export default PerformanceMonitor,

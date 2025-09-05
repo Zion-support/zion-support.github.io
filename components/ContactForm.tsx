@@ -7,8 +7,7 @@ interface FormData {
   company: string;
   phone: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -28,8 +27,7 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,12 +45,9 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
   };
 
   return (
@@ -190,7 +185,6 @@ const ContactForm: React.FC = () => {
         )}
       </button>
     </form>
-  );
-};
+  )};
 
 export default ContactForm;

@@ -77,8 +77,7 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -231,7 +230,6 @@ const Header = () => {
         </AnimatePresence>
       </nav>
     </header>
-  );
-};
+  )};
 
 export default Header;

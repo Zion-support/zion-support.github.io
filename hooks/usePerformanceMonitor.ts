@@ -16,9 +16,7 @@ import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
     const observer = new PerformanceObserver((list) => {,
       for (const entry of list.getEntries()) {,
         if (entry.entryType === 'navigation') {
-        };
-      };
-    }),
+        }}}),
 ,
     observer.observe({ entryTypes: ['navigation'] }),
 ,

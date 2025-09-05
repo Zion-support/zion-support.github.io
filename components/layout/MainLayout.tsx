@@ -84,8 +84,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({,
         </main>,
         <Footer />,
       </div>,
-    </>,
-  )
+    </>)
 };
 ,
 export default MainLayout,

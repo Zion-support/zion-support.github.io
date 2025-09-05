@@ -28,8 +28,7 @@ import {
 interface SidebarProps {
   className?: string;
   isOpen?: boolean;
-  onClose?: () => void;
-}
+  onClose?: () => void}
 
 export default function Sidebar({ className = '', isOpen = false, onClose }: SidebarProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
@@ -40,8 +39,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
+    )};
 
   const navigationSections = [
     {
@@ -100,8 +98,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
 
   const handleLinkClick = (href: string) => {
     if (onClose) onClose();
-    router.push(href);
-  };
+    router.push(href)};
 
   return (
     <motion.aside
@@ -148,8 +145,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
                   <IconComponent className="w-5 h-5" />
                   <span className="font-medium">{link.name}</span>
                 </button>
-              );
-            })}
+              )})}
           </div>
         </div>
         
@@ -196,13 +192,11 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>
                           </div>
                         </button>
-                      );
-                    })}
+                      )})}
                   </motion.div>
                 )}
               </div>
-            );
-          })}
+            )})}
         </div>
         
         {/* Contact Info */}
@@ -247,5 +241,4 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         </div>
       </div>
     </motion.aside>
-  );
-}
+  )}

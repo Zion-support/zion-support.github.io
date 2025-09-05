@@ -765,5 +765,4 @@ export default function AIServices() {
         </section>
       </main>
     </div>
-  );
-}
+  )}

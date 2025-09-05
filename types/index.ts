@@ -2,8 +2,7 @@ export interface ContactInfo {
   phone: string;
   email: string;
   address: string;
-  site: string;
-}
+  site: string}
 
 export interface Service {
   title: string;
@@ -11,8 +10,7 @@ export interface Service {
   features: string[];
   href: string;
   icon: string;
-  color: string;
-}
+  color: string}
 
 export interface ServiceCategory {
   title: string;
@@ -20,8 +18,7 @@ export interface ServiceCategory {
   count: number;
   features: string[];
   href: string;
-  color: string;
-}
+  color: string}
 
 export interface SEOProps {
   title: string;
@@ -29,15 +26,12 @@ export interface SEOProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-  noindex?: boolean;
-}
+  noindex?: boolean}
 
 export interface LoadingState {
   isLoading: boolean;
-  error?: string;
-}
+  error?: string}
 
 export interface AnimationState {
   isLoaded: boolean;
-  hasError: boolean;
-}
+  hasError: boolean}

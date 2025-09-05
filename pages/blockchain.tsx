@@ -107,8 +107,7 @@ export default function Blockchain() {
                       ))}
                     </ul>
                   </div>
-                );
-              })}
+                )})}
             </div>
           </div>
         </div>
@@ -175,5 +174,4 @@ export default function Blockchain() {
         </div>
       </main>
     </div>
-  );
-}
+  )}

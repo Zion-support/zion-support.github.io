@@ -6,28 +6,26 @@ export class TestingSystem {,
     element: HTMLElement,
     action: "click" | "type" | "hover") {,
     switch (action) {,
-      case "click":,
+      case click:,
         element.click(),
         break,
-      case "type":,
+      case type:,
         // Handle type action,
         break,
-      case "hover":,
+      case hover:,
         // Handle hover action,
         break,
       default:,
         throw new Error(`Unknown action: ${action}`)
-    };
-  };
-};
+    }}};
 // Type definition for HTMLElement,
 interface HTMLElement {,
   click(): void
 };
 export class TestingSystem {,
   static async testUserInteraction(,
-    "element": HTMLElement,
-    "action": 'click' | 'type' | 'hover') {,
+    element: HTMLElement,
+    action: 'click' | 'type' | 'hover') {,
     switch (action) {,
       case 'click':,
         element.click(),
@@ -40,6 +38,4 @@ export class TestingSystem {,
         break,
       default: ,
         break
-    };
-  };
-};
+    }}};

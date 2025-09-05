@@ -8,9 +8,5 @@ export const messageChannelHandler: MessageHandler = {,
   },
   receiveMessage: (_callback) => {,
     // No-op: placeholder for message listener registration
-  };
-};
-};
-};
-};
+  }}}}};
 ,

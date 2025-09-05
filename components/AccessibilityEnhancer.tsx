@@ -6,13 +6,11 @@ export default function AccessibilityEnhancer() {
   useEffect(() => {
     // Skip focus outline for mouse users
     const handleMouseDown = () => {
-      document.body.classList.add('using-mouse');
-    };
+      document.body.classList.add('using-mouse')};
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        document.body.classList.remove('using-mouse');
-      }
+        document.body.classList.remove('using-mouse')}
     };
 
     // Add event listeners
@@ -38,12 +36,10 @@ export default function AccessibilityEnhancer() {
     `;
 
     skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
+      skipLink.style.top = '6px'});
 
     skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
+      skipLink.style.top = '-40px'});
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
@@ -54,24 +50,18 @@ export default function AccessibilityEnhancer() {
 
       interactiveElements.forEach((element) => {
         if (!element.getAttribute('tabindex')) {
-          element.setAttribute('tabindex0');
-        }
+          element.setAttribute('tabindex0')}
         // Add keyboard event handlers
         element.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            (element as HTMLElement).click();
-          }
-        });
-      });
-    };
+            (element as HTMLElement).click()}
+        })})};
 
     // Run enhancement after DOM is loaded
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', enhanceKeyboardNavigation);
-    } else {
-      enhanceKeyboardNavigation();
-    }
+      document.addEventListener('DOMContentLoaded', enhanceKeyboardNavigation)} else {
+      enhanceKeyboardNavigation()}
 
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
@@ -85,14 +75,12 @@ export default function AccessibilityEnhancer() {
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
-        liveRegion.textContent = message;
-      }
+        liveRegion.textContent = message}
     };
 
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
-      announcePageChange('Page loaded');
-    };
+      announcePageChange('Page loaded')};
 
     // Add route change listener if available
     if (typeof window !== 'undefined' && window.history) {
@@ -101,42 +89,33 @@ export default function AccessibilityEnhancer() {
 
       window.history.pushState = function(...args) {
         originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
+        setTimeout(handleRouteChange, 100)};
 
       window.history.replaceState = function(...args) {
         originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
+        setTimeout(handleRouteChange, 100)};
 
-      window.addEventListener('popstate', handleRouteChange);
-    }
+      window.addEventListener('popstate', handleRouteChange)}
 
     // Cleanup
     return () => {
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('keydown', handleKeyDown);
       if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
+        skipLink.parentNode.removeChild(skipLink)}
       if (liveRegion.parentNode) {
-        liveRegion.parentNode.removeChild(liveRegion);
-      }
-    };
-  }, []);
+        liveRegion.parentNode.removeChild(liveRegion)}
+    }}, []);
 
-  return null;
-}
+  return null}
 
 // Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
-    outline: none !important;
-  }
+    outline: none !important}
   .focus-visible:focus {
     outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
-  }
+    outline-offset: 2px !important}
   .sr-only {
     position: absolute;
     width: 1px;
@@ -146,8 +125,7 @@ const focusStyles = `
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
-  }
+    border: 0}
   .sr-only.focus:not-sr-only:focus {
     position: static;
     width: auto;
@@ -156,13 +134,11 @@ const focusStyles = `
     margin: inherit;
     overflow: visible;
     clip: auto;
-    white-space: normal;
-  }
+    white-space: normal}
 `;
 
 // Inject styles
 if (typeof document !== 'undefined') {
   const styleSheet = document.createElement('style');
   styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
-}
+  document.head.appendChild(styleSheet)}

@@ -87,8 +87,7 @@ export default function Header({ className = '' }: HeaderProps) {,
           href: '/custom-development',
           icon: Settings,
           description: 'Bespoke software solutions'
-        };
-      ]
+        }]
     },
     {,
       name: 'Solutions',
@@ -117,8 +116,7 @@ export default function Header({ className = '' }: HeaderProps) {,
           href: '/digital-transformation',
           icon: Zap,
           description: 'Complete digital transformation'
-        };
-      ]
+        }]
     },
     {,
       name: 'Resources',
@@ -153,13 +151,11 @@ export default function Header({ className = '' }: HeaderProps) {,
           href: '/api-docs',
           icon: Code,
           description: 'Technical documentation'
-        };
-      ]
+        }]
     },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' };
-  ],
+    { name: 'Pricing', href: '/pricing' }],
 ,
   const contactInfo = {,
     phone: '+1 302 464 0950',
@@ -252,12 +248,9 @@ export default function Header({ className = '' }: HeaderProps) {,
                               <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-blue-600 transition-colors ml-auto" />,
                             </Link>)
                         })};
-                      </motion.div>,
-                    )};
-                  </AnimatePresence>,
-                )};
-              </div>,
-            ))};
+                      </motion.div>)};
+                  </AnimatePresence>)};
+              </div>))};
           </div>,
           {/* CTA Button */};
           <div className="hidden lg: flex items-center space-x-4">,
@@ -308,13 +301,10 @@ export default function Header({ className = '' }: HeaderProps) {,
                             >,
                               <IconComponent className="w-4 h-4" />,
                               <span>{subItem.name}</span>,
-                            </Link>,
-                          )
+                            </Link>)
                         })};
-                      </div>,
-                    )};
-                  </div>,
-                ))};
+                      </div>)};
+                  </div>))};
                 <div className="px-6 py-4 border-t border-gray-200">,
                   <Link,
                     href="/contact",
@@ -325,10 +315,8 @@ export default function Header({ className = '' }: HeaderProps) {,
                   </Link>,
                 </div>,
               </div>,
-            </motion.div>,
-          )};
+            </motion.div>)};
         </AnimatePresence>,
       </nav>,
-    </header>,
-  )
+    </header>)
 };

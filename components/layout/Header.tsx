@@ -32,7 +32,7 @@ import {;
   Award,
   Globe,
   Search,
-const "Header": React.FC = () => {,
+const Header: React.FC = () => {,
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {,
     const handleScroll = () => {,
@@ -59,8 +59,7 @@ const "Header": React.FC = () => {,
             </Link>))};
         </nav>,
       </div>,
-    </header>,
-  ),
+    </header>),
 export default Header
 
 }}

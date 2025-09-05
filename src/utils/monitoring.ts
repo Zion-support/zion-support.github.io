@@ -9,10 +9,9 @@ export const setupAnalytics = () => {
     document.head.appendChild(script);
     
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments)}
     gtag('js', new Date());
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID);
-  }
+    gtag('config', process.env.NEXT_PUBLIC_GA_ID)}
 };
 
 export const trackPerformance = () => {
@@ -26,10 +25,8 @@ export const trackPerformance = () => {
         gtag('eventpage_load_time', {
           value: Math.round(loadTime),
           event_category: 'Performance'
-        });
-      }
-    });
-  }
+        })}
+    })}
 };
 
 export const trackErrors = () => {
@@ -39,7 +36,5 @@ export const trackErrors = () => {
         event_category: 'Error',
         event_label: event.message,
         value: 1
-      });
-    }
-  });
-};
+      })}
+  })};

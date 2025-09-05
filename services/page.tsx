@@ -82,8 +82,7 @@ const allServices = [,
     href: '/micro-saas',
     color: 'blue',
     services: ['Analytics DashboardDocument ProcessingCustomer ExperienceInventory ManagementProject Management']
-  };
-],
+  }],
 ,
 export default function ServicesPage() {,
   return (,
@@ -206,8 +205,7 @@ export default function ServicesPage() {,
                       <ArrowRight className="w-4 h-4 ml-2" />,
                     </Link>,
                   </div>,
-                </motion.div>,
-              ))};
+                </motion.div>))};
             </div>,
           </div>,
         </section>,
@@ -290,6 +288,5 @@ export default function ServicesPage() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  )
+    </Layout>)
 };

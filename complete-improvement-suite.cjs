@@ -183,11 +183,9 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-<<<<<<< HEAD
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
         content.includes('>>>>>>> ')
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
       );
     } catch (error) {
       return false;

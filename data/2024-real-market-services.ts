@@ -92,5 +92,4 @@ export const realMarketServices: RealMarketService[] = [,
     customers: 1800,
     rating: 4.7,
     reviews: 950
-  };
-],
+  }],

@@ -11,14 +11,12 @@ export const findService = (query: string, services: Service[]): Service[] => {,
   return services.filter(service =>,
     service.name.toLowerCase().includes(searchTerm) ||,
     service.description.toLowerCase().includes(searchTerm) ||,
-    service.category.toLowerCase().includes(searchTerm),
-  )
+    service.category.toLowerCase().includes(searchTerm))
 };
 ,
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {,
   return services.filter(service =>,
-    service.category.toLowerCase() === category.toLowerCase(),
-  )
+    service.category.toLowerCase() === category.toLowerCase())
 };
 ,
 export default {,
@@ -26,7 +24,7 @@ export default {,
   getServicesByCategory
 };
 // Service finder utility,
-export const findService = ("_serviceName": string) => {,
+export const findService = (_serviceName: string) => {,
   // Implementation placeholder,
   return null
 };

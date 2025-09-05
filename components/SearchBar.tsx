@@ -5,8 +5,7 @@ interface SearchResult {
   title: string;
   description: string;
   url: string;
-  type: 'service' | 'page' | 'category';
-}
+  type: 'service' | 'page' | 'category'}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -60,8 +59,7 @@ const SearchBar: React.FC = () => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
-      return;
-    }
+      return}
 
     setIsLoading(true);
     
@@ -75,37 +73,31 @@ const SearchBar: React.FC = () => {
     
     setResults(filteredResults);
     setIsOpen(true);
-    setIsLoading(false);
-  };
+    setIsLoading(false)};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
-  };
+    handleSearch(value)};
 
   const handleResultClick = () => {
     setIsOpen(false);
-    setQuery('');
-  };
+    setQuery('')};
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
-      inputRef.current?.blur();
-    }
+      inputRef.current?.blur()}
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   return (
     <div className="relative" ref={searchRef}>
@@ -183,7 +175,6 @@ const SearchBar: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default SearchBar;

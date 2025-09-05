@@ -35,14 +35,12 @@ const navigation = {,
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' };
-  ],
+    { name: 'IoT Solutions', href: '/iot-solutions' }],
   'Solutions': [,
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' };
-  ],
+    { name: 'Custom Development', href: '/solutions/custom' }],
   'Industries': [,
     { name: 'Healthcare', href: '/industries/healthcare' },
     { name: 'Finance', href: '/industries/finance' },
@@ -51,8 +49,7 @@ const navigation = {,
     { name: 'Manufacturing', href: '/industries/manufacturing' },
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' };
-  ],
+    { name: 'Energy', href: '/industries/energy' }],
   'Resources': [,
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
@@ -61,8 +58,7 @@ const navigation = {,
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' };
-  ],
+    { name: 'FAQ', href: '/faq' }],
   'Company': [,
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -71,15 +67,13 @@ const navigation = {,
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' };
-  ]
+    { name: 'Privacy Policy', href: '/privacy' }]
 };
 ,
 const quickLinks = [,
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
-  { name: 'Support', href: '/support' };
-],
+  { name: 'Support', href: '/support' }],
 ,
 interface SidebarProps {,
   isOpen: boolean,
@@ -96,8 +90,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {,
     };
     return () => {,
       document.body.style.overflow = 'unset'
-    };
-  }, [isOpen]),
+    }}, [isOpen]),
 ,
   const handleDropdownToggle = (item: string) => {,
     setActiveDropdown(activeDropdown === item ? null : item)
@@ -168,10 +161,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {,
                           >,
                             {link.name};
                           </Link>))};
-                      </motion.div>,
-                    )};
-                  </div>,
-                ))};
+                      </motion.div>)};
+                  </div>))};
               </nav>,
               {/* Quick Links */};
               <div className="mt-8 pt-8 border-t border-gray-200">,
@@ -212,8 +203,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {,
               </div>,
             </div>,
           </motion.div>,
-        </>,
-      )};
-    </AnimatePresence>,
-  )
+        </>)};
+    </AnimatePresence>)
 };

@@ -9,8 +9,7 @@ const EnhancedFooter: React.FC = () => {;
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
     { name: 'Mobile Apps', href: '/services/mobile-development' },
     { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Data Analytics', href: '/services/data-analytics' };
-  ],
+    { name: 'Data Analytics', href: '/services/data-analytics' }],
 ,
   const products = [,
     { name: 'ZionAI Analytics', href: '/products/zion-ai-analytics' },
@@ -41,13 +40,11 @@ const EnhancedFooter: React.FC = () => {,
             </ul>,
           </div>,
                   </Link>,
-                </li>,
-              ))};
+                </li>))};
             </ul>,
           </div>,
                   </Link>,
-                </li>,
-              ))};
+                </li>))};
             </ul>,
           </div>,
         </div>,
@@ -56,8 +53,7 @@ const EnhancedFooter: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  )
+    </footer>)
 };
 ,
 export default EnhancedFooter

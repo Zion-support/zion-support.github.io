@@ -4,10 +4,8 @@ import React, { useEffect } from 'react';
 declare global {
   interface Window {
     performance: {
-      getEntriesByType: (_type: string) => unknown[];
-    };
-    gtag: (...args: unknown[]) => void;
-  }
+      getEntriesByType: (_type: string) => unknown[]};
+    gtag: (...args: unknown[]) => void}
 }
 
 interface PerformanceData {
@@ -20,13 +18,10 @@ interface PerformanceData {
   memory: {
     used: number;
     total: number;
-    limit: number;
-  } | null;
-}
+    limit: number} | null}
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (performanceData: PerformanceData) => void;
-}
+  onPerformanceData?: (performanceData: PerformanceData) => void}
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
@@ -38,8 +33,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         domContentLoadedEventStart: number;
         loadEventEnd: number;
         loadEventStart: number;
-        fetchStart: number;
-      };
+        fetchStart: number};
       const paint = window.performance.getEntriesByType('paint');
       
       const performanceData: PerformanceData = {
@@ -64,28 +58,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       };
 
       if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
+        onPerformanceData(performanceData)}
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
-      }
+        console.log('Performance Metrics:', performanceData)}
     };
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+      measurePerformance()} else {
+      window.addEventListener('load', measurePerformance)}
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
+      window.removeEventListener('load', measurePerformance)}}, [onPerformanceData]);
 
-  return null;
-};
+  return null};
 
 export default PerformanceMonitor;

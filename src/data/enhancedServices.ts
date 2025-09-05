@@ -15,8 +15,7 @@ export interface ProductListing {,
   deliveryTime: string,
   features: string[],
   image?: string
-};
-    },
+}},
     &quot,rating&quot,: 4.8,
     &quot,reviews&quot,: 156,
     &quot,deliveryTime&quot,: &quot,2-4 weeks,
@@ -48,6 +47,5 @@ export interface ProductListing {,
       &quot,API management,
       &quot,Multi-tenant architecture&quot
     ]
-  };
-],
+  }],
 ,

@@ -6,7 +6,7 @@ import React from 'react';
   className?: string,
   sizes?: string
 };
-export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   src,
   alt,
   width,

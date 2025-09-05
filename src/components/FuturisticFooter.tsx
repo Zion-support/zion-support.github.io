@@ -3,8 +3,7 @@ import * as React from 'react','',
 import Link from 'next/link','',
 import { motion } from 'framer-motion;
 import {};
-  // TODO: Implement;
-};
+  // TODO: Implement};
   Phone;
   Mail;
   MapPin;
@@ -71,8 +70,7 @@ const FuturisticFooter: React.FC = () => {};
         { name: 'Cookie Policy', href: '/cookies' },'',
         { name: 'Security', href: '/security' }']
       ]
-    };
-  ],
+    }],
 ,
   const socialLinks = ['],
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',

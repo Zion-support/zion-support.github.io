@@ -5,5 +5,4 @@ export default function App(): JSX.Element {
     <main>
       <h1>Hello App</h1>
     </main>
-  );
-}
+  )}

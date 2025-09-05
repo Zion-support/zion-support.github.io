@@ -23,15 +23,12 @@ export function middleware(request: NextRequest) {
         .find(lang => ['enesfrde'].includes(lang.split('-')[0]));
 
       if (preferredLocale) {
-        locale = preferredLocale.split('-')[0];
-      }
+        locale = preferredLocale.split('-')[0]}
     }
     // Redirect to the locale-specific URL
     const url = new URL(`/${locale}${pathname}`, request.url);
-    return NextResponse.redirect(url);
-  }
-  return NextResponse.next();
-}
+    return NextResponse.redirect(url)}
+  return NextResponse.next()}
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`

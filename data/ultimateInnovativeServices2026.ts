@@ -625,5 +625,4 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [,
       website: "https://ziontechgroup.com"
     },
     uniqueValue: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling"
-  };
-],
+  }],

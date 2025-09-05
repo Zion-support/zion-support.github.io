@@ -28,8 +28,7 @@ import {
 } from 'lucide-react';
 
 interface FooterProps {
-  className?: string;
-}
+  className?: string}
 
 export default function Footer({ className = '' }: FooterProps) {
   const currentYear = new Date().getFullYear();
@@ -157,8 +156,7 @@ export default function Footer({ className = '' }: FooterProps) {
                   >
                     <IconComponent className="w-5 h-5" />
                   </a>
-                );
-              })}
+                )})}
             </div>
           </div>
           {/* Services */}
@@ -177,8 +175,7 @@ export default function Footer({ className = '' }: FooterProps) {
                       <span>{service.name}</span>
                     </Link>
                   </li>
-                );
-              })}
+                )})}
             </ul>
           </div>
           {/* Solutions */}
@@ -284,5 +281,4 @@ export default function Footer({ className = '' }: FooterProps) {
         </div>
       </div>
     </footer>
-  );
-}
+  )}

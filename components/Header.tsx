@@ -7,42 +7,41 @@ import {;
 ;
 const servicesDropdown = [;
   {;
-    "icon": Brain;
-    "title": 'AI & Machine Learning';
-    "description": 'Intelligent solutions for business automation',
-    "href": '/ai-services'
+    icon: Brain;
+    title: 'AI & Machine Learning';
+    description: 'Intelligent solutions for business automation',
+    href: '/ai-services'
   },
   {,
-    "icon": Shield,
-    "title": 'Cybersecurity',
-    "description": 'Advanced security and threat protection',
-    "href": '/it-services'
+    icon: Shield,
+    title: 'Cybersecurity',
+    description: 'Advanced security and threat protection',
+    href: '/it-services'
   },
   {,
-    "icon": Cloud,
-    "title": 'Cloud Infrastructure',
-    "description": 'Scalable cloud solutions and migration',
-    "href": '/it-services'
+    icon: Cloud,
+    title: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions and migration',
+    href: '/it-services'
   },
   {,
-    "icon": Code,
-    "title": 'Custom Software Development',
-    "description": 'Tailored applications to meet your specific business needs',
-    "href": '/services'
+    icon: Code,
+    title: 'Custom Software Development',
+    description: 'Tailored applications to meet your specific business needs',
+    href: '/services'
   },
   {,
-    "icon": Network,
-    "title": 'System Integration',
-    "description": 'Seamless integration of existing systems',
-    "href": '/services'
+    icon: Network,
+    title: 'System Integration',
+    description: 'Seamless integration of existing systems',
+    href: '/services'
   },
   {,
-    "icon": Zap,
-    "title": 'Digital Transformation',
-    "description": 'Complete digital overhaul of your business processes',
-    "href": '/services'
-  };
-],
+    icon: Zap,
+    title: 'Digital Transformation',
+    description: 'Complete digital overhaul of your business processes',
+    href: '/services'
+  }],
 ,
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {,
   const [isMenuOpen, setIsMenuOpen] = useState(false),
@@ -63,8 +62,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {,
     setIsMenuOpen(!isMenuOpen),
     if (onMenuClick) {,
       onMenuClick()
-    };
-  };
+    }};
 ,
   const closeMenu = () => {,
     setIsMenuOpen(false),
@@ -170,8 +168,7 @@ const servicesDropdown = [,
     description: 'Protect your digital assets',
     href: '/cybersecurity',
     features: ['Security AuditsThreat DetectionComplianceIncident Response']
-  };
-],
+  }],
 ,
 const solutionsDropdown = [,
   {,
@@ -194,8 +191,7 @@ const solutionsDropdown = [,
     description: 'Online store optimization',
     href: '/ecommerce',
     features: ['Platform DevelopmentPayment IntegrationSEO OptimizationAnalytics']
-  };
-],
+  }],
 ,
 const industriesDropdown = [,
   { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
@@ -203,8 +199,7 @@ const industriesDropdown = [,
   { name: 'Education', href: '/industries/education', icon: BookOpen },
   { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
   { name: 'Retail', href: '/industries/retail', icon: ShoppingBag },
-  { name: 'Government', href: '/industries/government', icon: Building2 };
-],
+  { name: 'Government', href: '/industries/government', icon: Building2 }],
 ,
 export default function Header() {,
   Menu,
@@ -233,12 +228,10 @@ const Header: React.FC = () => {,
       submenu: [,
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Network },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud };
-      ]
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud }]
     },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' };
-  ],
+    { name: 'Contact', href: '/contact' }],
 ,
   return (,
     <header className="bg-white shadow-lg sticky top-0 z-50">,
@@ -358,8 +351,7 @@ const Header: React.FC = () => {,
                           </Link>))};
                       </div>,
                     </div>,
-                  </motion.div>,
-                )};
+                  </motion.div>)};
               </AnimatePresence>,
             </div>,
             {/* Solutions Dropdown */};
@@ -393,8 +385,7 @@ const Header: React.FC = () => {,
                           </div>,
                         </Link>))};
                     </div>,
-                  </motion.div>,
-                )};
+                  </motion.div>)};
               </AnimatePresence>,
             </div>,
             {/* Industries Dropdown */};
@@ -423,8 +414,7 @@ const Header: React.FC = () => {,
                           <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>,
                         </Link>))};
                     </div>,
-                  </motion.div>,
-                )};
+                  </motion.div>)};
               </AnimatePresence>,
             </div>,
           {/* CTA Button */};
@@ -495,10 +485,8 @@ const Header: React.FC = () => {,
                           {subItem.name};
                         </Link>))};
                     </div>,
-                  </div>,
-                )};
-              </div>,
-            ))};
+                  </div>)};
+              </div>))};
           </nav>,
           {/* Contact Info */};
           <div className="hidden lg: flex items-center space-x-4 text-sm text-gray-600">,
@@ -552,12 +540,9 @@ const Header: React.FC = () => {,
                         >,
                           <subItem.icon className="h-4 w-4 mr-2" />,
                           {subItem.name};
-                        </Link>,
-                      ))};
-                    </div>,
-                  )};
-                </div>,
-              ))};
+                        </Link>))};
+                    </div>)};
+                </div>))};
             className="lg: hidden bg-white shadow-lg",
           >,
             <div className="px-4 py-6 space-y-4">,
@@ -601,10 +586,8 @@ const Header: React.FC = () => {,
                               {service.description};
                             </p>,
                           </div>,
-                        </button>,
-                      ))};
-                    </motion.div>,
-                  )};
+                        </button>))};
+                    </motion.div>)};
                 </AnimatePresence>,
               </div>,
               <Link,
@@ -683,19 +666,15 @@ const Header: React.FC = () => {,
             </div>,
           </div>)};
       </div>,
-    </header>,
-  )
+    </header>)
 };
 ,
 export default Header
 };
 ,
 export default Header,
-            </motion.div>,
-          )};
+            </motion.div>)};
         </AnimatePresence>,
       </nav>,
-    </header>,
-  )
-};
-}}))),
+    </header>)
+}}}))),

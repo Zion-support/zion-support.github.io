@@ -10,8 +10,7 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: Record<string, unknown>;
   noindex?: boolean;
-  nofollow?: boolean;
-}
+  nofollow?: boolean}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions';
@@ -131,7 +130,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
     </Head>
-  );
-};
+  )};
 
 export default SEOHead;

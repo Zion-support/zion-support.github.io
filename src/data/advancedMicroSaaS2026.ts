@@ -25,6 +25,5 @@
     &quot,marketSize&quot,: &apos,$4.2 billion (application security market)&apos,
     &quot,demoUrl&quot,: &apos,https: //ziontechgroup.com/demo&apos,
     &quot,documentationUrl&quot,: &apos,https: //ziontechgroup.com/docs&apos
-  };
-],
+  }],
 ,

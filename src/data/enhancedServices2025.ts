@@ -85,8 +85,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$1,299/mo',
         includes: ['Unlimited wordsCustom integrationsDedicated support'],
         features: ['All Professional featuresCustom AI modelsWhite-label optionsSLA guarantee']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-content-studio-pro',
       docs: 'https://ziontechgroup.com/services/ai-content-studio-pro#docs',
@@ -148,8 +147,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$999/mo',
         includes: ['Unlimited contactsCustom integrationsDedicated support'],
         features: ['All Growth featuresCustom AI modelsWhite-label optionsSLA guarantee']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-email-orchestrator',
       demo: 'https://ziontechgroup.com/demo/ai-email-orchestrator',
@@ -210,8 +208,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$1,499/mo',
         includes: ['Unlimited membersCustom integrationsDedicated support'],
         features: ['All Business featuresCustom AI modelsWhite-label optionsSLA guarantee']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-project-orchestrator',
       demo: 'https://ziontechgroup.com/demo/ai-project-orchestrator',
@@ -272,8 +269,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$4,999/mo',
         includes: ['Full analytics suiteReal-time reportsDedicated support'],
         features: ['All Business featuresCustom AI modelsWhite-label optionsSLA guarantee']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-financial-analytics-pro',
       demo: 'https://ziontechgroup.com/demo/ai-financial-analytics',
@@ -334,8 +330,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: 'Custom',
         includes: ['Unlimited quantum hoursCustom solutionsDedicated team'],
         features: ['All Business featuresCustom quantum circuitsWhite-label options24/7 support']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/quantum-optimization-suite',
       demo: 'https://ziontechgroup.com/demo/quantum-optimization',
@@ -396,8 +391,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$12,999/mo',
         includes: ['Full platform accessDedicated supportCustom solutions'],
         features: ['All Professional featuresWhite-label optionsCustom blockchain24/7 support']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',
       demo: 'https://ziontechgroup.com/demo/blockchain-platform',
@@ -458,8 +452,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$2,999/mo',
         includes: ['Unlimited devicesCustom solutionsDedicated support'],
         features: ['All Professional featuresWhite-label optionsCustom hardware24/7 support']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-edge-computing-platform',
       demo: 'https://ziontechgroup.com/demo/edge-computing',
@@ -520,8 +513,7 @@ export const enhancedServices2025: ServiceItem[] = [,
         price: '$5,999/mo',
         includes: ['Full security suiteDedicated supportCustom solutions'],
         features: ['All Professional featuresCustom AI modelsWhite-label options24/7 support']
-      };
-    ],
+      }],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-cybersecurity-suite',
       demo: 'https://ziontechgroup.com/demo/cybersecurity-suite',
@@ -546,7 +538,6 @@ export const enhancedServices2025: ServiceItem[] = [,
     estimatedDelivery: '3-4 weeks',
     supportLevel: 'Enterprise',
     tags: ['CybersecurityAIThreat DetectionComplianceSecurity']
-  };
-],
+  }],
 ,
 export default enhancedServices2025,

@@ -161,8 +161,7 @@ export default function Navigation() {
                                 {service.description}
                               </div>
                             </Link>
-                          );
-                        })}
+                          )})}
                       </div>
                       <div className="border-t border-gray-200 mt-4 pt-4 px-6">
                         <Link
@@ -216,8 +215,7 @@ export default function Navigation() {
                                 {solution.description}
                               </div>
                             </Link>
-                          );
-                        })}
+                          )})}
                       </div>
                       <div className="border-t border-gray-200 mt-4 pt-4 px-6">
                         <Link
@@ -450,5 +448,4 @@ export default function Navigation() {
         </div>
       </nav>
     </>
-  );
-}
+  )}

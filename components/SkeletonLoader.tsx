@@ -17,8 +17,7 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`};
         />))};
-    </div>,
-  )
+    </div>)
 };
 ,
 export default SkeletonLoader,

@@ -12,8 +12,7 @@ export const checkAccessibility = () => {
         element: img,
         message: 'Image missing alt text',
         severity: 'error'
-      });
-    }
+      })}
   });
   
   // Check for proper heading hierarchy
@@ -27,18 +26,13 @@ export const checkAccessibility = () => {
         element: heading,
         message: 'Heading level skipped',
         severity: 'warning'
-      });
-    }
-    lastLevel = level;
-  });
+      })}
+    lastLevel = level});
   
-  return issues;
-};
+  return issues};
 
 export const fixAccessibilityIssues = (issues) => {
   issues.forEach(issue => {
     if (issue.type === 'missing-alt') {
-      issue.element.alt = 'Image description';
-    }
-  });
-};
+      issue.element.alt = 'Image description'}
+  })};

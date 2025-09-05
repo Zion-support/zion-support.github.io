@@ -1,5 +1,5 @@
 };
-export const lazyLoadImage = ("img": HTMLImageElemen t) => {;
+export const lazyLoadImage = (img: HTMLImageElemen t) => {;
   const observer = new IntersectionObserver((entries) => {;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -7,6 +7,4 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {;
         if (image.dataset.src) {
           image.src = image.dataset.src,',',
           image.classList.remove('lazy'),
-          observer.unobserve(image)};
-      };
-}})),
+          observer.unobserve(image)}}}})),
