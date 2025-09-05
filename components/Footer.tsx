@@ -83,6 +83,41 @@ const companyInfo = {
   hours: '24/7 Support Available'
 };
 
+const company = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/team' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'News', href: '/news' }
+];
+
+const resources = [
+  { name: 'Documentation', href: '/docs' },
+  { name: 'API Reference', href: '/api-docs' },
+  { name: 'Tutorials', href: '/tutorials' },
+  { name: 'Guides', href: '/guides' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Support', href: '/support' }
+];
+
+const legal = [
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
+  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'Security', href: '/security' },
+  { name: 'Compliance', href: '/compliance' },
+  { name: 'Sitemap', href: '/sitemap' }
+];
+
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -100,19 +135,23 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <span>{companyInfo.phone}</span>
+                <a href={`tel:${companyInfo.phone}`} className="hover:text-blue-400 transition-colors">
+                  {companyInfo.phone}
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span>{companyInfo.email}</span>
+                <a href={`mailto:${companyInfo.email}`} className="hover:text-blue-400 transition-colors">
+                  {companyInfo.email}
+                </a>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
-                <span className="text-xs">{companyInfo.address}</span>
+                <MapPin className="w-4 h-4 text-blue-400 mt-0.5" />
+                <span className="text-gray-300">{companyInfo.address}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-400" />
-                <span className="text-xs">{companyInfo.hours}</span>
+                <span className="text-gray-300">{companyInfo.hours}</span>
               </div>
             </div>
           </div>
@@ -173,55 +212,63 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-md mx-auto text-center">
-            <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-            <p className="text-gray-300 text-sm mb-4">
-              Get the latest news and updates from Zion Tech Group
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-                Subscribe
-              </button>
-            </div>
+          {/* Resources & Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2 mb-6">
+              {resources.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legal.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Social Links & Copyright */}
+        {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex gap-4">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} {companyInfo.name}. All rights reserved.
             </div>
-            <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <p className="text-gray-500 text-xs mt-1">
-                Made with ❤️ for innovation
-              </p>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={social.name}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

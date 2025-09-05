@@ -1,15 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-
 interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
-
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
   children, 
   title = "Zion Tech Group", 
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
 }: MainLayoutProps) {

@@ -1,24 +1,19 @@
 #!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 function sh(cmd, opts = {}) {
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()}
-
 function getRepoFromGit() {
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo from origin');
   return { "owner": m[1], "repo": m[2] }}
-
 function getToken() {
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
   const remoteUrl = sh('git remote get-url origin');
   const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
   if (!tokenMatch) throw new Error('No GitHub token available');
   return tokenMatch[1]}
-
 async function gh(path, method = 'GET', body) {
   const token = getToken();
   const base = '"https": //api.github.com';
@@ -36,11 +31,9 @@ async function gh(path, method = 'GET', body) {
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }}
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data}
-
 async function listOpenPRs(owner, repo) {
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs}
-
 function resolveConflictsFiles() {
   // list conflicted files
   const output = sh('git diff --name-only --diff-filter=U || true');
@@ -50,7 +43,7 @@ function resolveConflictsFiles() {
     const content = fs.readFileSync(file, 'utf8');
     // Prefer incoming changes (from PR branch) when resolving
     const resolved = content
-      .replace(/<<<<<<<[\s\S]*?=======([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming)
+      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming)
       .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)}
@@ -59,7 +52,6 @@ function resolveConflictsFiles() {
   if (staged.split('\n').filter(Boolean).length) {
     sh('git commit -m ""chore": auto-resolve merge conflicts"')}
 }
-
 async function main() {
   const { owner, repo } = getRepoFromGit();
   console.log(`"Repository": ${owner}/${repo}`);
@@ -114,6 +106,4 @@ async function main() {
     try { sh('git stash pop || true')} catch {}
   }
 }
-
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)});
-

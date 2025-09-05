@@ -1,56 +1,22 @@
 #!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-class TargetedMergeResolver {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.resolvedFiles = [];
-    this.errors = []}
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
-
-  async resolveMergeConflicts() {
-    this.log('🔧 Resolving Merge Conflicts');
-    
-    try {
-      // Find files with merge conflicts
-      const files = this.getAllFiles(this.projectRoot, ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
-      
-      for (const file of files) {
-        if (this.hasMergeConflicts(file)) {
-          if (this.resolveFileConflicts(file)) {
-            this.resolvedFiles.push(file)}
-        }
-      }
-      
-      this.log(`✅ Resolved conflicts in ${this.resolvedFiles.length} files`);
-      return this.resolvedFiles} catch (error) {
-      this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
-      return []}
-  }
-
-  getAllFiles(dir, extensions) {
-    let files = [];
-    try {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath)}
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-    
-    return files}
-
-  hasMergeConflicts(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
+const fs = require('fs'
+const path = require('path'
+    this.log(' Resolving Merge Conflicts'
+      const files = this.getAllFiles(this.projectRoot, ['.tsx', '.ts', '.jsx', '.js', '.json', '.md'
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+      // Skip directories that can'
+      const content = fs.readFileSync(filePath, 'utf8'
+      return content.includes(''
+             content.includes(''
+             content.includes(''
+      let content = fs.readFileSync(filePath, 'utf8'
+      content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n[^\n]+\n/g, '$1'
+      content = content.replace(/\n/g, ''
+      content = content.replace(/\n/g, ''
+      content = content.replace(/[^\n]+\n/g, ''
+        fs.writeFileSync(filePath, content, 'utf8'
+    this.log(' Starting Targeted Merge Resolution'
+      this.log(' No merge conflicts found'
+      path.join(this.projectRoot, 'merge-resolution-report.json'
+    this.log(' Report saved to merge-resolution-report.json'
+cursor/fix-lint-push-and-merge-to-main-f3c1

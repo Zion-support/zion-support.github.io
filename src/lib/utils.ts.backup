@@ -1,19 +1,9 @@
-<<<<<<< HEAD:src/lib/utils.ts.backup
-<<<<<<< HEAD
+:src/lib/utils.ts.backup
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(..."inputs": ClassValue[]) {
   return twMerge(clsx(inputs))
-}
-=======
-import { type ClassValue, clsx } from "clsx";
-import { twMerge  } from 'tailwind-merge';
-
-export function cn(..."inputs": ClassValue[]) {
-  return twMerge(clsx(inputs))}
-;';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
-<<<<<<< HEAD import { type ClassValue,clsx } from "clsx" import { twMerge } from "tailwind-merge" export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) } ======= import { type ClassValue,clsx } from "clsx"; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs))} ;'; >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+}ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ import { type ClassValue,clsx } from "clsx" import { twMerge } from "tailwind-merge" export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) }  import { type ClassValue,clsx } from "clsx"; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs))} ;'; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/lib/utils.ts

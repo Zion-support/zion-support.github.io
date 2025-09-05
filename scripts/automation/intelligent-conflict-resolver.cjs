@@ -3,7 +3,6 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -25,7 +24,6 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -33,7 +31,6 @@ class $1 {
     if (level === "ERROR") {
   // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
-
     // Write errors to error file;
     if (level === "ERROR") {
   fs.appendFileSync(this.errorFile, logMessage + "\n")}
@@ -70,7 +67,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     try {
   const content = fs.readFileSync(filePath, "utf8");
       const conflictMarkers = this.extractConflictMarkers(content);
-
       if (conflictMarkers.length === 0) {
   return { "type": "no-conflict", "resolvable": false }
       }
@@ -96,10 +92,8 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
   extractConflictMarkers(content) {
   const markers = [];
     const lines = content.split("\n");
-
     for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
-
       if (line.startsWith("<<<<<<<")) {
   const marker = {
   "start": i,
@@ -135,7 +129,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
   const types = markers.map(marker => {
   const startContent = this.getConflictContent(marker, "start");
       const endContent = this.getConflictContent(marker, "end");
-
       if (this.isPackageJsonConflict(startContent, endContent));
         return "package-json";
       if (this.isLockFileConflict(startContent, endContent)) return "lock-file";
@@ -145,9 +138,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         return "component";
       if (this.isImportConflict(startContent, endContent)) return "import";
       if (this.isStyleConflict(startContent, endContent)) return "style";
-
       return "unknown"});
-
     return types[0] || "unknown"}
 ;
   getConflictContent(marker, side) {
@@ -205,10 +196,8 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
   generateResolutionStrategy(markers, filePath) {
   const strategies = [];
-
     markers.forEach(marker => {
   const type = this.determineConflictType([marker]);
-
       switch (type) {
   case "package-json":;
           strategies.push(Merge dependencies from both branches, keeping latest versions";
@@ -234,17 +223,14 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         "default": ;
           strategies.push("Manual review required")}
     });
-
     return strategies}
 ;
   async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);
     try {
   const content = fs.readFileSync(filePath, "utf8");
-
     try {
   const content = fs.readFileSync(filePath, "utf8");
       let resolvedContent = content;
-
       analysis.markers.forEach(marker => {
   const type = this.determineConflictType([marker]);
         switch (type) {
@@ -268,7 +254,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
             break;
           "default": this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`)}
       });
-
       if (resolvedContent !== content) {
   fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);
         return true}
@@ -284,16 +269,13 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     try {
   const startJson = JSON.parse(startSection);
       const endJson = JSON.parse(endSection);
-
   resolvePackageJsonConflict(content, marker) {
   // Simple "strategy": take the version with more dependencies;
     const startSection = this.getConflictSection(content, marker, "start");
     const endSection = this.getConflictSection(content, marker, "end");
-
     try {
   const startJson = JSON.parse(startSection);
       const endJson = JSON.parse(endSection);
-
       // Merge dependencies, preferring higher versions;
       const merged = { ...startJson }
 ;
@@ -339,7 +321,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
   getConflictSection(content, marker, side) {
   const lines = content.split("\n");
-
     if (side === "start") {
   return lines.slice(marker.start + 1, marker.separator).join("\n")} else {
   return lines.slice(marker.separator + 1, marker.end).join("\n")}
@@ -362,10 +343,8 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         "recommendations": this.generateOverallRecommendations(conflicts)}
       const reportPath = path.join(;
         this.projectRoot,conflict-resolution-report.json";
-
   async generateConflictReport(conflicts) {
   this.log("Generating conflict resolution report...");
-
     try {
   const report = {
   "timestamp": new Date().toISOString(),
@@ -395,7 +374,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
     const manualReview = conflicts.filter(c => !c.resolvable);
     if (autoResolvable.length > 0) {
   recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution`;
-
     if (autoResolvable.length > 0) {
   recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution";
       )}
@@ -424,14 +402,11 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
         return { "resolved": 0, "total": 0 }
       }
 ;
-
   async runConflictResolution() {
   this.log("Starting intelligent conflict resolution...");
-
     try {
   // Check for conflicts;
       const conflictFiles = await this.checkForConflicts();
-
       if (conflictFiles.length === 0) {
   this.log("No conflicts to resolve");
         return { "resolved": 0, "total": 0 }
@@ -440,7 +415,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
       // Analyze each conflict;
       const conflicts = [];
       let resolvedCount = 0;
-
       for (const filePath of conflictFiles) {
   const analysis = await this.analyzeConflictFile(filePath);
         conflicts.push(analysis);
@@ -453,10 +427,8 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
       // Generate report;
       await this.generateConflictReport(conflicts);
       this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved`;
-
       // Generate report;
       await this.generateConflictReport(conflicts);
-
       this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved";
       );
       return { "resolved": resolvedCount, "total": conflicts.length }
@@ -499,20 +471,16 @@ if (require.main === module) {
   resolver.log("Shutting down gracefully...");
     process.exit(0)});
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
-
 // Main execution;
 if (require.main === module) {
   const resolver = new IntelligentConflictResolver();
-
   // Handle graceful shutdown;
   process.on("SIGINT", () => {
   resolver.log("Shutting down gracefully...");
     process.exit(0)});
-
   process.on("SIGTERM", () => {
   resolver.log("Shutting down gracefully...");
     process.exit(0)});
-
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})}
 ;

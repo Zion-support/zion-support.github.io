@@ -1,7 +1,6 @@
-<<<<<<< HEAD:src/components/EnhancedPerformanceOptimizer.tsx.disabled
+:src/components/EnhancedPerformanceOptimizer.tsx.disabled
 
 ;
 import React, { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info     } from lucide-react';  interface PerformanceMetrics { "fcp": number;';';
-=======
 ; import React,{ useEffect,useState,useCallback,useMemo } from 'react' import { motion,AnimatePresence } from 'framer-motionimport { Zap,Gauge,HardDrive,Network,Cpu,HardDriveIcon,Battery,Wifi,WifiOff,RefreshCw,TrendingUp,TrendingDown,AlertTriangle,CheckCircle,Info } from lucide-react'; interface PerformanceMetrics { fcp: number;';';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/EnhancedPerformanceOptimizer.tsx

@@ -1,31 +1,15 @@
 import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Shield, Eye, Lock, Database, User, Mail, Phone } from 'lucide-react';
+import Layout from '../components/Layout';
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal information." />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Shield className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-5xl font-bold mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-xl text-blue-100">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
-            </p>
-            <p className="text-sm text-blue-200 mt-4">
-              Last updated: January 15, 2024
-            </p>
-          </div>
+    <Layout>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+          <p className="text-lg text-gray-600">
+            Your privacy is important to us. Learn how we collect, use, and protect your information.
+          </p>
         </div>
       </section>
 
@@ -34,31 +18,22 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Information We Collect
-                </h2>
-                
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start gap-4">
-                    <User className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Personal Information
-                      </h3>
-                      <p className="text-gray-600">
-                        We collect information you provide directly to us, such as when you create an account, 
-                        contact us, or use our services. This may include your name, email address, phone number, 
-                        company information, and any other information you choose to provide.
-                      </p>
-                    </div>
-                  </div>
-
+<p className="text-gray-600 mb-6">
+                <strong>Last updated: </strong> January 15, 2024
+              </p>
+              
+              <div className="prose max-w-none">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+                <p className="text-gray-600 mb-4">
+                  We collect information you provide directly to us, such as when you create an account,
+                  contact us, or use our services. This may include: </p>
+                <ul className="list-disc list-inside text-gray-600 mb-6">
+                  <li>Name and contact information</li>
+                  <li>Email address and phone number</li>
+                  <li>Company information</li>
+                  <li>Payment and billing information</li>
+                  <li>Communications with us</li>
+                </ul>
 
                   <div className="flex items-start gap-4">
                     <Database className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
@@ -68,7 +43,7 @@ export default function PrivacyPage() {
                       </h3>
                       <p className="text-gray-600">
                         We automatically collect certain information about your use of our services, including 
-                        your IP address, browser type, device information, pages visited, time spent on pages, 
+                        your IP address, browser type, device information, pages visited, time spent on pages,
                         and other usage statistics.
                       </p>
                     </div>
@@ -131,13 +106,21 @@ export default function PrivacyPage() {
                   </div>
                 </div>
 
+<h2 className="text-2xl font-bold text-gray-900 mb-4">5. Your Rights</h2>
+                <p className="text-gray-600 mb-4">
+                  You have the right to: </p>
+                <ul className="list-disc list-inside text-gray-600 mb-6">
+                  <li>Access your personal information</li>
+                  <li>Correct inaccurate information</li>
+                  <li>Delete your personal information</li>
+                  <li>Object to processing of your information</li>
+                  <li>Data portability</li>
+                </ul>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Information Sharing
-                </h2>
-                
-                <div className="space-y-4 mb-8">
-
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Contact Us</h2>
+                <p className="text-gray-600 mb-4">
+                  If you have any questions about this Privacy Policy, please contact us at: </p>
+                <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-600">
                     We do not sell, trade, or otherwise transfer your personal information to third parties without 
                     your consent, except in the following circumstances:

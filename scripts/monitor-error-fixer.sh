@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🔧 Console Error Fixer Monitor for Zion App"
-echo "=========================================="
+echo ""
 
 # Check if PM2 is running
 if ! command -v pm2 &> /dev/null; then
@@ -13,12 +13,12 @@ fi
 show_status() {
     echo ""
     echo "📊 Console Error Fixer Status:"
-    echo "=============================="
+    echo "=="
     pm2 show console-error-fixer 2>/dev/null || echo "❌ Console error fixer not running"
     
     echo ""
     echo "📋 Recent Error Fixer Logs:"
-    echo "============================"
+    echo ""
     pm2 logs console-error-fixer --lines 20 2>/dev/null || echo "❌ No logs available"
 }
 
@@ -26,7 +26,7 @@ show_status() {
 show_reports() {
     echo ""
     echo "📄 Error Fix Reports:"
-    echo "====================="
+    echo ""
     
     if [ -f "console-error-fix-report.json" ]; then
         echo "📊 Latest Report:"
@@ -47,7 +47,7 @@ show_reports() {
 show_current_errors() {
     echo ""
     echo "🔍 Current Error Scan:"
-    echo "======================"
+    echo "="
     
     # Run a quick error scan
     echo "🔍 Running quick error scan..."
@@ -62,7 +62,7 @@ show_current_errors() {
 trigger_fix() {
     echo ""
     echo "🔧 Manually Triggering Error Fixer:"
-    echo "==================================="
+    echo ""
     
     if pm2 show console-error-fixer >/dev/null 2>&1; then
         echo "🔄 Restarting console error fixer..."
@@ -82,7 +82,7 @@ trigger_fix() {
 show_overview() {
     echo ""
     echo "🤖 PM2 Automation Overview:"
-    echo "==========================="
+    echo "======"
     pm2 status
     
     echo ""
@@ -97,7 +97,7 @@ show_overview() {
 while true; do
     echo ""
     echo "🔧 Console Error Fixer Monitor Menu:"
-    echo "===================================="
+    echo "="
     echo "1. Show Error Fixer Status"
     echo "2. Show Error Reports"
     echo "3. Show Current Errors"

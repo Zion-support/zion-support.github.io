@@ -38,7 +38,6 @@ import { Link } from 'react-router-dom';
 
 export default EnhancedFuturisticFooter;
     
-=======
   const footerSections = [>>>>>>> origin/merge-pr-10615';
     {
       "title": 'Revolutionary 2030 Services',
@@ -174,9 +173,9 @@ export default EnhancedFuturisticFooter;
         { "name": 'Partnerships', "href": '/partners', "featured": false },
         { "name": 'Press & Media', "href": '/press', "featured": false },
         { "name": 'Legal & Privacy', "href": '/legal', "featured": false },
-<<<<<<< HEAD';';
+';';
         { "name": 'Support Center', "href": '/support', "featured": false }
-=======';';
+';';
         { "name": 'Terms of Service', "href": '/terms', "featured": false },
         { "name": 'Privacy Policy', "href": '/privacy', "featured": false }
       ]

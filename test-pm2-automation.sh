@@ -228,7 +228,7 @@ test_pm2_monitoring() {
 # Main test execution
 main() {
     echo -e "${PURPLE}🧪 PM2 Automation System Test Suite${NC}"
-    echo "=================================================="
+    echo "="
     echo
     
     local test_results=()
@@ -260,7 +260,7 @@ main() {
     # Display results
     echo
     echo -e "${PURPLE}📊 Test Results Summary${NC}"
-    echo "=================================================="
+    echo "="
     
     for result in "${test_results[@]}"; do
         echo "$result"
