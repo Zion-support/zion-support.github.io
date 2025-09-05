@@ -1,5 +1,30 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+import Header from './Header';
+import { Sidebar } from './Sidebar';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+export default function Layout({
+  children,
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
+  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
+  ogImage = '/og-image.jpg',
+  noIndex = false
+}: LayoutProps) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+=======
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -19,11 +44,18 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
 
 interface LayoutProps {
   title: string;
   description: string;
   children: React.ReactNode;
+<<<<<<< HEAD
   keywords?: string;
 }
 
@@ -43,11 +75,11 @@ export default function Layout({ title, description, children, keywords }: Layou
 
   const solutions = [
     { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
-    { name: 'Startup Solutions', href: '/startup', description: 'Scalable startup platforms' },
+    { name: 'Startup Solutions', href: '/solutions/startup', description: 'Scalable startup platforms' },
     { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
-    { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
-    { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
-    { name: 'Education', href: '/education', description: 'EdTech platforms' }
+    { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions' },
+    { name: 'Finance', href: '/industries/finance', description: 'Fintech and banking solutions' },
+    { name: 'Education', href: '/industries/education', description: 'EdTech platforms' }
   ];
 
   const quickLinks = [
@@ -58,6 +90,7 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];
+>>>>>>> main
 
   return (
     <>
@@ -66,9 +99,82 @@ export default function Layout({ title, description, children, keywords }: Layou
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords || "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Open Graph */}
+=======
+>>>>>>> main
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com" />
+<<<<<<< HEAD
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={ogImage} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": description,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/ziontechgroup"
+              ]
+            })
+          }}
+        />
+      </Head>
+      
+      <div className="min-h-screen flex">
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        <div className="flex-1 flex flex-col lg:ml-80">
+          <Header onMenuClick={() => setIsSidebarOpen(true)} />
+          <main className="flex-1 pt-16">
+            {children}
+          </main>
+          <Footer />
+=======
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="icon" href="/favicon.ico" />
@@ -100,6 +206,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               </div>
             </div>
           </div>
+>>>>>>> main
         </div>
 
         {/* Main Navigation */}
@@ -467,7 +574,10 @@ export default function Layout({ title, description, children, keywords }: Layou
                 <div className="text-gray-400 text-sm mb-4 md:mb-0">
                   © 2025 Zion Tech Group. All rights reserved.
                 </div>
-                <div className="flex space-x-6 text-sm">
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors">
+                    Sitemap
+                  </Link>
                   <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
                   </Link>
@@ -486,3 +596,30 @@ export default function Layout({ title, description, children, keywords }: Layou
     </>
   );
 }
+=======
+  title?: string;
+  description?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Layout;
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
