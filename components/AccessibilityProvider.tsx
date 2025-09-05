@@ -5,13 +5,17 @@ interface AccessibilityContextType {
   setFocus: (elementId: string) => void;
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
   const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
@@ -36,7 +40,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    throw new Error(
+      'useAccessibility must be used within an AccessibilityProvider'
+    );
   }
   return context;
 };

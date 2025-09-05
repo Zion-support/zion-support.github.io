@@ -14,7 +14,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
-  url = 'https://ziontechgroup.com'
+  url = 'https://ziontechgroup.com',
 }) => {
   return (
     <Head>

@@ -21,7 +21,7 @@ export function useApi<T>(
   const fetchData = async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const result = await apiCall();
       setData(result);

@@ -6,7 +6,8 @@ const AccessibilityEnhancer: React.FC = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    skipLink.className =
+      'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Add ARIA live region for announcements
@@ -35,12 +36,12 @@ const AccessibilityEnhancer: React.FC = () => {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
 
-      window.history.pushState = function(...args) {
+      window.history.pushState = function (...args) {
         originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
 
-      window.history.replaceState = function(...args) {
+      window.history.replaceState = function (...args) {
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };

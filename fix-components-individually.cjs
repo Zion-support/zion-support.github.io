@@ -45,7 +45,7 @@ export const useAccessibility = () => {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
-};`
+};`,
   },
   {
     path: 'components/Analytics.tsx',
@@ -65,7 +65,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   return null;
 };
 
-export default Analytics;`
+export default Analytics;`,
   },
   {
     path: 'components/LoadingSpinner.tsx',
@@ -90,7 +90,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className 
   );
 };
 
-export default LoadingSpinner;`
+export default LoadingSpinner;`,
   },
   {
     path: 'components/PerformanceMonitor.tsx',
@@ -137,7 +137,7 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;`
+export default PerformanceMonitor;`,
   },
   {
     path: 'components/SEOHead.tsx',
@@ -178,8 +178,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
-export default SEOHead;`
-  }
+export default SEOHead;`,
+  },
 ];
 
 files.forEach(file => {

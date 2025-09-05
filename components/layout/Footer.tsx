@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,7 +17,8 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
-              Leading provider of AI-powered technology solutions and digital transformation services.
+              Leading provider of AI-powered technology solutions and digital
+              transformation services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -31,10 +39,32 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li>
+                <Link href="/" className="text-gray-300 hover:text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-300 hover:text-white"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

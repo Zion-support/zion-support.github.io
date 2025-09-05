@@ -20,7 +20,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   quality = 75,
-  sizes = '100vw'
+  sizes = '100vw',
 }) => {
   return (
     <Image

@@ -9,15 +9,17 @@ interface MainLayoutProps {
   description?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title,
+  description,
+}) => {
   return (
     <>
       <SEOHead title={title} description={description} />
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </div>
     </>

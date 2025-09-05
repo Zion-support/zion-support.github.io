@@ -30,11 +30,11 @@ class EnhancedAppOptimizer {
       // Analyze bundle size
       execSync('npm run analyze', { stdio: 'pipe' });
       this.log('✅ Bundle analysis completed');
-      
+
       // Optimize images
       execSync('npm run optimize:images', { stdio: 'pipe' });
       this.log('✅ Image optimization completed');
-      
+
       return true;
     } catch (error) {
       this.log(`❌ Bundle optimization failed: ${error.message}`);
@@ -48,11 +48,11 @@ class EnhancedAppOptimizer {
       // Run performance audit
       execSync('npm run perf:audit', { stdio: 'pipe' });
       this.log('✅ Performance audit completed');
-      
+
       // Run lighthouse
       execSync('npm run perf:lighthouse', { stdio: 'pipe' });
       this.log('✅ Lighthouse audit completed');
-      
+
       return true;
     } catch (error) {
       this.log(`❌ Performance optimization failed: ${error.message}`);
@@ -66,11 +66,11 @@ class EnhancedAppOptimizer {
       // Generate sitemap
       execSync('npm run sitemap:generate', { stdio: 'pipe' });
       this.log('✅ Sitemap generation completed');
-      
+
       // Generate search index
       execSync('npm run search:index', { stdio: 'pipe' });
       this.log('✅ Search index generation completed');
-      
+
       return true;
     } catch (error) {
       this.log(`❌ SEO optimization failed: ${error.message}`);
@@ -84,11 +84,11 @@ class EnhancedAppOptimizer {
       // Run accessibility tests
       execSync('npm run test:accessibility', { stdio: 'pipe' });
       this.log('✅ Accessibility tests completed');
-      
+
       // Run accessibility checker
       execSync('npm run automation:accessibility', { stdio: 'pipe' });
       this.log('✅ Accessibility checker completed');
-      
+
       return true;
     } catch (error) {
       this.log(`❌ Accessibility optimization failed: ${error.message}`);
@@ -102,11 +102,11 @@ class EnhancedAppOptimizer {
       // Run security audit
       execSync('npm run security:audit', { stdio: 'pipe' });
       this.log('✅ Security audit completed');
-      
+
       // Run security scanner
       execSync('npm run automation:security-audit', { stdio: 'pipe' });
       this.log('✅ Security scanner completed');
-      
+
       return true;
     } catch (error) {
       this.log(`❌ Security optimization failed: ${error.message}`);
@@ -123,13 +123,13 @@ class EnhancedAppOptimizer {
         performance: await this.optimizePerformance(),
         seo: await this.optimizeSEO(),
         accessibility: await this.optimizeAccessibility(),
-        security: await this.optimizeSecurity()
+        security: await this.optimizeSecurity(),
       },
       summary: {
         totalOptimizations: 5,
         successfulOptimizations: 0,
-        failedOptimizations: 0
-      }
+        failedOptimizations: 0,
+      },
     };
 
     // Calculate summary
@@ -141,28 +141,36 @@ class EnhancedAppOptimizer {
       }
     });
 
-    const reportPath = path.join(__dirname, 'reports', 'enhanced-optimization-report.json');
+    const reportPath = path.join(
+      __dirname,
+      'reports',
+      'enhanced-optimization-report.json'
+    );
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-    
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved to: ${reportPath}`);
-    
+
     return report;
   }
 
   async run() {
     this.log('🚀 Starting Enhanced App Optimizer...');
-    
+
     try {
       const report = await this.generateReport();
-      
+
       this.log('🏁 Enhanced App Optimizer completed');
-      this.log(`✅ Successful optimizations: ${report.summary.successfulOptimizations}`);
-      this.log(`❌ Failed optimizations: ${report.summary.failedOptimizations}`);
-      
+      this.log(
+        `✅ Successful optimizations: ${report.summary.successfulOptimizations}`
+      );
+      this.log(
+        `❌ Failed optimizations: ${report.summary.failedOptimizations}`
+      );
+
       return report;
     } catch (error) {
       this.log(`💥 Enhanced App Optimizer failed: ${error.message}`);

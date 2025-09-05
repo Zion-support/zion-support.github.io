@@ -15,19 +15,23 @@ interface NotificationContextType {
   removeNotification: (id: string) => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextType | undefined>(
+  undefined
+);
 
 interface NotificationProviderProps {
   children: ReactNode;
 }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({
+  children,
+}) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
-    
+
     setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {
@@ -38,11 +42,15 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   };
 
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
+    setNotifications(prev =>
+      prev.filter(notification => notification.id !== id)
+    );
   };
 
   return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+    <NotificationContext.Provider
+      value={{ notifications, addNotification, removeNotification }}
+    >
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
@@ -54,7 +62,7 @@ const NotificationContainer: React.FC = () => {
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map((notification) => (
+      {notifications.map(notification => (
         <NotificationItem
           key={notification.id}
           notification={notification}
@@ -86,7 +94,12 @@ const NotificationItem: React.FC<{
   const Icon = icons[notification.type];
 
   return (
-    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
+    <div
+      className={
+        colors[notification.type] +
+        ' text-white p-4 rounded-lg shadow-lg max-w-sm'
+      }
+    >
       <div className="flex items-start">
         <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />
         <div className="flex-1">
@@ -107,7 +120,9 @@ const NotificationItem: React.FC<{
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error(
+      'useNotifications must be used within a NotificationProvider'
+    );
   }
   return context;
 };

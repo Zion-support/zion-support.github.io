@@ -11,15 +11,21 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
+        const navigationEntry = entries.find(
+          entry => entry.entryType === 'navigation'
+        );
+
         if (navigationEntry) {
           setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+            loadTime:
+              navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTime:
+              navigationEntry.domContentLoadedEventEnd -
+              navigationEntry.domContentLoadedEventStart,
+            memoryUsage:
+              (window.performance as any).memory?.usedJSHeapSize || 0,
           });
         }
       });

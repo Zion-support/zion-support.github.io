@@ -15,7 +15,7 @@ class ComprehensiveDeploymentAutomator {
       typeCheck: { success: false, duration: 0 },
       security: { success: false, duration: 0 },
       performance: { success: false, duration: 0 },
-      deployment: { success: false, duration: 0 }
+      deployment: { success: false, duration: 0 },
     };
   }
 
@@ -36,14 +36,14 @@ class ComprehensiveDeploymentAutomator {
   async runStep(stepName, command, timeout = 300000) {
     this.log(`🔄 Running ${stepName}...`);
     const startTime = Date.now();
-    
+
     try {
-      execSync(command, { 
+      execSync(command, {
         stdio: 'pipe',
         timeout,
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       const duration = Date.now() - startTime;
       this.log(`✅ ${stepName} completed successfully (${duration}ms)`);
       return { success: true, duration };
@@ -84,35 +84,47 @@ class ComprehensiveDeploymentAutomator {
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    const result = await this.runStep('Security Audit', 'npm run security:audit');
+    const result = await this.runStep(
+      'Security Audit',
+      'npm run security:audit'
+    );
     this.deploymentResults.security = result;
     return result.success;
   }
 
   async runPerformanceCheck() {
     this.log('⚡ Running performance check...');
-    const result = await this.runStep('Performance Check', 'npm run perf:audit');
+    const result = await this.runStep(
+      'Performance Check',
+      'npm run perf:audit'
+    );
     this.deploymentResults.performance = result;
     return result.success;
   }
 
   async deployToStaging() {
     this.log('🚀 Deploying to staging...');
-    const result = await this.runStep('Staging Deployment', 'npm run deploy:staging');
+    const result = await this.runStep(
+      'Staging Deployment',
+      'npm run deploy:staging'
+    );
     this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async deployToProduction() {
     this.log('🌟 Deploying to production...');
-    const result = await this.runStep('Production Deployment', 'npm run deploy:production');
+    const result = await this.runStep(
+      'Production Deployment',
+      'npm run deploy:production'
+    );
     this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async generateDeploymentReport() {
     this.log('📊 Generating deployment report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       deploymentResults: this.deploymentResults,
@@ -121,9 +133,9 @@ class ComprehensiveDeploymentAutomator {
         successfulSteps: 0,
         failedSteps: 0,
         totalDuration: 0,
-        successRate: 0
+        successRate: 0,
       },
-      recommendations: []
+      recommendations: [],
     };
 
     // Calculate summary
@@ -137,7 +149,8 @@ class ComprehensiveDeploymentAutomator {
     });
 
     if (report.summary.totalSteps > 0) {
-      report.summary.successRate = (report.summary.successfulSteps / report.summary.totalSteps) * 100;
+      report.summary.successRate =
+        (report.summary.successfulSteps / report.summary.totalSteps) * 100;
     }
 
     // Generate recommendations
@@ -154,27 +167,33 @@ class ComprehensiveDeploymentAutomator {
       report.recommendations.push('Fix TypeScript errors before deployment');
     }
     if (!this.deploymentResults.security.success) {
-      report.recommendations.push('Address security vulnerabilities before deployment');
+      report.recommendations.push(
+        'Address security vulnerabilities before deployment'
+      );
     }
     if (!this.deploymentResults.performance.success) {
       report.recommendations.push('Optimize performance before deployment');
     }
 
-    const reportPath = path.join(__dirname, 'reports', 'deployment-report.json');
+    const reportPath = path.join(
+      __dirname,
+      'reports',
+      'deployment-report.json'
+    );
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-    
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Deployment report saved to: ${reportPath}`);
-    
+
     return report;
   }
 
   async runStagingDeployment() {
     this.log('🚀 Starting staging deployment...');
-    
+
     try {
       // Pre-deployment checks
       await this.runBuild();
@@ -183,17 +202,17 @@ class ComprehensiveDeploymentAutomator {
       await this.runTypeCheck();
       await this.runSecurityAudit();
       await this.runPerformanceCheck();
-      
+
       // Deploy to staging
       await this.deployToStaging();
-      
+
       // Generate report
       const report = await this.generateDeploymentReport();
-      
+
       this.log('🏁 Staging deployment completed');
       this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
       this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
-      
+
       return report;
     } catch (error) {
       this.log(`💥 Staging deployment failed: ${error.message}`);
@@ -203,7 +222,7 @@ class ComprehensiveDeploymentAutomator {
 
   async runProductionDeployment() {
     this.log('🌟 Starting production deployment...');
-    
+
     try {
       // Pre-deployment checks
       await this.runBuild();
@@ -212,17 +231,17 @@ class ComprehensiveDeploymentAutomator {
       await this.runTypeCheck();
       await this.runSecurityAudit();
       await this.runPerformanceCheck();
-      
+
       // Deploy to production
       await this.deployToProduction();
-      
+
       // Generate report
       const report = await this.generateDeploymentReport();
-      
+
       this.log('🏁 Production deployment completed');
       this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
       this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
-      
+
       return report;
     } catch (error) {
       this.log(`💥 Production deployment failed: ${error.message}`);
@@ -233,9 +252,11 @@ class ComprehensiveDeploymentAutomator {
   async run() {
     const args = process.argv.slice(2);
     const environment = args[0] || 'staging';
-    
-    this.log(`🚀 Starting Comprehensive Deployment Automator for ${environment}...`);
-    
+
+    this.log(
+      `🚀 Starting Comprehensive Deployment Automator for ${environment}...`
+    );
+
     try {
       let report;
       if (environment === 'production') {
@@ -243,7 +264,7 @@ class ComprehensiveDeploymentAutomator {
       } else {
         report = await this.runStagingDeployment();
       }
-      
+
       return report;
     } catch (error) {
       this.log(`💥 Deployment automator failed: ${error.message}`);

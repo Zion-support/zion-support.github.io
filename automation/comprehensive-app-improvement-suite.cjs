@@ -5,7 +5,6 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Starting Comprehensive App Improvement Suite');
-console.log('================================================');
 
 const improvements = [
   {
@@ -116,7 +115,6 @@ async function runAllImprovements() {
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
   console.log('\n📊 COMPREHENSIVE IMPROVEMENT REPORT');
-  console.log('====================================');
   console.log(`Total Duration: ${results.totalDuration}ms`);
   console.log(`Successful: ${results.successCount}/${improvements.length}`);
   console.log(`Failed: ${results.failureCount}/${improvements.length}`);

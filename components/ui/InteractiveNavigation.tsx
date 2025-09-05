@@ -13,7 +13,10 @@ interface InteractiveNavigationProps {
   className?: string;
 }
 
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items,
+  className = '',
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -31,7 +34,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {items.map((item) => (
+            {items.map(item => (
               <div key={item.label} className="relative">
                 {item.children ? (
                   <div className="relative">
@@ -44,7 +47,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                     </button>
                     {activeDropdown === item.label && (
                       <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">
-                        {item.children.map((child) => (
+                        {item.children.map(child => (
                           <Link
                             key={child.href}
                             href={child.href}
@@ -78,7 +81,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
-            {items.map((item) => (
+            {items.map(item => (
               <div key={item.label}>
                 {item.children ? (
                   <div>
@@ -91,7 +94,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                     </button>
                     {activeDropdown === item.label && (
                       <div className="pl-4">
-                        {item.children.map((child) => (
+                        {item.children.map(child => (
                           <Link
                             key={child.href}
                             href={child.href}

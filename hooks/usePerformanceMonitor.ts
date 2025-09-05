@@ -8,16 +8,16 @@ declare global {
     startTime: number;
     duration: number;
   }
-  
+
   interface PerformanceNavigationTiming extends PerformanceEntry {
     loadEventEnd: number;
     loadEventStart: number;
   }
-  
+
   interface PerformancePaintTiming extends PerformanceEntry {
     name: string;
   }
-  
+
   interface PerformanceEventTiming extends PerformanceEntry {
     processingStart: number;
   }
@@ -39,13 +39,17 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     }
 
     const updateMetrics = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = window.performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;
-      
+
       if (navigation) {
         setMetrics({
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          renderTime:
+            navigation.domContentLoadedEventEnd -
+            navigation.domContentLoadedEventStart,
           memoryUsage: memory?.usedJSHeapSize || 0,
           fps: 60,
         });

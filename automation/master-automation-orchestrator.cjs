@@ -135,7 +135,6 @@ async function main() {
     const report = generateReport(results);
 
     console.log('\n📊 AUTOMATION SUMMARY');
-    console.log('====================');
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);

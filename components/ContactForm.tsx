@@ -21,9 +21,15 @@ const ContactForm: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -59,7 +65,10 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Name *
           </label>
           <input
@@ -73,7 +82,10 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Email *
           </label>
           <input
@@ -87,10 +99,13 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Company
           </label>
           <input
@@ -103,7 +118,10 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Phone
           </label>
           <input
@@ -118,7 +136,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="service"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           Service Interest
         </label>
         <select
@@ -138,7 +159,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           Message *
         </label>
         <textarea

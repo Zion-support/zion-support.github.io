@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -29,7 +28,7 @@ jest.mock('next/router', () => ({
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props) => {
+  default: props => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
   },
@@ -39,7 +38,11 @@ jest.mock('next/image', () => ({
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-    return <a href={href} {...props}>{children}</a>;
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
   },
 }));
 
@@ -65,15 +68,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
-<<<<<<< HEAD
-;
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {; constructor() {}; disconnect() {}; observe() {}; unobserve() {}};
-;
-=======
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -87,4 +82,3 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

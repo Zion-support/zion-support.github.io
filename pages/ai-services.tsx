@@ -7,7 +7,10 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more." />
+        <meta
+          name="description"
+          content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <ErrorBoundary level="page">

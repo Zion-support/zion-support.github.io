@@ -20,7 +20,7 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
   useEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
-      
+
       if (width >= breakpoints.xl) {
         setScreenSize('xl');
       } else if (width >= breakpoints.lg) {

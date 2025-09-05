@@ -21,8 +21,6 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       let content = originalContent
         // Remove merge conflict markers
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
-        .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
