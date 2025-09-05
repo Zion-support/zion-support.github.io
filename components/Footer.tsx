@@ -15,25 +15,62 @@ import {
 
 const services = {
   'AI Solutions': [
-    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
-    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
-    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'Machine Learning', href: '/ai-services#machine-learning' },
+    { name: 'Natural Language Processing', href: '/ai-services#nlp' },
+    { name: 'Computer Vision', href: '/ai-services#computer-vision' },
+    { name: 'Predictive Analytics', href: '/ai-services#predictive-analytics' }
   ],
   'IT Services': [
-    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-    { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'System Administration', href: '/it-services#system-admin' }
   ],
   'Micro SaaS': [
-    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'SaaS Development', href: '/micro-saas#development' },
+    { name: 'API Integration', href: '/micro-saas#api-integration' },
+    { name: 'Cloud Solutions', href: '/micro-saas#cloud-solutions' },
+    { name: 'Business Automation', href: '/micro-saas#automation' }
+  ]
+};
+
+const solutions = {
+  'By Industry': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' }
+  ],
+  'By Solution': [
+    { name: 'Enterprise', href: '/solutions/enterprise' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Solutions', href: '/solutions/custom' },
+    { name: 'Startup Solutions', href: '/solutions/startup' }
+  ]
+};
+
+const resources = {
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News', href: '/news' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Partners', href: '/partners' }
   ]
 };
 
@@ -53,9 +90,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               {companyInfo.description}
@@ -99,42 +136,43 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Solutions */}
+          {Object.entries(solutions).map(([category, solutionList]) => (
+            <div key={category}>
+              <h4 className="text-lg font-semibold mb-4">{category}</h4>
+              <ul className="space-y-2">
+                {solutionList.map((solution) => (
+                  <li key={solution.name}>
+                    <Link 
+                      href={solution.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      {solution.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Resources & Company */}
+          {Object.entries(resources).map(([category, resourceList]) => (
+            <div key={category}>
+              <h4 className="text-lg font-semibold mb-4">{category}</h4>
+              <ul className="space-y-2">
+                {resourceList.map((resource) => (
+                  <li key={resource.name}>
+                    <Link 
+                      href={resource.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      {resource.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Newsletter Signup */}

@@ -23,11 +23,47 @@ const navigation = [
     children: [
       { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure solutions' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' }
+    ]
+  },
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    children: [
+      { name: 'Enterprise', href: '/solutions/enterprise', description: 'Enterprise solutions' },
+      { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology' },
+      { name: 'Finance', href: '/solutions/finance', description: 'Financial services' },
+      { name: 'Education', href: '/solutions/education', description: 'Educational technology' },
+      { name: 'Government', href: '/solutions/government', description: 'Government solutions' }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare industry' },
+      { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
+      { name: 'Education', href: '/industries/education', description: 'Education sector' },
+      { name: 'Government', href: '/industries/government', description: 'Government sector' },
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing industry' },
+      { name: 'Retail', href: '/industries/retail', description: 'Retail industry' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'White Papers', href: '/white-papers', description: 'Technical documentation' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational webinars' },
+      { name: 'Help Center', href: '/help', description: 'Support and help' }
     ]
   },
   { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ];
 
