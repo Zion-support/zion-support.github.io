@@ -5,33 +5,32 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const baseUrl = 'https://ziontechgroup.com';
+const baseUrl = '"https": //ziontechgroup.com';
 
 // Define all pages with their priority and change frequency
-const pages = [
-  { url: '', priority: '1.0', changefreq: 'daily' },
-  { url: '/services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
-  { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/about', priority: '0.8', changefreq: 'monthly' },
-  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-  { url: '/pricing', priority: '0.8', changefreq: 'weekly' },
-  { url: '/faq', priority: '0.7', changefreq: 'monthly' },
-  { url: '/quantum-computing', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cybersecurity', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cloud-devops', priority: '0.8', changefreq: 'weekly' },
-  { url: '/services-catalog', priority: '0.7', changefreq: 'weekly' },
-  { url: '/docs', priority: '0.6', changefreq: 'monthly' },
-  { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
-  { url: '/terms', priority: '0.5', changefreq: 'yearly' }
+const pages = [{ url: '', "priority": '1.0', "changefreq": 'daily' },
+  { "url": '/services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/micro-saas', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/ai-services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/it-services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/about', "priority": '0.8', "changefreq": 'monthly' },
+  { "url": '/contact', "priority": '0.8', "changefreq": 'monthly' },
+  { "url": '/pricing', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/faq', "priority": '0.7', "changefreq": 'monthly' },
+  { "url": '/quantum-computing', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/cybersecurity', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/cloud-devops', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/services-catalog', "priority": '0.7', "changefreq": 'weekly' },
+  { "url": '/docs', "priority": '0.6', "changefreq": 'monthly' },
+  { "url": '/privacy', "priority": '0.5', "changefreq": 'yearly' },
+  { "url": '/terms', "priority": '0.5', "changefreq": 'yearly' }
 ];
 
 function generateSitemap() {
   const currentDate = new Date().toISOString();
   
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  let sitemap = "<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">";
 
   pages.forEach(page => {
     const fullUrl = `${baseUrl}${page.url}`;
@@ -43,26 +42,26 @@ function generateSitemap() {
     <priority>${page.priority}</priority>
   </url>`});
 
-  sitemap += `
-</urlset>`;
+  sitemap += "
+</urlset>";
 
   // Write sitemap to public directory
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   
   console.log('✅ Enhanced sitemap generated successfully!');
-  console.log(`📄 Sitemap saved to: ${sitemapPath}`);
-  console.log(`🔗 Total URLs: ${pages.length}`)}
+  console.log(`📄 Sitemap saved "to": ${sitemapPath}`);
+  console.log(`🔗 Total "URLs": ${pages.length}`)}
 
 // Generate robots.txt as well
 function generateRobotsTxt() {
-  const robotsContent = `User-agent: *
+  const robotsContent = `User-"agent": *
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 
 # Crawl-delay for respectful crawling
-Crawl-delay: 1
+Crawl-"delay": 1
 
 # Block access to admin and private areas
 Disallow: /admin/
@@ -76,10 +75,10 @@ Disallow: /scripts/
   fs.writeFileSync(robotsPath, robotsContent);
   
   console.log('✅ robots.txt generated successfully!');
-  console.log(`📄 Robots.txt saved to: ${robotsPath}`)}
+  console.log(`📄 Robots.txt saved "to": ${robotsPath}`)}
 
 // Run if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `"file": //${process.argv[1]}`) {
   generateSitemap();
   generateRobotsTxt()}
 

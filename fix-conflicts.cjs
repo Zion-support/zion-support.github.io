@@ -14,8 +14,7 @@ function fixMergeConflicts(filePath) {
   console.log(`Fixed conflicts in ${filePath}`)}
 
 // Fix the problematic files
-const filesToFix = [
-  'pages/ai-services.tsx',
+const filesToFix = ['pages/ai-services.tsx',
   'pages/it-services.tsx', 
   'pages/micro-saas.tsx'
 ];

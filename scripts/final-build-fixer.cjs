@@ -22,7 +22,7 @@ class FinalBuildFixer {
       console.log(`\n✅ Fixed ${this.fixedFiles.length} files`)
       console.log(`❌ Errors in ${this.errors.length} files`)
     } catch (error) {
-      console.error('Error fixing files:', error.message)
+      console.error('Error fixing "files": ', error.message)
     }
   }
   async fixFile(filePath) {
@@ -30,25 +30,24 @@ class FinalBuildFixer {
       const content = fs.readFileSync(filePath, 'utf8')
       let fixedContent = content
       // Fix specific patterns
-      const patterns = [
-        // Fix corrupted meta descriptions
-        {pattern: /content="The page you"re looking for doesn"t exist."/g,replacement: 'content="The page you\'re looking for doesn\'t exist."'};
+      const patterns = [// Fix corrupted meta descriptions
+        {"pattern": /content="The page you"re looking for doesn"t exist."/g,"replacement": 'content="The page you\'re looking for doesn\'t exist."'};
         // Fix extra closing braces
         {
-          pattern: /\n}\s*$/gm;
-          replacement: '\n}'
+          "pattern": /\n}\s*$/gm;
+          "replacement": '\n}'
         };
         // Fix corrupted JSX attributes
-        {pattern: /content="([^"]*)"\s*\/>/g,replacement: 'content="$1" />'};
+        {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1" />'};
         // Fix missing function declarations
         {
-          pattern: /const Layout = dynamic\(\(\) => import\("\.\.\/components\/Layout"\), \{ ssr: false \}\)\n\}/g;
-          replacement: 'const Layout = dynamic(() => import("../components/Layout"), { ssr: false })'
+          "pattern": /const Layout = dynamic\(\(\) => import\("\.\.\/components\/Layout"\), \{ "ssr": false \}\)\n\}/g;
+          "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr": false })'
         };
         // Fix extra closing braces in functions
         {
-          pattern: /export default function \w+\(\) \{\n {2}return \(\n {4}<>\n {6}<Head>/g;
-          replacement: 'export default function NotFound() {\n  return (\n    <>\n      <Head>'
+          "pattern": /export default function \w+\(\) \{\n {2}return \(\n {4}<>\n {6}<Head>/g;
+          "replacement": 'export default function NotFound() {\n  return (\n    <>\n      <Head>'
         }
       ]
       for (const { pattern, replacement } of patterns) {
@@ -57,7 +56,7 @@ class FinalBuildFixer {
       // Write the fixed content
       fs.writeFileSync(filePath, fixedContent)
       this.fixedFiles.push(filePath)
-      console.log(`✅ Fixed: ${filePath}`)
+      console.log(`✅ "Fixed": ${filePath}`)
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`)
       console.error(`❌ Error fixing ${filePath}:`, error.message)

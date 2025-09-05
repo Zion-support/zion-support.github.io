@@ -15,9 +15,9 @@ export function SuggestedTalents($1) {
     try {
       const { data, error } = await supabase
         .from("suggested_talents")
-        .select(`
+        .select("
           *,
-          talent_profile: talent_i d(
+          "talent_profile": talent_i d(
             id,
             user_id,
             full_name,
@@ -32,18 +32,17 @@ export function SuggestedTalents($1) {
             category,
             company_name
           )
-        `)
+        ")
         .eq("job_id", jobId);
 
       if(error) throw error;
       setTalents(data || []);
     } catch (error) {
-      console.error("Error fetching suggested talents:", error);
+      console.error("Error fetching suggested "talents": ", error);
       toast({
-        title: "Error",
-        description: "Failed to load suggested talents.Please try again later.",
-        variant: "destructive",
-      });
+        "title": "Error",
+        "description": "Failed to load suggested talents.Please try again later.",
+        "variant": "destructive"});
     } finally {
       setIsLoading(false);
     }
@@ -52,17 +51,15 @@ export function SuggestedTalents($1) {
   const handleViewProfile = (props) => {
     
     toast({
-      title: "View Profile",
-      description: `Navigating to talent profile: ${talentId}`,
-    };);
+      "title": "View Profile",
+      "description": `Navigating to talent profile: ${talentId}`};);
   };
 
   const handleInvite = (props) => {
     
     toast({
-      title: "Invite Talent",
-      description: `Inviting talent: ${talentId}`,
-    };);
+      "title": "Invite Talent",
+      "description": `Inviting talent: ${talentId}`};);
   };
 
   const handleRefresh = (props) => {
@@ -73,7 +70,7 @@ export function SuggestedTalents($1) {
   };
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -87,16 +84,15 @@ export function SuggestedTalents($1) {
   // Transform data to match JobMatchCard component props
   const transformedTalents = talents.map(talent => {
     return {
-      id: talen t.talent_profile?.id || ",
-      name: talen t.talent_profile?.full_name || 'Talent',
-      title: talen t.talent_profile?.professional_title || 'Talent',
-      company: talen t.talent_profile?.company_name || ",
-      avatar: talen t.talent_profile?.profile_picture_url || ",
-      location: talen t.talent_profile?.location || 'Remote',
-      category: talen t.talent_profile?.category || 'Technology',
-      matchPercent: talen t.match_score || 85,
-      skills: talen t.talent_profile?.skills || [],
-    };;
+      "id": talen t.talent_profile?.id || ",
+      "name": talen t.talent_profile?.full_name || 'Talent',
+      "title": talen t.talent_profile?.professional_title || 'Talent',
+      "company": talen t.talent_profile?.company_name || ",
+      "avatar": talen t.talent_profile?.profile_picture_url || ",
+      "location": talen t.talent_profile?.location || 'Remote',
+      "category": talen t.talent_profile?.category || 'Technology',
+      "matchPercent": talen t.match_score || 85,
+      "skills": talen t.talent_profile?.skills || []};
   });
 
   return (<CardclassName="border-zion-blue-light bg-zion-blue">

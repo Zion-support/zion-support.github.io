@@ -2,7 +2,7 @@ import React from 'react';
 
 interface AlertProps {
 
-  children: React.ReactNode;';
+  "children": React.ReactNode;';
   className?: string;';';
   variant?: 'default' | 'destructive';
 
@@ -10,14 +10,14 @@ interface AlertProps {
 
 interface AlertTitleProps {
 
-  children: React.ReactNode;
+  "children": React.ReactNode;
   className?: string;
 
 }
 
 interface AlertDescriptionProps {
 
-  children: React.ReactNode;
+  "children": React.ReactNode;
   className?: string;
 
 }

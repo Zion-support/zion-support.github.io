@@ -7,20 +7,20 @@ const path = require('path');
 class ErrorAnalyzer {
   constructor() {
     this.errors = {
-      typescript: [],
-      eslint: [],
-      build: [],
-      dependency: [],
-      security: [],
-      performance: [],
-      other: []
+      "typescript": [],
+      "eslint": [],
+      "build": [],
+      "dependency": [],
+      "security": [],
+      "performance": [],
+      "other": []
     };
     this.errorReport = {
-      timestamp: new Date().toISOString(),
-      totalErrors: 0,
-      errorCategories: {},
-      priorityErrors: [],
-      recommendations: []
+      "timestamp": new Date().toISOString(),
+      "totalErrors": 0,
+      "errorCategories": {},
+      "priorityErrors": [],
+      "recommendations": []
     }}
 
   async analyzeAllErrors() {
@@ -37,7 +37,7 @@ class ErrorAnalyzer {
       
       console.log('✅ Error analysis completed successfully');
       return this.errorReport} catch (error) {
-      console.error('❌ Error during analysis:', error.message);
+      console.error('❌ Error during "analysis": ', error.message);
       throw error}
   }
 
@@ -46,9 +46,9 @@ class ErrorAnalyzer {
     
     try {
       const result = execSync('npx tsc --noEmit --pretty false', { 
-        encoding: 'utf8', 
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "encoding": 'utf8', 
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       });
       
       // Parse TypeScript errors
@@ -67,12 +67,12 @@ class ErrorAnalyzer {
             const errorLine = lines[lines.indexOf(line) + 1];
             if (errorLine && errorLine.trim()) {
               this.errors.typescript.push({
-                file: currentFile,
-                line: lineNum,
-                column: colNum,
-                message: errorLine.trim(),
-                severity: this.determineSeverity(errorLine),
-                category: this.categorizeTypeScriptError(errorLine)
+                "file": currentFile,
+                "line": lineNum,
+                "column": colNum,
+                "message": errorLine.trim(),
+                "severity": this.determineSeverity(errorLine),
+                "category": this.categorizeTypeScriptError(errorLine)
               })}
           }
         }
@@ -99,12 +99,12 @@ class ErrorAnalyzer {
           const errorLine = lines[lines.indexOf(line) + 1];
           if (errorLine && errorLine.trim()) {
             this.errors.typescript.push({
-              file: currentFile,
-              line: lineNum,
-              column: colNum,
-              message: errorLine.trim(),
-              severity: this.determineSeverity(errorLine),
-              category: this.categorizeTypeScriptError(errorLine)
+              "file": currentFile,
+              "line": lineNum,
+              "column": colNum,
+              "message": errorLine.trim(),
+              "severity": this.determineSeverity(errorLine),
+              "category": this.categorizeTypeScriptError(errorLine)
             })}
         }
       }
@@ -116,9 +116,9 @@ class ErrorAnalyzer {
     
     try {
       const result = execSync('npx eslint . --format=compact', { 
-        encoding: 'utf8', 
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "encoding": 'utf8', 
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       });
       
       const lines = result.split('\n');
@@ -127,12 +127,12 @@ class ErrorAnalyzer {
           const match = line.match(/^([^:]+):(\d+):(\d+):\s*(.+)$/);
           if (match) {
             this.errors.eslint.push({
-              file: match[1],
-              line: parseInt(match[2]),
-              column: parseInt(match[3]),
-              message: match[4],
-              severity: match[4].includes('error') ? 'error' : 'warning',
-              category: this.categorizeESLintError(match[4])
+              "file": match[1],
+              "line": parseInt(match[2]),
+              "column": parseInt(match[3]),
+              "message": match[4],
+              "severity": match[4].includes('error') ? 'error' : 'warning',
+              "category": this.categorizeESLintError(match[4])
             })}
         }
       }
@@ -149,12 +149,12 @@ class ErrorAnalyzer {
         const match = line.match(/^([^:]+):(\d+):(\d+):\s*(.+)$/);
         if (match) {
           this.errors.eslint.push({
-            file: match[1],
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: match[4],
-            severity: match[4].includes('error') ? 'error' : 'warning',
-            category: this.categorizeESLintError(match[4])
+            "file": match[1],
+            "line": parseInt(match[2]),
+            "column": parseInt(match[3]),
+            "message": match[4],
+            "severity": match[4].includes('error') ? 'error' : 'warning',
+            "category": this.categorizeESLintError(match[4])
           })}
       }
     }
@@ -165,10 +165,10 @@ class ErrorAnalyzer {
     
     try {
       const result = execSync('npm run build', { 
-        encoding: 'utf8', 
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd(),
-        timeout: 60000
+        "encoding": 'utf8', 
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd(),
+        "timeout": 60000
       })} catch (error) {
       const errorOutput = error.stderr?.toString() || error.stdout?.toString() || '';
       this.parseBuildErrors(errorOutput)}
@@ -177,11 +177,11 @@ class ErrorAnalyzer {
   parseBuildErrors(errorOutput) {
     const lines = errorOutput.split('\n');
     for (const line of lines) {
-      if (line.includes('Error:') || line.includes('Failed to compile')) {
+      if (line.includes('"Error": ') || line.includes('Failed to compile')) {
         this.errors.build.push({
           message: line.trim(),
-          severity: 'error',
-          category: 'build'
+          "severity": 'error',
+          "category": 'build'
         })}
     }
   }
@@ -191,9 +191,9 @@ class ErrorAnalyzer {
     
     try {
       const result = execSync('npm audit --json', { 
-        encoding: 'utf8', 
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "encoding": 'utf8', 
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       });
       
       const auditData = JSON.parse(result);
@@ -201,11 +201,11 @@ class ErrorAnalyzer {
         Object.keys(auditData.vulnerabilities).forEach(pkg => {
           const vuln = auditData.vulnerabilities[pkg];
           this.errors.dependency.push({
-            package: pkg,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            category: 'security'
+            "package": pkg,
+            "severity": vuln.severity,
+            "title": vuln.title,
+            "description": vuln.description,
+            "category": 'security'
           })})}
     } catch (error) {
       // Dependency issues are expected
@@ -217,18 +217,18 @@ class ErrorAnalyzer {
     
     try {
       const result = execSync('npm audit --audit-level=moderate', { 
-        encoding: 'utf8', 
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "encoding": 'utf8', 
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       });
       
       const lines = result.split('\n');
       for (const line of lines) {
         if (line.includes('high') || line.includes('critical')) {
           this.errors.security.push({
-            message: line.trim(),
-            severity: line.includes('critical') ? 'critical' : 'high',
-            category: 'security'
+            "message": line.trim(),
+            "severity": line.includes('critical') ? 'critical' : 'high',
+            "category": 'security'
           })}
       }
     } catch (error) {
@@ -270,18 +270,17 @@ class ErrorAnalyzer {
     
     // Categorize errors
     this.errorReport.errorCategories = {
-      typescript: this.errors.typescript.length,
-      eslint: this.errors.eslint.length,
-      build: this.errors.build.length,
-      dependency: this.errors.dependency.length,
-      security: this.errors.security.length,
-      performance: this.errors.performance.length,
-      other: this.errors.other.length
+      "typescript": this.errors.typescript.length,
+      "eslint": this.errors.eslint.length,
+      "build": this.errors.build.length,
+      "dependency": this.errors.dependency.length,
+      "security": this.errors.security.length,
+      "performance": this.errors.performance.length,
+      "other": this.errors.other.length
     };
     
     // Identify priority errors
-    this.errorReport.priorityErrors = [
-      ...this.errors.typescript.filter(e => e.severity === 'error'),
+    this.errorReport.priorityErrors = [...this.errors.typescript.filter(e => e.severity === 'error'),
       ...this.errors.eslint.filter(e => e.severity === 'error'),
       ...this.errors.build,
       ...this.errors.security.filter(e => e.severity === 'critical' || e.severity === 'high')
@@ -295,34 +294,34 @@ class ErrorAnalyzer {
     
     if (this.errors.typescript.length > 0) {
       recommendations.push({
-        type: 'typescript',
-        priority: 'high',
-        action: 'Run TypeScript error fixer automation',
-        description: `${this.errors.typescript.length} TypeScript errors need to be resolved`
+        "type": 'typescript',
+        "priority": 'high',
+        "action": 'Run TypeScript error fixer automation',
+        "description": `${this.errors.typescript.length} TypeScript errors need to be resolved`
       })}
     
     if (this.errors.eslint.length > 0) {
       recommendations.push({
-        type: 'eslint',
-        priority: 'medium',
-        action: 'Run ESLint error fixer automation',
-        description: `${this.errors.eslint.length} ESLint errors need to be resolved`
+        "type": 'eslint',
+        "priority": 'medium',
+        "action": 'Run ESLint error fixer automation',
+        "description": `${this.errors.eslint.length} ESLint errors need to be resolved`
       })}
     
     if (this.errors.security.length > 0) {
       recommendations.push({
-        type: 'security',
-        priority: 'critical',
-        action: 'Run security audit and fix automation',
-        description: `${this.errors.security.length} security vulnerabilities need to be addressed`
+        "type": 'security',
+        "priority": 'critical',
+        "action": 'Run security audit and fix automation',
+        "description": `${this.errors.security.length} security vulnerabilities need to be addressed`
       })}
     
     if (this.errors.dependency.length > 0) {
       recommendations.push({
-        type: 'dependency',
-        priority: 'high',
-        action: 'Run dependency update automation',
-        description: `${this.errors.dependency.length} dependency issues need to be resolved`
+        "type": 'dependency',
+        "priority": 'high',
+        "action": 'Run dependency update automation',
+        "description": `${this.errors.dependency.length} dependency issues need to be resolved`
       })}
     
     return recommendations}
@@ -330,23 +329,23 @@ class ErrorAnalyzer {
   async saveReport() {
     const reportPath = path.join(process.cwd(), 'error-analysis-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
-    console.log(`📄 Error report saved to: ${reportPath}`)}
+    console.log(`📄 Error report saved "to": ${reportPath}`)}
 
   printSummary() {
     console.log('\n📋 ERROR ANALYSIS SUMMARY');
     console.log('='.repeat(50));
-    console.log(`Total Errors: ${this.errorReport.totalErrors}`);
-    console.log('\nError Categories:');
+    console.log(`Total "Errors": ${this.errorReport.totalErrors}`);
+    console.log('\nError "Categories": ');
     Object.entries(this.errorReport.errorCategories).forEach(([category, count]) => {
       if (count > 0) {
         console.log(`  ${category}: ${count}`)}
     });
     
-    console.log('\nPriority Errors:');
+    console.log('\nPriority "Errors": ');
     this.errorReport.priorityErrors.slice(0, 5).forEach((error, index) => {
       console.log(`  ${index + 1}. ${error.message || error.title || 'Unknown error'}`)});
     
-    console.log('\nRecommendations:');
+    console.log('\"nRecommendations": ');
     this.errorReport.recommendations.forEach((rec, index) => {
       console.log(`  ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.action}`)})}
 }
@@ -361,7 +360,7 @@ async function main() {
     
     // Return the report for use by other scripts
     return analyzer.errorReport} catch (error) {
-    console.error('❌ Error analyzer failed:', error.message);
+    console.error('❌ Error analyzer "failed": ', error.message);
     process.exit(1)}
 }
 

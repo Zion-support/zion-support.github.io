@@ -5,10 +5,10 @@ import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
 
 export default function Authentication() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+    "phone": '+1 302 464 0950',
+    "email": 'kleber@ziontechgroup.com',
+    "address": '364 E Main St STE 1008 Middletown DE 19709',
+    "site": 'https://ziontechgroup.com'
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Authentication() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -47,13 +47,13 @@ export default function Authentication() {
 
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
+{"curl -X GET ""https": //api.ziontechgroup.com/v1/services" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`}
+  -H "Content-Type: application/json""}
                 </pre>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid "md": grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Getting Your API Key</h3>
                   <ol className="list-decimal list-inside space-y-2 text-gray-600">
@@ -87,7 +87,7 @@ export default function Authentication() {
 
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`// Authorization URL
+{"// Authorization URL
 https://auth.ziontechgroup.com/oauth/authorize?
   client_id=YOUR_CLIENT_ID&
   redirect_uri=YOUR_REDIRECT_URI&
@@ -102,11 +102,11 @@ grant_type=authorization_code&
 code=AUTHORIZATION_CODE&
 client_id=YOUR_CLIENT_ID&
 client_secret=YOUR_CLIENT_SECRET&
-redirect_uri=YOUR_REDIRECT_URI`}
+redirect_uri=YOUR_REDIRECT_URI"}
                 </pre>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid "md": grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>
                   <ol className="list-decimal list-inside space-y-2 text-gray-600">
@@ -141,7 +141,7 @@ redirect_uri=YOUR_REDIRECT_URI`}
 
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`// JWT Token Structure
+{"// JWT Token Structure
 {
   "header": {
     "alg": "HS256",
@@ -153,11 +153,11 @@ redirect_uri=YOUR_REDIRECT_URI`}
     "exp": 1641081600,
     "scope": "read write"
   }
-}`}
+}"}
                 </pre>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid "md": grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-600">
@@ -186,7 +186,7 @@ redirect_uri=YOUR_REDIRECT_URI`}
             <p className="text-gray-600 mb-4">
               API requests are rate limited to ensure fair usage and system stability.
             </p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <div className="grid "md": grid-cols-3 gap-4 text-sm">
               <div className="bg-white rounded p-4">
                 <h3 className="font-semibold text-gray-900 mb-2">Free Tier</h3>
                 <p className="text-gray-600">1,000 requests/hour</p>
@@ -208,11 +208,11 @@ redirect_uri=YOUR_REDIRECT_URI`}
             <p className="text-gray-600 mb-6">
               Our technical team is here to help you implement secure authentication.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get Support
               </Link>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Technical Team
               </a>
             </div>

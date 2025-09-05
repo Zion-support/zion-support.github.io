@@ -1,12 +1,11 @@
 import {Link} from 'react - router - dom';"
 import React from 'react';
-;
 import {Link} from "react-router-dom";
 import {Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star} from "lucide-react";
 export function ContactInfo($1) {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16">          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4">
             Get In Touch"
 </h2>"
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -70,7 +69,7 @@ export function ContactInfo($1) {
                   <div>"
                     <p className="text-white font-medium">Website</p>"
                     <a"
-                      href="https: // comment
+                      href=""https": // comment
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">"
@@ -97,13 +96,13 @@ export function ContactInfo($1) {
                   <div className="flex justify-between">"
                     <span>Monday - Friday</span>"
                     <span className="text-zion-cyan">"
-                      9: 00 AM - 6:00 PM EST"
+                      "9": 00 AM - 6:00 PM EST"
                     </span>"
                   </div>"
                   <div className="flex justify-between">"
                     <span>Saturday</span>",
                     <span className="text-zion-cyan">,"
-10: 00 AM - 4:00 PM EST"
+"10": 00 AM - 4:00 PM EST"
                     </span>"
                   </div>"
                   <div className="flex justify-between">"
@@ -139,7 +138,7 @@ export function ContactInfo($1) {
               </CardHeader>"
               <CardContent className="space-y-4">"
                 <Link to="/request-quote">"
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white">
+                  <Button className="w-full bg-zion-purple "hover": bg-zion-purple-dark text-white">
                     Request Free Quote"
                   </Button>"
                 </Link>"
@@ -221,7 +220,7 @@ export function ContactInfo($1) {
               Join hundreds of satisfied clients who have transformed their"
               businesses with our technology solutions"
             </p>"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
               <Link to="/request-quote">"
                 <Button"
                   size="lg"
@@ -238,8 +237,7 @@ export function ContactInfo($1) {
                 </Button>
               </a>
             </div>
-    </section>";,
-  )}"
+    </section>";)}"
 }"
 ";"
   )", ";"

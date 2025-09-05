@@ -44,7 +44,7 @@ import {
   Rocket
 } from 'lucide-react';
 
-const ComprehensiveNewServicesShowcase2025: React.FC = () => {
+const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(");
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -68,23 +68,23 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
     }
 
     if (selectedType !== 'all') {
-      const serviceTypeMap: { [key: string]: 'Micro SAAS' | 'IT Services' | 'AI Services' } = {
+      const "serviceTypeMap": { [key: string]: 'Micro SAAS' | 'IT Services' | 'AI Services' } = {
         'micro-saas': 'Micro SAAS',
         'it-services': 'IT Services',
         'ai-services': 'AI Services'
-      };;
+      };
       services = services.filter(service => 
         service.serviceType === serviceTypeMap[selectedType]
       );
     }
 
     if (selectedPriceRange !== 'all') {
-      const priceRanges: { [key: string]: [number, number] } = {
+      const "priceRanges": { [key: string]: [number, number] } = {
         'budget': [0, 299],
         'mid-range': [300, 999],
         'premium': [1000, 2499],
         'enterprise': [2500, 999999]
-      };;
+      };
       const [min, max] = priceRanges[selectedPriceRange] || [0, 999999];
       services = services.filter(service => service.price >= min && service.price <= max);
     }
@@ -104,7 +104,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
     return services;
   }, [searchTerm, selectedCategory, selectedType, selectedPriceRange, selectedInnovationLevel, selectedSupportLevel]);
 
-  const getServiceIcon = (serviceType: string) => {
+  const getServiceIcon = ("serviceType": string) => {
     switch (serviceType) {
       case 'Micro SAAS': return Smartphone;
       case 'AI Services': return Brain;
@@ -113,7 +113,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'cutting-edge': return 'bg-purple-100 text-purple-800 border-purple-200';
       case 'advanced': return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -122,7 +122,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getSupportLevelColor = (level: string) => {
+  const getSupportLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'enterprise': return 'bg-red-100 text-red-800 border-red-200';
       case 'premium': return 'bg-orange-100 text-orange-800 border-orange-200';
@@ -137,7 +137,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
       <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl "md": text-6xl font-bold mb-6">
               Revolutionary Technology Services 2025
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
@@ -157,7 +157,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
                 <div className="text-sm opacity-90">Service Categories</div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
                 <Phone className="w-5 h-5 mr-2" />
                 +1 302 464 0950
@@ -174,7 +174,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
       {/* Filters */}
       <div className="bg-white border-b border-gray-200 py-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-6 gap-4">
             <div className="lg:col-span-2">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -271,11 +271,11 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => {
             const ServiceIcon = getServiceIcon(service.serviceType);
             return (
-              <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600">
@@ -309,7 +309,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>
                       <ul className="text-sm text-gray-600 space-y-1">
                         {service.features.slice(0, 3).map((feature, index) => (
                           <li key={index} className="flex items-center">
@@ -326,7 +326,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">ROI:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">"ROI": </h4>
                       <p className="text-sm text-green-600 font-medium">{service.roi}</p>
                     </div>
 
@@ -342,7 +342,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
                     </div>
 
                     <div className="pt-4 border-t border-gray-200">
-                      <div className="flex flex-col sm:flex-row gap-2">
+                      <div className="flex flex-col "sm": flex-row gap-2">
                         <Button className="flex-1 bg-blue-600 hover:bg-blue-700">
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-2" />
@@ -388,7 +388,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact our experts to discuss how our innovative services can drive your success.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6" />

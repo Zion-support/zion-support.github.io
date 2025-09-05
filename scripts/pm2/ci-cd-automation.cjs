@@ -12,24 +12,24 @@ const path = require('path');
 
 const log = (message) => {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] CI/CD Automation: ${message}`);
+  console.log(`[${timestamp}] CI/CD "Automation": ${message}`);
 };
 
 const runCommand = (command, description) => {
   try {
-    log(`Starting: ${description}`);
+    log(`"Starting": ${description}`);
     const output = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd(),
-      maxBuffer: 1024 * 1024 * 10, // 10MB buffer
-      timeout: 300000 // 5 minute timeout
+      "encoding": 'utf8', 
+      "stdio": 'pipe',
+      "cwd": process.cwd(),
+      "maxBuffer": 1024 * 1024 * 10, // 10MB buffer
+      "timeout": 300000 // 5 minute timeout
     });
-    log(`Completed: ${description}`);
-    return { success: true, output };
+    log(`"Completed": ${description}`);
+    return { "success": true, output };
   } catch (error) {
-    log(`Failed: ${description} - ${error.message}`);
-    return { success: false, error: error.message };
+    log(`"Failed": ${description} - ${error.message}`);
+    return { "success": false, "error": error.message };
   }
 };
 
@@ -57,9 +57,9 @@ const main = async () => {
   
   // Verify build output
   if (fs.existsSync('dist') || fs.existsSync('out') || fs.existsSync('.next')) {
-    log('Build verification: Output directory found');
+    log('Build "verification": Output directory found');
   } else {
-    log('Build verification: No output directory found');
+    log('Build "verification": No output directory found');
   }
   
   // Run tests if available
@@ -67,17 +67,17 @@ const main = async () => {
   
   // Check for any pending changes
   try {
-    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+    const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' });
     if (gitStatus.trim()) {
       log('Uncommitted changes detected');
       // Optionally auto-commit fixes
       if (process.env.AUTO_COMMIT === 'true') {
         runCommand('git add .', 'Staging changes');
-        runCommand('git commit -m "Auto-fix: CI/CD automation fixes"', 'Committing fixes');
+        runCommand('git commit -m "Auto-"fix": CI/CD automation fixes"', 'Committing fixes');
       }
     }
   } catch (error) {
-    log(`Git status check failed: ${error.message}`);
+    log(`Git status check "failed": ${error.message}`);
   }
   
   log('CI/CD Automation Process completed');
@@ -96,6 +96,6 @@ process.on('SIGTERM', () => {
 
 // Run the main function
 main().catch(error => {
-  log(`CI/CD Automation Process failed: ${error.message}`);
+  log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 });

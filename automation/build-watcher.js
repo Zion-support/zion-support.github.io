@@ -8,26 +8,23 @@ class BuildWatcher {
   constructor() {
     this.projectRoot = process.cwd();
     this.buildReport = {
-      timestamp: new Date().toISOString(),
-      duration: 0,
-      buildAttempts: [],
-      fileChanges: [],
-      buildSuccess: false,
-      lastBuildTime: null,
-      totalBuilds: 0,
-      successfulBuilds: 0,
-      failedBuilds: 0,
-    };
+      "timestamp": new Date().toISOString(),
+      "duration": 0,
+      "buildAttempts": [],
+      "fileChanges": [],
+      "buildSuccess": false,
+      "lastBuildTime": null,
+      "totalBuilds": 0,
+      "successfulBuilds": 0,
+      "failedBuilds": 0};
     this.startTime = Date.now();
     this.isRunning = false;
-    this.watchPatterns = [
-      'src/**/*.{ts,tsx,js,jsx}',
+    this.watchPatterns = ['src/**/*.{ts,tsx,js,jsx}',
       'pages/**/*.{ts,tsx,js,jsx}',
       'components/**/*.{ts,tsx,js,jsx}',
       '*.{json,config.js,config.ts}',
     ];
-    this.ignoredPatterns = [
-      'node_modules/**',
+    this.ignoredPatterns = ['node_modules/**',
       '.next/**',
       'out/**',
       'dist/**',
@@ -49,7 +46,7 @@ class BuildWatcher {
     // Create logs directory
     const logsDir = path.join(this.projectRoot, 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { "recursive": true });
     }
 
     // Initial build check
@@ -82,8 +79,7 @@ class BuildWatcher {
     console.log('👀 Starting file watching...');
 
     // Simple file watching using fs.watch
-    const watchDirs = [
-      path.join(this.projectRoot, 'src'),
+    const watchDirs = [path.join(this.projectRoot, 'src'),
       path.join(this.projectRoot, 'pages'),
       path.join(this.projectRoot, 'components'),
     ];
@@ -95,8 +91,7 @@ class BuildWatcher {
     }
 
     // Watch root config files
-    const configFiles = [
-      'package.json',
+    const configFiles = ['package.json',
       'tsconfig.json',
       'next.config.js',
       'eslint.config.js',
@@ -114,7 +109,7 @@ class BuildWatcher {
     try {
       const watcher = fs.watch(
         dir,
-        { recursive: true },
+        { "recursive": true },
         (eventType, filename) => {
           if (filename && this.shouldWatchFile(filename)) {
             this.handleFileChange(eventType, path.join(dir, filename));
@@ -122,7 +117,7 @@ class BuildWatcher {
         }
       );
 
-      console.log(`👀 Watching directory: ${dir}`);
+      console.log(`👀 Watching "directory": ${dir}`);
     } catch (error) {
       console.error(`Error watching directory ${dir}:`, error);
     }
@@ -134,7 +129,7 @@ class BuildWatcher {
         this.handleFileChange(eventType, filePath);
       });
 
-      console.log(`👀 Watching file: ${filePath}`);
+      console.log(`👀 Watching "file": ${filePath}`);
     } catch (error) {
       console.error(`Error watching file ${filePath}:`, error);
     }
@@ -175,13 +170,12 @@ class BuildWatcher {
   handleFileChange(eventType, filePath) {
     const relativePath = path.relative(this.projectRoot, filePath);
 
-    console.log(`📝 File change detected: ${eventType} - ${relativePath}`);
+    console.log(`📝 File change "detected": ${eventType} - ${relativePath}`);
 
     this.buildReport.fileChanges.push({
       eventType,
-      file: relativePath,
-      timestamp: new Date().toISOString(),
-    });
+      "file": relativePath,
+      "timestamp": new Date().toISOString()});
 
     // Queue build
     this.queueBuild();
@@ -227,11 +221,10 @@ class BuildWatcher {
       const buildDuration = Date.now() - buildStartTime;
 
       this.buildReport.buildAttempts.push({
-        timestamp: new Date().toISOString(),
-        duration: buildDuration,
-        success: true,
-        type: 'full_build',
-      });
+        "timestamp": new Date().toISOString(),
+        "duration": buildDuration,
+        "success": true,
+        "type": 'full_build'});
 
       this.buildReport.buildSuccess = true;
       this.buildReport.lastBuildTime = new Date().toISOString();
@@ -243,18 +236,17 @@ class BuildWatcher {
       const buildDuration = Date.now() - buildStartTime;
 
       this.buildReport.buildAttempts.push({
-        timestamp: new Date().toISOString(),
-        duration: buildDuration,
-        success: false,
-        type: 'full_build',
-        error: error.message,
-      });
+        "timestamp": new Date().toISOString(),
+        "duration": buildDuration,
+        "success": false,
+        "type": 'full_build',
+        "error": error.message});
 
       this.buildReport.buildSuccess = false;
       this.buildReport.totalBuilds += 1;
       this.buildReport.failedBuilds += 1;
 
-      console.log(`❌ Build failed after ${buildDuration}ms:`, error.message);
+      console.log(`❌ Build failed after ${buildDuration}"ms": `, error.message);
 
       // Trigger error fixer on build failure
       await this.triggerErrorFixer();
@@ -268,16 +260,16 @@ class BuildWatcher {
 
     try {
       execSync('npx tsc --noEmit', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        timeout: 60000, // 1 minute timeout
+        "encoding": 'utf8',
+        "cwd": this.projectRoot,
+        "stdio": 'pipe',
+        "timeout": 60000, // 1 minute timeout
       });
 
       console.log('✅ Type check passed');
     } catch (error) {
       console.log('❌ Type check failed');
-      throw new Error(`Type check failed: ${error.message}`);
+      throw new Error(`Type check "failed": ${error.message}`);
     }
   }
 
@@ -286,16 +278,16 @@ class BuildWatcher {
 
     try {
       execSync('npx eslint . --max-warnings 0', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        timeout: 60000, // 1 minute timeout
+        "encoding": 'utf8',
+        "cwd": this.projectRoot,
+        "stdio": 'pipe',
+        "timeout": 60000, // 1 minute timeout
       });
 
       console.log('✅ Lint check passed');
     } catch (error) {
       console.log('❌ Lint check failed');
-      throw new Error(`Lint check failed: ${error.message}`);
+      throw new Error(`Lint check "failed": ${error.message}`);
     }
   }
 
@@ -304,16 +296,15 @@ class BuildWatcher {
 
     try {
       execSync('npx next build', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        timeout: this.buildTimeout,
-      });
+        "encoding": 'utf8',
+        "cwd": this.projectRoot,
+        "stdio": 'pipe',
+        "timeout": this.buildTimeout});
 
       console.log('✅ Next.js build completed');
     } catch (error) {
       console.log('❌ Next.js build failed');
-      throw new Error(`Next.js build failed: ${error.message}`);
+      throw new Error(`Next.js build "failed": ${error.message}`);
     }
   }
 
@@ -335,7 +326,7 @@ class BuildWatcher {
         }
       }, 5000);
     } catch (error) {
-      console.error('❌ Error fixer failed:', error);
+      console.error('❌ Error fixer "failed": ', error);
     }
   }
 
@@ -375,7 +366,7 @@ class BuildWatcher {
     const reportDir = path.dirname(reportPath);
 
     if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
+      fs.mkdirSync(reportDir, { "recursive": true });
     }
 
     // Add duration to report
@@ -393,10 +384,9 @@ class BuildWatcher {
         .readdirSync(reportDir)
         .filter(file => file.startsWith('build-watcher-report-'))
         .map(file => ({
-          name: file,
-          path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
-        }))
+          "name": file,
+          "path": path.join(reportDir, file),
+          "time": fs.statSync(path.join(reportDir, file)).mtime.getTime()}))
         .sort((a, b) => b.time - a.time);
 
       // Remove old reports (keep only the latest 10)
@@ -406,7 +396,7 @@ class BuildWatcher {
         }
       }
     } catch (error) {
-      console.error('Error cleaning up old reports:', error);
+      console.error('Error cleaning up old "reports": ', error);
     }
   }
 

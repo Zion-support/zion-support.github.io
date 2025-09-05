@@ -52,8 +52,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/"\s*";';/g, '"');
     
     // Fix template literals
-    content = content.replace(/`\s*';';/g, '`');
-    content = content.replace(/`\s*';/g, '`');
+    content = content.replace(/"\s*';';/g, '"');
+    content = content.replace(/"\s*';/g, '"');
     
     // Fix return statements
     content = content.replace(/return\s+([^;]+);';';/g, 'return $1;');
@@ -63,8 +63,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{';/g, 'if ($1) {');
     content = content.replace(/else\s*\{';/g, 'else {');
     content = content.replace(/switch\s*\(\s*([^)]+)\s*\)\s*\{';/g, 'switch ($1) {');
-    content = content.replace(/case\s+([^:]+):';/g, 'case $1:');
-    content = content.replace(/default:';/g, 'default:');
+    content = content.replace(/case\s+([^:]+):';/g, 'case $"1": ');
+    content = content.replace(/default:';/g, '"default": ');
     
     // Fix try-catch blocks
     content = content.replace(/try\s*\{';/g, 'try {');
@@ -100,7 +100,7 @@ function fixSyntaxErrors(filePath) {
     // Write the fixed content back
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors "in": ${filePath}`);
       return true;
     }
     

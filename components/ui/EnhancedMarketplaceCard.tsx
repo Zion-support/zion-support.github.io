@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
@@ -7,12 +8,7 @@ interface EnhancedMarketplaceCardProps {
   image?: string;
 }
 
-export default function EnhancedMarketplaceCard({ 
-  title, 
-  description, 
-  price, 
-  image 
-}: EnhancedMarketplaceCardProps) {
+export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (
     <div className="rounded-xl border bg-white shadow-sm hover:shadow-md transition p-4 flex flex-col">
       <div className="flex items-center gap-3 mb-3">

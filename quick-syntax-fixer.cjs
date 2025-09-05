@@ -22,9 +22,9 @@ class QuickSyntaxFixer {
       // Fix common syntax patterns
       content = content
         // Fix semicolons after object properties
-        .replace(/(\w+):\s*([^,]+),/g, '$1: $2,')
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$1: $2\n  }')
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$1: $2\n  ]')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1": $2,')
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1": $2\n  }')
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1": $2\n  ]')
         
         // Fix function calls with semicolons
         .replace(/(\w+\([^)]*\)),/g, '$1,')
@@ -61,7 +61,7 @@ class QuickSyntaxFixer {
         .replace(/^\s*;\s*$/gm, '')
         
         // Fix multiple semicolons
-        .replace(/;;+/g, ';')
+        .replace(/;+/g, ';')
         
         // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
@@ -69,7 +69,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`"Fixed": ${filePath}`);
         return true}
 
       return false} catch (error) {
@@ -81,8 +81,7 @@ class QuickSyntaxFixer {
     this.log('🚀 Starting Quick Syntax Fixer');
     
     // Fix critical files first
-    const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx',
+    const criticalFiles = ['components/AccessibilityEnhancer.tsx',
       '.eslintrc.js',
       'ecosystem.config.cjs',
       'run-automation-suite.cjs',
@@ -99,7 +98,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles }}
+    return { "fixedFiles": this.fixedFiles }}
 }
 
 // Run the fixer

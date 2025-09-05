@@ -14,8 +14,8 @@ class CodeQualityMonitor {
     this.reportFile = path.join(__dirname, 'reports', 'code-quality.json');
 
     // Ensure directories exist
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
+    fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }
 
   log(message, level = 'INFO') {
@@ -29,48 +29,46 @@ class CodeQualityMonitor {
     this.log('Running code quality checks...');
 
     const results = {
-      timestamp: new Date().toISOString(),
-      lint: { status: 'unknown', issues: 0, errors: 0, warnings: 0 },
-      typeCheck: { status: 'unknown', errors: 0 },
-      testCoverage: { status: 'unknown', percentage: 0 },
-      codeComplexity: { status: 'unknown', score: 0 },
-      qualityScore: 0,
-    };
+      "timestamp": new Date().toISOString(),
+      "lint": { status: 'unknown', "issues": 0, "errors": 0, "warnings": 0 },
+      "typeCheck": { status: 'unknown', "errors": 0 },
+      "testCoverage": { status: 'unknown', "percentage": 0 },
+      "codeComplexity": { status: 'unknown', "score": 0 },
+      "qualityScore": 0};
 
     // ESLint check
     try {
-      execSync('yarn lint', { stdio: 'pipe', cwd: process.cwd() });
+      execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
       results.lint.status = 'pass';
-      this.log('ESLint: PASS');
+      this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
       const output = error.stdout || error.message;
       results.lint.errors = (output.match(/error/gi) || []).length;
       results.lint.warnings = (output.match(/warning/gi) || []).length;
       results.lint.issues = results.lint.errors + results.lint.warnings;
-      this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN');
+      this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN');
     }
 
     // TypeScript check
     try {
-      execSync('npx tsc --noEmit', { stdio: 'pipe', cwd: process.cwd() });
+      execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() });
       results.typeCheck.status = 'pass';
-      this.log('TypeScript: PASS');
+      this.log('"TypeScript": PASS');
     } catch (error) {
       results.typeCheck.status = 'fail';
       const output = error.stdout || error.message;
       results.typeCheck.errors = (output.match(/error TS/g) || []).length;
-      this.log(`TypeScript: ${results.typeCheck.errors} errors found`, 'WARN');
+      this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN');
     }
 
     // Test coverage (if tests exist)
     try {
       if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) {
         const coverage = execSync('yarn test --coverage --silent', {
-          stdio: 'pipe',
-          encoding: 'utf8',
-          cwd: process.cwd(),
-        });
+          "stdio": 'pipe',
+          "encoding": 'utf8',
+          "cwd": process.cwd()});
         // Parse coverage percentage (simplified)
         const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/);
         if (coverageMatch) {
@@ -87,7 +85,7 @@ class CodeQualityMonitor {
 
     // Generate report
     fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2));
-    this.log(`Code quality report generated: ${this.reportFile}`);
+    this.log(`Code quality report "generated": ${this.reportFile}`);
 
     return results;
   }
@@ -122,14 +120,14 @@ class CodeQualityMonitor {
     try {
       const results = await this.runQualityChecks();
       this.log(
-        `Code quality check completed. Quality score: ${results.qualityScore}/100`
+        `Code quality check completed. Quality "score": ${results.qualityScore}/100`
       );
 
       if (results.qualityScore < 70) {
         this.log('Code quality is below threshold. Review needed.', 'WARN');
       }
     } catch (error) {
-      this.log(`Error in code quality monitor: ${error.message}`, 'ERROR');
+      this.log(`Error in code quality "monitor": ${error.message}`, 'ERROR');
     }
   }
 }

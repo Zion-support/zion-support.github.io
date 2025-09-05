@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES_2025} from "../data/innovativeMicroSaasServices2025";
-;';
+import {INNOVATIVE_MICRO_SAAS_SERVICES_2025} from "../data/innovativeMicroSaasServices2025";';
 const InnovativeServicesShowcase = (props) => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
-    const tabs = [
-        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
-        {id: 'it', name: 'IT Services', count: innovativeITServices2025.length},
-        {id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length};
+    const tabs = [{ "id": 'microsaas', "name": 'Micro SAAS Services', "count": INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+        {"id": 'it', "name": 'IT Services', "count": innovativeITServices2025.length},
+        {"id": 'ai', "name": 'AI Services', "count": innovativeAIServices2025.length};
     ];
     const getServicesByTab = (props) => {
         switch (activeTab) {
@@ -17,15 +15,14 @@ const InnovativeServicesShowcase = (props) => {
                 return innovativeITServices2025;
             case 'ai':
                 return innovativeAIServices2025;
-            default:
-                return []}
+            "default": return []}
     };
-    const handleServiceClick = (props) => {setSelectedService(service)};;
-    const closeModal = (props) => {setSelectedService(null)};;
+    const handleServiceClick = (props) => {setSelectedService(service)};
+    const closeModal = (props) => {setSelectedService(null)};
     return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 "sm": px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Innovative
@@ -57,7 +54,7 @@ const InnovativeServicesShowcase = (props) => {
       </section>"
 "
       {/* comment */}"
-      <section className="px-4 sm: px-6 lg:px-8 mb-12">"
+      <section className="px-4 "sm": px-6 lg:px-8 mb-12">"
         <div className="max-w-7xl mx-auto">"
           <div className="flex flex-wrap justify-center gap-2">
             {tabs.map(tab => (",
@@ -69,7 +66,7 @@ const InnovativeServicesShowcase = (props) => {
 "
                   activeTab === tab.id"
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
-                    : "bg-white/10 text-gray-300 hover:bg-white/20", "
+                    : "bg-white/10 text-gray-300 "hover": bg-white/20", "
 }"}
 
               >
@@ -83,18 +80,18 @@ const InnovativeServicesShowcase = (props) => {
       </section>"
 "
       {/* comment */}"
-      <section className = "px-4 sm: px-6 lg:px-8 pb-20">"
+      <section className = "px-4 "sm": px-6 lg:px-8 pb-20">"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {getServicesByTab().map((service, index) => ("
               <div "
                 key={service.id}"
                 onClick="{()" =" > handleServiceClick(service)}"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
               <div ">
                 key={service.id}"
                 onClick="{()" =" > handleServiceClick(service)}"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
               >"
                 <div className="flex justify-between items-start mb-4">"
                   <div className="text-3xl">",
@@ -117,7 +114,7 @@ const InnovativeServicesShowcase = (props) => {
                   </div>"
                 </div>"
 "
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover: text-blue-400 transition-colors">",
+                <h3 className="text-xl font-semibold text-white mb-3 group-"hover": text-blue-400 transition-colors">",
                   {service.name}"
                 </h3>"
 "
@@ -127,7 +124,7 @@ const InnovativeServicesShowcase = (props) => {
 "
                 <div className="mb-4">"
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">"
-                    Key Features: "
+                    Key "Features": "
                   </h4>"
                   <div className="flex flex-wrap gap-1">",
                     {service.features.slice(0, 3).map((feature, idx) => ("
@@ -151,11 +148,10 @@ const InnovativeServicesShowcase = (props) => {
                     {activeTab === "it" && service.deliveryTime}"
                     {activeTab === "ai" && "${service.aiScore}% AI Score"}"
                   </div>"
-                  <div className="text-blue-400 text-sm font-semibold group-hover: text-blue-300 transition-colors">
+                  <div className="text-blue-400 text-sm font-semibold group-"hover": text-blue-300 transition-colors">
                     Learn More →
                   </div>
-              </div>,
-            ))}
+              </div>))}
 
           </div>
         </div>"
@@ -171,7 +167,7 @@ const InnovativeServicesShowcase = (props) => {
                 </h2>"
                 <button"
                   onClick={closeModal}"
-                  className="text-gray-400 hover: text-white transition-colors ">"
+                  className="text-gray-400 "hover": text-white transition-colors ">"
                   <svg "
                     className="w-6 h-6"
                     fill="none"
@@ -191,7 +187,7 @@ const InnovativeServicesShowcase = (props) => {
                 </button>"
               </div>"
 "
-              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">"
+              <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">"
                 <div>"
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">"
                     Description"
@@ -235,7 +231,7 @@ const InnovativeServicesShowcase = (props) => {
                     </h3>"
                     <div className="space-y-3">"
                       <div className="flex justify-between">"
-                        <span className="text-gray-300">Price: </span>"
+                        <span className="text-gray-300">"Price": </span>"
                         <span className="text-white font-semibold">"
                           {activeTab === "microsaas" &&",
                             "$${selectedService.price}/${selectedService.pricingModel}"}"
@@ -248,19 +244,19 @@ const InnovativeServicesShowcase = (props) => {
                       {activeTab === "microsaas" && ("
                         <>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">User Limit: </span>"
+                            <span className="text-gray-300">User "Limit": </span>"
                             <span className="text-white">",
                               {selectedService.userLimit}"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">Market Price: </span>"
+                            <span className="text-gray-300">Market "Price": </span>"
                             <span className="text-white">",
                               {selectedService.marketPrice}"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">ROI: </span>"
+                            <span className="text-gray-300">"ROI": </span>"
                             <span className="text-white text-green-400">,
                               {selectedService.roi}
 
@@ -271,21 +267,21 @@ const InnovativeServicesShowcase = (props) => {
                       {activeTab === "it" && ("
                         <>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">Project Rate: </span>"
+                            <span className="text-gray-300">Project "Rate": </span>"
                             <span className="text-white">",
                               ${selectedService.projectRate}"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
                             <span className="text-gray-300">"
-                              Response Time: "
+                              Response "Time": "
                             </span>"
                             <span className="text-white">",
                               {selectedService.responseTime}"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">SLA: </span>"
+                            <span className="text-gray-300">"SLA": </span>"
                             <span className="text-white">,
                               {selectedService.sla}
 
@@ -296,19 +292,19 @@ const InnovativeServicesShowcase = (props) => {
                       {activeTab === "ai" && ("
                         <>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">AI Score: </span>"
+                            <span className="text-gray-300">AI "Score": </span>"
                             <span className="text-white text-green-400">",
                               {selectedService.aiScore}%"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">Accuracy: </span>"
+                            <span className="text-gray-300">"Accuracy": </span>"
                             <span className="text-white">",
                               {selectedService.accuracy}"
                             </span>"
                           </div>"
                           <div className="flex justify-between">"
-                            <span className="text-gray-300">Market Price: </span>"
+                            <span className="text-gray-300">Market "Price": </span>"
                             <span className="text-white">,
                               {selectedService.marketPrice}
 
@@ -392,25 +388,24 @@ const InnovativeServicesShowcase = (props) => {
 "
                     <div className="mt-6">"
                       <a"
-                        href="{"mailto:" ${selectedService.contactInfo.email}"}"
-                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block ">
+                        href="{""mailto": " ${selectedService.contactInfo.email}"}"
+                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block ">
                         Get Started Today,
                       </a>
                     </div>
-        </div>",
-      )}"
+        </div>")}"
 "
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"
         <div className="max-w-4xl mx-auto text-center px-4">"
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">"
+          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-6">"
             Ready to Transform Your Business?"
           </h2>"
           <p className="text-xl text-gray-300 mb-8">",
             Let&apos,s discuss how our innovative services can drive your success in"
             2025 and beyond"
           </p>"
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">"

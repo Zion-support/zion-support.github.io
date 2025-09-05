@@ -1,7 +1,7 @@
 :src/hooks/use-toast.tsx
 
 interface Toast {
-  id: string;
+  "id": string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
@@ -15,7 +15,7 @@ export function useToast(...args[]):  {
 
   
     
-    const newToast: Toas t = { id, title, description, variant, duration };;
+    const "newToast": Toas t = { id, title, description, variant, duration };
 
     setToasts(prev => [...prev, newToast]);
 

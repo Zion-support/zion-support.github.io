@@ -9,13 +9,13 @@ console.log('⚡ Starting Advanced Build Optimization...');
 class BuildOptimizer {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      optimizations: [],
-      metrics: {
+      "timestamp": new Date().toISOString(),
+      "optimizations": [],
+      "metrics": {
         beforeSize: 0,
-        afterSize: 0,
-        buildTime: 0,
-        optimizationsApplied: 0
+        "afterSize": 0,
+        "buildTime": 0,
+        "optimizationsApplied": 0
       }
     }}
 
@@ -25,7 +25,7 @@ class BuildOptimizer {
     console.log(logEntry)}
 
   async runOptimization(name, optimizationFunction) {
-    this.log(`Applying: ${name}`);
+    this.log(`"Applying": ${name}`);
     const startTime = Date.now(;);
     
     try {
@@ -34,11 +34,11 @@ class BuildOptimizer {
       
       const optimization = {
         name,
-        status: result.status || 'applied',
-        message: result.message || 'Optimization applied successfully',
+        "status": result.status || 'applied',
+        "message": result.message || 'Optimization applied successfully',
         duration,
-        impact: result.impact || 'low',
-        details: result.details || {}
+        "impact": result.impact || 'low',
+        "details": result.details || {}
      };
       
       this.results.optimizations.push(optimization);
@@ -60,11 +60,11 @@ class BuildOptimizer {
       const duration = Date.now() - startTi;m;e;
       const optimization = {
         name,
-        status: 'failed',
-        message: error.message,
+        "status": 'failed',
+        "message": error.message,
         duration,
-        impact: 'none',
-        details: { error: error.stack }
+        "impact": 'none',
+        "details": { error: error.stack }
      };
       
       this.results.optimizations.push(optimization);
@@ -79,15 +79,15 @@ class BuildOptimizer {
         
         if () {
           resolve({
-            status: 'skipped',
-            message: 'next.config.js not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'next.config.js not found',
+            "impact": 'none'
           })) {
     ) {
           resolve({
-            status: 'skipped',
-            message: 'next.config.js not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'next.config.js not found',
+            "impact": 'none'
           })}
           return}
 
@@ -98,53 +98,47 @@ class BuildOptimizer {
         if () {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  compress: true,'
+            'module.exports = {\n  "compress": true,'
           )) {
     ) {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  compress: true,'
+            'module.exports = {\n  "compress": true,'
           )}
           optimizations.push('compression')}
 
         // Check for image optimization
         if () {
-          const imageConfig = `
-  images: {
+          const imageConfig = "
+  "images": {
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },) {
+    "minimumCacheTTL": 60,
+    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]}) {
     ) {
-          const imageConfig = `
-  images: {
+          const imageConfig = "
+  "images": {
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-  }`;
+    "minimumCacheTTL": 60,
+    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]}}";
           config = config.replace(
             'module.exports = {',
-            `module.exports = {${imageConfig}`
+            "module.exports = {${imageConfig}"
           );
           optimizations.push('image optimization')}
 
         // Check for experimental features
         if () {
-          const experimentalConfig = `
-  experimental: {
+          const experimentalConfig = "
+  "experimental": {
     optimizeCss: true,
-    scrollRestoration: true,
-  },) {
+    "scrollRestoration": true}) {
     ) {
-          const experimentalConfig = `
-  experimental: {
+          const experimentalConfig = "
+  "experimental": {
     optimizeCss: true,
-    scrollRestoration: true,
-  },
-  }`;
+    "scrollRestoration": true}}";
           config = config.replace(
             'module.exports = {',
             `module.exports = {${experimentalConfig}`
@@ -156,21 +150,21 @@ class BuildOptimizer {
      {
           fs.writeFileSync(configPath, config)}
           resolve({
-            status: 'applied',
-            message: `Applied optimizations: ${optimizations.join(', ')}`,
-            impact: 'high',
-            details: { optimizations }
+            "status": 'applied',
+            "message": `Applied optimizations: ${optimizations.join(', ')}`,
+            "impact": 'high',
+            "details": { optimizations }
           })} else {
           resolve({
-            status: 'skipped',
-            message: 'Next.js config already optimized',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Next.js config already optimized',
+            "impact": 'none'
           })}
       } catch (error) {
         resolve({
-          status: 'failed',
-          message: `Failed to optimize Next.js config: ${error.message}`,
-          impact: 'none'
+          "status": 'failed',
+          "message": `Failed to optimize Next.js config: ${error.message}`,
+          "impact": 'none'
         })}
     })}
 
@@ -181,15 +175,15 @@ class BuildOptimizer {
         
         if () {
           resolve({
-            status: 'skipped',
-            message: 'package.json not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'package.json not found',
+            "impact": 'none'
           })) {
     ) {
           resolve({
-            status: 'skipped',
-            message: 'package.json not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'package.json not found',
+            "impact": 'none'
           })}
           return}
 
@@ -198,9 +192,9 @@ class BuildOptimizer {
 
         // Add build optimization scripts
         const optimizedScripts = {
-          'build:analyze': 'ANALYZE=true npm run build',
-          'build:prod': 'NODE_ENV=production npm run build',
-          'start:prod': 'NODE_ENV=production npm start'
+          '"build": analyze': 'ANALYZE=true npm run build',
+          '"build": prod': 'NODE_ENV=production npm run build',
+          '"start": prod': 'NODE_ENV=production npm start'
        };
 
         let scriptsAdded = ;0;
@@ -218,8 +212,8 @@ class BuildOptimizer {
         // Ensure engines field exists
         if (!packageJson.engines) {
           packageJson.engines = {
-            node: '>=18.0.0',
-            npm: '>=8.0.0'
+            "node": '>=18.0.0',
+            "npm": '>=8.0.0'
           }) {
      {
           optimizations.push(`${scriptsAdded} build scripts`)}
@@ -227,8 +221,8 @@ class BuildOptimizer {
         // Ensure engines field exists
         if (!packageJson.engines) {
           packageJson.engines = {
-            node: '>=18.0.0',
-            npm: '>=8.0.0'
+            "node": '>=18.0.0',
+            "npm": '>=8.0.0'
           }}
           optimizations.push('engines specification')}
 
@@ -237,21 +231,21 @@ class BuildOptimizer {
      {
           fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))}
           resolve({
-            status: 'applied',
-            message: `Added optimizations: ${optimizations.join(', ')}`,
-            impact: 'medium',
-            details: { optimizations, scriptsAdded }
+            "status": 'applied',
+            "message": `Added optimizations: ${optimizations.join(', ')}`,
+            "impact": 'medium',
+            "details": { optimizations, scriptsAdded }
           })} else {
           resolve({
-            status: 'skipped',
-            message: 'package.json already optimized',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'package.json already optimized',
+            "impact": 'none'
           })}
       } catch (error) {
         resolve({
-          status: 'failed',
-          message: `Failed to optimize package.json: ${error.message}`,
-          impact: 'none'
+          "status": 'failed',
+          "message": `Failed to optimize package.json: ${error.message}`,
+          "impact": 'none'
         })}
     })}
 
@@ -262,19 +256,19 @@ class BuildOptimizer {
         
         if () {
           resolve({
-            status: 'skipped',
-            message: 'Bundle analyzer already exists',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Bundle analyzer already exists',
+            "impact": 'none'
           })) {
     ) {
           resolve({
-            status: 'skipped',
-            message: 'Bundle analyzer already exists',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Bundle analyzer already exists',
+            "impact": 'none'
           })}
           return}
 
-        const analyzerScript = `
+        const analyzerScript = "
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer';);
 
 module.exports = (nextConfig = {}) => {
@@ -283,38 +277,35 @@ module.exports = (nextConfig = {}) => {
       if ( {
         config.plugins.push(
           new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: isServer ? 8888 : 8889,
-            openAnalyzer: true,
-          })
+            "analyzerMode": 'server',
+            "analyzerPort": isServer ? 8888 : 8889,
+            "openAnalyzer": true})
         )}
 
       return config) {
      {
         config.plugins.push(
           new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: isServer ? 8888 : 8889,
-            openAnalyzer: true,
-          })
+            "analyzerMode": 'server',
+            "analyzerPort": isServer ? 8888 : 8889,
+            "openAnalyzer": true})
         )}
 
-      return config}},
-  })};
-`;
+      return config}}})};
+";
 
         fs.writeFileSync(analyzerPath, analyzerScript.trim());
 
         resolve({
-          status: 'applied',
-          message: 'Bundle analyzer script created',
-          impact: 'medium',
-          details: { path: analyzerPath }
+          "status": 'applied',
+          "message": 'Bundle analyzer script created',
+          "impact": 'medium',
+          "details": { path: analyzerPath }
         })} catch (error) {
         resolve({
-          status: 'failed',
-          message: `Failed to create bundle analyzer: ${error.message}`,
-          impact: 'none'
+          "status": 'failed',
+          "message": `Failed to create bundle analyzer: ${error.message}`,
+          "impact": 'none'
         })}
     })}
 
@@ -325,15 +316,15 @@ module.exports = (nextConfig = {}) => {
         
         if () {
           resolve({
-            status: 'skipped',
-            message: 'tailwind.config.js not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'tailwind.config.js not found',
+            "impact": 'none'
           })) {
     ) {
           resolve({
-            status: 'skipped',
-            message: 'tailwind.config.js not found',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'tailwind.config.js not found',
+            "impact": 'none'
           })}
           return}
 
@@ -341,21 +332,19 @@ module.exports = (nextConfig = {}) => {
         let optimizations = [];
 
         // Check for purge configuration
-        if (&& !config.includes('content:')) {
-          const contentConfig = `
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
+        if (&& !config.includes('"content": ')) {
+          const contentConfig = "
+  content: ['./pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}']) {
-    && !config.includes('content:')) {
-          const contentConfig = `
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
+    && !config.includes('"content": ')) {
+          const contentConfig = "
+  content: ['./pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}']},`;
+    './src/**/*.{js,ts,jsx,tsx}']},";
           config = config.replace(
             'module.exports = {',
-            `module.exports = {${contentConfig}`
+            "module.exports = {${contentConfig}"
           );
           optimizations.push('content purging')}
 
@@ -363,12 +352,12 @@ module.exports = (nextConfig = {}) => {
         if () {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  mode: "jit",'
+            'module.exports = {\n  "mode": "jit",'
           )) {
     ) {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  mode: "jit",'
+            'module.exports = {\n  "mode": "jit",'
           )}
           optimizations.push('JIT mode')}
 
@@ -377,21 +366,21 @@ module.exports = (nextConfig = {}) => {
      {
           fs.writeFileSync(tailwindPath, config)}
           resolve({
-            status: 'applied',
-            message: `Applied optimizations: ${optimizations.join(', ')}`,
-            impact: 'high',
-            details: { optimizations }
+            "status": 'applied',
+            "message": "Applied optimizations: ${optimizations.join(', ')}",
+            "impact": 'high',
+            "details": { optimizations }
           })} else {
           resolve({
-            status: 'skipped',
-            message: 'Tailwind config already optimized',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Tailwind config already optimized',
+            "impact": 'none'
           })}
       } catch (error) {
         resolve({
-          status: 'failed',
-          message: `Failed to optimize Tailwind config: ${error.message}`,
-          impact: 'none'
+          "status": 'failed',
+          "message": "Failed to optimize Tailwind config: ${error.message}",
+          "impact": 'none'
         })}
     })}
 
@@ -402,23 +391,22 @@ module.exports = (nextConfig = {}) => {
         
         if () {
           resolve({
-            status: 'skipped',
-            message: 'Service worker already exists',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Service worker already exists',
+            "impact": 'none'
           })) {
     ) {
           resolve({
-            status: 'skipped',
-            message: 'Service worker already exists',
-            impact: 'none'
+            "status": 'skipped',
+            "message": 'Service worker already exists',
+            "impact": 'none'
           })}
           return}
 
-        const serviceWorker = `
+        const serviceWorker = "
 // Simple service worker for caching
 const CACHE_NAME = 'zion-tech-v;1;';
-const urlsToCache = [
-  '/',
+const urlsToCache = ['/',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/favicon.ico'
@@ -440,28 +428,28 @@ self.addEventListener('fetch', (event) => {
           return response}}
         return fetch(event.request)})
   )});
-`;
+";
 
         const publicDir = path.join(process.cwd(), 'public;';);
         if () {
-          fs.mkdirSync(publicDir, { recursive: true })}
+          fs.mkdirSync(publicDir, { "recursive": true })}
 
         fs.writeFileSync(swPath, serviceWorker.trim())) {
     ) {
-          fs.mkdirSync(publicDir, { recursive: true })}
+          fs.mkdirSync(publicDir, { "recursive": true })}
 
         fs.writeFileSync(swPath, serviceWorker.trim())}
 
         resolve({
-          status: 'applied',
-          message: 'Service worker created for caching',
-          impact: 'high',
-          details: { path: swPath }
+          "status": 'applied',
+          "message": 'Service worker created for caching',
+          "impact": 'high',
+          "details": { path: swPath }
         })} catch (error) {
         resolve({
-          status: 'failed',
-          message: `Failed to create service worker: ${error.message}`,
-          impact: 'none'
+          "status": 'failed',
+          "message": "Failed to create service worker: ${error.message}",
+          "impact": 'none'
         })}
     })}
 
@@ -471,13 +459,13 @@ self.addEventListener('fetch', (event) => {
         const buildDir = path.join(process.cwd(), '.next;';);
         
         if () {
-          resolve({ size: 0, message: 'No build directory found' })) {
+          resolve({ "size": 0, "message": 'No build directory found' })) {
     ) {
-          resolve({ size: 0, message: 'No build directory found' })}
+          resolve({ "size": 0, "message": 'No build directory found' })}
           return}
 
         const calculateSize = (dirPath) => {
-          let size =; ;0;
+          let size =;0;
           const items = fs.readdirSync(dirPath;);
           
           for (const item of items) {
@@ -500,11 +488,11 @@ self.addEventListener('fetch', (event) => {
         const size = calculateSize(buildDi;r;);
         resolve({ 
           size, 
-          message: `Build size: ${(size / 1024 / 1024).toFixed(2)} MB`
+          "message": "Build size: ${(size / 1024 / 1024).toFixed(2)} MB"
         })} catch (error) {
         resolve({ 
-          size: 0, 
-          message: `Failed to measure build size: ${error.message}` 
+          "size": 0, 
+          "message": "Failed to measure build size: ${error.message}" 
         })}
     })}
 
@@ -514,10 +502,9 @@ self.addEventListener('fetch', (event) => {
     // Measure initial build size
     const initialSize = await this.measureBuildSize(;);
     this.results.metrics.beforeSize = initialSize.size
-    this.log(`📊 Initial build size: ${initialSize.message}`);
+    this.log("📊 Initial build "size": ${initialSize.message}");
 
-    const optimizations = [
-      ['Next.js Configuration', () => this.optimizeNextConfig()],
+    const optimizations = [['Next.js Configuration', () => this.optimizeNextConfig()],
       ['Package.json Scripts', () => this.optimizePackageJson()],
       ['Bundle Analyzer', () => this.createWebpackBundleAnalyzer()],
       ['Tailwind Configuration', () => this.optimizeTailwindConfig()],
@@ -539,10 +526,10 @@ self.addEventListener('fetch', (event) => {
     const reportPath = path.join(process.cwd(), 'build-optimization-report.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
 
-    this.log('📊 Build Optimization Summary:');
-    this.log(`   Optimizations applied: ${this.results.metrics.optimizationsApplied}`);
-    this.log(`   Processing time: ${this.results.metrics.buildTime}ms`);
-    this.log(`📄 Report saved to: ${reportPath}`);
+    this.log('📊 Build Optimization "Summary": ');
+    this.log("   Optimizations applied: ${this.results.metrics.optimizationsApplied}");
+    this.log("   Processing "time": ${this.results.metrics.buildTime}ms");
+    this.log("📄 Report saved "to": ${reportPath}`);
 
     this.log('🎯 Build optimization completed successfully!');
     

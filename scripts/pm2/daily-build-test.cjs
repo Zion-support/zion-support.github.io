@@ -12,34 +12,33 @@ const path = require('path');
 
 const log = (message) => {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Daily Build Test: ${message}`);
+  console.log(`[${timestamp}] Daily Build "Test": ${message}`);
 };
 
 const runCommand = (command, description) => {
   try {
-    log(`Starting: ${description}`);
+    log(`"Starting": ${description}`);
     const output = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd()
+      "encoding": 'utf8', 
+      "stdio": 'pipe',
+      "cwd": process.cwd()
     });
-    log(`Completed: ${description}`);
-    return { success: true, output };
+    log(`"Completed": ${description}`);
+    return { "success": true, output };
   } catch (error) {
-    log(`Failed: ${description} - ${error.message}`);
-    return { success: false, error: error.message };
+    log(`"Failed": ${description} - ${error.message}`);
+    return { "success": false, "error": error.message };
   }
 };
 
 const runTests = () => {
   log('Running test suite');
   
-  const testCommands = [
-    'npm test',
-    'npm run test:unit',
-    'npm run test:integration',
-    'npm run test:e2e',
-    'npm run test:coverage'
+  const testCommands = ['npm test',
+    'npm run "test": unit',
+    'npm run "test": integration',
+    'npm run "test": e2e',
+    'npm run "test": coverage'
   ];
   
   let testsPassed = 0;
@@ -54,8 +53,8 @@ const runTests = () => {
     }
   });
   
-  log(`Test results: ${testsPassed} passed, ${testsFailed} failed`);
-  return { passed: testsPassed, failed: testsFailed };
+  log(`Test "results": ${testsPassed} passed, ${testsFailed} failed`);
+  return { "passed": testsPassed, "failed": testsFailed };
 };
 
 const buildProject = () => {
@@ -89,14 +88,14 @@ const buildProject = () => {
     
     for (const dir of outputDirs) {
       if (fs.existsSync(dir)) {
-        log(`Build output verified: ${dir} directory exists`);
+        log(`Build output "verified": ${dir} directory exists`);
         buildVerified = true;
         break;
       }
     }
     
     if (!buildVerified) {
-      log('Warning: No build output directory found');
+      log('"Warning": No build output directory found');
     }
     
     return true;
@@ -108,13 +107,13 @@ const buildProject = () => {
 
 const generateTestReport = (testResults) => {
   const report = {
-    timestamp: new Date().toISOString(),
-    tests: {
+    "timestamp": new Date().toISOString(),
+    "tests": {
       passed: testResults.passed,
-      failed: testResults.failed,
-      total: testResults.passed + testResults.failed
+      "failed": testResults.failed,
+      "total": testResults.passed + testResults.failed
     },
-    build: {
+    "build": {
       success: true
     }
   };
@@ -167,6 +166,6 @@ process.on('SIGTERM', () => {
 
 // Run the main function
 main().catch(error => {
-  log(`Daily Build and Test Process failed: ${error.message}`);
+  log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 });

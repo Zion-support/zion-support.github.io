@@ -57,7 +57,7 @@ import {
   MapPin ';';
 } from 'lucide-react';
 
-const EnhancedHeaderNew: React.FC = (props) => {
+const "EnhancedHeaderNew": React.FC = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
   const [searchQuery, setSearchQuery] = useState<any>(");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
@@ -75,7 +75,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async ("e": React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -88,74 +88,68 @@ const EnhancedHeaderNew: React.FC = (props) => {
     }
   };
 
-  const serviceCategories = [
-    {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      services: [
-        { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', price: 'From $199/month' },
-        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', price: 'From $299/month' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', price: 'From $399/month' },
-        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', price: 'From $599/month' }
+  const serviceCategories = [{
+      "title": 'AI & Machine Learning',
+      "icon": Brain,
+      "color": 'from-purple-500 to-pink-600',
+      "services": [
+        { name: 'AI Content Creation Suite', "href": '/services/ai-content-creation-suite', "price": 'From $199/month' },
+        { "name": 'AI Customer Support Automation', "href": '/services/ai-customer-support-automation', "price": 'From $299/month' },
+        { "name": 'AI Marketing Automation', "href": '/services/ai-marketing-automation', "price": 'From $399/month' },
+        { "name": 'AI Financial Analytics', "href": '/services/ai-financial-analytics', "price": 'From $599/month' }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      color: 'from-green-500 to-teal-600',
-      services: [
-        { name: 'Affiliate Marketing Tracking', href: '/services/affiliate-tracking', price: 'From $99/month' },
-        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard', price: 'From $149/month' },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', price: 'From $79/month' },
-        { name: 'Email Automation Sequencer', href: '/services/email-sequencer', price: 'From $129/month' }
+      "title": 'Micro SaaS Solutions',
+      "icon": ShoppingCart,
+      "color": 'from-green-500 to-teal-600',
+      "services": [{ name: 'Affiliate Marketing Tracking', "href": '/services/affiliate-tracking', "price": 'From $99/month' },
+        { "name": 'Event Management Dashboard', "href": '/services/event-management-dashboard', "price": 'From $149/month' },
+        { "name": 'Helpdesk Platform', "href": '/services/helpdesk-platform', "price": 'From $79/month' },
+        { "name": 'Email Automation Sequencer', "href": '/services/email-sequencer', "price": 'From $129/month' }
       ]
     },
     {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-600',
-      services: [
-        { name: 'Cloud Migration Services', href: '/services/cloud-migration', price: 'From $2,999/project' },
-        { name: 'DevOps & CI/CD Implementation', href: '/services/devops-cicd', price: 'From $1,999/month' },
-        { name: 'Cybersecurity Assessment', href: '/services/cybersecurity-assessment', price: 'From $1,499/assessment' },
-        { name: 'IT Infrastructure Management', href: '/services/it-infrastructure-management', price: 'From $999/month' }
+      "title": 'IT Services',
+      "icon": Cloud,
+      "color": 'from-blue-500 to-cyan-600',
+      "services": [{ name: 'Cloud Migration Services', "href": '/services/cloud-migration', "price": 'From $2,999/project' },
+        { "name": 'DevOps & CI/CD Implementation', "href": '/services/devops-cicd', "price": 'From $1,999/month' },
+        { "name": 'Cybersecurity Assessment', "href": '/services/cybersecurity-assessment', "price": 'From $1,499/assessment' },
+        { "name": 'IT Infrastructure Management', "href": '/services/it-infrastructure-management', "price": 'From $999/month' }
       ]
     },
     {
-      title: 'Emerging Technologies',
-      icon: Atom,
-      color: 'from-indigo-500 to-purple-600',
-      services: [
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', price: 'From $4,999/month' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', price: 'From $1,999/month' },
-        { name: 'Blockchain Development', href: '/services/blockchain-development', price: 'From $2,999/project' }
+      "title": 'Emerging Technologies',
+      "icon": Atom,
+      "color": 'from-indigo-500 to-purple-600',
+      "services": [{ name: 'Quantum Computing Solutions', "href": '/services/quantum-computing', "price": 'From $4,999/month' },
+        { "name": 'IoT Edge Computing', "href": '/services/iot-edge-computing', "price": 'From $1,999/month' },
+        { "name": 'Blockchain Development', "href": '/services/blockchain-development', "price": 'From $2,999/project' }
       ]
     };
   ];
 
-  const industrySolutions = [
-    { name: 'Healthcare', icon: Heart, href: '/solutions/healthcare' },
-    { name: 'Manufacturing', icon: Factory, href: '/solutions/manufacturing' },
-    { name: 'Financial', icon: CreditCard, href: '/solutions/financial' },
-    { name: 'Education', icon: GraduationCap, href: '/solutions/education' },
-    { name: 'Retail', icon: ShoppingBag, href: '/solutions/retail' },
-    { name: 'Enterprise', icon: Building, href: '/solutions/enterprise' };
+  const industrySolutions = [{ "name": 'Healthcare', "icon": Heart, "href": '/solutions/healthcare' },
+    { "name": 'Manufacturing', "icon": Factory, "href": '/solutions/manufacturing' },
+    { "name": 'Financial', "icon": CreditCard, "href": '/solutions/financial' },
+    { "name": 'Education', "icon": GraduationCap, "href": '/solutions/education' },
+    { "name": 'Retail', "icon": ShoppingBag, "href": '/solutions/retail' },
+    { "name": 'Enterprise', "icon": Building, "href": '/solutions/enterprise' };
   ];
 
-  const mainNavigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', hasDropdown: true },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' };
+  const mainNavigation = [{ "name": 'Home', "href": '/' },
+    { "name": 'Services', "href": '/services', "hasDropdown": true },
+    { "name": 'Solutions', "href": '/solutions', "hasDropdown": true },
+    { "name": 'About', "href": '/about' },
+    { "name": 'Contact', "href": '/contact' };
   ];
 
   return (
     <>
       {/* Top Contact Bar */}
       <div className="bg-gray-800 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
               <div className="flex items-center">
@@ -192,23 +186,23 @@ const EnhancedHeaderNew: React.FC = (props) => {
             ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'
             : 'bg-white border-b border-gray-200'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        initial={{ "y": -100 }}
+        animate={{ "y": 0 }}
+        transition={{ "duration": 0.8, "ease": 'easeOut' }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <motion.div
                 className="relative"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ "scale": 1.05, "rotate": 5 }}
+                whileTap={{ "scale": 0.95 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-"hover": opacity-100 transition-opacity duration-500 blur-lg" />
               </motion.div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-gray-900">
@@ -221,7 +215,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-8">
+            <nav className="hidden "xl": flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <div key={item.name} className="relative">
                   <Link
@@ -229,7 +223,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
                     className={`font-medium transition-all duration-300 ${
                       location.pathname === item.href';';
                         ? 'text-cyan-600 border-b-2 border-cyan-600'
-                        : 'text-gray-700 hover:text-cyan-600'
+                        : 'text-gray-700 "hover": text-cyan-600'
                     }`}
                     onMouseEnter={() => {
                       if (item.hasDropdown) {
@@ -246,14 +240,14 @@ const EnhancedHeaderNew: React.FC = (props) => {
             </nav>
 
             {/* Search and CTA */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden "md": flex items-center space-x-4">
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 px-4 py-2 pl-10 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-64 px-4 py-2 pl-10 bg-gray-100 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
                 {isSearching && (
@@ -265,7 +259,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
               </form>
               <Link
                 to="/contact"
-                className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                className="bg-cyan-600 "hover": bg-cyan-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
               >
                 Get Quote
               </Link>
@@ -274,7 +268,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              className=""xl": hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -285,13 +279,13 @@ const EnhancedHeaderNew: React.FC = (props) => {
         <AnimatePresence>
           {servicesDropdownOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ "opacity": 0, "y": -20 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              exit={{ "opacity": 0, "y": -20 }}
               className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-xl"
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+              <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {serviceCategories.map((category, index) => (
                     <div key={index} className="space-y-4">
@@ -306,7 +300,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
                           <li key={serviceIndex}>
                             <Link
                               to={service.href}
-                              className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                              className="block p-3 rounded-lg "hover": bg-gray-50 transition-colors group"
                             >
                               <div className="font-medium text-gray-900 group-hover:text-cyan-600">
                                 {service.name}
@@ -329,7 +323,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
                     </div>
                     <Link
                       to="/contact"
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                      className="bg-cyan-600 "hover": bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
                       Contact Us
                     </Link>
@@ -344,19 +338,19 @@ const EnhancedHeaderNew: React.FC = (props) => {
         <AnimatePresence>
           {solutionsDropdownOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ "opacity": 0, "y": -20 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              exit={{ "opacity": 0, "y": -20 }}
               className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-xl"
               onMouseLeave={() => setSolutionsDropdownOpen(false)}
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+              <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {industrySolutions.map((industry, index) => (
                     <Link
                       key={index}
                       to={industry.href}
-                      className="group p-6 rounded-xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300"
+                      className="group p-6 rounded-xl border border-gray-200 "hover": border-cyan-300 hover:shadow-lg transition-all duration-300"
                     >
                       <div className="flex items-center space-x-4 mb-4">
                         <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center group-hover:bg-cyan-200 transition-colors">
@@ -382,17 +376,17 @@ const EnhancedHeaderNew: React.FC = (props) => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div';
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="xl:hidden bg-white border-b border-gray-200"
+              initial={{ "opacity": 0, "height": 0 }}
+              animate={{ "opacity": 1, "height": 'auto' }}
+              exit={{ "opacity": 0, "height": 0 }}
+              className=""xl": hidden bg-white border-b border-gray-200"
             >
               <div className="px-4 py-6 space-y-4">
                 {mainNavigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-lg font-medium text-gray-700 "hover": text-cyan-600 hover:bg-gray-50 rounded-lg transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -406,7 +400,7 @@ const EnhancedHeaderNew: React.FC = (props) => {
                         placeholder="Search services..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full px-4 py-2 pl-10 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-2 pl-10 bg-gray-100 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       />
                       <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
                     </div>

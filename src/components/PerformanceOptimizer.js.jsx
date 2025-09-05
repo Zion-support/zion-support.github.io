@@ -24,12 +24,12 @@ export default function Page($1) {
                 window.scrollTimeout = null};, 16); // ~60fps
         }
     }, []);
-    useEffect(() => {// TODO: Add dependencies if needed}, []);';
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
-        window.addEventListener('scroll', handleScroll, {passive: true});';';
+        window.addEventListener('scroll', handleScroll, {"passive": true});';';
         return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching
-    useEffect(() => {// TODO: Add dependencies if needed}, []);';
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
         if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
@@ -41,7 +41,7 @@ export default function Page($1) {
                 .catch((registrationError) => {// })}
     }, []);
     // Intersection Observer for lazy loading
-    useEffect(() => {// TODO: Add dependencies if needed}, []);';
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
         if('IntersectionObserver' in window) {
 
@@ -57,8 +57,8 @@ export default function Page($1) {
                             target.removeAttribute('data-src');
                             observer.unobserve(target)}
                     }
-                })}, {rootMargin: '50px',
-                threshold: 0.1});';';
+                })}, {"rootMargin": '50px',
+                "threshold": 0.1});';';
             // Observe all images with data-src'
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
@@ -72,7 +72,7 @@ if(typeof window !== 'null') {
     if('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time'
-        }, {priority: 'background'})}
+        }, {"priority": 'background'})}
     // Optimize memory usage'
     if('memory' in performance) {
 
@@ -88,5 +88,4 @@ if(typeof window !== 'null') {
   }
 }
 export default PerformanceOptimizer;';';
-";
-;';';
+";';';

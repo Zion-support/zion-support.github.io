@@ -7,11 +7,11 @@ const path = require('path')
 class SecurityAutomation {
   constructor() {
     this.config = {
-      scanInterval: parseInt(process.env.SCAN_INTERVAL) || 14400000, // 4 hours
-      autoPatch: process.env.AUTO_PATCH === 'true',
-      vulnerabilityThreshold: process.env.VULNERABILITY_THRESHOLD || 'medium',
-      alertEnabled: true,
-      quarantineEnabled: true
+      "scanInterval": parseInt(process.env.SCAN_INTERVAL) || 14400000, // 4 hours
+      "autoPatch": process.env.AUTO_PATCH === 'true',
+      "vulnerabilityThreshold": process.env.VULNERABILITY_THRESHOLD || 'medium',
+      "alertEnabled": true,
+      "quarantineEnabled": true
     };
     
     this.vulnerabilities = [];
@@ -29,13 +29,13 @@ class SecurityAutomation {
       await this.performInitialScan();
       this.startContinuousScanning();
       console.log('✅ Security Automation started successfully')} catch (error) {
-      console.error('❌ Failed to start Security Automation:', error)}
+      console.error('❌ Failed to start Security "Automation": ', error)}
   }
 
   async initialize() {
     // Create logs directory
-    await fs.mkdir('./logs', { recursive: true });
-    await fs.mkdir('./security-reports', { recursive: true });
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./security-reports', { "recursive": true });
     
     // Load existing data
     await this.loadSecurityData();
@@ -53,7 +53,7 @@ class SecurityAutomation {
       await this.analyzeResults();
       
       console.log('✅ Initial security scan completed')} catch (error) {
-      console.error('❌ Initial security scan failed:', error)}
+      console.error('❌ Initial security scan "failed": ', error)}
   }
 
   async scanDependencies() {
@@ -61,26 +61,26 @@ class SecurityAutomation {
     
     try {
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' };);
+      const auditResult = execSync('npm audit --json', { "encoding": 'utf8' };);
       const audit = JSON.parse(auditResult;);
       
       this.scanResults.dependencies = {
-        vulnerabilities: audit.vulnerabilities || {},
-        metadata: audit.metadata || {},
-        timestamp: new Date().toISOString()
+        "vulnerabilities": audit.vulnerabilities || {},
+        "metadata": audit.metadata || {},
+        "timestamp": new Date().toISOString()
       };
       
       // Process vulnerabilities
       if ( {
         for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
           this.vulnerabilities.push({
-            type: 'dependency',
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            recommendation: vuln.recommendation,
-            timestamp: new Date().toISOString()
+            "type": 'dependency',
+            "package": packageName,
+            "severity": vuln.severity,
+            "title": vuln.title,
+            "description": vuln.description,
+            "recommendation": vuln.recommendation,
+            "timestamp": new Date().toISOString()
           })}
       }
       
@@ -88,18 +88,18 @@ class SecurityAutomation {
      {
         for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
           this.vulnerabilities.push({
-            type: 'dependency',
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            recommendation: vuln.recommendation,
-            timestamp: new Date().toISOString()
+            "type": 'dependency',
+            "package": packageName,
+            "severity": vuln.severity,
+            "title": vuln.title,
+            "description": vuln.description,
+            "recommendation": vuln.recommendation,
+            "timestamp": new Date().toISOString()
           })}
       }
       
-      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {})}.length} dependency vulnerabilities`)} catch (error) {
-      console.error('Error scanning dependencies:', error)}
+      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {})}.length} dependency vulnerabilities")} catch (error) {
+      console.error('Error scanning "dependencies": ', error)}
   }
 
   async scanCode() {
@@ -107,12 +107,12 @@ class SecurityAutomation {
     
     try {
       // Run ESLint security rules
-      const eslintResult = execSync('npx eslint . --config .eslintrc.security.js --format json', { encoding: 'utf8' };);
+      const eslintResult = execSync('npx eslint . --config .eslintrc.security.js --format json', { "encoding": 'utf8' };);
       const eslint = JSON.parse(eslintResult;);
       
       this.scanResults.code = {
-        eslint: eslint,
-        timestamp: new Date().toISOString()
+        "eslint": eslint,
+        "timestamp": new Date().toISOString()
       };
       
       // Process ESLint security issues
@@ -120,39 +120,38 @@ class SecurityAutomation {
         file.messages.forEach(message => {
           if () {
             this.vulnerabilities.push({
-              type: 'code',
-              file: file.filePath,
-              rule: message.ruleId,
-              severity: message.severity,
-              message: message.message,
-              line: message.line,
-              column: message.column,
-              timestamp: new Date().toISOString()
+              "type": 'code',
+              "file": file.filePath,
+              "rule": message.ruleId,
+              "severity": message.severity,
+              "message": message.message,
+              "line": message.line,
+              "column": message.column,
+              "timestamp": new Date().toISOString()
             })}
         })})) {
     ) {
             this.vulnerabilities.push({
-              type: 'code',
-              file: file.filePath,
-              rule: message.ruleId,
-              severity: message.severity,
-              message: message.message,
-              line: message.line,
-              column: message.column,
-              timestamp: new Date().toISOString()
+              "type": 'code',
+              "file": file.filePath,
+              "rule": message.ruleId,
+              "severity": message.severity,
+              "message": message.message,
+              "line": message.line,
+              "column": message.column,
+              "timestamp": new Date().toISOString()
             })}
         })})}
       
-      console.log(`📊 Found ${eslint.length} files with potential security issues`)} catch (error) {
-      console.error('Error scanning code:', error)}
+      console.log("📊 Found ${eslint.length} files with potential security issues")} catch (error) {
+      console.error('Error scanning "code": ', error)}
   }
 
   async scanConfiguration() {
     console.log('⚙️ Scanning configuration files...');
     
     try {
-      const configFiles = [
-        'package.json',
+      const configFiles = ['package.json',
         'next.config.js',
         'nginx.conf',
         'netlify.toml',
@@ -173,31 +172,30 @@ class SecurityAutomation {
       }
       
       this.scanResults.configuration = {
-        issues: configIssues,
-        timestamp: new Date().toISOString()
+        "issues": configIssues,
+        "timestamp": new Date().toISOString()
       };
       
       // Add configuration issues to vulnerabilities
       configIssues.forEach(issue => {
         this.vulnerabilities.push({
-          type: 'configuration',
-          file: issue.file,
-          severity: issue.severity,
-          issue: issue.issue,
-          recommendation: issue.recommendation,
-          timestamp: new Date().toISOString()
+          "type": 'configuration',
+          "file": issue.file,
+          "severity": issue.severity,
+          "issue": issue.issue,
+          "recommendation": issue.recommendation,
+          "timestamp": new Date().toISOString()
         })});
       
-      console.log(`📊 Found ${configIssues.length} configuration issues`)} catch (error) {
-      console.error('Error scanning configuration:', error)}
+      console.log("📊 Found ${configIssues.length} configuration issues")} catch (error) {
+      console.error('Error scanning "configuration": ', error)}
   }
 
   async analyzeConfigFile(filename, content) {
     const issues = [];
     
     // Check for hardcoded secrets
-    const secretPatterns = [
-      /password\s*[:=]\s*["'][^"']+["']/gi,
+    const secretPatterns = [/password\s*[:=]\s*["'][^"']+["']/gi,
       /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi,
       /secret\s*[:=]\s*["'][^"']+["']/gi,
       /token\s*[:=]\s*["'][^"']+["']/gi
@@ -207,18 +205,18 @@ class SecurityAutomation {
       const matches = content.match(pattern;);
       if ( {
         issues.push({
-          file: filename,
-          severity: 'high',
-          issue: 'Hardcoded secret detected',
-          recommendation: 'Use environment variables for sensitive data'
+          "file": filename,
+          "severity": 'high',
+          "issue": 'Hardcoded secret detected',
+          "recommendation": 'Use environment variables for sensitive data'
         })}
     })) {
      {
         issues.push({
-          file: filename,
-          severity: 'high',
-          issue: 'Hardcoded secret detected',
-          recommendation: 'Use environment variables for sensitive data'
+          "file": filename,
+          "severity": 'high',
+          "issue": 'Hardcoded secret detected',
+          "recommendation": 'Use environment variables for sensitive data'
         })}
     })}
     
@@ -233,21 +231,21 @@ class SecurityAutomation {
         Object.entries(packageJson.scripts).forEach(([scriptName, script]) => {
           if (script.includes('sudo') || script.includes('rm -rf')) {
             issues.push({
-              file: filename,
-              severity: 'medium',
-              issue: `Potentially dangerous script: ${scriptName}`,
-              recommendation: 'Review script for security implications'
+              "file": filename,
+              "severity": 'medium',
+              "issue": "Potentially dangerous script: ${scriptName}",
+              "recommendation": 'Review script for security implications'
             })}
         })}
     }
     
     // Check for CORS misconfigurations
-    if (content.includes('cors') && content.includes('origin: "*"')) {
+    if (content.includes('cors') && content.includes('"origin": "*"')) {
       issues.push({
         file: filename,
-        severity: 'medium',
-        issue: 'Overly permissive CORS configuration',
-        recommendation: 'Restrict CORS origins to specific domains'
+        "severity": 'medium',
+        "issue": 'Overly permissive CORS configuration',
+        "recommendation": 'Restrict CORS origins to specific domains'
       })}
     
     return issues) {
@@ -255,21 +253,21 @@ class SecurityAutomation {
         Object.entries(packageJson.scripts).forEach(([scriptName, script]) => {
           if (script.includes('sudo') || script.includes('rm -rf')) {
             issues.push({
-              file: filename,
-              severity: 'medium',
-              issue: `Potentially dangerous script: ${scriptName}`,
-              recommendation: 'Review script for security implications'
+              "file": filename,
+              "severity": 'medium',
+              "issue": "Potentially dangerous script: ${scriptName}",
+              "recommendation": 'Review script for security implications'
             })}
         })}
     }
     
     // Check for CORS misconfigurations
-    if (content.includes('cors') && content.includes('origin: "*"')) {
+    if (content.includes('cors') && content.includes('"origin": "*"')) {
       issues.push({
         file: filename,
-        severity: 'medium',
-        issue: 'Overly permissive CORS configuration',
-        recommendation: 'Restrict CORS origins to specific domains'
+        "severity": 'medium',
+        "issue": 'Overly permissive CORS configuration',
+        "recommendation": 'Restrict CORS origins to specific domains'
       })}
     
     return issues}}
@@ -279,8 +277,7 @@ class SecurityAutomation {
     
     try {
       // Use git-secrets or similar tool
-      const secretPatterns = [
-        'AKIA[0-9A-Z]{16}', // AWS Access Key
+      const secretPatterns = ['AKIA[0-9A-Z]{16}', // AWS Access Key
         'sk_live_[0-9a-zA-Z]{24}', // Stripe Secret Key
         'xoxb-[0-9]{11}-[0-9]{11}-[0-9a-zA-Z]{24}', // Slack Bot Token
         'ghp_[0-9a-zA-Z]{36}', // GitHub Personal Access Token
@@ -302,12 +299,12 @@ class SecurityAutomation {
             
             if ( {
               secretIssues.push({
-                file: file,
-                severity: 'critical',
-                issue: 'Exposed secret detected',
-                pattern: pattern,
-                matches: matches,
-                recommendation: 'Remove secret and rotate credentials'
+                "file": file,
+                "severity": 'critical',
+                "issue": 'Exposed secret detected',
+                "pattern": pattern,
+                "matches": matches,
+                "recommendation": 'Remove secret and rotate credentials'
               })}
           })} catch (error) {
           // Skip binary files or files that can't be read
@@ -315,17 +312,17 @@ class SecurityAutomation {
       }
       
       this.scanResults.secrets = {
-        issues: secretIssues,
-        timestamp: new Date().toISOString()
+        "issues": secretIssues,
+        "timestamp": new Date().toISOString()
       }) {
      {
               secretIssues.push({
-                file: file,
-                severity: 'critical',
-                issue: 'Exposed secret detected',
-                pattern: pattern,
-                matches: matches,
-                recommendation: 'Remove secret and rotate credentials'
+                "file": file,
+                "severity": 'critical',
+                "issue": 'Exposed secret detected',
+                "pattern": pattern,
+                "matches": matches,
+                "recommendation": 'Remove secret and rotate credentials'
               })}
           })} catch (error) {
           // Skip binary files or files that can't be read
@@ -333,23 +330,23 @@ class SecurityAutomation {
       }
       
       this.scanResults.secrets = {
-        issues: secretIssues,
-        timestamp: new Date().toISOString()
+        "issues": secretIssues,
+        "timestamp": new Date().toISOString()
       }}
       
       // Add secret issues to vulnerabilities
       secretIssues.forEach(issue => {
         this.vulnerabilities.push({
-          type: 'secret',
-          file: issue.file,
-          severity: issue.severity,
-          issue: issue.issue,
-          recommendation: issue.recommendation,
-          timestamp: new Date().toISOString()
+          "type": 'secret',
+          "file": issue.file,
+          "severity": issue.severity,
+          "issue": issue.issue,
+          "recommendation": issue.recommendation,
+          "timestamp": new Date().toISOString()
         })});
       
-      console.log(`📊 Found ${secretIssues.length} exposed secrets`)} catch (error) {
-      console.error('Error scanning secrets:', error)}
+      console.log("📊 Found ${secretIssues.length} exposed secrets")} catch (error) {
+      console.error('Error scanning "secrets": ', error)}
   }
 
   async getAllFiles(dir, files = []) {
@@ -390,12 +387,12 @@ class SecurityAutomation {
     console.log('📊 Analyzing security scan results...');
     
     const analysis = {
-      timestamp: new Date().toISOString(),
-      totalVulnerabilities: this.vulnerabilities.length,
-      severityBreakdown: this.getSeverityBreakdown(),
-      typeBreakdown: this.getTypeBreakdown(),
-      criticalIssues: this.getCriticalIssues(),
-      recommendations: await this.generateRecommendations()
+      "timestamp": new Date().toISOString(),
+      "totalVulnerabilities": this.vulnerabilities.length,
+      "severityBreakdown": this.getSeverityBreakdown(),
+      "typeBreakdown": this.getTypeBreakdown(),
+      "criticalIssues": this.getCriticalIssues(),
+      "recommendations": await this.generateRecommendations()
    };
     
     this.scanResults.analysis = analysis;
@@ -407,7 +404,7 @@ class SecurityAutomation {
     console.log('✅ Security analysis completed')}
 
   getSeverityBreakdown() {
-    const breakdown = { critical: 0, high: 0, medium: 0, low: 0};
+    const breakdown = { "critical": 0, "high": 0, "medium": 0, "low": 0};
     
     this.vulnerabilities.forEach(vuln => {
       const severity = vuln.severity?.toLowerCase() || 'lo;w;';
@@ -441,87 +438,87 @@ class SecurityAutomation {
     const dependencyVulns = this.vulnerabilities.filter(v => v.type === 'dependency';);
     if ( {
       recommendations.push({
-        type: 'dependency_update',
-        priority: 'high',
-        action: 'Update vulnerable dependencies',
-        count: dependencyVulns.length,
-        impact: 'Fix known security vulnerabilities'
+        "type": 'dependency_update',
+        "priority": 'high',
+        "action": 'Update vulnerable dependencies',
+        "count": dependencyVulns.length,
+        "impact": 'Fix known security vulnerabilities'
       })}
     
     // Code recommendations
     const codeVulns = this.vulnerabilities.filter(v => v.type === 'code') {
      {
       recommendations.push({
-        type: 'dependency_update',
-        priority: 'high',
-        action: 'Update vulnerable dependencies',
-        count: dependencyVulns.length,
-        impact: 'Fix known security vulnerabilities'
+        "type": 'dependency_update',
+        "priority": 'high',
+        "action": 'Update vulnerable dependencies',
+        "count": dependencyVulns.length,
+        "impact": 'Fix known security vulnerabilities'
       })}
     
     // Code recommendations
     const codeVulns = this.vulnerabilities.filter(v => v.type === 'code'});
     if ( {
       recommendations.push({
-        type: 'code_review',
-        priority: 'medium',
-        action: 'Review and fix code security issues',
-        count: codeVulns.length,
-        impact: 'Improve code security posture'
+        "type": 'code_review',
+        "priority": 'medium',
+        "action": 'Review and fix code security issues',
+        "count": codeVulns.length,
+        "impact": 'Improve code security posture'
       })}
     
     // Configuration recommendations
     const configVulns = this.vulnerabilities.filter(v => v.type === 'configuration') {
      {
       recommendations.push({
-        type: 'code_review',
-        priority: 'medium',
-        action: 'Review and fix code security issues',
-        count: codeVulns.length,
-        impact: 'Improve code security posture'
+        "type": 'code_review',
+        "priority": 'medium',
+        "action": 'Review and fix code security issues',
+        "count": codeVulns.length,
+        "impact": 'Improve code security posture'
       })}
     
     // Configuration recommendations
     const configVulns = this.vulnerabilities.filter(v => v.type === 'configuration'});
     if ( {
       recommendations.push({
-        type: 'configuration_hardening',
-        priority: 'medium',
-        action: 'Harden configuration settings',
-        count: configVulns.length,
-        impact: 'Reduce attack surface'
+        "type": 'configuration_hardening',
+        "priority": 'medium',
+        "action": 'Harden configuration settings',
+        "count": configVulns.length,
+        "impact": 'Reduce attack surface'
       })}
     
     // Secret recommendations
     const secretVulns = this.vulnerabilities.filter(v => v.type === 'secret') {
      {
       recommendations.push({
-        type: 'configuration_hardening',
-        priority: 'medium',
-        action: 'Harden configuration settings',
-        count: configVulns.length,
-        impact: 'Reduce attack surface'
+        "type": 'configuration_hardening',
+        "priority": 'medium',
+        "action": 'Harden configuration settings',
+        "count": configVulns.length,
+        "impact": 'Reduce attack surface'
       })}
     
     // Secret recommendations
     const secretVulns = this.vulnerabilities.filter(v => v.type === 'secret'});
     if ( {
       recommendations.push({
-        type: 'secret_management',
-        priority: 'critical',
-        action: 'Remove exposed secrets and rotate credentials',
-        count: secretVulns.length,
-        impact: 'Prevent credential compromise'
+        "type": 'secret_management',
+        "priority": 'critical',
+        "action": 'Remove exposed secrets and rotate credentials',
+        "count": secretVulns.length,
+        "impact": 'Prevent credential compromise'
       })}
     
     return recommendations) {
      {
       recommendations.push({
-        type: 'secret_management',
-        priority: 'critical',
-        action: 'Remove exposed secrets and rotate credentials',
-        count: secretVulns.length,
-        impact: 'Prevent credential compromise'
+        "type": 'secret_management',
+        "priority": 'critical',
+        "action": 'Remove exposed secrets and rotate credentials',
+        "count": secretVulns.length,
+        "impact": 'Prevent credential compromise'
       })}
     
     return recommendations}}
@@ -531,17 +528,17 @@ class SecurityAutomation {
     
     for (const issue of criticalIssues) {
       const alert = {
-        id: `alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        type: 'security_alert',
-        severity: issue.severity,
-        issue: issue,
-        timestamp: new Date().toISOString(),
-        resolved: false
+        "id": "alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
+        "type": 'security_alert',
+        "severity": issue.severity,
+        "issue": issue,
+        "timestamp": new Date().toISOString(),
+        "resolved": false
      };
       
       this.securityAlerts.push(alert);
       
-      console.log(`🚨 Security Alert: ${issue.severity.toUpperCase()} - ${issue.issue || issue.title}`);
+      console.log("🚨 Security "Alert": ${issue.severity.toUpperCase()} - ${issue.issue || issue.title}");
       
       // Auto-patch if enabled and possible
       if ( {
@@ -560,28 +557,28 @@ class SecurityAutomation {
     if (vulnerability.type !== 'dependency') return}
     
     try {
-      console.log(`🔧 Auto-patching vulnerability: ${vulnerability.package}`);
+      console.log("🔧 Auto-patching "vulnerability": ${vulnerability.package}");
       
       // Run npm audit fix
-      execSync('npm audit fix --force', { stdio: 'pipe' });
+      execSync('npm audit fix --force', { "stdio": 'pipe' });
       
       // Record patch
       this.patchHistory.push({
-        vulnerability: vulnerability,
-        action: 'auto_patch',
-        timestamp: new Date().toISOString(),
-        success: true
+        "vulnerability": vulnerability,
+        "action": 'auto_patch',
+        "timestamp": new Date().toISOString(),
+        "success": true
       });
       
-      console.log(`✅ Auto-patched ${vulnerability.package}`)} catch (error) {
-      console.error(`❌ Failed to auto-patch ${vulnerability.package}:`, error);
+      console.log("✅ Auto-patched ${vulnerability.package}")} catch (error) {
+      console.error("❌ Failed to auto-patch ${vulnerability.package}:", error);
       
       this.patchHistory.push({
-        vulnerability: vulnerability,
-        action: 'auto_patch',
-        timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message
+        "vulnerability": vulnerability,
+        "action": 'auto_patch',
+        "timestamp": new Date().toISOString(),
+        "success": false,
+        "error": error.message
       })}
   }
 
@@ -594,7 +591,7 @@ class SecurityAutomation {
       try {
         console.log('🔄 Performing scheduled security scan...');
         await this.performFullScan()} catch (error) {
-        console.error('Error in scheduled scan:', error)}
+        console.error('Error in scheduled "scan": ', error)}
     }, this.config.scanInterval);
     
     // Quick vulnerability check every hour
@@ -604,7 +601,7 @@ class SecurityAutomation {
       
       try {
         await this.quickVulnerabilityCheck()} catch (error) {
-        console.error('Error in quick vulnerability check:', error)}
+        console.error('Error in quick vulnerability "check": ', error)}
     }, 3600000); // 1 hour
   }
 
@@ -622,42 +619,42 @@ class SecurityAutomation {
       await this.analyzeResults();
       
       console.log('✅ Full security scan completed')} catch (error) {
-      console.error('❌ Full security scan failed:', error)}
+      console.error('❌ Full security scan "failed": ', error)}
   }
 
   async quickVulnerabilityCheck() {
     try {
       // Quick dependency check
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' };);
+      const auditResult = execSync('npm audit --json', { "encoding": 'utf8' };);
       const audit = JSON.parse(auditResult;);
       
       if (.length > 0) {
-        console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities)) {
+        console.log("⚠️ New vulnerabilities "detected": ${Object.keys(audit.vulnerabilities)) {
     .length > 0) {
         console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities)}.length}`);
         await this.generateAlerts()}
     } catch (error) {
-      console.error('Error in quick vulnerability check:', error)}
+      console.error('Error in quick vulnerability "check": ', error)}
   }
 
   async saveScanResults() {
     try {
       const filename = `./security-reports/security-scan-${new Date().toISOString().split('T')[0]}.json;`;
       await fs.writeFile(filename, JSON.stringify(this.scanResults, null, 2))} catch (error) {
-      console.error('Error saving scan results:', error)}
+      console.error('Error saving scan "results": ', error)}
   }
 
   async saveSecurityData() {
     try {
       const data = {
-        vulnerabilities: this.vulnerabilities,
-        alerts: this.securityAlerts,
-        patchHistory: this.patchHistory,
-        lastUpdated: new Date().toISOString()
+        "vulnerabilities": this.vulnerabilities,
+        "alerts": this.securityAlerts,
+        "patchHistory": this.patchHistory,
+        "lastUpdated": new Date().toISOString()
      };
       
       await fs.writeFile('./logs/security-data.json', JSON.stringify(data, null, 2))} catch (error) {
-      console.error('Error saving security data:', error)}
+      console.error('Error saving security "data": ', error)}
   }
 
   async loadSecurityData() {
@@ -675,7 +672,7 @@ class SecurityAutomation {
         this.securityAlerts = [];
         this.patchHistory = []}
     } catch (error) {
-      console.error('Error loading security data:', error)}
+      console.error('Error loading security "data": ', error)}
   }
 }
 

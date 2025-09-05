@@ -29,7 +29,7 @@ export function WorkspaceHeader($1) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 "sm": grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
           <div className="text-2xl font-medium">8</div>

@@ -35,7 +35,7 @@ function EnhancedAccessibilityPanel($1) {
 
 interface AccessibilitySettings {
 
-  highContrast: boolean;
+  "highContrast": boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;';
@@ -46,7 +46,7 @@ interface AccessibilitySettings {
   letterSpacing: number;
   wordSpacing: number}
 interface AccessibilityIssue {
-  id: string;';';
+  "id": string;';';
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: string;';
@@ -57,16 +57,16 @@ export function EnhancedAccessibilityPanel($1) {
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
-    highContrast: fals e,
-    largeText: fals e,
-    reducedMotion: fals e,
-    screenReader: boolean,
-    focusIndicator: tru e,
-    colorBlindness: 'none',
-    fontSize: 1 6,
-    lineHeight: 1.5,
-    letterSpacing: 0,
-    wordSpacing: 0};);
+    "highContrast": fals e,
+    "largeText": fals e,
+    "reducedMotion": fals e,
+    "screenReader": boolean,
+    "focusIndicator": tru e,
+    "colorBlindness": 'none',
+    "fontSize": 1 6,
+    "lineHeight": 1.5,
+    "letterSpacing": 0,
+    "wordSpacing": 0};);
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>(");
@@ -120,11 +120,11 @@ export function EnhancedAccessibilityPanel($1) {
         updatedSettings.lineHeight.toString()';
       );';';
       document.documentElement.style.setProperty('
-        '--letter-spacing',`
-        `${updatedSettings.letterSpacing}px`
+        '--letter-spacing',"
+        "${updatedSettings.letterSpacing}px"
       );';';
       document.documentElement.style.setProperty('
-        '--word-spacing',`
+        '--word-spacing',"
         `${updatedSettings.wordSpacing}px`
       );
 
@@ -138,7 +138,7 @@ export function EnhancedAccessibilityPanel($1) {
 
   // Load settings from localStorage
   useEffect(() => {
-// TODO: Add dependencies if needed
+// "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function

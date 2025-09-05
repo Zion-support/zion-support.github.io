@@ -232,18 +232,21 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-gray-200 bg-white"
+              className="lg:hidden border-t border-gray-200"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
                       onClick={closeMenu}
                     >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="w-4 h-4" />
+                        <span>{item.name}</span>
+                      </div>
+                      {item.children && <ChevronDown className="w-4 h-4" />}
                     </Link>
                     {item.children && (
                       <div className="ml-8 space-y-1">
@@ -251,11 +254,11 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             onClick={closeMenu}
                           >
-                            <div className="flex items-center space-x-2">
-                              <child.icon className="w-3 h-3" />
+                            <div className="flex items-center space-x-3">
+                              <child.icon className="w-4 h-4" />
                               <span>{child.name}</span>
                             </div>
                             {child.count && (
@@ -269,23 +272,23 @@ export default function Header() {
                     )}
                   </div>
                 ))}
-                
-                {/* Mobile CTA Buttons */}
-                <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
-                    onClick={closeMenu}
-                  >
-                    Get Quote
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                    onClick={closeMenu}
-                  >
-                    Free Consultation
-                  </Link>
+                <div className="px-4 pt-4 border-t border-gray-200">
+                  <div className="flex flex-col space-y-2">
+                    <Link
+                      href="/contact"
+                      className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-center"
+                      onClick={closeMenu}
+                    >
+                      Get Quote
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
+                      onClick={closeMenu}
+                    >
+                      Free Consultation
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -12,20 +12,20 @@ export function ClientSuccessStoriesSection($1) {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>";
           <pclassName="text-xl text-gray-600 max-w-3xl mx-auto">';
@@ -36,22 +36,22 @@ export function ClientSuccessStoriesSection($1) {
           initial = {
 
   { opacity: 0,
-  y: 2 0
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.1
+  { "duration": 0.6,
+  "delay": 0.1
 
 }}"
-          className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 "md": gri d-cols-4 gap-8 mb-16"
         > {successMetrics.map ( (metric, index) => {;
             
             return ("
@@ -69,30 +69,30 @@ export function ClientSuccessStoriesSection($1) {
         </motion.div>
 
         {/* Testimonials Grid */}"
-        <div className="grid md: gri d-cols-2 gap-8 mb-12">
+        <div className="grid "md": gri d-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)  => ("
-        <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 "lg": gri d-cols-3 gap-8 mb-16">
           {successStories.map((story, index) => (
             <motion.div
               key={story.id}"
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
               initial = {
 
   { opacity: 0,
-  y: 3 0
+  "y": 3 0
 
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-              viewport={{ once: tru e }}
+              viewport={{ "once": tru e }}
               transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.1
+  { "duration": 0.6,
+  "delay": inde x * 0.1
 
 }}
             >"
@@ -120,17 +120,17 @@ export function ClientSuccessStoriesSection($1) {
                 </h3>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Challenge:</h4>
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Challenge": </h4>
                   <p className="text-gray - 400 text-sm">{story.challenge}</p>
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Solution:</h4>
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Solution": </h4>
                   <p className="text-gray - 400 text-sm">{story.solution}</p>
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">Results:</h4>
+                  <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Results": </h4>
                   <ul className="space - y-1">
                     {story.results.map((result, resultIndex) => (<li key={resultIndex} className="flex items - center gap-2 text-sm">
                         <div className="w-2 h-2 bg-green - 400 rounded-full"></div>
@@ -162,21 +162,21 @@ export function ClientSuccessStoriesSection($1) {
         <motion.div
           className="mb-16";          initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
         >"
@@ -185,7 +185,7 @@ export function ClientSuccessStoriesSection($1) {
               Success by the Numbers
             </h3>
 
-            <div className="grid grid - cols - 2 md: gri d - cols - 4 gap-8">
+            <div className="grid grid - cols - 2 "md": gri d - cols - 4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font - bold text-blue - 400 mb-2">98%</div>
                 <div className="text-gray - 300 text-sm">Client Satisfaction</div>
@@ -209,20 +209,20 @@ export function ClientSuccessStoriesSection($1) {
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 2 0
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.6
+  { "duration": 0.6,
+  "delay": 0.6
 
 }}
         >"
@@ -233,7 +233,7 @@ export function ClientSuccessStoriesSection($1) {
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <ArrowRight className="ml-2 h-5 w-5"   />

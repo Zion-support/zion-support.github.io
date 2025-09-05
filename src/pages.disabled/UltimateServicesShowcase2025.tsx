@@ -39,7 +39,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const UltimateServicesShowcase2025: React.FC = () => {
+const "UltimateServicesShowcase2025": React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(");
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -63,22 +63,22 @@ const UltimateServicesShowcase2025: React.FC = () => {
     }
 
     if (selectedType !== 'all') {
-      const serviceTypeMap: { [key: string]: 'Micro SAAS' | 'IT Services' | 'AI Services' } = {
+      const "serviceTypeMap": { [key: string]: 'Micro SAAS' | 'IT Services' | 'AI Services' } = {
         'micro-saas': 'Micro SAAS',
         'it-services': 'IT Services',
         'ai-services': 'AI Services'
-      };;
+      };
       services = services.filter(service => 
         service.serviceType === serviceTypeMap[selectedType]
       );
     }
 
     if (selectedPriceRange !== 'all') {
-      const priceRanges: { [key: string]: [number, number] } = {
+      const "priceRanges": { [key: string]: [number, number] } = {
         'budget': [1000, 2999],
         'mid-range': [3000, 6999],
         'enterprise': [7000, 999999]
-      };;
+      };
       const [min, max] = priceRanges[selectedPriceRange] || [0, 999999];
       services = services.filter(service => service.price >= min && service.price <= max);
     }
@@ -103,7 +103,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
   const freeTierServices = getUltimateServicesWithFreeTier();
   const betaAccessServices = getUltimateBetaAccessServices();
 
-  const getServiceTypeColor = (serviceType: string) => {
+  const getServiceTypeColor = ("serviceType": string) => {
     switch (serviceType) {
       case 'Micro SAAS': return 'bg-blue-100 text-blue-800';
       case 'IT Services': return 'bg-green-100 text-green-800';
@@ -112,7 +112,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'revolutionary': return 'bg-red-100 text-red-800';
       case 'cutting-edge': return 'bg-orange-100 text-orange-800';
@@ -121,7 +121,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getSupportLevelColor = (level: string) => {
+  const getSupportLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'enterprise': return 'bg-purple-100 text-purple-800';
       case 'premium': return 'bg-blue-100 text-blue-800';
@@ -134,7 +134,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header Section */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Ultimate Services Showcase 2025
@@ -160,7 +160,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
             </div>
 
             {/* Statistics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 "md": grid-cols-4 gap-4 mb-8">
               <div className="bg-blue-50 p-4 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600">{stats.totalServices}</div>
                 <div className="text-sm text-blue-800">Total Services</div>
@@ -183,7 +183,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
       </div>
 
       {/* Filters Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="h-5 w-5 text-gray-600" />
@@ -302,9 +302,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </TabsList>
 
           <TabsContent value="all" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <Badge className={getServiceTypeColor(service.serviceType)}>
@@ -349,15 +349,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
                           <TrendingUp className="h-4 w-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>"ROI": {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-1 mb-1">
                           <Clock className="h-4 w-4" />
-                          <span>Delivery: {service.estimatedDelivery}</span>
+                          <span>"Delivery": {service.estimatedDelivery}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
-                          <span>Market: {service.marketPrice}</span>
+                          <span>"Market": {service.marketPrice}</span>
                         </div>
                       </div>
 
@@ -382,7 +382,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                               <span>{service.targetAudience.length} audiences</span>
                             </div>
                           </div>
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                          <Button size="sm" className="bg-blue-600 "hover": bg-blue-700">
                             Learn More
                             <ArrowRight className="h-4 w-4 ml-1" />
                           </Button>
@@ -396,9 +396,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="featured" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300 border-2 border-yellow-200">
+                <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300 border-2 border-yellow-200">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <Badge className="bg-yellow-100 text-yellow-800">
@@ -435,15 +435,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
                           <TrendingUp className="h-4 w-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>"ROI": {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
-                          <span>Market: {service.marketPrice}</span>
+                          <span>"Market": {service.marketPrice}</span>
                         </div>
                       </div>
 
-                      <Button size="sm" className="w-full bg-blue-600 hover:bg-blue-700">
+                      <Button size="sm" className="w-full bg-blue-600 "hover": bg-blue-700">
                         Get Started
                         <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
@@ -455,9 +455,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="trending" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {trendingServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300 border-2 border-green-200">
+                <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300 border-2 border-green-200">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <Badge className="bg-green-100 text-green-800">
@@ -494,15 +494,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
                           <TrendingUp className="h-4 w-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>"ROI": {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
-                          <span>Market: {service.marketPrice}</span>
+                          <span>"Market": {service.marketPrice}</span>
                         </div>
                       </div>
 
-                      <Button size="sm" className="w-full bg-green-600 hover:bg-green-700">
+                      <Button size="sm" className="w-full bg-green-600 "hover": bg-green-700">
                         Join Trend
                         <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
@@ -514,9 +514,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="free" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {freeTierServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300 border-2 border-green-200">
+                <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300 border-2 border-green-200">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <Badge className="bg-green-100 text-green-800">
@@ -553,15 +553,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
                           <TrendingUp className="h-4 w-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>"ROI": {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
-                          <span>Market: {service.marketPrice}</span>
+                          <span>"Market": {service.marketPrice}</span>
                         </div>
                       </div>
 
-                      <Button size="sm" className="w-full bg-green-600 hover:bg-green-700">
+                      <Button size="sm" className="w-full bg-green-600 "hover": bg-green-700">
                         Start Free Trial
                         <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
@@ -573,9 +573,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="beta" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {betaAccessServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300 border-2 border-blue-200">
+                <Card key={service.id} className=""hover": shadow-lg transition-shadow duration-300 border-2 border-blue-200">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <Badge className="bg-blue-100 text-blue-800">
@@ -612,15 +612,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
                           <TrendingUp className="h-4 w-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>"ROI": {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className="h-4 w-4" />
-                          <span>Market: {service.marketPrice}</span>
+                          <span>"Market": {service.marketPrice}</span>
                         </div>
                       </div>
 
-                      <Button size="sm" className="w-full bg-blue-600 hover:bg-blue-700">
+                      <Button size="sm" className="w-full bg-blue-600 "hover": bg-blue-700">
                         Request Beta Access
                         <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
@@ -635,7 +635,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
 
       {/* Contact CTA Section */}
       <div className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 text-blue-100">
             Contact us today to discuss your specific needs and get a customized solution

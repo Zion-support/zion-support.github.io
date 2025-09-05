@@ -18,9 +18,9 @@ class SimpleMergeResolver {
 
   async findConflictedFiles() {
     try {
-      const { stdout } = await execAsync('git diff --name-only --diff-filter=U', { cwd: this.projectRoot });
+      const { stdout } = await execAsync('git diff --name-only --diff-filter=U', { "cwd": this.projectRoot });
       return stdout.trim().split('\n').filter(file => file)} catch (error) {
-      await this.log(`Error finding conflicted files: ${error.message}`, 'ERROR');
+      await this.log(`Error finding conflicted "files": ${error.message}`, 'ERROR');
       return []}
   }
 
@@ -42,11 +42,11 @@ class SimpleMergeResolver {
       if (resolvedContent !== content) {
         await fs.writeFile(filePath, resolvedContent, 'utf8');
         this.fixedFiles.push(filePath);
-        await this.log(`Resolved conflicts in: ${filePath}`);
+        await this.log(`Resolved conflicts "in": ${filePath}`);
         return true}
       
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       await this.log(`Error resolving ${filePath}: ${error.message}`, 'ERROR');
       return false}
   }
@@ -63,7 +63,7 @@ class SimpleMergeResolver {
     await this.log(`Resolved conflicts in ${this.fixedFiles.length} files`);
     
     if (this.errors.length > 0) {
-      await this.log(`Encountered ${this.errors.length} errors:`, 'WARN');
+      await this.log(`Encountered ${this.errors.length} "errors": `, 'WARN');
       this.errors.forEach(error => {
         console.log(`  - ${error.file}: ${error.error}`)})}
     
@@ -77,7 +77,7 @@ async function main() {
   
   if (fixedCount > 0) {
     console.log(`\n✅ Successfully resolved conflicts in ${fixedCount} files`);
-    console.log('You can now commit the changes with: git add . && git commit -m "Resolve merge conflicts"')} else {
+    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts"')} else {
     console.log('\n✅ No conflicts found or all conflicts already resolved')}
 }
 

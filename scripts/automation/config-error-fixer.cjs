@@ -13,29 +13,29 @@ class $1 {
     this.configHistory = new Map()}
 ;
   ensureDirectories() {
-  ["this.logsPath", `this.reportsPath`].forEach(dir => {
+  ["this.logsPath", "this.reportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     })}
 ;
-  log(message, level = `INFO`) {
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
-    const logFile = path.join(this.logsPath, `config-error-fixer.log`);
-    fs.appendFileSync(logFile, logMessage + `\n`);
-
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
+    console.log("logMessage);
+    const logFile = path.join(this.logsPath, "config-error-fixer.log");
+    fs.appendFileSync(logFile, logMessage + "\n");
+
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
+    const logMessage = "[${timestamp}] [${level}] ${message}";
+    console.log("logMessage);
 
     const logFile = path.join(this.logsPath, "config-error-fixer.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
 ;
   async scanConfigFiles() {
   this.log("🔍 Scanning configuration files...");
-    const configFiles = ["package.json"", "tsconfig.json", "eslint.config.js"", "vite.config.ts", "tailwind.config.js"", "postcss.config.js", "next.config.js"", "jest.config.js", "netlify.toml``, ``];
+    const configFiles = ["package.json"", "tsconfig.json", "eslint.config.js"", "vite.config.ts", "tailwind.config.js"", "postcss.config.js", "next.config.js"", "jest.config.js", "netlify.toml"", ""];
     const issues = [];
 
     for (const configFile of configFiles) {
@@ -44,37 +44,36 @@ class $1 {
   try {
   const fileIssues = await this.analyzeConfigFile(filePath);
           issues.push(...fileIssues)} catch (error) {
-  this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`} catch (error) {
+  this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}",WARN"} catch (error) {
   this.log( ⚠️ Could not analyze ${configFile}: ${error.message}",WARN";
           )}
       }
     }
 ;
-          issues.push(...fileIssues);`)} catch (error) {`);
-          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}",WARN`);
+          issues.push(...fileIssues);")} catch (error) {");
+          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}",WARN");
           )}
       }
-    }`);
+    }");
 `);
-    this.log(Found ${issues.length} configuration issues``);
+    this.log(Found ${issues.length} configuration issues`");
     return issues}
 ;
   async analyzeConfigFile(filePath) {
   const issues = [];
     const fileName = path.basename(filePath);
     try {
-  const content = fs.readFileSync(filePath, `utf8`);
+  const content = fs.readFileSync(filePath, "utf8");
       // Check for syntax errors;
-      if (fileName.endsWith(`.json`)) {
+      if (fileName.endsWith(".json")) {
   try {
   JSON.parse(content)} catch (parseError) {
   issues.push({
-  file: fileName,
-            type: "syntax",
-            description: "Invalid JSON syntax",
-            severity: "high",
-            error: parseError.message,
-})}
+  "file": fileName,
+            "type": "syntax",
+            "description": "Invalid JSON syntax",
+            "severity": "high",
+            "error": parseError.message})}
       }
 ;
       // Check for merge conflicts;
@@ -83,10 +82,10 @@ class $1 {
         content.includes(">>>>>>>");
       ) {
   issues.push({
-  file: fileName,
-          type: "merge-conflict",
-          description: "Merge conflicts detected",
-          severity: "high"})}
+  "file": fileName,
+          "type": "merge-conflict",
+          "description": "Merge conflicts detected",
+          "severity": "high"})}
 ;
       // Check for common configuration issues;
       if (fileName === "package.json") {
@@ -96,11 +95,10 @@ class $1 {
         content.includes(">>>>>>>");
       ) {
   issues.push({
-  file: fileName,
-          type: "merge-conflict",
-          description: "Merge conflicts detected",
-          severity: "high",
-})}
+  "file": fileName,
+          "type": "merge-conflict",
+          "description": "Merge conflicts detected",
+          "severity": "high"})}
 ;
       // Check for common configuration issues;
       if (fileName === "package.json") {
@@ -112,12 +110,11 @@ class $1 {
         issues.push(...eslintIssues)}
     } catch (error) {
   issues.push({
-  file: fileName,
-        type: "read-error",
-        description: "Cannot read file",
-        severity: "high",
-        error: error.message,
-})}
+  "file": fileName,
+        "type": "read-error",
+        "description": "Cannot read file",
+        "severity": "high",
+        "error": error.message})}
 ;
     return issues}
 ;
@@ -129,27 +126,25 @@ class $1 {
       // Check for missing required fields;
       if (!pkg.name) {
   issues.push({
-  file: "package.json",
-          type: "missing-field",
-          description: "Missing name field",
-          severity: "medium",
+  "file": "package.json",
+          "type": "missing-field",
+          "description": "Missing name field",
+          "severity": "medium",
 
       // Check for missing required fields;
       if (!pkg.name) {
   issues.push({
-  file: "package.json",
-          type: "missing-field",
-          description: "Missing name field",
-          severity: "medium",
-})}
+  "file": "package.json",
+          "type": "missing-field",
+          "description": "Missing name field",
+          "severity": "medium"})}
 ;
       if (!pkg.version) {
   issues.push({
-  file: "package.json",
-          type: "missing-field",
-          description: "Missing version field",
-          severity: "medium",
-})}
+  "file": "package.json",
+          "type": "missing-field",
+          "description": "Missing version field",
+          "severity": "medium"})}
 ;
       // Check for dependency conflicts;
       if (pkg.dependencies && pkg.devDependencies) {
@@ -158,9 +153,9 @@ class $1 {
         const conflicts = deps.filter(dep => devDeps.includes(dep));
         if (conflicts.length > 0) {
   issues.push({
-  file: `package.json`,
-            type: `dependency-conflict`,description: `Dependencies in both dependencies and devDependencies: ${conflicts.join(", ")}`,
-            severity: `medium`})}
+  "file": "package.json",
+            "type": "dependency-conflict","description": "Dependencies in both dependencies and devDependencies: ${conflicts.join(", ")}",
+            "severity": "medium"})}
       }
     } catch (error) {
   // Already handled in syntax check}
@@ -176,21 +171,21 @@ class $1 {
       if (tsConfig.compilerOptions) {
   if (;
           tsConfig.compilerOptions.target &&;
-          ![`es3`", "es5", "es6"", "es2015", "es2016"", "es2017", "es2018"", "es2019", "es2020"", "es2021", "es2022"", "esnext", ""].includes(tsConfig.compilerOptions.target);
+          !["es3"", "es5", "es6"", "es2015", "es2016"", "es2017", "es2018"", "es2019", "es2020"", "es2021", "es2022"", "esnext", ""].includes(tsConfig.compilerOptions.target);
         ) {
   issues.push({
-  file: `tsconfig.json`,
-            type: `invalid-option`,description: `Invalid target: ${tsConfig.compilerOptions.target}`,
-            severity: `medium`})}
+  "file": "tsconfig.json",
+            "type": "invalid-option","description": "Invalid target: ${tsConfig.compilerOptions.target}",
+            "severity": "medium"})}
 ;
         if (;
           tsConfig.compilerOptions.module &&;
-          ![`none`", "commonjs", "amd"", "umd", "system"", "es2015", "esnext"", ""].includes(tsConfig.compilerOptions.module);
+          !["none"", "commonjs", "amd"", "umd", "system"", "es2015", "esnext"", ""].includes(tsConfig.compilerOptions.module);
         ) {
   issues.push({
-  file: `tsconfig.json`,
-            type: `invalid-option`,description: `Invalid module: ${tsConfig.compilerOptions.module}`,
-            severity: `medium`})}
+  "file": "tsconfig.json",
+            "type": "invalid-option","description": "Invalid module: ${tsConfig.compilerOptions.module}",
+            "severity": "medium"})}
       }
     } catch (error) {
   // Already handled in syntax check}
@@ -203,20 +198,18 @@ class $1 {
           !["es3", "es5", "es6", "es2015", "es2016", "es2017", "es2018", "es2019", "es2020", "es2021", "es2022", "esnext", "].includes(tsConfig.compilerOptions.target);
         ) {
   issues.push({
-  file: "tsconfig.json",
-            type: "invalid-option",description: `Invalid target: ${tsConfig.compilerOptions.target}`,
-            severity: "medium",
-})}
+  "file": "tsconfig.json",
+            "type": "invalid-option","description": "Invalid target: ${tsConfig.compilerOptions.target}",
+            "severity": "medium"})}
 ;
         if (;
           tsConfig.compilerOptions.module &&;
           !["none", "commonjs", "amd", "umd", "system", "es2015", "esnext", "].includes(tsConfig.compilerOptions.module);
         ) {
   issues.push({
-  file: "tsconfig.json",
-            type: "invalid-option",description: `Invalid module: ${tsConfig.compilerOptions.module}`,
-            severity: "medium",
-})}
+  "file": "tsconfig.json",
+            "type": "invalid-option","description": "Invalid module: ${tsConfig.compilerOptions.module}",
+            "severity": "medium"})}
       }
     } catch (error) {
   // Already handled in syntax check}
@@ -226,17 +219,17 @@ class $1 {
   analyzeEslintConfig(content) {
   const issues = [];
     // Check for common ESLint config issues;
-    if (content.includes(`eslint.config.js`)) {
+    if (content.includes("eslint.config.js")) {
   // Check for proper export syntax;
       if (;
         !content.includes("export default") &&;
         !content.includes("module.exports");
       ) {
   issues.push({
-  file: "eslint.config.js",
-          type: "syntax",
-          description: "Missing proper export statement",
-          severity: "high"})}
+  "file": "eslint.config.js",
+          "type": "syntax",
+          "description": "Missing proper export statement",
+          "severity": "high"})}
 ;
       // Check for required plugins;
       if (;
@@ -244,16 +237,15 @@ class $1 {
         !content.includes("@typescript-""eslint/eslint-plugin""");
       ) {
   issues.push({
-  file: "eslint.config.js",
-          type: "missing-plugin",
-          description: "Missing @typescript-""eslint/eslint-plugin"``,
-          severity: `medium`,
-})}
+  "file": "eslint.config.js",
+          "type": "missing-plugin",
+          "description": "Missing @typescript-""eslint/eslint-plugin""",
+          "severity": "medium"})}
     }
 ;
     return issues}
 ;
-  async fixConfigIssues(issues) {this.log(`🔧 Fixing ${issues.length} configuration issues...`);
+  async fixConfigIssues(issues) {this.log("🔧 Fixing ${issues.length} configuration issues...");
 
     let fixedCount = 0;
     const fixResults = [];
@@ -267,38 +259,36 @@ class $1 {
         fixResults.push({
   issue,
           fixed,
-          timestamp: new Date().toISOString(),
-})} catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, `ERROR`);
+          "timestamp": new Date().toISOString()})} catch (fixError) {this.log("❌ Error fixing config "issue": ${fixError.message}", "ERROR`);
         fixResults.push({
   issue,
-          fixed: false,
-          error: fixError.message,
-          timestamp: new Date().toISOString()})}
+          "fixed": false,
+          "error": fixError.message,
+          "timestamp": new Date().toISOString()})}
     }
 ;
     this.log(✅ Fixed ${fixedCount} out of ${issues.length} configuration issues`;
     );
-    return { fixedCount, totalIssues: issues.length, results: fixResults }
+    return { fixedCount, "totalIssues": issues.length, "results": fixResults }
   }
 ;
   async fixConfigIssue(issue) {
-  const filePath = path.join(this.workspacePath, `issue.file);
+  const filePath = path.join(this.workspacePath, "issue.file);
     if (!fs.existsSync(filePath)) {
   return false}
 ;
     try {
-  let content = fs.readFileSync(filePath`, `utf8")} catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, "ERROR");
+  let content = fs.readFileSync(filePath", "utf8")} catch (fixError) {this.log("❌ Error fixing config "issue": ${fixError.message}`, "ERROR");
         fixResults.push({
   issue,
-          fixed: false,
-          error: fixError.message,
-          timestamp: new Date().toISOString(),
-})}
+          "fixed": false,
+          "error": fixError.message,
+          "timestamp": new Date().toISOString()})}
     }
 ;
     this.log(✅ Fixed ${fixedCount} out of ${issues.length} configuration issues";
     );
-    return { fixedCount, totalIssues: issues.length, results: fixResults }
+    return { fixedCount, "totalIssues": issues.length, "results": fixResults }
   }
 ;
   async fixConfigIssue(issue) {
@@ -335,24 +325,24 @@ class $1 {
   content = await this.fixDependencyConflicts(content);
             fixed = content !== originalContent}
           break;
-        case `invalid-option`:;
-          if (issue.file === `tsconfig.json`) {
+        case `invalid-option":;
+          if (issue.file === "tsconfig.json") {
   content = await this.fixTsConfigOptions(content, issue);
             fixed = content !== originalContent}
           break}
 ;
       if (fixed) {
-  fs.writeFileSync(filePath, content);this.log(`✅ Fixed ${issue.type} in ${issue.file}`);
+  fs.writeFileSync(filePath, content);this.log("✅ Fixed ${issue.type} in ${issue.file}");
         return true}
 ;
-      return false} catch (fixError) {this.log(`❌ Failed to fix config issue: ${fixError.message}`, `ERROR`);
+      return false} catch (fixError) {this.log("❌ Failed to fix config "issue": ${fixError.message}", "ERROR");
       return false}
   }
 ;
   async fixMergeConflicts(content) {
   // Remove merge conflict markers and keep HEAD version;
     content = content.replace(;
-      /\n[`\s\S]*?\n      `$1";
+      /\n["\s\S]*?\n      "$1";
     );
     // Clean up any remaining markers;
     content = content.replace(/\n?/g", "");
@@ -452,39 +442,39 @@ class $1 {
   async generateReport(fixResults) {
   this.log("📊 Generating configuration error fixing report...");
     const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   totalIssues: fixResults.totalIssues,
-        fixedIssues: fixResults.fixedCount,
-        fixRate: fixResults.totalIssues > 0;
+        "fixedIssues": fixResults.fixedCount,
+        "fixRate": fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
                 2;
               );
             : 100},
-      fixResults: fixResults.results,
-      recommendations: ["Review fixed configuration files to ensure they meet your requirements"", "Test the application after configuration changes", "Consider implementing configuration validation"", "Backup configuration files before making changes", ``]}
+      "fixResults": fixResults.results,
+      "recommendations": ["Review fixed configuration files to ensure they meet your requirements"", "Test the application after configuration changes", "Consider implementing configuration validation"", "Backup configuration files before making changes", ""]}
     const reportFile = path.join(;
-      this.reportsPath,config-error-fixer-report.json`;
+      this.reportsPath,config-error-fixer-report.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-this.log(`📄 Report generated: ${reportFile}`);
+this.log(`📄 Report "generated": ${reportFile}`);
     return report}
 ;
   async run() {
-  this.log(`🚀 Starting Config Error Fixer...`);
+  this.log("🚀 Starting Config Error Fixer...");
     try {
   // Scan configuration files;
       const issues = await this.scanConfigFiles();
       if (issues.length === 0) {
-  this.log(`🎉 No configuration issues found!`);
-        return { success: true, issues: [], fixed: 0 }
+  this.log("🎉 No configuration issues found!");
+        return { "success": true, "issues": [], "fixed": 0 }
       }
 ;
       // Fix issues;
       const fixResults = await this.fixConfigIssues(issues);
       // Generate report;
       const report = await this.generateReport(fixResults);
-      this.log(`🎉 Config Error Fixer completed!`);
+      this.log("🎉 Config Error Fixer completed!");
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalIssues} issues`;
 
   async run() {
@@ -496,7 +486,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
       if (issues.length === 0) {
   this.log("🎉 No configuration issues found!");
-        return { success: true, issues: [], fixed: 0 }
+        return { "success": true, "issues": [], "fixed": 0 }
       }
 ;
       // Fix issues;
@@ -510,12 +500,11 @@ this.log(`📄 Report generated: ${reportFile}`);
       );
 
       return {
-  success: fixResults.fixedCount > 0,
-        issues: issues,
-        fixed: fixResults.fixedCount,
-        report,
-}
-    } catch (error) {  this.log(`💥 Config Error Fixer failed: ${error.message  }`, `ERROR`);
+  "success": fixResults.fixedCount > 0,
+        "issues": issues,
+        "fixed": fixResults.fixedCount,
+        report}
+    } catch (error) {  this.log(`💥 Config Error Fixer "failed": ${error.message  }", "ERROR`);
       throw error}
   }
 }

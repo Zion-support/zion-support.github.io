@@ -26,7 +26,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ "Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
@@ -70,10 +70,10 @@ for (const file of files) {
     fixedCount++}
 }
 
-console.log(`\n🎉 HTML entity fixing completed!`)) {
+console.log("\n🎉 HTML entity fixing completed!")) {
     ) {
     fixedCount++}
 }
 
-console.log(`\n🎉 HTML entity fixing completed!`)}
-console.log(`📊 Files fixed: ${fixedCount}`);
+console.log("\n🎉 HTML entity fixing completed!")}
+console.log(`📊 Files "fixed": ${fixedCount}`);

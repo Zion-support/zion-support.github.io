@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const "Navigation": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = ("event": MouseEvent) => {
       if (activeDropdown && !(event.target as Element).closest('.dropdown')) {
         setActiveDropdown(null);
       }
@@ -19,25 +19,24 @@ const Navigation: React.FC = () => {
     };
   }, [activeDropdown]);
 
-  const navigation = [
-    { name: 'Home', href: '/' },
+  const navigation = [{ "name": 'Home', "href": '/' },
     {
-      name: 'Services',
-      href: '#',
-      dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'Micro SAAS', href: '/micro-saas-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Blockchain', href: '/blockchain-solutions' }
+      "name": 'Services',
+      "href": '#',
+      "dropdown": [
+        { name: 'AI Services', "href": '/ai-services' },
+        { "name": 'Micro SAAS', "href": '/micro-saas-services' },
+        { "name": 'IT Services', "href": '/it-services' },
+        { "name": 'Blockchain', "href": '/blockchain-solutions' }
       ]
     },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' };
+    { "name": 'Careers', "href": '/careers' },
+    { "name": 'Contact', "href": '/contact' };
   ];
 
   return (
     <nav className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -47,7 +46,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden "md": flex space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative dropdown">
                 {item.dropdown ? (
@@ -56,7 +55,7 @@ const Navigation: React.FC = () => {
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    <button className="text-gray-700 "hover": text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                       {item.name}
                     </button>
                     {activeDropdown === item.name && (
@@ -65,7 +64,7 @@ const Navigation: React.FC = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                            className="block px-4 py-2 text-sm text-gray-700 "hover": bg-gray-100 hover:text-blue-600"
                           >
                             {dropdownItem.name}
                           </Link>
@@ -77,7 +76,7 @@ const Navigation: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-700 "hover": text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -87,10 +86,10 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className=""md": hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-700 "hover": text-blue-600 p-2"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -99,7 +98,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className=""md": hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
               {navigation.map((item) => (
                 <div key={item.name}>
@@ -113,7 +112,7 @@ const Navigation: React.FC = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                            className="block px-3 py-2 text-sm text-gray-600 "hover": text-blue-600"
                             onClick={() => setIsOpen(false)}
                           >
                             {dropdownItem.name}
@@ -124,7 +123,7 @@ const Navigation: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-gray-700 "hover": text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}

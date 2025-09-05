@@ -73,25 +73,22 @@ class AdvancedSourceFixer {
       if (wasFixed) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixes.push({
-          file: filePath,
-          timestamp: new Date().toISOString(),
-          fixes: this.getAppliedFixes(content, fixedContent),
-        });
-        this.log(`Fixed: ${filePath}`);
+          "file": filePath,
+          "timestamp": new Date().toISOString(),
+          "fixes": this.getAppliedFixes(content, fixedContent)});
+        this.log(`"Fixed": ${filePath}`);
       }
     } catch (error) {
       this.errors.push({
-        file: filePath,
-        error: error.message,
-        timestamp: new Date().toISOString(),
-      });
+        "file": filePath,
+        "error": error.message,
+        "timestamp": new Date().toISOString()});
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     }
   }
 
   hasParsingErrors(content) {
-    const errorPatterns = [
-      /Error: 'Parsing error:/,
+    const errorPatterns = [/"Error": 'Parsing error:/,
       /Unterminated string literal/,
       /Identifier expected/,
       /Declaration or statement expected/,
@@ -116,8 +113,7 @@ class AdvancedSourceFixer {
   }
 
   hasSyntaxIssues(content) {
-    const syntaxIssues = [
-      /import.*from.*from/,
+    const syntaxIssues = [/import.*from.*from/,
       /export.*from.*from/,
       /function.*function/,
       /const.*const.*const/,
@@ -195,14 +191,13 @@ class AdvancedSourceFixer {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      totalFilesFixed: this.fixes.length,
-      totalErrors: this.errors.length,
-      fixes: this.fixes,
-      errors: this.errors,
-    };
+      "timestamp": new Date().toISOString(),
+      "totalFilesFixed": this.fixes.length,
+      "totalErrors": this.errors.length,
+      "fixes": this.fixes,
+      "errors": this.errors};
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);
+    this.log(`Report "generated": ${this.reportFile}`);
   }
 }
 

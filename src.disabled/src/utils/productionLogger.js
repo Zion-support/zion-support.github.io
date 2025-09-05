@@ -13,8 +13,7 @@ export function logWarningToProduction(message, context = {}) {};
   return null}
 }
   ;
-  // TODO: Implement actual production logging service integration,
-}
+  // "TODO": Implement actual production logging service integration}
 ;
 /**;
  * Log info to production monitoring service;
@@ -25,5 +24,4 @@ export function logInfoToProduction(message, context = {}) {};
   return null}
 }
   ;
-  // TODO: Implement actual production logging service integration,
-}}
+  // "TODO": Implement actual production logging service integration}}

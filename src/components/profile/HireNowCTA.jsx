@@ -7,26 +7,26 @@ import {DollarSign, MessageSquare} from 'lucide-react';
 export function HireNowCTA($1) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
-        projectDescription: ",
-        budget: ",
-        startDate: ",
-        message: "
+        "projectDescription": ",
+        "budget": ",
+        "startDate": ",
+        "message": "
     };);
     const handleSubmit = (props) => {
         e.preventDefault();
         if (onHire) {
             onHire(formData)}
         // Reset form and close
-        setFormData({projectDescription: ",
-            budget: ",
-            startDate: ",
-            message: "});
+        setFormData({"projectDescription": ",
+            "budget": ",
+            "startDate": ",
+            "message": "});
         setIsFormOpen(false)};
     const handleChange = (props) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }))};;
+        }))};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
@@ -45,7 +45,7 @@ export function HireNowCTA($1) {
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
             </p>
-            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": from-zion-purple-light hover:to-zion-purple">
               Start Project Discussion
             </Button>
           </div>) : (<form onSubmit={handleSubmit} className="space-y-4">
@@ -53,7 +53,7 @@ export function HireNowCTA($1) {
               <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
                 Project Description
               </label>
-              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required />
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": text-zion-slate-light focus:border-zion-cyan" required />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -61,14 +61,14 @@ export function HireNowCTA($1) {
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
                   Budget Range
                 </label>
-                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required  />
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white "placeholder": text-zion-slate-light focus:border-zion-cyan" required  />
               </div>
 
               <div>
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
                   Start Date
                 </label>
-                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required  />
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white "focus": border-zion-cyan" required  />
               </div>
             </div>
 
@@ -76,14 +76,14 @@ export function HireNowCTA($1) {
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                 Additional Message
               </label>
-              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3} />
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": text-zion-slate-light focus:border-zion-cyan" rows={3} />
             </div>
 
             <div className="flex gap-3">
-              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": from-zion-purple-light hover:to-zion-purple">
                 Send Message
               </Button>
-              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light hover:text-white">
                 Cancel
               </Button>
             </div>

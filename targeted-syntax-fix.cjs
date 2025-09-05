@@ -8,16 +8,16 @@ function fixSyntaxErrors(content) {
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
     return match.replace(/,\s*$/, '')});
   
-  // Fix malformed state objects: {, -> {
+  // Fix malformed state "objects": {, -> {
   content = content.replace(/=\s*\{\s*,/g, '= {');
   
-  // Fix malformed function declarations: ): State {, -> ): State {
+  // Fix malformed function "declarations": ): State {, -> ): State {
   content = content.replace(/\):\s*State\s*\{\s*,/g, '): State {');
   
-  // Fix extra semicolons in if statements: {; -> {
+  // Fix extra semicolons in if "statements": {; -> {
   content = content.replace(/\{\s*;/g, '{');
   
-  // Fix malformed JSX elements: >, -> >
+  // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
   
   return content}
@@ -32,7 +32,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ "Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -42,8 +42,7 @@ function processFile(filePath) {
 // Main execution
 console.log('🔧 Starting targeted syntax error fixing...');
 
-const filesToFix = [
-  'components/ContactForm.tsx',
+const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
   'pages/cloud-devops.tsx',
@@ -59,16 +58,16 @@ for (const file of filesToFix) {
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`)) {
+console.log("\n📊 Syntax fixing "complete": ")) {
     ) {
     if (processFile(file)) {
       totalFixed++}
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`)}
-console.log(`   - Files fixed: ${totalFixed}`);
-console.log(`   - Issues encountered: 0`);
+console.log("\n📊 Syntax fixing "complete": ")}
+console.log(`   - Files "fixed": ${totalFixed}`);
+console.log("   - Issues "encountered": 0");
 
 if ( {
   console.log('\n✅ All syntax errors have been fixed!')) {

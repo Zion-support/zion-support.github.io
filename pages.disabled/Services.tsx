@@ -7,7 +7,7 @@ export default function Services() {
       <Head>
         <title>Services | Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive range of AI, IT, and software development services." />
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/services" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">

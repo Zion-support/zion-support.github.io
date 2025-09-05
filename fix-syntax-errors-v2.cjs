@@ -9,11 +9,11 @@ function fixSyntaxErrors(content) {
   content = content.replace(/\$2/g, '');
   
   // Fix missing commas in object literals - more specific patterns
-  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
-    return `${key1}: 'value',\n    ${key2}:`});
+  content = content.replace(/(\w+):\s*['""][^'""]*['""]\s*\n\s*(\w+):/g, (match, key1, key2) => {
+    return "${key1}: 'value',\n    ${key2}:"});
   
   // Fix missing commas in style objects
-  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
+  content = content.replace(/(\w+):\s*['""][^'""]*['""]\s*\n\s*(\w+):/g, (match, key1, key2) => {
     return `${key1}: 'value',\n    ${key2}:`});
   
   // Fix missing semicolons after function declarations
@@ -32,7 +32,7 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`)}
+      console.log(`"Fixed": ${filePath}`)}
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)}
 }

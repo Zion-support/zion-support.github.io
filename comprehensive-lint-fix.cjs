@@ -60,7 +60,7 @@ function removeUnusedLucideImports(filePath) {
     const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      console.log(`✅ Cleaned unused lucide imports in: ${filePath}`);
+      console.log(`✅ Cleaned unused lucide imports "in": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
@@ -91,11 +91,11 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/([^}])\n/g, '$1;\n');
     
     // Fix missing commas in object literals
-    content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
+    content = content.replace(/([^}])\n\s*}/g, '$1,\n}');
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax errors in: ${filePath}`);
+      console.log(`✅ Fixed syntax errors "in": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
@@ -145,17 +145,17 @@ try {
       fixedCount++}
   }
   
-  console.log(`\n🎉 Processed ${sourceFiles.length} files:`);
+  console.log(`\n🎉 Processed ${sourceFiles.length} "files": `);
   console.log(`  - Cleaned unused imports in ${cleanedCount} files`);
   console.log(`  - Fixed syntax errors in ${fixedCount} files`);
   
   // Try to run lint fix again
-  console.log(`\n🔨 Running lint fix again...`);
+  console.log("\n🔨 Running lint fix again...");
   try {
-    execSync("npm run lint:fix", { stdio: "inherit" });
+    execSync("npm run "lint": fix", { "stdio": "inherit" });
     console.log("✅ Lint fix completed!")} catch (error) {
     console.log("⚠️  Lint fix still has some issues, but continuing...")}
   
 } catch (error) {
-  console.error("❌ Error during comprehensive lint fixing:", error.message);
+  console.error("❌ Error during comprehensive lint "fixing": ", error.message);
   process.exit(1)}

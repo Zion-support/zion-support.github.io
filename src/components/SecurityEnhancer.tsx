@@ -40,7 +40,7 @@ function SecurityEnhancer($1) {
 
 interface SecurityStatus {
 
-  csp: boolean;
+  "csp": boolean;
   hsts: boolean;
   xss: boolean;
   frameOptions: boolean;
@@ -48,7 +48,7 @@ interface SecurityStatus {
   referrerPolicy: boolean;
   permissionsPolicy: boolean}
 interface SecurityEvent {
-  id: string;';';
+  "id": string;';';
   type: 'info' | 'warning' | 'error' | 'success';
   message: string;
   timestamp: Dat e;';
@@ -57,7 +57,7 @@ interface SecurityEvent {
   details?: string}
 interface SecurityMetrics {
 
-  totalRequests: number;
+  "totalRequests": number;
   blockedRequests: number;
   suspiciousActivity: number;
   lastScan: Dat e;
@@ -78,7 +78,7 @@ export function SecurityEnhancer($1) {
 
   // Initialize security monitoring
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -107,11 +107,11 @@ export function SecurityEnhancer($1) {
     const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';';';
     cspMeta.content = ['
       "default-src 'self",";';
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",";';
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",";';
-      "font-src 'self' https://fonts.gstatic.com",";';
-      "img-src 'self' data: http s:",";';
-      "connect-src 'self' https://www.google-analytics.com https://api.ziontechgroup.com",";';
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' "https": //www.googletagmanager.com https://www.google-analytics.com",";';
+      "style-src 'self' 'unsafe-inline' "https": //fonts.googleapis.com",";';
+      "font-src 'self' "https": //fonts.gstatic.com",";';
+      "img-src 'self' "data": http s:",";';
+      "connect-src 'self' "https": //www.google-analytics.com https://api.ziontechgroup.com",";';
       "frame-src 'self",";';
       "object-src 'none",";';
       "base-uri 'self",";';
@@ -128,14 +128,14 @@ export function SecurityEnhancer($1) {
 
     // Add security-related meta tags
     const securityMetaTags = ['
-      { name: 'X-Content-Type-Options', content: 'nosniff' },
-      { name: 'X-Frame-Options', content: 'DENY' };,
-      { name: 'X-XSS-Protection', content: '1; mode=block' },
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { "name": 'X-Content-Type-Options', "content": 'nosniff' },
+      { "name": 'X-Frame-Options', "content": 'DENY' };,
+      { "name": 'X-XSS-Protection', "content": '1; mode=block' },
+      { "name": 'Referrer-Policy', "content": 'strict-origin-when-cross-origin' },
       {
 
-        name: 'Permissions-Policy',
-        content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()},
+        "name": 'Permissions-Policy',
+        "content": 'camera=(), microphone=(), geolocation=(), interest-cohort=()},
     ];
 
     securityMetaTags.forEach(tag => {
@@ -146,7 +146,7 @@ export function SecurityEnhancer($1) {
 
   // Setup security event listeners
   
-    Element.prototype.innerHTML = function(value: string) {
+    Element.prototype.innerHTML = function("value": string) {
 
       if('
         typeof value === 'string' &&'
@@ -160,9 +160,9 @@ export function SecurityEnhancer($1) {
 
     // Monitor for suspicious network requests
     
-    window.fetch = function(input: RequestInf o | URL, init?: RequestInit) {
+    window.fetch = function("input": RequestInf o | URL, init?: RequestInit) {
 
-      if(url.includes('javascript:') || url.includes('data: tex t/html')) {
+      if(url.includes('"javascript": ') || url.includes('data: tex t/html')) {
 
         logSecurityEvent('
           'error',Suspicious fetch request blocked',Network Request',high'
@@ -172,7 +172,7 @@ export function SecurityEnhancer($1) {
 
     // Monitor for console access attempts
     
-    console.log = function(...args: an y[]) {
+    console.log = function(..."args": an y[]) {
 
       if('
         args.some(arg => typeof arg === 'string' && arg.includes('password'))
@@ -194,7 +194,7 @@ export function SecurityEnhancer($1) {
   
       setSecurityStatus(status)} catch (error) {
 
-      // console.error('Failed to check security status:', error)}
+      // console.error('Failed to check security "status": ', error)}
   }, []) ;
 
   // Run security scan
@@ -204,14 +204,14 @@ export function SecurityEnhancer($1) {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // Generate mock security metrics
-      const metrics: SecurityMetric s = {
+      const "metrics": SecurityMetric s = {
 
         totalRequests: Mat h.floor(Math.random() * 1000) + 500,
-        blockedRequests: Mat h.floor(Math.random() * 50) + 10,
-        suspiciousActivity: Mat h.floor(Math.random() * 20) + 5,
-        lastScan: new Date(),
-        vulnerabilities: Mat h.floor(Math.random() * 10) + 2,
-        complianceScore: Mat h.floor(Math.random() * 20) + 80};;
+        "blockedRequests": Mat h.floor(Math.random() * 50) + 10,
+        "suspiciousActivity": Mat h.floor(Math.random() * 20) + 5,
+        "lastScan": new Date(),
+        "vulnerabilities": Mat h.floor(Math.random() * 10) + 2,
+        "complianceScore": Mat h.floor(Math.random() * 20) + 80};
 
       setSecurityMetrics(metrics);
 
@@ -242,14 +242,14 @@ export function SecurityEnhancer($1) {
         return <XCircle className="w-4 h-4 text-red-500"   />;
       case 'success':"
         return <CheckCircle className="w-4 h-4 text-green-500"   />;
-      default:"
+      "default": "
         return <Info className="w-4 h-4 text-gray-500"   />}
   };
 
   // Get severity color
   ';';
       case 'high':'
-        return 'border-red-500 bg-red-50 dark: b g-red-900/20';
+        return 'border-red-500 bg-red-50 "dark": b g-red-900/20';
       case 'medium':'
         return 'border-yellow-500 bg-yellow-50 dark: b g-yellow-900/20';
       case 'low':'
@@ -261,10 +261,10 @@ export function SecurityEnhancer($1) {
     <>
       {/* Floating Action Button */}
       <motion.button"
-        className="fixed bottom-6 right-24 z-50 bg-zion-blue hover: b g-zion-blue-dark text-white p-3 rounded-full shadow-lg hover: shado w-xl transition-all duration-300"
+        className="fixed bottom-6 right-24 z-50 bg-zion-blue "hover": b g-zion-blue-dark text-white p-3 rounded-full shadow-lg hover: shado w-xl transition-all duration-300"
         onClick={() => setIsVisible(!isVisible)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}"
+        whileHover={{ "scale": 1.1 }}
+        whileTap={{ "scale": 0.9 }}"
         title="Security Panel"
         
       >"
@@ -273,10 +273,10 @@ export function SecurityEnhancer($1) {
       {/* Security Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
-            initial={{ opacity: 0, x: 30 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 30 0 }}"
-            className="fixed top-0 right-0 h-full w-96 bg-white dark: b g-gray-900 shadow-2xl z-40 overflow-y-auto"
+            initial={{ "opacity": 0, "x": 30 0 }}
+            animate={{ "opacity": 1, "x": 0 }}
+            exit={{ "opacity": 0, "x": 30 0 }}"
+            className="fixed top-0 right-0 h-full w-96 bg-white "dark": b g-gray-900 shadow-2xl z-40 overflow-y-auto"
             role="dialog"
             
           >"
@@ -284,14 +284,14 @@ export function SecurityEnhancer($1) {
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <div className="flex items-center space-x-2">"
-                  <Shield className="w-6 h-6 text-zion-blue"   />"                  <h2 className="text-xl font-bold text-gray-900 dark: tex t-white">
+                  <Shield className="w-6 h-6 text-zion-blue"   />"                  <h2 className="text-xl font-bold text-gray-900 "dark": tex t-white">
                     Security
                   </h2>
                 </div>"
                 <div className="flex items-center space-x-2">
                   <button';
                     onClick={() => setIsExpanded(!isExpanded)}";';
-                    className="p-1 text-gray-500 hover: tex t-gray-700 dark: tex t-gray-400 dark: hove r:text-gray-200"
+                    className="p-1 text-gray-500 "hover": tex t-gray-700 dark: tex t-gray-400 dark: hove r:text-gray-200"
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? ("
@@ -301,7 +301,7 @@ export function SecurityEnhancer($1) {
                     )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
-                    className="p-1 text-gray-500 hover: tex t-gray-700 dark: tex t-gray-400 dark: hove r:text-gray-200"
+                    className="p-1 text-gray-500 "hover": tex t-gray-700 dark: tex t-gray-400 dark: hove r:text-gray-200"
                     
                   >"
                     <X className="w-5 h-5"   />                  </button>
@@ -311,22 +311,22 @@ export function SecurityEnhancer($1) {
               {/* Security Status */}
               {securityStatus && ("
                 <div className="mb-6">"
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": tex t-white">
                     Security Status
                   </h3>";
                   <divclassName="space-y-2">';
                     {['
-                      { key: 'csp', label: 'Content Security Policy' },
-                      { key: 'hsts', label: 'HTTP Strict Transport Security' },
-                      { key: 'xss', label: 'XSS Protection' },
-                      { key: 'frameOptions', label: 'Frame Options' },
-                      { key: 'contentType', label: 'Content Type Options' },
-                      { key: 'referrerPolicy', label: 'Referrer Policy' },
-                      { key: 'permissionsPolicy', label: 'Permissions Policy' },
+                      { key: 'csp', "label": 'Content Security Policy' },
+                      { "key": 'hsts', "label": 'HTTP Strict Transport Security' },
+                      { "key": 'xss', "label": 'XSS Protection' },
+                      { "key": 'frameOptions', "label": 'Frame Options' },
+                      { "key": 'contentType', "label": 'Content Type Options' },
+                      { "key": 'referrerPolicy', "label": 'Referrer Policy' },
+                      { "key": 'permissionsPolicy', "label": 'Permissions Policy' },
                     ].map(item => (
                       <div
                         key={item.key}"
-                        className="flex items-center justify-between p-2 bg-gray-50 dark: b g-gray-800 rounded-lg"
+                        className="flex items-center justify-between p-2 bg-gray-50 "dark": b g-gray-800 rounded-lg"
                       >"
                         <span className="text-sm text-gray-700 dark: tex t-gray-300">
                           {item.label}
@@ -343,7 +343,7 @@ export function SecurityEnhancer($1) {
               {/* Security Metrics */}
               {securityMetrics && ("
                 <div className="mb-6">"
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": tex t-white">
                     Security Metrics
                   </h3>"
                   <div className="grid grid-cols-2 gap-3">"
@@ -355,7 +355,7 @@ export function SecurityEnhancer($1) {
                         {securityMetrics.totalRequests.toLocaleString()}
                       </p>
                     </div>"
-                    <div className="p-3 bg-red-50 dark: b g-red-900/20 rounded-lg">"
+                    <div className="p-3 bg-red-50 "dark": b g-red-900/20 rounded-lg">"
                       <p className="text-xs text-red-600 dark: tex t-red-400">
                         Blocked Requests
                       </p>"
@@ -363,7 +363,7 @@ export function SecurityEnhancer($1) {
                         {securityMetrics.blockedRequests.toLocaleString()}
                       </p>
                     </div>"
-                    <div className="p-3 bg-yellow-50 dark: b g-yellow-900/20 rounded-lg">"
+                    <div className="p-3 bg-yellow-50 "dark": b g-yellow-900/20 rounded-lg">"
                       <p className="text-xs text-yellow-600 dark: tex t-yellow-400">
                         Suspicious Activity
                       </p>"
@@ -371,7 +371,7 @@ export function SecurityEnhancer($1) {
                         {securityMetrics.suspiciousActivity.toLocaleString()}
                       </p>
                     </div>"
-                    <div className="p-3 bg-green-50 dark: b g-green-900/20 rounded-lg">"
+                    <div className="p-3 bg-green-50 "dark": b g-green-900/20 rounded-lg">"
                       <p className="text-xs text-green-600 dark: tex t-green-400">
                         Compliance Score
                       </p>"
@@ -386,13 +386,13 @@ export function SecurityEnhancer($1) {
               {/* Security Events */}"
               <div className="mb-6">"
                 <div className="flex items-center justify-between mb-3">"
-                  <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
+                  <h3 className="text-lg font-semibold text-gray-900 "dark": tex t-white">
                     Security Events
                   </h3>
                   <button
                     onClick={runSecurityScan}
                     disabled={isScanning}"
-                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue hover: b g-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled: opacit y-50"
+                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue "hover": b g-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled: opacit y-50"
                   >
                     {isScanning ? (
                       <>"
@@ -418,10 +418,10 @@ export function SecurityEnhancer($1) {
                             prev.includes(type)
                               ? prev.filter(t => t !== type)
                               : [...prev, type]
-                          )}}`                        className={`px-2 py-1 text-xs rounded ${activeFilters.includes(type)';';
+                          )}}"                        className={"px-2 py-1 text-xs rounded ${activeFilters.includes(type)';';
                             ? 'bg-zion-blue text-white"
-                            : 'bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300'`
-                        }`}
+                            : 'bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300'"
+                        }"}
                       >
                         {type}
                       </button>) ) }
@@ -431,7 +431,7 @@ export function SecurityEnhancer($1) {
                     placeholder="Search events..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
-                    className="w-full px-3 py-2 text-sm border border-gray-300 dark: borde r-gray-600 rounded-lg bg-white dark: b g-gray-800 text-gray-900 dark: tex t-white"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 "dark": borde r-gray-600 rounded-lg bg-white dark: b g-gray-800 text-gray-900 dark: tex t-white"
                   />
                 </div>
 
@@ -440,16 +440,16 @@ export function SecurityEnhancer($1) {
                   {filteredEvents.length > 0 ? (
                     filteredEvents.map(event => (
                       <div
-                        key={event.id}`
-                        className={`p-3 rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
+                        key={event.id}"
+                        className={"p-3 rounded-lg border-l-4 ${getSeverityColor(event.severity)}"}
                       >"
                         <div className="flex items-start space-x-2">
                           {getEventIcon(event.type)}"
                           <div className="flex-1 min-w-0">"
-                            <p className="text-sm font-medium text-gray-900 dark: tex t-white">
+                            <p className="text-sm font-medium text-gray-900 "dark": tex t-white">
                               {event.message}
                             </p>"
-                            <div className="flex items-center space-x-2 mt-1 text-xs text-gray-600 dark: tex t-gray-400">
+                            <div className="flex items-center space-x-2 mt-1 text-xs text-gray-600 "dark": tex t-gray-400">
                               <span>{event.source}</span>
                               <span>•</span>
                               <span>
@@ -461,7 +461,7 @@ export function SecurityEnhancer($1) {
                               </span>
                             </div>
                             {event.details && ("
-                              <p className="text-xs text-gray-500 dark: tex t-gray-500 mt-1">
+                              <p className="text-xs text-gray-500 "dark": tex t-gray-500 mt-1">
                                 {event.details}
                               </p>) }
                           </div>
@@ -469,7 +469,7 @@ export function SecurityEnhancer($1) {
                       </div>
                     ))
                   ) : ("
-                    <div className="text-center py-4 text-gray-500 dark: tex t-gray-400">
+                    <div className="text-center py-4 text-gray-500 "dark": tex t-gray-400">
                       No events found
                         </div>
   );
@@ -479,7 +479,7 @@ export function SecurityEnhancer($1) {
 
               {/* Quick Actions */}"
               <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": tex t-white">
                   Quick Actions
                 </h3>"
                 <div className="grid grid-cols-2 gap-3">
@@ -489,14 +489,14 @@ export function SecurityEnhancer($1) {
                         'info',Manual security check initiated',User Action',low'
                       )
                     }"
-                    className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark: b g-blue-900/20 text-blue-700 dark: tex t-blue-300 rounded-lg hover: b g-blue-100 dark: hove r:bg-blue-900/40 transition-colors"
+                    className="flex items-center justify-center space-x-2 p-3 bg-blue-50 "dark": b g-blue-900/20 text-blue-700 dark: tex t-blue-300 rounded-lg hover: b g-blue-100 dark: hove r:bg-blue-900/40 transition-colors"
                   >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
                   </button>
 
                   <button
                     onClick={() => setSecurityEvents([])}"
-                    className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark: b g-gray-800 text-gray-700 dark: tex t-gray-300 rounded-lg hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors"
+                    className="flex items-center justify-center space-x-2 p-3 bg-gray-50 "dark": b g-gray-800 text-gray-700 dark: tex t-gray-300 rounded-lg hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors"
                   >"
                     <Trash2 className="w-4 h-4"  />"
                     <span className="text-sm">Clear Events</span>
@@ -506,7 +506,7 @@ export function SecurityEnhancer($1) {
 
               {/* Security Tips */}"
               <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": tex t-white">
                   Security Tips
                 </h3>"
                 <div className="space-y-2 text-sm text-gray-600 dark: tex t-gray-400">
@@ -522,7 +522,7 @@ export function SecurityEnhancer($1) {
       </AnimatePresence>
     </>';
   )}
-"`
+""
 
 </motion>
 </script>

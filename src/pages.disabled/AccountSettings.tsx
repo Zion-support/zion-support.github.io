@@ -38,18 +38,18 @@ export default function AccountSettings() {
         return;
       }
 
-      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' };);
+      const accounts = await window.ethereum.request({ "method": 'eth_requestAccounts' };);
       if (!accounts.length) {
         toast.error('No accounts found');
         return;
       }
 
       const address = accounts[0];
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()};`;
+      const message = `Zion AI Marketplace wallet verification\"nAddress": ${address}\"nTime": ${new Date().toISOString()};`;
       
       await window.ethereum.request({
-        method: 'personal_sign',
-        params: [address, message]
+        "method": 'personal_sign',
+        "params": [address, message]
       });
 
       // Auto-set DID handle if ENS is available
@@ -60,10 +60,10 @@ export default function AccountSettings() {
           setDidHandle(ensName);
         }
       } catch (error) {
-        console.error('ENS lookup error:', error);
+        console.error('ENS lookup "error": ', error);
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+      toast.success(`Wallet "connected": ${address.slice(0, 6)}...${address.slice(-4)}`);
     } catch (error) {
       toast.error(error.message || 'Failed to connect wallet');
     }
@@ -92,7 +92,7 @@ export default function AccountSettings() {
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 "md": grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>

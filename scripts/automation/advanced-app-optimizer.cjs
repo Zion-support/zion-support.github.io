@@ -19,13 +19,13 @@ class AdvancedAppOptimizer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -43,124 +43,108 @@ class AdvancedAppOptimizer {
         if () {
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
         
-        const optimizedConfig = `/** @type {import('next').NextConfig} */
+        const optimizedConfig = "/** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
+  "compress": true,
+  "poweredByHeader": false,
+  "generateEtags": false,
   
   // Image optimization
-  images: {
+  "images": {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'sel) {
+    "formats": ['image/webp', 'image/avif'],
+    "minimumCacheTTL": 60,
+    "dangerouslyAllowSVG": true,
+    "contentSecurityPolicy": "default-src 'sel) {
     ) {
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
         
-        const optimizedConfig = `/** @type {import('next').NextConfig} */
+        const optimizedConfig = "/** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
+  "compress": true,
+  "poweredByHeader": false,
+  "generateEtags": false,
   
   // Image optimization
-  images: {
+  "images": {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'sel}f;'; script-src 'none'; sandbox;",
-  },
+    "formats": ['image/webp', 'image/avif'],
+    "minimumCacheTTL": 60,
+    "dangerouslyAllowSVG": true,
+    "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
   
   // Bundle optimization
-  webpack: (config, { dev, isServer }) => {
+  "webpack": (config, { dev, isServer }) => {
     // Production optimizations
     if ( {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        "chunks": 'all',
+        "cacheGroups": {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
+            "name": 'vendors',
+            "chunks": 'all'},
+          "common": {
             name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      }}
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}}
     
     return config) {
      {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        "chunks": 'all',
+        "cacheGroups": {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
+            "name": 'vendors',
+            "chunks": 'all'},
+          "common": {
             name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      }}
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}}
     
     return config}},
   
   // Experimental features for performance
-  experimental: {
+  "experimental": {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
+    "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
   
   // Headers for security and performance
   async headers() {
     return [;
       {
-        source: '/(.*)',
-        headers: [
+        "source": '/(.*)',
+        "headers": [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            "value": 'DENY'},
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            "key": 'X-Content-Type-Options',
+            "value": 'nosniff'},
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          }],
-      }]},
+            "key": 'Referrer-Policy',
+            "value": 'origin-when-cross-origin'}]}]},
   
   // Redirects and rewrites
   async redirects() {
     return [;
       {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }]},
-};
+        "source": '/home',
+        "destination": '/',
+        "permanent": true}]}};
 
 module.exports = nextConfig;
-`;
+";
 
         fs.writeFileSync(nextConfigPath, optimizedConfig);
         this.log('Next.js configuration optimized');
         
-        return { status: 'success', message: 'Next.js config optimized' }}
+        return { "status": 'success', "message": 'Next.js config optimized' }}
 
     optimizeTailwindConfig() {
         this.log('Optimizing Tailwind CSS configuration...');
@@ -171,163 +155,128 @@ module.exports = nextConfig;
         if () {
             tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')}
         
-        const optimizedConfig = `/** @type {import('tailwindcss').Config} */
+        const optimizedConfig = "/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+  "content": ['./pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}'],
-  theme: {
+  "theme": {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
-        },
-        secondary: {
+          "500": '#3b82f6',
+          "600": '#2563eb',
+          "700": '#1d4ed8',
+          "900": '#1e3a8a'},
+        "secondary": {
           50: '#f8fafc',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          900: '#0f172a',
-        },
-      },
-      fontFamily: {
+          "500": '#64748b',
+          "600": '#475569',
+          "700": '#334155',
+          "900": '#0f172a'}},
+      "fontFamily": {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      animation: {
+        "mono": ['JetBrains Mono', 'monospace']},
+      "animation": {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out',
-        'bounce-subtle': 'bounceSubtle 2s infinite',
-      },
-      keyframes: {
+        'bounce-subtle': 'bounceSubtle 2s infinite'},
+      "keyframes": {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        bounceSubtle: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' },
-        },
-      },
-    },
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
+          '100%': { "opacity": '1' }},
+        "slideUp": {
+          '0%': { transform: 'translateY(10px)', "opacity": '0' },
+          '100%': { "transform": 'translateY(0)', "opacity": '1' }},
+        "bounceSubtle": {
+          '0%, 100%': { "transform": 'translateY(0)' },
+          '50%': { "transform": 'translateY(-5px)' }}}}},
+  "plugins": [require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')],
   // Purge unused styles in production
-  purge: {
+  "purge": {
     enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
+    "content": ['./pages/**/*.{js,ts,jsx,tsx}',
       './components/**/*.{js,ts,jsx,tsx}',
       './app/**/*.{js,ts,jsx,tsx}'],
-    options: {
-      safelist: [
-        'animate-fade-in',
+    "options": {
+      safelist: ['animate-fade-in',
         'animate-slide-up',
-        'animate-bounce-subtle'],
-    },
-  },) {
+        'animate-bounce-subtle']}}) {
     ) {
             tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')}
         
-        const optimizedConfig = `/** @type {import('tailwindcss').Config} */
+        const optimizedConfig = "/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+  "content": ['./pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}'],
-  theme: {
+  "theme": {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
-        },
-        secondary: {
+          "500": '#3b82f6',
+          "600": '#2563eb',
+          "700": '#1d4ed8',
+          "900": '#1e3a8a'},
+        "secondary": {
           50: '#f8fafc',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          900: '#0f172a',
-        },
-      },
-      fontFamily: {
+          "500": '#64748b',
+          "600": '#475569',
+          "700": '#334155',
+          "900": '#0f172a'}},
+      "fontFamily": {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      animation: {
+        "mono": ['JetBrains Mono', 'monospace']},
+      "animation": {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out',
-        'bounce-subtle': 'bounceSubtle 2s infinite',
-      },
-      keyframes: {
+        'bounce-subtle': 'bounceSubtle 2s infinite'},
+      "keyframes": {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        bounceSubtle: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' },
-        },
-      },
-    },
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
+          '100%': { "opacity": '1' }},
+        "slideUp": {
+          '0%': { transform: 'translateY(10px)', "opacity": '0' },
+          '100%': { "transform": 'translateY(0)', "opacity": '1' }},
+        "bounceSubtle": {
+          '0%, 100%': { "transform": 'translateY(0)' },
+          '50%': { "transform": 'translateY(-5px)' }}}}},
+  "plugins": [require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')],
   // Purge unused styles in production
-  purge: {
+  "purge": {
     enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
+    "content": ['./pages/**/*.{js,ts,jsx,tsx}',
       './components/**/*.{js,ts,jsx,tsx}',
       './app/**/*.{js,ts,jsx,tsx}'],
-    options: {
-      safelist: [
-        'animate-fade-in',
+    "options": {
+      safelist: ['animate-fade-in',
         'animate-slide-up',
-        'animate-bounce-subtle'],
-    },
-  },
-  }
+        'animate-bounce-subtle']}}}
 };
-`;
+";
 
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
         
-        return { status: 'success', message: 'Tailwind config optimized' }}
+        return { "status": 'success', "message": 'Tailwind config optimized' }}
 
     createPerformanceMonitoring() {
         this.log('Creating performance monitoring utilities...');
         
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {
-            fs.mkdirSync(utilsDir, { recursive: true })}
+            fs.mkdirSync(utilsDir, { "recursive": true })}
         
         // Performance monitoring utility
-        const performanceMonitor = `/**
+        const performanceMonitor = "/**
  * Performance Monitoring Utility
  * Tracks and reports performance metrics
  */
@@ -336,10 +285,10 @@ export class PerformanceMonitor {
   constructor() {
     this.metrics = new Map) {
     ) {
-            fs.mkdirSync(utilsDir, { recursive: true })}
+            fs.mkdirSync(utilsDir, { "recursive": true })}
         
         // Performance monitoring utility
-        const performanceMonitor = `/**
+        const performanceMonitor = "/**
  * Performance Monitoring Utility
  * Tracks and reports performance metrics
  */
@@ -371,14 +320,14 @@ export class PerformanceMonitor {
       
       // Log slow operations
       if ( {
-        console.warn(\`Slow operation detected: \${name} took \${measure.duration}ms\`)}
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)}
     }
   }
 
   getMetrics() {
     return Object.fromEntries(this.metrics)) {
      {
-        console.warn(\`Slow operation detected: \${name} took \${measure.duration}ms\`)}
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)}
     }
   }
 
@@ -396,12 +345,12 @@ export class PerformanceMonitor {
 }
 
 export const performanceMonitor = new PerformanceMonitor;(;);
-`;
+";
 
         fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
         
         // Web Vitals utility
-        const webVitals = `/**
+        const webVitals = "/**
  * Web Vitals Utility
  * Measures Core Web Vitals
  */
@@ -412,20 +361,18 @@ export function reportWebVitals(metric) {
   // Send to analytics service
   if ( {
     window.gtag('event', metric.name, {
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      event_label: metric.id,
-      non_interaction: true,
-    })}
+      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      "event_label": metric.id,
+      "non_interaction": true})}
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
     console.log(metric)) {
      {
     window.gtag('event', metric.name, {
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      event_label: metric.id,
-      non_interaction: true,
-    })}
+      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      "event_label": metric.id,
+      "non_interaction": true})}
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
@@ -442,12 +389,12 @@ export function initWebVitals() {
     getLCP(reportWebVitals);
     getTTFB(reportWebVitals)}
 }
-`;
+";
 
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
         
         this.log('Performance monitoring utilities created');
-        return { status: 'success', message: 'Performance monitoring created' }}
+        return { "status": 'success', "message": 'Performance monitoring created' }}
 
     optimizeImages() {
         this.log('Optimizing images...');
@@ -465,38 +412,38 @@ export function initWebVitals() {
                 
                 if ( { // Only optimize large images
                     optimizations.push({
-                        file: path.relative(this.projectRoot, file),
-                        originalSize: sizeKB,
-                        status: 'needs_optimization'
+                        "file": path.relative(this.projectRoot, file),
+                        "originalSize": sizeKB,
+                        "status": 'needs_optimization'
                     })} else {
                     optimizations.push({
-                        file: path.relative(this.projectRoot, file),
-                        originalSize: sizeKB,
-                        status: 'already_optimized'
+                        "file": path.relative(this.projectRoot, file),
+                        "originalSize": sizeKB,
+                        "status": 'already_optimized'
                     })}
                 
                 optimizedCount++} catch (error) {
-                this.log(`Error processing image ${file}: ${error.message}`)}
+                this.log("Error processing image ${file}: ${error.message}")}
         }
         
-        this.log(`Processed ${optimizedCount} images`)) {
+        this.log("Processed ${optimizedCount} images")) {
      { // Only optimize large images
                     optimizations.push({
-                        file: path.relative(this.projectRoot, file),
-                        originalSize: sizeKB,
-                        status: 'needs_optimization'
+                        "file": path.relative(this.projectRoot, file),
+                        "originalSize": sizeKB,
+                        "status": 'needs_optimization'
                     })} else {
                     optimizations.push({
-                        file: path.relative(this.projectRoot, file),
-                        originalSize: sizeKB,
-                        status: 'already_optimized'
+                        "file": path.relative(this.projectRoot, file),
+                        "originalSize": sizeKB,
+                        "status": 'already_optimized'
                     })}
                 
                 optimizedCount++} catch (error) {
-                this.log(`Error processing image ${file}: ${error.message}`)}
+                this.log("Error processing image ${file}: ${error.message}")}
         }
         
-        this.log(`Processed ${optimizedCount} images`)}
+        this.log("Processed ${optimizedCount} images")}
         return { optimizedCount, optimizations }}
 
     findImageFiles(dir) {
@@ -528,19 +475,19 @@ export function initWebVitals() {
         this.log('Generating advanced app optimization report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            optimizations: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "optimizations": {
                 nextConfig: this.optimizeNextConfig(),
-                tailwindConfig: this.optimizeTailwindConfig(),
-                performanceMonitoring: this.createPerformanceMonitoring(),
-                images: this.optimizeImages()
+                "tailwindConfig": this.optimizeTailwindConfig(),
+                "performanceMonitoring": this.createPerformanceMonitoring(),
+                "images": this.optimizeImages()
             },
-            recommendations: this.generateOptimizationRecommendations()
+            "recommendations": this.generateOptimizationRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Advanced app optimization report saved to ${this.reportFile}`);
+        this.log("Advanced app optimization report saved to ${this.reportFile}");
         
         return report}
 
@@ -565,7 +512,7 @@ export function initWebVitals() {
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {
-            this.log(`Advanced App Optimizer failed: ${error.message}`);
+            this.log("Advanced App Optimizer "failed": ${error.message}`);
             throw error}
     }
 }

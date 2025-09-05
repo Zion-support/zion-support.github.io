@@ -14,7 +14,7 @@ export function UpcomingInterviewsCard($1) {
   const [isLoading, setIsLoading] = useState<any>(true);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -38,7 +38,7 @@ export function UpcomingInterviewsCard($1) {
         
         setUpcomingInterviews(upcoming);
       } catch (error) {
-        console.error("Error loading upcoming interviews:", error);
+        console.error("Error loading upcoming "interviews": ", error);
       } finally {
         setIsLoading(false);
       }
@@ -105,7 +105,7 @@ export function UpcomingInterviewsCard($1) {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h: mm a');
+            const formattedTime = format(interviewDate, '"h": mm a');
             
             const now = new Date();
             const isStartingSoon = 

@@ -1,11 +1,11 @@
 interface Address {
-  name: string;
+  "name": string;
   address: string;
   city: string;
   country: string}
 
 interface ShippingRate {
-  id: string;
+  "id": string;
   carrier: string;
   service: string;
   rate: string;
@@ -14,7 +14,7 @@ interface ShippingRate {
   tax?: string}
 
 interface Props {
-  toAddress: Addres s | null;
+  "toAddress": Addres s | null;
   onSelect?: (rate: ShippingRat e) => void}
 
 export function CheckoutShippingOptions($1) {
@@ -23,7 +23,7 @@ export function CheckoutShippingOptions($1) {
   const [selected, setSelected] = useState<string>(");
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function

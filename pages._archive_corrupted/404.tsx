@@ -17,21 +17,20 @@ import {
   Shield
 } from 'lucide-react';
 
-const NotFound: NextPage = () => {
-  const quickLinks = [
-    { name: 'Home', url: '/', icon: Home },
-    { name: 'Services', url: '/services', icon: Briefcase },
-    { name: 'About', url: '/about', icon: Users },
-    { name: 'Contact', url: '/contact', icon: Phone },
-    { name: 'Blog', url: '/blog', icon: BookOpen },
-    { name: 'Pricing', url: '/pricing', icon: DollarSign },
-    { name: 'Team', url: '/team', icon: Award },
-    { name: 'Webinars', url: '/webinars', icon: Calendar },
-    { name: 'White Papers', url: '/whitepapers', icon: FileText },
-    { name: 'Solutions', url: '/solutions', icon: Award },
-    { name: 'Careers', url: '/careers', icon: Briefcase },
-    { name: 'Help Center', url: '/support', icon: FileText },
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield }
+const "NotFound": NextPage = () => {
+  const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },
+    { "name": 'Services', "url": '/services', "icon": Briefcase },
+    { "name": 'About', "url": '/about', "icon": Users },
+    { "name": 'Contact', "url": '/contact', "icon": Phone },
+    { "name": 'Blog', "url": '/blog', "icon": BookOpen },
+    { "name": 'Pricing', "url": '/pricing', "icon": DollarSign },
+    { "name": 'Team', "url": '/team', "icon": Award },
+    { "name": 'Webinars', "url": '/webinars', "icon": Calendar },
+    { "name": 'White Papers', "url": '/whitepapers', "icon": FileText },
+    { "name": 'Solutions', "url": '/solutions', "icon": Award },
+    { "name": 'Careers', "url": '/careers', "icon": Briefcase },
+    { "name": 'Help Center', "url": '/support', "icon": FileText },
+    { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
   ];
 
   return (
@@ -62,10 +61,10 @@ const NotFound: NextPage = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center mb-12">
             <button
               onClick={() => window.history.back()}
-              className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white "hover": opacity-90 transition-opacity"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
@@ -88,7 +87,7 @@ const NotFound: NextPage = () => {
                 <Link
                   key={link.url}
                   href={link.url}
-                  className="flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group"
+                  className="flex flex-col items-center p-4 rounded-lg bg-slate-700 "hover": bg-slate-600 transition-colors group"
                 >
                   <link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" />
                   <span className="text-gray-300 group-hover:text-white text-sm text-center">
@@ -106,7 +105,7 @@ const NotFound: NextPage = () => {
             <p className="text-gray-300 mb-6">
               If you can&apos;t find what you&apos;re looking for, our team is here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"

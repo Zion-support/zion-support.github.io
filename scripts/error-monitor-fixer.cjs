@@ -14,7 +14,7 @@ class ErrorMonitorFixer {
   ensureDirectories() {
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     })}
 
   log(message) {
@@ -25,11 +25,11 @@ class ErrorMonitorFixer {
     this.log('🔍 Detecting common errors in codebase');
 
     const errors = {
-      syntaxErrors: [],
-      importErrors: [],
-      typeErrors: [],
-      lintErrors: [],
-      buildErrors: []
+      "syntaxErrors": [],
+      "importErrors": [],
+      "typeErrors": [],
+      "lintErrors": [],
+      "buildErrors": []
     };
 
     // Check for syntax errors in source files
@@ -45,7 +45,7 @@ class ErrorMonitorFixer {
     return errors}
 
   scanDirectoryForErrors(dir, errors) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+    const files = fs.readdirSync(dir, { "withFileTypes": true });
     
     files.forEach(file => {
       const filePath = path.join(dir, file.name);
@@ -61,42 +61,40 @@ class ErrorMonitorFixer {
       const relativePath = path.relative(this.projectRoot, filePath);
 
       // Check for common syntax errors
-      const syntaxIssues = [
-        { pattern: /<<<<<<< HEAD/, message: 'Merge conflict markers found' },
-        { pattern: /=======/, message: 'Merge conflict markers found' },
-        { pattern: />>>>>>>/, message: 'Merge conflict markers found' },
-        { pattern: /import\s+.*?from\s+['"][^'"]*?['"]\s*['"]/, message: 'Unterminated import string' },
-        { pattern: /className=\{`[^`]*\$\{[^}]*\}[^`]*$/, message: 'Unterminated template literal' },
-        { pattern: /console\.log\([^)]*$/, message: 'Unterminated console.log' }
+      const syntaxIssues = [{ "pattern": /<<<<<<< HEAD/, "message": 'Merge conflict markers found' },
+        { "pattern": /=======/, "message": 'Merge conflict markers found' },
+        { "pattern": />>>>>>>/, "message": 'Merge conflict markers found' },
+        { "pattern": /import\s+.*?from\s+['"][^'"]*?['"]\s*['"]/, "message": 'Unterminated import string' },
+        { "pattern": /className=\{"[^"]*\$\{[^}]*\}[^"]*$/, "message": 'Unterminated template literal' },
+        { "pattern": /console\.log\([^)]*$/, "message": 'Unterminated console.log' }
       ];
 
       syntaxIssues.forEach(({ pattern, message }) => {
         if (pattern.test(content)) {
           errors.syntaxErrors.push({
-            file: relativePath,
+            "file": relativePath,
             message,
-            line: this.findLineNumber(content, pattern)
+            "line": this.findLineNumber(content, pattern)
           })}
       });
 
       // Check for import issues
-      const importIssues = [
-        { pattern: /import\s+.*?from\s+['"]([^'"]*?)['"]\s*$/, message: 'Missing semicolon in import' },
-        { pattern: /import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/, message: 'Double quotes in import' }
+      const importIssues = [{ "pattern": /import\s+.*?from\s+['"]([^'"]*?)['"]\s*$/, "message": 'Missing semicolon in import' },
+        { "pattern": /import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/, "message": 'Double quotes in import' }
       ];
 
       importIssues.forEach(({ pattern, message }) => {
         if (pattern.test(content)) {
           errors.importErrors.push({
-            file: relativePath,
+            "file": relativePath,
             message,
-            line: this.findLineNumber(content, pattern)
+            "line": this.findLineNumber(content, pattern)
           })}
       })} catch (error) {
       errors.syntaxErrors.push({
-        file: path.relative(this.projectRoot, filePath),
-        message: `File read error: ${error.message}`,
-        line: 0
+        "file": path.relative(this.projectRoot, filePath),
+        "message": "File read error: ${error.message}",
+        "line": 0
       })}
   }
 
@@ -147,7 +145,7 @@ class ErrorMonitorFixer {
 
       // Fix template literals
       if (error.message.includes('template literal')) {
-        content = content.replace(/className=\{`([^`]*)\$\{([^}]*)\}([^`]*)$/g, 'className={`$1${$2}$3`}');
+        content = content.replace(/className=\{"([^"]*)\$\{([^}]*)\}([^"]*)$/g, 'className={`$1${$2}$3`}');
         fixed = true}
 
       if (fixed) {
@@ -195,28 +193,28 @@ class ErrorMonitorFixer {
     this.log('🔍 Running build checks');
 
     const checks = {
-      lintCheck: false,
-      typeCheck: false,
-      buildCheck: false
+      "lintCheck": false,
+      "typeCheck": false,
+      "buildCheck": false
     };
 
     try {
       // Run linting
-      execSync('npm run lint', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync('npm run lint', { "cwd": this.projectRoot, "stdio": 'pipe' });
       checks.lintCheck = true;
       this.log('✅ Lint check passed')} catch (error) {
       this.log('❌ Lint check failed')}
 
     try {
       // Run type check
-      execSync('npm run type-check:fast', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio": 'pipe' });
       checks.typeCheck = true;
       this.log('✅ Type check passed')} catch (error) {
       this.log('❌ Type check failed')}
 
     try {
       // Run build check
-      execSync('npm run build:fast', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio": 'pipe' });
       checks.buildCheck = true;
       this.log('✅ Build check passed')} catch (error) {
       this.log('❌ Build check failed')}
@@ -225,21 +223,21 @@ class ErrorMonitorFixer {
 
   generateErrorReport(errors, fixedCount, checks) {
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalErrors: errors.syntaxErrors.length + errors.importErrors.length,
-        fixedErrors: fixedCount,
-        remainingErrors: (errors.syntaxErrors.length + errors.importErrors.length) - fixedCount
+        "fixedErrors": fixedCount,
+        "remainingErrors": (errors.syntaxErrors.length + errors.importErrors.length) - fixedCount
       },
-      errors: {
+      "errors": {
         syntaxErrors: errors.syntaxErrors,
-        importErrors: errors.importErrors,
-        typeErrors: errors.typeErrors,
-        lintErrors: errors.lintErrors,
-        buildErrors: errors.buildErrors
+        "importErrors": errors.importErrors,
+        "typeErrors": errors.typeErrors,
+        "lintErrors": errors.lintErrors,
+        "buildErrors": errors.buildErrors
       },
-      checks: checks,
-      recommendations: this.generateRecommendations(errors, checks)
+      "checks": checks,
+      "recommendations": this.generateRecommendations(errors, checks)
     };
 
     const reportPath = path.join(this.reportsDir, 'error-monitor-report.json');
@@ -288,11 +286,11 @@ class ErrorMonitorFixer {
       const report = this.generateErrorReport(errors, fixedCount, checks);
 
       this.log('✅ Error Monitor and Fixer completed');
-      this.log(`   Fixed: ${fixedCount} errors`);
-      this.log(`   Remaining: ${report.summary.remainingErrors} errors`);
+      this.log(`   "Fixed": ${fixedCount} errors`);
+      this.log(`   "Remaining": ${report.summary.remainingErrors} errors`);
 
       return report} catch (error) {
-      this.log(`❌ Error Monitor and Fixer failed: ${error.message}`);
+      this.log(`❌ Error Monitor and Fixer "failed": ${error.message}`);
       throw error}
   }
 }

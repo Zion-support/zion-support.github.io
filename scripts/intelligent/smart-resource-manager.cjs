@@ -14,25 +14,25 @@ class SmartResourceManager {
     this.resourceHistory = [];
     this.optimizationActions = [];
     this.resourceThresholds = {
-      memory: {
+      "memory": {
         warning: 70, // percentage
-        critical: 85,
-        maxProcessMemory: 1024 * 1024 * 1024 // 1GB
+        "critical": 85,
+        "maxProcessMemory": 1024 * 1024 * 1024 // 1GB
       },
-      cpu: {
+      "cpu": {
         warning: 60, // percentage
-        critical: 80,
-        maxLoadAverage: 2.0
+        "critical": 80,
+        "maxLoadAverage": 2.0
       },
-      disk: {
+      "disk": {
         warning: 80, // percentage
-        critical: 90
+        "critical": 90
       }
     };
     this.optimizationStrategies = {
-      memory: ['garbage_collection', 'restart_process', 'scale_down', 'optimize_code'],
-      cpu: ['scale_up', 'optimize_code', 'restart_process', 'reduce_workload'],
-      disk: ['clean_logs', 'clean_temp', 'compress_files', 'archive_old_data']
+      "memory": ['garbage_collection', 'restart_process', 'scale_down', 'optimize_code'],
+      "cpu": ['scale_up', 'optimize_code', 'restart_process', 'reduce_workload'],
+      "disk": ['clean_logs', 'clean_temp', 'compress_files', 'archive_old_data']
     };
     this.reportDir = path.join(process.cwd(), 'resource-reports');
     this.ensureDirectories();
@@ -40,8 +40,8 @@ class SmartResourceManager {
 
   async ensureDirectories() {
     try {
-      await fs.mkdir(this.reportDir, { recursive: true });
-      await fs.mkdir(path.join(process.cwd(), 'logs'), { recursive: true });
+      await fs.mkdir(this.reportDir, { "recursive": true });
+      await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Directories already exist or created');
     }
@@ -51,7 +51,7 @@ class SmartResourceManager {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          console.error('❌ Failed to connect to PM2:', err);
+          console.error('❌ Failed to connect to "PM2": ', err);
           reject(err);
           return;
         }
@@ -85,10 +85,10 @@ class SmartResourceManager {
       const processResources = await this.collectProcessResources();
       
       const resourceData = {
-        timestamp: Date.now(),
-        system: systemResources,
-        processes: processResources,
-        alerts: []
+        "timestamp": Date.now(),
+        "system": systemResources,
+        "processes": processResources,
+        "alerts": []
       };
 
       // Check for resource alerts
@@ -103,22 +103,22 @@ class SmartResourceManager {
 
       return resourceData;
     } catch (error) {
-      console.error('❌ Error monitoring resources:', error);
+      console.error('❌ Error monitoring "resources": ', error);
     }
   }
 
   async collectSystemResources() {
     const memory = {
-      total: os.totalmem(),
-      free: os.freemem(),
-      used: os.totalmem() - os.freemem(),
-      percentage: ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
+      "total": os.totalmem(),
+      "free": os.freemem(),
+      "used": os.totalmem() - os.freemem(),
+      "percentage": ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
     };
 
     const cpu = {
-      loadAverage: os.loadavg(),
-      cores: os.cpus().length,
-      model: os.cpus()[0].model
+      "loadAverage": os.loadavg(),
+      "cores": os.cpus().length,
+      "model": os.cpus()[0].model
     };
 
     const disk = await this.getDiskUsage();
@@ -129,22 +129,22 @@ class SmartResourceManager {
   async getDiskUsage() {
     try {
       const { execSync } = require('child_process');
-      const output = execSync('df -h /', { encoding: 'utf8' });
+      const output = execSync('df -h /', { "encoding": 'utf8' });
       const lines = output.split('\n');
       const data = lines[1].split(/\s+/);
       
       return {
-        total: data[1],
-        used: data[2],
-        available: data[3],
-        percentage: parseInt(data[4].replace('%', ''))
+        "total": data[1],
+        "used": data[2],
+        "available": data[3],
+        "percentage": parseInt(data[4].replace('%', ''))
       };
     } catch (error) {
       return {
-        total: 'Unknown',
-        used: 'Unknown',
-        available: 'Unknown',
-        percentage: 0
+        "total": 'Unknown',
+        "used": 'Unknown',
+        "available": 'Unknown',
+        "percentage": 0
       };
     }
   }
@@ -158,14 +158,14 @@ class SmartResourceManager {
         }
 
         const processResources = processes.map(process => ({
-          name: process.name,
-          pid: process.pid,
-          memory: process.monit.memory,
-          cpu: process.monit.cpu,
-          heapUsed: process.monit.heap_used,
-          heapTotal: process.monit.heap_total,
-          status: process.pm2_env.status,
-          instances: process.pm2_env.instances
+          "name": process.name,
+          "pid": process.pid,
+          "memory": process.monit.memory,
+          "cpu": process.monit.cpu,
+          "heapUsed": process.monit.heap_used,
+          "heapTotal": process.monit.heap_total,
+          "status": process.pm2_env.status,
+          "instances": process.pm2_env.instances
         }));
 
         resolve(processResources);
@@ -179,51 +179,51 @@ class SmartResourceManager {
     // Check memory alerts
     if (system.memory.percentage > this.resourceThresholds.memory.critical) {
       resourceData.alerts.push({
-        type: 'memory',
-        severity: 'critical',
-        message: `System memory usage is ${system.memory.percentage.toFixed(2)}%`,
-        threshold: this.resourceThresholds.memory.critical
+        "type": 'memory',
+        "severity": 'critical',
+        "message": `System memory usage is ${system.memory.percentage.toFixed(2)}%`,
+        "threshold": this.resourceThresholds.memory.critical
       });
     } else if (system.memory.percentage > this.resourceThresholds.memory.warning) {
       resourceData.alerts.push({
-        type: 'memory',
-        severity: 'warning',
-        message: `System memory usage is ${system.memory.percentage.toFixed(2)}%`,
-        threshold: this.resourceThresholds.memory.warning
+        "type": 'memory',
+        "severity": 'warning',
+        "message": `System memory usage is ${system.memory.percentage.toFixed(2)}%`,
+        "threshold": this.resourceThresholds.memory.warning
       });
     }
 
     // Check CPU alerts
     if (system.cpu.loadAverage[0] > this.resourceThresholds.cpu.critical) {
       resourceData.alerts.push({
-        type: 'cpu',
-        severity: 'critical',
-        message: `CPU load average is ${system.cpu.loadAverage[0].toFixed(2)}`,
-        threshold: this.resourceThresholds.cpu.critical
+        "type": 'cpu',
+        "severity": 'critical',
+        "message": `CPU load average is ${system.cpu.loadAverage[0].toFixed(2)}`,
+        "threshold": this.resourceThresholds.cpu.critical
       });
     } else if (system.cpu.loadAverage[0] > this.resourceThresholds.cpu.warning) {
       resourceData.alerts.push({
-        type: 'cpu',
-        severity: 'warning',
-        message: `CPU load average is ${system.cpu.loadAverage[0].toFixed(2)}`,
-        threshold: this.resourceThresholds.cpu.warning
+        "type": 'cpu',
+        "severity": 'warning',
+        "message": `CPU load average is ${system.cpu.loadAverage[0].toFixed(2)}`,
+        "threshold": this.resourceThresholds.cpu.warning
       });
     }
 
     // Check disk alerts
     if (system.disk.percentage > this.resourceThresholds.disk.critical) {
       resourceData.alerts.push({
-        type: 'disk',
-        severity: 'critical',
-        message: `Disk usage is ${system.disk.percentage}%`,
-        threshold: this.resourceThresholds.disk.critical
+        "type": 'disk',
+        "severity": 'critical',
+        "message": `Disk usage is ${system.disk.percentage}%`,
+        "threshold": this.resourceThresholds.disk.critical
       });
     } else if (system.disk.percentage > this.resourceThresholds.disk.warning) {
       resourceData.alerts.push({
-        type: 'disk',
-        severity: 'warning',
-        message: `Disk usage is ${system.disk.percentage}%`,
-        threshold: this.resourceThresholds.disk.warning
+        "type": 'disk',
+        "severity": 'warning',
+        "message": `Disk usage is ${system.disk.percentage}%`,
+        "threshold": this.resourceThresholds.disk.warning
       });
     }
 
@@ -231,19 +231,19 @@ class SmartResourceManager {
     for (const process of processes) {
       if (process.memory > this.resourceThresholds.memory.maxProcessMemory) {
         resourceData.alerts.push({
-          type: 'process_memory',
-          severity: 'warning',
-          message: `Process ${process.name} is using ${(process.memory / 1024 / 1024).toFixed(2)}MB`,
-          process: process.name
+          "type": 'process_memory',
+          "severity": 'warning',
+          "message": `Process ${process.name} is using ${(process.memory / 1024 / 1024).toFixed(2)}MB`,
+          "process": process.name
         });
       }
 
       if (process.cpu > 90) {
         resourceData.alerts.push({
-          type: 'process_cpu',
-          severity: 'warning',
-          message: `Process ${process.name} CPU usage is ${process.cpu.toFixed(2)}%`,
-          process: process.name
+          "type": 'process_cpu',
+          "severity": 'warning',
+          "message": `Process ${process.name} CPU usage is ${process.cpu.toFixed(2)}%`,
+          "process": process.name
         });
       }
     }
@@ -315,7 +315,7 @@ class SmartResourceManager {
     const cpuAlerts = resources.alerts.filter(a => a.type.includes('cpu'));
 
     if (cpuAlerts.length > 0 || cpuLoad > this.resourceThresholds.cpu.warning) {
-      console.log(`⚡ Optimizing CPU usage (load: ${cpuLoad.toFixed(2)})`);
+      console.log(`⚡ Optimizing CPU usage ("load": ${cpuLoad.toFixed(2)})`);
 
       // Scale up if CPU load is high
       if (cpuLoad > this.resourceThresholds.cpu.critical) {
@@ -352,7 +352,7 @@ class SmartResourceManager {
   async forceGarbageCollection() {
     try {
       const { execSync } = require('child_process');
-      execSync('node -e "if (global.gc) global.gc()"', { stdio: 'pipe' });
+      execSync('node -e "if (global.gc) global.gc()"', { "stdio": 'pipe' });
       console.log('🗑️ Forced garbage collection');
     } catch (error) {
       console.log('⚠️ Garbage collection not available');
@@ -368,11 +368,11 @@ class SmartResourceManager {
         } else {
           console.log(`✅ Restarted ${processName} (${reason})`);
           this.optimizationActions.push({
-            timestamp: Date.now(),
-            action: 'restart_process',
-            process: processName,
+            "timestamp": Date.now(),
+            "action": 'restart_process',
+            "process": processName,
             reason,
-            success: true
+            "success": true
           });
           resolve(true);
         }
@@ -391,16 +391,16 @@ class SmartResourceManager {
         return new Promise((resolve) => {
           pm2.scale('ziontech-main-app', newInstances, (err) => {
             if (err) {
-              console.error('❌ Failed to scale down:', err);
+              console.error('❌ Failed to scale "down": ', err);
               resolve(false);
             } else {
               console.log(`📉 Scaled down to ${newInstances} instances`);
               this.optimizationActions.push({
-                timestamp: Date.now(),
-                action: 'scale_down',
-                instances: newInstances,
-                reason: 'high_memory_usage',
-                success: true
+                "timestamp": Date.now(),
+                "action": 'scale_down',
+                "instances": newInstances,
+                "reason": 'high_memory_usage',
+                "success": true
               });
               resolve(true);
             }
@@ -408,7 +408,7 @@ class SmartResourceManager {
         });
       }
     } catch (error) {
-      console.error('❌ Error scaling down processes:', error);
+      console.error('❌ Error scaling down "processes": ', error);
     }
   }
 
@@ -423,16 +423,16 @@ class SmartResourceManager {
         return new Promise((resolve) => {
           pm2.scale('ziontech-main-app', newInstances, (err) => {
             if (err) {
-              console.error('❌ Failed to scale up:', err);
+              console.error('❌ Failed to scale "up": ', err);
               resolve(false);
             } else {
               console.log(`📈 Scaled up to ${newInstances} instances`);
               this.optimizationActions.push({
-                timestamp: Date.now(),
-                action: 'scale_up',
-                instances: newInstances,
-                reason: 'high_cpu_load',
-                success: true
+                "timestamp": Date.now(),
+                "action": 'scale_up',
+                "instances": newInstances,
+                "reason": 'high_cpu_load',
+                "success": true
               });
               resolve(true);
             }
@@ -440,7 +440,7 @@ class SmartResourceManager {
         });
       }
     } catch (error) {
-      console.error('❌ Error scaling up processes:', error);
+      console.error('❌ Error scaling up "processes": ', error);
     }
   }
 
@@ -452,8 +452,8 @@ class SmartResourceManager {
           return;
         }
         resolve(processes.map(process => ({
-          name: process.name,
-          instances: process.pm2_env.instances
+          "name": process.name,
+          "instances": process.pm2_env.instances
         })));
       });
     });
@@ -464,20 +464,20 @@ class SmartResourceManager {
       const { execSync } = require('child_process');
       
       // Clean old log files (older than 7 days)
-      execSync('find logs -name "*.log" -mtime +7 -delete', { stdio: 'pipe' });
+      execSync('find logs -name "*.log" -mtime +7 -delete', { "stdio": 'pipe' });
       
       // Compress recent log files
-      execSync('find logs -name "*.log" -mtime +1 -exec gzip {} \\;', { stdio: 'pipe' });
+      execSync('find logs -name "*.log" -mtime +1 -exec gzip {} \\;', { "stdio": 'pipe' });
       
       console.log('🧹 Cleaned log files');
       
       this.optimizationActions.push({
-        timestamp: Date.now(),
-        action: 'clean_logs',
-        success: true
+        "timestamp": Date.now(),
+        "action": 'clean_logs',
+        "success": true
       });
     } catch (error) {
-      console.error('❌ Error cleaning log files:', error);
+      console.error('❌ Error cleaning log "files": ', error);
     }
   }
 
@@ -486,18 +486,18 @@ class SmartResourceManager {
       const { execSync } = require('child_process');
       
       // Clean temporary files
-      execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { stdio: 'pipe' });
-      execSync('find . -name "*.tmp" -mtime +1 -delete', { stdio: 'pipe' });
+      execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
+      execSync('find . -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
       
       console.log('🧹 Cleaned temporary files');
       
       this.optimizationActions.push({
-        timestamp: Date.now(),
-        action: 'clean_temp',
-        success: true
+        "timestamp": Date.now(),
+        "action": 'clean_temp',
+        "success": true
       });
     } catch (error) {
-      console.error('❌ Error cleaning temp files:', error);
+      console.error('❌ Error cleaning temp "files": ', error);
     }
   }
 
@@ -506,39 +506,39 @@ class SmartResourceManager {
       const { execSync } = require('child_process');
       
       // Compress old reports
-      execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { stdio: 'pipe' });
+      execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio": 'pipe' });
       
       console.log('🗜️ Compressed old files');
       
       this.optimizationActions.push({
-        timestamp: Date.now(),
-        action: 'compress_files',
-        success: true
+        "timestamp": Date.now(),
+        "action": 'compress_files',
+        "success": true
       });
     } catch (error) {
-      console.error('❌ Error compressing files:', error);
+      console.error('❌ Error compressing "files": ', error);
     }
   }
 
   async generateResourceReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      currentResources: this.resourceHistory[this.resourceHistory.length - 1],
-      resourceThresholds: this.resourceThresholds,
-      optimizationActions: this.optimizationActions.slice(-50),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "currentResources": this.resourceHistory[this.resourceHistory.length - 1],
+      "resourceThresholds": this.resourceThresholds,
+      "optimizationActions": this.optimizationActions.slice(-50),
+      "summary": {
         totalOptimizations: this.optimizationActions.length,
-        successfulOptimizations: this.optimizationActions.filter(a => a.success).length,
-        averageMemoryUsage: this.calculateAverageMemoryUsage(),
-        averageCpuUsage: this.calculateAverageCpuUsage(),
-        resourceEfficiency: this.calculateResourceEfficiency()
+        "successfulOptimizations": this.optimizationActions.filter(a => a.success).length,
+        "averageMemoryUsage": this.calculateAverageMemoryUsage(),
+        "averageCpuUsage": this.calculateAverageCpuUsage(),
+        "resourceEfficiency": this.calculateResourceEfficiency()
       }
     };
 
     const reportPath = path.join(this.reportDir, `resource-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Resource report saved to: ${reportPath}`);
+    console.log(`📊 Resource report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -595,7 +595,7 @@ async function main() {
     });
 
   } catch (error) {
-    console.error('❌ Smart Resource Manager failed:', error);
+    console.error('❌ Smart Resource Manager "failed": ', error);
     process.exit(1);
   }
 }

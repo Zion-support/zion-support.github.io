@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 // LinkedIn automation placeholder - implement actual functionality
 export const linkedinAutomation = {
-  run: () => {
+  "run": () => {
     // LinkedIn automation placeholder - implement actual functionality
     // TODO: Implement actual LinkedIn automation functionality
   }

@@ -14,7 +14,7 @@ class ComponentReplacer {
   replaceComponent() {
     this.log('Replacing broken AIChatbotSystem component with working version...');
     
-    const workingComponent = `import React, { useState, useEffect, useRef, useCallback } from 'react';
+    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Bot, 
@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 
 interface ChatMessage {
-  id: string;
+  "id": string;
   content: string;
   sender: 'user' | 'bot';
   timestamp: Date;
@@ -53,7 +53,7 @@ interface AIChatbotSystemProps {
   maxMessages?: number;
   autoScroll?: boolean}
 
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
@@ -65,11 +65,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
-    voiceEnabled: false,
-    autoResponse: true,
-    language: 'en',
-    theme: 'dark',
-    responseSpeed: 'normal'
+    "voiceEnabled": false,
+    "autoResponse": true,
+    "language": 'en',
+    "theme": 'dark',
+    "responseSpeed": 'normal'
   });
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -77,18 +77,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
+      const "welcomeMessage": ChatMessage = {
         id: 'welcome',
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?",
-        sender: 'bot',
-        timestamp: new Date(),
-        type: 'text',
-        status: 'sent',
-        metadata: {
+        "content": "Hello! I'm Zion AI, your intelligent assistant. I can help you "with": \\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?",
+        "sender": 'bot',
+        "timestamp": new Date(),
+        "type": 'text',
+        "status": 'sent',
+        "metadata": {
           confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-          estimatedResponseTime: 2
+          "suggestions": ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          "relatedServices": ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          "estimatedResponseTime": 2
         }
       };
       setMessages([welcomeMessage])}
@@ -97,48 +97,47 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
+      messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response
-  const simulateAIResponse = useCallback(async (userInput: string) => {
+  const simulateAIResponse = useCallback(async ("userInput": string) => {
     setIsTyping(true);
     
     // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-    const responses = [
-      {
-        content: "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
-        suggestions: ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
-        relatedServices: ['AI Solutions', 'Cloud Services', 'Digital Transformation']
+    const responses = [{
+        "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
+        "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
+        "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation']
       },
       {
-        content: "That's a great question! Let me provide you with detailed information about our services.",
-        suggestions: ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
-        relatedServices: ['Consulting', 'Implementation', 'Support']
+        "content": "That's a great question! Let me provide you with detailed information about our services.",
+        "suggestions": ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
+        "relatedServices": ['Consulting', 'Implementation', 'Support']
       },
       {
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
+        "content": "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
+        "suggestions": ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management']
       }
     ];
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
-    const botMessage: ChatMessage = {
+    const "botMessage": ChatMessage = {
       id: Date.now().toString(),
-      content: randomResponse.content,
-      sender: 'bot',
-      timestamp: new Date(),
-      type: 'text',
-      status: 'sent',
-      metadata: {
+      "content": randomResponse.content,
+      "sender": 'bot',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent',
+      "metadata": {
         confidence: 0.85 + Math.random() * 0.1,
-        suggestions: randomResponse.suggestions,
-        relatedServices: randomResponse.relatedServices,
-        estimatedResponseTime: 1 + Math.random() * 2
+        "suggestions": randomResponse.suggestions,
+        "relatedServices": randomResponse.relatedServices,
+        "estimatedResponseTime": 1 + Math.random() * 2
       }
     };
 
@@ -146,17 +145,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     setIsTyping(false)}, []);
 
   // Handle message submission
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async ("e": React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
-      content: inputValue.trim(),
-      sender: 'user',
-      timestamp: new Date(),
-      type: 'text',
-      status: 'sent'
+      "content": inputValue.trim(),
+      "sender": 'user',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent'
     };
 
     setMessages(prev => [...prev, userMessage]);
@@ -165,20 +164,20 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
 
   // Handle suggestion clicks
-  const handleSuggestionClick = useCallback((suggestion: string) => {
+  const handleSuggestionClick = useCallback(("suggestion": string) => {
     setInputValue(suggestion)}, []);
 
   // Handle file upload
-  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
         id: Date.now().toString(),
-        content: \`Uploaded: \${file.name}\`,
-        sender: 'user',
-        timestamp: new Date(),
-        type: 'file',
-        status: 'sent'
+        "content": \"Uploaded: \${file.name}\",
+        "sender": 'user',
+        "timestamp": new Date(),
+        "type": 'file',
+        "status": 'sent'
       };
       setMessages(prev => [...prev, fileMessage])}
   }, []);
@@ -188,15 +187,15 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     setIsListening(!isListening)}, [isListening]);
 
   // Rate response
-  const rateResponse = useCallback((messageId: string, rating: 'positive' | 'negative') => {
-    console.log(\`Rated message \${messageId} as \${rating}\`)}, []);
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
   return (
     <>
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg "hover": bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
         aria-label="Toggle AI Chat"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
@@ -206,9 +205,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            initial={{ "opacity": 0, "y": 20, "scale": 0.95 }}
+            animate={{ "opacity": 1, "y": 0, "scale": 1 }}
+            exit={{ "opacity": 0, "y": 20, "scale": 0.95 }}
             className="fixed bottom-24 right-6 w-96 h-[600px] bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl z-40 flex flex-col"
           >
             {/* Header */}
@@ -228,7 +227,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     {showSettings && (
                       <button
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
-                        className="p-2 text-zinc-400 hover:text-white transition-colors"
+                        className="p-2 text-zinc-400 "hover": text-white transition-colors"
                         aria-label="Settings"
                       >
                         <Settings className="w-4 h-4" />
@@ -236,7 +235,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     )}
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="p-2 text-zinc-400 hover:text-white transition-colors"
+                      className="p-2 text-zinc-400 "hover": text-white transition-colors"
                       aria-label="Close chat"
                     >
                       <X className="w-4 h-4" />
@@ -251,12 +250,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={\`flex gap-3 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\`}
+                  initial={{ "opacity": 0, "y": 10 }}
+                  animate={{ "opacity": 1, "y": 0 }}
+                  className={\"flex gap-3 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}
                 >
                   {/* Avatar */}
-                  <div className={\`w-8 h-8 rounded-full flex items-center justify-center \${message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'}\`}>
+                  <div className={\"w-8 h-8 rounded-full flex items-center justify-center \${message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'}\"}>
                     {message.sender === 'user' ? (
                       <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
                         <User className="w-4 h-4 text-zinc-300" />
@@ -269,8 +268,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
 
                   {/* Message Content */}
-                  <div className={\`max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\`}>
-                    <div className={\`p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\`}>
+                  <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
+                    <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                       
                       {/* Message Metadata */}
@@ -282,7 +281,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                                 <button
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
+                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full "hover": bg-zinc-600/50 transition-colors"
                                 >
                                   {suggestion}
                                 </button>
@@ -307,7 +306,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     </div>
 
                     {/* Message Actions */}
-                    <div className={\`flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\`}>
+                    <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()}
                       </span>
@@ -316,14 +315,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         <div className="flex items-center gap-1">
                           <button
                             onClick={() => rateResponse(message.id, 'positive')}
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
+                            className="p-1 text-zinc-400 "hover": text-green-400 transition-colors"
                             aria-label="Rate response positively"
                           >
                             <ThumbsUp className="w-3 h-3" />
                           </button>
                           <button
                             onClick={() => rateResponse(message.id, 'negative')}
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
+                            className="p-1 text-zinc-400 "hover": text-red-400 transition-colors"
                             aria-label="Rate response negatively"
                           >
                             <ThumbsDown className="w-3 h-3" />
@@ -338,15 +337,15 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               {/* Typing Indicator */}
               {isTyping && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ "opacity": 0 }}
+                  animate={{ "opacity": 1 }}
                   className="flex justify-start"
                 >
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": '0.2s' }}></div>
                     </div>
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
@@ -365,7 +364,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about Zion Tech Group..."
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping}
                   />
 
@@ -377,7 +376,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt"
                     />
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />
+                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
                 </div>
 
@@ -386,7 +385,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   <button
                     type="button"
                     onClick={toggleVoiceInput}
-                    className={\`p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white' : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'}\`}
+                    className={\"p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white' : 'bg-zinc-700 text-zinc-400 "hover": bg-zinc-600'}\"}
                     aria-label="Voice input"
                   >
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
@@ -397,7 +396,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-3 bg-zion-cyan text-white rounded-lg "hover": bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
                 >
                   <Send className="w-4 h-4" />
@@ -421,7 +420,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       </AnimatePresence>
     </>
   )};
-`;
+";
     
     fs.writeFileSync(this.filePath, workingComponent);
     this.log('AIChatbotSystem component replaced successfully!')}
@@ -432,7 +431,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     try {
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {
-      this.log(`Error in Component Replacer: ${error.message}`);
+      this.log(`Error in Component "Replacer": ${error.message}`);
       throw error}
   }
 }
@@ -445,7 +444,7 @@ if (require.main === module) {
       console.log('Component Replacer completed successfully!');
       process.exit(0)})
     .catch(error => {
-      console.error('Component Replacer failed:', error);
+      console.error('Component Replacer "failed": ', error);
       process.exit(1)})}
 
 module.exports = ComponentReplacer;

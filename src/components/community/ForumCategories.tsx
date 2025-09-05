@@ -1,6 +1,6 @@
 interface ForumCategoryInfo {
 
-  id: string;
+  "id": string;
   name: string;
   description: string;
   postCount: number;
@@ -12,82 +12,82 @@ lastPost?: {
     date: string}}
 
 export default function ForumCategories(...args[]):  {
-  const categories: ForumCategoryInf o[] = [ {
+  const "categories": ForumCategoryInf o[] = [{
       id: '1',
-      name: 'General Discussion',
-      description: 'General topics and discussions about technology, business, and innovation',
-      postCount: 15 0,
-      adminOnly: fals e,
-      icon: 'message-circle',
-      lastPost: {
+      "name": 'General Discussion',
+      "description": 'General topics and discussions about technology, business, and innovation',
+      "postCount": 15 0,
+      "adminOnly": fals e,
+      "icon": 'message-circle',
+      "lastPost": {
         title: 'Welcome to the Zion Tech Group community!',
-        author: 'Admin',
-        date: '2024-01-15'
+        "author": 'Admin',
+        "date": '2024-01-15'
 
     },
     {
-      id: '2',
-      name: 'Technical Support',
-      description: 'Get help with technical issues, API integration, and development questions',
-      postCount: 8 9,
-      adminOnly: fals e,
-      icon: 'code',
-      lastPost: {
+      "id": '2',
+      "name": 'Technical Support',
+      "description": 'Get help with technical issues, API integration, and development questions',
+      "postCount": 8 9,
+      "adminOnly": fals e,
+      "icon": 'code',
+      "lastPost": {
         title: 'API integration question',
-        author: 'Developer123',
-        date: '2024-01-14'
+        "author": 'Developer123',
+        "date": '2024-01-14'
 
     },
     {
-      id: '3',
-      name: 'AI & Machine Learning',
-      description: 'Discussions about AI, ML, and data science topics',
-      postCount: 23 4,
-      adminOnly: fals e,
-      icon: 'brain',
-      lastPost: {
+      "id": '3',
+      "name": 'AI & Machine Learning',
+      "description": 'Discussions about AI, ML, and data science topics',
+      "postCount": 23 4,
+      "adminOnly": fals e,
+      "icon": 'brain',
+      "lastPost": {
         title: 'New AI model deployment strategies',
-        author: 'DataScientist',
-        date: '2024-01-13'
+        "author": 'DataScientist',
+        "date": '2024-01-13'
 
     },
     {
-      id: '4',
-      name: 'Cloud & DevOps',
-      description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
-      postCount: 16 7,
-      adminOnly: fals e,
-      icon: 'cloud',
-      lastPost: {
+      "id": '4',
+      "name": 'Cloud & DevOps',
+      "description": 'Cloud infrastructure, DevOps practices, and deployment strategies',
+      "postCount": 16 7,
+      "adminOnly": fals e,
+      "icon": 'cloud',
+      "lastPost": {
         title: 'Kubernetes best practices',
-        author: 'DevOpsEngineer',
-        date: '2024-01-12'
+        "author": 'DevOpsEngineer',
+        "date": '2024-01-12'
 
     },
     {
-      id: '5',
-      name: 'Cybersecurity',
-      description: 'Security best practices, threat detection, and compliance discussions',
-      postCount: 9 8,
-      adminOnly: fals e,
-      icon: 'shield',
-      lastPost: {
+      "id": '5',
+      "name": 'Cybersecurity',
+      "description": 'Security best practices, threat detection, and compliance discussions',
+      "postCount": 9 8,
+      "adminOnly": fals e,
+      "icon": 'shield',
+      "lastPost": {
         title: 'Zero-day vulnerability response',
-        author: 'SecurityExpert',
-        date: '2024-01-11'
+        "author": 'SecurityExpert',
+        "date": '2024-01-11'
 
     };,
     {
-      id: '6',
-      name: 'Business & Strategy',
-      description: 'Business development, strategy, and industry insights',
-      postCount: 7 6,
-      adminOnly: fals e,
-      icon: 'trending-up',
-      lastPost: {
+      "id": '6',
+      "name": 'Business & Strategy',
+      "description": 'Business development, strategy, and industry insights',
+      "postCount": 7 6,
+      "adminOnly": fals e,
+      "icon": 'trending-up',
+      "lastPost": {
         title: 'Digital transformation case studies',
-        author: 'BusinessAnalyst',
-        date: '2024-01-10'
+        "author": 'BusinessAnalyst',
+        "date": '2024-01-10'
 
   ];
 
@@ -101,7 +101,7 @@ export default function ForumCategories(...args[]):  {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-6">
             Community Forums
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -110,11 +110,11 @@ export default function ForumCategories(...args[]):  {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+        <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-8">
           {categories.map((category) => (
             <div
               key={category.id}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: borde r-white/40 transition-all duration-300 hover: scal e-105 group cursor-pointer"
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 "hover": borde r-white/40 transition-all duration-300 hover: scal e-105 group cursor-pointer"
 
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-xl flex items-center justify-center">
@@ -127,7 +127,7 @@ export default function ForumCategories(...args[]):  {
                 )}
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover: tex t-zion-cyan transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-white mb-3 group-"hover": tex t-zion-cyan transition-colors duration-300">
                 {category.name}
               </h3>
 
@@ -144,7 +144,7 @@ export default function ForumCategories(...args[]):  {
 
               {category.lastPost && (;
                 <div className="pt-4 border-t border-white/10">
-                  <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>
+                  <p className="text-xs text-zion-slate-light mb-1">Latest "Post": </p>
                   <p className="text-sm text-white font-medium truncate">
                     {category.lastPost.title}
                   </p>
@@ -167,7 +167,7 @@ export default function ForumCategories(...args[]):  {
             <p className="text-zion-slate-light mb-6">
               Start contributing to discussions, ask questions, and share your expertise with the community.
             </p>
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-light hover: t o-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover: scal e-105">
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue "hover": fro m-zion-cyan-light hover: t o-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover: scal e-105">
               Start a Discussion
             </button>;
           </div>;

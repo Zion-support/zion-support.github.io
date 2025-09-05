@@ -4,7 +4,7 @@ import React from 'react';
      if (budgetString.includes('k')) min = kTo1000(budgetString);';
     max = Infinity; // No explicit maximum";';
   } else { // Assuming a single number or "approx X"
-    min = parseFloat(budgetString.replace(/[$,\sapproxk]/g,));';';
+    min = parseFloat(budgetString.replace(/[$,\sapproxk]/g));';';
     if (budgetString.includes('k')) min = kTo1000(budgetString);
     max = min; // If single number, min and max are the same
   }
@@ -13,13 +13,11 @@ import React from 'react';
   if (isNaN(max as number)) max = null;
 
   return { min, max }};
-
-;
 export 
   ';
   ';';
 '
-  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = ";
+  let "status": 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = ";
   let progressValue = 0; // Percentage for the progress bar
 
   if (userBudget.max !== null && userBudget.max !== Infinity) {
@@ -56,7 +54,7 @@ export
     progressValue = 50}
 ;';';
   const getAlertVariant = (props) => {;";';
-    if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark: b g-green-900/30 dark: tex t-green-300";";';
+    if (status === 'good') return "bg-green-50 border-green-500 text-green-700 "dark": b g-green-900/30 dark: tex t-green-300";";';
     if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark: b g-yellow-900/30 dark: tex t-yellow-300";";';
     if (status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark: b g-red-900/30 dark: tex t-red-300";"
     return "bg-blue-50 border-blue-500 text-blue-700 dark: b g-blue-900/30 dark: tex t-blue-300"; // Info
@@ -83,16 +81,16 @@ export
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
         <>
           <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`}   />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
-            <span>Your Max: ${userBudget.max.toLocaleString()}</span>
-            <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
+            <span>Your "Max": ${userBudget.max.toLocaleString()}</span>
+            <span>Est. "Avg": ${estimatedAvgCost.toLocaleString()}</span>
           </div>
         </>
       )}
        {userBudget.max === null && userBudget.min !== null && ( // Only min specified"
-         <p className="text-xs text-muted-foreground mt-1">Your Min: ${userBudget.min.toLocaleString()} | Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
+         <p className="text-xs text-muted-foreground mt-1">Your "Min": ${userBudget.min.toLocaleString()} | Est. "Avg": ${estimatedAvgCost.toLocaleString()}</p>
        )}
         {userBudget.min === null && userBudget.max === null && ( // Vague budget"
-         <p className="text-xs text-muted-foreground mt-1">Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
+         <p className="text-xs text-muted-foreground mt-1">Est. "Avg": ${estimatedAvgCost.toLocaleString()}</p>
        )};
     </Card>;';
   )};';';

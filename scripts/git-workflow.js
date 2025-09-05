@@ -16,7 +16,7 @@ class GitWorkflow {
       
       console.log('✅ Git repository found');
       return true} catch (error) {
-      console.log('❌ Error checking git status:', error.message);
+      console.log('❌ Error checking git "status": ', error.message);
       return false}
   }
 
@@ -25,12 +25,12 @@ class GitWorkflow {
     return `Automated improvements and optimizations - ${timestamp}`}
 
   createGitHooks() {
-    const preCommitHook = `#!/bin/sh
+    const preCommitHook = "#!/bin/sh
 # Pre-commit hook
 echo "Running pre-commit checks..."
 
 # Run linting
-npm run lint:check
+npm run "lint": check
 
 # Run type checking
 npm run type-check
@@ -39,18 +39,17 @@ npm run type-check
 npm test
 
 echo "Pre-commit checks completed"
-`;
+";
 
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
     console.log('✅ Created pre-commit hook')}
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      gitRepository: this.checkGitStatus(),
-      commitMessage: this.generateCommitMessage(),
-      recommendations: [
-        'Run git add . to stage changes',
+      "timestamp": new Date().toISOString(),
+      "gitRepository": this.checkGitStatus(),
+      "commitMessage": this.generateCommitMessage(),
+      "recommendations": ['Run git add . to stage changes',
         'Run git commit -m "Automated improvements"',
         'Run git push origin main to push changes'
       ]

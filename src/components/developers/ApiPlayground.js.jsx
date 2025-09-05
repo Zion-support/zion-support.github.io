@@ -10,7 +10,7 @@ export function ApiPlayground($1) {
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const handleParamChange = (props) => {}
-        setParamValues((prev) => ({...prev, [name]: value}))};;
+        setParamValues((prev) => ({...prev, [name]: value}))};
     const sendRequest = async () => {};
 "
 "
@@ -20,19 +20,19 @@ export function ApiPlayground($1) {
         if (method === "GET" || method === "DELETE") {}
             params.forEach((p) => {}
                 const val = paramValues[p.name];
-                if(val)`
-                    searchParams.append(p.name, val)});``
-            const query = searchParams.toString();```
-            if (query)````
+                if(val)"
+                    searchParams.append(p.name, val)});""
+            const query = searchParams.toString();"""
+            if (query)""""
                 url += `?${query}`}
         const options = {}
   method,
-  headers: {}
-`
-``
-                Authorization: `Bearer ${apiKey`
-`"`}`,"
-                "Content-Type": "application/json"}};;"
+  "headers": {}
+"
+""
+                "Authorization": "Bearer ${apiKey"
+"""}","
+                "Content-Type": "application/json"}};"
         if (method !== "GET" && method !== "DELETE") {}
             try {}
                 options.body = JSON.stringify(JSON.parse(body))}
@@ -62,7 +62,7 @@ export function ApiPlayground($1) {
       {response && <CodeBlock code={response} language="json" />}
     </div>)};
 export {ApiPlayground};
-export default ApiPlayground;"`
-export default ApiPlayground;"`"`
+export default ApiPlayground;""
+export default ApiPlayground;"""`
 
 </Textarea>;

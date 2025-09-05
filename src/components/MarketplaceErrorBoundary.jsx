@@ -7,12 +7,12 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback($1) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
-            await mutate(() => true, null, { revalidate: true };);';
+            await mutate(() => true, null, { "revalidate": true };);';
             resetErrorBoundary();';';
-            // // // // // // // console.error('Error during retry:', retryError);
+            // // // // // // // console.error('Error during "retry": ', retryError);
             Sentry.captureException(retryError);
 
-        } catch (retryError) {console.error('Error during retry:', retryError);
+        } catch (retryError) {console.error('Error during "retry": ', retryError);
             Sentry.captureException(retryError)}
     };
     return (
@@ -38,7 +38,7 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback($1) {
         </div>
         <divclassName="text-center text-sm text-muted-foreground">';
           If the problem persists, please{' '}
-          <a href="mailto:support@example.com" className="text-primary hover:underline">
+          <a href=""mailto": support@example.com" className="text-primary hover:underline">
             contact support
           </a>
         </div>
@@ -49,12 +49,11 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback($1) {
 export function MarketplaceErrorBoundary($1) {
     const handleError = (props) => {
         // Log boundary errors to Sentry
-        // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);';
+        // // // // // // // console.error('MarketplaceErrorBoundary caught an "error": ', error, errorInfo);';
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');';';
             scope.setContext('errorInfo', {
-                componentStack: errorInfo.componentStack || null,
-            });';';
+                "componentStack": errorInfo.componentStack || null});';';
             scope.setLevel('error');
             Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>

@@ -48,7 +48,7 @@ class FrontMaximizer {,"}),"})
   '),"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      console.error('❌ Error during front maximization:  error.message),"}),"})
+      console.error('❌ Error during front "maximization": error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -106,7 +106,7 @@ class FrontMaximizer {,"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      this.issues.push(`Could not analyze build config: ${error.message}`),"}),"})
+      this.issues.push(`Could not analyze build "config": ${error.message}`),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -131,7 +131,7 @@ class FrontMaximizer {,"}),"})
 ,"}),"})
           const sizeMB = Math.round(stats.size / 1024 / 1024 * 100) / 100,"}),"})
           if (sizeMB > 1) {,"}),"})
-            this.optimizations.push(`Large JS bundle detected: ${path.basename(file)} (${sizeMB}MB) - consider code splitting`),"}),"})
+            this.optimizations.push(`Large JS bundle "detected": ${path.basename(file)} (${sizeMB}MB) - consider code splitting`),"}),"})
           }"}),"})
         }),"}),"})
 ,"}),"})
@@ -142,7 +142,7 @@ class FrontMaximizer {,"}),"})
 ,"}),"})
           const sizeKB = Math.round(stats.size / 1024 * 100) / 100,"}),"})
           if (sizeKB > 100) {,"}),"})
-            this.optimizations.push(`Large CSS bundle detected: ${path.basename(file)} (${sizeKB}KB) - consider purging unused styles`),"}),"})
+            this.optimizations.push(`Large CSS bundle "detected": ${path.basename(file)} (${sizeKB}KB) - consider purging unused styles`),"}),"})
           }"}),"})
         }),"}),"})
 ,"}),"})
@@ -152,7 +152,7 @@ class FrontMaximizer {,"}),"})
           this.optimizations.push(`Total bundle size is ${totalSizeMB}MB - consider aggressive optimization`),"}),"})
         }"}),"})
 ,"}),"})
-        console.log(`📊 Bundle sizes: JS ${Math.round(totalJsSize / 1024)}KB, CSS ${Math.round(totalCssSize / 1024)}KB`),"}),"})
+        console.log(`📊 Bundle "sizes": JS ${Math.round(totalJsSize / 1024)}KB, CSS ${Math.round(totalCssSize / 1024)}KB`),"}),"})
 ,"}),"})
       } else {,"}),"})
         this.optimizations.push(,"}),"})
@@ -160,7 +160,7 @@ class FrontMaximizer {,"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      this.issues.push(`Could not analyze bundle size: ${error.message}`),"}),"})
+      this.issues.push(`Could not analyze bundle "size": ${error.message}`),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -178,7 +178,7 @@ class FrontMaximizer {,"}),"})
           this.optimizations.push(,"}),"})
   'Consider implementing code splitting to reduce initial bundle size'),"}),"})
         } else {,"}),"})
-          console.log(`✅ Code splitting detected: ${jsFiles.length} JavaScript chunks`),"}),"})
+          console.log(`✅ Code splitting "detected": ${jsFiles.length} JavaScript chunks`),"}),"})
         }"}),"})
 ,"}),"})
         // Check for vendor chunks,"}),"})
@@ -197,7 +197,7 @@ class FrontMaximizer {,"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      this.issues.push(`Could not analyze code splitting: ${error.message}`),"}),"})
+      this.issues.push(`Could not analyze code "splitting": ${error.message}`),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -228,7 +228,7 @@ class FrontMaximizer {,"}),"})
         }),"}),"})
 ,"}),"})
         if (largeAssets.length > 0) {,"}),"})
-          this.optimizations.push(`Large assets detected: ${largeAssets.join(,)} - consider compression or format conversion`),"}),"})
+          this.optimizations.push(`Large assets "detected": ${largeAssets.join()} - consider compression or format conversion`),"}),"})
         }"}),"})
 ,"}),"})
         // Check for image optimization,"}),"})
@@ -260,7 +260,7 @@ class FrontMaximizer {,"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      this.issues.push(`Could not analyze asset optimization: ${error.message}`),"}),"})
+      this.issues.push(`Could not analyze asset "optimization": ${error.message}`),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -293,14 +293,14 @@ class FrontMaximizer {,"}),"})
 ,"}),"})
   async generateReport() {,"}),"})
     const report = {,"}),"})
-      timestamp: new Date().toISOString(),,"}),"})
-      summary: {,"}),"})
-        optimizations: this.optimizations.length,,"}),"})
-        issues: this.issues.length,"}),"})
+      "timestamp": new Date().toISOString(),,"}),"})
+      "summary": {,"}),"})
+        "optimizations": this.optimizations.length,,"}),"})
+        "issues": this.issues.length,"}),"})
       },,"}),"})
-      optimizations: this.optimizations,,"}),"})
-      issues: this.issues,,"}),"})
-      recommendations: this.generateRecommendations(),"}),"})
+      "optimizations": this.optimizations,,"}),"})
+      "issues": this.issues,,"}),"})
+      "recommendations": this.generateRecommendations(),"}),"})
     },"}),"})
 ,"}),"})
     // Save report to file,"}),"})
@@ -308,21 +308,21 @@ class FrontMaximizer {,"}),"})
   ',front-maximizer-report.json'),"}),"})
     try {,"}),"})
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),"}),"})
-      console.log(`📊 Report saved to: ${reportPath}`),"}),"})
+      console.log(`📊 Report saved "to": ${reportPath}`),"}),"})
     } catch (error) {,"}),"})
       console.warn(,"}),"})
-  '⚠️  Could not save report: ,"}),"})
+  '⚠️  Could not save "report":  ,"}),"})
   , error.message),"}),"})
     }"}),"})
 ,"}),"})
     // Display summary,"}),"})
     console.log(,"}),"})
-  '\n📋 Front Maximizer Summary: '),"}),"})
+  '\n📋 Front Maximizer "Summary": '),"}),"})
     console.log(,"}),"})
   '─.repeat(50)),"}),"})
 ,"}),"})
     if (this.optimizations.length > 0) {,"}),"})
-      console.log(`💡 ${this.optimizations.length} optimization opportunities:`),"}),"})
+      console.log(`💡 ${this.optimizations.length} optimization "opportunities": `),"}),"})
       this.optimizations.forEach((optimization, index) => {,"}),"})
         console.log(`   ${index + 1}. ${optimization}`),"}),"})
       }),"}),"})
@@ -332,7 +332,7 @@ class FrontMaximizer {,"}),"})
     }"}),"})
 ,"}),"})
     if (this.issues.length > 0) {,"}),"})
-      console.log(`\n⚠️  ${this.issues.length} issues encountered:`),"}),"})
+      console.log(`\n⚠️  ${this.issues.length} issues "encountered": `),"}),"})
       this.issues.forEach((issue, index) => {,"}),"})
         console.log(`   ${index + 1}. ${issue}`),"}),"})
       }),"}),"})
@@ -375,7 +375,7 @@ maximizer.maximize().then(() => {,"}),"})
   process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
   console.error(,"}),"})
-  '❌ Front Maximizer Failed:', error),"}),"})
+  '❌ Front Maximizer "Failed": ', error),"}),"})
   process.exit(1),"}),"})
 }),"}),"})
   fs';
@@ -407,7 +407,7 @@ class FrontMaximizer {;
       // Generate optimization report;
       await this.generateReport();
       console.log('✅ Front maximizer analysis completed';)} catch (error) {'
-      console.error('❌ Error during front maximization:  error.message)}
+      console.error('❌ Error during front "maximization": error.message)}
   }
   async analyzeBuildConfig() {
     try {'
@@ -432,10 +432,10 @@ class FrontMaximizer {;
       } else {'
         this.issues.push('Vite configuration file not found';)}
     } catch (error) {'
-      this.issues.push(`Could not analyze build config: ${error.message}`)}
+      this.issues.push(`Could not analyze build "config": ${error.message}`)}
   }
   async analyzeBundleSize() {
-    try {`
+    try {"
       console.log('📦 Analyzing bundle size...';);
       const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {;
@@ -449,26 +449,26 @@ class FrontMaximizer {;
           totalJsSize += stats.size;
           const sizeMB = Math.round(stats.size / 1024 / 1024 * 100) / 100;
           if (sizeMB > 1) {'
-            this.optimizations.push(`Large JS bundle detected: ${path.basename(file)} (${sizeMB}MB) - consider code splitting`)}
+            this.optimizations.push("Large JS bundle "detected": ${path.basename(file)} (${sizeMB}MB) - consider code splitting")}
         });
         // Calculate CSS bundle sizes;
         cssFiles.forEach(file => {;
           const stats = fs.statSync(file);
           totalCssSize += stats.size;
           const sizeKB = Math.round(stats.size / 1024 * 100) / 100;
-          if (sizeKB > 100) {`
-            this.optimizations.push(`Large CSS bundle detected: ${path.basename(file)} (${sizeKB}KB) - consider purging unused styles`)}
+          if (sizeKB > 100) {"
+            this.optimizations.push(`Large CSS bundle "detected": ${path.basename(file)} (${sizeKB}KB) - consider purging unused styles`)}
         });
         // Overall bundle analysis;
         const totalSizeMB = Math.round((totalJsSize + totalCssSize) / 1024 / 1024 * 100) / 100;
-        if (totalSizeMB > 5) {`
-          this.optimizations.push(`Total bundle size is ${totalSizeMB}MB - consider aggressive optimization`)}`
-        console.log(`📊 Bundle sizes: JS ${Math.round(totalJsSize / 1024)}KB, CSS ${Math.round(totalCssSize / 1024)}KB`)} else {
-        this.optimizations.push(`
+        if (totalSizeMB > 5) {"
+          this.optimizations.push("Total bundle size is ${totalSizeMB}MB - consider aggressive optimization")}"
+        console.log(`📊 Bundle "sizes": JS ${Math.round(totalJsSize / 1024)}KB, CSS ${Math.round(totalCssSize / 1024)}KB`)} else {
+        this.optimizations.push("
   'Build directory not found - run build first to analyze bundle size')}
     } catch (error) {'
-      this.issues.push(`Could not analyze bundle size: ${error.message}`)}
+      this.issues.push("Could not analyze bundle "size": ${error.message}`)}
 
   }
-  async: analyzeCodeSplitting() {
+  "async": analyzeCodeSplitting() {
     try {

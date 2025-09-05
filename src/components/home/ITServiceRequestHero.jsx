@@ -23,35 +23,34 @@ export function ITServiceRequestHero($1) {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
+    "hidden": { opacity: 0, "y": 20 },
+    "visible": {
       opacity: 1,
-      y: 0,
-      transition: {
+      "y": 0,
+      "transition": {
         duration: 0.6,
-        staggerChildren: 0.2
+        "staggerChildren": 0.2
       }
     }
-  };;
+  };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
+    "hidden": { opacity: 0, "y": 20 },
+    "visible": {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
+      "y": 0,
+      "transition": { duration: 0.5 }
     }
-  };;
+  };
 
-  const features = [
-    {icon: Clock, text: "24/7 Availability", color: "text-zion-cyan"},
-    {icon: Globe, text: "Global Coverage", color: "text-zion-purple"},
-    {icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light"},
-    {icon: Zap, text: "Fast Response", color: "text-zion-purple-light"};
+  const features = [{"icon": Clock, "text": "24/7 Availability", "color": "text-zion-cyan"},
+    {"icon": Globe, "text": "Global Coverage", "color": "text-zion-purple"},
+    {"icon": Shield, "text": "Certified Technicians", "color": "text-zion-cyan-light"},
+    {"icon": Zap, "text": "Fast Response", "color": "text-zion-purple-light"};
   ];
 
   return (
-    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 "md": py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
@@ -63,9 +62,9 @@ export function ITServiceRequestHero($1) {
         variants={containerVariants} 
         initial="hidden" 
         whileInView="visible" 
-        viewport={{ once: true }}
+        viewport={{ "once": true }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
@@ -77,7 +76,7 @@ export function ITServiceRequestHero($1) {
               </span>
             </div>
 
-            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <GradientHeading className="mb-6 text-4xl "md": text-5xl lg:text-6xl leading-tight">
               24x7 Global IT Onsite Services
             </GradientHeading>
 
@@ -143,7 +142,7 @@ export function ITServiceRequestHero($1) {
                       value={location}
                       onChange={(e) => setLocation(e.target.value)}
                       placeholder="Enter city, address, or coordinates"
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light "focus": outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       required
                     />
                   </div>
@@ -152,7 +151,7 @@ export function ITServiceRequestHero($1) {
                 <button
                   type="submit"
                   disabled={isSubmitting || !location.trim()}
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue "hover": from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>

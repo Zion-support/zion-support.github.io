@@ -1,16 +1,16 @@
 export interface LinkInfo {
-  url: string;
+  "url": string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
   error?: string}
 export interface PageInfo {
-  path: string;
+  "path": string;
   title: string;
   links: LinkInf o[];
   exists: boolean}
 export class LinkChecker {
-  private baseUrl: string;
+  private "baseUrl": string;
   private visitedUrls: Se t<string> = new Set();
   private brokenLinks: LinkInf o[] = [];
   private missingPages: string[] = [];';
@@ -19,7 +19,7 @@ export class LinkChecker {
 
     this.baseUrl = baseUrl}
   // Check if a link is internal or external
-  isInternalLink(url: string): boolean {
+  isInternalLink("url": string): boolean {
 
     try {
       
@@ -28,7 +28,7 @@ export class LinkChecker {
       return false}  }
 
   // Normalize URL to handle relative paths
-  normalizeUrl(url: string, basePage: string): string {
+  normalizeUrl("url": string, "basePage": string): string {
 
     try {
 
@@ -37,14 +37,14 @@ export class LinkChecker {
       if(url.startsWith('/')) {
         return `${this.baseUrl}${url}`}
       if(url.startsWith('#')) {
-`
-        return `${this.baseUrl}${basePage}${url}`}`
+"
+        return "${this.baseUrl}${basePage}${url}"}"
       return `${this.baseUrl}${basePage}/${url}`} catch {
 
       return url}  }
 
   // Extract all links from a page
-  extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
+  extractLinks("pageContent": string, "pagePath": string): LinkInfo[] {
 
     const links: LinkInf o[] = [];
 
@@ -60,22 +60,22 @@ export class LinkChecker {
       ) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
-          url: normalizedUr l,
-          status: 'working',
-          page: pagePat h,
-          anchor: ur l.startsWith('#') ? url : undefined})}
+          "url": normalizedUr l,
+          "status": 'working',
+          "page": pagePat h,
+          "anchor": ur l.startsWith('#') ? url : undefined})}
     }
 
     // Extract src attributes from img, script, and link tags"
     
     while((match = srcRegex.exec(pageContent)) !== null) {
 
-      if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {
+      if(url && !url.startsWith('"data": ') && !url.startsWith('blob:')) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
-          url: normalizedUr l,
-          status: 'working',
-          page: pagePat h})}    }
+          "url": normalizedUr l,
+          "status": 'working',
+          "page": pagePat h})}    }
 
     return links}
 
@@ -92,7 +92,7 @@ export class LinkChecker {
   // Check all links on a page
   async checkPageLinks($1): Promise<any> {
 
-    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInf o[] = [];
+    const links = this.extractLinks(pageContent, pagePath);    const "checkedLinks": LinkInf o[] = [];
 
     for(const link of links) {
 
@@ -115,23 +115,23 @@ export class LinkChecker {
 
     return {
 
-      path: pagePat h,
-      title: thi s.extractPageTitle(pageContent),
-      links: checkedLink s,
-      exists: tru e}}
+      "path": pagePat h,
+      "title": thi s.extractPageTitle(pageContent),
+      "links": checkedLink s,
+      "exists": tru e}}
 
   // Extract page title
-  private extractPageTitle(content: string): string {
+  private extractPageTitle("content": string): string {
 
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary
   getSummary() {
     return {
 
-      totalLinks: anythi s.visitedUrls.size,
-      brokenLinks: thi s.brokenLinks.length,
-      missingPages: thi s.missingPages.length,
-      externalLinks: Arra y.from(this.visitedUrls).filter()
+      "totalLinks": anythi s.visitedUrls.size,
+      "brokenLinks": thi s.brokenLinks.length,
+      "missingPages": thi s.missingPages.length,
+      "externalLinks": Arra y.from(this.visitedUrls).filter()
         url => !this.isInternalLink(url)
       ).length}}
 

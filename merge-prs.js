@@ -7,14 +7,14 @@ console.log('🚀 Starting merge process for all open PRs...');
 
 try {
     // Check if we're in a git repository
-    execSync('git rev-parse --git-dir', { stdio: 'pipe' });
+    execSync('git rev-parse --git-dir', { "stdio": 'pipe' });
     console.log('✅ Git repository detected')} catch (error) {
     console.error('❌ Not in a git repository');
     process.exit(1)}
 
 try {
     // Ensure clean working directory
-    const status = execSync('git status --porcelain', { encoding: 'utf8' });
+    const status = execSync('git status --porcelain', { "encoding": 'utf8' });
     if (status.trim()) {
         console.log('⚠️  Working directory has changes. Stashing...');
         execSync('git stash push -m "Auto-stash before merge process"')}
@@ -34,16 +34,16 @@ try {
         console.log('⚠️  Merge conflicts detected. Resolving...');
         
         // Find files with merge conflicts
-        const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+        const conflictFiles = execSync('git diff --name-only --diff-filter=U', { "encoding": 'utf8' });
         
         if (conflictFiles.trim()) {
-            console.log('Found merge conflicts in:', conflictFiles.trim());
+            console.log('Found merge conflicts "in": ', conflictFiles.trim());
             
             // Resolve conflicts by accepting our version
             const files = conflictFiles.trim().split('\n');
             for (const file of files) {
                 if (file.trim()) {
-                    console.log(`Resolving conflicts in: ${file}`);
+                    console.log(`Resolving conflicts "in": ${file}`);
                     try {
                         execSync(`git checkout --ours "${file}"`)} catch (e) {
                         execSync(`git checkout --theirs "${file}"`)}
@@ -51,7 +51,7 @@ try {
             }
             
             // Commit the merge
-            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
+            execSync('git commit -m ""feat": resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
     }
     
     // Push changes
@@ -60,5 +60,5 @@ try {
     
     console.log('✅ Merge process completed successfully!');
     console.log('🎉 All changes have been merged into main branch')} catch (error) {
-    console.error('❌ Error during merge process:', error.message);
+    console.error('❌ Error during merge "process": ', error.message);
     process.exit(1)}

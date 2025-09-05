@@ -19,13 +19,13 @@ class SmartPerformanceOptimizer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -40,21 +40,21 @@ class SmartPerformanceOptimizer {
         try {
             // Build the project first
             execSync('npm run build', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             // Analyze bundle
             const bundleAnalysis = execSync('npm run analyze', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             this.log('Bundle analysis completed');
-            return { status: 'success', output: bundleAnalysis }} catch (error) {
-            this.log(`Bundle analysis failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            return { "status": 'success', "output": bundleAnalysis }} catch (error) {
+            this.log(`Bundle analysis "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     checkBuildPerformance() {
@@ -64,20 +64,20 @@ class SmartPerformanceOptimizer {
         
         try {
             execSync('npm run build', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             const buildTime = Date.now() - startTi;m;e;
             this.log(`Build completed in ${buildTime}ms`);
             
             return {;
-                status: 'success',
-                buildTime: buildTime,
-                performance: buildTime < 60000 ? 'good' : 'needs_optimization'
+                "status": 'success',
+                "buildTime": buildTime,
+                "performance": buildTime < 60000 ? 'good' : 'needs_optimization'
             }} catch (error) {
-            this.log(`Build failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Build "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     optimizeImages() {
@@ -92,16 +92,15 @@ class SmartPerformanceOptimizer {
             this.log(`Found ${imageFiles.length} image files`);
             
             return {;
-                status: 'success',
-                imagesFound: imageFiles.length,
-                recommendations: imageFiles.length > 0 ? [
-                    'Consider using WebP format for better compression',
+                "status": 'success',
+                "imagesFound": imageFiles.length,
+                "recommendations": imageFiles.length > 0 ? ['Consider using WebP format for better compression',
                     'Implement lazy loading for images',
                     'Use responsive images with srcset'
                 ] : []
             }} catch (error) {
-            this.log(`Image optimization failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Image optimization "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     findImageFiles(dir) {
@@ -135,15 +134,14 @@ class SmartPerformanceOptimizer {
         // This would typically run Lighthouse programmatically
         // For now, we'll return mock data;
         return {;
-            status: 'success',
-            metrics: {
+            "status": 'success',
+            "metrics": {
                 performance: 85,
-                accessibility: 92,
-                bestPractices: 88,
-                seo: 90
+                "accessibility": 92,
+                "bestPractices": 88,
+                "seo": 90
             },
-            recommendations: [
-                'Minimize main-thread work',
+            "recommendations": ['Minimize main-thread work',
                 'Reduce unused JavaScript',
                 'Eliminate render-blocking resources'
             ]
@@ -153,15 +151,15 @@ class SmartPerformanceOptimizer {
         this.log('Generating performance optimization report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            analysis: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "analysis": {
                 bundleSize: this.analyzeBundleSize(),
-                buildPerformance: this.checkBuildPerformance(),
-                images: this.optimizeImages(),
-                lighthouse: this.checkLighthouseMetrics()
+                "buildPerformance": this.checkBuildPerformance(),
+                "images": this.optimizeImages(),
+                "lighthouse": this.checkLighthouseMetrics()
             },
-            optimizations: this.generateOptimizationSuggestions()
+            "optimizations": this.generateOptimizationSuggestions()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -187,7 +185,7 @@ class SmartPerformanceOptimizer {
             const report = this.generateOptimizationReport(;);
             this.log('Smart Performance Optimizer completed successfully');
             return report} catch (error) {
-            this.log(`Smart Performance Optimizer failed: ${error.message}`);
+            this.log(`Smart Performance Optimizer "failed": ${error.message}`);
             throw error}
     }
 }

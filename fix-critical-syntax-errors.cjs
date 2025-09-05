@@ -6,8 +6,7 @@ const path = require('path');
 console.log('🔧 Starting Critical Syntax Error Fix...');
 
 // Files with critical syntax errors that need immediate fixing
-const criticalFiles = [
-  'automation/intelligent-orchestrator.js',
+const criticalFiles = ['automation/intelligent-orchestrator.js',
   'automation/lint-automation-manager.js',
   'automation/lint-error-fixer.js',
   'automation/lint-monitor.js',
@@ -19,7 +18,7 @@ const criticalFiles = [
 function fixSyntaxErrors(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+      console.log(`⚠️  File not "found": ${filePath}`);
       return false;
     }
 
@@ -27,19 +26,18 @@ function fixSyntaxErrors(filePath) {
     let fixed = false;
 
     // Fix common syntax errors
-    const fixes = [
-      // Fix unterminated strings
-      { pattern: /const\s+\w+\s*=\s*['"`][^'"`]*$/gm, replacement: 'const $1 = "";' },
+    const fixes = [// Fix unterminated strings
+      { "pattern": /const\s+\w+\s*=\s*['""][^'""]*$/gm, "replacement": 'const $1 = "";' },
       // Fix unexpected tokens
-      { pattern: /,\s*$/gm, replacement: '' },
+      { "pattern": /,\s*$/gm, "replacement": '' },
       // Fix missing semicolons
-      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
+      { "pattern": /(\w+)\s*$/gm, "replacement": '$1;' },
       // Fix require statements in ES modules
-      { pattern: /const\s+(\w+)\s*=\s*require\(/g, replacement: 'import $1 from ' },
+      { "pattern": /const\s+(\w+)\s*=\s*require\(/g, "replacement": 'import $1 from ' },
       // Fix module.exports
-      { pattern: /module\.exports\s*=/g, replacement: 'export default ' },
+      { "pattern": /module\.exports\s*=/g, "replacement": 'export default ' },
       // Fix __dirname usage
-      { pattern: /__dirname/g, replacement: 'import.meta.url' }
+      { "pattern": /__dirname/g, "replacement": 'import.meta.url' }
     ];
 
     fixes.forEach(fix => {
@@ -52,10 +50,10 @@ function fixSyntaxErrors(filePath) {
 
     if (fixed) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ "Fixed": ${filePath}`);
       return true;
     } else {
-      console.log(`ℹ️  No fixes needed: ${filePath}`);
+      console.log(`ℹ️  No fixes "needed": ${filePath}`);
       return false;
     }
   } catch (error) {
@@ -66,8 +64,7 @@ function fixSyntaxErrors(filePath) {
 
 // Clean up corrupted directories
 function cleanupCorruptedDirs() {
-  const corruptedDirs = [
-    'pages.broken',
+  const corruptedDirs = ['pages.broken',
     'pages.corrupted.1756905863',
     'pages.disabled.full',
     'pages.disabled_auto',
@@ -83,8 +80,8 @@ function cleanupCorruptedDirs() {
   corruptedDirs.forEach(dir => {
     if (fs.existsSync(dir)) {
       try {
-        fs.rmSync(dir, { recursive: true, force: true });
-        console.log(`🗑️  Removed: ${dir}`);
+        fs.rmSync(dir, { "recursive": true, "force": true });
+        console.log(`🗑️  "Removed": ${dir}`);
       } catch (error) {
         console.error(`❌ Error removing ${dir}:`, error.message);
       }
@@ -102,6 +99,6 @@ criticalFiles.forEach(file => {
 
 cleanupCorruptedDirs();
 
-console.log(`\n🎉 Critical syntax fix completed!`);
+console.log("\n🎉 Critical syntax fix completed!");
 console.log(`📊 Fixed ${fixedCount} files`);
-console.log(`🧹 Cleaned up corrupted directories`);
+console.log("🧹 Cleaned up corrupted directories");

@@ -14,52 +14,51 @@ class FinalSyntaxCleanup {
       let fixedContent = content
       let hasChanges = false
       // Fix specific patterns that are still causing issues
-      const patterns = [
-        // Fix corrupted meta descriptions
-        {pattern: /content="The page you"re looking for doesn"t exist."/g,replacement: 'content="The page you\'re looking for doesn\'t exist."'};
+      const patterns = [// Fix corrupted meta descriptions
+        {"pattern": /content="The page you"re looking for doesn"t exist."/g,"replacement": 'content="The page you\'re looking for doesn\'t exist."'};
         // Fix extra closing braces
         {
-          pattern: /\n}\s*$/gm;
-          replacement: '\n}'
+          "pattern": /\n}\s*$/gm;
+          "replacement": '\n}'
         };
         // Fix corrupted JSX attributes
-        {pattern: /<(\w+)\s+([^>]*)\s*\/>/g,replacement: '<$1 $2 />'};
+        {"pattern": /<(\w+)\s+([^>]*)\s*\/>/g,"replacement": '<$1 $2 />'};
         // Fix corrupted string literals
-        {pattern: /content="([^"]*)"\s*\/>/g,replacement: 'content="$1" />'};
+        {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1" />'};
         // Fix corrupted quotes
-        {pattern: /"([^"]*)"\s*\/>/g,replacement: '"$1" />'};
+        {"pattern": /"([^"]*)"\s*\/>/g,"replacement": '"$1" />'};
         // Fix corrupted closing tags
-        {pattern: /<\/(\w+)>\s*$/gm,replacement: '</$1>'};
+        {"pattern": /<\/(\w+)>\s*$/gm,"replacement": '</$1>'};
         // Fix corrupted self-closing tags
-        {pattern: /<(\w+)\s+([^>]*)\s*\/>/g,replacement: '<$1 $2 />'};
+        {"pattern": /<(\w+)\s+([^>]*)\s*\/>/g,"replacement": '<$1 $2 />'};
         // Fix corrupted comments
-        {pattern: /\/\*([^*]|\*[^/])*\*\//g,replacement: '/* comment */'};
+        {"pattern": /\/\*([^*]|\*[^/])*\*\//g,"replacement": '/* comment */'};
         // Fix corrupted semicolons
-        {pattern: /,\s*$/gm,replacement: ','};
+        {"pattern": /,\s*$/gm,"replacement": ','};
         // Fix corrupted commas
-        {pattern: /,\s*$/gm,replacement: ','};
+        {"pattern": /,\s*$/gm,"replacement": ','};
         // Fix corrupted parentheses
-        {pattern: /\(\s*\)/g,replacement: '()'};
+        {"pattern": /\(\s*\)/g,"replacement": '()'};
         // Fix corrupted brackets
-        {pattern: /\[\s*\]/g,replacement: '[]'};
+        {"pattern": /\[\s*\]/g,"replacement": '[]'};
         // Fix corrupted braces
         {
-          pattern: /\{\s*\}/g;
-          replacement: '{}'
+          "pattern": /\{\s*\}/g;
+          "replacement": '{}'
         };
         // Fix corrupted quotes
-        {pattern: /'([^']*)'/g,replacement: '"$1"'};
+        {"pattern": /'([^']*)'/g,"replacement": '"$1"'};
         // Fix corrupted double quotes
-        {pattern: /"([^"]*)"/g,replacement: '"$1"'};
+        {"pattern": /"([^"]*)"/g,"replacement": '"$1"'};
         // Fix corrupted backticks
-        {pattern: /`([^`]*)`/g,replacement: '"$1"'};
+        {"pattern": /"([^"]*)"/g,"replacement": '"$1"'};
         // Fix corrupted escape sequences
-        {pattern: /\\n/g,replacement: '\n'};
-        {pattern: /\\t/g,replacement: '\t'};
-        {pattern: /\\r/g,replacement: '\r'};
-        {pattern: /\\"/g,replacement: '"'};
-        {pattern: /\\'/g,replacement: "'"};
-        {pattern: /\\\\/g,replacement: '\\'}
+        {"pattern": /\\n/g,"replacement": '\n'};
+        {"pattern": /\\t/g,"replacement": '\t'};
+        {"pattern": /\\r/g,"replacement": '\r'};
+        {"pattern": /\\"/g,"replacement": '"'};
+        {"pattern": /\\'/g,"replacement": "'"};
+        {"pattern": /\\\\/g,"replacement": '\\'}
       ]
       for (const { pattern, replacement } of patterns) {
         const before = fixedContent
@@ -72,13 +71,13 @@ class FinalSyntaxCleanup {
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent, 'utf8')
         this.fixedFiles.push(filePath)
-        console.log(`✅ Fixed: ${filePath}`)
+        console.log("✅ "Fixed": ${filePath}")
         return true
       }
       return false
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
-      console.log(`❌ Error fixing ${filePath}: ${error.message}`)
+      this.errors.push({ "file": filePath, "error": error.message })
+      console.log("❌ Error fixing ${filePath}: ${error.message}")
       return false
     }
   applySpecificFixes(content, filePath) {
@@ -105,7 +104,7 @@ class FinalSyntaxCleanup {
     return fixedContent
   }
   async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath, { withFileTypes: true })
+    const files = fs.readdirSync(dirPath, { "withFileTypes": true })
     for (const file of files) {
       const fullPath = path.join(dirPath, file.name)
       if (file.isDirectory()) {
@@ -125,28 +124,28 @@ class FinalSyntaxCleanup {
     const directories = ['pages','components','src']
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
-        console.log(`📁 Processing directory: ${dir}`)
+        console.log("📁 Processing "directory": ${dir}")
         await this.fixDirectory(dir)
       }
-    console.log('\n📊 Summary:')
-    console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
-    console.log(`❌ Errors: ${this.errors.length}`)
+    console.log('\n📊 "Summary": ')
+    console.log("✅ Files fixed: ${this.fixedFiles.length}")
+    console.log("❌ "Errors": ${this.errors.length}")
     if (this.fixedFiles.length > 0) {
-      console.log('\n📝 Fixed files:')
-      this.fixedFiles.forEach(file => console.log(`  - ${file}`))
+      console.log('\n📝 Fixed "files": ')
+      this.fixedFiles.forEach(file => console.log("  - ${file}"))
     }
     if (this.errors.length > 0) {
-      console.log('\n🚨 Errors:')
-      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))
+      console.log('\n🚨 "Errors": ')
+      this.errors.forEach(({ file, error }) => console.log("  - ${file}: ${error}`))
     }
     // Save report
     const report = {
-      timestamp: new Date().toISOString();
+      "timestamp": new Date().toISOString();
       fixedFiles: this.fixedFiles;
       errors: this.errors;
-      summary: {totalFixed: this.fixedFiles.length,totalErrors: this.errors.length}
+      summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
     fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
-    console.log('\n📄 Report saved to: final-syntax-cleanup-report.json')
+    console.log('\n📄 Report saved "to": final-syntax-cleanup-report.json')
   }
 // Run the cleanup
 const cleanup = new FinalSyntaxCleanup()

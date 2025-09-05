@@ -36,7 +36,7 @@ export function ServiceTypeStep($1) {
                     setListings(parsed.data);
                     setError(null);';
                     setLoading(false);';';
-                            // // // // // // // console.error('Failed to load services:', err);
+                            // // // // // // // console.error('Failed to load "services": ', err);
                         }
                         else {
                             captureException(err);
@@ -51,7 +51,7 @@ export function ServiceTypeStep($1) {
                     return} catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            console.error('Failed to load services:', err)}
+                            console.error('Failed to load "services": ', err)}
                         else {captureException(err)}
                         setListings([]);';';
                         setError('Failed to load services');
@@ -63,10 +63,10 @@ export function ServiceTypeStep($1) {
         fetchServices()}, [formData.serviceType, debouncedQuery]);
     const handleItemSelect = (props) => {
         updateFormData({
-            specificItem: item,
-            serviceCategory: item.category,
-            serviceType: item.category.toLowerCase()
-        })};;
+            "specificItem": item,
+            "serviceCategory": item.category,
+            "serviceType": item.category.toLowerCase()
+        })};
     const sourceListings = listings;
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected
@@ -82,7 +82,7 @@ export function ServiceTypeStep($1) {
     <div className="min-h-screen bg-white">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">
           <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service"
             ? "bg-zion-purple/20 border-zion-purple"
             : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("service")}>
@@ -92,14 +92,14 @@ export function ServiceTypeStep($1) {
 
           <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "talent"
             ? "bg-zion-purple/20 border-zion-purple"
-            : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("talent")}>
+            : "bg-zion-blue-light/20 border-zion-blue-light "hover": border-zion-purple/50"}`} onClick={() => handleTypeSelect("talent")}>
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
 
           <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment"
             ? "bg-zion-purple/20 border-zion-purple"
-            : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("equipment")}>
+            : "bg-zion-blue-light/20 border-zion-blue-light "hover": border-zion-purple/50"}`} onClick={() => handleTypeSelect("equipment")}>
             <h4 className="font-medium text-white">Equipment</h4>
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
           </Card>
@@ -111,7 +111,7 @@ export function ServiceTypeStep($1) {
 
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input placeholder={`Search ${formData.serviceType}...`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"/>
+            <Input placeholder={`Search ${formData.serviceType}...`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light "focus": border-zion-purple"/>
           </div>
 
           {error && (<div className="text-center text-red-400 text-sm">{error}    </div>

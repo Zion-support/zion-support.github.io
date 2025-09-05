@@ -7,32 +7,32 @@ export default function Page($1) {;}
 
         return {
           url,
-          status: 'healthy',
-          responseTime: Date.now() - startTime};';
+          "status": 'healthy',
+          "responseTime": Date.now() - startTime};';
       }
       // For external links, we could implement actual health checking'
       // For now, we'll mark them as external
       return {url,
-        status: 'external',
-        responseTime: Date.now() - startTime};
+        "status": 'external',
+        "responseTime": Date.now() - startTime};
     } catch (error) {
       return {
         url,
-        status: 'broken',
-        responseTime: Date.now() - startTime,
-        error: error instanceof Error ? error.message : 'Unknown error'};
+        "status": 'broken',
+        "responseTime": Date.now() - startTime,
+        "error": error instanceof Error ? error.message : 'Unknown error'};
     }
   };
   const checkAllLinks = async () => {
     setIsChecking(true);';';
-    setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
+    setLinkStatuses(links.map(link => ({ "url": link.url, "status": 'checking' })));
     const statuses = await Promise.all()
       links.map(link => checkLinkHealth(link.url))
     );
     setLinkStatuses(statuses);
     setIsChecking(false);
   };
-  useEffect(() => {// TODO: Add dependencies if needed}, []);
+  useEffect(() => {// "TODO": Add dependencies if needed}, []);
     // Auto-check links when component mounts
     checkAllLinks();
   }, [links]);
@@ -50,7 +50,7 @@ export default function Page($1) {;}
         return ("
           <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"  />
         );
-      default:"
+      "default": "
         return <AlertTriangle className="w-5 h-5 text-gray-500"  />;
     }
   };
@@ -66,7 +66,7 @@ export default function Page($1) {;}
         return 'External';
       case 'checking':'
         return 'Checking...';
-      default:'
+      "default": '
         return 'Unknown';
     }
   };
@@ -82,7 +82,7 @@ export default function Page($1) {;}
         return 'text-blue-500';
       case 'checking':'
         return 'text-yellow-500';
-      default:'
+      "default": '
         return 'text-gray-500';
     }
   };';';
@@ -108,7 +108,7 @@ export default function Page($1) {;}
         <button
           onClick={checkAllLinks}
           disabled={isChecking}"
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
+          className="px-4 py-2 bg-blue-600 "hover": bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
         >
           {isChecking ? (
             <>"
@@ -153,7 +153,7 @@ export default function Page($1) {;}
           return ()
             <div
               key={link.url}"
-              className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300"
+              className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg "hover": border-white/20 transition-colors duration-300"
             >"
               <div className="flex items-center gap-3">
                 {getStatusIcon(status.status)}
@@ -169,8 +169,8 @@ export default function Page($1) {;}
                 </div>
               </div>"
               <div className="text-right">
-                <div`
-                  className={`text-sm font-medium ${getStatusColor(status.status)}`}
+                <div"
+                  className={"text-sm font-medium ${getStatusColor(status.status)}`}
                 >
                   {getStatusText(status.status)}
                 </div>
@@ -221,5 +221,4 @@ export {LinkHealthChecker};
 
 export {LinkHealthChecker};
 
-export {LinkHealthChecker};';
-;';';
+export {LinkHealthChecker};';';';

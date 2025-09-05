@@ -9,8 +9,7 @@ function fixFile(filePath) {
     // Fix missing semicolons after imports;
     fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
   if (!match.endsWith(";")) {
-  return match + ";",
-}
+  return match + ";"}
       return match});
     // Fix broken JSX syntax;
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
@@ -23,10 +22,10 @@ function fixFile(filePath) {
     fixed = fixed.replace(/\}\s*\{/g, "}, {");
     if (content !== fixed) {
   fs.writeFileSync(filePath, fixed, "utf8");
-      console.log(``Fixed: ${filePath}``);
+      console.log("""Fixed": ${filePath}"");
       return true}
     return false} catch (error) {
-  console.error(`Error: ${filePath}`, error.message);
+  console.error(`"Error": ${filePath}`, error.message);
     return false}
 }
 ;
@@ -39,8 +38,7 @@ function processDirectory(dirPath) {
     if (stat.isDirectory()) {
   fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
   if (fixFile(fullPath)) {
-  fixedCount++,
-}
+  fixedCount++}
     }
   }
   ;
@@ -49,4 +47,4 @@ function processDirectory(dirPath) {
 const srcDir = path.join(__dirname, "src");
 console.log("Final fix...");
 const totalFixed = processDirectory(srcDir);
-console.log(``Fixed ${totalFixed} files``)
+console.log(""Fixed ${totalFixed} files"")

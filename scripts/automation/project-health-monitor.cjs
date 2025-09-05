@@ -19,13 +19,13 @@ class ProjectHealthMonitor {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -37,15 +37,13 @@ class ProjectHealthMonitor {
     checkProjectStructure() {
         this.log('Checking project structure...');
         
-        const requiredFiles = [
-            'package.json',
+        const requiredFiles = ['package.json',
             'next.config.js',
             'tsconfig.json',
             'tailwind.config.js'
         ];
         
-        const optionalFiles = [
-            'README.md',
+        const optionalFiles = ['README.md',
             '.gitignore',
             '.env.example',
             'Dockerfile',
@@ -53,9 +51,9 @@ class ProjectHealthMonitor {
         ];
         
         const structure = {
-            required: {},
-            optional: {},
-            score: 0
+            "required": {},
+            "optional": {},
+            "score": 0
        };
         
         // Check required files
@@ -75,10 +73,10 @@ class ProjectHealthMonitor {
             structure.optional[file] = exists;
             if (structure.score += 5}
         
-        this.log(`Project structure score: ${structure.score}/100`)) {
+        this.log(`Project structure "score": ${structure.score}/100`)) {
     structure.score += 5}
         
-        this.log(`Project structure score: ${structure.score}/100`)}
+        this.log(`Project structure "score": ${structure.score}/100`)}
         return structure}
 
     checkCodeQuality() {
@@ -87,20 +85,20 @@ class ProjectHealthMonitor {
         try {
             // Run linting
             execSync('npm run lint', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             return {;
-                status: 'success',
-                linting: 'passed',
-                score: 20
+                "status": 'success',
+                "linting": 'passed',
+                "score": 20
             }} catch (error) {
             return {;
-                status: 'warning',
-                linting: 'failed',
-                score: 0,
-                error: error.message
+                "status": 'warning',
+                "linting": 'failed',
+                "score": 0,
+                "error": error.message
             }}
     }
 
@@ -109,20 +107,20 @@ class ProjectHealthMonitor {
         
         try {
             execSync('npm run type-check', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             return {;
-                status: 'success',
-                typeCheck: 'passed',
-                score: 20
+                "status": 'success',
+                "typeCheck": 'passed',
+                "score": 20
             }} catch (error) {
             return {;
-                status: 'warning',
-                typeCheck: 'failed',
-                score: 0,
-                error: error.message
+                "status": 'warning',
+                "typeCheck": 'failed',
+                "score": 0,
+                "error": error.message
             }}
     }
 
@@ -131,20 +129,20 @@ class ProjectHealthMonitor {
         
         try {
             execSync('npm run build', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             return {;
-                status: 'success',
-                build: 'passed',
-                score: 20
+                "status": 'success',
+                "build": 'passed',
+                "score": 20
             }} catch (error) {
             return {;
-                status: 'failed',
-                build: 'failed',
-                score: 0,
-                error: error.message
+                "status": 'failed',
+                "build": 'failed',
+                "score": 0,
+                "error": error.message
             }}
     }
 
@@ -162,8 +160,8 @@ class ProjectHealthMonitor {
             let outdatedCount = ;0;
             try {
                 execSync('npm outdated --json', { 
-                    cwd: this.projectRoot, 
-                    stdio: 'pipe'
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
                 })} catch (error) {
                 if ( {
                     try {
@@ -180,15 +178,15 @@ class ProjectHealthMonitor {
             const score = Math.max(0, 20 - (outdatedCount * 2;););
             
             return {;
-                status: 'success',
-                totalDependencies: totalDeps,
-                outdatedCount: outdatedCount,
-                score: score
+                "status": 'success',
+                "totalDependencies": totalDeps,
+                "outdatedCount": outdatedCount,
+                "score": score
             }} catch (error) {
             return {;
-                status: 'failed',
-                score: 0,
-                error: error.message
+                "status": 'failed',
+                "score": 0,
+                "error": error.message
             }}
     }
 
@@ -197,25 +195,25 @@ class ProjectHealthMonitor {
         
         try {
             const auditResult = execSync('npm audit --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||; ;0;
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
             
             return {;
-                status: 'success',
-                vulnerabilities: vulnerabilities,
-                score: score
+                "status": 'success',
+                "vulnerabilities": vulnerabilities,
+                "score": score
             }} catch (error) {
             return {;
-                status: 'warning',
-                score: 10,
-                error: error.message
+                "status": 'warning',
+                "score": 10,
+                "error": error.message
             }}
     }
 
@@ -237,27 +235,27 @@ class ProjectHealthMonitor {
                            totalScore >= 40 ? 'fair' : 'poo;r;';
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            health: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "health": {
                 overall: {
                     score: totalScore,
-                    status: healthStatus,
-                    maxScore: 100
+                    "status": healthStatus,
+                    "maxScore": 100
                 },
-                structure: structure,
-                codeQuality: codeQuality,
-                typeScript: typeScript,
-                build: build,
-                dependencies: dependencies,
-                security: security
+                "structure": structure,
+                "codeQuality": codeQuality,
+                "typeScript": typeScript,
+                "build": build,
+                "dependencies": dependencies,
+                "security": security
             },
-            recommendations: this.generateHealthRecommendations(totalScore, healthStatus)
+            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus)
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Project health report saved to ${this.reportFile}`);
-        this.log(`Overall health score: ${totalScore}/100 (${healthStatus})`);
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
         
         return report}
 
@@ -290,7 +288,7 @@ class ProjectHealthMonitor {
             const report = this.generateHealthReport(;);
             this.log('Project Health Monitor completed successfully');
             return report} catch (error) {
-            this.log(`Project Health Monitor failed: ${error.message}`);
+            this.log(`Project Health Monitor "failed": ${error.message}`);
             throw error}
     }
 }

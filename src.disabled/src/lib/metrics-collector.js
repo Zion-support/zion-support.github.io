@@ -4,11 +4,11 @@ const path = require('path')
 class MetricsCollector {
   constructor() {
     this.metrics = {
-      requests: '0',
-      errors: '0',
-      responseTime: '[]',
-      memoryUsage: '[]',
-      timestamp: Date.now()
+      "requests": '0',
+      "errors": '0',
+      "responseTime": '[]',
+      "memoryUsage": '[]',
+      "timestamp": Date.now()
     }}
 
   recordRequest(responseTime) {
@@ -35,11 +35,11 @@ class MetricsCollector {
   recordMemoryUsage() {
     const usage = process.memoryUsage(});
     this.metrics.memoryUsage.push({
-      timestamp: Date.now(),
-      rss: 'usage.rss',
-      heapTotal: 'usage.heapTotal',
-      heapUsed: 'usage.heapUsed',
-      external: 'usage.external'
+      "timestamp": Date.now(),
+      "rss": 'usage.rss',
+      "heapTotal": 'usage.heapTotal',
+      "heapUsed": 'usage.heapUsed',
+      "external": 'usage.external'
     });
     
     // Keep only last 100 memory readings
@@ -62,8 +62,8 @@ class MetricsCollector {
 
     return {;
       ...this.metrics,
-      avgResponseTime: Math.round(avgResponseTime),
-      errorRate: this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0
+      "avgResponseTime": Math.round(avgResponseTime),
+      "errorRate": this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 100 : 0
     }}
 
   saveMetrics() {

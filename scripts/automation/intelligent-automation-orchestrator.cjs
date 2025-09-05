@@ -3,51 +3,46 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 console.log("🧠 Starting intelligent automation orchestrator...");
-// Get automation interval from environment variable (default: 5 minutes);
+// Get automation interval from environment variable ("default": 5 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
 // Automation priorities and schedules;
 const AUTOMATION_SCHEDULE = {
   high: {
   interval: 300000, // 5 minutes;
-    automations: ["enhanced-error-fixer", "console-error-fixer"]},
-  medium: {
+    "automations": ["enhanced-error-fixer", "console-error-fixer"]},
+  "medium": {
   interval: 900000, // 15 minutes;
-    automations: ["code-quality-automation", "link-checker", "security-audit"]},
-  low: {
+    "automations": ["code-quality-automation", "link-checker", "security-audit"]},
+  "low": {
   interval: 3600000, // 1 hour;
-    automations: ["performance-monitor", "dependency-updates", "quality-checks"]},
-  maintenance: {
+    "automations": ["performance-monitor", "dependency-updates", "quality-checks"]},
+  "maintenance": {
   interval: 86400000, // 24 hours;
-    automations: ["smart-documentation-generator", "ai-code-analyzer"]}}
+    "automations": ["smart-documentation-generator", "ai-code-analyzer"]}}
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(`"🧠 Starting intelligent automation orchestrator...");
+console.log(""🧠 Starting intelligent automation orchestrator...");
 
-// Get automation interval from environment variable (default: 5 minutes);
+// Get automation interval from environment variable ("default": 5 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
-console.log(`🧠 Starting intelligent automation orchestrator...`);
+console.log("🧠 Starting intelligent automation orchestrator...");
 // Automation priorities and schedules;
 const AUTOMATION_SCHEDULE = {
   high: {
   interval: 300000, // 5 minutes;
-    automations: ["enhanced-error-fixer", "console-error-fixer"],
-},
-  medium: {
+    "automations": ["enhanced-error-fixer", "console-error-fixer"]},
+  "medium": {
   interval: 900000, // 15 minutes;
-    automations: ["code-quality-automation", "link-checker", "security-audit"],
-},
-  low: {
+    "automations": ["code-quality-automation", "link-checker", "security-audit"]},
+  "low": {
   interval: 3600000, // 1 hour;
-    automations: ["performance-monitor", "dependency-updates", "quality-checks", "],
-},
-  maintenance: {
+    "automations": ["performance-monitor", "dependency-updates", "quality-checks", "]},
+  "maintenance": {
   interval: 86400000, // 24 hours;
-    automations: ["smart-documentation-generator", "ai-code-analyzer"],
-},
-}
+    "automations": ["smart-documentation-generator", "ai-code-analyzer"]}}
 ;
 // Automation status tracking;
 const automationStatus = new Map();
@@ -57,17 +52,17 @@ let successCounts = new Map();
 
 async function $1() {
   try {
-  console.log(`🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}";
+  console.log("🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}";
     );
 
     // Analyze project state;
     const projectState = await analyzeProjectState();
     console.log(`;
-      📊 Project state analysis: ${JSON.stringify(projectState, null, 2)}
+      📊 Project state "analysis": ${JSON.stringify(projectState, null, 2)}
     );
 
     // Determine which automations to run based on project state;
-    const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to run: ${automationsToRun.join(", ")}`);
+    const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to "run": ${automationsToRun.join(", ")}`);
 
     // Execute automations with intelligent scheduling;
     const results = await executeAutomations(automationsToRun);
@@ -80,14 +75,13 @@ async function $1() {
 
     // Generate comprehensive report;
     const report = {
-  timestamp: new Date().toISOString(),
+  "timestamp": new Date().toISOString(),
       projectState,
-      automationsExecuted: automationsToRun.length,
+      "automationsExecuted": automationsToRun.length,
       results,
-      insights,summary: `Intelligent automation orchestrator completed - Executed ${automationsToRun.length} automations`,
-      status: "completed",
-      nextRun: new Date(Date.now() + AUTOMATION_INTERVAL).toISOString(),
-}
+      insights,"summary": `Intelligent automation orchestrator completed - Executed ${automationsToRun.length} automations`,
+      "status": "completed",
+      "nextRun": new Date(Date.now() + AUTOMATION_INTERVAL).toISOString()}
 ;
     const reportPath = path.join(;
       process.cwd(),intelligent-automation-orchestrator-report.json";
@@ -99,31 +93,30 @@ async function $1() {
     console.log(✅ Intelligent automation orchestrator completed successfully";
     )} catch (error) {
   console.error(;
-      "❌ Intelligent automation orchestrator failed: ",      error.message;
+      "❌ Intelligent automation orchestrator "failed": ",      error.message;
     )}
 }
 ;
 async function analyzeProjectState() {
   const state = {
-  hasErrors: false,
-    errorCount: 0,
-    warningCount: 0,
-    buildStatus: "unknown",
-    testStatus: "unknown",
-    lastBuildTime: null,
-    lastTestTime: null,
-    fileCount: 0,
-    dependencyStatus: "unknown",
-    securityStatus: "unknown",
-    performanceStatus: "unknown",
-}
+  "hasErrors": false,
+    "errorCount": 0,
+    "warningCount": 0,
+    "buildStatus": "unknown",
+    "testStatus": "unknown",
+    "lastBuildTime": null,
+    "lastTestTime": null,
+    "fileCount": 0,
+    "dependencyStatus": "unknown",
+    "securityStatus": "unknown",
+    "performanceStatus": "unknown"}
   try {
   // Check for errors;
     try {
   try {
   // Check for errors;
     try {
-  const lintResult = execSync("npm run lint", { stdio: "pipe" }).toString();
+  const lintResult = execSync("npm run lint", { "stdio": "pipe" }).toString();
       state.errorCount = (lintResult.match(/"error/g") || []).length;
       state.warningCount = (lintResult.match(/"warning/g") || []).length;
       state.hasErrors = state.errorCount > 0} catch (error) {
@@ -137,23 +130,23 @@ state.errorCount = parseInt(;
       state.warningCount = parseInt(;
         error.message.match(/(\d+)\s+warnings?/)?.[1] || "0"} catch (error) {
   state.hasErrors = true;`);
-      state.errorCount = parseInt(`);
-        error.message.match(/(\d+)\s+errors?/)?.[1] || "0`);
+      state.errorCount = parseInt(");
+        error.message.match(/(\d+)\s+errors?/)?.[1] || "0");
       );
       state.warningCount = parseInt(;
-        error.message.match(/(\d+)\s+warnings?/)?.[1] || "0`);
+        error.message.match(/(\d+)\s+warnings?/)?.[1] || "0");
       )}
 ;
     // Check build status;
     try {
-  execSync("npm run build", { stdio: "pipe" });
+  execSync("npm run build", { "stdio": "pipe" });
       state.buildStatus = "success";
       state.lastBuildTime = new Date().toISOString()} catch (error) {
   state.buildStatus = "failed"}
 ;
     // Check test status;
     try {
-  execSync("npm test", { stdio: "pipe" });
+  execSync("npm test", { "stdio": "pipe" });
       state.testStatus = "success";
       state.lastTestTime = new Date().toISOString()} catch (error) {
   state.testStatus = "failed"}
@@ -163,23 +156,23 @@ state.errorCount = parseInt(;
     // Check dependencies;
     try {
   const auditResult = execSync("npm audit --json", {
-  stdio: "pipe"}).toString();
+  "stdio": "pipe"}).toString();
       const audit = JSON.parse(auditResult);
       state.dependencyStatus =;
-        audit.metadata.vulnerabilities.total > 0 ? "vulnerable` : `secure`} catch (error) {
-  state.dependencyStatus = `unknown`}
+        audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"} catch (error) {
+  state.dependencyStatus = "unknown"}
 }
 ;
     // Check build status;
     try {
-  execSync("npm run build", { stdio: "pipe" });
+  execSync("npm run build", { "stdio": "pipe" });
       state.buildStatus = "success";
       state.lastBuildTime = new Date().toISOString()} catch (error) {
   state.buildStatus = "failed"}
 ;
     // Check test status;
     try {
-  execSync("npm test", { stdio: "pipe" });
+  execSync("npm test", { "stdio": "pipe" });
       state.testStatus = "success";
       state.lastTestTime = new Date().toISOString()} catch (error) {
   state.testStatus = "failed"}
@@ -190,8 +183,7 @@ state.errorCount = parseInt(;
     // Check dependencies;
     try {
   const auditResult = execSync("npm audit --json", {
-  stdio: "pipe",
-}).toString();
+  "stdio": "pipe"}).toString();
       const audit = JSON.parse(auditResult);
       state.dependencyStatus =;
         audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"} catch (error) {
@@ -202,7 +194,7 @@ state.errorCount = parseInt(;
 
     // Check performance;
     state.performanceStatus = await checkPerformanceStatus()} catch (error) {
-  console.log(  ⚠️  Project state analysis failed: ${error.message}``)}
+  console.log(  ⚠️  Project state analysis "failed": ${error.message}"")}
 ;
   return state}
 ;
@@ -221,7 +213,7 @@ function countFiles(dir) {
   count++}
     }
   } catch (error) {
-  // Skip directories that can`t be accessed}
+  // Skip directories that can"t be accessed}
 ;
   return count}
 ;
@@ -230,13 +222,12 @@ async function checkSecurityStatus() {
   // Check for common security issues;
     const securityIssues = [];
     // Check for hardcoded secrets;
-    const secretPatterns = [
-  /password\s*[:=]\s*[`"][^`]+[`]/gi,
-      /api_key\s*[:=]\s*[`"][^""]+["]/gi,
+    const secretPatterns = [/password\s*[:=]\s*[""][^"]+["]/gi,
+      /api_key\s*[:=]\s*[""][^""]+["]/gi,
       /secret\s*[:=]\s*["][^""]+[""]/gi,
       /token\s*[:=]\s*["][^"]+[""]/gi, ""]} catch (error) {
-  /password\s*[:=]\s*[`"][^`]+[`]/gi,
-      /api_key\s*[:=]\s*[`][^"]+["]/gi,
+  /password\s*[:=]\s*[""][^"]+["]/gi,
+      /api_key\s*[:=]\s*["][^"]+["]/gi,
       /secret\s*[:=]\s*["][^""]+[""]/gi,
       /token\s*[:=]\s*["][^"]+["]/gi, ""]} catch (error) {
   // Skip directories that can"t be accessed}
@@ -249,8 +240,7 @@ async function checkSecurityStatus() {
     const securityIssues = [];
 
     // Check for hardcoded secrets;
-    const secretPatterns = [
-  /password\s*[:=]\s*["][^""]+[""]/gi,
+    const secretPatterns = [/password\s*[:=]\s*["][^""]+[""]/gi,
       /api_key\s*[:=]\s*["][^"]+[""]/gi,
       /secret\s*[:=]\s*[""][^"]+["]/gi,
       /token\s*[:=]\s*[""][^""]+[""]/gi, "];
@@ -403,11 +393,11 @@ function determineAutomationsToRun(projectState) {
 ;
   if (projectState.performanceStatus === "poor") {
   automations.push("performance-monitor");
-    automations.push("code-quality-automation`)}
+    automations.push("code-quality-automation")}
 ;
   // Add scheduled automations based on time intervals;
   const now = Date.now();
-  for (const [`priority`, `schedule`] of Object.entries(AUTOMATION_SCHEDULE)) {
+  for (const ["priority", "schedule"] of Object.entries(AUTOMATION_SCHEDULE)) {
   for (const automation of schedule.automations) {
   const lastRun = lastRunTimes.get(automation) || 0;
       if (now - lastRun >= schedule.interval) {
@@ -424,34 +414,33 @@ function determineAutomationsToRun(projectState) {
 async function executeAutomations(automations) {
   const results = [];
   for (const automation of automations) {
-  try {console.log(`🚀 Executing automation: ${automation}`);
+  try {console.log(`🚀 Executing "automation": ${automation}`);
       const startTime = Date.now();
       const result = await executeAutomation(automation);
       const executionTime = Date.now() - startTime;
       results.push({
   automation,
-        status: `success`,
+        "status": "success",
         executionTime,
         result,
-        timestamp: new Date().toISOString()});
+        "timestamp": new Date().toISOString()});
       // Update last run time;
       lastRunTimes.set(automation, Date.now());
       // Update success count;
       successCounts.set(automation, (successCounts.get(automation) || 0) + 1);
       console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms`;
-      )} catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message`);
+      )} catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message");
       results.push({
   automation,
-        status: `failed`,
-        error: error.message,
-        timestamp: new Date().toISOString()})} catch (error) {console.error(❌ Automation ${automation} failed:, error.message`);
+        "status": "failed`,
+        "error": error.message,
+        "timestamp": new Date().toISOString()})} catch (error) {console.error(❌ Automation ${automation} failed:, error.message`);
 
       results.push({
   automation,
-        status: "failed",
-        error: error.message,
-        timestamp: new Date().toISOString(),
-});
+        "status": "failed",
+        "error": error.message,
+        "timestamp": new Date().toISOString()});
 
       // Update error count;
       errorCounts.set(automation, (errorCounts.get(automation) || 0) + 1)}
@@ -461,37 +450,35 @@ async function executeAutomations(automations) {
 ;
 async function executeAutomation(automationName) {
   // Map automation names to their script paths;
-  const automationScripts = {enhanced-error-fixer`: `./""scripts/automation/enhanced-error-fixer.cjs""",console-error-fixer": "./""scripts/automation/console-error-fixer.cjs""",code-quality-automation":;
+  const automationScripts = {enhanced-error-fixer": "./""scripts/automation/enhanced-error-fixer.cjs""",console-error-fixer": "./""scripts/automation/console-error-fixer.cjs""",code-quality-automation":;
       "./""scripts/automation/code-quality-automation.cjs""",link-checker": "./""scripts/automation/link-checker.cjs""",security-audit": "./""scripts/automation/security-audit.cjs""",performance-monitor": "./""scripts/automation/performance-monitor.cjs""",dependency-updates": "./""scripts/automation/dependency-updates.cjs""",quality-checks": "./""scripts/automation/quality-checks.cjs""",smart-documentation-generator":;
-      "./""scripts/automation/smart-documentation-generator.cjs""",ai-code-analyzer": "./``scripts/automation/ai-code-analyzer.cjs```,
+      "./""scripts/automation/smart-documentation-generator.cjs""",ai-code-analyzer": "./""scripts/automation/ai-code-analyzer.cjs""",
 
 async function executeAutomation(automationName) {
   // Map automation names to their script paths;
   const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs"",console-error-fixer": "./"scripts/automation/console-error-fixer.cjs"",code-quality-automation":;
       "./"scripts/automation/code-quality-automation.cjs"",link-checker": "./"scripts/automation/link-checker.cjs"",security-audit": "./"scripts/automation/security-audit.cjs"",performance-monitor": "./"scripts/automation/performance-monitor.cjs"",dependency-updates": "./"scripts/automation/dependency-updates.cjs"",quality-checks": "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator":;
-      "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs"",
-}
+      "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs""}
 ;
   const scriptPath = automationScripts[automationName];
-  if (!scriptPath) {throw new Error(`Unknown automation: ${automationName}`)}
+  if (!scriptPath) {throw new Error("Unknown "automation": ${automationName}")}
 ;
-  if (!fs.existsSync(scriptPath)) {throw new Error(`Automation script not found: ${scriptPath}`)}
+  if (!fs.existsSync(scriptPath)) {throw new Error("Automation script not "found": ${scriptPath}")}
 ;
-  // Execute the automation scriptconst result = execSync(`node ${scriptPath}`, {
-  stdio: `pipe`,
-    timeout: 300000, // 5 minute timeout}).toString();
+  // Execute the automation scriptconst result = execSync("node ${scriptPath}", {
+  "stdio": "pipe",
+    "timeout": 300000, // 5 minute timeout}).toString();
 
   return result}
 ;
 function updateAutomationStatus(results) {
   for (const result of results) {
   automationStatus.set(result.automation, {
-  lastRun: result.timestamp,
-      status: result.status,
-      executionTime: result.executionTime || 0,
-      errorCount: errorCounts.get(result.automation) || 0,
-      successCount: successCounts.get(result.automation) || 0,
-})}
+  "lastRun": result.timestamp,
+      "status": result.status,
+      "executionTime": result.executionTime || 0,
+      "errorCount": errorCounts.get(result.automation) || 0,
+      "successCount": successCounts.get(result.automation) || 0})}
 }
 ;
 function generateIntelligentInsights(projectState, results) {
@@ -499,92 +486,84 @@ function generateIntelligentInsights(projectState, results) {
   // Error analysis insights;
   if (projectState.errorCount > 0) {
   insights.push({
-  type: `error`,
-      severity: `high`,message: `Project has ${projectState.errorCount} errors that need immediate attention`,
-      recommendation: Run enhanced-error-fixer automation to resolve these issues`,
-})}
-;
-  // Build status insights;
-  if (projectState.buildStatus === `failed`) {
-  insights.push({
-  type: `build",
-      severity: "high",
-      message: "Project build is failing",
-      recommendation: "Investigate build errors and run enhanced-error-fixer"})}
-;
-  // Test status insights;
-  if (projectState.testStatus === "failed") {
-  insights.push({
-  type: "testing",
-      severity: "medium",
-      message: "Project tests are failing",
-      recommendation: Run code-quality-automation to improve test coverage and fix failing tests",
-})}
-;
-  // Security insights;
-  if (projectState.dependencyStatus === "vulnerable") {
-  insights.push({
-  type: "security",
-      severity: "high",
-      message: "Dependencies have security vulnerabilities",
-      recommendation: "Run security-audit and dependency-updates automations"})}
-;
-  // Performance insights;
-  if (projectState.performanceStatus === "poor") {
-  insights.push({
-  type: "performance",
-      severity: "medium",
-      message: "Project has performance issues",
-      recommendation: Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks",
-})}
-;
-  // Automation effectiveness insights;
-  const successfulAutomations = results.filter(;
-    r => r.status === "success`;
-
-  // Error analysis insights;
-  if (projectState.errorCount > 0) {
-  insights.push({
-  type: "error",
-      severity: "high",message: `Project has ${projectState.errorCount} errors that need immediate attention",
-      recommendation: Run enhanced-error-fixer automation to resolve these issues",
-})}
+  "type": "error",
+      "severity": "high","message": "Project has ${projectState.errorCount} errors that need immediate attention",
+      "recommendation": Run enhanced-error-fixer automation to resolve these issues"})}
 ;
   // Build status insights;
   if (projectState.buildStatus === "failed") {
   insights.push({
-  type: "build",
-      severity: "high",
-      message: "Project build is failing",
-      recommendation: "Investigate build errors and run enhanced-error-fixer",
-})}
+  "type": "build",
+      "severity": "high",
+      "message": "Project build is failing",
+      "recommendation": "Investigate build errors and run enhanced-error-fixer"})}
 ;
   // Test status insights;
   if (projectState.testStatus === "failed") {
   insights.push({
-  type: "testing",
-      severity: "medium",
-      message: "Project tests are failing",
-      recommendation: Run code-quality-automation to improve test coverage and fix failing tests",
-})}
+  "type": "testing",
+      "severity": "medium",
+      "message": "Project tests are failing",
+      "recommendation": Run code-quality-automation to improve test coverage and fix failing tests"})}
 ;
   // Security insights;
   if (projectState.dependencyStatus === "vulnerable") {
   insights.push({
-  type: "security",
-      severity: "high",
-      message: "Dependencies have security vulnerabilities",
-      recommendation: "Run security-audit and dependency-updates automations",
-})}
+  "type": "security",
+      "severity": "high",
+      "message": "Dependencies have security vulnerabilities",
+      "recommendation": "Run security-audit and dependency-updates automations"})}
 ;
   // Performance insights;
   if (projectState.performanceStatus === "poor") {
   insights.push({
-  type: "performance",
-      severity: "medium",
-      message: "Project has performance issues",
-      recommendation: Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks",
-})}
+  "type": "performance",
+      "severity": "medium",
+      "message": "Project has performance issues",
+      "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"})}
+;
+  // Automation effectiveness insights;
+  const successfulAutomations = results.filter(;
+    r => r.status === "success";
+
+  // Error analysis insights;
+  if (projectState.errorCount > 0) {
+  insights.push({
+  "type": "error",
+      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention",
+      "recommendation": Run enhanced-error-fixer automation to resolve these issues"})}
+;
+  // Build status insights;
+  if (projectState.buildStatus === "failed") {
+  insights.push({
+  "type": "build",
+      "severity": "high",
+      "message": "Project build is failing",
+      "recommendation": "Investigate build errors and run enhanced-error-fixer"})}
+;
+  // Test status insights;
+  if (projectState.testStatus === "failed") {
+  insights.push({
+  "type": "testing",
+      "severity": "medium",
+      "message": "Project tests are failing",
+      "recommendation": Run code-quality-automation to improve test coverage and fix failing tests"})}
+;
+  // Security insights;
+  if (projectState.dependencyStatus === "vulnerable") {
+  insights.push({
+  "type": "security",
+      "severity": "high",
+      "message": "Dependencies have security vulnerabilities",
+      "recommendation": "Run security-audit and dependency-updates automations"})}
+;
+  // Performance insights;
+  if (projectState.performanceStatus === "poor") {
+  insights.push({
+  "type": "performance",
+      "severity": "medium",
+      "message": "Project has performance issues",
+      "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"})}
 ;
   // Automation effectiveness insights;
   const successfulAutomations = results.filter(;
@@ -596,26 +575,25 @@ function generateIntelligentInsights(projectState, results) {
   const successRate = (successfulAutomations / totalAutomations) * 100;
     if (successRate < 80) {
   insights.push({
-  type: `automation`,
-        severity: `medium`,
-        message: `Automation success rate is ${successRate.toFixed(1)}%`,
-        recommendation: Investigate failing automations and improve error handling`,
-})}
+  "type": `automation",
+        "severity": "medium",
+        "message": "Automation success rate is ${successRate.toFixed(1)}%",
+        "recommendation": Investigate failing automations and improve error handling"})}
   }
 ;
   // File count insights;
   if (projectState.fileCount > 1000) {
   insights.push({
-  type: `maintenance`,
-      severity: `low`,message: `Project has ${projectState.fileCount} files`,
-      recommendation: Consider code splitting and modularization to improve maintainability`,    })}
+  "type": "maintenance",
+      "severity": "low","message": `Project has ${projectState.fileCount} files`,
+      "recommendation": Consider code splitting and modularization to improve maintainability"})}
 ;
   return insights}
 ;
 // Main continuous loop;
 async function runContinuous() {
   console.log(;
-    `🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
+    "🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   );
   // Run initial orchestration;
   await runIntelligentAutomationOrchestrator();
@@ -626,13 +604,13 @@ async function runContinuous() {
   )}
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...");
+process.on("SIGINT", () => {
+  console.log("🛑 Received SIGINT, shutting down gracefully...");
 
 // Main continuous loop;
 async function runContinuous() {
   console.log(;
-    `🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
+    "🚀 Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
   );
 
   // Run initial orchestration;
@@ -655,6 +633,6 @@ process.on("SIGTERM", () => {
   process.exit(0)});
 // Start the intelligent automation orchestrator;
 runContinuous().catch(error => {
-  console.error(❌ Failed to start intelligent automation orchestrator: ',    error;
+  console.error(❌ Failed to start intelligent automation "orchestrator": ',    error;
   );
   process.exit(1)})

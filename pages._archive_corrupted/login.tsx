@@ -18,18 +18,18 @@ import {
   Shield
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 
-const LoginPage: React.FC = () => {
+const "LoginPage": React.FC = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    "email": '',
+    "password": ''
   })
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ const LoginPage: React.FC = () => {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async ("e": React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     
@@ -48,21 +48,20 @@ const LoginPage: React.FC = () => {
     }, 2000)
   }
 
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6"  />,
-      title: 'Secure Access',
-      description: 'Enterprise-grade security for your account'
+  const features = [{
+      "icon": <Shield className="w-6 h-6"  />,
+      "title": 'Secure Access',
+      "description": 'Enterprise-grade security for your account'
     },
     {
-      icon: <Zap className="w-6 h-6"  />,
-      title: 'Fast Performance',
-      description: 'Lightning-fast access to all services'
+      "icon": <Zap className="w-6 h-6"  />,
+      "title": 'Fast Performance',
+      "description": 'Lightning-fast access to all services'
     },
     {
-      icon: <Globe className="w-6 h-6"  />,
-      title: 'Global Access',
-      description: 'Access your account from anywhere in the world'
+      "icon": <Globe className="w-6 h-6"  />,
+      "title": 'Global Access',
+      "description": 'Access your account from anywhere in the world'
     }
   ]
 
@@ -71,7 +70,7 @@ const LoginPage: React.FC = () => {
       <SEO title="Login - Zion Tech Group"
         description="Secure login to access your Zion Tech Group account and services."
         keywords="login, account, access, Zion Tech Group"
-        canonical="https://ziontechgroup.com/login"
+        canonical=""https": //ziontechgroup.com/login"
        />
       
       <PageTransition>
@@ -80,9 +79,9 @@ const LoginPage: React.FC = () => {
             <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               {/* Left Side - Login Form */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ "opacity": 0, "x": -20 }}
+                animate={{ "opacity": 1, "x": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="bg-white rounded-xl shadow-lg p-8"
               >
                 <div className="text-center mb-8">
@@ -109,7 +108,7 @@ const LoginPage: React.FC = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                         placeholder="Enter your email"
                        />
                     </div>
@@ -129,7 +128,7 @@ const LoginPage: React.FC = () => {
                         required
                         value={formData.password}
                         onChange={handleInputChange}
-                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                         placeholder="Enter your password"
                        />
                       <button
@@ -151,7 +150,7 @@ const LoginPage: React.FC = () => {
                       <input id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="h-4 w-4 text-blue-600 focus: rin g-blue-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-blue-600 "focus": rin g-blue-500 border-gray-300 rounded"
                        />
                       <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                         Remember me
@@ -167,9 +166,9 @@ const LoginPage: React.FC = () => {
                   <motion.button
                     type="submit"
                     disabled={isLoading}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 disabled: opacit y-50 disabled: curso r-not-allowed"
+                    whileHover={{ "scale": 1.02 }}
+                    whileTap={{ "scale": 0.98 }}
+                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": b g-blue-700 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 disabled: opacit y-50 disabled: curso r-not-allowed"
                   >
                     {isLoading ? (
                       <>
@@ -188,7 +187,7 @@ const LoginPage: React.FC = () => {
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-600">
                     Don't have an account?{' '}
-                    <a href="/register" className="font-medium text-blue-600 hover: tex t-blue-500">
+                    <a href="/register" className="font-medium text-blue-600 "hover": tex t-blue-500">
                       Sign up here
                     </a>
                   </p>
@@ -197,9 +196,9 @@ const LoginPage: React.FC = () => {
 
               {/* Right Side - Features */}
               <motion.div
-                initial={{ opacity: 0, x: 2 0 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ "opacity": 0, "x": 2 0 }}
+                animate={{ "opacity": 1, "x": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.2 }}
                 className="space-y-8"
               >
                 <div>
@@ -215,9 +214,9 @@ const LoginPage: React.FC = () => {
                   {features.map((feature, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 2 0 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                      initial={{ "opacity": 0, "y": 2 0 }}
+                      animate={{ "opacity": 1, "y": 0 }}
+                      transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
                       className="flex items-start gap-4"
                     >
                       <div className="text-blue-600 mt-1">
@@ -242,7 +241,7 @@ const LoginPage: React.FC = () => {
                   <p className="text-gray-600 mb-4">
                     Contact our support team for assistance with your account.
                   </p>
-                  <div className="flex flex-col sm: fle x-row gap-3">
+                  <div className="flex flex-col "sm": fle x-row gap-3">
                     <a
                       href="tel:+13024640950"
                       className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors text-center"

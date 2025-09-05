@@ -7,12 +7,12 @@ const { execSync } = require('child_process');
 console.log('🧪 Running Automated Tests...');
 
 const testReport = {
-  timestamp: new Date().toISOString(),
-  tests: [],
-  summary: {
+  "timestamp": new Date().toISOString(),
+  "tests": [],
+  "summary": {
     total: 0,
-    passed: 0,
-    failed: 0
+    "passed": 0,
+    "failed": 0
   }
 };
 
@@ -22,15 +22,15 @@ function runTest(name, testFn) {
     const result = testFn;(;);
     testReport.tests.push({
       name,
-      status: 'pass',
+      "status": 'pass',
       result
     });
     testReport.summary.passed++;
     console.log('✅ ' + name + ': PASSED')} catch (error) {
     testReport.tests.push({
       name,
-      status: 'fail',
-      error: error.message
+      "status": 'fail',
+      "error": error.message
     });
     testReport.summary.failed++;
     console.log('❌ ' + name + ': FAILED - ' + error.message)}
@@ -38,23 +38,23 @@ function runTest(name, testFn) {
 
 // Test build process
 runTest('Build Process', () => {
-  execSync('npm run build', { stdio: 'pipe' });
+  execSync('npm run build', { "stdio": 'pipe' });
   return 'Build completed successfully'});
 
 // Test linting
 runTest('Code Linting', () => {
-  execSync('npm run lint', { stdio: 'pipe' });
+  execSync('npm run lint', { "stdio": 'pipe' });
   return 'Linting passed'});
 
 // Test TypeScript compilation
 runTest('TypeScript Compilation', () => {
-  execSync('npm run type-check', { stdio: 'pipe' });
+  execSync('npm run type-check', { "stdio": 'pipe' });
   return 'TypeScript compilation successful'});
 
 // Test security audit
 runTest('Security Audit', () => {
   try {
-    execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
+    execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
     return 'Security audit passed'} catch (error) {
     // Security audit might fail with vulnerabilities, but that's expected
     return 'Security audit completed (vulnerabilities may exist)'}
@@ -63,6 +63,6 @@ runTest('Security Audit', () => {
 // Save report
 fs.writeFileSync('test-automation-report.json', JSON.stringify(testReport, null, 2));
 console.log('📄 Test report saved to test-automation-report.json');
-console.log('🧪 Test Summary: ' + testReport.summary.passed + '/' + testReport.summary.total + ' passed');
+console.log('🧪 Test "Summary": ' + testReport.summary.passed + '/' + testReport.summary.total + ' passed');
 
 process.exit(testReport.summary.failed > 0 ? 1 : 0);

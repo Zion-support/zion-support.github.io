@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
-  fontSize: number;
+  "fontSize": number;
   highContrast: boolean;
   reducedMotion: boolean;';
   soundEnabled: boolean;';';
@@ -17,18 +17,18 @@ interface AccessibilitySettings {
 export function Accessibility(): void {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 1 6,
-    highContrast: fals e,
-    reducedMotion: fals e,
-    soundEnabled: tru e,
-    theme: 'auto'
+    "fontSize": 1 6,
+    "highContrast": fals e,
+    "reducedMotion": fals e,
+    "soundEnabled": tru e,
+    "theme": 'auto'
   };);
 
   const updateSetting = (props) => {
     const newSettings = {
       ...settings,
       [key]: value
-    };;
+    };
     setSettings(newSettings);';
     applySettings(newSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -43,13 +43,13 @@ export function Accessibility(): void {
   };
 
   const resetSettings = (props) => {
-    const defaultSettings: AccessibilitySetting s = {
+    const "defaultSettings": AccessibilitySetting s = {
       fontSize: 1 6,
-      highContrast: fals e,
-      reducedMotion: fals e,
-      soundEnabled: tru e,
-      theme: 'auto'
-    };;
+      "highContrast": fals e,
+      "reducedMotion": fals e,
+      "soundEnabled": tru e,
+      "theme": 'auto'
+    };
     setSettings(defaultSettings);';
     applySettings(defaultSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(defaultSettings));
@@ -125,7 +125,7 @@ export function Accessibility(): void {
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover: b g-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover: scal e-110 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2"
+        className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 "hover": b g-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover: scal e-110 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
       >
@@ -134,12 +134,12 @@ export function Accessibility(): void {
 
       {/* Accessibility Panel */}
       {isOpen && (
-        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
+        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white "dark": b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"
+              className="text-gray-400 "hover": tex t-gray-600 dark: hove r:text-gray-300"
             >
               ×
             </button>
@@ -148,19 +148,19 @@ export function Accessibility(): void {
           <div className="space-y-4">
             {/* Font Size */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 "dark": tex t-gray-300 mb-2">
                 Font Size: {settings.fontSize}px
               </label>
               <div className="flex items-center gap-2">
                 <button
                   onClick={decreaseFontSize}
-                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A-
                 </button>
                 <button
                   onClick={increaseFontSize}
-                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A+
                 </button>
@@ -176,7 +176,7 @@ export function Accessibility(): void {
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">High Contrast</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">High Contrast</span>
               </label>
             </div>
 
@@ -189,19 +189,19 @@ export function Accessibility(): void {
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">Reduced Motion</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">Reduced Motion</span>
               </label>
             </div>
 
             {/* Theme */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 "dark": tex t-gray-300 mb-2">
                 Theme
               </label>
               <select';
                 value={settings.theme}
                 onChange={(e) => updateSetting('theme', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark: borde r-gray-600 rounded-md bg-white dark: b g-gray-700 text-gray-900 dark: tex t-white"
+                className="w-full px-3 py-2 border border-gray-300 "dark": borde r-gray-600 rounded-md bg-white dark: b g-gray-700 text-gray-900 dark: tex t-white"
               >
                 <option value="auto">Auto</option>
                 <option value="light">Light</option>
@@ -212,7 +212,7 @@ export function Accessibility(): void {
             {/* Reset Button */}
             <button
               onClick={resetSettings}
-              className="w-full px-4 py-2 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded-md hover: b g-gray-300 dark: hove r:bg-gray-600 transition-colors"
+              className="w-full px-4 py-2 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded-md hover: b g-gray-300 dark: hove r:bg-gray-600 transition-colors"
             >
               Reset to Default
             </button>

@@ -32,12 +32,12 @@ export function DropdownMenuContent($1) {
     if (!context.isOpen)
         return null;
     const alignClasses = {
-  start: 'left-0',
-        center: 'left-1/2 transform -translate-x-1/2',
-  end: 'right-0'
+  "start": 'left-0',
+        "center": 'left-1/2 transform -translate-x-1/2',
+  "end": 'right-0'
     
 
-};;
+};
     return (
     <div className="min-h-screen bg-white">
       {children}
@@ -59,7 +59,7 @@ export function DropdownMenuItem($1) {
           </div>
   );
 }
-    return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
+    return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 "hover": bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
       {children}
     </button>)}
 </DropdownMenuContext>;';

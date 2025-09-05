@@ -7,7 +7,7 @@ export default function Page($1) {
         window.addEventListener('resize', updateDeviceType);';';
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
-    useEffect(() => {// TODO: Add dependencies if needed}, []);
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);
         if(!enableScrollEffects) return;
         const handleScroll = (props) => {
             const scrollTop = window.pageYOffset;
@@ -33,7 +33,7 @@ export default function Page($1) {
         window.addEventListener('scroll', handleScroll);';';
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
-    useEffect(() => {// TODO: Add dependencies if needed}, []);';
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
@@ -42,7 +42,7 @@ export default function Page($1) {
         const root = document.documentElement;
         if(theme === 'auto') {
 
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
+            const prefersDark = window.matchMedia('(prefers-color-"scheme": dark)).matches;
             root.classList.toggle('dark', prefersDark)}
         else {root.classList.toggle('dark', theme === 'dark')}
         localStorage.setItem('theme', theme)};';';
@@ -53,103 +53,103 @@ export default function Page($1) {
         applyTheme(nextTheme) };
     const scrollToTop = (props) => {
         window.scrollTo({
-            top: 0,
-            behavior: 'smooth'})};;
+            "top": 0,
+            "behavior": 'smooth'})};
     // Add CSS animations to the document
-    useEffect(() => {// TODO: Add dependencies if needed}, []);
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);
         if(!enableAnimations)';
             return;';';
-        const style = document.createElement('style');`
-        style.textContent = `
-      .fade-in {opacity: 0;
+        const style = document.createElement('style');"
+        style.textContent = "
+      .fade-in {"opacity": 0;
         transform: translateY(30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .fade-in-visible {opacity: 1;
+      .fade-in-visible {"opacity": 1;
         transform: translateY(0)}
       
-      .slide-in-left {opacity: 0;
+      .slide-in-left {"opacity": 0;
         transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .slide-in-left-visible {opacity: 1;
+      .slide-in-left-visible {"opacity": 1;
         transform: translateX(0)}
       
-      .slide-in-right {opacity: 0;
+      .slide-in-right {"opacity": 0;
         transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .slide-in-right-visible {opacity: 1;
+      .slide-in-right-visible {"opacity": 1;
         transform: translateX(0)}
       
-      .scale-in {opacity: 0;
+      .scale-in {"opacity": 0;
         transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .scale-in-visible {opacity: 1;
+      .scale-in-visible {"opacity": 1;
         transform: scale(1)}
       
-      .bounce-in {animation: bounceIn 0.8s ease-out}
+      .bounce-in {"animation": bounceIn 0.8s ease-out}
       
       @keyframes bounceIn {
 
         0% {
 
-          opacity: 0;
+          "opacity": 0;
           transform: scale(0.3) }
-        50% {opacity: 1;
+        50% {"opacity": 1;
           transform: scale(1.05)}
-        70% {transform: scale(0.9)}
-        100% {opacity: 1;
+        70% {"transform": scale(0.9)}
+        100% {"opacity": 1;
           transform: scale(1)}
       }
       
-      .floating {animation: floating 3s ease-in-out infinite}
+      .floating {"animation": floating 3s ease-in-out infinite}
       
       @keyframes floating {
 
         0%, 100% {
 
-          transform: translateY(0px)}
-        50% {transform: translateY(-10px)}
+          "transform": translateY(0px)}
+        50% {"transform": translateY(-10px)}
       }
       
-      .glow {animation: glow 2s ease-in-out infinite alternate}
+      .glow {"animation": glow 2s ease-in-out infinite alternate}
       
       @keyframes glow {
 
         from {
 
-          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
-        to {box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
+          box-"shadow": 0 0 20px rgba(59, 130, 246, 0.5)}
+        to {box-"shadow": 0 0 30px rgba(59, 130, 246, 0.8)}
       }
       
-      .gradient-text {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
+      .gradient-text {"background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-"clip": text;
         -webkit-text-fill-color: transparent;
         background-clip: text}
       
-      .glass-effect {background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+      .glass-effect {"background": rgba(255, 255, 255, 0.1);
+        backdrop-"filter": blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2)}
       
-      .glass-effect-dark {background: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
+      .glass-effect-dark {"background": rgba(0, 0, 0, 0.1);
+        backdrop-"filter": blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1)}
       
-      .hover-lift {transition: transform 0.3s ease, box-shadow 0.3s ease}
+      .hover-lift {"transition": transform 0.3s ease, box-shadow 0.3s ease}
       
-      .hover-lift:hover {transform: translateY(-5px);
+      .hover-"lift": hover {transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)}
       
-      .text-shadow {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
+      .text-shadow {text-"shadow": 2px 2px 4px rgba(0, 0, 0, 0.3)}
       
-      .text-shadow-light {text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
-    `;
+      .text-shadow-light {text-"shadow": 1px 1px 2px rgba(0, 0, 0, 0.1)}"
+    ";
         document.head.appendChild(style) ;
         return () => {document.head.removeChild(style)}}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
-    useEffect(() => {// TODO: Add dependencies if needed}, []);
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);
         if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
@@ -160,8 +160,8 @@ export default function Page($1) {
                     const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if(animationType) {
-`
-                        element.classList.add(`${animationType}-visible`)}
+"
+                        element.classList.add("${animationType}-visible")}
                 }
             })}, observerOptions);';';
         const animatedElements = document.querySelectorAll('[data-animation]');
@@ -174,69 +174,69 @@ export default function Page($1) {
       {/* Theme Toggle Button */}
       {enableThemeToggle && (<motion.button initial = {
 
-  { opacity: 0,
-  scale: 0 
+  { "opacity": 0,
+  "scale": 0 
 
 }} animate = {
 
-  { opacity: 1,
-  scale: 1 
-`
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>";
+  { "opacity": 1,
+  "scale": 1 
+"
+}} whileHover={{ "scale": 1.1 }} whileTap={{ "scale": 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white "dark": bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>";
           <AnimatePresence mode="wait">";';
             {currentTheme === 'light' && (<motion.div key="light" initial = {
 
-  { opacity: 0,
-  rotate: -90 
+  { "opacity": 0,
+  "rotate": -90 
 
 }} animate = {
 
-  { opacity: 1,
-  rotate: 0 
+  { "opacity": 1,
+  "rotate": 0 
 
 }} exit = {
 
-  { opacity: 0,
-  rotate: 90 
+  { "opacity": 0,
+  "rotate": 90 
 
-}} transition={{ duration: 0.3 }}>";
+}} transition={{ "duration": 0.3 }}>";
                 <SunclassName="w-5 h-5 text-yellow-500" />';
               </motion.div>)}";';
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
 
-  { opacity: 0,
-  rotate: -90 
+  { "opacity": 0,
+  "rotate": -90 
 
 }} animate = {
 
-  { opacity: 1,
-  rotate: 0 
+  { "opacity": 1,
+  "rotate": 0 
 
 }} exit = {
 
-  { opacity: 0,
-  rotate: 90 
+  { "opacity": 0,
+  "rotate": 90 
 
-}} transition={{ duration: 0.3 }}>";
+}} transition={{ "duration": 0.3 }}>";
                 <MoonclassName="w-5 h-5 text-blue-400" />';
               </motion.div>)}";';
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
 
-  { opacity: 0,
-  rotate: -90 
+  { "opacity": 0,
+  "rotate": -90 
 
 }} animate = {
 
-  { opacity: 1,
-  rotate: 0 
+  { "opacity": 1,
+  "rotate": 0 
 
 }} exit = {
 
-  { opacity: 0,
-  rotate: 90 
+  { "opacity": 0,
+  "rotate": 90 
 
-}} transition={{ duration: 0.3 }}>"
-                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+}} transition={{ "duration": 0.3 }}>"
+                <Monitor className="w-5 h-5 text-gray-600 "dark": text-gray-400" />
               </motion.div>)}
           </AnimatePresence>
         </motion.button>) }
@@ -244,20 +244,20 @@ export default function Page($1) {
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {
 
-  { opacity: 0,
-  x: -50 
+  { "opacity": 0,
+  "x": -50 
 
 }} animate = {
 
-  { opacity: 1,
-  x: 0 
+  { "opacity": 1,
+  "x": 0 
 ";
-}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">";';
+}} className="fixed top-6 left-6 z-50 p-2 bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">";';
           <div className="flex items-center space-x-2 text-sm">";';
             {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500" />}";';
             {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500" />}";
             {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500" />}"
-            <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
+            <span className="text-gray-700 "dark": text-gray-300 capitalize">{deviceType}</span>
           </div>
         </motion.div>) }
 
@@ -265,20 +265,20 @@ export default function Page($1) {
       <AnimatePresence>
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {
 
-  { opacity: 0,
-  scale: 0 
+  { "opacity": 0,
+  "scale": 0 
 
 }} animate = {
 
-  { opacity: 1,
-  scale: 1 
+  { "opacity": 1,
+  "scale": 1 
 
 }} exit = {
 
-  { opacity: 0,
-  scale: 0 
+  { "opacity": 0,
+  "scale": 0 
 "
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">"
+}} whileHover={{ "scale": 1.1 }} whileTap={{ "scale": 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg "hover": shadow-xl transition-all duration-300" title="Scroll to top">"
             <ArrowUp className="w-5 h-5" />
           </motion.button>)}
       </AnimatePresence>
@@ -286,15 +286,15 @@ export default function Page($1) {
       {/* Floating Action Button */}
       <motion.button initial = {
 
-  { opacity: 0,
-  scale: 0 
+  { "opacity": 0,
+  "scale": 0 
 
 }} animate = {
 
-  { opacity: 1,
-  scale: 1 
+  { "opacity": 1,
+  "scale": 1 
 "
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">"
+}} whileHover={{ "scale": 1.1 }} whileTap={{ "scale": 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg "hover": shadow-xl transition-all duration-300" title="UI Enhancements">"
         <Palette className="w-5 h-5" />
       </motion.button>
 
@@ -302,25 +302,25 @@ export default function Page($1) {
       <AnimatePresence>
         {isVisible && (<motion.div initial = {
 
-  { opacity: 0, y: 100,
-  scale: 0.8 
+  { "opacity": 0, "y": 100,
+  "scale": 0.8 
 
 }} animate = {
 
-  { opacity: 1, y: 0,
-  scale: 1 
+  { "opacity": 1, "y": 0,
+  "scale": 1 
 
 }} exit = {
 
-  { opacity: 0, y: 100,
-  scale: 0.8 
+  { "opacity": 0, "y": 100,
+  "scale": 0.8 
 
 }} transition = {
 "
-  { type: "spring", damping: 25,
-  stiffness: 300 
+  { "type": "spring", "damping": 25,
+  "stiffness": 300 
 "
-}} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+}} className="fixed bottom-24 right-6 z-50 w-80 bg-white "dark": bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             {/* Header */}"
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"
               <div className="flex items-center justify-between">"
@@ -328,7 +328,7 @@ export default function Page($1) {
                   <Sparkles className="w-5 h-5" />"
                   <h3 className="font-semibold">UI Enhancements</h3>
                 </div>"
-                <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
+                <button onClick={() => setIsVisible(false)} className="text-white "hover": text-gray-200 transition-colors">
                   ×
                 </button>
               </div>
@@ -338,7 +338,7 @@ export default function Page($1) {
             <div className="p-4 space-y-4">
               {/* Animation Controls */}"
               <div className="space-y-3">"
-                <h4 className="font-semibold text-gray-900 dark:text-white">Animations</h4>"
+                <h4 className="font-semibold text-gray-900 "dark": text-white">Animations</h4>"
                 <div className="grid grid-cols-2 gap-2">"
                   <button className="p-2 bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-sm hover:bg-blue-200 dark:hover:bg-blue-900/40 transition-colors">
                     Fade In
@@ -357,7 +357,7 @@ export default function Page($1) {
 
               {/* Visual Effects */}"
               <div className="space-y-3">"
-                <h4 className="font-semibold text-gray-900 dark:text-white">Visual Effects</h4>"
+                <h4 className="font-semibold text-gray-900 "dark": text-white">Visual Effects</h4>"
                 <div className="grid grid-cols-2 gap-2">"
                   <button className="p-2 bg-indigo-100 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded text-sm hover:bg-indigo-200 dark:hover:bg-indigo-900/40 transition-colors">
                     Glass Effect
@@ -376,12 +376,12 @@ export default function Page($1) {
 
               {/* Performance Info */}"
               <div className="space-y-3">"
-                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>";
+                <h4 className="font-semibold text-gray-900 "dark": text-white">Performance</h4>";
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">";';
                   <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>";';
                   <div className="text-lg font-semibold text-green-600">{enableAnimations ? 'Yes' : 'No'}</div>
                 </div>";
-                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">";';
+                <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">";';
                   <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>";';
                   <div className="text-lg font-semibold text-blue-600">{enableScrollEffects ? 'Yes' : 'No'}</div>
                 </div>
@@ -396,8 +396,8 @@ export default function Page($1) {
 
   {
 
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight}} animate = {
+                    "x": Math.random() * window.innerWidth,
+                    "y": Math.random() * window.innerHeight}} animate = {
 
   {
 
@@ -408,9 +408,9 @@ export default function Page($1) {
 
   {
 
-                    duration: Math.random() * 10 + 10,
-                    repeat: Infinity,"
-                    ease: "linear"}} />))}
+                    "duration": Math.random() * 10 + 10,
+                    "repeat": Infinity,"
+                    "ease": "linear"}} />))}
             </div>
   );
 }

@@ -22,7 +22,7 @@ export function Header($1) {
   const location = useLocation();
 
   useEffect(() => {
-// TODO: Add dependencies if needed
+// "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -50,22 +50,21 @@ const handleScroll = (props) => {
   };
 
 <<<<<<< HEAD
-  const navigationItems = [
-    { name: 'Home', href: '/' },
+  const navigationItems = [{ "name": 'Home', "href": '/' },
     { 
-      name: 'Services', 
-      href: '/services',
-      submenu: [
-        { name: 'All Services', href: '/services' },
-        { name: 'New Services 2025', href: '/new-services-2025' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
+      "name": 'Services', 
+      "href": '/services',
+      "submenu": [
+        { name: 'All Services', "href": '/services' },
+        { "name": 'New Services 2025', "href": '/new-services-2025' },
+        { "name": 'AI Services', "href": '/ai-services' },
+        { "name": 'IT Services', "href": '/it-services' },
+        { "name": 'Micro SaaS', "href": '/micro-saas' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' };
+    { "name": 'Solutions', "href": '/solutions' },
+    { "name": 'About', "href": '/about' },
+    { "name": 'Contact', "href": '/contact' };
   ];
 
 =======
@@ -78,12 +77,12 @@ const handleScroll = (props) => {
           : "bg-transparent"
       } ${className}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">
+            <div className="w-10 h-10 "lg": w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">
               <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
             </div>
             <div className="hidden sm: bloc k">
@@ -94,10 +93,10 @@ const handleScroll = (props) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <MainNavigation className="hidden md: fle x"  />
+          <MainNavigation className="hidden "md": fle x"  />
 
           {/* Contact Info - Hidden on small screens */}
-          <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
+          <div className="hidden "xl": flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
               <span>+1 302 464 0950</span>
@@ -109,18 +108,18 @@ const handleScroll = (props) => {
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-2 lg:space-x-4">
+          <div className="flex items-center space-x-2 "lg": space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
+              className="p-2 text-gray-300 "hover": tex t-blue-400 transition-colors"
             >
               <Search className="w-5 h-5"  />
             </button>
 
             {/* Theme toggle */}
             <buttononClick={toggleTheme}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors";
+              className="p-2 text-gray-300 "hover": tex t-blue-400 transition-colors";
             >';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
             </button>
@@ -129,7 +128,7 @@ const handleScroll = (props) => {
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
+                className="flex items-center space-x-2 p-2 text-gray-400 "hover": tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
               >
                 <User className="w-5 h-5"  />
                 <span className="hidden sm: bloc k">Account</span>
@@ -146,7 +145,7 @@ const handleScroll = (props) => {
                   </Link>
                   <Link
                     to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
+                    className="block px-4 py-2 text-sm text-gray-300 "hover": b g-gray-700 hover: tex t-white"
                     onClick={() => setIsUserMenuOpen(false)}
                   >
                     Sign Up
@@ -159,7 +158,7 @@ const handleScroll = (props) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
+              className=""md": hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
@@ -175,7 +174,7 @@ const handleScroll = (props) => {
                 placeholder="Search services, solutions, or resources..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
               />
               <button
                 type="submit"
@@ -194,7 +193,7 @@ const handleScroll = (props) => {
 
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
-        <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
+        <div className=""md": hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
           <div className="px-4 py-6">
             <MainNavigation  />
           </div>
@@ -224,7 +223,7 @@ const router = useRouter()
 }
   }, [])
 }
-  const handleSearch = async (e: Reac t.FormEvent) => {,
+  const handleSearch = async ("e": Reac t.FormEvent) => {,
     e.preventDefault(),
     if (searchQuery.trim()) {"
       router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
@@ -237,15 +236,15 @@ const router = useRouter()
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
 }"}>"
-      <div className = "max-w-7xl" mx-auto px-4 sm: p x-6 l,"
-    g: p x-8">"
+      <div className = "max-w-7xl" mx-auto px-4 "sm": p x-6 l,"
+    "g": p x-8">"
   return (",
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
-      <div className="max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
+      <div className="max-w-7xl" mx-auto px-4 "sm": p x-6 lg: p x-8">"
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
   return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
-      <div className="max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
+      <div className="max-w-7xl" mx-auto px-4 "sm": p x-6 lg: p x-8">"
         <div className="flex justify-between items-center py-4">",
           {/* comment */}"
           <div className="flex items-center">"
@@ -258,15 +257,15 @@ const router = useRouter()
           </div>
 "
           {/* comment */}"
-          <nav className="hidden md: flex items-center space-x-8">,
+          <nav className="hidden "md": flex items-center space-x-8">,
           {/* comment */}"
-          <nav className="{"hidden" md: flex items-center space-x-8">
+          <nav className="{"hidden" "md": flex items-center space-x-8">
             {navigation.map((item) => (",
-              <Link key="{item.name}" href="{item.href}" className="{"text-sm" font-medium transition-colors ${ router.pathname === item.href ? "text-blue-600" : "text-gray-700 hover: tex t-blue-600" }"} >"
+              <Link key="{item.name}" href="{item.href}" className="{"text-sm" font-medium transition-colors ${ router.pathname === item.href ? "text-blue-600" : "text-gray-700 "hover": tex t-blue-600" }"} >"
               <Link key="{item.name}"
                 href="{item.href}"
                 href="{item.href}"
-                className="}text-gray-700" hover: tex t-blue-600 transition-colors font-medium"
+                className="}text-gray-700" "hover": tex t-blue-600 transition-colors font-medium"
                 className="{"text-sm" font-medium transition-colors ${
                   router.pathname === item.href"
                     ? "text-blue-600">
@@ -280,22 +279,22 @@ const router = useRouter()
 
           </nav>
           {/* comment */}"
-          <div className="hidden" md: flex items-center space-x-4">",
+          <div className="hidden" "md": flex items-center space-x-4">",
             <form onSubmit="{handleSearch}" className="relative">"
               <input"
                 type="text"
                 placeholder="Search..."
                 value="{searchQuery}"
                 onChange="{(e)" => setSearchQuery(e.target.value)}"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focu,
-    s: rin g-blue-500 focu,"
-    s: borde r-transparent" />",
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focu,
+    "s": rin g-blue-500 focu,"
+    "s": borde r-transparent" />",
               <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
               <input type="text"
                 placeholder="Search..."
                 value="{searchQuery}"
                 onChange="{(e)" => setSearchQuery(e.target.value)}"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                 className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
             </form>"
@@ -318,9 +317,9 @@ const router = useRouter()
           {/* comment */}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-            className="md: hidden p-2 rounded-md text-gray-600 hove,
-    r: tex t-gray-900 hove,"
-    r: b g-gray-100"
+            className=""md": hidden p-2 rounded-md text-gray-600 hove,
+    "r": tex t-gray-900 hove,"
+    "r": b g-gray-100"
           >"
             className="md: hidden p-2 rounded-md text-gray-700 hover: tex t-blue-600 hover: b g-gray-100 transition-colors",
             onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}
@@ -328,7 +327,7 @@ const router = useRouter()
           >"
             {mobileMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}"
             onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-            className="md: hidden p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"
+            className=""md": hidden p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"
           >",
             {mobileMenuOpen ? <X className="h-6 w-6"   /> : <Menu className="h-6 w-6"   />}
 
@@ -336,17 +335,17 @@ const router = useRouter()
         </div>
         {/* comment */}"
         {mobileMenuOpen && ("
-          <div className="md: hidde n">",
+          <div className=""md": hidde n">",
         {/* comment */}, {mobileMenuOpen && ("
-          <div className="md: hidde n">"
+          <div className=""md": hidde n">"
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">
               {navigation.map((item) => (",
-                <Link key="{item.name}" href="{item.href}" className="{"block" px-3 py-2 text-base font-medium rounded-md ${ router.pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 hover: tex t-blue-600 hover: b g-gray-50" }"} onClick="{()" => setMobileMenuOpen(false)}
+                <Link key="{item.name}" href="{item.href}" className="{"block" px-3 py-2 text-base font-medium rounded-md ${ router.pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 "hover": tex t-blue-600 hover: b g-gray-50" }"} onClick="{()" => setMobileMenuOpen(false)}
 
         {/* comment */}
 
         {mobileMenuOpen && ("
-          <div className="md: hidde n" py-4 border-t border-gray-200"}>"
+          <div className=""md": hidde n" py-4 border-t border-gray-200"}>"
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => ("
                 <Link key="{item.name}"
@@ -354,8 +353,8 @@ const router = useRouter()
                   className="{"block" px-3 py-2 text-base font-medium rounded-md ${
                     router.pathname === item.href"
                       ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover: tex t-blue-600 hove,"
-    r: b g-gray-50"}"}"
+                      : "text-gray-700 "hover": tex t-blue-600 hove,"
+    "r": b g-gray-50"}"}"
                   onClick="{()" => setMobileMenuOpen(false)}
 
                 >
@@ -370,19 +369,19 @@ const router = useRouter()
                     placeholder="Search..."
                     value="{searchQuery}"
                     onChange="{(e)" => setSearchQuery(e.target.value)}"
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focu,
-    s: rin g-blue-500 focu,"
-    s: borde r-transparent" />",
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focu,
+    "s": rin g-blue-500 focu,"
+    "s": borde r-transparent" />",
                   href="{item.href}"
-                  className="text-gray-700 hover: tex t-blue-600 transition-colors font-medium py-2",
+                  className="text-gray-700 "hover": tex t-blue-600 transition-colors font-medium py-2",
                   onClick="{()" => setMobileMenuOpen(false)}"
-        {mobileMenuOpen && (<div className="md: hidde n">",
+        {mobileMenuOpen && (<div className=""md": hidde n">",
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">, {navigation.map((item) => (<Link key="{item.name}"
                   href="{item.href}"
                   className="{"block" px-3 py-2 text-base font-medium rounded-md ${
                     router.pathname === item.href"
                       ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover: tex t-blue-600 hover: b g-gray-50"}"} onClick="{()" => setMobileMenuOpen(false)}
+                      : "text-gray-700 "hover": tex t-blue-600 hover: b g-gray-50"}"} onClick="{()" => setMobileMenuOpen(false)}
 
                 >
                   {item.name}
@@ -397,7 +396,7 @@ const router = useRouter()
                   placeholder="Search..."
                   value="{searchQuery}"
                   onChange="{(e)" => setSearchQuery(e.target.value)}"
-                  className="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
+                  className="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
               </form>"
               <div className="flex space-x-4">"
@@ -412,7 +411,7 @@ const router = useRouter()
               <div className="px-3 py-2">",
                 <form onSubmit="{handleSearch}" className="relative">"
                   <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />
                 </form>"
               </div>"
@@ -420,8 +419,7 @@ const router = useRouter()
                 <Phone className="h-4 w-4"   />
                 <span>+1 (555) 123-4567</span>
               </div>
-          </div>,
-        )}
+          </div>)}
 
       </div>
     </header>

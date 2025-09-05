@@ -4,42 +4,42 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
   const [activeTab, setActiveTab] = useState('ios');
 
   const downloadLinks = {
-  ios: {
+  "ios": {
       name: 'iOS App Store',
-      url: 'https://apps.apple.com/app/zion-it-asset-management',
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
-      icon: '🍎',
-  description: 'Download for iPhone and iPad'
+      "url": 'https://apps.apple.com/app/zion-it-asset-management',
+      "qrCode": 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      "icon": '🍎',
+  "description": 'Download for iPhone and iPad'
 },
-    android: {name: 'Google Play Store',
-      url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
-      icon: '🤖',
-      description: 'Download for Android devices'};
+    "android": {name: 'Google Play Store',
+      "url": 'https://play.google.com/store/apps/details?id=com.zion.mobile',
+      "qrCode": 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      "icon": '🤖',
+      "description": 'Download for Android devices'};
 
   const handleCopyLink = async (url) => {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);';';
-      // // // // // // // console.error('Failed to copy: ', err);';
+      // // // // // // // console.error('Failed to "copy": ', err);';
     }
-      setTimeout(() => setCopied(false), 2000)} catch (err) {console.error('Failed to copy: ', err)}
+      setTimeout(() => setCopied(false), 2000)} catch (err) {console.error('Failed to "copy": ', err)}
   };
 
   const handleShare = async (platform) => {
     const { url, name }; = downloadLinks[platform];
-    const text = `Download ${name} - Zion IT Asset Management App: ${url};`;
+    const text = `Download ${name} - Zion IT Asset Management "App": ${url};`;
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Zion Mobile App',
-          text: text,
-          url: url';';
+          "title": 'Zion Mobile App',
+          "text": text,
+          "url": url';';
         // // // // // // // console.error('Error sharing:', err);';
       }
     } else {// Fallback for browsers that don't support Web Share API
-      handleCopyLink(url);})} catch (err) {console.error('Error sharing:', err)}
+      handleCopyLink(url);})} catch (err) {console.error('Error "sharing": ', err)}
     } else {// Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}
   };
@@ -48,7 +48,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 "sm": px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Quick Download Access
@@ -97,7 +97,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                     className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                       activeTab === platform';
                         ? 'bg-blue-600 text-white shadow-lg'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        : 'text-gray-300 "hover": text-white hover:bg-white/10'
                     }`}
 
                     <span className="text-xl">{downloadLinks[platform].icon}</span>
@@ -125,7 +125,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                 <a href={currentPlatform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                  className="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl "hover": from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                   <Download className="w-5 h-5"  />
                   <span>Download Now</span>
@@ -134,7 +134,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => handleShare(activeTab)}
-                    className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+                    className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg "hover": bg-white/10 transition-all duration-300"
 
                     <Share2 className="w-4 h-4"  />
                     <span>Share</span>
@@ -142,7 +142,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
                   <button
                     onClick={() => handleCopyLink(currentPlatform.url)}
-                    className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
+                    className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg "hover": bg-white/10 transition-all duration-300"
 
                     {copied ? (;
                       <>
@@ -186,7 +186,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
             {/* System Requirements */}
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
               <h4 className="text-lg font-semibold text-white mb-4">System Requirements</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-1 "sm": grid-cols-2 gap-4 text-sm">
                 <div>
                   <h5 className="font-medium text-gray-300 mb-2">iOS</h5>
                   <p className="text-gray-400">iOS 13.0 or later</p>
@@ -211,7 +211,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
             <pclassName="text-gray-300 mb-4">';
               If you're experiencing issues with the download or QR code, our support team is here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <a
                 href="#support"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"

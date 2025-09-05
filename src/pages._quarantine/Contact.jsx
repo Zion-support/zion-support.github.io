@@ -15,87 +15,84 @@ import {Mail,
   Instagram,
   Github} from 'lucide-react';
 
-const contactMethods = [
-  {icon: Phone,
-    title: 'Phone',
-    value: '+1 302 464 0950',
-    description: 'Call us during business hours',
-    action: 'tel:+13024640950',
-    color: 'from-blue-500 to-cyan-500'},
-  {icon: Mail,
-    title: 'Email',
-    value: 'kleber@ziontechgroup.com',
-    description: 'Send us a message time',
-    action: 'mailto:kleber@ziontechgroup.com',
-    color: 'from-purple-500 to-pink-500'},
-  {icon: MapPin,
-    title: 'Address',
-    value: '364 E Main St STE 1008',
-    description: 'Middletown, DE 19709',
-    action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-    color: 'from-green-500 to-emerald-500'},
-  {icon: Clock,
-    title: 'Business Hours',
-    value: 'Mon - Fri: 9:00 AM - 6:00 PM',
-    description: 'Eastern Time Zone',
-    action: null,
-    color: 'from-orange-500 to-red-500'};
+const contactMethods = [{"icon": Phone,
+    "title": 'Phone',
+    "value": '+1 302 464 0950',
+    "description": 'Call us during business hours',
+    "action": 'tel:+13024640950',
+    "color": 'from-blue-500 to-cyan-500'},
+  {"icon": Mail,
+    "title": 'Email',
+    "value": 'kleber@ziontechgroup.com',
+    "description": 'Send us a message time',
+    "action": 'mailto:kleber@ziontechgroup.com',
+    "color": 'from-purple-500 to-pink-500'},
+  {"icon": MapPin,
+    "title": 'Address',
+    "value": '364 E Main St STE 1008',
+    "description": 'Middletown, DE 19709',
+    "action": 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+    "color": 'from-green-500 to-emerald-500'},
+  {"icon": Clock,
+    "title": 'Business Hours',
+    "value": 'Mon - Fri: 9:00 AM - 6:00 PM',
+    "description": 'Eastern Time Zone',
+    "action": null,
+    "color": 'from-orange-500 to-red-500'};
 ];
 
-const socialLinks = [
-  {name: 'LinkedIn',
-    icon: Linkedin,
-    url: 'https://linkedin.com/company/ziontechgroup',
-    color: 'hover:text-blue-500'},
-  {name: 'Twitter',
-    icon: Twitter,
-    url: 'https://twitter.com/ziontechgroup',
-    color: 'hover:text-sky-500'},
-  {name: 'Facebook',
-    icon: Facebook,
-    url: 'https://facebook.com/ziontechgroup',
-    color: 'hover:text-blue-600'},
-  {name: 'Instagram',
-    icon: Instagram,
-    url: 'https://instagram.com/ziontechgroup',
-    color: 'hover:text-pink-500'},
-  {name: 'GitHub',
-    icon: Github,
-    url: 'https://github.com/ziontechgroup',
-    color: 'hover:text-gray-400'};
+const socialLinks = [{"name": 'LinkedIn',
+    "icon": Linkedin,
+    "url": 'https://linkedin.com/company/ziontechgroup',
+    "color": 'hover:text-blue-500'},
+  {"name": 'Twitter',
+    "icon": Twitter,
+    "url": 'https://twitter.com/ziontechgroup',
+    "color": 'hover:text-sky-500'},
+  {"name": 'Facebook',
+    "icon": Facebook,
+    "url": 'https://facebook.com/ziontechgroup',
+    "color": 'hover:text-blue-600'},
+  {"name": 'Instagram',
+    "icon": Instagram,
+    "url": 'https://instagram.com/ziontechgroup',
+    "color": 'hover:text-pink-500'},
+  {"name": 'GitHub',
+    "icon": Github,
+    "url": 'https://github.com/ziontechgroup',
+    "color": 'hover:text-gray-400'};
 ];
 
-const contactFormFields = [
-  {name: 'firstName',
-    label: 'First Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Enter your first name'},
-  {name: 'lastName',
-    label: 'Last Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Enter your last name'},
-  {name: 'email',
-    label: 'Email',
-    type: 'email',
-    required: true,
-    placeholder: 'Enter your email address'},
-  {name: 'phone',
-    label: 'Phone',
-    type: 'tel',
-    required: false,
-    placeholder: 'Enter your phone number (optional)'},
-  {name: 'comp',
-    label: 'Comp',
-    type: 'text',
-    required: false,
-    placeholder: 'Enter your comp name (optional)'},
-  {name: 'service',
-    label: 'Service Interest',
-    type: 'select',
-    required: true,
-    options: [
+const contactFormFields = [{"name": 'firstName',
+    "label": 'First Name',
+    "type": 'text',
+    "required": true,
+    "placeholder": 'Enter your first name'},
+  {"name": 'lastName',
+    "label": 'Last Name',
+    "type": 'text',
+    "required": true,
+    "placeholder": 'Enter your last name'},
+  {"name": 'email',
+    "label": 'Email',
+    "type": 'email',
+    "required": true,
+    "placeholder": 'Enter your email address'},
+  {"name": 'phone',
+    "label": 'Phone',
+    "type": 'tel',
+    "required": false,
+    "placeholder": 'Enter your phone number (optional)'},
+  {"name": 'comp',
+    "label": 'Comp',
+    "type": 'text',
+    "required": false,
+    "placeholder": 'Enter your comp name (optional)'},
+  {"name": 'service',
+    "label": 'Service Interest',
+    "type": 'select',
+    "required": true,
+    "options": [
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -109,13 +106,13 @@ const contactFormFields = [
 
 export default function Contact($1) {
   const [formData, setFormData] = useState({
-    firstName: ",
-    lastName: ",
-    email: ",
-    phone: ",
-    comp: ",
-    service: ",
-    message: "
+    "firstName": ",
+    "lastName": ",
+    "email": ",
+    "phone": ",
+    "comp": ",
+    "service": ",
+    "message": "
   };);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -140,13 +137,13 @@ export default function Contact($1) {
     setTimeout(() => {
       setSubmitSuccess(false);';
       setFormData({
-        firstName: ",
-        lastName: ",
-        email: ",
-        phone: ",
-        comp: ",
-        service: ",
-        message: "
+        "firstName": ",
+        "lastName": ",
+        "email": ",
+        "phone": ",
+        "comp": ",
+        "service": ",
+        "message": "
       });
     }, 3000);
   };
@@ -163,21 +160,21 @@ export default function Contact($1) {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ "opacity": 0, "scale": 0.8 }}
+              animate={{ "opacity": 1, "scale": 1 }}
+              transition={{ "duration": 0.8, "delay": 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <MessageSquare className="w-10 h-10 text-white"  />
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl "md": text-6xl font-bold text-white mb-6">
               Get in
               <span className="text-gradient block">Touch</span>
             </h1>
@@ -194,9 +191,9 @@ export default function Contact($1) {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Contact Information</h2>
@@ -205,16 +202,16 @@ export default function Contact($1) {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
+                initial={{ "opacity": 0, "y": 30 }}
+                whileInView={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center "hover": border-zion-cyan/40 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-"hover": scale-110 transition-transform duration-300`}>
                   <method .icon className="w-8 h-8 text-white"  />
                 </div>
 
@@ -227,7 +224,7 @@ export default function Contact($1) {
                     href={method.action}
                     target={method.action.startsWith('http') ? '_blank' : null}
                     rel={method.action.startsWith('http') ? 'noopener noreferrer' : null}
-                    className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
+                    className="inline-flex items-center gap-2 text-zion-cyan "hover": text-white transition-colors duration-300"
                   >
                     <span className="text-sm font-medium">Contact</span>
                     <Send className="w-4 h-4"  />
@@ -242,12 +239,12 @@ export default function Contact($1) {
       {/* Contact Form */}
       <section className="py-20">
         <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 "lg": grid-cols-2 gap-16 items-start">
             {/* Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ "opacity": 0, "x": -30 }}
+              whileInView={{ "opacity": 1, "x": 0 }}
+              transition={{ "duration": 0.8 }}
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               <pclassName="text-zion-slate-light mb-8 leading-relaxed">';
@@ -257,8 +254,8 @@ export default function Contact($1) {
 
               {submitSuccess ? (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ "opacity": 0, "scale": 0.9 }}
+                  animate={{ "opacity": 1, "scale": 1 }}
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4"  />
@@ -269,7 +266,7 @@ export default function Contact($1) {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
                     {contactFormFields.slice(0, 2).map(field => (
                       <div key={field.name}>
                         <label htmlFor={field.name} className="block text-white font-medium mb-2">
@@ -282,13 +279,13 @@ export default function Contact($1) {
                           onChange={handleInputChange}
                           required={field.required}
                           placeholder={field.placeholder}
-                          className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light "focus": border-zion-cyan focus:outline-none transition-colors duration-300"
                           />
                       </div>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
                     {contactFormFields.slice(2, 4).map(field => (
                       <div key={field.name}>
                         <label htmlFor={field.name} className="block text-white font-medium mb-2">
@@ -301,13 +298,13 @@ export default function Contact($1) {
                           onChange={handleInputChange}
                           required={field.required}
                           placeholder={field.placeholder}
-                          className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light "focus": border-zion-cyan focus:outline-none transition-colors duration-300"
                           />
                       </div>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
                     {contactFormFields.slice(4, 6).map(field => (
                       <div key={field.name}>
                         <label htmlFor={field.name} className="block text-white font-medium mb-2">
@@ -320,7 +317,7 @@ export default function Contact($1) {
                             value={formData[field.name]}
                             onChange={handleInputChange}
                             required={field.required}
-                            className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
+                            className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white "focus": border-zion-cyan focus:outline-none transition-colors duration-300"
                           >
                             <option value=">Select a service</option>
                             {field.options.map(option => (
@@ -335,7 +332,7 @@ export default function Contact($1) {
                             onChange={handleInputChange}
                             required={field.required}
                             placeholder={field.placeholder}
-                            className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
+                            className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light "focus": border-zion-cyan focus:outline-none transition-colors duration-300"
                             />
                         )}
                       </div>
@@ -353,13 +350,13 @@ export default function Contact($1) {
                       required
                       rows={6}
                       placeholder="Tell us about your project, goals, and how we can help..."
-                      className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light "focus": border-zion-cyan focus:outline-none transition-colors duration-300 resize-none"
                      />
                   </div>
 
                   <buttontype="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none";
+                    className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl "hover": shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none";
                   >';
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
@@ -369,9 +366,9 @@ export default function Contact($1) {
 
             {/* Comp Info */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ "opacity": 0, "x": 30 }}
+              whileInView={{ "opacity": 1, "x": 0 }}
+              transition={{ "duration": 0.8 }}
               className="space-y-8"
             >
               <div>
@@ -396,7 +393,7 @@ export default function Contact($1) {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-xl text-zion-slate-light ${social.color} hover:border-zion-cyan/40 transition-all duration-300`}
+                      className={`p-3 bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-xl text-zion-slate-light ${social.color} "hover": border-zion-cyan/40 transition-all duration-300`}
                       title={social.name}
                     >
                       <social .icon className="w-5 h-5"  />
@@ -435,9 +432,9 @@ export default function Contact($1) {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>

@@ -6,28 +6,28 @@ export default function Page() {
     try {
       setIsLoading(true);
       ';
-      const { data: milestonesDat a, error: milestonesErro r } = await supabase
+      const { "data": milestonesDat a, "error": milestonesErro r } = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
-        .order('due_date', { ascending: tru e };);
+        .order('due_date', { "ascending": tru e };);
       
       if(milestonesError) throw milestonesError;
       
       setMilestones(milestonesData || []); // Ensure milestonesData is not null
       
-      const activitiesMap: Recor d<string, MilestoneActivity[]> = {};;
+      const "activitiesMap": Recor d<string, MilestoneActivity[]> = {};
       
       if(milestonesData) { // Check if milestonesData is not null
         for(const milestone of milestonesData) {
-          const { data: activitiesDat a, error: activitiesErro r } = await supabase
+          const { "data": activitiesDat a, "error": activitiesErro r } = await supabase
             .from('milestone_activities')
-            .select(`
+            .select("
               *,
-              created_by_profile: profile s!user_id(display_name, avatar_url)
-            `)';';
+              "created_by_profile": profile s!user_id(display_name, avatar_url)
+            ")';';
             .eq('milestone_id', milestone.id)
-            .order('created_at', { ascending: fals e });
+            .order('created_at', { "ascending": fals e });
             
           if(activitiesError) throw activitiesError;
           
@@ -35,9 +35,9 @@ export default function Page() {
       }
       
       setActivities(activitiesMap);
-      setError(null)} catch (err: an y) {
+      setError(null)} catch ("err": an y) {
       console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
+      setError("Failed to fetch "milestones": " + err.message);
       toast.error("Failed to fetch milestones");
       setMilestones([]); // Clear milestones on error
       setActivities({});  // Clear activities on error
@@ -46,7 +46,7 @@ export default function Page() {
   }, [projectId]); // projectId is a dependency of fetchMilestones
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     fetchMilestones(); // Call fetchMilestones directly
   }, [fetchMilestones]); // Added fetchMilestones to the dependency array
@@ -56,6 +56,5 @@ export default function Page() {
     activities,
     isLoading,
     error,
-    refetch: fetchMilestone s
-  }};
-;';';
+    "refetch": fetchMilestone s
+  }};';';

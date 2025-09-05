@@ -5,10 +5,10 @@ const path = require('path')
 class PerformanceTracker {
   constructor() {
     this.metrics = {
-      timestamp: new Date().toISOString(),
-      buildTime: 0,
-      bundleSize: 0,
-      pageCount: 0
+      "timestamp": new Date().toISOString(),
+      "buildTime": 0,
+      "bundleSize": 0,
+      "pageCount": 0
     }}
 
   trackBuildTime(startTime) {

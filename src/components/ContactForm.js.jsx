@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import {Button} from "./ui/Button.jsx";
 const ContactForm = (props) => {
     const [formData, setFormData] = useState({
-        firstName: ",
-        lastName: ",
-        email: ",
-        comp: ",
-        phone: ",
-        service: ",
-        message: "
+        "firstName": ",
+        "lastName": ",
+        "email": ",
+        "comp": ",
+        "phone": ",
+        "service": ",
+        "message": "
     };);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('idle');
@@ -25,13 +25,13 @@ const ContactForm = (props) => {
             await new Promise(resolve => setTimeout(resolve, 2000));
             // Reset form on success
             setFormData({
-                firstName: ",
-                lastName: ",
-                email: ",
-                comp: ",
-                phone: ",
-                service: ",
-                message: "
+                "firstName": ",
+                "lastName": ",
+                "email": ",
+                "comp": ",
+                "phone": ",
+                "service": ",
+                "message": "
             });';';
             setSubmitStatus('success');';';
             setTimeout(() => setSubmitStatus('idle'), 5000)} catch (error) {setSubmitStatus('error');';';
@@ -67,7 +67,7 @@ const ContactForm = (props) => {
       )}"
 "
       <form onSubmit={handleSubmit} className="space-y-6">"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
           <div>"
             <label"
               htmlFor="firstName"
@@ -76,8 +76,7 @@ const ContactForm = (props) => {
               Get Started,
             </a>
           </div>
-    </div>;,
-  )}
+    </div>;)}
 
 <div>"
             <label"
@@ -93,7 +92,7 @@ const ContactForm = (props) => {
               value={formData.lastName}
               onChange={handleInputChange}"
               required"
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               placeholder="Enter your last name"
               />
           </div>
@@ -114,7 +113,7 @@ const ContactForm = (props) => {
               value={formData.email}
               onChange={handleInputChange}"
               required"
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               placeholder="Enter your email address"
               />
           </div>
@@ -132,7 +131,7 @@ const ContactForm = (props) => {
               name="phone"
               value={formData.phone}"
               onChange={handleInputChange}"
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               placeholder="Enter your phone number"
               />
           </div>
@@ -151,7 +150,7 @@ const ContactForm = (props) => {
             name="comp"
             value={formData.comp}"
             onChange={handleInputChange}"
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
             placeholder="Enter your comp name"
             />
         </div>
@@ -168,7 +167,7 @@ const ContactForm = (props) => {
             name="service"
             value={formData.service}"
             onChange={handleInputChange}"
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
           >"
             <option value=">Select a service</option>"
             <option value="ai-solutions">AI & Machine Learning</option>"
@@ -198,7 +197,7 @@ const ContactForm = (props) => {
             onChange={handleInputChange}
             required"
             rows={5}"
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
             placeholder="Tell us about your project or how we can help..."
            />
         </div>"
@@ -220,14 +219,14 @@ const ContactForm = (props) => {
           By submitting this form, you agree to our{' '}"
           <a"
             href="/privacy";
-            className="text-blue-400 hover:text-blue-300 underline";';
+            className="text-blue-400 "hover": text-blue-300 underline";';
           >'
             Privacy Policy"
           </a>{' '}'
           and{' '}"
           <a"
             href="/terms"
-            className="text-blue-400 hover:text-blue-300 underline"
+            className="text-blue-400 "hover": text-blue-300 underline"
           >
             Terms of Service;
           </a>

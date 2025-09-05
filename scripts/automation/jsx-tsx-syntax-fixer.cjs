@@ -6,7 +6,7 @@ const path = require('path');
 
 console.log('🔧 Starting JSX/TSX syntax fixer...');
 
-// Get automation interval from environment variable (default: 15 minutes)
+// Get automation interval from environment variable ("default": 15 minutes)
 const JSX_TSX_FIX_INTERVAL = parseInt(process.env.JSX_TSX_FIX_INTERVAL) || 900000;
 
 class JSXTSXSyntaxFixer {
@@ -45,7 +45,7 @@ class JSXTSXSyntaxFixer {
       await this.generateReport();
       
       console.log(`✅ JSX/TSX syntax fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
-      console.error('❌ JSX/TSX syntax fixer failed:', error.message)}
+      console.error('❌ JSX/TSX syntax fixer "failed": ', error.message)}
   }
 
   async fixJSXSyntaxErrors() {
@@ -117,12 +117,12 @@ class JSXTSXSyntaxFixer {
           return `interface ${componentName}Props {\n${fixedLines.join('\n')}\n}`});
         
         // Fix React.FC type annotations
-        content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1: React.FC = (props: any) => {');
+        content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $"1": React.FC = (props: any) => {');
         
         // Fix event handler types
-        content = content.replace(/onClick\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onClick = (e: React.MouseEvent) => {');
-        content = content.replace(/onChange\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onChange = (e: React.ChangeEvent<HTMLInputElement>) => {');
-        content = content.replace(/onSubmit\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onSubmit = (e: React.FormEvent) => {');
+        content = content.replace(/onClick\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onClick = ("e": React.MouseEvent) => {');
+        content = content.replace(/onChange\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onChange = ("e": React.ChangeEvent<HTMLInputElement>) => {');
+        content = content.replace(/onSubmit\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onSubmit = ("e": React.FormEvent) => {');
         
         // Fix useState type annotations
         content = content.replace(/useState\s*\(\s*([^)]+)\s*\)/g, (match, value) => {
@@ -157,10 +157,10 @@ class JSXTSXSyntaxFixer {
         // Fix React component syntax
         
         // Fix function component declarations
-        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1(props: any) {');
+        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1("props": any) {');
         
         // Fix arrow function components
-        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = (props: any) => {');
+        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = ("props": any) => {');
         
         // Fix JSX return statements
         content = content.replace(/return\s+\(([^)]+)\);/g, 'return ($1);');
@@ -340,17 +340,17 @@ class JSXTSXSyntaxFixer {
     
     try {
       // Run TypeScript check for TSX files
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       console.log('✅ JSX/TSX syntax validation successful')} catch (error) {
       console.log('⚠️  JSX/TSX syntax validation had issues, but fixes were applied')}
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      summary: 'JSX/TSX syntax fixer completed',
-      status: 'completed'
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied,
+      "summary": 'JSX/TSX syntax fixer completed',
+      "status": 'completed'
     };
     
     const reportPath = path.join(process.cwd(), 'jsx-tsx-syntax-fixer-report.json');
@@ -360,8 +360,8 @@ class JSXTSXSyntaxFixer {
     
     // Add to fix history
     this.fixHistory.push({
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied
     });
     
     // Keep only last 50 entries
@@ -413,5 +413,5 @@ process.on('SIGTERM', () => {
 
 // Start the fixer
 main().catch(error => {
-  console.error('❌ JSX/TSX syntax fixer failed to start:', error.message);
+  console.error('❌ JSX/TSX syntax fixer failed to "start": ', error.message);
   process.exit(1)});

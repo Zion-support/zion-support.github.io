@@ -19,7 +19,7 @@ class DependencyManager {
   setupDirectories() {
     [this.logsDir, this.errorReportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     })}
   setupLogging() {this.logFile = path.join(this.logsDir, 'dependency-manager.log'),this.log('Dependency Manager started', 'INFO')}
   log(message, level = 'INFO') {
@@ -38,59 +38,59 @@ class DependencyManager {
       this.dependencyCount = Object.keys(deps).length + Object.keys(devDeps).length;
       this.log(`Found ${this.dependencyCount} dependencies`, 'INFO');
       return { deps, devDeps }} catch (error) {
-      this.log(`Error reading package.json: ${error.message}`, 'ERROR');
+      this.log(`Error reading package."json": ${error.message}`, 'ERROR');
       throw error}
   }
   async checkForUpdates() {
     this.log('Checking for dependency updates...', 'INFO');
     try {
       // Check for outdated packages
-      const result = execSync('npm outdated --json', {cwd: this.projectRoot,encoding: 'utf8';
+      const result = execSync('npm outdated --json', {"cwd": this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       const outdated = JSON.parse(result);
-      this.updates = Object.keys(outdated).map(pkg => ({name: pkg,current: outdated[pkg].current,wanted: outdated[pkg].wanted;
+      this.updates = Object.keys(outdated).map(pkg => ({"name": pkg,"current": outdated[pkg].current,"wanted": outdated[pkg].wanted;
         latest: outdated[pkg].latest}));
       this.log(`Found ${this.updates.length} outdated packages`, 'INFO');
       return this.updates} catch (error) {
       if (error.status === 1) {this.log('No outdated packages found', 'INFO'),return []}
-      this.log(`Error checking for updates: ${error.message}`, 'ERROR');
+      this.log(`Error checking for "updates": ${error.message}`, 'ERROR');
       return []}
   }
   async checkSecurityVulnerabilities() {
     this.log('Checking for security vulnerabilities...', 'INFO');
     try {
       // Run npm audit
-      const result = execSync('npm audit --json', {cwd: this.projectRoot,encoding: 'utf8';
+      const result = execSync('npm audit --json', {"cwd": this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       const audit = JSON.parse(result);
       this.securityIssues = audit.vulnerabilities || {};
       const criticalCount = Object.values(this.securityIssues).filter(v => v.severity === 'critical').length;
       const highCount = Object.values(this.securityIssues).filter(v => v.severity === 'high').length;
       const moderateCount = Object.values(this.securityIssues).filter(v => v.severity === 'moderate').length;
-      this.log(`Security issues found: ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate`, 'INFO');
+      this.log(`Security issues "found": ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate`, 'INFO');
       return {
-        vulnerabilities: this.securityIssues;
-        summary: { critical: criticalCount, high: highCount, moderate: moderateCount }
+        "vulnerabilities": this.securityIssues;
+        summary: { critical: criticalCount, "high": highCount, "moderate": moderateCount }
       }} catch (error) {
       if (error.status === 1) {
         this.log('No security vulnerabilities found', 'INFO');
-        return { vulnerabilities: {}, summary: { critical: 0, high: 0, moderate: 0 } }}
-      this.log(`Error checking security: ${error.message}`, 'ERROR');
-      return { vulnerabilities: {}, summary: { critical: 0, high: 0, moderate: 0 } }}
+        return { "vulnerabilities": {}, "summary": { critical: 0, "high": 0, "moderate": 0 } }}
+      this.log(`Error checking "security": ${error.message}`, 'ERROR');
+      return { "vulnerabilities": {}, "summary": { critical: 0, "high": 0, "moderate": 0 } }}
   }
   async updateDependencies() {
     if (this.updates.length === 0) {this.log('No dependencies to update', 'INFO'),return}
     this.log('Updating dependencies...', 'INFO');
     try {
       // Update packages
-      execSync('npm update', {cwd: this.projectRoot,stdio: 'inherit'});
+      execSync('npm update', {"cwd": this.projectRoot,"stdio": 'inherit'});
       this.log('Dependencies updated successfully', 'INFO');
       // Check if package-lock.json was updated
       if (fs.existsSync(this.packageLockPath)) {
         const stats = fs.statSync(this.packageLockPath);
-        this.log(`package-lock.json updated at: ${stats.mtime}`, 'INFO')}
+        this.log(`package-lock.json updated "at": ${stats.mtime}`, 'INFO')}
     } catch (error) {
-      this.log(`Error updating dependencies: ${error.message}`, 'ERROR');
+      this.log(`Error updating "dependencies": ${error.message}`, 'ERROR');
       throw error}
   }
   async fixSecurityVulnerabilities() {
@@ -100,34 +100,34 @@ class DependencyManager {
     this.log('Fixing security vulnerabilities...', 'INFO');
     try {
       // Run npm audit fix
-      execSync('npm audit fix', {cwd: this.projectRoot,stdio: 'inherit'});
+      execSync('npm audit fix', {"cwd": this.projectRoot,"stdio": 'inherit'});
       this.log('Security vulnerabilities fixed', 'INFO');
       // Re-check security after fixes
       await this.checkSecurityVulnerabilities()} catch (error) {
-      this.log(`Error fixing security vulnerabilities: ${error.message}`, 'ERROR')}
+      this.log(`Error fixing security "vulnerabilities": ${error.message}`, 'ERROR')}
   }
   async cleanUnusedDependencies() {
     this.log('Checking for unused dependencies...', 'INFO');
     try {
       // Check for unused packages
-      const result = execSync('npx depcheck --json', {cwd: this.projectRoot,encoding: 'utf8';
+      const result = execSync('npx depcheck --json', {"cwd": this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       const depcheck = JSON.parse(result);
       const unused = depcheck.dependencies || [];
       const missing = depcheck.missing || {};
       if (unused.length > 0) {
-        this.log(`Found ${unused.length} unused dependencies: ${unused.join(', ')}`, 'WARN')}
+        this.log(`Found ${unused.length} unused "dependencies": ${unused.join(', ')}`, 'WARN')}
       if (Object.keys(missing).length > 0) {
         this.log(`Found ${Object.keys(missing).length} missing dependencies`, 'WARN')}
       return { unused, missing }} catch (error) {
-      this.log(`Error checking unused dependencies: ${error.message}`, 'WARN');
-      return { unused: [], missing: {} }}
+      this.log(`Error checking unused "dependencies": ${error.message}`, 'WARN');
+      return { "unused": [], "missing": {} }}
   }
   async optimizePackageManager() {
     this.log('Optimizing package manager...', 'INFO');
     try {
       // Clean npm cache
-      execSync('npm cache clean --force', {cwd: this.projectRoot,stdio: 'pipe'});
+      execSync('npm cache clean --force', {"cwd": this.projectRoot,"stdio": 'pipe'});
       // Remove node_modules and reinstall if package-lock.json is old
       if (fs.existsSync(this.packageLockPath)) {
         const lockStats = fs.statSync(this.packageLockPath);
@@ -135,22 +135,22 @@ class DependencyManager {
         const lockAgeDays = lockAge / (1000 * 60 * 60 * 24);
         if (lockAgeDays > 30) {
           this.log('package-lock.json is older than 30 days, reinstalling dependencies', 'INFO');
-          execSync('rm -rf node_modules package-lock.json', {cwd: this.projectRoot,stdio: 'pipe'});
-          execSync('npm install', {cwd: this.projectRoot,stdio: 'inherit'});
+          execSync('rm -rf node_modules package-lock.json', {"cwd": this.projectRoot,"stdio": 'pipe'});
+          execSync('npm install', {"cwd": this.projectRoot,"stdio": 'inherit'});
           this.log('Dependencies reinstalled successfully', 'INFO')}
       }
     } catch (error) {
-      this.log(`Error optimizing package manager: ${error.message}`, 'ERROR')}
+      this.log(`Error optimizing package "manager": ${error.message}`, 'ERROR')}
   }
   generateReport() {
-    const report = {timestamp: new Date().toISOString(),dependencyCount: this.dependencyCount,updatesAvailable: this.updates.length;
+    const report = {"timestamp": new Date().toISOString(),"dependencyCount": this.dependencyCount,"updatesAvailable": this.updates.length;
       securityIssues: Object.keys(this.securityIssues).length;
       updates: this.updates;
       securitySummary: this.securityIssues;
       recommendations: this.generateRecommendations()};
     const reportFile = path.join(this.errorReportsDir, `dependency-manager-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${reportFile}`, 'INFO');
+    this.log(`Report "generated": ${reportFile}`, 'INFO');
     return report}
   generateRecommendations() {
     const recommendations = [];
@@ -185,9 +185,9 @@ class DependencyManager {
       await this.optimizePackageManager();
       const report = this.generateReport();
       this.log('Dependency management automation completed', 'INFO');
-      this.log(`Summary: ${this.updates.length} updates, ${Object.keys(this.securityIssues).length} security issues`, 'INFO');
+      this.log(`"Summary": ${this.updates.length} updates, ${Object.keys(this.securityIssues).length} security issues`, 'INFO');
       return report} catch (error) {
-      this.log(`Fatal error in dependency manager: ${error.message}`, 'ERROR');
+      this.log(`Fatal error in dependency "manager": ${error.message}`, 'ERROR');
       throw error}
   }
 }
@@ -197,5 +197,5 @@ if (require.main === module) {
   manager.run()
     .then(() => {
       process.exit(0)})
-    .catch((error) => {console.error('Dependency manager failed:', error),process.exit(1)})}
+    .catch((error) => {console.error('Dependency manager "failed": ', error),process.exit(1)})}
 module.exports = DependencyManager;

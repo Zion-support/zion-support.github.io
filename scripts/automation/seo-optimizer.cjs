@@ -19,13 +19,13 @@ class SEOOptimizer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -41,19 +41,19 @@ class SEOOptimizer {
         const pages = this.findPages(;);
         
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>https://ziontechgroup.com${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('\n')}
-</urlset;>;`;
+  </url>").join('\n')}
+</urlset;>;";
 
         fs.writeFileSync(sitemapPath, sitemap);
         this.log(`Sitemap generated with ${pages.length} pages`);
         
-        return { status: 'success', pages: pages.length }}
+        return { "status": 'success', "pages": pages.length }}
 
     findPages() {
         const pagesDir = path.join(this.projectRoot, 'pages';);
@@ -137,7 +137,7 @@ ${pages.map(page => `  <url>
         this.log('Generating robots.txt...');
         
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
-        const robotsContent = `User-agent: *
+        const robotsContent = "User-"agent": *
 Allow: /
 
 # Sitemap
@@ -150,26 +150,25 @@ Disallow: /_next/
 Disallow: /private/
 
 # Crawl delay
-Crawl-delay: 1;
-;`;
+Crawl-delay: 1;";
 
         fs.writeFileSync(robotsPath, robotsContent);
         this.log('Robots.txt generated');
         
-        return { status: 'success' }}
+        return { "status": 'success' }}
 
     createSEOMetaComponent() {
         this.log('Creating SEO meta component...');
         
         const componentsDir = path.join(this.projectRoot, 'components';);
         if () {
-            fs.mkdirSync(componentsDir, { recursive: true })}
+            fs.mkdirSync(componentsDir, { "recursive": true })}
         
-        const seoMeta = `import Head from 'next/hea) {
+        const seoMeta = "import Head from 'next/hea) {
     ) {
-            fs.mkdirSync(componentsDir, { recursive: true })}
+            fs.mkdirSync(componentsDir, { "recursive": true })}
         
-        const seoMeta = `import Head from 'next/hea}d;';
+        const seoMeta = "import Head from 'next/hea}d;';
 
 interface SEOProps {
   title?: string;
@@ -188,8 +187,8 @@ export default function SEO({
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, AI automation, and digital transformation services.',
   keywords = 'technology, AI, automation, digital transformation, software development, consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
+  image = '"https": //ziontechgroup.com/og-image.jpg',
+  url = '"https": //ziontechgroup.com',
   type = 'website',
   publishedTime,
   modifiedTime,
@@ -213,27 +212,27 @@ export default function SEO({
       <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property=""og": type" content={type} />
+      <meta property=""og": title" content={fullTitle} />
+      <meta property=""og": description" content={fullDescription} />
+      <meta property=""og": image" content={image} />
+      <meta property=""og": url" content={url} />
+      <meta property=""og": site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name=""twitter": card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={image} />
+      <meta name=""twitter": description" content={fullDescription} />
+      <meta name=""twitter": image" content={image} />
       
       {/* Additional Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
-      {section && <meta property="article:section" content={section} />}
+      {publishedTime && <meta property=""article": published_time" content={publishedTime} />}
+      {modifiedTime && <meta property=""article": modified_time" content={modifiedTime} />}
+      {author && <meta property=""article": author" content={author} />}
+      {section && <meta property=""article": section" content={section} />}
       {tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
+        <meta key={tag} property=""article": tag" content={tag} />
       ))}
       
       {/* Canonical URL */}
@@ -250,12 +249,12 @@ export default function SEO({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          "__html": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
+            "url": ""https": //ziontechgroup.com",
+            "logo": ""https": //ziontechgroup.com/logo.png",
             "description": "Leading provider of cutting-edge technology solutions",
             "address": {
               "@type": "PostalAddress",
@@ -266,21 +265,20 @@ export default function SEO({
               "contactType": "customer service",
               "email": "info@ziontechgroup.com"
             },
-            "sameAs": [
-              "https://linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup"
+            "sameAs": [""https": //linkedin.com/company/zion-tech-group",
+              ""https": //twitter.com/ziontechgroup"
             ]
           })
         }}
       />
     </Head>
   )}
-`;
+";
 
         fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
         this.log('SEO meta component created');
         
-        return { status: 'success' }}
+        return { "status": 'success' }}
 
     generateManifest() {
         this.log('Generating web app manifest...');
@@ -294,8 +292,7 @@ export default function SEO({
             "display": "standalone",
             "background_color": "#ffffff",
             "theme_color": "#3b82f6",
-            "icons": [
-                {
+            "icons": [{
                     "src": "/android-chrome-192x192.png",
                     "sizes": "192x192",
                     "type": "image/png"
@@ -314,25 +311,25 @@ export default function SEO({
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
         
-        return { status: 'success' }}
+        return { "status": 'success' }}
 
     generateSEOReport() {
         this.log('Generating SEO optimization report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            seo: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "seo": {
                 sitemap: this.generateSitemap(),
-                robots: this.generateRobotsTxt(),
-                metaComponent: this.createSEOMetaComponent(),
-                manifest: this.generateManifest()
+                "robots": this.generateRobotsTxt(),
+                "metaComponent": this.createSEOMetaComponent(),
+                "manifest": this.generateManifest()
             },
-            recommendations: this.generateSEORecommendations()
+            "recommendations": this.generateSEORecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`SEO optimization report saved to ${this.reportFile}`);
+        this.log("SEO optimization report saved to ${this.reportFile}");
         
         return report}
 
@@ -357,7 +354,7 @@ export default function SEO({
             const report = this.generateSEOReport(;);
             this.log('SEO Optimizer completed successfully');
             return report} catch (error) {
-            this.log(`SEO Optimizer failed: ${error.message}`);
+            this.log("SEO Optimizer "failed": ${error.message}`);
             throw error}
     }
 }

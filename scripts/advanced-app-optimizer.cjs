@@ -15,12 +15,12 @@ class AdvancedAppOptimizer {
     this.startTime = Date.now();
     this.optimizations = [];
     this.report = {
-      timestamp: new Date().toISOString(),
-      optimizations: [],
-      performance: {},
-      bundle: {},
-      seo: {},
-      security: {}
+      "timestamp": new Date().toISOString(),
+      "optimizations": [],
+      "performance": {},
+      "bundle": {},
+      "seo": {},
+      "security": {}
     }}
 
   log(message, type = 'INFO') {
@@ -38,52 +38,44 @@ class AdvancedAppOptimizer {
     
     try {
       // Create webpack bundle analyzer
-      const bundleAnalyzer = `
+      const bundleAnalyzer = "
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+  "enabled": process.env.ANALYZE === 'true'});
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  images: {
+  "reactStrictMode": true,
+  "swcMinify": true,
+  "compress": true,
+  "poweredByHeader": false,
+  "generateEtags": false,
+  "images": {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  experimental: {
+    "formats": ['image/webp', 'image/avif']},
+  "experimental": {
     optimizeCss: true,
-    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
-  },
-  webpack: (config, { dev, isServer }) => {
+    "optimizePackageImports": ['@mui/material', '@mui/icons-material']},
+  "webpack": (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        "chunks": 'all',
+        "cacheGroups": {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
+            "name": 'vendors',
+            "chunks": 'all'},
+          "common": {
             name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      }}
-    return config},
-});
-`;
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}}
+    return config}});
+";
 
       fs.writeFileSync('next.config.optimized.js', bundleAnalyzer);
       this.optimizations.push('Bundle analyzer configuration created');
       
       // Create dynamic import helper
-      const dynamicImportHelper = `
+      const dynamicImportHelper = "
 // Dynamic import helper for code splitting
 export const dynamicImport = (importFn) => {
   return React.lazy(importFn)};
@@ -97,14 +89,14 @@ export const preloadComponent = (importFn) => {
   if (typeof window !== 'undefined') {
     importFn()}
 };
-`;
+";
 
       fs.writeFileSync('utils/dynamic-imports.js', dynamicImportHelper);
       this.optimizations.push('Dynamic import helper created');
       
       this.log('✅ Bundle optimization completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Bundle optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Bundle optimization "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -113,12 +105,12 @@ export const preloadComponent = (importFn) => {
     
     try {
       // Create optimized image component
-      const optimizedImageComponent = `
+      const optimizedImageComponent = "
 import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
+  "src": string;
   alt: string;
   width?: number;
   height?: number;
@@ -126,7 +118,7 @@ interface OptimizedImageProps {
   className?: string;
   quality?: number}
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
@@ -145,20 +137,20 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       quality={quality}
       placeholder="blur"
-      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+      sizes="(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw"
     />
   )};
 
 export default OptimizedImage;
-`;
+";
 
       fs.writeFileSync('components/OptimizedImage.tsx', optimizedImageComponent);
       this.optimizations.push('Optimized image component created');
       
       this.log('✅ Image optimization completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Image optimization "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -167,7 +159,7 @@ export default OptimizedImage;
     
     try {
       // Create SEO component
-      const seoComponent = `
+      const seoComponent = "
 import Head from 'next/head';
 
 interface SEOProps {
@@ -178,12 +170,12 @@ interface SEOProps {
   url?: string;
   type?: string}
 
-export const SEO: React.FC<SEOProps> = ({
+export const "SEO": React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of AI, cloud computing, cybersecurity, and enterprise solutions. Transform your business with cutting-edge technology.',
   keywords = 'AI, artificial intelligence, cloud computing, cybersecurity, enterprise solutions, technology consulting',
   image = '/images/og-image.jpg',
-  url = 'https://ziontechgroup.com',
+  url = '"https": //ziontechgroup.com',
   type = 'website'
 }) => {
   return (
@@ -195,32 +187,31 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow" />
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property=""og": title" content={title} />
+      <meta property=""og": description" content={description} />
+      <meta property=""og": image" content={image} />
+      <meta property=""og": url" content={url} />
+      <meta property=""og": type" content={type} />
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name=""twitter": card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name=""twitter": description" content={description} />
+      <meta name=""twitter": image" content={image} />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          "__html": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/images/logo.png",
+            "url": ""https": //ziontechgroup.com",
+            "logo": ""https": //ziontechgroup.com/images/logo.png",
             "description": description,
-            "sameAs": [
-              "https://linkedin.com/company/ziontechgroup",
-              "https://twitter.com/ziontechgroup"
+            "sameAs": [""https": //linkedin.com/company/ziontechgroup",
+              ""https": //twitter.com/ziontechgroup"
             ]
           })
         }}
@@ -229,19 +220,18 @@ export const SEO: React.FC<SEOProps> = ({
   )};
 
 export default SEO;
-`;
+";
 
       fs.writeFileSync('components/SEO.tsx', seoComponent);
       this.optimizations.push('SEO component created');
       
       // Create sitemap generator
-      const sitemapGenerator = `
+      const sitemapGenerator = "
 const fs = require('fs');
 const path = require('path');
 
 const generateSitemap = () => {
-  const pages = [
-    '/',
+  const pages = ['/',
     '/about',
     '/services',
     '/ai-services',
@@ -255,8 +245,8 @@ const generateSitemap = () => {
     '/careers'
   ];
 
-  const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 \${pages.map(page => \`
   <url>
     <loc>https://ziontechgroup.com\${page}</loc>
@@ -264,20 +254,20 @@ const generateSitemap = () => {
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>\`).join('')}
-</urlset>\`;
+</urlset>\";
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
   console.log('Sitemap generated successfully')};
 
 generateSitemap();
-`;
+";
 
       fs.writeFileSync('scripts/generate-sitemap.cjs', sitemapGenerator);
       this.optimizations.push('Sitemap generator created');
       
       this.log('✅ SEO optimization completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ SEO optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ SEO optimization "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -286,7 +276,7 @@ generateSitemap();
     
     try {
       // Create performance monitoring
-      const performanceMonitor = `
+      const performanceMonitor = "
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -297,10 +287,10 @@ export const usePerformanceMonitor = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime)});
+        console.log('"LCP": ', lastEntry.startTime)});
       
       try {
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+        lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -310,12 +300,12 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             const fid = fidEntry.processingStart - fidEntry.startTime;
-            console.log('FID:', fid)}
+            console.log('"FID": ', fid)}
         }
       });
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {
+        fidObserver.observe({ "entryTypes": ['first-input'] })} catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -326,26 +316,25 @@ export const usePerformanceMonitor = () => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value}
         }
-        console.log('CLS:', clsValue)});
+        console.log('"CLS": ', clsValue)});
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+        clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
         // Fallback for browsers that don't support CLS
       }
     }
   }, [])};
 
 export default usePerformanceMonitor;
-`;
+";
 
       fs.writeFileSync('hooks/usePerformanceMonitor.ts', performanceMonitor);
       this.optimizations.push('Performance monitoring hook created');
       
       // Create service worker for caching
-      const serviceWorker = `
+      const serviceWorker = "
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
+const urlsToCache = ['/',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
@@ -366,14 +355,14 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request)}
     )
   )});
-`;
+";
 
       fs.writeFileSync('public/sw.js', serviceWorker);
       this.optimizations.push('Service worker created');
       
       this.log('✅ Performance optimization completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Performance optimization "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -382,12 +371,12 @@ self.addEventListener('fetch', (event) => {
     
     this.report = {
       ...this.report,
-      duration: `${Math.round(duration / 1000)}s`,
-      optimizations: this.optimizations,
-      summary: {
+      "duration": `${Math.round(duration / 1000)}s`,
+      "optimizations": this.optimizations,
+      "summary": {
         totalOptimizations: this.optimizations.length,
-        duration: `${Math.round(duration / 1000)}s`,
-        status: 'completed'
+        "duration": `${Math.round(duration / 1000)}s`,
+        "status": 'completed'
       }
     };
 
@@ -406,10 +395,10 @@ self.addEventListener('fetch', (event) => {
       await this.generateReport();
       
       this.log('🎉 Advanced App Optimization completed successfully!', 'SUCCESS');
-      this.log(`📊 Total optimizations: ${this.optimizations.length}`, 'INFO');
+      this.log(`📊 Total "optimizations": ${this.optimizations.length}`, 'INFO');
       
       return true} catch (error) {
-      this.log(`❌ Advanced App Optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Advanced App Optimization "failed": ${error.message}`, 'ERROR');
       return false}
   }
 }
@@ -419,7 +408,7 @@ if (require.main === module) {
   const optimizer = new AdvancedAppOptimizer();
   optimizer.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
-    console.error('Advanced App Optimization failed:', error);
+    console.error('Advanced App Optimization "failed": ', error);
     process.exit(1)})}
 
 module.exports = AdvancedAppOptimizer;

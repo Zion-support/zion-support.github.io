@@ -40,21 +40,21 @@ class ErrorBoundary extends Component<Props, State> {
     fetch('/api/analytics/error', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         error: {
           message: error.message,
           stack: error.stack,
-          name: error.name,
+          name: error.name
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack,
+          componentStack: errorInfo.componentStack
         },
         url: window.location.href,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-      }),
+        userAgent: navigator.userAgent
+      })
     }).catch(console.error);
   };
 

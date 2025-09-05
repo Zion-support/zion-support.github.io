@@ -33,7 +33,7 @@ export default function Marketplace() {
     return true;
   });
 
-  const handleFilterChange = (filterType: string, value: string) => {
+  const handleFilterChange = ("filterType": string, "value": string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes(prev => 
@@ -69,9 +69,9 @@ export default function Marketplace() {
           <p className="text-gray-600">Discover and hire the best talent for your projects</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col "lg": flex-row gap-6">
           {/* Filters Sidebar */}
-          <div className="lg:w-64 space-y-6">
+          <div className=""lg": w-64 space-y-6">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -158,7 +158,7 @@ export default function Marketplace() {
             </div>
 
             {filteredListings.length > 0 ? (
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-6 "md": grid-cols-2 lg:grid-cols-3">
                 {filteredListings.map((listing) => (
                   <ProductListingCard
                     key={listing.id}
@@ -181,7 +181,7 @@ export default function Marketplace() {
                 <p className="text-gray-600 mb-4">
                   We couldn't find any listings matching your filters. Try adjusting your search criteria.
                 </p>
-                <Button onClick={clearAllFilters} className="bg-blue-600 hover:bg-blue-700">
+                <Button onClick={clearAllFilters} className="bg-blue-600 "hover": bg-blue-700">
                   Clear Filters
                 </Button>
               </div>

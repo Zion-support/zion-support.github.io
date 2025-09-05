@@ -1,17 +1,17 @@
 console.log('♿ Enhanced Accessibility Monitor Starting...');
 
 const accessibilityChecks = {
-  colorContrast: () => {
+  "colorContrast": () => {
     console.log('🎨 Checking color contrast...');
     return true;
   },
   
-  keyboardNav: () => {
+  "keyboardNav": () => {
     console.log('⌨️ Checking keyboard navigation...');
     return true;
   },
   
-  ariaLabels: () => {
+  "ariaLabels": () => {
     console.log('🏷️ Checking ARIA labels...');
     return true;
   }

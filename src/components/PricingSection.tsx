@@ -8,7 +8,7 @@ import React, { useState } from "react"
  */
 function PricingSection($1) {
 
-      icon: Shiel d;
+      "icon": Shiel d;
     };  ];
 const pricingTiers = [{
 const savings = billingCycle === "annual" ? 25 : 0
@@ -20,7 +20,7 @@ const savings = billingCycle === "annual" ? 25 : 0
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
 "
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,
+      <div className="relative z-10 max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">,
         {/* comment */}
 
 return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
@@ -28,20 +28,20 @@ return (<section className="py-20 bg-gradient - to - br from - slate - 900 via -
         <motion.div
           className="text-center mb-16"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
 >"
-          <h2 className="text-3xl md: tex t-5xl font-bold mb-6 text-white">",
+          <h2 className="text-3xl "md": tex t-5xl font-bold mb-6 text-white">",
             Simple, {" "}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transparent Pricing,
@@ -72,8 +72,8 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${
             </span>"
             {billingCycle === "annual" && (
               <motion.span,"
-initial="{{" opacity: 0, scale: 0.8 }}"
-                animate="{{" opacity: 1, scale: 1 }}"
+initial="{{" "opacity": 0, "scale": 0.8 }}"
+                animate="{{" "opacity": 1, "scale": 1 }}"
                 className="inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
 
               >"
@@ -86,18 +86,18 @@ initial="{{" opacity: 0, scale: 0.8 }}"
         </motion.div>
 
         {/* comment */}"
-        <div className="{"grid" grid-cols-1 md: gri d-cols-3 gap-8">,
+        <div className="{"grid" grid-cols-1 "md": gri d-cols-3 gap-8">,
           {plans.map((plan, index) => {
             const IconComponent = plan.icon
             return (
               <motion.div,"
 key = "{plan.name}"
-                initial="{{" opacity: 0, y: 2 0 }}"
-                whileInView="{{" opacity: 1, y: 0 }}"
-                viewport="{{" once: tru e }}"
-                transition="{{" duration: 0.6, delay: inde x * 0.1 }}"
+                initial="{{" "opacity": 0, "y": 2 0 }}"
+                whileInView="{{" "opacity": 1, "y": 0 }}"
+                viewport="{{" "once": tru e }}"
+                transition="{{" "duration": 0.6, "delay": inde x * 0.1 }}"
                 className="{"relative" group ${"
-                  plan.popular ? "md: -mt-4 md: m b-4" : "}"}
+                  plan.popular ? ""md": -mt-4 md: m b-4" : "}"}
 
               >
                 {/* comment */}
@@ -112,15 +112,15 @@ key = "{plan.name}"
   );
 }
  {/*   */}";
-                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">;
+                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : "}`}> {/*   */}";
-                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300`}>";
-                    <IconComponent className="`w-8" h-8`}  />;
+                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": scal e-110 transition-transform duration-300`}>";
+                    <IconComponent className=""w-8" h-8"}  />;
                   </div> {/* comment */}"
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
+                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : "}"}>
                   {/* comment */}"
-                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300"}>"
+                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": scal e-110 transition-transform duration-300"}>"
                     <IconComponent className="w-8" h-8"}        />
                   </div>
                   {/* comment */}"
@@ -160,11 +160,11 @@ key = "{plan.name}"
                     className="{"block" w-full"
                   >
                     <motion.button,"
-whileHover="{{" scale: 1.02 }}"
-                      whileTap="{{" scale: 0.98 }}"
+whileHover="{{" "scale": 1.02 }}"
+                      whileTap="{{" "scale": 0.98 }}"
                       className="{"w-full" px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         plan.popular"
-                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: fro m-zion-cyan/90 hover: t o-zion-purple/90">
+                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white "hover": fro m-zion-cyan/90 hover: t o-zion-purple/90">
                           : "border border-zion-cyan text-zion-cyan hover: b g-zion-cyan hover: tex t-white"}"}
 
                     >
@@ -174,9 +174,8 @@ whileHover="{{" scale: 1.02 }}"
                   </Link>
                 </div>
                 {/* comment */}"
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacit y-20 transition-opacity duration-300 -z-10"></div>
-              </motion.div>,
-            )})}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-"hover": opacit y-20 transition-opacity duration-300 -z-10"></div>
+              </motion.div>)})}
 
         </div>
         {/* comment */}
@@ -184,21 +183,21 @@ whileHover="{{" scale: 1.02 }}"
 <motion.div
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
 >"
@@ -210,12 +209,12 @@ whileHover="{{" scale: 1.02 }}"
               We understand that every business is unique. Contact us to discuss custom pricing,
 and solutions tailored to your specific requirements.
             </p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <Link to="/contact">,
                 <motion.button,"
-whileHover="{{" scale: 1.05 }}"
-                  whileTap="{{" scale: 0.95 }}"
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover: shado w-xl hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
+whileHover="{{" "scale": 1.05 }}"
+                  whileTap="{{" "scale": 0.95 }}"
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold "hover": shado w-xl hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
                 >
                   Contact Sales"
                   <ArrowRight className="w-5 h-5"   />

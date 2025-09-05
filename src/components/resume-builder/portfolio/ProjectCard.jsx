@@ -9,7 +9,7 @@ export function ProjectCard($1) {
     const handleDelete = (props) => {
         if (project.id) {
             onDelete(project.id)}
-        setDeleteDialogOpen(false)};;
+        setDeleteDialogOpen(false)};
     return (<Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (<img loading="lazy" src={project.image_url} alt={project.title} className="w-full h-full object-cover"  />) : (<div className="w-full h-full flex items-center justify-center bg-muted">

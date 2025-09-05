@@ -14,32 +14,32 @@ class SmartAutoScaler {
     this.scalingHistory = [];
     this.performanceMetrics = [];
     this.scalingRules = {
-      cpu: {
+      "cpu": {
         scaleUp: 70,
-        scaleDown: 30,
-        cooldown: 300000 // 5 minutes
+        "scaleDown": 30,
+        "cooldown": 300000 // 5 minutes
       },
-      memory: {
+      "memory": {
         scaleUp: 80,
-        scaleDown: 40,
-        cooldown: 300000
+        "scaleDown": 40,
+        "cooldown": 300000
       },
-      responseTime: {
+      "responseTime": {
         scaleUp: 2000, // ms
-        scaleDown: 500, // ms
-        cooldown: 600000 // 10 minutes
+        "scaleDown": 500, // ms
+        "cooldown": 600000 // 10 minutes
       },
-      errorRate: {
+      "errorRate": {
         scaleUp: 5, // percentage
-        scaleDown: 1, // percentage
-        cooldown: 900000 // 15 minutes
+        "scaleDown": 1, // percentage
+        "cooldown": 900000 // 15 minutes
       }
     };
     this.scalingLimits = {
-      minInstances: parseInt(process.env.MIN_INSTANCES) || 1,
-      maxInstances: parseInt(process.env.MAX_INSTANCES) || 10,
-      scaleUpIncrement: 1,
-      scaleDownIncrement: 1
+      "minInstances": parseInt(process.env.MIN_INSTANCES) || 1,
+      "maxInstances": parseInt(process.env.MAX_INSTANCES) || 10,
+      "scaleUpIncrement": 1,
+      "scaleDownIncrement": 1
     };
     this.cooldowns = new Map();
     this.reportDir = path.join(process.cwd(), 'scaling-reports');
@@ -48,8 +48,8 @@ class SmartAutoScaler {
 
   async ensureDirectories() {
     try {
-      await fs.mkdir(this.reportDir, { recursive: true });
-      await fs.mkdir(path.join(process.cwd(), 'logs'), { recursive: true });
+      await fs.mkdir(this.reportDir, { "recursive": true });
+      await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Directories already exist or created');
     }
@@ -59,7 +59,7 @@ class SmartAutoScaler {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          console.error('❌ Failed to connect to PM2:', err);
+          console.error('❌ Failed to connect to "PM2": ', err);
           reject(err);
           return;
         }
@@ -114,7 +114,7 @@ class SmartAutoScaler {
       }
 
     } catch (error) {
-      console.error('❌ Error evaluating scaling conditions:', error);
+      console.error('❌ Error evaluating scaling "conditions": ', error);
     }
   }
 
@@ -127,26 +127,26 @@ class SmartAutoScaler {
         }
 
         const metrics = {
-          timestamp: Date.now(),
-          processes: processes.map(process => ({
+          "timestamp": Date.now(),
+          "processes": processes.map(process => ({
             name: process.name,
-            instances: process.pm2_env.instances,
-            memory: process.monit.memory,
-            cpu: process.monit.cpu,
-            status: process.pm2_env.status,
-            restarts: process.pm2_env.restart_time,
-            uptime: process.pm2_env.pm_uptime
+            "instances": process.pm2_env.instances,
+            "memory": process.monit.memory,
+            "cpu": process.monit.cpu,
+            "status": process.pm2_env.status,
+            "restarts": process.pm2_env.restart_time,
+            "uptime": process.pm2_env.pm_uptime
           })),
-          system: {
+          "system": {
             memory: {
               total: os.totalmem(),
-              free: os.freemem(),
-              used: os.totalmem() - os.freemem(),
-              percentage: ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
+              "free": os.freemem(),
+              "used": os.totalmem() - os.freemem(),
+              "percentage": ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
             },
-            cpu: {
+            "cpu": {
               loadAverage: os.loadavg(),
-              cores: os.cpus().length
+              "cores": os.cpus().length
             }
           }
         };
@@ -174,12 +174,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('cpu')) return null;
 
       return {
-        type: 'scale_up',
-        reason: 'cpu',
+        "type": 'scale_up',
+        "reason": 'cpu',
         currentInstances,
-        targetInstances: Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
-        metric: avgCpu,
-        threshold: this.scalingRules.cpu.scaleUp
+        "targetInstances": Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
+        "metric": avgCpu,
+        "threshold": this.scalingRules.cpu.scaleUp
       };
     }
 
@@ -187,12 +187,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('cpu')) return null;
 
       return {
-        type: 'scale_down',
-        reason: 'cpu',
+        "type": 'scale_down',
+        "reason": 'cpu',
         currentInstances,
-        targetInstances: Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
-        metric: avgCpu,
-        threshold: this.scalingRules.cpu.scaleDown
+        "targetInstances": Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
+        "metric": avgCpu,
+        "threshold": this.scalingRules.cpu.scaleDown
       };
     }
 
@@ -210,12 +210,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('memory')) return null;
 
       return {
-        type: 'scale_up',
-        reason: 'memory',
+        "type": 'scale_up',
+        "reason": 'memory',
         currentInstances,
-        targetInstances: Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
-        metric: avgMemory,
-        threshold: this.scalingRules.memory.scaleUp
+        "targetInstances": Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
+        "metric": avgMemory,
+        "threshold": this.scalingRules.memory.scaleUp
       };
     }
 
@@ -223,12 +223,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('memory')) return null;
 
       return {
-        type: 'scale_down',
-        reason: 'memory',
+        "type": 'scale_down',
+        "reason": 'memory',
         currentInstances,
-        targetInstances: Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
-        metric: avgMemory,
-        threshold: this.scalingRules.memory.scaleDown
+        "targetInstances": Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
+        "metric": avgMemory,
+        "threshold": this.scalingRules.memory.scaleDown
       };
     }
 
@@ -246,12 +246,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('responseTime')) return null;
 
       return {
-        type: 'scale_up',
-        reason: 'responseTime',
+        "type": 'scale_up',
+        "reason": 'responseTime',
         currentInstances,
-        targetInstances: Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
-        metric: avgResponseTime,
-        threshold: this.scalingRules.responseTime.scaleUp
+        "targetInstances": Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
+        "metric": avgResponseTime,
+        "threshold": this.scalingRules.responseTime.scaleUp
       };
     }
 
@@ -259,12 +259,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('responseTime')) return null;
 
       return {
-        type: 'scale_down',
-        reason: 'responseTime',
+        "type": 'scale_down',
+        "reason": 'responseTime',
         currentInstances,
-        targetInstances: Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
-        metric: avgResponseTime,
-        threshold: this.scalingRules.responseTime.scaleDown
+        "targetInstances": Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
+        "metric": avgResponseTime,
+        "threshold": this.scalingRules.responseTime.scaleDown
       };
     }
 
@@ -282,12 +282,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('errorRate')) return null;
 
       return {
-        type: 'scale_up',
-        reason: 'errorRate',
+        "type": 'scale_up',
+        "reason": 'errorRate',
         currentInstances,
-        targetInstances: Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
-        metric: errorRate,
-        threshold: this.scalingRules.errorRate.scaleUp
+        "targetInstances": Math.min(currentInstances + this.scalingLimits.scaleUpIncrement, this.scalingLimits.maxInstances),
+        "metric": errorRate,
+        "threshold": this.scalingRules.errorRate.scaleUp
       };
     }
 
@@ -295,12 +295,12 @@ class SmartAutoScaler {
       if (this.isInCooldown('errorRate')) return null;
 
       return {
-        type: 'scale_down',
-        reason: 'errorRate',
+        "type": 'scale_down',
+        "reason": 'errorRate',
         currentInstances,
-        targetInstances: Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
-        metric: errorRate,
-        threshold: this.scalingRules.errorRate.scaleDown
+        "targetInstances": Math.max(currentInstances - this.scalingLimits.scaleDownIncrement, this.scalingLimits.minInstances),
+        "metric": errorRate,
+        "threshold": this.scalingRules.errorRate.scaleDown
       };
     }
 
@@ -373,7 +373,7 @@ class SmartAutoScaler {
         await this.executeScalingDecision(decision);
         this.setCooldown(decision.reason);
       } catch (error) {
-        console.error(`❌ Failed to execute scaling decision:`, error);
+        console.error("❌ Failed to execute scaling "decision": ", error);
       }
     }
   }
@@ -386,7 +386,7 @@ class SmartAutoScaler {
     return new Promise((resolve, reject) => {
       pm2.scale('ziontech-main-app', targetInstances, (err) => {
         if (err) {
-          console.error(`❌ Failed to scale to ${targetInstances} instances:`, err);
+          console.error(`❌ Failed to scale to ${targetInstances} "instances": `, err);
           reject(err);
           return;
         }
@@ -395,14 +395,14 @@ class SmartAutoScaler {
         
         // Record scaling action
         this.scalingHistory.push({
-          timestamp: Date.now(),
+          "timestamp": Date.now(),
           type,
           reason,
-          fromInstances: currentInstances,
-          toInstances: targetInstances,
+          "fromInstances": currentInstances,
+          "toInstances": targetInstances,
           metric,
           threshold,
-          success: true
+          "success": true
         });
 
         resolve();
@@ -414,17 +414,16 @@ class SmartAutoScaler {
     if (this.performanceMetrics.length < 10) return;
 
     const trends = {
-      cpu: this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageCpu(m))),
-      memory: this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageMemory(m))),
-      responseTime: this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageResponseTime())),
-      errorRate: this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateErrorRate(m)))
+      "cpu": this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageCpu(m))),
+      "memory": this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageMemory(m))),
+      "responseTime": this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateAverageResponseTime())),
+      "errorRate": this.calculateTrend(this.performanceMetrics.slice(-10).map(m => this.calculateErrorRate(m)))
     };
 
-    console.log(`📈 Performance Trends:
-      CPU: ${trends.cpu > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Memory: ${trends.memory > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Response Time: ${trends.responseTime > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Error Rate: ${trends.errorRate > 0 ? '↗️ Increasing' : '↘️ Decreasing'}`);
+    console.log(`📈 Performance "Trends": CPU: ${trends.cpu > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
+      "Memory": ${trends.memory > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
+      Response "Time": ${trends.responseTime > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
+      Error "Rate": ${trends.errorRate > 0 ? '↗️ Increasing' : '↘️ Decreasing'}`);
 
     // Adjust scaling rules based on trends
     await this.adjustScalingRules(trends);
@@ -464,31 +463,30 @@ class SmartAutoScaler {
       this.scalingRules.memory.scaleUp = Math.min(95, this.scalingRules.memory.scaleUp + adjustmentFactor * 10);
     }
 
-    console.log(`🔧 Adjusted scaling rules:
-      CPU scale-up: ${this.scalingRules.cpu.scaleUp}%
-      Memory scale-up: ${this.scalingRules.memory.scaleUp}%`);
+    console.log(`🔧 Adjusted scaling "rules": CPU scale-up: ${this.scalingRules.cpu.scaleUp}%
+      Memory scale-"up": ${this.scalingRules.memory.scaleUp}%`);
   }
 
   async generateScalingReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      scalingRules: this.scalingRules,
-      scalingLimits: this.scalingLimits,
-      recentScalingActions: this.scalingHistory.slice(-20),
-      currentMetrics: this.performanceMetrics[this.performanceMetrics.length - 1],
-      cooldowns: Object.fromEntries(this.cooldowns),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "scalingRules": this.scalingRules,
+      "scalingLimits": this.scalingLimits,
+      "recentScalingActions": this.scalingHistory.slice(-20),
+      "currentMetrics": this.performanceMetrics[this.performanceMetrics.length - 1],
+      "cooldowns": Object.fromEntries(this.cooldowns),
+      "summary": {
         totalScalingActions: this.scalingHistory.length,
-        successfulScalingActions: this.scalingHistory.filter(a => a.success).length,
-        averageInstances: this.calculateAverageInstances(),
-        scalingEfficiency: this.calculateScalingEfficiency()
+        "successfulScalingActions": this.scalingHistory.filter(a => a.success).length,
+        "averageInstances": this.calculateAverageInstances(),
+        "scalingEfficiency": this.calculateScalingEfficiency()
       }
     };
 
     const reportPath = path.join(this.reportDir, `scaling-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Scaling report saved to: ${reportPath}`);
+    console.log(`📊 Scaling report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -547,7 +545,7 @@ async function main() {
     });
 
   } catch (error) {
-    console.error('❌ Smart Auto-Scaler failed:', error);
+    console.error('❌ Smart Auto-Scaler "failed": ', error);
     process.exit(1);
   }
 }

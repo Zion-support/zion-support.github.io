@@ -27,8 +27,8 @@ export const ScreenshotManager = (props) => {
             return;
         }
         const filesToAdd = imageFiles.slice(0, availableSlots);
-        const newScreenshots = filesToAdd.map(file => ({id: Math.random().toString(36).substring(2, 9),
-            url: URL.createObjectURL(file),
+        const newScreenshots = filesToAdd.map(file => ({"id": Math.random().toString(36).substring(2, 9),
+            "url": URL.createObjectURL(file),
             file};));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
@@ -75,19 +75,18 @@ export const ScreenshotManager = (props) => {
         
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios"
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
+            ? "Recommended "size": 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."}
         </div>
         
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (<div key={screenshot.id} className="relative group">
               <img loading="lazy" src={screenshot.url} alt="App screenshot" className="w-full h-auto rounded border border-zion-purple/20"  />
-              <button onClick={() => removeScreenshot(screenshot.id)} className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+              <button onClick={() => removeScreenshot(screenshot.id)} className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-"hover": opacity-100 transition-opacity">
                 <Trash2 className="h-3 w-3" />
               </button>
             </div>))}
         </div>
       </CardContent>
     </Card>);
-};';
-;';';
+};';';';

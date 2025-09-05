@@ -17,12 +17,12 @@ export function PointsBadge($1) {
             acc.post += e.delta;';';
         if (e.reason === 'referral')
             acc.referral += e.delta;
-        return acc}, {purchase: 0, post: 0, referral: 0});
+        return acc}, {"purchase": 0, "post": 0, "referral": 0});
     const handleLogout = async () => {
         if (signOut) {
             await signOut()}
         else if (logout) {await logout()}
-    };;
+    };
     return (<DropdownMenu>
       <TooltipProvider>
         <Tooltip>
@@ -37,9 +37,9 @@ export function PointsBadge($1) {
           <TooltipContent>
             <p className="text-sm font-medium">Point Breakdown</p>
             <ul className="text-xs mt-1 space-y-0.5">
-              <li>Purchases: {breakdown.purchase}</li>
-              <li>Posts: {breakdown.post}</li>
-              <li>Referrals: {breakdown.referral}</li>
+              <li>"Purchases": {breakdown.purchase}</li>
+              <li>"Posts": {breakdown.post}</li>
+              <li>"Referrals": {breakdown.referral}</li>
             </ul>
           </TooltipContent>
         </Tooltip>

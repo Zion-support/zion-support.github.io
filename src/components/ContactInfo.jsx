@@ -1,11 +1,10 @@
 import React from 'react';
-;
 import {Link} from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo($1) {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4">
             Get In Touch
           </h2>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -26,14 +25,14 @@ import React from "react"
     return (<section className="py-20 bg-zion-blue-dark">;,"});,"})"
       <div className="container mx-auto px-4">;,"});,"})"
         <div className="text-center mb-16">;,"});,"})"
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,"});,"})"
+          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4">,"});,"})"
             Get In Touch,"});,"})"
           </h2>;,"});,"})"
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;,"});,"})"
             Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.;,"});,"})"
           </p>;,"});,"})"
         </div>;,"});,"})"
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,"});,"})"
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">,"});,"})"
           {/* comment */}"});,"})"
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">;,"});,"})"
               <CardHeader>";,"});,"})"
@@ -68,7 +67,7 @@ import React from "react"
                     <p className="text-zion-slate-light">364 E Main St STE 1008<br  />Middletown DE 19709</p>;,"});,"})"
                     <Globe className="h-5 w-5 text-zion-purple"   />;,"});,"})"
                     <p className="text-white font-medium">Website</p>";,"});,"})"
-                    <a href="https: // comment
+                    <a href=""https": // comment
                       ziontechgroup.com";,"});,"})"
                       <ExternalLink className="h-4 w-4"   />;,"});,"})"
                     </a>;,"});,"})"
@@ -84,10 +83,10 @@ import React from "react"
                 <div className="space-y-2 text-zion-slate-light">";,"});,"})"
                   <div className="flex justify-between">";,"});,"})"
                     <span>Monday - Friday</span>";,"});,"})"
-                    <span className="text-zion-cyan">9: 00 AM - 6:00 PM EST</span>","});,"})"
+                    <span className="text-zion-cyan">"9": 00 AM - 6:00 PM EST</span>","});,"})"
                   </div>";,"});,"})"
                     <span>Saturday</span>";,"});,"})"
-                    <span className="text-zion-cyan">10: 00 AM - 4:00 PM EST</span>","});,"})"
+                    <span className="text-zion-cyan">"10": 00 AM - 4:00 PM EST</span>","});,"})"
                     <span>Sunday</span>";,"});,"})"
                     <span className="text-zion-cyan">By Appointment</span>";,"});,"})"
                   <div className="pt-2 border-t border-zion-blue-light">";,"});,"})"
@@ -102,21 +101,21 @@ import React from "react"
                   Quick Actions";,"});,"})"
                   Get started with our most popular services,"});,"})"
                 <Link to="/request-quote">";,"});,"})"
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white">,"});,"})"
+                  <Button className="w-full bg-zion-purple "hover": bg-zion-purple-dark text-white">,"});,"})"
                     Request Free Quote,"});,"})"
                   </Button>;,"});,"})"
                 </Link>";,"});,"})"
                 <Link to="/comprehensive-services">";,"});,"})"
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10">,"});,"})"
+                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan "hover": bg-zion-purple/10">,"});,"})"
                     View All Services,"});,"})"
                 <Link to="/it-onsite-services">";,"});,"})"
-                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10">,"});,"})"
+                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light/10">,"});,"})"
                     IT Onsite Services,"});,"})"
                 <div className="pt-4 border-t border-zion-blue-light">";,"});,"})"
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>";,"});,"})"
                   <div className="flex items-center gap-2">";,"});,"})"
                     <Phone className="h-4 w-4 text-zion-cyan"   />";,"});,"})"
-                    <span className="text-zion-cyan font-medium">Call us now: +1 302 464 0950</span>,"});,"})"
+                    <span className="text-zion-cyan font-medium">Call us "now": +1 302 464 0950</span>,"});,"})"
                   <Star className="h-5 w-5 text-zion-cyan"   />;,"});,"})"
                   Why Choose Zion Tech Group?";,"});,"})"
                   What makes us different from the competition,"});,"})"
@@ -137,26 +136,26 @@ import React from "react"
             <p className="text-zion-slate-light mb-6">;,"});,"})"
               Join hundreds of satisfied clients who have transformed their businesses with our technology solutions";,"});,"})"
             </p>";,"});,"})"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">","});,"})"
-                <Button size="lg" className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3">,"});,"})"
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">","});,"})"
+                <Button size="lg" className="bg-white text-zion-purple "hover": bg-zion-slate-light px-8 py-3">,"});,"})"
                   Get Free Consultation,"});,"})"
                 </Button>";,"});,"})"
               </Link>";,"});,"})"
-              <a href="tel: +13024640950">","});,"})"
-                <Button size="lg" variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3">,"});,"})"
-                  Call Now: +1 302 464 0950,"});,"})"
+              <a href=""tel": +13024640950">","});,"})"
+                <Button size="lg" variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple px-8 py-3">,"});,"})"
+                  Call "Now": +1 302 464 0950,"});,"})"
     </section>)}";,"});,"})"
 ";,"});,"})"
-        <div: className = "text - center mb-16">          <h2 className="text-3xl md: text-4xl: font-bold text-white mb-4">",",
-            Get: In Touch",
+        <"div": className = "text - center mb-16">          <h2 className="text-3xl md: text-4xl: font-bold text-white mb-4">",",
+            "Get": In Touch",
           </h2>";";"
-          <p: className="text-zion-slate-light text-lg max-w-3xl mx-auto">",,,
-            Ready: to transform your business with cutting-edge technology?,,
-Contact: our experts today for a free consultation.
+          <"p": className="text-zion-slate-light text-lg max-w-3xl mx-auto">",,,
+            "Ready": to transform your business with cutting-edge technology?,,
+"Contact": our experts today for a free consultation.
           </p>"
         </div>",,",
 ",","
-        <div: className="grid grid-cols-1 lg: grid-cols-2: gap-8">"{/* comment */};"
+        <"div": className="grid grid-cols-1 lg: grid-cols-2: gap-8">"{/* comment */};"
           <div className="space - y-6">            <Card className="bg-zion-blue border-zion-blue-light">,
               <CardHeader>";"
                 <CardTitle className="text-white flex items-center gap-2">";"
@@ -169,7 +168,7 @@ import React from 'react';"
 import {Button} from "../ui/button";"
 import {Badge} from "../ui/badge";"
 import {Link} from "react-router-dom";"
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo($1) { return (<section className="py-20 bg-zion-blue-dark"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Get In Touch </h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {/* Contact Information */ }"
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo($1) { return (<section className="py-20 bg-zion-blue-dark"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4"> Get In Touch </h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {/* Contact Information */ }"
           <div className="space-y-6">"
             <Card className="bg-zion-blue border-zion-blue-light">"
               <CardHeader>"
@@ -191,7 +190,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
         </div>"
     return (<section className="py-20 bg-zion-blue-dark">;"
       <div className="container mx-auto px-4">;"
-        <div className="text - center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
+        <div className="text - center mb-16">          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4">,
             Get In Touch",
           </h2>";"
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -200,7 +199,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
           </p>,",
         </div>","
 ","
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"{/* comment */}";"
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">"{/* comment */}";"
           <div className="space-y-6">";"
             <Card className="bg - zion-blue border-zion-blue-light">",
               <CardHeader>";"
@@ -232,7 +231,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     <Globe className="h-5 w-5 text-zion-purple"   />;"
                     <p className = "text - white font-medium">Website</p>",
                     <a",
-                      href = "https: // comment
+                      href = ""https": // comment
                       target = "_blank">
                       rel="noopener noreferrer";"
                       className="text - zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">",
@@ -251,10 +250,10 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <div className="flex justify - between">",
                     <span>Monday - Friday</span>";"
                     <span className="text-zion-cyan">
-                      9:00 AM - 6:00 PM EST,
+                      "9": 00 AM - 6:00 PM EST,
                     </span>",",
                     <span>Saturday</span>";,
-10: 00 AM - 4:00 PM EST,
+"10": 00 AM - 4:00 PM EST,
                     <span>Sunday</span>";"
                     <span className="text-zion-cyan">By Appointment</span>";"
                   <div className="pt-2 border-t border-zion-blue-light">";"
@@ -271,17 +270,17 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   Quick Actions"
                   Get started with our most popular services,
                 <Link to="/request-quote">";"
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white">
+                  <Button className="w-full bg-zion-purple "hover": bg-zion-purple-dark text-white">
                     Request Free Quote,
                   </Button>
                 </Link>","
                 <Link to = "/comprehensive - services">",
                   <Button">
                     variant="outline";"
-                    className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">,
+                    className="w-full border-zion-purple text-zion-cyan "hover": bg-zion-purple/10 ">,
                     View All Services,
                 <Link to="/it-onsite-services">";"
-                    className="w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 ">
+                    className="w-full border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light/10 ">
                     IT Onsite Services,"
                 <div className="pt-4 border-t border-zion-blue-light">","
                   <p className = "text - zion-slate-light text-sm mb-3">,
@@ -289,7 +288,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   </p>";"
                   <div className="flex items-center gap-2">";"
                     <Phone className="h-4 w-4 text-zion-cyan"   />"
-                      Call us now: +1 302 464 0950,
+                      Call us "now": +1 302 464 0950,
                     </span>,"
                   <Star className="h - 5 w-5 text-zion-cyan"   />,
                   Why Choose Zion Tech Group ? "
@@ -313,22 +312,22 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
               businesses with our technology solutions";"
             <div className="flex flex-col sm : flex-row gap-4 justify-center">",
                   size="lg";"
-                  className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 ">,
+                  className="bg-white text-zion-purple "hover": bg-zion-slate-light px-8 py-3 ">,
                   Get Free Consultation,
                 </Button>",
-              <a href="tel: +13024640950">","
-                  className = "border - white text-white hover:bg-white hover:text-zion-purple px-8 py-3 ">,,
-                  Call Now: +1 302 464 0950,
+              <a href=""tel": +13024640950">","
+                  className = "border - white text-white "hover": bg-white hover:text-zion-purple px-8 py-3 ">,,
+                  Call "Now": +1 302 464 0950,
     </section>,"
   )}"}",
 ","
 export function ContactInfo($1) {return ($1) {"
     return (<section className = "py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
-        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">"
+        <div className="text-center mb-16">          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-4">"
           </p>"
 ",
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">"{/* comment */}"
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">"{/* comment */}"
           </p>"
         </div>"
           <div className="space-y-6">"
@@ -379,62 +378,62 @@ export function ContactInfo($1) {return ($1) {"
                       364 E Main St STE 1008"
                       <br /" >"
                     <Globe : className="h - 5 w-5 text-zion-purple"  />","
-                    <p: className = "text - white font-medium">Website</p>",,",
+                    <"p": className = "text - white font-medium">Website</p>",,",
                     <a",,"
-                      href="https: // comment
+                      href=""https": // comment
                       target = "_blank">
                       rel = "noopener: noreferrer",","
-                      className="text - zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 ">",",",
+                      className="text - zion-"cyan": hover: text-zion-cyan-light: transition-colors flex items-center gap-1 ">",",",
                       ziontechgroup.com","
                       <ExternalLink : className="h - 4 w-4"  />","
                     <Globe className="&apos;h-5" w-5 text-zion-purple&apos;        />&apos;"
                     <p className="&apos;text-white" font-medium&apos;>Website&apos;</p>&apos;&apos,&apos;&apos,
                     <a&apos;&apos,"
-                      href=&apos;https: // comment
+                      href=&apos;"https": // comment
                       target=&apos;_blank&apos;&apos,";"
                       rel="&apos;noopener" noreferrer&apos;&apos,";"
-                      className="&apos;text-zion-cyan" hover: text-zion-cyan-light transition-colors flex items-center gap-1 &apos,>"&apos,
+                      className="&apos;text-zion-cyan" "hover": text-zion-cyan-light transition-colors flex items-center gap-1 &apos,>"&apos,
                       ziontechgroup.com&apos;&apos,&apos;&apos,"
                       <ExternalLink className="&apos;h-4" w-4&apos;        />&apos;"
                     <Globe className = "h-5 w-5 text-zion-purple"   />"
                     <p className="text-white font-medium">Website</p>"
                     <p className="text-white font-medium">Website</p>"
-                    <a"; href = "https: // comment
+                    <a"; href = ""https": // comment
                     <a",
-                      href = "https: // comment
+                      href = ""https": // comment
                       target = "_blank","
                       rel = "noopener noreferrer">
-                      className = "text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">"
+                      className = "text-zion-cyan "hover": text-zion-cyan-light transition-colors flex items-center gap-1 ">"
                       ziontechgroup.com"
                       <ExternalLink className="h-4 w-4"   />
                     </a>
               </CardContent>,
             </Card>",,",
                   <Clock : className = "h - 5 w-5 text-zion-cyan"  />",,,"
-Business: Hours",,
-                  We"re: available when you need us"
+"Business": Hours",,
+                  We""re": available when you need us"
                 </CardDescription>"
               </CardHeader>";"
               <CardContent>",","
-                <div: className="space - y-2 text-zion-slate-light">","
-                  <div: className = "flex justify - between">",,
-                    <span>Monday: - Friday</span>",,",
-                    <span: className = "text-zion-cyan">",",
-                      9: 00: AM - 6:00: PM ES,T,
+                <"div": className="space - y-2 text-zion-slate-light">","
+                  <"div": className = "flex justify - between">",,
+                    <span>"Monday": - Friday</span>",,",
+                    <"span": className = "text-zion-cyan">",",
+                      "9": 00: AM - 6:00: PM ES,T,
                     </span>";"
                   </div>";"
                     <span>Saturday</span>"
-                      10: 00: AM - 4:00: PM ES,T,"
+                      "10": 00: AM - 4:00: PM ES,T,"
                     <span>Sunday</span>","
-                    <span: className="text - zion-cyan">By Appointment</span>","
-                  <div: className="pt - 2 border-t border-zion-blue-light">","
-                    <div: className="flex justify - between">","
-                      <span: className="text-zion-cyan font-medium">",,
-                        24 / 7: Support"
+                    <"span": className="text - zion-cyan">By Appointment</span>","
+                  <"div": className="pt - 2 border-t border-zion-blue-light">","
+                    <"div": className="flex justify - between">","
+                      <"span": className="text-zion-cyan font-medium">",,
+                        24 / "7": Support"
                       <Badge",
                         variant="secondary",,">
-                        className="bg-green-500/20: text-green-400 border-green-500/30 ">",,,
-Available: </Badge>"
+                        className="bg-green-500/"20": text-green-400 border-green-500/30 ">",,,
+"Available": </Badge>"
             </Card>"
                       className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 >","
                       ziontechgroup.com"
@@ -451,12 +450,12 @@ Available: </Badge>"
                   <div className="flex justify-between>"
                     <span>Monday - Friday</span>"
                     <span className="text-zion-cyan">"
-                      9: 00 AM - 6:00 PM EST"
+                      "9": 00 AM - 6:00 PM EST"
                     </span>"
                     <span>Saturday</span>",
                       1,
-    0:00 AM - ,"
-    4: 00 PM EST"
+    "0": 00 AM - ,"
+    "4": 00 PM EST"
                     <span>Sunday</span>"
                     <span className="text-zion-cyan">By Appointment</span>"
                   <div className="pt-2 border-t border-zion-blue-light>"
@@ -467,7 +466,7 @@ Available: </Badge>"
                     <Globe className = "h-5 w-5 text-zion-purple" /" >"
                     <a";"
                     <a"
-                      href = "https: // comment
+                      href = ""https": // comment
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">"
@@ -484,11 +483,11 @@ Available: </Badge>"
                   <div className="&apos;flex" justify-between&apos;>"&apos;&apos,"
                     <span>Monday - Friday</span>&apos;&apos,&apos;&apos,",
                     <span className="&apos;text-zion-cyan&apos">,
-9: 00 AM - 6:00 PM EST&apos,
+"9": 00 AM - 6:00 PM EST&apos,
                     </span>&apos;&apos,&apos;&apos,
                   </div>&apos;&apos,&apos;&apos,",
                     <span>Saturday</span>&apos;&apos,&apos,&apos,"
-                      10:00 AM - ,4: 00 PM EST&apos,
+                      "10": 00 AM - ,"4": 00 PM EST&apos,
                     <span>Sunday</span>&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-zion-cyan&apos">By Appointment&apos;</span>&apos;&apos,&apos;&apos;"
                   <div className="&apos;pt-2" border-t border-zion-blue-light&apos;>"&apos;&apos,&apos;&apos;"
@@ -512,14 +511,14 @@ Available: </Badge>"
                 <div className="space-y-2 text-zion-slate-light">"
                   <div className="flex justify-between">"
                     <span>Monday - Friday</span>"
-                      9: 00 AM - 6:00 PM EST",
-9: 00 AM - 6:00 PM EST,"
-9: 00 AM - 6:00 PM EST"
+                      "9": 00 AM - 6:00 PM EST",
+"9": 00 AM - 6:00 PM EST,"
+"9": 00 AM - 6:00 PM EST"
                     </span>"
                     <span>Saturday</span>",
-                      10:00 AM - 4:00 PM EST",
-10:00 AM - 4:00 PM EST,"
-10: 00 AM - 4:00 PM EST"
+                      "10": 00 AM - 4:00 PM EST",
+"10": 00 AM - 4:00 PM EST,"
+"10": 00 AM - 4:00 PM EST"
                     <span>Sunday</span>"
                     <span className="text-zion-cyan">By Appointment</span>"
                   <div className="pt-2 border-t border-zion-blue-light">"
@@ -536,56 +535,56 @@ Available: </Badge>"
             </Card>
 "{/* comment */}";";"
                   <MessageSquare : className="h-5 w-5 text-zion-cyan"  />",,",
-                  Quick: Actions",,,
-Get: started with our most popular services",
-                <Link: to = "/request-quote">",","
-                  <Button: className="w-full bg-zion-purple hover: bg-zion-purple-dark: text-white">",
-                    Request: Free Quote,
+                  "Quick": Actions",,,
+"Get": started with our most popular services",
+                <"Link": to = "/request-quote">",","
+                  <"Button": className="w-full bg-zion-purple hover: bg-zion-purple-dark: text-white">",
+                    "Request": Free Quote,
                   </Button>"
                 </Link>";"
-                <Link: to = "/comprehensive - services">",,
+                <"Link": to = "/comprehensive - services">",,
                   <Button",,">
                     variant = "outline",",">
-                    className="w-full: border-zion-purple text-zion-cyan hover: bg-zion-purple/10: ">",
-                    View: All Services",
-                <Link: to = "/it-onsite-services">",","
-                    className="w-full: border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: ">",
-                    IT: Onsite Services"
+                    className="w-"full": border-zion-purple text-zion-cyan hover: bg-zion-purple/10: ">",
+                    "View": All Services",
+                <"Link": to = "/it-onsite-services">",","
+                    className="w-"full": border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: ">",
+                    "IT": Onsite Services"
                 <div: className = "pt - 4 border-t border-zion-blue-light">",,",
-                  <p: className="text-zion-slate-light text-sm mb-3">",,,"
-Need: immediate assistance?",,
+                  <"p": className="text-zion-slate-light text-sm mb-3">",,,"
+"Need": immediate assistance?",,
                   </p>";";"
-                  <div: className="flex items-center gap-2">",,",
+                  <"div": className="flex items-center gap-2">",,",
                     <Phone : className = "h-4 w-4 text-zion-cyan"  />",",
-                      Call: us now: +1: 302 464 095,0,
+                      "Call": us now: +1: 302 464 095,0,
                     </span>"
                   <Star : className="h-5 w-5 text-zion-cyan"  />",,",
-                  Why: Choose Zion Tech Group ? ",,,
+                  "Why": Choose Zion Tech Group ? ",,,
 What : makes us different from the competition"
-                <div: className="space-y-3 text-zion-slate-light">","
-                  <div: className="flex items - start gap-2">","
-                    <div: className = "w - 2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>",,
-                    <span>Global: reach with local expertise</span>",","
-                    <span>24 / 7: support and monitoring</span>",
-                    <span>Certified: professionals</span>",,",
-                    <span>Competitive: pricing</span>",",
-                    <span>Proven: track record</span>",
+                <"div": className="space-y-3 text-zion-slate-light">","
+                  <"div": className="flex items - start gap-2">","
+                    <"div": className = "w - 2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>",,
+                    <span>"Global": reach with local expertise</span>",","
+                    <span>24 / "7": support and monitoring</span>",
+                    <span>"Certified": professionals</span>",,",
+                    <span>"Competitive": pricing</span>",",
+                    <span>"Proven": track record</span>",
 "{/* comment */}"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <MessageSquare className="&apos;h-5" w-5 text-zion-cyan&apos;        />"
                   Quick Actions&apos;&apos,&apos;&apos
                   Get started with our most popular services&apos;"
                 <Link to="&apos;/request-quote&apos;">"&apos;&apos,&apos;&apos;"
-                  <Button className="&apos;w-full" bg-zion-purple hover: bg-zion-purple-dark text-white&apos;>
+                  <Button className="&apos;w-full" bg-zion-purple "hover": bg-zion-purple-dark text-white&apos;>
                     Request Free Quote&apos
                 </Link>&apos;&apos;"
                 <Link to="&apos;/comprehensive-services&apos,">"&apos,&apos,"
                   <Button&apos;&apos,&apos>
                     variant=&apos;outline&apos;&apos,";"
-                    className="&apos;w-full" border-zion-purple text-zion-cyan hover: bg-zion-purple/10 &apos;>
+                    className="&apos;w-full" border-zion-purple text-zion-cyan "hover": bg-zion-purple/10 &apos;>
                     View All Services&apos;&apos;"
                 <Link to="&apos;/it-onsite-services&apos,">"&apos,&apos,"
-                    className="&apos;w-full" border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 &apos;>
+                    className="&apos;w-full" border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light/10 &apos;>
                     IT Onsite Services&apos;&apos;"
                 <div className="&apos;pt-4" border-t border-zion-blue-light&apos,>"&apos,&apos,&apos;&apos;"
                   <p className="&apos;text-zion-slate-light" text-sm mb-3&apos;>"
@@ -593,24 +592,24 @@ What : makes us different from the competition"
                   </p>&apos;&apos,&apos;&apos,"
                   <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos;&apos,",
                     <Phone className="&apos;h-4" w-4 text-zion-cyan&apos;        />&apos;&apos,&apos,&apos,"
-                      Call us no,w: +1 302 464 0950&apos,"
+                      Call us no,"w": +1 302 464 0950&apos,"
 "{/* comment */}"
                   <MessageSquare className = "h-5 w-5 text-zion-cyan"   />"
                   Quick Actions"
                   Get started with our most popular services"
                 <Link to="/request-quote>"
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white">
+                  <Button className="w-full bg-zion-purple "hover": bg-zion-purple-dark text-white">
                     Request Free Quote"
                   </Button>",
                 </Link>","
                 <Link to="/comprehensive-services>"
                   <Button"
                     variant="outline","
-                    className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">
+                    className="w-full border-zion-purple text-zion-cyan "hover": bg-zion-purple/10 ">
                     View All Services"
                 <Link to="/it-onsite-services>",
                     className="w-full border-zion-blue-light text-zion-slate-light hove,"
-    r: bg-zion-blue-light/10 ">
+    "r": bg-zion-blue-light/10 ">
                     IT Onsite Services"
                 <div className="pt-4 border-t border-zion-blue-light>"
                   <p className="text-zion-slate-light text-sm mb-3>"
@@ -619,7 +618,7 @@ What : makes us different from the competition"
                   <div className="flex items-center gap-2>"
                     <Phone className="h-4 w-4 text-zion-cyan" /" >",
                       Call us no,
-    w: +1 302 464 0950"
+    "w": +1 302 464 0950"
               </CardContent>"
                   <Star className="h-5 w-5 text-zion-cyan"   />"
                   Why Choose Zion Tech Group?"
@@ -640,9 +639,9 @@ What : makes us different from the competition"
                   </Button>"
                 </Link>"
                 <Link to="/comprehensive-services">",
-                  <Button" variant = "outline", className = "w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">"
+                  <Button" variant = "outline", className = "w-full border-zion-purple text-zion-cyan "hover": bg-zion-purple/10 ">"
                 <Link to="/it-onsite-services">",
-                  <Button" variant = "outline", className = "w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 ">"
+                  <Button" variant = "outline", className = "w-full border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light/10 ">"
                 <div className="pt-4 border-t border-zion-blue-light">"
                   <p className="text-zion-slate-light text-sm mb-3">"
                   <p className="text-zion-slate-light text-sm mb-3">"
@@ -681,23 +680,23 @@ What : makes us different from the competition"
                     <span>Proven track record</span>
 "{/* comment */}";";"
         <div : className="text-center mt-16">","
-          <div: className="bg - gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">","
-            <h3: className = "text - 2xl font-bold text-white mb-4">",,
-              Ready: to Get Started ? ";"
+          <"div": className="bg - gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">","
+            <"h3": className = "text - 2xl font-bold text-white mb-4">",,
+              "Ready": to Get Started ? ";"
             </h3>",","
             <p : className="text-zion-slate-light mb-6">",,,
-              Join: hundreds of satisfied clients who have transformed their,,"
-businesses: with our technology solutions",","
-            <div: className="flex flex-col sm: flex-row: gap-4 justify-center">",",
-              <Link: to="/request-quote">",,",
+              "Join": hundreds of satisfied clients who have transformed their,,"
+"businesses": with our technology solutions",","
+            <"div": className="flex flex-col sm: flex-row: gap-4 justify-center">",",
+              <"Link": to="/request-quote">",,",
                   size = "lg",","
-                  className="bg-white: text-zion-purple hover: bg-zion-slate-light: px-8 py-3 ">",
-                  Get: Free Consultation"
+                  className="bg-"white": text-zion-purple hover: bg-zion-slate-light: px-8 py-3 ">",
+                  "Get": Free Consultation"
                 </Button>",,",
               </Link>",","
-              <a: href="tel: +13024640950">",";"
-                  className="border-white: text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 ">",
-                  Call: Now: +1: 302 464 095,0,"
+              <"a": href="tel: +13024640950">",";"
+                  className="border-"white": text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 ">",
+                  "Call": Now: +1: 302 464 095,0,"
 "{/* comment */}"
         <div className = "text-center mt-16>"
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto>"
@@ -706,15 +705,15 @@ businesses: with our technology solutions",","
             </h3>"
             <p className="text-zion-slate-light mb-6">"
               businesses with our technology solutions"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center>",
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center>",
                   size="lg","
-                  className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 ">"
+                  className="bg-white text-zion-purple "hover": bg-zion-slate-light px-8 py-3 ">"
                   Get Free Consultation"
                 </Button>"
               </Link>"
               <a href="tel:+13024640950>",
-                  className="border-white text-white hover: bg-white hove,"
-    r: text-zion-purple px-8 py-3 ">,
+                  className="border-white text-white "hover": bg-white hove,"
+    "r": text-zion-purple px-8 py-3 ">,
                   Call No,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;text-center" mt-16&apos;>"&apos;&apos,&apos;&apos;"
@@ -724,16 +723,16 @@ businesses: with our technology solutions",","
             </h3>&apos;&apos,&apos;&apos,"
             <p className="&apos;text-zion-slate-light" mb-6&apos;>"
               businesses with our technology solutions&apos;&apos,&apos;&apos;"
-            <div className="&apos;flex" flex-col sm: flex-row gap-4 justify-center&apos,>"&apos,&apos,&apos;&apos;"
+            <div className="&apos;flex" flex-col "sm": flex-row gap-4 justify-center&apos,>"&apos,&apos,&apos;&apos;"
               <Link to="&apos;/request-quote&apos;">"&apos;&apos,"
                   size=&apos;lg&apos;&apos,";"
-                  className="&apos;bg-white" text-zion-purple hover: bg-zion-slate-light px-8 py-3 &apos,>
+                  className="&apos;bg-white" text-zion-purple "hover": bg-zion-slate-light px-8 py-3 &apos,>
                   Get Free Consultation&apos,&apos,
                 </Button>&apos;&apos,&apos;&apos,
               </Link>&apos;&apos,&apos;&apos,"
-              <a href="&apos;tel: +13024640950&apos,">"&apos,&apos,",
-                  className = "&apos,border-white" text-white hover:bg-white hover:text-zion-purple px-8 py-3 &apos,>
-                  Call No,w: +1 302 464 0950&apos,&apos,"
+              <a href="&apos;"tel": +13024640950&apos,">"&apos,&apos,",
+                  className = "&apos,border-white" text-white "hover": bg-white hover:text-zion-purple px-8 py-3 &apos,>
+                  Call No,"w": +1 302 464 0950&apos,&apos,"
 "{/* comment */}"
         <div className="text-center mt-16">"
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">"
@@ -745,15 +744,15 @@ businesses: with our technology solutions",","
               Join hundreds of satisfied clients who have transformed their;"
               Join hundreds of satisfied clients who have transformed their;"
               businesses with our technology solutions"
-            <div className = "flex flex-col sm: flex-row gap-4 justify-center">",
-                <Button" size="lg"," className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 ">"
+            <div className = "flex flex-col "sm": flex-row gap-4 justify-center">",
+                <Button" size="lg"," className="bg-white text-zion-purple "hover": bg-zion-slate-light px-8 py-3 ">"
                   Get Free Consultation",
                   Get Free Consultation,"
 size="lg"
                   Get Free Consultation"
                 </Button>"
-              <a href="tel: +13024640950">",
-                <Button" size="lg"," variant="outline"," className="border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 ">"
+              <a href=""tel": +13024640950">",
+                <Button" size="lg"," variant="outline"," className="border-white text-white "hover": bg-white hover:text-zion-purple px-8 py-3 ">"
                   className="border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 ">
                   Call Now: +1 302 464 0950",
     </section>)}"

@@ -33,7 +33,7 @@ class PerformanceOptimizer {
       await this.generateReport();
       
       this.log('✅ Performance optimizations completed')} catch (error) {
-      this.log(`❌ Performance optimizations failed: ${error.message}`)}
+      this.log(`❌ Performance optimizations "failed": ${error.message}`)}
   }
 
   async optimizeBundleSize() {
@@ -41,21 +41,21 @@ class PerformanceOptimizer {
     
     try {
       // Remove unused dependencies
-      execSync('npx depcheck --json', { cwd: this.projectRoot });
+      execSync('npx depcheck --json', { "cwd": this.projectRoot });
       
       // Analyze bundle
-      execSync('npm run analyze', { cwd: this.projectRoot });
+      execSync('npm run analyze', { "cwd": this.projectRoot });
       
       this.optimizations.push({
-        type: 'bundle',
-        action: 'Analyzed bundle and dependencies',
-        status: 'success'
+        "type": 'bundle',
+        "action": 'Analyzed bundle and dependencies',
+        "status": 'success'
       })} catch (error) {
       this.optimizations.push({
-        type: 'bundle',
-        action: 'Analyzed bundle and dependencies',
-        status: 'failed',
-        error: error.message
+        "type": 'bundle',
+        "action": 'Analyzed bundle and dependencies',
+        "status": 'failed',
+        "error": error.message
       })}
   }
 
@@ -65,7 +65,7 @@ class PerformanceOptimizer {
     const publicDir = path.join(this.projectRoot, 'public');
     if (fs.existsSync(publicDir)) {
       try {
-        const files = fs.readdirSync(publicDir, { recursive: true });
+        const files = fs.readdirSync(publicDir, { "recursive": true });
         const imageFiles = files.filter(file => 
           /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(file)
         );
@@ -76,24 +76,24 @@ class PerformanceOptimizer {
           
           if (stats.size > 100000) { // Files larger than 100KB
             this.optimizations.push({
-              type: 'image',
-              file: imageFile,
-              size: stats.size,
-              action: 'Large image detected - consider optimization',
-              status: 'warning'
+              "type": 'image',
+              "file": imageFile,
+              "size": stats.size,
+              "action": 'Large image detected - consider optimization',
+              "status": 'warning'
             })}
         }
         
         this.optimizations.push({
-          type: 'image',
-          action: 'Scanned images for optimization opportunities',
-          status: 'success'
+          "type": 'image',
+          "action": 'Scanned images for optimization opportunities',
+          "status": 'success'
         })} catch (error) {
         this.optimizations.push({
-          type: 'image',
-          action: 'Scanned images for optimization opportunities',
-          status: 'failed',
-          error: error.message
+          "type": 'image',
+          "action": 'Scanned images for optimization opportunities',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
@@ -124,23 +124,23 @@ class PerformanceOptimizer {
           if (modified) {
             fs.writeFileSync(file, content);
             this.optimizations.push({
-              type: 'import',
-              file: path.relative(this.projectRoot, file),
-              action: 'Optimized imports',
-              status: 'success'
+              "type": 'import',
+              "file": path.relative(this.projectRoot, file),
+              "action": 'Optimized imports',
+              "status": 'success'
             })}
         }
         
         this.optimizations.push({
-          type: 'import',
-          action: 'Scanned and optimized imports',
-          status: 'success'
+          "type": 'import',
+          "action": 'Scanned and optimized imports',
+          "status": 'success'
         })} catch (error) {
         this.optimizations.push({
-          type: 'import',
-          action: 'Scanned and optimized imports',
-          status: 'failed',
-          error: error.message
+          "type": 'import',
+          "action": 'Scanned and optimized imports',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
@@ -150,7 +150,7 @@ class PerformanceOptimizer {
     
     const performanceMonitorPath = path.join(this.projectRoot, 'src/utils/performance-monitor.js');
     
-    const performanceMonitorCode = `
+    const performanceMonitorCode = "
 // Performance monitoring utilities
 export class PerformanceMonitor {
   static measure(name, fn) {
@@ -158,14 +158,14 @@ export class PerformanceMonitor {
     const result = fn();
     const end = performance.now();
     
-    console.log(\`\${name}: \${end - start}ms\`);
+    console.log(\"\${name}: \${end - start}ms\");
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance', {
-        event_category: 'timing',
-        event_label: name,
-        value: Math.round(end - start)
+        "event_category": 'timing',
+        "event_label": name,
+        "value": Math.round(end - start)
       })}
     
     return result}
@@ -174,13 +174,13 @@ export class PerformanceMonitor {
     const start = performance.now();
     return fn().then(result => {
       const end = performance.now();
-      console.log(\`\${name}: \${end - start}ms\`);
+      console.log(\"\${name}: \${end - start}ms\");
       
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance', {
-          event_category: 'timing',
-          event_label: name,
-          value: Math.round(end - start)
+          "event_category": 'timing',
+          "event_label": name,
+          "value": Math.round(end - start)
         })}
       
       return result})}
@@ -195,23 +195,23 @@ export class PerformanceMonitor {
         getTTFB(console.log)})}
   }
 }
-`;
+";
 
     try {
       fs.writeFileSync(performanceMonitorPath, performanceMonitorCode);
       
       this.optimizations.push({
-        type: 'monitoring',
-        file: 'performance-monitor.js',
-        action: 'Added performance monitoring utilities',
-        status: 'success'
+        "type": 'monitoring',
+        "file": 'performance-monitor.js',
+        "action": 'Added performance monitoring utilities',
+        "status": 'success'
       })} catch (error) {
       this.optimizations.push({
-        type: 'monitoring',
-        file: 'performance-monitor.js',
-        action: 'Added performance monitoring utilities',
-        status: 'failed',
-        error: error.message
+        "type": 'monitoring',
+        "file": 'performance-monitor.js',
+        "action": 'Added performance monitoring utilities',
+        "status": 'failed',
+        "error": error.message
       })}
   }
 
@@ -232,18 +232,18 @@ export class PerformanceMonitor {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "optimizations": this.optimizations,
+      "summary": {
         total: this.optimizations.length,
-        successful: this.optimizations.filter(o => o.status === 'success').length,
-        failed: this.optimizations.filter(o => o.status === 'failed').length,
-        warnings: this.optimizations.filter(o => o.status === 'warning').length
+        "successful": this.optimizations.filter(o => o.status === 'success').length,
+        "failed": this.optimizations.filter(o => o.status === 'failed').length,
+        "warnings": this.optimizations.filter(o => o.status === 'warning').length
       }
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Performance optimization report generated: ${this.reportFile}`)}
+    this.log(`📊 Performance optimization report "generated": ${this.reportFile}`)}
 }
 
 // Run the performance optimizer

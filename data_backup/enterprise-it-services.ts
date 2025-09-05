@@ -1,5 +1,5 @@
 export interface EnterpriseItService {
-  id: string;
+  "id": string;
   name: string;
   tagline: string;
   price: string;
@@ -11,13 +11,12 @@ export interface EnterpriseItService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string};export const enterpriseITServices: EnterpriseItService[] = [
-  {
+address: string};export const "enterpriseITServices": EnterpriseItService[] = [{
     id: "enterprise-architecture",
-    name: "Enterprise Architecture Consulting",
-    tagline: "Strategic IT architecture for large organizations",
-    price: "$150/hour",
-    description: "Comprehensive enterprise architecture consulting services for digital transformation.",
+    "name": "Enterprise Architecture Consulting",
+    "tagline": "Strategic IT architecture for large organizations",
+    "price": "$150/hour",
+    "description": "Comprehensive enterprise architecture consulting services for digital transformation.",
     features[
       "Architecture assessment",
       "Technology roadmap",
@@ -25,11 +24,11 @@ address: string};export const enterpriseITServices: EnterpriseItService[] = [
       "Governance framework",
       "Implementation support"
     ],
-    link: "/services/enterprise-architecture",
-    category: "Enterprise IT",
-    realImplementation: true,
-    contactInfo: {
+    "link": "/services/enterprise-architecture",
+    "category": "Enterprise IT",
+    "realImplementation": true,
+    "contactInfo": {
       mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}

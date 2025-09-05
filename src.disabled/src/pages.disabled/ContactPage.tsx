@@ -1,1 +1,1 @@
-import React from 'react'; ; const ContactPage: React.FC = () => {}}; ; export default ContactPage;
+import React from 'react'; const "ContactPage": React.FC = () => {}}; export default ContactPage;

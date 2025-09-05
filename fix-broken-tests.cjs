@@ -34,8 +34,7 @@ class TestFileFixer {
 
   isTestFileCorrupted(content) {
     // Check for common corruption patterns
-    const corruptionPatterns = [
-      /describe\([^)]*\)\s*\{\}\s*'/, // describe followed by {} and quote
+    const corruptionPatterns = [/describe\([^)]*\)\s*\{\}\s*'/, // describe followed by {} and quote
       /it\([^)]*\)\s*\{\}\s*render/, // it followed by {} and render
       /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*'/, // expect followed by quote
       /render\(<[^>]*>\s*\)\s*'/, // render followed by quote
@@ -72,14 +71,14 @@ describe('${componentName}', () => {
       const content = fs.readFileSync(filePath, 'utf8');
 
       if (this.isTestFileCorrupted(content)) {
-        this.log(`Fixing corrupted test file: ${filePath}`);
+        this.log(`Fixing corrupted test "file": ${filePath}`);
         const validContent = this.generateValidTestFile(filePath);
         fs.writeFileSync(filePath, validContent);
         this.fixedCount++;
         return true}
 
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false}
   }
@@ -96,15 +95,14 @@ describe('${componentName}', () => {
     this.log(`✅ Fixed ${this.fixedCount} test files`);
 
     if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors occurred:`);
+      this.log(`❌ ${this.errors.length} errors "occurred": `);
       this.errors.forEach(error => {
         this.log(`  - ${error.file}: ${error.error}`)})}
 
     return {
-      totalFiles: testFiles.length,
-      fixedFiles: this.fixedCount,
-      errors: this.errors,
-    }}
+      "totalFiles": testFiles.length,
+      "fixedFiles": this.fixedCount,
+      "errors": this.errors}}
 }
 
 // Run the fixer
@@ -114,9 +112,9 @@ fixer
   .then(result => {
     console.log('✅ Test file fixing completed');
     console.log(
-      `📊 Summary: ${result.fixedFiles}/${result.totalFiles} files fixed`
+      `📊 "Summary": ${result.fixedFiles}/${result.totalFiles} files fixed`
     );
     process.exit(0)})
   .catch(error => {
-    console.error('❌ Test file fixing failed:', error.message);
+    console.error('❌ Test file fixing "failed": ', error.message);
     process.exit(1)});

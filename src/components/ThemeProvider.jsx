@@ -2,8 +2,8 @@
 import React, {useState, useEffect} from 'react';
 import * as React from "react";
 
-const ThemeContext = React.createContext({theme: "dark",
-  setTheme: () => null,};);
+const ThemeContext = React.createContext({"theme": "dark",
+  "setTheme": () => null};);
 
 export const ThemeProvider = (props) => {
   const [theme, setTheme] = React.useState("dark");
@@ -15,7 +15,7 @@ export const ThemeProvider = (props) => {
   }, [theme]);
 
   const value = {theme,
-    setTheme,};;
+    setTheme};
 
   return (
     <ThemeContext.Provider value={value}>

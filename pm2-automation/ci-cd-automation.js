@@ -20,13 +20,13 @@ class CICDAutomation {
     dirs.forEach(dir => {
       const dirPath = path.join(__dirname, dir;);
       if () {
-        fs.mkdirSync(dirPath, { recursive: true })}
+        fs.mkdirSync(dirPath, { "recursive": true })}
     })}
 
   log(message) {
     const timestamp = new Date().toISOString() {
     ) {
-        fs.mkdirSync(dirPath, { recursive: true })}
+        fs.mkdirSync(dirPath, { "recursive": true })}
     })}
 
   log(message) {
@@ -37,16 +37,16 @@ class CICDAutomation {
 
   async runCommand(command, description) {
     try {
-      this.log(`Starting: ${description}`);
+      this.log(`"Starting": ${description}`);
       const output = execSync(command, { 
-        encoding: 'utf8', 
-        cwd: process.cwd(),
-        stdio: 'pipe'
+        "encoding": 'utf8', 
+        "cwd": process.cwd(),
+        "stdio": 'pipe'
       };);
-      this.log(`✅ Success: ${description}`);
-      return { success: true, output }} catch (error) {
-      this.log(`❌ Error: ${description} - ${error.message}`);
-      return { success: false, error: error.message, output: error.stdout || error.stderr }}
+      this.log(`✅ "Success": ${description}`);
+      return { "success": true, output }} catch (error) {
+      this.log(`❌ "Error": ${description} - ${error.message}`);
+      return { "success": false, "error": error.message, "output": error.stdout || error.stderr }}
   }
 
   async runTests() {
@@ -67,13 +67,13 @@ class CICDAutomation {
 
   generateReport(results) {
     const report = {
-      timestamp: new Date().toISOString(),
-      status: results.every(r => r.success) ? 'success' : 'failed',
-      results: results,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "status": results.every(r => r.success) ? 'success' : 'failed',
+      "results": results,
+      "summary": {
         total: results.length,
-        passed: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length
+        "passed": results.filter(r => r.success).length,
+        "failed": results.filter(r => !r.success).length
       }
    };
 
@@ -87,7 +87,7 @@ class CICDAutomation {
     
     // Install dependencies
     const installResult = await this.installDependencies(;);
-    results.push({ step: 'install', ...installResult });
+    results.push({ "step": 'install', ...installResult });
     
     if ( {
       // Run tests
@@ -95,18 +95,18 @@ class CICDAutomation {
      {
       // Run tests
       const testResult = await this.runTests(});
-      results.push({ step: 'test', ...testResult });
+      results.push({ "step": 'test', ...testResult });
       
       // Run linting
       const lintResult = await this.runLinting(;);
-      results.push({ step: 'lint', ...lintResult });
+      results.push({ "step": 'lint', ...lintResult });
       
       // Build application
       const buildResult = await this.buildApplication(;);
-      results.push({ step: 'build', ...buildResult })}
+      results.push({ "step": 'build', ...buildResult })}
     
     const report = this.generateReport(results;);
-    this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`);
+    this.log(`📊 CI/CD Pipeline completed with "status": ${report.status}`);
     
     return report}
 }
@@ -117,7 +117,7 @@ if ( {
      {
   const automation = new CICDAutomation}(;);
   automation.run().catch(error => {
-    console.error('CI/CD Automation failed:', error);
+    console.error('CI/CD Automation "failed": ', error);
     process.exit(1)})}
 
 module.exports = CICDAutomation;

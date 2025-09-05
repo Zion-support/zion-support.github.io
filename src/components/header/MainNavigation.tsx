@@ -35,7 +35,7 @@ interface MainNavigationProps {
   className?: string;
 }
 
-export function MainNavigation(props: MainNavigationProps) {
+export function MainNavigation("props": MainNavigationProps) {
   const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState<boolean>(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState<boolean>(false);
@@ -45,7 +45,7 @@ export function MainNavigation(props: MainNavigationProps) {
       {/* Home */}
       <Link 
         to="/" 
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        className="text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
       >
         Home
       </Link>
@@ -55,7 +55,7 @@ export function MainNavigation(props: MainNavigationProps) {
         <button
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
         >
           <Zap className="w-4 h-4" />
           <span>Services</span>
@@ -77,7 +77,7 @@ export function MainNavigation(props: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      <Link to="/services" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">
                         All Services
                       </Link>
                     </li>
@@ -117,7 +117,7 @@ export function MainNavigation(props: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      <Link to="/services/quantum-computing" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">
                         Quantum Computing
                       </Link>
                     </li>
@@ -199,7 +199,7 @@ export function MainNavigation(props: MainNavigationProps) {
         <button
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
         >
           <Brain className="w-4 h-4" />
           <span>Solutions</span>
@@ -222,7 +222,7 @@ export function MainNavigation(props: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <Link to="/solutions/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      <Link to="/solutions/enterprise" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">
                         Enterprise Solutions
                       </Link>
                     </li>
@@ -294,7 +294,7 @@ export function MainNavigation(props: MainNavigationProps) {
         <button
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
         >
           <Building2 className="w-4 h-4" />
           <span>Company</span>
@@ -310,7 +310,7 @@ export function MainNavigation(props: MainNavigationProps) {
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  <Link to="/about" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">
                     About Us
                   </Link>
                 </li>
@@ -349,7 +349,7 @@ export function MainNavigation(props: MainNavigationProps) {
       {/* Resources */}
       <Link 
         to="/resources" 
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        className="text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
       >
         Resources
       </Link>
@@ -357,7 +357,7 @@ export function MainNavigation(props: MainNavigationProps) {
       {/* Blog */}
       <Link 
         to="/blog" 
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        className="text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
       >
         Blog
       </Link>
@@ -365,7 +365,7 @@ export function MainNavigation(props: MainNavigationProps) {
       {/* Contact */}
       <Link 
         to="/contact" 
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        className="text-sm font-medium text-zion-slate-light "hover": text-zion-cyan transition-colors"
       >
         Contact
       </Link>

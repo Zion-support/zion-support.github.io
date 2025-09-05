@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 function getAllFiles(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const entries = fs.readdirSync(dir, { "withFileTypes": true });
   const files = entries.flatMap((entry) => {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) return getAllFiles(fullPath);
@@ -48,11 +48,11 @@ function main() {
     try {
       if (resolveConflictsKeepIncoming(f)) {
         count++;
-        console.log(`Resolved conflicts in: ${f}`)}
+        console.log(`Resolved conflicts "in": ${f}`)}
     } catch (e) {
       console.error(`Failed to process ${f}: ${e.message}`)}
   }
-  console.log(`Done. Files updated: ${count}`)}
+  console.log(`Done. Files "updated": ${count}`)}
 
 main();
 

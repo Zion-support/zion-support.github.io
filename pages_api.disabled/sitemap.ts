@@ -1,11 +1,10 @@
 import { NextApiRequest, NextApiResponse } from
   'next';
 
-export default function handler(req: NextApiReques t, res: NextApiRespons e) {
-  const baseUrl =, https: //ziontechgroup.com';'
+export default function handler("req": NextApiReques t, "res": NextApiRespons e) {
+  const baseUrl =, "https": //ziontechgroup.com';'
   
-  const staticPages = [
-    ', '
+  const staticPages = [', '
 ,
   /about
   ', '
@@ -37,8 +36,7 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   ','
   ];
 
-  const blogPages = [
-    '/blog/5g-technology-and-its-impact-on-iot-chat'
+  const blogPages = ['/blog/5g-technology-and-its-impact-on-iot-chat'
   ', '
     '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat'
   ','
@@ -70,8 +68,7 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   ', '
   ];
 
-  const servicePages = [
-    '/services/ai-model-development-chat'
+  const servicePages = ['/services/ai-model-development-chat'
   ', '
     '/services/api-development-chat'
   ','
@@ -103,8 +100,7 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   ', '
   ];
 
-  const categoryPages = [
-    '/category/ai-consulting-chat'
+  const categoryPages = ['/category/ai-consulting-chat'
   ', '
     '/category/business-intelligence-chat'
   ','
@@ -136,8 +132,7 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   ', '
   ];
 
-  const chatContentPages = [
-    '/chat-content/ai-powered-business-solutions-discussion'
+  const chatContentPages = ['/chat-content/ai-powered-business-solutions-discussion'
   ', '
     '/chat-content/cloud-computing-strategies'
   ','
@@ -159,13 +154,12 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   ','
   ];
 
-  const allPages = [
-    ...staticPages, ...blogPages,
+  const allPages = [...staticPages, ...blogPages,
     ...servicePages, ...categoryPages,
     ...chatContentPages,  ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
     .map((page) => {
       const priority = page === '' ?
@@ -184,9 +178,9 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`})
+    </url>"})
     .join('')}
-</urlset>`;
+</urlset>";
 
   res.setHeader(
   'Content-Type', 'text/xml');

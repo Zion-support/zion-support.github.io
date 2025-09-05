@@ -6,7 +6,7 @@ const path = require('path');
 
 console.log('🔧 Starting intelligent TypeScript error fixer...');
 
-// Get automation interval from environment variable (default: 10 minutes)
+// Get automation interval from environment variable ("default": 10 minutes)
 const TYPESCRIPT_FIX_INTERVAL = parseInt(process.env.TYPESCRIPT_FIX_INTERVAL) || 600000;
 
 class IntelligentTypeScriptFixer {
@@ -48,7 +48,7 @@ class IntelligentTypeScriptFixer {
       await this.generateReport();
       
       console.log(`✅ Intelligent TypeScript error fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
-      console.error('❌ Intelligent TypeScript error fixer failed:', error.message)}
+      console.error('❌ Intelligent TypeScript error fixer "failed": ', error.message)}
   }
 
   async fixTypeScriptCompilationErrors() {
@@ -74,7 +74,7 @@ class IntelligentTypeScriptFixer {
         
         // Fix property signatures
         content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
-        content = content.replace(/logout:\s*any\(\)\s*=>\s*Promise<any>;/g, 'logout: () => Promise<any>;');
+        content = content.replace(/"logout": \s*any\(\)\s*=>\s*Promise<any>;/g, '"logout": () => Promise<any>;');
         
         // Fix function parameter types
         content = content.replace(/function\s+(\w+)\s*\(([^)]*)\)\s*{/g, (match, funcName, params) => {
@@ -108,8 +108,8 @@ class IntelligentTypeScriptFixer {
         content = content.replace(/<any>/g, '<any>');
         
         // Fix missing return types
-        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1(...args: any[]): any {');
-        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = (...args: any[]): any => {');
+        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1(..."args": any[]): any {');
+        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = (..."args": any[]): any => {');
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
@@ -144,9 +144,9 @@ class IntelligentTypeScriptFixer {
         content = content.replace(/useEffect\s*\(\s*\(\)\s*=>\s*{/g, 'useEffect(() => {');
         
         // Fix event handler types
-        content = content.replace(/onClick\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onClick = (e: React.MouseEvent) => {');
-        content = content.replace(/onChange\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onChange = (e: React.ChangeEvent<HTMLInputElement>) => {');
-        content = content.replace(/onSubmit\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onSubmit = (e: React.FormEvent) => {');
+        content = content.replace(/onClick\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onClick = ("e": React.MouseEvent) => {');
+        content = content.replace(/onChange\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onChange = ("e": React.ChangeEvent<HTMLInputElement>) => {');
+        content = content.replace(/onSubmit\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onSubmit = ("e": React.FormEvent) => {');
         
         // Fix prop types
         content = content.replace(/interface\s+(\w+)Props\s*{([^}]*)}/g, (match, componentName, props) => {
@@ -283,10 +283,10 @@ class IntelligentTypeScriptFixer {
         // Fix React component errors
         
         // Fix component function declarations
-        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1(props: any) {');
+        content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1("props": any) {');
         
         // Fix component arrow functions
-        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = (props: any) => {');
+        content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = ("props": any) => {');
         
         // Fix JSX return statements
         content = content.replace(/return\s+\(([^)]+)\);/g, 'return ($1);');
@@ -334,14 +334,14 @@ class IntelligentTypeScriptFixer {
         content = content.replace(/useEffect\s*\(\s*\(\)\s*=>\s*{/g, 'useEffect(() => {');
         
         // Fix useCallback hook
-        content = content.replace(/useCallback\s*\(\s*\([^)]*\)\s*=>\s*{/g, 'useCallback((...args: any[]) => {');
+        content = content.replace(/useCallback\s*\(\s*\([^)]*\)\s*=>\s*{/g, 'useCallback((..."args": any[]) => {');
         
         // Fix useMemo hook
         content = content.replace(/useMemo\s*\(\s*\(\)\s*=>\s*{/g, 'useMemo(() => {');
         
         // Fix custom hook declarations
-        content = content.replace(/function\s+use(\w+)\s*\([^)]*\)\s*{/g, 'function use$1(...args: any[]) {');
-        content = content.replace(/const\s+use(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const use$1 = (...args: any[]) => {');
+        content = content.replace(/function\s+use(\w+)\s*\([^)]*\)\s*{/g, 'function use$1(..."args": any[]) {');
+        content = content.replace(/const\s+use(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const use$1 = (..."args": any[]) => {');
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
@@ -397,18 +397,18 @@ class IntelligentTypeScriptFixer {
     console.log('🔧 Validating TypeScript fixes...');
     
     try {
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       console.log('✅ TypeScript compilation successful after fixes')} catch (error) {
       console.log('⚠️  TypeScript compilation still has issues, but fixes were applied');
-      console.log('  Remaining errors:', error.stdout || error.stderr || error.message)}
+      console.log('  Remaining "errors": ', error.stdout || error.stderr || error.message)}
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      summary: 'Intelligent TypeScript error fixer completed',
-      status: 'completed'
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied,
+      "summary": 'Intelligent TypeScript error fixer completed',
+      "status": 'completed'
     };
     
     const reportPath = path.join(process.cwd(), 'intelligent-typescript-fixer-report.json');
@@ -418,8 +418,8 @@ class IntelligentTypeScriptFixer {
     
     // Add to fix history
     this.fixHistory.push({
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied
     });
     
     // Keep only last 50 entries
@@ -471,5 +471,5 @@ process.on('SIGTERM', () => {
 
 // Start the fixer
 main().catch(error => {
-  console.error('❌ Intelligent TypeScript error fixer failed to start:', error.message);
+  console.error('❌ Intelligent TypeScript error fixer failed to "start": ', error.message);
   process.exit(1)});

@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Define public routes that don't require authentication
-const publicRoutes = [
-  "/",
+const publicRoutes = ["/",
   "/about",
   "/contact",
   "/blog",
@@ -35,8 +34,7 @@ export function middleware(request: NextRequest) {
   return NextResponse.next()}
 
 export const config = {
-  matcher: [
-    /*
+  "matcher": [/*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
      * - _next/static (static files)
@@ -44,5 +42,4 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ],
-};
+  ]};

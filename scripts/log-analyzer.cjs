@@ -12,7 +12,7 @@ class LogAnalyzer {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -58,20 +58,20 @@ class LogAnalyzer {
       const averageBuildTime = buildTimes.length > 0 ? 
         buildTimes.reduce((a, b) => a + b, 0) / buildTimes.length : 0;
 
-      this.log(`🔍 Total builds: ${totalBuilds}`);
-      this.log(`🔍 Successful builds: ${successfulBuilds}`);
-      this.log(`🔍 Failed builds: ${failedBuilds}`);
-      this.log(`🔍 Average build time: ${Math.round(averageBuildTime)}ms`);
+      this.log(`🔍 Total "builds": ${totalBuilds}`);
+      this.log(`🔍 Successful "builds": ${successfulBuilds}`);
+      this.log(`🔍 Failed "builds": ${failedBuilds}`);
+      this.log(`🔍 Average build "time": ${Math.round(averageBuildTime)}ms`);
 
       return {
-        total: totalBuilds,
-        successful: successfulBuilds,
-        failed: failedBuilds,
-        averageBuildTime: Math.round(averageBuildTime),
-        successRate: totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0
+        "total": totalBuilds,
+        "successful": successfulBuilds,
+        "failed": failedBuilds,
+        "averageBuildTime": Math.round(averageBuildTime),
+        "successRate": totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0
       }} catch (error) {
-      this.log(`❌ Build logs analysis failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Build logs analysis "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async analyzeErrorLogs() {
@@ -92,11 +92,11 @@ class LogAnalyzer {
           const lines = content.split('\n');
           
           for (const line of lines) {
-            if (line.includes('Error:') || line.includes('error:') || line.includes('ERROR')) {
+            if (line.includes('"Error": ') || line.includes('error:') || line.includes('ERROR')) {
               errors.push({
                 file: path.relative(this.projectRoot, logFile),
-                line: line.trim(),
-                timestamp: this.extractTimestamp(line)
+                "line": line.trim(),
+                "timestamp": this.extractTimestamp(line)
               });
 
               // Categorize error types
@@ -112,18 +112,18 @@ class LogAnalyzer {
         }
       }
 
-      this.log(`🔍 Total errors: ${errors.length}`);
-      this.log(`🔍 Error types: ${errorTypes.size}`);
-      this.log(`🔍 Files with errors: ${errorFiles.size}`);
+      this.log(`🔍 Total "errors": ${errors.length}`);
+      this.log(`🔍 Error "types": ${errorTypes.size}`);
+      this.log(`🔍 Files with "errors": ${errorFiles.size}`);
 
       return {
-        total: errors.length,
-        types: Object.fromEntries(errorTypes),
-        files: Object.fromEntries(errorFiles),
-        errors: errors.slice(0, 100) // Limit to first 100 errors
+        "total": errors.length,
+        "types": Object.fromEntries(errorTypes),
+        "files": Object.fromEntries(errorFiles),
+        "errors": errors.slice(0, 100) // Limit to first 100 errors
       }} catch (error) {
-      this.log(`❌ Error logs analysis failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Error logs analysis "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async analyzePerformanceLogs() {
@@ -135,10 +135,10 @@ class LogAnalyzer {
       );
 
       const metrics = {
-        responseTimes: [],
-        memoryUsage: [],
-        cpuUsage: [],
-        requestCounts: []
+        "responseTimes": [],
+        "memoryUsage": [],
+        "cpuUsage": [],
+        "requestCounts": []
       };
 
       for (const logFile of performanceLogs) {
@@ -148,22 +148,22 @@ class LogAnalyzer {
           
           for (const line of lines) {
             // Extract response times
-            const responseTimeMatch = line.match(/response time: (\d+)ms/i);
+            const responseTimeMatch = line.match(/response "time": (\d+)ms/i);
             if (responseTimeMatch) {
               metrics.responseTimes.push(parseInt(responseTimeMatch[1]))}
 
             // Extract memory usage
-            const memoryMatch = line.match(/memory: (\d+)MB/i);
+            const memoryMatch = line.match(/"memory": (\d+)MB/i);
             if (memoryMatch) {
               metrics.memoryUsage.push(parseInt(memoryMatch[1]))}
 
             // Extract CPU usage
-            const cpuMatch = line.match(/cpu: (\d+)%/i);
+            const cpuMatch = line.match(/"cpu": (\d+)%/i);
             if (cpuMatch) {
               metrics.cpuUsage.push(parseInt(cpuMatch[1]))}
 
             // Extract request counts
-            const requestMatch = line.match(/requests: (\d+)/i);
+            const requestMatch = line.match(/"requests": (\d+)/i);
             if (requestMatch) {
               metrics.requestCounts.push(parseInt(requestMatch[1]))}
           }
@@ -179,23 +179,23 @@ class LogAnalyzer {
       const averageCpuUsage = metrics.cpuUsage.length > 0 ? 
         metrics.cpuUsage.reduce((a, b) => a + b, 0) / metrics.cpuUsage.length : 0;
 
-      this.log(`🔍 Average response time: ${Math.round(averageResponseTime)}ms`);
-      this.log(`🔍 Average memory usage: ${Math.round(averageMemoryUsage)}MB`);
-      this.log(`🔍 Average CPU usage: ${Math.round(averageCpuUsage)}%`);
+      this.log(`🔍 Average response "time": ${Math.round(averageResponseTime)}ms`);
+      this.log(`🔍 Average memory "usage": ${Math.round(averageMemoryUsage)}MB`);
+      this.log(`🔍 Average CPU "usage": ${Math.round(averageCpuUsage)}%`);
 
       return {
-        averageResponseTime: Math.round(averageResponseTime),
-        averageMemoryUsage: Math.round(averageMemoryUsage),
-        averageCpuUsage: Math.round(averageCpuUsage),
-        totalRequests: metrics.requestCounts.reduce((a, b) => a + b, 0),
-        dataPoints: {
+        "averageResponseTime": Math.round(averageResponseTime),
+        "averageMemoryUsage": Math.round(averageMemoryUsage),
+        "averageCpuUsage": Math.round(averageCpuUsage),
+        "totalRequests": metrics.requestCounts.reduce((a, b) => a + b, 0),
+        "dataPoints": {
           responseTimes: metrics.responseTimes.length,
-          memoryUsage: metrics.memoryUsage.length,
-          cpuUsage: metrics.cpuUsage.length
+          "memoryUsage": metrics.memoryUsage.length,
+          "cpuUsage": metrics.cpuUsage.length
         }
       }} catch (error) {
-      this.log(`❌ Performance logs analysis failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Performance logs analysis "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async analyzeAccessLogs() {
@@ -219,9 +219,9 @@ class LogAnalyzer {
           for (const line of lines) {
             if (line.includes('GET') || line.includes('POST') || line.includes('PUT') || line.includes('DELETE')) {
               requests.push({
-                file: path.relative(this.projectRoot, logFile),
-                line: line.trim(),
-                timestamp: this.extractTimestamp(line)
+                "file": path.relative(this.projectRoot, logFile),
+                "line": line.trim(),
+                "timestamp": this.extractTimestamp(line)
               });
 
               // Extract status code
@@ -248,20 +248,20 @@ class LogAnalyzer {
         }
       }
 
-      this.log(`🔍 Total requests: ${requests.length}`);
-      this.log(`🔍 Status codes: ${statusCodes.size}`);
-      this.log(`🔍 User agents: ${userAgents.size}`);
-      this.log(`🔍 IP addresses: ${ipAddresses.size}`);
+      this.log(`🔍 Total "requests": ${requests.length}`);
+      this.log(`🔍 Status "codes": ${statusCodes.size}`);
+      this.log(`🔍 User "agents": ${userAgents.size}`);
+      this.log(`🔍 IP "addresses": ${ipAddresses.size}`);
 
       return {
-        total: requests.length,
-        statusCodes: Object.fromEntries(statusCodes),
-        userAgents: Object.fromEntries(userAgents),
-        ipAddresses: Object.fromEntries(ipAddresses),
-        requests: requests.slice(0, 100) // Limit to first 100 requests
+        "total": requests.length,
+        "statusCodes": Object.fromEntries(statusCodes),
+        "userAgents": Object.fromEntries(userAgents),
+        "ipAddresses": Object.fromEntries(ipAddresses),
+        "requests": requests.slice(0, 100) // Limit to first 100 requests
       }} catch (error) {
-      this.log(`❌ Access logs analysis failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Access logs analysis "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   findLogFiles() {
@@ -310,12 +310,12 @@ class LogAnalyzer {
     this.log('📊 Generating log analysis report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         build: await this.analyzeBuildLogs(),
-        errors: await this.analyzeErrorLogs(),
-        performance: await this.analyzePerformanceLogs(),
-        access: await this.analyzeAccessLogs()
+        "errors": await this.analyzeErrorLogs(),
+        "performance": await this.analyzePerformanceLogs(),
+        "access": await this.analyzeAccessLogs()
       }
     };
 
@@ -325,7 +325,7 @@ class LogAnalyzer {
     const reportFile = path.join(this.reportsDir, `log-analysis-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Log analysis report generated: ${reportFile}`);
+    this.log(`📄 Log analysis report "generated": ${reportFile}`);
     
     return report}
 
@@ -334,50 +334,50 @@ class LogAnalyzer {
 
     if (analysis.build && analysis.build.successRate < 90) {
       recommendations.push({
-        type: 'build_reliability',
-        priority: 'high',
-        message: `Build success rate is ${analysis.build.successRate.toFixed(1)}%. Improve build reliability.`,
-        impact: 'Reduces deployment failures'
+        "type": 'build_reliability',
+        "priority": 'high',
+        "message": `Build success rate is ${analysis.build.successRate.toFixed(1)}%. Improve build reliability.`,
+        "impact": 'Reduces deployment failures'
       })}
 
     if (analysis.build && analysis.build.averageBuildTime > 120000) { // 2 minutes
       recommendations.push({
-        type: 'build_performance',
-        priority: 'medium',
-        message: `Average build time is ${Math.round(analysis.build.averageBuildTime / 1000)}s. Optimize build process.`,
-        impact: 'Improves development efficiency'
+        "type": 'build_performance',
+        "priority": 'medium',
+        "message": `Average build time is ${Math.round(analysis.build.averageBuildTime / 1000)}s. Optimize build process.`,
+        "impact": 'Improves development efficiency'
       })}
 
     if (analysis.errors && analysis.errors.total > 100) {
       recommendations.push({
-        type: 'error_reduction',
-        priority: 'high',
-        message: `Found ${analysis.errors.total} errors in logs. Implement better error handling.`,
-        impact: 'Improves application stability'
+        "type": 'error_reduction',
+        "priority": 'high',
+        "message": `Found ${analysis.errors.total} errors in logs. Implement better error handling.`,
+        "impact": 'Improves application stability'
       })}
 
     if (analysis.performance && analysis.performance.averageResponseTime > 1000) { // 1 second
       recommendations.push({
-        type: 'performance_optimization',
-        priority: 'medium',
-        message: `Average response time is ${analysis.performance.averageResponseTime}ms. Optimize performance.`,
-        impact: 'Improves user experience'
+        "type": 'performance_optimization',
+        "priority": 'medium',
+        "message": `Average response time is ${analysis.performance.averageResponseTime}ms. Optimize performance.`,
+        "impact": 'Improves user experience'
       })}
 
     if (analysis.performance && analysis.performance.averageMemoryUsage > 500) { // 500MB
       recommendations.push({
-        type: 'memory_optimization',
-        priority: 'medium',
-        message: `Average memory usage is ${analysis.performance.averageMemoryUsage}MB. Optimize memory usage.`,
-        impact: 'Reduces resource consumption'
+        "type": 'memory_optimization',
+        "priority": 'medium',
+        "message": `Average memory usage is ${analysis.performance.averageMemoryUsage}MB. Optimize memory usage.`,
+        "impact": 'Reduces resource consumption'
       })}
 
     if (analysis.access && analysis.access.statusCodes['500']) {
       recommendations.push({
-        type: 'server_errors',
-        priority: 'high',
-        message: `Found ${analysis.access.statusCodes['500']} server errors. Fix server-side issues.`,
-        impact: 'Improves application reliability'
+        "type": 'server_errors',
+        "priority": 'high',
+        "message": `Found ${analysis.access.statusCodes['500']} server errors. Fix server-side issues.`,
+        "impact": 'Improves application reliability'
       })}
 
     return recommendations}
@@ -389,14 +389,14 @@ class LogAnalyzer {
       const report = await this.generateLogAnalysisReport();
       
       this.log('🎉 Log analysis completed!');
-      this.log(`🔍 Build success rate: ${report.analysis.build.successRate || 0}%`);
-      this.log(`🔍 Total errors: ${report.analysis.errors.total || 0}`);
-      this.log(`🔍 Average response time: ${report.analysis.performance.averageResponseTime || 0}ms`);
-      this.log(`🔍 Total requests: ${report.analysis.access.total || 0}`);
-      this.log(`💡 Recommendations: ${report.recommendations.length}`);
+      this.log(`🔍 Build success "rate": ${report.analysis.build.successRate || 0}%`);
+      this.log(`🔍 Total "errors": ${report.analysis.errors.total || 0}`);
+      this.log(`🔍 Average response "time": ${report.analysis.performance.averageResponseTime || 0}ms`);
+      this.log(`🔍 Total "requests": ${report.analysis.access.total || 0}`);
+      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
       
       return report} catch (error) {
-      this.log(`💥 Log analysis failed: ${error.message}`);
+      this.log(`💥 Log analysis "failed": ${error.message}`);
       throw error}
   }
 }
@@ -407,11 +407,11 @@ if (require.main === module) {
   analyzer.run()
     .then((report) => {
       console.log('\n🎉 Log Analyzer completed successfully!');
-      console.log(`🔍 Build success rate: ${report.analysis.build.successRate || 0}%`);
-      console.log(`💡 Recommendations: ${report.recommendations.length}`);
+      console.log(`🔍 Build success "rate": ${report.analysis.build.successRate || 0}%`);
+      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
       process.exit(0)})
     .catch((error) => {
-      console.error('\n💥 Log Analyzer failed:', error.message);
+      console.error('\n💥 Log Analyzer "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = LogAnalyzer;

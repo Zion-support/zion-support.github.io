@@ -2,7 +2,7 @@ import { useCallback  } from 'react';
 
 interface User {
 
-  id: string;
+  "id": string;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -12,8 +12,8 @@ interface User {
   updatedAt?: string}
 
 export const useAuthEventHandlers = (
-  setUser: (user: Use r | null)  => void,
-  setOnboardingStep: (step: number)  => void
+  "setUser": (user: Use r | null)  => void,
+  "setOnboardingStep": (step: number)  => void
 ) => {;
   const handleSignedIn = useCallback((user: Use r)  => {;
     setUser(user);
@@ -28,5 +28,4 @@ export const useAuthEventHandlers = (
   return {
     handleSignedIn,
     handleSignedOut
-  }};
-;';';
+  }};';';

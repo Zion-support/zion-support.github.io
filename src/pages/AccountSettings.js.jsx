@@ -52,17 +52,17 @@ export default function AccountSettings() {
             // Request accounts
             const address = accounts[0];
             // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()};`;
-            await ethereum.request({method: 'personal_sign',
-                params: [address, message]});
+            const message = `Zion AI Marketplace wallet verification\"nAddress": ${address}\"nTime": ${new Date().toISOString()};`;
+            await ethereum.request({"method": 'personal_sign',
+                "params": [address, message]});
             // Auto-set DID handle if ENS is available
             try {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
                 const ensName = await provider.lookupAddress(address);
                 if (ensName) {
                     setDidHandle(ensName)}
-            } catch (error) {console.error('ENS lookup error:', error)}
-            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error) {toast.error(error.message || 'Failed to connect wallet')}
+            } catch (error) {console.error('ENS lookup "error": ', error)}
+            toast.success(`Wallet "connected": ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error) {toast.error(error.message || 'Failed to connect wallet')}
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account" />
@@ -70,7 +70,7 @@ export default function AccountSettings() {
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 "md": grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>

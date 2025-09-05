@@ -39,8 +39,8 @@ class ApiClient {
         signal: controller.signal,
         headers: {
           'Content-Type': 'application/json',
-          ...fetchOptions.headers,
-        },
+          ...fetchOptions.headers
+        }
       });
 
       clearTimeout(timeoutId);
@@ -52,10 +52,10 @@ class ApiClient {
       const data = await response.json();
       return { data, success: true };
     } catch (error) {
-      console.error('API request failed:', error);
+      console.error('API request failed: ', error);
       return {
         error: error instanceof Error ? error.message : 'Unknown error occurred',
-        success: false,
+        success: false
       };
     }
   }
@@ -68,7 +68,7 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
 
@@ -76,7 +76,7 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
 

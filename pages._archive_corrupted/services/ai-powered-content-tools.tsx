@@ -9,10 +9,10 @@ export default function AIPoweredContentTools() {
         <meta name="description" content="Generate SEO‑ready articles, product copy, and visuals with safe, brand‑aligned AI and human review workflows." />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">AI‑Powered Content Tools</h1>
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">AI‑Powered Content Tools</h1>
         <p className="mt-4 text-white/80">Speed up content operations while maintaining brand voice, compliance, and factual accuracy with retrieval‑augmented generation.</p>
 
-        <section className="mt-8 grid md:grid-cols-2 gap-6">
+        <section className="mt-8 grid "md": grid-cols-2 gap-6">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">Modules</h2>
             <ul className="list-disc pl-5 text-white/80 space-y-2">
@@ -40,7 +40,7 @@ export default function AIPoweredContentTools() {
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
           <ul className="list-disc pl-5 text-white/80 space-y-2">
-            <li><a className="underline hover:text-blue-300" href="https://wordpress.org/plugins/" target="_blank" rel="noreferrer">WordPress Plugins Directory</a></li>
+            <li><a className="underline "hover": text-blue-300" href="https://wordpress.org/plugins/" target="_blank" rel="noreferrer">WordPress Plugins Directory</a></li>
             <li><a className="underline hover:text-blue-300" href="https://developers.google.com/drive/api" target="_blank" rel="noreferrer">Google Drive API</a></li>
           </ul>
         </section>

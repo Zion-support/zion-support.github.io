@@ -1,20 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowRight, Zap, Brain, Shield, Cloud} from 'lucide-react';
-;
 export function ITServiceRequestHero($1) {
-    const features = [
-        {
-            icon: <Brain className="w-6 h-6" />,
-            title: "AI-Powered Solutions",
-            description: "Cutting-edge artificial intelligence that learns and adapts to your business needs."
+    const features = [{
+            "icon": <Brain className="w-6 h-6" />,
+            "title": "AI-Powered Solutions",
+            "description": "Cutting-edge artificial intelligence that learns and adapts to your business needs."
         },
-        {icon: <Shield className="w-6 h-6" />,
-            title: "Cybersecurity",
-            description: "Advanced security solutions protecting your digital assets and infrastructure."},
-        {icon: <Cloud className="w-6 h-6" />,
-            title: "Cloud Computing",
-            description: "Scalable cloud solutions that optimize performance and reduce costs."};
+        {"icon": <Shield className="w-6 h-6" />,
+            "title": "Cybersecurity",
+            "description": "Advanced security solutions protecting your digital assets and infrastructure."},
+        {"icon": <Cloud className="w-6 h-6" />,
+            "title": "Cloud Computing",
+            "description": "Scalable cloud solutions that optimize performance and reduce costs."};
     ];
     return (<section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>
@@ -27,14 +25,14 @@ export function ITServiceRequestHero($1) {
         </NeonGlow>"
 "
         <NeonGlow color="zion-purple" intensity="medium">"
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl "md": text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
             Pioneering the future of technology with revolutionary AI;
             consciousness, quantum computing, and autonomous solutions that;
             transform businesses worldwide.
           </p>
         </NeonGlow>"
 "
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
+        <div className="flex flex-col "sm": flex-row gap-4 justify-center mb-12">"
           <Link"
             to="/micro-saas-services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
@@ -52,11 +50,11 @@ export function ITServiceRequestHero($1) {
         </div>
 "
         {/* Features Grid */}"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div"
               key={index}"
-              className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
+              className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 "hover": border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
             >"
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
                 <div className="text-white">{feature.icon}</div>"
@@ -72,5 +70,4 @@ export function ITServiceRequestHero($1) {
     </section>
   );';';
 }";';
-";
-;';';
+";';';

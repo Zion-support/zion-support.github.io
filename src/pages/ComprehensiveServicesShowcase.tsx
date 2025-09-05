@@ -5,7 +5,7 @@ import { AI_SERVICES } from '../data/aiServicesData';
 import { MICRO_SAAS_SERVICES } from '../data/microSaasServicesData';
 
 interface Service {
-  id: string;
+  "id": string;
   title: string;
   description: string;
   category: string;
@@ -29,7 +29,7 @@ interface Service {
     website: string;
   };
   technicalSpecs?: {
-    technology: string[];
+    "technology": string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
@@ -38,27 +38,25 @@ interface Service {
   competitors?: string[];
   marketSize?: string;
 }
-const ComprehensiveServicesShowcase: React.FC = () => {
+const "ComprehensiveServicesShowcase": React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
-  const allServices = [
-    ...INNOVATIVE_SERVICES.map(s => ({ ...s, serviceType: 'Innovative Services' })),
-    ...IT_SERVICES.map(s => ({ ...s, serviceType: 'IT Services' })),
-    ...AI_SERVICES.map(s => ({ ...s, serviceType: 'AI Services' })),
-    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' }))
+  const allServices = [...INNOVATIVE_SERVICES.map(s => ({ ...s, "serviceType": 'Innovative Services' })),
+    ...IT_SERVICES.map(s => ({ ...s, "serviceType": 'IT Services' })),
+    ...AI_SERVICES.map(s => ({ ...s, "serviceType": 'AI Services' })),
+    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, "serviceType": 'Micro SAAS Services' }))
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Analytics')).length },
-    { id: 'Cloud Services', name: 'Cloud Services', count: allServices.filter(s => s.category.includes('Cloud')).length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
-    { id: 'DevOps', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
-    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length },
-    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category.includes('Project Management')).length },
-    { id: 'CRM', name: 'CRM', count: allServices.filter(s => s.category.includes('CRM')).length },
-    { id: 'Analytics', name: 'Analytics', count: allServices.filter(s => s.category.includes('Analytics')).length }
+  const categories = [{ "id": 'all', "name": 'All Services', "count": allServices.length },
+    { "id": 'AI & Analytics', "name": 'AI & Analytics', "count": allServices.filter(s => s.category.includes('AI') || s.category.includes('Analytics')).length },
+    { "id": 'Cloud Services', "name": 'Cloud Services', "count": allServices.filter(s => s.category.includes('Cloud')).length },
+    { "id": 'Cybersecurity', "name": 'Cybersecurity', "count": allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
+    { "id": 'DevOps', "name": 'DevOps', "count": allServices.filter(s => s.category.includes('DevOps')).length },
+    { "id": 'Marketing', "name": 'Marketing', "count": allServices.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length },
+    { "id": 'Project Management', "name": 'Project Management', "count": allServices.filter(s => s.category.includes('Project Management')).length },
+    { "id": 'CRM', "name": 'CRM', "count": allServices.filter(s => s.category.includes('CRM')).length },
+    { "id": 'Analytics', "name": 'Analytics', "count": allServices.filter(s => s.category.includes('Analytics')).length }
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -68,7 +66,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         service.subcategory.includes(selectedCategory)
       );
 
-  const formatPrice = (price: number, currency: string, model: string) => {
+  const formatPrice = ("price": number, "currency": string, "model": string) => {
     if (model === 'monthly') {
       return `${currency}${price.toLocaleString()};/month`;
     } else if (model === 'project') {
@@ -77,7 +75,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     return `${currency}${price.toLocaleString()}`;
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'cutting-edge': return 'bg-purple-100 text-purple-800';
       case 'advanced': return 'bg-blue-100 text-blue-800';
@@ -92,7 +90,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl "md": text-6xl font-bold mb-6">
               Comprehensive Technology Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
@@ -117,7 +115,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       <div className="bg-blue-600 text-white py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg">
-            <strong>Contact Us:</strong> Phone: +1 302 464 0950 | Email: kleber@ziontechgroup.com | 
+            <strong>Contact "Us": </strong> Phone: +1 302 464 0950 | Email: kleber@ziontechgroup.com | 
             Address: 364 E Main St STE 1008 Middletown DE 19709 | Website: 
             <a href="https://ziontechgroup.com" className="underline ml-1">https://ziontechgroup.com</a>
           </p>
@@ -136,7 +134,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+                    : 'bg-white text-gray-700 "hover": bg-blue-50 border border-gray-200'
                 }`}
               >
                 {category.name} ({category.count})
@@ -146,11 +144,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
+              className="bg-white rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
               <div className="p-6">
@@ -178,8 +176,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
-                  <span>ROI: <strong className="text-green-600">{service.roi}</strong></span>
-                  <span>Delivery: <strong>{service.estimatedDelivery}</strong></span>
+                  <span>"ROI": <strong className="text-green-600">{service.roi}</strong></span>
+                  <span>"Delivery": <strong>{service.estimatedDelivery}</strong></span>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -199,7 +197,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 </div>
 
                 <div className="text-center">
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": bg-blue-700 transition-colors">
                     View Details
                   </button>
                 </div>
@@ -221,7 +219,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                   </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="text-gray-400 hover:text-gray-600 text-2xl"
+                    className="text-gray-400 "hover": text-gray-600 text-2xl"
                   >
                     ×
                   </button>
@@ -258,29 +256,29 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                       <h3 className="text-xl font-bold mb-4">Pricing & Details</h3>
                       <div className="space-y-3">
                         <div className="flex justify-between">
-                          <span className="font-medium">Price:</span>
+                          <span className="font-medium">"Price": </span>
                           <span className="text-2xl font-bold text-green-600">
                             {formatPrice(selectedService.price, selectedService.currency, selectedService.pricingModel)}
                           </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">Market Price:</span>
+                          <span className="font-medium">Market "Price": </span>
                           <span>{selectedService.marketPrice}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">ROI:</span>
+                          <span className="font-medium">"ROI": </span>
                           <span className="text-green-600 font-bold">{selectedService.roi}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">Delivery:</span>
+                          <span className="font-medium">"Delivery": </span>
                           <span>{selectedService.estimatedDelivery}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">Support:</span>
+                          <span className="font-medium">"Support": </span>
                           <span className="capitalize">{selectedService.supportLevel}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">Innovation Level:</span>
+                          <span className="font-medium">Innovation "Level": </span>
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${getInnovationLevelColor(selectedService.innovationLevel)}`}>
                             {selectedService.innovationLevel}
                           </span>
@@ -291,10 +289,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     <div className="bg-blue-50 p-6 rounded-lg mb-6">
                       <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                       <div className="space-y-2">
-                        <p><strong>Phone:</strong> {selectedService.contactInfo.phone}</p>
-                        <p><strong>Email:</strong> {selectedService.contactInfo.email}</p>
-                        <p><strong>Website:</strong> 
-                          <a href={selectedService.contactInfo.website} className="text-blue-600 hover:underline ml-1">
+                        <p><strong>"Phone": </strong> {selectedService.contactInfo.phone}</p>
+                        <p><strong>"Email": </strong> {selectedService.contactInfo.email}</p>
+                        <p><strong>"Website": </strong> 
+                          <a href={selectedService.contactInfo.website} className="text-blue-600 "hover": underline ml-1">
                             {selectedService.contactInfo.website}
                           </a>
                         </p>
@@ -306,7 +304,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                         <h3 className="text-xl font-bold mb-4">Technical Specifications</h3>
                         <div className="space-y-3">
                           <div>
-                            <span className="font-medium">Technologies:</span>
+                            <span className="font-medium">"Technologies": </span>
                             <div className="flex flex-wrap gap-2 mt-1">
                               {selectedService.technicalSpecs.technology.map((tech, index) => (
                                 <span key={index} className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded">
@@ -316,10 +314,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                             </div>
                           </div>
                           <div>
-                            <span className="font-medium">Uptime:</span> {selectedService.technicalSpecs.uptime}
+                            <span className="font-medium">"Uptime": </span> {selectedService.technicalSpecs.uptime}
                           </div>
                           <div>
-                            <span className="font-medium">API Endpoints:</span> {selectedService.technicalSpecs.apiEndpoints}
+                            <span className="font-medium">API "Endpoints": </span> {selectedService.technicalSpecs.apiEndpoints}
                           </div>
                         </div>
                           </div>

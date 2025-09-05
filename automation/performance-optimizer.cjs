@@ -11,12 +11,12 @@ const fs = require('fs');
 const path = require('path');
 
 function log(message, type = 'INFO') {
-  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+  const icons = { "INFO": 'ℹ️', "SUCCESS": '✅', "ERROR": '❌', "WARNING": '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
 }
 
 function ensureDir(dir) {
-  fs.mkdirSync(dir, { recursive: true });
+  fs.mkdirSync(dir, { "recursive": true });
 }
 
 function findFiles(dir, exts) {
@@ -51,8 +51,8 @@ function optimizeImages(publicDir, report) {
     const ext = path.extname(img).toLowerCase();
     const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
     try {
-      sharp(img).webp({ quality: 80 }).toFile(outPath);
-      optimized.push({ from: img, to: outPath });
+      sharp(img).webp({ "quality": 80 }).toFile(outPath);
+      optimized.push({ "from": img, "to": outPath });
     } catch (e) {
       report.errors.push(`Failed optimizing ${img}: ${e.message}`);
     }
@@ -67,24 +67,24 @@ function ensureNextConfigFlags(rootDir, report) {
     const file = path.join(rootDir, rel);
     if (!fs.existsSync(file)) continue;
     const original = fs.readFileSync(file, 'utf8');
-    if (original.includes('optimizeCss: true')) {
+    if (original.includes('"optimizeCss": true')) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
     }
     // Attempt minimal enhancement by appending experimental.optimizeCss
     try {
       let updated = original;
-      if (original.includes('experimental:')) {
+      if (original.includes('"experimental": ')) {
         updated = original.replace(
           /experimental:\s*\{/,
-          'experimental: {\n    optimizeCss: true,'
+          '"experimental": {\n    optimizeCss: true,'
         );
       } else if (
         original.includes('nextConfig') ||
         original.includes('module.exports')
       ) {
         updated = original.replace(/\{([\s\S]*?)\}/, m =>
-          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
+          m.replace(/\}$/, ',\n  "experimental": { optimizeCss: true }\n}')
         );
       }
       if (updated !== original) {
@@ -103,11 +103,10 @@ function main() {
   const timestamp = Date.now();
   const report = {
     timestamp,
-    actions: [],
-    optimizedImages: [],
-    modifiedFiles: [],
-    errors: [],
-  };
+    "actions": [],
+    "optimizedImages": [],
+    "modifiedFiles": [],
+    "errors": []};
 
   log('Starting Performance Optimizer...');
   ensureDir(path.join(root, 'automation-reports'));
@@ -124,7 +123,7 @@ function main() {
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
   log(
-    `Performance optimization complete. Report: ${path.basename(outFile)}`,
+    `Performance optimization complete. "Report": ${path.basename(outFile)}`,
     'SUCCESS'
   );
 }
@@ -132,6 +131,6 @@ function main() {
 try {
   main();
 } catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
+  log(`Performance optimizer "failed": ${e.message}`, 'ERROR');
   process.exit(1);
 }

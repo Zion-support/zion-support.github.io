@@ -1,5 +1,5 @@
 export interface AdvancedMicroSaasService { 
-  id: string; 
+  "id": string; 
   title: string; 
   description: string; 
   category: string; 
@@ -18,9 +18,9 @@ export interface AdvancedMicroSaasService {
   roi: string; 
   innovationLevel: string; 
   contactInfo: { phone: string; email: string; website: string }; 
-  technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; 
+  technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; 
   competitors?: string[]; 
   marketSize?: string;
 }
 
-export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [];
+export const "ADVANCED_MICRO_SAAS_SERVICES_2025": AdvancedMicroSaasService[] = [];

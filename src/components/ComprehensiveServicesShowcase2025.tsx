@@ -1,8 +1,8 @@
 import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page($1) {
-, { id: 'Metaverse', name: 'Metaverse', count: allService s.filter(s => s.category === 'Metaverse').length, icon: '🌍' }, { id: 'Edge Computing', name: 'Edge Computing', count: allService s.filter(s => s.category === 'Edge Computing').length, icon: '🌐' }, { id: 'Cybersecurity', name: 'Cybersecurity', count: allService s.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };';';
-  ] { id: 'all', name: 'All Levels', icon: '🌟' }, { id: 'Advanced', name: 'Advanced', icon: '🚀' }, { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' }, { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+, { "id": 'Metaverse', "name": 'Metaverse', "count": allService s.filter(s => s.category === 'Metaverse').length, "icon": '🌍' }, { "id": 'Edge Computing', "name": 'Edge Computing', "count": allService s.filter(s => s.category === 'Edge Computing').length, "icon": '🌐' }, { "id": 'Cybersecurity', "name": 'Cybersecurity', "count": allService s.filter(s => s.category === 'Cybersecurity').length, "icon": '🛡️' };';';
+  ] { "id": 'all', "name": 'All Levels', "icon": '🌟' }, { "id": 'Advanced', "name": 'Advanced', "icon": '🚀' }, { "id": 'Cutting-edge', "name": 'Cutting-edge', "icon": '⚡' }, { "id": 'Revolutionary', "name": 'Revolutionary', "icon": '💫' };
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -14,50 +14,46 @@ export default function Page($1) {
       case 'price':;';';
         return a.price - b.price;      case 'name':;';
         return a.title.localeCompare(b.title);
-      case 'innovation':;
-        
-  ;';
-  ;';';
+      case 'innovation':;';';';
 '
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
-  ;';
-  ;';';
+  'Advanced': 1, 'Cutting-edge': 2,;
+  ;';';';
   'Revolutionary': 3 ;
 
 };';
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
-      default:;
+      "default": ;
         return 0}) ;
 
-    hidden: { opacity: 0 },;
-    visible: {;
+    "hidden": { opacity: 0 },;
+    "visible": {;
       opacity: 1,;
-      transition: {;
+      "transition": {;
         staggerChildren: 0.1;
       };
     };
   };
 
   const itemVariants = {
-  hidden: { y: 2 0,
-  opacity: 0
+  "hidden": { y: 2 0,
+  "opacity": 0
 
 },                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
-                className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan"
+                className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan"
               />
             </div>
 
             {/* Filters Row */}"
-            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-4">
+            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-4">
               {/* Category Filter */}"
               <div className="relative">
                 <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)};"
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
 
                   {categories.map((category) => (;
                     <option key={category.id} value={category.id}>
@@ -72,7 +68,7 @@ export default function Page($1) {
                 <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}"
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
 
                   {innovationLevels.map((level) => (;
                     <option key={level.id} value={level.id}>
@@ -87,7 +83,7 @@ export default function Page($1) {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}"
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan appearance-none"
 "
                   <option value="name">Sort by Name</option>"
                   <option value="price">Sort by Price</option>"
@@ -102,15 +98,15 @@ export default function Page($1) {
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid"
                       ? 'bg-zion-cyan text-white"
-                      : 'text-zion-slate-400 hover: tex t-white'`
-                  }`}
+                      : 'text-zion-slate-400 "hover": tex t-white'`
+                  }"}
 ";
                   <Grid className="w-4 h-4 mx-auto"   />                </button>';
                 <button'
-                  onClick={() => setViewMode('list')}`
+                  onClick={() => setViewMode('list')}"
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list"
                       ? 'bg-zion-cyan text-white"
-                      : 'text-zion-slate-400 hover: tex t-white'`
+                      : 'text-zion-slate-400 "hover": tex t-white'`
                   }`}
 "
                   <List className="w-4 h-4 mx-auto"   />                </button>
@@ -120,7 +116,7 @@ export default function Page($1) {
             {/* Price Range Slider */}"
             <div className="mt-6">;"
               <label className="block text-sm font-medium text-zion-slate-300 mb-2">
-                Price Range: ${priceRange[0]} - ${priceRange[1]}
+                Price "Range": ${priceRange[0]} - ${priceRange[1]}
               </label>"
               <div className="flex gap-4 items-center">
                 <input"
@@ -156,7 +152,7 @@ export default function Page($1) {
       </section>
 
       {/* Services Grid */}"
-      <section className="relative px-4 sm: p x-6 lg: p x-8 pb-20">;"
+      <section className="relative px-4 "sm": p x-6 lg: p x-8 pb-20">;"
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}"
           <div className="mb-8">"
@@ -171,14 +167,14 @@ export default function Page($1) {
             initial="hidden";';
             animate="visible"
             className={viewMode === 'grid"
-              ? 'grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6"
+              ? 'grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-6"
               : 'space-y-4'
 
             {sortedServices.map((service) => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}`
-                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover: borde r-zion-cyan/50 hover: shado w-lg hover: shado w-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : "`
+                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 "hover": borde r-zion-cyan/50 hover: shado w-lg hover: shado w-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : "`
                 }`}
                 onClick={() => handleServiceClick(service)}
 
@@ -190,7 +186,7 @@ export default function Page($1) {
                       <div className="flex items-center gap-3">
                         {getCategoryIcon(service.category)}
                         <div>"
-                          <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
+                          <h3 className="text-lg font-semibold text-white group-"hover": tex t-zion-cyan transition-colors">
                             {service.title}
                           </h3>"
                           <p className="text-sm text-zion-slate-400">{service.category}</p>
@@ -235,7 +231,7 @@ export default function Page($1) {
                     </div>
 
                     {/* CTA Button */}"
-                    <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
+                    <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium "hover": fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More"
                       <ArrowRight className="w-4 h-4"   />                    </button>
                   </>) : (;
@@ -246,7 +242,7 @@ export default function Page($1) {
                         <div className="flex items-center gap-3">
                           {getCategoryIcon(service.category)}
                           <div>"
-                            <h3 className="text-xl font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
+                            <h3 className="text-xl font-semibold text-white group-"hover": tex t-zion-cyan transition-colors">
                               {service.title}
                             </h3>"
                             <p className="text-zion-slate-400">{service.category}</p>
@@ -275,7 +271,7 @@ export default function Page($1) {
                         ${service.price.toLocaleString()}
                       </div>"
                       <div className="text-sm text-zion-slate-400">/month</div>"
-                      <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-all duration-300 flex items-center gap-2">
+                      <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium "hover": fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-all duration-300 flex items-center gap-2">
                         Learn More"
                         <ArrowRight className="w-4 h-4"   />                      </button>
                     </div>
@@ -285,8 +281,8 @@ export default function Page($1) {
 
           {/* No Results */}
           {filteredServices.length === 0 && (<motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}"
+              initial={{ "opacity": 0 }}
+              animate={{ "opacity": 1 }}"
               className="text-center py-20"
 "
               <div className="text-6xl mb-4">🔍</div>"
@@ -295,14 +291,13 @@ export default function Page($1) {
                 Try adjusting your search criteria or filters
               </p>
               <button      onClick={;
-  ;
   ;';
   () => {;';';
                   setSearchTerm(");';';
                   setActiveCategory('all');
                   setPriceRange([0,
   10000]);';';
-                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover: b g-zion-cyan/90 transition-colors"
+                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium "hover": b g-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
               </button>
@@ -313,29 +308,29 @@ export default function Page($1) {
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (<motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}"
+            initial={{ "opacity": 0 }}
+            animate={{ "opacity": 1 }}
+            exit={{ "opacity": 0 }}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
 
             <motion.div
               initial = {
 
-  { scale: 0.9,
-  opacity: 0
+  { "scale": 0.9,
+  "opacity": 0
 
 }}
               animate = {
 
-  { scale: 1,
-  opacity: 1
+  { "scale": 1,
+  "opacity": 1
 
 }}
               exit = {
 
-  { scale: 0.9,
-  opacity: 0
+  { "scale": 0.9,
+  "opacity": 0
 
 }}"
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -357,13 +352,13 @@ export default function Page($1) {
                     </p>
                   </div>
                   <button onClick={closeModal}"
-                    className="text-zion-slate-400 hover: tex t-white transition-colors"
+                    className="text-zion-slate-400 "hover": tex t-white transition-colors"
 "
                     <X className="w-6 h-6"   />                  </button>
                 </div>
 
                 {/* Price and Key Info */}"
-                <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">"
+                <div className="grid grid-cols-1 "md": gri d-cols-3 gap-6 mb-8">"
                   <div className="bg-zion-slate-800/50 rounded-xl p-4">"
                     <div className="text-3xl font-bold text-zion-cyan mb-1">
                       ${selectedService.price.toLocaleString()}
@@ -385,7 +380,7 @@ export default function Page($1) {
                 </div>
 
                 {/* Features and Benefits */}"
-                <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
+                <div className="grid grid-cols-1 "md": gri d-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <CheckCircle className="w-5 h-5 text-zion-green"   />                      Key Features
@@ -413,7 +408,7 @@ export default function Page($1) {
                 </div>
 
                 {/* Use Cases and Target Audience */}"
-                <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
+                <div className="grid grid-cols-1 "md": gri d-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <Target className="w-5 h-5 text-zion-cyan"   />                      Use Cases
@@ -446,7 +441,7 @@ export default function Page($1) {
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <Code className="w-5 h-5 text-zion-cyan"   />                      Technical Specifications
                     </h3>"
-                    <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
+                    <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">
                       <div>"
                         <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>"
                         <div className="flex flex-wrap gap-2">
@@ -471,7 +466,7 @@ export default function Page($1) {
 }
                 {/* Contact and CTA */}"
                 <div className="border-t border-zion-slate-700 pt-6">"
-                  <div className="flex flex-col md: fle x-row items-center justify-between gap-4">"
+                  <div className="flex flex-col "md": fle x-row items-center justify-between gap-4">"
                     <div className="text-center md: tex t-left">"
                       <p className="text-zion-slate-400 mb-2">Ready to get started?</p>"
                       <div className="flex items-center gap-4 text-sm text-zion-slate-300">
@@ -480,7 +475,7 @@ export default function Page($1) {
                       </div>
                     </div>"
                     <div className="flex gap-3">"
-                      <button className="bg-zion-slate-700 text-white px-6 py-3 rounded-xl font-medium hover: b g-zion-slate-600 transition-colors">
+                      <button className="bg-zion-slate-700 text-white px-6 py-3 rounded-xl font-medium "hover": b g-zion-slate-600 transition-colors">
                         Request Demo
                       </button>"
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-medium hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-colors">

@@ -27,8 +27,7 @@ class OptimizedSyntaxFixer {
     return content}
 
   async fixCriticalFiles() {
-    const criticalFiles = [
-      'src/pages/services/AI-Healthcare-Diagnostics.tsx',
+    const criticalFiles = ['src/pages/services/AI-Healthcare-Diagnostics.tsx',
       'src/pages/services/AI5GNetwork.tsx',
       'src/pages/services/AIAnsible.tsx',
       'src/pages/services/AIApplicationSecurity.tsx',
@@ -46,7 +45,7 @@ class OptimizedSyntaxFixer {
           if (content !== originalContent) {
             fs.writeFileSync(filePath, content, 'utf8');
             this.fixedCount++;
-            this.log(`✅ Fixed: ${file}`)}
+            this.log(`✅ "Fixed": ${file}`)}
         } catch (error) {
           this.log(`❌ Error fixing ${file}: ${error.message}`)}
       }

@@ -214,13 +214,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal & Social */}
+          {/* Legal */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <Shield className="w-5 h-5 mr-2 text-blue-400" />
               Legal
             </h3>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3">
               {legal.map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -233,52 +233,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-            {/* Social Links */}
-            <div>
-              <h4 className="text-sm font-medium text-gray-300 mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest technology insights and company updates delivered to your inbox.
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-              />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors font-medium">
-                Subscribe
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -286,17 +240,27 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>Certified & Compliant</span>
-              <span>•</span>
-              <span>SOC 2 Type II</span>
-              <span>•</span>
-              <span>ISO 27001</span>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

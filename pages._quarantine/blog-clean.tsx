@@ -46,95 +46,93 @@ import {
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 
-const Blog: NextPage = () => {
-  const blogPosts = [
-    {
+const "Blog": NextPage = () => {
+  const blogPosts = [{
       id: 1,
-      title: "The Future of AI in Business: Trends and Predictions for 2024",
-      excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
-      author: "Kleber Santos",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Machine Learning",
-      image: "/api/placeholder/600/400",
-      slug: "future-of-ai-in-business-2024"
+      "title": "The Future of AI in Business: Trends and Predictions for 2024",
+      "excerpt": "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
+      "author": "Kleber Santos",
+      "date": "2024-01-15",
+      "readTime": "5 min read",
+      "category": "AI & Machine Learning",
+      "image": "/api/placeholder/600/400",
+      "slug": "future-of-ai-in-business-2024"
     },
     {
-      id: 2,
-      title: "The Future of AI in Business: 2025 Trends and Predictions",
-      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.",
-      author: "Sarah Johnson",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      category: "AI Trends",
-      image: "/api/placeholder/600/400",
-      tags: ["AI", "Business", "Trends", "2025"],
-      featured: true
+      "id": 2,
+      "title": "The Future of AI in Business: 2025 Trends and Predictions",
+      "excerpt": "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.",
+      "author": "Sarah Johnson",
+      "date": "2025-01-15",
+      "readTime": "8 min read",
+      "category": "AI Trends",
+      "image": "/api/placeholder/600/400",
+      "tags": ["AI", "Business", "Trends", "2025"],
+      "featured": true
     },
     {
-      id: 3,
-      title: "Building Scalable AI Solutions: Best Practices and Architecture",
-      excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.",
-      author: "Michael Chen",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      category: "Technical",
-      image: "/api/placeholder/600/400",
-      tags: ["AI Architecture", "Scalability", "Best Practices"],
-      featured: false
+      "id": 3,
+      "title": "Building Scalable AI Solutions: Best Practices and Architecture",
+      "excerpt": "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.",
+      "author": "Michael Chen",
+      "date": "2025-01-12",
+      "readTime": "12 min read",
+      "category": "Technical",
+      "image": "/api/placeholder/600/400",
+      "tags": ["AI Architecture", "Scalability", "Best Practices"],
+      "featured": false
     },
     {
-      id: 4,
-      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
-      excerpt: "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.",
-      author: "Emily Rodriguez",
-      date: "2025-01-10",
-      readTime: "10 min read",
-      category: "Security",
-      image: "/api/placeholder/600/400",
-      tags: ["Cybersecurity", "AI Security", "Threat Protection"],
-      featured: false
+      "id": 4,
+      "title": "Cybersecurity in the AI Era: Protecting Your Digital Assets",
+      "excerpt": "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.",
+      "author": "Emily Rodriguez",
+      "date": "2025-01-10",
+      "readTime": "10 min read",
+      "category": "Security",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Cybersecurity", "AI Security", "Threat Protection"],
+      "featured": false
     },
     {
-      id: 5,
-      title: "Cloud Migration Strategies: A Complete Guide for 2025",
-      excerpt: "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.",
-      author: "David Kim",
-      date: "2025-01-08",
-      readTime: "15 min read",
-      category: "Cloud",
-      image: "/api/placeholder/600/400",
-      tags: ["Cloud Migration", "Strategy", "Best Practices"],
-      featured: false
+      "id": 5,
+      "title": "Cloud Migration Strategies: A Complete Guide for 2025",
+      "excerpt": "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.",
+      "author": "David Kim",
+      "date": "2025-01-08",
+      "readTime": "15 min read",
+      "category": "Cloud",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Cloud Migration", "Strategy", "Best Practices"],
+      "featured": false
     },
     {
-      id: 6,
-      title: "AI-Powered Customer Experience: Transforming Business Interactions",
-      excerpt: "How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
-      author: "Lisa Wang",
-      date: "2025-01-05",
-      readTime: "9 min read",
-      category: "Customer Experience",
-      image: "/api/placeholder/600/400",
-      tags: ["Customer Experience", "AI", "Automation"],
-      featured: false
+      "id": 6,
+      "title": "AI-Powered Customer Experience: Transforming Business Interactions",
+      "excerpt": "How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
+      "author": "Lisa Wang",
+      "date": "2025-01-05",
+      "readTime": "9 min read",
+      "category": "Customer Experience",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Customer Experience", "AI", "Automation"],
+      "featured": false
     },
     {
-      id: 7,
-      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
-      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
-      author: "James Wilson",
-      date: "2025-01-03",
-      readTime: "11 min read",
-      category: "Analytics",
-      image: "/api/placeholder/600/400",
-      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
-      featured: false
+      "id": 7,
+      "title": "Data Analytics and Machine Learning: Driving Business Intelligence",
+      "excerpt": "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
+      "author": "James Wilson",
+      "date": "2025-01-03",
+      "readTime": "11 min read",
+      "category": "Analytics",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Data Analytics", "Machine Learning", "Business Intelligence"],
+      "featured": false
     }
   ];
 
-  const categories = [
-    "All Posts",
+  const categories = ["All Posts",
     "AI & Machine Learning",
     "Cloud Services",
     "Web Development",
@@ -153,7 +151,7 @@ const Blog: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
+          <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">
             Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Blog</span>
           </h1>
           <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -165,9 +163,9 @@ const Blog: NextPage = () => {
       {/* Blog Posts */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+          <div className="grid "md": gri d-cols-2 lg: gri d-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shado w-lg transition-shadow">
+              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden "hover": shado w-lg transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                   <FileText className="h-16 w-16 text-white"  />
                 </div>
@@ -192,7 +190,7 @@ const Blog: NextPage = () => {
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium"
+                      className="inline-flex items-center text-blue-600 "hover": tex t-blue-700 font-medium"
                     >
                       Read More
                       <ArrowRight className="ml-1 h-4 w-4"  />
@@ -208,7 +206,7 @@ const Blog: NextPage = () => {
       {/* Contact Section */}
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl "md": tex t-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -216,7 +214,7 @@ const Blog: NextPage = () => {
           </p>
           
           {/* Contact Details */}
-          <div className="grid gap-8 md: gri d-cols-3 text-center mb-8">
+          <div className="grid gap-8 "md": gri d-cols-3 text-center mb-8">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mx-auto mb-4">
                 <Phone className="h-6 w-6 text-white"  />

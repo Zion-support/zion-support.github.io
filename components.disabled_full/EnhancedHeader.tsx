@@ -14,49 +14,45 @@ export default function EnhancedHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async ("e": React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
-  const toggleDropdown = (itemName: string) => {
+  const toggleDropdown = ("itemName": string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
-  const navigation = [
+  const navigation = [{
+      "name": 'Services',
+      "href": '/services',
+      "dropdown": [
+        { name: 'IT Services', "href": '/services/it-services' },
+        { "name": 'Micro SaaS', "href": '/services/micro-saas' },
+        { "name": 'Web Development', "href": '/services/web-development' },
+        { "name": 'Cloud Services', "href": '/services/cloud-services' },
+        { "name": 'AI Development', "href": '/services/ai-development' },
+      ]},
     {
-      name: 'Services',
-      href: '/services',
-      dropdown: [
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'Web Development', href: '/services/web-development' },
-        { name: 'Cloud Services', href: '/services/cloud-services' },
-        { name: 'AI Development', href: '/services/ai-development' },
-      ],
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      dropdown: [
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-        { name: 'Customer Support', href: '/solutions/customer-support' },
-        { name: 'Email Automation', href: '/solutions/email-automation' },
-        { name: 'Event Management', href: '/solutions/event-management' },
-        { name: 'Project Management', href: '/solutions/project-management' },
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+      "name": 'Solutions',
+      "href": '/solutions',
+      "dropdown": [{ name: 'AI Content Creation', "href": '/solutions/ai-content-creation' },
+        { "name": 'Customer Support', "href": '/solutions/customer-support' },
+        { "name": 'Email Automation', "href": '/solutions/email-automation' },
+        { "name": 'Event Management', "href": '/solutions/event-management' },
+        { "name": 'Project Management', "href": '/solutions/project-management' },
+        { "name": 'Workflow Automation', "href": '/solutions/workflow-automation' },
+      ]},
+    { "name": 'About', "href": '/about' },
+    { "name": 'Blog', "href": '/blog' },
+    { "name": 'Contact', "href": '/contact' },
   ];
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}
     >
       {' '}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         {' '}
         <div className="flex justify-between items-center h-16">
           {' '}
@@ -75,7 +71,7 @@ export default function EnhancedHeader() {
             </a>{' '}
           </div>{' '}
           {}{' '}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden "md": flex items-center space-x-8">
             {' '}
             {navigation.map(item => (
               <div key={item.name} className="relative">
@@ -85,7 +81,7 @@ export default function EnhancedHeader() {
                     {' '}
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
                       <span>{item.name}</span>{' '}
@@ -98,7 +94,7 @@ export default function EnhancedHeader() {
                           <a
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-gray-700 "hover": bg-gray-50 hover:text-blue-600 transition-colors duration-200"
                           >
                             {' '}
                             {dropdownItem.name}{' '}
@@ -110,7 +106,7 @@ export default function EnhancedHeader() {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                    className="text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                   >
                     {' '}
                     {item.name}{' '}
@@ -120,7 +116,7 @@ export default function EnhancedHeader() {
             ))}{' '}
           </nav>{' '}
           {}{' '}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden "md": flex items-center space-x-4">
             {' '}
             {}{' '}
             <form onSubmit={handleSearch} className="relative">
@@ -130,29 +126,29 @@ export default function EnhancedHeader() {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-                className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />{' '}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
             </form>{' '}
             {}{' '}
             <div className="flex items-center space-x-2">
               {' '}
-              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+              <button className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200">
                 {' '}
                 <User className="h-5 w-5" />{' '}
               </button>{' '}
-              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+              <button className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200">
                 {' '}
                 <ShoppingCart className="h-5 w-5" />{' '}
               </button>{' '}
             </div>{' '}
           </div>{' '}
           {}{' '}
-          <div className="md:hidden">
+          <div className=""md": hidden">
             {' '}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
             >
               {' '}
               {mobileMenuOpen ? (
@@ -165,7 +161,7 @@ export default function EnhancedHeader() {
         </div>{' '}
         {}{' '}
         {mobileMenuOpen && (
-          <div className="md:hidden">
+          <div className=""md": hidden">
             {' '}
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {' '}
@@ -177,7 +173,7 @@ export default function EnhancedHeader() {
                       {' '}
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                       >
                         {' '}
                         <span>{item.name}</span>{' '}
@@ -190,7 +186,7 @@ export default function EnhancedHeader() {
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
                             >
                               {' '}
                               {dropdownItem.name}{' '}
@@ -202,7 +198,7 @@ export default function EnhancedHeader() {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
                       {item.name}{' '}
@@ -220,7 +216,7 @@ export default function EnhancedHeader() {
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />{' '}
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
                 </div>{' '}

@@ -6,8 +6,7 @@ const path = require('path');
 console.log('🔧 Fixing all remaining syntax errors...');
 
 // Fix specific files with known issues
-const filesToFix = [
-    'src/components/SEO.tsx',
+const filesToFix = ['src/components/SEO.tsx',
     'src/components/talent/TalentCard.jsx',
     'src/components/ui/use-toast.ts',
     'src/data/enhancedServices.ts',
@@ -16,7 +15,7 @@ const filesToFix = [
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
-        console.log(`⚠️  File not found: ${filePath}`);
+        console.log(`⚠️  File not "found": ${filePath}`);
         return;
     }
 
@@ -26,10 +25,10 @@ function fixFile(filePath) {
     // Fix SEO.tsx
     if (filePath.includes('SEO.tsx')) {
         // Remove malformed JSX after return statement
-        content = content.replace(/;\s*\{\/\* Twitter \*\/\}\s*<meta property="twitter: car d" content="summary_large_image"\s*\/>\s*<meta property="twitter: ur l" content=\{url\}\s*\/>\s*<meta property="twitter: titl e" content=\{title\}\s*\/>\s*<meta property="twitter: descriptio n" content=\{description\}\s*\/>/g, '');
+        content = content.replace(/;\s*\{\/\* Twitter \*\/\}\s*<meta property=""twitter": car d" content="summary_large_image"\s*\/>\s*<meta property="twitter: ur l" content=\{url\}\s*\/>\s*<meta property=""twitter": titl e" content=\{title\}\s*\/>\s*<meta property=""twitter": descriptio n" content=\{description\}\s*\/>/g, '');
         
         // Fix malformed return statement
-        content = content.replace(/return\s*\(\s*<>\s*<style jsx>\{`\s*\/\* Optimize animations \*\/\s*`\}<\/style>\s*\{\/\* Performance monitoring \*\/\}\s*<script>`\s*\{`\s*\/\/ Performance monitoring'\s*if\('performance' in window\)\s*\{[^}]*\}\s*`\}<\/script>\s*<\/>/g, 'return null;');
+        content = content.replace(/return\s*\(\s*<>\s*<style jsx>\{"\s*\/\* Optimize animations \*\/\s*"\}<\/style>\s*\{\/\* Performance monitoring \*\/\}\s*<script>"\s*\{"\s*\/\/ Performance monitoring'\s*if\('performance' in window\)\s*\{[^}]*\}\s*"\}<\/script>\s*<\/>/g, 'return null;');
     }
 
     // Fix TalentCard.jsx
@@ -49,7 +48,7 @@ function fixFile(filePath) {
         content = content.replace(/>"\s*<div className="flex items-center text-sm text-zion-blue-light">"/g, '>\n            <div className="flex items-center text-sm text-zion-blue-light">');
         content = content.replace(/>"\s*<Clock className="w-4 h-4 mr-1"\/>"/g, '>\n              <Clock className="w-4 h-4 mr-1"\/>');
         content = content.replace(/>"\s*<span>"/g, '>\n              <span>');
-        content = content.replace(/>"\s*<Button size="sm" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">"/g, '>\n            <Button size="sm" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">');
+        content = content.replace(/>"\s*<Button size="sm" className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">"/g, '>\n            <Button size="sm" className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">');
         content = content.replace(/>"\s*<span className="text-sm">"/g, '>\n              <span className="text-sm">');
         content = content.replace(/>"\s*<\/div>"/g, '>\n            <\/div>');
         content = content.replace(/>"\s*<\/div>"/g, '>\n          <\/div>');
@@ -62,16 +61,16 @@ function fixFile(filePath) {
     // Fix use-toast.ts
     if (filePath.includes('use-toast.ts')) {
         // Fix malformed function
-        content = content.replace(/const showToast = \(message: string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \};\s*\};\s*$/g, 'const showToast = (message: string, options?: ToastOptions) => {\n    return toast(message, options);\n  };\n\n  return { showToast };\n}');
+        content = content.replace(/const showToast = \("message": string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \};\s*\};\s*$/g, 'const showToast = ("message": string, options?: ToastOptions) => {\n    return toast(message, options);\n  };\n\n  return { showToast };\n}');
     }
 
     // Fix enhancedServices.ts
     if (filePath.includes('enhancedServices.ts')) {
         // Fix malformed object structure
         content = content.replace(/},/g, '},\n  },\n  {');
-        content = content.replace(/images: \["https:\/\/images\.unsplash\.com\/photo-1551288049-bebda4e38f71\?auto = format&fit=crop&w=800&h=500"\],/g, 'images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],');
-        content = content.replace(/createdAt: "2024-01-15T10: 0 0:00\.000Z",/g, 'createdAt: "2024-01-15T10:00:00.000Z",');
-        content = content.replace(/reviewCount: 15 6,/g, 'reviewCount: 156,');
+        content = content.replace(/"images": \["https:\/\/images\.unsplash\.com\/photo-1551288049-bebda4e38f71\?auto = format&fit=crop&w=800&h=500"\],/g, '"images": ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],');
+        content = content.replace(/"createdAt": "2024-01-15T10: 0 0:00\.000Z",/g, '"createdAt": "2024-01-15T10:00:00.000Z",');
+        content = content.replace(/"reviewCount": 15 6,/g, '"reviewCount": 156,');
     }
 
     // Fix useAuth.tsx
@@ -83,25 +82,25 @@ function fixFile(filePath) {
     // General fixes
     content = content.replace(/""/g, '');
     content = content.replace(/""/g, '');
-    content = content.replace(/'"`/g, '');
-    content = content.replace(/`"/g, '');
-    content = content.replace(/`\s*$/gm, '');
-    content = content.replace(/^\s*`\s*$/gm, '');
+    content = content.replace(/'""/g, '');
+    content = content.replace(/""/g, '');
+    content = content.replace(/"\s*$/gm, '');
+    content = content.replace(/^\s*"\s*$/gm, '');
 
     // Count fixes
     const originalContent = fs.readFileSync(filePath, 'utf8');
     if (content !== originalContent) {
         fixes = (originalContent.match(/""/g) || []).length + 
                 (originalContent.match(/""/g) || []).length +
-                (originalContent.match(/'"`/g) || []).length +
-                (originalContent.match(/`"/g) || []).length;
+                (originalContent.match(/'""/g) || []).length +
+                (originalContent.match(/""/g) || []).length;
     }
 
     if (fixes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
+        console.log("✅ Fixed ${fixes} issues in ${filePath}");
     } else {
-        console.log(`✨ No issues found in ${filePath}`);
+        console.log("✨ No issues found in ${filePath}");
     }
 
     return fixes;
@@ -113,12 +112,12 @@ filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
 
-console.log(`\n📊 Summary:`);
-console.log(`   Files processed: ${filesToFix.length}`);
-console.log(`   Total fixes applied: ${totalFixes}`);
+console.log("\n📊 "Summary": ");
+console.log("   Files processed: ${filesToFix.length}");
+console.log("   Total fixes "applied": ${totalFixes}");
 
 if (totalFixes > 0) {
-    console.log(`\n✨ All remaining syntax error fixing completed!`);
+    console.log("\n✨ All remaining syntax error fixing completed!");
 } else {
-    console.log(`\n✨ No syntax errors found to fix.`);
+    console.log("\n✨ No syntax errors found to fix.`);
 }

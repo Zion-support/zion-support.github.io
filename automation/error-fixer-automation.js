@@ -3,18 +3,16 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  execSync,
-} = // // require('child_process');
+  execSync} = // // require('child_process');
   class ErrorFixerAutomation {
     constructor() {
       this.projectRoot = process.cwd();
       this.errorReport = {
-        timestamp: new Date().toISOString(),
-        duration: 0,
-        fixesApplied: [],
-        errorsFound: [],
-        warnings: [],
-      };
+        "timestamp": new Date().toISOString(),
+        "duration": 0,
+        "fixesApplied": [],
+        "errorsFound": [],
+        "warnings": []};
       this.startTime = Date.now();
     }
 
@@ -38,12 +36,11 @@ const {
           `⚠️  Found ${this.errorReport.errorsFound.length} remaining errors`
         );
       } catch (error) {
-        console.error('❌ Error in automation:', error);
+        console.error('❌ Error in "automation": ', error);
         this.errorReport.errorsFound.push({
-          type: 'automation_error',
-          message: error.message,
-          stack: error.stack,
-        });
+          "type": 'automation_error',
+          "message": error.message,
+          "stack": error.stack});
       }
     }
 
@@ -52,10 +49,9 @@ const {
 
       try {
         const result = execSync('npx tsc --noEmit --pretty false', {
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          stdio: ['pipe', 'pipe', 'pipe'],
-        });
+          "encoding": 'utf8',
+          "cwd": this.projectRoot,
+          "stdio": ['pipe', 'pipe', 'pipe']});
 
         if (result) {
           const errors = this.parseTypeScriptErrors(result);
@@ -80,12 +76,11 @@ const {
           );
           if (match) {
             errors.push({
-              file: match[1].trim(),
-              line: parseInt(match[2]),
-              column: parseInt(match[3]),
-              message: match[4].trim(),
-              type: 'typescript',
-            });
+              "file": match[1].trim(),
+              "line": parseInt(match[2]),
+              "column": parseInt(match[3]),
+              "message": match[4].trim(),
+              "type": 'typescript'});
           }
         }
       }
@@ -112,8 +107,7 @@ const {
         } catch (fixError) {
           this.errorReport.errorsFound.push({
             ...error,
-            fixError: fixError.message,
-          });
+            "fixError": fixError.message});
         }
       }
     }
@@ -146,11 +140,10 @@ const {
             fs.writeFileSync(filePath, lines.join('\n'));
 
             this.errorReport.fixesApplied.push({
-              type: 'property_access',
-              file: error.file,
-              description: `Fixed property access for ${propertyName}`,
-              line: error.line,
-            });
+              "type": 'property_access',
+              "file": error.file,
+              "description": `Fixed property access for ${propertyName}`,
+              "line": error.line});
           }
         }
       }
@@ -183,11 +176,10 @@ const {
               fs.writeFileSync(filePath, lines.join('\n'));
 
               this.errorReport.fixesApplied.push({
-                type: 'module_import',
-                file: error.file,
-                description: `Fixed import path from ${modulePath} to ${newPath}`,
-                line: i + 1,
-              });
+                "type": 'module_import',
+                "file": error.file,
+                "description": `Fixed import path from ${modulePath} to ${newPath}`,
+                "line": i + 1});
             }
           }
         }
@@ -223,12 +215,11 @@ const {
     async fixTypeAssignmentError(error) {
       // This is a complex error that might need manual intervention
       this.errorReport.warnings.push({
-        type: 'type_assignment',
-        file: error.file,
-        message: error.message,
-        line: error.line,
-        description: 'Type assignment error requires manual review',
-      });
+        "type": 'type_assignment',
+        "file": error.file,
+        "message": error.message,
+        "line": error.line,
+        "description": 'Type assignment error requires manual review'});
     }
 
     async checkAndFixESLintErrors() {
@@ -236,10 +227,9 @@ const {
 
       try {
         const result = execSync('npx eslint . --format=compact --no-eslintrc', {
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          stdio: ['pipe', 'pipe', 'pipe'],
-        });
+          "encoding": 'utf8',
+          "cwd": this.projectRoot,
+          "stdio": ['pipe', 'pipe', 'pipe']});
 
         if (result) {
           const errors = this.parseESLintErrors(result);
@@ -261,12 +251,11 @@ const {
         const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
         if (match) {
           errors.push({
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: match[4].trim(),
-            type: 'eslint',
-          });
+            "file": match[1].trim(),
+            "line": parseInt(match[2]),
+            "column": parseInt(match[3]),
+            "message": match[4].trim(),
+            "type": 'eslint'});
         }
       }
 
@@ -286,8 +275,7 @@ const {
         } catch (fixError) {
           this.errorReport.errorsFound.push({
             ...error,
-            fixError: fixError.message,
-          });
+            "fixError": fixError.message});
         }
       }
     }
@@ -318,11 +306,10 @@ const {
             fs.writeFileSync(filePath, lines.join('\n'));
 
             this.errorReport.fixesApplied.push({
-              type: 'unused_variable',
-              file: error.file,
-              description: `Prefixed unused variable ${variableName} with underscore`,
-              line: error.line,
-            });
+              "type": 'unused_variable',
+              "file": error.file,
+              "description": `Prefixed unused variable ${variableName} with underscore`,
+              "line": error.line});
           }
         }
       }
@@ -344,11 +331,10 @@ const {
           fs.writeFileSync(filePath, lines.join('\n'));
 
           this.errorReport.fixesApplied.push({
-            type: 'console_statement',
-            file: error.file,
-            description: 'Commented out console statement',
-            line: error.line,
-          });
+            "type": 'console_statement',
+            "file": error.file,
+            "description": 'Commented out console statement',
+            "line": error.line});
         }
       }
     }
@@ -369,11 +355,10 @@ const {
           fs.writeFileSync(filePath, lines.join('\n'));
 
           this.errorReport.fixesApplied.push({
-            type: 'prefer_const',
-            file: error.file,
-            description: 'Changed let to const',
-            line: error.line,
-          });
+            "type": 'prefer_const',
+            "file": error.file,
+            "description": 'Changed let to const',
+            "line": error.line});
         }
       }
     }
@@ -438,11 +423,10 @@ const {
                 modified = true;
 
                 this.errorReport.fixesApplied.push({
-                  type: 'import_path',
-                  file: path.relative(this.projectRoot, filePath),
-                  description: `Fixed import path from ${modulePath} to ${newPath}`,
-                  line: i + 1,
-                });
+                  "type": 'import_path',
+                  "file": path.relative(this.projectRoot, filePath),
+                  "description": `Fixed import path from ${modulePath} to ${newPath}`,
+                  "line": i + 1});
               }
             }
           }
@@ -457,8 +441,7 @@ const {
     async checkAndFixMissingFiles() {
       console.log('🔍 Checking for missing files...');
 
-      const missingFiles = [
-        'src/pages/HomePage.tsx',
+      const missingFiles = ['src/pages/HomePage.tsx',
         'src/pages/SolutionsPage.tsx',
         'src/pages/AboutPage.tsx',
         'src/pages/ContactPage.tsx',
@@ -479,7 +462,7 @@ const {
       const dir = path.dirname(fullPath);
 
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { "recursive": true });
       }
 
       const componentName = path.basename(filePath, path.extname(filePath));
@@ -488,10 +471,9 @@ const {
       fs.writeFileSync(fullPath, content);
 
       this.errorReport.fixesApplied.push({
-        type: 'missing_file',
-        file: filePath,
-        description: `Created missing ${componentName} component`,
-      });
+        "type": 'missing_file',
+        "file": filePath,
+        "description": `Created missing ${componentName} component`});
     }
 
     generateComponentContent(componentName) {
@@ -523,11 +505,10 @@ export default function ${componentName}() {
       // Check for missing scripts
       const requiredScripts = {
         'type-check': 'tsc --noEmit',
-        lint: 'next lint',
-        build: 'next build',
-        dev: 'next dev',
-        start: 'next start',
-      };
+        "lint": 'next lint',
+        "build": 'next build',
+        "dev": 'next dev',
+        "start": 'next start'};
 
       for (const [script, command] of Object.entries(requiredScripts)) {
         if (!packageJson.scripts[script]) {
@@ -535,10 +516,9 @@ export default function ${componentName}() {
           modified = true;
 
           this.errorReport.fixesApplied.push({
-            type: 'package_json_script',
-            file: 'package.json',
-            description: `Added missing script: ${script}`,
-          });
+            "type": 'package_json_script',
+            "file": 'package.json',
+            "description": `Added missing script: ${script}`});
         }
       }
 
@@ -556,11 +536,11 @@ export default function ${componentName}() {
       const reportDir = path.dirname(reportPath);
 
       if (!fs.existsSync(reportDir)) {
-        fs.mkdirSync(reportDir, { recursive: true });
+        fs.mkdirSync(reportDir, { "recursive": true });
       }
 
       fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
-      console.log(`📄 Report saved to: ${reportPath}`);
+      console.log(`📄 Report saved "to": ${reportPath}`);
     }
   };
 

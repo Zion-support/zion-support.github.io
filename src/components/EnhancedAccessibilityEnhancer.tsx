@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface AccessibilitySettings {
-  largeText: boolean;
+  "largeText": boolean;
   reducedMotion: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   highContrast: boolean;
@@ -17,19 +17,17 @@ interface EnhancedAccessibilityEnhancerProps {
 
 export default function EnhancedAccessibilityEnhancer({
   enabled = true,
-  showSettings = true,
-}: EnhancedAccessibilityEnhancerProps) {
+  showSettings = true}: EnhancedAccessibilityEnhancerProps) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    largeText: false,
-    reducedMotion: false,
-    colorBlindness: 'none',
-    highContrast: false,
-    focusVisible: true,
-  };);
+    "largeText": false,
+    "reducedMotion": false,
+    "colorBlindness": 'none',
+    "highContrast": false,
+    "focusVisible": true};);
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback(("newSettings": AccessibilitySettings) => {
     const root = document.documentElement;
 
     // Apply large text
@@ -113,13 +111,13 @@ export default function Page($1) {
         setSettings(parsedSettings);
         applySettings(parsedSettings);
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+        console.error('Failed to parse accessibility "settings": ', error);
       }
     }
   }, [enabled, applySettings]);
 
-  const handleSettingChange = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    const updatedSettings = { ...settings, [key]: value };;
+  const handleSettingChange = ("key": keyof AccessibilitySettings, "value": boolean | string) => {
+    const updatedSettings = { ...settings, [key]: value };
     setSettings(updatedSettings);
     applySettings(updatedSettings);
   };
@@ -130,10 +128,10 @@ export default function Page($1) {
     <div className="accessibility-enhancer">
       {showSettings && (
         <motion.button
-          className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+          className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg "hover": bg-blue-700 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ "scale": 1.05 }}
+          whileTap={{ "scale": 0.95 }}
           aria-label="Accessibility Settings"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,7 +160,7 @@ export default function Page($1) {
 
   // Keyboard navigation enhancement
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(!enabled || !settings.keyboardNavigation) return;
 
@@ -199,7 +197,7 @@ export default function Page($1) {
 
   // Enhanced focus management
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     
       setCurrentFocus(target) ;
@@ -258,8 +256,8 @@ export default function Page($1) {
 
   // Zoom controls
   
-      applySettings({ zoomLevel: newZoo m });`
-      announceToScreenReader(`Zoom level ${newZoom}%`)},
+      applySettings({ "zoomLevel": newZoo m });"
+      announceToScreenReader("Zoom level ${newZoom}%")},
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
 
@@ -268,11 +266,11 @@ export default function Page($1) {
       {/* Accessibility Toggle Button */}
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover: shado w-xl transition-all duration-300 group"
+        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg "hover": shado w-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ "scale": 0.9 }}
         onClick={() => setIsVisible(!isVisible)}"
-        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover: b g-blue-700 transition-all duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
+        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg "hover": b g-blue-700 transition-all duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
         
         title="Accessibility Options"
       >"
@@ -283,11 +281,11 @@ export default function Page($1) {
       <AnimatePresence>
         {isOpen && showSettings && (
           <motion.div
-            className="fixed bottom-20 right-4 z-40 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 max-w-sm"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            className="fixed bottom-20 right-4 z-40 bg-white "dark": bg-gray-800 rounded-lg shadow-xl p-6 max-w-sm"
+            initial={{ opacity: 0, "y": 20, "scale": 0.95 }}
+            animate={{ "opacity": 1, "y": 0, "scale": 1 }}
+            exit={{ "opacity": 0, "y": 20, "scale": 0.95 }}
+            transition={{ "duration": 0.2 }}
           >
             <h3 className="text-lg font-semibold mb-4">Accessibility Settings</h3>
             
@@ -334,7 +332,7 @@ export default function Page($1) {
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
               {/* Visual Enhancements */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 "dark": tex t-slate-300">
                   Visual Enhancements
                 </h4>
 "
@@ -345,56 +343,56 @@ export default function Page($1) {
                       High Contrast';
                     </span>                  </div>';
                   <button'
-                    onClick={() => toggleSetting('highContrast')}`
+                    onClick={() => toggleSetting('highContrast')}"
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                    }"}'"
                     aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
                   >';
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast'
+                    <span"
+                      className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast'
                           ? 'translate-x-6"
-                          : 'translate-x-1'`
-                      }`}
+                          : 'translate-x-1'"
+                      }"}
                     />
                   </button>
                 </div>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Type className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <Type className="w-4 h-4 text-slate-600 "dark": tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Large Text';
                     </span>                  </div>';
                   <button'
-                    onClick={() => toggleSetting('largeText')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
-                    aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
+                    onClick={() => toggleSetting('largeText')}"
+                    className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'"
+                    }"}'"
+                    aria-label={"${settings.largeText ? 'Disable' : 'Enable'} large text mode"}
                   >';
-                    <span`
+                    <span"
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`
-                      }`}
+                      }"}
                     />
                   </button>
                 </div>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Eye className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <Eye className="w-4 h-4 text-slate-600 "dark": tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Focus Indicator';
                     </span>                  </div>';
                   <button'
-                    onClick={() => toggleSetting('focusIndicator')}`
+                    onClick={() => toggleSetting('focusIndicator')}"
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                    }"}'"
                     aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
                   >';
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator'
+                    <span"
+                      className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator'
                           ? 'translate-x-6"
-                          : 'translate-x-1'`
-                      }`}
+                          : 'translate-x-1'"
+                      }"}
                     />
                   </button>
                 </div>
@@ -402,7 +400,7 @@ export default function Page($1) {
 
               {/* Navigation Options */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 "dark": tex t-slate-300">
                   Navigation
                 </h4>
 "
@@ -413,45 +411,45 @@ export default function Page($1) {
                       Keyboard Navigation';
                     </span>                  </div>';
                   <button'
-                    onClick={() => toggleSetting('keyboardNavigation')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation'
+                    onClick={() => toggleSetting('keyboardNavigation')}"
+                    className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation'
                         ? 'bg-blue-600"
-                        : 'bg-slate-300'`
-                    }`}'`
-                    aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
+                        : 'bg-slate-300'"
+                    }"}'"
+                    aria-label={"${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation"}
                   >';
-                    <span`
+                    <span"
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation'
                           ? 'translate-x-6"
                           : 'translate-x-1'`
-                      }`}
+                      }"}
                     />
                   </button>
                 </div>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <MousePointer className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <MousePointer className="w-4 h-4 text-slate-600 "dark": tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Reduced Motion';
                     </span>                  </div>';
                   <button'
-                    onClick={() => toggleSetting('reducedMotion')}`
+                    onClick={() => toggleSetting('reducedMotion')}"
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                    }"}'"
                     aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
                   >';
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion'
+                    <span"
+                      className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion'
                           ? 'translate-x-6"
-                          : 'translate-x-1'`
-                      }`}
+                          : 'translate-x-1'"
+                      }"}
                     />
                   </button>
                 </div>
                 <button
-                  onClick={() => applySettings({ ...settings, zoomLevel: 10 0 })}
-                  className="flex items-center space-x-2 text-zion-purple/60 hover: tex t-zion-purple text-xs transition-colors"
+                  onClick={() => applySettings({ ...settings, "zoomLevel": 10 0 })}
+                  className="flex items-center space-x-2 text-zion-purple/60 "hover": tex t-zion-purple text-xs transition-colors"
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
                 >
                   <option value="none">None</option>
@@ -465,7 +463,7 @@ export default function Page($1) {
 
               {/* Zoom Controls */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 "dark": tex t-slate-300">
                   Zoom Controls
                 </h4>
 "
@@ -476,13 +474,13 @@ export default function Page($1) {
                   <divclassName="flex items-center space-x-2">';
                     <button'
                       onClick={() => adjustZoom('out')}"
-                      className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
+                      className="p-2 rounded-lg bg-slate-100 "dark": b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
                     >";
                       <ZoomOut className="w-4 h-4"   />                    </button>';
                     <button'
                       onClick={() => adjustZoom('in')}"
-                      className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
+                      className="p-2 rounded-lg bg-slate-100 "dark": b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
                     >"
                       <ZoomIn className="w-4 h-4"   />                    </button>
@@ -511,7 +509,7 @@ export default function Page($1) {
 }
                 <button
                   onClick={runAccessibilityAudit}
-                  className="w-full bg-zion-purple/20 hover: b g-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
+                  className="w-full bg-zion-purple/20 "hover": b g-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
                 >
                   Run Accessibility Audit
                 </button>
@@ -519,7 +517,7 @@ export default function Page($1) {
 
               {/* Screen Reader Support */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 "dark": tex t-slate-300">
                   Screen Reader
                 </h4>
 "
@@ -531,16 +529,16 @@ export default function Page($1) {
                     </span>
                   </div>';
                   <button'
-                    onClick={() => toggleSetting('screenReader')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
-                    aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}
+                    onClick={() => toggleSetting('screenReader')}"
+                    className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'"
+                    }"}'"
+                    aria-label={"${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support"}
                   >';
-                    <span`
+                    <span"
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader'
                           ? 'translate-x-6"
                           : 'translate-x-1'`
-                      }`}
+                      }"}
                     />
                   </button>
                 </div>
@@ -549,7 +547,7 @@ export default function Page($1) {
 
               {/* Current Focus Indicator */}
               {currentFocus && settings.focusIndicator && ("
-                <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg border border-blue-200 dark: borde r-blue-800">"
+                <div className="p-3 bg-blue-50 "dark": b g-blue-900/20 rounded-lg border border-blue-200 dark: borde r-blue-800">"
                   <h4 className="text-sm font-semibold text-blue-700 dark: tex t-blue-300 mb-2">
                     Current Focus
                   </h4>";
@@ -572,37 +570,37 @@ export default function Page($1) {
 }
 =======
 
-      {/* Screen Reader Only Styles */}`
-      <style jsx>{`
+      {/* Screen Reader Only Styles */}"
+      <style jsx>{"
         .sr-only {
 
-          position: absolut e;
+          "position": absolut e;
           width: 1p x;
           height: 1p x;
           padding: 0;
           margin: -1px;
           overflow: hidde n;
           clip: rec t(0, 0, 0, 0);
-          white-space: nowra p;
+          white-"space": nowra p;
           border: 0}
 
         .high-contrast {
 
-          filter: contras t(1.5) brightness(1.2)}
+          "filter": contras t(1.5) brightness(1.2)}
 
         .large-text {
 
-          font-size: 1.2em}
+          font-"size": 1.2em}
         .reduced-motion * {
 
-          animation-duration: 0.01ms !important;
+          animation-"duration": 0.01ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important}`      `}</style>
+          transition-duration: 0.01ms !important}"      "}</style>
     </>
   )};
 
 export default EnhancedAccessibilityEnhancer;';';
-"`
+""
 
 </span>
 </span>

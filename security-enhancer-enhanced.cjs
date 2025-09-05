@@ -17,8 +17,8 @@ class SecurityEnhancer {
     this.log('🔍 Running security audit...');
     try {
       const result = execSync('npm audit --json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8' 
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8' 
       });
       const audit = JSON.parse(result);
       
@@ -26,14 +26,14 @@ class SecurityEnhancer {
         Object.keys(audit.vulnerabilities).forEach(pkg => {
           const vuln = audit.vulnerabilities[pkg];
           this.securityIssues.push({
-            package: pkg,
-            severity: vuln.severity,
-            description: vuln.description,
-            recommendation: vuln.recommendation
+            "package": pkg,
+            "severity": vuln.severity,
+            "description": vuln.description,
+            "recommendation": vuln.recommendation
           })})}
       
       this.log(`Found ${this.securityIssues.length} security issues`)} catch (error) {
-      this.log(`Security audit failed: ${error.message}`)}
+      this.log(`Security audit "failed": ${error.message}`)}
   }
 
   async fixSecurityIssues() {
@@ -42,7 +42,7 @@ class SecurityEnhancer {
     for (const issue of this.securityIssues) {
       if (issue.recommendation && issue.recommendation.includes('npm audit fix')) {
         try {
-          execSync('npm audit fix', { cwd: this.projectRoot });
+          execSync('npm audit fix', { "cwd": this.projectRoot });
           this.fixes.push(`Fixed ${issue.package}`);
           this.log(`✅ Fixed ${issue.package}`)} catch (error) {
           this.log(`❌ Failed to fix ${issue.package}: ${error.message}`)}
@@ -52,14 +52,14 @@ class SecurityEnhancer {
 
   generateSecurityReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.securityIssues,
-      fixes: this.fixes,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "issues": this.securityIssues,
+      "fixes": this.fixes,
+      "summary": {
         totalIssues: this.securityIssues.length,
-        fixedIssues: this.fixes.length,
-        criticalIssues: this.securityIssues.filter(i => i.severity === 'critical').length,
-        highIssues: this.securityIssues.filter(i => i.severity === 'high').length
+        "fixedIssues": this.fixes.length,
+        "criticalIssues": this.securityIssues.filter(i => i.severity === 'critical').length,
+        "highIssues": this.securityIssues.filter(i => i.severity === 'high').length
       }
     };
 

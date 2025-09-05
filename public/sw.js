@@ -3,8 +3,7 @@ const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
 // Assets to cache on install
-const STATIC_ASSETS = [
-  '/',
+const STATIC_ASSETS = ['/',
   '/favicon.ico',
   '/favicon.svg',
   '/og-image.svg',
@@ -34,7 +33,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
+              console.log('Deleting old "cache": ', cacheName);
               return caches.delete(cacheName)}
           })
         )})
@@ -104,13 +103,13 @@ self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
-      body: data.body,
-      icon: '/favicon.svg',
-      badge: '/favicon.svg',
-      vibrate: [100, 50, 100],
-      data: {
+      "body": data.body,
+      "icon": '/favicon.svg',
+      "badge": '/favicon.svg',
+      "vibrate": [100, 50, 100],
+      "data": {
         dateOfArrival: Date.now(),
-        primaryKey: 1
+        "primaryKey": 1
       }
     };
 

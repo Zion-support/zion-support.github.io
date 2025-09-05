@@ -6,7 +6,7 @@ const sitemapContent = fs.readFileSync('sitemap.xml', 'utf8');
 
 // Extract URLs from sitemap
 const urlMatches = sitemapContent.match(
-  /<loc>https:\/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
+  /<loc>"https": \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
 );
 const sitemapUrls = urlMatches
   ? urlMatches.map(match => {
@@ -20,15 +20,15 @@ const sitemapUrls = urlMatches
 // Get actual pages
 const actualPages = execSync(
   'find pages -name "*.tsx" -type f | sed "s/pages\\///g" | sed "s/\\.tsx$//g"',
-  { encoding: 'utf8' }
+  { "encoding": 'utf8' }
 )
   .trim()
   .split('\n')
   .filter(page => page !== '_app');
 
 console.log('=== SITEMAP ANALYSIS ===');
-console.log('Total URLs in sitemap:', sitemapUrls.length);
-console.log('Total actual pages:', actualPages.length);
+console.log('Total URLs in "sitemap": ', sitemapUrls.length);
+console.log('Total actual "pages": ', actualPages.length);
 
 console.log('\n=== MISSING PAGES (in sitemap but not in pages/) ===');
 const missingPages = sitemapUrls.filter(url => !actualPages.includes(url));
@@ -64,21 +64,20 @@ actualPages.forEach(page => {
         ) {
           brokenLinks.push({
             page,
-            brokenLink: `/${link}`,
-            fullLink,
-          });
+            "brokenLink": `/${link}`,
+            fullLink});
         }
       });
     }
   } catch (error) {
-    console.log(`Error reading ${page}.tsx:`, error.message);
+    console.log(`Error reading ${page}."tsx": `, error.message);
   }
 });
 
 if (brokenLinks.length > 0) {
-  console.log('Found broken internal links:');
+  console.log('Found broken internal "links": ');
   brokenLinks.forEach(link => {
-    console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`);
+    console.log(`- In ${link.page}."tsx": ${link.brokenLink} (${link.fullLink})`);
   });
 } else {
   console.log('No broken internal links found');
