@@ -1,18 +1,13 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import { 
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-=======
-import { 
-=======
-  Brain, 
+  Handshake,
+  Brain,
   Users, 
   Award, 
   Target, 
@@ -22,12 +17,7 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+  Star
 } from 'lucide-react';
 
 const values = [
@@ -44,18 +34,9 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-</h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
-            </p>
-                  </motion.div>
-                  </div>
-                  </section>
+    description: 'We believe in the power of collaboration and work closely with our clients to achieve their goals.'
+  }
+];
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -312,7 +293,8 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
   );
 }
 
-const team = [{
+const team = [
+  {
     "name": 'Dr. Sarah Chen',
     "role": 'Chief Technology Officer',
     "expertise": 'AI & Machine Learning',
