@@ -599,6 +599,221 @@ const microSaasProducts = [
     link: 'https://churnprediction.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation platform for researchers and developers.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Simulation Engine', 'Algorithm Testing', 'Performance Analytics'],
+    pricing: '$499 - $2,999/month',
+    category: 'Quantum Computing',
+    popular: true,
+    benefits: ['Quantum Algorithm Development', 'Research Acceleration', 'Cost-Effective Testing', 'Scalable Platform'],
+    marketPrice: '$1,000 - $5,000/month',
+    link: 'https://quantumsimulator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Metaverse Builder',
+    description: 'No-code platform for creating immersive 3D virtual worlds and metaverse experiences.',
+    icon: Globe,
+    features: ['3D World Builder', 'Avatar Creation', 'Virtual Events', 'Blockchain Integration'],
+    pricing: '$199 - $1,999/month',
+    category: 'Metaverse',
+    popular: true,
+    benefits: ['Immersive Experiences', 'Easy Creation', 'Monetization Tools', 'Social Features'],
+    marketPrice: '$300 - $3,000/month',
+    link: 'https://metaversebuilder.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Mission Planner',
+    description: 'Advanced mission planning and optimization for space exploration and satellite operations.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbit Optimization', 'Resource Management', 'Risk Assessment'],
+    pricing: '$999 - $9,999/month',
+    category: 'Space Tech',
+    benefits: ['Mission Success', 'Cost Optimization', 'Risk Reduction', 'Advanced Analytics'],
+    marketPrice: '$2,000 - $15,000/month',
+    link: 'https://spacemission.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'Neural interface platform for controlling devices and applications with brain signals.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Device Control', 'Learning Algorithms', 'Safety Protocols'],
+    pricing: '$299 - $1,999/month',
+    category: 'Neurotechnology',
+    popular: true,
+    benefits: ['Accessibility', 'Innovation', 'Research Support', 'Medical Applications'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://braininterface.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Autonomous Drone Fleet Manager',
+    description: 'Intelligent drone fleet management with autonomous operations and mission optimization.',
+    icon: Car,
+    features: ['Fleet Coordination', 'Autonomous Flight', 'Mission Planning', 'Real-time Monitoring'],
+    pricing: '$399 - $2,499/month',
+    category: 'Drone Technology',
+    benefits: ['Efficiency', 'Safety', 'Scalability', 'Cost Reduction'],
+    marketPrice: '$600 - $4,000/month',
+    link: 'https://dronefleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Digital Twin Creator',
+    description: 'Create and manage digital twins of physical assets with real-time synchronization.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$599 - $3,999/month',
+    category: 'Digital Twin',
+    popular: true,
+    benefits: ['Predictive Maintenance', 'Optimization', 'Simulation', 'Cost Savings'],
+    marketPrice: '$1,000 - $6,000/month',
+    link: 'https://digitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generator',
+    description: 'Generate high-quality synthetic data for training AI models while preserving privacy.',
+    icon: Database,
+    features: ['Privacy-Preserving', 'High Quality', 'Customizable', 'API Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Data Generation',
+    benefits: ['Privacy Protection', 'Cost Reduction', 'Faster Development', 'Compliance'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://syntheticdata.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Change Predictor',
+    description: 'Advanced climate modeling and environmental impact prediction using machine learning.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Prediction', 'Risk Assessment', 'Policy Analysis'],
+    pricing: '$499 - $2,999/month',
+    category: 'Climate Tech',
+    benefits: ['Accurate Predictions', 'Policy Support', 'Risk Mitigation', 'Sustainability'],
+    marketPrice: '$800 - $5,000/month',
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personalized Medicine Platform',
+    description: 'AI-driven personalized treatment recommendations based on genetic and health data.',
+    icon: Heart,
+    features: ['Genetic Analysis', 'Treatment Optimization', 'Drug Interaction', 'Health Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Personalized Care', 'Better Outcomes', 'Cost Efficiency', 'Precision Medicine'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://personalizedmedicine.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Smart City Manager',
+    description: 'Comprehensive platform for managing smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Infrastructure Management', 'Citizen Services', 'Traffic Optimization', 'Resource Management'],
+    pricing: '$999 - $9,999/month',
+    category: 'Smart Cities',
+    benefits: ['Efficiency', 'Sustainability', 'Citizen Satisfaction', 'Cost Reduction'],
+    marketPrice: '$2,000 - $15,000/month',
+    link: 'https://smartcity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Fleet',
+    description: 'Self-driving vehicle fleet management with route optimization and safety monitoring.',
+    icon: Car,
+    features: ['Autonomous Driving', 'Fleet Management', 'Route Optimization', 'Safety Monitoring'],
+    pricing: '$1,999 - $19,999/month',
+    category: 'Autonomous Vehicles',
+    benefits: ['Safety', 'Efficiency', 'Cost Reduction', 'Innovation'],
+    marketPrice: '$3,000 - $30,000/month',
+    link: 'https://autonomousfleet.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Therapy',
+    description: 'VR-based therapeutic interventions for mental health and rehabilitation.',
+    icon: Heart,
+    features: ['VR Therapy Sessions', 'Progress Tracking', 'Personalized Treatment', 'Remote Access'],
+    pricing: '$199 - $1,299/month',
+    category: 'VR Therapy',
+    benefits: ['Accessibility', 'Effectiveness', 'Cost Efficiency', 'Privacy'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://vrtherapy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence platform.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Risk Assessment', 'Compliance Monitoring', 'Market Intelligence'],
+    pricing: '$399 - $2,499/month',
+    category: 'Blockchain Analytics',
+    benefits: ['Security', 'Compliance', 'Transparency', 'Risk Management'],
+    marketPrice: '$600 - $4,000/month',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Edge Computing Manager',
+    description: 'Intelligent edge computing orchestration and optimization platform.',
+    icon: Server,
+    features: ['Edge Orchestration', 'Load Balancing', 'Latency Optimization', 'Resource Management'],
+    pricing: '$299 - $1,999/month',
+    category: 'Edge Computing',
+    benefits: ['Low Latency', 'Efficiency', 'Scalability', 'Cost Optimization'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered 5G Network Optimizer',
+    description: 'Intelligent 5G network optimization and performance management platform.',
+    icon: Network,
+    features: ['Network Optimization', 'Performance Monitoring', 'Capacity Planning', 'Quality Management'],
+    pricing: '$599 - $3,999/month',
+    category: '5G Technology',
+    benefits: ['Performance', 'Efficiency', 'Coverage', 'User Experience'],
+    marketPrice: '$1,000 - $6,000/month',
+    link: 'https://5goptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IoT Security Platform',
+    description: 'Comprehensive security solution for IoT devices and networks.',
+    icon: Shield,
+    features: ['Device Security', 'Network Protection', 'Threat Detection', 'Compliance'],
+    pricing: '$199 - $1,299/month',
+    category: 'IoT Security',
+    benefits: ['Security', 'Compliance', 'Risk Reduction', 'Peace of Mind'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://iotsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Augmented Reality Creator',
+    description: 'No-code platform for creating AR experiences and applications.',
+    icon: Eye,
+    features: ['AR Creation Tools', '3D Object Recognition', 'Real-time Rendering', 'Cross-platform'],
+    pricing: '$99 - $999/month',
+    category: 'Augmented Reality',
+    benefits: ['Easy Creation', 'Engagement', 'Innovation', 'Market Reach'],
+    marketPrice: '$150 - $1,500/month',
+    link: 'https://arcreator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent automation platform for business processes and workflows.',
+    icon: Bot,
+    features: ['Process Automation', 'AI Decision Making', 'Integration', 'Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'RPA',
+    popular: true,
+    benefits: ['Efficiency', 'Accuracy', 'Cost Reduction', 'Scalability'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://rpaai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat hunting and cybersecurity intelligence platform.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Intelligence Analysis', 'Incident Response', 'Forensics'],
+    pricing: '$499 - $2,999/month',
+    category: 'Cybersecurity',
+    benefits: ['Threat Detection', 'Risk Mitigation', 'Compliance', 'Expertise'],
+    marketPrice: '$800 - $5,000/month',
+    link: 'https://threathunter.ziontechgroup.com'
+  },
+  {
     title: 'Blockchain Document Verification',
     description: 'Immutable document verification and authentication using blockchain technology.',
     icon: FileText,
@@ -3748,13 +3963,32 @@ export default function MicroSaaSPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Get Started
                 </Link>
                 <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   View All Services
                 </Link>
+              </div>
+              
+              {/* Contact Information */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-4xl mx-auto">
+                <h3 className="text-xl font-semibold mb-4 text-center">Contact Our Micro SaaS Experts</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-center">
+                  <div>
+                    <p className="text-sm text-gray-300 mb-1">Phone</p>
+                    <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 font-semibold">+1 302 464 0950</a>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-300 mb-1">Email</p>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-semibold">kleber@ziontechgroup.com</a>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-300 mb-1">Address</p>
+                    <p className="text-purple-400 font-semibold">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
