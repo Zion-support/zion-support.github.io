@@ -16,7 +16,7 @@ import {
   BarChart3,
   Brain,
   Shield,
-  Zap;
+  Zap
 } from 'lucide-react';
 
 const caseStudies = [
