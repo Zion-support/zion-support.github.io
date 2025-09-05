@@ -75,7 +75,8 @@ import {
   Signal,
   SignalHigh,
   SignalLow,
-  SignalZero
+  SignalZero,
+  Database
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -98,8 +99,6 @@ const serviceCategories = [
       'Fraud Detection',
       'Drug Discovery'
     ],
-
----
     href: "/ai-services",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     pricing: "Starting at $1,000/month",
@@ -125,8 +124,6 @@ const serviceCategories = [
       'Backup & Recovery',
       'IT Consulting'
     ],
-
----
     href: "/it-services",
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     pricing: "Starting at $120/hour",
@@ -152,8 +149,6 @@ const serviceCategories = [
       'Email Marketing',
       'Project Management'
     ],
-
----
     href: "/micro-saas",
     features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     pricing: "Starting at $29/month",
@@ -353,9 +348,6 @@ const allServices = [
     features: ['OCR Processing', 'Smart Filing', 'Search & Retrieval', 'Version Control']
   }
 ];
-
-
----
 
 const benefits = [
   {
