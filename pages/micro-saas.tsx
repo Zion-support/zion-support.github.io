@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -420,6 +421,186 @@ const microSaaSProducts = [{
     features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation for research and development applications.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Simulation Engine', 'Algorithm Testing', 'Research Tools'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and hunting using AI and machine learning algorithms.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Forensic Analysis'],
+    pricing: '$599 - $3,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete fleet management solution for autonomous and connected vehicles.',
+    icon: Car,
+    features: ['Fleet Tracking', 'Route Optimization', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Risk Assessment',
+    description: 'Climate risk analysis and environmental impact assessment for businesses.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Risk Assessment', 'Carbon Footprint', 'Sustainability Metrics'],
+    pricing: '$399 - $2,499/month',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'Neural Interface Development Platform',
+    description: 'Development platform for brain-computer interface applications and research.',
+    icon: Brain,
+    features: ['Signal Processing', 'Data Analysis', 'Real-time Processing', 'Research Tools'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Mission planning and optimization for space exploration and satellite operations.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbit Optimization', 'Resource Management', 'Risk Assessment'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins of physical assets with real-time synchronization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$799 - $4,999/month',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug-Target Interaction', 'Clinical Trial Design', 'Toxicity Prediction'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'Edge AI Computing Platform',
+    description: 'Edge computing platform with AI inference capabilities for IoT and mobile devices.',
+    icon: Smartphone,
+    features: ['Edge Inference', 'Model Optimization', 'Device Management', 'Real-time Processing'],
+    pricing: '$299 - $1,999/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Builder',
+    description: 'Create and manage virtual worlds with AI-powered content generation and user interaction.',
+    icon: Globe,
+    features: ['World Creation', 'AI Content Generation', 'User Interaction', 'Virtual Economy'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'Complete drone fleet management with autonomous operations and mission planning.',
+    icon: Rocket,
+    features: ['Autonomous Flight', 'Mission Planning', 'Payload Management', 'Safety Systems'],
+    pricing: '$999 - $4,999/month',
+    category: 'Drone Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generator',
+    description: 'Generate high-quality synthetic data for training AI models while preserving privacy.',
+    icon: Database,
+    features: ['Data Generation', 'Privacy Preservation', 'Quality Control', 'Model Training'],
+    pricing: '$199 - $1,999/month',
+    category: 'Synthetic Data',
+    popular: true
+  },
+  {
+    title: 'Blockchain DeFi Analytics Platform',
+    description: 'Comprehensive DeFi analytics with yield farming optimization and risk assessment.',
+    icon: TrendingUp,
+    features: ['Yield Optimization', 'Risk Assessment', 'Portfolio Tracking', 'Liquidity Analysis'],
+    pricing: '$299 - $2,999/month',
+    category: 'DeFi Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent RPA with computer vision and natural language processing capabilities.',
+    icon: Bot,
+    features: ['Process Automation', 'Computer Vision', 'NLP Integration', 'Workflow Design'],
+    pricing: '$499 - $2,999/month',
+    category: 'Intelligent RPA',
+    popular: true
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'ML Integration', 'Optimization Problems', 'Research Tools'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Quantum ML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Debris Tracking',
+    description: 'Track and predict space debris with AI-powered collision avoidance systems.',
+    icon: Rocket,
+    features: ['Debris Tracking', 'Collision Prediction', 'Avoidance Maneuvers', 'Risk Assessment'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Space Safety',
+    popular: true
+  },
+  {
+    title: 'Neural Network Optimization Platform',
+    description: 'Optimize neural network performance with automated architecture search and pruning.',
+    icon: Brain,
+    features: ['Architecture Search', 'Model Pruning', 'Quantization', 'Performance Optimization'],
+    pricing: '$399 - $2,499/month',
+    category: 'ML Optimization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Carbon Capture Optimization',
+    description: 'Optimize carbon capture and storage systems using AI and machine learning.',
+    icon: Sprout,
+    features: ['Process Optimization', 'Efficiency Monitoring', 'Cost Reduction', 'Environmental Impact'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Carbon Tech',
+    popular: true
+  },
+  {
+    title: 'Autonomous Underwater Vehicle Control',
+    description: 'Control and manage autonomous underwater vehicles for ocean exploration and research.',
+    icon: Globe,
+    features: ['Vehicle Control', 'Mission Planning', 'Data Collection', 'Safety Systems'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Marine Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fusion Energy Simulation',
+    description: 'Simulate and optimize fusion energy reactions using advanced AI algorithms.',
+    icon: Zap,
+    features: ['Fusion Simulation', 'Energy Optimization', 'Plasma Control', 'Safety Analysis'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Fusion Energy',
     popular: true
   }
 ];

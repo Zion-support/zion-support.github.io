@@ -18,7 +18,15 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Building,
+  Heart,
+  TrendingUp,
+  BookOpen,
+  Car,
+  Zap,
+  Sprout,
+  Cpu
 } from 'lucide-react';
 
 const navigation = [{
@@ -26,30 +34,55 @@ const navigation = [{
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '35+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '120+' }
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
     icon: Shield,
-    children: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
       { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
       { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
+      { name: 'Quantum Computing', href: '/solutions/quantum', icon: Cpu },
+      { name: 'Space Technology', href: '/solutions/space', icon: Rocket },
+      { name: 'Climate Tech', href: '/solutions/climate', icon: Sprout },
+      { name: 'Neurotechnology', href: '/solutions/neuro', icon: Brain }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    icon: Building,
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { name: 'Finance', href: '/industries/finance', icon: TrendingUp },
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      { name: 'Education', href: '/industries/education', icon: BookOpen },
+      { name: 'Transportation', href: '/industries/transportation', icon: Car },
+      { name: 'Energy', href: '/industries/energy', icon: Zap },
+      { name: 'Space & Aerospace', href: '/industries/space', icon: Rocket },
+      { name: 'Climate & Environment', href: '/industries/climate', icon: Sprout }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
     icon: FileText,
-    children: [{ name: 'Documentation', href: '/docs', icon: FileText },
+    children: [
+      { name: 'Documentation', href: '/docs', icon: FileText },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
+      { name: 'API Reference', href: '/api-docs', icon: Settings },
+      { name: 'White Papers', href: '/white-papers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Globe },
+      { name: 'Tutorials', href: '/tutorials', icon: BookOpen },
+      { name: 'Support Center', href: '/support', icon: MessageSquare }
     ]
   },
   {

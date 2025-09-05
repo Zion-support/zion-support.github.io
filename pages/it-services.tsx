@@ -34,7 +34,10 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Car,
+  Rocket,
+  Heart
 } from 'lucide-react';
 
 const itServices = [{
@@ -377,6 +380,177 @@ const itServices = [{
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and integration for research and development.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Hybrid Classical-Quantum Systems', 'Research Tools'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle IT Infrastructure',
+    description: 'Complete IT infrastructure for autonomous vehicle testing, deployment, and management.',
+    icon: Car,
+    features: ['Vehicle-to-Cloud Connectivity', 'Real-time Data Processing', 'Safety Systems', 'Fleet Management'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground station and satellite communication infrastructure for space operations.',
+    icon: Rocket,
+    features: ['Ground Station Setup', 'Satellite Communication', 'Mission Control Systems', 'Data Processing'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'Neural Interface IT Infrastructure',
+    description: 'IT infrastructure for brain-computer interface systems and neural data processing.',
+    icon: Brain,
+    features: ['Neural Data Processing', 'Real-time Signal Analysis', 'Medical Device Integration', 'Privacy Protection'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'Fusion Energy IT Systems',
+    description: 'Specialized IT infrastructure for fusion energy research and power plant operations.',
+    icon: Zap,
+    features: ['Plasma Control Systems', 'Safety Monitoring', 'Data Acquisition', 'Simulation Infrastructure'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'Climate Technology Infrastructure',
+    description: 'IT infrastructure for climate monitoring, modeling, and environmental data processing.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Climate Data Processing', 'Modeling Infrastructure', 'Carbon Tracking'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'Marine Technology IT Systems',
+    description: 'Underwater and maritime IT infrastructure for ocean exploration and research.',
+    icon: Globe,
+    features: ['Underwater Communication', 'Marine Data Processing', 'Vessel Management', 'Environmental Monitoring'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Marine Technology',
+    popular: true
+  },
+  {
+    title: 'Synthetic Biology IT Platform',
+    description: 'IT infrastructure for synthetic biology research and biomanufacturing operations.',
+    icon: Heart,
+    features: ['Biological Data Processing', 'Simulation Infrastructure', 'Lab Automation', 'Safety Systems'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Synthetic Biology',
+    popular: true
+  },
+  {
+    title: 'Carbon Capture IT Infrastructure',
+    description: 'IT systems for carbon capture, utilization, and storage (CCUS) operations.',
+    icon: Sprout,
+    features: ['Process Control Systems', 'Environmental Monitoring', 'Data Analytics', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Carbon Tech',
+    popular: true
+  },
+  {
+    title: 'Quantum Cryptography Infrastructure',
+    description: 'Quantum-resistant cryptography infrastructure and secure communication systems.',
+    icon: Lock,
+    features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Secure Communication', 'Key Management'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure Platform',
+    description: 'Complete IT infrastructure for metaverse applications and virtual world hosting.',
+    icon: Globe,
+    features: ['Virtual World Hosting', 'Real-time Rendering', 'User Management', 'Content Delivery'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Drone Technology IT Systems',
+    description: 'IT infrastructure for autonomous drone operations and fleet management.',
+    icon: Rocket,
+    features: ['Flight Control Systems', 'Mission Planning', 'Data Processing', 'Safety Monitoring'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Drone Technology',
+    popular: true
+  },
+  {
+    title: 'Synthetic Data IT Platform',
+    description: 'IT infrastructure for synthetic data generation and privacy-preserving analytics.',
+    icon: Database,
+    features: ['Data Generation Systems', 'Privacy Protection', 'Quality Control', 'Model Training'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Synthetic Data',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain infrastructure including private networks and DeFi platforms.',
+    icon: TrendingUp,
+    features: ['Blockchain Networks', 'Smart Contract Infrastructure', 'DeFi Platforms', 'Security Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Intelligent RPA Infrastructure',
+    description: 'Advanced RPA infrastructure with AI capabilities and cognitive automation.',
+    icon: Bot,
+    features: ['RPA Platform Setup', 'AI Integration', 'Process Mining', 'Workflow Automation'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Intelligent RPA',
+    popular: true
+  },
+  {
+    title: 'Digital Twin IT Infrastructure',
+    description: 'Complete IT infrastructure for digital twin systems and real-time simulation.',
+    icon: Monitor,
+    features: ['Simulation Infrastructure', 'Real-time Processing', 'IoT Integration', 'Analytics Platform'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Edge AI Infrastructure',
+    description: 'Distributed edge computing infrastructure with AI processing capabilities.',
+    icon: Network,
+    features: ['Edge Computing Nodes', 'AI Processing Units', 'Distributed Storage', 'Federated Learning'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Comprehensive IT infrastructure for smart city operations and citizen services.',
+    icon: Building,
+    features: ['IoT Sensor Networks', 'Data Processing Centers', 'Citizen Services Platform', 'Traffic Management'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Precision Medicine IT Platform',
+    description: 'IT infrastructure for personalized medicine and genomic data processing.',
+    icon: Heart,
+    features: ['Genomic Data Processing', 'Clinical Decision Support', 'Patient Management', 'Research Tools'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Precision Medicine',
     popular: true
   }
 ];

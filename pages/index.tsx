@@ -4,27 +4,36 @@ import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
-const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1,200+', label: 'Projects Completed' },
+  { number: '120+', label: 'Expert Services' },
+  { number: '50+', label: 'Team Members' },
+  { number: '15+', label: 'Years Experience' }
 ];
 
 const services = [{
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "40+ cutting-edge artificial intelligence solutions including quantum ML, space technology, and climate engineering",
     icon: Brain,
-    href: "/ai-services"},
+    href: "/ai-services",
+    count: "40+ Services"
+  },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "35+ comprehensive information technology services from quantum computing to smart city infrastructure",
     icon: Network,
-    href: "/it-services"},
+    href: "/it-services",
+    count: "35+ Services"
+  },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "45+ innovative micro SaaS solutions including quantum simulators, digital twins, and metaverse builders",
     icon: Cloud,
-    href: "/micro-saas"}
+    href: "/micro-saas",
+    count: "45+ Products"
+  }
 ];
 
 export default function HomePage() {
@@ -101,9 +110,14 @@ export default function HomePage() {
                   <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
                   <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                      {service.title}
+                    </h3>
+                    <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                      {service.count}
+                    </span>
+                  </div>
                   <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
                   <Link
                     href={service.href}
@@ -122,7 +136,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                     {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -166,9 +180,11 @@ export default function HomePage() {
             >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
                   <ul className="text-gray-600 space-y-2">
-                  <li>• Micro "SaaS": $29 - $4,999/month</li>
-                  <li>• IT "Services": $120 - $500/hour</li>
-                  <li>• AI Solutions: $1,000 - $1M/project</li>
+                  <li>• Micro SaaS: $9 - $49,999/month</li>
+                  <li>• IT Services: $100 - $500/hour</li>
+                  <li>• AI Solutions: $1,000 - $2M/project</li>
+                  <li>• Quantum Computing: $50K - $1M/project</li>
+                  <li>• Space Technology: $100K - $5M/project</li>
                   <li>• Transparent, no hidden fees</li>
                   </ul>
                   </motion.div>
@@ -181,10 +197,10 @@ export default function HomePage() {
             >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
                   <ul className="text-gray-600 space-y-2">
-                  <li>• 50+ cutting-edge services</li>
-                  <li>• AI, Blockchain, IoT expertise</li>
-                  <li>• Quantum computing solutions</li>
-                  <li>• Future-ready technology stack</li>
+                  <li>• 120+ cutting-edge services</li>
+                  <li>• AI, Quantum, Space, Climate tech</li>
+                  <li>• Fusion energy & neurotechnology</li>
+                  <li>• Next-generation solutions</li>
                   </ul>
                   </motion.div>
                   <motion.div

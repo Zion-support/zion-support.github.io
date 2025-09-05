@@ -378,6 +378,177 @@ const aiServices = [{
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
     popular: true
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for solving complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'ML Optimization', 'Complex Problem Solving', 'Quantum Simulation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fusion Energy Control',
+    description: 'AI systems for controlling and optimizing fusion energy reactions and plasma stability.',
+    icon: Zap,
+    features: ['Plasma Control', 'Energy Optimization', 'Safety Monitoring', 'Reaction Prediction'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'AI Neural Interface Technology',
+    description: 'Advanced brain-computer interface systems with AI-powered neural signal processing.',
+    icon: Brain,
+    features: ['Neural Decoding', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI Space Debris Management',
+    description: 'AI-powered space debris tracking, prediction, and collision avoidance systems.',
+    icon: Rocket,
+    features: ['Debris Tracking', 'Collision Prediction', 'Avoidance Maneuvers', 'Risk Assessment'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI Climate Engineering Solutions',
+    description: 'AI-powered climate engineering and geoengineering solutions for environmental restoration.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Geoengineering Design', 'Impact Assessment', 'Risk Management'],
+    pricing: '$60,000 - $600,000/project',
+    category: 'Climate Engineering',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Underwater Systems',
+    description: 'AI-powered autonomous underwater vehicles for ocean exploration and research.',
+    icon: Globe,
+    features: ['Autonomous Navigation', 'Data Collection', 'Mission Planning', 'Safety Systems'],
+    pricing: '$80,000 - $800,000/project',
+    category: 'Marine Technology',
+    popular: true
+  },
+  {
+    title: 'AI Synthetic Biology Platform',
+    description: 'AI-driven synthetic biology platform for designing and optimizing biological systems.',
+    icon: Heart,
+    features: ['Biological Design', 'Gene Optimization', 'Protein Engineering', 'Biosafety Analysis'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Synthetic Biology',
+    popular: true
+  },
+  {
+    title: 'AI Carbon Capture Optimization',
+    description: 'AI-powered carbon capture and storage optimization for climate change mitigation.',
+    icon: Sprout,
+    features: ['Process Optimization', 'Efficiency Maximization', 'Cost Reduction', 'Environmental Impact'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Carbon Tech',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Cryptography',
+    description: 'Quantum-resistant cryptography and secure communication systems using AI.',
+    icon: Lock,
+    features: ['Quantum Key Distribution', 'Cryptographic Analysis', 'Security Optimization', 'Threat Detection'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'AI Metaverse Intelligence',
+    description: 'AI-powered virtual world management with intelligent NPCs and dynamic environments.',
+    icon: Globe,
+    features: ['Virtual World AI', 'NPC Intelligence', 'Dynamic Environments', 'User Behavior Analysis'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Metaverse AI',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Drone Swarms',
+    description: 'AI-powered autonomous drone swarm coordination for complex missions.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Mission Planning', 'Collision Avoidance', 'Distributed Intelligence'],
+    pricing: '$60,000 - $600,000/project',
+    category: 'Drone Technology',
+    popular: true
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-powered synthetic data generation for training models while preserving privacy.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Quality Control', 'Model Training'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Synthetic Data',
+    popular: true
+  },
+  {
+    title: 'AI Blockchain Intelligence',
+    description: 'AI-powered blockchain analysis, optimization, and smart contract intelligence.',
+    icon: TrendingUp,
+    features: ['Blockchain Analysis', 'Smart Contract Optimization', 'DeFi Analytics', 'Security Auditing'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI Robotic Process Intelligence',
+    description: 'Advanced AI-powered robotic process automation with cognitive capabilities.',
+    icon: Bot,
+    features: ['Cognitive Automation', 'Process Learning', 'Decision Making', 'Adaptive Workflows'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Intelligent RPA',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin Intelligence',
+    description: 'AI-powered digital twin systems with real-time simulation and optimization.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization Algorithms', 'IoT Integration'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI Edge Intelligence Platform',
+    description: 'Distributed AI processing at the edge with federated learning capabilities.',
+    icon: Network,
+    features: ['Edge Processing', 'Federated Learning', 'Distributed Intelligence', 'Real-time Inference'],
+    pricing: '$35,000 - $350,000/setup',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Vehicle Intelligence',
+    description: 'Complete AI system for autonomous vehicles with advanced perception and decision making.',
+    icon: Car,
+    features: ['Advanced Perception', 'Decision Making', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI Personalized Medicine Platform',
+    description: 'AI-powered personalized medicine with genomic analysis and treatment optimization.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Personalization', 'Drug Discovery', 'Clinical Decision Support'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'AI Smart City Intelligence',
+    description: 'Comprehensive AI platform for smart city management and optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Environmental Monitoring', 'Citizen Services'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    popular: true
   }
 ];
 
