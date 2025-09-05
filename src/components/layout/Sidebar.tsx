@@ -6,7 +6,7 @@ import {
   Brain;
   Cloud;
   Shield;
-  Code,
+  Code;
   Database,
   Network,
   Settings,

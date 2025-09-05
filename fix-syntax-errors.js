@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 ;
 console.log('🔧 Fixing syntax errors...');
-,
+;
 // Fix Footer.tsx,
 const fixFooter = () => {,
   try {,

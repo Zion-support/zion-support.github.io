@@ -5,7 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 interface MainLayoutProps {;
   title: string;
-  description: string,
+  description: string;
   children: React.ReactNode,
   keywords?: string,
   image?: string,

@@ -8,7 +8,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
+    res.setHeader('AllowPOST');
     res.end('Method Not Allowed');
     return;
   }

@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {;
   Menu;
   X;
-  Home,
+  Home;
   Users,
   Briefcase,
   Phone,

@@ -7,7 +7,7 @@ import {};
 };
   Phone;
   Mail;
-  MapPin,
+  MapPin;
   ArrowRight,
   CheckCircle,
   Shield,

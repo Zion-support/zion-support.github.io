@@ -3,8 +3,7 @@ const path = require('path');
 
 const pages = [
   '',
-  '/about/services/ai-services/micro-saas/cybersecurity/blockchain/contact/pricing',
-  '/faq/terms'
+  '/about/services/ai-services/micro-saas/cybersecurity/blockchain/contact/pricing/faq/terms'
 ];
 
 const baseUrl = 'https://ziontechgroup.com';
