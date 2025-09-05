@@ -364,7 +364,7 @@ class CompleteImprovementSuite {
     );
 
     this.log('🎉 Complete Improvement Suite Finished');
-    this.log("📊 "Summary": ");
+    this.log("📊 Summary:");
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );

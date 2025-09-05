@@ -15,7 +15,7 @@ class SyntaxFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Fix common syntax errors
       content = this.fixCommonErrors(content);

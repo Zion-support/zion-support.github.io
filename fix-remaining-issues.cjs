@@ -101,7 +101,7 @@ function fixPropertyAssignmentErrors(filePath) {
 
 function removeUnusedVariables(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Remove unused variable declarations
