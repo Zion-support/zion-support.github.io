@@ -278,13 +278,12 @@ export default function AccessibilityPage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                </div>
+                  Accessibility Standards
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  We follow international accessibility standards to ensure our solutions are inclusive for everyone.
+                </p>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-              </div>
             </div>
           </div>
         </section>
