@@ -14,16 +14,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
   Globe,
   Award,
-  Clock,
   BarChart3,
-  Cloud,
-  Shield
+  Cloud
 } from 'lucide-react';
 
 const caseStudies = [
