@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import ContactForm from '../components/ContactForm';
 import ErrorBoundary from '../components/ErrorBoundary';
-
 export default function Contact() {
   return (
     <>
@@ -23,7 +22,6 @@ export default function Contact() {
               <p className="text-xl text-slate-300 text-center mb-12">
                 Ready to transform your business? Get in touch with our experts.
               </p>
-              
               <div className="grid md:grid-cols-2 gap-12">
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
@@ -55,7 +53,6 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                   <ContactForm />

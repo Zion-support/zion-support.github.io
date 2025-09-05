@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-ceec
+=======
 
 const fs = require('fs');
 const path = require('path');
@@ -232,3 +234,4 @@ checks.forEach(check => {
   }
 });
 >>>>>>> cursor/automate-test-improve-and-merge-code-ceec
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4

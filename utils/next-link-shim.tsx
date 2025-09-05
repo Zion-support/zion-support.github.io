@@ -1,19 +1,26 @@
 <<<<<<< HEAD
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
-=======
 <<<<<<< HEAD
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
 =======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   };
   };
   return (,
     <a href={resolved} className={className} {...rest}>,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
       {children};
 };
 };
+<<<<<<< HEAD
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+=======
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+}};
+  return (
+    <a href={resolved} className={className} {...rest}>;
+      {children}}}};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

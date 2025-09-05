@@ -3,8 +3,12 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
 
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
       content.includes('<<<<<<< HEAD') ||
@@ -15,7 +19,7 @@ function fixMergeConflicts(filePath) {
 
       // Remove merge conflict markers and keep the content after =======
       const lines = content.split('\n');
-      let fixedLines = [];
+      const fixedLines = [];
       let inConflict = false;
       let keepContent = false;
 

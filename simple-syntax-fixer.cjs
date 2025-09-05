@@ -9,7 +9,7 @@ console.log('🚀 Starting Simple Syntax Fixer');
 function fixSimpleSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
 
     // Fix HTML entity issues
     content = content.replace(/&amp;apos;/g, "'");
