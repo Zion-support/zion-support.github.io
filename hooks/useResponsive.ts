@@ -1,46 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-interface Breakpoints {_sm: number;
-  md: number;
-  lg: number;
-  xl: number;}
-
-const defaultBreakpoints: Breakpoints = {_sm: 640, _md: 768, _lg: 1024, _xl: 1280, };
-
-export function useResponsive(_breakpoints: Breakpoints = defaultBreakpoints) {_const [screenSize, _setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
-
-  useEffect__(() => {
-    const _updateScreenSize = () => {
-      const _width = window.innerWidth;
-
-      if (width >= breakpoints.xl) {
-        setScreenSize('xl');} else if (width >= breakpoints.lg) {_setScreenSize('lg');} else if (width >= breakpoints.md) {_setScreenSize('md');} else {_setScreenSize('sm');}
-    };
-
-    updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-
-    return () => {_window.removeEventListener('resize', _updateScreenSize);};
-  }, [breakpoints]);
-
-  return {_screenSize, _isMobile: screenSize === 'sm', _isTablet: screenSize === 'md', _isDesktop: screenSize === 'lg' || screenSize === 'xl', _isLarge: screenSize === 'xl', };
+ interface Breakpoints {
+  sm: number;
+md: number;
+lg: number;
+xl: number;
+}const defaultBreakpoints: Breakpoints = {
+  sm: 640, md: 768, lg: 1024, xl: 1280;
+};
+export function useResponsive (breakpoints: Breakpoints = defaultBreakpoints) {
+  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'> ('lg');
+useEffect ( () => {
+  const updateScreenSize = () => {
+  const width = window.innerWidth;
+if (width >= breakpoints.xl) {
+  setScreenSize ('xl');
+}else if (width >= breakpoints.lg) {
+  setScreenSize ('lg');
+}else if (width >= breakpoints.md) {
+  setScreenSize ('md');
+}else {
+  setScreenSize ('sm');
 }
-=======
-        "isDesktop": width >= 1024})},
-=======
-        &quot;isDesktop&quot;: width >= 1024})};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-    updateDimensions(),
-    window.addEventListener(
-  'resize', updateDimensions),
-    return () => window.removeEventListener(
-  'resize', updateDimensions)}, []),
-  return state},
-export default useResponsive,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+};
+updateScreenSize ();
+window.addEventListener ('resize', updateScreenSize);
+return () => {
+  window.removeEventListener ('resize', updateScreenSize);
+};
+}, [breakpoints]);
+return {
+  screenSize, isMobile: screenSize === 'sm', isTablet: screenSize === 'md', isDesktop: screenSize === 'lg' || screenSize === 'xl', isLarge: screenSize === 'xl';
+};
+}window.addEventListener ('resize', updateDimensions);
+return () => window.removeEventListener ('resize', updateDimensions) 
+}, []);
+return state;
+};
+export default useResponsive;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da 

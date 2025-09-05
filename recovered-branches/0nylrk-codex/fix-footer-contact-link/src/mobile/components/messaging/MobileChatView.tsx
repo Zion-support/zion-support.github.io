@@ -1,303 +1,42 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { useNavigate } from "react-router-dom",
-import { toast } from "sonner",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Avatar, AvatarImage, AvatarFallback } from &quot;@/components/ui/avatar&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from &quot;lucide-react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { toast } from &quot;sonner&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
-  isMe: boolean,
-  sender?: string,
-  avatar?: string,
-  status?: 'sent' | 'delivered' | 'read'
-}
-
-interface MobileChatViewProps {
+ interface Message {
+  id: string;
+content: string;
+timestamp: string;
+isMe: boolean;
+sender?: string;
+avatar?: string;
+status?: 'sent' | 'delivered' | 'read' 
+}interface MobileChatViewProps {
   contact: {
-    id: string,
-    name: string,
-    avatar?: string,
-    status?: string
-  },
-  messages: Message[],
-  onBack: () => void,
-  onSendMessage: (content: string) => void
-}
-
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-<<<<<<< HEAD
-  const [newMessage, setNewMessage] = useState(""),
-  const navigate = useNavigate(),
-=======
-import React, {_useState} from "react";
-
-interface Message {_id: string;
-  content: string;
-  timestamp: string;
-  isMe: boolean;
-  sender?: string;
-  avatar?: string;
-  status?: 'sent' | 'delivered' | 'read';}
-
-interface MobileChatViewProps {_contact: {
-    id: string;
-    name: string;
-    avatar?: string;
-    status?: string;};
-  messages: Message[];
-  onBack: () => void;
-  onSendMessage: (_content: string) => void;
-}
-
-export function MobileChatView(_{_contact, _messages, _onBack, _onSendMessage}: MobileChatViewProps) {_const [newMessage, _setNewMessage] = useState("");
-  const _navigate = useNavigate();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
-  const _handleSend = () => {
-    if (newMessage.trim() !== "") {
-      onSendMessage(newMessage),
-      setNewMessage("")
-=======
-  const [newMessage, setNewMessage] = useState("&quot;);
-  const navigate = useNavigate();
-  
+  id: string;
+name: string;
+avatar?: string;
+status?: string 
+};
+messages: Message[];
+onBack: () => void;
+onSendMessage: (content: string) => void 
+}export function MobileChatView ({
+  contact, messages, onBack, onSendMessage 
+}: MobileChatViewProps) {
   const handleSend = () => {
-    if (newMessage.trim() !== "&quot;) {
-      onSendMessage(newMessage);
-<<<<<<< HEAD
-      setNewMessage("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
-  },
-  
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(),
-      handleSend()
-    }
-  },
-  
-  const startVideoCall = () => {
-<<<<<<< HEAD
-    const roomId = `mobile-${contact.id}`,
-    toast.success("Starting video call", {
-=======
-    const roomId = `mobile-${contact.id}`;
-    toast.success(&quot;Starting video call&quot;, {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      description: `Connecting with ${contact.name}...`
-    }),
-    
-    // Navigate to video call page
-    navigate(`/call/${roomId}`)
-  },
-  
-  const startAudioCall = () => {
-<<<<<<< HEAD
-    const roomId = `mobile-audio-${contact.id}`,
-    toast.success("Starting audio call", {
-=======
-    const roomId = `mobile-audio-${contact.id}`;
-    toast.success(&quot;Starting audio call", {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      description: `Connecting with ${contact.name}...`
-    }),
-    
-    // Navigate to video call page with audio-only flag
-    navigate(`/call/${roomId}?audioOnly=true`)
-  },
-=======
-      setNewMessage("");}
-  };
-  
-  const _handleKeyDown = (_e: React.KeyboardEvent<HTMLInputElement>) => {_if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();}
-  };
-  
-  const _startVideoCall = () => {_const _roomId = `mobile-${contact.id}`;
-    toast.success("Starting video call", {_description: `Connecting with ${contact.name}...`
-    });
-    
-    // Navigate to video call page
-    navigate(`/call/${_roomId}`);
-  };
-  
-  const _startAudioCall = () => {_const _roomId = `mobile-audio-${contact.id}`;
-    toast.success("Starting audio call", {_description: `Connecting with ${contact.name}...`
-    });
-    
-    // Navigate to video call page with audio-only flag
-    navigate(`/call/${_roomId}?audioOnly=true`);
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
-  return (
-    <div className="flex flex-col h-full pb-safe">
-      <header className="sticky top-0 z-10 bg-background border-b border-border">
-<<<<<<< HEAD
-        <div className="flex items-center h-14 px-4&quot;>
-          <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={onBack}>
-=======
-        <div className="flex items-center h-14 px-4">
-          <Button variant="ghost" size="icon" onClick={_onBack}>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <ChevronLeft className="h-5 w-5" />
-          </Button>
-          
-          <div className="flex items-center flex-1 gap-3 mx-2">
-            <Avatar>
-              <AvatarImage src={_contact.avatar} alt={_contact.name} />
-              <AvatarFallback>{_contact.name.charAt(0).toUpperCase()}</AvatarFallback>
-            </Avatar>
-            <div>
-<<<<<<< HEAD
-              <h3 className="font-medium">{contact.name}</h3>
-              <p className="text-xs text-muted-foreground&quot;>
-                {contact.status || &quot;Online"}
-=======
-              <h3 className="font-medium">{_contact.name}</h3>
-              <p className="text-xs text-muted-foreground">
-                {_contact.status || "Online"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </p>
-            </div>
-          </div>
-          
-<<<<<<< HEAD
-          <div className="flex&quot;>
-            <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={startAudioCall}>
-              <Phone className="h-5 w-5&quot; />
-            </Button>
-            
-            <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={startVideoCall}>
-              <Video className="h-5 w-5&quot; />
-=======
-          <div className="flex">
-            <Button variant="ghost" size="icon" onClick={_startAudioCall}>
-              <Phone className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" onClick={_startVideoCall}>
-              <Video className="h-5 w-5" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </Button>
-            
-            <Button variant=&quot;ghost&quot; size=&quot;icon">
-              <MoreVertical className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </header>
-      
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {_messages.map(_(message) => (
-          <div 
-            key={message.id} 
-<<<<<<< HEAD
-            className={cn(
-              "flex&quot;,
-              message.isMe ? &quot;justify-end&quot; : &quot;justify-start"
-            )}
-          >
-            <div 
-              className={cn(
-                "max-w-[80%] rounded-2xl px-4 py-2&quot;,
-                message.isMe 
-                  ? &quot;bg-primary text-primary-foreground rounded-tr-none&quot; 
-                  : &quot;bg-muted rounded-tl-none"
-              )}
-            >
-              <p>{message.content}</p>
-              <div className={cn(
-                "text-xs mt-1 flex justify-end&quot;,
-                message.isMe ? &quot;text-primary-foreground/80&quot; : &quot;text-muted-foreground"
-=======
-            className={_cn(
-              "flex", _message.isMe ? "justify-end" : "justify-start"
-            )}
-          >
-            <div 
-              className={_cn(
-                "max-w-[80%] rounded-2xl px-4 py-2", _message.isMe 
-                  ? "bg-primary text-primary-foreground rounded-tr-none" 
-                  : "bg-muted rounded-tl-none"
-              )}
-            >
-              <p>{_message.content}</p>
-              <div className={_cn(
-                "text-xs mt-1 flex justify-end", _message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              )}>
-                {_message.timestamp}
-                {_message.isMe && message.status && (
-                  <span className="ml-1">
-                    {message.status === 'read' ? '✓✓' : '✓'}
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2&quot;>
-          <Button variant=&quot;ghost&quot; size=&quot;icon">
-            <PaperclipIcon className="h-5 w-5&quot; />
-          </Button>
-          
-          <Input
-<<<<<<< HEAD
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder=&quot;Type a message..."
-            className="flex-1&quot;
-          />
-          
-          <Button 
-            size=&quot;icon" 
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50&quot; : "&quot;}
-=======
-            value={_newMessage}
-            onChange={_(_e) => setNewMessage(e.target.value)}
-            onKeyDown={_handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1"
-          />
-          
-          <Button 
-            size="icon" 
-            onClick={_handleSend}
-            disabled={_!newMessage.trim()}
-            className={_!newMessage.trim() ? "opacity-50" : ""}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            <Send className=&quot;h-5 w-5&quot; />
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
+  if (newMessage.trim () !== "") {
+  onSendMessage (newMessage);
+setNewMessage ("") contact.avatar 
+}alt= {
+  contact.name 
+}/> <AvatarFallback> {
+  contact.name.charAt (0) .toUpperCase () 
+}</AvatarFallback> </Avatar> <div> </p> </div> </div> </Button> <Button variant=" ghost"size=" icon"> <MoreVertical className="h-5 w-5"/> </Button> </div> </div> </header> <div className="flex-1 overflow-y-auto p-4 space-y-4"> {
+  messages.map ( (message) => (<div key= {
+  message.id 
+}) 
+}> {
+  message.timestamp 
+}{
+  message.isMe && message.status && (<span className="ml-1"> {
+  message.status === 'read' ? '✓✓' : '✓' 
+}</span>) 
+}</div> </div> </div>) ) 
+}</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/> </Button> <Input > <Send className=" h-5 w-5" /> </Button> </div> </div> </div>) 
 }

@@ -1,568 +1,780 @@
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: &quot;class&quot;,
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554'},
-        // Extended color palette
-        gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-          950: '#030712'},
-        blue: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554'},
-        indigo: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b'},
-        purple: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
-          950: '#3b0764'},
-        cyan: {
-          50: '#ecfeff',
-          100: '#cffafe',
-          200: '#a5f3fc',
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
-          700: '#0e7490',
-          800: '#155e75',
-          900: '#164e63',
-          950: '#083344'},
-        emerald: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-          950: '#022c22'},
-        orange: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316',
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-          950: '#431407'},
-        red: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
-          950: '#450a0a'},
-        fuchsia: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
-          950: '#4a044e'},
-        teal: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e'}},
-      fontFamily: {
-        sans: ['Intersystem-uisans-serif'],
-        mono: ['JetBrains MonoFira Codemonospace']},
-      fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.5rem' }],
-        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
-        '7xl': ['4.5rem', { lineHeight: '1' }],
-        '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }]},
-      fontWeight: {
-        thin: '100',
-        extralight: '200',
-        light: '300',
-        normal: '400',
-        medium: '500',
-        semibold: '600',
-        bold: '700',
-        extrabold: '800',
-        black: '900'},
-=======
-/** @type {_import('tailwindcss').Config} */
-module.exports = {_darkMode: "class", _content: [
-    './pages/**/*.{js, _ts, _jsx, _tsx}',
-    './components/**/*.{_js, _ts, _jsx, _tsx}'],
-  theme: {_extend: {
-      colors: {
-        'fade-in': 'fadeIn 0.6s ease-out forwards', _'fade-in-up': 'fadeInUp 0.6s ease-out forwards', _'fade-in-down': 'fadeInDown 0.6s ease-out forwards', _'slide-in-left': 'slideInLeft 0.6s ease-out forwards', _'slide-in-right': 'slideInRight 0.6s ease-out forwards', _'scale-in': 'scaleIn 0.6s ease-out forwards', _'float': 'float 6s ease-in-out infinite', _'pulse-slow': 'pulse 3s cubic-bezier(0.4, _0, _0.6, _1) infinite', _'bounce-slow': 'bounce 2s infinite', _'glow': 'glow 2s ease-in-out infinite alternate', _'shimmer': 'shimmer 2.5s linear infinite', _'matrix': 'matrix 20s linear infinite', _'neon-pulse': 'neonPulse 1.5s ease-in-out infinite', _'cyber-float': 'cyberFloat 8s ease-in-out infinite', _'hologram': 'hologram 3s ease-in-out infinite', _'energy-wave': 'energyWave 4s ease-in-out infinite', _'quantum-spin': 'quantumSpin 6s linear infinite', _'neural-network': 'neuralNetwork 10s linear infinite', _'plasma-flow': 'plasmaFlow 5s ease-in-out infinite', _'cyber-grid': 'cyberGrid 15s linear infinite', _primary: {
-          50: '#eff6ff', _100: '#dbeafe', _200: '#bfdbfe', _300: '#93c5fd', _400: '#60a5fa', _500: '#3b82f6', _600: '#2563eb', _700: '#1d4ed8', _800: '#1e40af', _900: '#1e3a8a', _950: '#172554'},
-        // Extended color palette
-        gray: {_50: '#f9fafb', _100: '#f3f4f6', _200: '#e5e7eb', _300: '#d1d5db', _400: '#9ca3af', _500: '#6b7280', _600: '#4b5563', _700: '#374151', _800: '#1f2937', _900: '#111827', _950: '#030712'},
-        blue: {_50: '#eff6ff', _100: '#dbeafe', _200: '#bfdbfe', _300: '#93c5fd', _400: '#60a5fa', _500: '#3b82f6', _600: '#2563eb', _700: '#1d4ed8', _800: '#1e40af', _900: '#1e3a8a', _950: '#172554'},
-        indigo: {_50: '#eef2ff', _100: '#e0e7ff', _200: '#c7d2fe', _300: '#a5b4fc', _400: '#818cf8', _500: '#6366f1', _600: '#4f46e5', _700: '#4338ca', _800: '#3730a3', _900: '#312e81', _950: '#1e1b4b'},
-        purple: {_50: '#faf5ff', _100: '#f3e8ff', _200: '#e9d5ff', _300: '#d8b4fe', _400: '#c084fc', _500: '#a855f7', _600: '#9333ea', _700: '#7c3aed', _800: '#6b21a8', _900: '#581c87', _950: '#3b0764'},
-        cyan: {_50: '#ecfeff', _100: '#cffafe', _200: '#a5f3fc', _300: '#67e8f9', _400: '#22d3ee', _500: '#06b6d4', _600: '#0891b2', _700: '#0e7490', _800: '#155e75', _900: '#164e63', _950: '#083344'},
-        emerald: {_50: '#ecfdf5', _100: '#d1fae5', _200: '#a7f3d0', _300: '#6ee7b7', _400: '#34d399', _500: '#10b981', _600: '#059669', _700: '#047857', _800: '#065f46', _900: '#064e3b', _950: '#022c22'},
-        orange: {_50: '#fff7ed', _100: '#ffedd5', _200: '#fed7aa', _300: '#fdba74', _400: '#fb923c', _500: '#f97316', _600: '#ea580c', _700: '#c2410c', _800: '#9a3412', _900: '#7c2d12', _950: '#431407'},
-        red: {_50: '#fef2f2', _100: '#fee2e2', _200: '#fecaca', _300: '#fca5a5', _400: '#f87171', _500: '#ef4444', _600: '#dc2626', _700: '#b91c1c', _800: '#991b1b', _900: '#7f1d1d', _950: '#450a0a'},
-        fuchsia: {_50: '#fdf4ff', _100: '#fae8ff', _200: '#f5d0fe', _300: '#f0abfc', _400: '#e879f9', _500: '#d946ef', _600: '#c026d3', _700: '#a21caf', _800: '#86198f', _900: '#701a75', _950: '#4a044e'},
-        teal: {_50: '#f0fdfa', _100: '#ccfbf1', _200: '#99f6e4', _300: '#5eead4', _400: '#2dd4bf', _500: '#14b8a6', _600: '#0d9488', _700: '#0f766e', _800: '#115e59', _900: '#134e4a', _950: '#042f2e'}},
-      fontFamily: {_sans: ['Inter', _'system-ui', _'sans-serif'], _mono: ['JetBrains Mono', _'Fira Code', _'monospace']},
-      fontSize: {_'xs': ['0.75rem', _{ lineHeight: '1rem'}],
-        'sm': ['0.875rem', {_lineHeight: '1.25rem'}],
-        'base': ['1rem', {_lineHeight: '1.5rem'}],
-        'lg': ['1.125rem', {_lineHeight: '1.75rem'}],
-        'xl': ['1.25rem', {_lineHeight: '1.75rem'}],
-        '2xl': ['1.5rem', {_lineHeight: '2rem'}],
-        '3xl': ['1.875rem', {_lineHeight: '2.25rem'}],
-        '4xl': ['2.25rem', {_lineHeight: '2.5rem'}],
-        '5xl': ['3rem', {_lineHeight: '1'}],
-        '6xl': ['3.75rem', {_lineHeight: '1'}],
-        '7xl': ['4.5rem', {_lineHeight: '1'}],
-        '8xl': ['6rem', {_lineHeight: '1'}],
-        '9xl': ['8rem', {_lineHeight: '1'}]},
-      fontWeight: {_thin: '100', _extralight: '200', _light: '300', _normal: '400', _medium: '500', _semibold: '600', _bold: '700', _extrabold: '800', _black: '900'},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      // Add cursor color palette to match CSS variables
-      colors: {_// ... existing colors ...
-        cursor: {
-<<<<<<< HEAD
-          blue: '#3b82f6blue-hover': '#2563eb',
-          accent: '#10b981accent-hover': '#059669',
-          purple: '#8b5cf6purple-hover': '#7c3aed',
-          light: '#374151',
-          lighter: '#4b5563',
-          dark: '#1f2937',
-          darker: '#111827'}},
-      spacing: {
-        '18': '4.5rem88': '22rem128': '32rem'},
-      borderRadius: {
-        '4xl': '2rem5xl': '2.5rem'},
-      boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'},
-      animation: {
-        'float': 'float 6s ease-in-out infinitepulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 3s infinitespin-slow': 'spin 8s linear infiniteping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinitefade-in': 'fadeIn 0.5s ease-in-outslide-up': 'slideUp 0.5s ease-outscale-in': 'scaleIn 0.3s ease-outshimmer': 'shimmer 2s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinite alternatematrix-rain': 'matrixRain 20s linear infinitequantum-shift': 'quantumShift 4s ease-in-out infinitespace-drift': 'spaceDrift 8s ease-in-out infiniteai-breathe': 'aiBreathe 3s ease-in-out infinitehologram-flicker': 'hologramFlicker 0.5s ease-in-out infinite alternatecyber-glitch': 'cyberGlitch 0.3s ease-in-out infinite alternateneural-pulse': 'neuralPulse 2s ease-in-out infinitequantum-entangle': 'quantumEntangle 5s ease-in-out infinitespace-time-warp': 'spaceTimeWarp 10s ease-in-out infiniteai-consciousness': 'aiConsciousness 6s ease-in-out infinitebiotech-evolution': 'biotechEvolution 7s ease-in-out infinitemetaverse-float': 'metaverseFloat 4s ease-in-out infinitequantum-compute': 'quantumCompute 8s ease-in-out infinitespace-mining': 'spaceMining 12s ease-in-out infiniteai-emotion': 'aiEmotion 3.5s ease-in-out infinitequantum-security': 'quantumSecurity 5.5s ease-in-out infinitebiotech-dna': 'biotechDNA 6.5s ease-in-out infinitespace-colonization': 'spaceColonization 15s ease-in-out infiniteai-creativity': 'aiCreativity 4.5s ease-in-out infinitequantum-learning': 'quantumLearning 7.5s ease-in-out infinitespace-exploration': 'spaceExploration 20s ease-in-out infiniteai-autonomy': 'aiAutonomy 5.5s ease-in-out infinitequantum-finance': 'quantumFinance 6.5s ease-in-out infinitebiotech-health': 'biotechHealth 4.5s ease-in-out infinitespace-technology': 'spaceTechnology 18s ease-in-out infiniteai-innovation': 'aiInnovation 3.5s ease-in-out infinitequantum-space': 'quantumSpace 25s ease-in-out infinitebiotech-research': 'biotechResearch 8.5s ease-in-out infinitespace-mining-automation': 'spaceMiningAutomation 30s ease-in-out infiniteai-consciousness-evolution': 'aiConsciousnessEvolution 10s ease-in-out infinitequantum-internet-security': 'quantumInternetSecurity 7.5s ease-in-out infinitebiotech-dna-computing': 'biotechDNAComputing 12.5s ease-in-out infinitequantum-financial-trading': 'quantumFinancialTrading 9.5s ease-in-out infinitespace-mining-platform': 'spaceMiningPlatform 35s ease-in-out infinitemetaverse-digital-reality': 'metaverseDigitalReality 6.5s ease-in-out infiniteautonomous-devops': 'autonomousDevOps 8.5s ease-in-out infinitequantum-cloud-infrastructure': 'quantumCloudInfrastructure 15.5s ease-in-out infiniteai-powered-enterprise-security': 'aiPoweredEnterpriseSecurity 6.5s ease-in-out infiniteautonomous-it-operations': 'autonomousITOperations 9.5s ease-in-out infinitezero-trust-architecture': 'zeroTrustArchitecture 7.5s ease-in-out infiniteai-emotion-marketing': 'aiEmotionMarketing 4.5s ease-in-out infinitebiotech-personalized-nutrition': 'biotechPersonalizedNutrition 5.5s ease-in-out infinitequantum-learning-accelerator': 'quantumLearningAccelerator 8.5s ease-in-out infiniteintelligent-data-governance': 'intelligentDataGovernance 6.5s ease-in-out infiniteai-meeting-transcriber': 'aiMeetingTranscriber 4.5s ease-in-out infinite'
-        'scale-out': 'scaleOut 0.3s ease-outbounce-in': 'bounceIn 0.6s ease-outbounce-out': 'bounceOut 0.6s ease-outrotate-in': 'rotateIn 0.6s ease-outrotate-out': 'rotateOut 0.6s ease-outflip-in-x': 'flipInX 0.6s ease-outflip-in-y': 'flipInY 0.6s ease-outzoom-in': 'zoomIn 0.3s ease-outzoom-out': 'zoomOut 0.3s ease-outpulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitespin-slow': 'spin 3s linear infinitebounce-slow': 'bounce 2s infinitegrid-flow': 'gridFlow 20s linear infiniteparticle': 'particle 7s linear infinitescan-line': 'scanLine 3s ease-in-out infinitegradient-x': 'gradientX 3s ease-in-out infinitebounce-x': 'bounceX 2s ease-in-out infinitecount-up': 'countUp 2s ease-out forwards'},
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
-=======
-          blue: '#3b82f6', _'blue-hover': '#2563eb', _accent: '#10b981', _'accent-hover': '#059669', _purple: '#8b5cf6', _'purple-hover': '#7c3aed', _light: '#374151', _lighter: '#4b5563', _dark: '#1f2937', _darker: '#111827'}},
-      spacing: {_'18': '4.5rem', _'88': '22rem', _'128': '32rem'},
-      borderRadius: {_'4xl': '2rem', _'5xl': '2.5rem'},
-      boxShadow: {_'glow': '0 0 20px rgba(59, _130, _246, _0.3)', _'glow-lg': '0 0 40px rgba(59, _130, _246, _0.4)', _'glow-xl': '0 0 60px rgba(59, _130, _246, _0.5)'},
-      animation: {_'float': 'float 6s ease-in-out infinite', _'pulse-slow': 'pulse 4s cubic-bezier(0.4, _0, _0.6, _1) infinite', _'bounce-slow': 'bounce 3s infinite', _'spin-slow': 'spin 8s linear infinite', _'ping-slow': 'ping 3s cubic-bezier(0, _0, _0.2, _1) infinite', _'fade-in': 'fadeIn 0.5s ease-in-out', _'slide-up': 'slideUp 0.5s ease-out', _'scale-in': 'scaleIn 0.3s ease-out', _'shimmer': 'shimmer 2s linear infinite', _'neon-pulse': 'neonPulse 1.5s ease-in-out infinite alternate', _'matrix-rain': 'matrixRain 20s linear infinite', _'quantum-shift': 'quantumShift 4s ease-in-out infinite', _'space-drift': 'spaceDrift 8s ease-in-out infinite', _'ai-breathe': 'aiBreathe 3s ease-in-out infinite', _'hologram-flicker': 'hologramFlicker 0.5s ease-in-out infinite alternate', _'cyber-glitch': 'cyberGlitch 0.3s ease-in-out infinite alternate', _'neural-pulse': 'neuralPulse 2s ease-in-out infinite', _'quantum-entangle': 'quantumEntangle 5s ease-in-out infinite', _'space-time-warp': 'spaceTimeWarp 10s ease-in-out infinite', _'ai-consciousness': 'aiConsciousness 6s ease-in-out infinite', _'biotech-evolution': 'biotechEvolution 7s ease-in-out infinite', _'metaverse-float': 'metaverseFloat 4s ease-in-out infinite', _'quantum-compute': 'quantumCompute 8s ease-in-out infinite', _'space-mining': 'spaceMining 12s ease-in-out infinite', _'ai-emotion': 'aiEmotion 3.5s ease-in-out infinite', _'quantum-security': 'quantumSecurity 5.5s ease-in-out infinite', _'biotech-dna': 'biotechDNA 6.5s ease-in-out infinite', _'space-colonization': 'spaceColonization 15s ease-in-out infinite', _'ai-creativity': 'aiCreativity 4.5s ease-in-out infinite', _'quantum-learning': 'quantumLearning 7.5s ease-in-out infinite', _'space-exploration': 'spaceExploration 20s ease-in-out infinite', _'ai-autonomy': 'aiAutonomy 5.5s ease-in-out infinite', _'quantum-finance': 'quantumFinance 6.5s ease-in-out infinite', _'biotech-health': 'biotechHealth 4.5s ease-in-out infinite', _'space-technology': 'spaceTechnology 18s ease-in-out infinite', _'ai-innovation': 'aiInnovation 3.5s ease-in-out infinite', _'quantum-space': 'quantumSpace 25s ease-in-out infinite', _'biotech-research': 'biotechResearch 8.5s ease-in-out infinite', _'space-mining-automation': 'spaceMiningAutomation 30s ease-in-out infinite', _'ai-consciousness-evolution': 'aiConsciousnessEvolution 10s ease-in-out infinite', _'quantum-internet-security': 'quantumInternetSecurity 7.5s ease-in-out infinite', _'biotech-dna-computing': 'biotechDNAComputing 12.5s ease-in-out infinite', _'quantum-financial-trading': 'quantumFinancialTrading 9.5s ease-in-out infinite', _'space-mining-platform': 'spaceMiningPlatform 35s ease-in-out infinite', _'metaverse-digital-reality': 'metaverseDigitalReality 6.5s ease-in-out infinite', _'autonomous-devops': 'autonomousDevOps 8.5s ease-in-out infinite', _'quantum-cloud-infrastructure': 'quantumCloudInfrastructure 15.5s ease-in-out infinite', _'ai-powered-enterprise-security': 'aiPoweredEnterpriseSecurity 6.5s ease-in-out infinite', _'autonomous-it-operations': 'autonomousITOperations 9.5s ease-in-out infinite', _'zero-trust-architecture': 'zeroTrustArchitecture 7.5s ease-in-out infinite', _'ai-emotion-marketing': 'aiEmotionMarketing 4.5s ease-in-out infinite', _'biotech-personalized-nutrition': 'biotechPersonalizedNutrition 5.5s ease-in-out infinite', _'quantum-learning-accelerator': 'quantumLearningAccelerator 8.5s ease-in-out infinite', _'intelligent-data-governance': 'intelligentDataGovernance 6.5s ease-in-out infinite', _'ai-meeting-transcriber': 'aiMeetingTranscriber 4.5s ease-in-out infinite'
-        'scale-out': 'scaleOut 0.3s ease-out', _'bounce-in': 'bounceIn 0.6s ease-out', _'bounce-out': 'bounceOut 0.6s ease-out', _'rotate-in': 'rotateIn 0.6s ease-out', _'rotate-out': 'rotateOut 0.6s ease-out', _'flip-in-x': 'flipInX 0.6s ease-out', _'flip-in-y': 'flipInY 0.6s ease-out', _'zoom-in': 'zoomIn 0.3s ease-out', _'zoom-out': 'zoomOut 0.3s ease-out', _'pulse-slow': 'pulse 3s cubic-bezier(0.4, _0, _0.6, _1) infinite', _'spin-slow': 'spin 3s linear infinite', _'bounce-slow': 'bounce 2s infinite', _'grid-flow': 'gridFlow 20s linear infinite', _'particle': 'particle 7s linear infinite', _'scan-line': 'scanLine 3s ease-in-out infinite', _'gradient-x': 'gradientX 3s ease-in-out infinite', _'bounce-x': 'bounceX 2s ease-in-out infinite', _'count-up': 'countUp 2s ease-out forwards'},
-      keyframes: {_fadeIn: {
-          '0%': { opacity: '0'},
-          '100%': {_opacity: '1'}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        },
-        slideUp: {_'0%': { transform: 'translateY(20px)', _opacity: '0'},
-          '100%': {_transform: 'translateY(0px)', _opacity: '1'}
-        },
-        slideInUp: {_'0%': { transform: 'translateY(100%)'},
-          '100%': {_transform: 'translateY(0)'}},
-        slideInDown: {_'0%': { transform: 'translateY(-100%)'},
-          '100%': {_transform: 'translateY(0)'}},
-        slideInLeft: {_'0%': { transform: 'translateX(-100%)'},
-          '100%': {_transform: 'translateX(0)'}},
-        slideInRight: {_'0%': { transform: 'translateX(100%)'},
-          '100%': {_transform: 'translateX(0)'}},
-        scaleIn: {_'0%': { transform: 'scale(0)'},
-          '100%': {_transform: 'scale(1)'}},
-        scaleOut: {_'0%': { transform: 'scale(1)'},
-          '100%': {_transform: 'scale(0)'}},
-        bounceIn: {_'0%': { transform: 'scale(0.3)', _opacity: '0'},
-          '50%': {_transform: 'scale(1.05)'},
-          '70%': {_transform: 'scale(0.9)'},
-          '100%': {_transform: 'scale(1)', _opacity: '1'}},
-        bounceOut: {_'0%': { transform: 'scale(1)', _opacity: '1'},
-          '20%': {_transform: 'scale(0.9)'},
-          '50%': {_transform: 'scale(1.05)'},
-          '100%': {_transform: 'scale(0.3)', _opacity: '0'}},
-        rotateIn: {_'0%': { transform: 'rotate(-200deg)', _opacity: '0'},
-          '100%': {_transform: 'rotate(0)', _opacity: '1'}},
-        rotateOut: {_'0%': { transform: 'rotate(0)', _opacity: '1'},
-          '100%': {_transform: 'rotate(200deg)', _opacity: '0'}},
-        flipInX: {_'0%': { transform: 'perspective(400px) rotateX(90deg)', _opacity: '0'},
-          '40%': {_transform: 'perspective(400px) rotateX(-20deg)'},
-          '60%': {_transform: 'perspective(400px) rotateX(10deg)'},
-          '80%': {_transform: 'perspective(400px) rotateX(-5deg)'},
-          '100%': {_transform: 'perspective(400px) rotateX(0deg)', _opacity: '1'}},
-        flipInY: {_'0%': { transform: 'perspective(400px) rotateY(90deg)', _opacity: '0'},
-          '40%': {_transform: 'perspective(400px) rotateY(-20deg)'},
-          '60%': {_transform: 'perspective(400px) rotateY(10deg)'},
-          '80%': {_transform: 'perspective(400px) rotateY(-5deg)'},
-          '100%': {_transform: 'perspective(400px) rotateY(0deg)', _opacity: '1'}},
-        zoomIn: {_'0%': { transform: 'scale(0.3)', _opacity: '0'},
-          '50%': {_opacity: '1'},
-          '100%': {_transform: 'scale(1)', _opacity: '1'}},
-        zoomOut: {_'0%': { transform: 'scale(1)', _opacity: '1'},
-          '50%': {_opacity: '0'},
-          '100%': {_transform: 'scale(0.3)', _opacity: '0'}},
-        float: {_'0%, _100%': { transform: 'translateY(0px)'},
-          '50%': {_transform: 'translateY(-20px)'}},
-        gridFlow: {_'0%': { transform: 'translateX(0) translateY(0)'},
-          '100%': {_transform: 'translateX(60px) translateY(60px)'}},
-        particle: {_'0%': { transform: 'translateY(0) scale(1)', _opacity: '1'},
-          '50%': {_transform: 'translateY(-100px) scale(1.5)', _opacity: '0.7'},
-          '100%': {_transform: 'translateY(-200px) scale(0.5)', _opacity: '0'}},
-        scanLine: {_'0%': { transform: 'translateX(-100%)'},
-          '100%': {_transform: 'translateX(100%)'}},
-        gradientX: {_'0%, _100%': { backgroundPosition: '0% 50%'},
-          '50%': {_backgroundPosition: '100% 50%'}},
-        bounceX: {_'0%, _100%': { transform: 'translateX(0)'},
-          '50%': {_transform: 'translateX(25%)'}},
-        countUp: {_'0%': { transform: 'scale(0.8)', _opacity: '0'},
-          '100%': {_transform: 'scale(1)', _opacity: '1'}},
-        quantumCompute: {_'0%': { transform: 'rotate(0deg) scale(1)'},
-          '25%': {_transform: 'rotate(90deg) scale(1.2)'},
-          '50%': {_transform: 'rotate(180deg) scale(1)'},
-          '75%': {_transform: 'rotate(270deg) scale(0.8)'},
-          '100%': {_transform: 'rotate(360deg) scale(1)'}
-        },
-        spaceMining: {_'0%, _100%': { transform: 'translateX(0px) translateY(0px) rotate(0deg)'},
-          '25%': {_transform: 'translateX(10px) translateY(-10px) rotate(90deg)'},
-          '50%': {_transform: 'translateX(0px) translateY(-20px) rotate(180deg)'},
-          '75%': {_transform: 'translateX(-10px) translateY(-10px) rotate(270deg)'}
-        },
-        aiEmotion: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.1) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.05) rotate(240deg)'}
-        },
-        quantumSecurity: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(5px)'},
-          '50%': {_transform: 'scale(1) translateX(0px)'},
-          '75%': {_transform: 'scale(0.9) translateX(-5px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        },
-        biotechDNA: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg)'}
-        },
-        spaceColonization: {_'0%': { transform: 'translateX(0px) translateY(0px) scale(1)'},
-          '20%': {_transform: 'translateX(20px) translateY(-20px) scale(1.1)'},
-          '40%': {_transform: 'translateX(0px) translateY(-40px) scale(1.2)'},
-          '60%': {_transform: 'translateX(-20px) translateY(-20px) scale(1.1)'},
-          '80%': {_transform: 'translateX(0px) translateY(0px) scale(1)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) scale(1)'}
-        },
-        aiCreativity: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.15) rotate(45deg)'},
-          '50%': {_transform: 'scale(1.3) rotate(90deg)'},
-          '75%': {_transform: 'scale(1.15) rotate(135deg)'}
-        },
-        quantumLearning: {_'0%': { transform: 'scale(1) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) translateY(-10px)'},
-          '50%': {_transform: 'scale(1.2) translateY(-20px)'},
-          '75%': {_transform: 'scale(1.1) translateY(-10px)'},
-          '100%': {_transform: 'scale(1) translateY(0px)'}
-        },
-        spaceExploration: {_'0%': { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)'},
-          '20%': {_transform: 'translateX(30px) translateY(-30px) rotate(72deg) scale(1.1)'},
-          '40%': {_transform: 'translateX(0px) translateY(-60px) rotate(144deg) scale(1.2)'},
-          '60%': {_transform: 'translateX(-30px) translateY(-30px) rotate(216deg) scale(1.1)'},
-          '80%': {_transform: 'translateX(0px) translateY(0px) rotate(288deg) scale(1)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) rotate(360deg) scale(1)'}
-        },
-        aiAutonomy: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.1) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.05) rotate(240deg)'}
-        },
-        quantumFinance: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(10px)'},
-          '50%': {_transform: 'scale(1.2) translateX(0px)'},
-          '75%': {_transform: 'scale(1.1) translateX(-10px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        },
-        biotechHealth: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg)'}
-        },
-        spaceTechnology: {_'0%': { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)'},
-          '25%': {_transform: 'translateX(25px) translateY(-25px) rotate(90deg) scale(1.1)'},
-          '50%': {_transform: 'translateX(0px) translateY(-50px) rotate(180deg) scale(1.2)'},
-          '75%': {_transform: 'translateX(-25px) translateY(-25px) rotate(270deg) scale(1.1)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) rotate(360deg) scale(1)'}
-        },
-        aiInnovation: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.15) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.1) rotate(240deg)'}
-        },
-        quantumSpace: {_'0%': { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)'},
-          '20%': {_transform: 'translateX(40px) translateY(-40px) rotate(72deg) scale(1.1)'},
-          '40%': {_transform: 'translateX(0px) translateY(-80px) rotate(144deg) scale(1.2)'},
-          '60%': {_transform: 'translateX(-40px) translateY(-40px) rotate(216deg) scale(1.1)'},
-          '80%': {_transform: 'translateX(0px) translateY(0px) rotate(288deg) scale(1)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) rotate(360deg) scale(1)'}
-        },
-        biotechResearch: {_'0%': { transform: 'scale(1) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) translateY(-15px)'},
-          '50%': {_transform: 'scale(1.2) translateY(-30px)'},
-          '75%': {_transform: 'scale(1.1) translateY(-15px)'},
-          '100%': {_transform: 'scale(1) translateY(0px)'}
-        },
-        spaceMiningAutomation: {_'0%': { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)'},
-          '10%': {_transform: 'translateX(20px) translateY(-20px) rotate(36deg) scale(1.05)'},
-          '20%': {_transform: 'translateX(40px) translateY(-40px) rotate(72deg) scale(1.1)'},
-          '30%': {_transform: 'translateX(60px) translateY(-60px) rotate(108deg) scale(1.15)'},
-          '40%': {_transform: 'translateX(80px) translateY(-80px) rotate(144deg) scale(1.2)'},
-          '50%': {_transform: 'translateX(100px) translateY(-100px) rotate(180deg) scale(1.25)'},
-          '60%': {_transform: 'translateX(80px) translateY(-80px) rotate(216deg) scale(1.2)'},
-          '70%': {_transform: 'translateX(60px) translateY(-60px) rotate(252deg) scale(1.15)'},
-          '80%': {_transform: 'translateX(40px) translateY(-40px) rotate(288deg) scale(1.1)'},
-          '90%': {_transform: 'translateX(20px) translateY(-20px) rotate(324deg) scale(1.05)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) rotate(360deg) scale(1)'}
-        },
-        aiConsciousnessEvolution: {_'0%': { transform: 'scale(1) rotate(0deg) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg) translateY(-10px)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg) translateY(-20px)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg) translateY(-10px)'},
-          '100%': {_transform: 'scale(1) rotate(360deg) translateY(0px)'}
-        },
-        quantumInternetSecurity: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(15px)'},
-          '50%': {_transform: 'scale(1.2) translateX(0px)'},
-          '75%': {_transform: 'scale(1.1) translateX(-15px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        },
-        biotechDNAComputing: {_'0%': { transform: 'scale(1) rotate(0deg)'},
-          '20%': {_transform: 'scale(1.1) rotate(72deg)'},
-          '40%': {_transform: 'scale(1.2) rotate(144deg)'},
-          '60%': {_transform: 'scale(1.1) rotate(216deg)'},
-          '80%': {_transform: 'scale(1.05) rotate(288deg)'},
-          '100%': {_transform: 'scale(1) rotate(360deg)'}
-        },
-        quantumFinancialTrading: {_'0%': { transform: 'scale(1) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) translateY(-20px)'},
-          '50%': {_transform: 'scale(1.2) translateY(-40px)'},
-          '75%': {_transform: 'scale(1.1) translateY(-20px)'},
-          '100%': {_transform: 'scale(1) translateY(0px)'}
-        },
-        spaceMiningPlatform: {_'0%': { transform: 'translateX(0px) translateY(0px) rotate(0deg) scale(1)'},
-          '10%': {_transform: 'translateX(30px) translateY(-30px) rotate(36deg) scale(1.05)'},
-          '20%': {_transform: 'translateX(60px) translateY(-60px) rotate(72deg) scale(1.1)'},
-          '30%': {_transform: 'translateX(90px) translateY(-90px) rotate(108deg) scale(1.15)'},
-          '40%': {_transform: 'translateX(120px) translateY(-120px) rotate(144deg) scale(1.2)'},
-          '50%': {_transform: 'translateX(150px) translateY(-150px) rotate(180deg) scale(1.25)'},
-          '60%': {_transform: 'translateX(120px) translateY(-120px) rotate(216deg) scale(1.2)'},
-          '70%': {_transform: 'translateX(90px) translateY(-90px) rotate(252deg) scale(1.15)'},
-          '80%': {_transform: 'translateX(60px) translateY(-60px) rotate(288deg) scale(1.1)'},
-          '90%': {_transform: 'translateX(30px) translateY(-30px) rotate(324deg) scale(1.05)'},
-          '100%': {_transform: 'translateX(0px) translateY(0px) rotate(360deg) scale(1)'}
-        },
-        metaverseDigitalReality: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.1) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.05) rotate(240deg)'}
-        },
-        autonomousDevOps: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(10px)'},
-          '50%': {_transform: 'scale(1.2) translateX(0px)'},
-          '75%': {_transform: 'scale(1.1) translateX(-10px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        },
-        quantumCloudInfrastructure: {_'0%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg)'},
-          '100%': {_transform: 'scale(1) rotate(360deg)'}
-        },
-        aiPoweredEnterpriseSecurity: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.1) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.05) rotate(240deg)'}
-        },
-        autonomousITOperations: {_'0%': { transform: 'scale(1) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) translateY(-15px)'},
-          '50%': {_transform: 'scale(1.2) translateY(-30px)'},
-          '75%': {_transform: 'scale(1.1) translateY(-15px)'},
-          '100%': {_transform: 'scale(1) translateY(0px)'}
-        },
-        zeroTrustArchitecture: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(15px)'},
-          '50%': {_transform: 'scale(1.2) translateX(0px)'},
-          '75%': {_transform: 'scale(1.1) translateX(-15px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        },
-        aiEmotionMarketing: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg)'}
-        },
-        biotechPersonalizedNutrition: {_'0%': { transform: 'scale(1) translateY(0px)'},
-          '25%': {_transform: 'scale(1.1) translateY(-20px)'},
-          '50%': {_transform: 'scale(1.2) translateY(-40px)'},
-          '75%': {_transform: 'scale(1.1) translateY(-20px)'},
-          '100%': {_transform: 'scale(1) translateY(0px)'}
-        },
-        quantumLearningAccelerator: {_'0%': { transform: 'scale(1) rotate(0deg)'},
-          '25%': {_transform: 'scale(1.1) rotate(90deg)'},
-          '50%': {_transform: 'scale(1.2) rotate(180deg)'},
-          '75%': {_transform: 'scale(1.1) rotate(270deg)'},
-          '100%': {_transform: 'scale(1) rotate(360deg)'}
-        },
-        intelligentDataGovernance: {_'0%, _100%': { transform: 'scale(1) rotate(0deg)'},
-          '33%': {_transform: 'scale(1.1) rotate(120deg)'},
-          '66%': {_transform: 'scale(1.05) rotate(240deg)'}
-        },
-        aiMeetingTranscriber: {_'0%': { transform: 'scale(1) translateX(0px)'},
-          '25%': {_transform: 'scale(1.1) translateX(10px)'},
-          '50%': {_transform: 'scale(1.2) translateX(0px)'},
-          '75%': {_transform: 'scale(1.1) translateX(-10px)'},
-          '100%': {_transform: 'scale(1) translateX(0px)'}
-        }
-      },
-<<<<<<< HEAD
-      animationDelay: {
-        '2000': '2s4000': '4s'},
-      backdropBlur: {
-        xs: '2px'},
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))gradient-mesh': 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff, #5f27cd)gradient-cyber': 'linear-gradient(45deg, #ff0055, #00ffff, #ffff00, #ff00ff, #8000ff)gradient-quantum': 'linear-gradient(45deg, #8b5cf6, #06b6d4, #ec4899, #10b981, #f59e0b)gradient-neon': 'linear-gradient(45deg, #ff0080, #00ffff, #ffff00, #ff00ff, #8000ff)gradient-hologram': 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)gradient-space': 'linear-gradient(45deg, #1e3a8a, #7c3aed, #059669, #dc2626, #ea580c)'},
-      backgroundSize: {
-        'auto': 'autocover': 'covercontain': 'contain200%': '200%300%': '300%400%': '400%500%': '500%'},
-      backgroundPosition: {
-        'center': 'centertop': 'topbottom': 'bottomleft': 'leftright': 'righttop-left': 'top lefttop-right': 'top rightbottom-left': 'bottom leftbottom-right': 'bottom right'},
-      backgroundAttachment: {
-        'fixed': 'fixedlocal': 'localscroll': 'scroll'},
-      backgroundClip: {
-        'border': 'border-boxpadding': 'padding-boxcontent': 'content-boxtext': 'text'},
-      backgroundOrigin: {
-        'border': 'border-boxpadding': 'padding-boxcontent': 'content-box'},
-      backgroundRepeat: {
-        'repeat': 'repeatno-repeat': 'no-repeatrepeat-x': 'repeat-xrepeat-y': 'repeat-yrepeat-round': 'repeat-roundrepeat-space': 'repeat-space'},
-      backgroundBlendMode: {
-        'normal': 'normalmultiply': 'multiplyscreen': 'screenoverlay': 'overlaydarken': 'darkenlighten': 'lightencolor-dodge': 'color-dodgecolor-burn': 'color-burnhard-light': 'hard-lightsoft-light': 'soft-lightdifference': 'differenceexclusion': 'exclusionhue': 'huesaturation': 'saturationcolor': 'colorluminosity': 'luminosity'},
-      mixBlendMode: {
-        'normal': 'normalmultiply': 'multiplyscreen': 'screenoverlay': 'overlaydarken': 'darkenlighten': 'lightencolor-dodge': 'color-dodgecolor-burn': 'color-burnhard-light': 'hard-lightsoft-light': 'soft-lightdifference': 'differenceexclusion': 'exclusionhue': 'huesaturation': 'saturationcolor': 'colorluminosity': 'luminosity'},
-      filter: {
-        'none': 'noneblur': 'blur(4px)blur-sm': 'blur(2px)blur-md': 'blur(8px)blur-lg': 'blur(16px)blur-xl': 'blur(24px)blur-2xl': 'blur(40px)blur-3xl': 'blur(64px)brightness': 'brightness(1.1)brightness-75': 'brightness(0.75)brightness-90': 'brightness(0.9)brightness-110': 'brightness(1.1)brightness-125': 'brightness(1.25)brightness-150': 'brightness(1.5)brightness-200': 'brightness(2)contrast': 'contrast(1.1)contrast-75': 'contrast(0.75)contrast-90': 'contrast(0.9)contrast-110': 'contrast(1.1)contrast-125': 'contrast(1.25)contrast-150': 'contrast(1.5)contrast-200': 'contrast(2)grayscale': 'grayscale(1)grayscale-0': 'grayscale(0)hue-rotate': 'hue-rotate(15deg)hue-rotate-30': 'hue-rotate(30deg)hue-rotate-60': 'hue-rotate(60deg)hue-rotate-90': 'hue-rotate(90deg)hue-rotate-180': 'hue-rotate(180deg)invert': 'invert(1)invert-0': 'invert(0)saturate': 'saturate(1.1)saturate-0': 'saturate(0)saturate-50': 'saturate(0.5)saturate-75': 'saturate(0.75)saturate-90': 'saturate(0.9)saturate-110': 'saturate(1.1)saturate-125': 'saturate(1.25)saturate-150': 'saturate(1.5)saturate-200': 'saturate(2)sepia': 'sepia(1)sepia-0': 'sepia(0)drop-shadow': 'drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))drop-shadow-sm': 'drop-shadow(0 1px 1px rgb(0 0 0 / 0.05))drop-shadow-md': 'drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))drop-shadow-lg': 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))drop-shadow-xl': 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))drop-shadow-2xl': 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))drop-shadow-none': 'drop-shadow(0 0 #0000)'},
-      backdropFilter: {
-        'none': 'noneblur': 'blur(4px)blur-sm': 'blur(2px)blur-md': 'blur(8px)blur-lg': 'blur(16px)blur-xl': 'blur(24px)blur-2xl': 'blur(40px)blur-3xl': 'blur(64px)brightness': 'brightness(1.1)brightness-75': 'brightness(0.75)brightness-90': 'brightness(0.9)brightness-110': 'brightness(1.1)brightness-125': 'brightness(1.25)brightness-150': 'brightness(1.5)brightness-200': 'brightness(2)contrast': 'contrast(1.1)contrast-75': 'contrast(0.75)contrast-90': 'contrast(0.9)contrast-110': 'contrast(1.1)contrast-125': 'contrast(1.25)contrast-150': 'contrast(1.5)contrast-200': 'contrast(2)grayscale': 'grayscale(1)grayscale-0': 'grayscale(0)hue-rotate': 'hue-rotate(15deg)hue-rotate-30': 'hue-rotate(30deg)hue-rotate-60': 'hue-rotate(60deg)hue-rotate-90': 'hue-rotate(90deg)hue-rotate-180': 'hue-rotate(180deg)invert': 'invert(1)invert-0': 'invert(0)saturate': 'saturate(1.1)saturate-0': 'saturate(0)saturate-50': 'saturate(0.5)saturate-75': 'saturate(0.75)saturate-90': 'saturate(0.9)saturate-110': 'saturate(1.1)saturate-125': 'saturate(1.25)saturate-150': 'saturate(1.5)saturate-200': 'saturate(2)sepia': 'sepia(1)sepia-0': 'sepia(0)'},
-      transitionProperty: {
-        'none': 'noneall': 'allcolors': 'color, background-color, border-color, text-decoration-color, fill, strokeopacity': 'opacityshadow': 'box-shadowtransform': 'transformbackground': 'background-color, background-image, background-position, background-size, background-repeat, background-attachment, background-clip, background-originborder': 'border-color, border-width, border-style, border-radiusspacing': 'margin, padding, width, height, top, right, bottom, lefttypography': 'color, background-color, font-size, font-weight, line-height, text-align, text-decoration, text-transform, letter-spacing, word-spacinglayout': 'display, position, top, right, bottom, left, z-index, float, clear, vertical-align, text-align, white-space, word-break, word-wrap, overflow, overflow-x, overflow-y, clip, visibility, opacity, zoom, cursor, pointer-events, user-select, resize, transition, animation, transform, transform-origin, transform-style, perspective, perspective-origin, backface-visibility'},
-      transitionDuration: {
-        '75': '75ms100': '100ms150': '150ms200': '200ms300': '300ms500': '500ms700': '700ms1000': '1000ms1500': '1500ms2000': '2000ms3000': '3000ms4000': '4000ms5000': '5000ms'},
-      transitionTimingFunction: {
-        'linear': 'linearin': 'cubic-bezier(0.4, 0, 1, 1)out': 'cubic-bezier(0, 0, 0.2, 1)in-out': 'cubic-bezier(0.4, 0, 0.2, 1)bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)elastic': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)smooth': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-quantum': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)ease-neon': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-hologram': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)ease-cyberpunk': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-space': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'},
-      transitionDelay: {
-        '75': '75ms100': '100ms150': '150ms200': '200ms300': '300ms500': '500ms700': '700ms1000': '1000ms1500': '1500ms2000': '2000ms3000': '3000ms4000': '4000ms5000': '5000ms'},
-      zIndex: {
-        '60': '6070': '7080': '8090': '90100': '100'},
-      screens: {
-        'xs': '475px3xl': '1600px4xl': '1920px5xl': '2560px'}}},
-  plugins: []}
-    './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {}},
-=======
-      animationDelay: {_'2000': '2s', _'4000': '4s'},
-      backdropBlur: {_xs: '2px'},
-      backgroundImage: {_'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))', _'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, _var(--tw-gradient-stops))', _'gradient-mesh': 'linear-gradient(45deg, _#ff6b6b, _#4ecdc4, _#45b7d1, _#96ceb4, _#feca57, _#ff9ff3, _#54a0ff, _#5f27cd)', _'gradient-cyber': 'linear-gradient(45deg, _#ff0055, _#00ffff, _#ffff00, _#ff00ff, _#8000ff)', _'gradient-quantum': 'linear-gradient(45deg, _#8b5cf6, _#06b6d4, _#ec4899, _#10b981, _#f59e0b)', _'gradient-neon': 'linear-gradient(45deg, _#ff0080, _#00ffff, _#ffff00, _#ff00ff, _#8000ff)', _'gradient-hologram': 'linear-gradient(45deg, _#ff6b6b, _#4ecdc4, _#45b7d1, _#96ceb4, _#feca57)', _'gradient-space': 'linear-gradient(45deg, _#1e3a8a, _#7c3aed, _#059669, _#dc2626, _#ea580c)'},
-      backgroundSize: {_'auto': 'auto', _'cover': 'cover', _'contain': 'contain', _'200%': '200%', _'300%': '300%', _'400%': '400%', _'500%': '500%'},
-      backgroundPosition: {_'center': 'center', _'top': 'top', _'bottom': 'bottom', _'left': 'left', _'right': 'right', _'top-left': 'top left', _'top-right': 'top right', _'bottom-left': 'bottom left', _'bottom-right': 'bottom right'},
-      backgroundAttachment: {_'fixed': 'fixed', _'local': 'local', _'scroll': 'scroll'},
-      backgroundClip: {_'border': 'border-box', _'padding': 'padding-box', _'content': 'content-box', _'text': 'text'},
-      backgroundOrigin: {_'border': 'border-box', _'padding': 'padding-box', _'content': 'content-box'},
-      backgroundRepeat: {_'repeat': 'repeat', _'no-repeat': 'no-repeat', _'repeat-x': 'repeat-x', _'repeat-y': 'repeat-y', _'repeat-round': 'repeat-round', _'repeat-space': 'repeat-space'},
-      backgroundBlendMode: {_'normal': 'normal', _'multiply': 'multiply', _'screen': 'screen', _'overlay': 'overlay', _'darken': 'darken', _'lighten': 'lighten', _'color-dodge': 'color-dodge', _'color-burn': 'color-burn', _'hard-light': 'hard-light', _'soft-light': 'soft-light', _'difference': 'difference', _'exclusion': 'exclusion', _'hue': 'hue', _'saturation': 'saturation', _'color': 'color', _'luminosity': 'luminosity'},
-      mixBlendMode: {_'normal': 'normal', _'multiply': 'multiply', _'screen': 'screen', _'overlay': 'overlay', _'darken': 'darken', _'lighten': 'lighten', _'color-dodge': 'color-dodge', _'color-burn': 'color-burn', _'hard-light': 'hard-light', _'soft-light': 'soft-light', _'difference': 'difference', _'exclusion': 'exclusion', _'hue': 'hue', _'saturation': 'saturation', _'color': 'color', _'luminosity': 'luminosity'},
-      filter: {_'none': 'none', _'blur': 'blur(4px)', _'blur-sm': 'blur(2px)', _'blur-md': 'blur(8px)', _'blur-lg': 'blur(16px)', _'blur-xl': 'blur(24px)', _'blur-2xl': 'blur(40px)', _'blur-3xl': 'blur(64px)', _'brightness': 'brightness(1.1)', _'brightness-75': 'brightness(0.75)', _'brightness-90': 'brightness(0.9)', _'brightness-110': 'brightness(1.1)', _'brightness-125': 'brightness(1.25)', _'brightness-150': 'brightness(1.5)', _'brightness-200': 'brightness(2)', _'contrast': 'contrast(1.1)', _'contrast-75': 'contrast(0.75)', _'contrast-90': 'contrast(0.9)', _'contrast-110': 'contrast(1.1)', _'contrast-125': 'contrast(1.25)', _'contrast-150': 'contrast(1.5)', _'contrast-200': 'contrast(2)', _'grayscale': 'grayscale(1)', _'grayscale-0': 'grayscale(0)', _'hue-rotate': 'hue-rotate(15deg)', _'hue-rotate-30': 'hue-rotate(30deg)', _'hue-rotate-60': 'hue-rotate(60deg)', _'hue-rotate-90': 'hue-rotate(90deg)', _'hue-rotate-180': 'hue-rotate(180deg)', _'invert': 'invert(1)', _'invert-0': 'invert(0)', _'saturate': 'saturate(1.1)', _'saturate-0': 'saturate(0)', _'saturate-50': 'saturate(0.5)', _'saturate-75': 'saturate(0.75)', _'saturate-90': 'saturate(0.9)', _'saturate-110': 'saturate(1.1)', _'saturate-125': 'saturate(1.25)', _'saturate-150': 'saturate(1.5)', _'saturate-200': 'saturate(2)', _'sepia': 'sepia(1)', _'sepia-0': 'sepia(0)', _'drop-shadow': 'drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))', _'drop-shadow-sm': 'drop-shadow(0 1px 1px rgb(0 0 0 / 0.05))', _'drop-shadow-md': 'drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))', _'drop-shadow-lg': 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))', _'drop-shadow-xl': 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))', _'drop-shadow-2xl': 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))', _'drop-shadow-none': 'drop-shadow(0 0 #0000)'},
-      backdropFilter: {_'none': 'none', _'blur': 'blur(4px)', _'blur-sm': 'blur(2px)', _'blur-md': 'blur(8px)', _'blur-lg': 'blur(16px)', _'blur-xl': 'blur(24px)', _'blur-2xl': 'blur(40px)', _'blur-3xl': 'blur(64px)', _'brightness': 'brightness(1.1)', _'brightness-75': 'brightness(0.75)', _'brightness-90': 'brightness(0.9)', _'brightness-110': 'brightness(1.1)', _'brightness-125': 'brightness(1.25)', _'brightness-150': 'brightness(1.5)', _'brightness-200': 'brightness(2)', _'contrast': 'contrast(1.1)', _'contrast-75': 'contrast(0.75)', _'contrast-90': 'contrast(0.9)', _'contrast-110': 'contrast(1.1)', _'contrast-125': 'contrast(1.25)', _'contrast-150': 'contrast(1.5)', _'contrast-200': 'contrast(2)', _'grayscale': 'grayscale(1)', _'grayscale-0': 'grayscale(0)', _'hue-rotate': 'hue-rotate(15deg)', _'hue-rotate-30': 'hue-rotate(30deg)', _'hue-rotate-60': 'hue-rotate(60deg)', _'hue-rotate-90': 'hue-rotate(90deg)', _'hue-rotate-180': 'hue-rotate(180deg)', _'invert': 'invert(1)', _'invert-0': 'invert(0)', _'saturate': 'saturate(1.1)', _'saturate-0': 'saturate(0)', _'saturate-50': 'saturate(0.5)', _'saturate-75': 'saturate(0.75)', _'saturate-90': 'saturate(0.9)', _'saturate-110': 'saturate(1.1)', _'saturate-125': 'saturate(1.25)', _'saturate-150': 'saturate(1.5)', _'saturate-200': 'saturate(2)', _'sepia': 'sepia(1)', _'sepia-0': 'sepia(0)'},
-      transitionProperty: {_'none': 'none', _'all': 'all', _'colors': 'color, _background-color, _border-color, _text-decoration-color, _fill, _stroke', _'opacity': 'opacity', _'shadow': 'box-shadow', _'transform': 'transform', _'background': 'background-color, _background-image, _background-position, _background-size, _background-repeat, _background-attachment, _background-clip, _background-origin', _'border': 'border-color, _border-width, _border-style, _border-radius', _'spacing': 'margin, _padding, _width, _height, _top, _right, _bottom, _left', _'typography': 'color, _background-color, _font-size, _font-weight, _line-height, _text-align, _text-decoration, _text-transform, _letter-spacing, _word-spacing', _'layout': 'display, _position, _top, _right, _bottom, _left, _z-index, _float, _clear, _vertical-align, _text-align, _white-space, _word-break, _word-wrap, _overflow, _overflow-x, _overflow-y, _clip, _visibility, _opacity, _zoom, _cursor, _pointer-events, _user-select, _resize, _transition, _animation, _transform, _transform-origin, _transform-style, _perspective, _perspective-origin, _backface-visibility'},
-      transitionDuration: {_'75': '75ms', _'100': '100ms', _'150': '150ms', _'200': '200ms', _'300': '300ms', _'500': '500ms', _'700': '700ms', _'1000': '1000ms', _'1500': '1500ms', _'2000': '2000ms', _'3000': '3000ms', _'4000': '4000ms', _'5000': '5000ms'},
-      transitionTimingFunction: {_'linear': 'linear', _'in': 'cubic-bezier(0.4, _0, _1, _1)', _'out': 'cubic-bezier(0, _0, _0.2, _1)', _'in-out': 'cubic-bezier(0.4, _0, _0.2, _1)', _'bounce': 'cubic-bezier(0.68, _-0.55, _0.265, _1.55)', _'elastic': 'cubic-bezier(0.68, _-0.55, _0.265, _1.55)', _'smooth': 'cubic-bezier(0.25, _0.46, _0.45, _0.94)', _'ease-quantum': 'cubic-bezier(0.68, _-0.55, _0.265, _1.55)', _'ease-neon': 'cubic-bezier(0.25, _0.46, _0.45, _0.94)', _'ease-hologram': 'cubic-bezier(0.68, _-0.55, _0.265, _1.55)', _'ease-cyberpunk': 'cubic-bezier(0.25, _0.46, _0.45, _0.94)', _'ease-space': 'cubic-bezier(0.68, _-0.55, _0.265, _1.55)'},
-      transitionDelay: {_'75': '75ms', _'100': '100ms', _'150': '150ms', _'200': '200ms', _'300': '300ms', _'500': '500ms', _'700': '700ms', _'1000': '1000ms', _'1500': '1500ms', _'2000': '2000ms', _'3000': '3000ms', _'4000': '4000ms', _'5000': '5000ms'},
-      zIndex: {_'60': '60', _'70': '70', _'80': '80', _'90': '90', _'100': '100'},
-      screens: {_'xs': '475px', _'3xl': '1600px', _'4xl': '1920px', _'5xl': '2560px'}}},
-  plugins: []}
-    './pages/**/*.{_js, _ts, _jsx, _tsx}',
-    './components/**/*.{_js, _ts, _jsx, _tsx}'],
-  theme: {_extend: {}},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  plugins: []}
-
+ // Add cursor color palette to match CSS variables colors: {
+  // ... existing colors ... cursor: {
+  
+};
+slideUp: {
+  '0%': {
+  transform: 'translateY (20px) ', opacity: '0' 
+};
+'100%': {
+  transform: 'translateY (0px) ', opacity: '1' 
+}
+};
+slideInUp: {
+  '0%': {
+  transform: 'translateY (100%) ' 
+};
+'100%': {
+  transform: 'translateY (0) ' 
+}
+};
+slideInDown: {
+  '0%': {
+  transform: 'translateY (-100%) ' 
+};
+'100%': {
+  transform: 'translateY (0) ' 
+}
+};
+slideInLeft: {
+  '0%': {
+  transform: 'translateX (-100%) ' 
+};
+'100%': {
+  transform: 'translateX (0) ' 
+}
+};
+slideInRight: {
+  '0%': {
+  transform: 'translateX (100%) ' 
+};
+'100%': {
+  transform: 'translateX (0) ' 
+}
+};
+scaleIn: {
+  '0%': {
+  transform: 'scale (0) ' 
+};
+'100%': {
+  transform: 'scale (1) ' 
+}
+};
+scaleOut: {
+  '0%': {
+  transform: 'scale (1) ' 
+};
+'100%': {
+  transform: 'scale (0) ' 
+}
+};
+bounceIn: {
+  '0%': {
+  transform: 'scale (0.3) ', opacity: '0' 
+};
+'50%': {
+  transform: 'scale (1.05) ' 
+};
+'70%': {
+  transform: 'scale (0.9) ' 
+};
+'100%': {
+  transform: 'scale (1) ', opacity: '1' 
+}
+};
+bounceOut: {
+  '0%': {
+  transform: 'scale (1) ', opacity: '1' 
+};
+'20%': {
+  transform: 'scale (0.9) ' 
+};
+'50%': {
+  transform: 'scale (1.05) ' 
+};
+'100%': {
+  transform: 'scale (0.3) ', opacity: '0' 
+}
+};
+rotateIn: {
+  '0%': {
+  transform: 'rotate (-200deg) ', opacity: '0' 
+};
+'100%': {
+  transform: 'rotate (0) ', opacity: '1' 
+}
+};
+rotateOut: {
+  '0%': {
+  transform: 'rotate (0) ', opacity: '1' 
+};
+'100%': {
+  transform: 'rotate (200deg) ', opacity: '0' 
+}
+};
+flipInX: {
+  '0%': {
+  transform: 'perspective (400px) rotateX (90deg) ', opacity: '0' 
+};
+'40%': {
+  transform: 'perspective (400px) rotateX (-20deg) ' 
+};
+'60%': {
+  transform: 'perspective (400px) rotateX (10deg) ' 
+};
+'80%': {
+  transform: 'perspective (400px) rotateX (-5deg) ' 
+};
+'100%': {
+  transform: 'perspective (400px) rotateX (0deg) ', opacity: '1' 
+}
+};
+flipInY: {
+  '0%': {
+  transform: 'perspective (400px) rotateY (90deg) ', opacity: '0' 
+};
+'40%': {
+  transform: 'perspective (400px) rotateY (-20deg) ' 
+};
+'60%': {
+  transform: 'perspective (400px) rotateY (10deg) ' 
+};
+'80%': {
+  transform: 'perspective (400px) rotateY (-5deg) ' 
+};
+'100%': {
+  transform: 'perspective (400px) rotateY (0deg) ', opacity: '1' 
+}
+};
+zoomIn: {
+  '0%': {
+  transform: 'scale (0.3) ', opacity: '0' 
+};
+'50%': {
+  opacity: '1' 
+};
+'100%': {
+  transform: 'scale (1) ', opacity: '1' 
+}
+};
+zoomOut: {
+  '0%': {
+  transform: 'scale (1) ', opacity: '1' 
+};
+'50%': {
+  opacity: '0' 
+};
+'100%': {
+  transform: 'scale (0.3) ', opacity: '0' 
+}
+};
+float: {
+  '0%, 100%': {
+  transform: 'translateY (0px) ' 
+};
+'50%': {
+  transform: 'translateY (-20px) ' 
+}
+};
+gridFlow: {
+  '0%': {
+  transform: 'translateX (0) translateY (0) ' 
+};
+'100%': {
+  transform: 'translateX (60px) translateY (60px) ' 
+}
+};
+particle: {
+  '0%': {
+  transform: 'translateY (0) scale (1) ', opacity: '1' 
+};
+'50%': {
+  transform: 'translateY (-100px) scale (1.5) ', opacity: '0.7' 
+};
+'100%': {
+  transform: 'translateY (-200px) scale (0.5) ', opacity: '0' 
+}
+};
+scanLine: {
+  '0%': {
+  transform: 'translateX (-100%) ' 
+};
+'100%': {
+  transform: 'translateX (100%) ' 
+}
+};
+gradientX: {
+  '0%, 100%': {
+  backgroundPosition: '0% 50%' 
+};
+'50%': {
+  backgroundPosition: '100% 50%' 
+}
+};
+bounceX: {
+  '0%, 100%': {
+  transform: 'translateX (0) ' 
+};
+'50%': {
+  transform: 'translateX (25%) ' 
+}
+};
+countUp: {
+  '0%': {
+  transform: 'scale (0.8) ', opacity: '0' 
+};
+'100%': {
+  transform: 'scale (1) ', opacity: '1' 
+}
+};
+quantumCompute: {
+  '0%': {
+  transform: 'rotate (0deg) scale (1) ' 
+};
+'25%': {
+  transform: 'rotate (90deg) scale (1.2) ' 
+};
+'50%': {
+  transform: 'rotate (180deg) scale (1) ' 
+};
+'75%': {
+  transform: 'rotate (270deg) scale (0.8) ' 
+};
+'100%': {
+  transform: 'rotate (360deg) scale (1) ' 
+}
+};
+spaceMining: {
+  '0%, 100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'translateX (10px) translateY (-10px) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'translateX (0px) translateY (-20px) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'translateX (-10px) translateY (-10px) rotate (270deg) ' 
+}
+};
+aiEmotion: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.1) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.05) rotate (240deg) ' 
+}
+};
+quantumSecurity: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (5px) ' 
+};
+'50%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (0.9) translateX (-5px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+};
+biotechDNA: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) ' 
+}
+};
+spaceColonization: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) scale (1) ' 
+};
+'20%': {
+  transform: 'translateX (20px) translateY (-20px) scale (1.1) ' 
+};
+'40%': {
+  transform: 'translateX (0px) translateY (-40px) scale (1.2) ' 
+};
+'60%': {
+  transform: 'translateX (-20px) translateY (-20px) scale (1.1) ' 
+};
+'80%': {
+  transform: 'translateX (0px) translateY (0px) scale (1) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) scale (1) ' 
+}
+};
+aiCreativity: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.15) rotate (45deg) ' 
+};
+'50%': {
+  transform: 'scale (1.3) rotate (90deg) ' 
+};
+'75%': {
+  transform: 'scale (1.15) rotate (135deg) ' 
+}
+};
+quantumLearning: {
+  '0%': {
+  transform: 'scale (1) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateY (-10px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateY (-20px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateY (-10px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateY (0px) ' 
+}
+};
+spaceExploration: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) scale (1) ' 
+};
+'20%': {
+  transform: 'translateX (30px) translateY (-30px) rotate (72deg) scale (1.1) ' 
+};
+'40%': {
+  transform: 'translateX (0px) translateY (-60px) rotate (144deg) scale (1.2) ' 
+};
+'60%': {
+  transform: 'translateX (-30px) translateY (-30px) rotate (216deg) scale (1.1) ' 
+};
+'80%': {
+  transform: 'translateX (0px) translateY (0px) rotate (288deg) scale (1) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (360deg) scale (1) ' 
+}
+};
+aiAutonomy: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.1) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.05) rotate (240deg) ' 
+}
+};
+quantumFinance: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (10px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateX (-10px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+};
+biotechHealth: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) ' 
+}
+};
+spaceTechnology: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) scale (1) ' 
+};
+'25%': {
+  transform: 'translateX (25px) translateY (-25px) rotate (90deg) scale (1.1) ' 
+};
+'50%': {
+  transform: 'translateX (0px) translateY (-50px) rotate (180deg) scale (1.2) ' 
+};
+'75%': {
+  transform: 'translateX (-25px) translateY (-25px) rotate (270deg) scale (1.1) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (360deg) scale (1) ' 
+}
+};
+aiInnovation: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.15) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.1) rotate (240deg) ' 
+}
+};
+quantumSpace: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) scale (1) ' 
+};
+'20%': {
+  transform: 'translateX (40px) translateY (-40px) rotate (72deg) scale (1.1) ' 
+};
+'40%': {
+  transform: 'translateX (0px) translateY (-80px) rotate (144deg) scale (1.2) ' 
+};
+'60%': {
+  transform: 'translateX (-40px) translateY (-40px) rotate (216deg) scale (1.1) ' 
+};
+'80%': {
+  transform: 'translateX (0px) translateY (0px) rotate (288deg) scale (1) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (360deg) scale (1) ' 
+}
+};
+biotechResearch: {
+  '0%': {
+  transform: 'scale (1) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateY (-15px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateY (-30px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateY (-15px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateY (0px) ' 
+}
+};
+spaceMiningAutomation: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) scale (1) ' 
+};
+'10%': {
+  transform: 'translateX (20px) translateY (-20px) rotate (36deg) scale (1.05) ' 
+};
+'20%': {
+  transform: 'translateX (40px) translateY (-40px) rotate (72deg) scale (1.1) ' 
+};
+'30%': {
+  transform: 'translateX (60px) translateY (-60px) rotate (108deg) scale (1.15) ' 
+};
+'40%': {
+  transform: 'translateX (80px) translateY (-80px) rotate (144deg) scale (1.2) ' 
+};
+'50%': {
+  transform: 'translateX (100px) translateY (-100px) rotate (180deg) scale (1.25) ' 
+};
+'60%': {
+  transform: 'translateX (80px) translateY (-80px) rotate (216deg) scale (1.2) ' 
+};
+'70%': {
+  transform: 'translateX (60px) translateY (-60px) rotate (252deg) scale (1.15) ' 
+};
+'80%': {
+  transform: 'translateX (40px) translateY (-40px) rotate (288deg) scale (1.1) ' 
+};
+'90%': {
+  transform: 'translateX (20px) translateY (-20px) rotate (324deg) scale (1.05) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (360deg) scale (1) ' 
+}
+};
+aiConsciousnessEvolution: {
+  '0%': {
+  transform: 'scale (1) rotate (0deg) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) translateY (-10px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) translateY (-20px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) translateY (-10px) ' 
+};
+'100%': {
+  transform: 'scale (1) rotate (360deg) translateY (0px) ' 
+}
+};
+quantumInternetSecurity: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (15px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateX (-15px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+};
+biotechDNAComputing: {
+  '0%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'20%': {
+  transform: 'scale (1.1) rotate (72deg) ' 
+};
+'40%': {
+  transform: 'scale (1.2) rotate (144deg) ' 
+};
+'60%': {
+  transform: 'scale (1.1) rotate (216deg) ' 
+};
+'80%': {
+  transform: 'scale (1.05) rotate (288deg) ' 
+};
+'100%': {
+  transform: 'scale (1) rotate (360deg) ' 
+}
+};
+quantumFinancialTrading: {
+  '0%': {
+  transform: 'scale (1) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateY (-20px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateY (-40px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateY (-20px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateY (0px) ' 
+}
+};
+spaceMiningPlatform: {
+  '0%': {
+  transform: 'translateX (0px) translateY (0px) rotate (0deg) scale (1) ' 
+};
+'10%': {
+  transform: 'translateX (30px) translateY (-30px) rotate (36deg) scale (1.05) ' 
+};
+'20%': {
+  transform: 'translateX (60px) translateY (-60px) rotate (72deg) scale (1.1) ' 
+};
+'30%': {
+  transform: 'translateX (90px) translateY (-90px) rotate (108deg) scale (1.15) ' 
+};
+'40%': {
+  transform: 'translateX (120px) translateY (-120px) rotate (144deg) scale (1.2) ' 
+};
+'50%': {
+  transform: 'translateX (150px) translateY (-150px) rotate (180deg) scale (1.25) ' 
+};
+'60%': {
+  transform: 'translateX (120px) translateY (-120px) rotate (216deg) scale (1.2) ' 
+};
+'70%': {
+  transform: 'translateX (90px) translateY (-90px) rotate (252deg) scale (1.15) ' 
+};
+'80%': {
+  transform: 'translateX (60px) translateY (-60px) rotate (288deg) scale (1.1) ' 
+};
+'90%': {
+  transform: 'translateX (30px) translateY (-30px) rotate (324deg) scale (1.05) ' 
+};
+'100%': {
+  transform: 'translateX (0px) translateY (0px) rotate (360deg) scale (1) ' 
+}
+};
+metaverseDigitalReality: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.1) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.05) rotate (240deg) ' 
+}
+};
+autonomousDevOps: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (10px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateX (-10px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+};
+quantumCloudInfrastructure: {
+  '0%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) ' 
+};
+'100%': {
+  transform: 'scale (1) rotate (360deg) ' 
+}
+};
+aiPoweredEnterpriseSecurity: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.1) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.05) rotate (240deg) ' 
+}
+};
+autonomousITOperations: {
+  '0%': {
+  transform: 'scale (1) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateY (-15px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateY (-30px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateY (-15px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateY (0px) ' 
+}
+};
+zeroTrustArchitecture: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (15px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateX (-15px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+};
+aiEmotionMarketing: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) ' 
+}
+};
+biotechPersonalizedNutrition: {
+  '0%': {
+  transform: 'scale (1) translateY (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateY (-20px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateY (-40px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateY (-20px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateY (0px) ' 
+}
+};
+quantumLearningAccelerator: {
+  '0%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'25%': {
+  transform: 'scale (1.1) rotate (90deg) ' 
+};
+'50%': {
+  transform: 'scale (1.2) rotate (180deg) ' 
+};
+'75%': {
+  transform: 'scale (1.1) rotate (270deg) ' 
+};
+'100%': {
+  transform: 'scale (1) rotate (360deg) ' 
+}
+};
+intelligentDataGovernance: {
+  '0%, 100%': {
+  transform: 'scale (1) rotate (0deg) ' 
+};
+'33%': {
+  transform: 'scale (1.1) rotate (120deg) ' 
+};
+'66%': {
+  transform: 'scale (1.05) rotate (240deg) ' 
+}
+};
+aiMeetingTranscriber: {
+  '0%': {
+  transform: 'scale (1) translateX (0px) ' 
+};
+'25%': {
+  transform: 'scale (1.1) translateX (10px) ' 
+};
+'50%': {
+  transform: 'scale (1.2) translateX (0px) ' 
+};
+'75%': {
+  transform: 'scale (1.1) translateX (-10px) ' 
+};
+'100%': {
+  transform: 'scale (1) translateX (0px) ' 
+}
+}
+};
+plugins: [] 
+}

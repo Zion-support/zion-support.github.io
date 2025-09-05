@@ -1,384 +1,76 @@
-import js from '@eslint/js',
-import typescript from '@typescript-eslint/eslint-plugin',
-import typescriptParser from '@typescript-eslint/parser',
-import react from 'eslint-plugin-react',
-import reactHooks from 'eslint-plugin-react-hooks',
-import next from '@next/eslint-plugin-next',
-
-export default [
-  js.configs.recommended,
-<<<<<<< HEAD
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-<<<<<<< HEAD
-=======
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      '.eslintrc.js',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/test-utils.*',
-      '**/jest.setup.*',
-      '**/jest.config.*',
-      '**/vite.config.*',
-      '**/postcss.config.*',
-      '**/playwright.config.*',
-      '**/cypress.config.*',
-      '**/bundle-analyzer.config.*',
-      '**/csp-config.*',
-      '**/ecosystem.config.*',
-      '**/Dockerfile*',
-      '**/docker-compose*',
-      '**/pm2-*',
-      '**/fix-*',
-      '**/clean-*',
-      '**/batch-*',
-      '**/merge-*',
-      '**/resolve-*',
-      '**/systematic-*',
-      '**/ultimate-*',
-      '**/structural-*',
-      '**/quick-*',
-      '**/comprehensive-*',
-      '**/enhanced-*',
-      '**/complete-*',
-      '**/app-optimizer.*',
-      '**/improve-*',
-      '**/find-*',
-      '**/git-ops.*',
-      '**/pr-manager.*',
-      '**/merge-strategy.*',
-      '**/resolve-and-merge-*',
-      '**/merge-all-*',
-      '**/merge-prs.*',
-      '**/pr-*',
-      '**/batch_*',
-      '**/check_*',
-      '**/commit-*',
-      '**/complete_*',
-      '**/deploy-*',
-      '**/fix_*',
-      '**/git_*',
-      '**/health-*',
-      '**/quick-*',
-      '**/run-*',
-      '**/start-*',
-      '**/test-*',
-      '**/ultimate-*',
-      '**/utils/next-*',
-      '**/utils/performance-*',
-      '**/utils/rate-*',
-      '**/utils/input-*',
-      '**/utils/csrf-*',
-      '**/utils/dynamic-*',
-      '**/utils/env-*',
-      '**/utils/messageChannel*',
-      '**/utils/sanitize*',
-      '**/utils/seo-*',
-      '**/utils/testing-*',
-      '**/utils/accessibility-*',
-      '**/utils/api.*',
-      '**/utils/monitoring.*',
-      '**/utils/performance.*',
-      '**/utils/seo-optimizer.*',
-      '**/types/empty.*',
-      '**/types/index.*',
-      '**/types/service-*',
-      '**/supabase/**',
-      '**/src/main.*',
-      '**/src/data/**',
-      '**/src/utils/**',
-      '**/src/components/**',
-      '**/src/App.*',
-      '**/components/ui/**',
-      '**/components/layout/**',
-      '**/components/performance/**',
-      '**/hooks/**',
-      '**/lib/**',
-      '**/api-backup/**',
-      '**/deployment/**',
-      '**/deployments/**',
-      '**/docs/**',
-      '**/e2e/**',
-      '**/content/**',
-      '**/data/**',
-      '**/config/**',
-      '**/__tests__/**',
-      '**/automation-reports/**',
-      '**/error-prevention-reports/**',
-      '**/performance-reports/**',
-      '**/link-reports/**',
-      '**/monitoring/**',
-      '**/pm2-automation/**',
-      '**/automation/logs/**',
-      '**/automation/backup/**',
-      '**/backup-merge-conflicts/**',
-      '**/temp_backup/**',
-      '**/temp_broken_components/**',
-      '**/temp_working/**',
-      '**/temp_*/**',
-      '**/ai-optimization-backups/**',
-      '**/ai-analysis-reports/**',
-      '**/optimization-reports/**',
-      '**/public/reports/**',
-      '**/pages_backup*/**',
-      '**/pages.*/**',
-      '**/pages-*/**',
-      '**/pages_disabled*/**',
-      '**/pages.disabled*/**',
-      '**/pages.broken*/**',
-      '**/pages.corrupted*/**',
-      '**/pages.old*/**',
-      '**/pages._*/**',
-      '**/pages.__*/**',
-      '**/backup-pages/**',
-      '**/src.pages.disabled/**',
-      '**/lib_backup*/**',
-      '**/src_backup*/**',
-      '**/corrupted-files-backup*/**',
-      '**/performance-reports*/**',
-      '**/log-analysis-reports*/**',
-      '**/link-reports*/**',
-      '**/lint-target*/**',
-      '**/monitoring*/**',
-      '**/pm2-automation*/**',
-      '**/automation/logs*/**',
-      '**/automation/backup*/**',
-      '**/performance-*.json',
-      '**/performance-*.js',
-      '**/performance-*.cjs',
-      '**/performance-*.sh',
-      '**/performance-*.html',
-      '**/performance-*.md',
-      '**/performance-*.txt'
-    ],
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
-        process: 'readonly',
-        // DOM types
-        Element: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        KeyboardEvent: 'readonly',
-        Node: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly',
-        LayoutShift: 'readonly',
-        performance: 'readonly',
-        IntersectionObserver: 'readonly',
-        IntersectionObserverEntry: 'readonly',
-        // React
-        React: 'readonly',
-        // Jest/Testing globals
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-<<<<<<< HEAD
-      },
-=======
-        // Node.js globals
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        Buffer: 'readonly'
-      }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-  {_files: ['**/*.{js, _jsx, _ts, _tsx}'],
-    languageOptions: {_parser: typescriptParser, _parserOptions: {
-        ecmaVersion: 'latest', _sourceType: 'module', _ecmaFeatures: {
-          jsx: true, },
-      },
-      globals: {_// Browser globals
-        window: 'readonly', _document: 'readonly', _console: 'readonly', _localStorage: 'readonly', _sessionStorage: 'readonly', _setTimeout: 'readonly', _clearTimeout: 'readonly', _setInterval: 'readonly', _clearInterval: 'readonly', _fetch: 'readonly', _process: 'readonly', _// DOM types
-        Element: 'readonly', _HTMLElement: 'readonly', _HTMLInputElement: 'readonly', _HTMLTextAreaElement: 'readonly', _HTMLSelectElement: 'readonly', _HTMLDivElement: 'readonly', _MouseEvent: 'readonly', _KeyboardEvent: 'readonly', _Node: 'readonly', _PerformanceObserver: 'readonly', _PerformanceNavigationTiming: 'readonly', _PerformanceEventTiming: 'readonly', _LayoutShift: 'readonly', _performance: 'readonly', _IntersectionObserver: 'readonly', _IntersectionObserverEntry: 'readonly', _// React
-        React: 'readonly', _// Jest/Testing globals
-        describe: 'readonly', _it: 'readonly', _test: 'readonly', _expect: 'readonly', _beforeEach: 'readonly', _afterEach: 'readonly', _beforeAll: 'readonly', _afterAll: 'readonly', _jest: 'readonly', },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
-    plugins: {_'@typescript-eslint': typescript, _react: react, _'react-hooks': reactHooks, _'@next/next': next, },
-    rules: {_...typescript.configs.recommended.rules, _...react.configs.recommended.rules, _...reactHooks.configs.recommended.rules, _...next.configs.recommended.rules, _'no-unused-vars': 'warn', _'no-console': 'warn', _'prefer-const': 'error', _'no-var': 'error', _'react/prop-types': 'off', _'react/react-in-jsx-scope': 'off', _'@typescript-eslint/no-unused-vars': 'warn', _'@typescript-eslint/no-explicit-any': 'warn', },
-    settings: {_react: {
-        version: 'detect', },
-    },
-  },
-  {_files: ['**/*.cjs'], _languageOptions: {
-      sourceType: 'commonjs', _globals: {
-        // Node.js globals
-        process: 'readonly', _console: 'readonly', _require: 'readonly', _module: 'readonly', _exports: 'readonly', __dirname: 'readonly', __filename: 'readonly', _global: 'readonly', _Buffer: 'readonly', _setTimeout: 'readonly', _clearTimeout: 'readonly', _setInterval: 'readonly', _clearInterval: 'readonly', _setImmediate: 'readonly', _clearImmediate: 'readonly', },
-    },
-  },
-  {_ignores: [
-      // Node/build outputs
-<<<<<<< HEAD
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-<<<<<<< HEAD
-      'out/**',
-      'coverage/**',
-      // Large/legacy sources and disabled dirs
-      'src/**/src.corrupted/**',
-      'src/**/src.disabled/**',
-      'src/**/src.broken/**',
-      'src/**/src.pages.disabled/**',
-      'solutions.disabled/**',
-      'components.disabled/**',
-      'components.corrupted/**',
-      'hooks/**/hooks.disabled/**',
-      'lib.disabled/**',
-      'lib/**/lib.corrupted/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'contracts.disabled/**',
-      'corrupted-files-backup/**',
-      'corrupted_files_backup_2/**',
-      'cypress.disabled/**',
-      'cypress_backup/**',
-      'data/**',
-      'e2e/**',
-      'pages.disabled/**',
-      'pages.disabled_backup/**',
-      'pages_backup/**',
-      'supabase/**',
-      'types/**',
-      'types.disabled/**',
-      'utils/**',
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
-      // Temp and backups
-      'backup/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'styles_backup/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-analysis-reports/**',
-      'optimization-reports/**',
-      'public/reports/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
-      'temp_*/**',
-      'backup-merge-conflicts/**',
-      'deployments/**',
-      'deployment/**',
-      'server/**',
-      'services/**',
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'netlify/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '**/*.cjs',
-      // Public assets/scripts
-      'public/**',
-      // Root-level noisy files
-      'api/**',
-      '*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
-      'jest.config.*',
-      'fix-*.js',
-      'fix-*.jsx',
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
-      // Page backups
-      'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
-  },
-=======
-      'node_modules/**', _'.next/**', _'dist/**', _'build/**', _'out/**', _'coverage/**', _// Large/legacy sources and disabled dirs
-      'src/**/src.corrupted/**', _'src/**/src.disabled/**', _'src/**/src.broken/**', _'src/**/src.pages.disabled/**', _'solutions.disabled/**', _'components.disabled/**', _'components.corrupted/**', _'hooks/**/hooks.disabled/**', _'lib.disabled/**', _'lib/**/lib.corrupted/**', _'zion-os.disabled/**', _'zion_academy/**', _'contracts.disabled/**', _'corrupted-files-backup/**', _'corrupted_files_backup_2/**', _'cypress.disabled/**', _'cypress_backup/**', _'data/**', _'e2e/**', _'pages.disabled/**', _'pages.disabled_backup/**', _'pages_backup/**', _'supabase/**', _'types/**', _'types.disabled/**', _'utils/**', _// Tests and mocks
-      '__tests__/**', _'tests/**', _'tests.disabled/**', _'*.test.*', _// Temp and backups
-      'backup/**', _'backup-pages/**', _'pages-backup/**', _'lib_backup/**', _'data_backup/**', _'styles_backup/**', _'api-backup/**', _'automation_backup/**', _'ai-optimization-backups/**', _'ai-analysis-reports/**', _'optimization-reports/**', _'public/reports/**', _'temp_backup/**', _'temp_broken_components/**', _'temp_working/**', _'temp_*/**', _'backup-merge-conflicts/**', _'deployments/**', _'deployment/**', _'server/**', _'services/**', _// Scripts/configs and CJS files not intended for lint
-      'scripts/**', _'automation/**', _'netlify/**', _'*.config.js', _'*.config.cjs', _'*.config.mjs', _'**/*.cjs', _// Public assets/scripts
-      'public/**', _// Root-level noisy files
-      'api/**', _'*.js', _'*.ts', _'*.tsx', _'*.jsx', _'jest.config.*', _'fix-*.js', _'fix-*.jsx', _// Misc root configs that were being linted
-      '.eslintrc.js', _'.eslintrc.cjs', _'.eslintrc.disabled.js', _'.prettierrc.js', _// Page backups
-      'pages.__backup/**', _'pages-disabled/**', _'pages.disabled_auto/**', _], },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-];
-=======
-      'node_modules/**',
-      // Public assets/scripts
-      'public/**',
-      // Root-level noisy files
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '*.backup.*',
-      '*.old.*',
-      '*.disabled.*',
-      '*.broken.*',
-      '*.corrupted.*',
-      '*.temp.*'
-    ]
-  }
-];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import next from '@next/eslint-plugin-next';
+export default [ js.configs.recommended;
+languageOptions: {
+  parser: typescriptParser;
+parserOptions: {
+  ecmaVersion: 'latest';
+sourceType: 'module';
+ecmaFeatures: {
+  jsx: true;
+};
+};
+globals: {
+  //Browser globals window: 'readonly';
+document: 'readonly';
+console: 'readonly';
+localStorage: 'readonly';
+sessionStorage: 'readonly';
+setTimeout: 'readonly';
+clearTimeout: 'readonly';
+setInterval: 'readonly';
+clearInterval: 'readonly';
+fetch: 'readonly';
+process: 'readonly';
+//DOM types Element: 'readonly';
+HTMLElement: 'readonly';
+HTMLInputElement: 'readonly';
+HTMLTextAreaElement: 'readonly';
+HTMLSelectElement: 'readonly';
+HTMLDivElement: 'readonly';
+MouseEvent: 'readonly';
+KeyboardEvent: 'readonly';
+Node: 'readonly';
+PerformanceObserver: 'readonly';
+PerformanceNavigationTiming: 'readonly';
+PerformanceEventTiming: 'readonly';
+LayoutShift: 'readonly';
+performance: 'readonly';
+IntersectionObserver: 'readonly';
+IntersectionObserverEntry: 'readonly';
+//React React: 'readonly';
+//Jest/Testing globals describe: 'readonly';
+it: 'readonly';
+test: 'readonly';
+expect: 'readonly';
+beforeEach: 'readonly';
+afterEach: 'readonly';
+beforeAll: 'readonly';
+afterAll: 'readonly';
+jest: 'readonly';
+};
+plugins: {
+  '@typescript-eslint': typescript, react: react, 'react-hooks': reactHooks, '@next/next': next;
+};
+rules: {
+  ...typescript.configs.recommended.rules, ...react.configs.recommended.rules, ...reactHooks.configs.recommended.rules, ...next.configs.recommended.rules, 'no-unused-vars': 'warn', 'no-console': 'warn', 'prefer-const': 'error', 'no-var': 'error', 'react/prop-types': 'off', 'react/react-in-jsx-scope': 'off', '@typescript-eslint/no-unused-vars': 'warn', '@typescript-eslint/no-explicit-any': 'warn';
+};
+settings: {
+  react: {
+  version: 'detect';
+};
+};
+};
+{
+  files: ['**/*.cjs'], languageOptions: {
+  sourceType: 'commonjs', globals: {
+  //Node.js globals process: 'readonly', console: 'readonly', require: 'readonly', module: 'readonly', exports: 'readonly', dirname: 'readonly', filename: 'readonly', global: 'readonly', Buffer: 'readonly', setTimeout: 'readonly', clearTimeout: 'readonly', setInterval: 'readonly', clearInterval: 'readonly', setImmediate: 'readonly', clearImmediate: 'readonly';
+};
+};
+};
+{
+  ignores: [ //Node/build outputs ];

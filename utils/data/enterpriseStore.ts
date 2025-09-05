@@ -1,149 +1,33 @@
-<<<<<<< HEAD
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',
-
-const generateId = () => Math.random().toString(36).slice(2, 10),
-=======
-
-const _generateId = () => Math.random().toString(36).slice(2, 10);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-const seedCompany: CompanyRecord = {_id: 'cmp_acme', _name: 'Acme Corporation', _slug: 'acme', _logoUrl: '/logo-acme.svg', _brandColor: '#4F46E5', _plan: {
-    tier: 'business', _seatsPurchased: 25, _seatsUsed: 3, _usageLimits: {
-      monthlyJobPosts: 50, _budgetCapUsd: 10000}},
-  members: [
-    {_id: 'mem_1', _email: 'admin@acme.com', _name: 'Avery Admin', _role: 'admin'},
-    {_id: 'mem_2', _email: 'maria@acme.com', _name: 'Maria Manager', _role: 'manager'},
-    {_id: 'mem_3', _email: 'reid@acme.com', _name: 'Reid Recruiter', _role: 'recruiter'}],
-  activity: [
-    {_id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: 'admin@acme.com', _action: 'created_company'},
-    {_id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: 'maria@acme.com', _action: 'posted_job', _meta: { jobId: 'job_123'} }],
-  invoices: [
-<<<<<<< HEAD
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},
-
-const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },
-const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },
-
-export const store = {
-  getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] || null
-  },
-  getCompanyById(id: string) {
-    return companiesById[id] || null
-  },
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {
-    const id = `cmp_${generateId()}`,
-    const slug = input.slug || `co-${generateId()}`,
-    const record: CompanyRecord = {
-      id,
-      name: input.name || 'New Company',
-      slug,
-      logoUrl: input.logoUrl,
-      brandColor: input.brandColor || '#111827',
-      plan: input.plan || {
-        tier: 'teams',
-        seatsPurchased: 10,
-        seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }},
-=======
-    {_id: 'inv_001', _companyId: 'cmp_acme', _number: 'INV-1001', _amountUsd: 499.0, _periodStartIso: '2025-07-01', _periodEndIso: '2025-07-31', _status: 'paid'},
-    {_id: 'inv_002', _companyId: 'cmp_acme', _number: 'INV-1002', _amountUsd: 499.0, _periodStartIso: '2025-08-01', _periodEndIso: '2025-08-31', _status: 'open'}]};
-
-const companiesById: Record<string, CompanyRecord> = {_[seedCompany.id]: seedCompany};
-const companiesBySlug: Record<string, CompanyRecord> = {_[seedCompany.slug]: seedCompany};
-
-export const _store = {_getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] || null;},
-  getCompanyById(id: string) {_return companiesById[id] || null;},
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {_const _id = `cmp_${generateId()}`;
-    const _slug = input.slug || `co-${_generateId()}`;
-    const record: CompanyRecord = {_id, _name: input.name || 'New Company', _slug, _logoUrl: input.logoUrl, _brandColor: input.brandColor || '#111827', _plan: input.plan || {
-        tier: 'teams', _seatsPurchased: 10, _seatsUsed: 0, _usageLimits: { monthlyJobPosts: 10, _budgetCapUsd: 1000}},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      members: [],
-      activity: [],
-      invoices: []},
-    companiesById[id] = record,
-    companiesBySlug[slug] = record,
-    return record
-  },
-<<<<<<< HEAD
-  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {
-    const company = companiesById[companyId],
-    if (!company) return null,
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
-    company.members.push(member),
-    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),
-    return member
-  },
-  removeMember(companyId: string, memberId: string): boolean {
-    const company = companiesById[companyId],
-    if (!company) return false,
-    const before = company.members.length,
-    company.members = company.members.filter(m => m.id !== memberId),
-    const changed = company.members.length !== before,
-    if (changed) {
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
-=======
-  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {_const _company = companiesById[companyId];
-    if (!company) return null;
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role };
-    company.members.push(member);
-    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
-    company.activity.unshift({_id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: email, _action: 'added_member'});
-    return member;
-  },
-  removeMember(companyId: string, memberId: string): boolean {_const _company = companiesById[companyId];
-    if (!company) return false;
-    const _before = company.members.length;
-    company.members = company.members.filter(m => m.id !== memberId);
-    const _changed = company.members.length !== before;
-    if (changed) {
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, _company.members.length);
-      company.activity.unshift({ id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: 'system', _action: 'removed_member', _meta: { memberId} });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
-    return changed
-  },
-<<<<<<< HEAD
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
-    const company = companiesById[companyId],
-    if (!company) return false,
-    const member = company.members.find(m => m.id === memberId),
-    if (!member) return false,
-    member.role = role,
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),
-    return true
-  },
-  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
-    const company = companiesById[companyId],
-    if (!company) return false,
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),
-    return true
-  },
-  listInvoices(companyId: string): InvoiceRecord[] {
-    const company = companiesById[companyId],
-    return company ? company.invoices : []
-  }},
-=======
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {_const _company = companiesById[companyId];
-    if (!company) return false;
-    const _member = company.members.find(m => m.id === memberId);
-    if (!member) return false;
-    member.role = role;
-    company.activity.unshift({ id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: 'system', _action: 'updated_role', _meta: { memberId, _role} });
-    return true;
-  },
-  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {_const _company = companiesById[companyId];
-    if (!company) return false;
-    company.plan.usageLimits = { monthlyJobPosts, _budgetCapUsd};
-    company.activity.unshift({_id: generateId(), _timestampIso: new Date().toISOString(), _actorEmail: 'system', _action: 'updated_usage_limits', _meta: { monthlyJobPosts, _budgetCapUsd} });
-    return true;
-  },
-  listInvoices(companyId: string): InvoiceRecord[] {_const _company = companiesById[companyId];
-    return company ? company.invoices : [];}};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+ const seedCompany: CompanyRecord = {
+  id: 'cmp acme', name: 'Acme Corporation', slug: 'acme', logoUrl: '/logo-acme.svg', brandColor: '#4F46E5', plan: {
+  tier: 'business', seatsPurchased: 25, seatsUsed: 3, usageLimits: {
+  monthlyJobPosts: 50, budgetCapUsd: 10000 
+}
+};
+members: [ {
+  id: 'mem 1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' 
+};
+{
+  id: 'mem 2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' 
+};
+{
+  id: 'mem 3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' 
+}];
+activity: [ {
+  id: generateId (), timestampIso: new Date () .toISOString (), actorEmail: 'admin@acme.com', action: 'created company' 
+};
+{
+  id: generateId (), timestampIso: new Date () .toISOString (), actorEmail: 'maria@acme.com', action: 'posted job', meta: {
+  jobId: 'job 123' 
+}
+}];
+invoices: [ members: [];
+activity: [];
+invoices: [] 
+};
+companiesById[id] = record;
+companiesBySlug[slug] = record;
+return record 
+};
+}return changed 
+};

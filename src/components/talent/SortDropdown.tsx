@@ -1,72 +1,23 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { SORT_OPTIONS } from &quot;@/data/sortOptions&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { SortDesc, ChevronDown } from 'lucide-react'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-<<<<<<< HEAD
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-=======
-  DropdownMenuTrigger} from &quot;@/components/ui/dropdown-menu&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
+ import {
+  {
+  {
+  SortDesc, ChevronDown 
+}from 'lucide-react' import {
+  DropdownMenu;
+DropdownMenuContent;
+DropdownMenuItem;
 interface SortDropdownProps {
-  sortOption: string,
-  setSortOption: (option: string) => void
-}
-=======
-import React from "react";
-import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-
-interface SortDropdownProps {_sortOption: string;
-  setSortOption: (_option: string) => void;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-export function SortDropdown(_{_sortOption, _setSortOption}: SortDropdownProps) {_return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button 
-          variant=&quot;outline&quot; 
-          className=&quot;w-full justify-between border-zion-blue-light text-white&quot;
-        >
-          <div className=&quot;flex items-center gap-2&quot;>
-            <SortDesc className=&quot;h-4 w-4 text-zion-purple&quot; />
-            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || &quot;Sort by&quot;}
-          </div>
-          <ChevronDown className=&quot;h-4 w-4 ml-2 opacity-50&quot; />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align=&quot;start&quot; 
-        className=&quot;w-[200px] bg-zion-blue-dark border-zion-blue-light&quot;
-      >
-        {_SORT_OPTIONS.map(_(option) => (_<DropdownMenuItem
-            key={option.value}
-<<<<<<< HEAD
-            onClick={() => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value ? &quot;bg-zion-purple/20 text-zion-purple&quot; : ""
-            }`}
-=======
-            onClick={_() => setSortOption(option.value)}
-            className={_`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""}`}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            {_option.label}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
+  sortOption: string;
+setSortOption: (option: string) => void 
+}sortOption, setSortOption 
+}: SortDropdownProps) {
+  return (<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="outline" className="w-full justify-between border-zion-blue-light text-white" > <div className="flex items-center gap-2" > <SortDesc className="h-4 w-4 text-zion-purple" /> {
+  SORT OPTIONS.find (opt => opt.value === sortOption) ?.label || "Sort by" 
+}</div> <ChevronDown className="h-4 w-4 ml-2 opacity-50" /> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="start" className="w-[200px] bg-zion-blue-dark border-zion-blue-light" > {
+  SORT OPTIONS.map ( (option) => (<DropdownMenuItem key= {
+  option.value 
+}> {
+  option.label 
+}</DropdownMenuItem>) ) 
+}</DropdownMenuContent> </DropdownMenu>) 
 }

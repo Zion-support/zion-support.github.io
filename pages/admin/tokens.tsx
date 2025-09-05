@@ -1,208 +1,288 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]),
-  const [userId, setUserId] = useState(""),
-  const [amount, setAmount] = useState(100),
-  const [reason, setReason] = useState("admin_action"),
-  const [config, setConfig] = useState<any>(null),
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json()),
-      fetch("/api/admin/tokens/config").then((r) => r.json())]),
-    setTransactions(txRes.transactions || []),
-    setConfig(cfgRes)
-=======
-import React, { useEffect, useState } from &quot;react&quot;;
-import EnhancedLayout from &quot;../../components/layout/EnhancedLayout&quot;;
+interface TokenConfig {
+  conversionRate: number;
+  minPurchase: number;
+  maxPurchase: number;
+  enabled: boolean;
+}
 
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]);
-  const [userId, setUserId] = useState("&quot;);
-  const [amount, setAmount] = useState(100);
-  const [reason, setReason] = useState(&quot;admin_action&quot;);
-  const [config, setConfig] = useState<any>(null);
+interface Transaction {
+  id: string;
+  userId: string;
+  amount: number;
+  tokens: number;
+  status: 'pending' | 'completed' | 'failed';
+  createdAt: string;
+  type: 'purchase' | 'refund' | 'bonus';
+}
 
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch(&quot;/api/admin/tokens&quot;).then((r) => r.json()),
-      fetch(&quot;/api/admin/tokens/config&quot;).then((r) => r.json())]);
-    setTransactions(txRes.transactions || []);
-    setConfig(cfgRes);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+const mockTransactions: Transaction[] = [
+  {
+    id: '1',
+    userId: 'user123',
+    amount: 100,
+    tokens: 1000,
+    status: 'completed',
+    createdAt: '2025-01-15T10:00:00Z',
+    type: 'purchase'
+  },
+  {
+    id: '2',
+    userId: 'user456',
+    amount: 50,
+    tokens: 500,
+    status: 'pending',
+    createdAt: '2025-01-15T09:30:00Z',
+    type: 'purchase'
+  },
+  {
+    id: '3',
+    userId: 'user789',
+    amount: 0,
+    tokens: 100,
+    status: 'completed',
+    createdAt: '2025-01-14T15:00:00Z',
+    type: 'bonus'
   }
+];
+
+const AdminTokensPage: React.FC = () => {
+  const [config, setConfig] = useState<TokenConfig>({
+    conversionRate: 0.05,
+    minPurchase: 10,
+    maxPurchase: 1000,
+    enabled: true
+  });
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    load()
-  }, []),
+    // Simulate loading data
+    setTimeout(() => {
+      setTransactions(mockTransactions);
+      setLoading(false);
+    }, 1000);
+  }, []);
 
-  async function issue() {
-<<<<<<< HEAD
-    const res = await fetch("/api/admin/tokens/issue", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount, reason })}),
-    const data = await res.json(),
-    if (data.error) alert(data.error),
-    await load()
-  }
+  const handleConfigUpdate = async (updates: Partial<TokenConfig>) => {
+    setSaving(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setConfig(prev => ({ ...prev, ...updates }));
+    } catch (error) {
+      console.error('Error updating config:', error);
+    } finally {
+      setSaving(false);
+    }
+  };
 
-  async function revoke() {
-    const res = await fetch("/api/admin/tokens/revoke", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount, reason })}),
-    const data = await res.json(),
-    if (data.error) alert(data.error),
-    await load()
-  }
+  const handleIssueTokens = async () => {
+    if (config.conversionRate <= 0) {
+      alert('Conversion rate must be greater than 0');
+      return;
+    }
+    await handleConfigUpdate(config);
+  };
 
-  async function saveConfig() {
-    const res = await fetch("/api/admin/tokens/config", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(config)}),
-    const data = await res.json(),
-    setConfig(data)
-=======
-    const res = await fetch(&quot;/api/admin/tokens/issue&quot;, {
-      method: &quot;POST&quot;,
-      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-      body: JSON.stringify({ userId, amount, reason })});
-    const data = await res.json();
-=======
-import React, {_useEffect, _useState} from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
+  const handleRevokeTokens = async () => {
+    await handleConfigUpdate({ enabled: false });
+  };
 
-export default function AdminTokens() {_const [transactions, _setTransactions] = useState<any[]>([]);
-  const [userId, _setUserId] = useState("");
-  const [amount, _setAmount] = useState(100);
-  const [reason, _setReason] = useState("admin_action");
-  const [config, _setConfig] = useState<any>(null);
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed': return 'bg-green-100 text-green-800';
+      case 'pending': return 'bg-yellow-100 text-yellow-800';
+      case 'failed': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
 
-  async function load() {
-    const [txRes, _cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then(_(r) => r.json()), _fetch("/api/admin/tokens/config").then(_(r) => r.json())]);
-    setTransactions(txRes.transactions || []);
-    setConfig(cfgRes);}
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'purchase': return 'bg-blue-100 text-blue-800';
+      case 'refund': return 'bg-red-100 text-red-800';
+      case 'bonus': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
 
-  useEffect__(() => {_load();}, []);
+  const totalTokensIssued = transactions
+    .filter(t => t.status === 'completed')
+    .reduce((sum, t) => sum + t.tokens, 0);
 
-  async function issue() {_const _res = await fetch("/api/admin/tokens/issue", _{
-      method: "POST", _headers: { "Content-Type": "application/json"},
-      body: JSON.stringify({_userId, _amount, _reason})});
-    const _data = await res.json();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    if (data.error) alert(data.error);
-    await load();
-  }
+  const totalRevenue = transactions
+    .filter(t => t.status === 'completed' && t.type === 'purchase')
+    .reduce((sum, t) => sum + t.amount, 0);
 
-<<<<<<< HEAD
-  async function revoke() {
-    const res = await fetch(&quot;/api/admin/tokens/revoke&quot;, {
-      method: &quot;POST&quot;,
-      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-      body: JSON.stringify({ userId, amount, reason })});
-    const data = await res.json();
-=======
-  async function revoke() {_const _res = await fetch("/api/admin/tokens/revoke", _{
-      method: "POST", _headers: { "Content-Type": "application/json"},
-      body: JSON.stringify({_userId, _amount, _reason})});
-    const _data = await res.json();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    if (data.error) alert(data.error);
-    await load();
-  }
-
-<<<<<<< HEAD
-  async function saveConfig() {
-    const res = await fetch(&quot;/api/admin/tokens/config&quot;, {
-      method: &quot;POST&quot;,
-      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-=======
-  async function saveConfig() {_const _res = await fetch("/api/admin/tokens/config", _{
-      method: "POST", _headers: { "Content-Type": "application/json"},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      body: JSON.stringify(config)});
-    const _data = await res.json();
-    setConfig(data);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
-
-<<<<<<< HEAD
   return (
-    <EnhancedLayout title=&quot;Admin: ZION$">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Issue / Revoke</h2>
-          <div className="grid sm:grid-cols-4 gap-2 text-sm&quot;>
-            <input placeholder=&quot;userId" className="border rounded px-2 py-1&quot; value={userId} onChange={(e) => setUserId(e.target.value)} />
-            <input type=&quot;number&quot; placeholder=&quot;amount" className="border rounded px-2 py-1&quot; value={amount} onChange={(e) => setAmount(parseInt(e.target.value || &quot;0&quot;))} />
-            <input placeholder=&quot;reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
-=======
-  return (_<EnhancedLayout title="Admin: ZION$">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Issue / Revoke</h2>
-          <div className="grid sm:grid-cols-4 gap-2 text-sm">
-            <input placeholder="userId" className="border rounded px-2 py-1" value={_userId} onChange={_(e) => setUserId(e.target.value)} />
-            <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={_amount} onChange={_(_e) => setAmount(parseInt(e.target.value || "0"))} />
-            <input placeholder="reason" className="border rounded px-2 py-1" value={_reason} onChange={_(_e) => setReason(e.target.value)} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <div className="flex gap-2">
-              <button className="px-3 py-1 rounded border" onClick={_issue}>Issue</button>
-              <button className="px-3 py-1 rounded border" onClick={_revoke}>Revoke</button>
-            </div>
+    <>
+      <Head>
+        <title>Admin Tokens - Zion Tech Group</title>
+        <meta name="description" content="Manage token system and transactions" />
+      </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Token Management</h1>
+        
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Tokens Issued</h3>
+            <p className="text-2xl font-bold">{totalTokensIssued.toLocaleString()}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Revenue</h3>
+            <p className="text-2xl font-bold text-green-600">${totalRevenue.toLocaleString()}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">System Status</h3>
+            <p className={`text-2xl font-bold ${config.enabled ? 'text-green-600' : 'text-red-600'}`}>
+              {config.enabled ? 'Active' : 'Disabled'}
+            </p>
           </div>
         </div>
 
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Conversion & Rules</h2>
-          {_config && (_<div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2">
-<<<<<<< HEAD
-                <label className="w-40&quot;>USD per Token</label>
-                <input type=&quot;number&quot; step=&quot;0.01" className="border rounded px-2 py-1&quot; value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || &quot;0") })} />
-                <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
-=======
-                <label className="w-40">USD per Token</label>
-                <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={_(e) => setConfig({ ...config, _usdPerToken: parseFloat(e.target.value || "0")})} />
-                <button className="px-3 py-1 rounded border" onClick={_saveConfig}>Save</button>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Configuration Panel */}
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <h2 className="text-xl font-semibold mb-4">Token Configuration</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Conversion Rate</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    value={config.conversionRate}
+                    onChange={(e) => setConfig(prev => ({ ...prev, conversionRate: parseFloat(e.target.value) || 0 }))}
+                    className="w-full p-2 border rounded-md"
+                    placeholder="0.05"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Example: 0.05 means 100 ZION$ = $5 credit
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Min Purchase ($)</label>
+                    <input
+                      type="number"
+                      value={config.minPurchase}
+                      onChange={(e) => setConfig(prev => ({ ...prev, minPurchase: parseInt(e.target.value) || 0 }))}
+                      className="w-full p-2 border rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Max Purchase ($)</label>
+                    <input
+                      type="number"
+                      value={config.maxPurchase}
+                      onChange={(e) => setConfig(prev => ({ ...prev, maxPurchase: parseInt(e.target.value) || 0 }))}
+                      className="w-full p-2 border rounded-md"
+                    />
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={config.enabled}
+                    onChange={(e) => setConfig(prev => ({ ...prev, enabled: e.target.checked }))}
+                    className="mr-2"
+                  />
+                  <label className="text-sm font-medium">Enable Token System</label>
+                </div>
+                
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleIssueTokens}
+                    disabled={saving}
+                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+                  >
+                    {saving ? 'Saving...' : 'Save Configuration'}
+                  </button>
+                  <button
+                    onClick={handleRevokeTokens}
+                    disabled={saving}
+                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 disabled:opacity-50"
+                  >
+                    Disable System
+                  </button>
+                </div>
               </div>
-              <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
             </div>
-          )}
-        </div>
 
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Transactions</h2>
-          <div className="space-y-2 text-sm max-h-96 overflow-auto">
-            {_transactions.map(_(t) => (
-              <div key={t.id} className="flex justify-between border rounded p-2">
-                <div className="flex gap-2 items-center">
-<<<<<<< HEAD
-                  <span className={`px-2 py-0.5 rounded text-xs ${["earn&quot;,&quot;issue&quot;].includes(t.type) ? &quot;bg-green-100 text-green-700&quot; : &quot;bg-red-100 text-red-700"}`}>{t.type}</span>
-                  <span className="text-gray-600">{t.userId}</span>
-                  <span className="text-gray-500&quot;>{t.reason.replaceAll(&quot;_&quot;,&quot; ")}</span>
+            {/* Conversion Rules */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <h2 className="text-xl font-semibold mb-4">Conversion Rules</h2>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>1 ZION$ = ${config.conversionRate} USD</span>
                 </div>
-                <div className="font-medium&quot;>{t.type === &quot;earn&quot; || t.type === &quot;issue&quot; ? &quot;+&quot; : &quot;-"}{t.amount} ZION$</div>
-=======
-                  <span className={_`px-2 py-0.5 rounded text-xs ${["earn", _"issue"].includes(t.type) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{_t.type}</span>
-                  <span className="text-gray-600">{_t.userId}</span>
-                  <span className="text-gray-500">{_t.reason.replaceAll("_", _" ")}</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>Minimum purchase: ${config.minPurchase}</span>
                 </div>
-                <div className="font-medium">{_t.type === "earn" || t.type === "issue" ? "+" : "-"}{_t.amount} ZION$</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  <span>Maximum purchase: ${config.maxPurchase}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  <span>System status: {config.enabled ? 'Active' : 'Disabled'}</span>
+                </div>
               </div>
-            ))}
-            {_transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
+            </div>
+          </div>
+
+          {/* Transactions Panel */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-xl font-semibold mb-4">Recent Transactions</h2>
+            
+            {loading ? (
+              <div className="text-center py-8">Loading transactions...</div>
+            ) : transactions.length === 0 ? (
+              <div className="text-center py-8 text-gray-500">No transactions found.</div>
+            ) : (
+              <div className="space-y-3 max-h-96 overflow-auto">
+                {transactions.map((transaction) => (
+                  <div key={transaction.id} className="border rounded-lg p-4">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <p className="font-medium">User: {transaction.userId}</p>
+                        <p className="text-sm text-gray-600">
+                          {transaction.type === 'purchase' && `$${transaction.amount} → ${transaction.tokens} tokens`}
+                          {transaction.type === 'refund' && `Refund: ${transaction.tokens} tokens`}
+                          {transaction.type === 'bonus' && `Bonus: ${transaction.tokens} tokens`}
+                        </p>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(transaction.status)}`}>
+                          {transaction.status}
+                        </span>
+                        <span className={`px-2 py-1 rounded text-xs font-semibold ${getTypeColor(transaction.type)}`}>
+                          {transaction.type}
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-500">
+                      {new Date(transaction.createdAt).toLocaleString()}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-      </div>
-    </EnhancedLayout>
-  )
-}
+      </main>
+    </>
+  );
+};
+
+export default AdminTokensPage;

@@ -1,41 +1,24 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-export default function AICustomerService() {
-  return (
-    <>
-      <Head>
-        <title>AI Customer Service | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
-=======
-        <meta name=&quot;description&quot; content=&quot;AI-powered customer service automation: chat, voice, support workflows, and analytics.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-customer-service&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import React from 'react';
 import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
-export default function AICustomerService() {_return (
-    <>
+const AICustomerService: React.FC = () => {
+  return (
+    <Layout>
       <Head>
-        <title>AI Customer Service | Zion Tech Group</title>
-        <meta name="description" content="AI-powered customer service automation: chat, _voice, _support workflows, _and analytics." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        <title>AI Customer Service - Zion Tech Group</title>
+        <meta name="description" content="Automate and augment customer support experiences with AI agents and analytics" />
       </Head>
-      <div className=&quot;min-h-screen bg-black text-white&quot;>
-        <section className=&quot;container mx-auto px-4 py-20&quot;>
-          <h1 className=&quot;text-4xl font-bold mb-6&quot;>AI Customer Service</h1>
-          <p className=&quot;text-gray-300&quot;>Automate and augment customer support experiences with AI agents and analytics.</p>
+      <main className="min-h-screen bg-black text-white">
+        <section className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>
+          <p className="text-gray-300">
+            Automate and augment customer support experiences with AI agents and analytics.
+          </p>
         </section>
-      </div>
-    </>
-<<<<<<< HEAD
-  )
-}
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      </main>
+    </Layout>
+  );
+};
 
+export default AICustomerService;

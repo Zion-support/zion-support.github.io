@@ -1,56 +1,80 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-export default function AIAssistantPage() {
-  return (
-    <>
-      <Head>
-        <title>AI Assistant | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;AI Assistant that automates research, drafting, scheduling, and customer responses.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-assistant&quot; />
-      </Head>
-      <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white&quot;>
-        <div className=&quot;max-w-6xl mx-auto space-y-10&quot;>
-          <header className=&quot;text-center&quot;>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4&quot;>AI Assistant</h1>
-            <p className=&quot;text-gray-300 text-lg&quot;>Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-=======
 import React from 'react';
 import Head from 'next/head';
-import Button from '../components/ui/Button';
+import Layout from '../components/layout/Layout';
 
-export default function AIAssistantPage() {_return (_<>
+const AIAssistant: React.FC = () => {
+  return (
+    <Layout>
       <Head>
-        <title>AI Assistant | Zion Tech Group</title>
-        <meta name="description" content="AI Assistant that automates research, _drafting, _scheduling, _and customer responses." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
+        <title>AI Assistant - Zion Tech Group</title>
+        <meta name="description" content="Intelligent AI assistant for your business needs" />
       </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-            <p className="text-gray-300 text-lg">Automate research, _summarization, _drafting, _scheduling, _and inbox triage.</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </header>
-          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {[
-<<<<<<< HEAD
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200&quot;>{f}</div>
-=======
-              'Research and summarize documents and web sources', _'Draft emails, _posts, _briefs, _and reports', _'Auto-schedule meetings and follow-ups', _'Integrations: Gmail, _Google Drive, _Slack, _Calendar', _'Team approvals and audit trail', _'Starting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{_f}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            ))}
-          </section>
-          <div className=&quot;text-center&quot;>
-            <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Request a Demo</Button>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Assistant</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Your intelligent AI assistant powered by advanced machine learning and natural language processing.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Natural Language Processing</h3>
+            <p className="text-gray-600 mb-4">
+              Understand and respond to natural language queries with high accuracy and context awareness.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Context-aware responses</li>
+              <li>• Multi-language support</li>
+              <li>• Sentiment analysis</li>
+              <li>• Intent recognition</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Task Automation</h3>
+            <p className="text-gray-600 mb-4">
+              Automate repetitive tasks and streamline workflows with intelligent task management.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Workflow automation</li>
+              <li>• Task scheduling</li>
+              <li>• Process optimization</li>
+              <li>• Error handling</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Data Analysis</h3>
+            <p className="text-gray-600 mb-4">
+              Analyze data and provide insights to help make informed business decisions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Pattern recognition</li>
+              <li>• Predictive analytics</li>
+              <li>• Data visualization</li>
+              <li>• Trend analysis</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </>
-  )
-}
+
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Experience the power of AI assistance for your business operations.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:bg-blue-700">
+              Request a Demo
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+};
+
+export default AIAssistant;

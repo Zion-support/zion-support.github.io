@@ -1,197 +1,281 @@
-export type DesignMapSection = {_id: string
-  title: string
-  description?: string
-<<<<<<< HEAD
-  items: { id: string, title: string, description?: string }[]
-=======
-  items: { id: string; title: string; description?: string}[]
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+export type DesignMapSection = {
+  id: string title: string description?: string 
+}export type DesignMap = {
+  route: string products: {
+  foundations: DesignMapSection[] talent: DesignMapSection[] client: DesignMapSection[] aiTools: DesignMapSection[] dao: DesignMapSection[] admin: DesignMapSection[] mobile: DesignMapSection[] 
 }
-
-export type DesignMap = {_route: string
-  products: {
-    foundations: DesignMapSection[]
-    talent: DesignMapSection[]
-    client: DesignMapSection[]
-    aiTools: DesignMapSection[]
-    dao: DesignMapSection[]
-    admin: DesignMapSection[]
-    mobile: DesignMapSection[]}
-}
-
-export function getZionDesignMap(): DesignMap {_return {
-    route: '/design-map', _products: {
-      foundations: [
-        {
-          id: 'foundations-colors', _title: 'Color system', _items: [
-            { id: 'light', _title: 'Light'},
-            {_id: 'dark', _title: 'Dark'}]},
-        {_id: 'foundations-typography', _title: 'Typography', _items: [
-            { id: 'heading-scale', _title: 'Heading scale'},
-            {_id: 'body-text', _title: 'Body text'},
-            {_id: 'mono', _title: 'Monospace'}]},
-        {_id: 'foundations-icons', _title: 'Icon set', _items: [
-            { id: 'system', _title: 'System icons'},
-            {_id: 'product', _title: 'Product icons'}]},
-        {_id: 'foundations-components', _title: 'Component library', _items: [
-            { id: 'buttons', _title: 'Buttons'},
-            {_id: 'cards', _title: 'Cards'},
-            {_id: 'badges', _title: 'Badges'},
-            {_id: 'tags', _title: 'Tags'}]}],
-      talent: [
-        {_id: 'talent-resume', _title: 'Resume builder', _items: [
-            { id: 'sections', _title: 'Sections'},
-            {_id: 'templates', _title: 'Templates'},
-            {_id: 'export', _title: 'Export'}]},
-        {_id: 'talent-apply', _title: 'Job application flow', _items: [
-            { id: 'job-list', _title: 'Job list'},
-            {_id: 'apply-form', _title: 'Apply form'},
-            {_id: 'status', _title: 'Status'}]},
-        {_id: 'talent-portfolio', _title: 'Portfolio / project cards', _items: [
-            { id: 'grid', _title: 'Grid'},
-            {_id: 'detail', _title: 'Detail'}]},
-        {_id: 'talent-interview', _title: 'Interview & chat UI', _items: [
-            { id: 'chat', _title: 'Chat'},
-            {_id: 'interview', _title: 'Interview'}]},
-        {_id: 'talent-dashboard', _title: 'Dashboard with stats', _items: [
-            { id: 'overview', _title: 'Overview'},
-            {_id: 'charts', _title: 'Charts'}]}],
-      client: [
-        {_id: 'client-job-post', _title: 'Job post flow', _items: [
-            { id: 'draft', _title: 'Draft'},
-            {_id: 'publish', _title: 'Publish'}]},
-        {_id: 'client-team-builder', _title: 'Team builder', _items: [
-            { id: 'roles', _title: 'Roles'},
-            {_id: 'invite', _title: 'Invite'}]},
-        {_id: 'client-shortlist-offer', _title: 'Shortlist + offer page', _items: [
-            { id: 'shortlist', _title: 'Shortlist'},
-            {_id: 'offer', _title: 'Offer'}]},
-        {_id: 'client-milestone-quote', _title: 'Milestone + quote view', _items: [
-            { id: 'milestones', _title: 'Milestones'},
-            {_id: 'quotes', _title: 'Quotes'}]}],
-      aiTools: [
-        {_id: 'ai-gpt-prompts', _title: 'GPT prompt modals', _items: [
-            { id: 'prompt-modal', _title: 'Prompt modal'},
-            {_id: 'history', _title: 'History'}]},
-        {_id: 'ai-content-assistant', _title: 'Content assistant panels', _items: [
-            { id: 'side-panel', _title: 'Side panel'},
-            {_id: 'inline', _title: 'Inline helper'}]},
-        {_id: 'ai-scoring', _title: 'Scoring overlays', _items: [
-            { id: 'resume-score', _title: 'Resume score'},
-            {_id: 'job-fit', _title: 'Job fit'}]},
-        {_id: 'ai-chat', _title: 'Chat-style interaction screens', _items: [
-            { id: 'chat', _title: 'Chat'},
-            {_id: 'agent', _title: 'Agent view'}]}],
-      dao: [
-        {_id: 'dao-voting', _title: 'Voting screens', _items: [
-            { id: 'list', _title: 'Proposals list'},
-            {_id: 'vote', _title: 'Vote flow'}]},
-        {_id: 'dao-treasury', _title: 'Treasury dashboard', _items: [
-            { id: 'balances', _title: 'Balances'},
-            {_id: 'activity', _title: 'Activity'}]},
-        {_id: 'dao-proposals', _title: 'Proposal submission', _items: [
-            { id: 'create', _title: 'Create proposal'},
-            {_id: 'review', _title: 'Review'}]},
-        {_id: 'dao-token', _title: 'Token transfer + staking', _items: [
-            { id: 'transfer', _title: 'Transfer'},
-            {_id: 'stake', _title: 'Stake'}]}],
-      admin: [
-        {_id: 'admin-user-metrics', _title: 'User metrics', _items: [
-            { id: 'cohorts', _title: 'Cohorts'},
-            {_id: 'funnels', _title: 'Funnels'}]},
-        {_id: 'admin-content-approvals', _title: 'Content approvals', _items: [
-            { id: 'queue', _title: 'Queue'},
-            {_id: 'policies', _title: 'Policies'}]},
-        {_id: 'admin-global-toggles', _title: 'Global toggle center', _items: [
-            { id: 'flags', _title: 'Feature flags'},
-            {_id: 'experiments', _title: 'Experiments'}]},
-        {_id: 'admin-deployment', _title: 'Deployment panel', _items: [
-            { id: 'environments', _title: 'Environments'},
-            {_id: 'releases', _title: 'Releases'}]}],
-      mobile: [
-        {_id: 'mobile-nav', _title: 'Navigation tabs', _items: [
-            { id: 'tabs', _title: 'Tabs'},
-            {_id: 'topbar', _title: 'Top bar'}]},
-        {_id: 'mobile-flows', _title: 'Condensed flows for jobs + chat', _items: [
-            { id: 'jobs', _title: 'Jobs'},
-            {_id: 'chat', _title: 'Chat'}]},
-        {_id: 'mobile-onboarding', _title: 'App onboarding', _items: [
-            { id: 'welcome', _title: 'Welcome'},
-            {_id: 'permissions', _title: 'Permissions'}]}]}}
-}
-
-<<<<<<< HEAD
-export type TokenSet = {
-  colors: Record<string string>
-  typography: {
-    fontSizes: Record<string string>
-  }
-}
-
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction
-  const tailwindConfig = require('../tailwind.config.js')
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
-  const colors: Record<string string> = {}
-=======
-export type TokenSet = {_colors: Record<string, _string>
-  typography: {
-    fontSizes: Record<string, _string>}
-}
-
-export async function buildTokenSet(): Promise<TokenSet> {_// Dynamically import Tailwind config for color extraction
-  const _tailwindConfig = require('../tailwind.config.js')
-  const _extendedColors = tailwindConfig?.theme?.extend?.colors || {}
-  const colors: Record<string, string> = {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  function flattenColors(_prefix: string, _obj: unknown) {_Object.entries(obj || {}).forEach(_([key, _value]) => {_const _newKey = prefix ? `${prefix}.${_key}` : key
-      if (typeof value === 'string') {_colors[newKey] = value} else if (typeof value === 'object') {_flattenColors(newKey, _value)}
-    })
-  }
-
-  flattenColors('', extendedColors)
-
-  const _typography = {_fontSizes: tailwindConfig?.theme?.extend?.fontSize || {}}
-
-  return {_colors, _typography}
-}
-
-export type UIKitKind = 'tailwind' | 'chakra' | 'react'
-
-<<<<<<< HEAD
-export function buildUIKit(kind: UIKitKind): Record<string string> {
-  if (kind === 'tailwind') {
-    return {
-      'README.md': '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button className=\"px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90\">{children}</button> }",
-      'components/Card.tsx': "export function Card({ children }: { children: React.ReactNode }) { return <div className=\"rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40\">{children}</div> }"}
-  }
-  if (kind === 'chakra') {
-    return {
-      'README.md': '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.theme/index.ts': "import { extendTheme } from '@chakra-ui/react', export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}}),",
-      'components/Button.tsx': "import { Button as CButton } from '@chakra-ui/react', export function Button(props: any){ return <CButton colorScheme=\"cyan\" {...props} /> }"}
-  }
+}export function getZionDesignMap () : DesignMap {
   return {
-    'README.md': '# Zion OS React UI Kit\n\nFramework-agnostic React components.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"}
-=======
-export function buildUIKit(_kind: UIKitKind): Record<string, string> {_if (kind === 'tailwind') {
-    return {
-      'README.md': '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.', _'components/Button.tsx': "export function Button(_{ children}: {_children: React.ReactNode}) {_return <button className=\"px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90\">{children}</button> }",
-      'components/Card.tsx': "export function Card(_{_children}: {_children: React.ReactNode}) {_return <div className=\"rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40\">{children}</div> }"}
-  }
-  if (kind === 'chakra') {_return {
-      'README.md': '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.', _'theme/index.ts': "import { extendTheme} from '@chakra-ui/react'; export default extendTheme({_colors: { neon: { blue: '#00d4ff'}}});",
-      'components/Button.tsx': "import {_Button as CButton} from '@chakra-ui/react'; export function Button(_props: unknown){_return <CButton colorScheme=\"cyan\" {...props} /> }"}
-  }
-  return {_'README.md': '# Zion OS React UI Kit\n\nFramework-agnostic React components.', _'components/Button.tsx': "export function Button(_{ children}: {_children: React.ReactNode}) {_return <button style={{ background: '#00d4ff', _color: '#000', _borderRadius: 8, _padding: '8px 12px'}}>{_children}</button> }"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  route: '/design-map', products: {
+  foundations: [ {
+  id: 'foundations-colors', title: 'Color system', items: [ {
+  id: 'light', title: 'Light' 
+};
+{
+  id: 'dark', title: 'Dark' 
+}] 
+};
+{
+  id: 'foundations-typography', title: 'Typography', items: [ {
+  id: 'heading-scale', title: 'Heading scale' 
+};
+{
+  id: 'body-text', title: 'Body text' 
+};
+{
+  id: 'mono', title: 'Monospace' 
+}] 
+};
+{
+  id: 'foundations-icons', title: 'Icon set', items: [ {
+  id: 'system', title: 'System icons' 
+};
+{
+  id: 'product', title: 'Product icons' 
+}] 
+};
+{
+  id: 'foundations-components', title: 'Component library', items: [ {
+  id: 'buttons', title: 'Buttons' 
+};
+{
+  id: 'cards', title: 'Cards' 
+};
+{
+  id: 'badges', title: 'Badges' 
+};
+{
+  id: 'tags', title: 'Tags' 
+}] 
+}];
+talent: [ {
+  id: 'talent-resume', title: 'Resume builder', items: [ {
+  id: 'sections', title: 'Sections' 
+};
+{
+  id: 'templates', title: 'Templates' 
+};
+{
+  id: 'export', title: 'Export' 
+}] 
+};
+{
+  id: 'talent-apply', title: 'Job application flow', items: [ {
+  id: 'job-list', title: 'Job list' 
+};
+{
+  id: 'apply-form', title: 'Apply form' 
+};
+{
+  id: 'status', title: 'Status' 
+}] 
+};
+{
+  id: 'talent-portfolio', title: 'Portfolio / project cards', items: [ {
+  id: 'grid', title: 'Grid' 
+};
+{
+  id: 'detail', title: 'Detail' 
+}] 
+};
+{
+  id: 'talent-interview', title: 'Interview & chat UI', items: [ {
+  id: 'chat', title: 'Chat' 
+};
+{
+  id: 'interview', title: 'Interview' 
+}] 
+};
+{
+  id: 'talent-dashboard', title: 'Dashboard with stats', items: [ {
+  id: 'overview', title: 'Overview' 
+};
+{
+  id: 'charts', title: 'Charts' 
+}] 
+}];
+client: [ {
+  id: 'client-job-post', title: 'Job post flow', items: [ {
+  id: 'draft', title: 'Draft' 
+};
+{
+  id: 'publish', title: 'Publish' 
+}] 
+};
+{
+  id: 'client-team-builder', title: 'Team builder', items: [ {
+  id: 'roles', title: 'Roles' 
+};
+{
+  id: 'invite', title: 'Invite' 
+}] 
+};
+{
+  id: 'client-shortlist-offer', title: 'Shortlist + offer page', items: [ {
+  id: 'shortlist', title: 'Shortlist' 
+};
+{
+  id: 'offer', title: 'Offer' 
+}] 
+};
+{
+  id: 'client-milestone-quote', title: 'Milestone + quote view', items: [ {
+  id: 'milestones', title: 'Milestones' 
+};
+{
+  id: 'quotes', title: 'Quotes' 
+}] 
+}];
+aiTools: [ {
+  id: 'ai-gpt-prompts', title: 'GPT prompt modals', items: [ {
+  id: 'prompt-modal', title: 'Prompt modal' 
+};
+{
+  id: 'history', title: 'History' 
+}] 
+};
+{
+  id: 'ai-content-assistant', title: 'Content assistant panels', items: [ {
+  id: 'side-panel', title: 'Side panel' 
+};
+{
+  id: 'inline', title: 'Inline helper' 
+}] 
+};
+{
+  id: 'ai-scoring', title: 'Scoring overlays', items: [ {
+  id: 'resume-score', title: 'Resume score' 
+};
+{
+  id: 'job-fit', title: 'Job fit' 
+}] 
+};
+{
+  id: 'ai-chat', title: 'Chat-style interaction screens', items: [ {
+  id: 'chat', title: 'Chat' 
+};
+{
+  id: 'agent', title: 'Agent view' 
+}] 
+}];
+dao: [ {
+  id: 'dao-voting', title: 'Voting screens', items: [ {
+  id: 'list', title: 'Proposals list' 
+};
+{
+  id: 'vote', title: 'Vote flow' 
+}] 
+};
+{
+  id: 'dao-treasury', title: 'Treasury dashboard', items: [ {
+  id: 'balances', title: 'Balances' 
+};
+{
+  id: 'activity', title: 'Activity' 
+}] 
+};
+{
+  id: 'dao-proposals', title: 'Proposal submission', items: [ {
+  id: 'create', title: 'Create proposal' 
+};
+{
+  id: 'review', title: 'Review' 
+}] 
+};
+{
+  id: 'dao-token', title: 'Token transfer + staking', items: [ {
+  id: 'transfer', title: 'Transfer' 
+};
+{
+  id: 'stake', title: 'Stake' 
+}] 
+}];
+admin: [ {
+  id: 'admin-user-metrics', title: 'User metrics', items: [ {
+  id: 'cohorts', title: 'Cohorts' 
+};
+{
+  id: 'funnels', title: 'Funnels' 
+}] 
+};
+{
+  id: 'admin-content-approvals', title: 'Content approvals', items: [ {
+  id: 'queue', title: 'Queue' 
+};
+{
+  id: 'policies', title: 'Policies' 
+}] 
+};
+{
+  id: 'admin-global-toggles', title: 'Global toggle center', items: [ {
+  id: 'flags', title: 'Feature flags' 
+};
+{
+  id: 'experiments', title: 'Experiments' 
+}] 
+};
+{
+  id: 'admin-deployment', title: 'Deployment panel', items: [ {
+  id: 'environments', title: 'Environments' 
+};
+{
+  id: 'releases', title: 'Releases' 
+}] 
+}];
+mobile: [ {
+  id: 'mobile-nav', title: 'Navigation tabs', items: [ {
+  id: 'tabs', title: 'Tabs' 
+};
+{
+  id: 'topbar', title: 'Top bar' 
+}] 
+};
+{
+  id: 'mobile-flows', title: 'Condensed flows for jobs + chat', items: [ {
+  id: 'jobs', title: 'Jobs' 
+};
+{
+  id: 'chat', title: 'Chat' 
+}] 
+};
+{
+  id: 'mobile-onboarding', title: 'App onboarding', items: [ {
+  id: 'welcome', title: 'Welcome' 
+};
+{
+  id: 'permissions', title: 'Permissions' 
+}] 
+}] 
 }
-
-export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {_const _base = process.env.LOVABLE_CMS_URL
-  if (!base) return null
-  try {
-    const _res = await fetch(`${base.replace(/\/$/, _'')}/api/design-tokens`)
-    if (!res.ok) return null
-    return (await res.json()) as Partial<TokenSet>
-  } catch {_return null}
+}
+}function flattenColors (prefix: string, obj: unknown) {
+  Object.entries (obj || {
+  
+}) .forEach ( ([key, value]) => {
+  const newKey = prefix ? `$ {
+  prefix 
+}.$ {
+  key 
+}` : key if (typeof value === 'string') {
+  colors[newKey] = value 
+}else if (typeof value === 'object') {
+  flattenColors (newKey, value) 
+}
+}) 
+}flattenColors ('', extendedColors) const typography = {
+  fontSizes: tailwindConfig?.theme?.extend?.fontSize || {
+  
+}
+}return {
+  colors, typography 
+}
+}export type UIKitKind = 'tailwind' | 'chakra' | 'react' 
+}export async function fetchLovableTokens () : Promise<Partial<TokenSet> | null> {
+  const base = process.env.LOVABLE CMS URL if (!base) return null try {
+  const res = await fetch (`$ {
+  base.replace (/\/$/, '') 
+}/api/design-tokens`) if (!res.ok) return null return (await res.json () ) as Partial<TokenSet> 
+}catch {
+  return null 
+}
 }

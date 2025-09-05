@@ -1,105 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, ReactNode } from 'react';
-=======
-import React, {_createContext, _useContext, _ReactNode} from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-interface AccessibilityContextType {_announceToScreenReader: (_message: string) => void;
-  setFocus: (_elementId: string) => void;}
-
-const _AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
->(undefined);
-
-interface AccessibilityProviderProps {_children: ReactNode;}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = (_{_children, _}) => {_const _announceToScreenReader = (_message: string) => {
-    const _liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;}
-  };
-
-  const _setFocus = (_elementId: string) => {_const _element = document.getElementById(elementId);
-    if (element) {
-      element.focus();}
-  };
-
-  return (
-<<<<<<< HEAD
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
-      {children}
-=======
-import React, { createContext, useContext, useState } from 'react';
-
-interface AccessibilityContextType {
-  highContras: t: boolean;
-  largeTex: t: boolean;
-  reducedMotio: n: boolean;
-  toggleHighContras: t: () => void;
-  toggleLargeTex: t: () => void;
-  toggleReducedMotio: n: () => void;
-}
-
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
-
+ interface AccessibilityContextType {
+  announceToScreenReader: (message: string) => void;
+setFocus: (elementId: string) => void;
+}const AccessibilityContext = createContext< AccessibilityContextType | undefined > (undefined);
 interface AccessibilityProviderProps {
-  childre: n: React.ReactNode;
+  children: ReactNode;
+}export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children;
+}) => {
+  const announceToScreenReader = (message: string) => {
+  const liveRegion = document.getElementById ('live-region');
+if (liveRegion) {
+  liveRegion.textContent = message;
 }
-
-export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-
-  const value = {
-    highContrast
-    largeText
-    reducedMotion
-    toggleHighContrast
-    toggleLargeText
-    toggleReducedMotion
-  };
-
-  return (
-    <AccessibilityContext.Provider value={value}>
-      <div className={`${highContrast ? 'high-contrast'  : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
-        {children}
-      </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-    <AccessibilityContext.Provider value={_{ announceToScreenReader, _setFocus}}>
-      {_children}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    </AccessibilityContext.Provider>
-  )
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-=======
-export const _useAccessibility = () => {_const _context = useContext(AccessibilityContext);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  if (context === undefined) {
-    throw new Error(
-      'useAccessibility must be used within an AccessibilityProvider'
-    );}
-  return context;
 };
-=======
-export default AccessibilityProvider;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+const setFocus = (elementId: string) => {
+  const element = document.getElementById (elementId);
+if (element) {
+  element.focus ();
+}
+};
+return (
+}if (context === undefined) {
+  throw new Error ('useAccessibility must be used within an AccessibilityProvider');
+}return context;
+};
