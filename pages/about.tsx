@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Brain, 
   Users, 
@@ -555,7 +554,8 @@ export default function AboutPage() {
         </section>
       </div>
     </Layout>
-=======
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -621,6 +621,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
   );
 }

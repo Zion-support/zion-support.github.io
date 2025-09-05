@@ -422,6 +422,606 @@ const itServices = [
     category: 'Disaster Recovery',
     popular: true,
     benefits: ['Business Continuity', 'Minimized Downtime', 'Data Protection', 'Compliance']
+  },
+  {
+    title: 'AI-Powered IT Operations Center',
+    description: 'Intelligent IT operations with AI-driven monitoring, automation, and predictive analytics.',
+    icon: Bot,
+    features: ['AI Monitoring', 'Predictive Analytics', 'Automated Remediation', 'Performance Optimization', 'Anomaly Detection'],
+    pricing: '$8,000 - $80,000/setup',
+    category: 'AI Operations',
+    popular: true,
+    benefits: ['Proactive Issue Resolution', 'Reduced Downtime', 'Cost Savings', 'Improved Performance', 'Predictive Maintenance']
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Integration of quantum computing capabilities for complex problem solving and optimization.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Classical-Quantum Systems', 'Quantum Security', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    benefits: ['Exponential Processing Power', 'Complex Problem Solving', 'Future-proof Technology', 'Competitive Advantage']
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Complete metaverse infrastructure setup with virtual worlds, avatars, and immersive experiences.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'Avatar Systems', '3D Asset Management', 'Real-time Collaboration', 'Blockchain Integration'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Metaverse',
+    popular: true,
+    benefits: ['Immersive Experiences', 'Virtual Collaboration', 'New Revenue Streams', 'Future-ready Platform']
+  },
+  {
+    title: 'Autonomous IT Management',
+    description: 'Fully autonomous IT management with self-healing systems and intelligent automation.',
+    icon: Settings,
+    features: ['Self-healing Systems', 'Autonomous Monitoring', 'Intelligent Automation', 'Predictive Maintenance', 'Auto-scaling'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'Autonomous IT',
+    popular: true,
+    benefits: ['Reduced Manual Work', 'Improved Reliability', 'Cost Efficiency', '24/7 Operations', 'Self-optimization']
+  },
+  {
+    title: 'Neuromorphic Computing Solutions',
+    description: 'Brain-inspired computing systems for advanced AI and machine learning applications.',
+    icon: Brain,
+    features: ['Neuromorphic Processors', 'Spiking Neural Networks', 'Low-power Computing', 'Real-time Learning'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true,
+    benefits: ['Ultra-low Power', 'Real-time Learning', 'Advanced AI', 'Efficient Processing']
+  },
+  {
+    title: 'Holographic Display Systems',
+    description: 'Advanced holographic display technology for immersive presentations and collaboration.',
+    icon: Monitor,
+    features: ['3D Holographic Displays', 'Gesture Control', 'Multi-user Collaboration', 'Real-time Rendering'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Holographic Technology',
+    popular: true,
+    benefits: ['Immersive Presentations', 'Enhanced Collaboration', 'Future-ready Technology', 'Competitive Edge']
+  },
+  {
+    title: 'Space-based Computing Infrastructure',
+    description: 'Satellite-based computing infrastructure for global connectivity and edge computing.',
+    icon: Rocket,
+    features: ['Satellite Computing', 'Global Connectivity', 'Edge Processing', 'Low-latency Communication'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space Computing',
+    popular: true,
+    benefits: ['Global Coverage', 'Low Latency', 'Redundancy', 'Future-proof Infrastructure']
+  },
+  {
+    title: 'Biometric Security Systems',
+    description: 'Advanced biometric authentication and security systems for enhanced protection.',
+    icon: Eye,
+    features: ['Facial Recognition', 'Fingerprint Scanning', 'Iris Recognition', 'Voice Authentication', 'Behavioral Analysis'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Biometric Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'User Convenience', 'Fraud Prevention', 'Compliance']
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin creation and management for real-time monitoring and optimization.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation', 'Optimization'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Digital Twins',
+    popular: true,
+    benefits: ['Real-time Insights', 'Predictive Maintenance', 'Optimization', 'Risk Mitigation']
+  },
+  {
+    title: 'Augmented Reality Workspaces',
+    description: 'AR-powered workspaces for enhanced productivity and collaboration.',
+    icon: Eye,
+    features: ['AR Workspace Design', '3D Visualization', 'Remote Collaboration', 'Gesture Control', 'Spatial Computing'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'AR Technology',
+    popular: true,
+    benefits: ['Enhanced Productivity', 'Immersive Collaboration', 'Spatial Computing', 'Future-ready Workspace']
+  },
+  {
+    title: 'Blockchain-as-a-Service',
+    description: 'Complete blockchain infrastructure and management services for enterprise applications.',
+    icon: Database,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Token Management', 'DeFi Integration', 'NFT Platforms'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Blockchain Services',
+    popular: true,
+    benefits: ['Decentralized Security', 'Transparency', 'Smart Contracts', 'Tokenization']
+  },
+  {
+    title: 'AI-Powered Data Centers',
+    description: 'Intelligent data center management with AI optimization and predictive maintenance.',
+    icon: Server,
+    features: ['AI Optimization', 'Predictive Maintenance', 'Energy Efficiency', 'Automated Management', 'Performance Monitoring'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'AI Data Centers',
+    popular: true,
+    benefits: ['Energy Efficiency', 'Predictive Maintenance', 'Cost Optimization', 'Improved Performance']
+  },
+  {
+    title: 'Telepresence Robotics',
+    description: 'Advanced telepresence robots for remote collaboration and presence.',
+    icon: Bot,
+    features: ['Remote Presence', 'AI Navigation', 'Video Conferencing', 'Gesture Recognition', 'Autonomous Movement'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Telepresence',
+    popular: true,
+    benefits: ['Remote Collaboration', 'Physical Presence', 'Enhanced Communication', 'Flexible Work']
+  },
+  {
+    title: 'Smart City Infrastructure',
+    description: 'Complete smart city technology infrastructure with IoT and AI integration.',
+    icon: Building,
+    features: ['IoT Networks', 'Traffic Management', 'Energy Optimization', 'Public Safety', 'Citizen Services'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Smart Cities',
+    popular: true,
+    benefits: ['Efficient City Management', 'Improved Services', 'Sustainability', 'Quality of Life']
+  },
+  {
+    title: 'Neural Interface Technology',
+    description: 'Brain-computer interface systems for direct neural control and communication.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Thought Control', 'Neural Feedback', 'Medical Applications', 'Research Support'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Neural Interfaces',
+    popular: true,
+    benefits: ['Direct Control', 'Medical Applications', 'Research Advancement', 'Accessibility']
+  },
+  {
+    title: 'Autonomous Vehicle Infrastructure',
+    description: 'Infrastructure support for autonomous vehicles including V2X communication and management.',
+    icon: Car,
+    features: ['V2X Communication', 'Traffic Management', 'Safety Systems', 'Fleet Management', 'Data Processing'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true,
+    benefits: ['Safety Enhancement', 'Traffic Optimization', 'Fleet Management', 'Future Mobility']
+  },
+  {
+    title: 'Holographic Communication Systems',
+    description: '3D holographic communication systems for immersive remote meetings and presentations.',
+    icon: Video,
+    features: ['3D Holographic Calls', 'Gesture Recognition', 'Spatial Audio', 'Multi-user Support', 'Real-time Rendering'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Holographic Communication',
+    popular: true,
+    benefits: ['Immersive Communication', 'Enhanced Presence', 'Better Collaboration', 'Future-ready Technology']
+  },
+  {
+    title: 'Quantum Internet Infrastructure',
+    description: 'Quantum internet setup with quantum key distribution and secure communication.',
+    icon: Network,
+    features: ['Quantum Key Distribution', 'Quantum Networks', 'Secure Communication', 'Quantum Repeaters', 'Entanglement Distribution'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Quantum Internet',
+    popular: true,
+    benefits: ['Unbreakable Security', 'Quantum Communication', 'Future-proof Network', 'Advanced Encryption']
+  },
+  {
+    title: 'AI-Powered Cybersecurity Operations Center',
+    description: 'Advanced SOC with AI-driven threat detection, response, and prevention.',
+    icon: Shield,
+    features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Threat Hunting', 'Incident Response'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'AI Security',
+    popular: true,
+    benefits: ['Advanced Protection', 'Automated Response', 'Threat Prevention', 'Continuous Monitoring']
+  },
+  {
+    title: 'Synthetic Biology Computing',
+    description: 'Biological computing systems using DNA and biological processes for computation.',
+    icon: Sprout,
+    features: ['DNA Computing', 'Biological Algorithms', 'Molecular Storage', 'Biocomputing', 'Bioinformatics'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Biological Computing',
+    popular: true,
+    benefits: ['Massive Parallelism', 'Energy Efficiency', 'Novel Computing', 'Research Applications']
+  },
+  {
+    title: 'Time Crystal Computing',
+    description: 'Revolutionary time crystal-based computing systems for quantum applications.',
+    icon: Clock,
+    features: ['Time Crystal Processors', 'Quantum Algorithms', 'Temporal Computing', 'Advanced Physics', 'Research Support'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Time Crystal Computing',
+    popular: true,
+    benefits: ['Novel Computing', 'Quantum Applications', 'Research Advancement', 'Future Technology']
+  },
+  {
+    title: 'Consciousness Simulation Systems',
+    description: 'AI systems for simulating consciousness and cognitive processes.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Self-awareness AI', 'Philosophical AI', 'Research Platform'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Consciousness AI',
+    popular: true,
+    benefits: ['Consciousness Research', 'AI Advancement', 'Philosophical Insights', 'Scientific Discovery']
+  },
+  {
+    title: 'Multiverse Computing Platform',
+    description: 'Computing platform for simulating and exploring multiple universe scenarios.',
+    icon: Globe,
+    features: ['Multiverse Simulation', 'Physics Modeling', 'Scenario Testing', 'Research Platform', 'Scientific Computing'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Multiverse Computing',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Physics Research', 'Universe Simulation', 'Advanced Computing']
+  },
+  {
+    title: 'Dark Matter Detection Systems',
+    description: 'Advanced computing systems for dark matter detection and particle physics research.',
+    icon: Eye,
+    features: ['Particle Detection', 'Signal Analysis', 'Statistical Computing', 'Physics Simulation', 'Research Support'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Particle Physics',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Physics Research', 'Advanced Detection', 'Research Support']
+  },
+  {
+    title: 'Exoplanet Discovery Computing',
+    description: 'AI-powered computing systems for discovering and analyzing exoplanets.',
+    icon: Globe,
+    features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment', 'Data Processing'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Astrobiology Computing',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Exoplanet Research', 'Astrobiology', 'Space Exploration']
+  },
+  {
+    title: 'Protein Folding Supercomputing',
+    description: 'Advanced computing systems for protein folding prediction and drug discovery.',
+    icon: Heart,
+    features: ['Protein Structure Prediction', 'Folding Simulation', 'Drug Design', 'Molecular Modeling', 'Biomedical Research'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Biomedical Computing',
+    popular: true,
+    benefits: ['Drug Discovery', 'Medical Research', 'Protein Understanding', 'Biomedical Advancement']
+  },
+  {
+    title: 'Cryptocurrency Mining Optimization',
+    description: 'AI-optimized cryptocurrency mining with energy efficiency and profit maximization.',
+    icon: TrendingUp,
+    features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis', 'Automated Mining'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Crypto Mining',
+    popular: true,
+    benefits: ['Profit Optimization', 'Energy Efficiency', 'Automated Operations', 'Market Analysis']
+  },
+  {
+    title: 'Virtual Reality Content Generation',
+    description: 'AI-generated immersive VR content with realistic physics and interactions.',
+    icon: Monitor,
+    features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering', 'AI Creation'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'VR Technology',
+    popular: true,
+    benefits: ['Immersive Content', 'Realistic Simulation', 'AI Generation', 'Enhanced VR']
+  },
+  {
+    title: 'Augmented Reality Intelligence',
+    description: 'Advanced AR systems with AI-powered object recognition and spatial understanding.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness', 'AI Integration'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'AR Intelligence',
+    popular: true,
+    benefits: ['Enhanced AR', 'AI Recognition', 'Spatial Understanding', 'Context Awareness']
+  },
+  {
+    title: 'Holographic Display Technology',
+    description: 'AI-optimized holographic displays with real-time content generation and interaction.',
+    icon: Monitor,
+    features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection', 'AI Optimization'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Holographic Technology',
+    popular: true,
+    benefits: ['Immersive Displays', 'Real-time Interaction', 'AI Optimization', 'Future Technology']
+  },
+  {
+    title: 'Teleportation Simulation Systems',
+    description: 'AI systems for simulating quantum teleportation and quantum communication protocols.',
+    icon: Network,
+    features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction', 'Quantum Communication'],
+    pricing: '$55,000 - $550,000/project',
+    category: 'Quantum Communication',
+    popular: true,
+    benefits: ['Quantum Simulation', 'Communication Research', 'Protocol Development', 'Scientific Advancement']
+  },
+  {
+    title: 'Time Travel Simulation',
+    description: 'AI systems for simulating time travel scenarios and temporal paradoxes.',
+    icon: Clock,
+    features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization', 'Physics Simulation'],
+    pricing: '$90,000 - $900,000/project',
+    category: 'Temporal AI',
+    popular: true,
+    benefits: ['Temporal Research', 'Paradox Analysis', 'Physics Simulation', 'Scientific Discovery']
+  },
+  {
+    title: 'Multiverse Exploration Systems',
+    description: 'AI systems for exploring and simulating multiple universe scenarios and theories.',
+    icon: Globe,
+    features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration', 'Research Platform'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Theoretical Physics',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Physics Research', 'Universe Simulation', 'Theory Testing']
+  },
+  {
+    title: 'AI-Powered Space Mission Control',
+    description: 'Intelligent space mission control systems with autonomous decision making.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Autonomous Control', 'Risk Assessment', 'Resource Management', 'Real-time Monitoring'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Space Technology',
+    popular: true,
+    benefits: ['Mission Success', 'Autonomous Operations', 'Risk Mitigation', 'Space Exploration']
+  },
+  {
+    title: 'AI-Powered Climate Engineering',
+    description: 'AI systems for climate engineering and geoengineering solutions.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Geoengineering Design', 'Impact Assessment', 'Risk Analysis', 'Environmental Monitoring'],
+    pricing: '$80,000 - $800,000/project',
+    category: 'Climate Engineering',
+    popular: true,
+    benefits: ['Climate Solutions', 'Environmental Impact', 'Risk Assessment', 'Sustainability']
+  },
+  {
+    title: 'AI-Powered Neural Architecture Search',
+    description: 'Automated neural network architecture design and optimization using AI.',
+    icon: Network,
+    features: ['Architecture Search', 'Hyperparameter Optimization', 'Model Compression', 'Performance Prediction', 'AutoML'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'AutoML',
+    popular: true,
+    benefits: ['Automated Design', 'Optimized Performance', 'Model Efficiency', 'AI Development']
+  },
+  {
+    title: 'AI-Powered Dark Matter Detection',
+    description: 'AI systems for detecting and analyzing dark matter particles and interactions.',
+    icon: Eye,
+    features: ['Particle Detection', 'Signal Analysis', 'Background Rejection', 'Statistical Analysis', 'Physics Research'],
+    pricing: '$70,000 - $700,000/project',
+    category: 'Particle Physics',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Particle Detection', 'Physics Research', 'Advanced Analysis']
+  },
+  {
+    title: 'AI-Powered Exoplanet Discovery',
+    description: 'AI systems for discovering and characterizing exoplanets from astronomical data.',
+    icon: Globe,
+    features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment', 'Data Processing'],
+    pricing: '$45,000 - $450,000/project',
+    category: 'Astrobiology',
+    popular: true,
+    benefits: ['Exoplanet Discovery', 'Astrobiology Research', 'Space Exploration', 'Scientific Discovery']
+  },
+  {
+    title: 'AI-Powered Protein Folding Prediction',
+    description: 'Advanced AI for predicting protein structures and folding patterns.',
+    icon: Heart,
+    features: ['Structure Prediction', 'Folding Simulation', 'Function Analysis', 'Drug Design', 'Biomedical Research'],
+    pricing: '$35,000 - $350,000/setup',
+    category: 'Structural Biology',
+    popular: true,
+    benefits: ['Drug Discovery', 'Medical Research', 'Protein Understanding', 'Biomedical Advancement']
+  },
+  {
+    title: 'AI-Powered Cryptocurrency Mining',
+    description: 'AI-optimized cryptocurrency mining with energy efficiency and profit maximization.',
+    icon: TrendingUp,
+    features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis', 'Automated Mining'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Crypto AI',
+    popular: true,
+    benefits: ['Profit Optimization', 'Energy Efficiency', 'Automated Operations', 'Market Analysis']
+  },
+  {
+    title: 'AI-Powered Virtual Reality Content',
+    description: 'AI-generated immersive VR content with realistic physics and interactions.',
+    icon: Monitor,
+    features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering', 'AI Creation'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'VR AI',
+    popular: true,
+    benefits: ['Immersive Content', 'Realistic Simulation', 'AI Generation', 'Enhanced VR']
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Advanced AR systems with AI-powered object recognition and spatial understanding.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness', 'AI Integration'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'AR AI',
+    popular: true,
+    benefits: ['Enhanced AR', 'AI Recognition', 'Spatial Understanding', 'Context Awareness']
+  },
+  {
+    title: 'AI-Powered Holographic Displays',
+    description: 'AI-optimized holographic displays with real-time content generation and interaction.',
+    icon: Monitor,
+    features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection', 'AI Optimization'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Holographic AI',
+    popular: true,
+    benefits: ['Immersive Displays', 'Real-time Interaction', 'AI Optimization', 'Future Technology']
+  },
+  {
+    title: 'AI-Powered Teleportation Simulation',
+    description: 'AI systems for simulating quantum teleportation and quantum communication protocols.',
+    icon: Network,
+    features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction', 'Quantum Communication'],
+    pricing: '$55,000 - $550,000/project',
+    category: 'Quantum Communication',
+    popular: true,
+    benefits: ['Quantum Simulation', 'Communication Research', 'Protocol Development', 'Scientific Advancement']
+  },
+  {
+    title: 'AI-Powered Time Travel Simulation',
+    description: 'AI systems for simulating time travel scenarios and temporal paradoxes.',
+    icon: Clock,
+    features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization', 'Physics Simulation'],
+    pricing: '$90,000 - $900,000/project',
+    category: 'Temporal AI',
+    popular: true,
+    benefits: ['Temporal Research', 'Paradox Analysis', 'Physics Simulation', 'Scientific Discovery']
+  },
+  {
+    title: 'AI-Powered Multiverse Exploration',
+    description: 'AI systems for exploring and simulating multiple universe scenarios and theories.',
+    icon: Globe,
+    features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration', 'Research Platform'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Theoretical Physics AI',
+    popular: true,
+    benefits: ['Scientific Discovery', 'Physics Research', 'Universe Simulation', 'Theory Testing']
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Quantum AI',
+    popular: true,
+    benefits: ['Quantum Computing', 'Advanced Algorithms', 'Optimization', 'Future Technology']
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Complete autonomous vehicle AI systems with perception, planning, and control.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Real-time Decision Making', 'Safety Systems'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems',
+    popular: true,
+    benefits: ['Autonomous Driving', 'Safety Enhancement', 'Traffic Optimization', 'Future Mobility']
+  },
+  {
+    title: 'AI-Powered Space Exploration Analytics',
+    description: 'AI systems for space mission planning, satellite data analysis, and space weather prediction.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Data Analysis', 'Space Weather Prediction', 'Orbital Mechanics', 'Risk Assessment'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Space Tech',
+    popular: true,
+    benefits: ['Space Exploration', 'Mission Success', 'Data Analysis', 'Risk Mitigation']
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced AI models for climate prediction, carbon footprint analysis, and environmental monitoring.',
+    icon: Globe,
+    features: ['Climate Modeling', 'Carbon Analysis', 'Environmental Monitoring', 'Sustainability Metrics', 'Policy Impact'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Climate AI',
+    popular: true,
+    benefits: ['Climate Solutions', 'Environmental Impact', 'Sustainability', 'Policy Support']
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'AI-powered brain-computer interface systems for medical and assistive applications.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications', 'Research Support'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'Neurotechnology',
+    popular: true,
+    benefits: ['Medical Applications', 'Assistive Technology', 'Research Support', 'Human Enhancement']
+  },
+  {
+    title: 'AI-Powered Synthetic Biology',
+    description: 'AI-driven synthetic biology platform for protein design and genetic engineering.',
+    icon: Sprout,
+    features: ['Protein Design', 'Genetic Engineering', 'Metabolic Pathway Design', 'Biological Simulation', 'Drug Discovery'],
+    pricing: '$40,000 - $180,000/project',
+    category: 'Synthetic Biology',
+    popular: true,
+    benefits: ['Drug Discovery', 'Genetic Engineering', 'Biomedical Research', 'Scientific Advancement']
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Advanced AI cybersecurity systems with threat hunting and automated response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Automated Response', 'Behavioral Analysis', 'Zero-day Detection', 'Incident Response'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true,
+    benefits: ['Advanced Protection', 'Automated Response', 'Threat Prevention', 'Continuous Monitoring']
+  },
+  {
+    title: 'AI-Powered Digital Twin Platform',
+    description: 'AI-powered digital twin creation and simulation for industrial and urban systems.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Simulation', 'Predictive Maintenance', 'Optimization', 'Analytics'],
+    pricing: '$35,000 - $150,000/project',
+    category: 'Digital Twins',
+    popular: true,
+    benefits: ['Real-time Insights', 'Predictive Maintenance', 'Optimization', 'Risk Mitigation']
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'AI-enhanced augmented reality systems for industrial and consumer applications.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control', 'AI Integration'],
+    pricing: '$25,000 - $120,000/project',
+    category: 'AR/VR AI',
+    popular: true,
+    benefits: ['Enhanced AR', 'AI Recognition', 'Spatial Understanding', 'Context Awareness']
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'AI inference and processing at the edge for real-time applications.',
+    icon: Server,
+    features: ['Edge Inference', 'Real-time Processing', 'Low Latency', 'Distributed AI', 'IoT Integration'],
+    pricing: '$15,000 - $80,000/setup',
+    category: 'Edge AI',
+    popular: true,
+    benefits: ['Low Latency', 'Real-time Processing', 'Distributed AI', 'IoT Support']
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'AI-powered blockchain transaction analysis and smart contract optimization.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Smart Contract Optimization', 'DeFi Analytics', 'Compliance Monitoring', 'Risk Assessment'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Blockchain AI',
+    popular: true,
+    benefits: ['Blockchain Analysis', 'Smart Contract Optimization', 'DeFi Support', 'Compliance']
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'AI-driven personalized medicine platform for treatment optimization and drug discovery.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support', 'Biomarker Analysis'],
+    pricing: '$60,000 - $250,000/project',
+    category: 'Personalized Medicine',
+    popular: true,
+    benefits: ['Personalized Treatment', 'Drug Discovery', 'Clinical Support', 'Medical Advancement']
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'AI-powered smart city infrastructure management and optimization platform.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation', 'Citizen Services'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart Cities',
+    popular: true,
+    benefits: ['Efficient City Management', 'Improved Services', 'Sustainability', 'Quality of Life']
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Advanced RPA with AI capabilities for complex business process automation.',
+    icon: Settings,
+    features: ['Process Automation', 'Document Processing', 'Decision Making', 'Exception Handling', 'AI Integration'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'RPA AI',
+    popular: true,
+    benefits: ['Process Automation', 'AI Integration', 'Efficiency', 'Cost Savings']
   }
 ];
 
@@ -1028,10 +1628,8 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
-      </div>
-    </Layout>
 
-    {/* IT Services Grid */}
+      {/* IT Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -1332,5 +1930,7 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
+      </div>
+    </Layout>
   );
 }

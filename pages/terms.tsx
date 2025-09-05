@@ -202,11 +202,11 @@ export default function TermsPage() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Mail className="w-5 h-5 text-blue-600" />
-                      <span className="text-gray-700">legal@ziontechgroup.com</span>
+                      <span className="text-gray-700">kleber@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="w-5 h-5 text-blue-600" />
-                      <span className="text-gray-700">+1 (555) 123-4567</span>
+                      <span className="text-gray-700">+1 302 464 0950</span>
                     </div>
                   </div>
                 </div>
