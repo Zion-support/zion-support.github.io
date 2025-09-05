@@ -1,3 +1,14 @@
+const fs = require('fs');
+const { exec, execSync } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.projectRoot = process.cwd();
+    this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
@@ -12,7 +23,7 @@
   }
 
   log(message) {
-    .toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   async runCommand(command, description, timeout = 60000) {
