@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface AdvancedMicroSaaSService { 
   "id": string; 
   title: string; 
@@ -96,3 +97,6 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

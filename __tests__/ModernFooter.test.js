@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('ModernFooter', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import ModernFooter from '../components/ModernFooter" describe('ModernFooter',() => {' test('renders without crashing',() => {' render(<ModernFooter / / />) expect(screen.getByTestId("modernfooter")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernFooter / / />) }) test('handles user interactions',() => {' render(<ModernFooter / / />) }) test('applies correct styling',() => {' render(<ModernFooter / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

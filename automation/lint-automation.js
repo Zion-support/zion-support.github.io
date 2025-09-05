@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
@@ -31,17 +32,22 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-c10a
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     fs.appendFileSync(this.logFile, logMessage);
+=======
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-c10a;,
+    fs.appendFileSync(this.logFile, logMessage);,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
   }
 
-  async runLint() {
-    try {
-      this.log('Starting lint automation...');
+  async runLint() {}
+    try {}
+      this.log('Starting lint automation...');',
       
-      // Run ESLint
-      this.log('Running ESLint...');
-      execSync('npm run lint', { "stdio": 'pipe' });
-      this.log('ESLint completed successfully');
+      // Run ESLint;
+      this.log('Running ESLint...');';
+      execSync('npm run lint', { "stdio": 'pipe' });',
+      this.log('ESLint completed successfully');';,
       
+<<<<<<< HEAD
       // Run type checking
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { "stdio": 'pipe' });
@@ -106,3 +112,13 @@ module.exports = LintAutomation;
 module.exports = LintAutomation;
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+      // Run type checking;
+      this.log('Running TypeScript type check...');';
+      execSync('npm run type-check', { "stdio": 'pipe' });',
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-c10a;
+}
+
+module.exports = LintAutomation;
+=======;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

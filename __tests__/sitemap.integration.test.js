@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('Sitemap Integration Tests', () => {
     // Add data loading tests here
   });
 });
+=======
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import sitemap from '../pages/sitemap" describe('sitemap Integration Tests',() => {' test('page renders correctly',() => {' render(<sitemap / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<sitemap / />) }) test('page content is accessible',() => {' render(<sitemap / />) }) test('page loads with correct data',() => {' render(<sitemap / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

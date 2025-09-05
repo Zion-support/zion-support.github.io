@@ -1,1 +1,2 @@
-import React,{useState,useRef} from 'react'; ; export function AdvancedAIBusinessProcessAutomation($1) {; ; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'; ;';';
+import { useState } from 'react';,
+import _React,{useState,useRef} from 'react'; ; export function AdvancedAIBusinessProcessAutomation(_) {; ; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'; ;';';

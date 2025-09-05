@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -12,6 +13,11 @@ import {
   Instagram,
 =======
 import { 
+=======
+import _React from 'react';,
+import Link from 'next/link';';
+import { }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
   MapPin, 
   Phone, 
   Mail, 
@@ -22,13 +28,14 @@ import {
   Instagram, 
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   Github,
-  ExternalLink
-} from 'lucide-react';
+  ExternalLink;
+} from 'lucide-react';,
 
 <<<<<<< HEAD
 const $1 = {
 =======
 const services = {
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
@@ -36,23 +43,32 @@ const services = {
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+=======
+  'AI Solutions': [';
+    { name: 'AI-Powered Email Responder, href: '/ai-services#ai-email-responder' },',
+    { name: 'Predictive Analytics Platform, href: '/ai-services#predictive-analytics' },',
+    { name: 'Intelligent Chatbot System, href: '/ai-services#intelligent-chatbot' },',
+    { name: 'Computer Vision Solutions, href: '/ai-services#computer-vision' },',
+    { name: 'AI Content Generation, href: '/ai-services#ai-content-generation' }',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
   ],
-  'IT Services': [
-    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-    { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+  'IT Services': [',
+    { name: 'Cloud Infrastructure Management, href: '/it-services#cloud-infrastructure' },',
+    { name: 'Cybersecurity Solutions, href: '/it-services#cybersecurity' },',
+    { name: 'Network Infrastructure, href: '/it-services#network-infrastructure' },',
+    { name: 'Database Management, href: '/it-services#database-management' },',
+    { name: 'System Administration, href: '/it-services#system-administration' }',
   ],
-  'Micro SaaS': [
-    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
-  ]
-};
+  'Micro SaaS': [',
+    { name: 'Cloud Cost Guard, href: '/micro-saas#cloud-cost-guard' },',
+    { name: 'LLM Evaluation Suite, href: '/micro-saas#llm-evaluation' },',
+    { name: 'Customer Feedback App, href: '/micro-saas#customer-feedback' },',
+    { name: 'API Rate Limiting, href: '/micro-saas#api-rate-limiting' },',
+    { name: 'Content Moderation AI, href: '/micro-saas#content-moderation' }',
+  ];,
+;};,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const company = [{ name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/about#team' },
@@ -187,10 +203,21 @@ export default function Footer() {
   ];
 
 =======
+=======
+const companyInfo = {}
+  name: 'Zion Tech Group,',
+  description: 'Leading provider of AI solutions, cloud services, and technology consulting. Transforming businesses through innovative technology.',',
+  phone: '+1 302 464 0950,',
+  email: 'kleber@ziontechgroup.com,',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',',
+  hours: '24/7 Support Available'';,
+;};,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+export default function Footer() {}
+  const currentYear = new Date().getFullYear();,
 
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   return (
     <footer className="bg-gray-900 text-white">
@@ -212,11 +239,19 @@ export default function Footer() {
               We help businesses transform and succeed in the digital age.
 =======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
+  return (;
+    <footer className="bg-gray-900 text-white">";
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">",
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">";,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+          <div className="lg:col-span-1">",
+            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>";,
+            <p className="text-gray-300 mb-4 text-sm leading-relaxed">";
               {companyInfo.description}
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
             </p>
             <div className="space-y-2 text-sm">
@@ -242,16 +277,39 @@ export default function Footer() {
 =======
           </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+            </p>,
+            <div className="space-y-2 text-sm">";,
+              <div className="flex items-center gap-2">";
+                <Phone className="w-4 h-4 text-blue-400" />";
+                <span>{companyInfo.phone}</span>,
+              </div>;,
+              <div className="flex items-center gap-2">";
+                <Mail className="w-4 h-4 text-blue-400" />";
+                <span>{companyInfo.email}</span>,
+              </div>;,
+              <div className="flex items-start gap-2">";
+                <MapPin className="w-4 h-4 text-blue-400 mt-1" />";
+                <span className="text-xs">{companyInfo.address}</span>",
+              </div>;,
+              <div className="flex items-center gap-2">";
+                <Clock className="w-4 h-4 text-blue-400" />";
+                <span className="text-xs">{companyInfo.hours}</span>",
+              </div>;,
+            </div>;
+          </div>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
 
           {/* Services */}
-          {Object.entries(services).map(([category, serviceList]) => (
-            <div key={category}>
-              <h4 className="text-lg font-semibold mb-4">{category}</h4>
-              <ul className="space-y-2">
-                {serviceList.map((service) => (
-                  <li key={service.name}>
-                    <Link 
+          {Object.entries(services).map(([category, serviceList]) => (,
+            <div key={category}>,
+              <h4 className="text-lg font-semibold mb-4">{category}</h4>",
+              <ul className="space-y-2">";,
+                {serviceList.map((service) => (;
+                  <li key={service.name}>,
+                    <Link );,
                       href={service.href}
+<<<<<<< HEAD
                       className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
                     >
 <<<<<<< HEAD
@@ -274,15 +332,20 @@ export default function Footer() {
               </p>
             </div>
 =======
+=======
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"",
+                    >;,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
                       {service.name}
-                    </Link>
-                  </li>
+                    </Link>,
+                  </li>;,
                 ))}
-              </ul>
-            </div>
+              </ul>,
+            </div>;,
           ))}
 
           {/* Quick Links */}
+<<<<<<< HEAD
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -320,26 +383,64 @@ export default function Footer() {
           </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
         </div>
+=======
+          <div>,
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>";,
+            <ul className="space-y-2">";
+              <li>;
+                <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  About Us;
+                </Link>;
+              </li>;
+              <li>;
+                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  Contact;
+                </Link>;
+              </li>;
+              <li>;
+                <Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  Blog;
+                </Link>;
+              </li>;
+              <li>;
+                <Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  Careers;
+                </Link>;
+              </li>;
+              <li>;
+                <Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  Privacy Policy;
+                </Link>;
+              </li>;
+              <li>;
+                <Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">";
+                  Terms of Service;
+                </Link>;
+              </li>;
+            </ul>;
+          </div>;
+        </div>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-md mx-auto text-center">
-            <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-            <p className="text-gray-300 text-sm mb-4">
-              Get the latest news and updates from Zion Tech Group
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+        <div className="border-t border-gray-800 mt-12 pt-8">",
+          <div className="max-w-md mx-auto text-center">";,
+            <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>";
+            <p className="text-gray-300 text-sm mb-4">";
+              Get the latest news and updates from Zion Tech Group;
+            </p>;
+            <div className="flex gap-2">";
+              <input;
+                type="email"";
+                placeholder="Enter your email"";
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"";
+              />;
+              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">";
+                Subscribe;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
 
 <<<<<<< HEAD
       {/* Bottom Bar */}
@@ -351,6 +452,7 @@ export default function Footer() {
               <span className="ml-2">Delaware, United States</span>
 =======
         {/* Social Links & Copyright */}
+<<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex gap-4">
@@ -383,5 +485,38 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+=======
+        <div className="border-t border-gray-800 mt-8 pt-8">",
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">";,
+            <div className="flex gap-4">";
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">";
+                <Facebook className="w-5 h-5" />";
+              </a>;
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">";
+                <Twitter className="w-5 h-5" />";
+              </a>;
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">";
+                <Linkedin className="w-5 h-5" />";
+              </a>;
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">";
+                <Instagram className="w-5 h-5" />";
+              </a>;
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">";
+                <Github className="w-5 h-5" />";
+              </a>;
+            </div>;
+            <div className="text-center md:text-right">";
+              <p className="text-gray-400 text-sm">";
+                © {currentYear} Zion Tech Group. All rights reserved.,
+              </p>;,
+              <p className="text-gray-500 text-xs mt-1">";
+                Made with ❤️ for innovation;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
   );
 }

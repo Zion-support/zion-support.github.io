@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('EnhancedNavigation', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

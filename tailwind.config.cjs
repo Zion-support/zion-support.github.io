@@ -26,13 +26,13 @@ module.exports = {
         "xl": "1280px",
         "2xl": "1536px",
         "3xl": "1920px"},
-      "spacing": {;
+      "spacing": {
         18: "4.5rem",
         "88": "22rem",
         "128": "32rem",
         "8xl": "88rem",
         "9xl": "96rem",
-        "responsive": {;
+        "responsive": {
           DEFAULT: "1rem",
           "sm": "2rem",
           "lg": "4rem",

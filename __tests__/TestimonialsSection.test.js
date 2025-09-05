@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('TestimonialsSection', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import TestimonialsSection from '../components/TestimonialsSection" describe('TestimonialsSection',() => {' test('renders without crashing',() => {' render(<TestimonialsSection / />) expect(screen.getByTestId("testimonialssection")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<TestimonialsSection / />) }) test('handles user interactions',() => {' render(<TestimonialsSection / />) }) test('applies correct styling',() => {' render(<TestimonialsSection / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

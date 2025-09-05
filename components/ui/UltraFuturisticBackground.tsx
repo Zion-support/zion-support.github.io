@@ -1,1 +1,1 @@
-import React from 'react'; type Props = { children: 'Reac t.ReactNode;' }; export default function UltraFuturisticBackground({ children }: Props) { return <>{children}</> }
+import _React from 'react'; type Props = { children: 'Reac t.ReactNode;' }; export default function UltraFuturisticBackground({ children }: Props) { return <>{children}</> }

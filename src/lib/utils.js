@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { twMerge } from 'tailwind-merge
 import clsx from 'clsx
 
@@ -8,3 +9,6 @@ export function cn(...inputs) {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

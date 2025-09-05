@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -11,55 +12,62 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     this.optimizations = [];
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
+=======
+  constructor() {}
+    this.optimizations = [];,
+    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');',
+    this.ensureLogDirectory();,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
   }
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { "recursive": true });
+  ensureLogDirectory() {}
+    const logDir = path.dirname(this.logFile);,
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true });",
     }
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
+  log(message, level = 'INFO') {'}
+    const timestamp = new Date().toISOString();,
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
+    _console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logMessage);,
   }
 
-  async optimizePerformance() {
-    try {
-      this.log('Starting performance optimization...');
+  async optimizePerformance() {}
+    try {}
+      this.log('Starting performance optimization...');',
       
-      // Analyze bundle size
+      // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
       
-      // Optimize images
+      // Optimize images;
       const imageOptimization = this.optimizeImages();
       
-      // Check for unused dependencies
+      // Check for unused dependencies;
       const dependencyAnalysis = this.analyzeDependencies();
       
-      // Generate optimization report
+      // Generate optimization report;
       const report = {
-        "timestamp": new Date().toISOString(),
-        "bundleSize": bundleAnalysis,
-        "imageOptimization": imageOptimization,
-        "dependencies": dependencyAnalysis,
-        "recommendations": this.generateRecommendations()
-      };
+        "timestamp": new Date().toISOString(),",
+        "bundleSize": bundleAnalysis,",
+        "imageOptimization": imageOptimization,",
+        "dependencies": dependencyAnalysis,",
+        "recommendations": this.generateRecommendations()";,
+;      };,
       
       this.saveReport(report);
-      this.log('Performance optimization completed');
+      this.log('Performance optimization completed');';
       return report;
-    } catch (error) {
-      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');
-      return null;
+    } catch (error) {}
+      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');',
+      return null;,
     }
   }
 
-  analyzeBundleSize() {
+  analyzeBundleSize() {}
     try {
+<<<<<<< HEAD
       // Placeholder for bundle analysis
       return {
 <<<<<<< HEAD
@@ -74,14 +82,20 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
   optimizeImages() {
+=======
+      // Placeholder for bundle analysis}
+      return {}
+  optimizeImages() {}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
     try {
-      // Placeholder for image optimization
-      return { optimized: 0, "totalImages": 0, "savings": '0KB' };
-    } catch (error) {
-      return { "error": error.message };
+      // Placeholder for image optimization}
+      return { optimized: 0, "totalImages": 0, "savings": '0KB' };',
+    } catch (error) {}
+      return { "error": error.message };",
     }
   }
 
+<<<<<<< HEAD
   analyzeDependencies() {
 <<<<<<< HEAD
 try {
@@ -90,23 +104,27 @@ try {
       const devDependencies = Object.keys(packageJson.devDependencies || {});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+  analyzeDependencies() {}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
       return {
-        "totalDependencies": dependencies.length + devDependencies.length,
-        "productionDependencies": dependencies.length,
-        "devDependencies": devDependencies.length,
-        "potentialUnused": this.findUnusedDependencies()
-      };
-    } catch (error) {
-      return { "error": error.message };
+        "totalDependencies": dependencies.length + devDependencies.length,",
+        "productionDependencies": dependencies.length,",
+        "devDependencies": devDependencies.length,",
+        "potentialUnused": this.findUnusedDependencies()";,
+      };,
+    } catch (error) {}
+      return { "error": error.message };",
     }
   }
 
   findUnusedDependencies() {
-    // Placeholder for unused dependency detection
-    return ['example-unused-package'];
+    // Placeholder for unused dependency detection}
+    return ['example-unused-package'];',
   }
 
   generateRecommendations() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 return ['Implement code splitting for better performance',
       'Optimize images using WebP format',
@@ -141,3 +159,6 @@ module.exports = PerformanceOptimizer;ursor/migrate-github-actions-to-pm2-and-cl
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+=======;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

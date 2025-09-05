@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co
@@ -6,3 +7,6 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholde
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

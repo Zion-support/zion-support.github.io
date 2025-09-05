@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('ModernHeader', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import ModernHeader from '../components/ModernHeader" describe('ModernHeader',() => {' test('renders without crashing',() => {' render(<ModernHeader / / />) expect(screen.getByTestId("modernheader")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernHeader / / />) }) test('handles user interactions',() => {' render(<ModernHeader / / />) }) test('applies correct styling',() => {' render(<ModernHeader / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

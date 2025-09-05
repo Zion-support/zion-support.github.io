@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('Services Integration Tests', () => {
     // Add data loading tests here
   });
 });
+=======
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

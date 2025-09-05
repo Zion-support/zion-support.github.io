@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -23,3 +24,6 @@ describe('ModernLayoutdynamic', () => {
     render(<ModernLayoutdynamic />);
     // Add styling tests if needed
   })});
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

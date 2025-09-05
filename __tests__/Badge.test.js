@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('Badge', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Badge / / />) }) test('handles user interactions',() => {' render(<Badge / / />) }) test('applies correct styling',() => {' render(<Badge / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

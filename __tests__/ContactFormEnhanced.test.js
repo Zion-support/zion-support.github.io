@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('ContactFormEnhanced', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

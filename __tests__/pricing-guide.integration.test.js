@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('Pricing-guide Integration Tests', () => {
     // Add data loading tests here
   });
 });
+=======
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import pricing-guide from '../pages/pricing-guide" describe('pricing-guide Integration Tests',() => {' test('page renders correctly',() => {' render(<pricing-guide / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<pricing-guide / />) }) test('page content is accessible',() => {' render(<pricing-guide / />) }) test('page loads with correct data',() => {' render(<pricing-guide / />) })})
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

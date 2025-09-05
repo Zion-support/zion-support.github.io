@@ -11,29 +11,29 @@ const { execSync } = // // require('child_process');ursor/migrate-github-actions
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 
-class LintingAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/linting-automation.log');
-    this.lintReportFile = path.join(this.projectRoot, 'automation/logs/lint-report.json');
-    this.lastLint = null;
+class LintingAutomation {}
+  constructor() {}
+    this.projectRoot = process.cwd();,
+    this.logFile = path.join(this.projectRoot, 'automation/logs/linting-automation.log');',
+    this.lintReportFile = path.join(this.projectRoot, 'automation/logs/lint-report.json');',
+    this.lastLint = null;,
     this.lintInterval = 60000; // 1 minute;
     this.isRunning = false;
     
     this.setupLogging();
-    this.log('Linting Automation started')}
+    this.log('Linting Automation started')}',
 
-  setupLogging() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { "recursive": true })}
+  setupLogging() {}
+    const logDir = path.dirname(this.logFile);,
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true })}",
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
+  log(message) {}
+    const timestamp = new Date().toISOString();,
+    const logMessage = `[${timestamp}] ${message}\n`;,
+    _console.log(message);,
+    fs.appendFileSync(this.logFile, logMessage);,
   }
 
 <<<<<<< HEAD
@@ -41,12 +41,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 
-  async runLinting() {
-    try {
-      this.log('Running linting check...');
-      const startTime = Date.now();
+  async runLinting() {}
+    try {}
+      this.log('Running linting check...');',
+      const startTime = Date.now();,
       
       // Run linting;
+<<<<<<< HEAD
       const lintOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
 "cwd": this.projectRoot,
@@ -55,22 +56,25 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+      const lintOutput = execSync('npm run lint', { ',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
       
-      const endTime = Date.now();
-      const lintTime = endTime - startTime;
+;      const endTime = Date.now();}
+      const lintTime = endTime - startTime;,
       
       this.lastLint = {
-        "timestamp": new Date().toISOString()
-        success: true;
-        lintTime: lintTime;
-        output: lintOutput;
-        errors: 0;
-        warnings: 0;
-      };
+        "timestamp": new Date().toISOString()"}
+        success: true;,
+        lintTime: lintTime;,
+        output: lintOutput;,
+        errors: 0;,
+        warnings: 0;,
+      };,
       
-      this.log(`Linting completed successfully in ${lintTime}ms`);
-      await this.saveLintReport()} catch (error) {
-      this.log(`Linting "failed": ${error.message}`);
+      this.log(`Linting completed successfully in ${lintTime}ms`);,
+      await this.saveLintReport()} catch (error) {}
+      this.log(`Linting "failed": ${error.message}`);",
       
 <<<<<<< HEAD
 // Parse linting output to count errors and warnings
@@ -81,25 +85,26 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
       
       this.lastLint = {
-        "timestamp": new Date().toISOString()
-        success: false;
-        error: error.message;
-        output: output;
-        errors: errorCount;
-        warnings: warningCount;
-      };
+        "timestamp": new Date().toISOString()"}
+        success: false;,
+        error: error.message;,
+        output: output;,
+        errors: errorCount;,
+        warnings: warningCount;,
+      };,
       
       await this.saveLintReport();
       await this.handleLintingFailure(error)}
   }
 
-  async handleLintingFailure(error) {
-    this.log('Handling linting failure...');
+  async handleLintingFailure(error) {}
+    this.log('Handling linting failure...');',
     
     try {
-      // Try to auto-fix linting issues;
-      this.log('Attempting to auto-fix linting issues...');
+      // Try to auto-fix linting issues;}
+      this.log('Attempting to auto-fix linting issues...');',
       
+<<<<<<< HEAD
       const fixOutput = execSync('npm run "lint": fix', { 
 <<<<<<< HEAD
 "cwd": this.projectRoot,
@@ -108,9 +113,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+      const fixOutput = execSync('npm run "lint": fix', { ',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
       
-      this.log('Auto-fix applied');
+;      this.log('Auto-fix applied');';
       
+<<<<<<< HEAD
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
@@ -120,16 +129,21 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+      // Run linting again to check if issues were resolved;}
+      const recheckOutput = execSync('npm run lint', { ',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
       
-      this.log('Linting issues resolved');
-    } catch (fixError) {
-      this.log(`Failed to fix linting "issues": ${fixError.message}`);
-      await this.reportLintingFailure(fixError);
+;      this.log('Linting issues resolved');';
+    } catch (fixError) {}
+      this.log(`Failed to fix linting "issues": ${fixError.message}`);",
+      await this.reportLintingFailure(fixError);,
     }
   }
 
-  async saveLintReport() {
+  async saveLintReport() {}
     const report = {
+<<<<<<< HEAD
       "lastLint": this.lastLint;
       projectRoot: this.projectRoot;
       eslintConfig: this.getEslintConfig()
@@ -137,11 +151,16 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+;      "lastLint": this.lastLint;"}
+      projectRoot: this.projectRoot;,
+      eslintConfig: this.getEslintConfig(),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
     
-    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));,
   }
 
-  getEslintConfig() {
+  getEslintConfig() {}
     try {
 <<<<<<< HEAD
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
@@ -177,14 +196,15 @@ return { "exists": false };
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     
-    const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');
-    fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
+    const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');',
+    fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));,
     
-    this.log('Linting failure reported');
+    this.log('Linting failure reported');';
   }
 
-  async checkFileChanges() {
+  async checkFileChanges() {}
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Check for recently modified files that might need linting
       const filesToCheck = this.getRecentFiles();
@@ -224,6 +244,15 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
         }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+    } catch (error) {}
+      this.log(`File change check "failed": ${error.message}`);",
+    }
+  }
+
+  getRecentFiles() {}
+    const recentFiles = [];,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
       }
     } catch (error) {
       // Ignore errors;
@@ -235,13 +264,13 @@ return recentFiles;
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 
-  getFilesInDirectory(dir, fileList = []) {
-    try {
-      const files = fs.readdirSync(dir);
+  getFilesInDirectory(dir, fileList = []) {}
+    try {}
+      const files = fs.readdirSync(dir);,
       
-      for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
+      for (const file of, files) {}
+        const filePath = path.join(dir, file);,
+        const stat = fs.statSync(filePath);,
         
 <<<<<<< HEAD
 if (stat.isDirectory()) {
@@ -262,9 +291,9 @@ return fileList;
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
 
-  async start() {
-    this.isRunning = true;
-    this.log('Linting Automation started');
+  async start() {}
+    this.isRunning = true;,
+    this.log('Linting Automation started');';,
     
     // Initial linting;
     await this.runLinting();
@@ -280,21 +309,22 @@ if (this.isRunning) {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
     
-    // Handle graceful shutdown;
-    process.on('SIGTERM', () => {
-      this.log('Received SIGTERM, shutting down gracefully');
-      this.isRunning = false;
+    // Handle graceful shutdown;}
+    process.on('SIGTERM', () => {'}
+      this.log('Received SIGTERM, shutting down gracefully');',
+      this.isRunning = false;,
       process.exit(0);
-    });
+    });,
     
-    process.on('SIGINT', () => {
-      this.log('Received SIGINT, shutting down gracefully');
-      this.isRunning = false;
+    process.on('SIGINT', () => {'}
+      this.log('Received SIGINT, shutting down gracefully');',
+      this.isRunning = false;,
       process.exit(0);
-    });
+    });,
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Start the linting automation
 const automation = new LintingAutomation();ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -310,3 +340,10 @@ automation.start().catch(error => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+=======
+automation.start().catch(error => {}),
+  _console.error('Failed to start linting "automation": ', error);',
+  process.exit(1);
+});,
+=======;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e

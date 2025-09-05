@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,3 +25,6 @@ describe('LoadingSpinner', () => {
     // Add styling tests here
   });
 });
+=======
+import _React from 'react"  import '@testing-library/jest-dom import LoadingSpinner from '../components/LoadingSpinner" describe('LoadingSpinner',() => {' test('renders without crashing',() => {' render(<LoadingSpinner / / />) expect(screen.getByTestId("loadingspinner")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<LoadingSpinner / / />) }) test('handles user interactions',() => {' render(<LoadingSpinner / / />) }) test('applies correct styling',() => {' render(<LoadingSpinner / / />) }) })
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
