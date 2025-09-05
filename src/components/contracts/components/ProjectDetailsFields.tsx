@@ -1,14 +1,22 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ProjectDetailsFields($1) {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ProjectDetailsFields - Zion Tech Group" description="Professional ProjectDetailsFields services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ProjectDetailsFields</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ProjectDetailsFields services to help your business grow.
-        </p>
-      </div>
-  );"}"
-
-</div>;
+ import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues> 
+}form 
+}: ProjectDetailsFieldsProps) {
+  return (<> <FormField control= {
+  form.control 
+}<FormItem> <FormLabel>Project Name</FormLabel> <FormControl> <Input placeholder="AI Website Development" {
+  ...field 
+}/> 
+}/> <FormField 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem className="flex flex-col"> 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem className="flex flex-col"> 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
+}/> </div> </>) 
+}

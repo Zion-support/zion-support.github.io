@@ -1,111 +1,61 @@
-const contactInfo = [{
-      icon: Phon e,
-      title: "Phone",
-      value: "+1 302 464 0950",
-      link: "tel:+13024640950"
-    },
-    {
-      icon: Mai l,
-      title: "Email",
-      value: "kleber@ziontechgroup.com",
-      link: "mailto: klebe r@ziontechgroup.com"
-    };, {;
-      icon: MapPi n,;"
-      title: "Address",;"
-      value: "364 E Main St STE 1008 Middletown DE 19709",;"
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ];
-  return ("
-    <section className="py-16 px-4 sm: p x-6 lg: p x-8">"
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial = {
-
-  { opacity: 0,
-  y: 2 0
-
-}}
-          whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: tru e }}"
-          className="text-center mb-16"
-"
-          <h2 className="text-3xl sm: tex t-4xl font-bold text-white mb-4">
-            Get In Touch
-          </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Contact us today to discuss your technology needs
-          </p>
-        </motion.div>"
-        <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 mb-12">
-          {contactInfo.map((contact, index)  => (
-            <motion.div
-              key={index}
-              initial = {
-
-  { opacity: 0,
-  y: 2 0
-
-}}
-              whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-              transition = {
-
-  { duration: 0.6,
-  delay: inde x * 0.1
-
-}}
-              viewport={{ once: tru e }}"
-              className="text-center"
-
-              <a href={contact.link}"
-                className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
-"
-                <contact.icon className="h-8 w-8 text-white"  />
-              </a>;"
-              <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>"
-              <p className="text-zion-slate-light">{contact.value}</p>
-            </motion.div>
-          ))}
-        </div>
-        <motion.div
-          initial = {
-
-  { opacity: 0,
-  y: 2 0
-
-}}
-          whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: tru e }}"
-          className="text-center"
-
-          <Link"
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300 transform hover: scal e-105"
-
-            Contact Us Today"
-            <ArrowRight className="ml-2 h-5 w-5"   />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default ContactSection;
-export default ContactSection;
-"
-
-</motion>
-</motion>';
+ import {
+  {
+  {
+  Mail 
+}from 'lucide-react' export function ContactSection () {
+  const [formData, setFormData] = useState ({
+  const [errors, setErrors] = useState< {
+  name?: string;
+email?: string;
+subject?: string;
+message?: string 
+}> ({
+  
+});
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const {
+  name, value 
+}= e.target;
+setFormData ( (prev) => ({
+  ...prev, [name]: value 
+}) );
+setErrors ( (prev) => ({
+  ...prev, [name]: undefined 
+}) ) 
+};
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault ();
+const schema = z.object ({
+  const result = schema.safeParse (formData);
+if (!result.success) {
+  const fieldErrors: Record<string string> = {
+  
+};
+for (const err of result.error.errors) {
+  if (err.path[0]) {
+  fieldErrors[err.path[0] as string] = err.message 
+}
+}setErrors (fieldErrors);
+toast ({
+  return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}setErrors ({
+  
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<section className="py-20 bg-zion-blue" id="contact" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" > <div> <GradientHeading>Get In Touch</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl mb-8" > We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today. </p> <div className="flex items-center mb-6" > <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan" > <Mail className="h-6 w-6" /> </div> <div> <p className="text-white font-semibold" >Email Us</p> <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors" > commercial@ziontechgroup.com </Link> </div> </div> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Request Commercial Proposal </Button> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1" > Name </label> <Input) 
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) 
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) 
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) 
+}</div> <div> <Button > {
+  isSubmitting ? 'Sending...' : 'Send Message' 
+}</Button>) 
+}</div> </form> </div> </div> </div> </div> </section>) 
+}

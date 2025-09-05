@@ -9,16 +9,14 @@ const { glob } = require('glob');
  * This helps improve performance and security
  */
 
-const CONSOLE_PATTERNS = [
-  /console\.log\([^)]*\);?/g,
+const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   // Keep console.error for debugging
 ];
 
-const EXCLUDE_PATTERNS = [
-  'node_modules',
+const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
   'dist',
   'build',
@@ -45,16 +43,16 @@ function removeConsoleStatements(content) {
       modifiedContent = modifiedContent.replace(pattern, '')}
   });
 
-  return { content: modifiedContent, removedCount }}
+  return { "content": modifiedContent, removedCount }}
 
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: newContent, removedCount } = removeConsoleStatements(content);
+    const { "content": newContent, removedCount } = removeConsoleStatements(content);
     
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✓ ${filePath}: Removed ${removedCount} console statements`);
+      
       return removedCount}
     
     return 0} catch (error) {
@@ -62,12 +60,33 @@ function processFile(filePath) {
     return 0}
 }
 
-async function main() {
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getAllFiles(filePath, extensions));
+    } else {
+      const ext = path.extname(file);
+      if (extensions.includes(ext)) {
+        results.push(filePath);
+      }
+    }
+  });
+  
+  return results;
+}
+
+function main() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
-  const patterns = [
-    `${srcDir}/**/*.{js,jsx,ts,tsx}`,
+  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
 
@@ -85,13 +104,16 @@ async function main() {
     }
   }
 
-  console.log(`\n📊 Summary:`);
+  console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-    console.log(`\n✨ Production build optimized!`)} else {
-    console.log(`\n✨ No console statements found to remove.`)}
+    console.log(`\n✨ Production build optimized!`);
+  } else {
+    console.log(`\n✨ No console statements found to remove.`);
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
 }
 
 if (require.main === module) {

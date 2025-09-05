@@ -1,32 +1,16 @@
-import { useCallback  } from 'react';
-
-interface User {
-
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string}
-
-export const useAuthEventHandlers = (
-  setUser: (user: Use r | null)  => void,
-  setOnboardingStep: (step: number)  => void
-) => {;
-  const handleSignedIn = useCallback((user: Use r)  => {;
+export const useAuthEventHandlers = (setUser: any, setOnboardingStep: any) => {
+  const handleSignedIn = (user: any) => {
     setUser(user);
-    setOnboardingStep(1); // Start onboarding process
-  }, [setUser, setOnboardingStep]);
+    setOnboardingStep(1);
+  };
 
-  const handleSignedOut = useCallback(() => {;
+  const handleSignedOut = () => {
     setUser(null);
-    setOnboardingStep(0); // Reset onboarding
-  }, [setUser, setOnboardingStep]);
+    setOnboardingStep(0);
+  };
 
   return {
     handleSignedIn,
     handleSignedOut
-  }};
-;';';
+  };
+};

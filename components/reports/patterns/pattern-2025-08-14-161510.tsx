@@ -1,0 +1,2 @@
+ <Head> <title>Pattern — Cloud Intelligence</title> <meta name="description" content="Actionable architectural pattern synthesized from live site signals." /> <meta property="og:title" content="Pattern — Cloud Intelligence" /> <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
+}

@@ -1,110 +1,44 @@
-#!/usr/bin/env node
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
 /**
- * Master Automation Suite
- * Orchestrates all automation scripts in a comprehensive workflow
+ * Master Automation Suite;
+ * Orchestrates all automation scripts in a comprehensive workflow;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
 
-class MasterAutomationSuite {
-  constructor() {
-    this.logDir = 'automation-reports';
-    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    this.masterResults = {
-      timestamp: this.timestamp,
-      suite: 'master-automation',
-      status: 'running',
-      phases: [],
-      summary: {}
-    };
-    
-    this.ensureLogDir()}
-
-  ensureLogDir() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true })}
-  }
-
-  log(message, level = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage)}
-
-  async runPhase(phaseName, phaseScript, description) {
-    this.log(`🔄 Running ${description}...`);
-    
-    const phaseResult = {
-      name: phaseName,
-      description,
-      startTime: new Date().toISOString(),
-      status: 'running',
-      output: '',
-      error: '',
-      duration: 0
-    };
-
-    try {
-      const startTime = Date.now();
-      const output = execSync(`node "${phaseScript}"`, { 
-        encoding: 'utf8',
-        timeout: 600000 // 10 minutes timeout
-      });
-      
-      const endTime = Date.now();
-      phaseResult.duration = endTime - startTime;
-      phaseResult.status = 'success';
-      phaseResult.output = output;
-      phaseResult.endTime = new Date().toISOString();
-      
-      this.log(`✅ ${description} completed in ${phaseResult.duration}ms`)} catch (error) {
-      const endTime = Date.now();
-      phaseResult.duration = endTime - Date.now();
-      phaseResult.status = 'failed';
-      phaseResult.error = error.message;
-      phaseResult.endTime = new Date().toISOString();
-      
-      this.log(`❌ ${description} failed: ${error.message}`, 'error')}
-
-    this.masterResults.phases.push(phaseResult);
-    return phaseResult}
-
-  async runMasterSuite() {
-    this.log('🚀 Starting Master Automation Suite');
-    this.log('===================================');
-
-    const phases = [
-      {
-        name: 'enhanced-orchestrator',
-        script: 'scripts/enhanced-automation-orchestrator.cjs',
-        description: 'Enhanced Automation Orchestrator'
+    const phases = [{
+        "name": 'enhanced-orchestrator',
+        "script": 'scripts/enhanced-automation-orchestrator.cjs',
+        "description": 'Enhanced Automation Orchestrator'
       },
       {
-        name: 'continuous-integration',
-        script: 'scripts/continuous-integration.cjs',
-        description: 'Continuous Integration Pipeline'
+        "name": 'continuous-integration',
+        "script": 'scripts/continuous-integration.cjs',
+        "description": 'Continuous Integration Pipeline'
       },
       {
-        name: 'monitoring-dashboard',
-        script: 'scripts/monitoring-dashboard.cjs',
-        description: 'Monitoring Dashboard'
+        "name": 'monitoring-dashboard',
+        "script": 'scripts/monitoring-dashboard.cjs',
+        "description": 'Monitoring Dashboard'
       },
       {
-        name: 'security-audit',
-        script: 'scripts/security-audit.cjs',
-        description: 'Security Audit'
+        "name": 'security-audit',
+        "script": 'scripts/security-audit.cjs',
+        "description": 'Security Audit'
       },
       {
-        name: 'performance-monitor',
-        script: 'scripts/performance-monitor.cjs',
-        description: 'Performance Monitoring'
+        "name": 'performance-monitor',
+        "script": 'scripts/performance-monitor.cjs',
+        "description": 'Performance Monitoring'
       },
       {
-        name: 'code-quality-monitor',
-        script: 'scripts/code-quality-monitor.cjs',
-        description: 'Code Quality Analysis'
+        "name": 'code-quality-monitor',
+        "script": 'scripts/code-quality-monitor.cjs',
+        "description": 'Code Quality Analysis'
       }
     ];
 
@@ -123,7 +57,7 @@ class MasterAutomationSuite {
     const totalCount = this.masterResults.phases.length;
     
     this.log('🏁 Master Automation Suite completed');
-    this.log(`📊 Results: ${successCount}/${totalCount} phases successful`);
+    this.log(`📊 "Results": ${successCount}/${totalCount} phases successful`);
     
     this.masterResults.status = successCount >= totalCount * 0.8 ? 'success' : 'partial';
     return this.masterResults}
@@ -137,17 +71,17 @@ class MasterAutomationSuite {
       this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0) / this.masterResults.phases.length : 0;
 
     this.masterResults.summary = {
-      totalPhases: totalCount,
-      successfulPhases: successCount,
-      failedPhases: totalCount - successCount,
-      successRate: totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) + '%' : '0%',
-      averageDuration: Math.round(averageDuration),
-      totalDuration: this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0),
-      recommendations: this.generateMasterRecommendations()
+      "totalPhases": totalCount,
+      "successfulPhases": successCount,
+      "failedPhases": totalCount - successCount,
+      "successRate": totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) + '%' : '0%',
+      "averageDuration": Math.round(averageDuration),
+      "totalDuration": this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0),
+      "recommendations": this.generateMasterRecommendations()
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(this.masterResults, null, 2));
-    this.log(`📄 Master automation report saved to: ${reportPath}`)}
+    this.log(`📄 Master automation report saved "to": ${reportPath}`)}
 
   generateMasterRecommendations() {
     const recommendations = [];
@@ -176,7 +110,42 @@ if (require.main === module) {
     .then(results => {
       process.exit(results.status === 'success' ? 0 : 1)})
     .catch(error => {
-      console.error('Fatal error:', error);
+      console.error('Fatal "error": ', error);
       process.exit(1)})}
 
 module.exports = MasterAutomationSuite;
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    this.logDir = 'automation-reports'
+    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+      "suite"
+      "status"
+      "status"
+      "output"
+      "error"
+        "encoding"
+      this.log(` ${description} "failed"`)
+        "name"
+        "script"
+        "description"
+        "name"
+        "script"
+        "description"
+        "name"
+        "script"
+        "description"
+        "name"
+        "script"
+        "description"
+        "name"
+        "script"
+        "description"
+        "name"
+        "script"
+        "description"
+      "successRate"
+      console.error('Fatal "error")

@@ -1,0 +1,14 @@
+
+
+const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactForm' ,'
+
+</p>'
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/ContactForm.dynamic.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

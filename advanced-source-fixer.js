@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
@@ -28,22 +27,15 @@ class AdvancedSourceFixer {
 
   async fixDirectory(dir) {
     if (!fs.existsSync(dir)) return;
+    
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (
-        stat.isDirectory() &&
-        !item.startsWith('.') &&
-        item !== 'node_modules'
-      ) {
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         await this.fixDirectory(fullPath);
-      } else if (
-        item.endsWith('.ts') ||
-        item.endsWith('.tsx') ||
-        item.endsWith('.js') ||
-        item.endsWith('.jsx')
-      ) {
+      } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
         await this.fixFile(fullPath);
       }
     }
@@ -75,7 +67,7 @@ class AdvancedSourceFixer {
         this.fixes.push({
           file: filePath,
           timestamp: new Date().toISOString(),
-          fixes: this.getAppliedFixes(content, fixedContent),
+          fixes: this.getAppliedFixes(content, fixedContent)
         });
         this.log(`Fixed: ${filePath}`);
       }
@@ -83,7 +75,7 @@ class AdvancedSourceFixer {
       this.errors.push({
         file: filePath,
         error: error.message,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString()
       });
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     }
@@ -102,17 +94,13 @@ class AdvancedSourceFixer {
       /',' expected/,
       /';' expected/,
       /'\)' expected/,
-      /'\}' expected/,
+      /'\}' expected/
     ];
     return errorPatterns.some(pattern => pattern.test(content));
   }
 
   hasImportExportIssues(content) {
-    return (
-      content.includes('from') &&
-      !content.includes('import') &&
-      !content.includes('export')
-    );
+    return content.includes('from') && !content.includes('import') && !content.includes('export');
   }
 
   hasSyntaxIssues(content) {
@@ -121,56 +109,71 @@ class AdvancedSourceFixer {
       /export.*from.*from/,
       /function.*function/,
       /const.*const.*const/,
-      /let.*let.*let/,
+      /let.*let.*let/
     ];
     return syntaxIssues.some(pattern => pattern.test(content));
   }
 
   fixParsingErrors(content, filePath) {
     let fixed = content;
+    
+    // Fix unterminated strings
     fixed = fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed.replace(/'[^']*$/gm, "'");
+    
+    // Fix duplicate keywords
     fixed = fixed.replace(/import\s+from\s+from/g, 'import React from');
     fixed = fixed.replace(/export\s+from\s+from/g, 'export default');
     fixed = fixed.replace(/function\s+function/g, 'function');
     fixed = fixed.replace(/const\s+const/g, 'const');
     fixed = fixed.replace(/let\s+let/g, 'let');
+    
+    // Add missing semicolons
     fixed = fixed.replace(/([^}])\n/g, '$1;\n');
+    
+    // Fix JSX tags
     fixed = fixed.replace(/<([^>]*)\s*>/g, '<$1>');
     fixed = fixed.replace(/<\/([^>]*)\s*>/g, '</$1>');
+    
     return fixed;
   }
 
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+    
     if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      if (
-        !fixed.includes('import React') &&
-        !fixed.includes('import * as React')
-      ) {
+      if (!fixed.includes('import React') && !fixed.includes('import * as React')) {
         fixed = "import React from 'react';\n" + fixed;
       }
     }
+    
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, 'import React from');
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+    
     if (!fixed.includes('export default') && !fixed.includes('export {')) {
       fixed += '\n\nexport default {};';
     }
+    
     return fixed;
   }
 
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
+    
+    // Fix duplicate keywords
     fixed = fixed.replace(/\bconst\s+const\b/g, 'const');
     fixed = fixed.replace(/\blet\s+let\b/g, 'let');
     fixed = fixed.replace(/\bvar\s+var\b/g, 'var');
     fixed = fixed.replace(/\bfunction\s+function\b/g, 'function');
+    
+    // Fix trailing commas
     fixed = fixed.replace(/\{\s*,\s*\}/g, '{}');
     fixed = fixed.replace(/\{\s*,\s*/g, '{');
     fixed = fixed.replace(/\[\s*,\s*\]/g, '[]');
     fixed = fixed.replace(/\[\s*,\s*/g, '[');
     fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
     fixed = fixed.replace(/\(\s*,\s*/g, '(');
+    
     return fixed;
   }
 
@@ -199,12 +202,17 @@ class AdvancedSourceFixer {
       totalFilesFixed: this.fixes.length,
       totalErrors: this.errors.length,
       fixes: this.fixes,
-      errors: this.errors,
+      errors: this.errors
     };
+    
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
   }
 }
 
-const fixer = new AdvancedSourceFixer();
-fixer.fixAllSourceFiles().catch(console.error);
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+
+module.exports = AdvancedSourceFixer;

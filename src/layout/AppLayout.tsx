@@ -1,13 +1,19 @@
-import React from 'react';
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-export function AppLayout($1) {
-	return (
-		<div className = "min-h-screen bg-black text-white">;
-			<main className="pt-20">;
-				{children};
-			</main>;
-		</div>;
-	);
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import { Footer } from '@/components/Footer'
+
+interface AppLayoutProps {
+	children?: React.ReactNode
+	hideFooter?: boolean
 }
-export default AppLayout;';';
+
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+	return (
+		<div className="flex flex-col min-h-screen bg-background">
+			<main className="flex-grow">
+				{children ?? <Outlet />}
+			</main>
+			{!hideFooter && <Footer />}
+		</div>
+	)
+}

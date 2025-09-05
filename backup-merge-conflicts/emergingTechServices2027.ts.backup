@@ -1,0 +1,83 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface EmergingTechService2027 { "id": 'string; "title": "string; "description": string; "category": string; "subcategory": string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "targetAudience": string[]; "marketPrice": string; "website": string; "contactEmail": string; "tags": string[]; "aiScore": number; "rating": number; "reviewCount": number; "featured": boolean; "location": string; "availability": string;' "} "author": "{ "name": string; "id": string; avatarUrl?: string; "verified": boolean "}; "images": 'string[]; "createdAt": "string; "technologyStack": string[]; "useCases": string[]; "integrations": string[]; "compliance": string[]; "support": string[];' "} export const "EMERGING_TECH_SERVICES_2027": "EmergingTechService2027[] = [];"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+export interface EmergingTechService2027 {
+  "id": string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPrice: string;
+  website: string;
+  contactEmail: string;
+  tags: string[];
+  aiScore: number;
+  rating: number;
+  reviewCount: number;
+  featured: boolean;
+  location: string;
+  availability: string;
+  author: { name: string; id: string; avatarUrl?: string; verified: boolean };
+  "images": string[];
+  createdAt: string;
+  technologyStack: string[];
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
+  support: string[]}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-merge-conflicts/emergingTechServices2027.ts.backup
+<<<<<<< HEAD:backup-merge-conflicts/emergingTechServices2027.ts.backup
+<<<<<<< HEAD
+
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+=======
+export interface EmergingTechService2027 { id: 'string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string;' } author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: 'string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[];' } export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];
+>>>>>>> main
+export interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]} export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+=======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+export interface EmergingTechService2027 { id: 'string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string;' } author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: 'string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[];' } export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];
+export interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]} export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/emergingTechServices2027.ts
+=======
+export interface EmergingTechService2027 { id: 'string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string;' } author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: 'string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[];' } export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];
+export interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]} export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/data/emergingTechServices2027.ts
+=======
+
+export interface EmergingTechService2027 { id: 'string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string;' } author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: 'string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[];' } export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+export const "EMERGING_TECH_SERVICES_2027": EmergingTechService2027[] = [];
+export interface EmergingTechService2027 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]} export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,53 +1,30 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('📊 Code Quality Checker Starting...\n');
-
-// Code quality checks
-const qualityChecks = [
+    }},
   {
-    name: 'TypeScript Type Checking',
-    action: () => {
-      console.log('🔍 Running TypeScript type checking...');
+    "name": 'ESLint Code Analysis',
+    "action": () => {
+      
       try {
-        execSync('npx tsc --noEmit', { stdio: 'pipe' });
-        console.log('✅ TypeScript type checking passed');
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
+        
       } catch (error) {
-        console.log('⚠️ TypeScript type checking found issues');
+        
       }
-    },
-  },
+    }},
   {
-    name: 'ESLint Code Analysis',
-    action: () => {
-      console.log('🔍 Running ESLint analysis...');
+    "name": 'Prettier Code Formatting',
+    "action": () => {
+      
       try {
-        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { stdio: 'pipe' });
-        console.log('✅ ESLint analysis passed');
+        execSync('npx prettier --check .', { "stdio": 'pipe' });
+        
       } catch (error) {
-        console.log('⚠️ ESLint found code quality issues');
+        
       }
-    },
-  },
+    }},
   {
-    name: 'Prettier Code Formatting',
-    action: () => {
-      console.log('🎨 Checking code formatting...');
-      try {
-        execSync('npx prettier --check .', { stdio: 'pipe' });
-        console.log('✅ Code formatting is consistent');
-      } catch (error) {
-        console.log('⚠️ Code formatting issues found');
-      }
-    },
-  },
-  {
-    name: 'Code Complexity Analysis',
-    action: () => {
-      console.log('📈 Analyzing code complexity...');
+    "name": 'Code Complexity Analysis',
+    "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
 
@@ -57,7 +34,7 @@ const qualityChecks = [
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
-            .readdirSync(dir, { recursive: true })
+            .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
           files.forEach(file => {
@@ -72,14 +49,13 @@ const qualityChecks = [
 
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
-      console.log(`Average lines per file: ${avgLinesPerFile}`);
-      console.log(`Total files analyzed: ${totalFiles}`);
-    },
-  },
+      
+      
+    }},
   {
-    name: 'Import/Export Analysis',
-    action: () => {
-      console.log('📦 Analyzing imports and exports...');
+    "name": 'Import/Export Analysis',
+    "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -94,15 +70,14 @@ const qualityChecks = [
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
-        console.log(`Total imports: ${importCount}`);
-        console.log(`Total exports: ${exportCount}`);
+        
+        
       }
-    },
-  },
+    }},
   {
-    name: 'Dead Code Detection',
-    action: () => {
-      console.log('💀 Checking for dead code...');
+    "name": 'Dead Code Detection',
+    "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -131,10 +106,9 @@ const qualityChecks = [
           });
         });
 
-        console.log(`Potential unused imports: ${unusedImports}`);
+        
       }
-    },
-  },
+    }},
 ];
 
 // Run quality checks
@@ -143,37 +117,54 @@ let totalCount = qualityChecks.length;
 
 for (const check of qualityChecks) {
   try {
-    console.log(`\n🔄 ${check.name}...`);
+    
     check.action();
-    console.log(`✅ ${check.name} completed`);
+    
     successCount++;
   } catch (error) {
-    console.log(`❌ ${check.name} failed: ${error.message}`);
+    
   }
 }
 
-console.log(`\n🎉 Code Quality Check Complete!`);
-console.log(`✅ Successfully completed: ${successCount}/${totalCount} checks`);
+
+
 
 // Generate quality report
 const report = {
-  timestamp: new Date().toISOString(),
-  checks: qualityChecks.map(check => ({
+  "timestamp": new Date().toISOString(),
+  "checks": qualityChecks.map(check => ({
     name: check.name,
-    status: 'completed',
-  })),
-  summary: {
+    "status": 'completed'})),
+  "summary": {
     total: totalCount,
-    successful: successCount,
-    failed: totalCount - successCount,
-  },
-};
+    "successful": successCount,
+    "failed": totalCount - successCount}};
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.mkdirSync(reportsDir, { "recursive": true });
 }
 
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-console.log(`📄 Quality report saved to: ${reportFile}`);
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Code Quality Checker Starting...\n')
+    "name"
+        execSync('npx tsc --noEmit', { "stdio"})
+    "name"
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio"})
+    "name"
+        execSync('npx prettier --check .', { "stdio"})
+    "name"
+    "name"
+    "name"
+            content.match(/^import\s+.*from\s+['"][^'')]
+    "status"

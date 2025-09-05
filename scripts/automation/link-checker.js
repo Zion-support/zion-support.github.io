@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node,"}),"})
 import fs from,"}),"})
   'fs',"}),"})
@@ -13,7 +17,7 @@ const __dirname = path.dirname(__filename),"}),"})
 ,"}),"})
 // // // console.log(,"}),"})
   '🔗 Starting continuous link checker automation...'),"}),"})
-// Get automation interval from environment variable (default: 30 minutes),"}),"})
+// Get automation interval from environment variable ("default": 30 minutes),"}),"})
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes,"}),"})
 async function checkLinks() {,"}),"})
   try {,"}),"})
@@ -23,7 +27,7 @@ async function checkLinks() {,"}),"})
   📦 Building project...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run build', { stdio: 'inherit }),"}),"})
+  'npm run build', { "stdio": 'inherit }),"}),"})
       // // // console.log(,,"}),"})
   ✅ Build completed'),"}),"})
     } catch (error) {,"}),"})
@@ -35,7 +39,7 @@ async function checkLinks() {,"}),"})
   '📦 Building project...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
-  'npm run build', { stdio: 'inherit }),"}),"})
+  'npm run build', { "stdio": 'inherit }),"}),"})
       // // // // // // // console.log(,"}),"})
   '✅ Build completed'),"}),"})
     } catch (error) {,"}),"})
@@ -85,8 +89,8 @@ async function checkLinks() {,"}),"})
         for (const ref of references) {,"}),"})
           if (!isValidReference(ref, distPath)) {,"}),"})
             brokenReferences.push({,"}),"})
-              file: path.relative(process.cwd(), htmlFile),,"}),"})
-              reference: ref,"}),"})
+              "file": path.relative(process.cwd(), htmlFile),,"}),"})
+              "reference": ref,"}),"})
             }),"}),"})
             hasIssues = true,"}),"})
       } catch (error) {,"}),"})
@@ -95,7 +99,7 @@ async function checkLinks() {,"}),"})
     }"}),"})
     if (brokenReferences.length > 0) {,"}),"})
       // // // // // // // console.log(,"}),"})
-  '⚠️  Broken references found:'),"}),"})
+  '⚠️  Broken references "found": '),"}),"})
       brokenReferences.forEach(ref => {,"}),"})
         // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`),"}),"})
       }),"}),"})
@@ -107,7 +111,7 @@ async function checkLinks() {,"}),"})
         // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`),"}),"})
     if (brokenReferences.length > 0) {,"}),"})
       // // // console.log(,"}),"})
-  '⚠️  Broken references found:'),"}),"})
+  '⚠️  Broken references "found": '),"}),"})
       brokenReferences.forEach(ref => {,"}),"})
         // // // console.log(`  - ${ref.file}: ${ref.reference}`),"}),"})
       }),"}),"})
@@ -118,11 +122,11 @@ async function checkLinks() {,"}),"})
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`),"}),"})
   } catch (error) {,"}),"})
     // // // // // // // console.error(,"}),"})
-  '❌ Link check failed: ,"}),"})
+  '❌ Link check "failed":  ,"}),"})
   , error.message),"}),"})
     // Don,"}),"})
   't exit, just log the error and continue,"}),"})
-  summary: 'Link check completed,"}),"})
+  "summary": 'Link check completed,"}),"})
 },"}),"})
 ,"}),"})
     const reportPath = path.join(process.cwd(), ,,"}),"})
@@ -131,7 +135,7 @@ async function checkLinks() {,"}),"})
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),"}),"})
     // // // console.log(`📊 Report saved to ${reportPath}`),"}),"})
   } catch (error) {,"}),"})
-    // // // console.error('❌ Link check failed:  error.message),"}),"})
+    // // // console.error('❌ Link check "failed": error.message),"}),"})
     // Don,,"}),"})
   t exit, just log the error and continue,"}),"})
 function files = [],"}),"})
@@ -157,7 +161,7 @@ function findReferences(content) {,"}),"})
   ']+)["']/)[1],"}),"})
       if (href && !href.startsWith(,"}),"})
   '#') && !href.startsWith(,"}),"})
-  'javascript: ') && !href.startsWith(,"}),"})
+  '"javascript": ') && !href.startsWith(,"}),"})
   'http)) {,"}),"})
         references.push(href),"}),"})
     }),"}),"})
@@ -170,8 +174,8 @@ function findReferences(content) {,"}),"})
       const src = match.match(/src=["']([^","}),"})
   ']+)["']/)[1],"}),"})
       if (src && !src.startsWith(,"}),"})
-  'data: ') && !src.startsWith(,"}),"})
-  'blob:') && !src.startsWith(,"}),"})
+  '"data": ') && !src.startsWith(,"}),"})
+  '"blob": ') && !src.startsWith(,"}),"})
   'http)) {,"}),"})
         references.push(src),"}),"})
     }),"}),"})
@@ -221,39 +225,38 @@ process.on(,"}),"})
 // Start the continuous link checker,"}),"})
 runContinuous().catch(error => {,"}),"})
   // // // // // // // console.error(,"}),"})
-  '❌ Failed to start continuous link checker:', error),"}),"})
+  '❌ Failed to start continuous link "checker": ', error),"}),"})
 ,"}),"})
   // // // console.error(,"}),"})
-  '❌ Failed to start continuous link checker: ', error),"}),"})
+  '❌ Failed to start continuous link "checker": ', error),"}),"})
   process.exit(1),"}),"})
 }),"}),"})
 }}}}}}}}}}}}}}}}}}}}}}"}),"})
-// Get automation interval from environment variable (default: 30 minutes);
+// Get automation interval from environment variable ("default": 30 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
 async function checkLinks() {
   try {',
     // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console.log(
-  📦 Building project...`);
+  📦 Building project...");
     try {
       execSync(
-  `npm run build`, { stdio: `inherit })
+  "npm run build", { "stdio": "inherit })
       // // // console.log(
-  ✅ Build completed`)} catch (error) {  
+  ✅ Build completed")} catch (error) {  
       // // // console.log(
-  `⚠️  Build failed but continuing...`);
-    // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()  }`);
+  "⚠️  Build failed but continuing...");
+    // // // // // // // console.log("🔗 Running link check at ${new Date().toISOString()  }");
     // Build the project first;
     // // // // // // // console.log(
-  `📦 Building project...`);
+  "📦 Building project...");
     try {
       execSync(
-  `npm run build', { stdio: 'inherit })
+  "npm run build', { "stdio": 'inherit })
       // // // // // // // console.log(
   '✅ Build completed')} catch (error) {  
       // // // // // // // console.log(
-
   '⚠️  Build failed but continuing...');
       return;
     // Check if dist folder exists;
@@ -269,6 +272,13 @@ async function checkLinks() {
     if (!fs.existsSync(indexHtmlPath)) {
       // // // // // // // console.log(',
       '⚠️  index.html not found in build output');
-
       return;
       // // // console.log(
+<<<<<<< HEAD
+#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) ,"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; async function checkLinks() {,"}),"}) try {,"}),"}) 📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) ,"}),"}) return,"}),"}) const distPath = path.join(process.cwd(),,"}),"}) 'dist'),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) ,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) return,"}),"}) const indexHtmlPath = path.join(distPath,,"}),"}) 'index.html'),"}),"}) if (!fs.existsSync(indexHtmlPath)) {,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) ,"}),"}) let hasIssues = false,"}),"}) const brokenReferences = [],"}),"}) for (const htmlFile of htmlFiles) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(htmlFile,,"}),"}) 'utf8'),"}),"}) const references = findReferences(content),"}),"}) for (const ref of references) {,"}),"}) if (!isValidReference(ref,distPath)) {,"}),"}) brokenReferences.push({,"}),"}) file: path.relative(process.cwd(),htmlFile),,"}),"}) reference: ref,"}),"}) }),"}),"}) hasIssues = true,"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) }"}),"}) ,"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) } catch (error) {,"}),"}) '❌ Link check failed: ,"}),"}) ,error.message),"}),"}) 't exit,just log the error and continue,"}),"}) summary: 'Link check completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) link-checker-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) } catch (error) {,"}),"}) t exit,just log the error and continue,"}),"}) function files = [],"}),"}) const items = fs.readdirSync(dir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) files.push(...findHtmlFiles(fullPath)),"}),"}) } else if (item.endsWith(,"}),"}) '.html')) {,"}),"}) files.push(fullPath),"}),"}) return files,"}),"}) function findReferences(content) {,"}),"}) const references = [],"}),"}) const hrefMatches = content.match(/href=[","}),"}) ']([^"']+)[","}),"}) ']/g),"}),"}) if (hrefMatches) {,"}),"}) hrefMatches.forEach(match => {,"}),"}) const href = match.match(/href=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (href && !href.startsWith(,"}),"}) '#') && !href.startsWith(,"}),"}) 'javascript: ') && !href.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(href),"}),"}) }),"}),"}) const srcMatches = content.match(/src=[",,"}),"}) ]([^"']+)[","}),"}) ']/g),"}),"}) if (srcMatches) {,"}),"}) srcMatches.forEach(match => {,"}),"}) const src = match.match(/src=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (src && !src.startsWith(,"}),"}) 'data: ') && !src.startsWith(,"}),"}) 'blob:') && !src.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(src),"}),"}) }),"}),"}) return references,"}),"}) function isValidReference(ref,distPath) {,"}),"}) if (ref.startsWith(,"}),"}) '/')) {,"}),"}) ref = ref.substring(1),"}),"}) const fullPath = path.join(distPath,ref),"}),"}) return fs.existsSync(fullPath),"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await checkLinks(),"}),"}) setInterval(async () => {,"}),"}) await checkLinks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous link checker:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous link checker: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 async function checkLinks() { try {',📦 Building project...`); try { execSync( `npm run build`,{ stdio: `inherit }) ✅ Build completed`)} catch (error) { `⚠️ Build failed but continuing...`); `📦 Building project...`); try { execSync( `npm run build',{ stdio: 'inherit }) '✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); return; const distPath = path.join(process.cwd(),';dist'); if (!fs.existsSync(distPath)) { '⚠️ Dist folder not found,skipping link check'); '⚠️ Dist folder not found,skipping link check'); return; const indexHtmlPath = path.join(distPath,';index.html'); if (!fs.existsSync(indexHtmlPath)) { '⚠️ index.html not found in build output'); return;
+=======
+#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) ,"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; async function checkLinks() {,"}),"}) try {,"}),"}) 📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) ,"}),"}) return,"}),"}) const distPath = path.join(process.cwd(),,"}),"}) 'dist'),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) ,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) return,"}),"}) const indexHtmlPath = path.join(distPath,,"}),"}) 'index.html'),"}),"}) if (!fs.existsSync(indexHtmlPath)) {,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) ,"}),"}) let hasIssues = false,"}),"}) const brokenReferences = [],"}),"}) for (const htmlFile of htmlFiles) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(htmlFile,,"}),"}) 'utf8'),"}),"}) const references = findReferences(content),"}),"}) for (const ref of references) {,"}),"}) if (!isValidReference(ref,distPath)) {,"}),"}) brokenReferences.push({,"}),"}) file: path.relative(process.cwd(),htmlFile),,"}),"}) reference: ref,"}),"}) }),"}),"}) hasIssues = true,"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) }"}),"}) ,"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) } catch (error) {,"}),"}) '❌ Link check failed: ,"}),"}) ,error.message),"}),"}) 't exit,just log the error and continue,"}),"}) summary: 'Link check completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) link-checker-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) } catch (error) {,"}),"}) t exit,just log the error and continue,"}),"}) function files = [],"}),"}) const items = fs.readdirSync(dir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) files.push(...findHtmlFiles(fullPath)),"}),"}) } else if (item.endsWith(,"}),"}) '.html')) {,"}),"}) files.push(fullPath),"}),"}) return files,"}),"}) function findReferences(content) {,"}),"}) const references = [],"}),"}) const hrefMatches = content.match(/href=[","}),"}) ']([^"']+)[","}),"}) ']/g),"}),"}) if (hrefMatches) {,"}),"}) hrefMatches.forEach(match => {,"}),"}) const href = match.match(/href=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (href && !href.startsWith(,"}),"}) '#') && !href.startsWith(,"}),"}) 'javascript: ') && !href.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(href),"}),"}) }),"}),"}) const srcMatches = content.match(/src=[",,"}),"}) ]([^"']+)[","}),"}) ']/g),"}),"}) if (srcMatches) {,"}),"}) srcMatches.forEach(match => {,"}),"}) const src = match.match(/src=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (src && !src.startsWith(,"}),"}) 'data: ') && !src.startsWith(,"}),"}) 'blob:') && !src.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(src),"}),"}) }),"}),"}) return references,"}),"}) function isValidReference(ref,distPath) {,"}),"}) if (ref.startsWith(,"}),"}) '/')) {,"}),"}) ref = ref.substring(1),"}),"}) const fullPath = path.join(distPath,ref),"}),"}) return fs.existsSync(fullPath),"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await checkLinks(),"}),"}) setInterval(async () => {,"}),"}) await checkLinks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous link checker:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous link checker: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 async function checkLinks() { try {',📦 Building project...`); try { execSync( `npm run build`,{ stdio: `inherit }) ✅ Build completed`)} catch (error) { `⚠️ Build failed but continuing...`); `📦 Building project...`); try { execSync( `npm run build',{ stdio: 'inherit }) '✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); return; const distPath = path.join(process.cwd(),';dist'); if (!fs.existsSync(distPath)) { '⚠️ Dist folder not found,skipping link check'); '⚠️ Dist folder not found,skipping link check'); return; const indexHtmlPath = path.join(distPath,';index.html'); if (!fs.existsSync(indexHtmlPath)) { '⚠️ index.html not found in build output'); return;
+=======
+#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) ,"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; async function checkLinks() {,"}),"}) try {,"}),"}) 📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) ,"}),"}) return,"}),"}) const distPath = path.join(process.cwd(),,"}),"}) 'dist'),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) ,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) return,"}),"}) const indexHtmlPath = path.join(distPath,,"}),"}) 'index.html'),"}),"}) if (!fs.existsSync(indexHtmlPath)) {,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) ,"}),"}) let hasIssues = false,"}),"}) const brokenReferences = [],"}),"}) for (const htmlFile of htmlFiles) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(htmlFile,,"}),"}) 'utf8'),"}),"}) const references = findReferences(content),"}),"}) for (const ref of references) {,"}),"}) if (!isValidReference(ref,distPath)) {,"}),"}) brokenReferences.push({,"}),"}) file: path.relative(process.cwd(),htmlFile),,"}),"}) reference: ref,"}),"}) }),"}),"}) hasIssues = true,"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) }"}),"}) ,"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) } catch (error) {,"}),"}) '❌ Link check failed: ,"}),"}) ,error.message),"}),"}) 't exit,just log the error and continue,"}),"}) summary: 'Link check completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) link-checker-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) } catch (error) {,"}),"}) t exit,just log the error and continue,"}),"}) function files = [],"}),"}) const items = fs.readdirSync(dir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) files.push(...findHtmlFiles(fullPath)),"}),"}) } else if (item.endsWith(,"}),"}) '.html')) {,"}),"}) files.push(fullPath),"}),"}) return files,"}),"}) function findReferences(content) {,"}),"}) const references = [],"}),"}) const hrefMatches = content.match(/href=[","}),"}) ']([^"']+)[","}),"}) ']/g),"}),"}) if (hrefMatches) {,"}),"}) hrefMatches.forEach(match => {,"}),"}) const href = match.match(/href=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (href && !href.startsWith(,"}),"}) '#') && !href.startsWith(,"}),"}) 'javascript: ') && !href.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(href),"}),"}) }),"}),"}) const srcMatches = content.match(/src=[",,"}),"}) ]([^"']+)[","}),"}) ']/g),"}),"}) if (srcMatches) {,"}),"}) srcMatches.forEach(match => {,"}),"}) const src = match.match(/src=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (src && !src.startsWith(,"}),"}) 'data: ') && !src.startsWith(,"}),"}) 'blob:') && !src.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(src),"}),"}) }),"}),"}) return references,"}),"}) function isValidReference(ref,distPath) {,"}),"}) if (ref.startsWith(,"}),"}) '/')) {,"}),"}) ref = ref.substring(1),"}),"}) const fullPath = path.join(distPath,ref),"}),"}) return fs.existsSync(fullPath),"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await checkLinks(),"}),"}) setInterval(async () => {,"}),"}) await checkLinks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous link checker:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous link checker: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 async function checkLinks() { try {',📦 Building project...`); try { execSync( `npm run build`,{ stdio: `inherit }) ✅ Build completed`)} catch (error) { `⚠️ Build failed but continuing...`); `📦 Building project...`); try { execSync( `npm run build',{ stdio: 'inherit }) '✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); return; const distPath = path.join(process.cwd(),';dist'); if (!fs.existsSync(distPath)) { '⚠️ Dist folder not found,skipping link check'); '⚠️ Dist folder not found,skipping link check'); return; const indexHtmlPath = path.join(distPath,';index.html'); if (!fs.existsSync(indexHtmlPath)) { '⚠️ index.html not found in build output'); return;
+=======
+#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) ,"}),"}) '🔗 Starting continuous link checker automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; async function checkLinks() {,"}),"}) try {,"}),"}) 📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Building project...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) ,"}),"}) return,"}),"}) const distPath = path.join(process.cwd(),,"}),"}) 'dist'),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) ,"}),"}) '⚠️ Dist folder not found,skipping link check'),"}),"}) return,"}),"}) const indexHtmlPath = path.join(distPath,,"}),"}) 'index.html'),"}),"}) if (!fs.existsSync(indexHtmlPath)) {,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '⚠️ index.html not found in build output'),"}),"}) return,"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) '✅ index.html found in build output'),"}),"}) const htmlFiles = findHtmlFiles(distPath),"}),"}) ,"}),"}) let hasIssues = false,"}),"}) const brokenReferences = [],"}),"}) for (const htmlFile of htmlFiles) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(htmlFile,,"}),"}) 'utf8'),"}),"}) const references = findReferences(content),"}),"}) for (const ref of references) {,"}),"}) if (!isValidReference(ref,distPath)) {,"}),"}) brokenReferences.push({,"}),"}) file: path.relative(process.cwd(),htmlFile),,"}),"}) reference: ref,"}),"}) }),"}),"}) hasIssues = true,"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) }"}),"}) ,"}),"}) if (brokenReferences.length > 0) {,"}),"}) '⚠️ Broken references found:'),"}),"}) brokenReferences.forEach(ref => {,"}),"}) }),"}),"}) if (!hasIssues) {,"}),"}) '✅ No broken references found'),"}),"}) } catch (error) {,"}),"}) '❌ Link check failed: ,"}),"}) ,error.message),"}),"}) 't exit,just log the error and continue,"}),"}) summary: 'Link check completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) link-checker-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) } catch (error) {,"}),"}) t exit,just log the error and continue,"}),"}) function files = [],"}),"}) const items = fs.readdirSync(dir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) files.push(...findHtmlFiles(fullPath)),"}),"}) } else if (item.endsWith(,"}),"}) '.html')) {,"}),"}) files.push(fullPath),"}),"}) return files,"}),"}) function findReferences(content) {,"}),"}) const references = [],"}),"}) const hrefMatches = content.match(/href=[","}),"}) ']([^"']+)[","}),"}) ']/g),"}),"}) if (hrefMatches) {,"}),"}) hrefMatches.forEach(match => {,"}),"}) const href = match.match(/href=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (href && !href.startsWith(,"}),"}) '#') && !href.startsWith(,"}),"}) 'javascript: ') && !href.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(href),"}),"}) }),"}),"}) const srcMatches = content.match(/src=[",,"}),"}) ]([^"']+)[","}),"}) ']/g),"}),"}) if (srcMatches) {,"}),"}) srcMatches.forEach(match => {,"}),"}) const src = match.match(/src=["']([^","}),"}) ']+)["']/)[1],"}),"}) if (src && !src.startsWith(,"}),"}) 'data: ') && !src.startsWith(,"}),"}) 'blob:') && !src.startsWith(,"}),"}) 'http)) {,"}),"}) references.push(src),"}),"}) }),"}),"}) return references,"}),"}) function isValidReference(ref,distPath) {,"}),"}) if (ref.startsWith(,"}),"}) '/')) {,"}),"}) ref = ref.substring(1),"}),"}) const fullPath = path.join(distPath,ref),"}),"}) return fs.existsSync(fullPath),"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await checkLinks(),"}),"}) setInterval(async () => {,"}),"}) await checkLinks(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous link checker:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous link checker: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 async function checkLinks() { try {',📦 Building project...`); try { execSync( `npm run build`,{ stdio: `inherit }) ✅ Build completed`)} catch (error) { `⚠️ Build failed but continuing...`); `📦 Building project...`); try { execSync( `npm run build',{ stdio: 'inherit }) '✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); return; const distPath = path.join(process.cwd(),';dist'); if (!fs.existsSync(distPath)) { '⚠️ Dist folder not found,skipping link check'); '⚠️ Dist folder not found,skipping link check'); return; const indexHtmlPath = path.join(distPath,';index.html'); if (!fs.existsSync(indexHtmlPath)) { '⚠️ index.html not found in build output'); return;

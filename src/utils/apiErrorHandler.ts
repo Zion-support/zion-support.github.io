@@ -1,10 +1,7 @@
-// comment
-export const apiErrorHandler = {}
-
-    variant: 'destructive',
-    error?.message || fallbackMessage || 'An unexpected error occurred  toast({
-'
-    variant: 'destructive','
-    title: 'Error',
-    description: messag e};);
-  // Log error for debugging
+export const handleApiError = (error: any) => {
+  console.error('API Error:', error);
+  return {
+    error: error?.message || 'An unexpected error occurred',
+    status: error?.status || 500
+  };
+};

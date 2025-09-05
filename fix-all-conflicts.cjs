@@ -1,81 +1,152 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-const fs = require('fs')
-const path = require('path')
+class ConflictResolver {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
-console.log('🔧 Starting comprehensive merge conflict fix...');
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
 
-function fixMergeConflicts(content) {
-  let fixed = content;
-  let changes = 0;
+  fixMergeConflicts(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
 
-  // Remove merge conflict markers and keep the HEAD version
-  const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;
-  
-  fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
-    changes++;
-    return headContent.trim()});
+      // Remove merge conflict markers
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+      
+      // Fix common syntax issues
+      content = content.replace(/\{_/g, '{');
+      content = content.replace(/_}/g, '}');
+      content = content.replace(/_/g, ' ');
+      content = content.replace(/,\s*$/gm, ';');
+      content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
+      
+      // Fix function parameters
+      content = content.replace(/\(\s*\{_([^}]+)_\}\s*\)/g, '({ $1 })');
+      content = content.replace(/\(\s*_([^)]+)_\s*\)/g, '($1)');
+      
+      // Fix interface definitions
+      content = content.replace(/interface\s+(\w+)\s*\{_([^}]+)_\}/g, 'interface $1 { $2 }');
+      
+      // Fix object destructuring
+      content = content.replace(/\{\s*_([^}]+)_\s*\}/g, '{ $1 }');
+      
+      // Fix array destructuring
+      content = content.replace(/\[\s*_([^\]]+)_\s*\]/g, '[ $1 ]');
+      
+      // Fix function calls
+      content = content.replace(/\(\s*_([^)]+)_\s*\)/g, '($1)');
+      
+      // Fix arrow functions
+      content = content.replace(/=>\s*\{_([^}]+)_\}/g, '=> { $1 }');
+      
+      // Fix return statements
+      content = content.replace(/return\s*\{_([^}]+)_\}/g, 'return { $1 }');
+      
+      // Fix JSX props
+      content = content.replace(/<(\w+)\s+([^>]*)_([^>]*)>/g, '<$1 $2 $3>');
+      
+      // Clean up extra spaces
+      content = content.replace(/\s+/g, ' ');
+      content = content.replace(/\s*{\s*/g, ' { ');
+      content = content.replace(/\s*}\s*/g, ' } ');
+      content = content.replace(/\s*\(\s*/g, ' (');
+      content = content.replace(/\s*\)\s*/g, ') ');
+      content = content.replace(/\s*,\s*/g, ', ');
+      content = content.replace(/\s*;\s*/g, '; ');
+      
+      // Fix multiple spaces
+      content = content.replace(/\s{2,}/g, ' ');
+      
+      // Fix line breaks
+      content = content.replace(/;\s*}/g, ';\n}');
+      content = content.replace(/{\s*/g, '{\n  ');
+      content = content.replace(/}\s*/g, '\n}');
+      content = content.replace(/;\s*/g, ';\n');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed merge conflicts in: ${filePath}`);
+        return true;
+      }
+      return false;
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`Error fixing ${filePath}: ${error.message}`);
+      return false;
+    }
+  }
 
-  // Remove any remaining conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
-  fixed = fixed.replace(/=======\n?/g, '');
-  fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-  
-  if (changes++) {
-    changes++}
-
-  return { content: fixed, changes }}
-
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const result = fixMergeConflicts(conten;t;);
+  findFilesWithConflicts(dir) {
+    const files = [];
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
     
-    if ( {
-      fs.writeFileSync(filePath, result.content, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, result.content, 'utf8')}
-      console.log(`✅ Fixed ${result.changes} conflicts in: ${filePath}`);
-      return result.changes}
-    return 0} catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0}
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules') {
+        files.push(...this.findFilesWithConflicts(fullPath));
+      } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ')) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+    
+    return files;
+  }
+
+  async run() {
+    this.log('Starting conflict resolution...');
+    
+    const filesToFix = this.findFilesWithConflicts('/workspace');
+    this.log(`Found ${filesToFix.length} files with conflicts`);
+    
+    for (const file of filesToFix) {
+      this.fixMergeConflicts(file);
+    }
+    
+    this.log(`Fixed ${this.fixedFiles.length} files`);
+    this.log(`Encountered ${this.errors.length} errors`);
+    
+    if (this.errors.length > 0) {
+      this.log('Errors:');
+      this.errors.forEach(err => this.log(`  ${err.file}: ${err.error}`));
+    }
+    
+    return {
+      fixedFiles: this.fixedFiles,
+      errors: this.errors
+    };
+  }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir;);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item;);
-      const stat = fs.statSync(fullPath;);
-      
-      if (&& !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath)}
-    }
-  }
-  
-  traverse(dir)) {
-    && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath)}
-    }
-  }
-  
-  traverse(dir)}
-  return files}
+// Run the conflict resolver
+if (require.main === module) {
+  const resolver = new ConflictResolver();
+  resolver.run()
+    .then(result => {
+      console.log('Conflict resolution completed');
+      console.log('Fixed files:', result.fixedFiles.length);
+      console.log('Errors:', result.errors.length);
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Conflict resolution failed:', error);
+      process.exit(1);
+    });
+}
 
-// Main execution
-const files = findTsxFiles('.;';);
-let totalChanges = ;0;
-
-console.log(`📁 Found ${files.length} files to process...`);
-
-for (const file of files) {
-  totalChanges += processFile(file)}
-
-console.log(`\n🎉 Merge conflict fixing completed!`);
-console.log(`📊 Total conflicts fixed: ${totalChanges}`);
+module.exports = ConflictResolver;

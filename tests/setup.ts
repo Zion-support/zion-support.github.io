@@ -1,1 +1,25 @@
-import '@testing-library/jest-dom'; jest.mock('next/router',() => ({ useRouter() { return { route: '/',pathname: '/',query: {},asPath: '/',push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn(),},} },})) Object.defineProperty(window,'matchMedia',{ writable: 'true',value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: 'query',onchange: 'null',addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),}) global.IntersectionObserver = class IntersectionObserver { disconnect() {} observe() {} unobserve() {} } as any global.ResizeObserver = class ResizeObserver { disconnect() {} observe() {} unobserve() {} } as any
+ // Mock window.scrollTo global.window.scrollTo = vi.fn (), // vi should be globally available // Ensure React Testing Library cleans up and mocks are restored between tests // ----------------------------------------------------------------------------- // Jest-compatibility shim ------------------------------------------------------ // ----------------------------------------------------------------------------- // A lot of legacy test files still call `jest.fn () `, `jest.mock () ` etc. Rather // than refactor them all at once we map those calls to Vitest's equivalent // (`vi`) . The shim only runs in the test environment and has no effect on // production bundles. // deliberately attaching to global for test environment setup // We expose it so imports compile even if we don't use it. SnapshotSerializer: () => {
+  
+}
+<<<<<<< HEAD
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+=======
+}
+=======
+}
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

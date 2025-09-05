@@ -1,54 +1,34 @@
 import React, { createContext, useContext } from 'react';
 
-interface User {
-
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string}
-
-interface AuthTokens {
-
-  accessToken: string | null;
-  refreshToken: string | null}
-
 interface AuthContextType {
-
-  user: Use r | null;
+  user: any;
+  setUser: (user: any) => void;
   isLoading: boolean;
+  setIsLoading: (loading: boolean) => void;
   onboardingStep: number;
-  tokens: AuthToken s;
-login: (email: string, password: string)  => Promise<any>;
-  register: (name: string, email: string, password: string)  => Promise<any>;
-  signup: (email: string, password: string, userData)  => Promise<any>;
-  logout: ()  => Promise<any>;
-  resetPassword: (email: string)  => Promise<any>;
-  updateProfile: (updates: Partia l<User>)  => Promise<any>;
-  loginWithGoogle: ()  => Promise<any>;
-  loginWithFacebook: ()  => Promise<any>;
-  loginWithTwitter: ()  => Promise<any>;
-  loginWithWeb3: ()  => Promise<any>}
+  setOnboardingStep: (step: number) => void;
+  tokens: any;
+  setTokens: (tokens: any) => void;
+  login: (email: string, password: string) => Promise<any>;
+  register: (name: string, email: string, password: string) => Promise<any>;
+  signup: (email: string, password: string, userData: any) => Promise<any>;
+  logout: () => void;
+  resetPassword: (email: string) => Promise<any>;
+  updateProfile: (data: any) => Promise<any>;
+  loginWithGoogle: () => Promise<any>;
+  loginWithFacebook: () => Promise<any>;
+  loginWithTwitter: () => Promise<any>;
+  loginWithWeb3: () => Promise<any>;
+}
 
-const AuthContext = createContext<AuthContextType | null>(null);
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const useAuth = (props) => {;
+export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (context = == null) {;';';
+  if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
-
+  }
   return context;
 };
 
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };}}}}
-</AuthContextType>
-</any>
-</any>
-</User>
-</any>
-</any>
-</any>;';';

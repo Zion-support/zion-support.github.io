@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "🚀 Starting Complete Automation Suite for Zion Tech Group"
-echo "=================================================="
+echo "="
 
 # Create logs directory
 mkdir -p automation-reports
@@ -45,7 +45,7 @@ run_optional() {
 
 echo ""
 echo "🔧 Phase 1: System Health & Dependencies"
-echo "========================================"
+echo "====="
 
 # Install dependencies
 run_with_log "Dependency Installation" "npm install"
@@ -55,10 +55,10 @@ run_with_log "Health Check" "node scripts/comprehensive-health-check.cjs"
 
 echo ""
 echo "🛠️  Phase 2: Code Quality & Fixes"
-echo "================================="
+echo "====="
 
 # Fix syntax errors
-run_optional "Syntax Error Fixing" "node scripts/fix-syntax-errors.cjs"
+run_optional "Syntax Error Fixing" "node fix-syntax-errors-comprehensive.cjs"
 
 # Type checking
 run_optional "TypeScript Type Check" "npx tsc --noEmit"
@@ -68,20 +68,21 @@ run_optional "ESLint Linting" "npm run lint"
 
 echo ""
 echo "🔒 Phase 3: Security & Performance"
-echo "================================="
+echo "====="
 
 # Security scan
-run_with_log "Security Scanner" "node scripts/security-audit.cjs"
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 
 # Performance monitoring
 run_optional "Performance Monitor" "node scripts/performance-monitor.cjs"
+run_optional "Performance Optimizer" "node automation/performance-optimizer.cjs"
 
 echo ""
 echo "📊 Phase 4: Quality Analysis"
-echo "============================"
+echo ""
 
 # Code quality monitoring
 run_optional "Code Quality Monitor" "node scripts/automation/code-quality-monitor.cjs"
@@ -91,7 +92,7 @@ run_optional "Dependency Update Check" "node scripts/automation/dependency-updat
 
 echo ""
 echo "🏗️  Phase 5: Build & Test"
-echo "========================"
+echo "==="
 
 # Build application
 run_with_log "Application Build" "npm run build"
@@ -101,14 +102,17 @@ run_optional "Test Suite" "npm test || echo 'No tests configured'"
 
 echo ""
 echo "🎯 Phase 6: Automation Orchestration"
-echo "===================================="
+echo "="
 
 # Run the automation orchestrator
 run_optional "Automation Orchestrator" "node scripts/automation-orchestrator.cjs"
 
+# Run monitoring dashboard
+run_optional "Monitoring Dashboard" "node automation/monitoring-dashboard.cjs"
+
 echo ""
 echo "📋 Phase 7: PM2 Process Management"
-echo "================================="
+echo "====="
 
 # Check if PM2 is available
 if command -v pm2 &> /dev/null; then
@@ -130,12 +134,12 @@ fi
 
 echo ""
 echo "📊 Final Summary"
-echo "==============="
+echo "="
 
 # Count log files
 TOTAL_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" | wc -l)
-SUCCESS_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "completed successfully" {} \; | wc -l)
-FAILED_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "failed" {} \; | wc -l)
+SUCCESS_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "completed successfully" {} \; 2>/dev/null | wc -l)
+FAILED_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "failed" {} \; 2>/dev/null | wc -l)
 
 echo "📈 Automation Results:"
 echo "   - Total processes: $TOTAL_LOGS"

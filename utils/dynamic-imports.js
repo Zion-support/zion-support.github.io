@@ -1,14 +1,40 @@
+<<<<<<< HEAD
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== &apos;undefined&apos;) { importFn()} };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== "undefined") { importFn()} };''"
+import { lazy } from 'react';
+=======
+import { lazy } from 'react';
 
-// Dynamic import helper for code splitting
+=======
+import { lazy } from 'react';
+
 export const dynamicImport = (importFn) => {
-  return React.lazy(importFn)};
+  return lazy(importFn);
+};
 
-// Route-based code splitting
 export const createLazyComponent = (componentPath) => {
-  return dynamicImport(() => import(componentPath))};
+  return dynamicImport(() => import(componentPath));
+};
 
-// Preload critical components
 export const preloadComponent = (importFn) => {
   if (typeof window !== 'undefined') {
-    importFn()}
+    importFn();
+  }
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+=======
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+=======
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+=======
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

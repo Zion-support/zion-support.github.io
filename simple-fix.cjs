@@ -1,37 +1,55 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
+const path = require('path');
 
-console.log('🔧 Applying simple fixes...');
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
 
-// Fix SEO.tsx - remove everything after the return statement
-const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
-const seoFixed = seoContent.split('  );')[0] + '  );';
-fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
-console.log('✅ Fixed SEO.tsx');
+    // Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Fix common syntax issues
+    content = content.replace(/\{_/g, '{');
+    content = content.replace(/_}/g, '}');
+    content = content.replace(/_/g, ' ');
+    
+    // Fix HTML entities
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&amp;/g, '&');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`Error fixing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
 
-// Fix TalentCard.jsx - remove quotes from JSX
-const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
-const talentFixed = talentContent.replace(/>"/g, '>').replace(/"</g, '<');
-fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
-console.log('✅ Fixed TalentCard.jsx');
+// Fix specific admin files
+const adminFiles = [
+  '/workspace/pages/admin/kyc.tsx',
+  '/workspace/pages/admin/learn/index.tsx',
+  '/workspace/pages/admin/logs.tsx',
+  '/workspace/pages/admin/notes.tsx',
+  '/workspace/pages/admin/partners.tsx'
+];
 
-// Fix use-toast.ts - add missing closing brace
-const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
-const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
-fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
-console.log('✅ Fixed use-toast.ts');
+let fixedCount = 0;
+for (const file of adminFiles) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+}
 
-// Fix enhancedServices.ts - remove quotes from object properties
-const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
-const servicesFixed = servicesContent.replace(/",/g, ',').replace(/":/g, ':');
-fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-console.log('✅ Fixed enhancedServices.ts');
-
-// Fix useAuth.tsx - fix malformed useEffect
-const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
-const authFixed = authContent.replace('useEffect(: unknown {', 'useEffect(() => {').replace(':src/hooks/useAuth.tsx', '  }, []);');
-fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-console.log('✅ Fixed useAuth.tsx');
-
-console.log('✨ Simple fixes completed!');
+console.log(`Fixed ${fixedCount} admin files`);

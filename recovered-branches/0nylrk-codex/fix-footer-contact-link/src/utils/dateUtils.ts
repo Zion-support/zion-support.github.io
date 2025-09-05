@@ -1,0 +1,1 @@
+ >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Formats a date string into a readable format * @param dateString ISO date string to format * @returns Formatted date string */ 
