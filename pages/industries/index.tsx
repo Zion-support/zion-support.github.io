@@ -74,7 +74,13 @@ const benefits = [
 
 export default function IndustriesPage() {
   return (
-    <Layout>
+    <>
+      <Head>
+        <title>Industries - Zion Tech Group</title>
+        <meta name="description" content="Industry-specific solutions for healthcare, finance, retail, education, and more" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -229,6 +235,6 @@ export default function IndustriesPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 }
