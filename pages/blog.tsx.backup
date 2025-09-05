@@ -76,7 +76,7 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
 
 export default function BlogPage() {
   return (
-    <MainLayout 
+<MainLayout 
       title="Blog - Zion Tech Group"
       description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
       keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"

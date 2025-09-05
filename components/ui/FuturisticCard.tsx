@@ -11,4 +11,4 @@ export default function FuturisticCard({ children, className = "bg-gradient-to-b
       {children}
     </div>
   );
-}ursor/add-new-services-and-deploy-updates-1b90
+}
