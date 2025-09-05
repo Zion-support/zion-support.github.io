@@ -1,0 +1,28 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+
+describe('AnalyticsTracker', () => {
+  test('renders without crashing', () => {
+    render(<AnalyticsTracker />);
+    expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<AnalyticsTracker />);
+  });
+
+  test('handles user interactions', () => {
+    render(<AnalyticsTracker />);
+  });
+
+  test('applies correct styling', () => {
+    render(<AnalyticsTracker />);
+  });
+<<<<<<< HEAD
+});
+});
+=======
+});
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

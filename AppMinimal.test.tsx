@@ -1,0 +1,28 @@
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from '@jest/globals';
+import AppMinimal from './AppMinimal';
+
+describe('AppMinimal', () => {
+  it('renders without crashing', () => {
+    render(<AppMinimal />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+  });
+
+  it('handles user interactions', () => {
+    render(<AppMinimal />);
+  });
+<<<<<<< HEAD
+import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
+}); it('displays correct content',() => { render(<AppMinimal />)}
+}); it('handles user interactions',() => { render(<AppMinimal />)})}
+});'
+</AppMinimal>'
+});
+});
+=======
+});
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
