@@ -385,6 +385,334 @@ const itServices = [
     marketPrice: '$150,000 - $1,200,000/project',
     link: 'https://ziontechgroup.com/manufacturing-it-solutions',
     contact: '+1 302 464 0950'
+  },
+
+  // Additional Cloud & Infrastructure Services
+  {
+    title: 'Multi-Cloud Migration Services',
+    description: 'Comprehensive migration services for moving workloads across AWS, Azure, and Google Cloud with minimal downtime.',
+    icon: Cloud,
+    features: ['Workload Assessment', 'Migration Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation', 'Go-live Support'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Cloud Migration',
+    popular: true,
+    benefits: ['Seamless Migration', 'Minimal Downtime', 'Cost Optimization', 'Enhanced Performance', 'Future-Proof Architecture'],
+    marketPrice: '$80,000 - $800,000/project',
+    link: 'https://ziontechgroup.com/multi-cloud-migration-services',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Advanced cloud cost management with automated rightsizing, reserved instance planning, and budget optimization.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Rightsizing Recommendations', 'Reserved Instance Planning', 'Budget Optimization', 'Automated Scaling', 'Cost Monitoring'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'Cloud FinOps',
+    popular: true,
+    benefits: ['30% Cost Reduction', 'Automated Optimization', 'Budget Control', 'Resource Efficiency', 'ROI Tracking'],
+    marketPrice: '$8,000 - $80,000/project',
+    link: 'https://ziontechgroup.com/cloud-cost-optimization',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Serverless Architecture Implementation',
+    description: 'Serverless application development and deployment with AWS Lambda, Azure Functions, and Google Cloud Functions.',
+    icon: Zap,
+    features: ['Serverless Design', 'Function Development', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization', 'Monitoring & Logging'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Serverless',
+    popular: true,
+    benefits: ['Cost Efficiency', 'Auto-scaling', 'Reduced Management', 'High Availability', 'Pay-per-use Model'],
+    marketPrice: '$40,000 - $250,000/project',
+    link: 'https://ziontechgroup.com/serverless-architecture-implementation',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional Cybersecurity Services
+  {
+    title: 'Penetration Testing Services',
+    description: 'Comprehensive penetration testing and vulnerability assessment with detailed reporting and remediation guidance.',
+    icon: Shield,
+    features: ['Network Penetration Testing', 'Web Application Testing', 'Mobile App Testing', 'Social Engineering', 'Physical Security Testing', 'Compliance Testing'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Penetration Testing',
+    popular: true,
+    benefits: ['Security Validation', 'Vulnerability Identification', 'Compliance Assurance', 'Risk Mitigation', 'Detailed Reporting'],
+    marketPrice: '$15,000 - $150,000/project',
+    link: 'https://ziontechgroup.com/penetration-testing-services',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Security Information and Event Management (SIEM)',
+    description: 'Comprehensive SIEM implementation with log aggregation, threat detection, and incident response automation.',
+    icon: Monitor,
+    features: ['Log Aggregation', 'Threat Detection', 'Incident Response', 'Compliance Reporting', 'Real-time Monitoring', 'Automated Response'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'SIEM',
+    popular: true,
+    benefits: ['Centralized Monitoring', 'Threat Detection', 'Automated Response', 'Compliance Support', 'Incident Management'],
+    marketPrice: '$120,000 - $600,000/project',
+    link: 'https://ziontechgroup.com/siem-implementation',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Identity and Access Management (IAM)',
+    description: 'Comprehensive IAM solution with single sign-on, multi-factor authentication, and privileged access management.',
+    icon: Lock,
+    features: ['Single Sign-On', 'Multi-Factor Authentication', 'Privileged Access Management', 'Identity Governance', 'Access Reviews', 'Compliance Management'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'IAM',
+    popular: true,
+    benefits: ['Enhanced Security', 'Simplified Access', 'Compliance', 'Cost Reduction', 'User Experience'],
+    marketPrice: '$80,000 - $500,000/project',
+    link: 'https://ziontechgroup.com/iam-implementation',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional Network & Connectivity Services
+  {
+    title: 'Software-Defined Networking (SDN)',
+    description: 'SDN implementation for centralized network management, automation, and programmability with enhanced security.',
+    icon: Network,
+    features: ['SDN Controller Setup', 'Network Virtualization', 'Automated Provisioning', 'Traffic Engineering', 'Security Integration', 'Monitoring & Analytics'],
+    pricing: '$100,000 - $600,000/project',
+    category: 'SDN',
+    popular: true,
+    benefits: ['Centralized Management', 'Network Automation', 'Enhanced Security', 'Cost Reduction', 'Scalable Architecture'],
+    marketPrice: '$150,000 - $1,000,000/project',
+    link: 'https://ziontechgroup.com/sdn-implementation',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Network Performance Monitoring',
+    description: 'Advanced network monitoring and analytics with real-time performance insights and automated troubleshooting.',
+    icon: BarChart3,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Automated Troubleshooting', 'Capacity Planning', 'Alert Management', 'Historical Analysis'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Network Monitoring',
+    popular: true,
+    benefits: ['Proactive Monitoring', 'Performance Optimization', 'Reduced Downtime', 'Cost Efficiency', 'Automated Management'],
+    marketPrice: '$40,000 - $250,000/project',
+    link: 'https://ziontechgroup.com/network-performance-monitoring',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Wireless Network Solutions',
+    description: 'Enterprise wireless network design and implementation with Wi-Fi 6/6E, security, and performance optimization.',
+    icon: Wifi,
+    features: ['Wi-Fi 6/6E Implementation', 'Wireless Security', 'Performance Optimization', 'Coverage Planning', 'Guest Network Management', 'Analytics & Monitoring'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Wireless Networks',
+    popular: true,
+    benefits: ['High Performance', 'Enhanced Security', 'Better Coverage', 'Cost Efficiency', 'Future-Proof Technology'],
+    marketPrice: '$50,000 - $300,000/project',
+    link: 'https://ziontechgroup.com/wireless-network-solutions',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional Database & Data Management Services
+  {
+    title: 'Database Migration Services',
+    description: 'Comprehensive database migration services with minimal downtime and data integrity assurance across platforms.',
+    icon: Database,
+    features: ['Migration Planning', 'Data Migration', 'Schema Conversion', 'Performance Optimization', 'Testing & Validation', 'Go-live Support'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Database Migration',
+    popular: true,
+    benefits: ['Seamless Migration', 'Data Integrity', 'Minimal Downtime', 'Performance Optimization', 'Risk Mitigation'],
+    marketPrice: '$35,000 - $300,000/project',
+    link: 'https://ziontechgroup.com/database-migration-services',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Data Governance & Compliance',
+    description: 'Comprehensive data governance framework with compliance management, data quality, and privacy protection.',
+    icon: Shield,
+    features: ['Data Governance Framework', 'Compliance Management', 'Data Quality Management', 'Privacy Protection', 'Data Classification', 'Audit Trails'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Data Governance',
+    popular: true,
+    benefits: ['Compliance Assurance', 'Data Quality', 'Risk Mitigation', 'Cost Efficiency', 'Audit Readiness'],
+    marketPrice: '$120,000 - $600,000/project',
+    link: 'https://ziontechgroup.com/data-governance-compliance',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Real-time Data Processing',
+    description: 'High-performance real-time data processing platform with stream processing and event-driven architecture.',
+    icon: Zap,
+    features: ['Stream Processing', 'Event-driven Architecture', 'Real-time Analytics', 'Data Ingestion', 'Scalable Processing', 'Monitoring & Alerting'],
+    pricing: '$100,000 - $600,000/project',
+    category: 'Real-time Data',
+    popular: true,
+    benefits: ['Real-time Processing', 'Scalable Architecture', 'Event-driven Design', 'Cost Efficiency', 'High Performance'],
+    marketPrice: '$150,000 - $1,000,000/project',
+    link: 'https://ziontechgroup.com/real-time-data-processing',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional AI & Machine Learning Infrastructure
+  {
+    title: 'AI Model Deployment Platform',
+    description: 'Production-ready AI model deployment with MLOps, monitoring, and automated scaling for enterprise applications.',
+    icon: Brain,
+    features: ['Model Deployment', 'MLOps Pipeline', 'Model Monitoring', 'Auto-scaling', 'A/B Testing', 'Performance Optimization'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'AI Deployment',
+    popular: true,
+    benefits: ['Production-ready AI', 'Automated Operations', 'Scalable Deployment', 'Model Monitoring', 'Cost Efficiency'],
+    marketPrice: '$100,000 - $500,000/project',
+    link: 'https://ziontechgroup.com/ai-model-deployment-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Data Science Platform',
+    description: 'Comprehensive data science platform with Jupyter notebooks, model development, and collaborative analytics.',
+    icon: BarChart3,
+    features: ['Jupyter Environment', 'Model Development', 'Collaborative Analytics', 'Data Visualization', 'Version Control', 'Resource Management'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Data Science',
+    popular: true,
+    benefits: ['Collaborative Environment', 'Model Development', 'Data Visualization', 'Version Control', 'Resource Efficiency'],
+    marketPrice: '$65,000 - $300,000/project',
+    link: 'https://ziontechgroup.com/data-science-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Training Infrastructure',
+    description: 'High-performance AI training infrastructure with GPU clusters, distributed training, and model optimization.',
+    icon: Cpu,
+    features: ['GPU Cluster Setup', 'Distributed Training', 'Model Optimization', 'Data Pipeline', 'Resource Management', 'Performance Monitoring'],
+    pricing: '$80,000 - $400,000/project',
+    category: 'AI Training',
+    popular: true,
+    benefits: ['High Performance', 'Distributed Training', 'Model Optimization', 'Cost Efficiency', 'Scalable Infrastructure'],
+    marketPrice: '$130,000 - $600,000/project',
+    link: 'https://ziontechgroup.com/ai-training-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional DevOps & Automation Services
+  {
+    title: 'Infrastructure as Code (IaC)',
+    description: 'Infrastructure automation using Terraform, Ansible, and CloudFormation for consistent and repeatable deployments.',
+    icon: Code,
+    features: ['Terraform Implementation', 'Ansible Automation', 'CloudFormation Templates', 'Version Control', 'Testing & Validation', 'Documentation'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Infrastructure as Code',
+    popular: true,
+    benefits: ['Consistent Deployments', 'Version Control', 'Automation', 'Cost Reduction', 'Scalable Operations'],
+    marketPrice: '$50,000 - $250,000/project',
+    link: 'https://ziontechgroup.com/infrastructure-as-code',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Continuous Integration/Continuous Deployment (CI/CD)',
+    description: 'Complete CI/CD pipeline implementation with automated testing, deployment, and monitoring for faster releases.',
+    icon: Settings,
+    features: ['CI/CD Pipeline Setup', 'Automated Testing', 'Deployment Automation', 'Quality Gates', 'Monitoring & Alerting', 'Rollback Capabilities'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'CI/CD',
+    popular: true,
+    benefits: ['Faster Releases', 'Automated Testing', 'Quality Assurance', 'Reduced Risk', 'Cost Efficiency'],
+    marketPrice: '$40,000 - $200,000/project',
+    link: 'https://ziontechgroup.com/cicd-implementation',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture implementation with service mesh, API gateway, and container orchestration.',
+    icon: Package,
+    features: ['Microservices Design', 'Service Mesh Implementation', 'API Gateway', 'Container Orchestration', 'Service Discovery', 'Monitoring & Logging'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Microservices',
+    popular: true,
+    benefits: ['Scalable Architecture', 'Service Independence', 'Technology Diversity', 'Faster Development', 'Easier Maintenance'],
+    marketPrice: '$80,000 - $500,000/project',
+    link: 'https://ziontechgroup.com/microservices-architecture',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional System Administration & Support
+  {
+    title: 'IT Infrastructure Assessment',
+    description: 'Comprehensive IT infrastructure assessment with performance analysis, security evaluation, and optimization recommendations.',
+    icon: Search,
+    features: ['Infrastructure Analysis', 'Performance Evaluation', 'Security Assessment', 'Capacity Planning', 'Cost Analysis', 'Optimization Recommendations'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'IT Assessment',
+    popular: true,
+    benefits: ['Infrastructure Insights', 'Performance Optimization', 'Security Enhancement', 'Cost Reduction', 'Strategic Planning'],
+    marketPrice: '$15,000 - $80,000/project',
+    link: 'https://ziontechgroup.com/it-infrastructure-assessment',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and implementation with backup strategies and business continuity.',
+    icon: Shield,
+    features: ['Disaster Recovery Planning', 'Backup Strategy', 'Business Continuity', 'Recovery Testing', 'Documentation', 'Training & Support'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Disaster Recovery',
+    popular: true,
+    benefits: ['Business Continuity', 'Risk Mitigation', 'Data Protection', 'Compliance', 'Peace of Mind'],
+    marketPrice: '$40,000 - $250,000/project',
+    link: 'https://ziontechgroup.com/disaster-recovery-planning',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Comprehensive IT asset management with inventory tracking, lifecycle management, and cost optimization.',
+    icon: Package,
+    features: ['Asset Inventory', 'Lifecycle Management', 'Cost Tracking', 'License Management', 'Depreciation Analysis', 'Procurement Support'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Asset Management',
+    popular: true,
+    benefits: ['Asset Visibility', 'Cost Optimization', 'License Compliance', 'Lifecycle Management', 'Procurement Efficiency'],
+    marketPrice: '$25,000 - $120,000/project',
+    link: 'https://ziontechgroup.com/it-asset-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional Emerging Technology Services
+  {
+    title: 'Augmented Reality (AR) Infrastructure',
+    description: 'AR infrastructure setup and development platform for enterprise applications with cloud rendering and analytics.',
+    icon: Eye,
+    features: ['AR Platform Setup', 'Cloud Rendering', '3D Content Management', 'Analytics & Tracking', 'Device Management', 'Integration Services'],
+    pricing: '$100,000 - $600,000/project',
+    category: 'AR Infrastructure',
+    popular: true,
+    benefits: ['Immersive Experiences', 'Cloud Rendering', 'Scalable Platform', 'Analytics', 'Cost Efficiency'],
+    marketPrice: '$150,000 - $1,000,000/project',
+    link: 'https://ziontechgroup.com/ar-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Digital twin platform development for real-time monitoring, simulation, and optimization of physical assets.',
+    icon: Monitor,
+    features: ['Digital Twin Creation', 'Real-time Monitoring', 'Simulation Capabilities', 'Predictive Analytics', 'IoT Integration', 'Visualization'],
+    pricing: '$150,000 - $800,000/project',
+    category: 'Digital Twin',
+    popular: true,
+    benefits: ['Real-time Insights', 'Predictive Analytics', 'Simulation Capabilities', 'Cost Optimization', 'Enhanced Decision Making'],
+    marketPrice: '$250,000 - $1,200,000/project',
+    link: 'https://ziontechgroup.com/digital-twin-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Robotic Process Automation (RPA)',
+    description: 'RPA implementation for automating repetitive business processes with intelligent automation and monitoring.',
+    icon: Bot,
+    features: ['Process Automation', 'Bot Development', 'Workflow Design', 'Integration Services', 'Monitoring & Analytics', 'Maintenance & Support'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'RPA',
+    popular: true,
+    benefits: ['Process Automation', 'Cost Reduction', 'Improved Accuracy', 'Scalable Operations', 'ROI Tracking'],
+    marketPrice: '$65,000 - $300,000/project',
+    link: 'https://ziontechgroup.com/rpa-implementation',
+    contact: '+1 302 464 0950'
   }
 ];
 

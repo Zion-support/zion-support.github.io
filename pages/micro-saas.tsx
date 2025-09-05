@@ -389,6 +389,347 @@ const microSaaSProducts = [
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/virtual-training-platform',
     contact: '+1 302 464 0950'
+  },
+
+  // Additional AI & Machine Learning Solutions
+  {
+    title: 'AI Voice Assistant Platform',
+    description: 'Custom voice assistant development platform with natural language processing and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Commands', 'Integration APIs', 'Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'AI Voice',
+    popular: true,
+    benefits: ['Hands-free Operations', 'Better Accessibility', 'Custom Voice Commands', 'Multi-language Support', 'Easy Integration'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-voice-assistant-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Image Recognition API',
+    description: 'Advanced image recognition and analysis API with object detection, facial recognition, and content moderation.',
+    icon: Eye,
+    features: ['Object Detection', 'Facial Recognition', 'Content Moderation', 'OCR Processing', 'Image Classification', 'API Integration'],
+    pricing: '$29 - $149/month',
+    category: 'AI Vision',
+    popular: true,
+    benefits: ['Automated Image Processing', 'Content Safety', 'OCR Capabilities', 'Easy API Integration', 'High Accuracy'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/ai-image-recognition-api',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Document Intelligence',
+    description: 'Intelligent document processing with OCR, data extraction, and automated classification for various document types.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Processing', 'Batch Processing', 'API Integration'],
+    pricing: '$49 - $249/month',
+    category: 'AI Documents',
+    popular: true,
+    benefits: ['Automated Processing', 'Data Extraction', 'Document Classification', 'Batch Operations', 'API Integration'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-document-intelligence',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered predictive maintenance platform for equipment monitoring, failure prediction, and maintenance scheduling.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'IoT Integration', 'Alert System', 'Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'AI Maintenance',
+    popular: true,
+    benefits: ['Reduced Downtime', 'Cost Savings', 'Predictive Alerts', 'IoT Integration', 'Maintenance Optimization'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance',
+    contact: '+1 302 464 0950'
+  },
+
+  // Cloud & Infrastructure Solutions
+  {
+    title: 'Multi-Cloud Management',
+    description: 'Unified multi-cloud management platform with cost optimization, security monitoring, and resource orchestration.',
+    icon: Cloud,
+    features: ['Multi-cloud Support', 'Cost Optimization', 'Security Monitoring', 'Resource Orchestration', 'Compliance Management', 'Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Cloud Management',
+    popular: true,
+    benefits: ['Unified Management', 'Cost Optimization', 'Security Enhancement', 'Compliance', 'Resource Efficiency'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/multi-cloud-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Container Orchestration Platform',
+    description: 'Kubernetes-based container orchestration with automated scaling, monitoring, and deployment management.',
+    icon: Server,
+    features: ['Kubernetes Management', 'Auto Scaling', 'Container Monitoring', 'Deployment Automation', 'Service Mesh', 'Security'],
+    pricing: '$59 - $299/month',
+    category: 'DevOps',
+    popular: true,
+    benefits: ['Automated Scaling', 'Container Management', 'Deployment Automation', 'Service Mesh', 'Security'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/container-orchestration-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Database Performance Optimizer',
+    description: 'AI-powered database optimization with query analysis, index recommendations, and performance monitoring.',
+    icon: Database,
+    features: ['Query Analysis', 'Index Optimization', 'Performance Monitoring', 'Automated Tuning', 'Capacity Planning', 'Alerting'],
+    pricing: '$49 - $249/month',
+    category: 'Database',
+    popular: true,
+    benefits: ['Performance Optimization', 'Automated Tuning', 'Query Optimization', 'Capacity Planning', 'Cost Reduction'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/database-performance-optimizer',
+    contact: '+1 302 464 0950'
+  },
+
+  // E-commerce & Business Solutions
+  {
+    title: 'AI Product Recommendation Engine',
+    description: 'Advanced product recommendation system with machine learning algorithms and real-time personalization.',
+    icon: Target,
+    features: ['ML Algorithms', 'Real-time Personalization', 'A/B Testing', 'Analytics Dashboard', 'API Integration', 'Customization'],
+    pricing: '$39 - $199/month',
+    category: 'E-commerce AI',
+    popular: true,
+    benefits: ['Higher Conversion', 'Personalized Experience', 'A/B Testing', 'Analytics', 'Easy Integration'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-product-recommendation-engine',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Dynamic Pricing Platform',
+    description: 'AI-powered dynamic pricing platform with competitor analysis, demand forecasting, and automated price optimization.',
+    icon: DollarSign,
+    features: ['Competitor Analysis', 'Demand Forecasting', 'Price Optimization', 'A/B Testing', 'Analytics', 'API Integration'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce',
+    popular: true,
+    benefits: ['Revenue Optimization', 'Competitive Pricing', 'Demand-based Pricing', 'A/B Testing', 'Analytics'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/dynamic-pricing-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Customer Journey Analytics',
+    description: 'Comprehensive customer journey tracking with behavioral analysis, conversion optimization, and personalized experiences.',
+    icon: TrendingUp,
+    features: ['Journey Tracking', 'Behavioral Analysis', 'Conversion Optimization', 'Personalization', 'A/B Testing', 'Analytics'],
+    pricing: '$49 - $249/month',
+    category: 'E-commerce Analytics',
+    popular: true,
+    benefits: ['Journey Insights', 'Conversion Optimization', 'Personalization', 'Behavioral Analysis', 'A/B Testing'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/customer-journey-analytics',
+    contact: '+1 302 464 0950'
+  },
+
+  // Security & Compliance Solutions
+  {
+    title: 'AI Security Monitoring',
+    description: 'Advanced AI-powered security monitoring with threat detection, anomaly analysis, and automated response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Real-time Monitoring', 'Incident Management', 'Compliance'],
+    pricing: '$99 - $499/month',
+    category: 'Security AI',
+    popular: true,
+    benefits: ['Threat Prevention', 'Automated Response', 'Real-time Monitoring', 'Compliance', 'Incident Management'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-security-monitoring',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Data Privacy Management',
+    description: 'Comprehensive data privacy platform with GDPR compliance, consent management, and data protection automation.',
+    icon: Lock,
+    features: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Privacy Impact Assessment', 'Audit Trails', 'Automation'],
+    pricing: '$79 - $399/month',
+    category: 'Privacy',
+    popular: true,
+    benefits: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Audit Trails', 'Automation'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/data-privacy-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Vulnerability Assessment Platform',
+    description: 'Automated vulnerability scanning and assessment with AI-powered risk analysis and remediation recommendations.',
+    icon: Shield,
+    features: ['Vulnerability Scanning', 'Risk Analysis', 'Remediation Recommendations', 'Compliance Checking', 'Reporting', 'Automation'],
+    pricing: '$59 - $299/month',
+    category: 'Security',
+    popular: true,
+    benefits: ['Vulnerability Detection', 'Risk Assessment', 'Remediation Guidance', 'Compliance', 'Automation'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/vulnerability-assessment-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Industry-Specific Solutions
+  {
+    title: 'Real Estate Analytics Platform',
+    description: 'AI-powered real estate analytics with market analysis, property valuation, and investment insights.',
+    icon: Building,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Analysis', 'Predictive Modeling', 'Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Real Estate',
+    popular: true,
+    benefits: ['Market Insights', 'Property Valuation', 'Investment Analysis', 'Trend Analysis', 'Predictive Modeling'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/real-estate-analytics-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Manufacturing Quality Control',
+    description: 'AI-powered quality control system with defect detection, process optimization, and predictive quality analytics.',
+    icon: CheckCircle,
+    features: ['Defect Detection', 'Process Optimization', 'Quality Analytics', 'Predictive Modeling', 'Real-time Monitoring', 'Reporting'],
+    pricing: '$149 - $599/month',
+    category: 'Manufacturing',
+    popular: true,
+    benefits: ['Quality Improvement', 'Defect Reduction', 'Process Optimization', 'Predictive Analytics', 'Cost Savings'],
+    marketPrice: '$250 - $900/month',
+    link: 'https://ziontechgroup.com/manufacturing-quality-control',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Retail Analytics Suite',
+    description: 'Comprehensive retail analytics with customer behavior analysis, inventory optimization, and sales forecasting.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis', 'Reporting'],
+    pricing: '$79 - $399/month',
+    category: 'Retail',
+    popular: true,
+    benefits: ['Customer Insights', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/retail-analytics-suite',
+    contact: '+1 302 464 0950'
+  },
+
+  // Communication & Collaboration Solutions
+  {
+    title: 'AI Meeting Assistant',
+    description: 'Intelligent meeting assistant with transcription, action item extraction, and meeting insights.',
+    icon: Video,
+    features: ['Meeting Transcription', 'Action Item Extraction', 'Meeting Insights', 'Note Taking', 'Follow-up Automation', 'Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'AI Meetings',
+    popular: true,
+    benefits: ['Meeting Efficiency', 'Action Item Tracking', 'Meeting Insights', 'Automation', 'Productivity'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-meeting-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Smart Calendar Management',
+    description: 'AI-powered calendar optimization with scheduling intelligence, conflict resolution, and productivity insights.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Meeting Optimization', 'Time Blocking', 'Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'Productivity',
+    popular: true,
+    benefits: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Time Optimization', 'Analytics'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/smart-calendar-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Email Management',
+    description: 'Intelligent email management with smart categorization, priority detection, and automated responses.',
+    icon: Mail,
+    features: ['Smart Categorization', 'Priority Detection', 'Automated Responses', 'Email Analytics', 'Spam Filtering', 'Scheduling'],
+    pricing: '$19 - $99/month',
+    category: 'AI Email',
+    popular: true,
+    benefits: ['Email Organization', 'Priority Management', 'Automation', 'Analytics', 'Productivity'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-email-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Data & Analytics Solutions
+  {
+    title: 'Real-time Data Streaming',
+    description: 'High-performance real-time data streaming platform with event processing and analytics capabilities.',
+    icon: Zap,
+    features: ['Real-time Streaming', 'Event Processing', 'Data Analytics', 'Scalability', 'Monitoring', 'Integration'],
+    pricing: '$79 - $399/month',
+    category: 'Data Streaming',
+    popular: true,
+    benefits: ['Real-time Processing', 'Event Analytics', 'Scalability', 'Monitoring', 'Integration'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/real-time-data-streaming',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Data Quality Platform',
+    description: 'Automated data quality management with AI-powered validation, cleansing, and monitoring capabilities.',
+    icon: Database,
+    features: ['Data Validation', 'Data Cleansing', 'Quality Monitoring', 'Anomaly Detection', 'Automation', 'Reporting'],
+    pricing: '$59 - $299/month',
+    category: 'Data Quality',
+    popular: true,
+    benefits: ['Data Quality', 'Automated Validation', 'Anomaly Detection', 'Automation', 'Cost Savings'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/ai-data-quality-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Predictive Analytics Engine',
+    description: 'Advanced predictive analytics platform with machine learning models and automated forecasting capabilities.',
+    icon: BarChart3,
+    features: ['ML Models', 'Automated Forecasting', 'Predictive Modeling', 'Data Visualization', 'API Integration', 'Customization'],
+    pricing: '$99 - $499/month',
+    category: 'Predictive Analytics',
+    popular: true,
+    benefits: ['Predictive Insights', 'Automated Forecasting', 'ML Models', 'Data Visualization', 'Customization'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/predictive-analytics-engine',
+    contact: '+1 302 464 0950'
+  },
+
+  // Emerging Technology Solutions
+  {
+    title: 'Edge Computing Platform',
+    description: 'Distributed edge computing platform with low-latency processing and IoT device management capabilities.',
+    icon: Cpu,
+    features: ['Edge Processing', 'Low Latency', 'IoT Management', 'Distributed Computing', 'Real-time Analytics', 'Security'],
+    pricing: '$149 - $599/month',
+    category: 'Edge Computing',
+    popular: true,
+    benefits: ['Low Latency', 'Edge Processing', 'IoT Management', 'Real-time Analytics', 'Distributed Computing'],
+    marketPrice: '$250 - $900/month',
+    link: 'https://ziontechgroup.com/edge-computing-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AR/VR Development Platform',
+    description: 'Comprehensive AR/VR development platform with 3D modeling, immersive experiences, and cross-platform deployment.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Immersive Experiences', 'Cross-platform Deployment', 'AR/VR SDK', 'Analytics', 'Cloud Rendering'],
+    pricing: '$199 - $799/month',
+    category: 'AR/VR',
+    popular: true,
+    benefits: ['Immersive Experiences', '3D Modeling', 'Cross-platform', 'Cloud Rendering', 'Analytics'],
+    marketPrice: '$300 - $1,200/month',
+    link: 'https://ziontechgroup.com/ar-vr-development-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: '5G Network Optimization',
+    description: 'AI-powered 5G network optimization with performance monitoring, capacity planning, and automated optimization.',
+    icon: Network,
+    features: ['5G Optimization', 'Performance Monitoring', 'Capacity Planning', 'Automated Optimization', 'Analytics', 'Predictive Maintenance'],
+    pricing: '$299 - $1,499/month',
+    category: '5G',
+    popular: true,
+    benefits: ['5G Optimization', 'Performance Monitoring', 'Capacity Planning', 'Automated Optimization', 'Predictive Maintenance'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/5g-network-optimization',
+    contact: '+1 302 464 0950'
   }
 ];
 
