@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
@@ -23,7 +24,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <Image src={image} alt={title} width={400} height={192} className="w-full h-48 object-cover" />
         <button
           onClick={onFavorite}
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface ApiState<T> {
   data: T | null;
@@ -18,7 +18,7 @@ export function useApi<T>(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     setError(null);
     
@@ -30,13 +30,13 @@ export function useApi<T>(
     } finally {
       setLoading(false);
     }
-  };
+  }, [apiCall]);
 
   useEffect(() => {
     if (options.immediate !== false) {
       fetchData();
     }
-  }, []);
+  }, [fetchData, options.immediate]);
 
   return {
     data,

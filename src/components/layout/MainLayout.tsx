@@ -1,34 +1,15 @@
-<<<<<<< HEAD
-isOpen = {sidebarOpen}; onClose = {() = > setSidebarOpen(false)}; />; <div className = "flex-1 ml-80">; {children}; </div>; </div>; )}; {!showSidebar && children}; </main>; <Footer />; </div>; </>; )};
-=======
-                isOpen={sidebarOpen};
-                onClose={() => setSidebarOpen(false)};
-<<<<<<< HEAD
-              />;
-              <div className="flex-1 ml-80">;
-                {children};
-              </div>;
-            </div>;
-          )};
-          {!showSidebar && children};
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
+import React from 'react';
+
+interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
   );
-=======
-              />,
-              <div className="flex-1 ml-80">,
-                {children};
-              </div>,
-            </div>,
-          )};
-          {!showSidebar && children};
-        </main>,
-        <Footer />,
-      </div>,
-    </>,
-  ),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+
+export default MainLayout;

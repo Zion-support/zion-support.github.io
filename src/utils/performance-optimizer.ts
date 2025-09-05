@@ -1,39 +1,31 @@
-<<<<<<< HEAD
-// Performance optimization utilities;
-export const optimizeImages = () = > { const images = document.querySelectorAll('img'); images.forEach(img = > { if (!img.loading) { img.loading = 'lazy'} if (!img.decoding) { img.decoding = 'async'} })}; export const preloadCriticalResources = () = > { const criticalResources = [ '/fonts/main.woff2/css/critical.css' ]; criticalResources.forEach(resource = > { const link = document.createElement('link'); link.rel = 'preload'; link.href = resource; link.as = resource.endsWith('.css') ? 'style': 'font'; document.head.appendChild(link)})}; export const optimizeBundleSize = () = > { // Dynamic imports for non-critical components const loadComponent = (componentName) = > { return import(`./components/${componentName}`)}; return { loadComponent }};
-;
-=======
-// Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy';
-    }
-    if (!img.decoding) {
-      img.decoding = 'async';
-    }
-  });
-};
+export interface OptimizationResult {
+  before: number;
+  after: number;
+  improvement: number;
+}
 
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2/css/critical.css'];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
-};
-
-export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
-  const loadComponent = componentName => {
-    return import(`./components/${componentName}`);
+export function optimizeImages(): OptimizationResult {
+  const before = document.querySelectorAll('img').length;
+  
+  // Image optimization logic would go here
+  const after = before; // Placeholder
+  
+  return {
+    before,
+    after,
+    improvement: 0
   };
+}
 
-  return { loadComponent };
-};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+export function optimizeCSS(): OptimizationResult {
+  const before = document.querySelectorAll('style').length;
+  
+  // CSS optimization logic would go here
+  const after = before; // Placeholder
+  
+  return {
+    before,
+    after,
+    improvement: 0
+  };
+}

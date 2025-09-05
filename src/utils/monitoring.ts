@@ -1,55 +1,29 @@
-<<<<<<< HEAD
-// Monitoring and analytics setup;
-export const setupAnalytics = () = > { // Google Analytics if (typeof window ! = = 'undefined' && process.env.NEXT_PUBLIC_GA_ID) { const script = document.createElement('script'); script.async = true; script.src = `https: //www.googletagmanager.com/gtag/js?id = ${process.env.NEXT_PUBLIC_GA_ID}`; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)} gtag('js', new Date()); gtag('config', process.env.NEXT_PUBLIC_GA_ID)}
-}; export const trackPerformance = () = > { if (typeof window ! = = 'undefined' && 'performance' in window) { window.addEventListener('load', () = > { const perfData = window.window.performance.getEntriesByType('navigation')[0]; const loadTime = perfData.loadEventEnd - perfData.loadEventStart; // Send to analytics if (typeof gtag ! = = 'undefined') { gtag('eventpage_load_time', { value: Math.round(loadTime) event_category: 'Performance' })} })}
-}; export const trackErrors = () = > { window.addEventListener('error', (event) = > { if (typeof gtag ! = = 'undefined') { gtag('eventjavascript_error', { event_category: 'Error' event_label: event.message value: 1 })} })};
-;
-=======
-// Monitoring and analytics setup
-export const setupAnalytics = () => {
-  // Google Analytics
-  if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-    document.head.appendChild(script);
+export interface MonitoringMetrics {
+  timestamp: number;
+  performance: {
+    loadTime: number;
+    renderTime: number;
+  };
+  errors: string[];
+  userAgent: string;
+}
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID);
-  }
-};
+export function collectMetrics(): MonitoringMetrics {
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    timestamp: Date.now(),
+    performance: {
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+      renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+    },
+    errors: [],
+    userAgent: typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.userAgent : 'unknown'
+  };
+}
 
-export const trackPerformance = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    window.addEventListener('load', () => {
-      const perfData =
-        window.window.performance.getEntriesByType('navigation')[0];
-      const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-
-      // Send to analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('eventpage_load_time', {
-          value: Math.round(loadTime),
-          event_category: 'Performance',
-        });
-      }
-    });
-  }
-};
-
-export const trackErrors = () => {
-  window.addEventListener('error', event => {
-    if (typeof gtag !== 'undefined') {
-      gtag('eventjavascript_error', {
-        event_category: 'Error',
-        event_label: event.message,
-        value: 1,
-      });
-    }
-  });
-};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+export function reportError(error: Error): void {
+  // Error reporting logic
+  // eslint-disable-next-line no-console
+  console.error('Error reported:', error);
+}

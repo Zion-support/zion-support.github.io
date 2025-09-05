@@ -12,15 +12,15 @@ interface AccessibilityProviderProps {
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (_message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
-      liveRegion.textContent = message;
+      liveRegion.textContent = _message;
     }
   };
 
-  const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
+  const setFocus = (_elementId: string) => {
+    const element = document.getElementById(_elementId);
     if (element) {
       element.focus();
     }

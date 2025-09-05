@@ -29,7 +29,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
+    );
   }
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
@@ -247,6 +247,7 @@ export default function Home() {
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
+            // eslint-disable-next-line no-console
             console.warn('Performance thresholds exceeded:', metrics)
           }}
         />

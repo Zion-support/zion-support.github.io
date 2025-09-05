@@ -1,12 +1,22 @@
-<<<<<<< HEAD
-}; observer.unobserve(image)}}}}));
-=======
-};
-          observer.unobserve(image)};
-      };
-<<<<<<< HEAD
-}}));
-=======
-}})),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+export interface PerformanceData {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+}
+
+export function getPerformanceData(): PerformanceData {
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+    renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+    memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
+  };
+}
+
+export function measurePerformance(callback: () => void): number {
+  const start = performance.now();
+  callback();
+  const end = performance.now();
+  return end - start;
+}

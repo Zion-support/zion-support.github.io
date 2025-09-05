@@ -9,13 +9,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
+    } catch (_error) {
       // Error reading localStorage key
       return initialValue;
     }
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const setValue = (value: T | ((_val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
@@ -23,7 +23,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
-    } catch (error) {
+    } catch (_error) {
       // Error setting localStorage key
     }
   };

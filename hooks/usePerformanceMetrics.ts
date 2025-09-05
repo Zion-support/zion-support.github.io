@@ -12,7 +12,7 @@ export function usePerformanceMetrics() {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceNavigationTiming;
       const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
         return acc + (entry as any).value
       }, 0);

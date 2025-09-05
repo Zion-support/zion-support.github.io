@@ -1,122 +1,48 @@
-<<<<<<< HEAD
-}}};
-; // Initial tracking; trackPageLoad(); trackMemory(); trackNetwork();
-; // Set up periodic tracking; const interval = setInterval(() = > {; trackMemory(); trackNetwork()}, 10000);
-; // Track online/offline status; const handleOnline = () = > setMetrics(prev = > ({ ...prev, isOnline: true })); const handleOffline = () = > setMetrics(prev = > ({ ...prev, isOnline: false }));
-; window.addEventListener('online', handleOnline); window.addEventListener('offline', handleOffline);
-; return () = > {; clearInterval(interval); window.removeEventListener('online', handleOnline); window.removeEventListener('offline', handleOffline)}}, [location.pathname]);
-; // Show performance issues; useEffect(() = > {; const hasPerformanceIssues = ; metrics.pageLoadTime > 3000 || // > 3 seconds; metrics.memoryUsage > 100 || // > 100 MB; !metrics.isOnline;
-; if (hasPerformanceIssues) {; setIsVisible(true); // Auto-hide after 10 seconds; const timer = setTimeout(() = > setIsVisible(false), 10000); return () = > clearTimeout(timer)}}, [metrics]);
-; if (!isVisible) return null;
-; return (; <div className = "fixed bottom-4 right-4 z-50">; <div className = "bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">; <div className = "flex items-center gap-3 mb-3">; <BarChart3 className = "w-5 h-5 text-blue-400" />; <span className = "text-sm font-medium text-white">Performance Monitor</span>; <button; onClick = {() = > setIsVisible(false)};
-;
-=======
-        };
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const measurePerformance = () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          setMetrics({
+            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+            renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            memoryUsage: 0, // Memory API not available in all browsers
+          });
+        }
       };
-<<<<<<< HEAD
+
+      if (document.readyState === 'complete') {
+        measurePerformance();
+      } else {
+        window.addEventListener('load', measurePerformance);
+      }
+
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+      };
+    }
+  }, []);
+
+  if (!metrics) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
 };
-;
-    // Initial tracking;
-    trackPageLoad();
-    trackMemory();
-    trackNetwork();
-;
-    // Set up periodic tracking;
-    const interval = setInterval(() => {;
-      trackMemory();
-      trackNetwork();
-    }, 10000);
-;
-    // Track online/offline status;
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true }));
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false }));
-;
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-;
-    return () => {;
-      clearInterval(interval);
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-};
-  }, [location.pathname]);
-;
-  // Show performance issues;
-  useEffect(() => {;
-    const hasPerformanceIssues =;
-      metrics.pageLoadTime > 3000 || // > 3 seconds;
-      metrics.memoryUsage > 100 || // > 100 MB;
-      !metrics.isOnline;
-;
-    if (hasPerformanceIssues) {;
-      setIsVisible(true);
-      // Auto-hide after 10 seconds;
-      const timer = setTimeout(() => setIsVisible(false), 10000);
-      return () => clearTimeout(timer);
-};
-  }, [metrics]);
-;
-  if (!isVisible) return null;
-;
-  return (;
-    <div className="fixed bottom-4 right-4 z-50">;
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">;
-        <div className="flex items-center gap-3 mb-3">;
-          <BarChart3 className="w-5 h-5 text-blue-400" />;
-          <span className="text-sm font-medium text-white">Performance Monitor</span>;
-          <button;
-=======
-    };
-,
-    // Initial tracking,
-    trackPageLoad(),
-    trackMemory(),
-    trackNetwork(),
-,
-    // Set up periodic tracking,
-    const interval = setInterval(() => {,
-      trackMemory(),
-      trackNetwork(),
-    }, 10000),
-,
-    // Track online/offline status,
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true })),
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false })),
-,
-    window.addEventListener('online', handleOnline),
-    window.addEventListener('offline', handleOffline),
-,
-    return () => {,
-      clearInterval(interval),
-      window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline),
-    };
-  }, [location.pathname]),
-,
-  // Show performance issues,
-  useEffect(() => {,
-    const hasPerformanceIssues =,
-      metrics.pageLoadTime > 3000 || // > 3 seconds,
-      metrics.memoryUsage > 100 || // > 100 MB,
-      !metrics.isOnline,
-,
-    if (hasPerformanceIssues) {,
-      setIsVisible(true),
-      // Auto-hide after 10 seconds,
-      const timer = setTimeout(() => setIsVisible(false), 10000),
-      return () => clearTimeout(timer),
-    };
-  }, [metrics]),
-,
-  if (!isVisible) return null,
-,
-  return (,
-    <div className="fixed bottom-4 right-4 z-50">,
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,
-        <div className="flex items-center gap-3 mb-3">,
-          <BarChart3 className="w-5 h-5 text-blue-400" />,
-          <span className="text-sm font-medium text-white">Performance Monitor</span>,
-          <button,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
-            onClick={() => setIsVisible(false)};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+
+export default PerformanceMonitor;
