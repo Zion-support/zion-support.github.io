@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
 import { 
   FileText, 
   Download, 
@@ -196,10 +197,6 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
-    </>
-<<<<<<< HEAD
     </MainLayout>
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
   );
 }

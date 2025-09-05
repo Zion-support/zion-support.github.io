@@ -2,29 +2,8 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu } from 'lucide-react';
 import Layout from '../components/Layout';
-=======
-import Link from 'next/link';
-import {
-  ArrowRight,
-  Building2,
-  Rocket,
-  Factory,
-  Brain,
-  Cloud,
-  Shield,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
