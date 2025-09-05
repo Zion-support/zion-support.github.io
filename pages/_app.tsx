@@ -1,31 +1,15 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app';';
-import '../styles/globals.css';';
-
-export default function App({ Component, pageProps }: AppProps) {;
-  return <Component {...pageProps} />;,
-=======
-<<<<<<< HEAD
-import type { AppProps } from "next/app";
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-=======
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import '../styles/globals.css';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
-      <main className="flex-grow">
-        <Component {...pageProps} />
-      </main>
-      <EnhancedFooter />
-    </div>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
   );
->>>>>>> main
->>>>>>> main
 }
