@@ -54,12 +54,7 @@ const whitePapers = [
 
 export default function WhitePapersPage() {
   return (
-    <>
-      <Head>
-        <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Download our comprehensive white papers on technology trends and best practices." />
-      </Head>
-
+    <MainLayout title="White Papers - Zion Tech Group">
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">

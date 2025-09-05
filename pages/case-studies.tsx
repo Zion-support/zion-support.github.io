@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -208,13 +208,11 @@ const industries = [
 ];
 
 export default function CaseStudies() {
-  return (
-    <>
-      <Head>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our success stories and see how we've helped clients transform their businesses with innovative technology solutions." />
-      </Head>
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
 
+  return (
+    <Layout title="Case Studies - Zion Tech Group">
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">

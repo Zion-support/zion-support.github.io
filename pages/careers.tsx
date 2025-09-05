@@ -15,7 +15,10 @@ import {
   CheckCircle,
   Star,
   Building,
-  Zap
+  Zap,
+  Globe,
+  Coffee,
+  Award
 } from 'lucide-react';
 
 const positions = [

@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu } from 'lucide-react';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu, Rocket, Clock, DollarSign, Star, Phone } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const stats = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
   Accessibility,
@@ -13,7 +13,9 @@ import {
   Users,
   Shield,
   Zap,
-  Heart
+  Heart,
+  Award,
+  FileText
 } from 'lucide-react';
 
 const accessibilityFeatures = [
@@ -284,7 +286,6 @@ export default function AccessibilityPage() {
                   We follow international accessibility standards to ensure our solutions are inclusive for everyone.
                 </p>
               </motion.div>
-            </div>
           </div>
         </section>
 
