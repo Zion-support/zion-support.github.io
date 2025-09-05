@@ -12,14 +12,8 @@ class MasterAutomationOrchestrator {
       healthCheck: { success: false, duration: 0, errors: [] },
       securityScan: { success: false, duration: 0, errors: [] },
       performanceOptimize: { success: false, duration: 0, errors: [] },
-      buildTest: { success: false, duration: 0, errors: [] },
+      buildTest: { success: false, duration: 0, errors: [] }
     };
-      "dependencyFix": { success: false, "duration": 0, "errors": [] },
-      "typescriptFix": { success: false, "duration": 0, "errors": [] },
-      "healthCheck": { success: false, "duration": 0, "errors": [] },
-      "securityScan": { success: false, "duration": 0, "errors": [] },
-      "performanceOptimize": { success: false, "duration": 0, "errors": [] },
-      "buildTest": { success: false, "duration": 0, "errors": [] }};
   }
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -31,31 +25,23 @@ class MasterAutomationOrchestrator {
       const result = execSync(`node ${scriptPath}`, {
         cwd: this.projectRoot,
         stdio: 'inherit',
-        encoding: 'utf8',
+        encoding: 'utf8'
       });
-        "cwd": this.projectRoot,
-        "stdio": 'inherit',
-        "encoding": 'utf8'});
       const duration = Date.now() - startTime;
       this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
       return {
-        "success": true,
+        success: true,
         duration,
-        errors: [],
+        errors: []
       };
     } catch (error) {
       const duration = Date.now() - startTime;
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
-        "errors": []};
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      this.log(`❌ ${scriptName} "failed": ${error.message}`, 'ERROR');
       return {
-        "success": false,
+        success: false,
         duration,
-        errors: [error.message],
+        errors: [error.message]
       };
-        "errors": [error.message]};
     }
   }
   async runDependencyFix() {

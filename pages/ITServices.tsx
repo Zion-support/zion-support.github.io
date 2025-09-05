@@ -2,51 +2,57 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { 
+  Server, 
+  Shield, 
+  Cloud, 
+  Database, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
 
-const aiServices = [
+const itServices = [
   {
-    title: 'AI-Powered Email Responder',
-    description: 'Automatically respond to customer emails with personalized, context-aware replies.',
-    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-Response Generation'],
-    pricing: '$500 - $2,000/month'
+    title: 'Cloud Infrastructure',
+    description: 'Scalable and secure cloud solutions for modern businesses.',
+    features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization'],
+    pricing: '$1,500 - $5,000/month'
   },
   {
-    title: 'Smart Document Analyzer',
-    description: 'Extract insights and data from documents using advanced AI and machine learning.',
-    features: ['Document Classification', 'Data Extraction', 'Content Analysis'],
-    pricing: '$800 - $3,000/month'
+    title: 'Cybersecurity Solutions',
+    description: 'Comprehensive security measures to protect your digital assets.',
+    features: ['Security Audits', 'Penetration Testing', 'Compliance Management'],
+    pricing: '$2,000 - $8,000/month'
   },
   {
-    title: 'Predictive Analytics Engine',
-    description: 'Forecast business trends and outcomes using machine learning algorithms.',
-    features: ['Time Series Analysis', 'Predictive Modeling', 'Risk Assessment'],
-    pricing: '$1,200 - $5,000/month'
+    title: 'Database Management',
+    description: 'Optimize and maintain your database infrastructure.',
+    features: ['Performance Tuning', 'Backup Solutions', 'Data Migration'],
+    pricing: '$1,000 - $4,000/month'
   }
 ];
 
 const stats = [
-  { number: "80+", label: "AI Solutions Available" },
-  { number: "95%", label: "Accuracy Rate" },
-  { number: "24/7", label: "AI Monitoring" },
-  { number: "48hrs", label: "Average Response Time" }
+  { number: "500+", label: "IT Projects Completed" },
+  { number: "99.9%", label: "Uptime Guarantee" },
+  { number: "24/7", label: "Support Available" }
 ];
 
-export default function AIServices() {
+export default function ITServices() {
   return (
     <>
       <Head>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, natural language processing, and predictive analytics." />
-        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, artificial intelligence, AI consulting" />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and technical support." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database management, technical support" />
       </Head>
 
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">AI Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">IT Services</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Transform your business with cutting-edge artificial intelligence solutions.
+              Comprehensive IT solutions to keep your business running smoothly and securely.
             </p>
           </div>
         </div>
@@ -55,14 +61,14 @@ export default function AIServices() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IT Services</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {itServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="w-6 h-6 text-blue-600" />
+                  <Server className="w-6 h-6 text-blue-600" />
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
