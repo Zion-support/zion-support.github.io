@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 import Head from 'next/head';
 import '../styles/globals.css';
 
@@ -12,4 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </>
   );
+=======
+import '../styles/minimal.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-f5bf
 }
