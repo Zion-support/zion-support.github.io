@@ -1,5 +1,5 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -24,7 +24,7 @@ import {
   RefreshCw,
   DollarSign
 } from 'lucide-react';
-
+import Layout from '../components/Layout';
 
 const migrationSteps = [
   {
@@ -141,12 +141,11 @@ const migrationTypes = [
 
 export default function CloudMigration() {
   return (
-    <>
-      <Head>
-        <title>Cloud Migration Solutions - ZION TECH GROUP</title>
-        <meta name="description" content="Migrate your infrastructure to the cloud with our expert cloud migration services. AWS, Azure, GCP support." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, GCP migration, cloud infrastructure, cloud services" />
-      </Head>
+    <Layout
+      title="Cloud Migration Solutions - Zion Tech Group"
+      description="Migrate your infrastructure to the cloud with our expert cloud migration services. AWS, Azure, GCP support."
+      keywords="cloud migration, AWS migration, Azure migration, GCP migration, cloud infrastructure, cloud services"
+    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -420,6 +419,6 @@ export default function CloudMigration() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

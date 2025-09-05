@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -14,6 +13,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const courses = [
   {
@@ -104,12 +104,11 @@ const features = [
 
 export default function TrainingPage() {
   return (
-    <>
-      <Head>
-        <title>Training & Education - ZION TECH GROUP</title>
-        <meta name="description" content="Enhance your skills with our comprehensive training programs in AI, IT services, and technology solutions." />
-        <meta name="keywords" content="training, education, courses, AI, IT, micro SaaS, technology, certification" />
-      </Head>
+    <Layout
+      title="Training & Education - Zion Tech Group"
+      description="Enhance your skills with our comprehensive training programs in AI, IT services, and technology solutions."
+      keywords="training, education, courses, AI, IT, micro SaaS, technology, certification"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -247,6 +246,6 @@ export default function TrainingPage() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

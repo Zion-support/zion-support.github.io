@@ -1,7 +1,7 @@
-import Head from "next/head";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Shield } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -88,12 +88,11 @@ const getStatusColor = (status: string) => {
 
 export default function StatusPage() {
   return (
-    <>
-      <Head>
-        <title>System Status - ZION TECH GROUP</title>
-        <meta name="description" content="Real-time status of all ZION TECH GROUP services and systems. Check uptime, performance, and incident reports." />
-        <meta name="keywords" content="status, uptime, incidents, system health, ZION TECH GROUP" />
-      </Head>
+    <Layout
+      title="System Status - Zion Tech Group"
+      description="Real-time status of all Zion Tech Group services and systems. Check uptime, performance, and incident reports."
+      keywords="status, uptime, incidents, system health, Zion Tech Group"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -248,6 +247,6 @@ export default function StatusPage() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-module.exports = default { plugins: { tailwindcss: {}, autoprefixer: {}, },};
-=======
-export default {}
-  plugins: {}
+export default {
+  plugins: {
     tailwindcss: {},
     autoprefixer: {},
   },
 };
->>>>>>> main
