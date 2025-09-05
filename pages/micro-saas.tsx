@@ -423,6 +423,232 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI-Powered Video Clip Maker',
+    description: 'Automatically edit long-form videos into social media-ready clips with AI optimization.',
+    icon: Video,
+    features: ['Auto Video Editing', 'Social Media Optimization', 'AI Thumbnail Generation', 'Multi-platform Export'],
+    pricing: '$79 - $399/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'E-Commerce Return Management SaaS',
+    description: 'Automated return process management for e-commerce businesses with AI-powered decision making.',
+    icon: Package,
+    features: ['Return Automation', 'Label Generation', 'Status Tracking', 'Fraud Detection'],
+    pricing: '$49 - $299/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI-Powered Affiliate Marketing Tracker',
+    description: 'Intelligent affiliate marketing tracking with fraud protection and automated payments.',
+    icon: Target,
+    features: ['Custom Referral Links', 'Attribution Tracking', 'Fraud Protection', 'Automated Payments'],
+    pricing: '$99 - $599/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'AI-Powered Website Analytics for SMBs',
+    description: 'Business intelligence dashboard for small businesses with AI-driven insights and recommendations.',
+    icon: BarChart3,
+    features: ['Traffic Analysis', 'Engagement Metrics', 'Conversion Tracking', 'AI Recommendations'],
+    pricing: '$29 - $199/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'AI-Powered IT Helpdesk Software',
+    description: 'AI-enhanced IT helpdesk with client portal and automated ticket resolution.',
+    icon: Settings,
+    features: ['Ticketing System', 'Knowledge Base', 'Client Portal', 'Remote Management'],
+    pricing: '$199 - $999/month',
+    category: 'IT Support'
+  },
+  {
+    title: 'AI-Powered Event Management Dashboard',
+    description: 'Comprehensive event management with AI-powered planning and execution tools.',
+    icon: Calendar,
+    features: ['Event Planning', 'Ticket Sales', 'Guest Management', 'AI Scheduling'],
+    pricing: '$149 - $799/month',
+    category: 'Event Management'
+  },
+  {
+    title: 'AI-Powered Social Proof Widgets',
+    description: 'Real-time social proof widgets with AI optimization for increased conversions.',
+    icon: Globe,
+    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'AI-Powered Customer Loyalty Tracker',
+    description: 'Intelligent loyalty program management with AI-driven engagement strategies.',
+    icon: Heart,
+    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Retention'
+  },
+  {
+    title: 'AI-Powered Personalized E-Learning',
+    description: 'Adaptive learning platform with AI-powered personalization and skill assessment.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring'],
+    pricing: '$49 - $299/month',
+    category: 'Education'
+  },
+  {
+    title: 'AI-Powered Local SEO Optimizer',
+    description: 'Comprehensive local SEO optimization with AI-powered keyword research and competitor analysis.',
+    icon: Search,
+    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'SEO'
+  },
+  {
+    title: 'AI-Powered Online Booking System',
+    description: 'Intelligent appointment scheduling with AI optimization and automated reminders.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management'],
+    pricing: '$29 - $149/month',
+    category: 'Scheduling'
+  },
+  {
+    title: 'AI-Powered Referral Program Manager',
+    description: 'Automated referral program management with AI-driven optimization and fraud detection.',
+    icon: Users,
+    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'AI-Powered Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection using AI.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered Voice Analytics Platform',
+    description: 'Advanced voice analysis for customer service, sales, and training optimization.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Call Quality Scoring', 'Training Insights', 'Performance Metrics'],
+    pricing: '$199 - $999/month',
+    category: 'Voice Analytics'
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Environmental impact tracking and sustainability optimization for businesses.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'AI-powered mental health support and wellness tracking for employees and individuals.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection'],
+    pricing: '$19 - $99/month',
+    category: 'Health & Wellness'
+  },
+  {
+    title: 'AI-Powered Cryptocurrency Tax Calculator',
+    description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization.',
+    icon: DollarSign,
+    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking'],
+    pricing: '$49 - $299/month',
+    category: 'Crypto Finance'
+  },
+  {
+    title: 'AI-Powered Remote Work Analytics',
+    description: 'Productivity and engagement analytics for remote teams with AI insights.',
+    icon: Monitor,
+    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights'],
+    pricing: '$79 - $399/month',
+    category: 'Remote Work'
+  },
+  {
+    title: 'AI-Powered Subscription Management',
+    description: 'Intelligent subscription lifecycle management with churn prediction and optimization.',
+    icon: Settings,
+    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights'],
+    pricing: '$99 - $599/month',
+    category: 'Subscription Management'
+  },
+  {
+    title: 'AI-Powered Code Documentation Generator',
+    description: 'Automatically generate comprehensive documentation from code with AI analysis.',
+    icon: FileText,
+    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples'],
+    pricing: '$79 - $399/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection.',
+    icon: Shield,
+    features: ['Unit Testing', 'Integration Testing', 'Security Auditing', 'Gas Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Database Query Optimizer',
+    description: 'Intelligent database query optimization and performance monitoring.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Database'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing and idea organization.',
+    icon: Target,
+    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options'],
+    pricing: '$29 - $149/month',
+    category: 'Collaboration'
+  },
+  {
+    title: 'AI-Powered API Documentation Generator',
+    description: 'Automatically generate interactive API documentation from OpenAPI specs.',
+    icon: Code,
+    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
+    pricing: '$49 - $299/month',
+    category: 'API Tools'
+  },
+  {
+    title: 'Smart Contract Deployment Manager',
+    description: 'Automated smart contract deployment and management across multiple blockchains.',
+    icon: Rocket,
+    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Error Monitoring',
+    description: 'Intelligent error tracking and debugging assistance for applications.',
+    icon: Monitor,
+    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management'],
+    pricing: '$39 - $199/month',
+    category: 'Monitoring'
+  },
+  {
+    title: 'Smart Contract Analytics Dashboard',
+    description: 'Comprehensive analytics for smart contract performance and usage.',
+    icon: BarChart3,
+    features: ['Usage Analytics', 'Performance Metrics', 'Cost Analysis', 'User Behavior'],
+    pricing: '$79 - $399/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'AI-Powered Code Refactoring Assistant',
+    description: 'Intelligent code refactoring suggestions and automated improvements.',
+    icon: Code,
+    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools'
   }
 ];
 
