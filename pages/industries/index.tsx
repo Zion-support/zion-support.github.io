@@ -1,8 +1,7 @@
-import Layout from '../../components/Layout';
-import Layout from '../components/Layout';
+import React from 'react';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 
 const industries = [
