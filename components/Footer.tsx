@@ -17,56 +17,80 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Youtube
+  Youtube,
+  Building
 } from 'lucide-react';
 
 const services = {
   'AI Solutions': [
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
-    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
-    { "name": 'AI Space Exploration', "href": '/ai-services#ai-space-exploration' },
-    { "name": 'AI Quantum Computing', "href": '/ai-services#ai-quantum-computing' },
-    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
-    { "name": 'AI Brain-Computer Interface', "href": '/ai-services#ai-brain-computer-interface' },
-    { "name": 'AI Metaverse Development', "href": '/ai-services#ai-metaverse-development' },
-    { "name": 'AI Explainable AI (XAI)', "href": '/ai-services#ai-explainable-ai' }
+    { "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
+    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
+    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
+    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
+    { "name": 'AI Content Generation', "href": '/ai-services#ai-content-generation' },
+    { "name": 'Voice AI Assistant', "href": '/ai-services#voice-ai-assistant' },
+    { "name": 'AI Fraud Detection', "href": '/ai-services#ai-fraud-detection' },
+    { "name": 'Quantum Machine Learning', "href": '/ai-services#quantum-ml' },
+    { "name": 'AI Medical Imaging', "href": '/ai-services#medical-imaging' },
+    { "name": 'AI Climate Monitoring', "href": '/ai-services#climate-monitoring' }
   ],
   'IT Services': [
-    { "name": 'AI-Powered IT Operations', "href": '/it-services#ai-powered-it-operations' },
-    { "name": 'Quantum Computing Integration', "href": '/it-services#quantum-computing-integration' },
-    { "name": 'Edge Computing Infrastructure', "href": '/it-services#edge-computing-infrastructure' },
-    { "name": '5G Network Implementation', "href": '/it-services#5g-network-implementation' },
-    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
-    { "name": 'IoT Platform Development', "href": '/it-services#iot-platform-development' },
-    { "name": 'AR/VR Enterprise Solutions', "href": '/it-services#arvr-enterprise-solutions' },
-    { "name": 'Zero Trust Security Architecture', "href": '/it-services#zero-trust-security-architecture' }
+    { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
+    { "name": 'Cybersecurity Solutions', "href": '/it-services#cybersecurity' },
+    { "name": 'Network Infrastructure', "href": '/it-services#network-infrastructure' },
+    { "name": 'Database Management', "href": '/it-services#database-management' },
+    { "name": 'DevOps & CI/CD', "href": '/it-services#devops-cicd' },
+    { "name": 'Data Center Migration', "href": '/it-services#data-center-migration' },
+    { "name": 'Quantum Computing Infrastructure', "href": '/it-services#quantum-computing' },
+    { "name": 'Edge Computing Solutions', "href": '/it-services#edge-computing' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain' },
+    { "name": '5G Network Implementation', "href": '/it-services#5g-networks' }
   ],
   'Micro SaaS': [
-    { "name": 'AI-Powered Legal Document Generator', "href": '/micro-saas#ai-legal-document-generator' },
-    { "name": 'Smart Home Automation Hub', "href": '/micro-saas#smart-home-automation-hub' },
-    { "name": 'AI-Powered HR Management', "href": '/micro-saas#ai-powered-hr-management' },
-    { "name": 'Blockchain Document Verification', "href": '/micro-saas#blockchain-document-verification' },
-    { "name": 'AI-Powered Video Editor', "href": '/micro-saas#ai-powered-video-editor' },
-    { "name": 'Smart Agriculture Monitoring', "href": '/micro-saas#smart-agriculture-monitoring' },
-    { "name": 'Voice Commerce Platform', "href": '/micro-saas#voice-commerce-platform' },
-    { "name": 'AI-Powered Mental Health Assistant', "href": '/micro-saas#ai-powered-mental-health-assistant' }
+    { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
+    { "name": 'LLM Evaluation Suite', "href": '/micro-saas#llm-evaluation' },
+    { "name": 'Customer Feedback App', "href": '/micro-saas#customer-feedback' },
+    { "name": 'API Rate Limiting', "href": '/micro-saas#api-rate-limiting' },
+    { "name": 'Content Moderation AI', "href": '/micro-saas#content-moderation' },
+    { "name": 'Workflow Automation', "href": '/micro-saas#workflow-automation' },
+    { "name": 'AI Code Review Assistant', "href": '/micro-saas#ai-code-review' },
+    { "name": 'Blockchain Analytics Platform', "href": '/micro-saas#blockchain-analytics' },
+    { "name": 'IoT Device Management', "href": '/micro-saas#iot-management' },
+    { "name": 'Quantum Computing Simulator', "href": '/micro-saas#quantum-simulator' }
   ]
 };
 
-const company = [{ "name": 'About Us', "href": '/about' },
+const company = [
+  { "name": 'About Us', "href": '/about' },
   { "name": 'Our Team', "href": '/about#team' },
   { "name": 'Careers', "href": '/careers' },
+  { "name": 'Partners', "href": '/partners' },
   { "name": 'Case Studies', "href": '/case-studies' },
-  { "name": 'Blog', "href": '/blog' },
-  { "name": 'News', "href": '/news' }
+  { "name": 'Blog & Insights', "href": '/blog' },
+  { "name": 'News & Press', "href": '/news' },
+  { "name": 'Investor Relations', "href": '/investors' }
 ];
 
-const resources = [{ "name": 'Documentation', "href": '/docs' },
+const resources = [
+  { "name": 'Documentation', "href": '/docs' },
   { "name": 'API Reference', "href": '/api-docs' },
   { "name": 'Tutorials', "href": '/tutorials' },
+  { "name": 'White Papers', "href": '/whitepapers' },
+  { "name": 'Webinars', "href": '/webinars' },
   { "name": 'Guides', "href": '/guides' },
   { "name": 'FAQ', "href": '/faq' },
-  { "name": 'Support', "href": '/support' }
+  { "name": 'Support Center', "href": '/support' }
+];
+
+const industries = [
+  { "name": 'Healthcare', "href": '/industries/healthcare' },
+  { "name": 'Finance & FinTech', "href": '/industries/finance' },
+  { "name": 'E-commerce & Retail', "href": '/industries/retail' },
+  { "name": 'Manufacturing', "href": '/industries/manufacturing' },
+  { "name": 'Education', "href": '/industries/education' },
+  { "name": 'Transportation', "href": '/industries/transportation' },
+  { "name": 'Real Estate', "href": '/industries/real-estate' },
+  { "name": 'Government', "href": '/industries/government' }
 ];
 
 const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
@@ -96,7 +120,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -173,7 +197,28 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Building className="w-5 h-5 mr-2 text-blue-400" />
+              Industries
+            </h3>
+            <ul className="space-y-3">
+              {industries.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -194,7 +239,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -215,7 +260,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -236,10 +281,10 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover: bg-blue-600 transition-colors group"
+                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
                       aria-label={social.name}
                     >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-hover: text-white" />
+                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </a>
                   );
                 })}
@@ -252,7 +297,7 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md: flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
@@ -276,7 +321,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md: flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>
