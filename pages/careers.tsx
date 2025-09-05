@@ -19,191 +19,352 @@ import {
 
 const jobOpenings = [
   {
-    title: 'Senior AI Engineer',
-    location: 'Remote / Delaware',
+    id: 1,
+    title: 'Senior Full Stack Developer',
+    location: 'San Francisco, CA',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+    salary: '$120,000 - $180,000',
+    experience: '5+ years',
+    remote: true,
+    description: 'We are looking for a senior full-stack developer to join our growing team. You will be responsible for building and maintaining our web applications using modern technologies.',
     requirements: [
-      '5+ years of experience in AI/ML',
-      'Strong Python and TensorFlow skills',
-      'Experience with cloud platforms',
-      'PhD in Computer Science preferred'
+      '5+ years experience in full-stack development',
+      'Proficiency in React, Node.js, TypeScript',
+      'Experience with databases (PostgreSQL, MongoDB)',
+      'Knowledge of cloud deployment and DevOps',
+      'Strong problem-solving and communication skills'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
+    benefits: [
+      'Competitive salary',
+      'Health and dental insurance',
+      'Remote work options',
+      'Learning and development budget',
+      'Team building events'
+    ],
+    posted: '2024-01-10',
+    featured: true
   },
   {
-    title: 'Full Stack Developer',
-    location: 'Remote / Delaware',
+    id: 2,
+    title: 'AI/ML Engineer',
+    location: 'New York, NY',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Build scalable web applications and APIs using modern technologies.',
+    salary: '$140,000 - $200,000',
+    experience: '4+ years',
+    remote: true,
+    description: 'Join our AI team to develop cutting-edge machine learning solutions and AI-powered applications.',
     requirements: [
-      '3+ years of full-stack development',
-      'React, Node.js, and database experience',
-      'API design and development',
-      'Strong problem-solving skills'
+      '4+ years experience in machine learning',
+      'Proficiency in Python, TensorFlow, PyTorch',
+      'Experience with cloud AI services',
+      'Strong mathematical background',
+      'Experience with MLOps and model deployment'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
+    benefits: [
+      'Competitive salary',
+      'Stock options',
+      'Health and dental insurance',
+      'Flexible work hours',
+      'Conference attendance budget'
+    ],
+    posted: '2024-01-08',
+    featured: true
   },
   {
+    id: 3,
     title: 'DevOps Engineer',
-    location: 'Remote / Delaware',
+    location: 'Austin, TX',
     type: 'Full-time',
-    department: 'Engineering',
-    description: 'Manage cloud infrastructure and deployment pipelines for our AI services.',
+    salary: '$110,000 - $160,000',
+    experience: '3+ years',
+    remote: true,
+    description: 'Help us build and maintain our cloud infrastructure and deployment pipelines.',
     requirements: [
-      '4+ years of DevOps experience',
-      'AWS/Azure/GCP expertise',
-      'Docker and Kubernetes knowledge',
-      'CI/CD pipeline experience'
+      '3+ years experience in DevOps',
+      'Proficiency in AWS, Docker, Kubernetes',
+      'Experience with CI/CD pipelines',
+      'Knowledge of infrastructure as code',
+      'Strong scripting skills (Bash, Python)'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
-  },
-  {
-    title: 'Product Manager',
-    location: 'Remote / Delaware',
-    type: 'Full-time',
-    department: 'Product',
-    description: 'Drive product strategy and roadmap for our AI and technology solutions.',
-    requirements: [
-      '5+ years of product management',
-      'AI/ML product experience preferred',
-      'Strong analytical skills',
-      'Excellent communication skills'
+    benefits: [
+      'Competitive salary',
+      'Health and dental insurance',
+      'Remote work options',
+      'Learning and development budget',
+      'Gym membership'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
+    posted: '2024-01-05',
+    featured: false
   }
 ];
 
-const benefits = [
+const companyValues = [
   {
     icon: Heart,
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance, mental health support, and wellness programs"
+    title: 'People First',
+    description: 'We believe our team is our greatest asset and invest in their growth and well-being.'
   },
   {
     icon: Zap,
-    title: "Flexible Work",
-    description: "Remote work options, flexible hours, and work-life balance initiatives"
+    title: 'Innovation',
+    description: 'We encourage creative thinking and embrace new technologies to solve complex problems.'
   },
   {
-    icon: BookOpen,
-    title: "Learning & Development",
-    description: "Professional development budget, training programs, and conference attendance"
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We work together as one team, sharing knowledge and supporting each other.'
   },
   {
     icon: Award,
-    title: "Career Growth",
-    description: "Clear career paths, mentorship programs, and advancement opportunities"
+    title: 'Excellence',
+    description: 'We strive for the highest quality in everything we do and continuously improve.'
+  }
+];
+
+const perks = [
+  {
+    icon: Laptop,
+    title: 'Flexible Work',
+    description: 'Work from anywhere with flexible hours and remote options'
+  },
+  {
+    icon: BookOpen,
+    title: 'Learning Budget',
+    description: 'Annual budget for courses, conferences, and professional development'
   },
   {
     icon: Coffee,
-    title: "Great Culture",
-    description: "Inclusive environment, team events, and collaborative atmosphere"
+    title: 'Great Culture',
+    description: 'Fun team events, company retreats, and a supportive work environment'
   },
   {
-    icon: Laptop,
-    title: "Modern Tools",
-    description: "Latest technology, equipment, and software to do your best work"
+    icon: Globe,
+    title: 'Global Impact',
+    description: 'Work on projects that make a real difference in the world'
   }
 ];
-const openPositions = [
-  {
-    title: "Senior AI Engineer",
-    department: "AI & Machine Learning",
-    location: "Remote / San Francisco",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead AI solution development and machine learning model implementation."
-  },
-  {
-    title: "Cloud Solutions Architect",
-    department: "Cloud & Infrastructure",
-    location: "Remote / New York",
-    type: "Full-time",
-    experience: "7+ years",
-    description: "Design and implement scalable cloud solutions for enterprise clients."
-  },
-  {
-    title: "Cybersecurity Specialist",
-    department: "Security",
-    location: "Remote / Austin",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Protect client systems and implement advanced security measures."
-  },
-  {
-    title: "Frontend Developer",
-    department: "Engineering",
-    location: "Remote / Seattle",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build beautiful, responsive user interfaces for our applications."
-  },
-  {
-    title: "DevOps Engineer",
-    department: "Infrastructure",
-    location: "Remote / Chicago",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Automate deployment processes and maintain cloud infrastructure."
-  },
-  {
-    title: "Product Manager",
-    department: "Product",
-    location: "Remote / Boston",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Drive product strategy and work with cross-functional teams."
-  }
-];
-const values = [
-  {
-    title: "Innovation First",
-    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
-  },
-  {
-    title: "Collaboration",
-    description: "We believe in the power of teamwork and diverse perspectives to achieve great results."
-  },
-  {
-    title: "Continuous Learning",
-    description: "We invest in our people's growth and provide opportunities for professional development."
-  },
-  {
-    title: "Client Success",
-    description: "Our success is measured by our clients' success and satisfaction with our solutions."
-  }
-];
-export default function CareersPage() {
-  return (
-    <MainLayout
-      title="Careers - Zion Tech Group"
-      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
-      keywords="careers, jobs, employment, technology careers, AI jobs, software development"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
 
-          <div className="container mx-auto px-4 relative z-10">
+export default function Careers() {
+  return (
+    <>
+      <Head>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
+        <meta name="keywords" content="jobs, careers, employment, tech jobs, software engineering, AI, machine learning" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our Team
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Join Our <span className="text-yellow-400">Team</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Build the future of technology with us
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Help us build the future of technology. Explore exciting career opportunities at Zion Tech Group.
               </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors"
+              >
+                View Open Positions
+              </motion.button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Company Values */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Values
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                These core values guide everything we do and shape our company culture.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {companyValues.map((value, index) => (
+                <motion.div
+                  key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Job Openings */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Open Positions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover exciting opportunities to join our growing team.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              {jobOpenings.map((job, index) => (
+                <motion.div
+                  key={job.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8"
+                >
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-900">{job.title}</h3>
+                        {job.featured && (
+                          <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center space-x-4 text-gray-600 mb-4">
+                        <div className="flex items-center space-x-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>{job.location}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{job.type}</span>
+                        </div>
+                        {job.remote && (
+                          <div className="flex items-center space-x-1">
+                            <Globe className="w-4 h-4" />
+                            <span>Remote</span>
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-gray-700 mb-4">{job.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                          {job.salary}
+                        </span>
+                        <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                          {job.experience}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col space-y-3 lg:ml-6">
+                      <Link
+                        href={`/jobs/${job.id}`}
+                        className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        Apply Now
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                      <button className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+                        Save Job
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Perks & Benefits */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Perks & Benefits
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer comprehensive benefits and perks to support our team members.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {perks.map((perk, index) => (
+                <motion.div
+                  key={perk.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <perk.icon className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{perk.title}</h3>
+                  <p className="text-gray-600">{perk.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Join Us?
+              </h2>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Don't see the perfect role? We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors"
+                >
+                  Submit Your Resume
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Learn About Our Culture
+                </motion.button>
+              </div>
             </motion.div>
           </div>
         </section>

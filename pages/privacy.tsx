@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, User } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 export default function PrivacyPage() {

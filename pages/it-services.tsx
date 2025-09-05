@@ -51,7 +51,8 @@ import {
   RefreshCw,
   Layers,
   Compass,
-  Lightning
+  Headphones,
+  AlertTriangle
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -361,7 +362,7 @@ const itServices = [
     id: 'ai-energy-management',
     title: 'AI Energy Management System',
     description: 'Optimize energy consumption with AI-powered smart grid management, renewable energy integration, and predictive analytics',
-    icon: Lightning,
+    icon: Zap,
     features: ['Smart Grid Management', 'Energy Forecasting', 'Renewable Integration', 'Cost Optimization'],
     pricing: 'Starting at $2,500/month',
     category: 'Energy Technology',
