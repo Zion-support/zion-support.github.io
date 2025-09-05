@@ -1,31 +1,55 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, {useState, useEffect} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
+=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+>>>>>>> main
 import {ChevronUpIcon} from '@heroicons/react/24/outline';
-const EnhancedScrollToTop = (props: any) => {;
-    const [isVisible, setIsVisible] = useState(false);    useEffect(() => {;
-        const toggleVisibility = (props: any) => {;
+const EnhancedScrollToTop = ("props": "any) => {;
+    const [isVisible", setIsVisible] = useState(false);    useEffect(() => {;
+        const toggleVisibility = ("props": "any) => {;
             if (window.pageYOffset > 300) {;
-                setIsVisible(true)}
+                setIsVisible(true)"}
 else {setIsVisible(false)}
         };
         window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const scrollToTop = (props: any) => {
+        window.scrollTo({';
+            top: 0,';';
+            behavior: 'smooth'
+=======
     const scrollToTop = (props: any) => {;
         window.scrollTo({;
             top: 0,;
             behavior: 'smooth';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    const scrollToTop = ("props": "any) => {;
+        window.scrollTo({;
+            "top": 0",;
+            "behavior": 'smooth';
+>>>>>>> main
         })};
     return (<AnimatePresence>;
       {isVisible && (<motion.button initial = {;
-  { opacity: 0, scale: 0.8,;
-  y: 20;
-}} animate = {;
-  { opacity: 1, scale: 1,;
-  y: 0;
-}} exit = {;
-  { opacity: 0, scale: 0.8,;
-  y: 20;
-}} onClick={scrollToTop} className="fixed bottom-24 right-6 z-40 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Scroll to top">;
+  { "opacity": "0", "scale": "0.8",;
+  "y": "20;
+"}} animate = {;
+  { "opacity": "1", "scale": "1",;
+  "y": "0;
+"}} exit = {;
+  { "opacity": "0", "scale": "0.8",;
+  "y": "20;
+"}} onClick={scrollToTop} className="fixed bottom-24 right-6 z-40 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300 transform "hover":scale-110 "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":ring-offset-2 "focus":ring-offset-slate-900" whileHover={{ "scale": 1.1 "}} whileTap={{ "scale": "0.95 "}} aria-label="Scroll to top">;
           <ChevronUpIcon className="w-6 h-6" />;
         </motion.button>)}
     </AnimatePresence>)};
@@ -40,5 +64,15 @@ export {EnhancedScrollToTop};
 export {EnhancedScrollToTop};
 ;
 export {EnhancedScrollToTop};
+<<<<<<< HEAD
+<<<<<<< HEAD
+';
+</motion>;';;';
+=======
 ;
 </motion>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+;
+</motion>;
+>>>>>>> main
