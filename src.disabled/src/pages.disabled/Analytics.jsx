@@ -1,1 +1,14 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment, Footer } from 'lucide-react';'''; import SEO from '@/components/SEO';'''; import { GradientHeading } from '@/components/GradientHeading'; export default function Analytics() {}; return null} return (_jsxs(_Fragment,{ children[_jsx(SEO,{ "title": "Analytics - Zion Tech Group","description": "View platform analytics and insights.","canonical": "https: ; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics };")]"
+import React from 'react';
+
+interface AnalyticsProps {
+  // Add props here as needed
+}
+
+export default function Analytics({ }: AnalyticsProps) {
+  return (
+    <div>
+      <h1>Analytics</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

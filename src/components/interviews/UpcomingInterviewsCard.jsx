@@ -1,7 +1,14 @@
-import React, {useEffect, useState} from "react"""
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"""
-import {Button} from "@/components/ui/button"""
-import {useInterviews} from "@/hooks/useInterviews"""
-import {format, isPast, parseISO} from "date-fns"""
-import Link from "next/link"""
-            const formattedTime = format(interviewDate, '"h"")"
+import React from 'react';
+
+interface UpcomingInterviewsCardProps {
+  // Add props here as needed
+}
+
+export default function UpcomingInterviewsCard({ }: UpcomingInterviewsCardProps) {
+  return (
+    <div>
+      <h1>UpcomingInterviewsCard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

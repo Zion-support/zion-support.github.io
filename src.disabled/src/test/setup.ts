@@ -1,32 +1,14 @@
-import '@testing-library/jest-dom';'
-// Mock window.matchMedia;'
-Object.defineProperty(window, 'matchMedia', { "writable": true,")"}
-  "value": vi.fn().mockImplementation(query => ({ matches: false,""})
-    "media": query,""
-    "onchange": null,")"
-    "addListener": vi.fn(), // deprecated;""
-    "removeListener": vi.fn(), // deprecated;""
-    "addEventListener": vi.fn(),""
-    "removeEventListener": vi.fn(),""
-    "dispatchEvent": vi.fn(),})),}
-});"
-// Mock IntersectionObserver;"
-global.IntersectionObserver = vi.fn().mockImplementation(() => ({ "observe": vi.fn(),""}
-  "unobserve": vi.fn(),""
-  "disconnect": vi.fn(),}));"
-// Mock ResizeObserver;"
-global.ResizeObserver = vi.fn().mockImplementation(() => ({ "observe": vi.fn(),""}
-  "unobserve": vi.fn(),""
-  "disconnect": vi.fn(),}));"
-// Mock scrollTo;
-global.scrollTo = vi.fn();
-// Mock console methods to reduce noise in tests;
-global.console = {;}
-  ...console,"
-  "warn": vi.fn(),""
-  "error": vi.fn(),}""
-import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: true,value: vi.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: vi.fn(),removeListener: vi.fn(),addEventListener: vi.fn(),removeEventListener: vi.fn(),dispatchEvent: vi.fn(),,})),,}
-}); global.IntersectionObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(),unobserve: vi.fn(),disconnect: vi.fn(),,})); global.ResizeObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(),unobserve: vi.fn(),disconnect: vi.fn(),,})); global.scrollTo = vi.fn(); global.console = {; ...console,warn: vi.fn(),error: vi.fn(),,}'
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import React from 'react';
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,6 +1,14 @@
-interface PostCardProps {}
-  // TODO: Implement;
-};
-  "post"""
-export default function PostCard($1) { return ( <div className="min-h-screen bg-white"> <div className="flex items-start space-x-4""})
-</div>)"
+import React from 'react';
+
+interface PostCardProps {
+  // Add props here as needed
+}
+
+export default function PostCard({ }: PostCardProps) {
+  return (
+    <div>
+      <h1>PostCard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

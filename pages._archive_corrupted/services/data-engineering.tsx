@@ -1,5 +1,14 @@
-import React from 'react'''
-import Link from 'next/link'''
-import { Database, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react'''
-export default function DataEngineering() { return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-amber-50 to-orange-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-orange-600 text-white w-fit"> <Database className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">Data Engineering & Analytics</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> We build reliable data platforms: ingestion,transformation,and modeling with modern stacks (dbt,Airflow,Dagster,Snowflake/BigQuery,ClickHouse). Deliver trusted dashboards and ML-ready datasets. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6""}
-</main>"
+import React from 'react';
+
+interface DataengineeringProps {
+  // Add props here as needed
+}
+
+export default function Dataengineering({ }: DataengineeringProps) {
+  return (
+    <div>
+      <h1>Dataengineering</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

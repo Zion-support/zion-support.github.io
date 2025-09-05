@@ -1,1 +1,14 @@
-import React from 'react'; import {}} from 'lucide-react'; export default function ResourcesPage() {; const whitepapers = [; {; "title": "AI-Powered Business Transformation: A Comprehensive Guide",; "description": "Learn how artificial intelligence is revolutionizing business operations and discover practical strategies for implementation.",; "category": "AI & Automation",; "downloadCount": "2.3k",; "rating""]"}
+import React from 'react';
+
+interface ResourcesProps {
+  // Add props here as needed
+}
+
+export default function Resources({ }: ResourcesProps) {
+  return (
+    <div>
+      <h1>Resources</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

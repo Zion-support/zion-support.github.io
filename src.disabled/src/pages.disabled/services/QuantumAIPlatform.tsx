@@ -1,1 +1,14 @@
-import React from 'react.ts'; import { Link } from 'react-router-dom.ts'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'''
+import React from 'react';
+
+interface QuantumAIPlatformProps {
+  // Add props here as needed
+}
+
+export default function QuantumAIPlatform({ }: QuantumAIPlatformProps) {
+  return (
+    <div>
+      <h1>QuantumAIPlatform</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-"export": default React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos;ve: selected ${match.item.titl,e}`}) '';';''`''';''
+import React from 'react';
+
+interface AIMatcherProps {
+  // Add props here as needed
+}
+
+export default function AIMatcher({ }: AIMatcherProps) {
+  return (
+    <div>
+      <h1>AIMatcher</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

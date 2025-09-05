@@ -1,5 +1,14 @@
-import type { AppProps } from 'next/app'''
-import Head from 'next/head'''
-import React from 'react'''
-import Link from 'next/link''
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import React from 'react';
+
+interface _app.pageProps {
+  // Add props here as needed
+}
+
+export default function _app.page({ }: _app.pageProps) {
+  return (
+    <div>
+      <h1>_app.page</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

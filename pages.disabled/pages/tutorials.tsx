@@ -1,2 +1,71 @@
-import React,{ useState } from 'react'; import Head from 'next/head'; const "Tutorials": React.FC = () => {; const [activeCategory,setActiveCategory] = useState('all'); const categories = [; { "id": 'all',"name": 'All Tutorials',"icon": '�' },; { "id": 'getting-started',"name": 'Getting Started',"icon": '' },; { "id": 'integration',"name": 'Integration',"icon": '�' },; { "id": 'advanced',"name": 'Advanced',"icon": '⚡' },; { "id": 'best-practices',"name": 'Best Practices',"icon": '' },; ]; const tutorials = [; {; "id": '1',; "title": 'Setting Up Your First AI Project',; "category": 'getting-started',; "description": 'Learn how to create and configure your first AI project on Zion Marketplace',; "duration": '20 min',; "difficulty": 'Beginner',; "steps": '8',; "featured": 'true',; "tags": ['onboarding','project-setup','first-steps'],;},; {; "id": '2',; "title": 'Integrating AI Services with Your Application',; "category": 'integration',; "description": 'Step-by-step guide to integrating AI services into your existing applications',; "duration": '45 min',; "difficulty": 'Intermediate',; "steps": '12',; "featured": 'true',; "tags": ['integration','api','webhooks'],;},; {; "id": '3',; "title": 'Building a Custom AI Workflow',; "category": 'advanced',; "description": 'Create complex AI workflows that combine multiple services and data sources',; "duration": '90 min',; "difficulty": 'Advanced',; "steps": '15',; "featured": 'false',; "tags": ['workflow','automation','advanced'],;},; {; "id": '4',; "title": 'Implementing AI-Powered Search',; "category": 'integration',; "description": 'Add intelligent search capabilities to your application using our AI search API',; "duration": '35 min',; "difficulty": 'Intermediate',; "steps": '10',; "featured": 'false',; "tags": ['search','ai','implementation'],;},; {; "id": '5',; "title": 'Securing Your AI Integration',; "category": 'best-practices',; "description": 'Best practices for securing AI integrations and protecting user data',; "duration": '40 min',; "difficulty": 'Intermediate',; "steps": '11',; "featured": 'true',; "tags": ['security','best-practices','compliance'],;},; {; "id": '6',; "title": 'Optimizing AI Service Performance',; "category": 'advanced',; "description": 'Techniques for optimizing AI service performance and reducing costs',; "duration": '60 min',; "difficulty": 'Advanced',; "steps": '13',; "featured": 'false',; "tags": ['optimization','performance','cost'],;},; {; "id": '7',; "title": 'Creating AI-Powered Dashboards',; "category": 'integration',; "description": 'Build real-time dashboards that display AI insights and analytics',; "duration": '50 min',; "difficulty": 'Intermediate',; "steps": '14',; "featured": 'false',; "tags": ['dashboard','analytics','real-time'],;},; {; "id": '8',; "title": 'Testing and Debugging AI Integrations',; "category": 'best-practices',; "description": 'Comprehensive testing strategies for AI integrations and debugging techniques',; "duration": '55 min',; "difficulty": 'Intermediate',; "steps": '16',; "featured": 'false',; "tags": ['testing','debugging','quality'],;},; ]; const filteredTutorials = tutorials.filter(tutorial => activeCategory === 'all' || tutorial.category === activeCategory; ); return (; <> <Head> <title>Tutorials - Zion AI Marketplace></div> <meta name="description" content="Step-by-step tutorials for AI integration and marketplace success" /> <meta name="keywords" content="tutorials,step-by-step,AI,integration,learning" /> ></div> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Step-by-Step Tutorials; ></div> <p className="text-xl text-gray-300 mt-4"> Master AI integration with our comprehensive,hands-on tutorials; ></div> ></div> ></div> {} <section className="container mx-auto px-6 py-8"> <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30"> <h2 className="text-2xl font-bold text-blue-400 mb-6">Choose a Category></div> <div className="flex flex-wrap gap-3"> {categories.map((category) => (; <button; key={category.id} onClick={() => setActiveCategory(category.id)} className={`px-6 py-3 rounded-lg font-medium transition-colors ${; activeCategory === category.id; ? 'bg-blue-600 text-white'; : 'bg-gray-700 text-gray-300 "hover": bg-gray-600';}`} > <span className="mr-2">{category.icon}></div> {category.name} ></div> ></div> ))} ></div> ></div> ></div> {} <section className="container mx-auto px-6 py-12"> <h2 className="text-3xl font-bold text-blue-400 mb-8">Featured Tutorials></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {tutorials.filter(tutorial => tutorial.featured).map((tutorial) => (; <div key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 "hover": border-blue-400 transition-colors"> <div className="flex items-center justify-between mb-3"> <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full"> Featured; ></div> <span className="text-xs text-gray-400">{tutorial.duration}></div> ></div> <h3 className="text-xl font-semibold text-white mb-3 "hover": text-blue-400 transition-colors cursor-pointer"> {tutorial.title} ></div> <p className="text-gray-300 text-sm mb-4">{tutorial.description}></div> <div className="flex items-center justify-between mb-4"> <span className={`text-xs px-2 py-1 rounded-full ${; tutorial.difficulty === 'Beginner' ? 'bg-green-600 text-white' :; tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :; 'bg-red-600 text-white';}`}> {tutorial.difficulty} ></div> <span className="text-xs text-gray-400">{tutorial.steps} steps></div> ></div> <button className="w-full bg-blue-600 "hover": bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"> Start Tutorial; ></div> ></div> ))} ></div> ></div> {} <main className="container mx-auto px-6 py-12"> <div className="flex items-center justify-between mb-8"> <h2 className="text-3xl font-bold text-blue-400"> {activeCategory === 'all' ? 'All Tutorials' : categories.find(c => c.id === activeCategory)?.name} ></div> <span className="text-gray-400"> {filteredTutorials.length} tutorials found; ></div> ></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {filteredTutorials.map((tutorial) => (; <article key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 "hover": border-blue-400 transition-colors group"> <div className="flex items-center justify-between mb-3""`)
-</Head>)"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Tutorials() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Tutorials
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

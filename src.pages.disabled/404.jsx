@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/404.jsx import React from 'react'; "export default NotFoundPage;"import { Home,ArrowLeft,Search,Users,Brain,Shield,Zap const NotFoundPage = () => {; const popularServices = [; { "name": "AI Solutions","path": "/ai - solutions","icon": 'Brain',"description": "Transform your business with AI" }," { "name": "Cybersecurity","path": "/services / cybersecurity","icon": 'Shield',"description": "Protect your digital assets" }," { "name": "Cloud & DevOps","path": "/cloud - devops","icon": 'Zap',"description": "Scale your infrastructure" }," { "name": "Enterprise Solutions","path": "/enterprise - solutions","icon": 'Users',"description": "Enterprise - grade technology" }" ];" const quickLinks = [; { "name": "Home","path": "/","icon": 'Home' },{ "name": "Services","path": "/services","icon": 'Search' }," { "name": "About Us","path": "/about","icon": 'Users' },{ "name": "Contact","path": "/contact","icon""]"}
+import React from 'react';
+
+interface 404Props {
+  // Add props here as needed
+}
+
+export default function 404({ }: 404Props) {
+  return (
+    <div>
+      <h1>404</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

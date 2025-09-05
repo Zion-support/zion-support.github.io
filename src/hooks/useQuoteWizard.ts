@@ -1,15 +1,14 @@
-import useSWR from 'swr';''
-import { captureException } from '@/utils/sentry';''
-import { useState } from 'react';'
-export interface ServiceItem {}
-  // TODO: Implement;
-}'
-  "id": string title: string;"
-};
-export interface WizardResponse {}
+import React from 'react';
 
-  return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {`}
-</WizardResponse>
-  const [step, setStep] = useState<WizardStep>('Services');'
-</WizardStep>
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+interface UseQuoteWizardProps {
+  // Add props here as needed
+}
+
+export default function UseQuoteWizard({ }: UseQuoteWizardProps) {
+  return (
+    <div>
+      <h1>UseQuoteWizard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

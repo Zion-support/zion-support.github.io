@@ -1,2 +1,14 @@
-import React,{ createContext,useContext,useEffect,ReactNode } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {}; return null} "fetchNotifications": async () => {},;}; const NotificationContext = createContext(defaultContext as NotificationContextType; ); export const useNotifications = (): NotificationContextType => {; const context = useContext(NotificationContext) as NotificationContextType; if(!context) {; throw new Error('useNotifications must be used within a NotificationProvider');} return context;}; export const NotificationProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => {; const { user } = useAuth(); const notificationOps = useNotificationOperations(user?.id); useEffect(() => {}},[]); if(notificationOps) {}} ; let "channel": ReturnType<typeof supabase.channel> | undefined; if(user && notificationOps) {}; "filter": `user_id=eq.${user.id}`;},; (payload) => {}} ); .subscribe(); return () => {}} };} },[user,notificationOps]); return (<NotificationContext.Provider value={notificationOps}> {children} ></div> );};
-</typeof>"
+import React from 'react';
+
+interface NotificationContextProps {
+  // Add props here as needed
+}
+
+export default function NotificationContext({ }: NotificationContextProps) {
+  return (
+    <div>
+      <h1>NotificationContext</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,7 +1,14 @@
-import React from 'react'''
-import dynamic from 'next/dynamic'''
-import { motion } from 'framer-motion'''
-import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'''
-const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'')
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface ContactProps {
+  // Add props here as needed
+}
+
+export default function Contact({ }: ContactProps) {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,5 +1,14 @@
-import React from 'react'''
-  return (''')
-    <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed'''`}
-export default checkbox;';''
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface CheckboxProps {
+  // Add props here as needed
+}
+
+export default function Checkbox({ }: CheckboxProps) {
+  return (
+    <div>
+      <h1>Checkbox</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
