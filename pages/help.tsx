@@ -145,6 +145,25 @@ export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
+  };
+
+  const contactMethods = [
+    {
+      title: "Email Support",
+      description: "Send us an email at support@ziontechgroup.com and we'll get back to you within 24 hours."
+    },
+    {
+      title: "Phone Support",
+      description: "Call us at +1 (555) 123-4567 for immediate assistance during business hours."
+    },
+    {
+      title: "Live Chat",
+      description: "Use our live chat feature for instant help with common questions and issues."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -227,7 +246,7 @@ export default function HelpPage() {
                   </button>
                   
                   <AnimatePresence>
-                    {expandedCategories.includes(category.title) && (
+                    {expandedCategory === category.title && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
