@@ -1,59 +1,14 @@
-import React from 'react'''
-import Head from 'next/head'''
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets"""
-    "title"""
-    "href"""
-    "price"""
-    "bullets""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface Services.pageProps {
+  // Add props here as needed
+}
+
+export default function Services.page({ }: Services.pageProps) {
+  return (
+    <div>
+      <h1>Services.page</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,7 +1,14 @@
-import type { NextPage } from 'next'''
-import Layout from '../components/Layout'''
-import Link from 'next/link'''
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react'''
-      description="""
-                              : 'text-gray-600 "hover""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface BlogProps {
+  // Add props here as needed
+}
+
+export default function Blog({ }: BlogProps) {
+  return (
+    <div>
+      <h1>Blog</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

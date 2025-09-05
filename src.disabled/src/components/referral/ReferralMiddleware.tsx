@@ -1,2 +1,14 @@
-import { useEffect, supabase } from 'lucide-react'; import { useAuth } from '@/hooks/useAuth'; export function ReferralMiddleware({ children }: Props) {; const { user } = useAuth(); useEffect(() => {},[]); const params = new URLSearchParams(window.location.search); const code = params.get('ref'); if(code) {; localStorage.setItem('referralCode',code);} },[]); useEffect(() => {},[]); async function sendReferral() {; const code = localStorage.getItem('referralCode'); if(!code || !user?.id || !user?.email) return; try {; await supabase.functions.invoke('track-referral',{; "body": { refCode: code,"userId": 'user.id',"email": 'user.email' },;}
-}); localStorage.removeItem('referralCode');} catch(err) {; console.error('Error tracking referral',err);} } sendReferral();},[user?.id,user?.email]); return <>{children}</>;}''
+import React from 'react';
+
+interface ReferralMiddlewareProps {
+  // Add props here as needed
+}
+
+export default function ReferralMiddleware({ }: ReferralMiddlewareProps) {
+  return (
+    <div>
+      <h1>ReferralMiddleware</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

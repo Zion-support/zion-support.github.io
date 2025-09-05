@@ -1,7 +1,14 @@
-import {Link} from 'react-router-dom'''
-import {Button} from '@/components/ui/button'''
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'''
-import {Badge} from '@/components/ui/badge'''
-import {SERVICE_CATEGORIES} from '@/data/microSaasServices'''
-                        {service.pricingModel === 'monthly' ? '/month' : service.pricingModel === 'yearly' ? '/year'''}
-export default NewServicesShowcase;';'''
+import React from 'react';
+
+interface NewServicesShowcaseProps {
+  // Add props here as needed
+}
+
+export default function NewServicesShowcase({ }: NewServicesShowcaseProps) {
+  return (
+    <div>
+      <h1>NewServicesShowcase</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

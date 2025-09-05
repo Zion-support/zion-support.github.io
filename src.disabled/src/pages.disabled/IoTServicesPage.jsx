@@ -1,2 +1,14 @@
-import { Link } from 'react - router - dom';'''; import React from 'react'; import {} Card,; CardContent,'; CardDescription,''; CardHeader,'''; CardTitle} from '../components/ui/card';'''; import { Button } from '../components/ui/button';'''; import { Badge } from '../components/ui/badge';'''; import { Link } from 'react-router-dom'; import {} Settings,; BarChart3,; Shield,; Zap,; Globe,; TrendingUp,; CheckCircle,; ArrowRight,; Zap as Cpu,'; Cloud,''; Smartphone,'''; TrendingUp as Activity} from 'lucide-react';'''; import { TrustedBySection } from '../components/TrustedBySection.js.jsx'; const iotUseCases = []; {} '; ''; '''; "title": 'Smart Manufacturing','''; "description": ''''; 'Monitor production lines,predict maintenance needs,and optimize manufacturing processes',; "icon": <Cpu className="h-6 w-6" />},; {} '; "title": 'Smart Cities','; "description": ''"; 'Manage traffic,utilities,and public services with connected IoT infrastructure',; "icon": <Globe className="h-6 w-6" />},; {} '; "title": 'Connected Healthcare','; "description": ''"; 'Remote patient monitoring,medical device management,and healthcare analytics',; "icon": <Activity className="h-6 w-6" />},; {} '; "title": 'Smart Agriculture','; "description": ''""
-</Cpu>"
+import React from 'react';
+
+interface IoTServicesPageProps {
+  // Add props here as needed
+}
+
+export default function IoTServicesPage({ }: IoTServicesPageProps) {
+  return (
+    <div>
+      <h1>IoTServicesPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

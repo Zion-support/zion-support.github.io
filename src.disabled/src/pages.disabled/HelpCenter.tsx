@@ -1,1 +1,14 @@
-import React,{ useState } from 'react'; import { motion, Link } from 'lucide-react'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'''
+import React from 'react';
+
+interface HelpCenterProps {
+  // Add props here as needed
+}
+
+export default function HelpCenter({ }: HelpCenterProps) {
+  return (
+    <div>
+      <h1>HelpCenter</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

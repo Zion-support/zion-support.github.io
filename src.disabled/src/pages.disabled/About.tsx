@@ -1,2 +1,14 @@
-import React from 'react'; import { SEO } from '../components/SEO'; const "About": React.FC = () => {; return(<> <SEO ; title="About Us - Zion Tech Group"; description="Learn about Zion Tech Group's mission,values,and commitment to delivering cutting-edge technology solutions."; /> <div className="min-h-screen bg-white py-20"> <div className="max-w-4xl mx-auto px-4"> <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group></div> <p className="text-lg text-gray-600 mb-6"> Zion Tech Group is a leading technology solutions provider dedicated to helping ; organizations transform their digital infrastructure and achieve their business goals.></div> <p className="text-lg text-gray-600"> Our team of experts specializes in AI,cybersecurity,cloud infrastructure,; and digital transformation services.></div> ></div> ></div> ></div> );}; return ("; <div className="min-h-screen bg-white"> <Header /> {}"; <section className="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50">;"; <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;"; <div className="text-center">;"; <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"> About Zion Tech Group,; </h1>,"; <p className="text-xl "md": text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">,,; We are a forward-thinking technology company dedicated to empowering businesses,; with innovative solutions that drive growth and competitive advantage.,; </section> {}"; <section className="py-16 bg-white">;"; <div className="grid grid-cols-1 "lg": grid-cols-2 gap-16 items-center"> <div>,"; <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-6">,; Our Story,,; </h2>,"; <p className = "text-lg text-gray-600 mb-6 leading-relaxed">,; Founded in 2020,Zion Tech Group emerged from a vision to bridge the gap between; cutting-edge technology and practical business solutions. We recognized that many; organizations struggle to harness the full potential of emerging technologies like; AI,cloud computing,and cybersecurity.; Our journey began with a simple "mission"")
-</SEO>)"
+import React from 'react';
+
+interface AboutProps {
+  // Add props here as needed
+}
+
+export default function About({ }: AboutProps) {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

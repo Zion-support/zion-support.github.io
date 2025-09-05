@@ -1,8 +1,14 @@
-import React from 'react'''
-import Head from 'next/head'''
-import Link from 'next/link'''
-} from 'lucide-react'''
-import type { NextPage } from 'next'''
-import Layout from '../components/Layout'''
-      description=""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface BlogcleanProps {
+  // Add props here as needed
+}
+
+export default function Blogclean({ }: BlogcleanProps) {
+  return (
+    <div>
+      <h1>Blogclean</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

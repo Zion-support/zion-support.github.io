@@ -1,1 +1,14 @@
-import React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';''}
+import React from 'react';
+
+interface AICodeGeneratorProps {
+  // Add props here as needed
+}
+
+export default function AICodeGenerator({ }: AICodeGeneratorProps) {
+  return (
+    <div>
+      <h1>AICodeGenerator</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

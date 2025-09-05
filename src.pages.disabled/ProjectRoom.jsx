@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/ProjectRoom.jsx import React from 'react'; export default function ProjectRoom () { const { projectId } = useParams () ; const [activeTab,setActiveTab] = useState ("chat") ; const [isInCall,setIsInCall] = useState (false) ; const [callParticipants,setCallParticipants] = useState ([{ "id": "user - 1","name": "You","isHost": 'true',"isVideoEnabled"")]"}
+import React from 'react';
+
+interface ProjectRoomProps {
+  // Add props here as needed
+}
+
+export default function ProjectRoom({ }: ProjectRoomProps) {
+  return (
+    <div>
+      <h1>ProjectRoom</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

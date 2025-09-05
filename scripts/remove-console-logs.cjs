@@ -117,12 +117,12 @@ function main() {
 
   console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-    console.log("\n✨ Production build optimized!");
+    console.log(`\n✨ Production build optimized!`);
   } else {
-    console.log("\n✨ No console statements found to remove.");
+    console.log(`\n✨ No console statements found to remove.`);
   }
 }
 

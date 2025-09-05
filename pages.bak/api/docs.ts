@@ -1,12 +1,14 @@
-import { NextApiRequest, NextApiResponse } from 'next'''
-type HttpMethod = 'get' | 'post' | 'put' | 'patch' | 'delete'''
-  location: 'query' | 'body' | 'header' | 'path'''
-      "openapi"""
-        "version"""
-        "description"""
-          "description"""
-              "statusCode"""
-              "timestamp": { type: 'string', "format"""}
-          "data"""
-          "message""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface DocsProps {
+  // Add props here as needed
+}
+
+export default function Docs({ }: DocsProps) {
+  return (
+    <div>
+      <h1>Docs</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

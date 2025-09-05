@@ -1,3 +1,14 @@
-import { NextApiRequest, NextApiResponse } from 'next'''
-export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const event: AnalyticsEven t = req.body; if (!event.name || !event.category || !event.timestamp) { return res.status(400).json({ error: 'Missing required fields' })} analyticsData.push(event); await sendToExternalServices(event); res.status(200).json({ success: tru e })} catch (error) { console.error('Analytics API Error: ',error); res.status(500).json({ error: 'Internal server error' })} } async function sendToExternalServices(event: AnalyticsEven t) { try { if (process.env.GA_MEASUREMENT_ID) { await fetch( `https: { method: 'POST',headers: { 'Content-Type': 'application/json',},body: JSO N.stringify({ client_id: even t.user_id,events: [ { name: even t.name,params: { event_category: even t.category,event_label: even t.label,value: even t.value,...event.custom_parameters,},},],}),} )} if (process.env.MIXPANEL_TOKEN) { await fetch('https: method: 'POST',headers: { 'Content-Type': 'application/json',},body: JSO N.stringify({ event: even t.name,properties: { distinct_id: even t.user_id,category: even t.category,action: even t.action,label: even t.label,value: even t.value,...event.custom_parameters,timestamp: even t.timestamp,},}),})} if (process.env.ANALYTICS_WEBHOOK_URL) { await fetch(process.env.ANALYTICS_WEBHOOK_URL,{ method: 'POST',headers: { 'Content-Type': 'application/json',},body: JSO N.stringify(event),})} } catch (error) { console.error('Failed to send to external services: ''`})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface AnalyticsProps {
+  // Add props here as needed
+}
+
+export default function Analytics({ }: AnalyticsProps) {
+  return (
+    <div>
+      <h1>Analytics</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

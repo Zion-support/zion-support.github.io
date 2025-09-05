@@ -1,6 +1,14 @@
-import {TalentCard} from "@/components/talent/TalentCard"""
-import {TalentSkeleton} from "@/components/talent/TalentSkeleton"""
-        return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6"""
-      <p className="text-zion-slate-light mb-4"""
-      {clearFilters && (<button onClick={clearFilters} className="px-4 py-2 bg-zion-purple text-white rounded "hover": bg-zion-purple-dark transition-colors""")
-    <div className="min-h-screen bg-white"")"
+import React from 'react';
+
+interface TalentGridProps {
+  // Add props here as needed
+}
+
+export default function TalentGrid({ }: TalentGridProps) {
+  return (
+    <div>
+      <h1>TalentGrid</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
