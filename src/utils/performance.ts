@@ -1,4 +1,4 @@
 };
           observer.unobserve(image)};
       };
-}})),;
+}}));
