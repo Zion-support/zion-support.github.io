@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { ReactNode } from 'react';
 interface FuturisticCardProps {
   children: ReactNode;
@@ -10,3 +12,4 @@ export default function FuturisticCard({ children, className = "bg-gradient-to-b
     </div>
   );
 }
+>>>>>>> main

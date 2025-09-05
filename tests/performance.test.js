@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface Performance.testProps {
@@ -12,3 +14,4 @@ export default function Performance.test({ }: Performance.testProps) {
     </div>
   );
 }
+>>>>>>> main
