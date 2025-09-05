@@ -69,7 +69,7 @@ export default function TermsPage() {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Limitation of Liability</h2>
                 <p className="text-gray-600 mb-6">
-                  In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, 
+                  In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential,
                   or punitive damages arising out of or relating to your use of our services.
                 </p>
 
@@ -98,7 +98,7 @@ export default function TermsPage() {
                   <p className="text-gray-600">
                     <strong>Email:</strong> legal@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (302) 464-0950<br />
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709ursor/add-new-services-and-deploy-updates-1b90
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
                   </p>
                 </div>
 
@@ -107,8 +107,8 @@ export default function TermsPage() {
                 </h2>
                 
                 <p className="text-gray-600 mb-6">
-                  These Terms of Service ("Terms") govern your use of Zion Tech Group's services, including our website, 
-                  applications, and any related services (collectively, the "Services"). By accessing or using our Services, 
+                  These Terms of Service ("Terms") govern your use of Zion Tech Group's services, including our website,
+                  applications, and any related services (collectively, the "Services"). By accessing or using our Services,
                   you agree to be bound by these Terms.
                 </p>
 
@@ -191,7 +191,7 @@ export default function TermsPage() {
                 
                 <div className="space-y-4 mb-8">
                   <p className="text-gray-600">
-                    To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, 
+                    To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect,
                     incidental, special, consequential, or punitive damages, including but not limited to loss of 
                     profits, data, or business opportunities.
                   </p>
@@ -240,7 +240,7 @@ export default function TermsPage() {
                 </h2>
                 
                 <p className="text-gray-600 mb-8">
-                  These Terms shall be governed by and construed in accordance with the laws of the State of California, 
+                  These Terms shall be governed by and construed in accordance with the laws of the State of California,
                   without regard to its conflict of law principles. Any disputes arising from these Terms shall be 
                   resolved in the courts of California.
                 </p>
