@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
+import { Search, Clock, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const searchResults = [

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 import { 
   TrendingUp,
   Building,
@@ -40,9 +40,71 @@ const values = [
   }
 ];
 
+const team = [
+  {
+    name: 'John Doe',
+    role: 'CEO & Founder',
+    image: '/team/john-doe.jpg',
+    bio: 'Visionary leader with 20+ years in technology',
+    expertise: 'Strategic Leadership',
+    experience: '20+ years'
+  },
+  {
+    name: 'Jane Smith',
+    role: 'CTO',
+    image: '/team/jane-smith.jpg',
+    bio: 'Expert in AI and machine learning technologies',
+    expertise: 'AI & Machine Learning',
+    experience: '15+ years'
+  },
+  {
+    name: 'Mike Johnson',
+    role: 'Lead Developer',
+    image: '/team/mike-johnson.jpg',
+    bio: 'Full-stack developer with cloud expertise',
+    expertise: 'Cloud & DevOps',
+    experience: '12+ years'
+  },
+  {
+    name: 'Sarah Wilson',
+    role: 'Head of Design',
+    image: '/team/sarah-wilson.jpg',
+    bio: 'UX/UI designer focused on user experience',
+    expertise: 'UX/UI Design',
+    experience: '10+ years'
+  }
+];
+
+const achievements = [
+  {
+    stat: '500+',
+    title: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries',
+    icon: TrendingUp
+  },
+  {
+    stat: '50+',
+    title: 'Happy Clients',
+    description: 'Long-term partnerships with satisfied customers',
+    icon: Users
+  },
+  {
+    stat: '99.9%',
+    title: 'Uptime',
+    description: 'Reliable and secure infrastructure',
+    icon: Shield
+  },
+  {
+    stat: '24/7',
+    title: 'Support',
+    description: 'Round-the-clock technical assistance',
+    icon: Zap
+  }
+];
+
 export default function About() {
   return (
-    <Layout
+    <MainLayout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, vision, and values. We're a leading technology solutions provider transforming businesses through innovative AI and cloud services."
     >
@@ -326,6 +388,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
         </div>
       </section>
     </div>
-    </Layout>
+    </MainLayout>
   );
 }
