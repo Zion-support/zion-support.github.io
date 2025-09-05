@@ -15,60 +15,72 @@ class TypeScriptFixer {
 
   async createTypeDeclarations() {
   this.log("📝 Creating comprehensive type declarations...");
-    const typeDeclarations = "// Global type declarations;
+    const typeDeclarations = `// Global type declarations
 declare module "*.svg" {
-  const "content": string;
-  export default content}
-
-declare module "*.png" {
-  const "content": string;
-  export default content}
-
-declare module "*.jpg" {
-  const "content": string;
-  export default content}
-
-declare module "*.jpeg" {
-  const "content": string;
-  export default content}
-
-declare module "*.gif" {
-  const "content": string;
-  export default content}
-
-declare module "*.webp" {
-  const "content": string;
-  export default content}
-
-declare module "*.css" {
-  const "content": { [className: string]: string }
-  export default content}
-
-declare module "*.scss" {
-  const "content": { [className: string]: string }
-  export default content}
-
-declare module "*.module.css" {
-  const "content": { [className: string]: string }
-  export default content}
-
-declare module "*.module.scss" {
-  const "content": { [className: string]: string }
-  export default content}
-
-// Next.js specific types;
-declare namespace NodeJS {
-  interface ProcessEnv {
-  "NODE_ENV": "development" | "production" | "test";
-    NEXT_PUBLIC_SUPABASE_URL?: string;
-    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string}
+  const content: string;
+  export default content;
 }
 
-// Global window extensions;
+declare module "*.png" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.jpg" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.jpeg" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.gif" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.webp" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+// Next.js specific types
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: "development" | "production" | "test";
+    NEXT_PUBLIC_SUPABASE_URL?: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
+    SUPABASE_SERVICE_ROLE_KEY?: string;
+  }
+}
+
+// Global window extensions
 declare global {
   interface Window {
-  gtag?: (..."args": any[]) => void}
+    gtag?: (...args: any[]) => void;
+  }
 }
 
 export {};";
@@ -183,7 +195,8 @@ export {};";
 
       if (modified) {
   fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed TypeScript "file": ${path.relative(this.projectRoot, filePath)}`)}
+        this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
+      }
       } catch (error) {
   this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN")}
   }

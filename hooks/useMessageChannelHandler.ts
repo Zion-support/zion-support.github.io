@@ -2,11 +2,11 @@ import { useEffect, useCallback } from 'react';
 
 // Type definition for MessageEvent
 interface MessageEvent {
-  "data": unknown;
+  data: unknown;
 }
 
 interface MessageChannelHandlerProps {
-  onMessage?: ("message": unknown) => void;
+  onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;
 }
 
@@ -14,7 +14,7 @@ export function useMessageChannelHandler({
   onMessage,
   onError
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback(("event": MessageEvent) => {
+  const handleMessage = useCallback((event: MessageEvent) => {
     try {
       if (onMessage) {
         onMessage(event.data);
