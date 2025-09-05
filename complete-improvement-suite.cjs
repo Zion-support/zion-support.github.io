@@ -364,17 +364,17 @@ class CompleteImprovementSuite {
     );
 
     this.log('🎉 Complete Improvement Suite Finished');
-    this.log("📊 "Summary": ");
+    this.log("📊 Summary: ");
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
     this.log(
-      `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
+      `   - Syntax errors fixed: ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
-      `   - Improvements "applied": ${finalReport.summary.totalImprovementsApplied}`
+      `   - Improvements applied: ${finalReport.summary.totalImprovementsApplied}`
     );
-    this.log(`   - Push "successful": ${finalReport.summary.pushSuccessful}`);
+    this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`);
   }
 }
 
