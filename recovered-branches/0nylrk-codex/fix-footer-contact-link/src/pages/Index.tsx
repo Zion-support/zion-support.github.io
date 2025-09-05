@@ -47,7 +47,7 @@ import {
   Zap, 
   Settings, 
   Search,
-  MessageSquare, 
+  MessageSquare,
   Sparkles,
   BarChart3,
   Smartphone

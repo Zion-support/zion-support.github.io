@@ -375,7 +375,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
   } catch (error) {
     console.error("Error in generate-content function:", error),
     
-    return new Response(JSON.stringify({ error: error.message }), {
+    return new Response(JSON.stringify({ error: error.message }) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 =======

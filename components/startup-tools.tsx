@@ -643,7 +643,7 @@ export default function StartupToolsPage() {_const _startupTools = [
 =======
       {_/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

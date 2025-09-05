@@ -163,7 +163,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
     const contract = data.choices[0].message.content.trim(),
     
     return new Response(JSON.stringify({ 
-      success: true, 
+      success: true,
       contract 
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
@@ -171,11 +171,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
     console.error('Error generating contract:', error),
     return new Response(
       JSON.stringify({ 
-        success: false, 
+        success: false,
         error: error.message || 'Failed to generate contract' 
       }),
       { 
-        status: 500, 
+        status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
 =======

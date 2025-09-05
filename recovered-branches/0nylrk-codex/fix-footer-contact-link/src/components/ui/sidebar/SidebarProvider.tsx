@@ -34,7 +34,7 @@ interface SidebarProviderProps {
 }
 
 export function SidebarProvider({ 
-  children, 
+  children,
   defaultOpen = true 
 }: SidebarProviderProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen),

@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Target, Crown, Star, TrendingUp, ArrowRight,
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon,
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale,
@@ -189,7 +189,7 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2029 Ultimate
               </span>
@@ -200,7 +200,7 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing, 
+              Experience the future of technology with our revolutionary AI consciousness, quantum computing,
               space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
             </p>
 

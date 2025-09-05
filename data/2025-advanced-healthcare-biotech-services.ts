@@ -133,7 +133,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.9,
     reviews: 12
   },
-
   // Precision Medicine & Genomics Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8,
     reviews: 23
   },
-
   // AI-Powered Medical Imaging Analysis
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.7,
     reviews: 34
   },
-
   // Digital Health & Telemedicine Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.6,
     reviews: 78
   },
-
   // Clinical Trial Management & Optimization
 <<<<<<< HEAD
   {

@@ -46,8 +46,8 @@ export function JobMatchCard({
   category, 
   matchPercent, 
   skills,
-  onApply, 
-  onViewDetails, 
+  onApply,
+  onViewDetails,
   onInvite 
 }: JobMatchProps) {
   const handleApply = () => {

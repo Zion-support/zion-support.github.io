@@ -474,9 +474,9 @@ class DependencyMonitor {,
         this.log(`Error parsing npm outdated: output: ${parseError.message}`),
       };
 ,
-      return {};
-    };
-  };
+      return {},
+    },
+  },
 ,
   async checkPackageLock() {,
     try {,
@@ -508,7 +508,7 @@ class DependencyMonitor {,
         encodin: g: 'utf8',
       }).trim(),
 ,
-      return { nodeVersion, npmVersion };
+      return { nodeVersion, npmVersion },
     } catch (error) {,
       return { erro: r: error.message };
     };

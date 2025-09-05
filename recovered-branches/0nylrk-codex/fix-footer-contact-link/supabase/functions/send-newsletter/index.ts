@@ -106,13 +106,13 @@ serve(_async (req) => {_if (req.method === "OPTIONS") {
       message: "Email would be sent to all subscribers in production"
     },
 
-    return new Response(JSON.stringify(emailResponse), {
+    return new Response(JSON.stringify(emailResponse) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
     console.error("Error in send-newsletter function:", error),
     
-    return new Response(JSON.stringify({ error: error.message }), {
+    return new Response(JSON.stringify({ error: error.message }) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 =======

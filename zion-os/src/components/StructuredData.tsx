@@ -14,7 +14,7 @@ export function StructuredData() {_const _structuredData = {
       "AI-Powered Tools",
       "Modular Architecture"
     ],
-    "screenshot": "https://ziontechgroup.com/screenshot.png",
+    "screenshot": "https: //ziontechgroup.com/screenshot.png",
     "softwareVersion": "1.0.0",
     "releaseNotes": "Initial release with core features for launching digital economies",
 <<<<<<< HEAD

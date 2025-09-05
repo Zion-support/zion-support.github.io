@@ -3,7 +3,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
+  Search, Filter, Star, CheckCircle, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, Microscope,
   Phone, Mail, MapPin, TrendingUp, Users, Award,
   Zap, Globe, Cpu, Database, Lock, Cloud,

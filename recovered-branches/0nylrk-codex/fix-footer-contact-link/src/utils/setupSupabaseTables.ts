@@ -88,8 +88,8 @@ export const _ensureProfilesTableExists = async () => {_try {
       RETURNS TRIGGER AS $$
       BEGIN
         INSERT INTO public.profiles (id, display_name, bio, headline)
-        VALUES (new.id, 
-                new.raw_user_meta_data->>'display_name', 
+        VALUES (new.id,
+                new.raw_user_meta_data->>'display_name',
                 new.raw_user_meta_data->>'bio',
                 new.raw_user_meta_data->>'headline'),
         RETURN new,

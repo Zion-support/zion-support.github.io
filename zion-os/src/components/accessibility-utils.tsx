@@ -23,8 +23,8 @@ export function SkipLink(_{_targetId, _children}: {_targetId: string; children: 
 // Live region for screen reader announcements
 <<<<<<< HEAD
 export function LiveRegion({ 
-  message, 
-  role = "status", 
+  message,
+  role = "status",
   "aria-live": ariaLive = "polite" 
 }: { 
   message: string, 
@@ -155,7 +155,7 @@ export function useKeyboardNavigation(_items: unknown[], _onSelect: (item: unkno
 
 // Announcement component for screen readers
 export function Announcement({ 
-  message, 
+  message,
   priority = "polite" 
 }: { 
   message: string, 
@@ -206,8 +206,8 @@ export function Announcement(_{_message, _priority = "polite"}: {_message: strin
 // Progress indicator component
 <<<<<<< HEAD
 export function ProgressIndicator({ 
-  value, 
-  max, 
+  value,
+  max,
   label 
 }: { 
   value: number, 
@@ -245,8 +245,8 @@ export function ProgressIndicator(_{_value, _max, _label}: {_value: number;
 // Collapsible section component
 <<<<<<< HEAD
 export function CollapsibleSection({ 
-  title, 
-  children, 
+  title,
+  children,
   defaultExpanded = false 
 }: { 
   title: string, 
@@ -294,8 +294,8 @@ export function CollapsibleSection(_{_title, _children, _defaultExpanded = false
 // Tooltip component with proper accessibility
 <<<<<<< HEAD
 export function Tooltip({ 
-  children, 
-  content, 
+  children,
+  content,
   position = "top" 
 }: { 
   children: React.ReactNode, 

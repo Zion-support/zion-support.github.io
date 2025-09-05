@@ -3,7 +3,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 } from 'lucide-react',

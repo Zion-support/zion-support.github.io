@@ -66,8 +66,8 @@ export function useContractTemplates() {_const { user, _isAuthenticated} = useAu
 <<<<<<< HEAD
   const createTemplate = useMutation({
     mutationFn: async ({ 
-      title, 
-      templateData, 
+      title,
+      templateData,
       isDefault = false 
     }: {
       title: string,

@@ -34,7 +34,7 @@ const AccessibilityEnhancer: React.FC = () => {_useEffect__(() => {
         isUsingMouse = false;
         document.body.classList.remove('using-mouse');
       }
-    };
+    },
 
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);

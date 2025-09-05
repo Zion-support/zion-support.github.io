@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function Custom404() {_return (
     <>
@@ -76,8 +76,8 @@ const NotFoundPage: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
 export default NotFoundPage;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

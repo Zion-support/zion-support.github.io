@@ -26,7 +26,7 @@ export default function AIBusinessManagerPage() {_return (
 
         {_/* Overview Section */}
         <section className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Revolutionary Business Management</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -36,7 +36,7 @@ export default function AIBusinessManagerPage() {_return (
                 with unprecedented efficiency and intelligence.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                From strategic planning to daily operations, the system continuously learns, 
+                From strategic planning to daily operations, the system continuously learns,
                 adapts, and optimizes every aspect of your business, ensuring maximum 
                 performance and growth potential.
               </p>
@@ -91,7 +91,7 @@ export default function AIBusinessManagerPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>
               <p className="text-gray-400">
-                AI-powered strategic planning that analyzes market conditions, 
+                AI-powered strategic planning that analyzes market conditions,
                 competitive landscape, and internal capabilities to develop optimal strategies.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function AIBusinessManagerPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-2">Growth Optimization</h3>
               <p className="text-gray-400">
-                Data-driven growth strategies with market expansion analysis, 
+                Data-driven growth strategies with market expansion analysis,
                 customer acquisition optimization, and revenue maximization.
               </p>
             </div>
@@ -172,14 +172,14 @@ export default function AIBusinessManagerPage() {_return (
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-400">1</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Data Collection</h3>
               <p className="text-gray-400 text-sm">
-                Continuously gathers data from all business systems, 
+                Continuously gathers data from all business systems,
                 market sources, and external factors.
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function AIBusinessManagerPage() {_return (
               </div>
               <h3 className="text-lg font-semibold mb-2">Analysis & Learning</h3>
               <p className="text-gray-400 text-sm">
-                AI algorithms analyze patterns, learn from outcomes, 
+                AI algorithms analyze patterns, learn from outcomes,
                 and identify optimization opportunities.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function AIBusinessManagerPage() {_return (
               </div>
               <h3 className="text-lg font-semibold mb-2">Decision Making</h3>
               <p className="text-gray-400 text-sm">
-                Autonomous decisions are made based on data analysis, 
+                Autonomous decisions are made based on data analysis,
                 business rules, and predictive models.
               </p>
             </div>
@@ -228,11 +228,11 @@ export default function AIBusinessManagerPage() {_return (
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">E-commerce & Retail</h3>
               <p className="text-gray-400 text-sm">
-                Inventory management, pricing optimization, customer service automation, 
+                Inventory management, pricing optimization, customer service automation,
                 and supply chain optimization.
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function AIBusinessManagerPage() {_return (
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Financial Services</h3>
               <p className="text-gray-400 text-sm">
-                Risk assessment, portfolio management, fraud detection, 
+                Risk assessment, portfolio management, fraud detection,
                 and regulatory compliance automation.
               </p>
             </div>
@@ -248,7 +248,7 @@ export default function AIBusinessManagerPage() {_return (
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>
               <p className="text-gray-400 text-sm">
-                Production optimization, quality control, predictive maintenance, 
+                Production optimization, quality control, predictive maintenance,
                 and supply chain management.
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function AIBusinessManagerPage() {_return (
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Healthcare</h3>
               <p className="text-gray-400 text-sm">
-                Patient scheduling, resource allocation, treatment optimization, 
+                Patient scheduling, resource allocation, treatment optimization,
                 and administrative efficiency.
               </p>
             </div>
@@ -264,7 +264,7 @@ export default function AIBusinessManagerPage() {_return (
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Technology Companies</h3>
               <p className="text-gray-400 text-sm">
-                Product development prioritization, customer success optimization, 
+                Product development prioritization, customer success optimization,
                 and operational scaling.
               </p>
             </div>
@@ -272,7 +272,7 @@ export default function AIBusinessManagerPage() {_return (
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Consulting Firms</h3>
               <p className="text-gray-400 text-sm">
-                Project management, resource allocation, client relationship management, 
+                Project management, resource allocation, client relationship management,
                 and knowledge management.
               </p>
             </div>

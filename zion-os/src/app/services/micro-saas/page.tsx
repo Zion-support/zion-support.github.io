@@ -502,7 +502,7 @@ export default function MicroSAASPage() {_return (_<div className="space-y-8">
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
         <h2 className="text-3xl font-bold">Ready to Accelerate Your Business?</h2>
         <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our micro SAAS solutions can transform your business operations, 
+          Let's discuss how our micro SAAS solutions can transform your business operations,
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

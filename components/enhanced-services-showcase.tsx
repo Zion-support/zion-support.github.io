@@ -3,7 +3,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Star, TrendingUp, Zap, Brain, Rocket, Shield, 
+  Star, TrendingUp, Zap, Brain, Rocket, Shield,
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
   Phone, Mail, MapPin, ExternalLink, Search, Filter,
   Grid, List, ChevronDown, ChevronUp, Sparkles,
@@ -726,11 +726,11 @@ export default function EnhancedServicesShowcase() {_const [selectedCategory, _s
 // Button component (if not imported)
 <<<<<<< HEAD
 const Button = ({ 
-  href, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  children, 
+  href,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  children,
   onClick 
 }: {
   href?: string,

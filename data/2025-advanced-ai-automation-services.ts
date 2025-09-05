@@ -133,7 +133,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.7,
     reviews: 34
   },
-
   // AI-Powered DevOps Automation
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.8,
     reviews: 28
   },
-
   // AI-Powered Customer Support Automation
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.6,
     reviews: 41
   },
-
   // AI-Powered Marketing Automation
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.7,
     reviews: 67
   },
-
   // AI-Powered Sales Intelligence
 <<<<<<< HEAD
   {

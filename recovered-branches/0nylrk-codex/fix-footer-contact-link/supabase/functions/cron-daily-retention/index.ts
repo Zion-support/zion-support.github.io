@@ -87,7 +87,7 @@ serve(_async (req) => {_try {
 
     return new Response(JSON.stringify({
       success: false,
-      error: error.message}), {
+      error: error.message}) {
       status: 500,
 <<<<<<< HEAD
       headers: { "Content-Type": "application/json" }})

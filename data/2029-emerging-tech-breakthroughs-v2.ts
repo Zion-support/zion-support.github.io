@@ -133,7 +133,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0,
     reviews: 12
   },
-
   // Quantum Internet Gateway
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 4.9,
     reviews: 18
   },
-
   // Synthetic Biology Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 4.8,
     reviews: 45
   },
-
   // Fusion Energy Management Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0,
     reviews: 6
   },
-
   // Space Mining Operations Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0,
     reviews: 3
   },
-
   // Quantum AI Consciousness Platform
 <<<<<<< HEAD
   {

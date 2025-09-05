@@ -364,7 +364,7 @@ class AdvancedPerformanceOptimizer {
         descriptio: n: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
         action: s: bundleAnalysis.optimizationOpportunities.map(
           opp => opp.recommendation
-        ),
+        );
       });
     }
 
@@ -451,12 +451,12 @@ class AdvancedPerformanceOptimizer {
 
   saveResults() {
     const reportFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       `performance-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(
-      reportFile,
+      reportFile;
       JSON.stringify(this.optimizationResults, null, 2)
     );
 

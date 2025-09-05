@@ -9,7 +9,7 @@ export function useResumeEnhancer() {
   const [error, setError] = useState<string | null>(null),
 =======
 
-type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',
 
 export function useResumeEnhancer() {_const [isEnhancing, _setIsEnhancing] = useState(false);
   const [error, _setError] = useState<string | null>(null);
@@ -25,7 +25,7 @@ export function useResumeEnhancer() {_const [isEnhancing, _setIsEnhancing] = use
 <<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {
         body: { 
-          content, 
+          content,
           enhancementType: type,
           context
         }

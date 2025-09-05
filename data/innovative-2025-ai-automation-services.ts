@@ -131,7 +131,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 45
   },
-
   // AI-Powered Predictive Customer Intelligence Platform
 <<<<<<< HEAD
   {
@@ -183,7 +182,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.8,
     reviews: 78
   },
-
   // AI-Powered Autonomous Code Generation & Deployment
 <<<<<<< HEAD
   {
@@ -235,7 +233,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 62
   },
-
   // AI-Powered Autonomous Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -287,7 +284,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 38
   },
-
   // AI-Powered Autonomous Healthcare Diagnosis Platform
 <<<<<<< HEAD
   {

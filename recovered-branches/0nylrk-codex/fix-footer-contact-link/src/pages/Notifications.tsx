@@ -11,7 +11,7 @@ import {
 } from "@/context/notifications",
 import { formatDistanceToNow } from "date-fns",
 import { 
-  Bell, Check, Trash2, ChevronRight, CheckCircle, 
+  Bell, Check, Trash2, ChevronRight, CheckCircle,
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
 } from "lucide-react",
 import { Button } from "@/components/ui/button",

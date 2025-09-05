@@ -27,8 +27,8 @@ function extractItems(xml) {
 async function main() {
   fs.mkdirSync(outDir, { recursive: true });
   const sources = [
-    'https://hnrss.org/frontpage',
-    'https://hnrss.org/newest?points=200',
+    'https://hnrss.org/frontpage';
+    'https://hnrss.org/newest?points=200';
   ];
   const keywords = ['AI', 'Artificial Intelligence', 'LLM', 'OpenAI', 'Anthropic', 'Llama', 'DeepSeek', 'RAG', 'Vector'];
 

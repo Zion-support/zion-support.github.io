@@ -37,7 +37,7 @@ export default function ContractBuilderPage() {
 import React, {_useEffect, _useMemo, _useState} from 'react';
 import DatePicker from 'react-datepicker';
 
-type PaymentType = 'hourly' | 'fixed';
+type PaymentType = 'hourly' | 'fixed',
 
 export default function ContractBuilderPage() {_const _router = useRouter();
   const [talentName, _setTalentName] = useState('');

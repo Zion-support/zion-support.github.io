@@ -72,7 +72,7 @@ export function BlogSection() {_return (_<section className="py-20 bg-zion-blue-
                   className=&quot;object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300&quot;
                   loading=&quot;lazy&quot;
                   onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                    const target = e.currentTarget as HTMLImageElement;
+                    const target = e.currentTarget as HTMLImageElement,
                     target.src =
                       &quot;https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

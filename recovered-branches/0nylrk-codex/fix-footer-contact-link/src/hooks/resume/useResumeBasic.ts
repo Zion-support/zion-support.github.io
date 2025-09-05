@@ -12,7 +12,6 @@ export function useResumeBasic() {
     error: fetchResumeOperations.error || resumeActions.error,
     resume: fetchResumeOperations.resume,
     fetchResume: fetchResumeOperations.fetchResume,
-    
     // From useResumeActions
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,18 +11,18 @@ export default function App() {
 }
 =======
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-import { Header } from './components/Header';
-import { Footer } from './components/layout/Footer';
-import { Sidebar } from './components/layout/Sidebar';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { Header } from './components/Header',
+import { Footer } from './components/layout/Footer',
+import { Sidebar } from './components/layout/Sidebar',
+import { ErrorBoundary } from './components/ErrorBoundary',
 ,
 // Import pages,
-import HomePage from '../pages/index';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import ServicesPage from '../pages/services';
+import HomePage from '../pages/index',
+import AboutPage from '../pages/about',
+import ContactPage from '../pages/contact',
+import ServicesPage from '../pages/services',
 
-import PricingPage from '../pages/pricing';
+import PricingPage from '../pages/pricing',
 ,
 export default function App() {,
   return (,
@@ -43,7 +43,6 @@ export default function App() {,
           <Footer />,
         </div>,
       </Router>,
-
     </ErrorBoundary>)
 };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

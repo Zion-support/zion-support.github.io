@@ -30,7 +30,7 @@ const _SAMPLE_QUERIES = [
   'LLM engineers with RAG experience',
   'Security projects with Zero Trust',
   'Next.js freelancers in Berlin'
-];
+],
 
 const _SKILLS = [
   'React', 'Next.js', 'TypeScript', 'Node', 'Python', 'AWS', 'Kubernetes', 'DevOps', 'Docker', 'Terraform', 'OpenAI', 'LangChain', 'RAG', 'NLP', 'PostgreSQL', 'Rust'

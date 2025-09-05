@@ -56,7 +56,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
-  children, 
+  children,
   authState = { isAuthenticated: false, user: null } 
 }) => {
   const { i18n, t } = useTranslation(),

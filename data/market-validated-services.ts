@@ -28,7 +28,7 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
@@ -86,7 +86,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '2 hours',
 		contactInfo
 	},
-
 	// Security and APIs
 	{
 		id: 'api-security-scanner',
@@ -122,7 +121,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '40 minutes',
 		contactInfo
 	},
-
 	// Cloud and Infra
 	{
 		id: 'cloud-cost-optimizer-pro',
@@ -175,7 +173,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '1 day',
 		contactInfo
 	},
-
 	// Reliability & Monitoring
 	{
 		id: 'uptime-slo-monitor',
@@ -228,7 +225,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '15 minutes',
 		contactInfo
 	},
-
 	// Dev & Productivity
 	{
 		id: 'pdf-render-api',
@@ -298,7 +294,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '15 minutes',
 		contactInfo
 	},
-
 	// Compliance & Risk
 	{
 		id: 'soc2-evidence-automation',
@@ -334,7 +329,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '2 hours',
 		contactInfo
 	},
-
 	// Developer and Ops Utilities
 	{
 		id: 'webhook-relay-replay',
@@ -370,7 +364,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '30 minutes',
 		contactInfo
 	},
-
 	// AI Channels
 	{
 		id: 'ai-phone-agent',
@@ -389,7 +382,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '1 hour',
 		contactInfo
 	},
-
 	// Search and Knowledge
 	{
 		id: 'vector-search-starter',

@@ -210,7 +210,7 @@ export function BudgetStep(_{_formData, _updateFormData}: BudgetStepProps) {_con
                     
                     updateFormData({
                       budget: { 
-                        ...formData.budget, 
+                        ...formData.budget,
                         amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }

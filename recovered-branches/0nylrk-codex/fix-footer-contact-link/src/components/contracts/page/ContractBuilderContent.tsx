@@ -31,7 +31,7 @@ export function ContractBuilderContent() {
       isSmartContract: true
     },
     {
-      id: 'contract-2', 
+      id: 'contract-2',
       title: 'Mobile App Development',
       client: 'TechStart Inc',
       talent: 'Sarah Williams',

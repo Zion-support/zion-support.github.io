@@ -133,7 +133,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.8,
     reviews: 156
   },
-
   // Intelligent Document Processing Hub
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.7,
     reviews: 134
   },
-
   // Smart Inventory Management System
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.9,
     reviews: 223
   },
-
   // AI-Powered HR Recruitment Suite
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.8,
     reviews: 187
   },
-
   // Intelligent Project Management Hub
 <<<<<<< HEAD
   {

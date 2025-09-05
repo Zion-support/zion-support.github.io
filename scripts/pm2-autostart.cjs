@@ -69,12 +69,12 @@ class PM2Autostart {
     try {
       const output = execSync('pm2 startup', { encoding: 'utf8' });
       return {
-        enabled: !output.includes('You have to run this command as root'),
+        enabled: !output.includes('You have to run this command as root');
         output: output
       };
     } catch (error) {
       return {
-        enabled: false,
+        enabled: false;
         error: error.message
       };
     }

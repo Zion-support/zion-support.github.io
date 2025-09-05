@@ -133,7 +133,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.8,
     reviews: 48
   },
-
   // AI Marketing Automation Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 62
   },
-
   // AI Sales Intelligence Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.9,
     reviews: 45
   },
-
   // AI Customer Service Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 38
   },
-
   // AI HR Management Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.8,
     reviews: 29
   },
-
   // AI Financial Analytics Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.9,
     reviews: 19
   },
-
   // AI Project Management Platform
 <<<<<<< HEAD
   {

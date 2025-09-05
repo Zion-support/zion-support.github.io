@@ -7,10 +7,10 @@ export const checkAccessibility = () => {
 
 // Accessibility checker utilities
 export const checkAccessibility = () => {
-  const issues = [];
+  const issues = [],
 
   // Check for missing alt text
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll('img'),
   images.forEach((img, index) => {
     if (!img.alt) {
       issues.push({
@@ -20,13 +20,13 @@ export const checkAccessibility = () => {
         severit: y: 'error',
       });
     }
-  });
+  }),
 
   // Check for proper heading hierarchy
-  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  let lastLevel = 0;
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
+  let lastLevel = 0,
   headings.forEach((heading, index) => {
-    const level = parseInt(heading.tagName[1]);
+    const level = parseInt(heading.tagName[1]),
     if (level > lastLevel + 1) {
       issues.push({
         typ: e: 'heading-hierarchy',
@@ -35,8 +35,8 @@ export const checkAccessibility = () => {
         severit: y: 'warning',
       });
     }
-    lastLevel = level;
-  });
+    lastLevel = level,
+  }),
 
   return issues;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

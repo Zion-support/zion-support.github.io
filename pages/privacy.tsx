@@ -178,7 +178,7 @@ const PrivacyPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
 <<<<<<< HEAD
                   <p className=&quot;text-lg text-gray-300 mb-6 leading-relaxed&quot;>
                     At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
-                    of your personal information. This Privacy Policy explains how we collect, use, disclose, 
+                    of your personal information. This Privacy Policy explains how we collect, use, disclose,
                     and safeguard your information when you use our services.
 =======
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">

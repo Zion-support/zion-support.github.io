@@ -28,12 +28,12 @@ export default function Enhanced2026ServiceShowcase() {_const _containerVariants
 <<<<<<< HEAD
   const itemVariants = {
     hidden: { 
-      opacity: 0, 
+      opacity: 0,
       y: 50,
       scale: 0.9
     },
     visible: { 
-      opacity: 1, 
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {

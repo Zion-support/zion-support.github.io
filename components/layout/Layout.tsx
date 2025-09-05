@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 <<<<<<< HEAD
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -26,8 +26,8 @@ const Layout: React.FC<LayoutProps> = (_{_children}) => {_return (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       <Footer />
     </div>
-  );
-};
+  ),
+},
 
 <<<<<<< HEAD
 export default Layout;

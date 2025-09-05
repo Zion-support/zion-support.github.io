@@ -37,8 +37,8 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
 },
 
 export function AutocompleteSuggestions({ 
-  suggestions, 
-  searchTerm, 
+  suggestions,
+  searchTerm,
   onSelectSuggestion,
   visible 
 }: AutocompleteSuggestionsProps) {

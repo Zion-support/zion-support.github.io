@@ -2,7 +2,7 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, ExternalLink, Star, TrendingUp, 
+  ArrowRight, ExternalLink, Star, TrendingUp,
   Users, Zap, Shield, Clock, Check, Brain,
   Rocket, Dna, DollarSign, Lock, Globe
 } from 'lucide-react',

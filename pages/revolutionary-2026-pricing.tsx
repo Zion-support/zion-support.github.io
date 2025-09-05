@@ -4,8 +4,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
-  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
+  CheckCircle, Star, TrendingUp, DollarSign, Clock, Users,
+  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles,
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
 } from 'lucide-react',

@@ -455,7 +455,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                       <span className=&quot;text-zion-slate-light&quot;>Date:</span>
                       <span className=&quot;text-zion-slate-light&quot;>
                         {new Date(transaction.created_at).toLocaleDateString()} 
-                        ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
+                        ({formatDistanceToNow(new Date(transaction.created_at) { addSuffix: true })})
                       </span>
                     </div>
                     

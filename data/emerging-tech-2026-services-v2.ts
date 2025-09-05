@@ -133,7 +133,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 85
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Synthetic Biology AI Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.7,
     reviews: 180
   },
-
   // Fusion Energy AI Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 65
   },
-
   // Quantum Machine Learning Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 280
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.7,
     reviews: 120
   },
-
   // Brain-Computer Interface Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 65
   },
-
   // Quantum Internet Platform
 <<<<<<< HEAD
   {

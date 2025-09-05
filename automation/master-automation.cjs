@@ -137,7 +137,7 @@ class MasterAutomation {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `automation-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -174,7 +174,7 @@ class MasterAutomation {
     // Check git status
     try {
       const gitResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Git status check'
       );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
@@ -185,7 +185,7 @@ class MasterAutomation {
     // Check dependencies
     try {
       const depsResult = await this.runCommand(
-        'npm list --depth=0',
+        'npm list --depth=0';
         'Dependencies check'
       );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';

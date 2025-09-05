@@ -59,7 +59,7 @@ const EnhancedContactForm: React.FC = () => {_const [formData, _setFormData] = u
     'Data Analytics',
     'Digital Transformation',
     'Other'
-  ];
+  ],
 
   const _validateForm = (): boolean => {_const newErrors: FormErrors = {};
 

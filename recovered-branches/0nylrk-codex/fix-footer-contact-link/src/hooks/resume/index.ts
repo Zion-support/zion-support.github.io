@@ -68,27 +68,22 @@ export function useResume() {_const [resume, _setResume] = useState<Resume | nul
     error,
     resume: resume || fetchResumeOperations.resume,
     resumes: resumeListOperations.resumes,
-    
     // Basic resume operations
     fetchResume,
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,
     setActiveResume: resumeActions.setActiveResume,
-    
     // Work experience operations
     addWorkExperience: workOperations.addWorkExperience,
     updateWorkExperience: workOperations.updateWorkExperience,
     deleteWorkExperience: workOperations.deleteWorkExperience,
-    
     // Education operations
     addEducation: educationOperations.addEducation,
     updateEducation: educationOperations.updateEducation,
     deleteEducation: educationOperations.deleteEducation,
-    
     // Skills operations
     addSkill: skillsOperations.addSkill,
     deleteSkill: skillsOperations.deleteSkill,
-    
     // Certifications operations
     addCertification: certOperations.addCertification,
     updateCertification: certOperations.updateCertification,

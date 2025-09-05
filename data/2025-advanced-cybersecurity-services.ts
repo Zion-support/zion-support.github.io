@@ -133,7 +133,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 19
   },
-
   // AI-Powered Threat Intelligence
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 31
   },
-
   // Cloud Security Posture Management
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 42
   },
-
   // DevSecOps Security Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 28
   },
-
   // IoT Security Platform
 <<<<<<< HEAD
   {

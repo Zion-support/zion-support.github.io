@@ -37,7 +37,7 @@ class MasterAutomationOrchestrator {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..'),
+        cwd: path.join(__dirname, '..')
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -53,7 +53,7 @@ class MasterAutomationOrchestrator {
     const commands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
       { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
-      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' },
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' }
     ];
 
     for (const { cmd, desc } of commands) {
@@ -66,7 +66,7 @@ class MasterAutomationOrchestrator {
 
     const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
-      { cmd: 'npm run build', desc: 'Build application' },
+      { cmd: 'npm run build', desc: 'Build application' }
     ];
 
     for (const { cmd, desc } of commands) {
@@ -83,7 +83,7 @@ class MasterAutomationOrchestrator {
 
     const fixCommands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
-      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' },
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' }
     ];
 
     for (const { cmd, desc } of fixCommands) {
@@ -95,8 +95,7 @@ class MasterAutomationOrchestrator {
     this.log('🤖 Running automation scripts...');
 
     const scripts = [
-      'enhanced-automation-suite.cjs',
-
+      'enhanced-automation-suite.cjs'
     ];
 
     for (const script of scripts) {
@@ -118,9 +117,9 @@ class MasterAutomationOrchestrator {
       scripts: {
         linting: 'completed',
         build: 'completed',
-        automation: 'completed',
+        automation: 'completed'
       },
-      summary: 'Master automation orchestrator completed successfully',
+      summary: 'Master automation orchestrator completed successfully'
     };
 
     const reportPath = path.join(

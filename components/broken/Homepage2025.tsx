@@ -92,7 +92,6 @@ const Homepage2025: React.FC<Homepage2025Props> = (_{_showInternalNav = true}) =
     ...innovative2035MicroSaasServices,
     ...innovative2035AIServices,
     ...innovative2035ITServices,
-    
     // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,

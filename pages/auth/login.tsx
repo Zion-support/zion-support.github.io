@@ -126,7 +126,7 @@ const _LoginPage = () => {_const _router = useRouter();
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
         if (!mounted) return,
         logInfo('LoginPage: onAuthStateChange event:', { 
-          event, 
+          event,
           userId: session?.user?.id 
         }),
         setUser(session?.user ?? null),
@@ -419,7 +419,7 @@ const _LoginPage = () => {_const _router = useRouter();
         if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
           setIsEmailUnverified(true),
           setError({ 
-            name: 'EmailNotVerifiedError', 
+            name: 'EmailNotVerifiedError',
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
           } as AuthError),
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered

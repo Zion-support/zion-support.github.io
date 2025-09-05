@@ -162,8 +162,8 @@ class ComprehensiveAutomationRunner {,
       { cmd: &quot;npm run test:smoke&quot;, desc: &quot;Smoke tests&quot; };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     ],
-,
-    for (const test of buildTests) {,
+
+    for (const test of buildTests) {
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result
     }
@@ -181,8 +181,8 @@ class ComprehensiveAutomationRunner {,
       { cmd: &quot;npm run perf:audit&quot;, desc: &quot;Performance audit&quot; };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     ],
-,
-    for (const test of perfTests) {,
+
+    for (const test of perfTests) {
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.performance[test.desc] = result
     }
@@ -200,8 +200,8 @@ class ComprehensiveAutomationRunner {,
       { cmd: &quot;npm run security:audit&quot;, desc: &quot;Enhanced security audit&quot; };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     ],
-,
-    for (const test of securityTests) {,
+
+    for (const test of securityTests) {
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.security[test.desc] = result
     }
@@ -221,8 +221,8 @@ class ComprehensiveAutomationRunner {,
       { cmd: &quot;npm run test:coverage&quot;, desc: &quot;Test coverage&quot; };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     ],
-,
-    for (const test of qualityTests) {,
+
+    for (const test of qualityTests) {
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.tests[test.desc] = result
     }
@@ -231,27 +231,27 @@ class ComprehensiveAutomationRunner {,
   calculateOverallScore() {,
     let totalScore = 0,
     let maxScore = 0,
-,
-    // Build tests (40% weight),
+
+    // Build tests (40% weight)
     const buildScore = this.calculateCategoryScore(this.results.builds),
     totalScore += buildScore * 0.4,
     maxScore += 100 * 0.4,
-,
-    // Performance tests (25% weight),
+
+    // Performance tests (25% weight)
     const perfScore = this.calculateCategoryScore(this.results.performance),
     totalScore += perfScore * 0.25,
     maxScore += 100 * 0.25,
-,
-    // Security tests (20% weight),
+
+    // Security tests (20% weight)
     const securityScore = this.calculateCategoryScore(this.results.security),
     totalScore += securityScore * 0.2,
     maxScore += 100 * 0.2,
-,
-    // Quality tests (15% weight),
+
+    // Quality tests (15% weight)
     const qualityScore = this.calculateCategoryScore(this.results.tests),
     totalScore += qualityScore * 0.15,
     maxScore += 100 * 0.15,
-,
+
     const finalScore = Math.round((totalScore / maxScore) * 100),
     this.results.overall.score = finalScore,
     this.results.overall.status = finalScore >= 80 ? &quot;excellent&quot; :,
@@ -263,7 +263,7 @@ class ComprehensiveAutomationRunner {,
 ,
   calculateCategoryScore(category) {,
     if (!category || Object.keys(category).length === 0) return 0,
-,
+
     const results = Object.values(category),
     const successCount = results.filter(r => r.success).length,
     return Math.round((successCount / results.length) * 100)
@@ -306,7 +306,7 @@ class ComprehensiveAutomationRunner {,
   async saveResults() {,
     this.results.recommendations = this.generateRecommendations(),
     this.results.overall.score = this.calculateOverallScore(),
-,
+
     fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),
     this.log(`Results saved: to: ${this.resultsFile}`)
   },
@@ -320,7 +320,7 @@ class ComprehensiveAutomationRunner {,
       await this.runPerformanceTests(),
       await this.runSecurityTests(),
       await this.runQualityTests(),
-,
+
       const score = this.calculateOverallScore(),
       await this.saveResults(),
 ,

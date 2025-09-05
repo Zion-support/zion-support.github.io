@@ -19,7 +19,7 @@ export default function GovernancePulsePage() {
 =======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import
-import data from '../../data/governance-pulse.json';
+import data from '../../data/governance-pulse.json',
 
 export default function GovernancePulsePage() {_const items: unknown[] = (data?.items || []).slice(0, _60);
   return (_<EnhancedLayout>

@@ -18,7 +18,6 @@ const _mockSentry = {_// Core Sentry methods
   ErrorBoundary: (_{ children}: unknown) => children,
   withErrorBoundary: (_component: unknown) => component,
   showReportDialog: noop,
-  
   // Browser-specific methods
   onLoad: noop,
   wrap: (_fn: (...args: unknown[]) => any) => fn,
@@ -31,12 +30,10 @@ const _mockSentry = {_// Core Sentry methods
   SentryWebpackPlugin: class SentryWebpackPlugin {_constructor() {}
     apply() {}
   },
-  
   // Tracing
   Tracing: {_BrowserTracing: class BrowserTracing {
       constructor() {}
     }},
-  
   // Integrations
   Integrations: {_BrowserTracing: class BrowserTracing {
       constructor() {}
@@ -47,15 +44,12 @@ const _mockSentry = {_// Core Sentry methods
     },
     OnUnhandledRejection: class OnUnhandledRejection {_constructor() {}
     }},
-  
   // Transport
   makeBrowserOfflineTransport: noopReturn,
   makeFetchTransport: noopReturn,
-  
   // Utils
   createTransport: noopReturn,
   SDK_VERSION: '7.0.0-mock',
-  
   // Constants
 <<<<<<< HEAD
   Severity: {

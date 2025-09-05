@@ -273,11 +273,11 @@ export default function NewsPage() {_return (
                 </span>
                 <span className="text-gray-400 text-sm">November 30, 2024</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover: text-blue-400 transition-colors">
                 Research Partnership with Leading Universities
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Zion Tech Group announces strategic research partnerships with MIT, Stanford, 
+                Zion Tech Group announces strategic research partnerships with MIT, Stanford,
                 and Cambridge to advance AI and quantum computing technologies.
               </p>
               <Link href="/news/university-research-partnerships" className="text-blue-400 hover:text-blue-300 text-sm font-medium">

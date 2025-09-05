@@ -133,7 +133,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.9,
     reviews: 400
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.8,
     reviews: 600
   },
-
   // Zero-Trust Network Architecture
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.9,
     reviews: 450
   },
-
   // AI-Powered DevOps Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.7,
     reviews: 1250
   },
-
   // Quantum-Safe Data Storage
 <<<<<<< HEAD
   {

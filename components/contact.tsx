@@ -5,8 +5,8 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, Clock, Users, 
-  MessageSquare, Send, CheckCircle, Star, 
+  Phone, Mail, MapPin, Globe, Clock, Users,
+  MessageSquare, Send, CheckCircle, Star,
   Rocket, Brain, Atom, Shield, Zap
 } from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',

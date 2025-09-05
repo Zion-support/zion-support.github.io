@@ -21,9 +21,9 @@ export function ProjectMilestonesContent() {
   const { user } = useAuth(),
   const { getProjectById } = useProjects(),
   const { 
-    milestones, 
+    milestones,
     activities,
-    isLoading: milestonesLoading, 
+    isLoading: milestonesLoading,
     createMilestone,
     updateMilestoneStatus,
     deleteMilestone,

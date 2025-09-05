@@ -133,7 +133,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // Autonomous AI Agents Platform 2026
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.8,
     reviews: 289
   },
-
   // AI Healthcare Companion 2026
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.9,
     reviews: 456
   },
-
   // AI Content Creation Revolution
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.8,
     reviews: 892
   },
-
   // AI Emotional Intelligence Platform
 <<<<<<< HEAD
   {

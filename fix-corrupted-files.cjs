@@ -67,8 +67,7 @@ const: AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;`,
-
+export default AccessibilityEnhancer;`;
   'components/OptimizedImage.tsx': `import React from 'react';
 import Image from 'next/image';
 
@@ -104,8 +103,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`,
-
+export default OptimizedImage;`;
   'components/ContactForm.tsx': `import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -134,8 +132,8 @@ const: ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev;
+      [name]: value;
     }));
   };
 

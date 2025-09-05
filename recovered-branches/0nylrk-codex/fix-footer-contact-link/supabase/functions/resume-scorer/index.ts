@@ -101,7 +101,7 @@ serve(async (req) => {
         talent_id,
         cover_letter,
         resume_id,
-        job:jobs(title, description, skills),
+        job: jobs(title, description, skills),
         talent_profile:profiles!talent_id(bio, skills)
       `)
 <<<<<<< HEAD
@@ -309,8 +309,7 @@ serve(async (req) => {
             # Resume Content
             ${_resumeContent}
             
-            Compare the resume to the job description and provide:
-            1. A match score between 0-100 (where 100 is a perfect match)
+            Compare the resume to the job description and provide: 1. A match score between 0-100 (where 100 is a perfect match)
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: &quot;Strongly Recommended&quot;, &quot;Recommended for Review&quot;, or &quot;Low Match&quot;
@@ -428,7 +427,7 @@ serve(async (req) => {
     return new Response(
 <<<<<<< HEAD
       JSON.stringify({ 
-        success: true, 
+        success: true,
         matchResult 
       }),
       { 

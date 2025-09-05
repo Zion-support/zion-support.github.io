@@ -131,7 +131,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Advanced AI & Robotics Services
 <<<<<<< HEAD
   {
@@ -183,7 +182,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.7,
     reviews: 23
   },
-
   // Quantum Energy & Sustainability Services
 <<<<<<< HEAD
   {
@@ -235,7 +233,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 5
   },
-
   // Advanced Metaverse & AR/VR Services
 <<<<<<< HEAD
   {
@@ -287,7 +284,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.6,
     reviews: 67
   },
-
   // Quantum Logistics & Supply Chain Services
 <<<<<<< HEAD
   {
@@ -339,7 +335,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.7,
     reviews: 19
   },
-
   // Advanced Cybersecurity & Threat Intelligence
 <<<<<<< HEAD
   {
@@ -391,7 +386,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Quantum Financial Trading & Analytics
 <<<<<<< HEAD
   {
@@ -443,7 +437,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 6
   },
-
   // Advanced IoT & Smart City Services
 <<<<<<< HEAD
   {

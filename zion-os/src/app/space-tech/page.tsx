@@ -97,7 +97,7 @@ export default function SpaceTechPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>
               <p className="text-gray-400 mb-4">
-                High-speed satellite internet, global connectivity solutions, 
+                High-speed satellite internet, global connectivity solutions,
                 and communication infrastructure for remote regions.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -213,7 +213,7 @@ export default function SpaceTechPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Space Strategy Consulting</h3>
               <p className="text-gray-400 mb-4">
-                Strategic guidance for space initiatives, regulatory compliance, 
+                Strategic guidance for space initiatives, regulatory compliance,
                 and space industry partnerships.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -435,7 +435,7 @@ export default function SpaceTechPage() {_return (
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Space Mining</h3>
               <p className="text-gray-400 mb-4">
-                Extraction of valuable resources from asteroids, the Moon, 
+                Extraction of valuable resources from asteroids, the Moon,
                 and other celestial bodies for Earth use.
               </p>
             </div>

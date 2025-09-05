@@ -47,9 +47,9 @@ interface ApplicationsTableProps {
 }
 
 export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
+  applications,
+  processingId,
+  onViewApplication,
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {

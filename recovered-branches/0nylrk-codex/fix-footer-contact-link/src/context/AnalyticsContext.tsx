@@ -134,8 +134,8 @@ export function AnalyticsProvider(_{_children}: {_children: ReactNode}) {_const 
   // Function to track conversion events
   const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {}) => {
     trackEvent('conversion', { 
-      conversionType, 
-      value, 
+      conversionType,
+      value,
       ...metadata 
     })
   },

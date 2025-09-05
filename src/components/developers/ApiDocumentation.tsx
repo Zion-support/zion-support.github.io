@@ -295,7 +295,7 @@ print(data)`
       "min": 5000, _"max": 10000, _"currency": "USD"},
     "status": "active",
     "client_id": "user_xyz789",
-    "created_at": "2025-05-15T10:30:00Z",
+    "created_at": "2025-05-15T10: 30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
     "application_count": 12
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
@@ -416,7 +416,7 @@ payload = {_'title': 'Senior React Developer', _'description': 'We need an exper
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/jobs',
+    'https: //api.ziontechgroup.com/v1/jobs',
     headers=headers,
     data=json.dumps(payload)
 )
@@ -770,7 +770,7 @@ payload = {_'talent_id': 'talent_abc123', _'project_name': 'E-commerce Website R
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/quotes',
+    'https: //api.ziontechgroup.com/v1/quotes',
     headers=headers,
     data=json.dumps(payload)
 )

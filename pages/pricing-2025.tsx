@@ -3,7 +3,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { 
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe,
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',

@@ -45,7 +45,7 @@ class IntelligentErrorDetector {
     };
 
     const totalErrors = Object.values(errors).reduce(
-      (sum, arr) => sum + arr.length,
+      (sum, arr) => sum + arr.length;
       0
     );
     this.log(`Found ${totalErrors} total errors across all categories`);
@@ -143,7 +143,7 @@ class IntelligentErrorDetector {
             lin: e:
               content
                 .split('\n')
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
           });
         }
       } catch (error) {
@@ -198,15 +198,15 @@ class IntelligentErrorDetector {
         (acc, [category, errorList]) => {
           acc[category] = errorList.length;
           return acc;
-        },
+        };
         {}
       ),
       detail: s: errors,
     };
 
     const reportFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'error-detection-report.json'
     );
     fs.mkdirSync(path.dirname(reportFile), { recursiv: e: true });

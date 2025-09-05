@@ -41,7 +41,6 @@ class CodeQualityMonitor {,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
-
       lastUpdated: new Date().toISOString()
     };
     this.logFile = path.join(__dirname, &quot;logs&quot;, &quot;code-quality.log&quot;)

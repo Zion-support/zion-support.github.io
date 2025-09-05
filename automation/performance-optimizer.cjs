@@ -92,8 +92,8 @@ class PerformanceOptimizer {
     };
 
     const reportFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'performance-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

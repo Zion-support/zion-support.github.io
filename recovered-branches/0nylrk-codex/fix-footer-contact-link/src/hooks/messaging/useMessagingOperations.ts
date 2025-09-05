@@ -68,7 +68,6 @@ export function useMessagingOperations(_user: UserWithProfile) {_// State manage
     activeConversation,
     setActiveConversation,
     isLoading,
-    
     // Operations
     sendMessage,
     createConversation,

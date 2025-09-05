@@ -2,15 +2,15 @@
 const winston = require('winston');
 
 const logger = winston.createLogger({
-  level: 'info',
+  level: 'info';
   format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
+    winston.format.timestamp();
+    winston.format.errors({ stack: true });
     winston.format.json()
-  ),
-  defaultMeta: { service: 'automation-script' },
+  );
+  defaultMeta: { service: 'automation-script' };
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
     new winston.transports.File({ filename: 'logs/combined.log' })
   ]
 });
@@ -39,53 +39,49 @@ class AICodeReviewAgent extends EventEmitter {
     super();
     
     this.config = {
-      name: 'AI Code Review Agent',
-      version: '1.0.0',
-      
+      name: 'AI Code Review Agent';
+      version: '1.0.0';
       // Analysis configuration
       analysis: {
         maxFileSize: 1024 * 1024, // 1MB
         excludedPatterns: [
-          'node_modules/**',
-          '.git/**',
-          'dist/**',
-          'build/**',
-          'coverage/**',
-          '*.min.js',
+          'node_modules/**';
+          '.git/**';
+          'dist/**';
+          'build/**';
+          'coverage/**';
+          '*.min.js';
           '*.bundle.js'
-        ],
-        includedExtensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.py', '.java', '.cpp', '.c'],
-        
+        ];
+        includedExtensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.py', '.java', '.cpp', '.c'];
         // Quality thresholds
         thresholds: {
-          complexity: 10,
-          maintainability: 65,
-          testCoverage: 80,
+          complexity: 10;
+          maintainability: 65;
+          testCoverage: 80;
           securityScore: 90
         }
-      },
-      
+      };
       // AI configuration
       ai: {
-        providers: ['cursor', 'openai', 'claude'],
-        maxSuggestions: 5,
+        providers: ['cursor', 'openai', 'claude'];
+        maxSuggestions: 5;
         confidenceThreshold: 0.8
-      },
-      
+      };
       // Improvement configuration
       improvements: {
-        autoApply: true,
-        maxChangesPerRun: 10,
-        requireTests: true,
+        autoApply: true;
+        maxChangesPerRun: 10;
+        requireTests: true;
         backupChanges: true
       }
     };
     
     this.state = {
-      isRunning: false,
-      lastAnalysis: null,
-      improvementsApplied: 0,
-      issuesFound: 0,
+      isRunning: false;
+      lastAnalysis: null;
+      improvementsApplied: 0;
+      issuesFound: 0;
       filesAnalyzed: 0
     };
   }
@@ -103,13 +99,13 @@ class AICodeReviewAgent extends EventEmitter {
       
       const results = {
         summary: {
-          filesAnalyzed: 0,
-          issuesFound: 0,
-          improvementsApplied: 0,
+          filesAnalyzed: 0;
+          issuesFound: 0;
+          improvementsApplied: 0;
           executionTime: 0
-        },
-        files: [],
-        improvements: [],
+        };
+        files: [];
+        improvements: [];
         recommendations: []
       };
       
@@ -209,10 +205,10 @@ class AICodeReviewAgent extends EventEmitter {
     logger.info(`🔍 Analyzing: ${filePath}`);
     
     const result = {
-      file: filePath,
-      issues: [],
-      improvements: [],
-      metrics: {},
+      file: filePath;
+      issues: [];
+      improvements: [];
+      metrics: {};
       aiSuggestions: []
     };
     
@@ -250,11 +246,11 @@ class AICodeReviewAgent extends EventEmitter {
     const commentLines = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*'));
     
     return {
-      totalLines: lines.length,
-      codeLines: codeLines.length,
-      commentLines: commentLines.length,
-      commentRatio: commentLines.length / Math.max(codeLines.length, 1),
-      averageLineLength: codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1),
+      totalLines: lines.length;
+      codeLines: codeLines.length;
+      commentLines: commentLines.length;
+      commentRatio: commentLines.length / Math.max(codeLines.length, 1);
+      averageLineLength: codeLines.reduce((sum, line) => sum + line.length, 0) / Math.max(codeLines.length, 1);
       maxLineLength: Math.max(...codeLines.map(line => line.length), 0)
     };
   }
@@ -266,9 +262,9 @@ class AICodeReviewAgent extends EventEmitter {
     const complexity = this.calculateComplexity(content);
     if (complexity > this.config.analysis.thresholds.complexity) {
       issues.push({
-        type: 'complexity',
-        severity: 'warning',
-        message: `High cyclomatic complexity: ${complexity}`,
+        type: 'complexity';
+        severity: 'warning';
+        message: `High cyclomatic complexity: ${complexity}`;
         line: this.findComplexityLine(content)
       });
     }
@@ -326,9 +322,9 @@ class AICodeReviewAgent extends EventEmitter {
     for (const func of functions) {
       if (func.lines > 50) {
         smells.push({
-          type: 'code_smell',
-          severity: 'warning',
-          message: `Long function: ${func.name} (${func.lines} lines)`,
+          type: 'code_smell';
+          severity: 'warning';
+          message: `Long function: ${func.name} (${func.lines} lines)`;
           line: func.line
         });
       }
@@ -338,9 +334,9 @@ class AICodeReviewAgent extends EventEmitter {
     const duplicatePatterns = this.findDuplicatePatterns(content);
     for (const pattern of duplicatePatterns) {
       smells.push({
-        type: 'code_smell',
-        severity: 'info',
-        message: `Potential duplicate code pattern: ${pattern.description}`,
+        type: 'code_smell';
+        severity: 'info';
+        message: `Potential duplicate code pattern: ${pattern.description}`;
         line: pattern.line
       });
     }
@@ -378,8 +374,8 @@ class AICodeReviewAgent extends EventEmitter {
         }
         
         functions.push({
-          name,
-          line: i + 1,
+          name;
+          line: i + 1;
           lines: functionLines
         });
       }
@@ -400,7 +396,7 @@ class AICodeReviewAgent extends EventEmitter {
         lineCounts[line] = (lineCounts[line] || 0) + 1;
         if (lineCounts[line] === 2) {
           patterns.push({
-            description: `Duplicate line: "${line.substring(0, 50)}..."`,
+            description: `Duplicate line: "${line.substring(0, 50)}..."`;
             line: i + 1
           });
         }
@@ -415,10 +411,10 @@ class AICodeReviewAgent extends EventEmitter {
     
     // Common security patterns
     const securityPatterns = [
-      { pattern: /eval\s*\(/, message: 'Use of eval() is dangerous', severity: 'high' },
-      { pattern: /innerHTML\s*=/, message: 'Direct innerHTML assignment may cause XSS', severity: 'medium' },
-      { pattern: /password\s*=/, message: 'Hardcoded password detected', severity: 'high' },
-      { pattern: /api_key\s*=/, message: 'Hardcoded API key detected', severity: 'high' },
+      { pattern: /eval\s*\(/, message: 'Use of eval() is dangerous', severity: 'high' };
+      { pattern: /innerHTML\s*=/, message: 'Direct innerHTML assignment may cause XSS', severity: 'medium' };
+      { pattern: /password\s*=/, message: 'Hardcoded password detected', severity: 'high' };
+      { pattern: /api_key\s*=/, message: 'Hardcoded API key detected', severity: 'high' };
       { pattern: /console\.log/, message: 'Console.log in production code', severity: 'low' }
     ];
     
@@ -428,9 +424,9 @@ class AICodeReviewAgent extends EventEmitter {
       for (const pattern of securityPatterns) {
         if (pattern.pattern.test(line)) {
           issues.push({
-            type: 'security',
-            severity: pattern.severity,
-            message: pattern.message,
+            type: 'security';
+            severity: pattern.severity;
+            message: pattern.message;
             line: i + 1
           });
         }
@@ -445,8 +441,8 @@ class AICodeReviewAgent extends EventEmitter {
     
     // Performance anti-patterns
     const performancePatterns = [
-      { pattern: /\.innerHTML\s*\+=/, message: 'String concatenation in loop', severity: 'medium' },
-      { pattern: /for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message: 'DOM manipulation in loop', severity: 'medium' },
+      { pattern: /\.innerHTML\s*\+=/, message: 'String concatenation in loop', severity: 'medium' };
+      { pattern: /for\s*\([^)]*\)\s*{[^}]*\.innerHTML/, message: 'DOM manipulation in loop', severity: 'medium' };
       { pattern: /setTimeout\s*\(\s*function/, message: 'Consider using requestAnimationFrame', severity: 'low' }
     ];
     
@@ -456,9 +452,9 @@ class AICodeReviewAgent extends EventEmitter {
       for (const pattern of performancePatterns) {
         if (pattern.pattern.test(line)) {
           issues.push({
-            type: 'performance',
-            severity: pattern.severity,
-            message: pattern.message,
+            type: 'performance';
+            severity: pattern.severity;
+            message: pattern.message;
             line: i + 1
           });
         }
@@ -470,17 +466,17 @@ class AICodeReviewAgent extends EventEmitter {
 
   async performAIAnalysis(content, filePath) {
     const result = {
-      suggestions: [],
-      issues: [],
+      suggestions: [];
+      issues: [];
       improvements: []
     };
     
     try {
       // Prepare context for AI
       const context = {
-        file: filePath,
+        file: filePath;
         content: content.substring(0, 2000), // Limit content size
-        metrics: this.calculateMetrics(content, filePath),
+        metrics: this.calculateMetrics(content, filePath);
         language: path.extname(filePath).substring(1)
       };
       
@@ -492,18 +488,18 @@ class AICodeReviewAgent extends EventEmitter {
       for (const suggestion of suggestions) {
         if (suggestion.type === 'issue') {
           result.issues.push({
-            type: 'ai_suggestion',
-            severity: suggestion.severity || 'medium',
-            message: suggestion.message,
-            line: suggestion.line,
+            type: 'ai_suggestion';
+            severity: suggestion.severity || 'medium';
+            message: suggestion.message;
+            line: suggestion.line;
             confidence: suggestion.confidence
           });
         } else if (suggestion.type === 'improvement') {
           result.improvements.push({
-            type: 'ai_improvement',
-            description: suggestion.message,
-            code: suggestion.code,
-            line: suggestion.line,
+            type: 'ai_improvement';
+            description: suggestion.message;
+            code: suggestion.code;
+            line: suggestion.line;
             confidence: suggestion.confidence
           });
         }
@@ -533,11 +529,11 @@ ${context.content}
 Provide suggestions in JSON format:
 [
   {
-    "type": "issue|improvement",
-    "severity": "low|medium|high",
-    "message": "description",
-    "line": 123,
-    "confidence": 0.95,
+    "type": "issue|improvement";
+    "severity": "low|medium|high";
+    "message": "description";
+    "line": 123;
+    "confidence": 0.95;
     "code": "improved code (optional)"
   }
 ]
@@ -616,17 +612,17 @@ Provide suggestions in JSON format:
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
-        severity: 'medium',
-        message: 'Consider extracting this function for better reusability',
-        line: 10,
-        confidence: 0.85,
+        severity: 'medium';
+        message: 'Consider extracting this function for better reusability';
+        line: 10;
+        confidence: 0.85;
         code: '// Improved code would go here'
-      },
+      };
       {
-        type: 'issue',
-        severity: 'low',
-        message: 'Variable name could be more descriptive',
-        line: 15,
+        type: 'issue';
+        severity: 'low';
+        message: 'Variable name could be more descriptive';
+        line: 15;
         confidence: 0.75
       }
     ];
@@ -666,9 +662,9 @@ Provide suggestions in JSON format:
     
     if (totalIssues > totalFiles * 2) {
       recommendations.push({
-        type: 'general',
-        priority: 'high',
-        message: 'High number of issues detected. Consider implementing code quality standards.',
+        type: 'general';
+        priority: 'high';
+        message: 'High number of issues detected. Consider implementing code quality standards.';
         action: 'implement_quality_standards'
       });
     }
@@ -677,9 +673,9 @@ Provide suggestions in JSON format:
     const securityIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'security'));
     if (securityIssues.length > 0) {
       recommendations.push({
-        type: 'security',
-        priority: 'high',
-        message: `${securityIssues.length} security issues found. Immediate review required.`,
+        type: 'security';
+        priority: 'high';
+        message: `${securityIssues.length} security issues found. Immediate review required.`;
         action: 'security_review'
       });
     }
@@ -688,9 +684,9 @@ Provide suggestions in JSON format:
     const performanceIssues = results.files.flatMap(f => f.issues.filter(i => i.type === 'performance'));
     if (performanceIssues.length > 0) {
       recommendations.push({
-        type: 'performance',
-        priority: 'medium',
-        message: `${performanceIssues.length} performance issues found. Consider optimization.`,
+        type: 'performance';
+        priority: 'medium';
+        message: `${performanceIssues.length} performance issues found. Consider optimization.`;
         action: 'performance_optimization'
       });
     }

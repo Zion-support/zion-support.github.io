@@ -6,7 +6,7 @@ import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown,
-  Brain, Rocket, Shield, 
+  Brain, Rocket, Shield,
   Zap,
   Target, Atom,
   BookOpen,

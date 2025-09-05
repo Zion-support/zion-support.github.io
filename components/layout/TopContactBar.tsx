@@ -2,7 +2,7 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, 
+  Phone, Mail, MapPin, Globe,
   Clock, ChevronDown, ChevronUp,
   MessageCircle, Calendar, Star
 } from 'lucide-react',

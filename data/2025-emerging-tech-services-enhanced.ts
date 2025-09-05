@@ -133,7 +133,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 5
   },
-
   // Quantum Bio-Computing Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 9
   },
-
   // Brain-Computer Interface Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 16
   },
-
   // Quantum Energy Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 24
   },
-
   // Quantum Materials Discovery Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 19
   },
-
   // Quantum Robotics Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 31
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Quantum Logistics Platform
 <<<<<<< HEAD
   {
@@ -549,7 +541,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 62
   },
-
   // Metaverse AI Development Platform
 <<<<<<< HEAD
   {
@@ -601,7 +592,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.6,
     reviews: 98
   },
-
   // Quantum Machine Learning Platform
 <<<<<<< HEAD
   {
@@ -653,7 +643,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Neuromorphic Computing Platform
 <<<<<<< HEAD
   {
@@ -705,7 +694,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Synthetic Biology Platform
 <<<<<<< HEAD
   {
@@ -757,7 +745,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 16
   },
-
   // Space Resource Mining Platform
 <<<<<<< HEAD
   {

@@ -128,7 +128,7 @@ export default InteractiveNavigation;
 import React, { useState } from 'react';
 
 export default function InteractiveNavigation() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false),
   return (
     <div>
       <a href=&quot;#main&quot; className=&quot;sr-only focus:not-sr-only&quot;>Skip to content</a>
@@ -140,6 +140,6 @@ export default function InteractiveNavigation() {
         </div>
       )}
     </div>
-  );
+  ),
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

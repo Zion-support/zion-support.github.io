@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Search, Filter, Grid3X3, List, 
+  Search, Filter, Grid3X3, List,
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon

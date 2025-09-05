@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, 
+  Brain, Star, Users, TrendingUp, Zap, Shield,
   CheckCircle, Clock, Award, Target, Globe, Sparkles,
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon

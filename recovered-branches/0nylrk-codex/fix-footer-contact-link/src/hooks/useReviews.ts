@@ -48,7 +48,7 @@ export function useReviews(_projectId?: string) {_const { user} = useAuth();
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+          reviewer_profile: profiles!reviewer_id(display_name, avatar_url)
         `)
 <<<<<<< HEAD
         .eq("project_id", projectId)

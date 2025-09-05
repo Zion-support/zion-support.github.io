@@ -16,7 +16,7 @@ if (process.argv[1] = = = new window.URL(import.meta.url).pathname) {_; try {; m
 
         modified = true};
 
-    };
+    },
     if (modified) {,
 <<<<<<< HEAD
       fs.writeFileSync(filePath, content, "utf8"),

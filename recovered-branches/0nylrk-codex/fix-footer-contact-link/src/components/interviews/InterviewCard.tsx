@@ -104,7 +104,7 @@ export function InterviewCard(_{_interview, _onRefresh}: InterviewCardProps) {_c
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
+      interview_id: interview.id,
       status 
     }),
 =======

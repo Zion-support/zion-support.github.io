@@ -18,21 +18,21 @@ export const _formatDate = (date: Date | string | number, format: string = 'medi
     case 'medium':
 <<<<<<< HEAD
       return dateObj.toLocaleDateString(undefined, { 
-        year: 'numeric', 
-        month: 'short', 
+        year: 'numeric',
+        month: 'short',
         day: 'numeric' 
       }),
     case 'long':
       return dateObj.toLocaleDateString(undefined, { 
-        year: 'numeric', 
-        month: 'long', 
+        year: 'numeric',
+        month: 'long',
         day: 'numeric' 
       }),
     case 'full':
       return dateObj.toLocaleDateString(undefined, { 
         weekday: 'long',
-        year: 'numeric', 
-        month: 'long', 
+        year: 'numeric',
+        month: 'long',
         day: 'numeric' 
       }),
     case 'relative':

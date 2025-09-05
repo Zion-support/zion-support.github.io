@@ -134,7 +134,7 @@ export default function WhitelabelManager() {_const { user} = useAuth();
                 
                 <h3>Admin Access</h3>
                 <p>
-                  You can assign tenant administrators who will have access to manage their white-label instance, 
+                  You can assign tenant administrators who will have access to manage their white-label instance,
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>

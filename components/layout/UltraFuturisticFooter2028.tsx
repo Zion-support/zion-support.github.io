@@ -2,10 +2,10 @@
 import React from 'react',
 import Link from 'next/link',
 import { 
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
-  Shield, Users, Briefcase, BookOpen, MessageCircle, 
-  Star, TrendingUp, Target, Layers, Cpu, Database, 
-  Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,
+  Shield, Users, Briefcase, BookOpen, MessageCircle,
+  Star, TrendingUp, Target, Layers, Cpu, Database,
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car,
   GraduationCap, Scale, Building, Factory, Camera,
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
   Code

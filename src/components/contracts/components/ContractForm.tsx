@@ -184,9 +184,9 @@ export function ContractForm(_{_talent, _clientName, _initialValues, _onFormValu
     setIsGenerating(true),
     try {
       const contract = await generateContract(
-        values, 
-        talent, 
-        clientName, 
+        values,
+        talent,
+        clientName,
         generatedMilestones
       ),
       

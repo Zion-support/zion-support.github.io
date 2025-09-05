@@ -133,7 +133,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 100
   },
-
   // DNA Computing Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 60
   },
-
   // Photonic Computing Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 80
   },
-
   // Holographic Display Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.7,
     reviews: 200
   },
-
   // Swarm Robotics Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 150
   },
-
   // Quantum Internet Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 80
   },
-
   // Biometric AI Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 350
   },
-
   // Quantum Energy Platform
 <<<<<<< HEAD
   {

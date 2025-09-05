@@ -45,8 +45,8 @@ const SearchBar: React.FC<SearchBarProps> = (_{_onSearch, _placeholder = 'Search
         </div>
       </form>
     </div>
-  );
-};
+  ),
+},
 
 export default SearchBar;
 =======

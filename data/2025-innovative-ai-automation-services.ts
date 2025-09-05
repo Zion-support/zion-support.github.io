@@ -305,7 +305,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.7,
     reviews: 89
   },
-
   // Autonomous Data Analytics Platform
 <<<<<<< HEAD
   {

@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp3Created = true
     } else if (playhtKey) {
       const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts',
+        'https: //api.play.ht/api/v2/tts',
         { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
         { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
       ),

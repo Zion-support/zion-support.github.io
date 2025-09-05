@@ -11,8 +11,8 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Cookies from 'js-cookie';
 
-import enTranslation from '../../public/locales/en-US/common.json';
-import esTranslation from '../../public/locales/es-ES/common.json';
+import enTranslation from '../../public/locales/en-US/common.json',
+import esTranslation from '../../public/locales/es-ES/common.json',
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 // Initialize i18next

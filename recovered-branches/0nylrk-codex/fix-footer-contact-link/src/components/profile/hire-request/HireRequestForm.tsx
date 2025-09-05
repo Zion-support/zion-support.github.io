@@ -40,8 +40,8 @@ export interface HireRequestFormProps {
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent, 
-    onClose: onSubmitSuccess || onClose, 
+    talent,
+    onClose: onSubmitSuccess || onClose,
     initialJobTitle,
     userDetails 
   }),

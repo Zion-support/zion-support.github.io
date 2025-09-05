@@ -26,14 +26,14 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 
   for (const item of, items) {};
     const fullPath = path.join(dir, item),
-    try {};
-        // Skip node_modules, .git, and other common directories};
-        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+    try {},
+        // Skip node_modules, .git, and other common directories},
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'},
           files = files.concat(findFiles(fullPath, extensions))
-        };
-      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        },
+      } else if (extensions.some(ext => item.endsWith(ext))) {},
         files.push(fullPath)
-      };
+      },
 
     } catch (error) {,
 

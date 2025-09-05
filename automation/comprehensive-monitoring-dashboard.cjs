@@ -14,36 +14,36 @@ class ComprehensiveMonitoringDashboard {
     
     this.config = {
       refreshInterval: 5000, // 5 seconds
-      maxLogLines: 50,
+      maxLogLines: 50;
       services: {
         pm2: {
-          name: "PM2 Process Management",
-          processes: ["zion-auto-sync", "zion-auto-sync-cron", "redundancy-automation-system", "redundancy-health-monitor", "redundancy-git-sync", "redundancy-build-monitor", "comprehensive-redundancy-orchestrator"],
+          name: "PM2 Process Management";
+          processes: ["zion-auto-sync", "zion-auto-sync-cron", "redundancy-automation-system", "redundancy-health-monitor", "redundancy-git-sync", "redundancy-build-monitor", "comprehensive-redundancy-orchestrator"];
           status: "unknown"
-        },
+        };
         githubActions: {
-          name: "GitHub Actions Workflows",
-          workflows: [".github/workflows/marketing-sync.yml", ".github/workflows/sync-health.yml"],
+          name: "GitHub Actions Workflows";
+          workflows: [".github/workflows/marketing-sync.yml", ".github/workflows/sync-health.yml"];
           status: "unknown"
-        },
+        };
         netlifyFunctions: {
-          name: "Netlify Functions",
-          manifestFile: "netlify/functions/functions-manifest.json",
+          name: "Netlify Functions";
+          manifestFile: "netlify/functions/functions-manifest.json";
           status: "unknown"
-        },
+        };
         git: {
-          name: "Git Synchronization",
+          name: "Git Synchronization";
           status: "unknown"
-        },
+        };
         build: {
-          name: "Build Health",
+          name: "Build Health";
           status: "unknown"
         }
       }
     };
     
     this.rl = readline.createInterface({
-      input: process.stdin,
+      input: process.stdin;
       output: process.stdout
     });
     
@@ -73,19 +73,19 @@ class ComprehensiveMonitoringDashboard {
   async runCommand(command, args = [], options = {}) {
     return new Promise((resolve) => {
       const result = spawnSync(command, args, {
-        cwd: this.workspace,
-        env: process.env,
-        shell: false,
-        encoding: "utf8",
-        maxBuffer: 1024 * 1024 * 10,
-        timeout: options.timeout || 10000,
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 10000;
         ...options
       });
       
       resolve({
-        status: result.status,
-        stdout: result.stdout || "",
-        stderr: result.stderr || "",
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
         error: result.error
       });
     });
@@ -118,10 +118,10 @@ class ComprehensiveMonitoringDashboard {
       if (result.status === 0) {
         const processes = JSON.parse(result.stdout);
         const status = {
-          total: processes.length,
-          online: processes.filter(p => p.pm2_env.status === "online").length,
-          stopped: processes.filter(p => p.pm2_env.status === "stopped").length,
-          errored: processes.filter(p => p.pm2_env.status === "errored").length,
+          total: processes.length;
+          online: processes.filter(p => p.pm2_env.status === "online").length;
+          stopped: processes.filter(p => p.pm2_env.status === "stopped").length;
+          errored: processes.filter(p => p.pm2_env.status === "errored").length;
           processes: []
         };
 
@@ -129,18 +129,18 @@ class ComprehensiveMonitoringDashboard {
           const process = processes.find(p => p.name === processName);
           if (process) {
             status.processes.push({
-              name: process.name,
-              status: process.pm2_env.status,
-              uptime: process.pm2_env.pm_uptime,
-              memory: process.monit.memory,
+              name: process.name;
+              status: process.pm2_env.status;
+              uptime: process.pm2_env.pm_uptime;
+              memory: process.monit.memory;
               cpu: process.monit.cpu
             });
           } else {
             status.processes.push({
-              name: processName,
-              status: "not_found",
-              uptime: 0,
-              memory: 0,
+              name: processName;
+              status: "not_found";
+              uptime: 0;
+              memory: 0;
               cpu: 0
             });
           }
@@ -168,16 +168,16 @@ class ComprehensiveMonitoringDashboard {
           const content = fs.readFileSync(workflow, 'utf8');
           const isValid = content.includes('name:') && content.includes('on:');
           workflows.push({
-            name: path.basename(workflow),
-            exists: true,
-            valid: isValid,
+            name: path.basename(workflow);
+            exists: true;
+            valid: isValid;
             size: fs.statSync(workflow).size
           });
         } else {
           workflows.push({
-            name: path.basename(workflow),
-            exists: false,
-            valid: false,
+            name: path.basename(workflow);
+            exists: false;
+            valid: false;
             size: 0
           });
         }
@@ -203,10 +203,10 @@ class ComprehensiveMonitoringDashboard {
       const isStale = age > 3600000; // 1 hour
 
       return {
-        status: "found",
-        functions: manifest.functions || [],
-        lastGenerated: lastGenerated,
-        isStale: isStale,
+        status: "found";
+        functions: manifest.functions || [];
+        lastGenerated: lastGenerated;
+        isStale: isStale;
         totalFunctions: (manifest.functions || []).length
       };
     } catch (error) {
@@ -249,9 +249,9 @@ class ComprehensiveMonitoringDashboard {
       }
 
       return {
-        status: gitStatus,
-        changes: changes,
-        branch: currentBranch,
+        status: gitStatus;
+        changes: changes;
+        branch: currentBranch;
         syncStatus: syncStatus
       };
     } catch (error) {
@@ -274,13 +274,13 @@ class ComprehensiveMonitoringDashboard {
       const hasDependencies = fs.existsSync("node_modules");
 
       return {
-        status: "found",
+        status: "found";
         scripts: {
-          build: hasBuildScript,
-          healthCheck: hasHealthCheck,
+          build: hasBuildScript;
+          healthCheck: hasHealthCheck;
           test: hasTestScript
-        },
-        dependencies: hasDependencies,
+        };
+        dependencies: hasDependencies;
         totalScripts: Object.keys(scripts).length
       };
     } catch (error) {
@@ -414,8 +414,8 @@ class ComprehensiveMonitoringDashboard {
       const logFiles = fs.readdirSync(this.logDir)
         .filter(file => file.endsWith('.log'))
         .map(file => ({
-          name: file,
-          path: path.join(this.logDir, file),
+          name: file;
+          path: path.join(this.logDir, file);
           stats: fs.statSync(path.join(this.logDir, file))
         }))
         .sort((a, b) => b.stats.mtime.getTime() - a.stats.mtime.getTime());
@@ -460,10 +460,10 @@ class ComprehensiveMonitoringDashboard {
     try {
       // Get all statuses in parallel
       const [pm2Status, ghStatus, netlifyStatus, gitStatus, buildStatus] = await Promise.all([
-        this.getPM2Status(),
-        this.getGitHubActionsStatus(),
-        this.getNetlifyFunctionsStatus(),
-        this.getGitStatus(),
+        this.getPM2Status();
+        this.getGitHubActionsStatus();
+        this.getNetlifyFunctionsStatus();
+        this.getGitStatus();
         this.getBuildStatus()
       ]);
 

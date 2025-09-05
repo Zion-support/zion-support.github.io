@@ -36,7 +36,7 @@ const _corruptedPages = [
   'pages/governance/create.tsx',
   'pages/governance/my-votes.tsx',
   'pages/governance/[proposalId].tsx'
-];
+],
 
 // Function to find the best backup file for a given page
 function findBestBackup(_pagePath) {_const _dir = path.dirname(pagePath);
@@ -180,7 +180,7 @@ function restorePage(_pagePath) {_try {
     
 <<<<<<< HEAD
     return { 
-      restored: true, 
+      restored: true,
       backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath
     }

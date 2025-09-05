@@ -539,7 +539,7 @@ export default function Marketplace() {_const _router = useRouter();
       } else if (err.response?.status === 500) {
         logErrorToProduction("500 Server error"),
         toast({
-          title: "Server Error", 
+          title: "Server Error",
           description: "The marketplace is temporarily unavailable. Please try again later.",
           variant: "destructive"})
 =======

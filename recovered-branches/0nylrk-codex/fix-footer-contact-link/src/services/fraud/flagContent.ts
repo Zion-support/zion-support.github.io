@@ -61,7 +61,7 @@ export const _flagContent = async (
   } catch (error) {
     console.error('Error flagging content:', error),
     return { 
-      success: false, 
+      success: false,
       error: error instanceof Error ? error.message : 'Unknown error' 
     }
 =======

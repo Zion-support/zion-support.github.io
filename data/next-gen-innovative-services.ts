@@ -155,7 +155,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Space Technology Platform
 <<<<<<< HEAD
   {
@@ -231,7 +230,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Biotech AI Platform
 <<<<<<< HEAD
   {
@@ -307,7 +305,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -383,7 +380,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -459,7 +455,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 22
   },
-
   // Quantum Cybersecurity Platform
 <<<<<<< HEAD
   {
@@ -535,7 +530,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 28
   },
-
   // Metaverse AI Development Platform
 <<<<<<< HEAD
   {
@@ -611,7 +605,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 32
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -687,7 +680,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 19
   },
-
   // AI-Powered Legal Contract Analyzer
 <<<<<<< HEAD
   {
@@ -763,7 +755,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.6,
     reviews: 45
   },
-
   // Quantum IoT Platform
 <<<<<<< HEAD
   {

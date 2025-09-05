@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
+  Brain, Atom, Target, ArrowRight, CheckCircle, Star,
   Phone, Mail, MapPin
 } from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',

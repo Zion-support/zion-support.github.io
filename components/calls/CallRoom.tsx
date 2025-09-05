@@ -50,7 +50,7 @@ import React, {_useCallback, _useEffect, _useMemo, _useState} from 'react';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
-export type StartMode = 'video' | 'audio';
+export type StartMode = 'video' | 'audio',
 
 type Props = {_projectId: string;
   userId: string;

@@ -11,7 +11,7 @@ for (const file of conflictedFiles) {_; fixMergeConflicts(file)};
 =======
 
 
-  };
+  },
   traverse(dir),
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   return files};

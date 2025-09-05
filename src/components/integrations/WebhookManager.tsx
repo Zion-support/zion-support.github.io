@@ -149,9 +149,9 @@ export function WebhookManager() {_const {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     await createWebhook(
-      newWebhook.name, 
-      newWebhook.url, 
-      newWebhook.eventTypes, 
+      newWebhook.name,
+      newWebhook.url,
+      newWebhook.eventTypes,
       newWebhook.secret || undefined
     ),
     

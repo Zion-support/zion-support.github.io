@@ -59,7 +59,6 @@ const _talentSchema = z.object({_// Step 1: Basic Info
     fullName: z.string().min(2, &quot;Full Name must be at least 2 characters&quot;),
     professionalTitle: z.string().min(2, &quot;Professional title is required&quot;),
     profilePicture: z.any().optional()}),
-  
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, &quot;Bio must be at least 50 characters&quot;),
@@ -74,7 +73,6 @@ const _talentSchema = z.object({_// Step 1: Basic Info
   skills: z.object({
     skillsList: z.string().min(2, &quot;Add at least one skill&quot;),
     toolsUsed: z.string().optional()}),
-  
   // Step 4: Availability & Preferences
   availability: z.object({
     availabilityType: z.string().min(1, &quot;Select your availability&quot;),

@@ -15,8 +15,8 @@
 } catch (error) {, this.log(`❌ Performance Optimizer: failed: ${error.message}`, "ERROR")}}},
 =======
 
-    };
-  };
+    },
+  },
 ,
 <<<<<<< HEAD
   log(message, level = &quot;INFO&quot;) {,
@@ -24,7 +24,7 @@
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     // console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logMessage)
-  };
+  },
 ,
   async optimizeBundle() {,
     try {,
@@ -118,7 +118,7 @@
         &quot;Enable gzip compression&quot;,
         &quot;Use React.memo for expensive components&quot;
       ]
-    };
+    },
 ,
     const reportFile = path.join(__dirname, &quot;reports&quot;, &quot;performance-report.json&quot;),
 =======

@@ -249,9 +249,9 @@ export default function AboutPage() {_const _stats = [
     {_year: '2025', _title: 'Future Vision', _description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'}
   ];
 
-import React from 'react';
-import Head from 'next/head';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Button from '../components/ui/Button',
 
 export default function AboutPage() {_return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">

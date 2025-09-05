@@ -131,7 +131,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Space Technology Services
 <<<<<<< HEAD
   {
@@ -183,7 +182,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Biotech AI Services
 <<<<<<< HEAD
   {
@@ -235,7 +233,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading
 <<<<<<< HEAD
   {
@@ -287,7 +284,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Quantum Cybersecurity
 <<<<<<< HEAD
   {
@@ -339,7 +335,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 32
   },
-
   // Quantum Internet Security
 <<<<<<< HEAD
   {
@@ -391,7 +386,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 22
   },
-
   // Quantum IoT Platform
 <<<<<<< HEAD
   {
@@ -443,7 +437,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.6,
     reviews: 48
   },
-
   // Quantum Logistics
 <<<<<<< HEAD
   {
@@ -495,7 +488,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 29
   },
-
   // Quantum Metaverse
 <<<<<<< HEAD
   {
@@ -547,7 +539,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 41
   },
-
   // Quantum Robotics
 <<<<<<< HEAD
   {
@@ -599,7 +590,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 14
   },
-
   // Autonomous Manufacturing
 <<<<<<< HEAD
   {
@@ -651,7 +641,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 19
   },
-
   // Autonomous Vehicle AI
 <<<<<<< HEAD
   {

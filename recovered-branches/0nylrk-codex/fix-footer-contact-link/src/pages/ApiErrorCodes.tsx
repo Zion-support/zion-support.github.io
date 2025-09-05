@@ -300,8 +300,7 @@ export function ApiErrorCodes() {_const _errorExample = `{
         
         <h3>Rate Limit Headers</h3>
         <p>
-          All API responses include headers to help you track your rate limit usage:
-        </p>
+          All API responses include headers to help you track your rate limit usage: </p>
         
         <ul>
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>

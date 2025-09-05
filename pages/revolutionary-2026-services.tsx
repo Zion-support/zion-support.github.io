@@ -139,7 +139,7 @@ export default function Revolutionary2026ServicesPage() {_return (
           <div className="max-w-7xl mx-auto relative z-10">
             {_/* Why Choose Zion Tech Group */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   Why Choose Zion Tech Group?

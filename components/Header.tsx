@@ -146,8 +146,8 @@ const Header: React.FC = () => {_const [isMenuOpen, _setIsMenuOpen] = useState(f
         )}
       </nav>
     </header>
-  );
-};
+  ),
+},
 
 export default Header;
 =======

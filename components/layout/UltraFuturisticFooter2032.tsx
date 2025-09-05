@@ -3,7 +3,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
   Rocket, Shield, Cpu, Target, Microscope, Users,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, Heart, Star, Award, CheckCircle,

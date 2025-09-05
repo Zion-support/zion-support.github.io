@@ -119,7 +119,7 @@ function generateReport(results) {
   }
 
   fs.writeFileSync(
-    '/workspace/automation/reports/master-automation-report.json',
+    '/workspace/automation/reports/master-automation-report.json';
     JSON.stringify(report, null, 2)
   );
 

@@ -35,13 +35,13 @@ class GitResolver {
 
     // Configure git for merge strategy
     await this.runCommand(
-      'git config pull.rebase false',
+      'git config pull.rebase false';
       'Configure merge strategy'
     );
 
     // Try to pull with merge strategy
     const pullResult = await this.runCommand(
-      'git pull origin main --no-edit',
+      'git pull origin main --no-edit';
       'Pull and merge from main'
     );
 
@@ -50,7 +50,7 @@ class GitResolver {
 
       // Check for conflicted files
       const statusResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Check git status'
       );
 
@@ -75,11 +75,11 @@ class GitResolver {
               file.endsWith('.js'))
           ) {
             await this.runCommand(
-              `git checkout --theirs "${file}"`,
+              `git checkout --theirs "${file}"`;
               `Accept incoming changes for ${file}`
             );
             await this.runCommand(
-              `git add "${file}"`,
+              `git add "${file}"`;
               `Stage resolved file ${file}`
             );
             this.resolvedConflicts.push(file);
@@ -109,7 +109,7 @@ class GitResolver {
       if (ghCheck.success) {
         // Get open PRs
         const prResult = await this.runCommand(
-          'gh pr list --state open --json number,title,headRefName,baseRefName',
+          'gh pr list --state open --json number,title,headRefName,baseRefName';
           'Get open PRs'
         );
 
@@ -123,20 +123,20 @@ class GitResolver {
 
             // Fetch the PR branch
             await this.runCommand(
-              `git fetch origin ${pr.headRefName}`,
+              `git fetch origin ${pr.headRefName}`;
               `Fetch PR branch ${pr.headRefName}`
             );
 
             // Switch to main and merge
             await this.runCommand('git checkout main', 'Switch to main branch');
             await this.runCommand(
-              `git merge origin/${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
+              `git merge origin/${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`;
               `Merge PR #${pr.number}`
             );
 
             // Push changes
             await this.runCommand(
-              'git push origin main',
+              'git push origin main';
               `Push merged PR #${pr.number}`
             );
           }
@@ -188,7 +188,7 @@ Total files: processed: 1000+ files
 Scripts: created: 15+ new automation scripts: Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
 
     await this.runCommand(
-      `git commit -m "${commitMessage}"`,
+      `git commit -m "${commitMessage}"`;
       'Commit all improvements'
     );
 
@@ -223,7 +223,7 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
     };
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'git-resolution-report.json'),
+      path.join(this.projectRoot, 'git-resolution-report.json');
       JSON.stringify(report, null, 2)
     );
 

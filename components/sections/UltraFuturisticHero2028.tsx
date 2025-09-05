@@ -3,7 +3,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   ArrowRight, Star, TrendingUp, Users, Award, Play,
   CheckCircle, DollarSign, Clock, Target, Crown
 } from 'lucide-react',

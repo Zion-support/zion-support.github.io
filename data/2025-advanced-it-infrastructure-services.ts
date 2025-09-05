@@ -133,7 +133,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.9,
     reviews: 15
   },
-
   // Autonomous Edge Computing Network
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.8,
     reviews: 28
   },
-
   // Zero-Trust Security Architecture
   {_id: 'zero-trust-security-architecture', _name: 'Zero-Trust Security Architecture', _tagline: 'Comprehensive security framework with continuous verification', _price: '$899', _period: '/month', _description: 'Advanced zero-trust security architecture that continuously verifies every user, _device, _and network connection, _providing comprehensive protection against modern cyber threats.', _features: [
       'Continuous identity verification', _'Device trust scoring', _'Network segmentation', _'Behavioral analysis', _'Threat intelligence integration', _'Automated response', _'Compliance automation', _'Security monitoring', _'Incident response', _'Security reporting'
@@ -260,7 +258,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.9,
     reviews: 56
   },
-
   // Autonomous Data Center Platform
   {_id: 'autonomous-data-center-platform', _name: 'Autonomous Data Center Platform', _tagline: 'Self-managing data center infrastructure with AI optimization', _price: '$1, _299', _period: '/month', _description: 'Revolutionary data center platform that uses AI to automatically manage infrastructure, _optimize performance, _and ensure maximum uptime while reducing operational costs.', _features: [
       'AI-powered infrastructure management', _'Automated capacity planning', _'Intelligent power management', _'Predictive maintenance', _'Performance optimization', _'Cost optimization', _'Security automation', _'Disaster recovery', _'Compliance monitoring', _'Real-time analytics'
@@ -335,7 +332,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.8,
     reviews: 22
   },
-
   // Quantum Networking Platform
 <<<<<<< HEAD
   {
@@ -387,7 +383,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.9,
     reviews: 12
   },
-
   // New Advanced IT Infrastructure Services for 2025
 <<<<<<< HEAD
   {
@@ -439,7 +434,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 5.0,
     reviews: 4
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -491,7 +485,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.8,
     reviews: 16
   },
-
   // Zero Trust Security Architecture Platform
 <<<<<<< HEAD
   {
@@ -543,7 +536,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.9,
     reviews: 12
   },
-
   // Autonomous Data Center Platform
 <<<<<<< HEAD
   {
@@ -595,7 +587,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 5.0,
     reviews: 6
   },
-
   // Quantum Networking Infrastructure
 <<<<<<< HEAD
   {
@@ -647,7 +638,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 5.0,
     reviews: 3
   },
-
   // AI-Powered Infrastructure Management
 <<<<<<< HEAD
   {
@@ -699,7 +689,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.8,
     reviews: 18
   },
-
   // Hybrid Cloud Orchestration Platform
 <<<<<<< HEAD
   {

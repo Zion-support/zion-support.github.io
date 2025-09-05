@@ -213,7 +213,7 @@ class AggressiveSyntaxFixer {_constructor() {
         const _validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, _'_');
         
         if (ext === '.tsx' || ext === '.jsx') {
-            return `import React from 'react';
+            return `import React from 'react',
 
 default function ${validFileName}() {_return (
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

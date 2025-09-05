@@ -164,7 +164,7 @@ export function DynamicListingPage(_{_title, _description, _categorySlug, _listi
         
         navigate(&quot;/request-quote", {
           state: { 
-            serviceType: categorySlug, 
+            serviceType: categorySlug,
             specificItem: {
               id: listing.id,
               title: listing.title,

@@ -54,7 +54,7 @@ const _response = await axios.get('https://api.zionai.com/v1/jobs', _{
         
         <h2>Overview</h2>
         <p>
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles, 
+          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles,
           quotes, and projects. Our RESTful API lets you integrate Zion's features into your 
           own applications and workflows.
         </p>

@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Key
@@ -76,12 +76,12 @@ export default function QuantumSecureCommunication() {_const _contactInfo = {
     'Regulated industry compliance',
     'Research collaboration',
     'Government communications'
-  ];
+  ],
 
   const _integrations = [
     'Slack', 'Microsoft Teams', 'Zoom', 'Email systems', 
     'File storage platforms'
-  ];
+  ],
 
   const _technology = [
     'Quantum Computing', 'Post-Quantum Cryptography', 'React', 'Node.js', 

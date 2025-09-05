@@ -575,8 +575,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
-  Search, Calendar, Clock, User, Tag, 
-  ArrowRight, ExternalLink, TrendingUp, 
+  Search, Calendar, Clock, User, Tag,
+  ArrowRight, ExternalLink, TrendingUp,
   BookOpen, Globe, Video
 } from 'lucide-react',
 import Link from 'next/link',

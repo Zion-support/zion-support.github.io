@@ -9,10 +9,10 @@ console.log('⚡ Starting AI Performance Predictor...');
 class AIPerformancePredictor {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-performance.log'
     );
     this.ensureLogDir();
@@ -187,16 +187,16 @@ class AIPerformancePredictor {
     this.log('💡 Generating performance recommendations...');
 
     return [
-      'Implement comprehensive monitoring',
-      'Set up performance budgets',
-      'Use performance profiling tools',
-      'Implement automated performance testing',
-      'Optimize images and assets',
-      'Use CDN for static content',
-      'Implement caching strategies',
-      'Monitor Core Web Vitals',
-      'Use performance optimization techniques',
-      'Regular performance audits',
+      'Implement comprehensive monitoring';
+      'Set up performance budgets';
+      'Use performance profiling tools';
+      'Implement automated performance testing';
+      'Optimize images and assets';
+      'Use CDN for static content';
+      'Implement caching strategies';
+      'Monitor Core Web Vitals';
+      'Use performance optimization techniques';
+      'Regular performance audits';
     ];
   }
 
@@ -213,10 +213,10 @@ class AIPerformancePredictor {
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-performance-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

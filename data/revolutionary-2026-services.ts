@@ -133,7 +133,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 890
   },
-
   // AI-Powered Legal Document Automation
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 450
   },
-
   // AI Healthcare Diagnostics Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 180
   },
-
   // AI Metaverse Development Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 680
   },
-
   // Quantum-Secure Communication Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 120
   },
-
   // Quantum Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 90
   },
-
   // Neuromorphic Computing Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 45
   },
-
   // DNA Computing Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 30
   },
-
   // Photonic Computing Platform
 <<<<<<< HEAD
   {
@@ -549,7 +541,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 75
   },
-
   // Holographic Display Platform
 <<<<<<< HEAD
   {
@@ -601,7 +592,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Autonomous Supply Chain Optimization
 <<<<<<< HEAD
   {
@@ -653,7 +643,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 580
   },
-
   // Autonomous Manufacturing AI
 <<<<<<< HEAD
   {
@@ -705,7 +694,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 380
   },
-
   // Swarm Robotics Platform
 <<<<<<< HEAD
   {
@@ -757,7 +745,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 95
   },
-
   // Quantum Space Mining Platform
 <<<<<<< HEAD
   {

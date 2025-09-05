@@ -49,7 +49,7 @@ export function useDisputes() {_const { user} = useAuth();
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          project:projects(
+          project: projects(
             scope_summary,
             job_id,
             client_id,
@@ -121,7 +121,7 @@ export function useDisputes() {_const { user} = useAuth();
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          project:projects(
+          project: projects(
             scope_summary,
             job_id,
             client_id,

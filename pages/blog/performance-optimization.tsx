@@ -21,7 +21,7 @@ export default function PerformanceOptimization() {_return (
           content='Best practices for optimizing performance in large-scale autonomous technology deployments.'
         />
         <meta
-          property='og:title'
+          property='og: title'
           content='Performance Optimization in Autonomous Systems'
         />
         <meta

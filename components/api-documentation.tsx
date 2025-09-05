@@ -3,7 +3,7 @@ import React from 'react',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import { 
-  Code, Database, Shield, Zap, Globe, Cpu, 
+  Code, Database, Shield, Zap, Globe, Cpu,
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
 } from 'lucide-react',
 

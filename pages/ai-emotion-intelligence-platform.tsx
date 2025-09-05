@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone,
   Zap, DollarSign, Shield, Mail, MapPin, Brain,
   Sparkles, Users, Clock, Award, Eye, Heart,
   MessageCircle, BarChart3, Globe, Smartphone

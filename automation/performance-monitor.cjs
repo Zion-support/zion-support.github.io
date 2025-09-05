@@ -107,8 +107,8 @@ class PerformanceMonitor {
 
   async saveMetrics() {
     const metricsFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'performance-metrics.json'
     );
     fs.mkdirSync(path.dirname(metricsFile), { recursiv: e: true });
@@ -122,8 +122,8 @@ class PerformanceMonitor {
     };
 
     const reportFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'performance-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

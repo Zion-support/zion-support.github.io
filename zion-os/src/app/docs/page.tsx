@@ -258,7 +258,7 @@ export default function DocumentationPage() {_return (
             <div className="card">
               <h3 className="text-xl font-semibold mb-4">REST API Reference</h3>
               <p className="text-gray-400 mb-4">
-                Complete REST API documentation with examples, authentication, 
+                Complete REST API documentation with examples, authentication,
                 and error handling for all Zion Tech Group services.
               </p>
               <div className="space-y-2 mb-6 text-sm text-gray-400">

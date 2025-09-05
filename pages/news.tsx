@@ -193,8 +193,8 @@ const NewsPage: React.FC = () => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
+      year: 'numeric',
+      month: 'long',
       day: 'numeric' 
     })
   },
@@ -342,7 +342,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
+  Newspaper, Globe, Award, Users, Rocket, Brain,
   ArrowRight, ExternalLink, Calendar, Tag, Star
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',

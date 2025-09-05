@@ -41,8 +41,8 @@ type EducationFormValues = z.infer<typeof educationSchema>,
 
 <<<<<<< HEAD
 export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
+  isEditing,
+  onSubmit,
   onCancel 
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false),

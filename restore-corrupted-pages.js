@@ -159,7 +159,7 @@ function restorePage(_pagePath) {_try {
     
 <<<<<<< HEAD
     return { 
-      restored: true, 
+      restored: true,
       backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath
     }

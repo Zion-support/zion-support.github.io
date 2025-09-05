@@ -4,7 +4,7 @@ import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import { 
-  GraduationCap, Users, Clock, Award, BookOpen, Video, 
+  GraduationCap, Users, Clock, Award, BookOpen, Video,
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap,
   Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp,
   Play, Download, ExternalLink, Calendar, MapPin, DollarSign,
@@ -154,7 +154,6 @@ export default function TrainingPage() {_const [selectedCategory, _setSelectedCa
       students: '789',
       icon: <Code className=&quot;w-8 h-8&quot; />
     },
-
     // Quantum Computing Programs
     {
       id: 8,
@@ -192,7 +191,6 @@ export default function TrainingPage() {_const [selectedCategory, _setSelectedCa
       students: '678',
       icon: <Shield className=&quot;w-8 h-8&quot; />
     },
-
     // Autonomous Operations Programs
     {
       id: 11,
@@ -218,7 +216,6 @@ export default function TrainingPage() {_const [selectedCategory, _setSelectedCa
       students: '567',
       icon: <Target className=&quot;w-8 h-8&quot; />
     },
-
     // Enterprise IT Programs
     {
       id: 13,

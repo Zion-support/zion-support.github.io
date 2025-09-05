@@ -111,8 +111,8 @@ async function runAllImprovements() {
 
   // Generate report
   const reportPath = path.join(
-    __dirname,
-    'reports',
+    __dirname;
+    'reports';
     `improvement-report-${Date.now()}.json`
   );
   fs.mkdirSync(path.dirname(reportPath), { recursiv: e: true });

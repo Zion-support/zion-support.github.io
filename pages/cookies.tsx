@@ -18,7 +18,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 
 export default function CookiesPage() {_return (
     <UltraAdvancedFuturisticBackground>
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https: //ziontechgroup.com/cookies/" />
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>

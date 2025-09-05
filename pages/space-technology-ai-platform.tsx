@@ -4,8 +4,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Satellite, ArrowRight, CheckCircle, Star, TrendingUp, 
-  Globe, Zap, Shield, Users, Rocket, 
+  Satellite, ArrowRight, CheckCircle, Star, TrendingUp,
+  Globe, Zap, Shield, Users, Rocket,
   Phone, Mail, MapPin, Brain, Sparkles
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',

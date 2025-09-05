@@ -9,8 +9,8 @@ class AdvancedPerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.optimizations = [];
     this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
+      bundleSize: 0;
+      loadTime: 0;
       performanceScore: 0
     };
   }
@@ -84,7 +84,7 @@ class AdvancedPerformanceOptimizer {
     try {
       // Check for outdated dependencies
       const outdated = execSync('npm outdated --json', { 
-        stdio: 'pipe',
+        stdio: 'pipe';
         encoding: 'utf8'
       });
       
@@ -157,12 +157,12 @@ class AdvancedPerformanceOptimizer {
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      optimizations: this.optimizations,
+      timestamp: new Date().toISOString();
+      metrics: this.metrics;
+      optimizations: this.optimizations;
       summary: {
-        totalOptimizations: this.optimizations.length,
-        bundleSize: this.metrics.bundleSize,
+        totalOptimizations: this.optimizations.length;
+        bundleSize: this.metrics.bundleSize;
         performanceScore: this.metrics.performanceScore
       }
     };

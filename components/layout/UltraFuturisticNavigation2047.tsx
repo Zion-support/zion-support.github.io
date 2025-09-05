@@ -36,30 +36,30 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500',
     children: [
       { 
-        name: 'Home', 
-        href: '/', 
+        name: 'Home',
+        href: '/',
         description: 'Main homepage',
         icon: <Home className=&quot;w-4 h-4&quot; />,
         color: 'from-emerald-500 to-cyan-500',
         featured: true
       },
       { 
-        name: 'About Us', 
-        href: '/about', 
+        name: 'About Us',
+        href: '/about',
         description: 'Company information and mission',
         icon: <Info className=&quot;w-4 h-4&quot; />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Contact', 
-        href: '/contact', 
+        name: 'Contact',
+        href: '/contact',
         description: 'Get in touch with our team',
         icon: <Mail className=&quot;w-4 h-4&quot; />,
         color: 'from-purple-500 to-pink-500'
       },
       { 
-        name: 'Team', 
-        href: '/team', 
+        name: 'Team',
+        href: '/team',
         description: 'Meet our leadership team',
         icon: <Users className=&quot;w-4 h-4&quot; />,
         color: 'from-orange-500 to-red-500'
@@ -76,38 +76,38 @@ const navigationItems: NavigationItem[] = [
     color: 'from-purple-500 to-pink-500',
     children: [
       { 
-        name: 'All Services', 
-        href: '/services', 
+        name: 'All Services',
+        href: '/services',
         description: 'Complete services overview',
         icon: <Grid className=&quot;w-4 h-4&quot; />,
         featured: true
       },
       { 
-        name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-2029', 
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-2029',
         description: 'Next-generation AI consciousness',
         icon: <Brain className=&quot;w-4 h-4&quot; />,
         color: 'from-purple-500 to-pink-500',
         featured: true
       },
       { 
-        name: 'Quantum Neural Networks', 
-        href: '/quantum-neural-network-platform', 
+        name: 'Quantum Neural Networks',
+        href: '/quantum-neural-network-platform',
         description: 'Quantum-powered AI neural networks',
         icon: <Atom className=&quot;w-4 h-4&quot; />,
         color: 'from-blue-500 to-cyan-500',
         featured: true
       },
       { 
-        name: 'Autonomous Business Operations', 
-        href: '/autonomous-business-operations-platform', 
+        name: 'Autonomous Business Operations',
+        href: '/autonomous-business-operations-platform',
         description: 'AI-powered business automation',
         icon: <Bot className=&quot;w-4 h-4&quot; />,
         color: 'from-emerald-500 to-teal-500'
       },
       { 
-        name: 'IT Asset Management', 
-        href: '/ai-powered-it-asset-management', 
+        name: 'IT Asset Management',
+        href: '/ai-powered-it-asset-management',
         description: 'AI-powered IT infrastructure management',
         icon: <Monitor className=&quot;w-4 h-4&quot; />,
         color: 'from-indigo-500 to-purple-500'
@@ -123,29 +123,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-blue-500 to-cyan-500',
     children: [
       { 
-        name: 'Solutions Overview', 
-        href: '/solutions', 
+        name: 'Solutions Overview',
+        href: '/solutions',
         description: 'Complete solutions overview',
         icon: <Rocket className=&quot;w-4 h-4&quot; />,
         featured: true
       },
       { 
-        name: 'Blockchain Solutions', 
-        href: '/blockchain-solutions', 
+        name: 'Blockchain Solutions',
+        href: '/blockchain-solutions',
         description: 'Advanced blockchain technology',
         icon: <Database className=&quot;w-4 h-4&quot; />,
         color: 'from-emerald-500 to-teal-500'
       },
       { 
-        name: 'IoT Platforms', 
-        href: '/iot-platforms', 
+        name: 'IoT Platforms',
+        href: '/iot-platforms',
         description: 'Internet of Things solutions',
         icon: <Network className=&quot;w-4 h-4&quot; />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Space Technology', 
-        href: '/space-tech', 
+        name: 'Space Technology',
+        href: '/space-tech',
         description: 'Space technology innovations',
         icon: <Globe2 className=&quot;w-4 h-4&quot; />,
         color: 'from-purple-500 to-pink-500'
@@ -161,29 +161,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-orange-500 to-red-500',
     children: [
       { 
-        name: 'Blog & Articles', 
-        href: '/blog', 
+        name: 'Blog & Articles',
+        href: '/blog',
         description: 'Latest insights and articles',
         icon: <FileText className=&quot;w-4 h-4&quot; />,
         featured: true
       },
       { 
-        name: 'Technology Insights', 
-        href: '/technology-insights', 
+        name: 'Technology Insights',
+        href: '/technology-insights',
         description: 'Technology trends and analysis',
         icon: <TrendingUp className=&quot;w-4 h-4&quot; />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
+        name: 'Case Studies',
+        href: '/case-studies',
         description: 'Success stories and implementations',
         icon: <Star className=&quot;w-4 h-4&quot; />,
         color: 'from-yellow-500 to-orange-500'
       },
       { 
-        name: 'White Papers', 
-        href: '/white-papers', 
+        name: 'White Papers',
+        href: '/white-papers',
         description: 'In-depth research and analysis',
         icon: <FileText className=&quot;w-4 h-4&quot; />,
         color: 'from-gray-500 to-slate-500'
@@ -199,29 +199,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-gray-500 to-slate-500',
     children: [
       { 
-        name: 'About Zion Tech Group', 
-        href: '/about', 
+        name: 'About Zion Tech Group',
+        href: '/about',
         description: 'Our story and mission',
         icon: <Info className=&quot;w-4 h-4&quot; />,
         featured: true
       },
       { 
-        name: 'Careers', 
-        href: '/careers', 
+        name: 'Careers',
+        href: '/careers',
         description: 'Join our team',
         icon: <Users className=&quot;w-4 h-4&quot; />,
         color: 'from-green-500 to-emerald-500'
       },
       { 
-        name: 'Support', 
-        href: '/support', 
+        name: 'Support',
+        href: '/support',
         description: 'Get help and support',
         icon: <MessageCircle className=&quot;w-4 h-4&quot; />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Privacy Policy', 
-        href: '/privacy', 
+        name: 'Privacy Policy',
+        href: '/privacy',
         description: 'Privacy and data protection',
         icon: <Shield className=&quot;w-4 h-4&quot; />,
         color: 'from-red-500 to-pink-500'

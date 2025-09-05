@@ -12,7 +12,7 @@ interface PaymentSummaryProps {
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
+    (sum, m) => sum + parseFloat(m.amount.toString()),
     0
   ).toFixed(2),
 =======
@@ -29,7 +29,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = (_{_milestones, _pa
     .filter(m => m.status === 'paid')
 <<<<<<< HEAD
     .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString()), 
+      (sum, m) => sum + parseFloat(m.amount.toString()),
       0
     ).toFixed(2),
 =======

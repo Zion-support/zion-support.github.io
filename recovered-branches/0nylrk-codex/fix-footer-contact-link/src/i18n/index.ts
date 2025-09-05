@@ -11,10 +11,10 @@ import arTranslation from './locales/ar/translation.json',
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import enTranslation from './locales/en/translation.json';
-import esTranslation from './locales/es/translation.json';
-import ptTranslation from './locales/pt/translation.json';
-import arTranslation from './locales/ar/translation.json';
+import enTranslation from './locales/en/translation.json',
+import esTranslation from './locales/es/translation.json',
+import ptTranslation from './locales/pt/translation.json',
+import arTranslation from './locales/ar/translation.json',
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 // Initialize i18next

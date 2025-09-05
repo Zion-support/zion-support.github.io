@@ -48,7 +48,7 @@ export function SuggestedTalents(_{_jobId, _jobTitle}: SuggestedTalentsProps) {_
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          talent_profile:talent_id(
+          talent_profile: talent_id(
             id,
             user_id,
             full_name,

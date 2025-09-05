@@ -133,7 +133,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Quantum-Secure Communication Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.8,
     reviews: 8
   },
-
   // AI-Powered Healthcare Diagnostics
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Autonomous Supply Chain Optimization
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading Platform
 <<<<<<< HEAD
   {

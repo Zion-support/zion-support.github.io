@@ -58,7 +58,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
     // Extract auth token from request
     const authHeader = req.headers.get('Authorization'),
     if (!authHeader) {
-      return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
+      return new Response(JSON.stringify({ error: 'Missing authorization header' }) {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -68,7 +68,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
     const { data: { user }, error: authError } = await supabase.auth.getUser(token),
     
     if (authError || !user) {
-      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }) {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -98,7 +98,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
       }
     }
 
-    return new Response(JSON.stringify({ error: 'Invalid action' }), {
+    return new Response(JSON.stringify({ error: 'Invalid action' }) {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -171,7 +171,7 @@ async function createWebhook(_userId: string, _name: string, _url: string, _even
     return new Response(JSON.stringify({ 
       webhook: data[0],
       message: 'Webhook created successfully'
-    }), {
+    }) {
       status: 201,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -207,7 +207,7 @@ async function getUserWebhooks(_userId: string) {_try {
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ webhooks: data }), {
+    return new Response(JSON.stringify({ webhooks: data }) {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -281,7 +281,7 @@ async function deleteWebhook(_userId: string, _webhookId: string) {_try {
     }
 
     if (!data || data.length === 0) {
-      return new Response(JSON.stringify({ error: 'Webhook not found' }), {
+      return new Response(JSON.stringify({ error: 'Webhook not found' }) {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -289,7 +289,7 @@ async function deleteWebhook(_userId: string, _webhookId: string) {_try {
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully',
       id: webhookId
-    }), {
+    }) {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -321,7 +321,7 @@ async function testWebhook(_userId: string, _webhookId: string, _eventType: stri
 
 <<<<<<< HEAD
     if (webhookError || !webhook) {
-      return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
+      return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }) {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -383,9 +383,9 @@ async function testWebhook(_userId: string, _webhookId: string, _eventType: stri
     } catch (fetchError) {
       console.error('Error sending test webhook:', fetchError),
       return new Response(JSON.stringify({ 
-        error: 'Failed to send test webhook', 
+        error: 'Failed to send test webhook',
         details: fetchError.message 
-      }), {
+      }) {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -509,8 +509,7 @@ function createTestPayload(_eventType: string) {_const _timestamp = new Date().t
         }
       },
       
-    default:
-      return {
+    default: return {
         event_type: 'test_event',
         event_id: eventId,
         timestamp,

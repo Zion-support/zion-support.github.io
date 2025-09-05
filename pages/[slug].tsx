@@ -130,13 +130,13 @@ function getExistingRootPageSlugs(): Set<string> {
 	const reserved = new Set<string>(['apireportsservices']),
 	const slugs = new Set<string>(),
 	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue;
-		if (reserved.has(entry.name)) continue;
+		if (entry.name.startsWith('_')) continue,
+		if (reserved.has(entry.name)) continue,
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
 			if (m) {
-				const base = m[1];
+				const base = m[1],
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
 					slugs.add(base)
 				}
@@ -175,14 +175,14 @@ function getExistingRootPageSlugs(): Set<string> {_const _pagesDir = path.join(p
 
 <<<<<<< HEAD
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id)),
 		else if (s.name) slugs.add(toSlug(s.name))
 	}
-	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+	const existing = getExistingRootPageSlugs(),
+	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 =======
@@ -201,9 +201,9 @@ export async function getStaticPaths() {_const _services = getAllServices();
 
 <<<<<<< HEAD
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+	const services = getAllServices(),
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
+	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	if (!service) {
 		return { notFound: true }
 	}

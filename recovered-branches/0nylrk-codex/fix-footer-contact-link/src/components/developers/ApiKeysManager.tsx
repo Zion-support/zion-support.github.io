@@ -46,9 +46,9 @@ export function ApiKeysManager() {
     keys,
     loading, 
     newApiKey,
-    fetchApiKeys, 
-    createApiKey, 
-    regenerateApiKey, 
+    fetchApiKeys,
+    createApiKey,
+    regenerateApiKey,
     revokeApiKey,
     clearNewApiKey
   } = useApiKeys(),

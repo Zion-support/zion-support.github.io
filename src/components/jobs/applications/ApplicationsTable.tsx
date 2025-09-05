@@ -103,9 +103,9 @@ const _ApplicationAvatar = (_{_application}: {_application: JobApplication}) => 
 
 <<<<<<< HEAD
 export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
+  applications,
+  processingId,
+  onViewApplication,
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {

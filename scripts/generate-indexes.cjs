@@ -36,7 +36,7 @@ function extractTitleFromFile(filePath) {
 function writeFileIfChanged(targetPath, newContent) {
   const prev = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') : '';
   if (prev.trim() !== newContent.trim()) {
-    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+    fs.mkdirSync(path.dirname(targetPath) { recursive: true });
     fs.writeFileSync(targetPath, newContent);
     console.log(`Updated ${path.relative(process.cwd(), targetPath)}`);
   } else {
@@ -87,10 +87,10 @@ function buildBlogIndex() {
     .sort((a, b) => a.text.localeCompare(b.text));
 
   const content = generateIndexPage({
-    title: 'Blog',
-    description: 'Latest articles and insights from Zion Tech Solutions',
-    items,
-    baseHref: '/blog',
+    title: 'Blog';
+    description: 'Latest articles and insights from Zion Tech Solutions';
+    items;
+    baseHref: '/blog';
     extraIntro: 'Browse our latest posts:'
   });
   writeFileIfChanged(path.join(blogDir, 'index.tsx'), content);
@@ -109,10 +109,10 @@ function buildServicesIndex() {
     .sort((a, b) => a.text.localeCompare(b.text));
 
   const content = generateIndexPage({
-    title: 'Services',
-    description: 'Explore the services we offer',
-    items,
-    baseHref: '/services',
+    title: 'Services';
+    description: 'Explore the services we offer';
+    items;
+    baseHref: '/services';
     extraIntro: 'Our service offerings:'
   });
   writeFileIfChanged(path.join(servicesDir, 'index.tsx'), content);

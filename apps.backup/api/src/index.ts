@@ -4,7 +4,7 @@ import rateLimit from '@fastify/rate-limit';
 import dotenv from 'dotenv';
 import {_createOpenAIClient, _generateJobPost, _withUser} from './openai';
 
-dotenv.config();
+dotenv.config(),
 
 const _app = Fastify({_logger: true});
 

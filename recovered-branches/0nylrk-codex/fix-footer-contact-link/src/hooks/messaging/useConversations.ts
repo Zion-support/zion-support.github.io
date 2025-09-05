@@ -92,7 +92,7 @@ export function useConversations(_user: UserWithProfile, _setConversations: (con
    */
 <<<<<<< HEAD
   const createConversation = async (
-    recipientId: string, 
+    recipientId: string,
     initialMessage: string,
     contextType: 'job' | 'talent' | 'general' = 'general',
     contextId?: string,

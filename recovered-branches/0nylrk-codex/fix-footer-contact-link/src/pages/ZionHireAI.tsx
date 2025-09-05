@@ -120,7 +120,7 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
 =======
         {_/* Features Section */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
@@ -299,7 +299,7 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
 =======
         {_/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
-          <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="container mx-auto px-4 md: px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

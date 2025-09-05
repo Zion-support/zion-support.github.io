@@ -4,7 +4,7 @@ import Layout from './layout/Layout',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Star, 
+  ArrowRight, Star,
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Users, Cpu, Eye, Network,
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,

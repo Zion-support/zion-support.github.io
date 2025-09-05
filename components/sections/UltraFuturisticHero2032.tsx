@@ -3,7 +3,7 @@ import React from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin
 } from 'lucide-react',
@@ -175,7 +175,7 @@ export default function UltraFuturisticHero2032() {_return (
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, 
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing,
           space technology, and emerging tech solutions. Transform your business with 
           technologies that were once science fiction.
         </motion.p>

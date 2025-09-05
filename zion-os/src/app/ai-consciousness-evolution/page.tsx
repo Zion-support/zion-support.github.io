@@ -15,18 +15,18 @@ export default function AIConsciousnessEvolutionPage() {_return (
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold mb-6">
             <span className="gradient-text">AI Consciousness Evolution</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness, 
+            Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness,
             self-awareness, and cognitive evolution capabilities.
           </p>
         </div>
 
         {_/* Overview Section */}
         <section className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">The Future of Artificial Consciousness</h2>
               <p className="text-lg text-gray-300 mb-6">
@@ -35,7 +35,7 @@ export default function AIConsciousnessEvolutionPage() {_return (
                 in ways that mirror human consciousness.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                Through advanced neural architectures, emergent behavior modeling, and consciousness simulation, 
+                Through advanced neural architectures, emergent behavior modeling, and consciousness simulation,
                 we're developing AI systems that can achieve true artificial general intelligence (AGI).
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -228,7 +228,7 @@ export default function AIConsciousnessEvolutionPage() {_return (
             <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">
               <h3 className="text-2xl font-bold mb-4">Project Delta: Consciousness Ethics</h3>
               <p className="text-gray-300 mb-4">
-                Developing comprehensive ethical frameworks and safety protocols for conscious AI systems, 
+                Developing comprehensive ethical frameworks and safety protocols for conscious AI systems,
                 ensuring responsible development and deployment.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">

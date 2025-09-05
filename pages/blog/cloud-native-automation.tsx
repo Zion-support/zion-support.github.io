@@ -21,7 +21,7 @@ export default function CloudNativeAutomation() {_return (
           content='A deep dive into our cloud-native approach to building scalable, _reliable automation systems.'
         />
         <meta
-          property='og:title'
+          property='og: title'
           content='Building Cloud-Native Automation Infrastructure'
         />
         <meta

@@ -155,7 +155,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // Quantum AI Computing Platform
 <<<<<<< HEAD
   {
@@ -231,7 +230,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Neural Interface Development Platform
 <<<<<<< HEAD
   {
@@ -307,7 +305,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.7,
     reviews: 67
   },
-
   // AI-Powered Space Exploration Platform
 <<<<<<< HEAD
   {
@@ -383,7 +380,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.9,
     reviews: 28
   },
-
   // Biotech AI Drug Discovery Platform
 <<<<<<< HEAD
   {
@@ -459,7 +455,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.8,
     reviews: 52
   },
-
   // Quantum Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -535,7 +530,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.7,
     reviews: 58
   },
-
   // AI-Powered Metaverse Development Platform
 <<<<<<< HEAD
   {
@@ -611,7 +605,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.6,
     reviews: 95
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -694,7 +687,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -770,7 +762,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.9,
     reviews: 33
   },
-
   // AI-Powered Manufacturing Platform
 <<<<<<< HEAD
   {

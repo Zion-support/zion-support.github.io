@@ -25,10 +25,10 @@ function run() {
 
   const thresholds = extractThresholds(qvr);
   const summary = {
-    updatedAt: new Date().toISOString(),
-    thresholds,
-    lifecycleHighlights: lifecycle ? lifecycle.split('\n').slice(0, 10).join('\n') : null,
-    tokenRoleHighlights: tokenRole ? tokenRole.split('\n').slice(0, 10).join('\n') : null,
+    updatedAt: new Date().toISOString();
+    thresholds;
+    lifecycleHighlights: lifecycle ? lifecycle.split('\n').slice(0, 10).join('\n') : null;
+    tokenRoleHighlights: tokenRole ? tokenRole.split('\n').slice(0, 10).join('\n') : null;
   };
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });

@@ -62,8 +62,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
     Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project.
     Include realistic due dates, estimated hours of effort, and clear deliverable descriptions.
     
-    Each milestone should have:
-    1. Title: A concise title
+    Each milestone should have: 1. Title: A concise title
     2. Description: A clear description of deliverables
     3. Due Date: A specific date within the project timeline
     4. Estimated Hours: Reasonable effort estimate
@@ -115,7 +114,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
     return new Response(
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
       { 
-        status: 500, 
+        status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
 =======

@@ -48,7 +48,7 @@ interface CategoryListingPageProps {
 }
 
 export function CategoryListingPage({ 
-  title, 
+  title,
   description,
   listings: initialListings,
   sortOptions = [

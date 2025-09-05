@@ -3,9 +3,9 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Search, Star, Users, TrendingUp, 
+  Search, Star, Users, TrendingUp,
   DollarSign, Clock, CheckCircle, ArrowRight,
-  Rocket, Monitor, Cpu, 
+  Rocket, Monitor, Cpu,
   Zap, Database, Cloud, Lock, Code,
   Sparkles, Target, Award, Lightbulb
 } from 'lucide-react',

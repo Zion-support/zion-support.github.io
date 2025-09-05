@@ -27,8 +27,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
+      newMatches,
+      viewedMatches,
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId),

@@ -320,7 +320,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
           </h1>
           <p className=&quot;text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed&quot;>
             Discover our comprehensive suite of micro SaaS services designed for modern businesses. 
-            From AI-powered content generation to enterprise-grade performance monitoring, 
+            From AI-powered content generation to enterprise-grade performance monitoring,
             we deliver professional solutions with competitive pricing and exceptional value.
           </p>
         </div>

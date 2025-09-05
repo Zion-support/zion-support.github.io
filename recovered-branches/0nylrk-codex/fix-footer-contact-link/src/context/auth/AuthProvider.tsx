@@ -23,8 +23,8 @@ import { mapProfileToUser } from &quot;./profileMapper&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
-    user, setUser, 
-    isLoading, setIsLoading, 
+    user, setUser,
+    isLoading, setIsLoading,
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
   

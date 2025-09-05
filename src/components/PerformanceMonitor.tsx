@@ -37,7 +37,7 @@ export default function PerformanceMonitor() {_return (
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
       window.removeEventListener('offline', handleOffline)
-    };
+    },
   }, [location.pathname]),
 
   // Show performance issues,
@@ -52,7 +52,7 @@ export default function PerformanceMonitor() {_return (
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
       return () => clearTimeout(timer)
-    };
+    },
   }, [metrics]),
 
   if (!isVisible) return null,

@@ -82,11 +82,11 @@ const _toastAdapter = (_props: ToastProps | string) => {_if (typeof props === 's
   }
 
   const { 
-    title, 
-    description, 
-    variant = 'default', 
-    action, 
-    onRetry, 
+    title,
+    description,
+    variant = 'default',
+    action,
+    onRetry,
     duration,
     priority,
     persistent = false 
@@ -195,13 +195,11 @@ export const _useToast = () => (_{_toast: toastAdapter, _dismiss: (toastId?: str
       globalToastManager.dismissToast(toastId);} else {_globalToastManager.dismissAll();}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   },
-  
   // Additional methods from global toast manager
   showToast: globalToastManager.showToast.bind(globalToastManager),
   getActiveToasts: globalToastManager.getActiveToasts.bind(globalToastManager),
   getQueueLength: globalToastManager.getQueueLength.bind(globalToastManager),
   dismissAll: globalToastManager.dismissAll.bind(globalToastManager),
-  
   // Convenience methods
   success: showToast.success,
   error: showToast.error,

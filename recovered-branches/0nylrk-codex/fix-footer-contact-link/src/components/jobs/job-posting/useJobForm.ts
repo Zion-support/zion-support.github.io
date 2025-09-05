@@ -136,7 +136,7 @@ export const _useJobForm = (_{_jobId, _onSuccess}: JobPostingProps) => {_const {
     isLoading,
     startDate,
     setStartDate,
-    endDate, 
+    endDate,
     setEndDate,
     isRemote,
     setIsRemote,

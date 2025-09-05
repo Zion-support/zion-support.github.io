@@ -47,13 +47,13 @@ export default function ZionOSPage() {_return (
                 The Future of Digital Economies
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Zion OS is a revolutionary platform that enables anyone to create, deploy, 
+                Zion OS is a revolutionary platform that enables anyone to create, deploy,
                 and manage sovereign digital economies powered by artificial intelligence. 
                 Our unified deployment protocol makes it possible to launch complex 
                 economic systems in minutes, not months.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Whether you're building a decentralized marketplace, launching a DAO, 
+                Whether you're building a decentralized marketplace, launching a DAO,
                 or creating a new token ecosystem, Zion OS provides all the tools you need 
                 to succeed in the digital economy revolution.
               </p>
@@ -198,7 +198,7 @@ export default function ZionOSPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Configure</h3>
               <p className="text-gray-400">
-                Use our intuitive launch wizard to configure your economy's parameters, 
+                Use our intuitive launch wizard to configure your economy's parameters,
                 including governance rules, token economics, and marketplace settings.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function ZionOSPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Deploy</h3>
               <p className="text-gray-400">
-                Click deploy and watch as Zion OS automatically creates your infrastructure, 
+                Click deploy and watch as Zion OS automatically creates your infrastructure,
                 smart contracts, and governance systems in minutes.
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function ZionOSPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Launch</h3>
               <p className="text-gray-400">
-                Your economy is ready to go! Start inviting users, launching projects, 
+                Your economy is ready to go! Start inviting users, launching projects,
                 and building your digital community.
               </p>
             </div>
@@ -244,7 +244,7 @@ export default function ZionOSPage() {_return (
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Startups & Entrepreneurs</h3>
               <p className="text-gray-400 mb-4">
-                Launch innovative business models with built-in governance, 
+                Launch innovative business models with built-in governance,
                 token economics, and marketplace infrastructure.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function ZionOSPage() {_return (
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3>
               <p className="text-gray-400 mb-4">
-                Build thriving communities with transparent governance, 
+                Build thriving communities with transparent governance,
                 fair token distribution, and collaborative decision-making.
               </p>
             </div>

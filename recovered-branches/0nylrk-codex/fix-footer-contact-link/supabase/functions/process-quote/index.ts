@@ -98,7 +98,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
     let aiAnalysis = null,
     try {
       if (openAIApiKey) {
-        const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+        const openAIResponse = await fetch('https: //api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
 =======

@@ -133,7 +133,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 850
   },
-
   // Quantum-Secure Communication Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 450
   },
-
   // Autonomous AI Marketing Suite
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.7,
     reviews: 1200
   },
-
   // Quantum Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 300
   },
-
   // AI-Powered Healthcare Companion
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 950
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 400
   },
-
   // Autonomous Manufacturing AI Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 250
   },
-
   // Quantum Space Technology Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 150
   },
-
   // AI-Powered Legal Automation Suite
 <<<<<<< HEAD
   {
@@ -549,7 +541,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.7,
     reviews: 700
   },
-
   // Quantum Blockchain Infrastructure
 <<<<<<< HEAD
   {

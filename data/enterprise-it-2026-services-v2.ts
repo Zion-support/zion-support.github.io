@@ -133,7 +133,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 520
   },
-
   // Multi-Cloud Orchestration Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 750
   },
-
   // AI-Powered IT Operations Center
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Quantum-Ready Infrastructure Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 350
   },
-
   // AI-Powered Data Governance Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 280
   },
-
   // Blockchain Enterprise Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 420
   },
-
   // AI-Powered DevOps Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 580
   },
-
   // Quantum Cybersecurity Platform
 <<<<<<< HEAD
   {

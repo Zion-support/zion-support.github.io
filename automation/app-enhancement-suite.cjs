@@ -52,7 +52,7 @@ class AppEnhancementSuite {
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -78,7 +78,7 @@ class AppEnhancementSuite {
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -101,7 +101,7 @@ class AppEnhancementSuite {
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -124,7 +124,7 @@ class AppEnhancementSuite {
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -147,7 +147,7 @@ class AppEnhancementSuite {
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -181,14 +181,14 @@ class AppEnhancementSuite {
           testin: g: this.enhancements.filter(e => e.includes('test')).length,
           documentatio: n: this.enhancements.filter(
             e => e.includes('README') || e.includes('sitemap')
-          ).length,
-        },
-      },
+          ).length;
+        };
+      };
     };
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `app-enhancement-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

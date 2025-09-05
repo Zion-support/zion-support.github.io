@@ -128,7 +128,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
             // Log slow or large images
             if (loadTime > 2000) {
-              logWarn('Slow image loading:', {
+              logWarn('Slow image loading: ', {
                 src,
                 loadTime: `${loadTime.toFixed(2)}ms`,
                 size: `${(fileSize / 1024).toFixed(2)}KB`
@@ -136,7 +136,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             }
 
             if (fileSize > 500 * 1024) {
-              logWarn('Large image detected:', {
+              logWarn('Large image detected: ', {
                 src,
                 size: `${(fileSize / 1024).toFixed(2)}KB`,
                 loadTime: `${loadTime.toFixed(2)}ms`

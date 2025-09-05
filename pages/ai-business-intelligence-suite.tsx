@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Lock
@@ -76,7 +76,7 @@ export default function AIBusinessIntelligenceSuite() {_const _contactInfo = {
     'Financial forecasting',
     'Marketing ROI optimization',
     'Operational efficiency tracking'
-  ];
+  ],
 
   const _integrations = [
     'Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 

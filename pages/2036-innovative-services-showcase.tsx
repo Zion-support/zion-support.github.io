@@ -4,8 +4,8 @@ import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import { 
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
+  Brain, Rocket, Shield, Zap, Target, Atom, Globe,
+  Cpu, Lock, Cloud, Settings, Eye, Award, Clock,
   Star, TrendingUp, Users, Building, Lightbulb,
   ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
 } from 'lucide-react',
@@ -233,7 +233,7 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
             transition={_{ duration: 0.8, _delay: 0.2}}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            Experience the future of technology with our cutting-edge micro SAAS services, 
+            Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
           <motion.div 

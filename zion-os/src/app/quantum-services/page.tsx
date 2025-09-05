@@ -97,7 +97,7 @@ export default function QuantumServicesPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>
               <p className="text-gray-400 mb-4">
-                Custom quantum algorithms designed for your specific business problems, 
+                Custom quantum algorithms designed for your specific business problems,
                 from optimization challenges to complex simulations.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -166,7 +166,7 @@ export default function QuantumServicesPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Simulation</h3>
               <p className="text-gray-400 mb-4">
-                Accurate simulation of quantum systems for materials science, 
+                Accurate simulation of quantum systems for materials science,
                 chemistry, and physics research applications.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -212,7 +212,7 @@ export default function QuantumServicesPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Strategy Consulting</h3>
               <p className="text-gray-400 mb-4">
-                Strategic guidance on quantum computing adoption, roadmap development, 
+                Strategic guidance on quantum computing adoption, roadmap development,
                 and integration with existing IT infrastructure.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">

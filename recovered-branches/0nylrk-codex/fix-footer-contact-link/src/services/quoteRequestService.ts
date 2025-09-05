@@ -38,7 +38,6 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     return data.map(_(item: unknown) => ({_...item, _talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   },
-  
   // Get quote requests for a specific talent
   getByTalentId: async (_talentId: string) => {_const { data, _error} = await supabase
       .from('quote_requests')
@@ -53,13 +52,12 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     if (error) throw error,
     return data as QuoteRequest[]
   },
-  
   // Get a single quote request by id
   getById: async (_id: string) => {_const { data, _error} = await supabase
       .from('quote_requests')
       .select(`
         *,
-        talent:talent_id (
+        talent: talent_id (
           display_name
         )
       `)
@@ -73,7 +71,6 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
       ...data,
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   },
-  
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status },
@@ -118,7 +115,6 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     if (error) throw error,
     return data[0] as QuoteRequest
   },
-  
   // Archive/Unarchive a quote request
   toggleArchive: async (_id: string, _isArchived: boolean) => {_const { data, _error} = await supabase
       .from('quote_requests')
@@ -129,7 +125,6 @@ export const _quoteRequestService = {_// Get all quote requests (for admin)
     if (error) throw error,
     return data[0] as QuoteRequest
   },
-  
   // Delete a quote request
   delete: async (_id: string) => {_const { error} = await supabase
       .from('quote_requests')

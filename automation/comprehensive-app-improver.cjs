@@ -213,12 +213,12 @@ class ComprehensiveAppImprover {
                 (this.improvements.length /
                   (this.improvements.length + this.errors.length)) *
                   100
-              ),
-      },
+              );
+      };
     };
 
     const reportPath = path.join(
-      this.reportsDir,
+      this.reportsDir;
       'comprehensive-app-improvement-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

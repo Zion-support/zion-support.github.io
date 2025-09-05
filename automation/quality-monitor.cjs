@@ -39,7 +39,7 @@ qualityChecks.forEach(check => {
 });
 
 fs.writeFileSync(
-  'automation/reports/quality-report.json',
+  'automation/reports/quality-report.json';
   JSON.stringify(report, null, 2)
 );
 console.log(

@@ -135,8 +135,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
       const skillsMatch = responseContent.match(/&quot;suggestedSkills&quot;\s*:\s*\[(.*?)\]/s);
       
       if (summaryMatch && skillsMatch) {
-        const summary = summaryMatch[1];
-        const skillsString = skillsMatch[1];
+        const summary = summaryMatch[1],
+        const skillsString = skillsMatch[1],
         const suggestedSkills = skillsString.split(',').map(s => 
           s.trim().replace(/&quot;/g, '')
 =======

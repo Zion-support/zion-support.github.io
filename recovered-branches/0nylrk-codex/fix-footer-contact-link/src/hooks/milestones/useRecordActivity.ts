@@ -27,7 +27,7 @@ export const _useRecordActivity = () => {_const { user} = useAuth();
         .insert({_milestone_id: milestoneId, _user_id: user.id, _action, _previous_status: previousStatus, _new_status: newStatus, _comment})
         .select(`
           *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
+          created_by_profile: profiles!user_id(display_name, avatar_url)
         `)
         .single(),
       

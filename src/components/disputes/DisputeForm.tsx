@@ -78,9 +78,9 @@ type DisputeFormProps = {
 },
 
 export function DisputeForm({ 
-  projectId, 
-  milestoneId, 
-  onDisputeCreated, 
+  projectId,
+  milestoneId,
+  onDisputeCreated,
   onCancel 
 }: DisputeFormProps) {
   const { createDispute } = useDisputes(),

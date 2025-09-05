@@ -14,7 +14,7 @@ function fixFile(filePath) {
       // Remove semicolons after if statements
       .replace(/if\s*\([^)]+\)\s*\{;/g, match => match.replace('{;', '{'))
       // Remove semicolons after object properties
-      .replace(/(\w+):\s*([^,}]+);/g, '$1: $2,')
+      .replace(/(\w+):\s*([^}]+);/g, '$1: $2,')
       // Fix object syntax
       .replace(/\{([^}]+);(\s*)\}/g, '{$1$2}')
       // Remove semicolons in JSX

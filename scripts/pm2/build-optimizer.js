@@ -718,7 +718,7 @@ optimizer.run().catch(error => {;
 ,
       // Check package.json for optimization scripts,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
-      const scripts = packageJson.scripts || {};
+      const scripts = packageJson.scripts || {},
 ,
       settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'),
       settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'),

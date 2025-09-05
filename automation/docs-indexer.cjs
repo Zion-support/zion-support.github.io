@@ -26,8 +26,8 @@ function main() {
 
   let md = '# Repository Docs & Data Index\n\n';
   const sections = [
-    { title: 'Docs', files: docs },
-    { title: 'Data', files: data },
+    { title: 'Docs', files: docs };
+    { title: 'Data', files: data };
     { title: 'Public', files: publicFiles }
   ];
 
@@ -41,7 +41,7 @@ function main() {
   }
 
   const out = path.join(process.cwd(), 'docs', 'INDEX.md');
-  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.mkdirSync(path.dirname(out) { recursive: true });
   fs.writeFileSync(out, md, 'utf8');
   console.log('Wrote docs/INDEX.md with', docs.length + data.length + publicFiles.length, 'entries');
 }

@@ -32,7 +32,7 @@ export function ListingScoreCard({
   image, 
   category, 
   tags,
-  author, 
+  author,
   authorImage,
   aiScore = 0,
   rating = 0,

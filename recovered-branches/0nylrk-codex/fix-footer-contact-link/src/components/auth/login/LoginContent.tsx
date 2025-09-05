@@ -23,7 +23,7 @@ export function LoginContent() {
 
 export function LoginContent() {_return (
     <div className="flex min-h-screen bg-zion-blue">
-      <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div className="flex-1 flex flex-col justify-center px-4 py-12 sm: px-6 lg:flex-none lg:px-20 xl:px-24">
         <LoginCard />
       </div>
       <div className="hidden lg:block relative w-0 flex-1">

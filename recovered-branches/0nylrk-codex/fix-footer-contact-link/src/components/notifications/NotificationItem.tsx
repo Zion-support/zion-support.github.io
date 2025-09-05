@@ -55,8 +55,8 @@ interface NotificationItemProps {
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({ 
-  notification, 
-  onMarkAsRead, 
+  notification,
+  onMarkAsRead,
   onDismiss 
 }) => {
   const navigate = useNavigate(),

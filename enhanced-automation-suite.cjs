@@ -9,33 +9,33 @@ class EnhancedAutomationSuite {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = {
-      codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
-      securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
+      codeQuality: { success: false, duration: 0, errors: [], warnings: [] };
+      securityAudit: { success: false, duration: 0, errors: [], warnings: [] };
       performanceOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
+        success: false;
+        duration: 0;
+        errors: [];
+        warnings: [];
+      };
       seoOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
+        success: false;
+        duration: 0;
+        errors: [];
+        warnings: [];
+      };
       accessibilityImprovements: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
+        success: false;
+        duration: 0;
+        errors: [];
+        warnings: [];
+      };
       buildOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
-      deployment: { success: false, duration: 0, errors: [], warnings: [] },
+        success: false;
+        duration: 0;
+        errors: [];
+        warnings: [];
+      };
+      deployment: { success: false, duration: 0, errors: [], warnings: [] };
     };
   }
 
@@ -56,19 +56,19 @@ class EnhancedAutomationSuite {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-        ...options,
+        cwd: this.projectRoot;
+        stdio: 'pipe';
+        encoding: 'utf8';
+        ...options;
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
+        success: false;
+        error: error.message;
+        output: error.stdout || error.stderr;
       };
     }
   }
@@ -80,31 +80,31 @@ class EnhancedAutomationSuite {
     try {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
-        'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"',
+        'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"';
         'Remove unused imports'
       );
 
       // Fix common code issues
       const codeFixesResult = await this.runCommand(
-        'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"',
+        'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"';
         'Apply code quality fixes'
       );
 
       this.results.codeQuality = {
-        success: unusedImportsResult.success && codeFixesResult.success,
-        duration: Date.now() - startTime,
+        success: unusedImportsResult.success && codeFixesResult.success;
+        duration: Date.now() - startTime;
         errors: [
-          ...(unusedImportsResult.success ? [] : [unusedImportsResult.error]),
-          ...(codeFixesResult.success ? [] : [codeFixesResult.error]),
-        ],
-        warnings: [],
+          ...(unusedImportsResult.success ? [] : [unusedImportsResult.error]);
+          ...(codeFixesResult.success ? [] : [codeFixesResult.error]);
+        ];
+        warnings: [];
       };
     } catch (error) {
       this.results.codeQuality = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
+        success: false;
+        duration: Date.now() - startTime;
+        errors: [error.message];
+        warnings: [];
       };
     }
   }
@@ -116,13 +116,13 @@ class EnhancedAutomationSuite {
     try {
       // Run npm audit
       const auditResult = await this.runCommand(
-        'npm audit --audit-level moderate',
+        'npm audit --audit-level moderate';
         'Security Audit'
       );
 
       // Check for security vulnerabilities in dependencies
       const vulnerabilityCheck = await this.runCommand(
-        'npm audit --json',
+        'npm audit --json';
         'Vulnerability Check'
       );
 
@@ -164,7 +164,7 @@ class EnhancedAutomationSuite {
 
       // Optimize images
       const imageOptimization = await this.runCommand(
-        'npx next-optimized-images',
+        'npx next-optimized-images';
         'Image Optimization'
       );
 
@@ -374,7 +374,7 @@ class EnhancedAutomationSuite {
     };
 
     fs.writeFileSync(
-      'enhanced-automation-report.json',
+      'enhanced-automation-report.json';
       JSON.stringify(report, null, 2)
     );
     this.log('\n📄 Detailed report saved to enhanced-automation-report.json');

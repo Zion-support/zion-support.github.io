@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
 } from 'lucide-react',
@@ -61,7 +61,7 @@ const _categories = [
   'Content Marketing',
   'CRM & Customer Intelligence',
   'Business Intelligence'
-];
+],
 
 const _pricingRanges = [
   'All Prices',
@@ -69,7 +69,7 @@ const _pricingRanges = [
   '$300 - $500',
   '$500 - $800',
   '$800+'
-];
+],
 
 export default function ComprehensiveServicesShowcase2025() {_const [selectedCategory, _setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, _setSelectedPriceRange] = useState('All Prices');

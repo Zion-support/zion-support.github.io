@@ -50,7 +50,7 @@ export function SupportChatbot() {
     
     try {
       // Try the Supabase AI chat function first with streaming
-      let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
+      let res = await fetch('https: //ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
@@ -187,8 +187,8 @@ export function SupportChatbot() {_const [open, _setOpen] = useState(false);
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || &quot;I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       const errorMsg: Msg = { 
-        id: Date.now().toString() + '-e', 
-        role: 'assistant', 
+        id: Date.now().toString() + '-e',
+        role: 'assistant',
         message: fallbackResponse
       },
       setMessages(prev => [...prev, errorMsg])

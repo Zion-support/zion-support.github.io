@@ -253,7 +253,7 @@ const _analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise
 const _updateFraudFlag = async (
   supabase: ReturnType<typeof createClient>,
   flagId: string,
-  classification: string, 
+  classification: string,
   explanation: string
 <<<<<<< HEAD
 ): Promise<void> => {

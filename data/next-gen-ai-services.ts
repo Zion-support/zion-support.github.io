@@ -162,7 +162,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 2
   },
-
   // Quantum AI Content Factory
 <<<<<<< HEAD
   {
@@ -238,7 +237,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // AI Autonomous Research Platform
 <<<<<<< HEAD
   {
@@ -314,7 +312,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 6
   },
-
   // Quantum AI Video Production Studio
 <<<<<<< HEAD
   {
@@ -390,7 +387,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.7,
     reviews: 23
   },
-
   // AI Quantum Computing Platform
 <<<<<<< HEAD
   {
@@ -466,7 +462,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 4
   },
-
   // Neural Network Evolution Platform
 <<<<<<< HEAD
   {
@@ -542,7 +537,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 3
   },
-
   // Quantum AI Creativity Engine
 <<<<<<< HEAD
   {
@@ -618,7 +612,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.6,
     reviews: 38
   },
-
   // New Innovative AI Services
 <<<<<<< HEAD
   {
@@ -994,7 +987,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // AI-Powered Predictive Analytics Platform
 <<<<<<< HEAD
   {
@@ -1070,7 +1062,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // AI-Powered Customer Experience Platform
 <<<<<<< HEAD
   {
@@ -1146,7 +1137,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 289
   },
-
   // AI-Powered Supply Chain Optimization
 <<<<<<< HEAD
   {
@@ -1222,7 +1212,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 45
   },
-
   // AI-Powered Financial Trading Platform
 <<<<<<< HEAD
   {
@@ -1298,7 +1287,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 18
   },
-
   // AI-Powered Healthcare Diagnostics
 <<<<<<< HEAD
   {

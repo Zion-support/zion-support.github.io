@@ -133,7 +133,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 950
   },
-
   // AI-Powered Customer Experience Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 1100
   },
-
   // AI-Powered Cybersecurity Suite
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 800
   },
-
   // AI-Powered Marketing Automation
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.7,
     reviews: 1400
   },
-
   // AI-Powered Sales Intelligence
 <<<<<<< HEAD
   {

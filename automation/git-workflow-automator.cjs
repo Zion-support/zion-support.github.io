@@ -58,7 +58,7 @@ class GitWorkflowAutomator {
 
       // Check if there are changes to commit
       const statusResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Check git status'
       );
       if (!statusResult.success || !statusResult.output.trim()) {
@@ -69,7 +69,7 @@ class GitWorkflowAutomator {
       // Commit changes
       const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(
-        `git commit -m "${commitMessage}"`,
+        `git commit -m "${commitMessage}"`;
         'Commit changes'
       );
 
@@ -124,7 +124,7 @@ class GitWorkflowAutomator {
       const currentBranch = await this.getCurrentBranch();
       if (currentBranch !== 'main') {
         await this.runCommand(
-          `git merge ${currentBranch}`,
+          `git merge ${currentBranch}`;
           `Merge ${currentBranch} into main`
         );
       }

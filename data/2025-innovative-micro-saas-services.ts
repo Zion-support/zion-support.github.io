@@ -133,7 +133,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.9,
     reviews: 89
   },
-
   // CRM Intelligence Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.9,
     reviews: 125
   },
-
   // Decision Engine Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.9,
     reviews: 78
   },
-
   // E-commerce Optimization Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.8,
     reviews: 95
   },
-
   // HR Automation Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.8,
     reviews: 58
   },
-
   // Financial Analytics Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.9,
     reviews: 52
   },
-
   // Supply Chain Intelligence Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.8,
     reviews: 38
   },
-
   // Marketing Automation Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.9,
     reviews: 82
   },
-
   // Project Management Intelligence Platform
 <<<<<<< HEAD
   {

@@ -50,7 +50,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Base URL for the site
-const BASE_URL = 'https://zion.app';
+const BASE_URL = 'https: //zion.app',
 
 // Define the pages and their metadata
 const pages = [
@@ -156,7 +156,7 @@ const pages = [
     changefreq: 'monthly',
     lastmod: new Date().toISOString().split('T')[0]
   }
-];
+],
 
 // Generate sitemap XML content
 function generateSitemapXML() {
@@ -164,30 +164,30 @@ function generateSitemapXML() {
   xml += '<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>\n';
   
   pages.forEach(page => {
-    xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`;
-    xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
-    xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-    xml += `    <priority>${page.priority}</priority>\n`;
-    xml += '  </url>\n';
-  });
+    xml += '  <url>\n',
+    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`,
+    xml += `    <lastmod>${page.lastmod}</lastmod>\n`,
+    xml += `    <changefreq>${page.changefreq}</changefreq>\n`,
+    xml += `    <priority>${page.priority}</priority>\n`,
+    xml += '  </url>\n',
+  }),
   
-  xml += '</urlset>';
-  return xml;
+  xml += '</urlset>',
+  return xml,
 }
 
 // Generate sitemap.txt (simple text version)
 function generateSitemapTXT() {
-  return pages.map(page => `${BASE_URL}${page.url}`).join('\n');
+  return pages.map(page => `${BASE_URL}${page.url}`).join('\n'),
 }
 
 // Main execution
 function main() {
   try {
     // Create public directory if it doesn't exist
-    const publicDir = path.join(__dirname, '../public');
+    const publicDir = path.join(__dirname, '../public'),
     if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
+      fs.mkdirSync(publicDir, { recursive: true }),
     }
 
     // Generate and save sitemap.xml
@@ -211,7 +211,7 @@ Sitemap: ${BASE_URL}/sitemap.xml
 Sitemap: ${BASE_URL}/sitemap.txt
 
 # Crawl-delay
-Crawl-delay: 1`;
+Crawl-delay: 1`,
     
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
@@ -222,14 +222,14 @@ Crawl-delay: 1`;
     // console.log(`🌐 Base URL: ${BASE_URL}`);
     
   } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-    process.exit(1);
+    console.error('❌ Error generating sitemap: ', error),
+    process.exit(1)
   }
 }
 
 // Run if called directly
 if (require.main === module) {
-  main();
+  main(),
 }
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };

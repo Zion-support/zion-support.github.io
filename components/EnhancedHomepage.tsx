@@ -10,9 +10,9 @@ import {
   Rocket, 
   Atom, 
   Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
+  Building,
+  Phone,
+  Mail,
   MapPin,
   ArrowUpRight
 } from 'lucide-react',

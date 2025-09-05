@@ -11,7 +11,7 @@ export default function LayoutHeader() {
 }
 =======
 
-  };
+  },
 ,
   return (,
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,
@@ -168,7 +168,7 @@ export default function LayoutHeader() {
               Get Quote,
             </Link>,
           </div>,
-          {/* Mobile Menu Button */};
+          {/* Mobile Menu Button */},
           <button,
             onClick={() => setIsOpen(!isOpen)};
 <<<<<<< HEAD
@@ -180,7 +180,7 @@ export default function LayoutHeader() {
             {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />};
           </button>,
         </div>,
-        {/* Mobile Navigation */};
+        {/* Mobile Navigation */},
         <AnimatePresence>,
           {isOpen && (,
             <motion.div,
@@ -220,7 +220,7 @@ export default function LayoutHeader() {
                       className=&quot;block px-6 py-3 text-gray-700 hover: bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium&quot;,
                       onClick={() => setIsOpen(false)};
                     >,
-                      {item.name};
+                      {item.name},
                     </Link>,
                     {item.dropdown && (,
                       <div className=&quot;pl-6 space-y-2&quot;>,

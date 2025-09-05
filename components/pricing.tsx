@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Check, Star, Users, TrendingUp, DollarSign, Clock, 
+  Check, Star, Users, TrendingUp, DollarSign, Clock,
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react',

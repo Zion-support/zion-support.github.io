@@ -54,7 +54,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
     // Extract auth token from request
     const authHeader = req.headers.get('Authorization'),
     if (!authHeader) {
-      return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
+      return new Response(JSON.stringify({ error: 'Missing authorization header' }) {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -64,7 +64,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
     const { data: { user }, error: authError } = await supabase.auth.getUser(token),
     
     if (authError || !user) {
-      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }) {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -95,7 +95,7 @@ serve(_async (req) => {_// Handle CORS for browser requests
       }
     }
 
-    return new Response(JSON.stringify({ error: 'Invalid action' }), {
+    return new Response(JSON.stringify({ error: 'Invalid action' }) {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -251,7 +251,7 @@ async function getUserApiKeys(_userId: string) {_try {
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ keys: data }), {
+    return new Response(JSON.stringify({ keys: data }) {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -282,7 +282,7 @@ async function regenerateApiKey(_userId: string, _keyId: string) {_try {
 
 <<<<<<< HEAD
     if (keyError || !keyData) {
-      return new Response(JSON.stringify({ error: 'API key not found or access denied' }), {
+      return new Response(JSON.stringify({ error: 'API key not found or access denied' }) {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -382,7 +382,7 @@ async function revokeApiKey(_userId: string, _keyId: string) {_try {
     return new Response(JSON.stringify({
       message: 'API key revoked successfully',
       key: data[0]
-    }), {
+    }) {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -416,7 +416,7 @@ async function getApiLogs(_userId: string, _limit = 50, _offset = 0) {_try {
     }
 
     if (!keyIds || keyIds.length === 0) {
-      return new Response(JSON.stringify({ logs: [], count: 0 }), {
+      return new Response(JSON.stringify({ logs: [] count: 0 }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -449,7 +449,7 @@ async function getApiLogs(_userId: string, _limit = 50, _offset = 0) {_try {
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ logs, count }), {
+    return new Response(JSON.stringify({ logs count }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {

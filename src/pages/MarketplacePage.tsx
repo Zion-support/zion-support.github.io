@@ -129,7 +129,7 @@ const _MarketplaceFilterControls = (_{_sortBy, _setSortBy, _filterCategory, _set
       {_showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
-);
+),
 
 import type {_AppDispatch} from '@/store';
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

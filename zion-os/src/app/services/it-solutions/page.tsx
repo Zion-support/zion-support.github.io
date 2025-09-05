@@ -491,7 +491,7 @@ export default function ITSolutionsPage() {_return (_<div className="space-y-8">
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
         <h2 className="text-3xl font-bold">Ready to Modernize Your IT Infrastructure?</h2>
         <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our IT solutions can transform your technology landscape, 
+          Let's discuss how our IT solutions can transform your technology landscape,
           enhance security, and drive operational efficiency. Get in touch for a comprehensive IT assessment.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

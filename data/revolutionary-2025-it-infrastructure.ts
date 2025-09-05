@@ -129,7 +129,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 145
   },
-
   // ☁️ Quantum Cloud Infrastructure Services
 <<<<<<< HEAD
   {
@@ -179,7 +178,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 78
   },
-
   // 🚀 Autonomous DevOps & Infrastructure Services
 <<<<<<< HEAD
   {
@@ -229,7 +227,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 198
   },
-
   // 🧠 AI-Powered Data Management Services
 <<<<<<< HEAD
   {
@@ -279,7 +276,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 145
   },
-
   // 🌐 Edge Computing & IoT Orchestration Services
 <<<<<<< HEAD
   {
@@ -329,7 +325,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 95
   },
-
   // 🔐 Blockchain & Web3 Infrastructure Services
 <<<<<<< HEAD
   {
@@ -379,7 +374,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // 🎯 API Management & Integration Services
 <<<<<<< HEAD
   {
@@ -429,7 +423,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 178
   },
-
   // 📊 Business Intelligence & Analytics Services
 <<<<<<< HEAD
   {
@@ -479,7 +472,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 234
   },
-
   // 🚀 Digital Transformation & Innovation Services
 <<<<<<< HEAD
   {

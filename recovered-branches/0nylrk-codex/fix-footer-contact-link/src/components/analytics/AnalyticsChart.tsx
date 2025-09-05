@@ -27,7 +27,7 @@ export function AnalyticsChart({
   description, 
   data, 
   type = 'line',
-  dataKeys, 
+  dataKeys,
   timeRange = '7d',
   onTimeRangeChange
 }: AnalyticsChartProps) {

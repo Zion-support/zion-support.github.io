@@ -21,7 +21,7 @@ export default function AIEthicsAutomation() {_return (
           content='Exploring the ethical implications and responsible development of autonomous technology.'
         />
         <meta
-          property='og:title'
+          property='og: title'
           content='Ethical Considerations in Autonomous AI Systems'
         />
         <meta

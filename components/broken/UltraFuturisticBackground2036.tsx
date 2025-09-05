@@ -7,7 +7,7 @@ interface UltraFuturisticBackground2036Props {
 }
 
 export default function UltraFuturisticBackground2036({ 
-  variant = 'default', 
+  variant = 'default',
   intensity = 'medium' 
 }: UltraFuturisticBackground2036Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -108,11 +108,11 @@ export default function UltraFuturisticBackground2036(_{_variant = 'default', _i
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, 
-        canvas.height / 2, 
-        0, 
-        canvas.width / 2, 
-        canvas.height / 2, 
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2
       ),
       

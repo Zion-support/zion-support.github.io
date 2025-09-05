@@ -3,15 +3,15 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { 
-  Brain, Zap, Target, BarChart3, Users, TrendingUp, 
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
   MessageSquare, Mail, Phone, MapPin, ArrowRight,
   Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   FileText, Image, Video, Music, Palette, Type,
   User, Search, Eye, Heart, ShoppingCart, Code,
-  Database, Users2, Award, Lock, Server, Network, 
-  Monitor, Settings, RefreshCw, Play, Pause, 
-  AlertTriangle, CheckCircle2, Building, Wifi, 
-  HardDrive, Cloud, Smartphone, Blocks, Wallet, 
+  Database, Users2, Award, Lock, Server, Network,
+  Monitor, Settings, RefreshCw, Play, Pause,
+  AlertTriangle, CheckCircle2, Building, Wifi,
+  HardDrive, Cloud, Smartphone, Blocks, Wallet,
   CreditCard, PiggyBank, Building2, Activity,
   Waves, BrainCircuit, CpuIcon, MonitorHeart,
   Film, Headphones, Camera, Gamepad2, Tv, Radio,
@@ -177,7 +177,7 @@ export default function ZionTechGroupPage() {_return (
 =======
         {_/* Core Values Section */}
         <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">

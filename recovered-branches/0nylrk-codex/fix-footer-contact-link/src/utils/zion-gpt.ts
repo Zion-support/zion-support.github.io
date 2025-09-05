@@ -23,7 +23,7 @@ export interface ModelConfig {
 }
 =======
 
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',
 
 export type ZionGPTUsage = {_modelId: string;
   tokensUsed: number;
@@ -122,7 +122,7 @@ function calculateCost(modelId: string, tokens: number): number {
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
-  prompt, 
+  prompt,
   purpose,
   maxTokens = 500,
   temperature = 0.7,

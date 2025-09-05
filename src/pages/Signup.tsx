@@ -85,8 +85,8 @@ export default function Signup() {
     },
     validationSchema: SignupSchema,
     onSubmit: async (values, { setErrors }) => {
-      logInfo('Form submission started with:', { 
-        name: values.name, 
+      logInfo('Form submission started with: ', { 
+        name: values.name,
         email: values.email,
         hasPassword: !!values.password,
         isPartnerSignup 
@@ -161,8 +161,8 @@ export default function Signup() {_const _router = useRouter(); // Changed from 
         
         const res = await axios.post('/api/auth/register', requestData),
         
-        logInfo('API response received:', { 
-          status: res.status, 
+        logInfo('API response received: ', { 
+          status: res.status,
           data: res.data 
         }),
         

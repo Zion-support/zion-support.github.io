@@ -24,7 +24,7 @@ export default function ApplyGrantPage() {
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type {_GrantCategory} from '../../types/grants';
 
-const categories: GrantCategory[] = ['Ecosystem Tools', 'Talent Development', 'Regional Expansion', 'Research Grants'];
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent Development', 'Regional ExpansionResearch Grants'],
 
 export default function ApplyGrantPage() {_const _router = useRouter();
   const [program, _setProgram] = useState<'grant' | 'incubator'>('grant');

@@ -349,9 +349,9 @@ export default function UltraFuturisticBackground2038(_{_intensity = 'medium', _
           ctx.lineWidth = 1;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           ctx.strokeRect(
-            particle.x - hologramSize / 2, 
-            particle.y - hologramSize / 2, 
-            hologramSize, 
+            particle.x - hologramSize / 2,
+            particle.y - hologramSize / 2,
+            hologramSize,
             hologramSize
           )
         }
@@ -377,9 +377,9 @@ export default function UltraFuturisticBackground2038(_{_intensity = 'medium', _
           
           ctx.fillStyle = gradient,
           ctx.fillRect(
-            particle.x - fieldSize / 2, 
-            particle.y - fieldSize / 2, 
-            fieldSize, 
+            particle.x - fieldSize / 2,
+            particle.y - fieldSize / 2,
+            fieldSize,
             fieldSize
           )
         }

@@ -133,7 +133,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 89
   },
-  
   // Quantum Neural Interface Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // AI Time Series Prediction Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 156
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 78
   },
-
   // AI Emotional Intelligence Platform
 <<<<<<< HEAD
   {

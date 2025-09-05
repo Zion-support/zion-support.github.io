@@ -22,15 +22,15 @@ const ContactForm: React.FC = () => {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle form submission here
     // console.log('Form submitted:', formData);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -296,7 +296,5 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState<
   )
 }
 
-export default ContactForm;
-,
 export default ContactForm,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

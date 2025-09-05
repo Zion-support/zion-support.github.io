@@ -59,7 +59,7 @@ export const _NotificationProvider = ({_children}: {_children: ReactNode}): JSX.
 <<<<<<< HEAD
         .on('postgres_changes', 
           {
-            event: '*', 
+            event: '*',
             schema: 'public',
             table: 'notifications',
             filter: `user_id=eq.${user.id}`

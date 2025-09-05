@@ -20,8 +20,8 @@ class IntelligentGitWorkflow {
 
   loadWorkflowData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-data.json'
     );
     try {
@@ -42,8 +42,8 @@ class IntelligentGitWorkflow {
 
   saveWorkflowData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-data.json'
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
@@ -273,7 +273,7 @@ class IntelligentGitWorkflow {
 
       // Find mergeable branches
       const mergeableBranches = await this.findMergeableBranches(
-        currentBranch,
+        currentBranch;
         branches
       );
 
@@ -388,7 +388,7 @@ class IntelligentGitWorkflow {
       console.log(`✅ AI resolved conflicts for ${branch}`);
     } catch (error) {
       console.log(
-        `❌ AI conflict resolution failed for ${branch}:`,
+        `❌ AI conflict resolution failed for ${branch}:`;
         error.message
       );
 
@@ -439,7 +439,7 @@ class IntelligentGitWorkflow {
       console.log(`✅ Resolved conflict in ${filePath}`);
     } catch (error) {
       console.log(
-        `❌ Failed to resolve conflict in ${filePath}:`,
+        `❌ Failed to resolve conflict in ${filePath}:`;
         error.message
       );
     }
@@ -468,8 +468,8 @@ class IntelligentGitWorkflow {
     };
 
     const errorFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-errors.json'
     );
     let errors = [];

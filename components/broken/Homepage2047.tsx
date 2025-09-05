@@ -58,9 +58,9 @@ import {_ArrowRight, _Play, _TrendingUp, _Brain, _Shield, _Rocket, _Globe, _Cpu,
 // Import our new innovative services
 
 // Import enhanced components
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
-import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
-import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
+import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
+import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047',
+import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047',
 
 const Homepage2047: React.FC = () => {_const [isVisible, _setIsVisible] = useState(false);
   const [currentServiceIndex, _setCurrentServiceIndex] = useState(0);

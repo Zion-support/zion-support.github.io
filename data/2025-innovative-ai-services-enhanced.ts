@@ -133,7 +133,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // AI Autonomous Ecosystem Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.8,
     reviews: 19
   },
-
   // AI Ethics & Governance Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.7,
     reviews: 31
   },
-
   // AI Creativity Studio Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.8,
     reviews: 89
   },
-
   // AI Education Platform
 <<<<<<< HEAD
   {

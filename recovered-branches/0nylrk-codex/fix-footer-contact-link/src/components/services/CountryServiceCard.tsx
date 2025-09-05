@@ -29,7 +29,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
-      "Germany": "🇩🇪", 
+      "Germany": "🇩🇪",
       "France": "🇫🇷",
       "Japan": "🇯🇵",
       "China": "🇨🇳",

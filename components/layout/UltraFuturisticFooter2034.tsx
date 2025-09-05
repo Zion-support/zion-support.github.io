@@ -3,7 +3,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Rocket, Brain, Atom, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Zap, Sparkles, Shield,
   Phone, Mail, MapPin, Globe, ArrowRight,
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github,
   CheckCircle, Award, Star, Crown, Gem, Infinity,

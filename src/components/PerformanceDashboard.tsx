@@ -39,7 +39,7 @@ const PerformanceDashboard: React.FC = () => {
       category: 'ux'
     },
     {
-      id: '2', 
+      id: '2',
       title: 'Environment Validation System',
       description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
       status: 'completed',

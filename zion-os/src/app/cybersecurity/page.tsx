@@ -13,14 +13,14 @@ export const _metadata = {_title: "Cybersecurity Services - Zion Tech Group | Ad
 export default function CybersecurityPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">Cybersecurity Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Protect your organization from evolving cyber threats with our comprehensive 
-            security solutions. From threat detection to compliance management, 
+            security solutions. From threat detection to compliance management,
             we secure your digital assets and ensure business continuity.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function CybersecurityPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Security Assessment</h3>
               <p className="text-gray-400 mb-4">
-                Comprehensive security assessments including penetration testing, 
+                Comprehensive security assessments including penetration testing,
                 vulnerability scanning, and risk analysis.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -143,7 +143,7 @@ export default function CybersecurityPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>
               <p className="text-gray-400 mb-4">
-                Ensure compliance with industry standards including SOC2, ISO 27001, 
+                Ensure compliance with industry standards including SOC2, ISO 27001,
                 GDPR, and industry-specific regulations.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -166,7 +166,7 @@ export default function CybersecurityPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Identity & Access Management</h3>
               <p className="text-gray-400 mb-4">
-                Secure identity management with multi-factor authentication, 
+                Secure identity management with multi-factor authentication,
                 single sign-on, and privileged access management.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -189,7 +189,7 @@ export default function CybersecurityPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Protection</h3>
               <p className="text-gray-400 mb-4">
-                Comprehensive data protection including encryption, backup, 
+                Comprehensive data protection including encryption, backup,
                 and disaster recovery solutions.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">

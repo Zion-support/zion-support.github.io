@@ -9,10 +9,10 @@ console.log('🤖 Starting AI Code Quality Analyzer...');
 class AICodeQualityAnalyzer {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-code-quality.log'
     );
     this.ensureLogDir();
@@ -139,13 +139,13 @@ class AICodeQualityAnalyzer {
     this.log('💡 Generating recommendations...');
 
     return [
-      'Implement automated code quality checks in CI/CD',
-      'Set up pre-commit hooks for linting and formatting',
-      'Add code review guidelines and templates',
-      'Create performance monitoring dashboard',
-      'Implement automated security scanning',
-      'Set up code coverage reporting',
-      'Add dependency vulnerability scanning',
+      'Implement automated code quality checks in CI/CD';
+      'Set up pre-commit hooks for linting and formatting';
+      'Add code review guidelines and templates';
+      'Create performance monitoring dashboard';
+      'Implement automated security scanning';
+      'Set up code coverage reporting';
+      'Add dependency vulnerability scanning';
     ];
   }
 
@@ -162,10 +162,10 @@ class AICodeQualityAnalyzer {
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-code-quality-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

@@ -9,10 +9,10 @@ console.log('🔒 Starting AI Security Intelligence...');
 class AISecurityIntelligence {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security.log'
     );
     this.ensureLogDir();
@@ -145,16 +145,16 @@ class AISecurityIntelligence {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
+      'Implement automated security scanning in CI/CD';
+      'Set up dependency vulnerability monitoring';
+      'Add security headers middleware';
+      'Implement rate limiting';
+      'Add input validation and sanitization';
+      'Use HTTPS everywhere';
+      'Implement proper authentication and authorization';
+      'Add security logging and monitoring';
+      'Regular security audits and penetration testing';
+      'Implement secure coding practices';
     ];
   }
 
@@ -171,10 +171,10 @@ class AISecurityIntelligence {
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

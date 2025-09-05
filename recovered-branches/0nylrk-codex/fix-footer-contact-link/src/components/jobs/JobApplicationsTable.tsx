@@ -27,10 +27,10 @@ interface JobApplicationsTableProps {
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, 
+    applications,
+    isLoading,
+    error,
+    updateApplicationStatus,
     markApplicationAsViewed,
     refetch
   } = useJobApplications(jobId),

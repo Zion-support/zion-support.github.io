@@ -3,7 +3,7 @@ import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { 
-  Brain, Rocket, Target, Cpu, Globe, Eye, 
+  Brain, Rocket, Target, Cpu, Globe, Eye,
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles

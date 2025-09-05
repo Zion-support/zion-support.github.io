@@ -25,13 +25,13 @@ interface ListingCardProps {
 
 export function ListingCard({ 
   id,
-  title, 
-  description, 
-  image, 
-  category, 
-  tags, 
-  author, 
-  authorImage, 
+  title,
+  description,
+  image,
+  category,
+  tags,
+  author,
+  authorImage,
   className,
   profileType = 'service'
 }: ListingCardProps) {

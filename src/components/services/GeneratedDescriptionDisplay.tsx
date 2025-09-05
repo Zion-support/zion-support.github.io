@@ -21,7 +21,7 @@ interface GeneratedDescriptionDisplayProps {
 }
 
 export function GeneratedDescriptionDisplay({ 
-  description, 
+  description,
   onSave 
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast(),

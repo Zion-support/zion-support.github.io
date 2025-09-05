@@ -105,7 +105,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1250
   },
-
   // Customer Success & Support
 <<<<<<< HEAD
   {
@@ -151,7 +150,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 950
   },
-
   // Financial Technology
 <<<<<<< HEAD
   {
@@ -197,7 +195,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 680
   },
-
   // Healthcare & Biotech
 <<<<<<< HEAD
   {
@@ -243,7 +240,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 420
   },
-
   // E-commerce & Retail
 <<<<<<< HEAD
   {
@@ -289,7 +285,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1680
   },
-
   // Cybersecurity & Compliance
 <<<<<<< HEAD
   {
@@ -335,7 +330,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 1100
   },
-
   // Data & Analytics
 <<<<<<< HEAD
   {
@@ -381,7 +375,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1450
   },
-
   // Human Resources
 <<<<<<< HEAD
   {
@@ -427,7 +420,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 890
   },
-
   // Legal & Compliance
 <<<<<<< HEAD
   {
@@ -473,7 +465,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 580
   },
-
   // Manufacturing & IoT
 <<<<<<< HEAD
   {

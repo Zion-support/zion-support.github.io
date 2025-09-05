@@ -74,10 +74,10 @@ class SecurityScanner {
 
   checkForHardcodedSecrets(content, filePath) {
     const secretPatterns = [
-      /password\s*=\s*['"][^'"]+['"]/gi,
-      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
-      /secret\s*=\s*['"][^'"]+['"]/gi,
-      /token\s*=\s*['"][^'"]+['"]/gi,
+      /password\s*=\s*['"][^'"]+['"]/gi;
+      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi;
+      /secret\s*=\s*['"][^'"]+['"]/gi;
+      /token\s*=\s*['"][^'"]+['"]/gi;
     ];
 
     secretPatterns.forEach(pattern => {
@@ -96,8 +96,8 @@ class SecurityScanner {
 
   checkForSQLInjection(content, filePath) {
     const sqlPatterns = [
-      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
-      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
+      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
+      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
     ];
 
     sqlPatterns.forEach(pattern => {
@@ -116,9 +116,9 @@ class SecurityScanner {
 
   checkForXSS(content, filePath) {
     const xssPatterns = [
-      /dangerouslySetInnerHTML/gi,
-      /innerHTML\s*=/gi,
-      /document\.write/gi,
+      /dangerouslySetInnerHTML/gi;
+      /innerHTML\s*=/gi;
+      /document\.write/gi;
     ];
 
     xssPatterns.forEach(pattern => {
@@ -139,8 +139,8 @@ class SecurityScanner {
     if (filePath.endsWith('package.json')) {
       const packageJson = JSON.parse(content);
       const dependencies = {
-        ...packageJson.dependencies,
-        ...packageJson.devDependencies,
+        ...packageJson.dependencies;
+        ...packageJson.devDependencies;
       };
 
       // Check for known vulnerable packages

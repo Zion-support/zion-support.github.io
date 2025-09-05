@@ -67,7 +67,7 @@ serve(async (req) => {
       .from('interviews')
       .select(`
         *,
-        clients:client_id(*),
+        clients: client_id(*),
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')

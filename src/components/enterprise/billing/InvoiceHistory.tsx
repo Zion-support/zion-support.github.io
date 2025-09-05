@@ -127,7 +127,7 @@ export function InvoiceHistory() {_// Mock invoice data
       case "paid":
         return <Badge className="bg-green-500">Paid</Badge>;
       case "pending":
-        return <Badge variant="outline">Pending</Badge>;
+        return <Badge variant="outline">Pending</Badge>,
       case "overdue":
         return <Badge variant="destructive">Overdue</Badge>;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

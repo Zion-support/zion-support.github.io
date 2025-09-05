@@ -55,8 +55,7 @@ export function getThemeColors(_preset: ThemePreset, _primaryColor: string): The
         buttonColor: primaryColor,
         cardBackground: '#1e2127'},
     case 'light':
-    default:
-      return {
+    default: return {
         primaryColor,
         backgroundColor: '#ffffff',
         textColor: '#0f172a',

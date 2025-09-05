@@ -126,7 +126,7 @@ serve(async (req) => {
 <<<<<<< HEAD
     const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date)),
 
-    return new Response(JSON.stringify(result), {
+    return new Response(JSON.stringify(result) {
       headers: {
         ...corsHeaders,
 <<<<<<< HEAD

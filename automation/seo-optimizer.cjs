@@ -174,7 +174,7 @@ class SEOOptimizer {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `seo-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));

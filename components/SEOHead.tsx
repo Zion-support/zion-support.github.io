@@ -24,8 +24,8 @@ const SEOHead: React.FC<SEOHeadProps> = (_{_title = 'Zion Tech Group - AI-Powere
       <meta name="twitter:image" content={_ogImage} />
       <link rel="canonical" href={_url} />
     </Head>
-  );
-};
+  ),
+},
 
 export default SEOHead;
 =======

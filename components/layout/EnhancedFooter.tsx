@@ -2,7 +2,7 @@
 import React from 'react',
 import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, 
+  Phone, Mail, MapPin, Globe,
   Twitter, Linkedin, Facebook, Instagram,
   ArrowRight, Rocket, Brain, Cpu, Shield,
   Star, Users, TrendingUp, Zap

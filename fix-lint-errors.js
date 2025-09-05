@@ -27,10 +27,10 @@ async function $1() {_; // Get all TypeScript/JavaScript files; const _files = a
       // Skip node_modules, .git, and other common directories};
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
         files = files.concat(findFiles(fullPath, extensions))
-      };
-    } else if (extensions.some(ext => item.endsWith(ext))) {};
+      },
+    } else if (extensions.some(ext => item.endsWith(ext))) {},
       files.push(fullPath)
-};
+},
 
 // Function to fix common syntax errors,
 
@@ -45,8 +45,8 @@ function fixSyntaxErrors(_content) {};
   fixed = fixed.replace(/([^,{}])\n/g, (_match, _p1) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'};
       return p1 + ',\n
-};
-};
+},
+},
 // Function to fix undefined variables (add basic, imports),
 <<<<<<< HEAD
 function fixUndefinedVariables(content, filePath) {};
@@ -109,8 +109,8 @@ function removeUnusedVariables(_content) {_;
 
 // Function to remove unused variables,
 function removeUnusedVariables(content) {,
-  // Remove common unused variable patterns};
-};
+  // Remove common unused variable patterns},
+},
 // Main function,
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
@@ -208,7 +208,7 @@ async function $1() {_;
 
   fixed += &quot;\n}&quot;.repeat(openBraces - closeBraces)};
 ,
-  return fixed};
+  return fixed},
 ,
 // Main function,
 async function $1() {,

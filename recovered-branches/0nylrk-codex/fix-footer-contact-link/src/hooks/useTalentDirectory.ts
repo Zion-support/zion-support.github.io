@@ -23,7 +23,7 @@ export function useTalentDirectory() {
 
   // Fetch talent data
   const { 
-    talents, 
+    talents,
     isLoading 
   } = useTalentData(),
 
@@ -64,7 +64,6 @@ export function useTalentDirectory() {
     talents,
     filteredTalents,
     isLoading,
-    
     // Search and filter state
     searchTerm,
     setSearchTerm,
@@ -77,7 +76,6 @@ export function useTalentDirectory() {
     setExperienceRange,
     sortOption,
     setSortOption,
-    
     // UI state
     isMobileFilterOpen,
     setIsMobileFilterOpen,
@@ -86,12 +84,10 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    
     // Auth and user state
     isAuthenticated,
     userDetails,
     savedTalents,
-    
     // Actions
     toggleSkill,
     toggleAvailability,

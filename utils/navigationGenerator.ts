@@ -253,7 +253,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 10
       },
-
       // Cybersecurity Services
 <<<<<<< HEAD
       {
@@ -321,7 +320,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 13
       },
-
       // Infrastructure Services
 <<<<<<< HEAD
       {
@@ -389,7 +387,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 16
       },
-
       // Blockchain Services
 <<<<<<< HEAD
       {
@@ -413,7 +410,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 17
       },
-
       // Content & Marketing Services
 <<<<<<< HEAD
       {
@@ -481,7 +477,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 20
       },
-
       // Research & Development Services
 <<<<<<< HEAD
       {
@@ -527,7 +522,6 @@ export class NavigationGenerator {_private services: NavigationItem[] = [];
         lastUpdated: '2025-01-15',
         priority: 22
       },
-
       // Specialized AI Services
 <<<<<<< HEAD
       {

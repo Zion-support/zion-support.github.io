@@ -77,8 +77,7 @@ Key Features: ${_keyFeatures || "Not specified"}
 Target Audience: ${_targetAudience || "General users"}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-Please create:
-1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
+Please create: 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points

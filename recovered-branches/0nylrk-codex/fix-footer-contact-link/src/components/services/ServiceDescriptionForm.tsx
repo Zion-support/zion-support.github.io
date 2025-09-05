@@ -69,8 +69,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
         body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
+          title: data.title,
+          keyFeatures: data.keyFeatures,
           targetAudience: data.targetAudience 
         }
       }),

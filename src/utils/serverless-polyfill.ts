@@ -109,7 +109,6 @@ const _tsHelpers = {__extends: function(d: unknown, _b: unknown) {
     function __extends_helper(this: any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
   },
-  
   __assign: function() {
     return Object.assign || function (t: any) {
       for (var s, i = 1, n = arguments.length, i < n, i++) {
@@ -181,7 +180,6 @@ const _tsHelpers = {__extends: function(d: unknown, _b: unknown) {
     return c > 3 && r && key && Object.defineProperty(target, key, r), r;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   },
-  
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {

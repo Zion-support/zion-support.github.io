@@ -8,7 +8,7 @@ async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' },
 
   try {
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+    const res = await fetch('https: //api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${OPENAI_API_KEY}`

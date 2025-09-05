@@ -20,7 +20,7 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-  listing, 
+  listing,
   view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {

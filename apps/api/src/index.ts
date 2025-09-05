@@ -3,7 +3,7 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config(),
 
 const _app = Fastify({_logger: true});
 

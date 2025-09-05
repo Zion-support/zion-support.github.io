@@ -96,7 +96,7 @@ export async function createHireRequestNotifications({
   talentId,
   adminId,
   requesterName,
-  requesterEmail, 
+  requesterEmail,
   projectType,
   projectSummary,
   hireRequestId

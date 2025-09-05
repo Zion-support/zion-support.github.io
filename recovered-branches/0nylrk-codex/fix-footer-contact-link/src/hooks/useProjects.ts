@@ -132,7 +132,7 @@ export function useProjects() {_const { user} = useAuth();
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          job:jobs(title, description),
+          job: jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)

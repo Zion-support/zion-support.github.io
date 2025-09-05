@@ -133,7 +133,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.9,
     reviews: 5
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.8,
     reviews: 18
   },
-
   // Autonomous DevOps Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.7,
     reviews: 25
   },
-
   // Blockchain Infrastructure Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.8,
     reviews: 12
   },
-
   // Quantum Networking Platform
 <<<<<<< HEAD
   {

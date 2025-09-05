@@ -62,7 +62,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
 import fs from 'fs';
 import path from 'path';
 
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',
 
 export type ProposalMeta = {_id: string;
   createdAt: string;

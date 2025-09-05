@@ -5,7 +5,7 @@ import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038'
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  ArrowRight, Star, 
+  ArrowRight, Star,
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Cpu, Cloud, Lock, Users, Award,
   CheckCircle, Sparkles, Infinity, Zap as Lightning

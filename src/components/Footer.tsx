@@ -198,7 +198,7 @@ export function Footer() {_return (
               <li>
                 <Link
                   href="/services"
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm"
+                  className="text-foreground/80 hover: text-primary transition-colors text-sm"
                 >
                   Services
                 </Link>
@@ -257,7 +257,7 @@ export function Footer() {_return (
             type=&quot;button"
             onClick={() => {
               window.scrollTo({ 
-                top: 0, 
+                top: 0,
                 behavior: 'smooth' 
               })
 =======

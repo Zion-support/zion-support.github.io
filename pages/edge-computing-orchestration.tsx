@@ -3,7 +3,7 @@ import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Cpu, Network, Zap, Shield, Database, Globe, 
+  Cpu, Network, Zap, Shield, Database, Globe,
   ArrowRight, CheckCircle, Star, TrendingUp, Users
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',

@@ -9,11 +9,11 @@ interface FeatureCardProps {
 }
 
 export default function FeatureCard({ 
-  icon, 
-  title, 
-  description, 
-  features, 
-  gradient, 
+  icon,
+  title,
+  description,
+  features,
+  gradient,
   className = '' 
 }: FeatureCardProps) {
   return (

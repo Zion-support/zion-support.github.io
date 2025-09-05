@@ -37,10 +37,10 @@ interface MilestoneCardProps {
 export function MilestoneCard({ 
   id,
   projectId,
-  title, 
-  description, 
-  amount, 
-  status, 
+  title,
+  description,
+  amount,
+  status,
   dueDate,
   onApprove,
   onReject

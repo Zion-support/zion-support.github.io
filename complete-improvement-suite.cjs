@@ -9,9 +9,9 @@ class CompleteImprovementSuite {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
     this.stats = {
-      "mergeConflicts": { resolved: 0, "failed": 0 },
-      "syntaxErrors": { fixed: 0, "failed": 0 },
-      "prsProcessed": { merged: 0, "failed": 0 },
+      "mergeConflicts": { resolved: 0, "failed": 0 };
+      "syntaxErrors": { fixed: 0, "failed": 0 };
+      "prsProcessed": { merged: 0, "failed": 0 };
       "improvements": { applied: 0, "failed": 0 }
     };
   }
@@ -359,7 +359,7 @@ class CompleteImprovementSuite {
         "pushSuccessful": pushSuccess}};
 
     fs.writeFileSync(
-      path.join(this.reportsDir, 'complete-improvement-report.json'),
+      path.join(this.reportsDir, 'complete-improvement-report.json');
       JSON.stringify(finalReport, null, 2)
     );
 

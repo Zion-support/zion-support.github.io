@@ -28,7 +28,7 @@ module.exports = {,
     if ( {,
       config.plugins.push() {,
      {,
-      config.plugins.push(};
+      config.plugins.push(},
         new BundleAnalyzerPlugin({,
 <<<<<<< HEAD
           "analyzerMode": 'static',

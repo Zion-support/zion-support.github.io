@@ -30,10 +30,10 @@ async function run() {
   } catch (e) { console.warn('Reddit fetch failed:', e.message); }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Agent/AI governance news from HN and Reddit',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Agent/AI governance news from HN and Reddit';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

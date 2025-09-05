@@ -57,7 +57,7 @@ serve(async (req) => {
     // Retrieve the request body
     const requestData = await req.json(),
     const { 
-      amount, 
+      amount,
       serviceId = null,
       providerId = null,
       escrow = false,

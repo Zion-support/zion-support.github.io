@@ -36,7 +36,7 @@ export const publicPages: SitemapItem[] = [
     path: '/contact',
     label: 'Contact',
     description: 'Get in touch with the Zion team',
-    priority: 0.8, 
+    priority: 0.8,
     changeFreq: 'monthly',
     lastmod: currentDate},
   {
@@ -338,7 +338,7 @@ export const completeSitemap: SitemapItem[] = [
 // Helper function to get appropriate routes based on user role
 <<<<<<< HEAD
 export const getAccessibleRoutes = (
-  isAuthenticated: boolean, 
+  isAuthenticated: boolean,
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
   // Public routes accessible to everyone

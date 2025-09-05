@@ -48,7 +48,7 @@ function walk(dir, results = []) {
 function main() {
   const items = walk(PAGES_DIR).sort((a, b) => a.route.localeCompare(b.route));
   const data = { generatedAt: new Date().toISOString(), items };
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
+  fs.mkdirSync(path.dirname(OUTPUT) { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(data, null, 2));
   console.log('Search index written to', OUTPUT, `(${items.length} items)`);
 }

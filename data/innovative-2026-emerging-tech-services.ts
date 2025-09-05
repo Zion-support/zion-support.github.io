@@ -133,7 +133,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     rating: 4.9,
     reviews: 40
   },
-
   // DNA Computing Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     rating: 4.9,
     reviews: 25
   },
-
   // Photonic Computing Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     rating: 4.8,
     reviews: 60
   },
-
   // Holographic Display Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     rating: 4.7,
     reviews: 100
   },
-
   // Biometric Authentication Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     rating: 4.8,
     reviews: 175
   },
-
   // Quantum Internet Platform
 <<<<<<< HEAD
   {

@@ -21,7 +21,7 @@ class SecurityAuditEnhanced {
     
     try {
       const auditResult = execSync('npm audit --json', { 
-        stdio: 'pipe',
+        stdio: 'pipe';
         encoding: 'utf8'
       });
       
@@ -30,10 +30,10 @@ class SecurityAuditEnhanced {
       
       Object.entries(vulnerabilities).forEach(([pkg, vuln]) => {
         this.vulnerabilities.push({
-          package: pkg,
-          severity: vuln.severity,
-          title: vuln.title,
-          description: vuln.description,
+          package: pkg;
+          severity: vuln.severity;
+          title: vuln.title;
+          description: vuln.description;
           recommendation: vuln.recommendation
         });
       });
@@ -54,7 +54,7 @@ class SecurityAuditEnhanced {
       );
       
       const allDeps = {
-        ...packageJson.dependencies,
+        ...packageJson.dependencies;
         ...packageJson.devDependencies
       };
       
@@ -68,8 +68,8 @@ class SecurityAuditEnhanced {
       
       if (suspiciousPackages.length > 0) {
         this.recommendations.push({
-          type: 'suspicious_packages',
-          message: `Review suspicious packages: ${suspiciousPackages.join(', ')}`,
+          type: 'suspicious_packages';
+          message: `Review suspicious packages: ${suspiciousPackages.join(', ')}`;
           severity: 'medium'
         });
       }
@@ -92,17 +92,17 @@ class SecurityAuditEnhanced {
           
           // Check for hardcoded secrets
           const secretPatterns = [
-            /password\s*=\s*['"][^'"]+['"]/gi,
-            /secret\s*=\s*['"][^'"]+['"]/gi,
-            /key\s*=\s*['"][^'"]+['"]/gi,
+            /password\s*=\s*['"][^'"]+['"]/gi;
+            /secret\s*=\s*['"][^'"]+['"]/gi;
+            /key\s*=\s*['"][^'"]+['"]/gi;
             /token\s*=\s*['"][^'"]+['"]/gi
           ];
           
           secretPatterns.forEach(pattern => {
             if (pattern.test(content)) {
               this.recommendations.push({
-                type: 'hardcoded_secrets',
-                message: `Potential hardcoded secrets found in ${envFile}`,
+                type: 'hardcoded_secrets';
+                message: `Potential hardcoded secrets found in ${envFile}`;
                 severity: 'high'
               });
             }
@@ -119,9 +119,9 @@ class SecurityAuditEnhanced {
     
     try {
       const sensitiveFiles = [
-        'package.json',
-        'package-lock.json',
-        '.env',
+        'package.json';
+        'package-lock.json';
+        '.env';
         '.env.local'
       ];
       
@@ -134,8 +134,8 @@ class SecurityAuditEnhanced {
           // Check if file is world-readable (should not be)
           if (mode & 0o004) {
             this.recommendations.push({
-              type: 'file_permissions',
-              message: `${file} is world-readable`,
+              type: 'file_permissions';
+              message: `${file} is world-readable`;
               severity: 'medium'
             });
           }
@@ -157,17 +157,17 @@ class SecurityAuditEnhanced {
         
         // Check for dangerous patterns
         const dangerousPatterns = [
-          { pattern: /eval\s*\(/g, message: 'eval() usage detected' },
-          { pattern: /innerHTML\s*=/g, message: 'innerHTML usage detected' },
-          { pattern: /document\.write/g, message: 'document.write usage detected' },
+          { pattern: /eval\s*\(/g, message: 'eval() usage detected' };
+          { pattern: /innerHTML\s*=/g, message: 'innerHTML usage detected' };
+          { pattern: /document\.write/g, message: 'document.write usage detected' };
           { pattern: /setTimeout\s*\(\s*['"][^'"]*['"]/g, message: 'String-based setTimeout detected' }
         ];
         
         dangerousPatterns.forEach(({ pattern, message }) => {
           if (pattern.test(content)) {
             this.recommendations.push({
-              type: 'code_security',
-              message: `${message} in ${path.relative(this.projectRoot, file)}`,
+              type: 'code_security';
+              message: `${message} in ${path.relative(this.projectRoot, file)}`;
               severity: 'medium'
             });
           }
@@ -244,14 +244,14 @@ class SecurityAuditEnhanced {
     this.calculateSecurityScore();
     
     const report = {
-      timestamp: new Date().toISOString(),
-      securityScore: this.securityScore,
-      vulnerabilities: this.vulnerabilities,
-      recommendations: this.recommendations,
+      timestamp: new Date().toISOString();
+      securityScore: this.securityScore;
+      vulnerabilities: this.vulnerabilities;
+      recommendations: this.recommendations;
       summary: {
-        totalVulnerabilities: this.vulnerabilities.length,
-        totalRecommendations: this.recommendations.length,
-        securityScore: this.securityScore,
+        totalVulnerabilities: this.vulnerabilities.length;
+        totalRecommendations: this.recommendations.length;
+        securityScore: this.securityScore;
         status: this.securityScore >= 80 ? 'good' : 
                 this.securityScore >= 60 ? 'fair' : 'poor'
       }

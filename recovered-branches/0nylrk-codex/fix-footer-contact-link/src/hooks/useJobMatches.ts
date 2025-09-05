@@ -36,7 +36,7 @@ export function useJobMatches(_jobId: string) {_const [matches, _setMatches] = u
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .select(`
           *,
-          talent_profile:talent_id(
+          talent_profile: talent_id(
             id,
             user_id,
             full_name,

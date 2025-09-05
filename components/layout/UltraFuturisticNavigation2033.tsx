@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,
   Cpu, Target, Microscope, Shield, Zap, Sparkles,
-  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  Menu, X, Search, ChevronDown, Home, Briefcase,
   DollarSign, BookOpen, Users, MessageCircle
 } from 'lucide-react',
 

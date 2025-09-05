@@ -3,7 +3,7 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom,
   Rocket, Shield, Target, CheckCircle, ExternalLink,
   Search, Filter, Grid, List, ChevronDown
 } from 'lucide-react',

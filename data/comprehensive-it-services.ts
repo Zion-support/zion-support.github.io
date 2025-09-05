@@ -131,7 +131,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Cloud Migration & Optimization Services
 <<<<<<< HEAD
   {
@@ -183,7 +182,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.7,
     reviews: 12
   },
-
   // Cybersecurity Operations Center
 <<<<<<< HEAD
   {
@@ -235,7 +233,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.8,
     reviews: 24
   },
-
   // Data Center Management Services
 <<<<<<< HEAD
   {
@@ -287,7 +284,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.7,
     reviews: 11
   },
-
   // Network Security & SD-WAN Services
 <<<<<<< HEAD
   {
@@ -339,7 +335,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.6,
     reviews: 19
   },
-
   // IT Project Management Services
 <<<<<<< HEAD
   {
@@ -391,7 +386,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.7,
     reviews: 32
   },
-
   // IT Training & Certification Services
 <<<<<<< HEAD
   {

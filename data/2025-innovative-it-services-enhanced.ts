@@ -133,7 +133,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Zero Trust Security Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 56
   },
-
   // Blockchain Enterprise Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 31
   },
-
   // AI-Powered DevOps Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 167
   },
-
   // Quantum Networking Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Autonomous IT Operations Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 52
   },
-
   // Quantum Data Center Platform
 <<<<<<< HEAD
   {
@@ -497,7 +490,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Quantum Cybersecurity Platform
 <<<<<<< HEAD
   {
@@ -549,7 +541,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 23
   },
-
   // Quantum Cloud Migration Platform
 <<<<<<< HEAD
   {
@@ -601,7 +592,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 38
   },
-
   // Cloud-Native Application Development Platform
 <<<<<<< HEAD
   {
@@ -653,7 +643,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 33
   },
-
   // Zero-Trust Security Architecture Platform
 <<<<<<< HEAD
   {
@@ -705,7 +694,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 21
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -757,7 +745,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 28
   },
-
   // API Gateway and Management Platform
 <<<<<<< HEAD
   {
@@ -809,7 +796,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.6,
     reviews: 39
   },
-
   // Data Pipeline and ETL Platform
 <<<<<<< HEAD
   {
@@ -861,7 +847,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 29
   },
-
   // Infrastructure as Code Platform
 <<<<<<< HEAD
   {
@@ -913,7 +898,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 35
   },
-
   // Database Performance Optimization Platform
 <<<<<<< HEAD
   {
@@ -965,7 +949,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 31
   },
-
   // Network Monitoring and Analytics Platform
 <<<<<<< HEAD
   {
@@ -1017,7 +1000,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.6,
     reviews: 37
   },
-
   // IT Asset Management and Discovery Platform
 <<<<<<< HEAD
   {
@@ -1069,7 +1051,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 43
   },
-
   // Quantum-Secure Cloud Infrastructure
 <<<<<<< HEAD
   {
@@ -1121,7 +1102,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Autonomous IT Operations Center
 <<<<<<< HEAD
   {
@@ -1173,7 +1153,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Edge Computing Orchestration Platform
 <<<<<<< HEAD
   {
@@ -1225,7 +1204,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 56
   },
-
   // Blockchain Infrastructure Platform
 <<<<<<< HEAD
   {

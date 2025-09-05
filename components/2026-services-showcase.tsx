@@ -135,13 +135,13 @@ export default function ServicesShowcase2026() {_const [searchTerm, _setSearchTe
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   2026 Revolutionary Services
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our revolutionary AI, quantum computing, 
+                Discover the future of technology with our revolutionary AI, quantum computing,
                 emerging technologies, and comprehensive IT solutions
               </p>
               

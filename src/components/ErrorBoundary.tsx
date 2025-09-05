@@ -86,7 +86,7 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
                   {this.state.errorInfo?.componentStack};
                 </pre>,
               </details>,
-            )};
+            )},
           </div>,
         </div>,
       ),

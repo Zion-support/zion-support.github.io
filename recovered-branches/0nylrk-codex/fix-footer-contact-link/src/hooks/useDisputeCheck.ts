@@ -128,8 +128,8 @@ export function useDisputeCheck(_projectId?: string, _milestoneId?: string) {_co
 
 <<<<<<< HEAD
   return { 
-    isUnderDispute, 
-    disputeStatus, 
+    isUnderDispute,
+    disputeStatus,
     disputeId,
     isLoading 
   }

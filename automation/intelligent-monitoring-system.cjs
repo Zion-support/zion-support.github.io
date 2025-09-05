@@ -154,7 +154,7 @@ class IntelligentMonitoringSystem {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `intelligent-monitoring-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

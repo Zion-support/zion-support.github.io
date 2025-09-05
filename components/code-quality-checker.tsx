@@ -657,7 +657,7 @@ export default function CodeQualityCheckerPage() {_const [isAnalyzing, _setIsAna
 =======
       {_/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

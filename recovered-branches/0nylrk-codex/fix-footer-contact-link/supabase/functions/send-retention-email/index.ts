@@ -576,7 +576,7 @@ async function generateEmail(_emailData: EmailData, _userData: unknown): Promise
 <<<<<<< HEAD
           <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
             <h2>We miss you! Special offer inside</h2>
-            <p>Hi ${firstName},</p>
+            <p>Hi ${firstName}</p>
             <p>It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>
             <p><strong>Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>
             <div style="margin: 25px 0,">
@@ -612,7 +612,7 @@ async function generateEmail(_emailData: EmailData, _userData: unknown): Promise
 <<<<<<< HEAD
           <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
             <h2>Exclusive hiring discount inside</h2>
-            <p>Hi ${firstName},</p>
+            <p>Hi ${firstName}</p>
             <p>We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>
             <p><strong>Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>
             <div style="margin: 25px 0,">

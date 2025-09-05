@@ -10,9 +10,9 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean,
+  error?: Error,
+  errorInfo?: ErrorInfo
 }
 =======
 import React, {_Component, _ErrorInfo, _ReactNode} from 'react';
@@ -72,7 +72,7 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
     this.setState({
       error,
       errorInfo
-    });
+    }),
 
     // Call the onError prop if provided
     if (this.props.onError) {
@@ -81,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
 
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });
+      (window as any).Sentry.captureException(error, { extra: errorInfo }),
     }
   }
 
@@ -212,4 +212,4 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary,

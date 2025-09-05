@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
+  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,
   CheckCircle, ArrowRight, Star, Clock, Target,
   Zap, Users, BarChart3, Settings, Database
 } from 'lucide-react',

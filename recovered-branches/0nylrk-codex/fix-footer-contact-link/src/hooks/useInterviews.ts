@@ -133,7 +133,7 @@ export function useInterviews() {_const [interviews, _setInterviews] = useState<
         .from('interviews')
         .select(`
           *,
-          clients:client_id(id, display_name, avatar_url),
+          clients: client_id(id, display_name, avatar_url),
           talents:talent_id(id, full_name, profile_picture_url)
         `)
 <<<<<<< HEAD

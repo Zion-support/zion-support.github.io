@@ -275,7 +275,7 @@ export default function LogsPage(_{_logs: initialLogs, _errorCount, _warningCoun
     
     const _parts = [];
     if (performance.memory) {
-      parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`);
+      parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`),
     }
     if (performance.timing) {_parts.push(`Timing: ${performance.timing}ms`);
     }

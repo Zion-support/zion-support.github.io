@@ -248,8 +248,7 @@ Contract:
 - Scope: ${_input.scope || 'Not specified'}
 - Experience Level: ${_input.experienceLevel || 'mid'}
 
-Constraints:
-- Assume remote contractor.
+Constraints: - Assume remote contractor.
 - Use current global market rates.
 - currency must be &quot;USD&quot;.
 - min and max are numbers with no commas.

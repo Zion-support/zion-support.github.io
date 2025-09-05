@@ -118,7 +118,7 @@ export default function UltraFuturistic2029InnovationsPage() {_const _contactInf
               transition={_{ duration: 0.8}}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">

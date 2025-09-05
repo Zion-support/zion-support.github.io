@@ -21,7 +21,7 @@ export default function GlobalBountiesPage() {
 =======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import
-import data from '../../data/global-bounties.json';
+import data from '../../data/global-bounties.json',
 
 export default function GlobalBountiesPage() {_const items: unknown[] = (data?.items || []).slice(0, _100);
   return (_<EnhancedLayout>

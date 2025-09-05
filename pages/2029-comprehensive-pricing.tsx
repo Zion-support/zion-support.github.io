@@ -4,8 +4,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
-  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,
+  Atom, Rocket, Target, Microscope, DollarSign, Phone,
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
 } from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',

@@ -15,7 +15,7 @@ describe('App Smoke Tests', () => {
 =======
 import React from 'react';
 
-import App from './App';
+import App from './App',
 
 describe(_'App Smoke Tests', _() => {_it(_'should render without crashing', _() => {
     expect__(() => render(<App />)).not.toThrow();});

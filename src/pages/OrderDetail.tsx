@@ -89,7 +89,7 @@ export default function OrderDetailPage() {_const _router = useRouter();
       '',
       `Total: $${_order.total.toFixed(2)}`,
       '',
-      'Shipping Address:',
+      'Shipping Address: ',
       order.shippingAddress.name,
       order.shippingAddress.street,
 <<<<<<< HEAD

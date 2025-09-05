@@ -68,12 +68,12 @@ class HealthChecker {
           memoryUsage,
           pm2Status,
           buildStatus
-        ),
+        );
       };
 
       // Save health report
       fs.writeFileSync(
-        this.healthReport,
+        this.healthReport;
         JSON.stringify(healthReport, null, 2)
       );
 

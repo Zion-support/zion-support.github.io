@@ -202,8 +202,8 @@ interface PageErrorBoundaryProps {
 }
 
 export default function PageErrorBoundary({ 
-  children, 
-  pageName, 
+  children,
+  pageName,
   fallback 
 }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {

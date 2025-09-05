@@ -3,7 +3,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star,
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
@@ -400,7 +400,7 @@ const _UltraFuturisticFooter2029 = () => {_return (_<footer className="bg-gradie
 =======
       {_/* Newsletter Signup */}
       <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

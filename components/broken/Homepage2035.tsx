@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 } from 'lucide-react',
@@ -99,7 +99,7 @@ const Homepage2035: React.FC = () => {_const [isLoading, _setIsLoading] = useSta
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
-      opacity: 1, 
+      opacity: 1,
       scale: 1,
       transition: { duration: 1.5, ease: &quot;easeOut&quot; as const }
 =======

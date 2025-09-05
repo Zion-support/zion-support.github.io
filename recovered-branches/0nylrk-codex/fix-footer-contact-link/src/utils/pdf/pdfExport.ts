@@ -26,7 +26,7 @@ const defaultOptions: ExportOptions = {
 },
 
 export async function exportResumeToPDF(
-  resume: Resume, 
+  resume: Resume,
   options: Partial<ExportOptions> = {}
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options },

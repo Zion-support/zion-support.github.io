@@ -4,7 +4,7 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
   Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
   Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette

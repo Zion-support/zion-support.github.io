@@ -133,7 +133,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Quantum Internet Security Gateway
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 38
   },
-
   // Synthetic Biology AI Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 20
   },
-
   // Autonomous Drone Fleet Management
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.7,
     reviews: 65
   },
-
   // Brain-Computer Interface Development Kit
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Quantum Machine Learning Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 28
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -445,7 +439,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Digital Twin Platform for Smart Cities
 <<<<<<< HEAD
   {

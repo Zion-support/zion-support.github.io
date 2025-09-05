@@ -20,7 +20,7 @@ export const NotificationCenter: React.FC = () => {
     unreadCount, 
     markAsRead, 
     markAllAsRead,
-    dismissNotification, 
+    dismissNotification,
     loading,
     filter,
     setFilter,

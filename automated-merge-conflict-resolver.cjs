@@ -11,43 +11,43 @@ console.log('==');
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
   // For pages, prefer the newer version (HEAD)
-  'pages/': 'HEAD',
+  'pages/': 'HEAD';
   // For components, prefer the newer version (HEAD)
-  'components/': 'HEAD',
-  'src/components/': 'HEAD',
+  'components/': 'HEAD';
+  'src/components/': 'HEAD';
   // For automation scripts, prefer the newer version (HEAD)
-  'automation/': 'HEAD',
-  'scripts/': 'HEAD',
+  'automation/': 'HEAD';
+  'scripts/': 'HEAD';
   // For configuration files, prefer the newer version (HEAD)
-  'package.json': 'HEAD',
-  'tsconfig.json': 'HEAD',
-  'tailwind.config.js': 'HEAD',
-  'vite.config.js': 'HEAD',
+  'package.json': 'HEAD';
+  'tsconfig.json': 'HEAD';
+  'tailwind.config.js': 'HEAD';
+  'vite.config.js': 'HEAD';
   // For data files, prefer the newer version (HEAD)
-  'src/data/': 'HEAD',
+  'src/data/': 'HEAD';
   // For utility files, prefer the newer version (HEAD)
-  'src/utils/': 'HEAD',
-  'src/lib/': 'HEAD',
+  'src/utils/': 'HEAD';
+  'src/lib/': 'HEAD';
   // For hooks, prefer the newer version (HEAD)
-  'src/hooks/': 'HEAD',
+  'src/hooks/': 'HEAD';
   // For store files, prefer the newer version (HEAD)
-  'src/store/': 'HEAD',
+  'src/store/': 'HEAD';
   // For UI components, prefer the newer version (HEAD)
-  'src/components/ui/': 'HEAD',
+  'src/components/ui/': 'HEAD';
   // For main files, prefer the newer version (HEAD)
-  'src/main.jsx': 'HEAD',
-  'src/App.jsx': 'HEAD',
-  'src/App.tsx': 'HEAD',
+  'src/main.jsx': 'HEAD';
+  'src/App.jsx': 'HEAD';
+  'src/App.tsx': 'HEAD';
   // For test files, prefer the newer version (HEAD)
-  '__tests__/': 'HEAD',
-  'tests/': 'HEAD',
+  '__tests__/': 'HEAD';
+  'tests/': 'HEAD';
   // For disabled files, prefer the newer version (HEAD)
-  '.disabled': 'HEAD',
-  '.quarantine': 'HEAD',
+  '.disabled': 'HEAD';
+  '.quarantine': 'HEAD';
   // For backup files, prefer the newer version (HEAD)
-  'temp-backup/': 'HEAD',
-  'temp_backup/': 'HEAD',
-  'backup/': 'HEAD',
+  'temp-backup/': 'HEAD';
+  'temp_backup/': 'HEAD';
+  'backup/': 'HEAD';
   // For reports and logs, prefer the newer version (HEAD)
   '.json': 'HEAD',
   '.txt': 'HEAD',

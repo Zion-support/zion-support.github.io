@@ -2039,7 +2039,7 @@ export const microSaasServices: MicroSaasService[] = [
     reviews: 27
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   }
-];
+],
 
 <<<<<<< HEAD
 export const serviceCategories = [
@@ -2083,7 +2083,7 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
     'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
     'Climate Technology': ['Climate Technology']
-  };
+  },
 
   return enhancedRealMicroSaasServices.filter(service => {
     const serviceCategories = service.category || '';

@@ -124,7 +124,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = (_{_service}) =>
   const iconVariants = {
     hidden: { rotate: -180, scale: 0 },
     visible: { 
-      rotate: 0, 
+      rotate: 0,
       scale: 1,
       transition: {
         duration: 0.6,

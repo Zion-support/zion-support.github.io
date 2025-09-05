@@ -11,9 +11,9 @@ const path = require('path');
 class ContentQualityAnalyzer {
   constructor() {
     this.analysis = {
-      totalFiles: 0,
-      issues: [],
-      recommendations: [],
+      totalFiles: 0;
+      issues: [];
+      recommendations: [];
       scores: {}
     };
   }
@@ -107,7 +107,7 @@ class ContentQualityAnalyzer {
       score -= 5;
     }
     
-    if (content.match(/\n{3,}/)) {
+    if (content.match(/\n{3}/)) {
       issues.push(`${filename}: Excessive line breaks detected`);
       score -= 3;
     }
@@ -158,7 +158,7 @@ class ContentQualityAnalyzer {
       score -= 5;
     }
     
-    if (content.match(/\n{3,}/)) {
+    if (content.match(/\n{3}/)) {
       issues.push(`${filename}: Excessive line breaks detected`);
       score -= 3;
     }

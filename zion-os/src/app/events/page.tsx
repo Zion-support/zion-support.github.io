@@ -41,7 +41,7 @@ export default function EventsPage() {_return (
                   Zion Tech Summit 2025
                 </h2>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                  Our flagship annual conference bringing together technology leaders, innovators, 
+                  Our flagship annual conference bringing together technology leaders, innovators,
                   and visionaries to explore the future of AI, quantum computing, and enterprise 
                   technology solutions.
                 </p>
@@ -113,7 +113,7 @@ export default function EventsPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Conferences</h3>
               <p className="text-gray-400 mb-4">
-                Large-scale industry events featuring keynote speakers, panel discussions, 
+                Large-scale industry events featuring keynote speakers, panel discussions,
                 and networking opportunities
               </p>
               <Link href="/events/category/conferences" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
@@ -129,7 +129,7 @@ export default function EventsPage() {_return (
               </div>
               <h3 className="text-xl font-semibold mb-3">Webinars</h3>
               <p className="text-gray-400 mb-4">
-                Online educational sessions covering specific topics, technologies, 
+                Online educational sessions covering specific topics, technologies,
                 and industry trends
               </p>
               <Link href="/events/category/webinars" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
@@ -213,11 +213,11 @@ export default function EventsPage() {_return (
                 </span>
                 <span className="text-gray-400 text-sm">January 22, 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover: text-blue-400 transition-colors">
                 Quantum Computing Fundamentals
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Hands-on workshop covering the basics of quantum computing, qubits, 
+                Hands-on workshop covering the basics of quantum computing, qubits,
                 and quantum algorithms for beginners and intermediate developers.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">
@@ -244,11 +244,11 @@ export default function EventsPage() {_return (
                 </span>
                 <span className="text-gray-400 text-sm">February 10-12, 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover: text-blue-400 transition-colors">
                 Cybersecurity Innovation Summit
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Three-day conference focused on emerging cybersecurity threats, 
+                Three-day conference focused on emerging cybersecurity threats,
                 AI-powered security solutions, and industry best practices.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">
@@ -276,11 +276,11 @@ export default function EventsPage() {_return (
                 </span>
                 <span className="text-gray-400 text-sm">February 25, 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover: text-blue-400 transition-colors">
                 Space Technology Applications
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Explore practical applications of space technology in telecommunications, 
+                Explore practical applications of space technology in telecommunications,
                 Earth observation, and satellite navigation systems.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">

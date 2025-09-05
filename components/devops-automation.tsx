@@ -221,7 +221,7 @@ export default function DevOpsAutomationPage() {_const _features = [
       <div className="min-h-screen bg-black">
         {_/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <div className="mb-8">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />

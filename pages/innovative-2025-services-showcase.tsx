@@ -2,7 +2,7 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { 
-  Brain, Shield, Rocket, Globe, Cpu, Database, 
+  Brain, Shield, Rocket, Globe, Cpu, Database,
   TrendingUp, Users, Star, Zap, Lock, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react',
@@ -210,7 +210,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {_const [selectedCategory
             transition={_{ duration: 0.8, _delay: 0.2}}
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
 

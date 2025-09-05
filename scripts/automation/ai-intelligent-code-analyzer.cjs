@@ -22,8 +22,8 @@ class AIIntelligentCodeAnalyzer {
 
   loadLearningData() {
     const learningFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'ai-learning-data.json'
     );
     try {
@@ -43,8 +43,8 @@ class AIIntelligentCodeAnalyzer {
 
   saveLearningData() {
     const learningFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'ai-learning-data.json'
     );
     fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
@@ -176,7 +176,7 @@ class AIIntelligentCodeAnalyzer {
     ).length;
     const classCount = (content.match(/class\s+\w+/g) || []).length;
     metrics.maintainability = Math.max(
-      0,
+      0;
       100 - functionCount * 2 - classCount * 5
     );
 
@@ -197,7 +197,7 @@ class AIIntelligentCodeAnalyzer {
     const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
     const forEachCount = (content.match(/\.forEach\(/g) || []).length;
     metrics.performance = Math.max(
-      0,
+      0;
       100 - asyncAwaitCount * 3 - forEachCount * 2
     );
 
@@ -451,8 +451,8 @@ class AIIntelligentCodeAnalyzer {
 
   saveResults() {
     const reportFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       `ai-code-analysis-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));

@@ -127,7 +127,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0,
     reviews: 15
   },
-
   // 🧬 DNA Computing & Biotech Services
 <<<<<<< HEAD
   {
@@ -177,7 +176,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // 🚀 Space Technology & Satellite Services
 <<<<<<< HEAD
   {
@@ -227,7 +225,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0,
     reviews: 5
   },
-
   // 🌐 Quantum Internet & Communication Services
 <<<<<<< HEAD
   {
@@ -277,7 +274,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 22
   },
-
   // 🏥 Advanced Healthcare AI Services
 <<<<<<< HEAD
   {
@@ -327,7 +323,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // 🏦 Financial Technology Revolution Services
 <<<<<<< HEAD
   {
@@ -377,7 +372,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // 🏭 Industrial IoT & Smart Manufacturing Services
 <<<<<<< HEAD
   {
@@ -427,7 +421,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // 🎓 Education Technology Revolution Services
 <<<<<<< HEAD
   {
@@ -477,7 +470,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 234
   },
-
   // 🌱 Sustainability & Green Technology Services
 <<<<<<< HEAD
   {
@@ -527,7 +519,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 58
   },
-
   // 🚛 Logistics & Supply Chain Revolution Services
 <<<<<<< HEAD
   {

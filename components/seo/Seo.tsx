@@ -9,7 +9,7 @@ export default function Seo(props: SeoProps) {
 =======
 import React from 'react';
 
-export type SeoProps = NextSeoProps;
+export type SeoProps = NextSeoProps,
 
 export default function Seo(_props: SeoProps) {_return <NextSeo {...props} />;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

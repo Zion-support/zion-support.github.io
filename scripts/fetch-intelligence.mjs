@@ -4,9 +4,9 @@ import path from 'path';
 import https from 'https';
 
 const SOURCES = [
-  'https://hnrss.org/frontpage',
-  'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',
-  'https://www.reddit.com/r/MachineLearning/.rss',
+  'https://hnrss.org/frontpage';
+  'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml';
+  'https://www.reddit.com/r/MachineLearning/.rss';
 ];
 
 function ensureDir(dirPath) { if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true }); }

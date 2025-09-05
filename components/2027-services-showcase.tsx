@@ -4,9 +4,9 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Search, Star, Users, TrendingUp, DollarSign, Clock, 
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
+  Search, Star, Users, TrendingUp, DollarSign, Clock,
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
 } from 'lucide-react',
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations',

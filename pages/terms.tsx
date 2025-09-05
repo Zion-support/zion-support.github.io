@@ -79,7 +79,7 @@ const TermsPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
   const prohibitedActivities = [
 import { motion } from 'framer-motion',
 import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
+  FileText, Shield, CheckCircle, AlertTriangle,
   Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket
 } from 'lucide-react',
@@ -1655,7 +1655,7 @@ export default function Terms() {_return (
                 <div className="text-gray-300 space-y-4">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <p>
-                    By accessing, browsing, or using our services, you acknowledge that you have read, 
+                    By accessing, browsing, or using our services, you acknowledge that you have read,
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.
                   </p>
                   <p>

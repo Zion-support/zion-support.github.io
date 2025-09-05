@@ -133,7 +133,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 5
   },
-
   // Quantum Internet Security Platform
 <<<<<<< HEAD
   {
@@ -185,7 +184,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 10
   },
-
   // Space Mining Operations Platform
 <<<<<<< HEAD
   {
@@ -237,7 +235,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 3
   },
-
   // Quantum Robotics Platform
 <<<<<<< HEAD
   {
@@ -289,7 +286,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Autonomous Vehicle AI Platform
 <<<<<<< HEAD
   {
@@ -341,7 +337,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 6
   },
-
   // Quantum Materials Discovery Platform
 <<<<<<< HEAD
   {
@@ -393,7 +388,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.8,
     reviews: 9
   },
-
   // Metaverse AI Development Platform
 <<<<<<< HEAD
   {

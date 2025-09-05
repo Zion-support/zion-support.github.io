@@ -2,7 +2,7 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { 
-  Rocket, CheckCircle, ArrowRight, Brain, Atom, 
+  Rocket, CheckCircle, ArrowRight, Brain, Atom,
   Shield, Zap, Users, Clock, Target, Star,
   FileText, Video, Code, Globe, Building
 } from 'lucide-react',

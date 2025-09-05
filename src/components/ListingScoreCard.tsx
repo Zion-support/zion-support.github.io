@@ -27,10 +27,10 @@ interface ListingScoreCardProps {
 }
 
 export function ListingScoreCard({ 
-  title, 
-  description, 
-  image, 
-  category, 
+  title,
+  description,
+  image,
+  category,
   tags,
   author,
   authorImage,

@@ -167,7 +167,7 @@ export default function CaseStudyPage() {_return (_<>
                   We built a comprehensive data analytics platform that provides real-time insights, _predictive modeling, _and automated reporting for improved patient care and operational efficiency.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
                     <p className="text-white/80">

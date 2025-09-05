@@ -15,7 +15,7 @@ export function MobileOnboarding() {
 =======
 import React, {_useState} from "react";
 
-type OnboardingStep = "language" | "role" | "signup";
+type OnboardingStep = "language" | "role" | "signup",
 
 export function MobileOnboarding() {_const [currentStep, _setCurrentStep] = useState<OnboardingStep>("language");
   const _navigate = useNavigate();

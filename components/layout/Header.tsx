@@ -105,4 +105,4 @@ const Header: React.FC = () => {_const _navigation = [
   )
 },
 
-export default Header;
+export default Header,

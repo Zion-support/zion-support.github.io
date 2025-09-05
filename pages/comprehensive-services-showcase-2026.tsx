@@ -5,8 +5,8 @@ import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-s
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions',
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services',
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Clock, Zap, Shield, Cloud, Brain, 
+  Search, Filter, Star, Users, TrendingUp,
+  Clock, Zap, Shield, Cloud, Brain,
   Database, Globe, Robot, Cube, Sparkles
 } from 'lucide-react',
 
