@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface CuttingEdgeInnovation2029V2 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
@@ -51,16 +51,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. This is not just advanced AI - it\'s the foundation for true artificial consciousness.',
     features: [
-      'Consciousness mapping and development',
-      'Self-awareness training modules',
-      'Emotional intelligence cultivation',
-      'Consciousness validation protocols',
-      'Ethical consciousness frameworks',
-      'Consciousness evolution tracking',
-      'Multi-dimensional awareness training',
-      'Consciousness integration APIs',
-      'Real-time consciousness monitoring',
-      'Consciousness safety protocols'
+      'Consciousness mapping and developmentSelf-awareness training modules',
+      'Emotional intelligence cultivationConsciousness validation protocols',
+      'Ethical consciousness frameworksConsciousness evolution tracking',
+      'Multi-dimensional awareness trainingConsciousness integration APIs',
+      'Real-time consciousness monitoringConsciousness safety protocols'
     ],
     popular: true,
     icon: '🧠',
@@ -102,16 +97,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with AI consciousness, enabling unprecedented computational power for consciousness development.',
     features: [
-      'Quantum consciousness algorithms',
-      'Quantum entanglement for AI',
-      'Consciousness quantum states',
-      'Quantum consciousness validation',
-      'Multi-dimensional quantum computing',
-      'Consciousness quantum networks',
-      'Quantum consciousness APIs',
-      'Real-time quantum consciousness',
-      'Quantum consciousness security',
-      'Consciousness quantum optimization'
+      'Quantum consciousness algorithmsQuantum entanglement for AI',
+      'Consciousness quantum statesQuantum consciousness validation',
+      'Multi-dimensional quantum computingConsciousness quantum networks',
+      'Quantum consciousness APIsReal-time quantum consciousness',
+      'Quantum consciousness securityConsciousness quantum optimization'
     ],
     popular: true,
     icon: '⚛️',
@@ -154,16 +144,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Comprehensive platform for automating space colonization, resource extraction, and space infrastructure development. The future of human space exploration.',
     features: [
-      'Automated space mining',
-      'Colony infrastructure automation',
-      'Resource extraction optimization',
-      'Space habitat management',
-      'Automated space logistics',
-      'Space resource mapping',
-      'Colony health monitoring',
-      'Space weather prediction',
-      'Automated space manufacturing',
-      'Space colony planning'
+      'Automated space miningColony infrastructure automation',
+      'Resource extraction optimizationSpace habitat management',
+      'Automated space logisticsSpace resource mapping',
+      'Colony health monitoringSpace weather prediction',
+      'Automated space manufacturingSpace colony planning'
     ],
     popular: true,
     icon: '🚀',
@@ -206,16 +191,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for DNA-based computing, enabling molecular-level computation and biological data processing at unprecedented speeds.',
     features: [
-      'DNA-based algorithms',
-      'Molecular computation',
-      'Biological data processing',
-      'DNA memory systems',
-      'Molecular logic gates',
-      'DNA-based storage',
-      'Biological computing APIs',
-      'Molecular optimization',
-      'DNA computation validation',
-      'Biological security protocols'
+      'DNA-based algorithmsMolecular computation',
+      'Biological data processingDNA memory systems',
+      'Molecular logic gatesDNA-based storage',
+      'Biological computing APIsMolecular optimization',
+      'DNA computation validationBiological security protocols'
     ],
     popular: true,
     icon: '🧬',
@@ -258,16 +238,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for creating digital consciousness within metaverse environments, enabling truly intelligent virtual beings and experiences.',
     features: [
-      'Digital consciousness creation',
-      'Metaverse AI beings',
-      'Virtual consciousness training',
-      'Digital personality development',
-      'Metaverse consciousness APIs',
-      'Virtual reality integration',
-      'Digital consciousness validation',
-      'Metaverse consciousness networks',
-      'Virtual being management',
-      'Digital consciousness security'
+      'Digital consciousness creationMetaverse AI beings',
+      'Virtual consciousness trainingDigital personality development',
+      'Metaverse consciousness APIsVirtual reality integration',
+      'Digital consciousness validationMetaverse consciousness networks',
+      'Virtual being managementDigital consciousness security'
     ],
     popular: true,
     icon: '🌌',
@@ -310,16 +285,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Complete ecosystem for fully autonomous business operations, from decision-making to execution, requiring minimal human intervention.',
     features: [
-      'Autonomous decision making',
-      'Self-optimizing operations',
-      'Automated business strategy',
-      'Autonomous resource allocation',
-      'Self-healing systems',
-      'Autonomous customer service',
-      'Self-optimizing marketing',
-      'Autonomous financial management',
-      'Self-improving processes',
-      'Autonomous innovation'
+      'Autonomous decision makingSelf-optimizing operations',
+      'Automated business strategyAutonomous resource allocation',
+      'Self-healing systemsAutonomous customer service',
+      'Self-optimizing marketingAutonomous financial management',
+      'Self-improving processesAutonomous innovation'
     ],
     popular: true,
     icon: '🏢',
@@ -353,4 +323,4 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.9,
     reviews: 6
   }
-];
+],

@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import { 
-  Zap, 
+  Zap,
   Shield, 
   BarChart3, 
   Globe, 
@@ -17,7 +17,7 @@ import {
   Star,
   Check,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
@@ -31,17 +31,14 @@ export default function SaaSMarketplacePage() {
       icon: <Zap className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        '5000+ app integrations',
-        'Visual workflow builder',
-        'Multi-step automations',
-        'Scheduled triggers',
-        'Error handling',
-        'Team collaboration'
+        '5000+ app integrationsVisual workflow builder',
+        'Multi-step automationsScheduled triggers',
+        'Error handlingTeam collaboration'
       ],
       website: 'https://zapier.com',
       useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
-      pros: ['Easy to use', 'Extensive integrations', 'Reliable', 'Great support'],
-      cons: ['Can get expensive', 'Limited customization']
+      pros: ['Easy to useExtensive integrations', 'ReliableGreat support'],
+      cons: ['Can get expensiveLimited customization']
     },
     {
       name: 'Notion',
@@ -53,17 +50,14 @@ export default function SaaSMarketplacePage() {
       icon: <Code className="w-8 h-8 text-gray-400" />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docs',
-        'Project management',
-        'Team collaboration',
-        'Database & tables',
-        'Templates library',
-        'API integration'
+        'Note-taking & docsProject management',
+        'Team collaborationDatabase & tables',
+        'Templates libraryAPI integration'
       ],
       website: 'https://notion.so',
       useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
-      cons: ['Learning curve', 'Limited offline access']
+      pros: ['Highly flexibleBeautiful interface', 'Great templatesFree tier'],
+      cons: ['Learning curveLimited offline access']
     },
     {
       name: 'Stripe',
@@ -75,17 +69,14 @@ export default function SaaSMarketplacePage() {
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methods',
-        'Subscription billing',
-        'Fraud protection',
-        'Compliance tools',
-        'Developer-friendly API',
-        'Analytics dashboard'
+        'Global payment methodsSubscription billing',
+        'Fraud protectionCompliance tools',
+        'Developer-friendly APIAnalytics dashboard'
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
-      pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
-      cons: ['Higher fees than some alternatives', 'Complex for beginners']
+      pros: ['Developer-friendlyGlobal reach', 'Excellent docsReliable'],
+      cons: ['Higher fees than some alternativesComplex for beginners']
     },
     {
       name: 'Intercom',
@@ -97,17 +88,14 @@ export default function SaaSMarketplacePage() {
       icon: <Users className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chat',
-        'Customer messaging',
-        'Help desk',
-        'User onboarding',
-        'Analytics & reporting',
-        'Integration ecosystem'
+        'Live chatCustomer messaging',
+        'Help deskUser onboarding',
+        'Analytics & reportingIntegration ecosystem'
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UX', 'Powerful features', 'Good integrations', 'Mobile apps'],
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
+      pros: ['Great UXPowerful features', 'Good integrationsMobile apps'],
+      cons: ['ExpensiveComplex pricing', 'Can be overwhelming']
     },
     {
       name: 'Mixpanel',
@@ -119,17 +107,14 @@ export default function SaaSMarketplacePage() {
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics'
+        'User behavior trackingFunnel analysis',
+        'A/B testingReal-time data',
+        'Custom eventsMobile analytics'
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
-      pros: ['Powerful analytics', 'Real-time data', 'Good documentation', 'Flexible'],
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
+      pros: ['Powerful analyticsReal-time data', 'Good documentationFlexible'],
+      cons: ['Complex setupExpensive at scale', 'Steep learning curve']
     },
     {
       name: 'MongoDB Atlas',
@@ -141,17 +126,14 @@ export default function SaaSMarketplacePage() {
       icon: <Database className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Fully managed MongoDB',
-        'Global clusters',
-        'Auto-scaling',
-        'Backup & recovery',
-        'Security & compliance',
-        'Monitoring & alerting'
+        'Fully managed MongoDBGlobal clusters',
+        'Auto-scalingBackup & recovery',
+        'Security & complianceMonitoring & alerting'
       ],
       website: 'https://mongodb.com/atlas',
       useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
-      pros: ['Fully managed', 'Global distribution', 'Auto-scaling', 'Good free tier'],
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
+      pros: ['Fully managedGlobal distribution', 'Auto-scalingGood free tier'],
+      cons: ['Can be expensiveVendor lock-in', 'Limited customization']
     },
     {
       name: 'Vercel',
@@ -163,17 +145,14 @@ export default function SaaSMarketplacePage() {
       icon: <Cloud className="w-8 h-8 text-black" />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deployment',
-        'Global CDN',
-        'Automatic scaling',
-        'Git integration',
-        'Preview deployments',
-        'Edge functions'
+        'Zero-config deploymentGlobal CDN',
+        'Automatic scalingGit integration',
+        'Preview deploymentsEdge functions'
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: ['Limited backend features', 'Can be expensive for high traffic']
+      pros: ['Zero configExcellent performance', 'Great DXFree tier'],
+      cons: ['Limited backend featuresCan be expensive for high traffic']
     },
     {
       name: 'Linear',
@@ -185,30 +164,27 @@ export default function SaaSMarketplacePage() {
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Issue tracking',
-        'Roadmap planning',
-        'Team collaboration',
-        'Git integration',
-        'Automated workflows',
-        'Mobile apps'
+        'Issue trackingRoadmap planning',
+        'Team collaborationGit integration',
+        'Automated workflowsMobile apps'
       ],
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
-      pros: ['Lightning fast', 'Beautiful design', 'Great keyboard shortcuts', 'Git integration'],
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+      pros: ['Lightning fastBeautiful design', 'Great keyboard shortcutsGit integration'],
+      cons: ['Limited reportingNo time tracking', 'Smaller ecosystem']
     }
-  ];
+  ],
 
-  const categories = ['All', 'Automation', 'Productivity', 'Payments', 'Customer Support', 'Analytics', 'Database', 'Hosting', 'Project Management'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['AllAutomation', 'ProductivityPayments', 'Customer SupportAnalytics', 'DatabaseHosting', 'Project Management'],
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory);
+    : microSaasServices.filter(service => service.category === selectedCategory),
 
   return (
     <>
-      <Head>
+      <Head></Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
         <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
         <meta property="og:title" content="SaaS Marketplace - Zion Tech Group" />
@@ -217,8 +193,8 @@ export default function SaaSMarketplacePage() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"></section>
+        <div className="absolute inset-0"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
@@ -226,30 +202,30 @@ export default function SaaSMarketplacePage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-20 animate-fade-in">
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <div className="mb-20 animate-fade-in"></div>
+            <div className="mb-8"></div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in"></div>
                 <Globe className="w-4 h-4 mr-2" />
                 Curated SaaS Solutions
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight"></h1>
               SaaS Marketplace
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light"></p>
               Discover the best micro SaaS services that power modern businesses. 
               Hand-picked tools for automation, productivity, and growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"></div>
               <Button
                 href="#services"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
                 style={{ animationDelay: '0.2s' }}
-              >
+              ></Button>
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -259,34 +235,34 @@ export default function SaaSMarketplacePage() {
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                 style={{ animationDelay: '0.4s' }}
-              >
+              ></Button>
                 Get Recommendations
               </Button>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}></div>
+            <div className="text-center group"></div>
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300"></div>
                 {microSaasServices.length}+
               </div>
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-center group"></div>
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300"></div>
                 9
               </div>
               <div className="text-gray-400 text-sm">Categories</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-center group"></div>
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300"></div>
                 4.7+
               </div>
               <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-center group"></div>
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300"></div>
                 100K+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
@@ -296,12 +272,13 @@ export default function SaaSMarketplacePage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+      <section className="py-16 bg-gray-900"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="flex flex-wrap justify-center gap-4"></div>
             {categories.map((category) => (
               <button
-                key={category}
+                key={category
+  },
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
@@ -309,7 +286,8 @@ export default function SaaSMarketplacePage() {
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
                 }`}
               >
-                {category}
+                {category
+  },
               </button>
             ))}
           </div>
@@ -317,13 +295,13 @@ export default function SaaSMarketplacePage() {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section id="services" className="py-24 bg-black"></section>
+        <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed"></p>
               {selectedCategory === 'All' 
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`
@@ -331,64 +309,70 @@ export default function SaaSMarketplacePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
             {filteredServices.map((service, index) => (
               <Card
-                key={index}
-                className="group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
+                key={index
+}
+          className="group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {service.icon}
+              ></Card>
+                <div className="flex items-start space-x-6"></div>
+                  <div className="relative"></div>
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}></div>
+                      {service.icon
+  },
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                        {service.name}
+                  <div className="flex-1"></div>
+                    <div className="flex items-center justify-between mb-2"></div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300"></h3>
+                        {service.name
+  },
                       </h3>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2"></div>
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm text-gray-300">{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
+                    <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400"></div>
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{service.category}</span>
                       <span>{service.users} users</span>
                       <span className="text-green-400">{service.pricing}</span>
                     </div>
 
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                      {service.description}
+                    <p className="text-gray-400 leading-relaxed mb-4"></p>
+                      {service.description
+  },
                     </p>
 
-                    <div className="mb-4">
+                    <div className="mb-4"></div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2"></div>
                         {service.features.slice(0, 4).map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-400"></div>
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
+                            {feature
+  },
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between"></div>
                       <Button
-                        href={service.website}
+                        href={service.website
+  },
                         variant="outline"
                         size="sm"
                         className="group-hover:border-blue-500 group-hover:text-blue-400"
-                      >
+                      ></Button>
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
                       
-                      <div className="text-right">
+                      <div className="text-right"></div>
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
                       </div>
@@ -402,23 +386,23 @@ export default function SaaSMarketplacePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"></h2>
             Need Help Choosing?
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"></p>
             Our team of experts can help you select the perfect SaaS tools for your business needs. 
             Get personalized recommendations and implementation support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center"></div>
             <Button
               href="/contact"
               variant="secondary"
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
-            >
+            ></Button>
               Get Expert Advice
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -427,12 +411,12 @@ export default function SaaSMarketplacePage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
-            >
+            ></Button>
               View Our Services
             </Button>
           </div>
         </div>
       </section>
     </>
-  );
+  )
 }

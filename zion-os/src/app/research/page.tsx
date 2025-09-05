@@ -333,7 +333,7 @@ export default function ResearchPage() {
           <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             Whether you're a researcher, student, or industry professional, there are many ways to get involved with our cutting-edge research initiatives.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="bg-white text-emerald-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
               Collaborate With Us
             </a>
@@ -344,5 +344,5 @@ export default function ResearchPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

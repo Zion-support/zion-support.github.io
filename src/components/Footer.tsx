@@ -1,35 +1,35 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link"; // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget",
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
-    return fallback;
+    return fallback
   }
-  return envVar;
+  return envVar,
 }
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
-  "https://twitter.com/ZionTechGroup"
-);
+  "https: //twitter.com/ZionTechGroup"
+),
 const LINKEDIN_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
-  "https://linkedin.com/company/ziontechgroup"
-);
+  "https: //linkedin.com/company/ziontechgroup"
+),
 const FACEBOOK_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
-  "https://facebook.com/ZionTechGroup"
-);
+  "https: //facebook.com/ZionTechGroup"
+),
 const INSTAGRAM_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
-  "https://instagram.com/ZionTechGroup"
-);
+  "https: //instagram.com/ZionTechGroup"
+),
 const GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
-  "https://github.com/ZionTechGroup"
-);
+  "https: //github.com/ZionTechGroup"
+),
 
 export function Footer() {
   return (
@@ -41,7 +41,7 @@ export function Footer() {
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
             </div>
             <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
-              The world&apos;s first free marketplace dedicated to high-tech and artificial intelligence.
+              The world&apos,s first free marketplace dedicated to high-tech and artificial intelligence.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -170,9 +170,9 @@ export function Footer() {
               window.scrollTo({ 
                 top: 0, 
                 behavior: 'smooth' 
-              });
+              }),
             }}
-            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
+            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
           >
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
@@ -183,9 +183,9 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-foreground/80 text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link
                 href="/privacy"
                 className="text-foreground/80 hover:text-primary text-sm transition-colors"
@@ -210,5 +210,5 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
-  );
+  )
 }

@@ -1,114 +1,154 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+console.log('🔧 Fixing remaining syntax errors...');
 
-    // Fix common syntax errors
-
-    // Fix unnecessary escape characters
-    content = content.replace(/\\:/g, ':');
-    content = content.replace(/\\,/g, ',');
-    content = content.replace(/\\;/g, ';');
-    content = content.replace(/\\}/g, '}');
-    content = content.replace(/\\{/g, '{');
-    content = content.replace(/\\\[/g, '[');
-    content = content.replace(/\\\]/g, ']');
-    content = content.replace(/\\\(/g, '(');
-    content = content.replace(/\\\)/g, ')');
-
-    // Fix missing semicolons
-    content = content.replace(/([^;])\s*$/gm, '$1;');
-
-    // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
-
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);
-      modified = true;
-    }
-
-    // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-
-    if (openBrackets > closeBrackets) {
-      const missingBrackets = openBrackets - closeBrackets;
-      content += ']'.repeat(missingBrackets);
-      modified = true;
-    }
-
-    // Fix duplicate imports
-    const importLines = content
-      .split('\n')
-      .filter(line => line.trim().startsWith('import'));
-    const uniqueImports = [...new Set(importLines)];
-    if (importLines.length !== uniqueImports.length) {
-      const nonImportLines = content
-        .split('\n')
-        .filter(line => !line.trim().startsWith('import'));
-      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
-      modified = true;
-    }
-
-    // Fix missing React import
-    if (content.includes('React') && !content.includes('import React')) {
-      content = "import React from 'react';\n" + content;
-      modified = true;
-    }
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
-    }
-
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+class SyntaxErrorFixer {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
   }
-}
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+  log(message) {
+    console.log(message);
+  }
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+  // Fix specific syntax errors found in the build
+  fixSyntaxErrors(content) {
+    let fixed = content;
 
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixSyntaxErrors(filePath)) fixedCount++;
+    // Fix malformed JSX closing tags like </HTMLInputElement>
+    fixed = fixed.replace(/<\/[A-Z][a-zA-Z]*Element>/g, '');
+    
+    // Fix malformed generic type syntax like =></string>
+    fixed = fixed.replace(/=>\s*<\/[a-zA-Z]+>/g, '=>');
+    
+    // Fix malformed generic type syntax like =></Visibility>
+    fixed = fixed.replace(/=>\s*<\/[A-Z][a-zA-Z]*>/g, '=>');
+    
+    // Fix malformed JSX attributes
+    fixed = fixed.replace(/className="text-sm text-gray-500">\{loading \? 'Translating…' : error \? `Error: \$\{error\}` : 'Ready'\}/g, 'className="text-sm text-gray-500">{loading ? \'Translating…\' : error ? `Error: ${error}` : \'Ready\'}</div>');
+    
+    // Fix missing closing tags in JSX
+    fixed = fixed.replace(/(<textarea[^>]*>[\s\S]*?<\/textarea>)\s*<div className="text-sm text-gray-500">/g, '$1\n      <div className="text-sm text-gray-500">');
+    
+    // Fix malformed Promise generic syntax
+    fixed = fixed.replace(/Promise<\(resolve, reject\) =>/g, 'Promise<string>');
+    fixed = fixed.replace(/Promise<\(resolve, reject\) =><\/string>/g, 'Promise<string>');
+    
+    // Fix malformed useMemo generic syntax
+    fixed = fixed.replace(/useMemo\(\(\) =><\/[A-Z][a-zA-Z]*>/g, 'useMemo(() =>');
+    
+    // Fix malformed useEffect generic syntax
+    fixed = fixed.replace(/useEffect\(\(\) =><\/[a-zA-Z]+>/g, 'useEffect(() =>');
+    
+    // Fix malformed useState generic syntax
+    fixed = fixed.replace(/useState<[^>]*>\([^)]*\) =><\/[a-zA-Z]+>/g, (match) => {
+      return match.replace(/=>\s*<\/[a-zA-Z]+>/, '');
+    });
+
+    return fixed;
+  }
+
+  // Process a single file
+  async processFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`⚠️ File not found: ${filePath}`);
+        return false;
+      }
+
+      const content = fs.readFileSync(filePath, 'utf8');
+      const fixed = this.fixSyntaxErrors(content);
+
+      // Only write if content changed
+      if (fixed !== content) {
+        fs.writeFileSync(filePath, fixed, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed: ${filePath}`);
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`❌ Error processing ${filePath}: ${error.message}`);
+      return false;
     }
   }
 
-  return fixedCount;
+  // Find all component files
+  findComponentFiles() {
+    const files = [];
+    const extensions = ['.tsx', '.jsx'];
+    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build', 'out'];
+
+    const scanDir = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+
+          if (stat.isDirectory()) {
+            if (!ignoreDirs.includes(item)) {
+              scanDir(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (extensions.includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        this.log(`⚠️ Error scanning directory ${dir}: ${error.message}`);
+      }
+    };
+
+    scanDir(path.join(__dirname, 'components'));
+    return files;
+  }
+
+  // Run the fixer
+  async run() {
+    try {
+      this.log('🔍 Scanning for component files to fix...');
+      const files = this.findComponentFiles();
+      this.log(`📁 Found ${files.length} component files to process`);
+
+      let fixedCount = 0;
+      for (const file of files) {
+        const wasFixed = await this.processFile(file);
+        if (wasFixed) {
+          fixedCount++;
+        }
+      }
+
+      this.log(`🎉 Fixed ${fixedCount} files out of ${files.length} processed`);
+      this.log(`❌ ${this.errors.length} errors encountered`);
+
+      return { success: true, fixedCount, errorCount: this.errors.length };
+    } catch (error) {
+      this.log(`❌ Fatal error: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
 }
 
-console.log('Starting syntax error fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
+// Run the fixer
+const fixer = new SyntaxErrorFixer();
+fixer.run().then(result => {
+  if (result.success) {
+    console.log(`✅ Syntax error fixer completed successfully! Fixed ${result.fixedCount} files.`);
+    process.exit(0);
+  } else {
+    console.log(`❌ Syntax error fixer failed: ${result.error}`);
+    process.exit(1);
+  }
+}).catch(error => {
+  console.error(`❌ Unexpected error: ${error.message}`);
+  process.exit(1);
+});

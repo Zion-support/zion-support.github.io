@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
   MessageSquare, Mail, Phone, MapPin, ArrowRight,
@@ -17,7 +17,7 @@ import {
   Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ZionTechGroupPage() {
   return (
@@ -196,7 +196,7 @@ export default function ZionTechGroupPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>
                 <p className="text-gray-300">
-                  We don't just adapt to change; we anticipate it and create the technologies that will define tomorrow.
+                  We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
                 </p>
               </div>
             </div>
@@ -358,7 +358,7 @@ export default function ZionTechGroupPage() {
 
         {/* Footer */}
         <footer className="bg-black/40">
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
@@ -408,12 +408,12 @@ export default function ZionTechGroupPage() {
             </div>
             <div className="mt-12 border-t border-gray-700 pt-8">
               <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2025 Zion Tech Group. All rights reserved.
+                &copy, 2025 Zion Tech Group. All rights reserved.
               </p>
             </div>
           </div>
         </footer>
       </div>
     </>
-  );
+  )
 }

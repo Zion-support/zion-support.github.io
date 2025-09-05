@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 export default function AdminTrustPage() {
-  const [weights, setWeights] = useState<any>(null);
-  const [defaults, setDefaults] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [weights, setWeights] = useState<any>(null),
+  const [defaults, setDefaults] = useState<any>(null),
+  const [loading, setLoading] = useState<boolean>(true),
 
-  useEffect(() => {
+  useEffect(() =></boolean> {
     async function load() {
-      setLoading(true);
-      const res = await fetch('/api/trust/weights');
-      const json = await res.json();
-      setWeights(json.current);
-      setDefaults(json.defaults);
-      setLoading(false);
+      setLoading(true),
+      const res = await fetch('/api/trust/weights'),
+      const json = await res.json(),
+      setWeights(json.current),
+      setDefaults(json.defaults),
+      setLoading(false),
     }
-    load();
-  }, []);
+    load(),
+  }, []),
 
   async function save() {
-    const res = await fetch('/api/trust/weights', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(weights) });
-    const json = await res.json();
-    setWeights(json.updated);
-    alert('Weights updated');
+    const res = await fetch('/api/trust/weights', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(weights) }),
+    const json = await res.json(),
+    setWeights(json.updated),
+    alert('Weights updated'),
   }
 
   return (
@@ -38,7 +38,7 @@ export default function AdminTrustPage() {
                 {Object.keys(weights).map((k) => (
                   <label key={k} className="flex items-center justify-between gap-2">
                     <span>{k}</span>
-                    <input type="number" step="0.01" value={weights[k]} onChange={(e) => setWeights({ ...weights, [k]: parseFloat(e.target.value) })} className="w-24 border rounded px-2 py-1" />
+                    <input type="number" step="0.01" value={weights[k]} onChange={(e) => setWeights({ ...weights, [k]: parseFloat(e.target.value) })} className="w-24 border rounded px-</input>2 py-1" />
                   </label>
                 ))}
               </div>
@@ -55,5 +55,5 @@ export default function AdminTrustPage() {
         )}
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

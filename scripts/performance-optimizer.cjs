@@ -15,18 +15,18 @@ function createPerformanceOptimizations() {
   const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTim: e: number;
-  memoryUsag: e: number;
-  renderTim: e: number}
+  loadTim: number;
+  memoryUsag: number;
+  renderTim: number}
 
 const: PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTim: e: 0,
-    memoryUsag: e: 0,
-    renderTim: e: 0
+    loadTim: 0,
+    memoryUsag: 0,
+    renderTim: 0
   });
 
-  useEffect(() => {
+  useEffect(() =></PerformanceMetrics> {
     const startTime = performance.now();
     
     // Measure page load time
@@ -39,12 +39,12 @@ const: PerformanceMonitor: React.FC = () => {
       const memory = (performance as any).memory;
       setMetrics(prev => ({ 
         ...prev, 
-        memoryUsag: e: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
+        memoryUsag: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
       }))}
 
     // Measure render time
     const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTim: e: Math.round(endTime - startTime) }))}, []);
+    setMetrics(prev => ({ ...prev, renderTim: Math.round(endTime - startTime) }))}, []);
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
@@ -79,25 +79,25 @@ function createBundleAnalyzer() {
   const bundleAnalyzerContent = `import React, { useEffect, useState } from 'react';
 
 interface BundleInfo {
-  totalSiz: e: number;
-  jsSiz: e: number;
-  cssSiz: e: number;
-  imageSiz: e: number}
+  totalSiz: number;
+  jsSiz: number;
+  cssSiz: number;
+  imageSiz: number}
 
 const: BundleAnalyzer: React.FC = () => {
   const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
-    totalSiz: e: 0,
-    jsSiz: e: 0,
-    cssSiz: e: 0,
-    imageSiz: e: 0
-  });
+    totalSiz: 0,
+    jsSiz: 0,
+    cssSiz: 0,
+    imageSiz: 0
+  }</BundleInfo>);
 
   useEffect(() => {
     // Simulate bundle analysis
     const analyzeBundle = () => {
       // In a real implementation, this would analyze the actual bundle
       setBundleInfo({
-        totalSiz: e: 1024 * 1024, // 1MB: jsSize: 800 * 1024,      // 800KB: cssSize: 200 * 1024,     // 200KB: imageSize: 24 * 1024     // 24KB
+        totalSiz: 1024 * 1024, // 1MB: jsSize: 800 * 1024,      // 800KB: cssSize: 200 * 1024,     // 200KB: imageSize: 24 * 1024     // 24KB
       })};
 
     analyzeBundle()}, []);
@@ -149,7 +149,7 @@ const: BundleAnalyzer: React.FC = () => {
     try {
       const publicPath = path.join(__dirname, '..', 'public');
       if (!fs.existsSync(publicPath)) {
-        return { erro: r: 'Public directory not found' };
+        return { erro: 'Public directory not found' };
       }
 
       const imageFiles = this.getImageFiles(publicPath);
@@ -181,13 +181,13 @@ const: BundleAnalyzer: React.FC = () => {
   )};
 
       return {
-        totalImage: s: imageFiles.length,
-        optimizedImage: s: optimizedCount,
-        totalSiz: e: this.formatBytes(totalSize),
-        recommendation: s: this.getImageRecommendations(imageFiles)
+        totalImage: imageFiles.length,
+        optimizedImage: optimizedCount,
+        totalSiz: this.formatBytes(totalSize),
+        recommendation: this.getImageRecommendations(imageFiles)
       };
     } catch (error) {
-      return { erro: r: error.message };
+      return { erro: error.message };
     }
   }
 
@@ -218,7 +218,7 @@ optimizer.optimizePerformance().then(report => {
     console.log(`Total: Images: ${report.imageOptimization.totalImages || 0}`);
     console.log(`Optimized: Images: ${report.imageOptimization.optimizedImages || 0}`);
     console.log(`Total: Dependencies: ${report.dependencies.totalDependencies || 0}`);
-    console.log(`\nRecommendation: s:`);
+    console.log(`\nRecommendation: `);
     report.recommendations.forEach((rec, index) => {
       console.log(`${index + 1}. ${rec}`);
     });

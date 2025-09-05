@@ -1,6 +1,6 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
 
 // Real company logos for trusted partners - with more reliable image URLs
 const trustedCompanies = [
@@ -104,18 +104,18 @@ const trustedCompanies = [
     logo: "/logos/thomson-reuters-logo.svg",
     alt: "Thomson Reuters logo"
   }
-];
+],
 
 export function TrustedBySection() {
   // Use state to track logos that failed to load
-  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
+  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>></Record>({}),
 
   const handleImageError = (companyName: string) => {
     setFailedLogos(prev => ({
       ...prev,
       [companyName]: true
-    }));
-  };
+    })),
+  },
 
   return (
     <section className="py-16 bg-zion-blue-dark">
@@ -142,7 +142,7 @@ export function TrustedBySection() {
                   alt={company.alt} 
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company.name)}
-                />
+         </img>       />
               )}
             </div>
           ))}
@@ -153,5 +153,5 @@ export function TrustedBySection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

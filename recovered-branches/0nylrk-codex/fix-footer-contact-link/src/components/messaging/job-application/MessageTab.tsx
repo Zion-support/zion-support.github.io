@@ -1,14 +1,14 @@
 
-import React from 'react';
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import React from 'react',
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
 
 export interface MessageTabProps {
-  message: string;
-  setMessage: (message: string) => void;
-  proposalLink: string;
-  setProposalLink: (link: string) => void;
+  message: string,
+  setMessage: (message: string) => void,
+  proposalLink: string,
+  setProposalLink: (link: string) => void
 }
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
@@ -22,7 +22,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           onChange={(e) => setMessage(e.target.value)}
           className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
           placeholder="Write a message to the job poster..."
-        />
+        /></Textarea>
       </div>
       
       <div>
@@ -33,9 +33,9 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           value={proposalLink}
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="https://..."
+          placeholder="https: //..."</Input>
         />
       </div>
     </div>
-  );
+  )
 }

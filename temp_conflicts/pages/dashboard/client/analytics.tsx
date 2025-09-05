@@ -1,22 +1,22 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import SimpleFunnel from '../../../components/charts/SimpleFunnel';
-import SimpleLineChart from '../../../components/charts/SimpleLineChart';
-import { KpiBadge } from '../../../components/ui/InteractiveStats';
-import { exportCsv, exportSvgAsPng } from '../../../utils/exporters';
-import useRole from '../../../hooks/useRole';
+import React, { useEffect, useMemo, useState } from 'react',
+import SimpleFunnel from '../../../components/charts/SimpleFunnel',
+import SimpleLineChart from '../../../components/charts/SimpleLineChart',
+import { KpiBadge } from '../../../components/ui/InteractiveStats',
+import { exportCsv, exportSvgAsPng } from '../../../utils/exporters',
+import useRole from '../../../hooks/useRole',
 
 export default function ClientAnalyticsPage() {
-  const [data, setData] = useState<any>(null);
-  const { role, loading } = useRole();
+  const [data, setData] = useState<any>(null),
+  const { role, loading } = useRole(),
 
-  useEffect(() => {
-    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null));
-  }, []);
+  useEffect(() =></any> {
+    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null)),
+  }, []),
 
-  if (loading) return <div>Loading...</div>;
-  if (role !== 'client' && role !== 'admin') return <div>Unauthorized</div>;
+  if (loading) return <div>Loading...</div>,
+  if (role !== 'client' && role !== 'admin') return <div>Unauthorized</div>,
 
-  const lineSeries = useMemo(() => [{ label: 'Quotes Received', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 8) })) }], []);
+  const lineSeries = useMemo(() => [{ label: 'Quotes Received', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 8) })) }], []),
 
   return (
     <div className="space-y-6">
@@ -32,7 +32,7 @@ export default function ClientAnalyticsPage() {
 
       <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">
         <h2 className="font-semibold mb-2">Conversion Funnel</h2>
-        <SimpleFunnel stages={data?.funnel || []} onExportCsv={(rows) => exportCsv('client-funnel.csv', rows)} />
+        <SimpleFunnel stages={data?.funnel || []} onExportCsv={(rows) => exportCsv('client-funnel.csv', row</SimpleFunnel>s)} />
       </div>
 
       <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">
@@ -40,11 +40,11 @@ export default function ClientAnalyticsPage() {
         <SimpleLineChart
           series={lineSeries}
           onExportCsv={(rows) => exportCsv('client-quotes.csv', rows as any)}
-          onExportPng={(svg) => exportSvgAsPng('client-quotes.png', svg)}
+          </SimpleLineChart>onExportPng={(svg) => exportSvgAsPng('client-quotes.png', svg)}
           yLabel="Quotes"
           xLabel="Month"
         />
       </div>
     </div>
-  );
+  ),
 }

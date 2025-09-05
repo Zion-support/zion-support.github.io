@@ -12,7 +12,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
-export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
+export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) =></HTMLDivElement> {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {
@@ -136,7 +136,7 @@ export const SidebarInset = React.forwardRef<
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
         props.className
       )}
-      {...props}
+      </main>{...props}
     />
   )
 })

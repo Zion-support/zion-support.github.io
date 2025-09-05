@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { useState, useEffect } from "react",
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useDebounce } from "@/hooks/useDebounce",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { BLOG_POSTS } from "@/data/blog-posts",
 import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 // Categories for filtering
@@ -25,68 +25,68 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
 
 export interface BlogProps {
-  posts?: BlogPost[];
+  posts?: BlogPost[],
 }
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
-  const query = useDebounce(searchQuery, 300);
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
+  const query = useDebounce(searchQuery, 300),
+  const [isLoading, setIsLoading] = useState(false),
+  const router = useRouter(),
 
   // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
+  useEffect(() =></BlogPost> {
     return () => {
-      setSearchQuery("");
-      setSelectedCategory("All Categories");
-      setPosts([...initialPosts]);
-    };
-  }, [router.asPath, initialPosts]);
+      setSearchQuery(""),
+      setSelectedCategory("All Categories"),
+      setPosts([...initialPosts]),
+    },
+  }, [router.asPath, initialPosts]),
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
-  //   }, 120000); // every 2 minutes
-  //   return () => clearInterval(interval);
-  // }, []);
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
+  //   }, 120000), // every 2 minutes
+  //   return () => clearInterval(interval),
+  // }, []),
 
   useEffect(() => {
     const fetchPosts = async () => {
-      setIsLoading(true);
+      setIsLoading(true),
       try {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
-        );
-        setPosts(data);
+        ),
+        setPosts(data),
       } catch (err) {
-        logErrorToProduction('Failed to fetch blog posts', { data: err });
+        logErrorToProduction('Failed to fetch blog posts', { data: err }),
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
-    };
+    },
 
-    fetchPosts();
-  }, [query]);
+    fetchPosts(),
+  }, [query]),
 
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
+      selectedCategory === "All Categories" || post.category === selectedCategory,
 
-    return matchesCategory;
-  });
+    return matchesCategory,
+  }),
   
   // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured);
+  const featuredPosts = posts.filter(post => post.isFeatured),
 
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
   return (
     <>
@@ -108,8 +108,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0];
-            if (!featuredPost) return null;
+            const featuredPost = featuredPosts[0],
+            if (!featuredPost) return null,
             
             return (
             <div className="mb-16">
@@ -119,12 +119,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   <img
                     src={featuredPost.featuredImage}
                     alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";
+                      const target = e.currentTarget as HTMLImageElement,
+                      target.src = "/images/blog-placeholder.svg"
                     }}
-                  />
+         </img>         />
                 </div>
                 <div className="flex flex-col justify-center">
                   <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
@@ -142,10 +142,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg",
                       }}
-                    />
+     </img>               />
                     <div>
                       <p className="text-white font-medium">{featuredPost.author.name}</p>
                       <p className="text-sm text-zion-slate-light">
@@ -164,7 +164,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 </div>
               </div>
             </div>
-            );
+            ),
           })()}
         
           {/* Filters and Search */}
@@ -177,7 +177,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   placeholder="Search articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-wh</Input>ite"
                 />
               </div>
               
@@ -215,11 +215,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     <img
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg",
+                </img>      }}
                     />
                   </div>
                   <CardContent className="p-6">
@@ -243,9 +243,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
+                          const target = e.currentTarget as HTMLImageElement,
+                          target.src = "/images/blog-placeholder.svg",
+              </img>          }}
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
                     </div>
@@ -267,8 +267,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <Button
                 variant="outline"
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories"),
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -279,5 +279,5 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         </div>
       </div>
     </>
-  );
+  ),
 }

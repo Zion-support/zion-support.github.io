@@ -1,23 +1,23 @@
 
-import { useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useReferrals } from '@/hooks/useReferrals';
-import { ReferralStats } from '@/components/referrals/ReferralStats';
-import { ReferralLink } from '@/components/referrals/ReferralLink';
-import { ReferralTable } from '@/components/referrals/ReferralTable';
-import { RewardsCard } from '@/components/referrals/RewardsCard';
-import { ReferralGuide } from '@/components/referrals/ReferralGuide';
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from '@/components/ui/button';
-import { toast } from '@/hooks/use-toast';
+import { useEffect } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { useReferrals } from '@/hooks/useReferrals',
+import { ReferralStats } from '@/components/referrals/ReferralStats',
+import { ReferralLink } from '@/components/referrals/ReferralLink',
+import { ReferralTable } from '@/components/referrals/ReferralTable',
+import { RewardsCard } from '@/components/referrals/RewardsCard',
+import { ReferralGuide } from '@/components/referrals/ReferralGuide',
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from '@/components/ui/button',
+import { toast } from '@/hooks/use-toast',
 import { Share, Users } from 'lucide-react'
-import { useRouter } from 'next/router'; // Changed from useNavigate
+import { useRouter } from 'next/router', // Changed from useNavigate
 
 export default function ReferralsPage() {
-  const router = useRouter(); // Changed from navigate
-  const { isAuthenticated } = useAuth();
+  const router = useRouter(), // Changed from navigate
+  const { isAuthenticated } = useAuth(),
   const {
     isLoading,
     referralCode,
@@ -26,19 +26,19 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-    shareOnSocialMedia} = useReferrals();
+    shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please login to access the referral program",
-        variant: "destructive"});
-      router.push("/login"); // Changed to router.push
+        variant: "destructive"}),
+      router.push("/login"), // Changed to router.push
     }
-  }, [isAuthenticated, router]); // Changed navigate to router in dependencies
+  }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
-  const referralLink = getReferralLink();
+  const referralLink = getReferralLink(),
 
   return (
     <div className="container max-w-7xl py-10">
@@ -91,5 +91,5 @@ export default function ReferralsPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

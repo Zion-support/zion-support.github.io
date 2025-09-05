@@ -10,7 +10,7 @@ class SecurityAuditor {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursiv: true });
     }
   }
 
@@ -25,17 +25,17 @@ class SecurityAuditor {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Runnin: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encodin: 'utf8',
+        cw: '/workspace',
+        stdi: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { succes: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} faile: ${error.message}`, 'error');
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -43,14 +43,14 @@ class SecurityAuditor {
     this.log('🔒 Starting security audit...');
 
     const audits = [
-      { comman: d: 'npm audit', descriptio: n: 'NPM security audit' },
+      { comman: 'npm audit', descriptio: 'NPM security audit' },
       {
-        comman: d: 'npm audit --audit-level=moderate',
-        descriptio: n: 'Moderate level audit',
+        comman: 'npm audit --audit-level=moderate',
+        descriptio: 'Moderate level audit',
       },
       {
-        comman: d: 'npm audit fix --dry-run',
-        descriptio: n: 'Dry run security fixes',
+        comman: 'npm audit fix --dry-run',
+        descriptio: 'Dry run security fixes',
       },
     ];
 
@@ -61,19 +61,19 @@ class SecurityAuditor {
     }
 
     this.log('✅ Security audit completed');
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating security audit report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      securit: y: await this.runSecurityAudit(),
-      summar: y: {
-        auditsRu: n: 3,
-        successfulAudit: s: 0,
-        failedAudit: s: 0,
+      timestam: new Date().toISOString(),
+      securit: await this.runSecurityAudit(),
+      summar: {
+        auditsRu: 3,
+        successfulAudit: 0,
+        failedAudit: 0,
       },
     };
 

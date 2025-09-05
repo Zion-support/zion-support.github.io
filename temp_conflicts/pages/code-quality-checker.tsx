@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react',
 
 export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
+  const [codeInput, setCodeInput] = useState(''),
 
   const features = [
     {
@@ -33,16 +33,16 @@ export default function CodeQualityCheckerPage() {
       title: 'Security Scanning',
       description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
+      gradient: 'from-purple-400 to-indigo-500'}],
 
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rules', 'TypeScript checks', 'React best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 compliance', 'Type hints', 'Security scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rules', 'Checkstyle', 'SonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lint', 'Go vet', 'Performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'] }
-  ];
+    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checks', 'React best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hints', 'Security scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyle', 'SonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysis', 'Memory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vet', 'Performance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS Fixer', 'Security analysis'] }
+  ],
 
   const pricing = [
     {
@@ -51,12 +51,9 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Perfect for individual developers and small projects',
       features: [
-        '100 code analyses/month',
-        'Basic quality metrics',
-        '5 programming languages',
-        'Email support',
-        'Basic reporting',
-        'Community rules'
+        '100 code analyses/monthBasic quality metrics',
+        '5 programming languagesEmail support',
+        'Basic reportingCommunity rules'
       ],
       popular: false
     },
@@ -66,14 +63,10 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Ideal for development teams and growing companies',
       features: [
-        '500 code analyses/month',
-        'Advanced quality metrics',
-        'All programming languages',
-        'Priority support',
-        'Advanced reporting',
-        'Custom rules',
-        'Team collaboration',
-        'API access'
+        '500 code analyses/monthAdvanced quality metrics',
+        'All programming languagesPriority support',
+        'Advanced reportingCustom rules',
+        'Team collaborationAPI access'
       ],
       popular: true
     },
@@ -83,23 +76,19 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited analyses',
-        'Enterprise metrics',
-        'Custom language support',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'On-premise deployment',
-        'Custom integrations'
+        'Unlimited analysesEnterprise metrics',
+        'Custom language support24/7 dedicated support',
+        'Custom reportingWhite-label options',
+        'On-premise deploymentCustom integrations'
       ],
       popular: false
     }
-  ];
+  ],
 
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;
+    if (!codeInput.trim()) return,
     
-    setIsAnalyzing(true);
+    setIsAnalyzing(true),
     // Simulate code analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -117,15 +106,13 @@ export default function CodeQualityCheckerPage() {
           securityScore: '92%'
         },
         recommendations: [
-          'Use const for immutable variables to improve code clarity',
-          'Break down large functions into smaller, more focused functions',
-          'Add proper error handling for better robustness',
-          'Consider adding JSDoc comments for better documentation'
+          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functions',
+          'Add proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
         ]
-      });
-      setIsAnalyzing(false);
-    }, 3000);
-  };
+      }),
+      setIsAnalyzing(false),
+    }, 3000),
+  },
 
   return (
     <>
@@ -163,7 +150,7 @@ export default function CodeQualityCheckerPage() {
               value={codeInput}
               onChange={(e) => setCodeInput(e.target.value)}
               className="w-full h-32 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono text-sm"
-            />
+            /></textarea>
             <Button
               onClick={handleAnalyzeCode}
               size="lg"
@@ -449,7 +436,7 @@ export default function CodeQualityCheckerPage() {
           <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of developers using our code quality checker to write better, safer, and more maintainable code.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               size="lg"
@@ -470,5 +457,5 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

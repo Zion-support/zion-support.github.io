@@ -1,30 +1,30 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+} from 'lucide-react',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -45,7 +45,7 @@ export default function InnovativeServicesShowcase2029() {
       color: 'from-cyan-600 via-teal-600 to-emerald-600',
       services: practicalBusinessSolutionServices2029
     }
-  ];
+  ],
 
   return (
     <>
@@ -243,7 +243,7 @@ export default function InnovativeServicesShowcase2029() {
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
+                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                   Contact Us Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -259,5 +259,5 @@ export default function InnovativeServicesShowcase2029() {
         <UltraFuturisticFooter2029 />
       </div>
     </>
-  );
+  )
 }

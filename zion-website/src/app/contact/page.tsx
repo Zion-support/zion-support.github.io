@@ -1,5 +1,5 @@
 import { 
-  EnvelopeIcon, 
+  EnvelopeIcon,
   PhoneIcon, 
   MapPinIcon,
   ClockIcon,

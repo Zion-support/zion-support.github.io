@@ -1,10 +1,10 @@
-import { QuoteFormData } from "@/types/quotes";
-import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
+import { QuoteFormData } from "@/types/quotes",
+import { Label } from "@/components/ui/label",
+import { Slider } from "@/components/ui/slider",
 
 interface BudgetStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) =></QuoteFormData> void
 }
 
 export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
@@ -16,24 +16,24 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
           type,
           maxAmount: formData.budget.amount + 5000
         }
-      });
+      }),
     } else {
       updateFormData({
         budget: {
           ...formData.budget,
           type
         }
-      });
+      }),
     }
-  };
+  },
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
-    }).format(value);
-  };
+    }).format(value),
+  },
 
   return (
     <div className="space-y-6">
@@ -92,7 +92,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   budget: { ...formData.budget, amount: value[0] }
                 })}
                 className="py-4"
-              />
+</Slider>              />
               <div className="flex justify-between text-sm text-zion-slate-light mt-2">
                 <span>$0</span>
                 <span>$50,000+</span>
@@ -112,7 +112,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 onValueChange={(value) => updateFormData({
                   budget: { ...formData.budget, amount: value[0] }
                 })}
-                className="py-4"
+                classNam</Slider>e="py-4"
               />
               <div className="flex justify-between text-sm text-zion-slate-light mt-2">
                 <span>$0/hour</span>
@@ -132,16 +132,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   max={50000}
                   step={500}
                   onValueChange={(value) => {
-                    const newAmount = value[0];
-                    const maxAmount = formData.budget.maxAmount || 50000;
+                    const newAmount = value[0],
+                    const maxAmount = formData.budget.maxAmount || 50000,
                     
                     updateFormData({
                       budget: { 
                         ...formData.budget, 
                         amount: newAmount,
-                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
+            </Slider>            maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }
-                    });
+                    }),
                   }}
                   className="py-4"
                 />
@@ -163,7 +163,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   onValueChange={(value) => updateFormData({
                     budget: { ...formData.budget, maxAmount: value[0] }
                   })}
-                  className="py-4"
+          </Slider>        className="py-4"
                 />
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">
                   <span>{formatCurrency(formData.budget.amount)}</span>
@@ -175,5 +175,5 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }

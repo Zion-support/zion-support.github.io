@@ -14,7 +14,7 @@ export default function OfflinePage() {
   const [lastUpdate, setLastUpdate] = useState<string>('')
   const [retryCount, setRetryCount] = useState(0)
 
-  useEffect(() => {
+  useEffect(() =></string> {
     // Check online status
     const updateOnlineStatus = () => {
       setIsOnline(navigator.onLine)

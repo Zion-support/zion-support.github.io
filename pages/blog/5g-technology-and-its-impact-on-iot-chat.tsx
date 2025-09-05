@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default Chat5gTechnologyAndItsImpactOnIotChat;
+export default Chat5gTechnologyAndItsImpactOnIotChat,

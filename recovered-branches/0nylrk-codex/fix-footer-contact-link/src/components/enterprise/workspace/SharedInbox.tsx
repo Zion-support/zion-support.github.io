@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 
 export function SharedInbox() {
   // Mock messages
@@ -30,7 +30,7 @@ export function SharedInbox() {
       timestamp: "2d ago",
       unread: false
     }
-  ];
+  ],
 
   return (
     <Card>
@@ -67,11 +67,11 @@ export function SharedInbox() {
         )}
         
         <div className="p-3 text-center border-t border-border">
-          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Messages
           </button>
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

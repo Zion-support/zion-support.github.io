@@ -52,7 +52,7 @@ class AppImprover {
         this.issues.push('next.config.js not found');
       }
     } catch (error) {
-      this.issues.push(`Error reading next.config.j: s: ${error.message}`);
+      this.issues.push(`Error reading next.config.j: ${error.message}`);
     }
   }
 
@@ -75,7 +75,7 @@ class AppImprover {
 
       this.log('✅ Package.json analyzed');
     } catch (error) {
-      this.issues.push(`Error reading package.jso: n: ${error.message}`);
+      this.issues.push(`Error reading package.jso: ${error.message}`);
     }
   }
 
@@ -111,40 +111,40 @@ class AppImprover {
   createOptimizedNextConfig() {
     const optimizedConfig = `/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMod: e: true,
-  swcMinif: y: true,
-  compres: s: true,
-  poweredByHeade: r: false,
-  eslin: t: { ignoreDuringBuild: s: false },
-  typescrip: t: { ignoreBuildError: s: false },
-  pageExtension: s: ['tsx', 'ts', 'jsx', 'js'],
+  reactStrictMod: true,
+  swcMinif: true,
+  compres: true,
+  poweredByHeade: false,
+  eslin: { ignoreDuringBuild: false },
+  typescrip: { ignoreBuildError: false },
+  pageExtension: ['tsx', 'ts', 'jsx', 'js'],
   
   // Performance optimizations: experimental: {
-    scrollRestoratio: n: true,
-    optimizeCs: s: true,
-    optimizePackageImport: s: ['lucide-react', '@radix-ui/react-icons']
+    scrollRestoratio: true,
+    optimizeCs: true,
+    optimizePackageImport: ['lucide-react', '@radix-ui/react-icons']
   },
   
   // Image optimization: images: {
-    domain: s: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    format: s: ['image/webp', 'image/avif'],
-    deviceSize: s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSize: s: [16, 32, 48, 64, 96, 128, 256, 384],
+    domain: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    format: ['image/webp', 'image/avif'],
+    deviceSize: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSize: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTT: L: 60,
     dangerouslyAllowSV: G: true,
-    contentSecurityPolic: y: "default-src 'self'; script-src 'none'; sandbox;"
+    contentSecurityPolic: "default-src 'self'; script-src 'none'; sandbox;"
   },
   
   // Security headers
   async headers() {
     return [{
-        sourc: e: '/(.*)',
-        header: s: [
-          { ke: y: 'X-Content-Type-Options', valu: e: 'nosniff' },
-          { ke: y: 'X-Frame-Options', valu: e: 'DENY' },
-          { ke: y: 'X-XSS-Protection', valu: e: '1; mode=block' },
-          { ke: y: 'Referrer-Policy', valu: e: 'origin-when-cross-origin' },
-          { ke: y: 'Permissions-Policy', valu: e: 'camera=(), microphone=(), geolocation=()' }
+        sourc: '/(.*)',
+        header: [
+          { ke: 'X-Content-Type-Options', valu: 'nosniff' },
+          { ke: 'X-Frame-Options', valu: 'DENY' },
+          { ke: 'X-XSS-Protection', valu: '1; mode=block' },
+          { ke: 'Referrer-Policy', valu: 'origin-when-cross-origin' },
+          { ke: 'Permissions-Policy', valu: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
     ];
@@ -154,9 +154,9 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        f: s: false,
-        ne: t: false,
-        tl: s: false
+        f: false,
+        ne: false,
+        tl: false
       };
     }
     return config;
@@ -209,9 +209,9 @@ class PerformanceOptimizer {
 
   generateReport() {
     const report = {
-      timestam: p: new Date().toISOString(),
-      metric: s: this.metrics,
-      recommendation: s: this.generateRecommendations()
+      timestam: new Date().toISOString(),
+      metric: this.metrics,
+      recommendation: this.generateRecommendations()
     };
 
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
@@ -258,16 +258,16 @@ class SecurityAuditor {
   async runAudit() {
     console.log('🔒 Running security audit...');
     try {
-      const result = execSync('npm audit --json', { encodin: g: 'utf8' });
+      const result = execSync('npm audit --json', { encodin: 'utf8' });
       const audit = JSON.parse(result);
       
       if (audit.vulnerabilities) {
         Object.keys(audit.vulnerabilities).forEach(pkg => {
           const vuln = audit.vulnerabilities[pkg];
           this.issues.push({
-            packag: e: pkg,
-            severit: y: vuln.severity,
-            descriptio: n: vuln.description
+            packag: pkg,
+            severit: vuln.severity,
+            descriptio: vuln.description
           });
         });
       }
@@ -282,7 +282,7 @@ class SecurityAuditor {
     if (this.issues.length > 0) {
       console.log('🔧 Attempting to fix security issues...');
       try {
-        execSync('npm audit fix', { stdi: o: 'inherit' });
+        execSync('npm audit fix', { stdi: 'inherit' });
         this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {
@@ -293,12 +293,12 @@ class SecurityAuditor {
 
   generateReport() {
     const report = {
-      timestam: p: new Date().toISOString(),
-      issue: s: this.issues,
-      fixe: s: this.fixes,
-      summar: y: {
-        totalIssue: s: this.issues.length,
-        fixesApplie: d: this.fixes.length
+      timestam: new Date().toISOString(),
+      issue: this.issues,
+      fixe: this.fixes,
+      summar: {
+        totalIssue: this.issues.length,
+        fixesApplie: this.fixes.length
       }
     };
 
@@ -322,12 +322,12 @@ module.exports = SecurityAuditor;`;
 
   generateReport() {
     const report = {
-      timestam: p: new Date().toISOString(),
-      issue: s: this.issues,
-      improvement: s: this.improvements,
-      summar: y: {
-        totalIssue: s: this.issues.length,
-        totalImprovement: s: this.improvements.length,
+      timestam: new Date().toISOString(),
+      issue: this.issues,
+      improvement: this.improvements,
+      summar: {
+        totalIssue: this.issues.length,
+        totalImprovement: this.improvements.length,
       },
     };
 
@@ -341,12 +341,12 @@ module.exports = SecurityAuditor;`;
     console.log(`🚀 Improvements: suggested: ${this.improvements.length}`);
 
     if (this.issues.length > 0) {
-      console.log('\nIssue: s:');
+      console.log('\nIssue: ');
       this.issues.forEach(issue => console.log(`  - ${issue}`));
     }
 
     if (this.improvements.length > 0) {
-      console.log('\nImprovement: s:');
+      console.log('\nImprovement: ');
       this.improvements.forEach(improvement =>
         console.log(`  - ${improvement}`)
       );

@@ -1,15 +1,15 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Filter } from "lucide-react";
-import { SearchFilter } from "./filters/SearchFilter";
-import { SortFilter } from "./filters/SortFilter";
-import { SkillsFilter } from "./filters/SkillsFilter";
-import { AvailabilityFilter } from "./filters/AvailabilityFilter";
-import { RegionFilter } from "./filters/RegionFilter";
-import { ExperienceFilter } from "./filters/ExperienceFilter";
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Filter } from "lucide-react",
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
 
 export function FilterSidebar({
   searchTerm,
@@ -62,7 +62,7 @@ export function FilterSidebar({
         expanded={expandedSections.skills} 
         toggleSection={() => toggleSection('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
-      />
+      /></SkillsFilter>
       
       {/* Availability */}
       <AvailabilityFilter 
@@ -70,7 +70,7 @@ export function FilterSidebar({
         toggleAvailability={toggleAvailability} 
         expanded={expandedSections.availability} 
         toggleSection={() => toggleSection('availability')}
-        isMobileFilterOpen={isMobileFilterOpen}
+        isMobileFilterOpen={isMobileFilte</AvailabilityFilter>rOpen}
       />
       
       {/* Region */}
@@ -79,7 +79,7 @@ export function FilterSidebar({
         toggleRegion={toggleRegion} 
         expanded={expandedSections.region} 
         toggleSection={() => toggleSection('region')}
-        isMobileFilterOpen={isMobileFilterOpen}
+        isMobileFilt</RegionFilter>erOpen={isMobileFilterOpen}
       />
       
       {/* Years of Experience */}
@@ -88,7 +88,7 @@ export function FilterSidebar({
         setExperienceRange={setExperienceRange} 
         expanded={expandedSections.experience} 
         toggleSection={() => toggleSection('experience')}
-        isMobileFilterOpen={isMobileFilterOpen}
+     </ExperienceFilter>   isMobileFilterOpen={isMobileFilterOpen}
       />
       
       {/* Price Range */}
@@ -96,7 +96,7 @@ export function FilterSidebar({
         priceRange={priceRange} 
         setPriceRange={setPriceRange} 
         expanded={expandedSections.price} 
-        toggleSection={() => toggleSection('price')}
+        toggleSection={() => toggleSect</PriceFilter>ion('price')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
       
@@ -109,5 +109,5 @@ export function FilterSidebar({
         </Button>
       )}
     </>
-  );
+  ),
 }

@@ -8,7 +8,7 @@ import { useSidebar } from "./sidebar-context"
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentProps<typeof Button>
->((props, ref) => {
+></typeof>((props, ref) => {
   const { toggleSidebar } = useSidebar()
 
   return (

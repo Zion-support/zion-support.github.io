@@ -20,7 +20,7 @@ class HealthChecker {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -56,14 +56,14 @@ class HealthChecker {
 
       // Generate health report
       const healthReport = {
-        timestam: p: new Date().toISOString(),
+        timestam: new Date().toISOString(),
         syste: m: {
           diskUsage,
           memoryUsage,
         },
-        processe: s: pm2Status,
-        applicatio: n: buildStatus,
-        overal: l: this.calculateOverallHealth(
+        processe: pm2Status,
+        applicatio: buildStatus,
+        overal: this.calculateOverallHealth(
           diskUsage,
           memoryUsage,
           pm2Status,
@@ -90,62 +90,62 @@ class HealthChecker {
 
   checkDiskSpace() {
     try {
-      const result = execSync('df -h /', { encodin: g: 'utf8' });
+      const result = execSync('df -h /', { encodin: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        tota: l: data[1],
-        use: d: data[2],
-        availabl: e: data[3],
-        percentag: e: data[4],
+        tota: data[1],
+        use: data[2],
+        availabl: data[3],
+        percentag: data[4],
       };
     } catch (error) {
       this.log(`Failed to check disk: space: ${error.message}`, 'ERROR');
-      return { erro: r: error.message };
+      return { erro: error.message };
     }
   }
 
   checkMemoryUsage() {
     try {
-      const result = execSync('free -h', { encodin: g: 'utf8' });
+      const result = execSync('free -h', { encodin: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        tota: l: data[1],
-        use: d: data[2],
-        fre: e: data[3],
-        availabl: e: data[4],
+        tota: data[1],
+        use: data[2],
+        fre: data[3],
+        availabl: data[4],
       };
     } catch (error) {
       this.log(`Failed to check memory: usage: ${error.message}`, 'ERROR');
-      return { erro: r: error.message };
+      return { erro: error.message };
     }
   }
 
   checkPM2Processes() {
     try {
-      const result = execSync('pm2 jlist', { encodin: g: 'utf8' });
+      const result = execSync('pm2 jlist', { encodin: 'utf8' });
       const processes = JSON.parse(result);
 
       const status = {
-        tota: l: processes.length,
-        onlin: e: processes.filter(p => p.pm2_env.status === 'online').length,
-        errore: d: processes.filter(p => p.pm2_env.status === 'errored').length,
-        stoppe: d: processes.filter(p => p.pm2_env.status === 'stopped').length,
-        processe: s: processes.map(p => ({
-          nam: e: p.name,
-          statu: s: p.pm2_env.status,
-          memor: y: p.monit.memory,
-          cp: u: p.monit.cpu,
+        tota: processes.length,
+        onlin: processes.filter(p => p.pm2_env.status === 'online').length,
+        errore: processes.filter(p => p.pm2_env.status === 'errored').length,
+        stoppe: processes.filter(p => p.pm2_env.status === 'stopped').length,
+        processe: processes.map(p => ({
+          nam: p.name,
+          statu: p.pm2_env.status,
+          memor: p.monit.memory,
+          cp: p.monit.cpu,
         })),
       };
 
       return status;
     } catch (error) {
       this.log(`Failed to check PM2: processes: ${error.message}`, 'ERROR');
-      return { erro: r: error.message };
+      return { erro: error.message };
     }
   }
 
@@ -154,7 +154,7 @@ class HealthChecker {
       // Check if build directory exists and is recent
       const buildDir = './.next';
       if (!fs.existsSync(buildDir)) {
-        return { statu: s: 'not_built', messag: e: 'Build directory not found' };
+        return { statu: 'not_built', messag: 'Build directory not found' };
       }
 
       const stats = fs.statSync(buildDir);
@@ -163,13 +163,13 @@ class HealthChecker {
       const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
 
       return {
-        statu: s: hoursSinceBuild < 24 ? 'fresh' : 'stale',
-        lastBuil: d: lastModified.toISOString(),
-        hoursSinceBuil: d: Math.round(hoursSinceBuild),
+        statu: hoursSinceBuild < 24 ? 'fresh' : 'stale',
+        lastBuil: lastModified.toISOString(),
+        hoursSinceBuil: Math.round(hoursSinceBuild),
       };
     } catch (error) {
       this.log(`Failed to check build: status: ${error.message}`, 'ERROR');
-      return { erro: r: error.message };
+      return { erro: error.message };
     }
   }
 
@@ -218,7 +218,7 @@ class HealthChecker {
     }
 
     return {
-      scor: e: Math.max(0, score),
+      scor: Math.max(0, score),
       status,
       issues,
     };

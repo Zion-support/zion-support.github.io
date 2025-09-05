@@ -19,7 +19,7 @@ class AutoFixer {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -69,8 +69,8 @@ class AutoFixer {
 
       // Run ESLint with --fix
       execSync('npm run: lint:fix', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdi: 'pipe',
+        cw: process.cwd(),
       });
 
       this.log('Linting issues fixed');
@@ -85,8 +85,8 @@ class AutoFixer {
 
       // Run TypeScript check
       execSync('npx tsc --noEmit', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdi: 'pipe',
+        cw: process.cwd(),
       });
 
       this.log('TypeScript check passed');
@@ -101,8 +101,8 @@ class AutoFixer {
 
       // Check for outdated dependencies
       const outdated = execSync('npm outdated --json', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdi: 'pipe',
+        cw: process.cwd(),
       });
 
       const outdatedDeps = JSON.parse(outdated.toString());
@@ -132,8 +132,8 @@ class AutoFixer {
       for (const pattern of tempFiles) {
         try {
           execSync(`find . -name "${pattern}" -type f -delete`, {
-            stdi: o: 'pipe',
-            cw: d: process.cwd(),
+            stdi: 'pipe',
+            cw: process.cwd(),
           });
         } catch (err) {
           // Ignore errors for file cleanup

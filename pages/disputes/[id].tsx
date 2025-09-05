@@ -1,34 +1,34 @@
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
+import { useRouter } from 'next/router',
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import { useCurrentUser } from '../../utils/auth',
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export default function DisputeDetailPage() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
-  const user = useCurrentUser();
+  const router = useRouter(),
+  const { id } = router.query as { id?: string },
+  const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher),
+  const user = useCurrentUser(),
 
-  const dispute = data?.dispute;
-  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
-  const [message, setMessage] = useState('');
-  const [resolutionSummary, setResolutionSummary] = useState('');
+  const dispute = data?.dispute,
+  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview'),
+  const [message, setMessage] = useState(''),
+  const [resolutionSummary, setResolutionSummary] = useState(''),
 
   async function sendMessage() {
-    if (!message.trim() || !id) return;
-    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) });
-    setMessage('');
-    mutate();
+    if (!message.trim() || !id) return,
+    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) }),
+    setMessage(''),
+    mutate(),
   }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
-    if (!id) return;
-    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) });
-    setResolutionSummary('');
-    mutate();
+    if (!id) return,
+    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) }),
+    setResolutionSummary(''),
+    mutate(),
   }
 
   return (
@@ -58,7 +58,7 @@ export default function DisputeDetailPage() {
           </div>
 
           <div className="border-b mb-4 flex gap-4 text-sm">
-            {(['Overview','Messages','Attachments','Admin Notes'] as const).map(t => (
+            {(['OverviewMessages','AttachmentsAdmin Notes'] as const).map(t => (
               <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default function DisputeDetailPage() {
               </div>
               {user.role !== 'guest' && (
                 <div className="flex gap-2">
-                  <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
+                  <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" /></input>
                   <button onClick={sendMessage} className="px-3 py-2 rounded bg-blue-600 text-white">Send</button>
                 </div>
               )}
@@ -151,7 +151,7 @@ export default function DisputeDetailPage() {
                 <div className="text-sm text-gray-500">Admin access required</div>
               ) : (
                 <div className="space-y-3">
-                  <textarea value={resolutionSummary} onChange={e => setResolutionSummary(e.target.value)} placeholder="Resolution summary / admin notes" rows={4} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+                  <textarea value={resolutionSummary} onChange={e => setResolutionSummary(e.target.value)} placeholder="Resolution summary / admin notes" rows={4} className="w-full border rounded px-3 py-2 bg-white dark:bg-b</textarea>lack" />
                   <div className="flex gap-2">
                     <button onClick={() => resolve('Under Review')} className="px-3 py-2 rounded border">Mark Under Review</button>
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
@@ -163,5 +163,5 @@ export default function DisputeDetailPage() {
         </div>
       )}
     </EnhancedLayout>
-  );
+  ),
 }

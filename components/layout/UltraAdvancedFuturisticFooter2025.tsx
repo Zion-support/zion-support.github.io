@@ -1,24 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
   Mail, Phone, MapPin, Globe, 
   Twitter, Linkedin, Github, 
   ArrowUp, Crown, Zap, Brain, Rocket,
   Shield, Users, BookOpen, Briefcase, Atom
-} from 'lucide-react';
-import Link from 'next/link';
-import { AnimatePresence } from 'framer-motion';
+} from 'lucide-react',
+import Link from 'next/link',
+import { AnimatePresence } from 'framer-motion',
 
 interface FooterLink {
-  label: string;
-  href: string;
-  description?: string;
-  external?: boolean;
+  label: string,
+  href: string,
+  description?: string,
+  external?: boolean
 }
 
 interface FooterSection {
-  title: string;
-  links: FooterLink[];
+  title: string,
+  links: FooterLink[]
 }
 
 const footerSections: FooterSection[] = [
@@ -76,13 +76,14 @@ const footerSections: FooterSection[] = [
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ]
   }
-];
+],
 
 const socialLinks = [
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-];
+  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true
+  },
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
@@ -91,12 +92,12 @@ const quickLinks = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-];
+],
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   const footerSections = [
     {
@@ -139,14 +140,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Support', href: '/support' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -154,9 +155,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
+  },
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -165,19 +166,20 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
+  },
     }
-  };
+  },
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+    <footer className="bg-slate-950 border-t border-white/10">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10"></div>
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+            key={i
+}
+          className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
             animate={{
               x: [0, Math.random() * 1000, 0],
               y: [0, Math.random() * 1000, 0],
@@ -201,60 +203,61 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10"></div>
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
           <motion.div
-            variants={containerVariants}
+            variants={containerVariants
+  },
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
-          >
+          ></motion>
             {/* Company Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
+            <motion.div variants={itemVariants} className="lg:col-span-2"></motion>
+              <div className="flex items-center space-x-3 mb-6"></div>
+                <div className="relative"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center"></div>
                     <Crown className="w-7 h-7 text-white" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50"></div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div></div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h3>
                     Zion Tech Group
                   </h3>
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed"></p>
                 Pioneering the future with revolutionary AI consciousness, quantum computing, 
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
+              <p className="text-gray-300 leading-relaxed mb-6 max-w-md"></p>
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
                 We help businesses transform and thrive in the digital age.
               </p>
 
               {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
+              <div className="space-y-3"></div>
+                <div className="flex items-center space-x-3 text-gray-300"></div>
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <span>+1 302 464 0950</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                <div className="flex items-center space-x-3 text-gray-300"></div>
                   <Mail className="w-4 h-4 text-purple-400" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                <div className="flex items-center space-x-3 text-gray-300"></div>
                   <MapPin className="w-4 h-4 text-pink-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                <div className="flex items-center space-x-3 text-gray-300"></div>
                   <Globe className="w-4 h-4 text-blue-400" />
-                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
+                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200"></a>
                     ziontechgroup.com
                   </a>
                 </div>
@@ -263,22 +266,24 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={itemVariants}>
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
+              <motion.div key={section.title} variants={itemVariants}></motion>
+                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2"></h4>
                   {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
                   {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
                   {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
                   {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
                   <span>{section.title}</span>
                 </h4>
-                <ul className="space-y-3">
+                <ul className="space-y-3"></ul>
                   {section.items.map((item) => (
-                    <li key={item.label}>
+                    <li key={item.label}></li>
                       <Link
-                        href={item.href}
+                        href={item.href
+  },
                         className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                      >
-                        {item.label}
+                      ></Link>
+                        {item.label
+  },
                       </Link>
                     </li>
                   ))}
@@ -294,33 +299,35 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mt-16 pt-12 border-t border-gray-800/50"
-          >
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          ></motion>
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8"></div>
               {/* Social Links */}
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-6"></div>
                 <span className="text-gray-400 font-medium">Follow Us:</span>
                 {socialLinks.map((social) => (
                   <motion.a
-                    key={social.label}
-                    href={social.href}
+                    key={social.label
+  },
+                    href={social.href
+  },
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                  >
+                  ></motion>
                     <social.icon className="w-5 h-5" />
                   </motion.a>
                 ))}
               </div>
 
               {/* Newsletter Signup */}
-              <div className="flex-1 max-w-md">
+              <div className="flex-1 max-w-md"></div>
                 <h5 className="text-lg font-semibold text-white mb-3">Stay Updated</h5>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-400 text-sm mb-4"></p>
                   Get the latest insights on AI consciousness, quantum computing, and future technology.
                 </p>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2"></div>
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -330,7 +337,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                  >
+                  ></motion>
                     Subscribe
                   </motion.button>
                 </div>
@@ -346,32 +353,32 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-gray-400 text-sm">
+        ></motion>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4"></div>
+              <div className="text-gray-400 text-sm"></div>
                 © 2024 Zion Tech Group. All rights reserved. | 
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2">
+                <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2"></Link>
                   Privacy Policy
                 </Link> | 
-                <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2">
+                <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2"></Link>
                   Terms of Service
                 </Link>
               </div>
               
-              <div className="flex items-center space-x-4 text-gray-400 text-sm">
+              <div className="flex items-center space-x-4 text-gray-400 text-sm"></div>
                 <span>Powered by</span>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2"></div>
                   <Brain className="w-4 h-4 text-cyan-400" />
                   <span>AI Consciousness</span>
                 </div>
                 <span>•</span>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2"></div>
                   <Atom className="w-4 h-4 text-purple-400" />
                   <span>Quantum Computing</span>
                 </div>
                 <span>•</span>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2"></div>
                   <Rocket className="w-4 h-4 text-pink-400" />
                   <span>Space Technology</span>
                 </div>
@@ -383,18 +390,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
       {/* Scroll to Top Button */}
       <motion.button
-        onClick={scrollToTop}
+        onClick={scrollToTop
+  },
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
-      >
+      ></motion>
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  );
-};
+  ),
+},
 
-export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025,

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function AIPoweredCybersecurityPage() {
 	return (
@@ -26,8 +26,8 @@ export default function AIPoweredCybersecurityPage() {
 					"Compliance evidence and audit-ready reports"
 				]}
 				industries={["Financial Services", "Healthcare", "SaaS", "Public Sector", "Critical Infrastructure"]}
-				canonical="https://ziontechgroup.com/ai-powered-cybersecurity"
+				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"
 			/>
 		</>
-	);
+	)
 }

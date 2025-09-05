@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { useNotifications } from '@/context/notifications/NotificationContext';
-import { useEnqueueSnackbar } from '@/context';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Button } from '@/components/ui/button',
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
+import { useNotifications } from '@/context/notifications/NotificationContext',
+import { useEnqueueSnackbar } from '@/context',
+import {logErrorToProduction} from '@/utils/productionLogger',
 import { 
-  NotificationFilter, 
+  NotificationFilter,
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
-} from '@/components/notifications';
-import { FilterType } from '@/components/notifications/NotificationFilter';
+} from '@/components/notifications',
+import { FilterType } from '@/components/notifications/NotificationFilter',
 
 export const NotificationCenter: React.FC = () => {
   const { 
-    filteredNotifications, 
+    filteredNotifications,
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -25,46 +25,46 @@ export const NotificationCenter: React.FC = () => {
     filter,
     setFilter,
     fetchNotifications
-  } = useNotifications();
+  } = useNotifications(),
   
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [loadedOnce, setLoadedOnce] = useState(false);
-  const enqueueSnackbar = useEnqueueSnackbar();
+  const [open, setOpen] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [loadedOnce, setLoadedOnce] = useState(false),
+  const enqueueSnackbar = useEnqueueSnackbar(),
 
   // Refresh notifications when popover opens, but avoid duplicate
-  useEffect(() => {
+  useEffect(() =></string> {
     if (open && !loadedOnce) {
       const loadNotifications = async () => {
         try {
-          await fetchNotifications();
-          setError(null);
+          await fetchNotifications(),
+          setError(null),
         } catch (err) {
-          logErrorToProduction('Failed to fetch notifications:', { data: err });
-          setError("Couldn't load notifications");
-          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
+          logErrorToProduction('Failed to fetch notifications:', { data: err }),
+          setError("Couldn't load notifications"),
+          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
         } finally {
-          setLoadedOnce(true);
+          setLoadedOnce(true),
         }
-      };
+      },
 
-      loadNotifications();
+      loadNotifications(),
     }
-  }, [open, loadedOnce, fetchNotifications]);
+  }, [open, loadedOnce, fetchNotifications]),
 
   const handleMarkAllAsRead = async () => {
     try {
-      await markAllAsRead();
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' });
+      await markAllAsRead(),
+      enqueueSnackbar("All notifications marked as read", { variant: 'success' }),
     } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err });
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
+      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
+      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
     }
-  };
+  },
 
   const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any);
-  };
+    setFilter(newFilter as any)
+  },
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
@@ -98,8 +98,8 @@ export const NotificationCenter: React.FC = () => {
           onRetry={fetchNotifications}
         />
         
-        <NotificationFooter onClose={() => setOpen(false)} />
+        <NotificationFooter onClose={() => setOpen(f</NotificationFooter>alse)} />
       </PopoverContent>
     </Popover>
-  );
-};
+  ),
+},

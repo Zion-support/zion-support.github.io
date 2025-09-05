@@ -50,7 +50,7 @@ const PaginationLink = ({
   isActive,
   size = "icon",
   ...props
-}: PaginationLinkProps) => (
+}: PaginationLinkProps) =></HTMLButtonElement> (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
@@ -65,7 +65,7 @@ const PaginationLink = ({
 PaginationLink.displayName = "PaginationLink"
 
 const PaginationButton = React.forwardRef<HTMLButtonElement, PaginationButtonProps>(
-  ({ page, isActive, className, ...props }, ref) => (
+  ({ page, isActive, className,</HTMLButtonElement> ...props }, ref) => (
     <button
       ref={ref}
       type="button"
@@ -87,7 +87,7 @@ PaginationButton.displayName = 'PaginationButton'
 const PaginationPrevious = ({
   className,
   ...props
-}: Omit<PaginationLinkProps, 'size'>) => (
+</PaginationLinkProps>}: Omit<PaginationLinkProps, 'size'>) => (
   <PaginationLink
     aria-label="Go to previous page"
     size="default"
@@ -101,7 +101,7 @@ const PaginationPrevious = ({
 PaginationPrevious.displayName = "PaginationPrevious"
 
 const PaginationNext = ({
-  className,
+  </PaginationLinkProps>className,
   ...props
 }: Omit<PaginationLinkProps, 'size'>) => (
   <PaginationLink

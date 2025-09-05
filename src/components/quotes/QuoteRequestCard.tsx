@@ -1,39 +1,39 @@
 
-import React from "react";
-import { format } from "date-fns";
+import React from "react",
+import { format } from "date-fns",
 import { 
-  Card, 
+  Card,
   CardContent, 
   CardHeader, 
   CardTitle, 
   CardDescription
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+} from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes";
+import type { QuoteRequest } from "@/types/quotes",
 
 type QuoteRequestCardProps = {
-  quote: QuoteRequest;
-  onViewDetails: (quote: QuoteRequest) => void;
-  onMarkAsResponded?: (id: string) => void;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
+  quote: QuoteRequest,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded?: (id: string) => void,
+  onToggleArchive: (id: string, isArchived: boolean) => void
+},
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails,
   onMarkAsResponded,
   onToggleArchive
-}) => {
+}) =></QuoteRequestCardProps> {
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-      return format(new Date(dateString), 'PP');
+      return format(new Date(dateString), 'PP'),
     } catch (e) {
-      return dateString;
+      return dateString,
     }
-  };
+  },
 
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -101,5 +101,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
-  );
-};
+  ),
+},

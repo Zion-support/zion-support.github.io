@@ -1,4 +1,4 @@
-import AdminTable from '../../components/admin/AdminTable';
+import AdminTable from '../../components/admin/AdminTable',
 
 export default function AdminDashboard() {
   return (
@@ -9,5 +9,5 @@ export default function AdminDashboard() {
       </ul>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  );
+  ),
 }

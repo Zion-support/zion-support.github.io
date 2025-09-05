@@ -1,24 +1,24 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
 
 export default function AIServices() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer),
+  }, []),
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
@@ -28,7 +28,7 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
-  ];
+  ],
 
   const services = [
     {
@@ -36,126 +36,126 @@ export default function AIServices() {
       name: 'Autonomous AI Agents',
       description: 'Self-managing AI agents that can perform complex tasks independently with minimal human intervention.',
       category: 'autonomous',
-      features: ['Task Automation', 'Decision Making', 'Learning Capabilities', 'Multi-platform Integration'],
+      features: ['Task AutomationDecision Making', 'Learning CapabilitiesMulti-platform Integration'],
       price: 'Custom Pricing',
       popular: true,
-      useCases: ['Process Automation', 'Customer Service', 'Data Analysis', 'Content Generation']
+      useCases: ['Process AutomationCustomer Service', 'Data AnalysisContent Generation']
     },
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
       category: 'predictive',
-      features: ['Market Analysis', 'Risk Assessment', 'Automated Trading', 'Real-time Monitoring'],
+      features: ['Market AnalysisRisk Assessment', 'Automated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
-      useCases: ['Algorithmic Trading', 'Portfolio Management', 'Risk Analysis', 'Market Prediction']
+      useCases: ['Algorithmic TradingPortfolio Management', 'Risk AnalysisMarket Prediction']
     },
     {
       id: 3,
       name: 'AI Legal Document Analysis',
       description: 'Intelligent document review and analysis for legal professionals with contract insights.',
       category: 'nlp',
-      features: ['Contract Analysis', 'Risk Identification', 'Compliance Checking', 'Document Summarization'],
+      features: ['Contract AnalysisRisk Identification', 'Compliance CheckingDocument Summarization'],
       price: '$199/month',
       popular: false,
-      useCases: ['Contract Review', 'Legal Research', 'Compliance Monitoring', 'Document Management']
+      useCases: ['Contract ReviewLegal Research', 'Compliance MonitoringDocument Management']
     },
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
       category: 'nlp',
-      features: ['Sentiment Analysis', 'Emotion Detection', 'Intent Recognition', 'Real-time Processing'],
+      features: ['Sentiment AnalysisEmotion Detection', 'Intent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
-      useCases: ['Customer Service', 'Call Center Analytics', 'Market Research', 'Quality Assurance']
+      useCases: ['Customer ServiceCall Center Analytics', 'Market ResearchQuality Assurance']
     },
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
       description: 'Intelligent search solutions with semantic understanding and personalized results.',
       category: 'specialized',
-      features: ['Semantic Search', 'Personalization', 'Natural Language Queries', 'Context Awareness'],
+      features: ['Semantic SearchPersonalization', 'Natural Language QueriesContext Awareness'],
       price: '$99/month',
       popular: false,
-      useCases: ['Enterprise Search', 'E-commerce', 'Content Discovery', 'Knowledge Management']
+      useCases: ['Enterprise SearchE-commerce', 'Content DiscoveryKnowledge Management']
     },
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
       category: 'computer-vision',
-      features: ['Object Detection', 'Image Recognition', 'Video Analysis', 'Real-time Processing'],
+      features: ['Object DetectionImage Recognition', 'Video AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
-      useCases: ['Quality Control', 'Security Monitoring', 'Medical Imaging', 'Autonomous Vehicles']
+      useCases: ['Quality ControlSecurity Monitoring', 'Medical ImagingAutonomous Vehicles']
     },
     {
       id: 7,
       name: 'Machine Learning Model Training',
       description: 'Custom ML model development and training for specific business requirements.',
       category: 'specialized',
-      features: ['Custom Models', 'Data Preprocessing', 'Model Optimization', 'Deployment Support'],
+      features: ['Custom ModelsData Preprocessing', 'Model OptimizationDeployment Support'],
       price: 'Custom Pricing',
       popular: false,
-      useCases: ['Predictive Modeling', 'Pattern Recognition', 'Anomaly Detection', 'Recommendation Systems']
+      useCases: ['Predictive ModelingPattern Recognition', 'Anomaly DetectionRecommendation Systems']
     },
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
       category: 'nlp',
-      features: ['Text Analysis', 'Language Translation', 'Sentiment Analysis', 'Entity Recognition'],
+      features: ['Text AnalysisLanguage Translation', 'Sentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
-      useCases: ['Content Analysis', 'Multilingual Support', 'Customer Feedback', 'Document Processing']
+      useCases: ['Content AnalysisMultilingual Support', 'Customer FeedbackDocument Processing']
     },
     {
       id: 9,
       name: 'AI Process Automation',
       description: 'Intelligent automation of complex business processes using AI and machine learning.',
       category: 'automation',
-      features: ['Process Mining', 'Workflow Optimization', 'Decision Automation', 'Integration APIs'],
+      features: ['Process MiningWorkflow Optimization', 'Decision AutomationIntegration APIs'],
       price: '$159/month',
       popular: false,
-      useCases: ['Business Process Automation', 'Workflow Management', 'Decision Support', 'System Integration']
+      useCases: ['Business Process AutomationWorkflow Management', 'Decision SupportSystem Integration']
     },
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
       category: 'predictive',
-      features: ['Trend Forecasting', 'Behavioral Analysis', 'Risk Prediction', 'Scenario Modeling'],
+      features: ['Trend ForecastingBehavioral Analysis', 'Risk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
-      useCases: ['Sales Forecasting', 'Customer Behavior', 'Risk Management', 'Resource Planning']
+      useCases: ['Sales ForecastingCustomer Behavior', 'Risk ManagementResource Planning']
     },
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
       category: 'specialized',
-      features: ['Content Creation', 'Multi-format Support', 'Brand Consistency', 'Quality Control'],
+      features: ['Content CreationMulti-format Support', 'Brand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
-      useCases: ['Marketing Content', 'Technical Documentation', 'Social Media', 'Email Campaigns']
+      useCases: ['Marketing ContentTechnical Documentation', 'Social MediaEmail Campaigns']
     },
     {
       id: 12,
       name: 'AI Chatbot Development',
       description: 'Intelligent conversational AI for customer service and engagement.',
       category: 'automation',
-      features: ['Natural Conversations', 'Multi-channel Support', 'Learning Capabilities', 'Integration APIs'],
+      features: ['Natural ConversationsMulti-channel Support', 'Learning CapabilitiesIntegration APIs'],
       price: '$89/month',
       popular: true,
-      useCases: ['Customer Support', 'Lead Generation', 'Internal Helpdesk', 'E-commerce Assistant']
+      useCases: ['Customer SupportLead Generation', 'Internal HelpdeskE-commerce Assistant']
     }
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory);
+    : services.filter(service => service.category === selectedCategory),
   return (
     <>
       <Head>
@@ -253,7 +253,7 @@ export default function AIServices() {
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
                     </div>
                     
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
@@ -343,7 +343,7 @@ export default function AIServices() {
                 </a>
                 <a 
                   href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
                 </a>
@@ -353,11 +353,11 @@ export default function AIServices() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Link from 'next/link';
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Link from 'next/link',
 
 export default function AIServicesPage() {
   return (
@@ -385,5 +385,5 @@ export default function AIServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }

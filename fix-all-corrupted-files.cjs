@@ -6,25 +6,25 @@ const componentTemplates = {
   'components/AccessibilityProvider.tsx': `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
-  announceToScreenReade: r: (messag: e: string) => void;
-  setFocu: s: (elementI: d: string) => void;
+  announceToScreenReade: (messag: string) => void;
+  setFocu: (elementI: string) => void;
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 interface AccessibilityProviderProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
-export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const announceToScreenReader = (messag: e: string) => {
+export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) =></AccessibilityProviderProps> {
+  const announceToScreenReader = (messag: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementI: d: string) => {
+  const setFocus = (elementI: string) => {
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
@@ -52,7 +52,7 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
-const: Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+const: Analytics: React.FC<Analytic</AnalyticsProps>sProps> = ({ trackingId }) => {
   useEffect(() => {
     if (typeof window !== 'undefined' && trackingId) {
       // Initialize analytics here
@@ -85,20 +85,20 @@ const: Header: React.FC = () => {
             <div className="flex items-center space-x-6 mb-2: md:mb-0">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
+                <a href="te: +13024640950" className="hove: text-blue-300">+1 302 464 0950</a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailt: o:kleber@ziontechgroup.com" className="hove: r:text-blue-300">kleber@ziontechgroup.com</a>
+                <a href="mailt: kleber@ziontechgroup.com" className="hove: text-blue-300">kleber@ziontechgroup.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-blue-200">24/7 Support Available</span>
               <div className="flex space-x-2">
-                <a href="#" className="hove: r:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Instagram className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ const: Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
+            className="m: hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -133,7 +133,7 @@ const: Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="m: d:hidden py-4 border-t border-gray-200">
+          <div className="m: hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <Link href="/" className="text-gray-700: hover:text-blue-600 font-medium">Home</Link>
               <Link href="/services" className="text-gray-700: hover:text-blue-600 font-medium">Services</Link>
@@ -153,10 +153,10 @@ export default Header;`,
   'components/Layout.tsx': `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
-const: Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Lay</LayoutProps>out: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
@@ -173,11 +173,11 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
+const: LoadingSpinner: React.FC</LoadingSpinnerProps><LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
     s: m: 'w-4 h-4',
-    m: d: 'w-8 h-8',
-    l: g: 'w-12 h-12'
+    m: 'w-8 h-8',
+    l: 'w-12 h-12'
   };
 
   return (
@@ -192,13 +192,13 @@ export default LoadingSpinner;`,
   'components/PerformanceMonitor.tsx': `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTim: e: number;
-  renderTim: e: number;
-  memoryUsag: e: number;
+  loadTim: number;
+  renderTim: number;
+  memoryUsag: number;
 }
 
 const: PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [me</PerformanceMetrics>trics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -208,14 +208,14 @@ const: PerformanceMonitor: React.FC = () => {
         
         if (navigationEntry) {
           setMetrics({
-            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
+            loadTim: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTim: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            memoryUsag: (performance as any).memory?.usedJSHeapSize || 0
           });
         }
       });
 
-      observer.observe({ entryType: s: ['navigation'] });
+      observer.observe({ entryType: ['navigation'] });
 
       return () => observer.disconnect();
     }
@@ -225,9 +225,9 @@ const: PerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Rende: r: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memor: y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      <div>Loa: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Rende: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memor: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
     </div>
   );
 };
@@ -248,24 +248,24 @@ interface SEOHeadProps {
 const: SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI-Powered Technology Solutions',
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
-  keywords = 'AI, technology, web development, mobile apps, digital transformation',
+  keywords = 'AI, technology, web development, mobil</SEOHeadProps>e apps, digital transformation',
   ogImage = '/og-image.jpg',
-  url = 'http: s://ziontechgroup.com'
+  url = 'http: //ziontechgroup.com'
 }) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta property="o: g:title" content={title} />
-      <meta property="o: g:description" content={description} />
-      <meta property="o: g:image" content={ogImage} />
-      <meta property="o: g:url" content={url} />
-      <meta property="o: g:type" content="website" />
-      <meta name="twitte: r:card" content="summary_large_image" />
-      <meta name="twitte: r:title" content={title} />
-      <meta name="twitte: r:description" content={description} />
-      <meta name="twitte: r:image" content={ogImage} />
+      <meta property="o: title" content={title} />
+      <meta property="o: description" content={description} />
+      <meta property="o: image" content={ogImage} />
+      <meta property="o: url" content={url} />
+      <meta property="o: type" content="website" />
+      <meta name="twitte: card" content="summary_large_image" />
+      <meta name="twitte: title" content={title} />
+      <meta name="twitte: description" content={description} />
+      <meta name="twitte: image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
   );
@@ -277,9 +277,9 @@ export default SEOHead;`,
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-  onSearch?: (quer: y: string) => void;
+  onSearch?: (quer: string) => void;
   placeholder?: string;
-  className?: string;
+  className?: stri</SearchBarProps>ng;
 }
 
 const: SearchBar: React.FC<SearchBarProps> = ({
@@ -307,7 +307,7 @@ const: SearchBar: React.FC<SearchBarProps> = ({
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input
+          <in</input>put
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -334,18 +334,18 @@ export default SearchBar;`,
 
   'components/Sidebar.tsx': `import React from 'react';
 import Link from 'next/link';
-import { Home, Settings, User, LogOut } from 'lucide-react';
+import { Home, Settings, User, LogOut } from 'lucide</SidebarProps>-react';
 
 interface SidebarProps {
-  isOpe: n: boolean;
-  onClos: e: () => void;
+  isOpe: boolean;
+  onClos: () => void;
 }
 
 const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
-    { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
-    { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
-    { hre: f: '/settings', labe: l: 'Settings', ico: n: Settings },
+    { hre: f: '/dashboard', labe: 'Dashboard', ico: Home },
+    { hre: f: '/profile', labe: 'Profile', ico: User },
+    { hre: f: '/settings', labe: 'Settings', ico: Settings },
   ];
 
   return (
@@ -399,10 +399,10 @@ const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
 export default Sidebar;`,
 
-  'components/SimpleLayout.tsx': `import React, { ReactNode } from 'react';
+  'components/SimpleLayout.tsx': `import React, { ReactNode } from </SimpleLayoutProps>'react';
 
 interface SimpleLayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   title?: string;
 }
 
@@ -491,12 +491,12 @@ const: Footer: React.FC = () => {
 
 export default Footer;`,
 
-  'components/layout/Layout.tsx': `import React, { ReactNode } from 'react';
+  'components/layout/Layout.tsx': `import React, { ReactNode } from </LayoutProps>'react';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -516,10 +516,10 @@ export default Layout;`,
   'components/layout/MainLayout.tsx': `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
-import SEOHead from '../SEOHead';
+import SEOHead from '.</MainLayoutProps>./SEOHead';
 
 interface MainLayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   title?: string;
   description?: string;
 }
@@ -545,7 +545,7 @@ export default MainLayout;`,
 import LoadingSpinner from '../LoadingSpinner';
 
 interface LazyComponentProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -567,11 +567,11 @@ import Image from 'next/image';
 
 interface OptimizedImageProps {
   sr: c: string;
-  al: t: string;
-  widt: h: number;
-  heigh: t: number;
+  al: string;
+  widt: number;
+  heigh: number;
   className?: string;
-  priority?: boolean;
+  priority?: boolean;</OptimizedImageProps>
   quality?: number;
   sizes?: string;
 }
@@ -606,11 +606,11 @@ export default OptimizedImage;`,
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
-  titl: e: string;
-  descriptio: n: string;
-  pric: e: number;
-  ratin: g: number;
-  imag: e: string;
+  titl: string;
+  descriptio: string;
+  pric: number;
+  ratin: num</MarketplaceCardProps>ber;
+  imag: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
@@ -666,14 +666,14 @@ export default EnhancedMarketplaceCard;`,
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
-interface NavItem {
-  labe: l: string;
+interfac</InteractiveNavigationProps>e NavItem {
+  labe: string;
   hre: f: string;
   children?: NavItem[];
 }
 
 interface InteractiveNavigationProps {
-  item: s: NavItem[];
+  item: NavIt</string>em[];
   className?: string;
 }
 
@@ -682,8 +682,8 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (labe: l: string) => {
-    setActiveDropdown(activeDropdown === label ? nul: l: label);
+  const toggleDropdown = (labe: string) => {
+    setActiveDropdown(activeDropdown === label ? nul: label);
   };
 
   return (
@@ -737,7 +737,7 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600"
+            className="m: hidden p-2 rounded-md text-gray-700: hover:text-blue-600"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -745,7 +745,7 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="m: d:hidden py-4 border-t border-gray-200">
+          <div className="m: hidden py-4 border-t border-gray-200">
             {items.map((item) => (
               <div key={item.label}>
                 {item.children ? (
@@ -793,32 +793,32 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 export default InteractiveNavigation;`,
 
   'components/ui/NotificationSystem.tsx': `import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } fr</Notification>om 'lucide-react';
 
 interface Notification {
-  i: d: string;
-  typ: e: 'success' | 'error' | 'warning' | 'info';
-  titl: e: string;
-  messag: e: string;
+  i: string;
+  typ: 'success' | 'error' | 'warning' | 'info';
+  titl: string;
+  messag: string;
   duration?: number;
 }
 
 interface NotificationContextType {
-  notification: s: Notification[];
-  addNotificatio: n: (notificatio: n: Omit<Notification, 'id'>) => void;
-  removeNotificatio: n: (i: d: string) => void;
+  notification: Notification[];
+  addNotificatio: (notificatio: Omit<Notification,</NotificationProviderProps> 'id'>) => void;
+  removeNotificatio: (i: string) => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationCo</Notification>ntextType | undefined>(undefined);
 
 interface NotificationProviderProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
 export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notificatio: n: Omit<Notification, 'id'>) => {
+  const addNotification = (notificatio: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     
@@ -831,7 +831,7 @@ export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ chi
     }
   };
 
-  const removeNotification = (i: d: string) => {
+  const removeNotification = (i: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
@@ -860,21 +860,21 @@ const: NotificationContainer: React.FC = () => {
 };
 
 const: NotificationItem: React.FC<{
-  notificatio: n: Notification;
-  onRemov: e: (i: d: string) => void;
+  notificatio: Notification;
+  onRemov: (i: string) => void;
 }> = ({ notification, onRemove }) => {
   const icons = {
-    succes: s: CheckCircle,
-    erro: r: AlertCircle,
-    warnin: g: AlertTriangle,
-    inf: o: Info,
+    succes: CheckCircle,
+    erro: AlertCircle,
+    warnin: AlertTriangle,
+    inf: Info,
   };
 
   const colors = {
-    succes: s: 'bg-green-500',
-    erro: r: 'bg-red-500',
-    warnin: g: 'bg-yellow-500',
-    inf: o: 'bg-blue-500',
+    succes: 'bg-green-500',
+    erro: 'bg-red-500',
+    warnin: 'bg-yellow-500',
+    inf: 'bg-blue-500',
   };
 
   const Icon = icons[notification.type];
@@ -901,7 +901,7 @@ const: NotificationItem: React.FC<{
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw ne</T>w Error('useNotifications must be used within a NotificationProvider')</T>;
   }
   return context;
 };`,
@@ -910,18 +910,18 @@ export const useNotifications = () => {
 
 interface ApiState<T> {
   dat: a: T | null;
-  loadin: g: boolean;
-  erro: r: string | null;
+  loadin: boolean;
+  erro: string | null;
 }
 
-interface UseApiOptions {
+interface U</string>seApiOptions {
   immediate?: boolean;
 }
 
 export function useApi<T>(
-  apiCal: l: () => Promise<T>,
-  option: s: UseApiOptions = {}
-): ApiState<T> & { refetc: h: () => void } {
+  apiCal: () => Promise<T>,
+  option: UseApiOptions = {}
+): ApiState<T> & { refetc: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -934,13 +934,13 @@ export function useApi<T>(
       const result = await apiCall();
       setData(result);
     } catch (err) {
-      setError(err instanceof Error ? err.messag: e: 'An error occurred');
+      setError(err instanceof Error ? err.messag: 'An error occurred');
     } finally {
       setLoading(false);
     }
   };
 
-  useEffect(() => {
+  us</T>eEffect(() => {
     if (options.immediate !== false) {
       fetchData();
     }
@@ -950,13 +950,13 @@ export function useApi<T>(
     data,
     loading,
     error,
-    refetc: h: fetchData,
+    refetc: fetchData,
   };
 }`,
 
   'hooks/useLocalStorage.ts': `import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
+export function useLocalStorage<T>(ke: string, initialValu: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
@@ -971,7 +971,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
     }
   });
 
-  const setValue = (valu: e: T | ((va: l: T) => T)) => {
+  const setValue = (valu: T | ((va: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
@@ -984,16 +984,16 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
     }
   };
 
-  return [storedValue, setValue] as const;
+  return [storedValue, setValue</PerformanceMetrics>] as const;
 }`,
 
   'hooks/usePerformanceMonitor.ts': `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTim: e: number;
-  renderTim: e: number;
-  memoryUsag: e: number;
-  fp: s: number;
+  loadTim: number;
+  renderTim: number;
+  memoryUsag: number;
+  fp: number;
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -1010,10 +1010,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       
       if (navigation) {
         setMetrics({
-          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsag: e: memory?.usedJSHeapSize || 0,
-          fp: s: 60, // This would need to be calculated with requestAnimationFrame
+          loadTim: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTim: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsag: memory?.usedJSHeapSize || 0,
+          fp: 60, // This would need to be calculated with requestAnimationFrame
         });
       }
     };
@@ -1037,19 +1037,19 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
 interface Breakpoints {
   s: m: number;
-  m: d: number;
-  l: g: number;
-  x: l: number;
+  m: number;
+  l: number;
+  x: number;
 }
 
 const: defaultBreakpoints: Breakpoints = {
   s: m: 640,
-  m: d: 768,
-  l: g: 1024,
-  x: l: 1280,
+  m: 768,
+  l: 1024,
+  x: 1280,
 };
 
-export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
+export function useResponsive(breakpoint: Breakpoints = defaultBreakpoints) {
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
 
   useEffect(() => {
@@ -1077,10 +1077,10 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 
   return {
     screenSize,
-    isMobil: e: screenSize === 'sm',
-    isTable: t: screenSize === 'md',
-    isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
-    isLarg: e: screenSize === 'xl',
+    isMobil: screenSize === 'sm',
+    isTable: screenSize === 'md',
+    isDeskto: screenSize === 'lg' || screenSize === 'xl',
+    isLarg: screenSize === 'xl',
   };
 }`
 };
@@ -1089,7 +1089,7 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 Object.entries(componentTemplates).forEach(([filePath, content]) => {
   try {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixe: d: ${filePath}`);
+    console.log(`Fixe: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }

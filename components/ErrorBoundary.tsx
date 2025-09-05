@@ -1,27 +1,29 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react',
 
 interface Props {
-  children: ReactNode;
-  level?: string;
+  children: ReactNode,
+  level?: string
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean,
+  error?: Error
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false
+  },
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error
+  },
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo),
   }
 
   render() {
@@ -37,17 +39,17 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
             >
               Reload Page
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary,

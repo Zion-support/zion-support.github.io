@@ -4,19 +4,19 @@ const { execSync } = require('child_process');
 console.log('🚀 Starting Deployment Process...');
 
 const steps = [
-  { nam: e: 'Install Dependencies', comman: d: 'npm ci' },
-  { nam: e: 'Run Tests', comman: d: 'npm run: test:smoke' },
-  { nam: e: 'Build Application', comman: d: 'npm run build' },
-  { nam: e: 'Deploy to Production', comman: d: 'npm run: deploy:production' },
+  { nam: 'Install Dependencies', comman: 'npm ci' },
+  { nam: 'Run Tests', comman: 'npm run: test:smoke' },
+  { nam: 'Build Application', comman: 'npm run build' },
+  { nam: 'Deploy to Production', comman: 'npm run: deploy:production' },
 ];
 
 steps.forEach(step => {
   try {
-    console.log(`Runnin: g: ${step.name}`);
-    execSync(step.command, { stdi: o: 'inherit' });
+    console.log(`Runnin: ${step.name}`);
+    execSync(step.command, { stdi: 'inherit' });
     console.log(`✅ ${step.name} completed`);
   } catch (error) {
-    console.log(`❌ ${step.name} faile: d: ${error.message}`);
+    console.log(`❌ ${step.name} faile: ${error.message}`);
     process.exit(1);
   }
 });

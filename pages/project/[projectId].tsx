@@ -1,52 +1,52 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
+import { useEffect, useState } from "react",
+import { useRouter } from "next/router",
+import FeedbackModal from "../../components/ui/FeedbackModal",
 
 export default function ProjectPage() {
-  const router = useRouter();
-  const { projectId } = router.query as { projectId?: string };
-  const [project, setProject] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [note, setNote] = useState("");
+  const router = useRouter(),
+  const { projectId } = router.query as { projectId?: string },
+  const [project, setProject] = useState<any | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const [note, setNote] = useState(""),
 
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>;
+    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
 
-  useEffect(() => {
+  useEffect(() =></string> {
     async function load() {
-      if (!projectId) return;
+      if (!projectId) return,
       try {
-        setLoading(true);
-        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers });
-        const json = await res.json();
-        if (!json.ok) throw new Error(json.error || "Failed to load project");
-        setProject(json.project);
+        setLoading(true),
+        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
+        const json = await res.json(),
+        if (!json.ok) throw new Error(json.error || "Failed to load project"),
+        setProject(json.project),
       } catch (e: any) {
-        setError(e.message);
+        setError(e.message)
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
     }
-    load();
-  }, [projectId]);
+    load(),
+  }, [projectId]),
 
-  const [showFeedback, setShowFeedback] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false),
 
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })});
-    const json = await res.json();
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
+    const json = await res.json(),
     if (json.ok) {
-      setProject(json.project);
-      setNote("");
-      setShowFeedback(true);
+      setProject(json.project),
+      setNote(""),
+      setShowFeedback(true),
     }
   }
 
@@ -54,11 +54,11 @@ export default function ProjectPage() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })});
-    const json = await res.json();
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
+    const json = await res.json(),
     if (json.ok) {
-      setProject(json.project);
-      setShowFeedback(true);
+      setProject(json.project),
+      setShowFeedback(true),
     }
   }
 
@@ -138,7 +138,7 @@ export default function ProjectPage() {
               )}
             </div>
             <div className="flex gap-2">
-              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
+              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3</input> py-2" />
               <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
             </div>
           </section>
@@ -154,8 +154,8 @@ export default function ProjectPage() {
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
         defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
-        userHeaders={headers}
+        userHeaders={</FeedbackModal>headers}
       />
     </div>
-  );
+  ),
 }

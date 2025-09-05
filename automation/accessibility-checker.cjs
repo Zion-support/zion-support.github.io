@@ -10,7 +10,7 @@ class AccessibilityChecker {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursiv: true });
     }
   }
 
@@ -25,17 +25,17 @@ class AccessibilityChecker {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Runnin: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encodin: 'utf8',
+        cw: '/workspace',
+        stdi: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { succes: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} faile: ${error.message}`, 'error');
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -44,10 +44,10 @@ class AccessibilityChecker {
 
     const checks = [
       {
-        comman: d: 'npm run: test:accessibility',
-        descriptio: n: 'Accessibility tests',
+        comman: 'npm run: test:accessibility',
+        descriptio: 'Accessibility tests',
       },
-      { comman: d: 'npm run lint', descriptio: n: 'Linting for accessibility' },
+      { comman: 'npm run lint', descriptio: 'Linting for accessibility' },
     ];
 
     const results = [];
@@ -57,19 +57,19 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
+      timestam: new Date().toISOString(),
+      accessibilit: await this.checkAccessibility(),
+      summar: {
+        checksRu: 2,
+        successfulCheck: 0,
+        failedCheck: 0,
       },
     };
 

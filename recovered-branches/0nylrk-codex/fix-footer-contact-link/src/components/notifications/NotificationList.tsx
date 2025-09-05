@@ -1,18 +1,18 @@
 
-import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
+import React from 'react',
+import { ScrollArea } from '@/components/ui/scroll-area',
+import { Skeleton } from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { NotificationItem } from './NotificationItem',
+import { Notification } from '@/context/notifications',
 
 interface NotificationListProps {
-  loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
-  onRetry: () => void;
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) =></void> Promise<void>,
+  onRetry</void>: () => void
 }
 
 export const NotificationList: React.FC<NotificationListProps> = ({
@@ -21,7 +21,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications,
   onMarkAsRead,
   onDismiss,
-  onRetry
+ </NotificationListProps> onRetry
 }) => {
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
@@ -58,5 +58,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ))
       )}
     </ScrollArea>
-  );
-};
+  ),
+},

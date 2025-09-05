@@ -1,16 +1,16 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEOOptimizer from '../components/SEOOptimizer',
+import AnalyticsTracker from '../components/AnalyticsTracker',
+import ErrorBoundary from '../components/ErrorBoundary',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+  const lastUpdated = 'January 17, 2025',
 
   const privacySections = [
     {
@@ -18,10 +18,8 @@ const PrivacyPage: React.FC = () => {
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)',
+        'Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)',
         'Communication records (emails, phone calls, support tickets)'
       ]
     },
@@ -30,12 +28,9 @@ const PrivacyPage: React.FC = () => {
       icon: <Settings className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations'
+        'Provide and improve our servicesCommunicate with you about our services',
+        'Process payments and manage accountsSend marketing communications (with consent)',
+        'Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
     },
     {
@@ -43,10 +38,8 @@ const PrivacyPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentiality',
+        'Comply with legal requirements and court ordersProtect our rights, property, and safety',
         'Business transfers (with notice and choice)'
       ]
     },
@@ -55,14 +48,12 @@ const PrivacyPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessments',
+        'Access controls and authentication measuresEmployee training on data protection',
         'Incident response and breach notification procedures'
       ]
     }
-  ];
+  ],
 
   const rights = [
     {
@@ -95,7 +86,7 @@ const PrivacyPage: React.FC = () => {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-  ];
+  ],
 
   return (
     <ErrorBoundary>
@@ -408,7 +399,7 @@ const PrivacyPage: React.FC = () => {
                   If you have any questions about this Privacy Policy or our data practices, 
                   please don't hesitate to contact us.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
@@ -430,9 +421,9 @@ const PrivacyPage: React.FC = () => {
         </main>
       </Layout>
     </ErrorBoundary>
-  );
-};
+  )
+},
 
-export default PrivacyPage;
+export default PrivacyPage,
 
  

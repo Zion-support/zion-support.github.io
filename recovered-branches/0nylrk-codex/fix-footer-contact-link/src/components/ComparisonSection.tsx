@@ -1,8 +1,8 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button",
+import { CheckCircle2 } from "lucide-react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 
 export function ComparisonSection() {
   return (
@@ -61,5 +61,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

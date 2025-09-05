@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react',
 
 export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -65,36 +66,36 @@ export default function UltraAdvancedNavigation2026V2() {
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-2 text-sm">
-            <div className="flex items-center space-x-6 text-gray-300">
-              <div className="flex items-center space-x-2">
+      <div className="bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="flex items-center justify-between py-2 text-sm"></div>
+            <div className="flex items-center space-x-6 text-gray-300"></div>
+              <div className="flex items-center space-x-2"></div>
                 <Phone className="w-4 h-4 text-purple-400" />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <Mail className="w-4 h-4 text-blue-400" />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <MapPin className="w-4 h-4 text-green-400" />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">
+            <div className="flex items-center space-x-4"></div>
+              <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors"></Link>
                 🚀 New 2026 Services
               </Link>
             </div>
@@ -107,43 +108,48 @@ export default function UltraAdvancedNavigation2026V2() {
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
           : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
+      }
+      `}>
+      </nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group"></Link>
+              <div className="relative"></div>
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300"></div>
                   Z
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </div>
-              <div className="hidden sm:block">
+              <div className="hidden sm:block"></div>
                 <div className="text-xl font-bold text-white">Zion Tech Group</div>
                 <div className="text-xs text-gray-400">Innovation 2026</div>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8"></div>
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative group"></div>
                   {item.dropdown ? (
                     <button
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                     >
-                      {item.icon}
+                      {item.icon
+  },
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
                   ) : (
                     <Link
-                      href={item.href}
+                      href={item.href
+  },
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                    >
-                      {item.icon}
+                    ></Link>
+                      {item.icon
+  },
                       <span>{item.name}</span>
                     </Link>
                   )}
@@ -155,18 +161,22 @@ export default function UltraAdvancedNavigation2026V2() {
                       onMouseLeave={() => setActiveDropdown(null)}
                       className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4"
                     >
-                      <div className="grid grid-cols-1 gap-2">
+                      <div className="grid grid-cols-1 gap-2"></div>
                         {item.dropdown.map((dropdownItem) => (
                           <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
+                            key={dropdownItem.name
+  },
+                            href={dropdownItem.href
+  },
                             className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
-                          >
-                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
-                              {dropdownItem.icon}
+                          ></Link>
+                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors"></div>
+                              {dropdownItem.icon
+  },
                             </div>
-                            <span className="text-gray-300 group-hover:text-white transition-colors">
-                              {dropdownItem.name}
+                            <span className="text-gray-300 group-hover:text-white transition-colors"></span>
+                              {dropdownItem.name
+  },
                             </span>
                           </Link>
                         ))}
@@ -178,9 +188,9 @@ export default function UltraAdvancedNavigation2026V2() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/contact">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <div className="hidden lg:flex items-center space-x-4"></div>
+              <Link href="/contact"></Link>
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"></button>
                   Get Started
                 </button>
               </Link>
@@ -198,7 +208,7 @@ export default function UltraAdvancedNavigation2026V2() {
       </nav>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
@@ -206,9 +216,9 @@ export default function UltraAdvancedNavigation2026V2() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
-          >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
+          ></motion>
+            <div className="p-6"></div>
+              <div className="flex items-center justify-between mb-8"></div>
                 <div className="text-xl font-bold text-white">Menu</div>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -218,17 +228,18 @@ export default function UltraAdvancedNavigation2026V2() {
                 </button>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6"></div>
                 {navigationItems.map((item) => (
-                  <div key={item.name}>
+                  <div key={item.name}></div>
                     {item.dropdown ? (
-                      <div>
+                      <div></div>
                             <button
                               onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                               className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                             >
-                              <div className="flex items-center space-x-3">
-                                {item.icon}
+                              <div className="flex items-center space-x-3"></div>
+                                {item.icon
+  },
                                 <span>{item.name}</span>
                               </div>
                               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -236,15 +247,18 @@ export default function UltraAdvancedNavigation2026V2() {
                               }`} />
                             </button>
                             {activeDropdown === item.name && (
-                              <div className="ml-6 mt-2 space-y-2">
+                              <div className="ml-6 mt-2 space-y-2"></div>
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
+                                    key={dropdownItem.name
+  },
+                                    href={dropdownItem.href
+  },
                                     onClick={() => setIsOpen(false)}
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
                                   >
-                                    {dropdownItem.icon}
+                                    {dropdownItem.icon
+  },
                                     <span>{dropdownItem.name}</span>
                                   </Link>
                                 ))}
@@ -253,36 +267,38 @@ export default function UltraAdvancedNavigation2026V2() {
                           </div>
                     ) : (
                       <Link
-                        href={item.href}
+                        href={item.href
+  },
                         onClick={() => setIsOpen(false)}
                         className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
-                        {item.icon}
+                        {item.icon
+  },
                         <span>{item.name}</span>
                       </Link>
                     )}
                   </div>
                 ))}
 
-                <div className="pt-6 border-t border-white/10">
+                <div className="pt-6 border-t border-white/10"></div>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"></button>
                       Get Started
                     </button>
                   </Link>
                 </div>
 
                 {/* Mobile Contact Info */}
-                <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
+                <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400"></div>
+                  <div className="flex items-center space-x-2"></div>
                     <Phone className="w-4 h-4 text-purple-400" />
                     <span>{contactInfo.mobile}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2"></div>
                     <Mail className="w-4 h-4 text-blue-400" />
                     <span>{contactInfo.email}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2"></div>
                     <MapPin className="w-4 h-4 text-green-400" />
                     <span className="text-xs">{contactInfo.address}</span>
                   </div>
@@ -302,11 +318,11 @@ export default function UltraAdvancedNavigation2026V2() {
           transition={{ duration: 0.3 }}
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
-        />
+ </motion>       />
       )}
 
       {/* Spacer for fixed navigation */}
       <div className="h-32"></div>
     </>
-  );
+  ),
 }

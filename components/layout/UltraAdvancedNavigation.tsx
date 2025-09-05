@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
   Bot, Car, Building2, DollarSign, Monitor, Users,
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const UltraAdvancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -215,20 +216,22 @@ const UltraAdvancedNavigation: React.FC = () => {
       href: '/contact',
       icon: null
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
-    }`}>
+    }
+      `}>
+      </nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -237,13 +240,13 @@ const UltraAdvancedNavigation: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center"
-          >
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          ></motion>
+            <Link href="/" className="flex items-center space-x-3 group"></Link>
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <div className="hidden sm:block">
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <div className="hidden sm:block"></div>
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></div>
                   Zion Tech Group
                 </div>
                 <div className="text-xs text-gray-400">Revolutionary Technology</div>
@@ -252,9 +255,9 @@ const UltraAdvancedNavigation: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8"></div>
             {navigationItems.map((item, index) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className="relative group"></div>
                 {item.dropdown ? (
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
@@ -268,9 +271,10 @@ const UltraAdvancedNavigation: React.FC = () => {
                   </button>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={item.href
+  },
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
+                  ></Link>
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
                   </Link>
@@ -278,7 +282,7 @@ const UltraAdvancedNavigation: React.FC = () => {
 
                 {/* Dropdown Menu */}
                 {item.dropdown && (
-                  <AnimatePresence>
+                  <AnimatePresence></AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -286,27 +290,31 @@ const UltraAdvancedNavigation: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
-                      >
-                        <div className="p-4">
+                      ></motion>
+                        <div className="p-4"></div>
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
-                          <div className="space-y-2">
+                          <div className="space-y-2"></div>
                             {item.dropdown.map((dropdownItem) => (
                               <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
+                                key={dropdownItem.name
+  },
+                                href={dropdownItem.href
+  },
                                 className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
-                              >
-                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                              ></Link>
+                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200"></div>
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
                                 </div>
-                                <div className="flex-1">
-                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
-                                    {dropdownItem.name}
+                                <div className="flex-1"></div>
+                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200"></div>
+                                    {dropdownItem.name
+  },
                                   </div>
                                   <div className="text-sm text-gray-400">{dropdownItem.description}</div>
                                 </div>
-                                <div className="text-sm font-semibold text-cyan-400">
-                                  {dropdownItem.price}
+                                <div className="text-sm font-semibold text-cyan-400"></div>
+                                  {dropdownItem.price
+  },
                                 </div>
                               </Link>
                             ))}
@@ -321,13 +329,13 @@ const UltraAdvancedNavigation: React.FC = () => {
           </div>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm text-gray-300">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+          <div className="hidden lg:flex items-center space-x-6"></div>
+            <div className="flex items-center space-x-4 text-sm text-gray-300"></div>
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200"></a>
                 <Phone className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.mobile}</span>
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200"></a>
                 <Mail className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.email}</span>
               </a>
@@ -338,13 +346,13 @@ const UltraAdvancedNavigation: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-            >
+            ></motion>
               Get Started
             </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden"></div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -356,7 +364,7 @@ const UltraAdvancedNavigation: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -364,17 +372,17 @@ const UltraAdvancedNavigation: React.FC = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
-          >
-            <div className="px-4 py-6 space-y-4">
+          ></motion>
+            <div className="px-4 py-6 space-y-4"></div>
               {navigationItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name}></div>
                   {item.dropdown ? (
-                    <div>
+                    <div></div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
-                        <div className="flex items-center space-x-3">
+                        <div className="flex items-center space-x-3"></div>
                           {item.icon && <item.icon className="w-5 h-5" />}
                           <span>{item.name}</span>
                         </div>
@@ -384,15 +392,18 @@ const UltraAdvancedNavigation: React.FC = () => {
                       </button>
                       
                       {activeDropdown === item.name && (
-                        <div className="ml-8 mt-2 space-y-2">
+                        <div className="ml-8 mt-2 space-y-2"></div>
                           {item.dropdown.map((dropdownItem) => (
                             <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
+                              key={dropdownItem.name
+  },
+                              href={dropdownItem.href
+  },
                               onClick={() => setIsOpen(false)}
                               className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
                             >
-                              {dropdownItem.name}
+                              {dropdownItem.name
+  },
                             </Link>
                           ))}
                         </div>
@@ -400,7 +411,8 @@ const UltraAdvancedNavigation: React.FC = () => {
                     </div>
                   ) : (
                     <Link
-                      href={item.href}
+                      href={item.href
+  },
                       onClick={() => setIsOpen(false)}
                       className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                     >
@@ -412,17 +424,17 @@ const UltraAdvancedNavigation: React.FC = () => {
               ))}
               
               {/* Mobile Contact Info */}
-              <div className="pt-6 border-t border-gray-800/50">
-                <div className="space-y-3 text-sm text-gray-400">
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+              <div className="pt-6 border-t border-gray-800/50"></div>
+                <div className="space-y-3 text-sm text-gray-400"></div>
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200"></a>
                     <Phone className="w-4 h-4" />
                     <span>{contactInfo.mobile}</span>
                   </a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200"></a>
                     <Mail className="w-4 h-4" />
                     <span>{contactInfo.email}</span>
                   </a>
-                  <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-3"></div>
                     <MapPin className="w-4 h-4 mt-0.5" />
                     <span>{contactInfo.address}</span>
                   </div>
@@ -433,7 +445,7 @@ const UltraAdvancedNavigation: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-                >
+                ></motion>
                   Get Started
                 </motion.a>
               </div>
@@ -442,7 +454,7 @@ const UltraAdvancedNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  ),
+},
 
-export default UltraAdvancedNavigation;
+export default UltraAdvancedNavigation,

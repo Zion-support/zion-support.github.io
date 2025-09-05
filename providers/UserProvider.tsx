@@ -28,7 +28,7 @@ const DEFAULT_USER: User = {
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
 
-  useEffect(() => {
+  useEffect(() =></User> {
     try {
       const raw = localStorage.getItem('zion.user')
       if (raw) {
@@ -48,7 +48,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }, [user])
 
-  const value = useMemo<UserContextValue>(() => ({
+  const value = useMemo<UserContextValue</UserContextValue>>(() => ({
     user,
     setUser,
     logout: () => setUser(null),

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Head from "next/head";
+import { useState } from "react",
+import Head from "next/head",
 
 export default function Partners() {
   const [form, setForm] = useState({
@@ -7,14 +7,14 @@ export default function Partners() {
     entityType: "",
     pocName: "",
     pocEmail: "",
-    useCaseType: "Education Partnership"});
-  const [result, setResult] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+    useCaseType: "Education Partnership"}),
+  const [result, setResult] = useState<any>(null),
+  const [loading, setLoading] = useState(false),
 
   async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setResult(null);
+    e.preventDefault(),
+    setLoading(true),
+    setResult(null),
     const res = await fetch("/api/partners/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,10 +22,10 @@ export default function Partners() {
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})});
-    const data = await res.json();
-    setLoading(false);
-    setResult(data);
+        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+    const data = await res.json(),
+    setLoading(false),
+    setResult(data),
   }
 
   return (
@@ -40,13 +40,13 @@ export default function Partners() {
           <form onSubmit={submit} className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Partner Registration</h2>
             <label className="block text-sm mb-2">Name</label>
-            <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required /></input>
             <label className="block text-sm mb-2">Entity Type</label>
-            <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...form, entityType: e.target.value })} required />
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...form, entityType: e.target.value })} req</input>uired />
             <label className="block text-sm mb-2">Point of Contact</label>
             <div className="grid grid-cols-2 gap-3 mb-4">
-              <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, pocName: e.target.value })} required />
-              <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, pocEmail: e.target.value })} required />
+              <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, pocName: e.target.value</input> })} required />
+              <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, pocEmail: e.targ</input>et.value })} required />
             </div>
             <label className="block text-sm mb-2">Use Case</label>
             <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, useCaseType: e.target.value })}>
@@ -91,5 +91,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  );
+  ),
 }

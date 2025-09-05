@@ -1,21 +1,21 @@
 
-import React from "react";
+import React from "react",
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
-import { toast } from "@/hooks/use-toast";
-import { InfoIcon } from "lucide-react";
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from "lucide-react",
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from "@/components/ui/tooltip";
+  TooltipTrigger} from "@/components/ui/tooltip",
 
 export function RoleManagement() {
   // Mock team members data
@@ -67,20 +67,20 @@ export function RoleManagement() {
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
-        manageBilling: false}}];
+        manageBilling: false}}],
 
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
       title: "Permission updated",
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
-  };
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`}),
+  },
 
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"};
+    "Viewer": "Read-only access to candidates"},
 
   return (
     <div className="space-y-6">
@@ -207,7 +207,7 @@ export function RoleManagement() {
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
-                  />
+                  /></Switch>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch 
@@ -215,7 +215,7 @@ export function RoleManagement() {
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
-                  />
+           </Switch>       />
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch 
@@ -223,14 +223,14 @@ export function RoleManagement() {
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
-                  />
+  </Switch>                />
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "manageTeam", checked)
-                    }
+               </Switch>     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
@@ -238,7 +238,7 @@ export function RoleManagement() {
                     checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
-                    }
+      </Switch>              }
                   />
                 </TableCell>
               </TableRow>
@@ -247,5 +247,5 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  );
+  ),
 }

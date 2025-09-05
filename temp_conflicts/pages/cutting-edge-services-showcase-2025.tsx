@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
   CheckCircle, ArrowRight, Zap, Target, Microscope,
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
-];
+],
 
 const serviceCategories = [
   {
@@ -64,27 +64,27 @@ const serviceCategories = [
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
   }
-];
+],
 
 export default function CuttingEdgeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,7 +94,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -105,7 +105,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <>
@@ -157,7 +157,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                {heroStats.map((stat, index) => (
+                {heroStats.map((stat, index) =></motion> (
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -214,7 +214,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-                />
+         </input>       />
               </div>
 
               {/* Category Filter */}
@@ -281,7 +281,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((s</motion>ervice, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -391,8 +391,8 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                 >
@@ -470,5 +470,5 @@ export default function CuttingEdgeServicesShowcase2025() {
         </section>
       </Layout>
     </>
-  );
+  ),
 }

@@ -1,5 +1,5 @@
-  };
-}};
+  },
+}},
 ,
 // Run all fixes,
 fixFooter(),

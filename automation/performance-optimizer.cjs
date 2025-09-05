@@ -12,7 +12,7 @@ class PerformanceOptimizer {
   ensureLogsDir() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursiv: e: true });
+      fs.mkdirSync(logsDir, { recursiv: true });
     }
   }
 
@@ -26,7 +26,7 @@ class PerformanceOptimizer {
   async optimizeBundle() {
     try {
       this.log('Optimizing bundle size...');
-      execSync('npm run: build:analyze', { stdi: o: 'pipe' });
+      execSync('npm run: build:analyze', { stdi: 'pipe' });
       this.optimizations.push('Bundle analysis completed');
       this.log('✓ Bundle analysis completed');
     } catch (error) {
@@ -40,7 +40,7 @@ class PerformanceOptimizer {
       // Check if there are images to optimize
       const publicDir = path.join(process.cwd(), 'public');
       if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursiv: e: true });
+        const files = fs.readdirSync(publicDir, { recursiv: true });
         const imageFiles = files.filter(
           file =>
             typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
@@ -80,9 +80,9 @@ class PerformanceOptimizer {
 
   async generateReport() {
     const report = {
-      timestam: p: new Date().toISOString(),
-      optimization: s: this.optimizations,
-      recommendation: s: [
+      timestam: new Date().toISOString(),
+      optimization: this.optimizations,
+      recommendation: [
         'Consider implementing code splitting',
         'Optimize images using WebP format',
         'Remove unused dependencies',
@@ -111,7 +111,7 @@ class PerformanceOptimizer {
 
       this.log('='.repeat(50));
       this.log(
-        `🎯 Performance Optimizer completed. Optimization: s: ${this.optimizations.length}`
+        `🎯 Performance Optimizer completed. Optimization: ${this.optimizations.length}`
       );
       this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`));
     } catch (error) {

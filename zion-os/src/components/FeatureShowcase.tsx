@@ -1,15 +1,15 @@
-"use client";
+"use client",
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react",
 
 interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  details: string[];
-  demo?: string;
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string,
+  details: string[],
+  demo?: string
 }
 
 const features: Feature[] = [
@@ -67,15 +67,15 @@ const features: Feature[] = [
       "Cross-chain bridges"
     ]
   }
-];
+],
 
 export function FeatureShowcase() {
-  const [activeFeature, setActiveFeature] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeFeature, setActiveFeature] = useState<string | null>(null),
+  const [isVisible, setIsVisible] = useState(false),
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  useEffect(() =></string> {
+    setIsVisible(true),
+  }, []),
 
   const getColorClasses = (color: string) => {
     const colorMap = {
@@ -85,9 +85,9 @@ export function FeatureShowcase() {
       red: "from-red-500 to-red-600",
       yellow: "from-yellow-500 to-yellow-600",
       indigo: "from-indigo-500 to-indigo-600"
-    };
-    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600";
-  };
+    },
+    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600",
+  },
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
@@ -216,5 +216,5 @@ export function FeatureShowcase() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

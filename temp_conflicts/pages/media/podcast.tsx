@@ -1,39 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react',
+import Link from 'next/link',
 
 type EpisodeListItem = {
-  id: string;
-  title: string;
-  inviteeName: string;
-  createdAt: string;
-  summary: string;
+  id: string,
+  title: string,
+  inviteeName: string,
+  createdAt: string,
+  summary: string,
   audio?: {
-    mp3Url?: string;
-    wavUrl?: string;
-    mp4Url?: string;
-  };
-};
+    mp3Url?: string,
+    wavUrl?: string,
+    mp4Url?: string
+  },
+},
 
 export default function PodcastIndexPage() {
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]),
+  const [loading, setLoading] = useState<boolean>(true),
 
-  useEffect(() => {
+  useEffect(() =></boolean> {
     const load = async () => {
       try {
-        const res = await fetch('/api/podcast/list');
-        const data = await res.json();
-        setEpisodes(data.episodes || []);
+        const res = await fetch('/api/podcast/list'),
+        const data = await res.json(),
+        setEpisodes(data.episodes || []),
       } catch (err) {
-        console.error(err);
+        console.error(err),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
-    };
-    load();
-  }, []);
+    },
+    load(),
+  }, []),
 
-  if (loading) return <div>Loading episodes…</div>;
+  if (loading) return <div>Loading episodes…</div>,
 
   return (
     <div className="space-y-6">
@@ -76,5 +76,5 @@ export default function PodcastIndexPage() {
         ))}
       </ul>
     </div>
-  );
+  ),
 }

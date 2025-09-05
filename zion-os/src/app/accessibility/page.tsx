@@ -291,7 +291,7 @@ export default function AccessibilityPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Help Us Improve Accessibility
           </h2>
@@ -309,5 +309,5 @@ export default function AccessibilityPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -16,7 +16,7 @@ export default function ZkVotePage() {
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult] = useState<any>(null)
 
-  useEffect(() => {
+  useEffect(() =></any> {
     if (typeof window !== 'undefined' && (window as any).ethereum) {
       setProvider(new BrowserProvider((window as any).ethereum))
     }
@@ -78,11 +78,11 @@ export default function ZkVotePage() {
 
       <div className="space-y-2">
         <label className="block text-sm">Group ID</label>
-        <input className="w-full border p-2 rounded" value={groupId} onChange={e=>setGroupId(e.target.value)} />
+        <input className="w-full border p-2 rounded" value={groupId} onChange={e=>setGroupId(e.target.valu</input>e)} />
         <label className="block text-sm">Option ID</label>
-        <input className="w-full border p-2 rounded" type="number" value={optionId} onChange={e=>setOptionId(parseInt(e.target.value||'0',10))} />
+        <input className="w-full border p-2 rounded" type="number" value={optionId} onChange={e=>setOptionId(parseInt(e.target.value</input>||'0',10))} />
         <label className="block text-sm">Weight (ZION$)</label>
-        <input className="w-full border p-2 rounded" type="number" value={weight} onChange={e=>setWeight(e.target.value)} />
+        <input className="w-full border p-2 rounded" type="number" value={weight} onChange={e=>setWeig</input>ht(e.target.value)} />
       </div>
 
       <div className="space-x-2">

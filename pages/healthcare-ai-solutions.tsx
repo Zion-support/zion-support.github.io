@@ -1,5 +1,5 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function HealthcareAISolutions() {
 	return (
@@ -20,7 +20,7 @@ export default function HealthcareAISolutions() {
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
+			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
-	);
+	)
 }

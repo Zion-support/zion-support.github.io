@@ -1,26 +1,26 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
 
-interface Node { id: string; tokens: string[] }
-interface Edge { source: string; target: string; weight: number; terms: string[] }
-interface Report { generatedAt: string; nodes: Node[]; edges: Edge[]; topTerms: { term: string; count: number }[] }
+interface Node { id: string, tokens: string[] }
+interface Edge { source: string, target: string, weight: number, terms: string[] }
+interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
 
-type Props = { report: Report | null };
+type Props = { report: Report | null },
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () =></Props> {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'knowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 };
+    const file = path.join(process.cwd(), 'publicautomation', 'knowledge-graph.json'),
+    const raw = fs.readFileSync(file, 'utf8'),
+    const data = JSON.parse(raw),
+    return { props: { report: data }, revalidate: 86400 },
   } catch {
-    return { props: { report: null }, revalidate: 86400 };
+    return { props: { report: null }, revalidate: 86400 },
   }
-};
+},
 
 export default function KnowledgeGraph({ report }: Props) {
-  if (!report) return <div>No knowledge graph yet.</div>;
+  if (!report) return <div>No knowledge graph yet.</div>,
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -51,5 +51,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+  ),
 }

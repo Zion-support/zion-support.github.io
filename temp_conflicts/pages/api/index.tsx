@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import Link from 'next/link',
 
 export default function ApiHubPage() {
 	return (
@@ -9,7 +9,7 @@ export default function ApiHubPage() {
 			<Head>
 				<title>API | Zion Tech Group</title>
 				<meta name="description" content="Zion Tech Group API hub and documentation." />
-				<link rel="canonical" href="https://ziontechgroup.com/api/" />
+				<link rel="canonical" href="https: //ziontechgroup.com/api/" />
 			</Head>
 			<Layout>
 				<section className="min-h-[60vh] px-4 py-24">
@@ -19,5 +19,5 @@ export default function ApiHubPage() {
 				</section>
 			</Layout>
 		</>
-	);
+	)
 }

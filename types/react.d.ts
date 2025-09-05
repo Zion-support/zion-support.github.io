@@ -1,4 +1,4 @@
-/*
+</string>/*
   Minimal React type declarations.
   ---------------------------------------------------------------------------
   These definitions are **not** a replacement for `@types/react` – they only
@@ -13,30 +13,30 @@
 declare module "react" {
   // Basic ReactElement stub (JSX trees ultimately compile into this).
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
-    type: T;
-    props: P;
-    key: React.Key | null;
+  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any></P> {
+    type: T,
+    props: P,
+    key: React.Key | null
   }
 
   // Function Component (very trimmed-down).
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  export interface FC<P = Record<string, unknown>> {
-    (props: P): ReactElement | null;
+  export interface FC<P = Record<string, unkno</P>wn>> {
+    (props: P): ReactElement | null
   }
 
   // Common hooks we rely on.
-  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+  export function useMemo<T>(factor</T>y: () => T, deps: readonly unknown[]): T,
 
-  export type Key = string | number;
+  export type Key = string | number,
 
   // Default export so `import React from 'react'` keeps working even without
   // the real react package being installed.
   const React: {
-    useMemo: typeof useMemo;
-  } & Record<string, unknown>;
+    useMemo: typeof useMemo
+  } & Record<string, unknown>,
 
-  export default React;
+  export default React,
 }
 
 declare namespace React {
@@ -44,6 +44,6 @@ declare namespace React {
   // errors when `@types/react` is not present.
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface IntrinsicElements {
-    [elemName: string]: any;
+    [elemName: string]: any
   }
 }

@@ -1,64 +1,64 @@
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
+import React, { useMemo, useState } from "react",
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",
 
 export interface MilestoneAssistantProps {
-  scopeOfWork: string;
-  startDateIso: string;
-  endDateIso: string;
-  projectType: ProjectType;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+  scopeOfWork: string,
+  startDateIso: string,
+  endDateIso: string,
+  projectType: ProjectType,
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void
 }
 
 export function MilestoneAssistant(props: MilestoneAssistantProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [autoAdd, setAutoAdd] = useState(true);
-  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [autoAdd, setAutoAdd] = useState(true),
+  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]),
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(0),
 
-  const isDisabled = useMemo(() => {
-    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType;
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
+  const isDisabled = useMemo(() =></number> {
+    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType,
+  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]),
 
   async function generate() {
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     try {
       const payload: MilestoneSuggestionInput = {
         scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
         endDateIso: props.endDateIso,
         projectType: props.projectType
-      };
+      },
       const res = await fetch("/api/ai/milestones", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
-      });
+      }),
       if (!res.ok) {
-        const t = await res.text();
-        throw new Error(t || "Failed to generate");
+        const t = await res.text(),
+        throw new Error(t || "Failed to generate"),
       }
-      const data = await res.json();
-      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
-      setExpandedIdx(0);
+      const data = await res.json(),
+      setItems(Array.isArray(data?.milestones) ? data.milestones : []),
+      setExpandedIdx(0),
     } catch (e: any) {
-      setError(e?.message || "Unexpected error");
+      setError(e?.message || "Unexpected error")
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {
-    setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
+    setItems(</SuggestedMilestoneItem>(prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m))),
   }
 
   function removeItem(idx: number) {
-    setItems((prev) => prev.filter((_, i) => i !== idx));
+    setItems((prev) => prev.filter((_, i) => i !== idx)),
   }
 
   function accept() {
-    props.onAccept?.(items, autoAdd);
+    props.onAccept?.(items, autoAdd),
   }
 
   return (
@@ -68,7 +68,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>
         <label style={{ display: "flex", gap: 6, alignItems: "center" }}>
-          <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />
+          <input type="checkbox" checked={autoAdd} onChange={(e) =</input>> setAutoAdd(e.target.checked)} />
           Auto-add to Milestone Tracker
         </label>
       </div>
@@ -102,7 +102,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                   <input
                     value={item.title}
                     onChange={(e) => updateItem(idx, { title: e.target.value })}
-                    placeholder="Title"
+                  </input>  placeholder="Title"
                   />
                 </div>
                 <div style={{ display: "grid", gap: 6 }}>
@@ -111,7 +111,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                     value={item.description}
                     onChange={(e) => updateItem(idx, { description: e.target.value })}
                     rows={3}
-                    placeholder="Description"
+                </textarea>    placeholder="Description"
                   />
                 </div>
                 <div style={{ display: "grid", gap: 6 }}>
@@ -119,7 +119,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                   <input
                     type="date"
                     value={item.suggestedDueDateIso.slice(0, 10)}
-                    onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() })}
+                    onChange={(e) => updateItem(idx, { suggestedDueDateIso: ne</input>w Date(e.target.value).toISOString() })}
                   />
                 </div>
                 <div style={{ display: "grid", gap: 6 }}>
@@ -128,7 +128,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                     type="number"
                     min={1}
                     value={item.estimatedEffortHours}
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math</input>.max(1, parseInt(e.target.value || "0", 10)) })}
                   />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>
@@ -141,7 +141,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         ))}
       </div>
     </div>
-  );
+  ),
 }
 
-export default MilestoneAssistant;
+export default MilestoneAssistant,

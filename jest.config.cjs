@@ -1,10 +1,10 @@
-module.exports = {
-  testEnvironmen: t: 'jsdom',
+</rootDir>module.exports = {
+  testEnvironmen: 'jsdom',
   setupFilesAfterEn: v: ['<rootDir>/jest.setup.js'],
-  moduleNameMappin: g: {
+  moduleNameMappin: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  testMatc: h: [
+  testMatc: [
     '**/__tests__/**/*.(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)',
   ],
@@ -15,8 +15,8 @@ module.exports = {
     '!**/node_modules/**',
   ],
   transfor: m: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { preset: s: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { preset: ['next/babel'] }],
   },
-  moduleFileExtension: s: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePattern: s: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleFileExtension: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePattern: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 };

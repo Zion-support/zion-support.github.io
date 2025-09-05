@@ -1,21 +1,21 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect, Suspense } from 'react',
+import { ContactInfo, AnimationState } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner',
+// import PerformanceMonitor from '../components/PerformanceMonitor',
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
-  });
-  useEffect(() => {
+  }),
+  useEffect(() =></AnimationState> {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100);
+    }, 100),
     return () => clearTimeout(timer)
-  }, []);
+  }, []),
   if (animationState.hasError) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -29,14 +29,14 @@ export default function Home() {
           </button>
         </div>
       </div>
-    );
+    )
   }
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
   return (
     <>
       <Head>
@@ -65,7 +65,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __htm: l.stringify({
-              "@context": "http: s://schema.org",
+              "@context": "http: //schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": contact.site,
@@ -225,10 +225,10 @@ export default function Home() {
               how our innovative solutions can drive your business forward.
             </p>
             <div className="flex flex-col: sm-row items-center justify-center gap-4 mb-8">
-              <a href={`te: l:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600: hover-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`te: ${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600: hover-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailt: o:${contact.email}`} className="px-6 py-3 bg-purple-600: hover-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailt: ${contact.email}`} className="px-6 py-3 bg-purple-600: hover-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
               <Link href="/contact" className="px-6 py-3 bg-slate-800: hover-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
@@ -248,15 +248,15 @@ export default function Home() {
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds: exceeded:', metrics)
-          }}
+      </PerformanceMonitor>    }}
         /> */}
       </ErrorBoundary>
     </>
   )
-  );
-import React from 'react';
-import Homepage2025 from '../components/Homepage2025';
+  ),
+import React from 'react',
+import Homepage2025 from '../components/Homepage2025',
 
 export default function HomePage() {
-  return <Homepage2025 />;
+  return <Homepage2025 />,
 }

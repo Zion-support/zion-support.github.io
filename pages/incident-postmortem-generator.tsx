@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function IncidentPostmortemGeneratorPage() {
   return (
@@ -15,7 +15,7 @@ export default function IncidentPostmortemGeneratorPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>
           <p className="text-slate-300">Generate high-quality RCAs by stitching logs, alerts, deploys, and chat history with templates and reviewer loops.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'RCA timeline assembly', 'Impact summary & customer comms', 'Template library & reviewer flow', 'Action items with owners & SLAs' ].map((f) => (
+            {[ 'RCA timeline assemblyImpact summary & customer comms', 'Template library & reviewer flowAction items with owners & SLAs' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-purple-500/30 text-slate-200">{f}</div>
             ))}
           </div>
@@ -26,6 +26,6 @@ export default function IncidentPostmortemGeneratorPage() {
         </div>
       </div>
     </Layout>
-  );
+  ),
 }
 

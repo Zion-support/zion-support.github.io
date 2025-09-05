@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, Zap, Shield, Rocket, Brain, Atom, 
   Users, Globe, Code, Server, Cpu, ArrowRight,
   TrendingUp, Award, Clock, DollarSign
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
   const pricingPlans = [
     {
@@ -25,12 +25,9 @@ export default function PricingPage() {
       textColor: 'text-blue-400',
       popular: false,
       features: [
-        'AI Business Intelligence Basic',
-        'Up to 5 team members',
-        'Basic analytics dashboard',
-        'Email support',
-        '14-day free trial',
-        'Standard integrations'
+        'AI Business Intelligence BasicUp to 5 team members',
+        'Basic analytics dashboardEmail support',
+        '14-day free trialStandard integrations'
       ],
       cta: 'Start Free Trial',
       ctaColor: 'from-blue-500 to-cyan-600'
@@ -46,14 +43,10 @@ export default function PricingPage() {
       textColor: 'text-purple-400',
       popular: true,
       features: [
-        'AI Business Intelligence Pro',
-        'AI Customer Experience',
-        'Up to 25 team members',
-        'Advanced analytics & reporting',
-        'Priority support',
-        '30-day free trial',
-        'Custom integrations',
-        'Advanced AI models'
+        'AI Business Intelligence ProAI Customer Experience',
+        'Up to 25 team membersAdvanced analytics & reporting',
+        'Priority support30-day free trial',
+        'Custom integrationsAdvanced AI models'
       ],
       cta: 'Start Free Trial',
       ctaColor: 'from-purple-500 to-pink-600'
@@ -69,16 +62,11 @@ export default function PricingPage() {
       textColor: 'text-green-400',
       popular: false,
       features: [
-        'All Professional features',
-        'Quantum Cybersecurity',
-        'Edge Computing Orchestration',
-        'Unlimited team members',
-        'Custom AI development',
-        'Dedicated support manager',
-        '60-day free trial',
-        'White-label solutions',
-        'SLA guarantees',
-        'On-premise deployment'
+        'All Professional featuresQuantum Cybersecurity',
+        'Edge Computing OrchestrationUnlimited team members',
+        'Custom AI developmentDedicated support manager',
+        '60-day free trialWhite-label solutions',
+        'SLA guaranteesOn-premise deployment'
       ],
       cta: 'Contact Sales',
       ctaColor: 'from-green-500 to-emerald-600'
@@ -94,21 +82,16 @@ export default function PricingPage() {
       textColor: 'text-orange-400',
       popular: false,
       features: [
-        'Fully customized solutions',
-        'Space technology integration',
-        'Quantum computing access',
-        'Dedicated development team',
-        '24/7 premium support',
-        'Custom trial period',
-        'Exclusive features',
-        'Strategic partnership',
-        'ROI optimization',
-        'Future technology access'
+        'Fully customized solutionsSpace technology integration',
+        'Quantum computing accessDedicated development team',
+        '24/7 premium supportCustom trial period',
+        'Exclusive featuresStrategic partnership',
+        'ROI optimizationFuture technology access'
       ],
       cta: 'Get Custom Quote',
       ctaColor: 'from-orange-500 to-red-600'
     }
-  ];
+  ],
 
   const addOns = [
     {
@@ -143,21 +126,21 @@ export default function PricingPage() {
       icon: Code,
       color: 'from-green-500 to-emerald-500'
     }
-  ];
+  ],
 
   const savings = {
     monthly: 0,
     annual: 20
-  };
+  },
 
-  const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId);
+  const handlePlanSelect = (planId: string) =></string> {
+    setSelectedPlan(planId),
     if (planId === 'custom') {
-      window.location.href = '/contact';
+      window.location.href = '/contact'
     } else {
-      window.location.href = '/contact';
+      window.location.href = '/contact',
     }
-  };
+  },
 
   return (
     <>
@@ -458,7 +441,7 @@ export default function PricingPage() {
                   AI, quantum computing, and space technology solutions.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className="flex flex-col sm: flex-row gap-6 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
@@ -484,5 +467,5 @@ export default function PricingPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

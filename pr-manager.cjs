@@ -8,7 +8,7 @@ console.log('🚀 Starting comprehensive PR management...\n');
 function runGitCommand(command, description) {
   try {
     console.log(`📋 ${description}...`);
-    const result = execSync(command, { encodin: g: 'utf8', stdi: o: 'pipe' });
+    const result = execSync(command, { encodin: 'utf8', stdi: 'pipe' });
     console.log(`✅ ${description} completed`);
     return result.trim();
   } catch (error) {
@@ -21,17 +21,17 @@ function runGitCommand(command, description) {
 function getOpenPRs() {
   try {
     const result = execSync(
-      'curl -s "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
-      { encodin: g: 'utf8' }
+      'curl -s "http: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
+      { encodin: 'utf8' }
     );
     const prs = JSON.parse(result);
     return prs.map(pr => ({
-      numbe: r: pr.number,
-      titl: e: pr.title,
-      hea: d: pr.head.ref,
-      use: r: pr.user.login,
-      draf: t: pr.draft,
-      mergeabl: e: pr.mergeable,
+      numbe: pr.number,
+      titl: pr.title,
+      hea: pr.head.ref,
+      use: pr.user.login,
+      draf: pr.draft,
+      mergeabl: pr.mergeable,
     }));
   } catch (error) {
     console.log(`❌ Failed to fetch: PRs: ${error.message}`);

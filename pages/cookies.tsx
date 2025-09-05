@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 export default function CookiesPage() {
   return (
@@ -19,5 +19,5 @@ export default function CookiesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }

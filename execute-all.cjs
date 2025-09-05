@@ -12,13 +12,13 @@ const scripts = [
 ];
 
 async function runScript(scriptPath) {
-  console.log(`\n📝 Runnin: g: ${scriptPath}`);
+  console.log(`\n📝 Runnin: ${scriptPath}`);
   try {
     require(`./${scriptPath}`);
-    console.log(`✅ Complete: d: ${scriptPath}`);
+    console.log(`✅ Complete: ${scriptPath}`);
     return true;
   } catch (error) {
-    console.log(`❌ Faile: d: ${scriptPath} - ${error.message}`);
+    console.log(`❌ Faile: ${scriptPath} - ${error.message}`);
     return false;
   }
 }
@@ -36,7 +36,7 @@ async function runAll() {
   const total = results.length;
 
   console.log(`\n🎉 Execution completed!`);
-  console.log(`📊 Result: s: ${successful}/${total} scripts successful`);
+  console.log(`📊 Result: ${successful}/${total} scripts successful`);
 
   if (successful < total) {
     console.log('\n⚠️ Failed: scripts:');
@@ -51,9 +51,9 @@ async function runAll() {
   console.log('1. Check the generated reports');
   console.log('2. Review any error messages');
   console.log(
-    '3. Ru: n: git add . && git commit -m "fea: t: Comprehensive automation improvements"'
+    '3. Ru: git add . && git commit -m "fea: Comprehensive automation improvements"'
   );
-  console.log('4. Ru: n: git push origin main');
+  console.log('4. Ru: git push origin main');
 }
 
 runAll().catch(console.error);

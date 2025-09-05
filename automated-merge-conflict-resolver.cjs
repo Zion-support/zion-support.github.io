@@ -71,7 +71,7 @@ function resolveConflicts() {
     // Get list of conflicted files
     const conflictedFiles = execSync(
       'git status --porcelain | grep "^UU\\|^AA\\|^DD" | cut -c4-',
-      { encodin: g: 'utf8' }
+      { encodin: 'utf8' }
     )
       .trim()
       .split('\n')
@@ -97,14 +97,14 @@ function resolveConflicts() {
 
         if (strategy === 'HEAD') {
           // Use our version (HEAD)
-          execSync(`git checkout --ours "${file}"`, { stdi: o: 'pipe' });
+          execSync(`git checkout --ours "${file}"`, { stdi: 'pipe' });
         } else if (strategy === 'THEIRS') {
           // Use their version (incoming)
-          execSync(`git checkout --theirs "${file}"`, { stdi: o: 'pipe' });
+          execSync(`git checkout --theirs "${file}"`, { stdi: 'pipe' });
         }
 
         // Add the resolved file
-        execSync(`git add "${file}"`, { stdi: o: 'pipe' });
+        execSync(`git add "${file}"`, { stdi: 'pipe' });
 
         console.log(`✅ Resolved ${file}`);
         resolvedCount++;
@@ -116,7 +116,7 @@ function resolveConflicts() {
 
     console.log(`\n📊 Resolution: Summary:`);
     console.log(`   ✅ Successfully: resolved: ${resolvedCount}`);
-    console.log(`   ❌ Error: s: ${errorCount}`);
+    console.log(`   ❌ Error: ${errorCount}`);
     console.log(`   📁 Total: files: ${conflictedFiles.length}`);
 
     if (errorCount === 0) {
@@ -137,7 +137,7 @@ function commitMerge() {
     console.log('\n💾 Committing merge...');
     execSync(
       'git commit -m "🔧 Resolve merge conflicts automatically - prefer HEAD version"',
-      { stdi: o: 'inherit' }
+      { stdi: 'inherit' }
     );
     console.log('✅ Merge committed successfully!');
     return true;
@@ -153,7 +153,7 @@ function main() {
   // Check if we're in a merge state
   try {
     execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', {
-      stdi: o: 'pipe',
+      stdi: 'pipe',
     });
   } catch (noConflictsError) {
     // No conflicts detected - this is expected behavior
@@ -180,7 +180,7 @@ function main() {
       );
       console.log('📋 Manual steps: required:');
       console.log('   1. Review the resolved files');
-      console.log('   2. Ru: n: git commit -m "Resolve merge conflicts"');
+      console.log('   2. Ru: git commit -m "Resolve merge conflicts"');
       console.log('   3. Push changes to remote repository');
     }
   } else {

@@ -1,23 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useState } from "react",
 
 export function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     // Simulate API call
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setEmail("");
-    }, 1000);
-  };
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000),
+  },
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -33,7 +33,7 @@ export function NewsletterForm() {
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =></Input> setEmail(e.target.value)}
             required
           />
           <Button 
@@ -46,5 +46,5 @@ export function NewsletterForm() {
         </form>
       )}
     </div>
-  );
+  ),
 }

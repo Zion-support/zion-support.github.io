@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  FileText, 
+  FileText,
   Download, 
   Calendar, 
   User, 
@@ -18,8 +18,8 @@ import {
   Eye,
   Clock,
   Award
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 const ReportsPage: React.FC = () => {
   const reports = [
@@ -29,7 +29,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
-      tags: ['Quantum Computing', 'Enterprise', 'Market Analysis', 'Future Tech'],
+      tags: ['Quantum ComputingEnterprise', 'Market AnalysisFuture Tech'],
       pages: 45,
       downloads: 1247,
       views: 5678,
@@ -43,7 +43,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],
+      tags: ['AIROI', 'Fortune 500Best Practices'],
       pages: 38,
       downloads: 892,
       views: 3456,
@@ -57,7 +57,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
-      tags: ['Cybersecurity', 'AI Threats', 'Threat Landscape', 'Defense'],
+      tags: ['CybersecurityAI Threats', 'Threat LandscapeDefense'],
       pages: 52,
       downloads: 1567,
       views: 6789,
@@ -71,7 +71,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
-      tags: ['Venture Capital', 'Investment', 'Innovation', 'Global Markets'],
+      tags: ['Venture CapitalInvestment', 'InnovationGlobal Markets'],
       pages: 41,
       downloads: 734,
       views: 2890,
@@ -85,7 +85,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
-      tags: ['Edge Computing', 'IoT', 'Industry 4.0', 'Real-time'],
+      tags: ['Edge ComputingIoT', 'Industry 4.0Real-time'],
       pages: 36,
       downloads: 623,
       views: 2345,
@@ -99,7 +99,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
-      tags: ['Green Computing', 'Sustainability', 'Environmental Impact', 'Clean Tech'],
+      tags: ['Green ComputingSustainability', 'Environmental ImpactClean Tech'],
       pages: 43,
       downloads: 445,
       views: 1789,
@@ -107,25 +107,27 @@ const ReportsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'
     }
-  ];
+  ],
 
   return (
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
+    <UltraAdvancedFuturisticBackground></UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen"></div>
+        <Head></Head>
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
           <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
         </Head>
 
         <QuickNavigation />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
           {categories.map((category) => (
             <Link 
-              key={category.name}
-              href={category.href}
+              key={category.name
+  },
+              href={category.href
+  },
               className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
-            >
+            ></Link>
               Research Reports
             </motion.h1>
             <motion.p 
@@ -133,7 +135,7 @@ const ReportsPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            ></motion>
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </motion.p>
             
@@ -142,16 +144,16 @@ const ReportsPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <span className="flex items-center space-x-2">
+            ></motion>
+              <span className="flex items-center space-x-2"></span>
                 <FileText className="w-5 h-5" />
                 <span>{reports.length} Reports Available</span>
               </span>
-              <span className="flex items-center space-x-2">
+              <span className="flex items-center space-x-2"></span>
                 <Download className="w-5 h-5" />
                 <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
               </span>
-              <span className="flex items-center space-x-2">
+              <span className="flex items-center space-x-2"></span>
                 <Eye className="w-5 h-5" />
                 <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
               </span>
@@ -160,39 +162,42 @@ const ReportsPage: React.FC = () => {
         </section>
 
         {/* Featured Report */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            ></motion>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Featured Report
               </h2>
             </motion.div>
 
             {reports.filter(report => report.featured).map((report, index) => (
               <motion.div
-                key={index}
-                className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
+                key={index
+}
+          className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-              >
-                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
-                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>
-                    {report.icon}
+              ></motion>
+                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8"></div>
+                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}></div>
+                    {report.icon
+  },
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
-                        {report.category}
+                  <div className="flex-1"></div>
+                    <div className="flex items-center space-x-4 mb-4"></div>
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium"></span>
+                        {report.category
+  },
                       </span>
-                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(report.date)}</span>
                       </span>
@@ -200,41 +205,42 @@ const ReportsPage: React.FC = () => {
                     <h3 className="text-3xl font-bold text-white mb-4">{report.title}</h3>
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report.excerpt}</p>
                     
-                    <div className="flex flex-wrap items-center gap-6 mb-6">
-                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                    <div className="flex flex-wrap items-center gap-6 mb-6"></div>
+                      <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                         <User className="w-4 h-4" />
                         <span>{report.author}</span>
                       </span>
-                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                         <FileText className="w-4 h-4" />
                         <span>{report.pages} pages</span>
                       </span>
-                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                         <Download className="w-4 h-4" />
                         <span>{formatNumber(report.downloads)} downloads</span>
                       </span>
-                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                         <Eye className="w-4 h-4" />
                         <span>{formatNumber(report.views)} views</span>
                       </span>
                     </div>
                     
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-6"></div>
                       {report.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
-                          {tag}
+                        <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm"></span>
+                          {tag
+  },
                         </span>
                       ))}
                     </div>
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"></button>
                     <Download className="w-5 h-5" />
                     <span>Download Full Report</span>
                   </button>
-                  <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2">
+                  <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2"></button>
                     <Eye className="w-5 h-5" />
                     <span>Preview Report</span>
                   </button>
@@ -245,19 +251,19 @@ const ReportsPage: React.FC = () => {
         </section>
 
         {/* Categories Filter */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            ></motion>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 All Reports
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Explore our comprehensive research across different technology domains
               </p>
             </motion.div>
@@ -269,41 +275,45 @@ const ReportsPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-            >
+            ></motion>
               {categories.map((category, index) => (
                 <button
-                  key={index}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                  key={index
+}
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     category.active
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                   }`}
-                >
+                ></button>
                   {category.name} ({category.count})
                 </button>
               ))}
             </motion.div>
 
             {/* Reports Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {reports.filter(report => !report.featured).map((report, index) => (
                 <motion.article
-                  key={index}
-                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  key={index
+}
+          className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
-                    {report.icon}
+                ></motion>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}></div>
+                    {report.icon
+  },
                   </div>
                   
-                  <div className="flex items-center space-x-4 mb-4">
-                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
-                      {report.category}
+                  <div className="flex items-center space-x-4 mb-4"></div>
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium"></span>
+                      {report.category
+  },
                     </span>
-                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                    <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                       <Calendar className="w-4 h-4" />
                       <span>{formatDate(report.date)}</span>
                     </span>
@@ -312,23 +322,23 @@ const ReportsPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report.title}</h3>
                   <p className="text-gray-300 mb-6 line-clamp-4">{report.excerpt}</p>
                   
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                  <div className="flex items-center justify-between mb-6"></div>
+                    <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                       <FileText className="w-4 h-4" />
                       <span>{report.pages} pages</span>
                     </span>
-                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                    <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                       <Download className="w-4 h-4" />
                       <span>{formatNumber(report.downloads)}</span>
                     </span>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                  <div className="flex items-center justify-between"></div>
+                    <span className="text-gray-400 text-sm flex items-center space-x-1"></span>
                       <User className="w-4 h-4" />
                       <span>{report.author.split('&')[0].trim()}</span>
                     </span>
-                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1">
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1"></button>
                       <span>Download</span>
                       <Download className="w-4 h-4" />
                     </button>
@@ -340,33 +350,33 @@ const ReportsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <motion.div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-6"></h2>
                 Need Custom Research?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
-                >
+                ></a>
                   <span>Request Custom Research</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <a
                   href="/services"
                   className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200"
-                >
+                ></a>
                   View Research Services
                 </a>
               </div>
@@ -375,7 +385,7 @@ const ReportsPage: React.FC = () => {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-};
+  )
+},
 
-export default ReportsPage;
+export default ReportsPage,

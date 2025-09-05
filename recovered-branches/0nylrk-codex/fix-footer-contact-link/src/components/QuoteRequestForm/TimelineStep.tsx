@@ -1,17 +1,17 @@
 
-import { useState } from "react";
-import { format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { CalendarIcon } from "@/components/icons";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
-import { QuoteFormData } from "@/types/quotes";
+import { useState } from "react",
+import { format } from "date-fns",
+import { Calendar } from "@/components/ui/calendar",
+import { Button } from "@/components/ui/button",
+import { Label } from "@/components/ui/label",
+import { CalendarIcon } from "@/components/icons",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils",
+import { QuoteFormData } from "@/types/quotes",
 
 interface TimelineStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) =></QuoteFormData> void
 }
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -71,7 +71,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
-                    />
+      </Calendar>              />
                   </PopoverContent>
                 </Popover>
               </div>
@@ -98,7 +98,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       onSelect={(date) => updateFormData({ endDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
-                      disabled={(date) => date < (formData.startDate || new Date())}
+              </Calendar>        disabled={(date) => date < (formData.startDate || new Date())}
                     />
                   </PopoverContent>
                 </Popover>
@@ -108,5 +108,5 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }

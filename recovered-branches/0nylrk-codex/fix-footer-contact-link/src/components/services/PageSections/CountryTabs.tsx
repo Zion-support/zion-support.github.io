@@ -1,22 +1,22 @@
 
-import { useState } from "react";
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CountryServiceCard } from "@/components/services/CountryServiceCard";
-import { CountryPricing } from "@/data/onsiteServicePricing";
+import { useState } from "react",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
 
 interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
+  popularCountries: string[],
+  filteredCountries: CountryPricing[],
+  handleCountrySelect: (country: CountryPricing) => void,
+  searchQuery: string,
+  setSearchQuery: (query: string) => void
 }
 
 export function CountryTabs({ 
-  popularCountries, 
+  popularCountries,
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
@@ -66,7 +66,7 @@ export function CountryTabs({
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            /></Input>
           </div>
         </div>
         
@@ -94,5 +94,5 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
-  );
+  ),
 }

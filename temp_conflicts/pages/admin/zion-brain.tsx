@@ -1,70 +1,70 @@
-import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import EnhancedNavigation from '@/components/layout/EnhancedNavigation';
+import { useEffect, useMemo, useState } from 'react',
+import Head from 'next/head',
+import EnhancedNavigation from '@/components/layout/EnhancedNavigation',
 
-type LogsSummary = { entries: any[]; byModule: Record<string, number>; byType: Record<string, number>; total: number };
+type LogsSummary = { entries: any[], byModule: Record<string, number>, byType: Record<string, number>, total: number },
 
 export default function ZionBrainAdmin() {
-  const [token, setToken] = useState<string>('');
-  const [routerInput, setRouterInput] = useState('');
-  const [routerResult, setRouterResult] = useState<any>(null);
+  const [token, setToken] = useState<string>(''),
+  const [routerInput, setRouterInput] = useState(''),
+  const [routerResult, setRouterResult] = useState<any>(null),
 
-  const [metrics, setMetrics] = useState({ signupsLastHour: 18, disputeFlagsLastHour: 2, zionVelocity: 110 });
-  const [triggers, setTriggers] = useState<any[]>([]);
+  const [metrics, setMetrics] = useState({ signupsLastHour: 18, disputeFlagsLastHour: 2, zionVelocity: 110 }),
+  const [triggers, setTriggers] = useState<any[]>([]),
 
-  const [prompt, setPrompt] = useState('');
-  const [userIntent, setUserIntent] = useState('');
-  const [optimized, setOptimized] = useState('');
+  const [prompt, setPrompt] = useState(''),
+  const [userIntent, setUserIntent] = useState(''),
+  const [optimized, setOptimized] = useState(''),
 
-  const [logs, setLogs] = useState<LogsSummary | null>(null);
-  const [stuck, setStuck] = useState<any[]>([]);
+  const [logs, setLogs] = useState<LogsSummary | null>(null),
+  const [stuck, setStuck] = useState<any[]>([]),
 
-  useEffect(() => {
-    const t = localStorage.getItem('zion_superadmin_token') || '';
-    setToken(t);
-    refreshLogs(t);
-  }, []);
+  useEffect(() =></any> {
+    const t = localStorage.getItem('zion_superadmin_token') || '',
+    setToken(t),
+    refreshLogs(t),
+  }, []),
 
-  const authHeaders = useMemo(() => (token ? { 'x-admin-token': token } : {}), [token]);
+  const authHeaders = useMemo(() => (token ? { 'x-admin-token': token } : {}), [token]),
 
   async function refreshLogs(t?: string) {
-    const headers = t ? { 'x-admin-token': t } : authHeaders;
-    const res = await fetch('/api/zion-brain/logs', { headers });
-    if (res.ok) setLogs(await res.json());
-    const stuckRes = await fetch('/api/zion-brain/logs?stuck=1', { headers });
-    if (stuckRes.ok) setStuck((await stuckRes.json()).entries || []);
+    const headers = t ? { 'x-admin-token': t } : authHeaders,
+    const res = await fetch('/api/zion-brain/logs', { headers }),
+    if (res.ok) setLogs(await res.json()),
+    const stuckRes = await fetch('/api/zion-brain/logs?stuck=1', { headers }),
+    if (stuckRes.ok) setStuck((await stuckRes.json()).entries || []),
   }
 
   async function handleRoute() {
-    const res = await fetch('/api/zion-brain/router', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ text: routerInput }) });
-    const data = await res.json();
-    setRouterResult(data);
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/router', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ text: routerInput }) }),
+    const data = await res.json(),
+    setRouterResult(data),
+    await refreshLogs(),
   }
 
   async function handleEvaluateReflex() {
-    const res = await fetch('/api/zion-brain/reflex', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify(metrics) });
-    const data = await res.json();
-    setTriggers(data.triggers || []);
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/reflex', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify(metrics) }),
+    const data = await res.json(),
+    setTriggers(data.triggers || []),
+    await refreshLogs(),
   }
 
   async function handleOptimize() {
-    const res = await fetch('/api/zion-brain/optimize', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ prompt, userIntent }) });
-    const data = await res.json();
-    setOptimized(data.optimized || '');
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/optimize', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ prompt, userIntent }) }),
+    const data = await res.json(),
+    setOptimized(data.optimized || ''),
+    await refreshLogs(),
   }
 
   function saveToken() {
-    localStorage.setItem('zion_superadmin_token', token);
-    refreshLogs(token);
+    localStorage.setItem('zion_superadmin_token', token),
+    refreshLogs(token),
   }
 
   const heatCells = useMemo(() => {
-    if (!logs) return [] as { key: string; value: number }[];
-    return Object.entries(logs.byModule || {}).map(([k, v]) => ({ key: k, value: v as number }));
-  }, [logs]);
+    if (!logs) return [] as { key: string, value: number }[],
+    return Object.entries(logs.byModule || {}).map(([k, v]) => ({ key: k, value: v as number })),
+  }, [logs]),
 
   return (
     <>
@@ -82,7 +82,7 @@ export default function ZionBrainAdmin() {
         <section className="mb-8 p-4 border rounded-lg">
           <h2 className="font-semibold mb-2">Superadmin Access</h2>
           <div className="flex gap-2 items-center">
-            <input className="border px-2 py-1 rounded w-80" placeholder="Enter admin token" value={token} onChange={(e) => setToken(e.target.value)} />
+            <input className="border px-2 py-1 rounded w-80" placeholder="Enter admin token" value={token} onChange={(e) => setToken(e.target.valu</input>e)} />
             <button className="px-3 py-1 bg-black text-white rounded" onClick={saveToken}>Save</button>
             <span className="text-xs text-gray-500">Token is required if SUPERADMIN_TOKEN is set on server</span>
           </div>
@@ -91,7 +91,7 @@ export default function ZionBrainAdmin() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <section className="p-4 border rounded-lg">
             <h2 className="font-semibold mb-2">1) Auto-Prompt Router</h2>
-            <textarea className="w-full border rounded p-2 mb-2" rows={4} placeholder="Type a user request..." value={routerInput} onChange={(e) => setRouterInput(e.target.value)} />
+            <textarea className="w-full border rounded p-2 mb-2" rows={4} placeholder="Type a user request..." value={routerInput} onChange={(e) => setRouterInput(e.tar</textarea>get.value)} />
             <button className="px-3 py-1 bg-blue-600 text-white rounded" onClick={handleRoute}>Detect & Route</button>
             {routerResult && (
               <div className="mt-3 text-sm">
@@ -109,15 +109,15 @@ export default function ZionBrainAdmin() {
             <div className="grid grid-cols-3 gap-2 mb-2 text-sm">
               <label className="flex flex-col">
                 <span>Signups/hr</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.signupsLastHour} onChange={(e) => setMetrics({ ...metrics, signupsLastHour: Number(e.target.value) })} />
+                <input type="number" className="border rounded px-2 py-1" value={metrics.signupsLastHour} onChange={(e) => setMetrics({ ...metrics, signupsLastHour: Numb</input>er(e.target.value) })} />
               </label>
               <label className="flex flex-col">
                 <span>Disputes/hr</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.disputeFlagsLastHour} onChange={(e) => setMetrics({ ...metrics, disputeFlagsLastHour: Number(e.target.value) })} />
+                <input type="number" className="border rounded px-2 py-1" value={metrics.disputeFlagsLastHour} onChange={(e) => setMetrics({ ...metrics, disputeFlagsLastHo</input>ur: Number(e.target.value) })} />
               </label>
               <label className="flex flex-col">
                 <span>ZION$/min</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.zionVelocity} onChange={(e) => setMetrics({ ...metrics, zionVelocity: Number(e.target.value) })} />
+                <input type="number" className="border rounded px-2 py-1" value={metrics.zionVelocity} onChange={(e) => setMetrics({ ...metrics, zi</input>onVelocity: Number(e.target.value) })} />
               </label>
             </div>
             <button className="px-3 py-1 bg-green-700 text-white rounded" onClick={handleEvaluateReflex}>Evaluate</button>
@@ -134,8 +134,8 @@ export default function ZionBrainAdmin() {
 
           <section className="p-4 border rounded-lg">
             <h2 className="font-semibold mb-2">3) Prompt Optimizer</h2>
-            <input className="border rounded px-2 py-1 w-full mb-2" placeholder="Optional: user intent" value={userIntent} onChange={(e) => setUserIntent(e.target.value)} />
-            <textarea className="w-full border rounded p-2 mb-2" rows={5} placeholder="Paste a prompt to optimize" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
+            <input className="border rounded px-2 py-1 w-full mb-2" placeholder="Optional: user intent" value={userIntent} o</input>nChange={(e) => setUserIntent(e.target.value)} />
+            <textarea className="w-full border rounded p-2 mb-2" rows={5} placeholder="Paste a prompt to optimize" valu</textarea>e={prompt} onChange={(e) => setPrompt(e.target.value)} />
             <div className="flex gap-2">
               <button className="px-3 py-1 bg-purple-700 text-white rounded" onClick={handleOptimize}>Optimize</button>
               <span className="text-xs text-gray-500">Instruction: Review this prompt and rewrite it to be 30% faster and more specific to user intent.</span>
@@ -185,5 +185,5 @@ export default function ZionBrainAdmin() {
         </section>
       </main>
     </>
-  );
+  ),
 }

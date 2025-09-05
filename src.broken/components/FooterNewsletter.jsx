@@ -1,40 +1,40 @@
-import { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
-import { apiClient } from '@/utils/apiClient';
-import { Loader2 } from 'lucide-react';
+import { useState } from 'react',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { useToast } from '@/hooks/use-toast',
+import { apiClient } from '@/utils/apiClient',
+import { Loader2 } from 'lucide-react',
 
 export function FooterNewsletter() {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const [email, setEmail] = useState(''),
+  const [honeypot, setHoneypot] = useState(''),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { toast } = useToast(),
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (honeypot) return; // ignore bots
-    setIsSubmitting(true);
+    e.preventDefault(),
+    if (honeypot) return, // ignore bots
+    setIsSubmitting(true),
     try {
       const res = await apiClient('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      });
+      }),
 
       if (res.ok) {
-        toast.success('Subscribed!');
-        setEmail('');
+        toast.success('Subscribed!'),
+        setEmail(''),
       } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data.error || 'Subscription failed');
+        const data = await res.json().catch(() => ({})),
+        toast.error(data.error || 'Subscription failed'),
       }
     } catch (err) {
-      toast.error(err.message || 'Subscription failed');
+      toast.error(err.message || 'Subscription failed'),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <form
@@ -48,7 +48,7 @@ export function FooterNewsletter() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-      />
+      /></Input>
       {/* Honeypot field */}
       <input
         type="text"
@@ -57,7 +57,7 @@ export function FooterNewsletter() {
         tabIndex="-1"
         autoComplete="off"
         style={{ display: 'none' }}
-      />
+</input>      />
       <Button
         type="submit"
         disabled={isSubmitting}
@@ -73,5 +73,5 @@ export function FooterNewsletter() {
         )}
       </Button>
     </form>
-  );
+  ),
 }

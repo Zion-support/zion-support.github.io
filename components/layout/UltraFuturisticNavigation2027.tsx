@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
@@ -8,14 +9,14 @@ import {
   FileText, Calendar, CreditCard, BarChart3, Settings,
   Rocket, Star, TrendingUp, Users, Target, Award,
   Phone, Mail, MapPin, ExternalLink, Building
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -90,7 +91,7 @@ const serviceCategories = [
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -102,8 +103,9 @@ const companyLinks = [
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
   { name: '💼 Careers', href: '/careers', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle
+  },
+],
 
 const technologyLinks = [
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
@@ -111,28 +113,29 @@ const technologyLinks = [
   { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud },
   { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
   { name: '📊 Analytics', href: '/analytics', icon: Database },
-  { name: '🔄 Automation', href: '/automation', icon: Cpu }
-];
+  { name: '🔄 Automation', href: '/automation', icon: Cpu
+  },
+],
 
 export default function UltraFuturisticNavigation2027() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true),
+  }, []),
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient) return,
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isClient]);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, [isClient]),
 
   const navigation = [
     {
@@ -393,72 +396,73 @@ export default function UltraFuturisticNavigation2027() {
         }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
-  ];
+  ],
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
         : 'bg-transparent'
-    }`}>
+    }`}></header>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
       
-      <div className="relative container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="relative container mx-auto px-4"></div>
+        <div className="flex items-center justify-between h-20"></div>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative z-10">
+          <Link href="/" className="flex items-center space-x-3 group relative z-10"></Link>
             <motion.div 
               className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
               whileHover={{ rotate: 5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-            >
+            ></motion>
               <Zap className="w-7 h-7 text-white" />
             </motion.div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
+            <div className="hidden sm:block"></div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300"></div>
                 Zion Tech Group
               </div>
-              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
+              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors"></div>
                 Revolutionary Technology Solutions
               </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-1"></nav>
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className="relative group"></div>
                 <motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
                   onMouseEnter={() => setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseLea</motion>ve={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
-                    {item.icon}
+                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}></div>
+                    {item.icon
+  },
                   </div>
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </motion.button>
 
                 {/* Dropdown Menu */}
-                <AnimatePresence>
+                <AnimatePresence></AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -466,33 +470,37 @@ export default function UltraFuturisticNavigation2027() {
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
-                    >
-                      <div className="p-4">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
-                            {item.icon}
+                    ></motion>
+                      <div className="p-4"></div>
+                        <div className="flex items-center space-x-3 mb-4"></div>
+                          <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}></div>
+                            {item.icon
+  },
                           </div>
-                          <div>
+                          <div></div>
                             <h3 className="text-lg font-semibold text-white">{item.name}</h3>
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
                         
-                        <div className="space-y-2">
+                        <div className="space-y-2"></div>
                           {item.children.map((child) => (
                             <Link
-                              key={child.name}
-                              href={child.href}
+                              key={child.name
+  },
+                              href={child.href
+  },
                               className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
-                            >
+                            ></Link>
                               <span className="text-2xl">{child.icon}</span>
-                              <div className="flex-1">
-                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
-                                  {child.name}
+                              <div className="flex-1"></div>
+                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors"></div>
+                                  {child.name
+  },
                                 </div>
                                 <div className="text-sm text-gray-400">{child.description}</div>
                               </div>
-                              <div className="text-right">
+                              <div className="text-right"></div>
                                 <div className="text-sm font-medium text-cyan-400">{child.price}</div>
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                               </div>
@@ -508,20 +516,20 @@ export default function UltraFuturisticNavigation2027() {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4"></div>
             {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4 text-sm">
+            <div className="hidden lg:flex items-center space-x-4 text-sm"></div>
               <a 
                 href={`tel:${contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >
+              ></a>
                 <Phone className="w-4 h-4" />
                 <span>{contactInfo.mobile}</span>
               </a>
               <a 
                 href={`mailto:${contactInfo.email}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >
+              ></a>
                 <Mail className="w-4 h-4" />
                 <span>{contactInfo.email}</span>
               </a>
@@ -531,11 +539,11 @@ export default function UltraFuturisticNavigation2027() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
+            ></motion>
               <Link
                 href="/contact"
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
-              >
+              ></Link>
                 <Rocket className="w-4 h-4" />
                 <span>Get Started</span>
               </Link>
@@ -553,7 +561,7 @@ export default function UltraFuturisticNavigation2027() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -561,23 +569,25 @@ export default function UltraFuturisticNavigation2027() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
-          >
-            <div className="container mx-auto px-4 py-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          ></motion>
+            <div className="container mx-auto px-4 py-6"></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                 {/* Services */}
-                <div>
+                <div></div>
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-                  <div className="space-y-3">
+                  <div className="space-y-3"></div>
                     {navigation.map((item) => (
-                      <div key={item.name}>
+                      <div key={item.name}></div>
                         <Link
-                          href={item.href}
+                          href={item.href
+  },
                           className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                        >
-                          <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}>
-                            {item.icon}
+                        ></Link>
+                          <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}></div>
+                            {item.icon
+  },
                           </div>
-                          <div>
+                          <div></div>
                             <div className="font-medium text-white">{item.name}</div>
                             <div className="text-sm text-gray-400">{item.description}</div>
                           </div>
@@ -588,41 +598,44 @@ export default function UltraFuturisticNavigation2027() {
                 </div>
 
                 {/* Quick Links & Contact */}
-                <div className="space-y-6">
-                  <div>
+                <div className="space-y-6"></div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <div className="space-y-2">
+                    <div className="space-y-2"></div>
                       {quickLinks.map((link) => (
                         <Link
-                          key={link.name}
-                          href={link.href}
+                          key={link.name
+  },
+                          href={link.href
+  },
                           className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                        >
-                          {link.icon}
+                        ></Link>
+                          {link.icon
+  },
                           <span className="text-white">{link.name}</span>
                         </Link>
                       ))}
                     </div>
                   </div>
 
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
-                    <div className="space-y-3">
+                    <div className="space-y-3"></div>
                       <a 
                         href={`tel:${contactInfo.mobile}`}
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
+                      ></a>
                         <Phone className="w-4 h-4 text-cyan-400" />
                         <span className="text-white">{contactInfo.mobile}</span>
                       </a>
                       <a 
                         href={`mailto:${contactInfo.email}`}
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
+                      ></a>
                         <Mail className="w-4 h-4 text-cyan-400" />
                         <span className="text-white">{contactInfo.email}</span>
                       </a>
-                      <div className="flex items-center space-x-3 p-3 rounded-xl">
+                      <div className="flex items-center space-x-3 p-3 rounded-xl"></div>
                         <MapPin className="w-4 h-4 text-cyan-400" />
                         <span className="text-white text-sm">{contactInfo.address}</span>
                       </div>
@@ -632,11 +645,11 @@ export default function UltraFuturisticNavigation2027() {
               </div>
 
               {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-gray-700/50">
+              <div className="mt-6 pt-6 border-t border-gray-700/50"></div>
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300"
-                >
+                ></Link>
                   <Rocket className="w-4 h-4 mr-2" />
                   Get Started Today
                 </Link>
@@ -646,7 +659,7 @@ export default function UltraFuturisticNavigation2027() {
         )}
       </AnimatePresence>
     </header>
-  );
-};
+  ),
+},
 
-export default UltraFuturisticNavigation2027;
+export default UltraFuturisticNavigation2027,

@@ -1,62 +1,62 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useMemo, useState } from "react",
+import { supabase } from "../../utils/supabase/client",
+import { AnimatePresence, motion } from "framer-motion",
 
 type JobSuggestion = {
-  id: string;
-  match_type?: "job_for_talent" | string;
-  job_id: string;
-  job_title: string;
-  client_name?: string;
-  client_id?: string;
-  talent_id: string;
-  summary?: string;
-  skills?: string[];
-  budget_min?: number | null;
-  budget_max?: number | null;
-  duration?: string | null;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
-  score?: number;
-  created_at?: string;
-  updated_at?: string;
-};
+  id: string,
+  match_type?: "job_for_talent" | string,
+  job_id: string,
+  job_title: string,
+  client_name?: string,
+  client_id?: string,
+  talent_id: string,
+  summary?: string,
+  skills?: string[],
+  budget_min?: number | null,
+  budget_max?: number | null,
+  duration?: string | null,
+  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null,
+  score?: number,
+  created_at?: string,
+  updated_at?: string
+},
 
 const SUGGESTION_TABLE_ENV =
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",
 
 export default function TalentDashboardSuggestedJobs() {
-  const [userId, setUserId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [suggestions, setSuggestions] = useState<JobSuggestion[]>([]);
+  const [userId, setUserId] = useState<string | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [suggestions, setSuggestions] = useState<JobSuggestion[]>([]),
 
-  useEffect(() => {
-    let mounted = true;
+  useEffect(() =></JobSuggestion> {
+    let mounted = true,
     async function init() {
       try {
-        const { data } = await supabase.auth.getUser();
-        const currentUserId = data.user?.id || null;
-        if (!mounted) return;
-        setUserId(currentUserId);
+        const { data } = await supabase.auth.getUser(),
+        const currentUserId = data.user?.id || null,
+        if (!mounted) return,
+        setUserId(currentUserId),
         if (!currentUserId) {
-          setSuggestions([]);
-          setLoading(false);
-          return;
+          setSuggestions([]),
+          setLoading(false),
+          return,
         }
-        await fetchSuggestions(currentUserId);
-        setupRealtime(currentUserId);
+        await fetchSuggestions(currentUserId),
+        setupRealtime(currentUserId),
       } finally {
-        if (mounted) setLoading(false);
+        if (mounted) setLoading(false),
       }
     }
-    init();
+    init(),
     return () => {
-      mounted = false;
-    };
+      mounted = false,
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, []),
 
   const fetchSuggestions = async (currentUserId: string) => {
-    setLoading(true);
+    setLoading(true),
     const { data, error } = await supabase
       .from<JobSuggestion>(SUGGESTION_TABLE_ENV)
       .select(
@@ -81,19 +81,19 @@ export default function TalentDashboardSuggestedJobs() {
       .eq("talent_id", currentUserId)
       .or("match_type.eq.job_for_talent,match_type.is.null")
       .order("score", { ascending: false })
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: false }),
 
     if (error) {
-      setSuggestions([]);
-      setLoading(false);
-      return;
+      setSuggestions([]),
+      setLoading(false),
+      return,
     }
 
-    setSuggestions(data || []);
-    setLoading(false);
-  };
+    setSuggestions(data || []),
+    setLoading(false),
+  },
 
-  const setupRealtime = (currentUserId: string) => {
+  const setupRealtime = (currentUs</JobSuggestion>erId: string) => {
     const channel = supabase
       .channel(`ai-jobs-talent-${currentUserId}`)
       .on(
@@ -105,7 +105,7 @@ export default function TalentDashboardSuggestedJobs() {
           filter: `talent_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
       )
-      .subscribe();
+      .subscribe(),
 
     supabase
       .channel(`ai-jobs-talent-upd-${currentUserId}`)
@@ -118,45 +118,45 @@ export default function TalentDashboardSuggestedJobs() {
           filter: `talent_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
       )
-      .subscribe();
+      .subscribe(),
 
     return () => {
-      supabase.removeChannel(channel);
-    };
-  };
+      supabase.removeChannel(channel),
+    },
+  },
 
   const newMatches = useMemo(
     () => (suggestions || []).filter((s) => (s.status || "new") === "new"),
     [suggestions]
-  );
+  ),
   const viewedMatches = useMemo(
     () => (suggestions || []).filter((s) => (s.status || "new") !== "new"),
     [suggestions]
-  );
+  ),
 
   const handleApply = async (s: JobSuggestion) => {
     await supabase
       .from(SUGGESTION_TABLE_ENV)
       .update({ status: "applied" })
-      .eq("id", s.id);
-    await fetchSuggestions(userId as string);
-  };
+      .eq("id", s.id),
+    await fetchSuggestions(userId as string),
+  },
 
   const handleDecline = async (s: JobSuggestion) => {
     await supabase
       .from(SUGGESTION_TABLE_ENV)
       .update({ status: "declined" })
-      .eq("id", s.id);
-    await fetchSuggestions(userId as string);
-  };
+      .eq("id", s.id),
+    await fetchSuggestions(userId as string),
+  },
 
   const Section = ({
     title,
     items,
     highlightNew}: {
-    title: string;
-    items: JobSuggestion[];
-    highlightNew?: boolean;
+    title: string,
+    items: JobSuggestion[],
+    highlightNew?: boolean
   }) => (
     <section className="space-y-3">
       <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
@@ -251,7 +251,7 @@ export default function TalentDashboardSuggestedJobs() {
         </AnimatePresence>
       </div>
     </section>
-  );
+  ),
 
   const content = useMemo(() => {
     if (loading) {
@@ -267,7 +267,7 @@ export default function TalentDashboardSuggestedJobs() {
             ))}
           </div>
         </div>
-      );
+      ),
     }
 
     if (!userId) {
@@ -275,7 +275,7 @@ export default function TalentDashboardSuggestedJobs() {
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           Please sign in to view AI-suggested jobs.
         </div>
-      );
+      ),
     }
 
     return (
@@ -283,8 +283,8 @@ export default function TalentDashboardSuggestedJobs() {
         <Section title="New Matches" items={newMatches} highlightNew />
         <Section title="Previously Viewed" items={viewedMatches} />
       </div>
-    );
-  }, [loading, newMatches, userId, viewedMatches]);
+    ),
+  }, [loading, newMatches, userId, viewedMatches]),
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-4 py-6">
@@ -296,5 +296,5 @@ export default function TalentDashboardSuggestedJobs() {
       </div>
       {content}
     </div>
-  );
+  ),
 }

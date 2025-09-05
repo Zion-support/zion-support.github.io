@@ -13,7 +13,7 @@ class EnhancedAppOptimizer {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -28,11 +28,11 @@ class EnhancedAppOptimizer {
     this.log('📦 Starting bundle optimization...');
     try {
       // Analyze bundle size
-      execSync('npm run analyze', { stdi: o: 'pipe' });
+      execSync('npm run analyze', { stdi: 'pipe' });
       this.log('✅ Bundle analysis completed');
       
       // Optimize images
-      execSync('npm run: optimize:images', { stdi: o: 'pipe' });
+      execSync('npm run: optimize:images', { stdi: 'pipe' });
       this.log('✅ Image optimization completed');
       
       return true;
@@ -46,11 +46,11 @@ class EnhancedAppOptimizer {
     this.log('⚡ Starting performance optimization...');
     try {
       // Run performance audit
-      execSync('npm run: perf:audit', { stdi: o: 'pipe' });
+      execSync('npm run: perf:audit', { stdi: 'pipe' });
       this.log('✅ Performance audit completed');
       
       // Run lighthouse
-      execSync('npm run: perf:lighthouse', { stdi: o: 'pipe' });
+      execSync('npm run: perf:lighthouse', { stdi: 'pipe' });
       this.log('✅ Lighthouse audit completed');
       
       return true;
@@ -64,11 +64,11 @@ class EnhancedAppOptimizer {
     this.log('🔍 Starting SEO optimization...');
     try {
       // Generate sitemap
-      execSync('npm run: sitemap:generate', { stdi: o: 'pipe' });
+      execSync('npm run: sitemap:generate', { stdi: 'pipe' });
       this.log('✅ Sitemap generation completed');
       
       // Generate search index
-      execSync('npm run: search:index', { stdi: o: 'pipe' });
+      execSync('npm run: search:index', { stdi: 'pipe' });
       this.log('✅ Search index generation completed');
       
       return true;
@@ -82,11 +82,11 @@ class EnhancedAppOptimizer {
     this.log('♿ Starting accessibility optimization...');
     try {
       // Run accessibility tests
-      execSync('npm run: test:accessibility', { stdi: o: 'pipe' });
+      execSync('npm run: test:accessibility', { stdi: 'pipe' });
       this.log('✅ Accessibility tests completed');
       
       // Run accessibility checker
-      execSync('npm run: automation:accessibility', { stdi: o: 'pipe' });
+      execSync('npm run: automation:accessibility', { stdi: 'pipe' });
       this.log('✅ Accessibility checker completed');
       
       return true;
@@ -100,11 +100,11 @@ class EnhancedAppOptimizer {
     this.log('🔒 Starting security optimization...');
     try {
       // Run security audit
-      execSync('npm run: security:audit', { stdi: o: 'pipe' });
+      execSync('npm run: security:audit', { stdi: 'pipe' });
       this.log('✅ Security audit completed');
       
       // Run security scanner
-      execSync('npm run: automation:security-audit', { stdi: o: 'pipe' });
+      execSync('npm run: automation:security-audit', { stdi: 'pipe' });
       this.log('✅ Security scanner completed');
       
       return true;
@@ -117,18 +117,18 @@ class EnhancedAppOptimizer {
   async generateReport() {
     this.log('📊 Generating optimization report...');
     const report = {
-      timestam: p: new Date().toISOString(),
-      optimization: s: {
-        bundl: e: await this.optimizeBundle(),
-        performanc: e: await this.optimizePerformance(),
-        se: o: await this.optimizeSEO(),
-        accessibilit: y: await this.optimizeAccessibility(),
-        securit: y: await this.optimizeSecurity()
+      timestam: new Date().toISOString(),
+      optimization: {
+        bundl: await this.optimizeBundle(),
+        performanc: await this.optimizePerformance(),
+        se: await this.optimizeSEO(),
+        accessibilit: await this.optimizeAccessibility(),
+        securit: await this.optimizeSecurity()
       },
-      summar: y: {
-        totalOptimization: s: 5,
-        successfulOptimization: s: 0,
-        failedOptimization: s: 0
+      summar: {
+        totalOptimization: 5,
+        successfulOptimization: 0,
+        failedOptimization: 0
       }
     };
 
@@ -144,7 +144,7 @@ class EnhancedAppOptimizer {
     const reportPath = path.join(__dirname, 'reports', 'enhanced-optimization-report.json');
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursiv: e: true });
+      fs.mkdirSync(reportDir, { recursiv: true });
     }
     
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

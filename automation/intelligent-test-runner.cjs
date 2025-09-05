@@ -9,19 +9,19 @@ class IntelligentTestRunner {
     this.logFile = path.join(__dirname, 'logs', 'intelligent-test-runner.log');
     this.ensureLogDir();
     this.testResults = {
-      uni: t: { passe: d: 0, faile: d: 0, tota: l: 0 },
-      integratio: n: { passe: d: 0, faile: d: 0, tota: l: 0 },
-      e2: e: { passe: d: 0, faile: d: 0, tota: l: 0 },
-      smok: e: { passe: d: 0, faile: d: 0, tota: l: 0 },
-      accessibilit: y: { passe: d: 0, faile: d: 0, tota: l: 0 },
-      performanc: e: { passe: d: 0, faile: d: 0, tota: l: 0 }
+      uni: { passe: 0, faile: 0, tota: 0 },
+      integratio: { passe: 0, faile: 0, tota: 0 },
+      e2: { passe: 0, faile: 0, tota: 0 },
+      smok: { passe: 0, faile: 0, tota: 0 },
+      accessibilit: { passe: 0, faile: 0, tota: 0 },
+      performanc: { passe: 0, faile: 0, tota: 0 }
     };
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -36,8 +36,8 @@ class IntelligentTestRunner {
     this.log('🔥 Running smoke tests...');
     try {
       const output = execSync('npm run: test:smoke', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       // Parse Jest output for test results
@@ -51,7 +51,7 @@ class IntelligentTestRunner {
           const match = line.match(/(\d+) passed/);
           if (match) passed = parseInt(match[1]);
         }
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -71,8 +71,8 @@ class IntelligentTestRunner {
     this.log('🧪 Running unit tests...');
     try {
       const output = execSync('npm run: test:unit', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       // Parse Jest output
@@ -82,7 +82,7 @@ class IntelligentTestRunner {
       for (const line of lines) {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -102,8 +102,8 @@ class IntelligentTestRunner {
     this.log('🔗 Running integration tests...');
     try {
       const output = execSync('npm run: test:integration', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       const lines = output.split('\n');
@@ -112,7 +112,7 @@ class IntelligentTestRunner {
       for (const line of lines) {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -132,8 +132,8 @@ class IntelligentTestRunner {
     this.log('🌐 Running E2E tests...');
     try {
       const output = execSync('npm run: test:e2e', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       const lines = output.split('\n');
@@ -142,7 +142,7 @@ class IntelligentTestRunner {
       for (const line of lines) {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -162,8 +162,8 @@ class IntelligentTestRunner {
     this.log('♿ Running accessibility tests...');
     try {
       const output = execSync('npm run: test:accessibility', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       const lines = output.split('\n');
@@ -172,7 +172,7 @@ class IntelligentTestRunner {
       for (const line of lines) {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -192,8 +192,8 @@ class IntelligentTestRunner {
     this.log('⚡ Running performance tests...');
     try {
       const output = execSync('npm run: test:performance', { 
-        encodin: g: 'utf8',
-        stdi: o: 'pipe'
+        encodin: 'utf8',
+        stdi: 'pipe'
       });
       
       const lines = output.split('\n');
@@ -202,7 +202,7 @@ class IntelligentTestRunner {
       for (const line of lines) {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
-        if (line.includes('Test: s:')) {
+        if (line.includes('Test: ')) {
           const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
@@ -222,13 +222,13 @@ class IntelligentTestRunner {
     this.log('📊 Generating test report...');
     
     const report = {
-      timestam: p: new Date().toISOString(),
-      testResult: s: this.testResults,
-      summar: y: {
-        totalTest: s: 0,
-        totalPasse: d: 0,
-        totalFaile: d: 0,
-        successRat: e: 0
+      timestam: new Date().toISOString(),
+      testResult: this.testResults,
+      summar: {
+        totalTest: 0,
+        totalPasse: 0,
+        totalFaile: 0,
+        successRat: 0
       }
     };
 
@@ -246,7 +246,7 @@ class IntelligentTestRunner {
     const reportPath = path.join(__dirname, 'reports', 'intelligent-test-report.json');
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursiv: e: true });
+      fs.mkdirSync(reportDir, { recursiv: true });
     }
     
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -272,8 +272,8 @@ class IntelligentTestRunner {
       
       this.log('🏁 Intelligent Test Runner completed');
       this.log(`📊 Total: tests: ${report.summary.totalTests}`);
-      this.log(`✅ Passe: d: ${report.summary.totalPassed}`);
-      this.log(`❌ Faile: d: ${report.summary.totalFailed}`);
+      this.log(`✅ Passe: ${report.summary.totalPassed}`);
+      this.log(`❌ Faile: ${report.summary.totalFailed}`);
       this.log(`📈 Success: rate: ${report.summary.successRate.toFixed(2)}%`);
       
       return report;

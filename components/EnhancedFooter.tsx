@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react',
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const footerSections = [
     {
@@ -36,13 +36,13 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Terms of Service', href: '/terms' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-  ];
+  ],
 
   return (
     <footer className="bg-slate-950 border-t border-white/10">
@@ -52,33 +52,33 @@ const EnhancedFooter: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center"></div>
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"></span>
                 Zion Tech Group
               </span>
             </div>
-            <p className="text-white/70 mb-6 max-w-md">
+            <p className="text-white/70 mb-6 max-w-md"></p>
               Leading-edge technology solutions and autonomous innovation platform. 
               Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-white/70">
+            <div className="space-y-3"></div>
+              <div className="flex items-center space-x-3 text-white/70"></div>
                 <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors"></a>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
+              <div className="flex items-center space-x-3 text-white/70"></div>
                 <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                <a href="tel:+13024640950" className="hover:text-white transition-colors"></a>
                   +1 (302) 464-0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
+              <div className="flex items-center space-x-3 text-white/70"></div>
                 <MapPin className="w-4 h-4" />
                 <span>Global Operations</span>
               </div>
@@ -87,16 +87,18 @@ const EnhancedFooter: React.FC = () => {
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
-            <div key={section.title}>
+            <div key={section.title}></div>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2"></ul>
                 {section.links.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name}></li>
                     <Link
-                      href={link.href}
+                      href={link.href
+  },
                       className="text-white/70 hover:text-white transition-colors duration-200"
-                    >
-                      {link.name}
+                    ></Link>
+                      {link.name
+  },
                     </Link>
                   </li>
                 ))}
@@ -106,24 +108,27 @@ const EnhancedFooter: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="pt-8 border-t border-white/10"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"></div>
             {/* Copyright */}
-            <div className="text-white/60 text-sm">
+            <div className="text-white/60 text-sm"></div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4"></div>
               {socialLinks.map((social) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={social.name
+  },
+                  href={social.href
+  },
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
-                  aria-label={social.name}
-                >
+                  aria-label={social.name
+  },
+                ></a>
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
@@ -132,7 +137,7 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  ),
+},
 
-export default EnhancedFooter;
+export default EnhancedFooter,

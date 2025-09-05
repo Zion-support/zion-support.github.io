@@ -1,25 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Cookie, Settings, Shield, Eye, Database, 
   CheckCircle, AlertTriangle, Info, Globe
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function CookiesPage() {
-  const lastUpdated = 'January 15, 2025';
+  const lastUpdated = 'January 15, 2025',
 
   const cookieTypes = [
     {
       name: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
       examples: [
-        'Authentication and security cookies',
-        'Session management cookies',
-        'Load balancing cookies',
-        'User preference cookies'
+        'Authentication and security cookiesSession management cookies',
+        'Load balancing cookiesUser preference cookies'
       ],
       icon: <Shield className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600'
@@ -28,10 +26,8 @@ export default function CookiesPage() {
       name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: [
-        'Google Analytics cookies',
-        'Page view tracking',
-        'User behavior analysis',
-        'Performance monitoring'
+        'Google Analytics cookiesPage view tracking',
+        'User behavior analysisPerformance monitoring'
       ],
       icon: <Database className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600'
@@ -40,10 +36,8 @@ export default function CookiesPage() {
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and track marketing campaign performance.',
       examples: [
-        'Social media cookies',
-        'Advertising cookies',
-        'Retargeting cookies',
-        'Campaign tracking cookies'
+        'Social media cookiesAdvertising cookies',
+        'Retargeting cookiesCampaign tracking cookies'
       ],
       icon: <Globe className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-600'
@@ -52,15 +46,13 @@ export default function CookiesPage() {
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: [
-        'Language preference cookies',
-        'Theme selection cookies',
-        'Form auto-fill cookies',
-        'User experience cookies'
+        'Language preference cookiesTheme selection cookies',
+        'Form auto-fill cookiesUser experience cookies'
       ],
       icon: <Settings className="w-6 h-6" />,
       color: 'from-orange-500 to-red-600'
     }
-  ];
+  ],
 
   const thirdPartyCookies = [
     {
@@ -87,7 +79,7 @@ export default function CookiesPage() {
       duration: '2 years',
       privacy: 'https://twitter.com/en/privacy'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -277,7 +269,7 @@ export default function CookiesPage() {
                 Cookie Consent
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                When you first visit our website, you&apos;ll see a cookie consent banner that allows you to:
+                When you first visit our website, you&apos,ll see a cookie consent banner that allows you to:
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Accept all cookies</li>
@@ -299,12 +291,12 @@ export default function CookiesPage() {
                   If you disable them, some features may not work correctly.
                 </p>
                 <p>
-                  <strong>Performance Impact:</strong> Disabling certain cookies may affect website performance and 
+                  <strong>Performance Impact: </strong> Disabling certain cookies may affect website performance and 
                   your user experience.
                 </p>
                 <p>
                   <strong>Third-Party Services:</strong> Some third-party services may continue to set cookies 
-                  even if you&apos;ve disabled them in your browser.
+                  even if you&apos,ve disabled them in your browser.
                 </p>
               </div>
             </div>
@@ -323,7 +315,7 @@ export default function CookiesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Cookies?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re here to help clarify any questions you may have about our cookie policy.
+              We&apos,re here to help clarify any questions you may have about our cookie policy.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -353,5 +345,5 @@ export default function CookiesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

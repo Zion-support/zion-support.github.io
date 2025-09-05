@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, 
   Users, Target, Star, Zap, Globe, TrendingUp,
   CheckCircle, ArrowRight, ExternalLink, Sparkles
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function ServicesPage() {
   const mainServices = [
@@ -102,7 +102,7 @@ export default function ServicesPage() {
       color: "from-pink-500 to-rose-500",
       href: "/neural-interface"
     }
-  ];
+  ],
 
   const specializedServices = [
     {
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       icon: Shield,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const industries = [
     "Finance & Banking",
@@ -140,7 +140,7 @@ export default function ServicesPage() {
     "Transportation & Logistics",
     "Education & Research",
     "Government & Defense"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -410,10 +410,10 @@ export default function ServicesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our AI and quantum technology solutions can help 
+              Let&apos,s discuss how our AI and quantum technology solutions can help 
               you achieve your business goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -433,5 +433,5 @@ export default function ServicesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

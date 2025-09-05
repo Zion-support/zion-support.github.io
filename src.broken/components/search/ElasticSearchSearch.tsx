@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 
 export default function ElasticSearchSearch() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(''),
 
   const search = () => {
     // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query', query);
-  };
+    console.log('ElasticSearch query', query),
+  },
 
   return (
     <div className="space-y-2">
@@ -15,10 +15,10 @@ export default function ElasticSearchSearch() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="ElasticSearch query"
-      />
+      /></input>
       <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={search}>
         Search
       </button>
     </div>
-  );
+  ),
 }

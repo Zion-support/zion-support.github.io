@@ -57,22 +57,22 @@ const workingLinks = [];
 navigationLinks.forEach(link => {
   if (
     link.startsWith('http') ||
-    link.startsWith('mailt: o:') ||
-    link.startsWith('te: l:')
+    link.startsWith('mailt: ') ||
+    link.startsWith('te: ')
   ) {
-    workingLinks.push({ link, reaso: n: 'External link' });
+    workingLinks.push({ link, reaso: 'External link' });
     return;
   }
 
   if (link === '/') {
-    workingLinks.push({ link, reaso: n: 'Home page' });
+    workingLinks.push({ link, reaso: 'Home page' });
     return;
   }
 
   if (existingPages.includes(link)) {
-    workingLinks.push({ link, reaso: n: 'Page exists' });
+    workingLinks.push({ link, reaso: 'Page exists' });
   } else {
-    brokenLinks.push({ link, reaso: n: 'Page missing' });
+    brokenLinks.push({ link, reaso: 'Page missing' });
   }
 });
 

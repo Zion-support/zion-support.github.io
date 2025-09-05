@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react',
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -6,30 +6,29 @@ const PerformanceMonitor: React.FC = () => {
       // Measure Core Web Vitals
       if ('web-vitals' in window) {
         // This would be imported from web-vitals library
-        console.log('Web Vitals measurement would be here');
+        console.log('Web Vitals measurement would be here')
       }
       
       // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        console.log('Page load time:', loadTime);
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
+        console.log('Page load time:', loadTime),
       }
-    };
+    },
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance(),
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance),
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
+      window.removeEventListener('load', measurePerformance),
+    },
+  }, []),
 
-  return null; // This component doesn't render anything visible
-};
-
-export default PerformanceMonitor;
+  return null, // This component doesn't render anything visible
+  },
+export default PerformanceMonitor,

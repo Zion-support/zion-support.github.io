@@ -1,7 +1,8 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { Suspense, lazy, useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import Layout from './layout/Layout',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
@@ -9,26 +10,26 @@ import {
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
   FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import new service data
-import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
+import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',
+import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2',
 
 // Lazy load heavy components for better performance
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
+const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')),
 
 const Homepage2040: React.FC = () => {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, []),
 
   // Enhanced animation variants for better performance
   const containerVariants = {
@@ -38,9 +39,9 @@ const Homepage2040: React.FC = () => {
       transition: {
         staggerChildren: 0.1,
         delayChildren: 0.2
-      }
+  },
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -50,9 +51,9 @@ const Homepage2040: React.FC = () => {
       transition: {
         duration: 0.6,
         ease: "easeOut" as const
-      }
+  },
     }
-  };
+  },
 
   const floatingVariants = {
     float: {
@@ -61,9 +62,9 @@ const Homepage2040: React.FC = () => {
         duration: 3,
         repeat: -1,
         ease: "easeInOut" as const
-      }
+  },
     }
-  };
+  },
 
   const statsData = [
     {
@@ -98,11 +99,11 @@ const Homepage2040: React.FC = () => {
       color: "text-green-400",
       hoverColor: "group-hover:text-green-300"
     }
-  ];
+  ],
 
   // Combine all services for showcase
-  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2],
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
 
   const serviceCategories = [
     {
@@ -129,44 +130,48 @@ const Homepage2040: React.FC = () => {
       count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
       color: "from-green-500 to-emerald-600"
     }
-  ];
+  ],
 
   return (
-    <Layout>
+    <Layout></Layout>
       {/* Main Content */}
-      <main className="relative z-10" id="main">
+      <main className="relative z-10" id="main"></main>
         {/* Hero Section with Enhanced Background */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
           aria-labelledby="hero-heading"
-        >
+        ></section>
           {/* Enhanced Futuristic Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none"></div>
             {/* Animated geometric shapes */}
             <motion.div 
-              variants={floatingVariants}
+              variants={floatingVariants
+  },
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
             ></motion.div>
             <motion.div 
-              variants={floatingVariants}
+              variants={floatingVariants
+  },
               animate="float"
               style={{ animationDelay: '1s' }}
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
             ></motion.div>
             <motion.div 
-              variants={floatingVariants}
+              variants={floatingVariants
+  },
               animate="float"
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
             
             {/* Quantum particle effects */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0"></div>
               {[...Array(20)].map((_, i) => (
                 <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
+                  key={i
+}
+          className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -185,60 +190,65 @@ const Homepage2040: React.FC = () => {
             </div>
           </div>
           
-          <div className="text-center max-w-6xl mx-auto relative z-10">
+          <div className="text-center max-w-6xl mx-auto relative z-10"></div>
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               animate="visible"
               className="space-y-8"
-            >
+            ></motion>
               {/* Enhanced Company Badge */}
               <motion.div
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
                 aria-label="Company recognition"
-              >
+              ></motion>
                 <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
               
               <motion.h1 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
-              >
+              ></motion>
                 Zion Tech Group
               </motion.h1>
               
               <motion.p 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
-              >
+              ></motion>
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
               
               {/* Enhanced CTA Section */}
               <motion.div 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-              >
-                <Link href="/get-started" aria-label="Get started with our services">
-                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                    <span className="flex items-center gap-3">
+              ></motion>
+                <Link href="/get-started" aria-label="Get started with our services"></Link>
+                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"></button>
+                    <span className="flex items-center gap-3"></span>
                       Get Started
                       <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" />
                     </span>
                   </button>
                 </Link>
-                <Link href="/services" aria-label="Learn more about our services">
-                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
+                <Link href="/services" aria-label="Learn more about our services"></Link>
+                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"></button>
                     Explore Services
                   </button>
                 </Link>
-                <Link href="/pricing" aria-label="View our pricing">
-                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">
+                <Link href="/pricing" aria-label="View our pricing"></Link>
+                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black"></button>
                     View Pricing
                   </button>
                 </Link>
@@ -246,22 +256,23 @@ const Homepage2040: React.FC = () => {
               
               {/* Enhanced Trust Indicators */}
               <motion.div
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="flex flex-wrap justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
+              ></motion>
+                <div className="flex items-center gap-2"></div>
                   <ShieldCheck className="w-5 h-5 text-green-400" />
                   <span>SOC 2 Type II Certified</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <Globe className="w-5 h-5 text-blue-400" />
                   <span>Global Infrastructure</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <Users className="w-5 h-5 text-purple-400" />
                   <span>10,000+ Happy Customers</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <Star className="w-5 h-5 text-yellow-400" />
                   <span>4.9/5 Rating</span>
                 </div>
@@ -274,26 +285,30 @@ const Homepage2040: React.FC = () => {
         </section>
 
         {/* Enhanced Stats Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 relative"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
+            ></motion>
               {statsData.map((stat, index) => (
                 <motion.div
-                  key={stat.label}
-                  variants={itemVariants}
+                  key={stat.label
+  },
+                  variants={itemVariants
+  },
                   className="group text-center p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                ></motion>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-4 group-hover:scale-110 transition-transform duration-300`}></div>
                     <stat.icon className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
-                  <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                    {stat.number}
+                  <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}></div>
+                    {stat.number
+  },
                   </div>
                   <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>
                   <div className="text-gray-400">{stat.description}</div>
@@ -304,45 +319,51 @@ const Homepage2040: React.FC = () => {
         </section>
 
         {/* Enhanced Service Categories */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 relative"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+            ></motion>
               <motion.h2 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
+              ></motion>
                 Revolutionary Service Categories
               </motion.h2>
               <motion.p 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
+              ></motion>
                 Explore our cutting-edge technology solutions across multiple domains
               </motion.p>
             </motion.div>
 
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
-              {serviceCategories.map((category, index) => (
+            ></motion>
+              {serviceCategories.map((category, </motion>index) => (
                 <motion.div
-                  key={category.name}
-                  variants={itemVariants}
+                  key={category.name
+  },
+                  variants={itemVariants
+  },
                   className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                >
+                ></motion>
                   <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  <div className="relative z-10">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="relative z-10"></div>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-6 group-hover:scale-110 transition-transform duration-300`}></div>
                       <category.icon className="w-8 h-8 text-white" aria-hidden="true" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
@@ -356,46 +377,52 @@ const Homepage2040: React.FC = () => {
         </section>
 
         {/* Enhanced Featured Services Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 relative"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+            ></motion>
               <motion.h2 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
+              ></motion>
                 Featured Revolutionary Services
               </motion.h2>
               <motion.p 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
+              ></motion>
                 Discover our most popular and innovative technology solutions
               </motion.p>
             </motion.div>
 
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {featuredServices.map((service, index) => (
+            ></motion>
+              {featuredServices.map((</motion>service, index) => (
                 <motion.div
-                  key={service.id}
-                  variants={itemVariants}
+                  key={service.id
+  },
+                  variants={itemVariants
+  },
                   className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-start justify-between mb-6">
+                ></motion>
+                  <div className="flex items-start justify-between mb-6"></div>
                     <div className="text-4xl">{service.icon}</div>
                     {service.popular && (
-                      <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
+                      <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full"></div>
                         Popular
                       </div>
                     )}
@@ -404,35 +431,38 @@ const Homepage2040: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-400 mb-4">{service.tagline}</p>
                   
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-3xl font-bold text-cyan-400">
-                      ${service.price.monthly}
+                  <div className="flex items-center justify-between mb-6"></div>
+                    <div className="text-3xl font-bold text-cyan-400"></div>
+                      ${service.price.monthly
+  },
                       <span className="text-lg text-gray-400">/month</span>
                     </div>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-400"></div>
                       {service.rating} ⭐ ({service.reviews})
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-6"></div>
                     {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-gray-300">
+                      <div key={idx} className="flex items-center gap-3 text-gray-300"></div>
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-sm">{feature}</span>
                       </div>
 
                       {/* Service Price */}
-                      <div className="mb-6">
-                        <span className="text-2xl font-bold text-cyan-400">
-                          {service.price}
+                      <div className="mb-6"></div>
+                        <span className="text-2xl font-bold text-cyan-400"></span>
+                          {service.price
+  },
                         </span>
                       </div>
 
                       {/* CTA Button */}
                       <Link 
-                        href={service.link}
+                        href={service.link
+  },
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
-                      >
+                      ></Link>
                         Learn More
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </Link>
@@ -447,11 +477,11 @@ const Homepage2040: React.FC = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="text-center mt-12"
-                >
+                ></motion>
                   <Link 
                     href="/innovative-2040-futuristic-services-showcase"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg"
-                  >
+                  ></Link>
                     View All 2040 Services
                     <ArrowRight className="w-6 h-6 ml-3" />
                   </Link>
@@ -462,57 +492,62 @@ const Homepage2040: React.FC = () => {
         </section>
 
         {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 relative"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <motion.div
-              variants={containerVariants}
+              variants={containerVariants
+  },
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="space-y-8"
-            >
+            ></motion>
               <motion.h2 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
+              ></motion>
                 Ready to Transform Your Business?
               </motion.h2>
               <motion.p 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="text-xl text-gray-300 max-w-2xl mx-auto"
-              >
+              ></motion>
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
               
               <motion.div 
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="flex flex-col sm:flex-row gap-6 justify-center"
-              >
-                <Link href="/contact" aria-label="Contact us">
-                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+              ></motion>
+                <Link href="/contact" aria-label="Contact us"></Link>
+                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"></button>
                     Contact Us Today
                   </button>
                 </Link>
-                <Link href="/demo" aria-label="Request a demo">
-                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                <Link href="/demo" aria-label="Request a demo"></Link>
+                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"></button>
                     Request Demo
                   </button>
                 </Link>
               </motion.div>
               
               <motion.div
-                variants={itemVariants}
+                variants={itemVariants
+  },
                 className="flex items-center justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
+              ></motion>
+                <div className="flex items-center gap-2"></div>
                   <Shield className="w-5 h-5 text-green-400" />
                   <span>Enterprise Security</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <Zap className="w-5 h-5 text-yellow-400" />
                   <span>24/7 Support</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <TrendingUp className="w-5 h-5 text-blue-400" />
                   <span>Proven Results</span>
                 </div>
@@ -522,7 +557,7 @@ const Homepage2040: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  ),
+},
 
-export default Homepage2040;
+export default Homepage2040,

@@ -7,11 +7,11 @@ const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      buildTim: e: 0,
-      bundleSiz: e: 0,
-      memoryUsag: e: 0,
-      cpuUsag: e: 0,
-      lastUpdate: d: new Date().toISOString(),
+      buildTim: 0,
+      bundleSiz: 0,
+      memoryUsag: 0,
+      cpuUsag: 0,
+      lastUpdate: new Date().toISOString(),
     };
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
@@ -20,7 +20,7 @@ class PerformanceMonitor {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -67,7 +67,7 @@ class PerformanceMonitor {
   async measureBuildTime() {
     const startTime = Date.now();
     try {
-      execSync('npm run build', { stdi: o: 'pipe', cw: d: process.cwd() });
+      execSync('npm run build', { stdi: 'pipe', cw: process.cwd() });
       return Date.now() - startTime;
     } catch (error) {
       return -1; // Build failed
@@ -111,14 +111,14 @@ class PerformanceMonitor {
       'reports',
       'performance-metrics.json'
     );
-    fs.mkdirSync(path.dirname(metricsFile), { recursiv: e: true });
+    fs.mkdirSync(path.dirname(metricsFile), { recursiv: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 
   async generatePerformanceReport() {
     const report = {
       ...this.metrics,
-      recommendation: s: this.generateRecommendations(),
+      recommendation: this.generateRecommendations(),
     };
 
     const reportFile = path.join(

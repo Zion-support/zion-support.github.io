@@ -1,109 +1,109 @@
 
-import { useState } from "react";
-import { useRouter } from 'next/router';
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { useState } from "react",
+import { useRouter } from 'next/router',
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
-import { fireEvent } from '@/lib/analytics';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { fireEvent } from '@/lib/analytics',
+import { useAuth } from "@/context/auth/AuthProvider",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import Link from "next/link";
+  FormMessage} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import Link from "next/link",
 
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/components/ui/checkbox",
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean()});
+  rememberMe: z.boolean()}),
 
 
-type LoginFormValues = z.infer<typeof loginSchema>;
+type LoginFormValues = z.infer<typeof loginSchema>,
 
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isResending, setIsResending] = useState(false);
-  const [verificationMessage, setVerificationMessage] = useState('');
-  const router = useRouter();
+  const { isLoading, login } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isResending, setIsResending] = useState(false),
+  const [verificationMessage, setVerificationMessage] = useState(''),
+  const router = useRouter(),
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false}});
+      rememberMe: false}}),
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+  const onSubmit = async (data: LoginFormValues) =></LoginFormValues> {
+    if (isSubmitting) return,
 
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe);
+      const result = await login(data.email, data.password, data.rememberMe),
       if (result?.error) {
-        let errorMessage = "Login failed. Please try again."; // Default generic error
+        let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.";
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.",
           } else {
-            errorMessage = result.error.message;
+            errorMessage = result.error.message,
           }
         }
-        form.setError("root", { message: errorMessage });
+        form.setError("root", { message: errorMessage }),
       } else {
-        fireEvent('login', { method: 'email' });
+        fireEvent('login', { method: 'email' }),
       }
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   const handleResendEmail = async () => {
-    const email = form.getValues('email');
+    const email = form.getValues('email'),
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' });
-      return;
+      form.setError('root', { message: 'Please enter your email address.' }),
+      return,
     }
-    setIsResending(true);
-    setVerificationMessage('');
+    setIsResending(true),
+    setVerificationMessage(''),
     try {
       const response = await fetch('/api/auth/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      });
-      const data = await response.json();
+      }),
+      const data = await response.json(),
       if (response.ok) {
-        setVerificationMessage('Verification email sent. Please check your inbox.');
+        setVerificationMessage('Verification email sent. Please check your inbox.'),
       } else {
-        setVerificationMessage(data.message || 'Failed to resend verification email.');
+        setVerificationMessage(data.message || 'Failed to resend verification email.'),
       }
     } catch (err) {
-      setVerificationMessage('Failed to resend verification email.');
+      setVerificationMessage('Failed to resend verification email.'),
     } finally {
-      setIsResending(false);
+      setIsResending(false),
     }
-  };
+  },
 
   const handleCheckStatus = () => {
-    const email = form.getValues('email');
+    const email = form.getValues('email'),
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' });
-      return;
+      form.setError('root', { message: 'Please enter your email address.' }),
+      return,
     }
-    router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-  };
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`),
+  },
 
   return (
     <Form {...form}>
@@ -114,9 +114,9 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
+          const firstError = Object.keys(errors)[0] as keyof LoginFormValues,
           if (firstError) {
-            form.setFocus(firstError);
+            form.setFocus(firstError),
           }
         })}
         className="space-y-6"
@@ -124,7 +124,7 @@ export function LoginForm() {
         <FormField
           control={form.control}
           name="email"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "email"> }) => (
+          render={({ field }: { field: ControllerRenderProps<LoginFormValu</FormField>es, "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
               <FormControl>
@@ -146,7 +146,7 @@ export function LoginForm() {
         <FormField
           control={form.control}
           name="password"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "password"> }) => (
+          render={({ field }: { field: ControllerRenderProps<Logi</FormField>nFormValues, "password"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
@@ -185,7 +185,7 @@ export function LoginForm() {
         <FormField
           control={form.control}
           name="rememberMe"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "rememberMe"> }) => (
+          render={({ field }: { field: ControllerRender</FormField>Props<LoginFormValues, "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
                 <Checkbox
@@ -244,11 +244,11 @@ export function LoginForm() {
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
-          <Link href="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
             Create account
           </Link>
         </p>
       </form>
     </Form>
-  );
+  )
 }

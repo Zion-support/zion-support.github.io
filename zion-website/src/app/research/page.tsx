@@ -1,5 +1,5 @@
 import { 
-  LightBulbIcon, 
+  LightBulbIcon,
   CpuChipIcon, 
   AcademicCapIcon, 
   GlobeAltIcon,
@@ -15,48 +15,36 @@ const researchAreas = [
     description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
     icon: LightBulbIcon,
     topics: [
-      'Deep Learning & Neural Networks',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
-      'Reinforcement Learning',
-      'Federated Learning',
-      'Explainable AI'
+      'Deep Learning & Neural NetworksNatural Language Processing',
+      'Computer Vision & Image RecognitionReinforcement Learning',
+      'Federated LearningExplainable AI'
     ]},
   {
     name: 'Quantum Computing & AI',
     description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
     icon: CpuChipIcon,
     topics: [
-      'Quantum Neural Networks',
-      'Quantum Machine Learning',
-      'Quantum-Classical Hybrid Systems',
-      'Quantum Error Correction',
-      'Quantum Algorithms for AI',
-      'Quantum Supremacy Applications'
+      'Quantum Neural NetworksQuantum Machine Learning',
+      'Quantum-Classical Hybrid SystemsQuantum Error Correction',
+      'Quantum Algorithms for AIQuantum Supremacy Applications'
     ]},
   {
     name: 'Autonomous Systems & Robotics',
     description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
     icon: RocketLaunchIcon,
     topics: [
-      'Autonomous Decision Making',
-      'Multi-Agent Systems',
-      'Robotic Learning & Adaptation',
-      'Human-Robot Interaction',
-      'Autonomous Navigation',
-      'Swarm Intelligence'
+      'Autonomous Decision MakingMulti-Agent Systems',
+      'Robotic Learning & AdaptationHuman-Robot Interaction',
+      'Autonomous NavigationSwarm Intelligence'
     ]},
   {
     name: 'AI Ethics & Governance',
     description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
     icon: ShieldCheckIcon,
     topics: [
-      'AI Bias & Fairness',
-      'Privacy-Preserving AI',
-      'AI Safety & Alignment',
-      'Ethical AI Guidelines',
-      'AI Regulation & Policy',
-      'Human-AI Collaboration'
+      'AI Bias & FairnessPrivacy-Preserving AI',
+      'AI Safety & AlignmentEthical AI Guidelines',
+      'AI Regulation & PolicyHuman-AI Collaboration'
     ]}]
 
 const recentPublications = [

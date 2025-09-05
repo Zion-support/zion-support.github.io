@@ -1,5 +1,5 @@
 import { 
-  LightBulbIcon, 
+  LightBulbIcon,
   CpuChipIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,

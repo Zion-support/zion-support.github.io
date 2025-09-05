@@ -1,45 +1,45 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useEffect, useState } from "react",
+import Head from "next/head",
 
 export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState("");
-  const [token, setToken] = useState<string | null>(null);
-  const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+  const [apiKey, setApiKey] = useState(""),
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+  const [loading, setLoading] = useState(false),
 
-  useEffect(() => {
-    const saved = localStorage.getItem("zion_partner_token");
-    if (saved) setToken(saved);
-  }, []);
+  useEffect(() =></any> {
+    const saved = localStorage.getItem("zion_partner_token"),
+    if (saved) setToken(saved),
+  }, []),
 
   async function getToken() {
     const res = await fetch("/api/partners/token", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ apiKey })});
-    const data = await res.json();
+      body: JSON.stringify({ apiKey })}),
+    const data = await res.json(),
     if (data.token) {
-      localStorage.setItem("zion_partner_token", data.token);
-      setToken(data.token);
+      localStorage.setItem("zion_partner_token", data.token),
+      setToken(data.token),
     }
   }
 
   async function fetchUsage() {
-    setLoading(true);
+    setLoading(true),
     const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
-    const data = await res.json();
-    setUsage(data.summary || null);
-    setLoading(false);
+      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+    const data = await res.json(),
+    setUsage(data.summary || null),
+    setLoading(false),
   }
 
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
       method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
-    const data = await res.json();
+      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+    const data = await res.json(),
     if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`);
+      alert(`New API Key: ${data.apiKey}`),
     }
   }
 
@@ -56,7 +56,7 @@ export default function PartnerDashboard() {
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
             <div className="flex gap-2">
-              <input className="border rounded px-3 py-2 flex-1" placeholder="Paste your API key" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
+              <input className="border rounded px-3 py-2 flex-1" placeholder="Paste your API key" value={apiKey} onChange={(e) => setApiKey(e.target.valu</input>e)} />
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
             </div>
           </div>
@@ -97,5 +97,5 @@ export default function PartnerDashboard() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

@@ -20,18 +20,18 @@ class MergeConflictResolver {
   }
 
   async runCommand(command, description) {
-    this.log(`Runnin: g: ${description}`, 'PROGRESS');
+    this.log(`Runnin: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-        timeou: t: 30000,
+        cw: this.projectRoot,
+        encodin: 'utf8',
+        timeou: 30000,
       });
-      this.log(`Complete: d: ${description}`, 'SUCCESS');
-      return { succes: s: true, outpu: t: result };
+      this.log(`Complete: ${description}`, 'SUCCESS');
+      return { succes: true, outpu: result };
     } catch (error) {
-      this.log(`Faile: d: ${description} - ${error.message}`, 'ERROR');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`Faile: ${description} - ${error.message}`, 'ERROR');
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -79,7 +79,7 @@ class MergeConflictResolver {
 
     // Commit changes
     await this.runCommand(
-      'git commit -m "fea: t: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
+      'git commit -m "fea: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
       'Commit improvements'
     );
 
@@ -102,7 +102,7 @@ class MergeConflictResolver {
 
     // Check if GitHub CLI is available
     try {
-      execSync('gh --version', { stdi: o: 'ignore' });
+      execSync('gh --version', { stdi: 'ignore' });
       this.log('GitHub CLI found', 'SUCCESS');
 
       // List open PRs

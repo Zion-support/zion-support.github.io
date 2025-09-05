@@ -1,27 +1,27 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import SimpleLineChart from '../../components/charts/SimpleLineChart';
-import SimpleBarChart from '../../components/charts/SimpleBarChart';
-import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart';
-import { KpiBadge } from '../../components/ui/InteractiveStats';
-import { exportCsv, exportSvgAsPng } from '../../utils/exporters';
-import useRole from '../../hooks/useRole';
+import React, { useEffect, useMemo, useState } from 'react',
+import SimpleLineChart from '../../components/charts/SimpleLineChart',
+import SimpleBarChart from '../../components/charts/SimpleBarChart',
+import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart',
+import { KpiBadge } from '../../components/ui/InteractiveStats',
+import { exportCsv, exportSvgAsPng } from '../../utils/exporters',
+import useRole from '../../hooks/useRole',
 
 export default function AdminAnalyticsPage() {
-  const [data, setData] = useState<any>(null);
-  const { role, loading } = useRole();
+  const [data, setData] = useState<any>(null),
+  const { role, loading } = useRole(),
 
-  useEffect(() => {
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null));
-  }, []);
+  useEffect(() =></any> {
+    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null)),
+  }, []),
 
-  if (loading) return <div>Loading...</div>;
-  if (role !== 'admin') return <div>Unauthorized</div>;
+  if (loading) return <div>Loading...</div>,
+  if (role !== 'admin') return <div>Unauthorized</div>,
 
-  const totals = data?.totals || {};
-  const geo = data?.geo || [];
-  const topCategories = data?.topCategories || [];
+  const totals = data?.totals || {},
+  const geo = data?.geo || [],
+  const topCategories = data?.topCategories || [],
 
-  const lineSeries = useMemo(() => [{ label: 'Jobs Filled', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 10) })) }], []);
+  const lineSeries = useMemo(() => [{ label: 'Jobs Filled', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 10) })) }], []),
 
   return (
     <div className="space-y-6">
@@ -44,14 +44,14 @@ export default function AdminAnalyticsPage() {
           <SimpleLineChart
             series={lineSeries}
             onExportCsv={(rows) => exportCsv('admin-jobs-filled.csv', rows as any)}
-            onExportPng={(svg) => exportSvgAsPng('admin-jobs-filled.png', svg)}
+            onExportPng={(s</SimpleLineChart>vg) => exportSvgAsPng('admin-jobs-filled.png', svg)}
             yLabel="Filled"
             xLabel="Month"
           />
         </div>
         <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">
           <h2 className="font-semibold mb-2">Top Performing Categories</h2>
-          <SimpleBarChart data={topCategories} onExportCsv={(rows) => exportCsv('admin-top-categories.csv', rows)} />
+          <SimpleBarChart data={topCategories} onExportCsv={(rows) => exportCsv('admin-top-ca</SimpleBarChart>tegories.csv', rows)} />
         </div>
       </div>
 
@@ -60,7 +60,7 @@ export default function AdminAnalyticsPage() {
           <h2 className="font-semibold mb-2">Referral Conversions</h2>
           <SimpleDoughnutChart
             data={[{ label: 'Converted', value: data?.referralConversions || 0 }, { label: 'Others', value: Math.max((totals.totalUsers || 0) - (data?.referralConversions || 0), 0) }]}
-            onExportCsv={(rows) => exportCsv('admin-referrals.csv', rows)}
+            onExportCsv={(rows) => exportCsv('admin-referrals.csv',</SimpleDoughnutChart> rows)}
             onExportPng={(svg) => exportSvgAsPng('admin-referrals.png', svg)}
           />
         </div>
@@ -77,5 +77,5 @@ export default function AdminAnalyticsPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import { 
-  Code, 
+  Code,
   Database, 
   Globe, 
   Shield, 
@@ -19,7 +19,7 @@ import {
   BookOpen,
   Github,
   Terminal
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ApiToolsPage() {
   const apiTools = [
@@ -28,10 +28,8 @@ export default function ApiToolsPage() {
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
-        'Support for 20+ programming languages',
-        'Real-time code completion and suggestions',
-        'Custom code templates and patterns',
-        'Integration with popular IDEs',
+        'Support for 20+ programming languagesReal-time code completion and suggestions',
+        'Custom code templates and patternsIntegration with popular IDEs',
         'Code review and optimization suggestions'
       ],
       pricing: {
@@ -55,10 +53,8 @@ export default function ApiToolsPage() {
       title: 'DataSync API - Real-time Data Synchronization',
       description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
       features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)',
-        'Real-time change detection and propagation',
-        'Conflict resolution and data validation',
-        'Webhook support for custom integrations',
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagation',
+        'Conflict resolution and data validationWebhook support for custom integrations',
         'Comprehensive audit logging and monitoring'
       ],
       pricing: {
@@ -82,10 +78,8 @@ export default function ApiToolsPage() {
       title: 'GeoAPI - Advanced Geospatial Services',
       description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
       features: [
-        'Global geocoding and reverse geocoding',
-        'Real-time traffic and routing optimization',
-        'Geofencing and location tracking',
-        'Map visualization and customization',
+        'Global geocoding and reverse geocodingReal-time traffic and routing optimization',
+        'Geofencing and location trackingMap visualization and customization',
         'Spatial data analysis and clustering'
       ],
       pricing: {
@@ -109,10 +103,8 @@ export default function ApiToolsPage() {
       title: 'AuthGuard API - Enterprise Authentication',
       description: 'Secure, scalable authentication and authorization system with advanced security features.',
       features: [
-        'Multi-factor authentication (MFA)',
-        'OAuth 2.0 and OpenID Connect support',
-        'Role-based access control (RBAC)',
-        'Advanced threat detection and prevention',
+        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect support',
+        'Role-based access control (RBAC)Advanced threat detection and prevention',
         'Compliance with SOC2, GDPR, and HIPAA'
       ],
       pricing: {
@@ -136,10 +128,8 @@ export default function ApiToolsPage() {
       title: 'WebhookHub - Intelligent Webhook Management',
       description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
       features: [
-        'Guaranteed webhook delivery with retry logic',
-        'Event filtering and transformation',
-        'Real-time monitoring and analytics',
-        'Custom authentication and security',
+        'Guaranteed webhook delivery with retry logicEvent filtering and transformation',
+        'Real-time monitoring and analyticsCustom authentication and security',
         'Integration with popular platforms'
       ],
       pricing: {
@@ -163,10 +153,8 @@ export default function ApiToolsPage() {
       title: 'NLP API - Natural Language Processing',
       description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
       features: [
-        'Text classification and categorization',
-        'Sentiment analysis and emotion detection',
-        'Named entity recognition (NER)',
-        'Language detection and translation',
+        'Text classification and categorizationSentiment analysis and emotion detection',
+        'Named entity recognition (NER)Language detection and translation',
         'Custom model training and fine-tuning'
       ],
       pricing: {
@@ -190,10 +178,8 @@ export default function ApiToolsPage() {
       title: 'Analytics API - Business Intelligence',
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
-        'Real-time data aggregation and analysis',
-        'Custom dashboard creation and sharing',
-        'Advanced filtering and segmentation',
-        'Export capabilities (CSV, JSON, PDF)',
+        'Real-time data aggregation and analysisCustom dashboard creation and sharing',
+        'Advanced filtering and segmentationExport capabilities (CSV, JSON, PDF)',
         'Scheduled reports and alerts'
       ],
       pricing: {
@@ -217,10 +203,8 @@ export default function ApiToolsPage() {
       title: 'EncryptAPI - Data Encryption Services',
       description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
       features: [
-        'AES-256 encryption and decryption',
-        'Secure key management and rotation',
-        'Digital signatures and certificates',
-        'Compliance with FIPS 140-2 standards',
+        'AES-256 encryption and decryptionSecure key management and rotation',
+        'Digital signatures and certificatesCompliance with FIPS 140-2 standards',
         'Hardware security module (HSM) support'
       ],
       pricing: {
@@ -239,18 +223,18 @@ export default function ApiToolsPage() {
       rating: 4.9,
       responseTime: '<20ms'
     }
-  ];
+  ],
 
-  const categories = ['All', 'Development', 'Data', 'Location', 'Security', 'Integration', 'AI/ML', 'Analytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['AllDevelopment', 'DataLocation', 'SecurityIntegration', 'AI/MLAnalytics'],
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
-    : apiTools.filter(tool => tool.category === selectedCategory);
+    : apiTools.filter(tool => tool.category === selectedCategory),
 
   return (
     <>
-      <Head>
+      <Head></Head>
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
         <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
         <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
@@ -259,26 +243,27 @@ export default function ApiToolsPage() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6"></div>
             <Terminal className="w-4 h-4 mr-2" />
             Developer-First API Solutions
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight"></h1>
             Powerful API Tools & Services
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"></p>
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
             {categories.map((category) => (
               <button
-                key={category}
+                key={category
+  },
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
@@ -286,7 +271,8 @@ export default function ApiToolsPage() {
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
                 }`}
               >
-                {category}
+                {category
+  },
               </button>
             ))}
           </div>
@@ -294,101 +280,110 @@ export default function ApiToolsPage() {
       </section>
 
       {/* API Tools Grid */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+      <section className="py-24 bg-gray-900"></section>
+        <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
             {filteredTools.map((tool, index) => (
               <Card
-                key={index}
-                className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
+                key={index
+}
+          className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {tool.icon}
+              ></Card>
+                <div className="flex items-start space-x-6"></div>
+                  <div className="relative"></div>
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}></div>
+                      {tool.icon
+  },
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                        {tool.title}
+                  <div className="flex-1"></div>
+                    <div className="flex items-center justify-between mb-3"></div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300"></h3>
+                        {tool.title
+  },
                       </h3>
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center text-yellow-400">
+                      <div className="flex items-center space-x-2"></div>
+                        <div className="flex items-center text-yellow-400"></div>
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
-                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
-                          {tool.status}
+                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium"></span>
+                          {tool.status
+  },
                         </span>
                       </div>
                     </div>
                     
-                    <p className="text-gray-400 leading-relaxed mb-6">
-                      {tool.description}
+                    <p className="text-gray-400 leading-relaxed mb-6"></p>
+                      {tool.description
+  },
                     </p>
                     
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                    <div className="grid grid-cols-3 gap-4 mb-6"></div>
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg"></div>
                         <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
                         <div className="text-xs text-gray-500">Users</div>
                       </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg"></div>
                         <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
                         <div className="text-xs text-gray-500">Response</div>
                       </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg"></div>
                         <div className="text-sm font-medium text-gray-300">Starting at</div>
                         <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
                       </div>
                     </div>
 
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6"></ul>
                       {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          {feature
+  },
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3"></div>
                       <Button
-                        href={tool.website}
+                        href={tool.website
+  },
                         variant="primary"
                         size="sm"
                         className="bg-indigo-600 hover:bg-indigo-700"
-                      >
+                      ></Button>
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Visit API
                       </Button>
                       <Button
-                        href={tool.docs}
+                        href={tool.docs
+  },
                         variant="outline"
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
-                      >
+                      ></Button>
                         <BookOpen className="w-4 h-4 mr-2" />
                         Documentation
                       </Button>
                       <Button
-                        href={tool.github}
+                        href={tool.github
+  },
                         variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
-                      >
+                      ></Button>
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Button>
@@ -402,55 +397,55 @@ export default function ApiToolsPage() {
       </section>
 
       {/* Developer Resources */}
-      <section className="py-24 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+      <section className="py-24 bg-gray-800"></section>
+        <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               Developer Resources
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               Everything you need to get started and build amazing applications with our APIs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <Card className="text-center border border-gray-700 hover:border-indigo-500/30"></Card>
+              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <BookOpen className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Comprehensive Documentation</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-6"></p>
                 Detailed API references, code examples, and integration guides for every service.
               </p>
-              <Button href="/docs" variant="outline" size="sm">
+              <Button href="/docs" variant="outline" size="sm"></Button>
                 Explore Docs
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Card>
 
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <Card className="text-center border border-gray-700 hover:border-indigo-500/30"></Card>
+              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <Play className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Interactive Playground</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-6"></p>
                 Test APIs directly in your browser with our interactive testing environment.
               </p>
-              <Button href="/playground" variant="outline" size="sm">
+              <Button href="/playground" variant="outline" size="sm"></Button>
                 Try Playground
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Card>
 
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <Card className="text-center border border-gray-700 hover:border-indigo-500/30"></Card>
+              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <Github className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Open Source SDKs</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-6"></p>
                 Official SDKs and client libraries for popular programming languages and frameworks.
               </p>
-              <Button href="/sdk" variant="outline" size="sm">
+              <Button href="/sdk" variant="outline" size="sm"></Button>
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -460,22 +455,22 @@ export default function ApiToolsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+      <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"></h2>
             Ready to Build Something Amazing?
           </h2>
-          <p className="text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed"></p>
             Start integrating our APIs today and join thousands of developers building the future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center"></div>
             <Button
               href="/contact"
               variant="secondary"
               size="lg"
               className="bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl"
-            >
+            ></Button>
               Get API Access
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -484,12 +479,12 @@ export default function ApiToolsPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-            >
+            ></Button>
               View Documentation
             </Button>
           </div>
         </div>
       </section>
     </>
-  );
+  )
 }

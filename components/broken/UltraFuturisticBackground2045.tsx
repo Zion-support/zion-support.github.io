@@ -1,38 +1,38 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react',
+import { motion } from 'framer-motion',
 
 interface UltraFuturisticBackground2045Props {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) =></UltraFuturisticBackground2045Props> {
+  const canvasRef = useRef<HTMLCanvasElement>(null),
+  const animationRef = useRef<number | unde</number>fined>(undefined),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = canvasRef.current,
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-    }> = [];
+    const particles: Array <{
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      alpha: number,
+      life: number
+    }> = [],
 
     // Create initial particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0, i < 100, i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -42,38 +42,38 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
-      });
+      }),
     }
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.life--,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
-        ctx.save();
-        ctx.globalAlpha = particle.alpha;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.save(),
+        ctx.globalAlpha = particle.alpha,
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Add glow effect
-        ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 20;
-        ctx.fill();
-        ctx.restore();
+        ctx.shadowColor = particle.color,
+        ctx.shadowBlur = 20,
+        ctx.fill(),
+        ctx.restore(),
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
@@ -86,63 +86,64 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             alpha: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
-          };
+  },
         }
-      });
+      }),
 
       // Draw connecting lines between nearby particles
       particles.forEach((particle1, i) => {
         particles.slice(i + 1).forEach((particle2) => {
-          const dx = particle1.x - particle2.x;
-          const dy = particle1.y - particle2.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particle1.x - particle2.x,
+          const dy = particle1.y - particle2.y,
+          const distance = Math.sqrt(dx * dx + dy * dy),
 
           if (distance < 150) {
-            ctx.save();
-            ctx.globalAlpha = (150 - distance) / 150 * 0.3;
-            ctx.strokeStyle = '#00ffff';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particle1.x, particle1.y);
-            ctx.lineTo(particle2.x, particle2.y);
-            ctx.stroke();
-            ctx.restore();
+            ctx.save(),
+            ctx.globalAlpha = (150 - distance) / 150 * 0.3,
+            ctx.strokeStyle = '#00ffff',
+            ctx.lineWidth = 1,
+            ctx.beginPath(),
+            ctx.moveTo(particle1.x, particle1.y),
+            ctx.lineTo(particle2.x, particle2.y),
+            ctx.stroke(),
+            ctx.restore(),
           }
-        });
-      });
+        }),
+      }),
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
+      animationRef.current = requestAnimationFrame(animate),
+    },
 
-    animate();
+    animate(),
 
     // Handle resize
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight,
+    },
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+        cancelAnimationFrame(animationRef.current),
       }
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize),
+    },
+  }, []),
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen bg-black overflow-hidden"></div>
       {/* Animated Canvas Background */}
       <canvas
-        ref={canvasRef}
+        ref={canvasRef
+  },
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
       />
 
       {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
+      <div className="fixed inset-0 pointer-events-none z-10"></div>
         {/* Animated Grid */}
         <motion.div
           className="absolute inset-0 opacity-20"
@@ -154,7 +155,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundSize: '50px 50px'
           }}
           animate={{
-            backgroundPosition: ['0px 0px', '50px 50px']}}
+            backgroundPosition: ['0px 0px50px 50px']}}
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -256,18 +257,19 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       </div>
 
       {/* Gradient Overlays */}
-      <div className="fixed inset-0 pointer-events-none z-20">
+      <div className="fixed inset-0 pointer-events-none z-20"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10" />
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
       </div>
 
       {/* Content */}
-      <div className="relative z-30">
-        {children}
+      <div className="relative z-30"></div>
+        {children
+  },
       </div>
 
       {/* Animated Border Effects */}
-      <div className="fixed inset-0 pointer-events-none z-40">
+      <div className="fixed inset-0 pointer-events-none z-40"></div>
         <motion.div
           className="absolute inset-0 border border-transparent"
           style={{
@@ -275,7 +277,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundSize: '200% 100%'
           }}
           animate={{
-            backgroundPosition: ['-200% 0', '200% 0']}}
+            backgroundPosition: ['-200% 0200% 0']}}
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -284,7 +286,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         />
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default UltraFuturisticBackground2045;
+export default UltraFuturisticBackground2045,

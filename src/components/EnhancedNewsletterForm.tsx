@@ -1,62 +1,62 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useState, useRef } from "react",
 import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useToast } from "@/hooks/use-toast",
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 export function EnhancedNewsletterForm() {
 
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+  const { toast } = useToast(),
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
-  const lastSubmit = useRef(0);
+  const lastSubmit = useRef(0),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
+    e.preventDefault(),
+    const now = Date.now(),
+    if (now - lastSubmit.current < 1000) return,
+    lastSubmit.current = now,
 
-    const trimmed = email.trim();
+    const trimmed = email.trim(),
     if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error("Invalid email");
-      return;
+      toast.error("Invalid email"),
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })});
+        body: JSON.stringify({ email: trimmed })}),
 
-      const data = await res.json().catch(() => ({}));
+      const data = await res.json().catch(() => ({})),
 
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!");
+          toast.success(data.message || "You're already subscribed!"),
         } else {
-          toast.success(data.message || "Thanks for subscribing!");
+          toast.success(data.message || "Thanks for subscribing!"),
         }
-        setIsSubmitted(true);
-        setEmail("");
+        setIsSubmitted(true),
+        setEmail(""),
       } else {
         // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data });
-        toast.error(data.error || "Subscription failed. Please try again.");
+        logErrorToProduction('Newsletter subscription failed:', { data: data }),
+        toast.error(data.error || "Subscription failed. Please try again."),
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error("Unable to subscribe right now. Please try again later.");
+      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      toast.error("Unable to subscribe right now. Please try again later."),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -73,7 +73,7 @@ export function EnhancedNewsletterForm() {
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
+          <p className="text-zion-slate-light mt-1">We&apos,ll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -87,7 +87,7 @@ export function EnhancedNewsletterForm() {
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =></Input> setEmail(e.target.value)}
             autoComplete="email"
             required
           />
@@ -112,5 +112,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  );
+  ),
 }

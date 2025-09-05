@@ -1,4 +1,4 @@
-import * as React from "react"
+</string>import * as React from "react"
 
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older

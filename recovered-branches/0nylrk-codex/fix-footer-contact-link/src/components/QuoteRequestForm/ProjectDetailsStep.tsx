@@ -1,12 +1,12 @@
 
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { QuoteFormData } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
 
 interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) =></QuoteFormData> void
 }
 
 export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
@@ -23,7 +23,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Enter a name for your project"
               value={formData.projectName}
               onChange={(e) => updateFormData({ projectName: e.target.value })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white</Input>"
             />
           </div>
           
@@ -34,7 +34,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Describe your project in detail..."
               value={formData.projectDescription}
               onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple te</Textarea>xt-white"
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, name: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light focus:border-zio</Input>n-purple text-white"
             />
           </div>
           
@@ -66,7 +66,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, company: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light focus:bo</Input>rder-zion-purple text-white"
             />
           </div>
           
@@ -80,7 +80,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, email: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light </Input>focus:border-zion-purple text-white"
             />
           </div>
           
@@ -93,11 +93,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blu</Input>e-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

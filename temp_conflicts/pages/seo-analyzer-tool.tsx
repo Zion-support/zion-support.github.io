@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react',
 
 export default function SEOAnalyzerToolPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [url, setUrl] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
+  const [url, setUrl] = useState(''),
 
   const features = [
     {
@@ -33,18 +33,15 @@ export default function SEOAnalyzerToolPage() {
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'}];
+      gradient: 'from-orange-400 to-red-500'}],
 
   const seoFactors = [
     {
       category: 'On-Page SEO',
       factors: [
-        'Title tags optimization',
-        'Meta descriptions',
-        'Header structure (H1, H2, H3)',
-        'Content quality and length',
-        'Internal linking structure',
-        'Image optimization (alt tags)'
+        'Title tags optimizationMeta descriptions',
+        'Header structure (H1, H2, H3)Content quality and length',
+        'Internal linking structureImage optimization (alt tags)'
       ],
       icon: '📝',
       color: 'text-green-400'
@@ -52,12 +49,9 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Technical SEO',
       factors: [
-        'Page load speed',
-        'Mobile responsiveness',
-        'XML sitemap',
-        'Robots.txt configuration',
-        'SSL certificate',
-        'Core Web Vitals'
+        'Page load speedMobile responsiveness',
+        'XML sitemapRobots.txt configuration',
+        'SSL certificateCore Web Vitals'
       ],
       icon: '⚙️',
       color: 'text-blue-400'
@@ -65,12 +59,9 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Content SEO',
       factors: [
-        'Keyword density',
-        'Content relevance',
-        'Readability scores',
-        'Content freshness',
-        'Multimedia optimization',
-        'Schema markup'
+        'Keyword densityContent relevance',
+        'Readability scoresContent freshness',
+        'Multimedia optimizationSchema markup'
       ],
       icon: '📊',
       color: 'text-purple-400'
@@ -78,17 +69,14 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Local SEO',
       factors: [
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keyword targeting',
-        'Location-based content',
-        'Local link building'
+        'Google My BusinessLocal citations',
+        'Review managementLocal keyword targeting',
+        'Location-based contentLocal link building'
       ],
       icon: '📍',
       color: 'text-orange-400'
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -97,12 +85,9 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
       features: [
-        '10 website analyses/month',
-        'Basic SEO metrics',
-        'Keyword research (100 keywords)',
-        'On-page SEO analysis',
-        'Email support',
-        'Basic reporting'
+        '10 website analyses/monthBasic SEO metrics',
+        'Keyword research (100 keywords)On-page SEO analysis',
+        'Email supportBasic reporting'
       ],
       popular: false
     },
@@ -112,14 +97,10 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '50 website analyses/month',
-        'Advanced SEO metrics',
-        'Keyword research (500 keywords)',
-        'Competitive analysis',
-        'Priority support',
-        'Advanced reporting',
-        'API access',
-        'Team collaboration'
+        '50 website analyses/monthAdvanced SEO metrics',
+        'Keyword research (500 keywords)Competitive analysis',
+        'Priority supportAdvanced reporting',
+        'API accessTeam collaboration'
       ],
       popular: true
     },
@@ -129,23 +110,19 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'For large organizations and SEO agencies',
       features: [
-        'Unlimited analyses',
-        'Enterprise SEO metrics',
-        'Unlimited keyword research',
-        'Advanced competitive analysis',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'Custom integrations'
+        'Unlimited analysesEnterprise SEO metrics',
+        'Unlimited keyword researchAdvanced competitive analysis',
+        '24/7 dedicated supportCustom reporting',
+        'White-label optionsCustom integrations'
       ],
       popular: false
     }
-  ];
+  ],
 
   const handleAnalyzeSEO = async () => {
-    if (!url.trim()) return;
+    if (!url.trim()) return,
     
-    setIsAnalyzing(true);
+    setIsAnalyzing(true),
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -161,20 +138,18 @@ export default function SEOAnalyzerToolPage() {
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
         ],
         recommendations: [
-          'Optimize meta descriptions for better click-through rates',
-          'Improve page load speed by optimizing images',
-          'Add more relevant internal links to improve site structure',
-          'Implement schema markup for rich snippets'
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing images',
+          'Add more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ],
         keywords: [
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
-      });
-      setIsAnalyzing(false);
-    }, 4000);
-  };
+      }),
+      setIsAnalyzing(false),
+    }, 4000),
+  },
 
   return (
     <>
@@ -214,7 +189,7 @@ export default function SEOAnalyzerToolPage() {
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              />
+              /></input>
               <Button
                 onClick={handleAnalyzeSEO}
                 size="lg"
@@ -517,7 +492,7 @@ export default function SEOAnalyzerToolPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Improve Your SEO Rankings?
@@ -546,5 +521,5 @@ export default function SEOAnalyzerToolPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

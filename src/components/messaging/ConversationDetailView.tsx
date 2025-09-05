@@ -1,61 +1,61 @@
 
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
+import React, { useState, useEffect, useRef } from 'react',
+import { format } from 'date-fns',
 import { MessageSquare } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { useAuth } from '@/hooks/useAuth';
-import { MessageBubble } from './MessageBubble';
-import { DateDivider } from './DateDivider';
+import { useMessaging } from '@/context/MessagingContext',
+import { Button } from '@/components/ui/button',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
+import { AspectRatio } from '@/components/ui/aspect-ratio',
+import { useAuth } from '@/hooks/useAuth',
+import { MessageBubble } from './MessageBubble',
+import { DateDivider } from './DateDivider',
 
 export function ConversationDetailView() {
-  const { user } = useAuth();
+  const { user } = useAuth(),
   const { 
-    activeConversation, 
+    activeConversation,
     activeMessages, 
     sendMessage, 
     loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  } = useMessaging(),
+  const [messageText, setMessageText] = useState(''),
+  const messagesEndRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLTextAreaElement | null>(null),
   
-  useEffect(() => {
+  useEffect(() =></HTMLTextAreaElement> {
     if (activeConversation) {
-      loadMessages(activeConversation.id);
+      loadMessages(activeConversation.id),
     }
-    inputRef.current?.focus();
-  }, [activeConversation?.id, loadMessages]);
+    inputRef.current?.focus(),
+  }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
-    scrollToBottom();
-  }, [activeMessages]);
+    scrollToBottom(),
+  }, [activeMessages]),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+  },
   
   const send = async () => {
-    if (!messageText.trim() || !activeConversation) return;
+    if (!messageText.trim() || !activeConversation) return,
 
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
-    inputRef.current?.focus();
-  };
+    await sendMessage(activeConversation.id, messageText),
+    setMessageText(''),
+    inputRef.current?.focus(),
+  },
 
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await send();
-  };
+    e.preventDefault(),
+    await send()
+  },
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HT</HTMLTextAreaElement>MLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      send();
+      e.preventDefault(),
+      send()
     }
-  };
+  },
   
   if (!activeConversation) {
     return (
@@ -66,28 +66,28 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    );
+    ),
   }
   
   // Group messages by date
-  const groupedMessages: { date: string; messages: any[] }[] = [];
+  const groupedMessages: { date: string, messages: any[] }[] = [],
   
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),
+    const existingGroup = groupedMessages.find(group => group.date === messageDate),
     
     if (existingGroup) {
-      existingGroup.messages.push(message);
+      existingGroup.messages.push(message),
     } else {
       groupedMessages.push({
         date: messageDate,
         messages: [message]
-      });
+      }),
     }
-  });
+  }),
   
   const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description);
+    (activeConversation.context_data.title || activeConversation.context_data.description),
 
   return (
     <div className="flex-1 flex flex-col h-full">
@@ -184,17 +184,17 @@ export function ConversationDetailView() {
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-c</textarea>yan"
             ref={inputRef}
           />
           <Button 
             type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
       </div>
     </div>
-  );
+  )
 }

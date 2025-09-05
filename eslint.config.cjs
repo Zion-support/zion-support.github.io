@@ -1,18 +1,18 @@
 module.exports = [
   {
-    file: s: ['automation/**/*.{js,jsx,ts,tsx}'],
-    languageOption: s: {
-      ecmaVersio: n: 'latest',
-      sourceTyp: e: 'module',
-      global: s: {
-        windo: w: 'readonly',
-        documen: t: 'readonly',
-        consol: e: 'readonly',
-        proces: s: 'readonly',
-        Reac: t: 'readonly',
+    file: ['automation/**/*.{js,jsx,ts,tsx}'],
+    languageOption: {
+      ecmaVersio: 'latest',
+      sourceTyp: 'module',
+      global: {
+        windo: 'readonly',
+        documen: 'readonly',
+        consol: 'readonly',
+        proces: 'readonly',
+        Reac: 'readonly',
       },
     },
-    rule: s: {
+    rule: {
       // Loosen rules for automation scripts to avoid CI noise
       'no-unused-vars': 'off',
       'no-console': 'off',

@@ -1,11 +1,11 @@
 
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
   // Sample endpoint data
   const endpoints = [
@@ -165,10 +165,10 @@ export function ApiReference() {
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
-  ];
+  ],
 
   // Find the active endpoint data
-  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
+  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),
 
   return (
     <ApiDocsLayout>
@@ -306,7 +306,7 @@ export function ApiReference() {
         </div>
       </div>
     </ApiDocsLayout>
-  );
+  ),
 }
 
-export default ApiReference;
+export default ApiReference,

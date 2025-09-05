@@ -1,27 +1,27 @@
 
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import React, { useState } from 'react',
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
+import { useAuth } from '@/hooks/useAuth',
+import { MilestoneCard } from './MilestoneCard',
+import { AddMilestoneForm } from './AddMilestoneForm',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
-import { EmptyState } from '@/components/ui/empty-state';
+import { EmptyState } from '@/components/ui/empty-state',
 
 interface MilestonesListProps {
-  milestones: Milestone[];
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean;
-  isClient: boolean;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>;
-  isSubmitting: boolean;
-  onApprove?: (id: string) => Promise<void>;
-  onReject?: (id: string) => Promise<void>;
+  milestones: Milestone[],
+  activities: Record<string, MilestoneActivity[]>,
+  isLoading: boolean,
+  isClient: boolean,
+  onCreateMilestone: (data: any) =></string> Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: s</Milestone>tring) => Promise<boolean>,
+  onDeleteMiles</boolean>tone: (id: string) => Promise<boolean>,
+  onUploadDeliverab</boolean>le: (id: string, file: File) => Promise<any>,
+  isSubmittin</any>g: boolean,
+  onApprove?: (id: string)</void> => Promise<void>,
+  onReject?: (id: string) => Promise<void>
 }
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({
@@ -32,17 +32,17 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onCreateMilestone,
   onUpdateStatus,
   onDeleteMilestone,
-  onUploadDeliverable,
+  onUploadDeli</MilestonesListProps>verable,
   isSubmitting,
   onApprove,
   onReject
 }) => {
-  const [showAddForm, setShowAddForm] = useState(false);
+  const [showAddForm, setShowAddForm] = useState(false),
   
   const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data);
-    setShowAddForm(false);
-  };
+    await onCreateMilestone(data),
+    setShowAddForm(false)
+  },
 
   if (isLoading) {
     return (
@@ -57,7 +57,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Card>
         ))}
       </div>
-    );
+    ),
   }
   
   if (milestones.length === 0 && !showAddForm) {
@@ -75,7 +75,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           } : undefined
         }
       />
-    );
+    ),
   }
 
   return (
@@ -95,7 +95,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
             <AddMilestoneForm 
               onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
+              isSubmitting={isSub</AddMilestoneForm>mitting}
               onCancel={() => setShowAddForm(false)}
             />
           </CardContent>
@@ -119,5 +119,5 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         ))}
       </div>
     </div>
-  );
-};
+  ),
+},

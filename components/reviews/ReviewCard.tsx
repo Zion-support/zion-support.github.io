@@ -1,18 +1,18 @@
-import React from 'react';
-import StarRating from './StarRating';
-import type { PublicReview } from '../../types/reviews';
+import React from 'react',
+import StarRating from './StarRating',
+import type { PublicReview } from '../../types/reviews',
 
 type Props = {
-  review: PublicReview;
-  onReport?: (id: string) => void;
-};
+  review: PublicReview,
+  onReport?: (id: string) => void
+},
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
-    <div className="enhanced-card hover:shadow-lg transition-shadow">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+    <div className="max-w-2xl mx-auto">
+      <div className="flex items-center justify-between mb-2"></div>
+        <div className="flex items-center gap-2"></div>
+          <StarRating value={review.rating} onChange={() => {}} readOnly size</StarRating>={18} />
           <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
         </div>
         <button
@@ -22,7 +22,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
           Report abuse
         </button>
       </div>
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center gap-2 mb-3"></div>
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
@@ -30,7 +30,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
       </div>
       <p className="text-sm leading-6">{review.text}</p>
 
-      <div className="flex flex-wrap gap-2 mt-3">
+      <div className="flex flex-wrap gap-2 mt-3"></div>
         {typeof review.categories?.communication === 'number' && (
           <span className="pill">Communication: {review.categories.communication}★</span>
         )}
@@ -42,7 +42,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         )}
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default ReviewCard;
+export default ReviewCard,

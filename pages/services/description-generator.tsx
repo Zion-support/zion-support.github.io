@@ -1,29 +1,29 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react',
 
 export default function ServiceDescriptionGeneratorPage() {
-  const [title, setTitle] = useState('');
-  const [targetAudience, setTargetAudience] = useState('');
-  const [featuresInput, setFeaturesInput] = useState('');
-  const [additionalNotes, setAdditionalNotes] = useState('');
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [title, setTitle] = useState(''),
+  const [targetAudience, setTargetAudience] = useState(''),
+  const [featuresInput, setFeaturesInput] = useState(''),
+  const [additionalNotes, setAdditionalNotes] = useState(''),
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [generated, setGenerated] = useState('');
-  const [accepted, setAccepted] = useState(false);
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [generated, setGenerated] = useState(''),
+  const [accepted, setAccepted] = useState(false),
 
-  const keyFeatures = useMemo(() => {
+  const keyFeatures = useMemo(() =></string> {
     return featuresInput
       .split('\n')
       .map((f) => f.trim())
-      .filter(Boolean);
-  }, [featuresInput]);
+      .filter(Boolean),
+  }, [featuresInput]),
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setAccepted(false);
+    e.preventDefault(),
+    setLoading(true),
+    setError(null),
+    setAccepted(false),
 
     try {
       const response = await fetch('/api/generate-service-description', {
@@ -34,29 +34,29 @@ export default function ServiceDescriptionGeneratorPage() {
           keyFeatures,
           targetAudience,
           additionalNotes: additionalNotes || undefined,
-          tone})});
+          tone})}),
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || 'Failed to generate');
+        const data = await response.json().catch(() => ({})),
+        throw new Error(data.error || 'Failed to generate'),
       }
 
-      const data = (await response.json()) as { description: string };
-      setGenerated(data.description || '');
+      const data = (await response.json()) as { description: string },
+      setGenerated(data.description || ''),
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message || 'Something went wrong')
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function handleAccept() {
-    setAccepted(true);
+    setAccepted(true),
   }
 
   function handleCopy() {
-    if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
+    if (!generated) return,
+    navigator.clipboard.writeText(generated).catch(() => {}),
   }
 
   return (
@@ -76,7 +76,7 @@ export default function ServiceDescriptionGeneratorPage() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-          />
+   </input>       />
         </div>
 
         <div>
@@ -87,7 +87,7 @@ export default function ServiceDescriptionGeneratorPage() {
             placeholder="e.g., CTOs and product teams at growth-stage SaaS"
             value={targetAudience}
             onChange={(e) => setTargetAudience(e.target.value)}
-            required
+            requ</input>ired
           />
         </div>
 
@@ -98,7 +98,7 @@ export default function ServiceDescriptionGeneratorPage() {
             placeholder={"e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance"}
             value={featuresInput}
             onChange={(e) => setFeaturesInput(e.target.value)}
-            required
+        </textarea>    required
           />
         </div>
 
@@ -122,7 +122,7 @@ export default function ServiceDescriptionGeneratorPage() {
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
             value={additionalNotes}
-            onChange={(e) => setAdditionalNotes(e.target.value)}
+            onChange={(e) => setAdditiona</textarea>lNotes(e.target.value)}
           />
         </div>
 
@@ -161,7 +161,7 @@ export default function ServiceDescriptionGeneratorPage() {
           <textarea
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
-            onChange={(e) => setGenerated(e.target.value)}
+            onChange={(e</textarea>) => setGenerated(e.target.value)}
           />
 
           {accepted && (
@@ -170,5 +170,5 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

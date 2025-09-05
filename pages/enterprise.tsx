@@ -1,10 +1,10 @@
-import type { GetServerSideProps } from 'next';
+import type { GetServerSideProps } from 'next',
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/plans/enterprise',
-      permanent: false}};
-};
+      permanent: false}},
+},
 
-export default function EnterpriseRedirect() { return null; }
+export default function EnterpriseRedirect() { return null, }

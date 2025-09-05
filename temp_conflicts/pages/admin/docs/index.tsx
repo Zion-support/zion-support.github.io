@@ -1,37 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 
 export default function DocsAdmin() {
-  const [token, setToken] = useState('');
-  const [value, setValue] = useState('');
-  const [status, setStatus] = useState<string | null>(null);
+  const [token, setToken] = useState(''),
+  const [value, setValue] = useState(''),
+  const [status, setStatus] = useState<string | null>(null),
 
-  const fetchContent = async () => {
-    setStatus('Loading...');
-    const res = await fetch('/api/admin/docs/get', { headers: { 'x-admin-token': token } });
+  const fetchContent = async () =></string> {
+    setStatus('Loading...'),
+    const res = await fetch('/api/admin/docs/get', { headers: { 'x-admin-token': token } }),
     if (!res.ok) {
-      setStatus('Failed to load');
-      return;
+      setStatus('Failed to load'),
+      return,
     }
-    const json = await res.json();
-    setValue(JSON.stringify(json, null, 2));
-    setStatus('Loaded');
-  };
+    const json = await res.json(),
+    setValue(JSON.stringify(json, null, 2)),
+    setStatus('Loaded'),
+  },
 
   const saveContent = async () => {
-    setStatus('Saving...');
+    setStatus('Saving...'),
     try {
-      const parsed = JSON.parse(value);
+      const parsed = JSON.parse(value),
       const res = await fetch('/api/admin/docs/save', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-        body: JSON.stringify(parsed)});
-      if (!res.ok) throw new Error('Save failed');
-      const data = await res.json();
-      setStatus(`Saved version ${data.version}`);
+        headers: { 'Content-Type': 'application/jsonx-admin-token': token },
+        body: JSON.stringify(parsed)}),
+      if (!res.ok) throw new Error('Save failed'),
+      const data = await res.json(),
+      setStatus(`Saved version ${data.version}`),
     } catch (e) {
-      setStatus('Invalid JSON or save error');
+      setStatus('Invalid JSON or save error'),
     }
-  };
+  },
 
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-4">
@@ -43,7 +43,7 @@ export default function DocsAdmin() {
           className="border rounded px-3 py-2 text-sm w-64"
           value={token}
           onChange={(e) => setToken(e.target.value)}
-        />
+ </input>       />
         <button onClick={fetchContent} className="px-3 py-2 text-sm rounded bg-gray-900 text-white">Load</button>
         <button onClick={saveContent} className="px-3 py-2 text-sm rounded bg-green-600 text-white">Save</button>
         {status && <p className="text-sm text-gray-600">{status}</p>}
@@ -51,8 +51,8 @@ export default function DocsAdmin() {
       <textarea
         className="w-full h-[70vh] border rounded p-3 font-mono text-sm"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => setValue(e.target</textarea>.value)}
       />
     </div>
-  );
+  ),
 }

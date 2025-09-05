@@ -16,10 +16,10 @@ function fixTypeScriptFiles(dir) {,
         const content = fs.readFileSync(fullPath, 'utf8'),
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {,
           console.log(`Fixing "file": ${fullPath}`),
-          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
+          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {},')},
       } catch (error) {,
 
-        console.log(`Error processing ${fullPath}: ${error.message}`)};
-};
-  })};
+        console.log(`Error processing ${fullPath}: ${error.message}`)},
+},
+  })},
 

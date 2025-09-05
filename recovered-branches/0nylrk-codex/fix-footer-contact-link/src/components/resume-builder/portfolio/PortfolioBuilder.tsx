@@ -1,45 +1,45 @@
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';
-import { ProjectCard } from './ProjectCard';
-import { ProjectForm } from './ProjectForm';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
+import { useState, useEffect } from 'react',
+import { Card, CardContent } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { FilePlus, Loader2 } from 'lucide-react',
+import { ProjectCard } from './ProjectCard',
+import { ProjectForm } from './ProjectForm',
+import { PortfolioProject } from '@/types/resume',
+import { usePortfolio } from '@/hooks/usePortfolio',
 
 export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
+  const [showAddProject, setShowAddProject] = useState(false),
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
   
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
+  useEffect(() =></PortfolioProject> {
+    fetchProjects(),
+  }, [fetchProjects]),
   
   const handleAddSuccess = () => {
-    setShowAddProject(false);
-    fetchProjects();
-  };
+    setShowAddProject(false),
+    fetchProjects(),
+  },
   
   const handleEditSuccess = () => {
-    setEditingProject(null);
-    fetchProjects();
-  };
+    setEditingProject(null),
+    fetchProjects(),
+  },
   
   const handleDeleteProject = async (projectId: string) => {
-    const success = await deleteProject(projectId);
+    const success = await deleteProject(projectId),
     if (success) {
-      fetchProjects();
+      fetchProjects()
     }
-  };
+  },
   
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    );
+    ),
   }
   
   return (
@@ -71,9 +71,9 @@ export function PortfolioBuilder() {
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null);
-              }}
+                setShowAddProject(false),
+                setEditingProject(null),
+            </ProjectForm>  }}
             />
           </CardContent>
         </Card>
@@ -87,7 +87,7 @@ export function PortfolioBuilder() {
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
-              onDelete={handleDeleteProject}
+              onDelete={ha</ProjectCard>ndleDeleteProject}
             />
           ))}
         </div>
@@ -115,5 +115,5 @@ export function PortfolioBuilder() {
         )
       )}
     </div>
-  );
+  ),
 }

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function Placeholder() {
   return (
@@ -14,5 +14,5 @@ export default function Placeholder() {
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
       </div>
     </main>
-  );
+  )
 }

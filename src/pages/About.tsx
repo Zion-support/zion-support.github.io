@@ -1,8 +1,8 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ContactSection } from "@/components/ContactSection";
-import Link from "next/link";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ContactSection } from "@/components/ContactSection",
+import Link from "next/link",
 
 export default function About() {
   const team = [
@@ -30,7 +30,7 @@ export default function About() {
       bio:
         "Sam Lee serves as Zion's Head of Community, cultivating relationships with developers, partners, and customers worldwide. He previously launched multiple tech communities that grew from small meetups into thriving networks. At Zion, Sam orchestrates events, online forums, and mentorship programs that encourage collaboration and knowledge sharing. His empathetic approach helps newcomers feel welcomed while promoting an inclusive culture. Sam studied communications and has a background in user advocacy. In his downtime, he enjoys photography and traveling with his family, often."
     }
-  ];
+  ],
 
   const timeline = [
     {
@@ -63,7 +63,7 @@ export default function About() {
       text:
         "Expanded into decentralized talent marketplace empowering creators worldwide to launch cutting-edge AI solutions and collaborate."
     }
-  ];
+  ],
 
   return (
     <>
@@ -238,5 +238,5 @@ export default function About() {
         <ContactSection />
       </main>
     </>
-  );
+  ),
 }

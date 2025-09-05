@@ -1,13 +1,13 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
 
 const PostJob: NextPage = () => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [budget, setBudget] = useState('');
-  const [preview, setPreview] = useState(false);
+  const [title, setTitle] = useState(''),
+  const [description, setDescription] = useState(''),
+  const [budget, setBudget] = useState(''),
+  const [preview, setPreview] = useState(false),
 
   return (
     <div className="space-y-6 pb-20">
@@ -21,15 +21,15 @@ const PostJob: NextPage = () => {
         <form className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Title</label>
-            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g., Build a Next.js website" className="w-full" />
+            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g., Build a Next.js website" className="w-full" /></input>
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Description</label>
-            <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Describe your project..." rows={6} className="w-full" />
+            <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Describe your project..." rows={6} className="w-</textarea>full" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Budget (USD)</label>
-            <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="5000" className="w-full" />
+            <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="5000" cl</input>assName="w-full" />
           </div>
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>
@@ -62,7 +62,7 @@ const PostJob: NextPage = () => {
         </aside>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default PostJob;
+export default PostJob,

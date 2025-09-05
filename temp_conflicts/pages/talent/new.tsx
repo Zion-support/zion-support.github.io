@@ -1,5 +1,5 @@
-import { FormEvent, useState } from 'react';
-import type { TalentProfile } from '@/utils/types/talent';
+import { FormEvent, useState } from 'react',
+import type { TalentProfile } from '@/utils/types/talent',
 
 export default function NewTalentPage() {
   const [form, setForm] = useState({
@@ -15,16 +15,16 @@ export default function NewTalentPage() {
     availability: 'Open',
     requestQuote: false,
     portfolio: '',
-    videoUrl: ''});
-  const [generated, setGenerated] = useState<Partial<TalentProfile> | null>(null);
-  const [saving, setSaving] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+    videoUrl: ''}),
+  const [generated, setGenerated] = useState<Partial<TalentProfile> | null></Partial>(null),
+  const [saving, setSaving] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
-  const onGenerate = async (e: FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
+  const onGenerate = async (e: For</string>mEvent) => {
+    e.preventDefault(),
+    setError(null),
+    setLoading(true),
     try {
       const res = await fetch('/api/talent/generate', {
         method: 'POST',
@@ -34,21 +34,21 @@ export default function NewTalentPage() {
           title: form.title,
           bio: form.bio,
           experience: form.experience,
-          skills: form.skills})});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Generation failed');
-      setGenerated(data);
+          skills: form.skills})}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Generation failed'),
+      setGenerated(data),
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   const onSave = async () => {
-    if (!generated) return;
-    setSaving(true);
-    setError(null);
+    if (!generated) return,
+    setSaving(true),
+    setError(null),
     try {
       const payload: Partial<TalentProfile> = {
         ...generated,
@@ -62,26 +62,26 @@ export default function NewTalentPage() {
         requestQuote: form.requestQuote,
         availability: form.availability as any,
         portfolio: form.portfolio
-          ? form.portfolio.split('\n').map((line) => {
-              const [title, url] = line.split('|').map((s) => s.trim());
-              return { title: title || url, url };
+          ? form.portfolio.split(</TalentProfile>'\n').map((line) => {
+              const [title, url] = line.split('|').map((s) => s.trim()),
+              return { title: title || url, url },
             })
           : [],
-        videoUrl: form.videoUrl || undefined};
+        videoUrl: form.videoUrl || undefined},
 
       const res = await fetch('/api/talent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Save failed');
-      window.location.href = `/talent/${data.slug}`;
+        body: JSON.stringify(payload)}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Save failed'),
+      window.location.href = `/talent/${data.slug}`,
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setSaving(false);
+      setSaving(false),
     }
-  };
+  },
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -92,48 +92,48 @@ export default function NewTalentPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="text-sm font-medium">Full Name</label>
-            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} required />
+            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.na</input>me} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} required />
           </div>
           <div>
             <label className="text-sm font-medium">Professional Title (optional)</label>
-            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.title} onChange={(e) => setForm((f) => ({ ...f, title: e.target.value }))} />
+            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={</input>form.title} onChange={(e) => setForm((f) => ({ ...f, title: e.target.value }))} />
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label className="text-sm font-medium">Location</label>
-            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.location} onChange={(e) => setForm((f) => ({ ...f, location: e.target.value }))} required />
+            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" va</input>lue={form.location} onChange={(e) => setForm((f) => ({ ...f, location: e.target.value }))} required />
           </div>
           <div>
             <label className="text-sm font-medium">Timezone</label>
-            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.timezone} onChange={(e) => setForm((f) => ({ ...f, timezone: e.target.value }))} placeholder="e.g., America/New_York" />
+            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 </input>py-2" value={form.timezone} onChange={(e) => setForm((f) => ({ ...f, timezone: e.target.value }))} placeholder="e.g., America/New_York" />
           </div>
           <div>
             <label className="text-sm font-medium">Region</label>
-            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.region} onChange={(e) => setForm((f) => ({ ...f, region: e.target.value }))} placeholder="e.g., North America" />
+            <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-90</input>0/40 px-3 py-2" value={form.region} onChange={(e) => setForm((f) => ({ ...f, region: e.target.value }))} placeholder="e.g., North America" />
           </div>
         </div>
 
         <div>
           <label className="text-sm font-medium">Short Bio</label>
-          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" rows={3} value={form.bio} onChange={(e) => setForm((f) => ({ ...f, bio: e.target.value }))} placeholder="Background, focus areas, impact" />
+          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-</textarea>900/40 px-3 py-2" rows={3} value={form.bio} onChange={(e) => setForm((f) => ({ ...f, bio: e.target.value }))} placeholder="Background, focus areas, impact" />
         </div>
 
         <div>
           <label className="text-sm font-medium">Experience Highlights</label>
-          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" rows={3} value={form.experience} onChange={(e) => setForm((f) => ({ ...f, experience: e.target.value }))} placeholder="Key roles, projects, outcomes" />
+          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-g</textarea>ray-900/40 px-3 py-2" rows={3} value={form.experience} onChange={(e) => setForm((f) => ({ ...f, experience: e.target.value }))} placeholder="Key roles, projects, outcomes" />
         </div>
 
         <div>
           <label className="text-sm font-medium">Skills (comma-separated)</label>
-          <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.skills} onChange={(e) => setForm((f) => ({ ...f, skills: e.target.value }))} placeholder="Python, DevOps, AI/ML, Azure" />
+          <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-7</input>00 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.skills} onChange={(e) => setForm((f) => ({ ...f, skills: e.target.value }))} placeholder="Python, DevOps, AI/ML, Azure" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label className="text-sm font-medium">Hourly Rate (USD)</label>
-            <input type="number" className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.hourlyRateUsd} onChange={(e) => setForm((f) => ({ ...f, hourlyRateUsd: e.target.value }))} placeholder="Leave empty for quote" />
+            <input type="number" className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-</input>700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.hourlyRateUsd} onChange={(e) => setForm((f) => ({ ...f, hourlyRateUsd: e.target.value }))} placeholder="Leave empty for quote" />
           </div>
           <div>
             <label className="text-sm font-medium">Availability</label>
@@ -143,7 +143,7 @@ export default function NewTalentPage() {
               <option>Booked</option>
             </select>
           </div>
-          <div className="flex items-end gap-2">
+          <div className="flex items-e</input>nd gap-2">
             <input id="rq" type="checkbox" checked={form.requestQuote} onChange={(e) => setForm((f) => ({ ...f, requestQuote: e.target.checked }))} />
             <label htmlFor="rq" className="text-sm">Request Quote instead</label>
           </div>
@@ -151,12 +151,12 @@ export default function NewTalentPage() {
 
         <div>
           <label className="text-sm font-medium">Portfolio (one per line: title | url)</label>
-          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" rows={3} value={form.portfolio} onChange={(e) => setForm((f) => ({ ...f, portfolio: e.target.value }))} placeholder="RAG Starter | https://example.com/rag" />
+          <textarea className="w-full mt-1 rounded-xl border border-gray-300 dark:b</textarea>order-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" rows={3} value={form.portfolio} onChange={(e) => setForm((f) => ({ ...f, portfolio: e.target.value }))} placeholder="RAG Starter | https://example.com/rag" />
         </div>
 
         <div>
           <label className="text-sm font-medium">Video URL (optional)</label>
-          <input className="w-full mt-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.videoUrl} onChange={(e) => setForm((f) => ({ ...f, videoUrl: e.target.value }))} placeholder="https://www.youtube.com/embed/..." />
+          <input className="w-full mt-1 rounded-xl border b</input>order-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/40 px-3 py-2" value={form.videoUrl} onChange={(e) => setForm((f) => ({ ...f, videoUrl: e.target.value }))} placeholder="https://www.youtube.com/embed/..." />
         </div>
 
         <div className="flex items-center gap-3">
@@ -181,5 +181,5 @@ export default function NewTalentPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

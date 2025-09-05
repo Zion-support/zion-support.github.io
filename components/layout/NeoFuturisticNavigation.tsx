@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 import { 
-	Menu, 
+	Menu,
 	X, 
 	ChevronDown, 
 	ChevronRight,
@@ -51,41 +51,41 @@ import {
 	Eye,
 	FlaskConical,
 	Link as LinkIcon
-} from 'lucide-react';
-import Button from '../ui/Button';
+} from 'lucide-react',
+import Button from '../ui/Button',
 
 export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-	const router = useRouter();
+	const [isOpen, setIsOpen] = useState(false),
+	const [isScrolled, setIsScrolled] = useState(false),
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+	const router = useRouter(),
 
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20);
-		};
+			setIsScrolled(window.scrollY > 20),
+		},
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		window.addEventListener('scroll', handleScroll),
+		return () => window.removeEventListener('scroll', handleScroll),
+	}, []),
 
 	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-	};
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+	},
 
 	const closeMobileMenu = () => {
-		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setIsOpen(false),
+		setActiveDropdown(null),
+	},
 
-	const isActive = (path: string) => router.pathname === path;
+	const isActive = (path: string) => router.pathname === path,
 
 	const serviceCategories = [
 		{
@@ -198,14 +198,14 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
-	];
+	],
 
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
-	];
+	],
 
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
@@ -213,7 +213,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' },
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
-	];
+	],
 
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
@@ -226,7 +226,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
-	];
+	],
 
 	// Newly added real services quick links
 	const newServiceLinks = [
@@ -236,31 +236,31 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-	];
+	],
 
 	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
-		}`}> 
+		}`}></nav>
 			{/* Scroll Progress Bar */}
-			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
+			<div className="absolute top-0 left-0 h-1 w-full bg-transparent"></div>
 				<div
 					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
 					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
 				/>
 			</div>
-			<div className="max-w-7xl mx-auto px-4">
-				<div className="flex items-center justify-between h-20">
+			<div className="max-w-7xl mx-auto px-4"></div>
+				<div className="flex items-center justify-between h-20"></div>
 					{/* Logo */}
-					<Link href="/" className="flex items-center space-x-3 group">
-						<div className="relative">
-							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+					<Link href="/" className="flex items-center space-x-3 group"></Link>
+						<div className="relative"></div>
+							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
 								<Sparkles className="w-6 h-6 text-white" />
 							</div>
 							<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
 						</div>
-						<div className="hidden sm:block">
-							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+						<div className="hidden sm:block"></div>
+							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300"></div>
 								Zion Tech Group
 							</div>
 							<div className="text-xs text-gray-400">Revolutionary Technology</div>
@@ -268,9 +268,9 @@ export default function NeoFuturisticNavigation() {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg:flex items-center space-x-8">
+					<div className="hidden lg:flex items-center space-x-8"></div>
 						{/* Services Dropdown */}
-						<div className="relative group">
+						<div className="relative group"></div>
 							<button
 								className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
 								onClick={() => toggleDropdown('services')}
@@ -281,25 +281,27 @@ export default function NeoFuturisticNavigation() {
 								}`}/>
 							</button>
 							{activeDropdown === 'services' && (
-								<div className="absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
-									<div className="grid grid-cols-2 gap-6">
+								<div className="absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6"></div>
+									<div className="grid grid-cols-2 gap-6"></div>
 										{serviceCategories.map((category, index) => (
-											<div key={index} className="group">
-												<div className="flex items-center space-x-3 mb-3">
-													<div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-20`}>
-														{category.icon}
+											<div key={index} className="group"></div>
+												<div className="flex items-center space-x-3 mb-3"></div>
+													<div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-20`}></div>
+														{category.icon
+  },
 													</div>
-													<div>
-														<h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-															{category.name}
+													<div></div>
+														<h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors"></h3>
+															{category.name
+  },
 														</h3>
 														<p className="text-gray-400 text-sm">{category.description}</p>
 													</div>
 												</div>
-												<div className="space-y-2">
+												<div className="space-y-2"></div>
 													{category.services.map((service, serviceIndex) => (
-														<div key={serviceIndex} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
-															<div>
+														<div key={serviceIndex} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors"></div>
+															<div></div>
 																<div className="text-white text-sm font-medium">{service.name}</div>
 																<div className="text-gray-400 text-xs">{service.description}</div>
 															</div>
@@ -310,12 +312,12 @@ export default function NeoFuturisticNavigation() {
 											</div>
 									))}
 									</div>
-									<div className="mt-6 pt-6 border-t border-gray-700/50">
-										<div className="flex items-center justify-between">
-											<div className="text-gray-400 text-sm">
+									<div className="mt-6 pt-6 border-t border-gray-700/50"></div>
+										<div className="flex items-center justify-between"></div>
+											<div className="text-gray-400 text-sm"></div>
 												<span className="text-cyan-400 font-semibold">500+</span> Revolutionary Services Available
 											</div>
-											<Button href="/services" variant="quantum" size="sm">
+											<Button href="/services" variant="quantum" size="sm"></Button>
 												View All Services
 												<ArrowRight className="w-4 h-4 ml-2" />
 											</Button>
@@ -342,7 +344,7 @@ export default function NeoFuturisticNavigation() {
 						<Link href="/resources" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Resources</Link>
 
 						{/* Popular Dropdown */}
-						<div className="relative group">
+						<div className="relative group"></div>
 							<button
 								className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
 								onClick={() => toggleDropdown('popular')}
@@ -351,10 +353,10 @@ export default function NeoFuturisticNavigation() {
 								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'popular' ? 'rotate-180' : ''}`}/>
 							</button>
 							{activeDropdown === 'popular' && (
-								<div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
-									<div className="space-y-2">
+								<div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6"></div>
+									<div className="space-y-2"></div>
 										{popularServiceLinks.map((item) => (
-											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
+											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors"></Link>
 												<span className="text-white text-sm">{item.name}</span>
 												<ArrowRight className="w-4 h-4 text-cyan-400" />
 											</Link>
@@ -365,7 +367,7 @@ export default function NeoFuturisticNavigation() {
 						</div>
 
 						{/* New Dropdown */}
-						<div className="relative group">
+						<div className="relative group"></div>
 							<button
 								className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
 								onClick={() => toggleDropdown('new')}
@@ -374,10 +376,10 @@ export default function NeoFuturisticNavigation() {
 								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'new' ? 'rotate-180' : ''}`}/>
 							</button>
 							{activeDropdown === 'new' && (
-								<div className="absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
-									<div className="space-y-2">
+								<div className="absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6"></div>
+									<div className="space-y-2"></div>
 										{newServiceLinks.map((item) => (
-											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
+											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors"></Link>
 												<span className="text-white text-sm">{item.name}</span>
 												<ArrowRight className="w-4 h-4 text-fuchsia-400" />
 											</Link>
@@ -397,31 +399,31 @@ export default function NeoFuturisticNavigation() {
 
 			{/* Mobile Menu */}
 			{isOpen && (
-				<div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50">
-					<div className="max-w-7xl mx-auto px-4 py-6">
-						<div className="space-y-6">
+				<div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50"></div>
+					<div className="max-w-7xl mx-auto px-4 py-6"></div>
+						<div className="space-y-6"></div>
 							{/* Services Section */}
-							<div>
+							<div></div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-services')}>
 									<span>Services</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}/>
 								</button>
 
 								{activeDropdown === 'mobile-services' && (
-									<div className="ml-4 space-y-3">
+									<div className="ml-4 space-y-3"></div>
 										{serviceCategories.map((category, index) => (
-											<div key={index} className="border-l-2 border-gray-700 pl-4">
+											<div key={index} className="border-l-2 border-gray-700 pl-4"></div>
 												<div className="text-cyan-400 font-medium mb-2">{category.name}</div>
 												<div className="text-gray-400 text-sm mb-2">{category.description}</div>
-												<div className="space-y-1">
+												<div className="space-y-1"></div>
 													{category.services.slice(0, 2).map((service, serviceIndex) => (
 														<div key={serviceIndex} className="text-xs text-gray-500">• {service.name} - {service.price}</div>
 													))}
 												</div>
 											</div>
 										))}
-										<div className="pt-3">
-											<Button href="/services" variant="quantum" size="sm" className="w-full">
+										<div className="pt-3"></div>
+											<Button href="/services" variant="quantum" size="sm" className="w-full"></Button>
 												View All Services
 												<ArrowRight className="w-4 h-4 ml-2" />
 											</Button>
@@ -431,17 +433,18 @@ export default function NeoFuturisticNavigation() {
 							</div>
 
 							{/* Company Section */}
-							<div>
+							<div></div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-company')}>
 									<span>Company</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}/>
 								</button>
 
 								{activeDropdown === 'mobile-company' && (
-									<div className="ml-4 space-y-3">
+									<div className="ml-4 space-y-3"></div>
 										{companyInfo.map((item, index) => (
-											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}>
-												{item.name}
+											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}></Link>
+												{item.name
+  },
 											</Link>
 										))}
 									</div>
@@ -449,17 +452,18 @@ export default function NeoFuturisticNavigation() {
 							</div>
 
 							{/* Resources Section */}
-							<div>
+							<div></div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-resources')}>
 									<span>Resources</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}/>
 								</button>
 
 								{activeDropdown === 'mobile-resources' && (
-									<div className="ml-4 space-y-3">
+									<div className="ml-4 space-y-3"></div>
 										{resources.map((item, index) => (
-											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}>
-												{item.name}
+											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}></Link>
+												{item.name
+  },
 											</Link>
 										))}
 									</div>
@@ -467,33 +471,33 @@ export default function NeoFuturisticNavigation() {
 							</div>
 
 							{/* Contact Info */}
-							<div className="pt-6 border-t border-gray-700/50">
+							<div className="pt-6 border-t border-gray-700/50"></div>
 								<div className="text-white font-semibold mb-4">Contact Information</div>
-								<div className="space-y-3">
-									<div className="flex items-center space-x-3">
+								<div className="space-y-3"></div>
+									<div className="flex items-center space-x-3"></div>
 										<Phone className="w-5 h-5 text-cyan-400" />
 										<span className="text-gray-300">{contactInfo.mobile}</span>
 									</div>
-									<div className="flex items-center space-x-3">
+									<div className="flex items-center space-x-3"></div>
 										<Mail className="w-5 h-5 text-purple-400" />
 										<span className="text-gray-300">{contactInfo.email}</span>
 									</div>
-									<div className="flex items-center space-x-3">
+									<div className="flex items-center space-x-3"></div>
 										<MapPin className="w-5 h-5 text-green-400" />
 										<span className="text-gray-300 text-sm">{contactInfo.address}</span>
 									</div>
-									<div className="flex items-center space-x-3">
+									<div className="flex items-center space-x-3"></div>
 										<Globe className="w-5 h-5 text-blue-400" />
 										<span className="text-gray-300">{contactInfo.website}</span>
 									</div>
 								</div>
 
-								<div className="mt-6 space-y-3">
-									<Button href="/services" variant="quantum" size="lg" className="w-full">
+								<div className="mt-6 space-y-3"></div>
+									<Button href="/services" variant="quantum" size="lg" className="w-full"></Button>
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
 									</Button>
-									<Button href="/contact" variant="secondary" size="lg" className="w-full">
+									<Button href="/contact" variant="secondary" size="lg" className="w-full"></Button>
 										Contact Us
 									</Button>
 								</div>
@@ -503,5 +507,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	);
+	),
 }

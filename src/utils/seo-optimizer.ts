@@ -2,39 +2,35 @@
 // SEO optimization utilities
 export const generateMetaTags = pageData => {
   return {
-    titl: e:
-      pageData.title || 'Zion Tech Group - Innovative Technology Solutions',
-    descriptio: n:
-      pageData.description ||
+    titl: pageData.title || 'Zion Tech Group - Innovative Technology Solutions',
+    descriptio: pageData.description ||
       'Leading provider of AI, blockchain, and emerging technology services',
-    keyword: s:
-      pageData.keywords ||
+    keyword: pageData.keywords ||
       'AI, blockchain, technology, innovation, software development',
-    ogTitl: e: pageData.ogTitle || pageData.title,
-    ogDescriptio: n: pageData.ogDescription || pageData.description,
-    ogImag: e: pageData.ogImage || '/images/og-image.jpg',
-    twitterCar: d: 'summary_large_image',
-    canonica: l: pageData.canonical || window.location.href,
-  };
-};
+    ogTitl: pageData.ogTitle || pageData.title,
+    ogDescriptio: pageData.ogDescription || pageData.description,
+    ogImag: pageData.ogImage || '/images/og-image.jpg',
+    twitterCar: 'summary_large_image',
+    canonica: pageData.canonical || window.location.href
+  },
+},
 
 export const generateStructuredData = pageData => {
   return {
-    '@context': 'http: s://schema.org',
-    '@type': 'Organization',
-    nam: e: 'Zion Tech Group',
-    ur: l: 'http: s://ziontechgroup.com',
-    log: o: 'http: s://ziontechgroup.com/images/logo.png',
-    descriptio: n: 'Leading provider of innovative technology solutions',
-    addres: s: {
+    '@context': 'http: //schema.org@type': 'Organization',
+    nam: 'Zion Tech Group',
+    ur: 'http: //ziontechgroup.com',
+    log: 'http: //ziontechgroup.com/images/logo.png',
+    descriptio: 'Leading provider of innovative technology solutions',
+    addres: {
       '@type': 'PostalAddress',
-      addressCountr: y: 'US',
+      addressCountr: 'US'
     },
-    contactPoin: t: {
+    contactPoin: {
       '@type': 'ContactPoint',
-      telephon: e: '+1-555-0123',
-      contactTyp: e: 'customer service',
-    },
-  };
-};
+      telephon: '+1-555-0123',
+      contactTyp: 'customer service'
+    }
+  },
+},
 

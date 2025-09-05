@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface Innovative2025Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovative2025Services: Innovative2025Service[] = [
@@ -51,12 +51,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that seamlessly processes and analyzes multiple data types simultaneously, enabling breakthrough insights and applications across industries.',
     features: [
-      'Cross-modal data fusion algorithms',
-      'Real-time multimodal analysis',
-      'Advanced pattern recognition',
-      'Custom model training',
-      'API-first architecture',
-      'Enterprise security & compliance'
+      'Cross-modal data fusion algorithmsReal-time multimodal analysis',
+      'Advanced pattern recognitionCustom model training',
+      'API-first architectureEnterprise security & compliance'
     ],
     popular: true,
     icon: '🔮',
@@ -69,11 +66,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['PyTorch', 'TensorFlow', 'CUDA', 'NVIDIA A100', 'Kubernetes', 'Redis'],
-    integrations: ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'REST API'],
-    useCases: ['Medical diagnosis', 'Autonomous navigation', 'Content moderation', 'Research analysis'],
+    technology: ['PyTorchTensorFlow', 'CUDANVIDIA A100', 'KubernetesRedis'],
+    integrations: ['AWSAzure', 'GCPDocker', 'KubernetesREST API'],
+    useCases: ['Medical diagnosisAutonomous navigation', 'Content moderationResearch analysis'],
     roi: 'Average customer sees 500% ROI within 6 months through improved accuracy and efficiency.',
-    competitors: ['OpenAI GPT-4V', 'Google Gemini', 'Anthropic Claude', 'Microsoft Azure AI'],
+    competitors: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeMicrosoft Azure AI'],
     marketSize: '$15B+ multimodal AI market',
     growthRate: '250% annual growth',
     variant: 'quantum-holographic',
@@ -98,12 +95,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Cutting-edge platform that understands, analyzes, and responds to human emotions in real-time, enabling more empathetic and effective AI interactions.',
     features: [
-      'Real-time emotion detection',
-      'Sentiment analysis & mood tracking',
-      'Emotional response generation',
-      'Cultural context awareness',
-      'Privacy-preserving processing',
-      'Multi-language support'
+      'Real-time emotion detectionSentiment analysis & mood tracking',
+      'Emotional response generationCultural context awareness',
+      'Privacy-preserving processingMulti-language support'
     ],
     popular: true,
     icon: '💝',
@@ -116,11 +110,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Emotional Intelligence',
     realService: true,
-    technology: ['TensorFlow', 'OpenCV', 'NLP', 'Computer Vision', 'Python', 'React'],
-    integrations: ['Slack', 'Zoom', 'Teams', 'CRM systems', 'Analytics platforms'],
-    useCases: ['Mental health monitoring', 'Customer sentiment analysis', 'Educational engagement', 'Gaming experiences'],
+    technology: ['TensorFlowOpenCV', 'NLPComputer Vision', 'PythonReact'],
+    integrations: ['SlackZoom', 'TeamsCRM systems', 'Analytics platforms'],
+    useCases: ['Mental health monitoringCustomer sentiment analysis', 'Educational engagementGaming experiences'],
     roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
-    competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
+    competitors: ['AffectivaRealeyes', 'EmotientNoldus'],
     marketSize: '$3.8B emotional AI market',
     growthRate: '180% annual growth',
     variant: 'holographic-matrix',
@@ -145,12 +139,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that combines classical AI with quantum computing power, solving previously intractable problems in optimization, cryptography, and simulation.',
     features: [
-      'Quantum-classical hybrid algorithms',
-      'Real-time quantum resource allocation',
-      'Advanced optimization solvers',
-      'Quantum machine learning',
-      'Secure quantum communications',
-      'Scalable quantum infrastructure'
+      'Quantum-classical hybrid algorithmsReal-time quantum resource allocation',
+      'Advanced optimization solversQuantum machine learning',
+      'Secure quantum communicationsScalable quantum infrastructure'
     ],
     popular: true,
     icon: '⚛️',
@@ -163,11 +154,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'CUDA', 'Quantum hardware'],
-    integrations: ['IBM Quantum', 'Google Quantum', 'AWS Braket', 'Azure Quantum'],
-    useCases: ['Portfolio optimization', 'Drug discovery', 'Supply chain optimization', 'Cryptography'],
+    technology: ['QiskitCirq', 'PennyLanePython', 'CUDAQuantum hardware'],
+    integrations: ['IBM QuantumGoogle Quantum', 'AWS BraketAzure Quantum'],
+    useCases: ['Portfolio optimizationDrug discovery', 'Supply chain optimizationCryptography'],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Rigetti', 'D-Wave'],
+    competitors: ['IBM QuantumGoogle Quantum', 'RigettiD-Wave'],
     marketSize: '$8.6B quantum computing market',
     growthRate: '300% annual growth',
     variant: 'quantum-cyberpunk',
@@ -193,12 +184,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced platform that uses AI to analyze blockchain transactions, detect patterns, and provide actionable insights for DeFi, NFTs, and cryptocurrency markets.',
     features: [
-      'Real-time blockchain monitoring',
-      'AI-powered fraud detection',
-      'Market trend analysis',
-      'Smart contract auditing',
-      'DeFi risk assessment',
-      'NFT market insights'
+      'Real-time blockchain monitoringAI-powered fraud detection',
+      'Market trend analysisSmart contract auditing',
+      'DeFi risk assessmentNFT market insights'
     ],
     popular: true,
     icon: '🔗',
@@ -211,11 +199,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1 week',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Ethereum', 'Bitcoin', 'GraphQL', 'PostgreSQL'],
-    integrations: ['Coinbase', 'Binance', 'Uniswap', 'OpenSea', 'Trading platforms'],
-    useCases: ['Fraud detection', 'Market analysis', 'Compliance monitoring', 'Investment research'],
+    technology: ['PythonTensorFlow', 'EthereumBitcoin', 'GraphQLPostgreSQL'],
+    integrations: ['CoinbaseBinance', 'UniswapOpenSea', 'Trading platforms'],
+    useCases: ['Fraud detectionMarket analysis', 'Compliance monitoringInvestment research'],
     roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
-    competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
+    competitors: ['ChainalysisElliptic', 'CipherTraceTRM Labs'],
     marketSize: '$2.1B blockchain analytics market',
     growthRate: '220% annual growth',
     variant: 'cyberpunk',
@@ -241,12 +229,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that uses AI to automatically generate, manage, and optimize immersive metaverse experiences with minimal human intervention.',
     features: [
-      'AI-generated 3D environments',
-      'Procedural content generation',
-      'Real-time world optimization',
-      'Avatar customization AI',
-      'Social interaction algorithms',
-      'Cross-platform compatibility'
+      'AI-generated 3D environmentsProcedural content generation',
+      'Real-time world optimizationAvatar customization AI',
+      'Social interaction algorithmsCross-platform compatibility'
     ],
     popular: true,
     icon: '🌐',
@@ -259,11 +244,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Metaverse & VR',
     realService: true,
-    technology: ['Unity', 'Unreal Engine', 'AI/ML', '3D Graphics', 'WebGL', 'WebXR'],
-    integrations: ['Meta Quest', 'HTC Vive', 'PlayStation VR', 'Steam VR'],
-    useCases: ['Virtual events', 'Gaming worlds', 'Educational simulations', 'Virtual real estate'],
+    technology: ['UnityUnreal Engine', 'AI/ML3D Graphics', 'WebGLWebXR'],
+    integrations: ['Meta QuestHTC Vive', 'PlayStation VRSteam VR'],
+    useCases: ['Virtual eventsGaming worlds', 'Educational simulationsVirtual real estate'],
     roi: 'Reduces development time by 70% and increases user engagement by 150% within 4 months.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland'],
+    competitors: ['UnityUnreal Engine', 'Roblox StudioDecentraland'],
     marketSize: '$12.5B metaverse market',
     growthRate: '280% annual growth',
     variant: 'holographic-matrix',
@@ -289,12 +274,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced platform that brings AI processing to the edge, enabling real-time intelligence for IoT devices without requiring cloud connectivity.',
     features: [
-      'Edge AI processing',
-      'Real-time decision making',
-      'Device optimization',
-      'Predictive maintenance',
-      'Energy efficiency',
-      'Secure edge computing'
+      'Edge AI processingReal-time decision making',
+      'Device optimizationPredictive maintenance',
+      'Energy efficiencySecure edge computing'
     ],
     popular: true,
     icon: '🌐',
@@ -307,11 +289,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1-2 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['TensorFlow Lite', 'Edge TPU', 'Raspberry Pi', 'Arduino', 'Python', 'C++'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'],
-    useCases: ['Predictive maintenance', 'Smart agriculture', 'Industrial automation', 'Healthcare monitoring'],
+    technology: ['TensorFlow LiteEdge TPU', 'Raspberry PiArduino', 'PythonC++'],
+    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTMQTT', 'CoAP'],
+    useCases: ['Predictive maintenanceSmart agriculture', 'Industrial automationHealthcare monitoring'],
     roi: 'Reduces operational costs by 35% and improves efficiency by 60% within 3 months.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'IBM Edge Application Manager'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoTIBM Edge Application Manager'],
     marketSize: '$6.7B edge AI market',
     growthRate: '190% annual growth',
     variant: 'cyberpunk',
@@ -337,12 +319,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced cybersecurity platform that uses AI to proactively hunt for threats, detect zero-day vulnerabilities, and provide automated incident response.',
     features: [
-      'AI threat hunting',
-      'Zero-day detection',
-      'Automated response',
-      'Behavioral analysis',
-      'Threat intelligence',
-      'Incident automation'
+      'AI threat huntingZero-day detection',
+      'Automated responseBehavioral analysis',
+      'Threat intelligenceIncident automation'
     ],
     popular: true,
     icon: '🛡️',
@@ -355,11 +334,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Python', 'Elasticsearch', 'Kafka'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Identity providers', 'Cloud platforms'],
-    useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Security automation'],
+    technology: ['Machine LearningDeep Learning', 'NLPPython', 'ElasticsearchKafka'],
+    integrations: ['SIEM systemsEDR platforms', 'FirewallsIdentity providers', 'Cloud platforms'],
+    useCases: ['Threat detectionIncident response', 'Vulnerability managementSecurity automation'],
     roi: 'Reduces security incidents by 75% and response time by 90% within 6 months.',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
+    competitors: ['CrowdStrikeSentinelOne', 'Carbon BlackCylance'],
     marketSize: '$18.2B AI cybersecurity market',
     growthRate: '240% annual growth',
     variant: 'quantum-cyberpunk',
@@ -385,12 +364,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary healthcare platform that uses AI to analyze medical images, detect diseases, and provide diagnostic insights with unprecedented accuracy.',
     features: [
-      'Medical image analysis',
-      'Disease detection',
-      'Diagnostic insights',
-      'Patient monitoring',
-      'Clinical decision support',
-      'HIPAA compliance'
+      'Medical image analysisDisease detection',
+      'Diagnostic insightsPatient monitoring',
+      'Clinical decision supportHIPAA compliance'
     ],
     popular: true,
     icon: '🏥',
@@ -403,11 +379,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '3-4 weeks',
     category: 'Healthcare AI',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Medical imaging', 'DICOM', 'Python', 'CUDA'],
-    integrations: ['PACS systems', 'EHR platforms', 'Radiology workflows', 'Hospital systems'],
-    useCases: ['Radiology diagnosis', 'Disease screening', 'Treatment planning', 'Patient monitoring'],
+    technology: ['TensorFlowPyTorch', 'Medical imagingDICOM', 'PythonCUDA'],
+    integrations: ['PACS systemsEHR platforms', 'Radiology workflowsHospital systems'],
+    useCases: ['Radiology diagnosisDisease screening', 'Treatment planningPatient monitoring'],
     roi: 'Improves diagnostic accuracy by 25% and reduces reading time by 40% within 4 months.',
-    competitors: ['Aidoc', 'Zebra Medical', 'Butterfly Network', 'Enlitic'],
+    competitors: ['AidocZebra Medical', 'Butterfly NetworkEnlitic'],
     marketSize: '$9.8B AI healthcare market',
     growthRate: '210% annual growth',
     variant: 'holographic-matrix',
@@ -433,12 +409,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [
-      'AI market analysis',
-      'Algorithmic trading',
-      'Portfolio optimization',
-      'Risk management',
-      'Real-time monitoring',
-      'Regulatory compliance'
+      'AI market analysisAlgorithmic trading',
+      'Portfolio optimizationRisk management',
+      'Real-time monitoringRegulatory compliance'
     ],
     popular: true,
     icon: '📈',
@@ -451,11 +424,11 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Financial Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Quantitative finance', 'Real-time data', 'Cloud computing', 'Blockchain'],
-    integrations: ['Bloomberg', 'Reuters', 'Trading platforms', 'Brokerage accounts', 'Market data feeds'],
-    useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis'],
+    technology: ['PythonTensorFlow', 'Quantitative financeReal-time data', 'Cloud computingBlockchain'],
+    integrations: ['BloombergReuters', 'Trading platformsBrokerage accounts', 'Market data feeds'],
+    useCases: ['Algorithmic tradingPortfolio management', 'Risk assessmentMarket analysis'],
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
-    competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E*TRADE'],
+    competitors: ['AlpacaInteractive Brokers', 'RobinhoodE*TRADE'],
     marketSize: '$11.3B algorithmic trading market',
     growthRate: '260% annual growth',
     variant: 'quantum-cyberpunk',
@@ -472,4 +445,4 @@ export const innovative2025Services: Innovative2025Service[] = [
     rating: 4.8,
     reviews: 32
   }
-];
+],

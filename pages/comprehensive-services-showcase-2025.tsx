@@ -1,118 +1,110 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Customer Success',
-  'Supply Chain',
-  'Financial Planning',
-  'Sales Intelligence',
-  'HR Analytics',
-  'Decision Intelligence',
-  'Content Marketing',
-  'CRM & Customer Intelligence',
+  'All ServicesAI & Machine Learning',
+  'Customer SuccessSupply Chain',
+  'Financial PlanningSales Intelligence',
+  'HR AnalyticsDecision Intelligence',
+  'Content MarketingCRM & Customer Intelligence',
   'Business Intelligence'
-];
+],
 
 const pricingRanges = [
-  'All Prices',
-  'Under $300',
-  '$300 - $500',
-  '$500 - $800',
+  'All PricesUnder $300',
+  '$300 - $500$500 - $800',
   '$800+'
-];
+],
 
 export default function ComprehensiveServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Filter services based on selections
   const filteredServices = comprehensiveRealServices2025.filter(service => {
-    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
+    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory),
     
-    let priceMatch = true;
+    let priceMatch = true,
     if (selectedPriceRange !== 'All Prices') {
-      const price = parseInt(service.price.replace('$', ''));
+      const price = parseInt(service.price.replace('$', '')),
       switch (selectedPriceRange) {
         case 'Under $300':
-          priceMatch = price < 300;
-          break;
+          priceMatch = price < 300,
+          break,
         case '$300 - $500':
-          priceMatch = price >= 300 && price <= 500;
-          break;
+          priceMatch = price >= 300 && price <= 500,
+          break,
         case '$500 - $800':
-          priceMatch = price > 500 && price <= 800;
-          break;
+          priceMatch = price > 500 && price <= 800,
+          break,
         case '$800+':
-          priceMatch = price > 800;
-          break;
+          priceMatch = price > 800,
+          break,
       }
     }
     
     const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       service.category.toLowerCase().includes(searchQuery.toLowerCase());
+                       service.category.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    return categoryMatch && priceMatch && searchMatch;
-  });
+    return categoryMatch && priceMatch && searchMatch,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      default: return 0
     }
-  });
+  }),
 
   const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  };
+    const numPrice = parseInt(price.replace('$', '')),
+    if (numPrice < 300) return 'Under $300',
+    if (numPrice <= 500) return '$300 - $500',
+    if (numPrice <= 800) return '$500 - $800',
+    return '$800+',
+  },
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  };
+    ),
+    return categoryData ? categoryData.icon : Globe
+  },
 
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
-  };
+    ),
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
+  },
 
   return (
     <>
@@ -211,7 +203,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
+                /></input>
               </div>
 
               {/* Category Filter */}
@@ -488,9 +480,9 @@ export default function ComprehensiveServicesShowcase2025() {
                 </p>
                 <button
                   onClick={() => {
-                    setSelectedCategory('All Services');
-                    setSelectedPriceRange('All Prices');
-                    setSearchQuery('');
+                    setSelectedCategory('All Services'),
+                    setSelectedPriceRange('All Prices'),
+                    setSearchQuery(''),
                   }}
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
@@ -548,7 +540,7 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </section>
     </>
-  );
-};
+  ),
+},
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025,

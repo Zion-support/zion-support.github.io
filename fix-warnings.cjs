@@ -2,28 +2,28 @@ const fs = require('fs');
 
 const fixes = [
   {
-    pat: h: 'components/AccessibilityProvider.tsx',
-    oldConten: t: `  const announceToScreenReader = (messag: e: string) => {
+    pat: 'components/AccessibilityProvider.tsx',
+    oldConten: `  const announceToScreenReader = (messag: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementI: d: string) => {
+  const setFocus = (elementI: string) => {
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
     }
   };`,
-    newConten: t: `  const announceToScreenReader = (messag: e: string) => {
+    newConten: `  const announceToScreenReader = (messag: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementI: d: string) => {
+  const setFocus = (elementI: string) => {
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
@@ -31,45 +31,45 @@ const fixes = [
   };`
   },
   {
-    pat: h: 'components/Analytics.tsx',
-    oldConten: t: `      console.log('Analytics initialized with tracking: ID:', trackingId);`,
-    newConten: t: `      // Analytics initialized with tracking ID`
+    pat: 'components/Analytics.tsx',
+    oldConten: `      console.log('Analytics initialized with tracking: ID:', trackingId);`,
+    newConten: `      // Analytics initialized with tracking ID`
   },
   {
-    pat: h: 'components/PerformanceMonitor.tsx',
-    oldConten: t: `            memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0`,
-    newConten: t: `            memoryUsag: e: (window.performance as any).memory?.usedJSHeapSize || 0`
+    pat: 'components/PerformanceMonitor.tsx',
+    oldConten: `            memoryUsag: (performance as any).memory?.usedJSHeapSize || 0`,
+    newConten: `            memoryUsag: (window.performance as any).memory?.usedJSHeapSize || 0`
   },
   {
-    pat: h: 'components/SearchBar.tsx',
-    oldConten: t: `  const [isOpen, setIsOpen] = useState(false);`,
-    newConten: t: `  // const [isOpen, setIsOpen] = useState(false);`
+    pat: 'components/SearchBar.tsx',
+    oldConten: `  const [isOpen, setIsOpen] = useState(false);`,
+    newConten: `  // const [isOpen, setIsOpen] = useState(false);`
   },
   {
-    pat: h: 'components/ui/EnhancedMarketplaceCard.tsx',
-    oldConten: t: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`,
-    newConten: t: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`
+    pat: 'components/ui/EnhancedMarketplaceCard.tsx',
+    oldConten: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`,
+    newConten: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`
   },
   {
-    pat: h: 'hooks/useLocalStorage.ts',
-    oldConten: t: `import { useState, useEffect } from 'react';`,
-    newConten: t: `import { useState } from 'react';`
+    pat: 'hooks/useLocalStorage.ts',
+    oldConten: `import { useState, useEffect } from 'react';`,
+    newConten: `import { useState } from 'react';`
   },
   {
-    pat: h: 'hooks/useLocalStorage.ts',
-    oldConten: t: `      console.error('Error reading localStorage key "' + key + '":', error);`,
-    newConten: t: `      // Error reading localStorage key`
+    pat: 'hooks/useLocalStorage.ts',
+    oldConten: `      console.error('Error reading localStorage key "' + key + '":', error);`,
+    newConten: `      // Error reading localStorage key`
   },
   {
-    pat: h: 'hooks/useLocalStorage.ts',
-    oldConten: t: `      console.error('Error setting localStorage key "' + key + '":', error);`,
-    newConten: t: `      // Error setting localStorage key`
+    pat: 'hooks/useLocalStorage.ts',
+    oldConten: `      console.error('Error setting localStorage key "' + key + '":', error);`,
+    newConten: `      // Error setting localStorage key`
   },
   {
-    pat: h: 'hooks/usePerformanceMonitor.ts',
-    oldConten: t: `      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    pat: 'hooks/usePerformanceMonitor.ts',
+    oldConten: `      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;`,
-    newConten: t: `      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    newConten: `      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;`
   }
 ];

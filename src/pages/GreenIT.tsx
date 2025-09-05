@@ -1,9 +1,9 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from 'lucide-react'
-import Link from "next/link";
+import Link from "next/link",
 
 export default function GreenIT() {
   const greenITSolutions = [
@@ -19,7 +19,7 @@ export default function GreenIT() {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
-  ];
+  ],
 
   return (
     <>
@@ -87,7 +87,7 @@ export default function GreenIT() {
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -123,5 +123,5 @@ export default function GreenIT() {
         </div>
       </main>
     </>
-  );
+  )
 }

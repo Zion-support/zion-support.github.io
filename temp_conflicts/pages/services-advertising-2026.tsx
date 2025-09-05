@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink,
   Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,
   ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin,
   DollarSign, Target as TargetIcon, BarChart3, Users as UsersIcon
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
-import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',
+import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',
 
 export default function ServicesAdvertising2026() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedService, setSelectedService] = useState<string | null>(null),
 
   // Combine all services
-  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026];
+  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s =></string> s.category === 'AI & Machine Learning').length },
     { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing & AI').length },
     { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },
     { id: 'Edge Computing & IoT', name: 'Edge & IoT', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing & IoT').length },
@@ -39,15 +39,15 @@ export default function ServicesAdvertising2026() {
     { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length },
     { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: allServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +57,7 @@ export default function ServicesAdvertising2026() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -68,7 +68,7 @@ export default function ServicesAdvertising2026() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -231,7 +231,7 @@ export default function ServicesAdvertising2026() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400 focus:bg-white/20"
-              />
+       </input>       />
             </div>
 
             {/* Category Filter */}
@@ -444,18 +444,18 @@ export default function ServicesAdvertising2026() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6"
-            onClick={() => setSelectedService(null)}
+            onClick={() => setSelectedService(n</motion>ull)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPr</motion>opagation()}
             >
               {selectedService && (() => {
-                const service = allServices.find(s => s.id === selectedService);
-                if (!service) return null;
+                const service = allServices.find(s => s.id === selectedService),
+                if (!service) return null,
 
                 return (
                   <div className="p-8">
@@ -614,13 +614,13 @@ export default function ServicesAdvertising2026() {
                       </a>
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="px-8 py-4 border border-white/20 text-white hover:border-cyan-400 transition-all duration-300 rounded-lg"
+                        className="px-8 py-4 border border-white/20 text-white hover: border-cyan-400 transition-all duration-300 rounded-lg"
                       >
                         Close
                       </button>
                     </div>
                   </div>
-                );
+                )
               })()}
             </motion.div>
           </motion.div>
@@ -629,5 +629,5 @@ export default function ServicesAdvertising2026() {
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

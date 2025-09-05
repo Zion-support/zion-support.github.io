@@ -1,10 +1,10 @@
 
-import React from 'react';
+import React from 'react',
 
 interface MilestoneActivitiesProps {
-  projectId: string;
+  projectId: string
 }
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  return <div>Activity will be shown here</div>;
+  return <div>Activity will be shown here</div>,
 }

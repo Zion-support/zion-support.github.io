@@ -1,21 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
   CheckCircle, ArrowRight, Star, Clock, Target,
   Zap, Users, BarChart3, Settings, Database
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceHighlights = [
   {
@@ -23,37 +23,37 @@ const serviceHighlights = [
     description: 'Never trust, always verify - Advanced zero trust implementation',
     icon: Shield,
     color: 'from-red-500 to-pink-600',
-    features: ['Continuous verification', 'Micro-segmentation', 'Adaptive controls', 'Real-time monitoring']
+    features: ['Continuous verificationMicro-segmentation', 'Adaptive controlsReal-time monitoring']
   },
   {
     title: 'AI Threat Intelligence',
     description: 'Predict and prevent cyber threats with AI intelligence',
     icon: Eye,
     color: 'from-indigo-500 to-purple-600',
-    features: ['Real-time detection', 'Predictive analytics', 'Automated response', 'Global intelligence']
+    features: ['Real-time detectionPredictive analytics', 'Automated responseGlobal intelligence']
   },
   {
     title: 'Cloud Security Posture',
     description: 'Secure your cloud infrastructure with comprehensive posture management',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Multi-cloud monitoring', 'Compliance automation', 'Risk management', 'Security analytics']
+    features: ['Multi-cloud monitoringCompliance automation', 'Risk managementSecurity analytics']
   },
   {
     title: 'DevSecOps Security',
     description: 'Integrate security into your DevOps pipeline seamlessly',
     icon: Cpu,
     color: 'from-green-500 to-emerald-600',
-    features: ['Automated testing', 'Vulnerability scanning', 'Compliance automation', 'Security metrics']
+    features: ['Automated testingVulnerability scanning', 'Compliance automationSecurity metrics']
   },
   {
     title: 'IoT Security Platform',
     description: 'Secure your IoT ecosystem with comprehensive protection',
     icon: Globe,
     color: 'from-purple-500 to-violet-600',
-    features: ['Device authentication', 'Network monitoring', 'Threat detection', 'Automated response']
+    features: ['Device authenticationNetwork monitoring', 'Threat detectionAutomated response']
   }
-];
+],
 
 const benefits = [
   {
@@ -80,7 +80,7 @@ const benefits = [
     icon: BarChart3,
     color: 'text-purple-400'
   }
-];
+],
 
 export default function CybersecurityServices() {
   return (
@@ -364,7 +364,7 @@ export default function CybersecurityServices() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -406,5 +406,5 @@ export default function CybersecurityServices() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

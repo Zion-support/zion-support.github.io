@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface ErrorBoundaryState {
@@ -79,7 +79,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
     // Report to Sentry
-    Sentry.withScope((scope) => {
+    Sentry.withScope((scope) =></ErrorBoundaryState> {
       scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
       scope.setLevel('error')
       scope.setContext('errorInfo', {
@@ -390,7 +390,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 export const useErrorBoundary = () => {
   const [error, setError] = React.useState<Error | null>(null)
 
-  React.useEffect(() => {
+  </Error>React.useEffect(() => {
     if (error) {
       throw error
     }
@@ -406,7 +406,7 @@ export const useErrorBoundary = () => {
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
+  errorBoundaryProps?: Omit<ErrorBo</ErrorBoundaryProps>undaryProps, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>

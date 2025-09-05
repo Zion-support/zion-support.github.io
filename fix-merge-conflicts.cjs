@@ -9,7 +9,7 @@ function fixMergeConflicts(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers and keep the latest version
-    // Patter: n:  ... 
+    // Patter: ... 
     content = content.replace(/([\s\S]*?)
     
     // Also handle cases where there might be multiple conflict sections

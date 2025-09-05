@@ -1,41 +1,41 @@
 export interface ContentGenerationRequest {
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
-  topic: string;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal';
-  length: 'short' | 'medium' | 'long';
-  keywords?: string[];
-  targetAudience?: string;
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',
+  topic: string,
+  tone: 'professional' | 'casual' | 'friendly' | 'formal',
+  length: 'short' | 'medium' | 'long',
+  keywords?: string[],
+  targetAudience?: string
 }
 
 export interface ContentGenerationResponse {
-  content: string;
-  wordCount: number;
-  seoScore: number;
-  readabilityScore: number;
-  suggestions: string[];
+  content: string,
+  wordCount: number,
+  seoScore: number,
+  readabilityScore: number,
+  suggestions: string[],
   metadata: {
-    title: string;
-    description: string;
-    tags: string[];
-  };
+    title: string,
+    description: string,
+    tags: string[]
+  },
 }
 
 export interface ContentTemplate {
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  preview: string;
-  price: number;
+  id: string,
+  name: string,
+  description: string,
+  type: string,
+  preview: string,
+  price: number
 }
 
 export class AIContentGeneratorService {
-  private apiKey: string;
-  private baseUrl: string;
+  private apiKey: string,
+  private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
-    this.baseUrl = baseUrl;
+    this.apiKey = apiKey,
+    this.baseUrl = baseUrl
   }
 
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
@@ -46,16 +46,16 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'},
-        body: JSON.stringify(request)});
+        body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`);
+        throw new Error(`Content generation failed: ${response.statusText}`),
       }
 
-      return await response.json();
+      return await response.json(),
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request);
+      return this.generateMockContent(request),
     }
   }
 
@@ -93,7 +93,7 @@ export class AIContentGeneratorService {
         preview: 'Turn visitors into customers with compelling copy...',
         price: 59
       }
-    ];
+    ],
   }
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
@@ -109,7 +109,7 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 
 ## Conclusion
 
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,
 
     return {
       content: mockContent,
@@ -117,31 +117,29 @@ ${request.topic} represents a significant opportunity for organizations looking 
       seoScore: 85,
       readabilityScore: 78,
       suggestions: [
-        'Add more specific examples',
-        'Include relevant statistics',
+        'Add more specific examplesInclude relevant statistics',
         'Optimize for target keywords'
       ],
       metadata: {
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
-        tags: [request.topic, request.type, 'guide', 'tutorial']
+        tags: [request.topic, request.type, 'guidetutorial']
       }
-    };
+    },
   }
 
   async analyzeContent(content: string): Promise<{
-    seoScore: number;
-    readabilityScore: number;
-    suggestions: string[];
-    keywordDensity: Record<string, number>;
-  }> {
+    seoScore: number,
+    readabilityScore: number,
+    suggestions: string[],
+    keywordDensity: Record<string, number>,
+  }></string> {
     // Mock content analysis
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,
       readabilityScore: Math.floor(Math.random() * 30) + 70,
       suggestions: [
-        'Add more headings for better structure',
-        'Include internal links to related content',
+        'Add more headings for better structureInclude internal links to related content',
         'Optimize meta description'
       ],
       keywordDensity: {
@@ -149,7 +147,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,
         'marketing': 1.5
       }
-    };
+    },
   }
 }
 
@@ -160,10 +158,8 @@ export const AI_CONTENT_PRICING = {
     price: 29,
     period: '/month',
     features: [
-      '100 content generations per month',
-      'Basic templates',
-      'SEO analysis',
-      'Email support',
+      '100 content generations per monthBasic templates',
+      'SEO analysisEmail support',
       'Standard quality'
     ]
   },
@@ -172,12 +168,9 @@ export const AI_CONTENT_PRICING = {
     price: 99,
     period: '/month',
     features: [
-      '500 content generations per month',
-      'Premium templates',
-      'Advanced SEO analysis',
-      'Priority support',
-      'High quality output',
-      'Custom branding',
+      '500 content generations per monthPremium templates',
+      'Advanced SEO analysisPriority support',
+      'High quality outputCustom branding',
       'API access'
     ]
   },
@@ -186,14 +179,10 @@ export const AI_CONTENT_PRICING = {
     price: 299,
     period: '/month',
     features: [
-      'Unlimited content generations',
-      'Custom templates',
-      'Advanced analytics',
-      'Dedicated support',
-      'Highest quality',
-      'White-label options',
-      'Custom integrations',
-      'SLA guarantee'
+      'Unlimited content generationsCustom templates',
+      'Advanced analyticsDedicated support',
+      'Highest qualityWhite-label options',
+      'Custom integrationsSLA guarantee'
     ]
   }
-};
+},

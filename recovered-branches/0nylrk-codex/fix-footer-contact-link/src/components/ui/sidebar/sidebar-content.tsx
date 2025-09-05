@@ -8,7 +8,7 @@ import type { SafeRef } from "../sidebar.types"
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>,
   React.ComponentProps<typeof Input>
->((props, ref) => {
+></typeof>((props, ref) => {
   return (
     <Input
       ref={ref}
@@ -32,7 +32,7 @@ export const SidebarHeader = React.forwardRef<
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="header"
       className={cn("flex flex-col gap-2 p-2", props.className)}
-      {...props}
+      {...prop</div>s}
     />
   )
 })
@@ -47,7 +47,7 @@ export const SidebarFooter = React.forwardRef<
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="footer"
       className={cn("flex flex-col gap-2 p-2", props.className)}
-      {...props}
+      {.</div>..props}
     />
   )
 })
@@ -55,7 +55,7 @@ SidebarFooter.displayName = "SidebarFooter"
 
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<typeof Separator>
+  React.ComponentProp</typeof>s<typeof Separator>
 >((props, ref) => {
   return (
     <Separator

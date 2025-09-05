@@ -6,7 +6,7 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface LoadingState {
@@ -17,9 +17,9 @@ interface LoadingState {
 }
 
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>
+  importFn: () => Promise<{ default: ComponentType<any> }></any>
   fallback?: React.ReactNode
-  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
   maxRetries?: number
@@ -35,7 +35,7 @@ const EnhancedLoading: React.FC<{
   message?: string
   showProgress?: boolean
 }> = ({ 
-  progress = 0, 
+  progress = 0,
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -149,7 +149,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   prefetch = false,
   className,
   children,
-  ...props
+  ...props</DynamicLoaderProps>
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
     isLoading: true,
@@ -158,7 +158,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     isOnline: true
   })
   const [progress, setProgress] = useState(0)
-  const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null)
+  const [DynamicComponent, setDynamicComponent] = useState</ComponentType><ComponentType<any> | null>(null)
   const isOnline = useNetworkStatus()
 
   // Simulate loading progress for better UX
@@ -301,11 +301,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
 }
 
 // HOC for creating dynamic components easily
-export const createDynamicComponent = <T extends ComponentType<any>>(
+export const createDynami</T>cComponent = <T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-  options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
+  options?: Omit<Dy</DynamicLoaderProps>namicLoaderProps, 'importFn' | 'children'>
 ) => {
-  return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (
+  return </T>(props: React.ComponentProps<T> & { children?: React.ReactNode }) => (
     <DynamicComponentLoader
       importFn={importFn}
       {...(options || {})}

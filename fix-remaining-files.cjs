@@ -2,8 +2,8 @@ const fs = require('fs');
 
 const files = [
   {
-    pat: h: 'components/Header.tsx',
-    conten: t: `import React, { useState } from 'react';
+    pat: 'components/Header.tsx',
+    conten: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -22,20 +22,20 @@ const: Header: React.FC = () => {
             <div className="flex items-center space-x-6 mb-2: md:mb-0">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
+                <a href="te: +13024640950" className="hove: text-blue-300">+1 302 464 0950</a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailt: o:kleber@ziontechgroup.com" className="hove: r:text-blue-300">kleber@ziontechgroup.com</a>
+                <a href="mailt: kleber@ziontechgroup.com" className="hove: text-blue-300">kleber@ziontechgroup.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-blue-200">24/7 Support Available</span>
               <div className="flex space-x-2">
-                <a href="#" className="hove: r:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hove: r:text-blue-300"><Instagram className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hove: text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
           </div>
@@ -58,14 +58,14 @@ const: Header: React.FC = () => {
 
           <button
             onClick={toggleMenu}
-            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
+            className="m: hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="m: d:hidden py-4 border-t border-gray-200">
+          <div className="m: hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <Link href="/" className="text-gray-700: hover:text-blue-600 font-medium">Home</Link>
               <Link href="/services" className="text-gray-700: hover:text-blue-600 font-medium">Services</Link>
@@ -83,14 +83,14 @@ const: Header: React.FC = () => {
 export default Header;`
   },
   {
-    pat: h: 'components/Layout.tsx',
-    conten: t: `import React, { ReactNode } from 'react';
+    pat: 'components/Layout.tsx',
+    conten: `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
-const: Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Layout: React.FC<LayoutProps> = ({ children }) =></LayoutProps> {
   return (
     <main className="min-h-screen">
       {children}
@@ -101,12 +101,12 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;`
   },
   {
-    pat: h: 'components/SearchBar.tsx',
-    conten: t: `import React, { useState } from 'react';
+    pat: 'components/SearchBar.tsx',
+    conten: `import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-  onSearch?: (quer: y: string) => void;
+  onSearch?: (quer: string) => void;
   placeholder?: string;
   className?: string;
 }
@@ -114,7 +114,7 @@ interface SearchBarProps {
 const: SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
   placeholder = 'Search...',
-  className = ''
+  classN</SearchBarProps>ame = ''
 }) => {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -139,7 +139,7 @@ const: SearchBar: React.FC<SearchBarProps> = ({
           <input
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => setQuery(e.target.val</input>ue)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
@@ -162,21 +162,21 @@ const: SearchBar: React.FC<SearchBarProps> = ({
 export default SearchBar;`
   },
   {
-    pat: h: 'components/Sidebar.tsx',
-    conten: t: `import React from 'react';
+    pat: 'components/Sidebar.tsx',
+    conten: `import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
 interface SidebarProps {
-  isOpe: n: boolean;
-  onClos: e: () => void;
+  isOpe: boolean;
+  onClos: () => void;
 }
 
-const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const: Sidebar: React.FC<S</SidebarProps>idebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
-    { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
-    { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
-    { hre: f: '/settings', labe: l: 'Settings', ico: n: Settings },
+    { hre: f: '/dashboard', labe: 'Dashboard', ico: Home },
+    { hre: f: '/profile', labe: 'Profile', ico: User },
+    { hre: f: '/settings', labe: 'Settings', ico: Settings },
   ];
 
   return (
@@ -227,15 +227,15 @@ const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 export default Sidebar;`
   },
   {
-    pat: h: 'components/SimpleLayout.tsx',
-    conten: t: `import React, { ReactNode } from 'react';
+    pat: 'components/SimpleLayout.tsx',
+    conten: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   title?: string;
 }
 
-const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
+const: SimpleLayout: </SimpleLayoutProps>React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
@@ -251,8 +251,8 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 export default SimpleLayout;`
   },
   {
-    pat: h: 'components/layout/Footer.tsx',
-    conten: t: `import React from 'react';
+    pat: 'components/layout/Footer.tsx',
+    conten: `import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
@@ -320,13 +320,13 @@ const: Footer: React.FC = () => {
 export default Footer;`
   },
   {
-    pat: h: 'components/layout/Layout.tsx',
-    conten: t: `import React, { ReactNode } from 'react';
+    pat: 'components/layout/Layout.tsx',
+    conten: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  childre: n: ReactNode;
+  child</LayoutProps>re: ReactNode;
 }
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -344,16 +344,16 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;`
   },
   {
-    pat: h: 'components/layout/MainLayout.tsx',
-    conten: t: `import React, { ReactNode } from 'react';
+    pat: 'components/layout/MainLayout.tsx',
+    conten: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
 interface MainLayoutProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   title?: string;
-  description?: string;
+  description?: string;</MainLayoutProps>
 }
 
 const: MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
@@ -374,12 +374,12 @@ const: MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }
 export default MainLayout;`
   },
   {
-    pat: h: 'components/performance/LazyComponent.tsx',
-    conten: t: `import React, { Suspense, ReactNode } from 'react';
+    pat: 'components/performance/LazyComponent.tsx',
+    conten: `import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
 interface LazyComponentProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -397,15 +397,15 @@ const: LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;`
   },
   {
-    pat: h: 'components/performance/OptimizedImage.tsx',
-    conten: t: `import React from 'react';
+    pat: 'components/performance/OptimizedImage.tsx',
+    conten: `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
   sr: c: string;
-  al: t: string;
-  widt: h: number;
-  heigh: t: number;
+  al: string;
+  widt: number;
+  heigh: number;
   className?: string;
   priority?: boolean;
   quality?: number;
@@ -413,7 +413,7 @@ interface OptimizedImageProps {
 }
 
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+  sr</OptimizedImageProps>c,
   alt,
   width,
   height,
@@ -439,21 +439,21 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
 export default OptimizedImage;`
   },
   {
-    pat: h: 'components/ui/EnhancedMarketplaceCard.tsx',
-    conten: t: `import React from 'react';
+    pat: 'components/ui/EnhancedMarketplaceCard.tsx',
+    conten: `import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
-  titl: e: string;
-  descriptio: n: string;
-  pric: e: number;
-  ratin: g: number;
-  imag: e: string;
+  titl: string;
+  descriptio: string;
+  pric: number;
+  ratin: number;
+  imag: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
 
-const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+const: EnhancedMarketplac</MarketplaceCardProps>eCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
   price,
@@ -501,29 +501,29 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 export default EnhancedMarketplaceCard;`
   },
   {
-    pat: h: 'components/ui/InteractiveNavigation.tsx',
-    conten: t: `import React, { useState } from 'react';
+    pat: 'components/ui/InteractiveNavigation.tsx',
+    conten: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
-  labe: l: string;
+  labe: string;
   hre: f: string;
   children?: NavItem[];
 }
 
-interface InteractiveNavigationProps {
-  item: s: NavItem[];
+interface InteractiveNavigation</InteractiveNavigationProps>Props {
+  item: NavItem[];
   className?: string;
 }
 
-const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ i</string>tems, className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (labe: l: string) => {
-    setActiveDropdown(activeDropdown === label ? nul: l: label);
+  const toggleDropdown = (labe: string) => {
+    setActiveDropdown(activeDropdown === label ? nul: label);
   };
 
   return (
@@ -574,14 +574,14 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 
           <button
             onClick={toggleMenu}
-            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600"
+            className="m: hidden p-2 rounded-md text-gray-700: hover:text-blue-600"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {isOpen && (
-          <div className="m: d:hidden py-4 border-t border-gray-200">
+          <div className="m: hidden py-4 border-t border-gray-200">
             {items.map((item) => (
               <div key={item.label}>
                 {item.children ? (
@@ -629,34 +629,34 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 export default InteractiveNavigation;`
   },
   {
-    pat: h: 'components/ui/NotificationSystem.tsx',
-    conten: t: `import React, { createContext, useContext, useState, ReactNode } from 'react';
+    pat: 'components/ui/NotificationSystem.tsx',
+    conten: `import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 interface Notification {
-  i: d: string;
-  typ: e: 'success' | 'error' | 'warning' | 'info';
-  titl: e: string;
-  messag: e: string;
+  i: string;
+  typ: 'success' | 'error' | 'warning' | 'info</Notification>';
+  titl: string;
+  messag: string;
   duration?: number;
 }
 
 interface NotificationContextType {
-  notification: s: Notification[];
-  addNotificatio: n: (notificatio: n: Omit<Notification, 'id'>) => void;
-  removeNotificatio: n: (i: d: string) => void;
+  notification: Notification[];
+  addNotificatio: (notificatio: Omit<Notification, 'id'>) => void;
+  removeNotificatio: (i: string) => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<</NotificationProviderProps>NotificationContextType | undefined>(undefined);
 
 interface NotificationProviderProps {
-  childre: n: ReactNode;
+  childre: ReactNode;
 }
 
-export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+expor</Notification>t const: NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notificatio: n: Omit<Notification, 'id'>) => {
+  const addNotification = (notificatio: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     
@@ -669,7 +669,7 @@ export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ chi
     }
   };
 
-  const removeNotification = (i: d: string) => {
+  const removeNotification = (i: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
@@ -698,21 +698,21 @@ const: NotificationContainer: React.FC = () => {
 };
 
 const: NotificationItem: React.FC<{
-  notificatio: n: Notification;
-  onRemov: e: (i: d: string) => void;
+  notificatio: Notification;
+  onRemov: (i: string) => void;
 }> = ({ notification, onRemove }) => {
   const icons = {
-    succes: s: CheckCircle,
-    erro: r: AlertCircle,
-    warnin: g: AlertTriangle,
-    inf: o: Info,
+    succes: CheckCircle,
+    erro: AlertCircle,
+    warnin: AlertTriangle,
+    inf: Info,
   };
 
   const colors = {
-    succes: s: 'bg-green-500',
-    erro: r: 'bg-red-500',
-    warnin: g: 'bg-yellow-500',
-    inf: o: 'bg-blue-500',
+    succes: 'bg-green-500',
+    erro: 'bg-red-500',
+    warnin: 'bg-yellow-500',
+    inf: 'bg-blue-500',
   };
 
   const Icon = icons[notification.type];
@@ -745,13 +745,13 @@ export const useNotifications = () => {
 };`
   },
   {
-    pat: h: 'hooks/useApi.ts',
-    conten: t: `import { useState, useEffect } from 'react';
+    pat: 'hooks/useApi.</T>ts',
+    conten: `import { useState, useEffect } from 'react';
 
-interface ApiState<T> {
+interf</T>ace ApiState<T> {
   dat: a: T | null;
-  loadin: g: boolean;
-  erro: r: string | null;
+  loadin: boolean;
+  erro: string | null;
 }
 
 interface UseApiOptions {
@@ -759,9 +759,9 @@ interface UseApiOptions {
 }
 
 export function useApi<T>(
-  apiCal: l: () => Promise<T>,
-  option: s: UseApiOptions = {}
-): ApiState<T> & { refetc: h: () => void } {
+  apiCal: () => Promise<T>,
+  option</string>: UseApiOptions = {}
+): ApiState<T> & { refetc: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -774,7 +774,7 @@ export function useApi<T>(
       const result = await apiCall();
       setData(result);
     } catch (err) {
-      setError(err instanceof Error ? err.messag: e: 'An error occurred');
+      setError(err instanceof Error ? err.messag: 'An error occurred');
     } finally {
       setLoading(false);
     }
@@ -789,16 +789,16 @@ export function useApi<T>(
   return {
     data,
     loading,
-    error,
-    refetc: h: fetchData,
+    e</T>rror,
+    refetc: fetchData,
   };
 }`
   },
   {
-    pat: h: 'hooks/useLocalStorage.ts',
-    conten: t: `import { useState, useEffect } from 'react';
+    pat: 'hooks/useLocalStorage.ts',
+    conten: `import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
+export function useLocalStorage<T>(ke: string, initialValu: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
@@ -813,7 +813,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
     }
   });
 
-  const setValue = (valu: e: T | ((va: l: T) => T)) => {
+  const setValue = (valu: T | ((va: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
@@ -830,14 +830,14 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
 }`
   },
   {
-    pat: h: 'hooks/usePerformanceMonitor.ts',
-    conten: t: `import { useState, useEffect } from 'react';
+    pat: 'hooks/usePerformanceMonitor.ts',
+    conten: `import { useState, useEffect } from 'react';
 
-interface PerformanceMetrics {
-  loadTim: e: number;
-  renderTim: e: number;
-  memoryUsag: e: number;
-  fp: s: number;
+inte</PerformanceMetrics>rface PerformanceMetrics {
+  loadTim: number;
+  renderTim: number;
+  memoryUsag: number;
+  fp: number;
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -854,10 +854,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       
       if (navigation) {
         setMetrics({
-          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsag: e: memory?.usedJSHeapSize || 0,
-          fp: s: 60,
+          loadTim: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTim: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsag: memory?.usedJSHeapSize || 0,
+          fp: 60,
         });
       }
     };
@@ -877,24 +877,24 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 }`
   },
   {
-    pat: h: 'hooks/useResponsive.ts',
-    conten: t: `import { useState, useEffect } from 'react';
+    pat: 'hooks/useResponsive.ts',
+    conten: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
   s: m: number;
-  m: d: number;
-  l: g: number;
-  x: l: number;
+  m: number;
+  l: number;
+  x: number;
 }
 
 const: defaultBreakpoints: Breakpoints = {
   s: m: 640,
-  m: d: 768,
-  l: g: 1024,
-  x: l: 1280,
+  m: 768,
+  l: 1024,
+  x: 1280,
 };
 
-export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
+export function useResponsive(breakpoint: Breakpoints = defaultBreakpoints) {
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
 
   useEffect(() => {
@@ -922,10 +922,10 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 
   return {
     screenSize,
-    isMobil: e: screenSize === 'sm',
-    isTable: t: screenSize === 'md',
-    isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
-    isLarg: e: screenSize === 'xl',
+    isMobil: screenSize === 'sm',
+    isTable: screenSize === 'md',
+    isDeskto: screenSize === 'lg' || screenSize === 'xl',
+    isLarg: screenSize === 'xl',
   };
 }`
   }
@@ -934,7 +934,7 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
-    console.log('Fixe: d:', file.path);
+    console.log('Fixe: ', file.path);
   } catch (error) {
     console.error('Error fixing', file.path, ':', error.message);
   }

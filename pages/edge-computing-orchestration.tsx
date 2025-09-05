@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
   Cpu, Network, Zap, Shield, Database, Globe, 
   ArrowRight, CheckCircle, Star, TrendingUp, Users
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function EdgeComputingPage() {
   const features = [
@@ -46,7 +46,7 @@ export default function EdgeComputingPage() {
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
@@ -55,7 +55,7 @@ export default function EdgeComputingPage() {
     "Scale seamlessly across global edge networks",
     "Enable real-time AI and machine learning at the edge",
     "Reduce central server load and improve overall performance"
-  ];
+  ],
 
   const useCases = [
     {
@@ -78,7 +78,7 @@ export default function EdgeComputingPage() {
       description: "Inventory management, customer analytics, and supply chain optimization",
       results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -130,7 +130,7 @@ export default function EdgeComputingPage() {
       ],
       popular: false
     }
-  ];
+  ],
 
   return (
     <>
@@ -441,7 +441,7 @@ export default function EdgeComputingPage() {
             <p className="text-xl text-blue-100 mb-8">
               Join the edge computing revolution and transform your business with real-time processing capabilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -461,5 +461,5 @@ export default function EdgeComputingPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

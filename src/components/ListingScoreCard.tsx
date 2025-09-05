@@ -1,22 +1,22 @@
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 import { StarIcon } from 'lucide-react'
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
 
 interface ListingScoreCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string;
+  title: string,
+  description: string,
+  image?: string,
+  category: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  className?: string
 }
 
 export function ListingScoreCard({ 
@@ -32,8 +32,8 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
+  const [mainImageError, setMainImageError] = useState(false),
+  const [authorImageError, setAuthorImageError] = useState(false),
 
   return (
     <div className={cn(
@@ -49,7 +49,7 @@ export function ListingScoreCard({
             onError={() => setMainImageError(true)}
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
-          />
+          /></Image>
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -122,7 +122,7 @@ export function ListingScoreCard({
                   className="object-cover rounded-full"
                   onError={() => setAuthorImageError(true)}
                   priority={false}
-                />
+          </Image>      />
               </div>
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
@@ -134,5 +134,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  );
+  ),
 }

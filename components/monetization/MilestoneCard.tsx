@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import { Milestone } from '../../utils/types/milestones';
+import React, { useState } from 'react',
+import { Milestone } from '../../utils/types/milestones',
 
 type Props = {
-  milestone: Milestone;
-  projectId: string;
-  role: 'client' | 'talent' | 'admin';
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
-};
+  milestone: Milestone,
+  projectId: string,
+  role: 'client' | 'talent' | 'admin',
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
+},
 
-const statusSteps = ['Pending', 'In Progress', 'Submitted', 'Approved', 'Paid'] as const;
+const statusSteps = ['PendingIn Progress', 'SubmittedApproved', 'Paid'] as const,
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false),
 
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
+  const currentIndex = statusSteps.findIndex((s) => s === milestone.status),
 
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
+  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending',
+  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress',
+  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted',
+  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved',
 
   return (
-    <div className="border rounded-lg p-4 bg-white shadow-sm">
-      <div className="flex items-start justify-between">
-        <div>
+    <div className="max-w-2xl mx-auto">
+      <div className="flex items-start justify-between"></div>
+        <div></div>
           <h3 className="text-lg font-semibold">{milestone.title}</h3>
           <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
         </div>
@@ -32,15 +32,16 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         </button>
       </div>
 
-      <div className="mt-3">
-        <div className="flex items-center gap-2">
+      <div className="mt-3"></div>
+        <div className="flex items-center gap-2"></div>
           {statusSteps.map((step, idx) => (
-            <div key={step} className="flex items-center">
+            <div key={step} className="flex items-center"></div>
               <div
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
                 }
-                title={step}
+                title={step
+  },
               />
               {idx < statusSteps.length - 1 && (
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
@@ -52,17 +53,18 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
       </div>
 
       {expanded && (
-        <div className="mt-4 space-y-2 text-sm text-gray-800">
+        <div className="mt-4 space-y-2 text-sm text-gray-800"></div>
           {milestone.description && <p>{milestone.description}</p>}
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
-            <div>
+            <div></div>
               <div className="font-medium">Attachments</div>
-              <ul className="list-disc ml-5">
+              <ul className="list-disc ml-5"></ul>
                 {milestone.attachments.map((a) => (
-                  <li key={a.id}>
-                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
-                      {a.label || a.url}
+                  <li key={a.id}></li>
+                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer"></a>
+                      {a.label || a.url
+  },
                     </a>
                   </li>
                 ))}
@@ -72,7 +74,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         </div>
       )}
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2"></div>
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
@@ -107,5 +109,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  );
+  ),
 }

@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const NetworkSecurityChat = () => {
   return (
@@ -16,7 +16,7 @@ const NetworkSecurityChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default NetworkSecurityChat;
+export default NetworkSecurityChat,

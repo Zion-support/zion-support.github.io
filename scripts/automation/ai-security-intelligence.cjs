@@ -21,7 +21,7 @@ class AISecurityIntelligence {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -36,12 +36,12 @@ class AISecurityIntelligence {
     this.log('🔍 Running security scan...');
 
     const securityAnalysis = {
-      timestam: p: new Date().toISOString(),
-      vulnerabilitie: s: await this.scanVulnerabilities(),
-      dependencie: s: await this.scanDependencies(),
-      codeSecurit: y: await this.scanCodeSecurity(),
-      configuratio: n: await this.scanConfiguration(),
-      recommendation: s: this.generateSecurityRecommendations(),
+      timestam: new Date().toISOString(),
+      vulnerabilitie: await this.scanVulnerabilities(),
+      dependencie: await this.scanDependencies(),
+      codeSecurit: await this.scanCodeSecurity(),
+      configuratio: await this.scanConfiguration(),
+      recommendation: this.generateSecurityRecommendations(),
     };
 
     return securityAnalysis;
@@ -52,30 +52,29 @@ class AISecurityIntelligence {
 
     try {
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encodin: g: 'utf8' });
+      const auditResult = execSync('npm audit --json', { encodin: 'utf8' });
       const audit = JSON.parse(auditResult);
 
       return {
-        scor: e:
-          audit.metadata.vulnerabilities.total === 0
+        scor: audit.metadata.vulnerabilities.total === 0
             ? 10: 0: Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        tota: l: audit.metadata.vulnerabilities.total,
-        hig: h: audit.metadata.vulnerabilities.high,
-        moderat: e: audit.metadata.vulnerabilities.moderate,
-        lo: w: audit.metadata.vulnerabilities.low,
-        inf: o: audit.metadata.vulnerabilities.info,
-        advisorie: s: audit.advisories || {},
+        tota: audit.metadata.vulnerabilities.total,
+        hig: audit.metadata.vulnerabilities.high,
+        moderat: audit.metadata.vulnerabilities.moderate,
+        lo: audit.metadata.vulnerabilities.low,
+        inf: audit.metadata.vulnerabilities.info,
+        advisorie: audit.advisories || {},
       };
     } catch (error) {
       this.log(`⚠️ NPM audit: failed: ${error.message}`);
       return {
-        scor: e: 75,
-        tota: l: 0,
-        hig: h: 0,
-        moderat: e: 0,
-        lo: w: 0,
-        inf: o: 0,
-        advisorie: s: {},
+        scor: 75,
+        tota: 0,
+        hig: 0,
+        moderat: 0,
+        lo: 0,
+        inf: 0,
+        advisorie: {},
       };
     }
   }
@@ -84,10 +83,10 @@ class AISecurityIntelligence {
     this.log('📦 Scanning dependencies...');
 
     const dependencies = {
-      scor: e: 85,
-      outdate: d: 12,
-      deprecate: d: 3,
-      suggestion: s: [
+      scor: 85,
+      outdate: 12,
+      deprecate: 3,
+      suggestion: [
         'Update React to latest stable version',
         'Replace deprecated packages',
         'Review third-party dependencies for security',
@@ -101,14 +100,14 @@ class AISecurityIntelligence {
     this.log('🔍 Scanning code for security issues...');
 
     const codeSecurity = {
-      scor: e: 78,
-      issue: s: [
+      scor: 78,
+      issue: [
         'Potential XSS vulnerability in user input',
         'Missing input validation',
         'Hardcoded secrets in configuration',
         'Insecure random number generation',
       ],
-      suggestion: s: [
+      suggestion: [
         'Implement input sanitization',
         'Add comprehensive input validation',
         'Use environment variables for secrets',
@@ -123,14 +122,14 @@ class AISecurityIntelligence {
     this.log('⚙️ Scanning security configuration...');
 
     const configuration = {
-      scor: e: 82,
-      issue: s: [
+      scor: 82,
+      issue: [
         'Missing Content Security Policy',
         'Insecure CORS configuration',
         'Missing security headers',
         'Insecure session configuration',
       ],
-      suggestion: s: [
+      suggestion: [
         'Implement CSP headers',
         'Configure CORS properly',
         'Add security headers middleware',
@@ -163,10 +162,10 @@ class AISecurityIntelligence {
 
     const report = {
       ...analysis,
-      summar: y: {
-        overallScor: e: this.calculateOverallScore(analysis),
-        riskLeve: l: this.getRiskLevel(analysis),
-        priorit: y: this.getPriority(analysis),
+      summar: {
+        overallScor: this.calculateOverallScore(analysis),
+        riskLeve: this.getRiskLevel(analysis),
+        priorit: this.getPriority(analysis),
       },
     };
 
@@ -185,10 +184,10 @@ class AISecurityIntelligence {
 
   calculateOverallScore(analysis) {
     const weights = {
-      vulnerabilitie: s: 0.4,
-      dependencie: s: 0.2,
-      codeSecurit: y: 0.25,
-      configuratio: n: 0.15,
+      vulnerabilitie: 0.4,
+      dependencie: 0.2,
+      codeSecurit: 0.25,
+      configuratio: 0.15,
     };
 
     return Math.round(
@@ -225,7 +224,7 @@ class AISecurityIntelligence {
         `🎉 AI security intelligence completed! Overall: Score: ${report.summary.overallScore}/100`
       );
       this.log(
-        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: y: ${report.summary.priority}`
+        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: ${report.summary.priority}`
       );
     } catch (error) {
       this.log(`❌ AI security intelligence: failed: ${error.message}`);

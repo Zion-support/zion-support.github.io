@@ -18,17 +18,17 @@ class SystematicMerger {
   }
 
   async runCommand(command, description) {
-    this.log(`🚀 Startin: g: ${description}`);
+    this.log(`🚀 Startin: ${description}`);
     try {
       const result = execSync(command, {
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
-        cw: d: this.projectRoot,
+        stdi: 'pipe',
+        encodin: 'utf8',
+        cw: this.projectRoot,
       });
-      this.log(`✅ Complete: d: ${description}`);
+      this.log(`✅ Complete: ${description}`);
       return result;
     } catch (error) {
-      this.log(`❌ Faile: d: ${description} - ${error.message}`, 'ERROR');
+      this.log(`❌ Faile: ${description} - ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -60,7 +60,7 @@ class SystematicMerger {
         this.log(`🔧 Attempting to resolve conflicts for ${branchName}`);
 
         // Check if there are conflicts
-        const status = execSync('git status --porcelain', { encodin: g: 'utf8' });
+        const status = execSync('git status --porcelain', { encodin: 'utf8' });
         if (status.includes('UU') || status.includes('AA')) {
           // Accept incoming changes for conflicts
           await this.runCommand(
@@ -96,7 +96,7 @@ class SystematicMerger {
             `Abort merge for ${branchName}`
           );
         } catch (abortError) {
-          this.log(`Warnin: g: Could not abort merge for ${branchName}`, 'WARN');
+          this.log(`Warnin: Could not abort merge for ${branchName}`, 'WARN');
         }
 
         return false;
@@ -134,7 +134,7 @@ class SystematicMerger {
             );
           } catch (pushError) {
             this.log(
-              `Warnin: g: Could not push changes for ${branch}: ${pushError.message}`,
+              `Warnin: Could not push changes for ${branch}: ${pushError.message}`,
               'WARN'
             );
           }
@@ -152,15 +152,15 @@ class SystematicMerger {
 
   generateReport() {
     const report = {
-      timestam: p: new Date().toISOString(),
-      summar: y: {
-        totalBranche: s: this.mergedBranches.length + this.failedBranches.length,
-        successfullyMerge: d: this.mergedBranches.length,
-        failedToMerg: e: this.failedBranches.length,
-        successRat: e: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,
+      timestam: new Date().toISOString(),
+      summar: {
+        totalBranche: this.mergedBranches.length + this.failedBranches.length,
+        successfullyMerge: this.mergedBranches.length,
+        failedToMerg: this.failedBranches.length,
+        successRat: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,
       },
-      mergedBranche: s: this.mergedBranches,
-      failedBranche: s: this.failedBranches,
+      mergedBranche: this.mergedBranches,
+      failedBranche: this.failedBranches,
     };
 
     fs.writeFileSync(

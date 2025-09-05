@@ -1,24 +1,24 @@
-import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../../components/layout/Layout';
+import type { GetServerSideProps, NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+import Layout from '../../components/layout/Layout',
 
-type Props = { posts: BlogPost[]; authors: string[]; topics: string[]; tags: string[] };
+type Props = { posts: BlogPost[], authors: string[], topics: string[], tags: string[] },
 
-const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
-  const [filters, setFilters] = useState<{ author?: string; topic?: string; tag?: string }>({});
+const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) =></Props> {
+  const [filters, setFilters] = useState<{ author?: string, topic?: string, tag?: string }>({}),
 
   const filtered = useMemo(() => {
     return posts.filter((p) => {
-      if (filters.author && p.author !== filters.author) return false;
-      if (filters.topic && !p.topics.includes(filters.topic)) return false;
-      if (filters.tag && !p.tags.includes(filters.tag)) return false;
-      return true;
-    });
-  }, [posts, filters]);
+      if (filters.author && p.author !== filters.author) return false,
+      if (filters.topic && !p.topics.includes(filters.topic)) return false,
+      if (filters.tag && !p.tags.includes(filters.tag)) return false,
+      return true,
+    }),
+  }, [posts, filters]),
 
-  const hero = filtered[0];
-  const rest = filtered.slice(1);
+  const hero = filtered[0],
+  const rest = filtered.slice(1),
 
   return (
     <Layout>
@@ -43,7 +43,7 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
             title="Zion Blog"
             url={typeof window === 'undefined' ? 'https://zion.app/blog' : window.location.href}
             description="Insights on AI and DevOps from Zion."
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: 'Zion Blog', network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=blog' }) }).catch(() => {})}
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: 'Zion Blog', network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=blog' }) }).cat</PageShareButtons>ch(() => {})}
           />
         </div>
 
@@ -58,15 +58,15 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  ),
+},
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const posts = listPublishedPosts();
-  const authors = listAllAuthors();
-  const topics = listAllTopics();
-  const tags = listAllTags();
-  return { props: { posts, authors, topics, tags } };
-};
+  const posts = listPublishedPosts(),
+  const authors = listAllAuthors(),
+  const topics = listAllTopics(),
+  const tags = listAllTags(),
+  return { props: { posts, authors, topics, tags } },
+},
 
-export default BlogHome;
+export default BlogHome,

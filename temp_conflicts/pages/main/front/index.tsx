@@ -1,20 +1,20 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react',
+import { motion, useScroll, useSpring } from 'framer-motion',
+import { useEffect, useState } from 'react',
 
 export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll();
-  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 });
-  const [showToTop, setShowToTop] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const { scrollYProgress } = useScroll(),
+  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 }),
+  const [showToTop, setShowToTop] = useState(false),
+  const [mobileOpen, setMobileOpen] = useState(false),
   useEffect(() => {
-    const onScroll = () => setShowToTop(window.scrollY > 400);
-    window.addEventListener('scroll', onScroll, { passive: true } as any);
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    const onScroll = () => setShowToTop(window.scrollY > 400),
+    window.addEventListener('scroll', onScroll, { passive: true } as any),
+    onScroll(),
+    return () => window.removeEventListener('scroll', onScroll),
+  }, []),
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -92,36 +92,36 @@ export default function MainFrontIndex() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
             onClick={() => setMobileOpen(false)}
-          >
+          ></motion>
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.2 }}
               className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl"
               onClick={(e) => e.stopPropagation()}
-            >
+    </motion>        >
               <div className="mb-4 flex items-center justify-between">
                 <div className="text-lg font-semibold">Navigate</div>
                 <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close</button>
               </div>
               <div className="grid grid-cols-2 gap-3 text-sm">
                 {[
-                  ['Home','/'],
-                  ['Command','#command-center'],
-                  ['Features','#features'],
-                  ['Map','#feature-map'],
-                  ['Suites','#suites'],
-                  ['Capabilities','#capabilities'],
-                  ['Use Cases','#use-cases'],
-                  ['Pillars','#pillars'],
-                  ['Benefits','#benefits'],
-                  ['Templates','#templates'],
-                  ['Demos','#demos'],
-                  ['Highlights','#highlights'],
-                  ['Cases','#cases'],
-                  ['Reports','#reports'],
-                  ['Docs','#roadmap'],
-                  ['Automations','/automation']].map(([label, href]) => (
+                  ['Home/'],
+                  ['Command#command-center'],
+                  ['Features#features'],
+                  ['Map#feature-map'],
+                  ['Suites#suites'],
+                  ['Capabilities#capabilities'],
+                  ['Use Cases#use-cases'],
+                  ['Pillars#pillars'],
+                  ['Benefits#benefits'],
+                  ['Templates#templates'],
+                  ['Demos#demos'],
+                  ['Highlights#highlights'],
+                  ['Cases#cases'],
+                  ['Reports#reports'],
+                  ['Docs#roadmap'],
+                  ['Automations/automation']].map(([label, href]) => (
                   (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>
                   ) : (
@@ -192,10 +192,10 @@ export default function MainFrontIndex() {
             {/* Live metrics strip */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                ['24/7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails']].map(([k,v]) => (
+                ['24/7Autonomous'],
+                ['MainDirect Sync'],
+                ['0 OpsCloud‑Native'],
+                ['SafetyGuardrails']].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>
@@ -210,14 +210,10 @@ export default function MainFrontIndex() {
               <div className="marquee">
                 <div className="marquee__track">
                   {[
-                    'Autonomous Agents',
-                    'Repo Sync to Main',
-                    'Zero‑Ops Cloud',
-                    'Safety Guardrails',
-                    'A11y + Performance',
-                    'Observability',
-                    'SEO Automation',
-                    'Design Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
+                    'Autonomous AgentsRepo Sync to Main',
+                    'Zero‑Ops CloudSafety Guardrails',
+                    'A11y + PerformanceObservability',
+                    'SEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>
@@ -229,11 +225,11 @@ export default function MainFrontIndex() {
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
               {[
-                ['Automation Hub', '/automation'],
-                ['SEO Audit', '/reports/seo'],
-                ['AI Trends', '/reports/ai-trends'],
-                ['Newsroom', '/newsroom'],
-                ['Site Health', '/site-health']].map(([label, href]) => (
+                ['Automation Hub/automation'],
+                ['SEO Audit/reports/seo'],
+                ['AI Trends/reports/ai-trends'],
+                ['Newsroom/newsroom'],
+                ['Site Health/site-health']].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
                 </Link>
@@ -323,21 +319,21 @@ export default function MainFrontIndex() {
         <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">
           <nav aria-label="Quick section navigation" className="space-y-2">
             {[
-              ['#command-center', 'Command'],
-              ['#feature-map', 'Map'],
-              ['#engines', 'Engines'],
-              ['#suites', 'Suites'],
-              ['#capabilities', 'Capabilities'],
-              ['#use-cases', 'Use Cases'],
-              ['#pillars', 'Pillars'],
-              ['#benefits', 'Benefits'],
-              ['#templates', 'Templates'],
-              ['#demos', 'Demos'],
-              ['#highlights', 'Highlights'],
-              ['#cases', 'Cases'],
-              ['#reports', 'Reports'],
-              ['#guardrails', 'Guardrails'],
-              ['#roadmap', 'Docs']].map(([href, label]) => (
+              ['#command-centerCommand'],
+              ['#feature-mapMap'],
+              ['#enginesEngines'],
+              ['#suitesSuites'],
+              ['#capabilitiesCapabilities'],
+              ['#use-casesUse Cases'],
+              ['#pillarsPillars'],
+              ['#benefitsBenefits'],
+              ['#templatesTemplates'],
+              ['#demosDemos'],
+              ['#highlightsHighlights'],
+              ['#casesCases'],
+              ['#reportsReports'],
+              ['#guardrailsGuardrails'],
+              ['#roadmapDocs']].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
               </a>
@@ -420,12 +416,12 @@ export default function MainFrontIndex() {
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Autonomous Meta Orchestrator</div>
-              <p className="mt-1 text-sm text-white/75">Optimizes metadata, changelogs, and docs; commits results every 3m.</p>
+              <p className="mt-1 text-sm text-white/75">Optimizes metadata, changelogs, and docs, commits results every 3m.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Run now ↗</div>
             </a>
             <a
               href="/.netlify/functions/rapid-sync"
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover"
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Rapid Sync (2m)</div>
@@ -439,7 +435,7 @@ export default function MainFrontIndex() {
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Content Freshness Audit</div>
-              <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update; commits freshness reports.</p>
+              <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update, commits freshness reports.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
             </a>
 
@@ -485,11 +481,11 @@ export default function MainFrontIndex() {
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">New intelligent cloud automations running 24/7 — no human intervention required.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             <a href="/.netlify/functions/autonomous-content-curator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="flex items-center gap-2"><Activity className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Content Curator</h3></div>
-              <p className="mt-1 text-sm text-white/75">Curates and promotes highlights on front pages; syncs to main.</p>
+              <p className="mt-1 text-sm text-white/75">Curates and promotes highlights on front pages, syncs to main.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
             </a>
             <a href="/.netlify/functions/revenue-ideas-lab" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
@@ -512,7 +508,7 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[ 
-              { title: 'Automation Guardian (10m)', desc: 'Monitors and auto-heals automations; commits fixes safely.', href: '/.netlify/functions/automation-guardian-runner' },
+              { title: 'Automation Guardian (10m)', desc: 'Monitors and auto-heals automations, commits fixes safely.', href: '/.netlify/functions/automation-guardian-runner' },
               { title: 'Components Docs Runner (30m)', desc: 'Regenerates components/docs indexes and README, then pushes.', href: '/.netlify/functions/components-docs-runner' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -572,10 +568,10 @@ export default function MainFrontIndex() {
               { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' },
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
-              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals; writes public report.', href: '/.netlify/functions/seo-audit-runner' },
+              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals, writes public report.', href: '/.netlify/functions/seo-audit-runner' },
               { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' },
               { label: 'Dependency Auto‑Upgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
-              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations; syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Trigger All & Commit', desc: 'Invokes all functions and triggers a build or commit.', href: '/.netlify/functions/trigger-all-and-commit' }
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
@@ -1099,14 +1095,14 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ['SEO Automation', 'On-site scans and safe diffs to improve visibility', '/reports/seo'],
-              ['Site Health', 'A11y, performance, and resilient links at a glance', '/site-health'],
-              ['Automation Hub', 'Factories and live autonomous workflows', '/automation'],
-              ['AI Trends Radar', 'Signals inspiring new factories and experiments', '/reports/ai-trends'],
-              ['Newsroom', 'Curated updates and product evolution highlights', '/newsroom'],
-              ['Live Pipelines', 'Observe CI pipelines, logs, and artifacts', '/site-health'],
-              ['Documentation', 'Technical notes, guides, and changelog', '/reports/seo'],
-              ['AI Changelog', 'Summarized autonomous changes and highlights', '/newsroom']].map(([label, desc, href]) => (
+              ['SEO AutomationOn-site scans and safe diffs to improve visibility', '/reports/seo'],
+              ['Site HealthA11y, performance, and resilient links at a glance', '/site-health'],
+              ['Automation HubFactories and live autonomous workflows', '/automation'],
+              ['AI Trends RadarSignals inspiring new factories and experiments', '/reports/ai-trends'],
+              ['NewsroomCurated updates and product evolution highlights', '/newsroom'],
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts', '/site-health'],
+              ['DocumentationTechnical notes, guides, and changelog', '/reports/seo'],
+              ['AI ChangelogSummarized autonomous changes and highlights', '/newsroom']].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1241,9 +1237,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              ['🚀', 'Speed', 'Continuous delivery to main with safe, incremental changes.'],
-              ['🛡️', 'Safety', 'Conservative edits and guardrails keep production stable.'],
-              ['📈', 'Scale', 'Automatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
+              ['🚀Speed', 'Continuous delivery to main with safe, incremental changes.'],
+              ['🛡️Safety', 'Conservative edits and guardrails keep production stable.'],
+              ['📈Scale', 'Automatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
@@ -1320,26 +1316,16 @@ export default function MainFrontIndex() {
           </div>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports',
-              'Higher velocity with automated maintenance',
-              'Reduced costs via zero‑ops and automated QA',
-              'Consistent design language and UX quality',
-              'Transparent artifacts and live workflow logs',
-              'Faster experiment velocity with measurable impact',
-              'Improved search visibility via continuous SEO',
-              'Happier users thanks to performance & a11y wins',
-              'Lower operational risk through guardrails',
-              'Improved discoverability via deep indexing and SEO',
-              'Happier engineers with less toil and more creation',
-              'Confident shipping through automated guardrails',
-              'Predictable quality gates and SLOs upheld automatically',
-              'Auditability for compliance with full traceability',
-              'Happier teams: less toil, more product value',
-              'Automated dependency upgrades and security scans',
-              'Clear analytics and downloadable artifacts for every run',
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branchFewer regressions via layered checks and reports',
+              'Higher velocity with automated maintenanceReduced costs via zero‑ops and automated QA',
+              'Consistent design language and UX qualityTransparent artifacts and live workflow logs',
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEO',
+              'Happier users thanks to performance & a11y winsLower operational risk through guardrails',
+              'Improved discoverability via deep indexing and SEOHappier engineers with less toil and more creation',
+              'Confident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
+              'Auditability for compliance with full traceabilityHappier teams: less toil, more product value',
+              'Automated dependency upgrades and security scansClear analytics and downloadable artifacts for every run',
               'Composable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -1493,7 +1479,7 @@ export default function MainFrontIndex() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">
-              {['Next.js','TypeScript','Tailwind','Framer Motion','Supabase','Netlify'].map((t) => (
+              {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map((t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">
                   {t}
                 </span>
@@ -1507,10 +1493,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md:grid-cols-4">
             {[
-              ['Explore', 'Browse live automations', '/automation'],
-              ['Audit', 'Check site health', '/site-health'],
-              ['Optimize', 'Run the SEO auditor', '/reports/seo'],
-              ['Learn', 'Follow AI trends', '/reports/ai-trends']].map(([title, desc, href]) => (
+              ['ExploreBrowse live automations', '/automation'],
+              ['AuditCheck site health', '/site-health'],
+              ['OptimizeRun the SEO auditor', '/reports/seo'],
+              ['LearnFollow AI trends', '/reports/ai-trends']].map(([title, desc, href]) => (
               <Link key={title as string} href={href as string}>
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="text-sm font-semibold text-white">{title as string}</div>
@@ -1902,7 +1888,7 @@ export default function MainFrontIndex() {
         </button>
       )}
     </div>
-  );
+  ),
 }
 
 /* AUTO-GENERATED: FRONT_ACTIONS_START */

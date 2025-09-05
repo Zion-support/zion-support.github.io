@@ -12,7 +12,7 @@ const REQUIRED = [
 async function getJsonLd(url) {
   const res = await fetch(url);
   const html = await res.text();
-  const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^></script>]*>([\s\S]*?)<\/script>/gi)];
   const payloads = [];
   for (const m of matches) {
     try {

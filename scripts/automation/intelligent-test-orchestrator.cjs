@@ -10,7 +10,7 @@ class IntelligentTestOrchestrator {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursiv: true });
     }
   }
 
@@ -28,17 +28,17 @@ class IntelligentTestOrchestrator {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Runnin: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encodin: 'utf8',
+        cw: '/workspace',
+        stdi: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { succes: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} faile: ${error.message}`, 'error');
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -46,10 +46,10 @@ class IntelligentTestOrchestrator {
     this.log('🧪 Starting intelligent test orchestration...');
 
     const tests = [
-      { comman: d: 'npm run: test:smoke', descriptio: n: 'Smoke tests' },
-      { comman: d: 'npm run: test:unit', descriptio: n: 'Unit tests' },
-      { comman: d: 'npm run: test:integration', descriptio: n: 'Integration tests' },
-      { comman: d: 'npm run: test:coverage', descriptio: n: 'Test coverage' },
+      { comman: 'npm run: test:smoke', descriptio: 'Smoke tests' },
+      { comman: 'npm run: test:unit', descriptio: 'Unit tests' },
+      { comman: 'npm run: test:integration', descriptio: 'Integration tests' },
+      { comman: 'npm run: test:coverage', descriptio: 'Test coverage' },
     ];
 
     const results = [];
@@ -59,19 +59,19 @@ class IntelligentTestOrchestrator {
     }
 
     this.log('✅ Intelligent test orchestration completed');
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating intelligent test report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      test: s: await this.runIntelligentTests(),
-      summar: y: {
-        testsRu: n: 4,
-        successfulTest: s: 0,
-        failedTest: s: 0,
+      timestam: new Date().toISOString(),
+      test: await this.runIntelligentTests(),
+      summar: {
+        testsRu: 4,
+        successfulTest: 0,
+        failedTest: 0,
       },
     };
 

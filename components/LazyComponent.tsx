@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react',
 
 interface LazyComponentProps {
-  component: () => Promise<{ default: React.ComponentType<any> }>;
-  fallback?: React.ReactNode;
-  [key: string]: any;
+  component: () => Promise<{ default: React.ComponentType<any> }></any>,
+  fallback?: React.ReactNode,
+  [key: string]: any
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
@@ -11,13 +11,13 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   fallback = <div>Loading...</div>, 
   ...props 
 }) => {
-  const LazyLoadedComponent = lazy(component);
+  const LazyLoadedComponent = lazy(component),
   
   return (
-    <Suspense fallback={fallback}>
+    <Suspense fallback={fallback}></Suspense>
       <LazyLoadedComponent {...props} />
     </Suspense>
-  );
-};
+  ),
+},
 
-export default LazyComponent;
+export default LazyComponent,

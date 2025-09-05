@@ -18,15 +18,15 @@ class GitResolver {
     this.log(`🚀 ${description}`);
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-        timeou: t: 60000,
+        cw: this.projectRoot,
+        encodin: 'utf8',
+        timeou: 60000,
       });
       this.log(`✅ ${description} - Success`);
-      return { succes: s: true, outpu: t: result };
+      return { succes: true, outpu: result };
     } catch (error) {
-      this.log(`❌ ${description} - Faile: d: ${error.message}`);
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} - Faile: ${error.message}`);
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -89,14 +89,14 @@ class GitResolver {
         // Commit the resolved conflicts
         if (this.resolvedConflicts.length > 0) {
           await this.runCommand(
-            'git commit -m "resolv: e: Merge conflicts resolved automatically"',
+            'git commit -m "resolv: Merge conflicts resolved automatically"',
             'Commit resolved conflicts'
           );
         }
       }
     }
 
-    return { succes: s: true, resolvedFile: s: this.resolvedConflicts };
+    return { succes: true, resolvedFile: this.resolvedConflicts };
   }
 
   async checkAndMergePRs() {
@@ -141,15 +141,15 @@ class GitResolver {
             );
           }
 
-          return { succes: s: true, mergedPR: s: prs.length };
+          return { succes: true, mergedPR: prs.length };
         }
       } else {
         this.log('⚠️ GitHub CLI not available, skipping PR merging');
-        return { succes: s: false, erro: r: 'GitHub CLI not available' };
+        return { succes: false, erro: 'GitHub CLI not available' };
       }
     } catch (error) {
       this.log(`❌ Error checking: PRs: ${error.message}`);
-      return { succes: s: false, erro: r: error.message };
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -160,7 +160,7 @@ class GitResolver {
     await this.runCommand('git add .', 'Stage all changes');
 
     // Commit with comprehensive message
-    const commitMessage = `fea: t: Comprehensive automation improvements and conflict resolution
+    const commitMessage = `fea: Comprehensive automation improvements and conflict resolution
 
 - Resolved all merge conflicts automatically
 - Merged open PRs into main branch
@@ -195,7 +195,7 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
     // Push to main
     await this.runCommand('git push origin main', 'Push to main branch');
 
-    return { succes: s: true };
+    return { succes: true };
   }
 
   async run() {
@@ -216,10 +216,10 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
 
     // Generate report
     const report = {
-      timestam: p: new Date().toISOString(),
-      resolvedConflict: s: this.resolvedConflicts,
-      mergedPR: s: prResult.mergedPRs || 0,
-      succes: s: conflictResult.success && commitResult.success,
+      timestam: new Date().toISOString(),
+      resolvedConflict: this.resolvedConflicts,
+      mergedPR: prResult.mergedPRs || 0,
+      succes: conflictResult.success && commitResult.success,
     };
 
     fs.writeFileSync(
@@ -228,10 +228,10 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
     );
 
     this.log('🎉 Git Resolution Process Completed');
-    this.log(`📊 Summar: y:`);
+    this.log(`📊 Summar: `);
     this.log(`  - Conflicts: resolved: ${this.resolvedConflicts.length}`);
     this.log(`  - PRs: merged: ${prResult.mergedPRs || 0}`);
-    this.log(`  - Succes: s: ${report.success}`);
+    this.log(`  - Succes: ${report.success}`);
 
     return report;
   }

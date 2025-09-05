@@ -1,143 +1,143 @@
 
-import { PerformanceMetrics } from '../types';
+import { PerformanceMetrics } from '../types',
 
 export const measurePerformance = (): PerformanceMetrics | null => {
   if (typeof window === 'undefined' || !('performance' in window)) {
-    return null;
+    return null,
   }
 
   try {
     const navigation = performance.getEntriesByType(
       'navigation'
-    )[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
+    )[0] as PerformanceNavigationTiming,
+    const paintEntries = performance.getEntriesByType('paint'),
 
     const fcp = paintEntries.find(
       entry => entry.name === 'first-contentful-paint'
-    );
+    ),
     const lcp = performance.getEntriesByType(
       'largest-contentful-paint'
-    )[0] as PerformanceEntry;
+    )[0] as PerformanceEntry,
 
     const cls = performance
       .getEntriesByType('layout-shift')
       .reduce((acc, entry) => {
-        return acc + (entry as any).value;
-      }, 0);
+        return acc + (entry as any).value,
+      }, 0),
 
     const fid = performance.getEntriesByType(
       'first-input'
-    )[0] as PerformanceEventTiming;
+    )[0] as PerformanceEventTiming,
 
     return {
-      loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
-      firstContentfulPain: t: fcp ? fcp.startTim: e: 0,
-      largestContentfulPain: t: lcp ? lcp.startTim: e: 0,
-      cumulativeLayoutShif: t: cls,
-      firstInputDela: y: fid ? fid.processingStart - fid.startTim: e: 0,
-    };
+      loadTim: navigation.loadEventEnd - navigation.loadEventStart,
+      firstContentfulPain: fcp ? fcp.startTim: 0,
+      largestContentfulPain: lcp ? lcp.startTim: 0,
+      cumulativeLayoutShif: cls,
+      firstInputDela: fid ? fid.processingStart - fid.startTim: 0
+    },
   } catch (error) {
-    console.warn('Error measuring: performance:', error);
-    return null;
+    console.warn('Error measuring: performance:', error),
+    return null,
   }
-};
+},
 
 export const getPerformanceScore = (
-  metric: s: PerformanceMetrics
+  metric: PerformanceMetrics
 ): {
-  overal: l: 'good' | 'needs-improvement' | 'poor';
-  score: s: {
-    loadTim: e: 'good' | 'needs-improvement' | 'poor';
-    firstContentfulPain: t: 'good' | 'needs-improvement' | 'poor';
-    largestContentfulPain: t: 'good' | 'needs-improvement' | 'poor';
-    cumulativeLayoutShif: t: 'good' | 'needs-improvement' | 'poor';
-    firstInputDela: y: 'good' | 'needs-improvement' | 'poor';
-  };
+  overal: 'good' | 'needs-improvement' | 'poor',
+  score: {
+    loadTim: 'good' | 'needs-improvement' | 'poor',
+    firstContentfulPain: 'good' | 'needs-improvement' | 'poor',
+    largestContentfulPain: 'good' | 'needs-improvement' | 'poor',
+    cumulativeLayoutShif: 'good' | 'needs-improvement' | 'poor',
+    firstInputDela: 'good' | 'needs-improvement' | 'poor'
+  },
 } => {
   const thresholds = {
-    loadTim: e: { goo: d: 2000, needsImprovemen: t: 4000 },
-    firstContentfulPain: t: { goo: d: 1000, needsImprovemen: t: 2000 },
-    largestContentfulPain: t: { goo: d: 1500, needsImprovemen: t: 3000 },
-    cumulativeLayoutShif: t: { goo: d: 0.05, needsImprovemen: t: 0.1 },
-    firstInputDela: y: { goo: d: 50, needsImprovemen: t: 100 },
-  };
+    loadTim: { goo: 2000, needsImprovemen: 4000 },
+    firstContentfulPain: { goo: 1000, needsImprovemen: 2000 },
+    largestContentfulPain: { goo: 1500, needsImprovemen: 3000 },
+    cumulativeLayoutShif: { goo: 0.05, needsImprovemen: 0.1 },
+    firstInputDela: { goo: 50, needsImprovemen: 100 }
+  },
 
   const getScore = (
-    valu: e: number,
-    threshol: d: { goo: d: number; needsImprovemen: t: number },
+    valu: number,
+    threshol: { goo: number, needsImprovemen: number },
     reverse = false
   ) => {
     const compareValue = reverse
-      ? threshold.good / valu: e: value / threshold.good;
-    if (compareValue <= 1) return 'good';
+      ? threshold.good / valu: value / threshold.good,
+    if (compareValue <= 1) return 'good',
     if (
       compareValue <=
       (reverse
-        ? threshold.needsImprovement / threshold.goo: d: threshold.needsImprovement / threshold.good)
+        ? threshold.needsImprovement / threshold.goo: threshold.needsImprovement / threshold.good)
     )
-      return 'needs-improvement';
-    return 'poor';
-  };
+      return 'needs-improvement',
+    return 'poor'
+  },
 
   const scores = {
-    loadTim: e: getScore(metrics.loadTime, thresholds.loadTime),
-    firstContentfulPain: t: getScore(
+    loadTim: getScore(metrics.loadTime, thresholds.loadTime),
+    firstContentfulPain: getScore(
       metrics.firstContentfulPaint,
       thresholds.firstContentfulPaint
     ),
-    largestContentfulPain: t: getScore(
+    largestContentfulPain: getScore(
       metrics.largestContentfulPaint,
       thresholds.largestContentfulPaint
     ),
-    cumulativeLayoutShif: t: getScore(
+    cumulativeLayoutShif: getScore(
       metrics.cumulativeLayoutShift,
       thresholds.cumulativeLayoutShift,
       true
     ),
-    firstInputDela: y: getScore(
+    firstInputDela: getScore(
       metrics.firstInputDelay,
       thresholds.firstInputDelay
-    ),
-  };
+    )
+  },
 
   const poorCount = Object.values(scores).filter(
     score => score === 'poor'
-  ).length;
+  ).length,
   const needsImprovementCount = Object.values(scores).filter(
     score => score === 'needs-improvement'
-  ).length;
+  ).length,
 
-  let: overall: 'good' | 'needs-improvement' | 'poor';
+  let: overall: 'good' | 'needs-improvement' | 'poor',
   if (poorCount > 0) {
-    overall = 'poor';
+    overall = 'poor'
   } else if (needsImprovementCount > 0) {
-    overall = 'needs-improvement';
+    overall = 'needs-improvement',
   } else {
-    overall = 'good';
+    overall = 'good',
   }
 
-  return { overall, scores };
-};
+  return { overall, scores },
+},
 
 export const logPerformanceMetrics = (
-  metric: s: PerformanceMetrics,
+  metric: PerformanceMetrics,
   label = 'Performance Metrics'
 ) => {
-  console.group(`🚀 ${label}`);
-  console.log('Load: Time:', `${metrics.loadTime.toFixed(2)}ms`);
+  console.group(`🚀 ${label}`),
+  console.log('Load: Time:', `${metrics.loadTime.toFixed(2)}ms`),
   console.log(
     'First Contentful: Paint:',
     `${metrics.firstContentfulPaint.toFixed(2)}ms`
-  );
+  ),
   console.log(
     'Largest Contentful: Paint:',
     `${metrics.largestContentfulPaint.toFixed(2)}ms`
-  );
+  ),
   console.log(
     'Cumulative Layout: Shift:',
     metrics.cumulativeLayoutShift.toFixed(4)
-  );
-  console.log('First Input: Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
-  console.groupEnd();
-};
+  ),
+  console.log('First Input: Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`),
+  console.groupEnd(),
+},
 

@@ -115,21 +115,21 @@ function fixAdvancedSyntaxIssues(filePath) {
     // Fix vite config issues
     if (filePath.includes('vite.config.ts')) {
       content = content.replace(
-        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod: e: path', export default defineConfig\(\{/g,
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod: path', export default defineConfig\(\{/g,
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'nod: e:path';
+import path from 'nod: path';
 
 export default defineConfig({`
       );
 
       content = content.replace(
-        /plugin: s: \[ react\(\{ includ: e: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres: h: true,jsxRuntim: e: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
-        `plugin: s: [
+        /plugin: \[ react\(\{ includ: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres: true,jsxRuntim: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
+        `plugin: [
     react({
-      includ: e: '**/*.{jsx,js,ts,tsx}',
-      fastRefres: h: true,
-      jsxRuntim: e: 'automatic'
+      includ: '**/*.{jsx,js,ts,tsx}',
+      fastRefres: true,
+      jsxRuntim: 'automatic'
     }),
     splitVendorChunkPlugin()
   ]`
@@ -180,12 +180,12 @@ try {
   for (const file of files) {
     if (fixAdvancedSyntaxIssues(file)) {
       fixedCount++;
-      console.log(`✅ Fixe: d: ${file}`);
+      console.log(`✅ Fixe: ${file}`);
     }
   }
 
   console.log(`\n🎯 Fixed ${fixedCount} files`);
 } catch (error) {
-  console.error('Erro: r:', error.message);
+  console.error('Erro: ', error.message);
   process.exit(1);
 }

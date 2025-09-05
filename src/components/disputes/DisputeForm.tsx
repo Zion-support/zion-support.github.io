@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import React, { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
+  FormMessage} from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { disputeReasonLabels } from "@/types/disputes";
-import { useDisputes } from "@/hooks/useDisputes";
-import { toast } from "sonner";
+  SelectValue} from "@/components/ui/select",
+import { Input } from "@/components/ui/input",
+import { disputeReasonLabels } from "@/types/disputes",
+import { useDisputes } from "@/hooks/useDisputes",
+import { toast } from "sonner",
 import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
@@ -29,14 +29,14 @@ const formSchema = z.object({
     .min(1, { message: "Please select a reason for the dispute" }),
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional()});
+  attachments: z.array(z.any()).optional()}),
 
 type DisputeFormProps = {
-  projectId: string;
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void;
-  onCancel?: () => void;
-};
+  projectId: string,
+  milestoneId?: string,
+  onDisputeCreated?: (disputeId: string) => void,
+  onCancel?: () => void
+},
 
 export function DisputeForm({ 
   projectId, 
@@ -44,60 +44,60 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 }: DisputeFormProps) {
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
+  const { createDispute } = useDisputes(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [files, setFiles] = useState<File[]>([]),
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>></z>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: []}});
+      attachments: []}}),
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement></HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files);
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles]);
+      const newFiles = Array.from(e.target.files),
+      setFiles(prev => [...prev, ...newFiles]),
+      form.setValue("attachments", [...files, ...newFiles]),
     }
-  };
+  },
 
   const removeFile = (index: number) => {
-    const newFiles = [...files];
-    newFiles.splice(index, 1);
-    setFiles(newFiles);
-    form.setValue("attachments", newFiles);
-  };
+    const newFiles = [...files],
+    newFiles.splice(index, 1),
+    setFiles(newFiles),
+    form.setValue("attachments", newFiles),
+  },
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-        description: values.description});
+        description: values.description}),
       
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
-        if (files.length > 0) {
-          // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`);
+   </typeof>     if (files.length > 0) {
+          // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`),
         }
         
-        toast.success("Your dispute has been submitted");
+        toast.success("Your dispute has been submitted"),
         
         if (onDisputeCreated) {
-          onDisputeCreated(dispute.id);
+          onDisputeCreated(dispute.id),
         }
       }
     } catch (error) {
-      logErrorToProduction('Error submitting dispute:', { data: error });
-      toast.error("Failed to submit dispute. Please try again.");
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again."),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   }
 
@@ -113,7 +113,7 @@ export function DisputeForm({
           <FormField
             control={form.control}
             name="reason_code"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<ty</FormField>peof formSchema>, "reason_code"> }) => (
               <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -136,7 +136,7 @@ export function DisputeForm({
           <FormField
             control={form.control}
             name="description"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "description"> }) => (
+            render={({ field }: { field: ControllerRenderProp</FormField>s<z.infer<typeof formSchema>, "description"> }) => (
               <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
@@ -200,5 +200,5 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  );
+  ),
 }

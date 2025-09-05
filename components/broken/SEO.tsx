@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react',
+import Head from 'next/head',
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string,
+  description?: string,
+  keywords?: string | string[],
+  image?: string,
+  url?: string,
+  type?: 'website' | 'article' | 'product',
+  publishedTime?: string,
+  modifiedTime?: string,
+  author?: string,
+  section?: string,
+  tags?: string[],
+  structuredData?: any,
+  noindex?: boolean,
+  nofollow?: boolean,
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -33,16 +33,16 @@ const SEO: React.FC<SEOProps> = ({
   structuredData,
   noindex = false,
   nofollow = false}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`,
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`,
 
   return (
-    <Head>
+    <Head></Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -71,8 +71,8 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Article Specific Meta Tags */}
       {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    <>
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           {author && <meta property="article:author" content={author} />}
           {section && <meta property="article:section" content={section} />}
@@ -178,7 +178,7 @@ const SEO: React.FC<SEOProps> = ({
         />
       )}
     </Head>
-  );
-};
+  ),
+},
 
-export default SEO;
+export default SEO,

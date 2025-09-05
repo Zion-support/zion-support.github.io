@@ -1,21 +1,21 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
 
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null;
-  };
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void;
+    selectedProductTypes: string[],
+    selectedLocations: string[],
+    selectedAvailability: string[],
+    selectedRating: number | null
+  },
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
+  onClearFilters: () => void
 }
 
 export function FilterSidebar({
@@ -54,7 +54,7 @@ export function FilterSidebar({
                 checked={filters.selectedProductTypes.includes(type.value)}
                 onCheckedChange={() => onFilterChange('productTypes', type.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
+              /></Checkbox>
               <label 
                 htmlFor={`type-${type.value}`}
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
@@ -79,7 +79,7 @@ export function FilterSidebar({
                 checked={filters.selectedLocations.includes(location.value)}
                 onCheckedChange={() => onFilterChange('locations', location.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
+     </Checkbox>         />
               <label 
                 htmlFor={`location-${location.value}`}
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
@@ -103,7 +103,7 @@ export function FilterSidebar({
                 id={`availability-${availability.value}`} 
                 checked={filters.selectedAvailability.includes(availability.value)}
                 onCheckedChange={() => onFilterChange('availability', availability.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-pu</Checkbox>rple"
               />
               <label 
                 htmlFor={`availability-${availability.value}`}
@@ -149,5 +149,5 @@ export function FilterSidebar({
         </div>
       </div>
     </div>
-  );
+  ),
 }

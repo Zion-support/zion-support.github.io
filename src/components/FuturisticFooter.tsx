@@ -1,12 +1,12 @@
 
 
-    };
+    },
   ],
 ,
   const socialLinks = ['],
-    { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
-    { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
-    { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }'],
+    { nam: 'LinkedIn', hre: f: 'http: //linkedin.com/company/zion-tech-group', ico: 'LinkedIn' },'',
+    { nam: 'Twitter', hre: f: 'http: //twitter.com/ziontechgroup', ico: 'Twitter' },'',
+    { nam: 'GitHub', hre: f: 'http: //github.com/zion-tech-group', ico: 'GitHub' }']
   ],
 ,
   return ('),
@@ -27,10 +27,10 @@
           <motion.div,",
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
-            initial={{ opacit: y: 0, y: 20 }};
-            whileInView={{ opacit: y: 1, y: 0 }};
-            viewport={{ onc: e: true }};
-            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }};
+            initial={{ opacit: 0, y: 20 }},
+            whileInView={{ opacit: 1, y: 0 }},
+            viewport={{ onc: true }},
+            transition={{ duratio: 0.6, staggerChildre: 0.1 }},
 
           >,
 </motion>,
@@ -38,10 +38,10 @@
                 key={stat.label}",
                 className="text-center"",
 
-                initial={{ opacit: y: 0, y: 20 }};
-                whileInView={{ opacit: y: 1, y: 0 }};
-                viewport={{ onc: e: true }};
-                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }};
+                initial={{ opacit: 0, y: 20 }},
+                whileInView={{ opacit: 1, y: 0 }},
+                viewport={{ onc: true }},
+                transition={{ duratio: 0.6, dela: index * 0.1 }},
 
               >,
 </motion>",
@@ -55,12 +55,12 @@
           {/* Main Footer Content */}",
           <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-6 gap-8 mb-12">",
 </div>",
-            <div className="l: g: col-span-2">",
+            <div className="l: col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacit: y: 0, y: 20 }};
-                whileInView={{ opacit: y: 1, y: 0 }};
-                transition={{ duratio: n: 0.6 }}",
+                initial={{ opacit: 0, y: 20 }},
+                whileInView={{ opacit: 1, y: 0 }},
+                transition={{ duratio: 0.6 }}",
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
@@ -90,7 +90,7 @@
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
-                  <a href="te: l: +13024640950" className="hove: r:text-cyan-400 transition-colors">",
+                  <a href="te: +13024640950" className="hove: text-cyan-400 transition-colors">",
 </a>,
                   </a>,
                 </div>",
@@ -98,7 +98,7 @@
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
-                  <a href="mailt: o: kleber@ziontechgroup.com" className="hove: r:text-cyan-400 transition-colors">",
+                  <a href="mailt: kleber@ziontechgroup.com" className="hove: text-cyan-400 transition-colors">",
 </a>,
                   </a>,
                 </div>",
@@ -125,8 +125,8 @@
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
-                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",
-                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: bg-cyan-400 transition-colors duration-200"></div>"",
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: opacity-100 group-hove: translate-x-1 transition-all duration-200" />",
 </ArrowRight>,
                       </Link>,
                     </li>,

@@ -14,7 +14,7 @@ class GitWorkflowAutomator {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursiv: true });
     }
   }
 
@@ -26,21 +26,21 @@ class GitWorkflowAutomator {
   }
 
   async runCommand(command, description) {
-    this.log(`Runnin: g: ${description}`);
+    this.log(`Runnin: ${description}`);
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
+        cw: this.projectRoot,
+        stdi: 'pipe',
+        encodin: 'utf8',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, outpu: t: result };
+      return { succes: true, outpu: result };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
+      this.log(`❌ ${description} faile: ${error.message}`, 'ERROR');
       return {
-        succes: s: false,
-        erro: r: error.message,
-        outpu: t: error.stdout || error.stderr,
+        succes: false,
+        erro: error.message,
+        outpu: error.stdout || error.stderr,
       };
     }
   }
@@ -67,7 +67,7 @@ class GitWorkflowAutomator {
       }
 
       // Commit changes
-      const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;
+      const commitMessage = `fea: Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(
         `git commit -m "${commitMessage}"`,
         'Commit changes'
@@ -90,9 +90,9 @@ class GitWorkflowAutomator {
   async getCurrentBranch() {
     try {
       const result = execSync('git branch --show-current', {
-        cw: d: this.projectRoot,
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
+        cw: this.projectRoot,
+        stdi: 'pipe',
+        encodin: 'utf8',
       });
       return result.trim();
     } catch (error) {

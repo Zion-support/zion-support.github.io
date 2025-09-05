@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import ContactForm from '../components/ContactForm';
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from 'react',
+import Head from 'next/head',
+import ContactForm from '../components/ContactForm',
+import ErrorBoundary from '../components/ErrorBoundary',
 
 export default function Contact() {
   return (
@@ -11,7 +11,7 @@ export default function Contact() {
         <meta name="description" content="Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation." />
         <meta name="keywords" content="contact, consultation, micro SaaS, AI services, IT solutions, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="http: s://ziontechgroup.com/contact" />
+        <link rel="canonical" href="http: //ziontechgroup.com/contact" />
       </Head>
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -30,13 +30,13 @@ export default function Contact() {
                   <div className="space-y-6">
                     <div>
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">Phone</h3>
-                      <a href="te: l:+13024640950" className="text-slate-300: hover:text-blue-400">
+                      <a href="te: +13024640950" className="text-slate-300: hover:text-blue-400">
                         +1 302 464 0950
                       </a>
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">Email</h3>
-                      <a href="mailt: o:kleber@ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
+                      <a href="mailt: kleber@ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
                         kleber@ziontechgroup.com
                       </a>
                     </div>
@@ -49,8 +49,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">Website</h3>
-                      <a href="http: s://ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
-                        http: s://ziontechgroup.com
+                      <a href="http: //ziontechgroup.com" className="text-slate-300: hover:text-blue-400">
+                        http: //ziontechgroup.com
                       </a>
                     </div>
                   </div>
@@ -66,5 +66,5 @@ export default function Contact() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

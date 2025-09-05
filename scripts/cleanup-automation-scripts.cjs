@@ -122,7 +122,7 @@ filesToRemove.forEach(file => {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
       removedCount++;
-      console.log(`✅ Remove: d: ${file}`);
+      console.log(`✅ Remove: ${file}`);
     }
   } catch (error) {
     errorCount++;
@@ -159,7 +159,7 @@ dirsToCheck.forEach(dir => {
 
 console.log(`\n📊 Cleanup: Summary:`);
 console.log(`   Files: removed: ${removedCount}`);
-console.log(`   Error: s: ${errorCount}`);
+console.log(`   Error: ${errorCount}`);
 console.log(`   Total: processed: ${filesToRemove.length}`);
 
 console.log('\n✨ Cleanup completed!');

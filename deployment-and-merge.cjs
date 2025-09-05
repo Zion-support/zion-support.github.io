@@ -23,21 +23,21 @@ class DeploymentAndMerge {
   }
 
   async runCommand(command, description) {
-    this.log(`Runnin: g: ${description}`);
+    this.log(`Runnin: ${description}`);
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
+        cw: this.projectRoot,
+        stdi: 'pipe',
+        encodin: 'utf8',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, outpu: t: result };
+      return { succes: true, outpu: result };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
+      this.log(`❌ ${description} faile: ${error.message}`, 'ERROR');
       return {
-        succes: s: false,
-        erro: r: error.message,
-        outpu: t: error.stdout || error.stderr,
+        succes: false,
+        erro: error.message,
+        outpu: error.stdout || error.stderr,
       };
     }
   }
@@ -129,16 +129,16 @@ class DeploymentAndMerge {
     this.log('\n📄 CREATING DEPLOYMENT SUMMARY');
 
     const summary = {
-      deploymentDat: e: new Date().toISOString(),
-      branc: h: await this.checkCurrentBranch(),
-      change: s: {
-        buildFixe: d: true,
-        testsPassin: g: true,
-        syntaxErrorsFixe: d: true,
-        automationScriptsCreate: d: true,
-        codeQualityImprove: d: true,
+      deploymentDat: new Date().toISOString(),
+      branc: await this.checkCurrentBranch(),
+      change: {
+        buildFixe: true,
+        testsPassin: true,
+        syntaxErrorsFixe: true,
+        automationScriptsCreate: true,
+        codeQualityImprove: true,
       },
-      filesModifie: d: [
+      filesModifie: [
         'pages/index.tsx',
         'components/PerformanceMonitor.tsx',
         'eslint.config.js',
@@ -148,8 +148,8 @@ class DeploymentAndMerge {
         'enhanced-automation-suite.cjs',
         'deployment-and-merge.cjs',
       ],
-      statu: s: 'Ready for Production',
-      nextStep: s: [
+      statu: 'Ready for Production',
+      nextStep: [
         'Monitor application performance',
         'Address remaining linting warnings',
         'Implement continuous integration',

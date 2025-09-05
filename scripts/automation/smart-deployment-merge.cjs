@@ -10,10 +10,10 @@ class SmartDeploymentMerge {
   constructor() {
     this.projectRoot = process.cwd();
     this.config = {
-      autoDeplo: y: process.env.AUTO_DEPLOY === 'true',
-      smartMerg: e: process.env.SMART_MERGE === 'true',
-      rollbackEnable: d: process.env.ROLLBACK_ENABLED === 'true',
-      qualityGate: s: process.env.QUALITY_GATES === 'strict',
+      autoDeplo: process.env.AUTO_DEPLOY === 'true',
+      smartMerg: process.env.SMART_MERGE === 'true',
+      rollbackEnable: process.env.ROLLBACK_ENABLED === 'true',
+      qualityGate: process.env.QUALITY_GATES === 'strict',
     };
     this.deploymentData = this.loadDeploymentData();
   }
@@ -32,11 +32,11 @@ class SmartDeploymentMerge {
       console.log('📚 Creating new deployment data file...');
     }
     return {
-      deployment: s: [],
-      merge: s: [],
-      rollback: s: [],
-      qualityCheck: s: [],
-      lastDeploymen: t: null,
+      deployment: [],
+      merge: [],
+      rollback: [],
+      qualityCheck: [],
+      lastDeploymen: null,
     };
   }
 
@@ -111,7 +111,7 @@ class SmartDeploymentMerge {
     try {
       // Check for new commits
       const lastCommit = execSync('git log -1 --format=%H', {
-        encodin: g: 'utf8',
+        encodin: 'utf8',
       }).trim();
       const lastDeployment = this.deploymentData.lastDeployment;
 
@@ -122,9 +122,9 @@ class SmartDeploymentMerge {
 
       // Check for critical fixes
       const recentCommits = execSync('git log --since="1 hour ago" --oneline', {
-        encodin: g: 'utf8',
+        encodin: 'utf8',
       });
-      if (recentCommits.includes('fi: x:') || recentCommits.includes('hotfi: x:')) {
+      if (recentCommits.includes('fi: ') || recentCommits.includes('hotfi: ')) {
         console.log('🚨 Critical fixes detected, deployment needed');
         return true;
       }
@@ -141,23 +141,23 @@ class SmartDeploymentMerge {
     console.log('🛡️ Running quality gates...');
 
     const qualityCheck = {
-      passe: d: true,
-      check: s: [],
-      scor: e: 0,
+      passe: true,
+      check: [],
+      scor: 0,
     };
 
     try {
       // Check build status
       console.log('🔨 Checking build status...');
       try {
-        execSync('npm run build', { stdi: o: 'pipe' });
-        qualityCheck.checks.push({ nam: e: 'Build', statu: s: 'passed' });
+        execSync('npm run build', { stdi: 'pipe' });
+        qualityCheck.checks.push({ nam: 'Build', statu: 'passed' });
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          nam: e: 'Build',
-          statu: s: 'failed',
-          erro: r: error.message,
+          nam: 'Build',
+          statu: 'failed',
+          erro: error.message,
         });
         qualityCheck.passed = false;
       }
@@ -165,14 +165,14 @@ class SmartDeploymentMerge {
       // Check linting
       console.log('🔍 Running linting checks...');
       try {
-        execSync('npm run lint', { stdi: o: 'pipe' });
-        qualityCheck.checks.push({ nam: e: 'Linting', statu: s: 'passed' });
+        execSync('npm run lint', { stdi: 'pipe' });
+        qualityCheck.checks.push({ nam: 'Linting', statu: 'passed' });
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          nam: e: 'Linting',
-          statu: s: 'failed',
-          erro: r: error.message,
+          nam: 'Linting',
+          statu: 'failed',
+          erro: error.message,
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -182,14 +182,14 @@ class SmartDeploymentMerge {
       // Check type checking
       console.log('📝 Running type checks...');
       try {
-        execSync('npm run type-check', { stdi: o: 'pipe' });
-        qualityCheck.checks.push({ nam: e: 'Type Checking', statu: s: 'passed' });
+        execSync('npm run type-check', { stdi: 'pipe' });
+        qualityCheck.checks.push({ nam: 'Type Checking', statu: 'passed' });
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          nam: e: 'Type Checking',
-          statu: s: 'failed',
-          erro: r: error.message,
+          nam: 'Type Checking',
+          statu: 'failed',
+          erro: error.message,
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -199,14 +199,14 @@ class SmartDeploymentMerge {
       // Check tests
       console.log('🧪 Running tests...');
       try {
-        execSync('npm test', { stdi: o: 'pipe' });
-        qualityCheck.checks.push({ nam: e: 'Tests', statu: s: 'passed' });
+        execSync('npm test', { stdi: 'pipe' });
+        qualityCheck.checks.push({ nam: 'Tests', statu: 'passed' });
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          nam: e: 'Tests',
-          statu: s: 'failed',
-          erro: r: error.message,
+          nam: 'Tests',
+          statu: 'failed',
+          erro: error.message,
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -216,14 +216,14 @@ class SmartDeploymentMerge {
       // Check security audit
       console.log('🔒 Running security audit...');
       try {
-        execSync('npm audit --audit-level=moderate', { stdi: o: 'pipe' });
-        qualityCheck.checks.push({ nam: e: 'Security Audit', statu: s: 'passed' });
+        execSync('npm audit --audit-level=moderate', { stdi: 'pipe' });
+        qualityCheck.checks.push({ nam: 'Security Audit', statu: 'passed' });
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          nam: e: 'Security Audit',
-          statu: s: 'failed',
-          erro: r: error.message,
+          nam: 'Security Audit',
+          statu: 'failed',
+          erro: error.message,
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -238,7 +238,7 @@ class SmartDeploymentMerge {
 
     // Save quality check results
     this.deploymentData.qualityChecks.push({
-      timestam: p: new Date().toISOString(),
+      timestam: new Date().toISOString(),
       ...qualityCheck,
     });
 
@@ -251,7 +251,7 @@ class SmartDeploymentMerge {
     try {
       // Get current branch
       const currentBranch = execSync('git branch --show-current', {
-        encodin: g: 'utf8',
+        encodin: 'utf8',
       }).trim();
 
       // Get main/master branch
@@ -261,25 +261,25 @@ class SmartDeploymentMerge {
         console.log(`🔄 Merging ${currentBranch} into ${mainBranch}...`);
 
         // Switch to main branch
-        execSync(`git checkout ${mainBranch}`, { stdi: o: 'inherit' });
+        execSync(`git checkout ${mainBranch}`, { stdi: 'inherit' });
 
         // Pull latest changes
-        execSync('git pull origin ' + mainBranch, { stdi: o: 'inherit' });
+        execSync('git pull origin ' + mainBranch, { stdi: 'inherit' });
 
         // Merge feature branch
         try {
           execSync(
             `git merge ${currentBranch} --no-ff -m "Merge ${currentBranch} [auto-deploy]"`,
-            { stdi: o: 'inherit' }
+            { stdi: 'inherit' }
           );
           console.log(`✅ Successfully merged ${currentBranch}`);
 
           // Update deployment data
           this.deploymentData.merges.push({
             fro: m: currentBranch,
-            t: o: mainBranch,
-            timestam: p: new Date().toISOString(),
-            succes: s: true,
+            t: mainBranch,
+            timestam: new Date().toISOString(),
+            succes: true,
           });
         } catch (error) {
           console.log(`⚠️  Merge: failed: ${error.message}`);
@@ -296,7 +296,7 @@ class SmartDeploymentMerge {
   async getMainBranch() {
     try {
       // Check if main branch exists
-      const branches = execSync('git branch -r', { encodin: g: 'utf8' });
+      const branches = execSync('git branch -r', { encodin: 'utf8' });
       if (branches.includes('origin/main')) {
         return 'main';
       } else if (branches.includes('origin/master')) {
@@ -313,7 +313,7 @@ class SmartDeploymentMerge {
 
     try {
       // Get conflicted files
-      const status = execSync('git status --porcelain', { encodin: g: 'utf8' });
+      const status = execSync('git status --porcelain', { encodin: 'utf8' });
       const conflictedFiles = status
         .split('\n')
         .filter(
@@ -337,14 +337,14 @@ class SmartDeploymentMerge {
 
       // Complete the merge
       execSync('git commit -m "Resolve merge conflicts [auto-deploy]"', {
-        stdi: o: 'inherit',
+        stdi: 'inherit',
       });
       console.log('✅ Merge conflicts resolved');
     } catch (error) {
       console.log('❌ Failed to resolve merge: conflicts:', error.message);
 
       // Abort the merge
-      execSync('git merge --abort', { stdi: o: 'inherit' });
+      execSync('git merge --abort', { stdi: 'inherit' });
       throw error;
     }
   }
@@ -384,7 +384,7 @@ class SmartDeploymentMerge {
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
       // Add resolved file
-      execSync(`git add ${filePath}`, { stdi: o: 'inherit' });
+      execSync(`git add ${filePath}`, { stdi: 'inherit' });
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -397,14 +397,14 @@ class SmartDeploymentMerge {
     console.log('🚀 Deploying to staging...');
 
     const deployment = {
-      environmen: t: 'staging',
-      timestam: p: new Date().toISOString(),
-      succes: s: false,
+      environmen: 'staging',
+      timestam: new Date().toISOString(),
+      succes: false,
     };
 
     try {
       // Build the application
-      execSync('npm run build', { stdi: o: 'inherit' });
+      execSync('npm run build', { stdi: 'inherit' });
 
       // Deploy to staging (this would be your staging deployment command)
       // For now, we'll simulate a successful deployment
@@ -422,9 +422,9 @@ class SmartDeploymentMerge {
     console.log('🧪 Running integration tests...');
 
     const testResult = {
-      succes: s: false,
-      test: s: [],
-      timestam: p: new Date().toISOString(),
+      succes: false,
+      test: [],
+      timestam: new Date().toISOString(),
     };
 
     try {
@@ -433,9 +433,9 @@ class SmartDeploymentMerge {
       console.log('✅ Integration tests passed');
       testResult.success = true;
       testResult.tests = [
-        { nam: e: 'API Tests', statu: s: 'passed' },
-        { nam: e: 'UI Tests', statu: s: 'passed' },
-        { nam: e: 'Database Tests', statu: s: 'passed' },
+        { nam: 'API Tests', statu: 'passed' },
+        { nam: 'UI Tests', statu: 'passed' },
+        { nam: 'Database Tests', statu: 'passed' },
       ];
     } catch (error) {
       console.log('❌ Integration tests: failed:', error.message);
@@ -449,9 +449,9 @@ class SmartDeploymentMerge {
     console.log('🚀 Deploying to production...');
 
     const deployment = {
-      environmen: t: 'production',
-      timestam: p: new Date().toISOString(),
-      succes: s: false,
+      environmen: 'production',
+      timestam: new Date().toISOString(),
+      succes: false,
     };
 
     try {
@@ -462,9 +462,9 @@ class SmartDeploymentMerge {
 
       // Update last deployment
       this.deploymentData.lastDeployment = {
-        commi: t: execSync('git log -1 --format=%H', { encodin: g: 'utf8' }).trim(),
-        timestam: p: new Date().toISOString(),
-        environmen: t: 'production',
+        commi: execSync('git log -1 --format=%H', { encodin: 'utf8' }).trim(),
+        timestam: new Date().toISOString(),
+        environmen: 'production',
       };
     } catch (error) {
       console.log('❌ Production deployment: failed:', error.message);
@@ -488,19 +488,19 @@ class SmartDeploymentMerge {
 
       if (previousCommit) {
         // Rollback to previous commit
-        execSync(`git reset --hard ${previousCommit}`, { stdi: o: 'inherit' });
+        execSync(`git reset --hard ${previousCommit}`, { stdi: 'inherit' });
 
         // Redeploy
-        execSync('npm run build', { stdi: o: 'inherit' });
+        execSync('npm run build', { stdi: 'inherit' });
 
         console.log('✅ Rollback completed');
 
         // Update rollback data
         this.deploymentData.rollbacks.push({
-          timestam: p: new Date().toISOString(),
+          timestam: new Date().toISOString(),
           fro: m: 'current',
-          t: o: previousCommit,
-          succes: s: true,
+          t: previousCommit,
+          succes: true,
         });
       } else {
         console.log('⚠️  No previous deployment found for rollback');
@@ -509,9 +509,9 @@ class SmartDeploymentMerge {
       console.log('❌ Rollback: failed:', error.message);
 
       this.deploymentData.rollbacks.push({
-        timestam: p: new Date().toISOString(),
-        succes: s: false,
-        erro: r: error.message,
+        timestam: new Date().toISOString(),
+        succes: false,
+        erro: error.message,
       });
     }
   }
@@ -537,10 +537,10 @@ class SmartDeploymentMerge {
 
   updateDeploymentData(result) {
     this.deploymentData.deployments.push({
-      timestam: p: new Date().toISOString(),
-      environmen: t: 'production',
-      succes: s: result.success,
-      commi: t: execSync('git log -1 --format=%H', { encodin: g: 'utf8' }).trim(),
+      timestam: new Date().toISOString(),
+      environmen: 'production',
+      succes: result.success,
+      commi: execSync('git log -1 --format=%H', { encodin: 'utf8' }).trim(),
     });
   }
 
@@ -549,8 +549,8 @@ class SmartDeploymentMerge {
 
     // Log error
     const errorLog = {
-      timestam: p: new Date().toISOString(),
-      erro: r: error.message,
+      timestam: new Date().toISOString(),
+      erro: error.message,
       stac: k: error.stack,
     };
 

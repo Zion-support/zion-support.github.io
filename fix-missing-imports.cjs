@@ -19,11 +19,11 @@ class ImportFixer {
 
   // Get all Lucide React icons from the file
   findLucideIcons(content) {
-    const iconMatches = content.match(/ico: n:\s*([A-Z][a-zA-Z0-9]+)/g);
+    const iconMatches = content.match(/ico: \s*([A-Z][a-zA-Z0-9]+)/g);
     if (!iconMatches) return [];
 
     return iconMatches.map(match => {
-      const iconName = match.replace('ico: n:', '').trim();
+      const iconName = match.replace('ico: ', '').trim();
       return iconName;
     });
   }
@@ -50,7 +50,7 @@ class ImportFixer {
       let content = fs.readFileSync(filePath, 'utf8');
 
       // Skip if not a React component file
-      if (!content.includes('lucide-react') && !content.includes('ico: n:')) {
+      if (!content.includes('lucide-react') && !content.includes('ico: ')) {
         return true;
       }
 
@@ -104,7 +104,7 @@ class ImportFixer {
       }
 
       fs.writeFileSync(filePath, content);
-      this.fixedFiles.push({ fil: e: filePath, addedIcon: s: missingIcons });
+      this.fixedFiles.push({ fil: filePath, addedIcon: missingIcons });
       return true;
     } catch (error) {
       this.log(`❌ Failed to fix ${filePath}: ${error.message}`);

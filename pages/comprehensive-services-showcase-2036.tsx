@@ -1,19 +1,19 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036ITServices } from '../data/real-2036-it-services';
-import { real2036AIServices } from '../data/real-2036-ai-services';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036ITServices } from '../data/real-2036-it-services',
+import { real2036AIServices } from '../data/real-2036-ai-services',
+import { motion } from 'framer-motion',
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices,
     ...real2036ITServices,
     ...real2036AIServices
-  ];
+  ],
 
-  const categories = [...new Set(allServices.map(service => service.category))];
+  const categories = [...new Set(allServices.map(service => service.category))],
 
   return (
     <Layout>
@@ -241,7 +241,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Contact Us Today
                 </button>
@@ -254,7 +254,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default ComprehensiveServicesShowcase2036;
+export default ComprehensiveServicesShowcase2036,

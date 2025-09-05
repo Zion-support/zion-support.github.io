@@ -1,59 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services';
+} from '../data/innovative-2035-micro-saas-services',
 import { 
   innovative2035AIServices 
-} from '../data/innovative-2035-ai-services';
+} from '../data/innovative-2035-ai-services',
 import { 
   innovative2035ITServices 
-} from '../data/innovative-2035-it-services';
+} from '../data/innovative-2035-it-services',
 import { 
   innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
+} from '../data/2025-innovative-real-micro-saas-services',
 import { 
   innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
+} from '../data/2025-innovative-ai-services-enhanced',
 import { 
   innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
+} from '../data/2025-innovative-it-services-enhanced',
 import { 
   emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { motion } from 'framer-motion';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036ITServices } from '../data/real-2036-it-services';
-import { real2036AIServices } from '../data/real-2036-ai-services';
+} from '../data/2025-emerging-tech-services-enhanced',
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services',
+import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
+import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+import { motion } from 'framer-motion',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036ITServices } from '../data/real-2036-it-services',
+import { real2036AIServices } from '../data/real-2036-ai-services',
 
-interface Homepage2025Props { showInternalNav?: boolean }
-
-const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+interface Homepage2025Props { showInternalNav?: boolean
+  },
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =></Homepage2025Props> {
+  const [activeSection, setActiveSection] = useState('hero'),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, []),
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId),
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setIsMobileMenuOpen(false);
+      element.scrollIntoView({ behavior: 'smooth' }),
+      setActiveSection(sectionId),
+      setIsMobileMenuOpen(false),
     }
-  };
+  },
 
   const allServices = [
     // New 2035 services (featured first)
@@ -68,9 +68,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...emergingTechServicesEnhanced2025,
     ...advancedAIAutomationServices,
     ...quantumCybersecurityServices
-  ];
+  ],
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
 
   const navigationSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
@@ -81,21 +81,21 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
-  ];
+  ],
 
   return (
-    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum"></UltraFuturisticBackground2026>
       {showInternalNav && (
-      <>
-        {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+    <>
+      {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10"></nav>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="flex justify-between items-center h-16"></div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2"
-            >
+            ></motion>
               Zion Tech Group
             </motion.h1>
             <motion.p 
@@ -103,7 +103,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-            >
+            ></motion>
               Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation
             </motion.p>
             <motion.div 
@@ -111,11 +111,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-            >
-              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+            ></motion>
+              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"></button>
                 Get Started Today
               </button>
-              <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+              <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"></button>
                 Explore Services
               </button>
             </motion.div>
@@ -126,16 +126,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
-            >
-              <div className="flex items-center gap-2">
+            ></motion>
+              <div className="flex items-center gap-2"></div>
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 <span>Mobile: +1 302 464 0950</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2"></div>
                 <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                 <span>Email: kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2"></div>
                 <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
                 <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
@@ -144,31 +144,32 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </section>
 
         {/* Services Preview */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-24 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            ></motion>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h2>
                 Revolutionary Services Portfolio
               </h2>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
                 Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
               </p>
             </motion.div>
 
             {/* Featured Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
               {featuredServices.map((service, index) => (
                 <motion.div
-                  key={service.id}
+                  key={service.id
+  },
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
+                ></motion>
                   <UltraFuturisticServiceCard2026
                     service={{
                       id: service.id,
@@ -194,11 +195,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
-            >
+            ></motion>
               <a 
                 href="/comprehensive-services-showcase-2036"
                 className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25"
-              >
+              ></a>
                 View Complete Portfolio
               </a>
             </motion.div>
@@ -206,22 +207,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </section>
 
         {/* Technology Domains */}
-        <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            ></motion>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
 
           {/* Mobile Navigation Menu */}
-          <AnimatePresence>
+          <AnimatePresence></AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -229,11 +230,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border-t border-white/10"
                 id="mobile-navigation"
-              >
-                <div className="py-4 space-y-2">
+              ></motion>
+                <div className="py-4 space-y-2"></div>
                   {navigationSections.map((section) => (
                     <button
-                      key={section.id}
+                      key={section.id
+  },
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                         activeSection === section.id
@@ -245,18 +247,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       <span>{section.label}</span>
                     </button>
                   ))}
-                  <div className="pt-4 border-t border-white/10">
+                  <div className="pt-4 border-t border-white/10"></div>
                     <a
                       href="tel:+13024640950"
                       className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
+                    ></a>
                       <span>📱</span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
+                    ></a>
                       <span>✉️</span>
                       <span>kleber@ziontechgroup.com</span>
                     </a>
@@ -271,15 +273,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       )}
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="text-center z-10 max-w-6xl mx-auto">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16"></section>
+        <div className="text-center z-10 max-w-6xl mx-auto"></div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          ></motion>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"></span>
               Future of Technology
             </span>
           </motion.h1>
@@ -289,7 +291,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
-          >
+          ></motion>
             Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.
           </motion.p>
 
@@ -298,7 +300,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          >
+          ></motion>
             <button
               onClick={() => scrollToSection('services')}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
@@ -308,7 +310,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <a
               href="https://ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-            >
+            ></a>
               Visit Website
             </a>
           </motion.div>
@@ -319,15 +321,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-          >
-            {featuredServices.slice(0, 3).map((service, index) => (
+          ></motion>
+            {featuredServices.slice(0, 3).map</motion>((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
                 className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-              >
+              ></motion>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                 <p className="text-gray-400 text-sm">{service.tagline}</p>
@@ -339,35 +342,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
                 Revolutionary Micro SAAS Services
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="default"
                   theme="quantum"
                 />
@@ -378,35 +383,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* AI Services Section */}
-      <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
-        <div className="max-w-7xl mx-auto">
+      <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"></span>
                 Cutting-Edge AI Services
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Revolutionary AI solutions that transform businesses and create unprecedented opportunities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="premium"
                   theme="neon"
                 />
@@ -417,35 +424,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* AI Automation Services Section */}
-      <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
+      <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"></span>
                 Advanced AI Automation
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Intelligent automation solutions that learn, adapt, and continuously optimize your business processes.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {advancedAIAutomationServices.map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="enterprise"
                   theme="holographic"
                 />
@@ -456,35 +465,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Quantum Cybersecurity Section */}
-      <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
-        <div className="max-w-7xl mx-auto">
+      <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"></span>
                 Quantum Cybersecurity
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Unbreakable security powered by quantum computing and advanced AI algorithms.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {quantumCybersecurityServices.map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="premium"
                   theme="cyberpunk"
                 />
@@ -495,35 +506,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* IT Solutions Section */}
-      <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
+      <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"></span>
                 Advanced IT Solutions
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Comprehensive IT services that drive digital transformation and business innovation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="default"
                   theme="quantum"
                 />
@@ -534,35 +547,37 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Emerging Technologies Section */}
-      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
-        <div className="max-w-7xl mx-auto">
+      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"></span>
                 Emerging Technologies
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Revolutionary technologies that define the future of human civilization and business.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id
+  },
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              ></motion>
                 <UltraFuturisticServiceCard2026 
-                  service={service} 
+                  service={service
+  },
                   variant="enterprise"
                   theme="holographic"
                 />
@@ -573,59 +588,59 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-4xl mx-auto text-center">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          ></motion>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h2>
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
                 Ready to Transform Your Business?
               </span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Contact us today to learn how our innovative services can revolutionize your operations.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"></div>
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"></div>
                 <div className="text-3xl mb-4">📱</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"></div>
                 <div className="text-3xl mb-4">✉️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"></div>
                 <div className="text-3xl mb-4">📍</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm"></p>
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </p>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="https://ziontechgroup.com"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
+              ></a>
                 Visit Our Website
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-              >
+              ></a>
                 Get Started Today
               </a>
             </div>
@@ -634,18 +649,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Enhanced Footer */}
-      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div>
+      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8"></footer>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"></div>
+            <div></div>
               <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed"></p>
                 Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.
               </p>
             </div>
-            <div>
+            <div></div>
               <h4 className="text-white font-semibold mb-4">Services</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
+              <ul className="text-gray-400 text-sm space-y-2"></ul>
                 <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
                 <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
                 <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
@@ -654,9 +669,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
               </ul>
             </div>
-            <div>
+            <div></div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
+              <ul className="text-gray-400 text-sm space-y-2"></ul>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
                 <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
@@ -664,9 +679,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
               </ul>
             </div>
-            <div>
+            <div></div>
               <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
+              <ul className="text-gray-400 text-sm space-y-2"></ul>
                 <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
                 <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
@@ -678,23 +693,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-24 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            ></motion>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h2>
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto"></p>
                 We're not just another technology company - we're pioneers shaping the future of business and technology
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {[
                 {
                   title: 'Innovation First',
@@ -728,20 +743,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 }
               ].map((feature, index) => (
                 <motion.div
-                  key={feature.title}
+                  key={feature.title
+  },
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center p-8"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
-                    {feature.icon}
+                ></motion>
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto"></div>
+                    {feature.icon
+  },
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">
-                    {feature.title}
+                  <h3 className="text-2xl font-bold mb-4 text-white"></h3>
+                    {feature.title
+  },
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
+                  <p className="text-gray-300 leading-relaxed"></p>
+                    {feature.description
+  },
                   </p>
                 </motion.div>
               ))}
@@ -750,7 +769,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </footer>
     </UltraFuturisticBackground2035>
-  );
+  ),
 }
 
-export default Homepage2025;
+export default Homepage2025,

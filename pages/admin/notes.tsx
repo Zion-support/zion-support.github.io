@@ -1,40 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
 type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
+  id: string,
+  targetType: string,
+  targetId: string,
+  text: string,
+  authorId: string,
+  createdAt: number
+},
 
 export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true),
+  const [notes, setNotes] = useState<Note[]>([]),
+  const [loading, setLoading] = useState(false),
 
-  useEffect(() => {
+  useEffect(() =></Note> {
     async function load() {
-      setLoading(true);
+      setLoading(true),
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || []);
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+        if (!res.ok) return,
+        const data = await res.json(),
+        setNotes(data.notes || []),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
     }
-    if (isAdmin) load();
-  }, [isAdmin]);
+    if (isAdmin) load(),
+  }, [isAdmin]),
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold">Admin Notes</h1>
         <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.check</input>ed)} />
           <span>Admin</span>
         </label>
       </div>
@@ -55,5 +55,5 @@ export default function AdminNotesConsole() {
         </div>
       )}
     </div>
-  );
+  ),
 }

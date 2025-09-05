@@ -1,8 +1,8 @@
-'use client';
+'use client',
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown,
   Brain, Rocket, Shield, 
@@ -12,7 +12,7 @@ import {
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const navigationItems = [
   {
@@ -355,47 +355,47 @@ const navigationItems = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-};
+},
 
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
+      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm"></div>
+            <div className="flex items-center gap-4 mb-2 sm:mb-0"></div>
+              <div className="flex items-center gap-2"></div>
                 <Phone className="w-4 h-4 text-cyan-300" />
                 <span>{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2"></div>
                 <Mail className="w-4 h-4 text-purple-300" />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2"></div>
               <MapPin className="w-4 h-4 text-green-300" />
               <span className="text-xs">{contactInfo.address}</span>
             </div>
@@ -408,27 +408,29 @@ export default function EnhancedNavigation2025() {
         isScrolled 
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
           : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+      }
+      `}>
+      </nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group"></Link>
+              <div className="relative"></div>
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   <Star className="w-6 h-6 text-white" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </div>
-              <div>
+              <div></div>
                 <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
                 <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8"></div>
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative group"></div>
                   <button
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
@@ -441,7 +443,7 @@ export default function EnhancedNavigation2025() {
                   </button>
 
                   {/* Submenu */}
-                  <AnimatePresence>
+                  <AnimatePresence></AnimatePresence>
                     {activeSubmenu === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -449,40 +451,46 @@ export default function EnhancedNavigation2025() {
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-6">
+                      ></motion>
+                        <div className="p-6"></div>
                           {item.submenu?.map((subitem) => (
                             <Link
-                              key={subitem.name}
-                              href={subitem.href}
+                              key={subitem.name
+  },
+                              href={subitem.href
+  },
                               onClick={() => setActiveSubmenu(null)}
                               className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
                             >
-                              <div className="flex items-start space-x-3">
+                              <div className="flex items-start space-x-3"></div>
                                 {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
+                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200"></div>
                                     <subitem.icon className="w-5 h-5 text-cyan-400" />
                                   </div>
                                 )}
-                                <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                    {subitem.name}
+                                <div className="flex-1"></div>
+                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200"></h3>
+                                    {subitem.name
+  },
                                   </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
-                                    {subitem.description}
+                                  <p className="text-sm text-gray-400 mt-1"></p>
+                                    {subitem.description
+  },
                                   </p>
                                   {subitem.services && (
-                                    <div className="mt-2 flex flex-wrap gap-1">
+                                    <div className="mt-2 flex flex-wrap gap-1"></div>
                                       {subitem.services.slice(0, 2).map((service) => (
                                         <span
-                                          key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
-                                        >
-                                          {service}
+                                          key={service
+}
+          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
+                                        ></span>
+                                          {service
+  },
                                         </span>
                                       ))}
                                       {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
+                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"></span>
                                           +{subitem.services.length - 2} more
                                         </span>
                                       )}
@@ -501,26 +509,27 @@ export default function EnhancedNavigation2025() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4"></div>
               <Link
                 href="/pricing"
                 className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-              >
+              ></Link>
                 Pricing
               </Link>
               <Link
                 href="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+              ></Link>
                 Get Started
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              onClick={toggleMenu}
+              onClick={toggleMenu
+  },
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
+            ></button>
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -528,7 +537,7 @@ export default function EnhancedNavigation2025() {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
@@ -536,8 +545,9 @@ export default function EnhancedNavigation2025() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                          {item.badge}
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full"></motion>
+                          {item.badge
+  },
                         </span>
                       )}
                     </div>
@@ -553,18 +563,21 @@ export default function EnhancedNavigation2025() {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
                       className="ml-8 mt-2 space-y-2"
-                    >
-                      {item.children?.map((child) => (
+                    ></motion>
+                      {item.children?.map((</motion>child) => (
                         <Link
-                          key={child.name}
-                          href={child.href}
+                          key={child.name
+  },
+                          href={child.href
+  },
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
                           className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
                         >
                           <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                            {subItem.name}
+                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200"></span>
+                            {subItem.name
+  },
                           </span>
                         </Link>
                       ))}
@@ -574,7 +587,7 @@ export default function EnhancedNavigation2025() {
               ))}
 
               {/* Mobile CTA */}
-              <div className="pt-4">
+              <div className="pt-4"></div>
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -587,31 +600,33 @@ export default function EnhancedNavigation2025() {
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={closeMenu}
+              onClick={closeMenu
+  },
             />
             
             {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
-              <div className="p-6">
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto"></div>
+              <div className="p-6"></div>
                 {/* Close Button */}
-                <div className="flex justify-end mb-6">
+                <div className="flex justify-end mb-6"></div>
                   <button
-                    onClick={closeMenu}
+                    onClick={closeMenu
+  },
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                  >
+                  ></button>
                     <X className="w-6 h-6" />
                   </button>
                 </div>
 
                 {/* Mobile Navigation Items */}
-                <div className="space-y-4">
+                <div className="space-y-4"></div>
                   {navigationItems.map((item) => (
-                    <div key={item.name}>
+                    <div key={item.name}></div>
                       <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >
-                        <div className="flex items-center space-x-3">
+                        <div className="flex items-center space-x-3"></div>
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
                         </div>
@@ -621,7 +636,7 @@ export default function EnhancedNavigation2025() {
                       </button>
 
                       {/* Mobile Submenu */}
-                      <AnimatePresence>
+                      <AnimatePresence></AnimatePresence>
                         {activeSubmenu === item.name && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
@@ -629,14 +644,17 @@ export default function EnhancedNavigation2025() {
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
                             className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
+                          ></motion>
+                            {item.submenu</motion>?.map((subitem) => (
                               <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
+                                key={subitem.name
+  },
+                                href={subitem.href
+  },
+                                onClick={closeMenu
+  },
                                 className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
+                              ></Link>
                                 <h4 className="text-white font-medium">{subitem.name}</h4>
                                 <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
                               </Link>
@@ -649,35 +667,37 @@ export default function EnhancedNavigation2025() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
+                <div className="mt-8 space-y-4"></div>
                   <Link
                     href="/pricing"
-                    onClick={closeMenu}
+                    onClick={closeMenu
+  },
                     className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
+                  ></Link>
                     View Pricing
                   </Link>
                   <Link
                     href="/contact"
-                    onClick={closeMenu}
+                    onClick={closeMenu
+  },
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
+                  ></Link>
                     Contact Us
                   </Link>
                 </div>
 
                 {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
+                <div className="mt-8 pt-6 border-t border-gray-700/50"></div>
+                  <div className="space-y-3 text-sm"></div>
+                    <div className="flex items-center space-x-3 text-gray-400"></div>
                       <Phone className="w-4 h-4 text-cyan-400" />
                       <span>{contactInfo.phone}</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
+                    <div className="flex items-center space-x-3 text-gray-400"></div>
                       <Mail className="w-4 h-4 text-purple-400" />
                       <span>{contactInfo.email}</span>
                     </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
+                    <div className="flex items-start space-x-3 text-gray-400"></div>
                       <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
                       <span className="text-xs">{contactInfo.address}</span>
                     </div>
@@ -692,7 +712,7 @@ export default function EnhancedNavigation2025() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  );
-};
+  ),
+},
 
-export default EnhancedNavigation2025;
+export default EnhancedNavigation2025,

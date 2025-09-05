@@ -1,52 +1,52 @@
-import Head from 'next/head';
-import React from 'react';
+import Head from 'next/head',
+import React from 'react',
 
 type Speaker = {
-  name: string;
-  title: string;
-  avatarUrl: string;
-  bio: string;
-  twitter?: string;
-  linkedin?: string;
-  highlight?: boolean;
-};
+  name: string,
+  title: string,
+  avatarUrl: string,
+  bio: string,
+  twitter?: string,
+  linkedin?: string,
+  highlight?: boolean
+},
 
 type Partner = {
-  name: string;
-  logoUrl?: string;
-};
+  name: string,
+  logoUrl?: string
+},
 
-const EVENT_START_ISO = '2025-11-12T16:00:00Z';
+const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
 
 function useCountdown(targetIso: string) {
-  const [remainingMs, setRemainingMs] = React.useState<number>(() => {
-    return new Date(targetIso).getTime() - Date.now();
-  });
+  const [remainingMs, setRemainingMs] = React.useState<number>(() =></number> {
+    return new Date(targetIso).getTime() - Date.now(),
+  }),
 
   React.useEffect(() => {
     const id = setInterval(() => {
-      setRemainingMs(new Date(targetIso).getTime() - Date.now());
-    }, 1000);
-    return () => clearInterval(id);
-  }, [targetIso]);
+      setRemainingMs(new Date(targetIso).getTime() - Date.now()),
+    }, 1000),
+    return () => clearInterval(id),
+  }, [targetIso]),
 
-  const isPast = remainingMs <= 0;
-  const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
-  const days = Math.floor(totalSec / 86400);
-  const hours = Math.floor((totalSec % 86400) / 3600);
-  const minutes = Math.floor((totalSec % 3600) / 60);
-  const seconds = totalSec % 60;
+  const isPast = remainingMs <= 0,
+  const totalSec = Math.max(0, Math.floor(remainingMs / 1000)),
+  const days = Math.floor(totalSec / 86400),
+  const hours = Math.floor((totalSec % 86400) / 3600),
+  const minutes = Math.floor((totalSec % 3600) / 60),
+  const seconds = totalSec % 60,
 
-  return { isPast, days, hours, minutes, seconds };
+  return { isPast, days, hours, minutes, seconds },
 }
 
 export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
-  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
-  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
-  const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' });
-  const [submitting, setSubmitting] = React.useState(false);
-  const [result, setResult] = React.useState<{ ok?: boolean; error?: string } | null>(null);
+  const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube'),
+  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ'),
+  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO),
+  const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+  const [submitting, setSubmitting] = React.useState(false),
+  const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null),
 
   const speakers: Speaker[] = [
     {
@@ -67,32 +67,32 @@ export default function SummitPage() {
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-      twitter: 'https://twitter.com'}];
+      twitter: 'https://twitter.com'}],
 
   const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
-    { name: 'University Partner' }];
+    { name: 'University Partner' }],
 
   const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setResult(null);
+    e.preventDefault(),
+    setSubmitting(true),
+    setResult(null),
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'summit-page' })});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Failed');
-      setResult({ ok: true });
-      setForm({ name: '', email: '', role: '', country: '' });
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data?.error || 'Failed'),
+      setResult({ ok: true }),
+      setForm({ name: '', email: '', role: '', country: '' }),
     } catch (err: any) {
-      setResult({ error: err?.message || 'Unexpected error' });
+      setResult({ error: err?.message || 'Unexpected error' }),
     } finally {
-      setSubmitting(false);
+      setSubmitting(false),
     }
-  };
+  },
 
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
@@ -101,10 +101,10 @@ export default function SummitPage() {
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
           src={`https://www.youtube.com/embed/${embedId}`}
           title="YouTube livestream"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
           allowFullScreen
         />
-      );
+      ),
     }
     if (platform === 'twitch') {
       return (
@@ -114,7 +114,7 @@ export default function SummitPage() {
           title="Twitch livestream"
           allowFullScreen
         />
-      );
+      ),
     }
     return (
       <iframe
@@ -123,8 +123,8 @@ export default function SummitPage() {
         title="Twitter livestream"
         allowFullScreen
       />
-    );
-  };
+    ),
+  },
 
   return (
     <>
@@ -224,7 +224,7 @@ export default function SummitPage() {
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
               value={embedId}
               onChange={(e) => setEmbedId(e.target.value)}
-            />
+     </input>       />
             {isPast ? (
               <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
@@ -246,7 +246,7 @@ export default function SummitPage() {
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              onChange={(e) => setForm({ ...form, name: e.target.value }</input>)}
             />
           </div>
           <div>
@@ -256,7 +256,7 @@ export default function SummitPage() {
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              onChange={(e) => setForm({ ...form, email: e.target</input>.value })}
             />
           </div>
           <div>
@@ -265,7 +265,7 @@ export default function SummitPage() {
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.role}
-              onChange={(e) => setForm({ ...form, role: e.target.value })}
+              onChange={(e) => setForm({ ...form, role: </input>e.target.value })}
             />
           </div>
           <div>
@@ -274,7 +274,7 @@ export default function SummitPage() {
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.country}
-              onChange={(e) => setForm({ ...form, country: e.target.value })}
+              onChange={(e) => setForm({ ...form, c</input>ountry: e.target.value })}
             />
           </div>
           <div className="md:col-span-2 flex items-center gap-3">
@@ -291,10 +291,10 @@ export default function SummitPage() {
         </form>
       </section>
 
-      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
       </section>
     </>
-  );
+  )
 }

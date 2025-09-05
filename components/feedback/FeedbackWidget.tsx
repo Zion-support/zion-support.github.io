@@ -1,27 +1,27 @@
-import React, { useMemo, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { useMemo, useState } from 'react',
+import { v4 as uuidv4 } from 'uuid',
 
 export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string;
-};
+  responseId?: string,
+  aiModel?: string,
+},
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null),
+  const [comment, setComment] = useState(''),
+  const [submitting, setSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
-  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
+  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
 
   const submit = async () => {
     if (!rating) {
-      setError('Please choose 👍 or 👎');
-      return;
+      setError('Please choose 👍 or 👎'),
+      return,
     }
-    setError(null);
-    setSubmitting(true);
+    setError(null),
+    setSubmitting(true),
     try {
       const res = await fetch('/api/feedback/submit', {
         method: 'POST',
@@ -31,24 +31,24 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           rating,
           comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
-          aiModel})});
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true);
+          aiModel})}),
+      if (!res.ok) throw new Error('Failed to submit feedback'),
+      setSubmitted(true),
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong');
+      setError(e?.message || 'Something went wrong')
     } finally {
-      setSubmitting(false);
+      setSubmitting(false),
     }
-  };
+  },
 
   return (
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
+    <div className="max-w-2xl mx-auto">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
+        <div className="space-y-3"></div>
+          <div className="flex items-center gap-2"></div>
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -70,19 +70,21 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           </div>
           <textarea
             placeholder="Optional feedback (what worked, what didn’t)"
-            value={comment}
+            value={comment
+  },
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
             className="w-full rounded-md border px-3 py-2 text-sm"
-            rows={3}
-          />
+            rows={3
+  },
+   </textarea>       />
           {error && <div className="text-xs text-red-600">{error}</div>}
-          <div>
-            <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
+          <div></div>
+            <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm"></button>
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
       )}
     </div>
-  );
+  ),
 }

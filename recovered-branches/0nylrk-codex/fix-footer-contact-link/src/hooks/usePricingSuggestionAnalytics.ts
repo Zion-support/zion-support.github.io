@@ -1,23 +1,23 @@
-import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
 
 interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-  averagePriceGap: number;
-  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[];
+  totalSuggestions: number,
+  acceptanceRate: number,
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
-    type: 'client' | 'talent';
-  }[];
-  isLoading: boolean;
-  error: string | null;
+    id: string,
+    userId: string,
+    suggestedMin: number,
+    suggestedMax: number,
+    actualValue?: number,
+    accepted: boolean,
+    createdAt: string,
+    type: 'client' | 'talent'
+  }[],
+  isLoading: boolean,
+  error: string | null
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
@@ -29,15 +29,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: true,
     error: null
-  });
+  }),
 
-  useEffect(() => {
+  useEffect(() =></PricingSuggestionAnalytics> {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
         const mockData = {
@@ -59,35 +59,35 @@ export function usePricingSuggestionAnalytics(days = 30) {
             accepted: Math.random() > 0.25,
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
-        };
+        },
 
         setAnalytics({
           ...mockData,
           isLoading: false,
           error: null
-        });
+        }),
 
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-        //   .gte('created_at', `now() - interval '${days} days'`);
+        //   .gte('created_at', `now() - interval '${days} days'`),
         
-        // if (error) throw error;
+        // if (error) throw error,
         // Process data and setAnalytics({...})
 
       } catch (error) {
-        console.error("Error fetching pricing suggestion analytics:", error);
+        console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
-        });
+        }),
       }
-    };
+    },
 
-    fetchAnalytics();
-  }, [days]);
+    fetchAnalytics(),
+  }, [days]),
 
-  return analytics;
+  return analytics,
 }

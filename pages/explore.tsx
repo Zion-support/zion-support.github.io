@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Grid, List, ArrowRight, ChevronRight,
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
+} from 'lucide-react',
+import SmartHeader from '../components/SmartHeader',
+import SmartFooter from '../components/SmartFooter',
 
 export default function ExplorePage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
 
   const categories = [
     {
@@ -106,7 +106,7 @@ export default function ExplorePage() {
       serviceCount: 17,
       featured: false
     }
-  ];
+  ],
 
   const featuredServices = [
     {
@@ -149,29 +149,28 @@ export default function ExplorePage() {
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
-  ];
+  ],
 
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
-    return matchesSearch && matchesFilter;
-  });
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,
+    return matchesSearch && matchesFilter,
+  }),
 
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.serviceCount - a.serviceCount;
+        return b.serviceCount - a.serviceCount,
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      default:
-        return 0;
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
+      default: return 0
     }
-  });
+  }),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -228,7 +227,7 @@ export default function ExplorePage() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                  />
+                  /></input>
                 </div>
               </div>
 
@@ -362,7 +361,7 @@ export default function ExplorePage() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
                     onClick={() => window.location.href = `/category/${category.id}`}
-                  >
+           </motion>       >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
@@ -524,7 +523,7 @@ export default function ExplorePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -551,5 +550,5 @@ export default function ExplorePage() {
 
       <SmartFooter />
     </div>
-  );
+  )
 }

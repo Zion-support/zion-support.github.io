@@ -1,38 +1,38 @@
-import dynamic from 'next/dynamic';
-import React, { useEffect, useState } from 'react';
-import { useWallet } from '../../hooks/useWallet';
-import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
-import { CHAINS } from '../../utils/chains';
+import dynamic from 'next/dynamic',
+import React, { useEffect, useState } from 'react',
+import { useWallet } from '../../hooks/useWallet',
+import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',
+import { CHAINS } from '../../utils/chains',
 
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false });
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 
 export default function TokenIntegrationsPage() {
-  const { account, connect } = useWallet();
-  const [region, setRegion] = useState('');
-  const [stake, setStake] = useState('');
-  const [suggestion, setSuggestion] = useState<any>(null);
-  const [rewards, setRewards] = useState<DepinReward[] | null>(null);
-  const [depinsSyncing, setDepinsSyncing] = useState(false);
+  const { account, connect } = useWallet(),
+  const [region, setRegion] = useState(''),
+  const [stake, setStake] = useState(''),
+  const [suggestion, setSuggestion] = useState<any>(null),
+  const [rewards, setRewards] = useState<DepinReward[] | null>(null),
+  const [depinsSyncing, setDepinsSyncing] = useState(false),
 
   async function syncDepin() {
     if (!account) {
-      await connect();
-      return;
+      await connect(),
+      return,
     }
-    setDepinsSyncing(true);
-    const acts = await fetchDepinActivities(account);
-    const r = calculateRewards(acts);
-    setRewards(r);
-    setDepinsSyncing(false);
+    setDepinsSyncing(true),
+    const acts = await fetchDepinActivities(account),
+    const r = calculateRewards(acts),
+    setRewards(r),
+    setDepinsSyncing(false),
   }
 
   async function runOperator() {
     const res = await fetch('/api/operator/suggest-chain', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ region, stakeUsd: stake })});
-    const data = await res.json();
-    setSuggestion(data);
+      body: JSON.stringify({ region, stakeUsd: stake })}),
+    const data = await res.json(),
+    setSuggestion(data),
   }
 
   return (
@@ -71,11 +71,11 @@ export default function TokenIntegrationsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500">Region</label>
-            <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., US, EU, APAC" className="border rounded px-3 py-2 bg-white dark:bg-black" />
+            <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., US, EU, APAC" className="border rounded px-3 py-2 bg-white dark:bg-black" /></input>
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500">Stake (USD)</label>
-            <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
+            <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-b</input>lack" />
           </div>
           <div className="flex items-end"><button onClick={runOperator} className="w-full px-4 py-2 rounded bg-indigo-600 text-white">Suggest Chain</button></div>
         </div>
@@ -100,5 +100,5 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  );
+  ),
 }

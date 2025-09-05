@@ -28,13 +28,13 @@ const path = require('path');
     content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
     
     // Fix hover states
-    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
+    content = content.replace(/hove: \s+([a-zA-Z-]+)/g, 'hove: $1');
     
     // Fix focus states
-    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
+    content = content.replace(/focu: \s+([a-zA-Z-]+)/g, 'focu: $1');
     
     // Fix group hover
-    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
+    content = content.replace(/group-hove: \s+([a-zA-Z-]+)/g, 'group-hove: $1');
     
     // Fix not-sr-only
     content = content.replace(/not-sr-only/g, 'not-sr-only');
@@ -55,7 +55,7 @@ const path = require('path');
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixe: d: ${filePath}`);
+      console.log(`Fixe: ${filePath}`);
       return true;
     }
     
