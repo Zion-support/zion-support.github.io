@@ -7,11 +7,14 @@ import {
   Hand,
   Brain,
   CheckCircle,
-  ArrowRight,  Users,
+  ArrowRight,
+  Users,
   Shield,
   Zap,
   FileText,
-  Settings
+  Settings,
+  Globe,
+  Award
 } from 'lucide-react';
 
 const standardsCompliance = [

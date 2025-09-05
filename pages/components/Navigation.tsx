@@ -17,7 +17,22 @@ import {
   Cloud,
   Code,
   CreditCard,
-  Document
+  Document,
+  Settings,
+  Network,
+  Target,
+  Rocket,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  FileText,
+  GraduationCap,
+  MessageSquare,
+  Users,
+  Globe,
+  Phone,
+  Shield
 } from 'lucide-react';
 
 const navigationItems = [
