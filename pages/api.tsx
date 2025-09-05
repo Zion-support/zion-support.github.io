@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
-  Copy, 
-  Check, 
-  ExternalLink, 
+
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import {
+  Code,
+  Copy,
+  Check,
+  ExternalLink,
   Search,
   Filter,
   BookOpen,
@@ -24,11 +25,9 @@ import {
   Play,
   Pause,
   RotateCcw
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
-const apiEndpoints = [
-  {
+} from 'lucide-react'
+import Layout from '../components/Layout'
+const apiEndpoints = [{
     method: 'GET',
     path: '/api/v1/services',
     description: 'Retrieve all available services',
@@ -39,8 +38,7 @@ const apiEndpoints = [
     ],
     responses: [
       { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }
-    ]
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }]
   },
   {
     method: 'POST',
@@ -55,8 +53,7 @@ const apiEndpoints = [
     ],
     responses: [
       { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }
-    ]
+      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }]
   },
   {
     method: 'GET',
@@ -64,8 +61,7 @@ const apiEndpoints = [
     description: 'Get system status and health information',
     parameters: [],
     responses: [
-      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }
-    ]
+      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }]
   },
   {
     method: 'POST',
@@ -79,13 +75,9 @@ const apiEndpoints = [
     ],
     responses: [
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }
-    ]
-  }
-];
-
-const apiFeatures = [
-  {
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
+  }]
+const apiFeatures = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -120,40 +112,33 @@ const apiFeatures = [
     description: 'Built for high performance and scalability',
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
-  }
-];
-
+  }]
 const sdkLanguages = [
   { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
   { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
   { name: 'Java', icon: 'J', color: 'bg-red-500' },
   { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
   { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
-  { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }
-];
-
+  { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
 export default function APIPage() {
-  const [selectedEndpoint, setSelectedEndpoint] = useState(0);
-  const [copiedCode, setCopiedCode] = useState<number | null>(null);
-
+  const [selectedEndpoint, setSelectedEndpoint] = useState(0)
+  const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
-    navigator.clipboard.writeText(text);
-    setCopiedCode(index);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-
+    navigator.clipboard.writeText(text)
+    setCopiedCode(index)
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
   const generateCodeExample = (endpoint: any) => {
-    const baseUrl = 'https://api.ziontechgroup.com';
+    const baseUrl = 'https://api.ziontechgroup.com'
     const exampleParams = endpoint.parameters
       .filter((p: any) => p.required)
       .map((p: any) => `${p.name}: "example_${p.name}"`)
-      .join(', ');
-
+      .join(', ')
     if (endpoint.method === 'GET') {
       return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));`;
+  .catch(error => console.error('Error:', error));`
     } else {
       return `fetch('${baseUrl}${endpoint.path}', {
   method: '${endpoint.method}',
@@ -167,10 +152,9 @@ export default function APIPage() {
 })
 .then(response => response.json())
 .then(data => console.log(data))
-.catch(error => console.error('Error:', error));`;
+.catch(error => console.error('Error:', error));`
     }
-  };
-
+  }
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50">
@@ -203,7 +187,6 @@ export default function APIPage() {
             </motion.div>
           </div>
         </section>
-
         {/* API Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -215,7 +198,6 @@ export default function APIPage() {
                 Powerful API capabilities designed for developers and businesses
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {apiFeatures.map((feature, index) => (
                 <motion.div
@@ -247,7 +229,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* API Endpoints Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -259,7 +240,6 @@ export default function APIPage() {
                 Explore our comprehensive API endpoints with interactive documentation
               </p>
             </div>
-
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Endpoint List */}
@@ -287,7 +267,6 @@ export default function APIPage() {
                     </div>
                   </div>
                 </div>
-
                 {/* Endpoint Details */}
                 <div className="lg:col-span-2">
                   <div className="bg-white rounded-lg shadow-sm p-6">
@@ -310,7 +289,6 @@ export default function APIPage() {
                         </p>
                       </div>
                     </div>
-
                     {/* Parameters */}
                     {apiEndpoints[selectedEndpoint].parameters.length > 0 && (
                       <div className="mb-8">
@@ -351,7 +329,6 @@ export default function APIPage() {
                         </div>
                       </div>
                     )}
-
                     {/* Responses */}
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-gray-900 mb-4">Responses</h4>
@@ -375,7 +352,6 @@ export default function APIPage() {
                         ))}
                       </div>
                     </div>
-
                     {/* Code Example */}
                     <div>
                       <div className="flex items-center justify-between mb-4">
@@ -407,7 +383,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* SDK Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -419,7 +394,6 @@ export default function APIPage() {
                 Official SDKs and libraries for popular programming languages
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {sdkLanguages.map((sdk, index) => (
                 <motion.div
@@ -440,7 +414,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -468,5 +441,5 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import React from 'react'
+import { motion } from 'framer-motion'
 import {
   Eye,
   Ear,
@@ -17,11 +18,9 @@ import {
   Heart,
   FileText,
   Settings
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
-const accessibilityFeatures = [
-  {
+} from 'lucide-react'
+import Layout from '../components/Layout'
+const accessibilityFeatures = [{
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -66,11 +65,8 @@ const accessibilityFeatures = [
       "Error prevention and recovery",
       "Simplified language options"
     ]
-  }
-];
-
-const complianceStandards = [
-  {
+  }]
+const complianceStandards = [{
     name: "WCAG 2.1 AA",
     description: "Web Content Accessibility Guidelines Level AA compliance",
     icon: Shield,
@@ -93,11 +89,8 @@ const complianceStandards = [
     description: "European accessibility standard",
     icon: Globe,
     level: "EU Standard"
-  }
-];
-
-const testingTools = [
-  {
+  }]
+const testingTools = [{
     name: "Automated Testing",
     description: "AI-powered accessibility scanning and validation",
     icon: Zap,
@@ -114,9 +107,7 @@ const testingTools = [
     description: "Testing with actual users with disabilities",
     icon: Heart,
     features: ["Real user feedback", "Accessibility validation", "Usability insights", "Inclusive design"]
-  }
-];
-
+  }]
 export default function AccessibilityPage() {
   return (
     <Layout>
@@ -142,7 +133,6 @@ export default function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -154,7 +144,6 @@ export default function AccessibilityPage() {
                 We implement a wide range of accessibility features to ensure your digital products are usable by everyone
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {accessibilityFeatures.map((feature, index) => (
                 <motion.div
@@ -186,7 +175,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Standards Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -198,7 +186,6 @@ export default function AccessibilityPage() {
                 We ensure your products meet international accessibility standards and legal requirements
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {complianceStandards.map((standard, index) => (
                 <motion.div
@@ -225,7 +212,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         {/* Testing Tools Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -237,7 +223,6 @@ export default function AccessibilityPage() {
                 Comprehensive testing approaches to ensure accessibility compliance
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testingTools.map((tool, index) => (
                 <motion.div
@@ -269,7 +254,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -297,5 +281,5 @@ export default function AccessibilityPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

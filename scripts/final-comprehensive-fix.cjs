@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
-console.log('🔧 Final Syntax Fix');
-console.log('==================');
+console.log('🔧 Final Comprehensive Fix');
+console.log('==========================');
 
-// Function to fix specific syntax errors
-function fixSpecificErrors(content) {
+// Function to fix all remaining syntax errors
+function fixAllSyntax(content) {
   return content
-    // Fix JSX closing tags
-    .replace(/<\$1>/g, '>')
-    .replace(/<\/\$1>/g, '>')
-    .replace(/<\$1/g, '<')
-    .replace(/<\/\$1/g, '</')
+    // Fix malformed JSX tags
+    .replace(/<h2[^>]*>([^<]+)><\/h2>/gm, '<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">$1</h2>')
+    .replace(/<p[^>]*>([^<]+)><\/p>/gm, '<p className="text-lg text-gray-600 max-w-3xl mx-auto">$1</p>')
+    .replace(/<h1[^>]*>([^<]+)><\/h1>/gm, '<h1 className="text-4xl md:text-6xl font-bold mb-6">$1</h1>')
+    .replace(/<h3[^>]*>([^<]+)><\/h3>/gm, '<h3 className="text-2xl font-bold text-gray-900 mb-4">$1</h3>')
+    .replace(/<span[^>]*>([^<]+)><\/span>/gm, '<span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">$1</span>')
+    .replace(/<div[^>]*>([^<]+)><\/div>/gm, '<div className="container mx-auto px-4">$1</div>')
+    .replace(/<motion\.div[^>]*>([^<]+)><\/motion\.div>/gm, '<motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>$1</motion.div>')
     
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
@@ -76,7 +78,7 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     
-    content = fixSpecificErrors(content);
+    content = fixAllSyntax(content);
     
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
@@ -89,4 +91,4 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax fix completed!');
+console.log('🎉 Final comprehensive fix completed!');

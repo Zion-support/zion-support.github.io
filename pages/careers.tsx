@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  Users, 
-  Star, 
+
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import {
+  Briefcase,
+  MapPin,
+  Clock,
+  Users,
+  Star,
   ArrowRight,
   CheckCircle,
   Heart,
@@ -25,20 +26,16 @@ import {
   BarChart3,
   Target,
   Lightbulb
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
+} from 'lucide-react'
+import Layout from '../components/Layout'
 const jobCategories = [
   { id: 'engineering', name: 'Engineering', count: 12, icon: Code },
   { id: 'design', name: 'Design', count: 5, icon: Brain },
   { id: 'product', name: 'Product', count: 3, icon: Target },
   { id: 'marketing', name: 'Marketing', count: 4, icon: TrendingUp },
   { id: 'sales', name: 'Sales', count: 6, icon: Users },
-  { id: 'operations', name: 'Operations', count: 2, icon: Shield }
-];
-
-const openPositions = [
-  {
+  { id: 'operations', name: 'Operations', count: 2, icon: Shield }]
+const openPositions = [{
     id: 1,
     title: 'Senior Full Stack Developer',
     department: 'Engineering',
@@ -162,11 +159,8 @@ const openPositions = [
     ],
     posted: '2024-01-03',
     featured: false
-  }
-];
-
-const companyValues = [
-  {
+  }]
+const companyValues = [{
     title: 'Innovation',
     description: 'We embrace new technologies and creative solutions to solve complex problems.',
     icon: Lightbulb
@@ -185,11 +179,8 @@ const companyValues = [
     title: 'Growth',
     description: 'We invest in our people and provide opportunities for continuous learning and development.',
     icon: TrendingUp
-  }
-];
-
-const benefits = [
-  {
+  }]
+const benefits = [{
     title: 'Health & Wellness',
     description: 'Comprehensive health, dental, and vision insurance for you and your family.',
     icon: Heart
@@ -218,17 +209,13 @@ const benefits = [
     title: 'Equity',
     description: 'Stock options to share in the company\'s success and growth.',
     icon: TrendingUp
-  }
-];
-
+  }]
 export default function CareersPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedJob, setSelectedJob] = useState<number | null>(null);
-
-  const filteredJobs = selectedCategory === 'all' 
-    ? openPositions 
-    : openPositions.filter(job => job.department.toLowerCase() === selectedCategory);
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedJob, setSelectedJob] = useState<number | null>(null)
+  const filteredJobs = selectedCategory === 'all'
+    ? openPositions
+    : openPositions.filter(job => job.department.toLowerCase() === selectedCategory)
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50">
@@ -261,7 +248,6 @@ export default function CareersPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Company Values Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -273,7 +259,6 @@ export default function CareersPage() {
                 The principles that guide everything we do
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {companyValues.map((value, index) => (
                 <motion.div
@@ -297,7 +282,6 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -309,7 +293,6 @@ export default function CareersPage() {
                 We offer comprehensive benefits to support you and your family
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -333,7 +316,6 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
         {/* Job Categories Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -345,7 +327,6 @@ export default function CareersPage() {
                 Find your perfect role and join our growing team
               </p>
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
@@ -372,7 +353,6 @@ export default function CareersPage() {
                 </button>
               ))}
             </div>
-
             {/* Job Listings */}
             <div className="space-y-6">
               {filteredJobs.map((job, index) => (
@@ -429,7 +409,6 @@ export default function CareersPage() {
                       </button>
                     </div>
                   </div>
-
                   {/* Job Details */}
                   {selectedJob === job.id && (
                     <motion.div
@@ -468,7 +447,6 @@ export default function CareersPage() {
                 </motion.div>
               ))}
             </div>
-
             {filteredJobs.length === 0 && (
               <div className="text-center py-12">
                 <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -480,7 +458,6 @@ export default function CareersPage() {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -508,5 +485,5 @@ export default function CareersPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
 
-console.log('🔧 Merge conflict resolver - fixing syntax errors...');
+console.log('🔧 Quick merge fix - resolving syntax errors...');
 
 // Fix the specific syntax errors we identified
 const files = [
@@ -60,18 +59,4 @@ files.forEach(file => {
 });
 
 console.log(`✅ Fixed ${totalFixed} files`);
-console.log('🎉 Merge conflict resolver completed!');
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log(' Merge Conflict Resolver')
-console.log('=====')
-      const conflictFiles = execSync('git diff --name-only --diff-filter=U')
-        "encoding"
-        console.log('\"nErrors")
-      console.error('Error resolving "conflicts")
-  console.log('Run "git add ." and "git commit")
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+console.log('🎉 Quick merge fix completed!');
