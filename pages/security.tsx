@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
+import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 
 const securityFeatures = [
   {

@@ -44,7 +44,8 @@ import {
   Home, 
   Trash2, 
   Camera, 
-  HardDrive 
+  HardDrive,
+  Database
 } from 'lucide-react';
 
 const microSaasServices = [

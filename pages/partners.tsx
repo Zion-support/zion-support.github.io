@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Globe, Cloud, Zap, Users, Shield, Award, Handshake } from 'lucide-react';
+import { Globe, Cloud, Zap, Users, Shield, Award, Handshake, ArrowRight } from 'lucide-react';
 
 const partners = [
   {
