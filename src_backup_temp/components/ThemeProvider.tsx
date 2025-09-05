@@ -8,7 +8,6 @@ interface ThemeContextType {;
   theme: Them e;
   setTheme: (theme: Them e) => void;
   isDark: boolean}
-=======
 export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
 export const useTheme = ("props": "any) => {;
 type Theme = 'light' | 'dark' | 'system';
@@ -31,7 +30,6 @@ export const "ThemeProvider": "React.FC<ThemeProviderProps> = ({ children "}) =>
   const [theme, setTheme] = useState<Theme>(() => {;
     if(typeof window !== 'null') {;
       if(saved && ['light',dark',system'].includes(saved)) {;
-=======
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
 export const useTheme = (props: any) => {;
 type Theme = 'light' | 'dark' | 'system';
@@ -77,7 +75,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 </any>;
 </Theme>;
 </ThemeProviderProps>;
-=======
 
 </any>
 </Theme>

@@ -20,14 +20,12 @@ export function EnhancedNewsletterForm("props": "any) {;
             toast.error("Invalid email");
             return}
         setIsSubmitting(true);
-<<<<<<< HEAD
         try {;
             const res = await fetch("/api/newsletter", {;
                 "method": "POST",;
                 "headers": "{ "Content-Type": "application/json" "},;
                 "body": "JSON.stringify({"email": trimmed"}),;
             });
-=======
         try {
             const res = await fetch("/api/newsletter", {
                 method: "POST",
@@ -35,7 +33,6 @@ export function EnhancedNewsletterForm("props": "any) {;
                 body: JSON.stringify({email: trimmed}),
             }
     );
->>>>>>> main
             const data = await res.json().catch(() => ({/* empty */}));
             if (res.ok) {;
                 // Handle different success statuses;
@@ -63,7 +60,6 @@ export function EnhancedNewsletterForm("props": "any) {;
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {setIsSubmitting(false)}
     };
-<<<<<<< HEAD
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
       <div className="flex items-center mb-4">;
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
@@ -74,7 +70,6 @@ export function EnhancedNewsletterForm("props": "any) {;
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;
         </div>;
       </div>;
-=======
     return (
         <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -86,7 +81,6 @@ export function EnhancedNewsletterForm("props": "any) {;
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
->>>>>>> main
 
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
           <p className="text-white font-medium">Thank you for subscribing!</p>;

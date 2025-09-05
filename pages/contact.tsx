@@ -37,7 +37,6 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-re
         {/* Contact Information */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-=======
 
 export default function ContactPage() {
   return (
@@ -64,10 +63,8 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-=======
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Let's{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -100,7 +97,6 @@ export default function ContactPage() {
                 Ready to transform your business with our AI and technology solutions? 
                 Let's discuss how we can help you achieve your goals.
               </p>
-=======
             </motion.div>
           </div>
         </section>
@@ -146,7 +142,6 @@ export default function ContactPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6 text-center"
@@ -368,7 +363,6 @@ export default function ContactPage() {
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-=======
                   </div>
 
                   <div>
@@ -520,7 +514,6 @@ export default function ContactPage() {
                 >
                   View Our Services
                 </Link>
-=======
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -555,7 +548,6 @@ export default function ContactPage() {
         </section>
       </div>
     </>
-=======
       </div>
     </MainLayout>
   );

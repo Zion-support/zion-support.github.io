@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";";
 import {Button} from '@/components/ui/button';";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';";
@@ -37,8 +36,6 @@ export function InterviewRequestForm("props": "any) {;
             "notes": "",";
             "meetingLink": ""}});
     async function onSubmit("props": "any) {;
-=======
-<<<<<<< HEAD
 import React, {useState} from "react";"
 import {Button} from '@/components/ui/button';"
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"
@@ -64,15 +61,12 @@ import {useInterviews} from '@/hooks/useInterviews';
     notes: z.string().optional()}
     );
 export function InterviewRequestForm(props: any) {
-=======
 import React from 'react';
->>>>>>> main
 
 interface InterviewRequestForm.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
         resolver: zodResolver(formSchema),
         defaultValues: {
 
@@ -83,24 +77,20 @@ interface InterviewRequestForm.jsProps {
             meetingLink: ""}}
     );
     async function onSubmit(props: any) {
->>>>>>> main
 
         if(!userDetails?.id) {;
 
-<<<<<<< HEAD
             toast({;
 ";
                 "title": "Authentication required"",";
                 "description": "Please log in to schedule an interview",";
                 "variant": "destructive"});
-=======
             toast({
 "
                 title: "Authentication required","
                 description: "Please log in to schedule an interview","
                 variant: "destructive"}
     );
->>>>>>> main
             return}
         setIsSubmitting(true);
         try {;
@@ -109,7 +99,6 @@ interface InterviewRequestForm.jsProps {
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration;
             const durationMinutes = parseInt(values.duration);
-<<<<<<< HEAD
             await requestInterview({"talent_id": talent.id",;
                 "client_id": "userDetails.id",;
                 "scheduled_date": "scheduledDate.toISOString()",;
@@ -123,7 +112,6 @@ interface InterviewRequestForm.jsProps {
 ";
                 "title": "Interview requested",`;
                 "description": "`Your interview request with ${talent.full_name"} has been sent.`});
-=======
             await requestInterview({talent_id: talent.id,
                 client_id: userDetails.id,
                 scheduled_date: scheduledDate.toISOString(),
@@ -139,7 +127,6 @@ interface InterviewRequestForm.jsProps {
                 title: "Interview requested",`
                 description: `Your interview request with ${talent.full_name} has been sent.`}
     );
->>>>>>> main
             onClose()}
         catch(error) {;
 ";
@@ -157,7 +144,6 @@ interface InterviewRequestForm.jsProps {
         ""15": "00"", ""15": "30"", ""16": "00"", ""16": "30"", ""17": "00"", ""17": "30"",";
         ""18": "00"", ""18": "30"", ""19": "00"", ""19": "30"", ""20": "00";
     ];
-<<<<<<< HEAD
     return (<Form {...form"}>";
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">";
         <div className="flex items-center mb-6">";
@@ -194,7 +180,6 @@ interface InterviewRequestForm.jsProps {
                   <PopoverContent className="w-auto p-0" align="start">";
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {(date) => date < new Date() || date > addDays(new Date(),;
   90);
-=======
     return (<Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
         <div className="flex items-center mb-6">"
@@ -231,7 +216,6 @@ interface InterviewRequestForm.jsProps {
                   <PopoverContent className="w-auto p-0" align="start">"
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {(date) => date < new Date() || date > addDays(new Date(),
   90)
->>>>>>> main
 
 "} initialFocus className="p-3 pointer-events-auto"/>;
                   </PopoverContent>;
@@ -323,7 +307,6 @@ interface InterviewRequestForm.jsProps {
     </Form>)}
 '"`;
 
-<<<<<<< HEAD
 </FormField>;
 </FormField>;
 </FormField>;
@@ -332,7 +315,6 @@ interface InterviewRequestForm.jsProps {
 </Calendar>;
 </FormField>;
 </FormField>
-=======
 </FormField>
 </FormField>
 </FormField>
@@ -341,7 +323,6 @@ interface InterviewRequestForm.jsProps {
 </Calendar>
 </FormField>
 </FormField>
-=======
 export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProps) {
   return (
     <div>
@@ -350,5 +331,3 @@ export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProp
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";
 import {Avatar, AvatarFallback} from '@/components / ui / avatar';
 export default function Page("props": "any) {;
@@ -6,7 +5,6 @@ export default function Page("props": "any) {;
 import { Avatar", AvatarFallback } from '@/components/ui/avatar';";
 import {Card, CardContent} from '@/components/ui/card';";
 import {Separator} from '@/components/ui/separator';
-<<<<<<< HEAD
 export default function Page("props": "any) {;
 ;";
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">";
@@ -22,7 +20,6 @@ export default function Page("props": "any) {;
       <Separator className="mb-6" />";
       <div className="mb-4 flex justify-end">";
         <Button className="bg-zion-purple text-white "hover": "bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)"}>";
-=======
 export default function Page(props: any) {
 ;"
     return (
@@ -39,7 +36,6 @@ export default function Page(props: any) {
       <Separator className="mb-6" />"
       <div className="mb-4 flex justify-end">"
         <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>"
->>>>>>> main
           {showNew ? "Cancel" : "New Post"}
         </Button>;
       </div>";
@@ -68,7 +64,6 @@ export default function Page(props: any) {
                 .join("");
                 .toUpperCase();
                 .slice(0, 2)}
-<<<<<<< HEAD
                 </AvatarFallback>;
               </Avatar>;
               <div>";
@@ -80,7 +75,6 @@ export default function Page(props: any) {
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
               </div>;
             </CardContent>;
-=======
                 </AvatarFallback>
               </Avatar>
               <div>"
@@ -92,20 +86,14 @@ export default function Page(props: any) {
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
               </div>
             </CardContent>
->>>>>>> main
           </Card>))}
       </div>";
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>;
     </div>)};
-<<<<<<< HEAD
 '";
-=======
 '"
-=======
 import React from 'react';
->>>>>>> main
->>>>>>> main
 
 interface CommunityDiscussion.jsProps {
   // Add props here as needed

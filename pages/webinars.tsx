@@ -54,7 +54,6 @@ export default function WebinarsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-=======
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -439,7 +438,6 @@ export default function WebinarsPage() {
                     Download
                   </button>
                 </div>
-=======
         {/* Upcoming Webinars */}
         {upcomingWebinars.length > 0 && (
           <section className="py-16 bg-gray-50">
@@ -629,7 +627,6 @@ export default function WebinarsPage() {
         </section>
       </div>
     </>
-=======
     </MainLayout>
   );
 }

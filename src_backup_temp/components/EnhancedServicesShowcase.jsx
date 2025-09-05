@@ -206,7 +206,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ;
                 </button>;
               ))}
-<<<<<<< HEAD
 ;
           </motion.div>;
       </section>;
@@ -229,7 +228,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   >{service.icon}"";";
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",;
                   </h3>"";";
-=======
 
           </motion.div>
       </section>
@@ -252,13 +250,11 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   >{service.icon}"";"
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",
                   "";"
->>>>>>> main
                   <p className = "text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
 ;
                   </p>;
 ""{/* comment */}"";";
                 <p className = "text-gray-300 text-sm mb-4 text-center"> {service.tagline}
-<<<<<<< HEAD
 ;
 ""{/* comment */}"";";
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"";";
@@ -341,7 +337,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>";
                     Key Features&apos;&apos,&apos;&apos;";
                   <ul className="&apos;space-y-1&apos;">;
-=======
 
 ""{/* comment */}"";"
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"";"
@@ -424,7 +419,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>"
                     Key Features&apos;&apos,&apos;&apos;"
                   <ul className="&apos;space-y-1&apos;">
->>>>>>> main
                     {service.features.slice(0, 4).map((feature, idx) => (&apos}
 ;
                       <li&apos;&apos>;
@@ -738,7 +732,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
   { "duration": "0.6",;
   "delay": "0.6;
 
-<<<<<<< HEAD
 "}}>";
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>";
             <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">";
@@ -763,7 +756,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
 </div>;
       </section>;
     </div>)"};
-=======
   { opacity: 1,
   y: 0
 
@@ -796,7 +788,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
 </div>
       </section>
     </div>)};
->>>>>>> main
 export default EnhancedServicesShowcase;
 }}}
 ;
@@ -824,7 +815,6 @@ export {EnhancedServicesShowcase}
 '";
 `"";
 
-<<<<<<< HEAD
 </p>;
 </motion>;
 </motion>;
@@ -919,7 +909,6 @@ export {EnhancedServicesShowcase}
 </motion>;
 </div>;
 </section>;
-=======
 '"
 `""
 
@@ -1017,5 +1006,4 @@ export {EnhancedServicesShowcase}
 </motion>
 </div>
 </section>
->>>>>>> main
 </div>

@@ -1,20 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AnalyticsDashboard = ("props": "any) => {;
     const { isTracking", currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({"enableTracking": "true",;
         "enablePerformanceTracking": "true",;
         "enableUserBehaviorTracking": "true",;
         "enableHeatmapTracking": "false"});
-=======
 export const AnalyticsDashboard = (props: any) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
         enableHeatmapTracking: false}
     );
->>>>>>> main
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
@@ -78,16 +75,13 @@ export const AnalyticsDashboard = (props: any) => {
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
-<<<<<<< HEAD
     return (<div className={`bg-white "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}`}>      {/* Header */}
 // comment;
 useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);
-=======
     return (
         <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
 // comment
 useEffect(() => {updateAnalyticsSummary()}, [events, currentSession])
->>>>>>> main
 }
     // comment;
 const handleDashboardInteraction = ("props": "any) => {"";
@@ -134,7 +128,6 @@ const formatDuration = ("props": "any) => {if()"}
 }
         const remainingSeconds = seconds % 60";
         return "${minutes}m ${remainingSeconds}s"}
-<<<<<<< HEAD
 ;
     // comment;
 const formatNumber = ("props": "any) => {;
@@ -157,7 +150,6 @@ const formatNumber = ("props": "any) => {;
               className="{"flex" items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? "bg-green-500/20 text-green-100" : "bg-red-500/20 text-red-100"}"}"" >"""""";
               <div """""""";
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}"" ></div>""";
-=======
 
     // comment
 const formatNumber = (props: any) => {
@@ -180,7 +172,6 @@ const formatNumber = (props: any) => {
               className="{"flex" items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? "bg-green-500/20 text-green-100" : "bg-red-500/20 text-red-100"}"}"" >""""""
               <div """"""""
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}"" ></div>"""
->>>>>>> main
               {isTracking ? "Tracking" : "Stopped"}
 ;
             </div>;

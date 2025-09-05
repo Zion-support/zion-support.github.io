@@ -359,7 +359,6 @@ export default function CookiesPage() {
         </section>
       </div>
     </MainLayout>
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';

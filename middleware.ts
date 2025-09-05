@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextResponse } from "next/server";",
 import type { NextRequest } from "next/server";",
 
@@ -29,10 +28,8 @@ const publicRoutes = [;
 
   }
   
-=======
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-<<<<<<< HEAD
 
 const publicRoutes = [
   "/",
@@ -45,7 +42,6 @@ const publicRoutes = [
   "/resources",
   "/talent",
   "/team",
-<<<<<<< HEAD
   "/careers",
   "/help",
   "/faq",
@@ -83,7 +79,6 @@ const publicRoutes = [
   "/revolutionary-2025-pricing",
   "/products",
   "/solutions/enterprise"
-=======
   "/partners",
   "/news",
   "/careers",
@@ -96,14 +91,12 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
->>>>>>> main
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Allow public routes
-=======
 
 const publicRoutes = [
   "/",
@@ -182,36 +175,24 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Check if the route is public
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Add any authentication logic here
   // For now, just allow all requests
-=======
   const authCookie = request.cookies.get("auth-token");
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
   
->>>>>>> main
-=======
   // For protected routes, you can add authentication logic here
   // For now, we'll just allow all requests
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -220,11 +201,6 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
-<<<<<<< HEAD
-=======
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
->>>>>>> main
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
   ],
 };

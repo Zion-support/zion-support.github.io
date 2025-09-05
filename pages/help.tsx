@@ -100,7 +100,6 @@ import {
         readTime: '4 min read',
         type: 'Requirements'
       }
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -400,7 +399,6 @@ export default function HelpPage() {
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-=======
         <meta name="description" content="Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact information." />
         <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
       </Head>
@@ -452,7 +450,6 @@ export default function HelpPage() {
                   <ChevronRight className="w-4 h-4 text-gray-400 mx-auto mt-2 group-hover:text-gray-600" />
                 </motion.a>
               ))}
-=======
         {/* Search Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -645,7 +642,6 @@ export default function HelpPage() {
                   Call Us
                   <Phone className="ml-2 w-4 h-4" />
                 </a>
-=======
             <div className="max-w-6xl mx-auto">
               <div className="space-y-6">
                 {filteredCategories.map((category, index) => (

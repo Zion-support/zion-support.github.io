@@ -77,7 +77,6 @@ export default function IndustriesPage() {
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-=======
 import Layout from '../../components/Layout';
 
 const industries = [
@@ -189,7 +188,6 @@ export default function Industries() {
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
                     <p className="text-gray-600 mb-6 leading-relaxed">";
-=======
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
                       <IconComponent className="w-12 h-12" />
@@ -214,7 +212,6 @@ export default function Industries() {
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
                     </Link>;
                   </motion.div>;
-=======
                     <div className="space-y-2 mb-6">
                       {industry.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-gray-300">
@@ -336,7 +333,6 @@ export default function Industries() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">

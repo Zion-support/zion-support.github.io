@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from 'react';                <Clock className="w-5 h-5 text-cyan-400" />;
                 <span>24-Hour Response</span>;
               </motion.div>;
@@ -8,16 +7,13 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
   "y": "20;
 
 "}} animate = {;
-=======
 import React from 'react';
 
 interface RequestQuote.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
 }} animate = {
->>>>>>> main
 
   { "opacity": "1",;
   "y": "0;
@@ -228,7 +224,6 @@ interface RequestQuote.jsProps {
   { "opacity": "1",;
   "x": "0;
 
-<<<<<<< HEAD
 "}} viewport={{ "once": "true "}} transition={{ "duration": "0.8 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>;
                 <div className="space-y-4">;
@@ -245,7 +240,6 @@ interface RequestQuote.jsProps {
                   </div>;
                 </div>;
               </motion.div>;
-=======
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch
                 <div className="space-y-4">
@@ -262,7 +256,6 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
->>>>>>> main
 
               {/* Why Choose Us */}
               <motion.div initial = {;
@@ -280,7 +273,6 @@ interface RequestQuote.jsProps {
   { "duration": "0.8",;
   "delay": "0.2;
 
-<<<<<<< HEAD
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>;
                 <div className="space-y-4">;
@@ -313,7 +305,6 @@ interface RequestQuote.jsProps {
                   </div>;
                 </div>;
               </motion.div>;
-=======
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us
                 <div className="space-y-4">
@@ -346,7 +337,6 @@ interface RequestQuote.jsProps {
                   </div>
                 </div>
               </motion.div>
->>>>>>> main
 
               {/* Process */}
               <motion.div initial = {;
@@ -364,7 +354,6 @@ interface RequestQuote.jsProps {
   { "duration": "0.8",;
   "delay": "0.4;
 
-<<<<<<< HEAD
 "}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
                 <div className="space-y-4">;
@@ -401,7 +390,6 @@ interface RequestQuote.jsProps {
           </div>;
         </div>;
       </section>;
-=======
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Our Process
                 <div className="space-y-4">
@@ -438,7 +426,6 @@ interface RequestQuote.jsProps {
           </div>
         </div>
       </section>
->>>>>>> main
     </div>)}
 export {RequestQuote};
 ;
@@ -449,7 +436,6 @@ export {RequestQuote};
 export {RequestQuote};
 ;
 export {RequestQuote};
-<<<<<<< HEAD
 ;
 </motion>;
 </motion>;
@@ -459,7 +445,6 @@ export {RequestQuote};
 </motion>;
 </motion>;
 </motion>
-=======
 
 </motion>
 </motion>
@@ -469,7 +454,6 @@ export {RequestQuote};
 </motion>
 </motion>
 </motion>
-=======
 export default function RequestQuote.js({ }: RequestQuote.jsProps) {
   return (
     <div>
@@ -478,5 +462,3 @@ export default function RequestQuote.js({ }: RequestQuote.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

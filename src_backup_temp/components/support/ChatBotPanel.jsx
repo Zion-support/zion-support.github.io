@@ -83,7 +83,6 @@ export function ChatBotPanel("props": "any) {"}
             else {// Reset failed attempts if successful;
                 setFailedAttempts(0)}
         }
-<<<<<<< HEAD
         catch(error) {;
 ";
             // // // // // // // // console.error("Error in AI "chat":", error);
@@ -92,7 +91,6 @@ export function ChatBotPanel("props": "any) {"}
                 "variant": "destructive",";
                 "title": "Communication Error",";
                 "description": "We're having trouble connecting to our support service."});
-=======
         catch(error) {
 "
             // // // // // // // // console.error("Error in AI chat:", error);
@@ -102,7 +100,6 @@ export function ChatBotPanel("props": "any) {"}
                 title: "Communication Error","
                 description: "We're having trouble connecting to our support service."}
     );
->>>>>>> main
             setFailedAttempts((prev) => prev + 1);
             if(failedAttempts >= 2) {suggestEscalation()}
         }
@@ -124,14 +121,11 @@ export function ChatBotPanel("props": "any) {"}
 ";
                     messages[{ "role": "user"", "content": "message "}];
                 }),;
-<<<<<<< HEAD
             });
             if(!response.ok) {;
-=======
             }
     );
             if(!response.ok) {
->>>>>>> main
 
                 return {;
 
@@ -189,7 +183,6 @@ export function ChatBotPanel("props": "any) {"}
                 "timestamp": "new Date();
 
         ]);
-<<<<<<< HEAD
         // In a real implementation", this would trigger a live chat request;
         toast({";
             "title": "Support request submitted",";
@@ -214,7 +207,6 @@ export function ChatBotPanel("props": "any) {"}
     return (<div className="flex flex-col h-full">";
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>";
         <div className="flex flex-col gap-4">";
-=======
         // In a real implementation, this would trigger a live chat request
         toast({"
             title: "Support request submitted","
@@ -240,7 +232,6 @@ export function ChatBotPanel("props": "any) {"}
         <div className="flex flex-col h-full">"
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>"
         <div className="flex flex-col gap-4">"
->>>>>>> main
           {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp} />))}
 ";
           {isLoading && (<div className="flex items-center justify-center py-2">";

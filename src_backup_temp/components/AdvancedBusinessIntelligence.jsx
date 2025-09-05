@@ -118,7 +118,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
 
             return `${value.toFixed(1)}%`}
         return new Intl.NumberFormat('en-US').format(value)};
-<<<<<<< HEAD
     if(!isOpen) {;
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl "hover": "shadow-3xl transition-all duration-300 "hover":scale-110 z-40" title="Open Business Intelligence Dashboard">";
@@ -160,7 +159,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           </button>;
         </div>;
       </div>;
-=======
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">"
@@ -204,7 +202,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           </button>
         </div>
       </div>
->>>>>>> main
 
       {/* Controls */"}";
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";
@@ -256,7 +253,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             </button>) }) }
       </div>;
 
-<<<<<<< HEAD
       {/* Content */}";
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'";
         {activeTab === 'overview' && (<div className="space-y-6">;
@@ -265,7 +261,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               {filteredMetrics.map(metric => (<div key={metric.id"} className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 "hover": "shadow-lg`"}>";
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
-=======
       {/* Content */}"
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -274,7 +269,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               {filteredMetrics.map(metric => (<div key={metric.id} className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 hover:shadow-lg`}>"
                   <div className="flex items-center justify-between mb-3">"
                     <h3 className="font-semibold text-zion-slate">{metric.name}
->>>>>>> main
                     {getTrendIcon(metric.trend)}
                   </div>";
                   <div className="text-2xl font-bold text-zion-slate mb-2">;
@@ -297,7 +291,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>) ) }
             </div>;
 
-<<<<<<< HEAD
             {/* Quick Actions */}";
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
@@ -311,7 +304,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 { "label": 'Set Alerts', "icon": "AlertTriangle", "action": "() => { /* empty */ "} },;
                 { "label": 'Export Data', "icon": "Download", "action": "() => { /* empty */ "} }
             ].map((item, index) => {;
-=======
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
@@ -325,7 +317,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },
                 { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
             ].map((item, index) => {
->>>>>>> main
 
                 const Icon = item.icon;";
                 return (<button key={index} onClick={item.action} className="p-3 bg-white "dark": "bg-zion-slate rounded-lg border border-zion-slate-light "hover":border-zion-cyan transition-colors text-sm font-medium text-zion-slate "hover":text-zion-cyan">";
@@ -335,7 +326,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               </div>;
             </div>;
           </div>)}
-<<<<<<< HEAD
 '";
         {activeTab === 'insights' && (<div className="space-y-4">";
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">";
@@ -358,7 +348,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                         <h4 className="font-medium text-zion-slate mb-2">Recommended "Actions": "</h4>";
                         <div className="flex flex-wrap gap-2">";
                           {insight.actions.map((action", index) => (<span key={index} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20">;
-=======
 '"
         {activeTab === 'insights' && (<div className="space-y-4">"
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
@@ -381,7 +370,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                         <h4 className="font-medium text-zion-slate mb-2">Recommended Actions:</h4>"
                         <div className="flex flex-wrap gap-2">"
                           {insight.actions.map((action, index) => (<span key={index} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20">
->>>>>>> main
                               {action}
                             </span>) ) }
                         </div>;
@@ -390,7 +378,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-<<<<<<< HEAD
 '";
         {activeTab === 'models' && (<div className="space-y-4">";
             {models.map(model => (<div key={model.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">";
@@ -399,7 +386,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active' ? 'bg-green-100 text-green-700 "dark": "bg-green-900/30 "dark":text-green-300' :';
                     model.status === 'training' ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300' :'`;
                         'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'"}`}>;
-=======
 '"
         {activeTab === 'models' && (<div className="space-y-4">"
             {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
@@ -408,7 +394,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :'
                     model.status === 'training' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`
                         'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'}`}>
->>>>>>> main
                     {model.status}
                   </span>;
                 </div>";
@@ -436,7 +421,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-<<<<<<< HEAD
 '";
         {activeTab === 'analytics' && (<div className="space-y-6">";
             <div className="text-center text-zion-slate-light">";
@@ -444,7 +428,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>;
               <p>Detailed analytics and custom reports coming soon...</p>;
             </div>;
-=======
 '"
         {activeTab === 'analytics' && (<div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -452,7 +435,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>
->>>>>>> main
           </div>)}
       </div>;
     </div>)}

@@ -35,7 +35,6 @@ export const useApi = ("props": "any) => {;
   const execute = async () => {;
     setLoading(true);
     setError(null);
-<<<<<<< HEAD
     ;
     try {;
       const response = await fetch(url, {;
@@ -46,7 +45,6 @@ export const useApi = ("props": "any) => {;
       ;
       if (!response.ok) {;
         throw new Error(\`HTTP error! "status": "\${response.status"}\`);
-=======
     
     try {
       const response = await fetch(url, {
@@ -58,7 +56,6 @@ export const useApi = ("props": "any) => {;
       
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
->>>>>>> main
       }
       const result = await response.json();
       setData(result);
@@ -189,7 +186,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
     const matchesLanguage = selectedLanguage === 'all' || snippet.language === selectedLanguage;
     const matchesComplexity = selectedComplexity === 'all' || snippet.complexity === selectedComplexity;
     return matchesSearch && matchesLanguage && matchesComplexity;
-<<<<<<< HEAD
   });
 ;
   const copyToClipboard = ("props": "any) => {navigator.clipboard.writeText(code);"};
@@ -197,7 +193,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">;
       <div className="container mx-auto px-4">;
-=======
   }
     );
 
@@ -206,7 +201,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
->>>>>>> main
         {/* Header */}
         <div className="text-center mb-12">;
           <h1 className="text-4xl "md": "text-5xl font-bold text-white mb-6">;
@@ -255,7 +249,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
         </div>;
 
         {/* Code Snippets Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">;
           {filteredSnippets.map((snippet) => (;
             <div;
@@ -275,7 +268,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                       snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-red-500/20 text-red-400';
                     "}`}>;
-=======
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredSnippets.map((snippet) => (
             <div
@@ -295,7 +287,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                       snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
                     }`}>
->>>>>>> main
                       {snippet.complexity}
                     </span>;
                   </div>;
@@ -345,7 +336,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
         </div>;
 
         {/* AI Features Section */}
-<<<<<<< HEAD
         <div className="mt-12">;
           <h2 className="text-3xl font-bold text-white mb-6 text-center">;
             AI-Powered Code Generation Features;
@@ -440,7 +430,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
   );
 "};
 ;
-=======
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
             AI-Powered Code Generation Features
@@ -535,7 +524,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
     );
 };
 
->>>>>>> main
 export default AdvancedAICodeGenerator;
 ;
 </string>

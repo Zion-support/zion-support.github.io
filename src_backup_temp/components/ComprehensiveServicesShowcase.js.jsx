@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   Brain,,"});,"})";
   Shield,,"});,"})";
@@ -417,7 +416,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}"});,"})";
 """"";,"});,"})";
 """";
   const [selectedCategory, setSelectedCategory] = useState();
-=======
 import React, {useState} from "react";""";,"}
     );,"})","}
     );,"})","})"
@@ -1278,7 +1276,6 @@ export function ComprehensiveServicesShowcase(props: any) {}"}
     );,"})"
 """"
   const [selectedCategory, setSelectedCategory] = useState()
->>>>>>> main
 }
   const [selectedService, setSelectedService] = useState();
 }  const containerVariants = {}
@@ -1340,7 +1337,6 @@ const serviceCategories = [];
         {/* comment */}""""";
         <motion .div """";
           className="text-center mb-16"          initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "30"}}
 ;
@@ -1383,7 +1379,6 @@ designed to transform your business and drive exponential growth.";
         </motion.div>"",;
         {/* comment */}""""";
         <motion .div """";
-=======
 
   {opacity: 0, y: 30}}
 
@@ -1426,7 +1421,6 @@ designed to transform your business and drive exponential growth."
         </motion.div>"",
         {/* comment */}"""""
         <motion .div """"
->>>>>>> main
           className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
 ;
   {"opacity": "0", "y": "20"}}
@@ -1450,7 +1444,6 @@ designed to transform your business and drive exponential growth."
 ;
             >;
               {category.icon}
-<<<<<<< HEAD
 ;
               <span>{category.name}</span>;
             </button>) ) }";
@@ -1524,7 +1517,6 @@ designed to transform your business and drive exponential growth."
                     {service.features.length > 3 && ("""";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
                         +{service.features.length-3} more,;
-=======
 
               <span>{category.name}</span>
             </button>) ) }"
@@ -1598,7 +1590,6 @@ designed to transform your business and drive exponential growth."
                     {service.features.length > 3 && (""""
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">
                         +{service.features.length-3} more,
->>>>>>> main
                       </span>) }
 ;
                   </div>";
@@ -1637,7 +1628,6 @@ designed to transform your business and drive exponential growth."
   {"opacity": "0", "y": "30"}}
 ;
           animate = {}
-<<<<<<< HEAD
 ;
   {"opacity": "1", "y": "0"}}
 ;
@@ -1676,7 +1666,6 @@ designed to transform your business and drive exponential growth."
             onClick="{" () =" > setSelectedService (null)}";
           >""""";
             <motion .div"""";
-=======
 
   {opacity: 1, y: 0}}
 
@@ -1715,13 +1704,11 @@ designed to transform your business and drive exponential growth."
             onClick="{" () =" > setSelectedService (null)}"
           >"""""
             <motion .div""""
->>>>>>> main
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
 ;
   {"scale": "0.9", "opacity": "0"}}
 ;
               animate = {}
-<<<<<<< HEAD
 ;
   {"scale": "1", "opacity": "1"}}
 ;
@@ -1801,7 +1788,6 @@ designed to transform your business and drive exponential growth."
                   </a>;
                 </div>;
             </motion.div>,;
-=======
 
   {scale: 1, opacity: 1}}
 
@@ -1881,7 +1867,6 @@ designed to transform your business and drive exponential growth."
                   </a>
                 </div>
             </motion.div>,
->>>>>>> main
           </motion.div>) }
 ;
       </AnimatePresence>";
