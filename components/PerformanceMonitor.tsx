@@ -1,26 +1,48 @@
 import React, { useEffect } from 'react';
 
-interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
-}
-
-// Extend Window interface to include performance
+// Extend the Window interface to include performance and gtag
 declare global {
   interface Window {
-    performance: Performance;
+    performance: {
+      getEntriesByType: (_type: string) => unknown[];
+    };
+    gtag: (...args: unknown[]) => void;
   }
 }
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (performanceData: PerformanceData) => void;
+}
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
     if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = window.performance.getEntriesByType('navigation')[0] as {
+        domContentLoadedEventEnd: number;
+        domContentLoadedEventStart: number;
+        loadEventEnd: number;
+        loadEventStart: number;
+        fetchStart: number;
+      };
       const paint = window.performance.getEntriesByType('paint');
       
-      const performanceData = {
+      const performanceData: PerformanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -34,10 +56,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
-        memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize,
-          total: (window.performance as any).memory.totalJSHeapSize,
-          limit: (window.performance as any).memory.jsHeapSizeLimit
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
         } : null
       };
 
