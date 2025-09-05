@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useCallback} from 'react';';
-import {BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X} from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
 const ContentQualityDashboard = ("props": "any) => {    const [isOpen", setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);';

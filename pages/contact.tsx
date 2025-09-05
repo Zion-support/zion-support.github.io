@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const contactInfo = [

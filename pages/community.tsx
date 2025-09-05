@@ -1,7 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
 
 export default function CommunityPage() {
   const communityFeatures = [

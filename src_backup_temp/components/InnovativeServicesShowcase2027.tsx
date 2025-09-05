@@ -1,4 +1,3 @@
-import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 ;
 export default function Page("props": "any) {;
       "},;

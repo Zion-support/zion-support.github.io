@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from './components/Layout';
-import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Phone,

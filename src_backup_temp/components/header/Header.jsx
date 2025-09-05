@@ -1,16 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
 ;
-import {UserMenu} from './UserMenu.jsx';
-import {LanguageSelector} from './LanguageSelector.jsx';
-import {MainNavigation} from '@/layout/MainNavigation';
-import {MobileMenu} from './MobileMenu.jsx';
-import {useAuth} from '@/hooks/useAuth';
-import {useWhitelabel} from '@/context/WhitelabelContext';
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
 import { { Link }, {useNavigate} } from 'react-router-dom';
-import {Button} from "@/components/ui/button";
 import { { Menu, X, Sparkles }, {Search as SearchIcon} } from 'lucide-react';
 ;
 

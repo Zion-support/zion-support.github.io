@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, ChevronDown, ChevronUp, Search, Mail, Phone, MessageSquare } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const faqCategories = [

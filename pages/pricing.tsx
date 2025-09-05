@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const plans = [

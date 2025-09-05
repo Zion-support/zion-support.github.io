@@ -1,16 +1,8 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Header } from './src/components/Header.tsx';
-import { Footer } from './src/components/Footer.tsx';
-import { Sidebar } from './src/components/Sidebar.tsx';
-import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './src/components/ui/loading-spinner.tsx';
 ;
 // Enhanced Components;
 import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';
 import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';
-import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';
-import { ChatAssistant } from './components/ChatAssistant';
 ;
 // Optimized lazy loading with preloading and error boundaries;
 const createLazyComponent = (;

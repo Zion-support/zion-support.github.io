@@ -278,7 +278,6 @@ export function Footer() {;
       </div>;
     </footer>;
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { 
   Phone, 
   Mail, 
@@ -309,7 +308,6 @@ import Link from 'next/link';
   Newspaper,
   Target,
   Heart,
-import { Zap, Phone, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -475,7 +473,6 @@ export default function Footer(props: any) {
   Shield,
   Award,
   Users,
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
   Palette,
   ChevronDown
   DollarSign,
@@ -982,7 +979,6 @@ const Footer = () => {
     { icon: <Facebook className="w-5 h-5" />, url: "https://facebook.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Instagram className="w-5 h-5" />, url: "https://instagram.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Github className="w-5 h-5" />, url: "https://github.com/ziontechgroup", color: "hover:text-gray-400" }
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 export function Footer(props: any) {
   const scrollToTop = (props: any) => {

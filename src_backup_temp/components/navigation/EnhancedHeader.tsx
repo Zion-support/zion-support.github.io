@@ -1,8 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
 
 const EnhancedHeader: React.FC = (props: any) => {
   const [isOpen, setIsOpen] = useState<any>(false);

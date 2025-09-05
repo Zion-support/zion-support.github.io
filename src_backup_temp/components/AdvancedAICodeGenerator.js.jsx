@@ -22,7 +22,6 @@ const mockCodeSnippets = [;
     "title": 'Custom React Hook for API Calls';
     "description": 'A reusable hook for making API calls with loading states and error handling';
     "language": 'typescript';
-    "code": "`import { useState", useEffect } from 'react';
 ;
 interface UseApiOptions {method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: "Record<string", string>;

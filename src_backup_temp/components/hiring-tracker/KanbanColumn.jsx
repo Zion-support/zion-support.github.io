@@ -1,7 +1,3 @@
-import {Droppable} from "@hello-pangea/dnd";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "CandidateCard.jsx";
 export function KanbanColumn("props": "any) {;
     // Add color based on column type;
     const getBadgeVariant = ("props": any) => {;

@@ -1,5 +1,4 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
 export default function Header.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="Header.test - Zion Tech Group" description="Professional Header.test services by Zion Tech Group"   />"

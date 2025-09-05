@@ -1,8 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star } from "lucide-react";
-import { motion } from "framer-motion";
 const categories = [
     {
         title: "Services",

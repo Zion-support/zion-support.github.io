@@ -1,15 +1,5 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { EXPANDED_SERVICES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Slider } from '@/components/ui/slider';
-import { TrendingUp, DollarSign, Clock, BarChart3, Mail, Phone, Globe } from 'lucide-react';
 import Calculator from 'lucide-react/dist/esm/icons/calculator';
 import Target from 'lucide-react/dist/esm/icons/target';
-import { SEO } from '@/components/SEO';
 export default function ServiceCalculatorPage() {
     const [selectedService, setSelectedService] = useState(null);
     const [inputs, setInputs] = useState({

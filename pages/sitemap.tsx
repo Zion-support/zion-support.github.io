@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Home, Users, Settings, Shield, Brain, Cloud, ArrowRight, CheckCircle } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const sitemapSections = [

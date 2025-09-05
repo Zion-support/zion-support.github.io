@@ -1,6 +1,3 @@
-import { Route, Routes  } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 ;
 // Lazy load dashboard pages;

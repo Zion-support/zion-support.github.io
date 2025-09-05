@@ -1,10 +1,4 @@
 import React from "react";
-import {useState} from "react";
-import {BookOpen, Terminal} from "lucide-react";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-import {Badge} from "@/components/ui/badge";
 import CodeBlock from "CodeBlock.jsx";
 export function ApiDocumentation("props": "any) {;
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">;

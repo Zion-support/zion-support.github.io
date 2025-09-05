@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'''
-import {motion} from 'framer-motion'''
     const [timeRange, setTimeRange] = useState('7d''')
                 "topPages"""
                     {"page"""}

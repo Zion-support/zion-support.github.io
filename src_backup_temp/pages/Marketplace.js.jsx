@@ -1,13 +1,4 @@
 import React, {useState, useEffect, useMemo} from "react";
-import {Button} from "@/components/ui/button";
-import {Grid3X3, ListFilter, Loader2} from "lucide-react";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {FilterSidebar} from "@/components/search/FilterSidebar";
-import {ActiveFiltersBar} from "@/components/search/ActiveFiltersBar";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {marketplaceItems, marketplaceFilters} from "@/data/marketplaceData";
-import {generateRandomListing} from "@/utils/generateRandomListing";
-import {useNavigate} from "react-router-dom";
 
 export default function Marketplace
 export {Marketplace}() {

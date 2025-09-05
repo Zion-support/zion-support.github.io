@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2} from 'lucide-react';
 ,;
   {"id": '2',;
     "name": 'Marcus Rodriguez',;

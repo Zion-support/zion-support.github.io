@@ -1,6 +1,4 @@
 import React, {useState} from 'react';'''';';
-import {Link, useLocation} from 'react-router-dom';'''';';
-import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
 const Navigation = (props: any) => {}
     const [isOpen, setIsOpen] = useState(false);';
     const [isServicesOpen, setIsServicesOpen] = useState(false);';';
@@ -37,12 +35,8 @@ const Navigation = (props: any) => {}
                 {name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions'},'';';
                 {name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro'},'';';
 import React, {useState} from 'react';
-import {Link, useLocation} from 'react-router-dom';
-import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
 const Navigation = (props: any) => {}
 import React, {useState} from 'react';'''
-import {Link, useLocation} from 'react-router-dom';'''
-import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
 const Navigation = ("props": "any) => {"}
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);

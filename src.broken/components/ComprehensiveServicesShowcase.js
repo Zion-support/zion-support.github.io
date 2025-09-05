@@ -1,9 +1,3 @@
-import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
 const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
@@ -686,7 +680,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
                 </a>
 import React, {useState, useMemo, useCallback, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
 import {Search,
             Filter,
             Star,
@@ -719,7 +712,6 @@ import {Search,
             Smartphone,
             Monitor,
             Server} from 'lucide-react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;

@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {Search, Sparkles, Filter, TrendingUp, Clock, Star} from 'lucide-react';
 ;
 const mockSuggestions = [;
     {"id": '1', "text": 'AI Development Services', "type": 'service', "relevance": "95", "category": 'AI & ML'},;

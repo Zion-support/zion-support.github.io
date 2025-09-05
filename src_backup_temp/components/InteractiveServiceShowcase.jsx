@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 export default InteractiveServiceShowcase;
-import {motion, AnimatePresence} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
 ",;

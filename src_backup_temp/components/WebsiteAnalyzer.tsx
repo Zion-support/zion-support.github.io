@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
-import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 export const "WebsiteAnalyzer": "React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
-import { CheckCircle", import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 ;
 export default function Page("props": "any) {;
  catch(error) {;
@@ -23,7 +21,6 @@ export default function Page("props": "any) {;
       // console.error('Analysis "failed":', error)} finally {;
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
-import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
 export default function Page(props: any) {
  catch(error) {

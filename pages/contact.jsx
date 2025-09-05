@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    window.alert('Thank you for your message! We will get back to you soon.');
   };
 
   return (

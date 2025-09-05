@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
@@ -14,7 +13,6 @@ import {
   Zap
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { useState } from 'react';
 
 const serviceTypes = [
   { id: 'ai', name: 'AI Services', description: 'Machine Learning, NLP, Computer Vision' },

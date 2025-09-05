@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
 import Web3Modal from 'web3modal';
-import { ethers } from 'ethers';
 ;
 export default function Page("props": "any) {;
 > = ({ children "}) => {;

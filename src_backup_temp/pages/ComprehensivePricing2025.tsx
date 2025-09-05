@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Check, 
   Star, 
@@ -19,7 +18,6 @@ import {
   Clock,
   Users
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2025, InnovativeService } from '../data/innovativeServices2025';
 
 const ComprehensivePricing2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

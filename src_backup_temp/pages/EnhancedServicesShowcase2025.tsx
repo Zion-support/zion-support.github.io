@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
-import { IT_SERVICES } from '../data/itServicesData';
-import { AI_SERVICES } from '../data/aiServicesData';
-import { MICRO_SAAS_SERVICES } from '../data/microSaasServicesData';
 :src_backup_temp/pages/EnhancedServicesShowcase2025.tsx
-import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices2025';
-import { ADVANCED_IT_SERVICES } from '../data/advancedITServices2025';
-import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices2025';
 
 interface Service {
   id: string;

@@ -1,6 +1,4 @@
 import React from 'react';'''';';
-import {Link} from 'react-router-dom';'''';';
-import {motion} from 'framer-motion';';
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) => {}';';
 '';';
 ''';';
@@ -18,10 +16,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''';';
         {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''';';
 import React from 'react';
-import {Link} from 'react-router-dom';
 import React from 'react';'''
-import {Link} from 'react-router-dom';'''
-import {motion} from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = ("props": "any) => {"}
 ';
 '';

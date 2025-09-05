@@ -1,5 +1,4 @@
 import React from 'react';
-;import {Link} from 'react-router-dom';
 export const ErrorPage = ("props": "any) => {"}
   return();
     <div className="min-h-screen bg-zion-blue flex items-center justify-center">"""";

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Play, Download } from 'lucide-react';
 
 export default function WebinarsPage() {
   return (

@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link  } from 'react-router-dom';
 export default function Page(props: any) {;
 import React from 'react';
-import { Link  } from 'react-router-dom';
 export default function Page(props: any) {
  from 'lucide-react';
 

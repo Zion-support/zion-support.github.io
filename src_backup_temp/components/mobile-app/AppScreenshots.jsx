@@ -1,5 +1,4 @@
 import React, {useRef} from "react";
-import { ChevronLeft, ChevronRight import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots;
 const mockScreenshots = [;
     {"id": "1", "alt": "Dashboard screen", "src": "/placeholder.svg"},;

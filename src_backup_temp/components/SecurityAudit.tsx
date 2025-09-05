@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 ;
 interface SecurityCheck {;
   "name": "string;

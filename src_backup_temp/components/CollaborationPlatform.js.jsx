@@ -1,5 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff} from 'lucide-react';
 ,;
   {"id": '2',;
     "name": 'Sarah Johnson',;

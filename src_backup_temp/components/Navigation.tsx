@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
 ;
 const "Navigation": "React.FC = () => {;
   const [isOpen", setIsOpen] = useState(false);

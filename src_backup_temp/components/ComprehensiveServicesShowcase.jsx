@@ -1,4 +1,3 @@
-import React, {useState} from 'react'import {motion, AnimatePresence} from framer-motionimport {}
   Brain,;
   Shield,;
   Rocket,;
@@ -10,7 +9,6 @@ import React, {useState} from 'react'import {motion, AnimatePresence} from frame
   TrendingUp,;
   CheckCircle,;
   DollarSign,;
-  Clock,'Target,'Award'''} from 'lucide-react'import {Link} from react-router-dom// Import the new service data;const serviceCategories = []{}"id": "micro-saas'",'''"name": "Micro SAAS Solutions'",'''"icon": "<Rocket className=w-6 h-6'  />","color": "from-purple-600 to-pink-600'",';
     "services": "revolutionary2027AdvancedMicroSaasServices"},;
   {}
 "id": "it-infrastructure'",'''"name": "IT Infrastructure & Cybersecurity'",'''';

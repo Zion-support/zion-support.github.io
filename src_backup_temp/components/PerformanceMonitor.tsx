@@ -80,8 +80,6 @@ const "PerformanceMonitor": "React.FC = () => {;
 };
 ;
 export default PerformanceMonitor;
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 import logger from '../utils/logger';
 
 interface PerformanceMetrics {

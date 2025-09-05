@@ -1,6 +1,4 @@
 import React, {useState} from 'react';'''';';
-import {motion, AnimatePresence} from 'framer-motion';'''';';
-import {Link} from 'react-router-dom';';
 const InteractiveServiceShowcase = (props: any) => {}';';
 '';';
 ''';';
@@ -134,10 +132,7 @@ const InteractiveServiceShowcase = (props: any) => {}';';
     ];'''';';
     const filteredServices = activeCategory === 'all'
 import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
 import React, {useState} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
-import {Link} from 'react-router-dom';
 const InteractiveServiceShowcase = ("props": "any) => {"}
 ';
 '';

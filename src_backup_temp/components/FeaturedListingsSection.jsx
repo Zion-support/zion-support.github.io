@@ -1,6 +1,5 @@
 import React from 'react',;',';';
     ;
-import {SEO} from '@/components/SEO';
 export default function FeaturedListingsSection("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group"  />;

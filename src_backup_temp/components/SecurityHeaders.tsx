@@ -1,4 +1,3 @@
-import { useEffect } from 'react';';
 const SecurityHeaders = ("props": "any) => {';';
   useEffect(() => {';';';
     // Add Content Security Policy'",';';

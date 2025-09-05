@@ -1,8 +1,4 @@
 import React from 'react';
-import {useState} from "react";
-import { MessageSquare import { Button } from "@/components/ui/button";
-import {ChatAssistant} from "@/components/ChatAssistant";
-import {apiClient} from "@/utils/apiClient";
 export function ChatAssistantTrigger("props": "any) {;
     const [isOpen", setIsOpen] = useState(false);
     // Handle sending messages to the AI chat assistant;

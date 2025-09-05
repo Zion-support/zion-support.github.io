@@ -1,16 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { toast } from 'sonner';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
-import { Form } from '@/components/ui/form';
-import { useJobForm } from './useJobForm';
-import { BasicInfoFields } from './BasicInfoFields';
-import { DateFields } from './DateFields';
-import { DescriptionFields } from './DescriptionFields';
-import { useJobs } from '@/hooks/useJobs';
-import { JobSchemaType } from './validation';
 ;
 export function JobPostingForm("props": "any) {;
   const navigate = useNavigate();

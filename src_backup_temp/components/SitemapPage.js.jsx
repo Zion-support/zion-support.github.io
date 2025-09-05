@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {SEO} from "./SEO";
 ;
 export default function SitemapPage("props": "any) {;
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);

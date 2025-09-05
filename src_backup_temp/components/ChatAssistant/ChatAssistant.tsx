@@ -1,6 +1,5 @@
 import React from 'react',;',';';
     ;
-import {SEO } from '@/components/SEO';
 export default function ChatAssistant(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />

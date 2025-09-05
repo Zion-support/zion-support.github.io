@@ -3,8 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const whitePapers = [

@@ -226,7 +226,6 @@ export const SEO: React.FC<SEOProps> = ({
         })}
 import Head from "next/head"
 import React from "react"
-import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
 export const SEO: React.FC < SEOProps> = ({,
 "
 export default function Page(props: any) {

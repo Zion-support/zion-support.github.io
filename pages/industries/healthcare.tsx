@@ -1,7 +1,5 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
 
 const solutions = [
   {

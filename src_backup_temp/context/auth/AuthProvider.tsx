@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from '../../integrations/supabase/client';
 export default function Page("props": "any) {;
  = useAuthEventHandlers(setUser", setOnboardingStep);
 ;

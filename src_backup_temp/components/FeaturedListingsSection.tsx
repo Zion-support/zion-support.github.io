@@ -1,10 +1,6 @@
-import { Link  } from 'react-router-dom';
-import { Link  } from 'react-router-dom';
  from 'react';
 import React, { useState } from 'react';
 export /**;
-import { motion  } from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
 ;
  params - Function parameters;
  * @returns {*} Function return value;

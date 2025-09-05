@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
 
 export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation

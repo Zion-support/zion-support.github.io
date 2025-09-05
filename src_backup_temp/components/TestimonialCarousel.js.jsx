@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {ChevronLeft, ChevronRight, Star, Quote, ArrowRight} from 'lucide-react';
 ,;
   {"id": "2",;
     "name": 'Michael Chen',;

@@ -1,14 +1,3 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { Search } from "lucide-react";
 // Categories for filtering
 const CATEGORIES = [
     "All Categories",

@@ -1,5 +1,4 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
 export default function SecurityEnhancer.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="SecurityEnhancer.test - Zion Tech Group" description="Professional SecurityEnhancer.test services by Zion Tech Group"   />"

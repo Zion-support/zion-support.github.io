@@ -1,7 +1,5 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 
 const solutions = [
   {

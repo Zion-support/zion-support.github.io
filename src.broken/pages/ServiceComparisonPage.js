@@ -1,13 +1,4 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { EXPANDED_SERVICES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Star, Mail, Phone, Globe, CheckCircle, X, BarChart3, Users } from 'lucide-react';
 import Target from 'lucide-react/dist/esm/icons/target';
-import { SEO } from '@/components/SEO';
 export default function ServiceComparisonPage() {
     const [selectedServices, setSelectedServices] = useState([]);
     const [comparisonServices, setComparisonServices] = useState([]);

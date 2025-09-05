@@ -1,6 +1,5 @@
 import React, {useEffect, useMemo, useCallback} from 'react';';';
 import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
 ;
 export default function PerformanceOptimizer(props) {;
   const location = useLocation();
@@ -49,7 +48,6 @@ export default function PerformanceOptimizer(props) {;
   return null;
 }
 import React, {useEffect, useMemo, useCallback} from 'react';
-import {useLocation} from 'react-router-dom';
 
 export default function Page(props: any) {
 "
@@ -206,7 +204,6 @@ if(typeof window !== 'undefined') {
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """';
 ;';;';
 import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
 
 export default function PerformanceOptimizer(props) {
   const location = useLocation();

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 export default function Page("props": "any) {;
 ",;
     { "value": "quote_received", "label": "Quote Request Received" },;

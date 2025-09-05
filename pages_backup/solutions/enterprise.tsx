@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Building, Users, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const enterpriseFeatures = [

@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Users, Award, Target, Lightbulb, Heart } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const teamMembers = [

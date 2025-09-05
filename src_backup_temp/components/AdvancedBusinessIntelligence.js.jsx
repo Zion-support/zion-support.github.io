@@ -1,5 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity} from 'lucide-react';
 ,;
   {"id": 'model-2',;
     "name": 'Revenue Forecasting Model',;

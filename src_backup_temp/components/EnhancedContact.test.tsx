@@ -1,5 +1,4 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
 export default function EnhancedContact.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="EnhancedContact.test - Zion Tech Group" description="Professional EnhancedContact.test services by Zion Tech Group"   />"

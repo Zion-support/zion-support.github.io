@@ -1,12 +1,4 @@
 import React from 'react';
-import {useState, useEffect} from 'react';";
-import {Footer} from '@/components/Footer';";
-import {GradientHeading} from '@/components/GradientHeading';";
-import {ListingScoreCard} from '@/components/ListingScoreCard';";
-import {Button} from '@/components/ui/button';";
-import {Input} from '@/components/ui/input';";
-import {Select, SelectTrigger, SelectContent, SelectItem} from '@/components/ui/select';";
-import {Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2} from 'lucide-react';
 export default function Page("props": "any) {;
 ",;
     { "label": 'A-Z', "value": 'a-z' },;

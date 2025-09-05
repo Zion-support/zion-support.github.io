@@ -1,7 +1,3 @@
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {useState, useRef} from "react";
-import { Mail import { useToast } from "@/hooks/use-toast";
 export function EnhancedNewsletterForm("props": "any) {;
     const [email", setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);

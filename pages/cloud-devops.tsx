@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
   const contact = {

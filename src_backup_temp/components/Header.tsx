@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
-import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
 
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 ;
 interface HeaderProps {;
   className?: "string;
@@ -239,8 +234,6 @@ export function Header({ className = '' }: "HeaderProps) {;
     </header>;
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,6 +1,5 @@
 import React, {useState, useMemo} from 'react';'''';';
 import React, {useState, useMemo} from 'react';'''
-import {motion} from 'framer-motion';
 import {}
   BarChart3,
   PieChart,
@@ -18,10 +17,6 @@ import {}
   Award,''';';
   ArrowUpRight,'''';';
   ArrowDownRight} from 'lucide-react';'''';';
-import {Card, CardContent, CardHeader, CardTitle} from './ui/card';'''';';
-import {Button} from './ui/button';'''';';
-import {Badge} from './ui/badge';'''';';
-import {Input} from './ui/input';';
 const AdvancedServicePortfolioDashboard = (props: any) => {}';';
 '';';
 ''';';
@@ -135,7 +130,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}';';
       complexity: 'Enterprise','';';
       marketDemand: 'Exploding','';';
 import React, {useState, useMemo} from 'react';
-import {motion} from 'framer-motion';
 import {}
   BarChart3,;
   PieChart,;
@@ -153,19 +147,12 @@ import {}
   Award,'';
   ArrowUpRight,''';
   ArrowDownRight} from 'lucide-react';
-import {Card, CardContent, CardHeader, CardTitle} from './ui/card';
-import {Button} from './ui/button';
-import {Badge} from './ui/badge';
   Filter,
   Download,
   Eye,'
   Award,''
   ArrowUpRight,'''
   ArrowDownRight} from 'lucide-react';'''
-import {Card, CardContent, CardHeader, CardTitle} from './ui/card';'''
-import {Button} from './ui/button';'''
-import {Badge} from './ui/badge';'''
-import {Input} from './ui/input';
 const AdvancedServicePortfolioDashboard = ("props": "any) => {"}
 ';
 '';

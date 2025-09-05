@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 COMPLETE MERGE RESOLUTION SYSTEM');
@@ -185,7 +184,6 @@ function createGitHubPRAutomation() {
   
   const prScript = `#!/usr/bin/env node
 
-import { execSync } from 'child_process';
 
 const GITHUB_TOKEN = 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
 const REPO_OWNER = 'Zion-Holdings';
@@ -289,7 +287,6 @@ function runComprehensiveImprovements() {
   const improvements = {
     'syntax-fixer.js': `#!/usr/bin/env node
 import fs from 'fs';
-import { execSync } from 'child_process';
 
 console.log('🔧 Running comprehensive syntax fixer...');
 
@@ -331,7 +328,6 @@ fixSyntaxErrors();
 `,
 
     'build-optimizer.js': `#!/usr/bin/env node
-import { execSync } from 'child_process';
 
 console.log('🔨 Running build optimizer...');
 

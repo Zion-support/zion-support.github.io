@@ -1,5 +1,4 @@
 import Stripe from 'stripe';
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16',
@@ -48,4 +47,4 @@ async function handler(req, res) {
   }
 }
 
-export default withErrorLogging(handler);
+export default handler;

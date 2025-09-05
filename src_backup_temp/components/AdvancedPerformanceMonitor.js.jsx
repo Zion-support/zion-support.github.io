@@ -1,5 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';
 ,;
   {"id": '2',;
     "name": 'API Requests',;

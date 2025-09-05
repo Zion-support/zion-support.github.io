@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';
-import {SunIcon, MoonIcon} from '@heroicons/react/24/outline';
 const ThemeToggle = (props: any) => {;
     const [isDark, setIsDark] = useState(true);
     useEffect(() => {';
@@ -22,7 +21,6 @@ const ThemeToggle = (props: any) => {;
     };';';
     return (<button onClick={toggleTheme} className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group" aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}>
 import React, {useState, useEffect} from 'react';
-import {SunIcon, MoonIcon} from '@heroicons/react/24/outline';
 const ThemeToggle = ("props": "any) => {;
     const [isDark", setIsDark] = useState(true);
     useEffect(() => {;

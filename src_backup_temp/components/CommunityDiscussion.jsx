@@ -1,10 +1,6 @@
 import React, {useState} from "react";
-import {Avatar, AvatarFallback} from '@/components / ui / avatar';
 export default function Page("props": "any) {;
  from '@/components/ui/textarea';";
-import { Avatar", AvatarFallback } from '@/components/ui/avatar';";
-import {Card, CardContent} from '@/components/ui/card';";
-import {Separator} from '@/components/ui/separator';
 export default function Page("props": "any) {;
 ;";
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">";

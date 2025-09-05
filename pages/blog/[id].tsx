@@ -1,9 +1,6 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag, Clock, Share2, BookOpen } from 'lucide-react';
 
 const BlogPost = () => {
   const router = useRouter();

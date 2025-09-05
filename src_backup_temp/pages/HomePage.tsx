@@ -1,5 +1,4 @@
 import React from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const HomePage: React.FC = () => {
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6);

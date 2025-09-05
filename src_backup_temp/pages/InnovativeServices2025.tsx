@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Search, 
   Filter, 
@@ -19,7 +18,6 @@ import {
   Target,
   Award
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2025, InnovativeService } from '../data/innovativeServices2025';
 
 const InnovativeServices2025: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

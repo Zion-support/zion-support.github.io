@@ -1,6 +1,5 @@
 import React from 'react',;',';';
     ;
-import {SEO } from '@/components/SEO';
 export default function AppMinimal(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="AppMinimal - Zion Tech Group" description="Professional AppMinimal services by Zion Tech Group"  />

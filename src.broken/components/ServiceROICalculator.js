@@ -1,6 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { Calculator, TrendingUp, DollarSign, Clock, Target, BarChart3 } from 'lucide-react';
 export const ServiceROICalculator = ({ serviceName, basePrice, implementationTime, expectedROI, className = "" }) => {
     const [companySize, setCompanySize] = useState('small');
     const [customFeatures, setCustomFeatures] = useState(0);

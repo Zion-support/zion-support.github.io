@@ -1,12 +1,4 @@
 import React from 'react';
-import {useEffect, useState} from "react";
-import {Input} from "@/components/ui/input";
-import {Card} from "@/components/ui/card";
-import { Search import { ListingScoreCard } from "@/components/ListingScoreCard";
-import {captureException} from "@/utils/sentry";
-import {Skeleton} from "@/components/ui/skeleton";
-import {useDebounce} from "@/hooks/useDebounce";
-import {z} from "zod";
 const listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep("props": "any) {;
     const [searchQuery", setSearchQuery] = useState("");

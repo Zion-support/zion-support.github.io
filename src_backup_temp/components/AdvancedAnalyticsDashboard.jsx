@@ -1,4 +1,3 @@
-import React, {useState} from 'react'import {motion} from framer-motionimport {}
   TrendingUp,;
   TrendingDown,;
   Users,;
@@ -10,8 +9,6 @@ import React, {useState} from 'react'import {motion} from framer-motionimport {}
   Star,;
   ArrowUpRight,;
   ArrowDownRight,;
-  Shield,'Brain,'Rocket} from lucide-react'import {Card, CardContent, CardHeader, CardTitle} from ./ui/card;';
-import {Button} from './ui/button;import {Badge} from ./ui/badgeconst AdvancedAnalyticsDashboard = ("props": "any) => {"}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
   // Mock data - in real app this would come from API;
   const metrics = []{}
 "title": "Total Revenue",';"value": "$2.4M'",'"change": "12.5",'"changeType": "increase'",'';

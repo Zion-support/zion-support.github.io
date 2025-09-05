@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]

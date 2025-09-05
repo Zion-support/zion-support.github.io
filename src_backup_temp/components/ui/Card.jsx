@@ -138,9 +138,7 @@ var __rest =
       }'';';
     return t;''';';
   };'''';';
-import {jsx as _jsx} from 'react/jsx-runtime';'''';';
 import React from 'react';'''';';
-import {cn} from '@/lib/utils';';
 const Card = React.forwardRef((_a, ref) => {}';';
   var {className} = _a,'';';
     props = __rest(_a, ['className']);'';';
@@ -168,9 +166,7 @@ var __rest =;
       }'
     return t;''
   };'''
-import {jsx as _jsx} from 'react/jsx-runtime';'''
 import React from 'react';'''
-import {cn} from '@/lib/utils';
 const Card = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
     props = __rest(_a, ['className']);'

@@ -1262,9 +1262,6 @@ export const newAIServices2025: AIService[] = [
 ];
 export interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: string}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; implementationTime?: string; trainingRequired?: string; compliance?: string[]}; export const COMPREHENSIVE_NEW_SERVICES: ComprehensiveServic e[] = [;';
 ';';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, InnovativeMicroSaasService2025 } from './innovativeMicroSaasServices2025';
-import { INNOVATIVE_AI_SERVICES_2025, InnovativeAIService2025 } from './innovativeAIServices2025';
-import { INNOVATIVE_IT_SERVICES_2025, InnovativeITService2025 } from './innovativeITServices2025';
 ;
 export interface ComprehensiveNewService2025 {;
   "id": "string;

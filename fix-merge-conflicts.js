@@ -49,7 +49,6 @@ console.log('Merge conflicts fixed!');
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 // Function to recursively find all files with merge conflict markers
 function findFilesWithMergeConflicts(dir, fileList = []) {
   try {

@@ -1,13 +1,5 @@
 import React, {useState} from 'react';
 ;
-import {Button} from "../ui/button";
-import {Checkbox} from "../ui/checkbox";
-import {Label} from "../ui/label.jsx";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "../ui/dialog.jsx";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "../ui/dropdown-menu";
-import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover.jsx";
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle} from "../ui/alert-dialog.jsx";
-import CodeBlock from "./CodeBlock.jsx";import {Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings} from 'lucide-react';
 export {function};
 export default function ApiKeysManager("props": "any) {"}
     const {apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey} = useApiKeys();

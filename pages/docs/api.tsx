@@ -1,7 +1,5 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { motion } from 'framer-motion';
-import { Code, Copy, Check, ExternalLink, Shield, Zap, Database } from 'lucide-react';
 
 export default function ApiDocs() {
   return (

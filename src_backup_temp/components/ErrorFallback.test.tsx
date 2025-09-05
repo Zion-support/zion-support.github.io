@@ -1,5 +1,4 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
 export default function ErrorFallback.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="ErrorFallback.test - Zion Tech Group" description="Professional ErrorFallback.test services by Zion Tech Group"   />"

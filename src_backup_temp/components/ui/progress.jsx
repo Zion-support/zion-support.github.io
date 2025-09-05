@@ -1,4 +1,3 @@
-import {cn} from '../../lib/utils';
 ;
 const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref) => {;
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);

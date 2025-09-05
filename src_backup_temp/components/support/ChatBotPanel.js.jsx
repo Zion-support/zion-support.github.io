@@ -1,13 +1,6 @@
 import React, {useState, useRef, useEffect} from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {toast} from "@/components/ui/use-toast";
-import {apiClient} from "@/utils/apiClient";
-import {cn} from "@/lib/utils";
 ;
 ;
-import {Send, Loader2} from "lucide-react";import {useTheme} from "@/hooks/useTheme";
 // Define suggested quick replies""";
 const QUICK_REPLIES = ["""";
     {"id": "hire", "text": "How do I hire?"},"""";

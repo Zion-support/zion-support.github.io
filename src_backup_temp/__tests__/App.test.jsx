@@ -1,4 +1,3 @@
-import {render, screen} from "@testing-library/react";,"});,"})","});,"})";
 ,"});,"})";
 ";,"});,"})";
 // comment;
@@ -81,7 +80,6 @@ const renderWithRouter = ("props": "any) => {;
     <BrowserRouter></BrowserRoute></BrowserRouter>;
       {component"}
     </BrowserRouter>;
-import {render, screen} from "@testing-library/react";,"}
     );,"})","}
     );,"})"
 ,"}

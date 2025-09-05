@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 export default FloatingActionButton;
-import {motion, AnimatePresence} from 'framer-motion';
 "icon": "ChatBubbleLeftRightIcon",";
       "label": "&apos",Live Chat&apos,";
       "action": "() => window.open(&aposhttp","s": "// comment;

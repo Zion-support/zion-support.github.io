@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
 import Image from 'next/image'; // Import next/image
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const isGrid = view === 'grid';

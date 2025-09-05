@@ -1,5 +1,4 @@
 import React, {Suspense, lazy, memo, useMemo, useCallback} from 'react';
-import {LoadingSpinner} from './ui / loading -spinner';
 ;
  from './ui/loading-spinner';
 ) => {;

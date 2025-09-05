@@ -1,9 +1,3 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { EmptyMatchesCard } from './EmptyMatchesCard';
-import { JobMatchCard } from './JobMatchCard';
 ;
 export function SuggestedTalents("props": "any) {;
   const [talents", setTalents] = useState<any[]>([]); // Added type for talents;

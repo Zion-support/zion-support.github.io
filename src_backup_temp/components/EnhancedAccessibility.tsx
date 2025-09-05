@@ -1,4 +1,3 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export const "EnhancedAccessibility": React.FC<EnhancedAccessibilityProps> = ({;
   enabled = true",;: "any;

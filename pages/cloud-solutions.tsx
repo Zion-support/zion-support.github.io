@@ -1,6 +1,5 @@
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Cloud,

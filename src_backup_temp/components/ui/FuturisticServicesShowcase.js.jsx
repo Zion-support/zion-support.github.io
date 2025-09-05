@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle} from 'lucide-react';
 const services = [;
     {"id": 'ai-automation';
         "name": 'AI & Automation';

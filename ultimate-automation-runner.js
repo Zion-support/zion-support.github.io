@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
 console.log('🚀 Starting Ultimate Automation Runner...');
 
@@ -186,8 +185,6 @@ function createTestingUtilities() {
   
   const testFiles = {
     'test-utils.js': `// Testing utilities
-import { render } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
 
 export const renderWithProviders = (ui, options = {}) => {
   const { theme = 'light', ...renderOptions } = options;

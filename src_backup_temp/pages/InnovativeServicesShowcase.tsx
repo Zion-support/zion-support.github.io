@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, getServicesByCategory, MicroSaasService } from '../data/innovativeMicroSaasServices2025';
 
 const InnovativeServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

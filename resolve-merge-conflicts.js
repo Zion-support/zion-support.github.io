@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs';''
 import path from 'path';''
-import { execSync } from 'child_process';''
 console.log('🔧 Resolving merge conflicts by accepting incoming changes...');'
 // Function to resolve merge conflicts by accepting incoming changes;
 function resolveMergeConflicts(filePath) {}

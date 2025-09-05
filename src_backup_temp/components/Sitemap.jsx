@@ -2,7 +2,6 @@ import React from 'react';
 export default Sitemap;
 ;
 
-import {Link} from 'react-router-dom';
 export default function Page("props": "any) {;
 ",;
             { "path": '/blog', "label": 'Blog', "description": 'Latest insights and technology trends' }

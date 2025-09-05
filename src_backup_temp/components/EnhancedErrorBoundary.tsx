@@ -1,6 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 ;
 interface Props {;
   "children": "ReactNode;
@@ -51,14 +49,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {;
     // Call custom error handler;
     if (this.props.onError) {;
 import React from 'react';
-import {  import { motion  } from 'framer-motion';
 
 export default function Page(props: any) {
 -${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;

@@ -1,8 +1,5 @@
-import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 
-import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function APIPage() {
   const apiFeatures = [

@@ -1,5 +1,4 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
 export default function ContactSection.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="ContactSection.test - Zion Tech Group" description="Professional ContactSection.test services by Zion Tech Group"   />"

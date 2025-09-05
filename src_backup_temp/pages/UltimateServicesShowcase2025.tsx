@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { newMicroSaasServices2025, newITServices2025, newAIServices2025, zionContact } from '../data/comprehensiveNewServices2025';
 
 interface Service {
   id: string;

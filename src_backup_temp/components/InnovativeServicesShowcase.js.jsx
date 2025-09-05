@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES_2025} from "../data/innovativeMicroSaasServices2025";
 ;
 ;
 const InnovativeServicesShowcase = ("props": "any) => {;

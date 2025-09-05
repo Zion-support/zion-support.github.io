@@ -1,7 +1,5 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
-import { Code, BookOpen, Zap, Shield } from 'lucide-react';
 
 export default function APIDocs() {
   return (

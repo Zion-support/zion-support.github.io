@@ -1,6 +1,4 @@
 // Testing utilities
-import { render } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
 
 export const renderWithProviders = (ui, options = {}) => {
   const { theme = 'light', ...renderOptions } = options;

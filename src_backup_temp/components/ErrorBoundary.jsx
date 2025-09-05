@@ -11,9 +11,6 @@ export function ErrorBoundaryFallback("props": "any) {;
 		</div>;
 	);
 import React, { useState, useEffect } from 'react';''
-import { useNavigate } from 'react-router-dom';''
-import { motion } from 'framer-motion';''
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';'
 function ErrorFallback({ error, resetError }) {}
   const navigate = useNavigate();
 

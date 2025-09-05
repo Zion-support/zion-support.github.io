@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
-import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
   return ()

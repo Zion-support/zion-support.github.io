@@ -1,8 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FileText, Download, Calendar, User, Eye } from 'lucide-react';
 
 export default function WhitePapersPage() {
   return (

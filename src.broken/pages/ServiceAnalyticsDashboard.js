@@ -1,7 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { useState } from 'react';
-import { SEO } from '@/components/SEO';
-import { BarChart3, TrendingUp, Users, DollarSign, Activity, Target, Award } from 'lucide-react';
 const ServiceAnalyticsDashboard = () => {
     const [selectedPeriod, setSelectedPeriod] = useState('30d');
     const analyticsData = {

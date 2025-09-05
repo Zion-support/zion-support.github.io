@@ -1,6 +1,5 @@
 import React from 'react',;',';';
     ;
-import {SEO } from '@/components/SEO';
 export default function FuturisticAnimatedBackground(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />

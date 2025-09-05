@@ -1,7 +1,5 @@
 import React from 'react';
 import Layout from './components/Layout';
-import { motion } from 'framer-motion';
-import { Play, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
 
 const demoFeatures = [
   {

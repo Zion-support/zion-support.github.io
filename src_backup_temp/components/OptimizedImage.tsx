@@ -1,4 +1,3 @@
-import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
 export default function Page("props": "any) {;
 ) => {;
 

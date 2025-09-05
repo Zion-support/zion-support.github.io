@@ -1,9 +1,3 @@
-import { Gift import { useAuth } from '@/hooks/useAuth';
-import {useEffect, useState} from 'react';
-import {usePoints} from '@/hooks/usePoints';
-import {Link} from 'react-router-dom';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 export function PointsBadge("props": "any) {;
     const { user", signOut, logout } = useAuth();
     const {ledger, balance} = usePoints();

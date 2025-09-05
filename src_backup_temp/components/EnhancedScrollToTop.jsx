@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 export default EnhancedScrollToTop;
-import {motion, AnimatePresence} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
 ", []);

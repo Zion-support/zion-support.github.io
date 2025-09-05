@@ -1,5 +1,4 @@
 import React from 'react';
-import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
     componentDidCatch(error", errorInfo) {;
@@ -202,5 +201,4 @@ export {Page};
 </div>
 </motion>
 </div>
-import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
 });'; ;';';''

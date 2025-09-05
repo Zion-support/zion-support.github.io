@@ -1,14 +1,10 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit',;',';';
     ;';
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';';';
 const initialState = {"items": "[]"};';';';
 export const getApiUrl = ("props": "any) => {'",';';
     ';';';
-import {createSlice, createAsyncThunk } from '@reduxjs/toolkit';';';
 const initialState = {"items": "[]"};';';';
 export const getApiUrl = ("props": "any) => {const env = import.meta?.env || process.env;'",';';
     ';';';
-import { createSlice, createAsyncThunk } from &apos;@reduxjs/toolkit';&apos;&apos;';
 const initialState = {"items": "[]"};';';
 "export": "const getApiUrl = ("props": any) => {';';';
   const env = import.meta?.env || process.env;'",';';
