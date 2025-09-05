@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+<<<<<<< HEAD
 
 const publicRoutes = [
   "/",
@@ -70,10 +71,91 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Allow public routes
+=======
+
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/blog",
+  "/services",
+  "/solutions",
+  "/industries",
+  "/resources",
+  "/talent",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/accessibility",
+  "/compliance",
+  "/gdpr",
+  "/security",
+  "/support",
+  "/help",
+  "/faq",
+  "/guides",
+  "/tutorials",
+  "/webinars",
+  "/white-papers",
+  "/case-studies",
+  "/press",
+  "/events",
+  "/newsletter",
+  "/sitemap",
+  "/api-docs",
+  "/docs",
+  "/api",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/pricing",
+  "/company",
+  "/community",
+  "/status",
+  "/search",
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/services-overview",
+  "/solutions/cloud-migration",
+  "/solutions/custom",
+  "/solutions/digital-transformation",
+  "/solutions/education",
+  "/solutions/enterprise",
+  "/solutions/finance",
+  "/solutions/government",
+  "/solutions/healthcare",
+  "/solutions/industry",
+  "/solutions/retail",
+  "/solutions/smb",
+  "/solutions/startup",
+  "/services/cloud",
+  "/services/cloud-devops",
+  "/services/cybersecurity",
+  "/services/data-analytics",
+  "/services/quantum-computing",
+  "/industries/education",
+  "/industries/finance",
+  "/industries/government",
+  "/industries/healthcare",
+  "/industries/manufacturing",
+  "/industries/retail"
+];
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  
+  // Check if the route is public
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Add any authentication logic here
   // For now, just allow all requests
@@ -84,12 +166,19 @@ export function middleware(request: NextRequest) {
   }
   
 >>>>>>> main
+=======
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow all requests
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -98,8 +187,11 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+<<<<<<< HEAD
 =======
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
 >>>>>>> main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   ],
 };

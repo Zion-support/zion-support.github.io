@@ -1,6 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 import Layout from '../../components/layout/Layout';
+=======
+import Layout from '../../components/Layout';
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, Clock, Share2, BookOpen } from 'lucide-react';

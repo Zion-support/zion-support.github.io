@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -19,11 +20,18 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
 
 interface LayoutProps {
   title: string;
   description: string;
   children: React.ReactNode;
+<<<<<<< HEAD
   keywords?: string;
 }
 
@@ -489,3 +497,30 @@ export default function Layout({ title, description, children, keywords }: Layou
     </>
   );
 }
+=======
+  title?: string;
+  description?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Layout;
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
