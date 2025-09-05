@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+module.exports = {
+=======
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -9,7 +12,6 @@ module.exports = {
       "script": 'npm',
       "args": 'start',
       "cwd": './',
->>>>>>> origin/merge-pr-10644
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -27,7 +29,6 @@ module.exports = {
       "log_file": 'logs/pm2/error-detection-service.log',
       "error_file": 'logs/pm2/error-detection-service-error.log',
       "out_file": 'logs/pm2/error-detection-service-out.log'},
-
     // Syntax Error Fixer
     {
       "name": 'syntax-error-fixer',
@@ -40,7 +41,6 @@ module.exports = {
         "PORT": 3000
       }
     },
-
     // Error Detection and Monitoring System
     {
       "name": 'error-detection-monitor',
@@ -61,7 +61,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // TypeScript Error Auto-Fixer
     {
       "name": 'typescript-error-auto-fixer',
@@ -82,7 +81,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // ESLint Error Auto-Fixer
     {
       "name": 'eslint-error-auto-fixer',
@@ -103,7 +101,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Dependency Error Resolver
     {
       "name": 'dependency-error-resolver',
@@ -124,12 +121,10 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Build Error Auto-Fixer
     {
       "name": 'build-error-auto-fixer',
       "script": './scripts/automation/build-error-auto-fixer.cjs',
->>>>>>> origin/merge-pr-10644
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -147,7 +142,6 @@ module.exports = {
       "log_file": 'logs/pm2/syntax-error-fixer.log',
       "error_file": 'logs/pm2/syntax-error-fixer-error.log',
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'},
-
     // TypeScript Error Fixer
     {
       "name": 'typescript-error-fixer',
@@ -163,12 +157,10 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Code Quality Auto-Enhancer
     {
       "name": 'code-quality-auto-enhancer',
       "script": './scripts/automation/code-quality-auto-enhancer.cjs',
->>>>>>> origin/merge-pr-10644
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -186,7 +178,6 @@ module.exports = {
       "log_file": 'logs/pm2/typescript-error-fixer.log',
       "error_file": 'logs/pm2/typescript-error-fixer-error.log',
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'},
-
     // ESLint Error Fixer
         "NODE_ENV": 'production',
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
@@ -199,7 +190,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Error Prevention Monitor
     {
       "name": 'error-prevention-monitor',
@@ -220,9 +210,7 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Error Analytics Dashboard
->>>>>>> origin/merge-pr-10644
     {
       "name": 'eslint-error-fixer',
       "script": 'scripts/pm2/eslint-error-fixer.js',
@@ -243,7 +231,6 @@ module.exports = {
       "log_file": 'logs/pm2/eslint-error-fixer.log',
       "error_file": 'logs/pm2/eslint-error-fixer-error.log',
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'},
-
     // File Extension Normalizer
     {
       "name": 'file-extension-normalizer',
@@ -259,12 +246,10 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Intelligent Error Orchestrator
     {
       "name": 'intelligent-error-orchestrator',
       "script": './scripts/automation/intelligent-error-orchestrator.cjs',
->>>>>>> origin/merge-pr-10644
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -282,7 +267,6 @@ module.exports = {
       "log_file": 'logs/pm2/file-extension-normalizer.log',
       "error_file": 'logs/pm2/file-extension-normalizer-error.log',
       "out_file": 'logs/pm2/file-extension-normalizer-out.log'},
-
     // Import Cleaner
     {
       "name": 'import-cleaner',
@@ -304,7 +288,6 @@ module.exports = {
       "log_file": 'logs/pm2/import-cleaner.log',
       "error_file": 'logs/pm2/import-cleaner-error.log',
       "out_file": 'logs/pm2/import-cleaner-out.log'},
-
     // Code Quality Monitor
     {
       "name": 'code-quality-monitor',
@@ -326,7 +309,6 @@ module.exports = {
       "log_file": 'logs/pm2/code-quality-monitor.log',
       "error_file": 'logs/pm2/code-quality-monitor-error.log',
       "out_file": 'logs/pm2/code-quality-monitor-out.log'},
-
     // Build Health Monitor
     {
       "name": 'build-health-monitor',
@@ -348,7 +330,6 @@ module.exports = {
       "log_file": 'logs/pm2/build-health-monitor.log',
       "error_file": 'logs/pm2/build-health-monitor-error.log',
       "out_file": 'logs/pm2/build-health-monitor-out.log'},
-
     // Error Report Aggregator
     {
       "name": 'error-report-aggregator',
@@ -370,7 +351,6 @@ module.exports = {
       "log_file": 'logs/pm2/error-report-aggregator.log',
       "error_file": 'logs/pm2/error-report-aggregator-error.log',
       "out_file": 'logs/pm2/error-report-aggregator-out.log'},
-
     // Intelligent Error Prevention
     {
       "name": 'intelligent-error-prevention',
@@ -405,7 +385,6 @@ module.exports = {
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     }
   ],
-
   "deploy": {
     production: {
       user: 'ubuntu',
@@ -418,5 +397,5 @@ module.exports = {
       'pre-setup': ''
     }
   }
->>>>>>> origin/merge-pr-10644
 };
+>>>>>>> main

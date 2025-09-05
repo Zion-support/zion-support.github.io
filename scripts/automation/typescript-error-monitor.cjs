@@ -1,9 +1,11 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -21,7 +23,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
-
 class TypeScriptErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -31,12 +32,10 @@ class TypeScriptErrorMonitor {
     this.isRunning = false;
     this.lastCheck = null;
     this.errorCache = new Map();
-    
     // Ensure directories exist
     [this.logsDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { "recursive": true })}
->>>>>>> origin/merge-pr-10629
     })}
 ;
   log(message, level = "INFO") {
@@ -45,12 +44,10 @@ class TypeScriptErrorMonitor {
     console.log("logMessage);
     const logFile = path.join(this.logsPath, "typescript-error-monitor.log");
     fs.appendFileSync(logFile, logMessage + "\n");
-
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = "[${timestamp}] [${level}] ${message}";
     console.log("logMessage);
-
     const logFile = path.join(this.logsPath, "typescript-error-monitor.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
 ;
@@ -81,7 +78,6 @@ class TypeScriptErrorMonitor {
   const match = line.match(;
           /(.+):(\d+):(\d+)\s*-\s*error TS(\d+):\s*(.+)/;
     const lines = output.split("\n");
-
     for (const line of lines) {
   if (line.includes("error TS")) {
   const match = line.match(;
@@ -108,11 +104,9 @@ class TypeScriptErrorMonitor {
             "message": match[5].trim(),
             "severity": "warning"})}
     console.log(logMessage);
-    
     // Write to log file
     const logFile = path.join(this.logsDir, 'typescript-error-monitor.log');
     fs.appendFileSync(logFile, logMessage + '\n')}
-
   async runCommand(command, options = {}) {
     try {
       const result = execSync(command, {
@@ -124,33 +118,25 @@ class TypeScriptErrorMonitor {
       return { "success": true, "output": result }} catch (error) {
       return { "success": false, "error": error.message, "output": error.stdout || error.stderr }}
   }
-
   async checkTypeScriptErrors() {
     this.log('Checking TypeScript errors...');
-    
     try {
       const result = await this.runCommand('npx tsc --noEmit', { "silent": true });
-      
       if (result.success) {
         this.log('No TypeScript errors found');
         this.errorCache.clear();
         return []}
-
       const errors = this.parseTypeScriptErrors(result.output || '');
       this.log(`Found ${errors.length} TypeScript errors`);
-      
       // Cache errors for comparison
       this.errorCache.set(Date.now(), errors);
-      
       return errors} catch (error) {
       this.log(`Failed to check TypeScript "errors": ${error.message}`, 'ERROR');
       return []}
   }
-
   parseTypeScriptErrors(errorOutput) {
     const errors = [];
     const lines = errorOutput.split('\n');
-    
     for (const line of lines) {
       const match = line.match(/(\S+\.(ts|tsx|js|jsx))\((\d+),(\d+)\):\s*(.+)/);
       if (match) {
@@ -161,7 +147,6 @@ class TypeScriptErrorMonitor {
           "message": match[5].trim(),
           "timestamp": Date.now()
         });
->>>>>>> origin/merge-pr-10629
       }
     }
 ;
@@ -174,7 +159,6 @@ class TypeScriptErrorMonitor {
 ;
     try {
   let content = fs.readFileSync(filePath, "utf8");
-
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not "found": ${filePath}`, "WARN");
       return false}
 ;
@@ -182,7 +166,6 @@ class TypeScriptErrorMonitor {
   let content = fs.readFileSync(filePath, "utf8");
       const lines = content.split("\n");
       const lineIndex = error.line - 1;
-
       if (lineIndex < 0 || lineIndex >= lines.length) {
   return false}
 ;
@@ -195,7 +178,6 @@ class TypeScriptErrorMonitor {
           fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
-
         case "2339": // Property does not exist;
           fixedLine = await this.fixPropertyError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
@@ -204,7 +186,6 @@ class TypeScriptErrorMonitor {
           fixedLine = await this.fixTypeMismatchError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
-
         case "7006": // Parameter implicitly has "any" type;
           fixedLine = await this.fixImplicitAnyError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
@@ -221,7 +202,6 @@ class TypeScriptErrorMonitor {
           fixedLine = await this.fixGenericTypeScriptError(;
             error,
             lines,
-
         "default": ;
           // Generic fix attempt;
           fixedLine = await this.fixGenericTypeScriptError(;
@@ -276,7 +256,6 @@ class TypeScriptErrorMonitor {
           for (const ext of extensions) {
   const fullPath = path.resolve(;
               path.dirname(error.file),
-
       // Fix missing extensions;
       if (;
         line.includes("import") &&;
@@ -328,7 +307,6 @@ class TypeScriptErrorMonitor {
         const fixedLine = line.replace(;
           new RegExp(`\\.${property}\\b`),.${property} as any";
         );
-
         return fixedLine}
     }
 ;
@@ -341,7 +319,6 @@ class TypeScriptErrorMonitor {
   // Add type assertions for function calls;
     if (line.includes("(") && line.includes(")")) {
   const fixedLine = line.replace(/\(([^)]+)\)/g, "(($1) as any)");
-
       return fixedLine}
 ;
     return line}
@@ -362,7 +339,6 @@ class TypeScriptErrorMonitor {
   // Add type assertion for assignments;
     if (line.includes("=")) {
   const fixedLine = line.replace(/=\s*([^]+);?$/, "= ($1) as any;");
-
       return fixedLine}
 ;
     return line}
@@ -379,9 +355,7 @@ class TypeScriptErrorMonitor {
     return line}
 ;
   async attemptFixes(errors) {this.log("🔧 Attempting to fix ${errors.length} TypeScript errors...");
-
     let fixedCount = 0;
-    
     for (const error of errors) {
   try {
   const fixed = await this.fixTypeScriptError(error);
@@ -399,7 +373,6 @@ class TypeScriptErrorMonitor {
         )} catch (fixError) {
   this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
           "ERROR";
-
         // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.code}";
         this.fixAttempts.set(;
           errorKey,
@@ -438,37 +411,28 @@ class TypeScriptErrorMonitor {
       this.reportsPath,typescript-error-monitor-report.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
     this.log(`📄 Report "generated": ${reportFile}`);
     try {
       const filePath = path.join(this.projectRoot, error.file);
       if (!fs.existsSync(filePath)) {
         return false}
-
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
-      
       // Fix common TypeScript errors
       if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {
         return await this.fixModuleImportError(error, lines, filePath)}
-      
       if (error.message.includes('Property') && error.message.includes('does not exist')) {
         return await this.fixPropertyError(error, lines, filePath)}
-      
       if (error.message.includes('Type') && error.message.includes('is not assignable')) {
         return await this.fixTypeError(error, lines, filePath)}
-
       if (error.message.includes('Parameter') && error.message.includes('implicitly has an')) {
         return await this.fixImplicitAnyError(error, lines, filePath)}
-
       if (error.message.includes('Object is possibly')) {
         return await this.fixNullCheckError(error, lines, filePath)}
-
       return false} catch (error) {
       this.log(`Failed to fix TypeScript "error": ${error.message}`, 'ERROR');
       return false}
   }
-
   async fixModuleImportError(error, lines, filePath) {
     const line = lines[error.line - 1];
     if (line.includes('import') || line.includes('require')) {
@@ -484,7 +448,6 @@ class TypeScriptErrorMonitor {
           }
         }
         return match});
-      
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
@@ -492,7 +455,6 @@ class TypeScriptErrorMonitor {
         return true}
     }
     return false}
-
   async fixPropertyError(error, lines, filePath) {
     const line = lines[error.line - 1];
     if (line.includes('.')) {
@@ -505,7 +467,6 @@ class TypeScriptErrorMonitor {
         return true}
     }
     return false}
-
   async fixTypeError(error, lines, filePath) {
     const line = lines[error.line - 1];
     if (line.includes('=') && !line.includes('as any')) {
@@ -518,7 +479,6 @@ class TypeScriptErrorMonitor {
         return true}
     }
     return false}
-
   async fixImplicitAnyError(error, lines, filePath) {
     const line = lines[error.line - 1];
     if (line.includes('function') || line.includes('=>')) {
@@ -531,7 +491,6 @@ class TypeScriptErrorMonitor {
         return true}
     }
     return false}
-
   async fixNullCheckError(error, lines, filePath) {
     const line = lines[error.line - 1];
     if (line.includes('.')) {
@@ -544,27 +503,21 @@ class TypeScriptErrorMonitor {
         return true}
     }
     return false}
-
   async autoFixErrors(errors) {
     let fixedCount = 0;
-    
     for (const error of errors) {
       if (await this.fixTypeScriptError(error)) {
         fixedCount++}
     }
-    
     if (fixedCount > 0) {
       this.log(`Auto-fixed ${fixedCount} TypeScript errors`);
-      
       // Re-check for remaining errors
       const remainingErrors = await this.checkTypeScriptErrors();
       if (remainingErrors.length === 0) {
         this.log('All TypeScript errors have been resolved!')} else {
         this.log(`${remainingErrors.length} errors remain after auto-fix`)}
     }
-    
     return fixedCount}
-
   async generateReport(errors, fixedCount) {
     const report = {
       "timestamp": new Date().toISOString(),
@@ -578,12 +531,9 @@ class TypeScriptErrorMonitor {
         "message": error.message
       }))
     };
-
     const reportPath = path.join(this.reportsDir, `typescript-error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
     this.log(`Report "generated": ${reportPath}`);
->>>>>>> origin/merge-pr-10629
     return report}
 ;
   async run() {
@@ -602,14 +552,11 @@ class TypeScriptErrorMonitor {
       const report = await this.generateReport(fixResults);
       this.log("🎉 TypeScript Error Monitor completed!");
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
-
   async run() {
   this.log("🚀 Starting TypeScript Error Monitor...");
-
     try {
   // Run TypeScript check;
       const checkResult = await this.runTypeScriptCheck();
-
       if (checkResult.success) {
   this.log("🎉 No TypeScript errors found!");
         return { "success": true, "errors": [], "fixed": 0 }
@@ -617,14 +564,11 @@ class TypeScriptErrorMonitor {
 ;
       // Attempt to fix errors;
       const fixResults = await this.attemptFixes(checkResult.errors);
-
       // Generate report;
       const report = await this.generateReport(fixResults);
-
       this.log("🎉 TypeScript Error Monitor completed!");
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors";
       );
-
       return {
   "success": fixResults.fixedCount > 0,
         "errors": checkResult.errors,
@@ -638,12 +582,10 @@ class TypeScriptErrorMonitor {
 // Run the automation if called directly;
   async startWatching() {
     this.log('Starting TypeScript error monitoring...');
-    
     // Initial check
     const initialErrors = await this.checkTypeScriptErrors();
     if (initialErrors.length > 0) {
       await this.autoFixErrors(initialErrors)}
-    
     // Set up file watcher
     this.watcher = chokidar.watch(['src/**/*.{ts,tsx,js,jsx}',
       'pages/**/*.{ts,tsx,js,jsx}',
@@ -653,7 +595,6 @@ class TypeScriptErrorMonitor {
       "persistent": true,
       "ignoreInitial": true
     });
-
     this.watcher
       .on('change', async (filePath) => {
         this.log("File "changed": ${filePath}");
@@ -663,17 +604,13 @@ class TypeScriptErrorMonitor {
         await this.handleFileChange(filePath)})
       .on('unlink', (filePath) => {
         this.log("File "removed": ${filePath}")});
-
     this.isRunning = true;
     this.log('TypeScript error monitoring is active')}
-
   async handleFileChange(filePath) {
     // Debounce rapid changes
     if (this.lastCheck && Date.now() - this.lastCheck < 1000) {
       return}
-    
     this.lastCheck = Date.now();
-    
     // Wait a bit for file to be written
     setTimeout(async () => {
       const errors = await this.checkTypeScriptErrors();
@@ -681,24 +618,20 @@ class TypeScriptErrorMonitor {
         const fixedCount = await this.autoFixErrors(errors);
         await this.generateReport(errors, fixedCount)}
     }, 500)}
-
   async stop() {
     if (this.watcher) {
       await this.watcher.close();
       this.watcher = null}
     this.isRunning = false;
     this.log('TypeScript error monitoring stopped')}
-
   async run() {
     try {
       await this.startWatching();
-      
       // Keep the process running
       process.on('SIGINT', async () => {
         this.log('Received SIGINT, shutting down...');
         await this.stop();
         process.exit(0)});
-      
       process.on('SIGTERM', async () => {
         this.log('Received SIGTERM, shutting down...');
         await this.stop();
@@ -707,9 +640,7 @@ class TypeScriptErrorMonitor {
       process.exit(1)}
   }
 }
-
 // Run the monitor
->>>>>>> origin/merge-pr-10629
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
   monitor.run().catch(error => {
@@ -717,3 +648,4 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = TypeScriptErrorMonitor
+>>>>>>> main
