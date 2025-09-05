@@ -14,11 +14,11 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     const { data, error } = await supabase
       .from('favorites')
-      .select('item_type, item_id, created_at')
+      .select('item_type,item_id,created_at')
       .eq('user_id', userId)
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: 'false' });
     if (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: 'error.message' });
       return;
     }
     res.status(200).json(data || []);
@@ -32,12 +32,12 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { error } = await supabase
       .from('favorites')
-      .insert({ user_id: userId, item_type, item_id });
+      .insert({ user_id: 'userId', item_type, item_id });
     if (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: 'error.message' });
       return;
     }
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: 'true' });
     return;
   }
   if (req.method === 'DELETE') {
@@ -48,12 +48,11 @@ export default async function handler(req, res) {
       .eq('item_type', item_type)
       .eq('item_id', item_id);
     if (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: 'error.message' });
       return;
     }
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: 'true' });
     return;
   }
   res.status(405).end();
 }
-

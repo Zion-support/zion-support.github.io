@@ -9,6 +9,6 @@ export default function LazyLoader.test() {return (
           Professional LazyLoader.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

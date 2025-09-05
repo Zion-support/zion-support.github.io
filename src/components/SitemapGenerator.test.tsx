@@ -9,6 +9,6 @@ export default function SitemapGenerator.test() {return (
           Professional SitemapGenerator.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

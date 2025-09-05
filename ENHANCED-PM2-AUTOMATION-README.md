@@ -2,295 +2,273 @@
 
 ## 🚀 Overview
 
-The Enhanced Intelligent PM2 Automation System is a comprehensive automation ecosystem that transforms your Zion Tech Group application development workflow. This system provides intelligent automation for repository management, development pipeline optimization, code quality improvements, and automated deployment with rollback capabilities.
+This enhanced PM2 automation system provides intelligent, AI-powered automation for development, deployment, monitoring, and maintenance of your application. The system includes advanced features like automated Git operations, intelligent deployment pipelines, real-time monitoring, and self-healing capabilities.
 
-## 🌟 Key Features
+## ✨ Key Features
 
-### 🔄 Intelligent Repository Management
+### 🤖 AI-Powered Health Monitoring
+- **Real-time System Monitoring**: Continuous monitoring of CPU, memory, disk, and network usage
+- **Intelligent Analysis**: AI-powered trend analysis and anomaly detection
+- **Predictive Alerts**: Proactive issue prediction and prevention
+- **Auto-Recovery**: Automatic system optimization and process restart
 
-- **Automated PR Merging**: Intelligently merges pull requests with conflict resolution
-- **Smart Conflict Resolution**: Uses AI-powered strategies to resolve merge conflicts
-- **Branch Priority Analysis**: Automatically prioritizes branches based on content and importance
-- **Repository Health Monitoring**: Tracks repository health and provides recommendations
-- **Automated Cleanup**: Removes old branches and maintains repository hygiene
+### 🔀 Intelligent Git Automation
+- **Smart Merge Strategy**: Intelligent conflict resolution and merge automation
+- **Quality Gates**: Automated quality checks before merging
+- **Branch Management**: Automatic branch cleanup and protection
+- **Commit Analysis**: Intelligent commit message analysis and auto-actions
 
-### 🚀 Smart Development Pipeline
+### 🚀 Advanced Deployment Automation
+- **Multi-Environment Support**: Development, staging, and production deployments
+- **Rollback Capabilities**: Automatic rollback on deployment failures
+- **Health Checks**: Comprehensive post-deployment verification
+- **Quality Gates**: Automated quality checks during deployment
 
-- **Code Quality Analysis**: Comprehensive analysis of code quality metrics
-- **Automated Testing**: Generates and runs tests to improve coverage
-- **Performance Optimization**: Detects and fixes performance issues automatically
-- **Workflow Optimization**: Optimizes development environment and package.json scripts
-- **Intelligent Error Fixing**: Automatically fixes common TypeScript and ESLint errors
+### 📊 Real-Time Monitoring Dashboard
+- **Live Metrics**: Real-time system and application metrics
+- **WebSocket Updates**: Live updates without page refresh
+- **Alert Management**: Centralized alert monitoring and management
+- **Performance Analytics**: Detailed performance analysis and reporting
 
-### 🤖 AI-Powered Code Enhancement
+### 🔄 Intelligent CI/CD Pipeline
+- **Automated Testing**: Comprehensive test suite execution
+- **Security Scanning**: Automated security vulnerability scanning
+- **Build Optimization**: Intelligent build optimization and caching
+- **Quality Gates**: Automated quality gate enforcement
 
-- **Intelligent Code Analysis**: AI-powered analysis of code patterns and quality
-- **Automated Refactoring**: Suggests and applies code improvements
-- **Performance Issue Detection**: Identifies performance anti-patterns
-- **Code Optimization**: Applies intelligent optimizations based on best practices
-- **Learning-Based Improvements**: Continuously learns from code patterns
+### 🔒 Security Automation
+- **Dependency Scanning**: Automated dependency vulnerability scanning
+- **Code Security Analysis**: Automated code security analysis
+- **Configuration Security**: Security configuration validation
+- **Auto-Patching**: Automatic security patch application
 
-### 🚢 Automated Deployment Orchestrator
+### 💾 Backup & Recovery
+- **Automated Backups**: Scheduled automated backups
+- **Incremental Backups**: Efficient incremental backup strategy
+- **Disaster Recovery**: Comprehensive disaster recovery procedures
+- **Data Retention**: Configurable data retention policies
 
-- **Multi-Environment Support**: Development, staging, and production environments
-- **Intelligent Health Checks**: Comprehensive pre and post-deployment validation
-- **Automatic Rollback**: Smart rollback strategies when deployments fail
-- **Deployment Monitoring**: Real-time monitoring of deployment status
-- **Environment-Specific Configurations**: Tailored configurations for each environment
+## 🛠️ Installation & Setup
 
-### 🛡️ Enhanced Error Prevention
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- PM2 (will be installed automatically)
+- Git
 
-- **Predictive Error Detection**: Anticipates and prevents errors before they occur
-- **Real-Time Monitoring**: Continuous monitoring of application health
-- **Automated Issue Resolution**: Automatically fixes common issues
-- **Preventive Maintenance**: Proactive maintenance to prevent problems
-- **Error Analytics**: Comprehensive error reporting and analysis
+### Quick Start
 
-### 🔍 Intelligent Code Review
+1. **Clone the repository** (if not already done):
+   ```bash
+   git clone <your-repository-url>
+   cd <repository-name>
+   ```
 
-- **Automated Code Review**: AI-powered code quality analysis
-- **Quality Thresholds**: Configurable quality standards
-- **Review Recommendations**: Suggests improvements and best practices
-- **Continuous Quality Monitoring**: Ongoing quality assessment
-- **Performance Impact Analysis**: Evaluates code changes for performance impact
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-## 📋 System Architecture
+3. **Start the enhanced system**:
+   ```bash
+   ./start-enhanced-intelligent-pm2-system.sh
+   ```
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                Enhanced PM2 Automation System               │
-├─────────────────────────────────────────────────────────────┤
-│  🔄 Repository Manager  │  🚀 Development Pipeline        │
-│  • Git Automation       │  • Code Quality                 │
-│  • Conflict Resolution  │  • Testing Automation           │
-│  • Branch Management    │  • Performance Optimization     │
-├─────────────────────────────────────────────────────────────┤
-│  🤖 AI Enhancement      │  🚢 Deployment Orchestrator     │
-│  • Code Analysis        │  • Multi-Environment            │
-│  • Auto-Refactoring     │  • Health Checks                │
-│  • Learning Engine      │  • Rollback Strategies          │
-├─────────────────────────────────────────────────────────────┤
-│  🛡️ Error Prevention   │  🔍 Code Review                 │
-│  • Predictive Detection │  • Quality Analysis             │
-│  • Real-Time Monitoring │  • Best Practices               │
-│  • Auto-Resolution      │  • Performance Impact           │
-├─────────────────────────────────────────────────────────────┤
-│  📊 Unified Dashboard   │  🔮 Predictive Maintenance      │
-│  • Real-Time Monitoring │  • Issue Prevention             │
-│  • Analytics            │  • Learning-Based Optimization  │
-│  • Alerts               │  • Continuous Improvement       │
-└─────────────────────────────────────────────────────────────┘
-```
+4. **Access the monitoring dashboard**:
+   Open http://localhost:3001 in your browser
 
-## 🚀 Quick Start
+### Manual Setup
 
-### 1. Install Dependencies
+1. **Install PM2 globally**:
+   ```bash
+   npm install -g pm2
+   ```
 
-```bash
-# Ensure PM2 is installed globally
-npm install -g pm2
+2. **Start the enhanced ecosystem**:
+   ```bash
+   pm2 start ecosystem.enhanced-intelligent.cjs
+   ```
 
-# Install project dependencies
-npm install
-```
-
-### 2. Start the Enhanced System
-
-```bash
-# Make the startup script executable
-chmod +x start-enhanced-intelligent-pm2-system.sh
-
-# Start the enhanced PM2 automation system
-./start-enhanced-intelligent-pm2-system.sh
-```
-
-### 3. Verify Installation
-
-```bash
-# Check PM2 status
-pm2 status
-
-# Monitor all processes
-pm2 monit
-
-# View logs
-pm2 logs
-```
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-The system uses environment variables for configuration:
-
-```bash
-# Core automation settings
-GIT_AUTOMATION_MODE=true
-AUTO_MERGE_ENABLED=true
-CONFLICT_RESOLUTION_MODE=intelligent
-
-# Development automation
-DEVELOPMENT_AUTOMATION_MODE=true
-AUTO_TEST_ENABLED=true
-CODE_QUALITY_MODE=enhanced
-
-# AI enhancement settings
-AI_ENHANCEMENT_MODE=true
-CODE_OPTIMIZATION_LEVEL=aggressive
-AUTO_REFACTOR_ENABLED=true
-
-# Deployment settings
-DEPLOYMENT_AUTOMATION_MODE=true
-AUTO_DEPLOY_ENABLED=true
-ROLLBACK_ENABLED=true
-
-# Error prevention
-ERROR_PREVENTION_MODE=predictive
-AUTO_FIX_ENABLED=true
-PREVENTIVE_MAINTENANCE=true
-```
-
-### Ecosystem Configuration
-
-The main configuration file is `ecosystem-intelligent-enhanced.config.cjs`:
-
-```javascript
-module.exports = {
-  apps: [
-    // Intelligent Repository Manager
-    {
-      name: 'intelligent-repository-manager',
-      script: './scripts/automation/intelligent-repository-manager.cjs',
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      env: {
-        GIT_AUTOMATION_MODE: 'true',
-        AUTO_MERGE_ENABLED: 'true',
-        CONFLICT_RESOLUTION_MODE: 'intelligent',
-      },
-    },
-    // ... other automations
-  ],
-};
-```
-
-## 📊 Automation Schedule
-
-| Automation                   | Frequency        | Description                                     |
-| ---------------------------- | ---------------- | ----------------------------------------------- |
-| **Repository Management**    | Every 15 minutes | Git operations, PR merging, conflict resolution |
-| **Development Pipeline**     | Every 2 hours    | Code quality, testing, performance optimization |
-| **AI Code Enhancement**      | Every 4 hours    | Code analysis, refactoring, optimization        |
-| **Deployment Orchestration** | Every 6 hours    | Deployment, health checks, rollback             |
-| **Error Prevention**         | Every 10 minutes | Predictive error detection and prevention       |
-| **Code Review**              | Every 3 hours    | Automated code quality analysis                 |
-| **Dependency Intelligence**  | Every 8 hours    | Dependency updates and security scanning        |
-| **Performance Optimization** | Every 2 hours    | Performance monitoring and optimization         |
-| **Testing Automation**       | Every 4 hours    | Test generation and execution                   |
-| **Security Intelligence**    | Every 6 hours    | Vulnerability scanning and security updates     |
-| **Continuous Improvement**   | Every 12 hours   | Learning-based optimization                     |
-| **Unified Dashboard**        | Every 5 minutes  | Real-time monitoring and analytics              |
-| **Predictive Maintenance**   | Every 8 hours    | Issue prevention and maintenance                |
-| **Build Pipeline**           | Every 4 hours    | Build optimization and processes                |
-| **Development Watcher**      | Real-time        | File watching and auto-rebuild                  |
-
-## 🔧 Usage Examples
-
-### Manual Repository Management
-
-```bash
-# Run intelligent repository management manually
-node scripts/automation/intelligent-repository-manager.cjs
-
-# Check repository health
-pm2 logs intelligent-repository-manager
-```
-
-### Manual Development Pipeline
-
-```bash
-# Run development pipeline manually
-node scripts/automation/smart-development-pipeline.cjs
-
-# View development pipeline logs
-pm2 logs smart-development-pipeline
-```
-
-### Manual Deployment
-
-```bash
-# Deploy to development environment
-node -e "
-const { DeploymentSystem } = require('./scripts/automation/automated-deployment-orchestrator.cjs');
-const system = new DeploymentSystem();
-system.deploy('development', { force: true });
-"
-
-# Check deployment status
-pm2 logs automated-deployment-orchestrator
-```
-
-### View Automation Reports
-
-```bash
-# View repository management report
-cat logs/intelligent-repository-manager.log
-
-# View development pipeline report
-cat logs/smart-development-pipeline-report.json
-
-# View deployment report
-cat logs/deployment-report.json
-```
+3. **Save PM2 configuration**:
+   ```bash
+   pm2 save
+   pm2 startup
+   ```
 
 ## 📁 File Structure
 
 ```
-scripts/automation/
-├── intelligent-repository-manager.cjs      # Git automation and conflict resolution
-├── smart-development-pipeline.cjs          # Development workflow optimization
-├── ai-code-enhancement.cjs                # AI-powered code improvements
-├── automated-deployment-orchestrator.cjs  # Deployment management
-├── enhanced-error-prevention.cjs          # Error prevention and monitoring
-├── intelligent-code-review.cjs            # Automated code review
-├── smart-dependency-intelligence.cjs      # Dependency management
-├── performance-optimization-engine.cjs    # Performance monitoring
-├── intelligent-testing-automation.cjs     # Testing automation
-├── security-intelligence-system.cjs       # Security scanning
-├── continuous-improvement-engine.cjs      # Learning and optimization
-├── unified-automation-dashboard.cjs       # Monitoring dashboard
-├── predictive-maintenance-system.cjs      # Predictive maintenance
-├── intelligent-build-pipeline.cjs         # Build optimization
-└── dev-watcher.cjs                        # Development file watching
-
-logs/                                      # Automation logs and reports
-├── intelligent-repository-manager.log
-├── smart-development-pipeline.log
-├── deployment-report.json
-└── ...
-
-ecosystem-intelligent-enhanced.config.cjs  # Main PM2 configuration
-start-enhanced-intelligent-pm2-system.sh   # Startup script
+├── ecosystem.enhanced-intelligent.cjs    # Enhanced PM2 ecosystem configuration
+├── start-enhanced-intelligent-pm2-system.sh  # Enhanced startup script
+├── scripts/
+│   └── intelligent/
+│       ├── ai-health-monitor-enhanced.cjs    # Enhanced AI health monitor
+│       ├── git-automation-enhanced.cjs       # Enhanced Git automation
+│       ├── deployment-automation-enhanced.cjs # Enhanced deployment automation
+│       ├── monitoring-dashboard.cjs          # Real-time monitoring dashboard
+│       ├── cicd-pipeline.cjs                 # CI/CD pipeline automation
+│       ├── performance-optimizer.cjs         # Performance optimization
+│       ├── security-automation.cjs           # Security automation
+│       ├── code-quality-monitor.cjs          # Code quality monitoring
+│       ├── resource-monitor.cjs              # Resource monitoring
+│       ├── error-recovery.cjs                # Error recovery system
+│       └── backup-automation.cjs             # Backup automation
+├── logs/                                    # System logs
+├── dashboard/                               # Monitoring dashboard files
+├── automation-reports/                      # Automation reports
+├── security-reports/                        # Security reports
+├── quality-reports/                         # Quality reports
+├── backups/                                 # Backup files
+├── performance-reports/                     # Performance reports
+├── pipelines/                               # CI/CD pipeline artifacts
+└── artifacts/                               # Build artifacts
 ```
 
-## 🔍 Monitoring and Debugging
+## 🔧 Configuration
 
-### PM2 Commands
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+# PM2 Configuration
+NODE_ENV=production
+PM2_SERVE_PORT=3000
+PM2_SERVE_PATH=/workspace
+
+# Monitoring
+MONITOR_INTERVAL=30000
+ALERT_THRESHOLD=0.8
+HEALTH_CHECK_TIMEOUT=300000
+
+# Git Automation
+AUTO_MERGE_ENABLED=true
+CONFLICT_RESOLUTION=intelligent
+BRANCH_PROTECTION=main
+QUALITY_GATES_ENABLED=true
+
+# Deployment
+AUTO_DEPLOY_ENABLED=true
+ROLLBACK_ENABLED=true
+HEALTH_CHECK_TIMEOUT=300000
+
+# Notifications
+SLACK_WEBHOOK_URL=your_slack_webhook_url
+EMAIL_NOTIFICATIONS=your_email@example.com
+DEPLOYMENT_WEBHOOK_URL=your_webhook_url
+
+# Security
+VULNERABILITY_THRESHOLD=medium
+AUTO_PATCH=true
+SECURITY_ALERTS=true
+
+# Quality Gates
+MIN_TEST_COVERAGE=80
+MAX_BUILD_TIME=300000
+MAX_BUNDLE_SIZE=5242880
+MAX_LINT_ERRORS=0
+MAX_SECURITY_VULNERABILITIES=0
+```
+
+### Ecosystem Configuration
+
+The main configuration is in `ecosystem.enhanced-intelligent.cjs`. Key configuration options:
+
+- **Instances**: Number of application instances
+- **Memory Limits**: Maximum memory usage per process
+- **Restart Policies**: Automatic restart configuration
+- **Cron Schedules**: Scheduled task execution
+- **Environment Variables**: Process-specific environment variables
+
+## 📊 Monitoring & Dashboard
+
+### Real-Time Dashboard
+
+Access the monitoring dashboard at http://localhost:3001 to view:
+
+- **System Overview**: CPU, memory, disk usage
+- **Process Status**: PM2 process status and metrics
+- **Performance Metrics**: Application performance data
+- **Recent Alerts**: Latest system alerts and notifications
+- **Deployment Status**: Current deployment status
+- **Resource Usage**: Real-time resource utilization
+
+### WebSocket API
+
+The dashboard uses WebSocket for real-time updates:
+- **Endpoint**: ws://localhost:8080
+- **Message Format**: JSON with type and data fields
+- **Update Frequency**: Every 5 seconds
+
+### Log Files
+
+All logs are stored in the `logs/` directory:
+- **Application Logs**: `web-enhanced.log`
+- **Health Monitor**: `ai-health-monitor-enhanced.log`
+- **Git Automation**: `git-automation-enhanced.log`
+- **Deployment**: `deployment-automation-enhanced.log`
+- **Performance**: `performance-optimizer-enhanced.log`
+- **Security**: `security-automation-enhanced.log`
+
+## 🔄 Automation Features
+
+### Git Automation
+
+The system automatically:
+- **Monitors** for new commits and pull requests
+- **Analyzes** code quality and conflicts
+- **Merges** branches when quality gates pass
+- **Resolves** conflicts intelligently
+- **Cleans up** merged branches
+- **Notifies** on merge failures
+
+### Deployment Automation
+
+The system automatically:
+- **Triggers** deployments on new commits
+- **Runs** quality gates and security scans
+- **Deploys** to appropriate environments
+- **Verifies** deployment health
+- **Rolls back** on failures
+- **Notifies** on deployment status
+
+### Health Monitoring
+
+The system automatically:
+- **Monitors** system resources continuously
+- **Detects** anomalies and trends
+- **Predicts** potential issues
+- **Optimizes** system performance
+- **Recovers** from failures
+- **Alerts** on critical issues
+
+## 🚨 Alerting & Notifications
+
+### Alert Types
+
+- **System Alerts**: CPU, memory, disk usage alerts
+- **Process Alerts**: Process failures and restarts
+- **Deployment Alerts**: Deployment success/failure
+- **Security Alerts**: Security vulnerabilities and threats
+- **Quality Alerts**: Code quality and test failures
+
+### Notification Channels
+
+- **Slack**: Real-time Slack notifications
+- **Email**: Email notifications for critical alerts
+- **Webhook**: Custom webhook notifications
+- **Dashboard**: In-dashboard alert display
+
+## 🔧 Maintenance & Troubleshooting
+
+### Common Commands
 
 ```bash
 # View all processes
-pm2 status
+pm2 list
 
-# Monitor processes in real-time
-pm2 monit
-
-# View logs for all processes
+# View logs
 pm2 logs
-
-# View logs for specific process
-pm2 logs intelligent-repository-manager
-
-# Restart specific process
-pm2 restart intelligent-repository-manager
 
 # Restart all processes
 pm2 restart all
@@ -298,239 +276,136 @@ pm2 restart all
 # Stop all processes
 pm2 stop all
 
-# Delete all processes
-pm2 delete all
+# Monitor processes
+pm2 monit
 
 # Save current configuration
 pm2 save
 
-# Setup startup script
-pm2 startup
+# Reload configuration
+pm2 reload all
 ```
+
+### Troubleshooting
+
+1. **Process Not Starting**:
+   - Check logs: `pm2 logs <process-name>`
+   - Verify configuration in ecosystem file
+   - Check system resources
+
+2. **High Memory Usage**:
+   - Check for memory leaks in application
+   - Adjust memory limits in ecosystem file
+   - Restart processes: `pm2 restart all`
+
+3. **Deployment Failures**:
+   - Check deployment logs
+   - Verify environment configuration
+   - Check quality gate requirements
+
+4. **Git Automation Issues**:
+   - Check Git configuration
+   - Verify branch protection rules
+   - Review conflict resolution logs
 
 ### Log Analysis
 
 ```bash
-# View recent repository management activity
-tail -f logs/intelligent-repository-manager.log
+# View specific process logs
+pm2 logs ai-health-monitor-enhanced
 
-# View development pipeline results
-cat logs/smart-development-pipeline-report.json | jq '.'
-
-# View deployment history
-cat logs/deployment-report.json | jq '.recentDeployments'
-
-# View error logs
+# View error logs only
 pm2 logs --err
-```
 
-### Performance Monitoring
+# View logs with timestamps
+pm2 logs --timestamp
 
-```bash
-# Monitor system resources
-pm2 monit
-
-# View process statistics
-pm2 show intelligent-repository-manager
-
-# Check memory usage
-pm2 show | grep -E "(memory|cpu)"
-```
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-#### 1. PM2 Process Not Starting
-
-```bash
-# Check PM2 status
-pm2 status
-
-# Check PM2 logs
-pm2 logs
-
-# Restart PM2 daemon
-pm2 kill
-pm2 start ecosystem-intelligent-enhanced.config.cjs
-```
-
-#### 2. Automation Scripts Failing
-
-```bash
-# Check script permissions
-ls -la scripts/automation/
-
-# Make scripts executable
-chmod +x scripts/automation/*.cjs
-
-# Test script manually
-node scripts/automation/intelligent-repository-manager.cjs
-```
-
-#### 3. Git Operations Failing
-
-```bash
-# Check Git configuration
-git config --list
-
-# Check Git status
-git status
-
-# Check remote configuration
-git remote -v
-
-# Test Git commands
-git fetch origin
-git branch -r
-```
-
-#### 4. Dependency Issues
-
-```bash
-# Clear npm cache
-npm cache clean --force
-
-# Remove node_modules and reinstall
-rm -rf node_modules package-lock.json
-npm install
-
-# Check for conflicting dependencies
-npm ls
-```
-
-### Debug Mode
-
-Enable debug mode for detailed logging:
-
-```bash
-# Set debug environment variable
-export DEBUG=*
-
-# Start with debug logging
-pm2 start ecosystem-intelligent-enhanced.config.cjs --env development
+# Follow logs in real-time
+pm2 logs --follow
 ```
 
 ## 🔒 Security Considerations
 
-### Environment Variables
+### Security Features
 
-- Store sensitive configuration in environment variables
-- Use `.env` files for local development (not committed to Git)
-- Rotate API keys and tokens regularly
+- **Dependency Scanning**: Automated vulnerability scanning
+- **Code Security Analysis**: Static code analysis
+- **Configuration Security**: Security configuration validation
+- **Access Control**: Process-level access control
+- **Audit Logging**: Comprehensive audit trails
 
-### Git Security
+### Best Practices
 
-- Use SSH keys for Git authentication
-- Limit access to repository branches
-- Review and approve all automated changes
-
-### Process Isolation
-
-- Each automation runs in its own PM2 process
-- Memory limits prevent resource exhaustion
-- Automatic restart on failures
+1. **Regular Updates**: Keep dependencies and PM2 updated
+2. **Access Control**: Limit access to production systems
+3. **Monitoring**: Monitor security alerts regularly
+4. **Backups**: Maintain regular backups
+5. **Documentation**: Document all changes and configurations
 
 ## 📈 Performance Optimization
 
-### Resource Management
+### Optimization Features
 
-- **Memory Limits**: Each process has configurable memory limits
-- **CPU Optimization**: Processes run at optimal intervals
-- **Log Rotation**: Automatic log rotation to prevent disk space issues
+- **Automatic Scaling**: Dynamic instance scaling
+- **Resource Monitoring**: Continuous resource monitoring
+- **Performance Analysis**: Detailed performance metrics
+- **Optimization Recommendations**: AI-powered optimization suggestions
+- **Caching**: Intelligent caching strategies
 
-### Monitoring
+### Performance Tuning
 
-- **Real-Time Metrics**: Live performance monitoring
-- **Resource Alerts**: Automatic alerts for resource issues
-- **Performance Reports**: Detailed performance analysis
-
-## 🔄 Updates and Maintenance
-
-### Updating the System
-
-```bash
-# Pull latest changes
-git pull origin main
-
-# Restart the automation system
-pm2 restart all
-
-# Check for updates
-pm2 update
-```
-
-### Backup and Recovery
-
-```bash
-# Backup current PM2 configuration
-pm2 save
-cp ~/.pm2/dump.pm2 ./backups/pm2-backup-$(date +%Y%m%d-%H%M%S).pm2
-
-# Restore from backup
-pm2 kill
-pm2 resurrect ./backups/pm2-backup-YYYYMMDD-HHMMSS.pm2
-```
+1. **Memory Optimization**: Adjust memory limits based on usage
+2. **CPU Optimization**: Optimize CPU-intensive operations
+3. **Network Optimization**: Optimize network requests
+4. **Database Optimization**: Optimize database queries
+5. **Caching**: Implement appropriate caching strategies
 
 ## 🤝 Contributing
 
-### Adding New Automations
+### Development Setup
 
-1. Create new automation script in `scripts/automation/`
-2. Add configuration to `ecosystem-intelligent-enhanced.config.cjs`
-3. Update startup script with new process information
-4. Test thoroughly before deployment
+1. **Fork the repository**
+2. **Create a feature branch**
+3. **Make your changes**
+4. **Test thoroughly**
+5. **Submit a pull request**
 
-### Automation Guidelines
+### Code Standards
 
-- Follow the established pattern for automation scripts
-- Include comprehensive error handling
-- Add detailed logging for debugging
-- Implement graceful shutdown handling
-- Use environment variables for configuration
+- **ESLint**: Follow ESLint configuration
+- **Prettier**: Use Prettier for code formatting
+- **Tests**: Write tests for new features
+- **Documentation**: Update documentation as needed
 
-## 📚 Additional Resources
+## 📝 License
 
-### Documentation
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [PM2 Official Documentation](https://pm2.keymetrics.io/docs/)
-- [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
-- [Git Automation Guide](https://git-scm.com/book/en/v2/Git-Tools-Scripting-Git)
+## 🆘 Support
 
-### Support
+### Getting Help
 
-- Check logs for detailed error information
-- Review PM2 status for process health
-- Monitor system resources for bottlenecks
-- Use debug mode for troubleshooting
+1. **Check the logs** for error messages
+2. **Review the documentation** for configuration options
+3. **Check GitHub issues** for known problems
+4. **Create a new issue** if you find a bug
 
-## 🎯 Roadmap
+### Contact
 
-### Future Enhancements
-
-- **Machine Learning Integration**: Advanced pattern recognition and optimization
-- **Cloud Integration**: Multi-cloud deployment support
-- **Advanced Analytics**: Predictive analytics and insights
-- **Team Collaboration**: Multi-user automation management
-- **Mobile Monitoring**: Mobile app for system monitoring
-
-### Version History
-
-- **v2.0.0**: Enhanced Intelligent PM2 Automation System
-- **v1.0.0**: Basic PM2 automation system
-
----
+- **GitHub Issues**: [Create an issue](https://github.com/your-org/your-repo/issues)
+- **Email**: support@your-domain.com
+- **Documentation**: [Read the docs](https://your-docs-url.com)
 
 ## 🎉 Conclusion
 
-The Enhanced Intelligent PM2 Automation System represents a significant advancement in development automation. By combining intelligent repository management, AI-powered code enhancement, automated deployment orchestration, and comprehensive monitoring, this system provides a robust foundation for modern application development.
+The Enhanced Intelligent PM2 Automation System provides a comprehensive solution for modern application development and deployment. With its AI-powered monitoring, intelligent automation, and real-time dashboard, it helps teams maintain high-quality, reliable applications with minimal manual intervention.
 
 The system is designed to be:
+- **Intelligent**: AI-powered analysis and decision making
+- **Automated**: Minimal manual intervention required
+- **Reliable**: Self-healing and fault-tolerant
+- **Scalable**: Handles growth and increased load
+- **Secure**: Built-in security features and monitoring
+- **Observable**: Comprehensive monitoring and alerting
 
-- **Intelligent**: Uses AI and machine learning for optimization
-- **Automated**: Minimizes manual intervention
-- **Reliable**: Includes comprehensive error handling and rollback
-- **Scalable**: Supports multiple environments and processes
-- **Monitorable**: Provides real-time insights and analytics
-
-Start your journey with intelligent automation today and experience the future of development workflow optimization!
+Start using the enhanced system today and experience the power of intelligent automation!

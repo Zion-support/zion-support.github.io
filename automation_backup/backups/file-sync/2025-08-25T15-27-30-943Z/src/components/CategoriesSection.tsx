@@ -1,2 +1,5 @@
-// Auto-generated module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main
