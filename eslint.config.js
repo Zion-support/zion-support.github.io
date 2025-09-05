@@ -163,7 +163,8 @@ export default [
       '**/performance-*.sh',
       '**/performance-*.html',
       '**/performance-*.md',
-      '**/performance-*.txt'
+      '**/performance-*.txt',
+      'backup-problematic-files/**'
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -295,7 +296,8 @@ export default [
       '*.disabled.*',
       '*.broken.*',
       '*.corrupted.*',
-      '*.temp.*'
+      '*.temp.*',
+      'backup-problematic-files/**'
     ]
   }
 ];
