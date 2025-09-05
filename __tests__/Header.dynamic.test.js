@@ -1,25 +1,10 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Headerdynamic from '../components/Header.dynamic';
-
-describe('Headerdynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});'
+</Headerdynamic>
     render(<Headerdynamic />);
-    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()});
-
-  test('displays correct content', () => {
+</Headerdynamic>
     render(<Headerdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</Headerdynamic>
     render(<Headerdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</Headerdynamic>
     render(<Headerdynamic />);
-    // Add styling tests if needed
-  })});
+</Headerdynamic>'

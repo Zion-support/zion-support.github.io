@@ -1,1 +1,1 @@
-"HEAD": src.pages.disabled/it-services/Infrastructure.tsx import React from 'react'; export { function }; export default function Infrastructure(...args[]): {} },; {; "icon"
+"HEAD": src.pages.disabled/it-services/Infrastructure.tsx import React from 'react'; export { function }; export default function Infrastructure(...args[]): {} },; {; "icon"""

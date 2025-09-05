@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ServicesSection from '../components/ServicesSection';
-
-describe('ServicesSection', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import ServicesSection from '../components/ServicesSection';''
+describe('ServicesSection', () => {''
+  test('renders without crashing', () => {'
     render(<ServicesSection />);
-    expect(screen.getByTestId('servicessection')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</ServicesSection>
     render(<ServicesSection />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</ServicesSection>
     render(<ServicesSection />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</ServicesSection>
     render(<ServicesSection />);
-    // Add styling tests here
-  });
-});
+</ServicesSection>'

@@ -1,2 +1,2 @@
-import React from 'react'
-export default HeroSectionAlt;';'
+import React from 'react'''
+export default HeroSectionAlt;';'''

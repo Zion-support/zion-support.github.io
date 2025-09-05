@@ -1,1 +1,1 @@
-export const "FuturisticAnimatedBackground"
+export const "FuturisticAnimatedBackground"""

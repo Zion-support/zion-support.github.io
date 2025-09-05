@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react'
-export default function Authentication() { const contact = { phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',site: 'https: }; return ( <> <Head> <title>Authentication - Zion Tech Group Documentation</title> <meta name="description" content="Learn how to authenticate with Zion Tech Group's APIs using API keys,OAuth 2.0,and JWT tokens." /> <link rel="canonical" href={`${contact.site}/docs/authentication`} /> </Head> <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"> <div className="max-w-4xl mx-auto px-4 py-8"> {} <div className="mb-8"> <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4"> <ArrowLeft className="w-4 h-4 mr-2" /> Back to Documentation </Link> <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1> <p className="text-xl text-gray-600"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+import React from 'react'''
+import Head from 'next/head'''
+import Link from 'next/link'''
+import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react'''
+export default function Authentication() { const contact = { phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',site: 'https: }; return ( <> <Head> <title>Authentication - Zion Tech Group Documentation</title> <meta name="description" content="Learn how to authenticate with Zion Tech Group's APIs using API keys,OAuth 2.0,and JWT tokens." /> <link rel="canonical" href={`${contact.site}/docs/authentication`} /> </Head> <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"> <div className="max-w-4xl mx-auto px-4 py-8"> {} <div className="mb-8"> <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4"> <ArrowLeft className="w-4 h-4 mr-2" /> Back to Documentation </Link> <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1> <p className="text-xl text-gray-600""
+cursor/fix-lint-push-and-merge-to-main-f3c1;)"

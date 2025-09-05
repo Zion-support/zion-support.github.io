@@ -1,7 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react';''
+import Head from 'next/head';'
 interface MainLayoutProps {
+  // TODO: Implement
+}
   children: React.ReactNode;
   title?: string;
   description?: string;
@@ -9,23 +10,22 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}: MainLayoutProps) => {
-  return (
+</MainLayoutProps>
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+</Head>
+        <title>{title}</title>'
+        <meta name="description" content={description} />"
+</meta>"
+        <meta name="keywords" content={keywords} />"
+</meta>"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
+</meta>"
+        <link rel="icon" href="/favicon.ico" />"
+</link>
       </Head>
-      {children}
-    </>
+    </>)
   );
 };
 
-export default MainLayout;
+export default MainLayout;"

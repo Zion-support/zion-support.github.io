@@ -1,3 +1,3 @@
-import React from 'react'
-      {placeholder || 'Select an option'
-export default select;';'
+import React from 'react'''
+      {placeholder || 'Select an option'''
+export default select;';'''

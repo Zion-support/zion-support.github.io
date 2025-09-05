@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSidebar2025 from '../components/EnhancedSidebar2025';
-
-describe('EnhancedSidebar2025', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import EnhancedSidebar2025 from '../components/EnhancedSidebar2025';''
+describe('EnhancedSidebar2025', () => {''
+  test('renders without crashing', () => {'
     render(<EnhancedSidebar2025 />);
-    expect(screen.getByTestId('enhancedsidebar2025')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</EnhancedSidebar2025>
     render(<EnhancedSidebar2025 />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</EnhancedSidebar2025>
     render(<EnhancedSidebar2025 />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</EnhancedSidebar2025>
     render(<EnhancedSidebar2025 />);
-    // Add styling tests here
-  });
-});
+</EnhancedSidebar2025>'
