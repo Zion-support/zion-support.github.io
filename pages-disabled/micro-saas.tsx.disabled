@@ -167,11 +167,11 @@ const microSaaSProducts = [{
   },
   {
     title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.'
-    icon: BarChart3}
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],}
-    pricing: '$29 - $199/month'
-    category: 'Analytics'}
+    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
+    icon: BarChart3,
+    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
+    pricing: '$29 - $199/month',
+    category: 'Analytics'
   },
   {
     title: 'Document Management System',
