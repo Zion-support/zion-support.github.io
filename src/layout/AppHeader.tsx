@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const AppHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -16,11 +16,42 @@ const AppHeader: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'All Services', href: '/services' }
+        { name: 'All Services', href: '/services' },
+        { name: 'Custom Development', href: '/custom-development' },
+        { name: 'Consulting', href: '/consulting' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      submenu: [
+        { name: 'Enterprise Solutions', href: '/solutions' },
+        { name: 'Industry Solutions', href: '/industries' },
+        { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about',
+      submenu: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/blog',
+      submenu: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'FAQ', href: '/faq' }
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -41,26 +72,27 @@ const AppHeader: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div 
+                key={item.name} 
+                className="relative group"
+                onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
                 <Link
                   href={item.href}
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   {item.name}
                   {item.submenu && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link>
                 
                 {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
+                {item.submenu && activeDropdown === item.name && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
                   >
                     {item.submenu.map((subItem) => (
                       <Link
