@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Headphones, MessageCircle, Mail, Phone, Clock, CheckCircle, ArrowRight, FileText, Video, Users } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const supportOptions = [
   {
@@ -128,7 +128,7 @@ const contactInfo = {
 
 export default function SupportPage() {
   return (
-    <MainLayout
+    <Layout
       title="Support - Zion Tech Group"
       description="Get help and support for our services. 24/7 support options including live chat, email, phone, and video support. Multiple support tiers available."
       keywords="support, help, customer service, technical support, live chat, email support, phone support, 24/7 support"
@@ -436,6 +436,6 @@ export default function SupportPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

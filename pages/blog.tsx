@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 <<<<<<< HEAD
 
+
 const blogPosts = [
   {
     id: 1,
@@ -55,10 +56,12 @@ const categories = [
   "Cybersecurity",
   "SaaS",
   "Digital Transformation"
+
 ];
 
 export default function BlogPage() {
   return (
+
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Blog - Zion Tech Group</title>
@@ -75,9 +78,11 @@ export default function BlogPage() {
             <p className="text-xl text-blue-100 mb-8">
               Stay updated with the latest trends, insights, and innovations in technology
             </p>
+
           </div>
         </div>
       </section>
+
 
       {/* Blog Content */}
       <section className="py-16">
@@ -128,6 +133,7 @@ export default function BlogPage() {
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
+
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
@@ -150,11 +156,13 @@ export default function BlogPage() {
               ))}
             </div>
 
+
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Load More Posts
               </button>
+
             </div>
           </div>
         </div>

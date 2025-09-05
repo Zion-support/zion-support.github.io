@@ -34,6 +34,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -57,6 +58,7 @@ export default function PrivacyPage() {
                       </p>
                     </div>
                   </div>
+
 
                   <div className="flex items-start gap-4">
                     <Database className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
@@ -129,11 +131,13 @@ export default function PrivacyPage() {
                   </div>
                 </div>
 
+
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Information Sharing
                 </h2>
                 
                 <div className="space-y-4 mb-8">
+
                   <p className="text-gray-600">
                     We do not sell, trade, or otherwise transfer your personal information to third parties without 
                     your consent, except in the following circumstances:

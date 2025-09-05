@@ -12,7 +12,7 @@ import {
   Video,
   Download
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const resources = [
   {
@@ -58,7 +58,7 @@ const quickLinks = [
 
 export default function ResourcesPage() {
   return (
-    <MainLayout
+    <Layout
       title="Resources - Zion Tech Group"
       description="Comprehensive resources including documentation, case studies, blog posts, and API references for developers and businesses."
       keywords="documentation, case studies, blog, API reference, resources, tutorials, guides"
@@ -248,6 +248,6 @@ export default function ResourcesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

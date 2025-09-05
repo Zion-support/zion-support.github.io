@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy } from 'react'
-interface LazyComponentProps {
-  "component": () => Promise<{ default: React.ComponentType<unknown> }>
-  fallback?: React.ReactNode
-  [key:string]: unknown
 }
 
 export const "LazyComponent": React.FC<LazyComponentProps> = ({ 
