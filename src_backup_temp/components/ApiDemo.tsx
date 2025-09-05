@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
-<<<<<<< HEAD
 export default function Page("props": "any) {;
 "}}}
 interface User {;
@@ -22,58 +21,21 @@ const [newUser, setNewUser] = useState<any>({ "name": '', "email": ''});
   return () => {;
     // Cleanup function;
   "};
-=======
-export default function Page(props: any) {
-}}}
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  createdAt?: string;
-
-const ApiDemo: React.FC = (): JSX.Element => {;
-  const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState<any>(false);
-  const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
-    );
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
-  // Check API health on component mount
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
->>>>>>> main
 }, []);, []);
     checkHealth () ;
     fetchUsers () }, []) ;
 
     try {;
-<<<<<<< HEAD
-<<<<<<< HEAD
       
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {';
 ';';
-=======
-;
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
->>>>>>> main
       setHealthStatus('❌ API Unhealthy')};
 
     setLoading(true) ;
     setError(null) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
     try {
       
@@ -83,62 +45,31 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
 
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
 
-<<<<<<< HEAD
-=======
-;
-    try {;
-      if(response.success && response.data) {;
-        setUsers(response.data)} catch(err) {;
-      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       setLoading(false)};
 ;
     e.preventDefault () ;
-<<<<<<< HEAD
 
     if(!newUser.name.trim() || !newUser.email.trim()) {';
 ';';
-=======
-;
-    if(!newUser.name.trim() || !newUser.email.trim()) {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       setLoading(false)};
 
     e.preventDefault () ;
 
     if(!newUser.name.trim() || !newUser.email.trim()) {
 
->>>>>>> main
       setError('Name and email are required');
       return;
 
     setLoading(true) ;
     setError(null) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
     try {
       
       if(response.success && response.data) {
 
-<<<<<<< HEAD
-=======
-;
-    try {;
-      if(response.success && response.data) {;
-=======
->>>>>>> main
         setUsers(prev => [...prev, response.data!]);
-<<<<<<< HEAD
         setNewUser({ "name": '', "email": '' })} catch(err) {;
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       setLoading(false)};
   return ();
     <div className="max-w-4xl mx-auto p-6 space-y-6">";
@@ -185,7 +116,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             </button>;
           </form>;
         </div>;
-=======
         setNewUser({ name: '', email: '' })} catch(err) {
 
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
@@ -223,10 +153,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 onChange={ (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value
 }))}"
@@ -237,37 +163,16 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <button"
               type="submit"
               disabled={loading}"
-<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
 ';';
-=======
-                onChange={ (e) => setNewUser(prev => ({ ...prev,;
-  email: e.target.value;
-}))}";
-                className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500";
-                required;
-              />;
-            </div>;
-            <button";
-              type="submit";
-              disabled={loading}";
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
 
->>>>>>> main
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
         </div>
 
->>>>>>> main
         {/* Error Display */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
         {error && ("
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">"
             <p className="text-red-700">{error}</p>
@@ -280,33 +185,13 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
-<<<<<<< HEAD
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
 ';';
-=======
-        {error && (";
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
-            <p className="text-red-700">{error}</p>;
-          </div>;
-        )}
-;
-        {/* Users List */}";
-        <div className="p-4 bg-gray-50 rounded-lg">";
-          <div className="flex justify-between items-center mb-4">";
-            <h3 className="text-lg font-semibold text-gray-700">Users({users.length});
-            <button;
-              onClick={fetchUsers}
-              disabled={loading}";
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               {loading ? 'Loading...' : 'Refresh'}
-=======
-<<<<<<< HEAD
               disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md "hover": "b g-gray-700 "disabled": opacit y-50";
               {loading ? 'Loading...' : 'Refresh'"}
->>>>>>> main
             </button>;
           </div>;
           {loading ? (";
@@ -333,8 +218,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
                     "ID": "{user.id"}
                   </span>;
                 </div>) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
   );
 }
@@ -345,25 +228,19 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
-=======
-=======
->>>>>>> main
             </div>) }
         </div>;
         {/* Architecture Info */}";
         <div className="mt-8 p-4 bg-green-50 rounded-lg">";
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
           <div className="text-sm text-green-700 space-y-1">;
-<<<<<<< HEAD
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
             <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>;) };';
 ';';
 export default ApiDemo}}}}}}}'"`
@@ -371,18 +248,6 @@ export default ApiDemo}}}}}}}'"`
 </any>
 </any>';
 </any>;';;';
-=======
-    </div>;) };
-=======
-            <p>• <strong>"Frontend": "</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
-            <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
-            <p>• <strong>"Development":</strong> Vite proxy forwards /api calls to Node.js</p>;
-            <p>• <strong>"Production":</strong> Node.js serves built frontend + API</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) "};
->>>>>>> main
 ;
 export default ApiDemo}}}}}}}'"`;
 </any>;
@@ -390,10 +255,6 @@ export default ApiDemo}}}}}}}'"`;
 </any>;
 </any>;
 </any>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
 
@@ -448,5 +309,3 @@ export default ApiDemo}}}}}}}'"`
 </any>
 </any>
 </any>
->>>>>>> main
->>>>>>> main

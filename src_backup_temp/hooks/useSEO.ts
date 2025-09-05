@@ -127,7 +127,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
   // Add structured data;
   ;
     if (!enableStructuredData || typeof document === 'null') return;
-<<<<<<< HEAD
 ;
     // Remove existing structured data'";
     ;
@@ -136,17 +135,6 @@ existingScripts.forEach("script": "> {;'"      if (script.textContent && script.
     });
 ;
     // Add new structured data';
-=======
-
-    // Remove existing structured data'"
-    
-existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
-        script.remove()}
-    }
-    );
-
-    // Add new structured data'
->>>>>>> main
     const script = document.createElement('script');'    script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);

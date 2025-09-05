@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';;
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
@@ -17,8 +14,6 @@ import { Search,
   Phone, 
   Mail, 
   FileText, 
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
@@ -43,28 +38,12 @@ import {
   Download,
   Star,
   TrendingUp
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
->>>>>>> main
   Video,
   Download,
   ExternalLink,
   ChevronDown,
-<<<<<<< HEAD
   ChevronRight;
 } from 'lucide-react';
->>>>>>> main
 
 const helpCategories = [;
   {}
@@ -88,10 +67,8 @@ const helpCategories = [;
         description: "How to get started with our AI solutions","
         type: "Tutorial","
         readTime: "15 min"";
-=======
   ChevronRight,
   ArrowRight
->>>>>>> main
 } from 'lucide-react';
 const helpCategories = [
   {
@@ -119,11 +96,9 @@ const helpCategories = [
         type: 'Guide',
         readTime: '8 min',
         difficulty: 'Beginner'
->>>>>>> main
       }
     ];
   },
-<<<<<<< HEAD
   {}
     title: "AI Services","
     icon: HelpCircle,
@@ -145,121 +120,9 @@ const helpCategories = [
         description: "Tips and best practices for using AI effectively","
         type: "Guide","
         readTime: "12 min"";
-=======
-  {
-    name: 'Account Management',
-    icon: Settings,
-    description: 'Manage your account settings and preferences',
-    articles: [
-      {
-        title: 'Account Settings',
-        description: 'Manage your account preferences and settings',
-        type: 'Guide',
-        readTime: '6 min',
-        difficulty: 'Beginner'
-      },
-      {
-        title: 'Billing and Payments',
-        description: 'Understanding billing cycles and payment methods',
-        type: 'Guide',
-        readTime: '7 min',
-        difficulty: 'Beginner'
-      },
-      {
-        title: 'User Permissions',
-        description: 'Setting up team members and access levels',
-        type: 'Tutorial',
-        readTime: '12 min',
-        difficulty: 'Intermediate'
-      }
-    ]
-  },
-  {
-    name: 'Services & Features',
-    icon: Zap,
-    description: 'Learn about our services and how to use them',
-    articles: [
-      {
-        title: 'AI Services Overview',
-        description: 'Complete guide to our AI solutions',
-        type: 'Guide',
-        readTime: '15 min',
-        difficulty: 'Intermediate'
-      },
-      {
-        title: 'Cloud Migration Guide',
-        description: 'Step-by-step cloud migration process',
-        type: 'Tutorial',
-        readTime: '20 min',
-        difficulty: 'Advanced'
-      },
-      {
-        title: 'Micro SaaS Development',
-        description: 'Building custom micro SaaS applications',
-        type: 'Guide',
-        readTime: '18 min',
-        difficulty: 'Advanced'
-      }
-    ]
-  },
-  {
-    name: 'Security & Compliance',
-    icon: Shield,
-    description: 'Security best practices and compliance information',
-    articles: [
-      {
-        title: 'Security Best Practices',
-        description: 'Essential security guidelines for your projects',
-        type: 'Guide',
-        readTime: '12 min',
-        difficulty: 'Intermediate'
-      },
-      {
-        title: 'Data Privacy & GDPR',
-        description: 'Understanding data privacy and GDPR compliance',
-        type: 'Guide',
-        readTime: '10 min',
-        difficulty: 'Intermediate'
-      },
-      {
-        title: 'Access Control Setup',
-        description: 'Configuring user access and permissions',
-        type: 'Tutorial',
-        readTime: '14 min',
-        difficulty: 'Intermediate'
-      }
-    ]
-  },
-  {
-    name: 'Troubleshooting',
-    icon: HelpCircle,
-    description: 'Common issues and how to resolve them',
-    articles: [
-      {
-        title: 'Common Login Issues',
-        description: 'Troubleshooting login and authentication problems',
-        type: 'Guide',
-        readTime: '8 min',
-        difficulty: 'Beginner'
-      },
-      {
-        title: 'API Error Codes',
-        description: 'Understanding and resolving API errors',
-        type: 'Reference',
-        readTime: '6 min',
-        difficulty: 'Intermediate'
-      },
-      {
-        title: 'Performance Optimization',
-        description: 'Tips for improving application performance',
-        type: 'Guide',
-        readTime: '16 min',
-        difficulty: 'Advanced'
->>>>>>> main
       }
     ];
   },
-<<<<<<< HEAD
   {}
     title: "Cloud Services","
     icon: MessageCircle,
@@ -281,39 +144,11 @@ const helpCategories = [
         description: "Keep your cloud environment secure","
         type: "Guide","
         readTime: "15 min"";
-=======
-  {
-    name: 'API Documentation',
-    icon: Settings,
-    description: 'Technical documentation and API references',
-    articles: [
-      {
-        title: 'API Quick Start',
-        description: 'Get started with our REST API',
-        type: 'Tutorial',
-        readTime: '12 min',
-        difficulty: 'Intermediate'
-      },
-      {
-        title: 'Authentication Guide',
-        description: 'API authentication methods and examples',
-        type: 'Guide',
-        readTime: '10 min',
-        difficulty: 'Intermediate'
-      },
-      {
-<<<<<<< HEAD
         title: 'SDK Documentation',
         description: 'Software development kits and libraries',
         type: 'Reference',
         readTime: '15 min',
         difficulty: 'Advanced'
-=======
-        title: "Security Best Practices",
-        description: "Keep your cloud environment secure",
-        type: "Guide",
-        readTime: "15 min"
->>>>>>> main
       }
     ];
   },
@@ -333,24 +168,14 @@ const helpCategories = [
         type: "Tutorial","
         readTime: "8 min"";
       },
-<<<<<<< HEAD
       {}
         title: "Account Settings","
         description: "Manage your account preferences and settings","
         type: "Tutorial","
         readTime: "10 min"";
-=======
-      {
-        title: "Account Settings",
-        description: "Manage your account preferences and settings",
-        type: "Tutorial",
-        readTime: "10 min"
->>>>>>> main
->>>>>>> main
       }
     ];
   }
-<<<<<<< HEAD
 ;];
 
 const quickLinks = [;
@@ -378,20 +203,8 @@ const faqs = [;
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period.""
   }
 ;];
-=======
-];
-<<<<<<< HEAD
 
 const popularArticles = [
-=======
-const quickLinks = [
-  { title: "API Documentation", href: "/docs/api", icon: FileText },
-  { title: "Video Tutorials", href: "/tutorials", icon: Video },
-  { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-];
-const faqs = [
->>>>>>> main
   {
     title: 'Getting Started with AI Services',
     views: 1250,
@@ -411,7 +224,6 @@ const faqs = [
     category: 'API Documentation'
   },
   {
-<<<<<<< HEAD
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }]
@@ -445,15 +257,6 @@ export default function HelpPage() {
     }))
   }
   
-=======
-    title: 'Security Best Practices',
-    views: 720,
-    rating: 4.9,
-    category: 'Security'
-  }
-];
-<<<<<<< HEAD
->>>>>>> main
 
 const supportChannels = [
   {
@@ -582,11 +385,9 @@ export default function HelpPage() {
                             </div>
                           </div>
                           <ArrowRight className="w-4 h-4 text-gray-400" />
-=======
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');',
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-<<<<<<< HEAD
 
   const toggleCategory = (categoryTitle: string) => {
 ;    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
@@ -636,11 +437,6 @@ export default function HelpPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
               {quickLinks.map((link, index) => (,
                 <motion.a}),
-=======
-  const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
-  };
->>>>>>> main
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -682,7 +478,6 @@ export default function HelpPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <motion.a
->>>>>>> main
                   key={index}
                   href={link.href}
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group""
@@ -694,7 +489,6 @@ export default function HelpPage() {
                   </h3>,
                 </motion.a>;
               ))}
-<<<<<<< HEAD
             </div>,
           </div>;
         </div>;
@@ -711,22 +505,6 @@ export default function HelpPage() {
             <div className="space-y-6">";
               {helpCategories.map((category, categoryIndex) => (,
                 <motion.div}),
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Help Categories */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Browse by Category
-            </h2>
-            <div className="space-y-6">
-              {helpCategories.map((category, categoryIndex) => (
-                <motion.div
->>>>>>> main
                   key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden""
                   initial={{ opacity: 0, y: 20 }}
@@ -735,7 +513,6 @@ export default function HelpPage() {
                 >,
                   <button;
                     onClick={() => toggleCategory(category.title)}
-<<<<<<< HEAD
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors""
                   >;
                     <div className="flex items-center gap-4">";
@@ -754,25 +531,6 @@ export default function HelpPage() {
                   <AnimatePresence>;
                     {expandedCategory === category.title && (;
                       <motion.div}),
-=======
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center gap-4">
-                      <category.icon className="w-6 h-6 text-blue-600" />
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        {category.title}
-                      </h3>
-                    </div>
-                    {expandedCategory === category.title ? (
-                      <ChevronDown className="w-5 h-5 text-gray-500" />
-                    ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-500" />
-                    )}
-                  </button>
-                  <AnimatePresence>
-                    {expandedCategory === category.title && (
-                      <motion.div
->>>>>>> main
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto, opacity: 1 }}',
                         exit={{ height: 0, opacity: 0 }}
@@ -786,27 +544,17 @@ export default function HelpPage() {
                                 key={articleIndex}
                                 className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group""
                                 whileHover={{ y: -2 }}
-<<<<<<< HEAD
                               >,
                                 <div className="flex items-start justify-between mb-2">";
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">";
                                     {article.type}
                                   </span>,
                                   <span className="text-xs text-gray-500">";
-=======
-                              >
-                                <div className="flex items-start justify-between mb-2">
-                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.type}
-                                  </span>
-                                  <span className="text-xs text-gray-500">
->>>>>>> main
                                     {article.readTime}
                                   </span>,
                                 </div>;
                                 <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">";
                                   {article.title}
-<<<<<<< HEAD
                                 </h4>,
                                 <p className="text-sm text-gray-600">";
                                   {article.description}
@@ -836,15 +584,6 @@ export default function HelpPage() {
             <div className="space-y-6">";
               {faqs.map((faq, index) => (,
                 <motion.div}),
-=======
-                                </h4>
-                                <p className="text-sm text-gray-600">
-                                  {article.description}
-                                </p>
-                              </motion.div>
-                            ))}
-                          </div>
->>>>>>> main
                         </div>
                       ))}
                     </div>
@@ -908,7 +647,6 @@ export default function HelpPage() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Support Channels */}
@@ -1023,26 +761,11 @@ export default function HelpPage() {
         </section>
       </div>
     </MainLayout>
-=======
-        </div>
-      </section>
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <motion.div
->>>>>>> main
                   key={index}
                   className="bg-gray-50 rounded-lg p-6""
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
                 >,
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">";
                     {faq.question}
@@ -1106,67 +829,5 @@ export default function HelpPage() {
         </div>;
       </section>;
     </div>;
-=======
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Contact Support */}
-      <section className="py-16 bg-blue-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Our support team is here to help you succeed
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/10 rounded-lg p-6">
-                <Mail className="w-8 h-8 text-white mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
-                <p className="text-blue-100 mb-4">Get help via email</p>
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="text-white hover:text-blue-200 font-medium"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <Phone className="w-8 h-8 text-white mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
-                <p className="text-blue-100 mb-4">Call us directly</p>
-                <a
-                  href="tel:+15551234567"
-                  className="text-white hover:text-blue-200 font-medium"
-                >
-                  +1 (555) 123-4567
-                </a>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
-                <p className="text-blue-100 mb-4">Chat with our team</p>
-                <button className="text-white hover:text-blue-200 font-medium">
-                  Start Chat
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
->>>>>>> main
->>>>>>> main
   );
 }

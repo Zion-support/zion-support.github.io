@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';';
 export default ComprehensiveNewServicesShowcase2025;';';
-=======
-import React, { useState } from 'react';
-<<<<<<< HEAD
 import { ;
   NEW_MICRO_SAAS_SERVICES_2025,;
   NEW_IT_SERVICES_2025,;
@@ -343,9 +338,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
 }
 ;
 export default ComprehensiveNewServicesShowcase2025;
-=======
-export default ComprehensiveNewServicesShowcase2025;
->>>>>>> main
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
@@ -365,102 +357,6 @@ export default function Page(props: any) {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms.Each service is designed to transform your business with innovative technology and proven ROI.</p>
           </motion.div>
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import { 
-  NEW_MICRO_SAAS_SERVICES_2025,
-  NEW_IT_SERVICES_2025,
-  NEW_INNOVATIVE_SERVICES_2025
-} from '../data/servicesData';
-import { 
-  Zap, 
-  Brain, 
-  Server, 
-  Mail, 
-  MessageCircle, 
-  Calendar, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Cpu,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Globe
-} from 'lucide-react';
-
-interface ServiceShowcaseProps {
-  className?: string;
-}
-
-export function ComprehensiveNewServicesShowcase2025({ className = '' }: ServiceShowcaseProps) {
-  const [activeTab, setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
-  const [selectedService, setSelectedService] = useState<any>(null);
-
-  const tabs = [
-    { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: NEW_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'it-services', name: 'IT Services', icon: Server, count: NEW_IT_SERVICES_2025.length },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: NEW_INNOVATIVE_SERVICES_2025.length }
-  ];
-
-  const getCurrentServices = () => {
-    switch (activeTab) {
-      case 'micro-saas':
-        return NEW_MICRO_SAAS_SERVICES_2025;
-      case 'it-services':
-        return NEW_IT_SERVICES_2025;
-      case 'ai-services':
-        return NEW_INNOVATIVE_SERVICES_2025;
-      default:
-        return [];
-    }
-  };
-
-  const formatPrice = (price: number, model: string) => {
-    if (model === 'monthly') {
-      return `$${price.toLocaleString()}/month`;
-    } else if (model === 'hourly') {
-      return `$${price}/hour`;
-    } else if (model === 'project') {
-      return `$${price.toLocaleString()}`;
-    }
-    return `$${price.toLocaleString()}`;
-  };
-
-  const getInnovationBadge = (level: string) => {
-    const colors = {
-      'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
-      'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',
-      'Professional': 'bg-green-100 text-green-800 border-green-200'
-    };
-    
-    return (
-      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
-        {level}
-      </span>
-    );
-  };
-
-  return (
-    <div className={`bg-gray-50 py-16 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Revolutionary Services 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive suite of innovative Micro SAAS, IT Infrastructure, and AI services 
-            designed to transform your business and drive unprecedented growth.
-          </p>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         </div>
 
         {/* Search and Filter Section */}"
@@ -476,10 +372,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
               />
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
@@ -495,24 +387,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                 </button>) ) }
-<<<<<<< HEAD
-=======
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="font-semibold">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MailIcon className="w-5 h-5" />
-                <span className="font-semibold">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="font-semibold">Middletown, DE</span>
-              </div>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
             </div>
 
             {/* Sort */}
@@ -551,21 +425,12 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     <p className="text-sm text-gray-400">{service.tagline}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 {service.featured && ("
                   <div className="flex items-center space-x-1 text-yellow-400">"
                     <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 
               {/* Description */}"
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -598,22 +463,16 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                       <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"   />                      <span>{feature}</span>
                     </div>
                   ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
                         </div>
   );
 }
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
                     </div>) }
->>>>>>> main
                 </div>
               </div>
 
@@ -720,10 +579,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <p className="text-cyan-100">364 E Main St STE 1008</p>"              <p className="text-cyan-200 text-sm">Middletown DE 19709</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 "
           <div className="text-center mt-8">
             <a"
@@ -802,24 +657,11 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
 export default ComprehensiveNewServicesShowcase2025;'"`
 
 </motion>
-<<<<<<< HEAD
 </motion>';
 </motion>;';;';
-=======
-        )}
-      </div>
-    </div>
-  );
-}
-
-export default ComprehensiveNewServicesShowcase2025;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
->>>>>>> main
->>>>>>> main

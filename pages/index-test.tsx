@@ -1,1 +1,52 @@
+import Head from 'next/head';
 import Layout from '../components/Layout';
+
+export default function IndexTest() {
+  return (
+    <Layout>
+      <Head>
+        <title>Index Test - Zion Tech Group</title>
+        <meta name="description" content="Test page for index functionality." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Index Test
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                This is a test page for index functionality.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Results</h2>
+                <div className="space-y-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-green-800 mb-2">✓ Page Load Test</h3>
+                    <p className="text-green-700">Page loads successfully without errors.</p>
+                  </div>
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-green-800 mb-2">✓ Layout Test</h3>
+                    <p className="text-green-700">Layout component renders correctly.</p>
+                  </div>
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-green-800 mb-2">✓ Styling Test</h3>
+                    <p className="text-green-700">CSS styles are applied properly.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
+}

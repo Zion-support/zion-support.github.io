@@ -1,13 +1,3 @@
-<<<<<<< HEAD:src/utils/getStripe.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { loadStripe,Stripe } from '@stripe/stripe-js'; let "stripePromise": "Promise<Stripe | null> export function getStripe(): Promise<Stripe | null> { if (!stripePromise) { const key = import.meta.env.PROD ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string) : (import.meta.env.VITE_STRIPE_TEST_KEY as string); stripePromise = loadStripe(key",{ "advancedFraudSignals": 'false' })} return stripePromise} export default getStripe;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 import { loadStripe, Stripe } from '@stripe/stripe-js';
 let "stripePromise": Promise<Stripe | null>;
 export function getStripe(): Promise<Stripe | null> {
@@ -15,7 +5,6 @@ export function getStripe(): Promise<Stripe | null> {
     const key = import.meta.env.PROD
       ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string)
       : (import.meta.env.VITE_STRIPE_TEST_KEY as string);
-<<<<<<< HEAD
     stripePromise = loadStripe(key, { advancedFraudSignals: false }
     );
 
@@ -24,20 +13,7 @@ export function getStripe(): Promise<Stripe | null> {
 }
 
 export default getStripe;
-=======
-    stripePromise = loadStripe(key, { "advancedFraudSignals": false })}
-  return stripePromise}
-<<<<<<< HEAD
 ';
 export default getStripe;;';;';
-=======
-import { loadStripe,Stripe } from '@stripe/stripe-js'; let stripePromise: Promise<Stripe | null> export function getStripe(): Promise<Stripe | null> { if (!stripePromise) { const key = import.meta.env.PROD ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string) : (import.meta.env.VITE_STRIPE_TEST_KEY as string); stripePromise = loadStripe(key,{ advancedFraudSignals: 'false' })} return stripePromise} export default getStripe;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export default getStripe;';';
 import { loadStripe,Stripe } from '@stripe/stripe-js'; let stripePromise: Promise<Stripe | null>; export function getStripe(): Promise<Stripe | null> { if (!stripePromise) { const key = import.meta.env.PROD ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string) : (import.meta.env.VITE_STRIPE_TEST_KEY as string); stripePromise = loadStripe(key,{ advancedFraudSignals: false })} return stripePromise} export default getStripe;';';
->>>>>>> main
->>>>>>> main:src_backup_temp/utils/getStripe.ts
->>>>>>> main
->>>>>>> main
->>>>>>> main

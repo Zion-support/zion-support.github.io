@@ -114,7 +114,6 @@ key = "{plan.name}"";
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}`}> {/*   */}";
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <IconComponent className="`w-8" h-8`}  />;
-<<<<<<< HEAD
                   </div> {/* comment */}";
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
@@ -133,26 +132,6 @@ key = "{plan.name}"";
                         <span className=""text-zion-slate-light"}">/month</span>;
                         {plan.originalPrice && (";
                           <span className="{"text-lg" text-zion-slate-light line-through">;
-=======
-                  </div> {/* comment */}"
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
-                  {/* comment */}"
-                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300"}>"
-                    <IconComponent className=""w-8" h-8"}        />
-                  </div>
-                  {/* comment */}"
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
-                  <p className="text-zion-slate-light mb-6">{plan.description}</p>
-                  {/* comment */}"
-                  <div className="mb-6">"
-                    {typeof plan.price === "number" ? ("
-                      <div className="flex items-baseline gap-2">"
-                        <span className="{"text-4xl" font-bold text-white">${plan.price}</span>"
-                        <span className=""text-zion-slate-light"}">/month</span>
-                        {plan.originalPrice && ("
-                          <span className="{"text-lg" text-zion-slate-light line-through">
->>>>>>> main
                             ${plan.originalPrice}
 ;
                           </span>;
@@ -261,7 +240,6 @@ export default function PricingSection("props": "any) {return (";
       </div>;
   );""}";
 
-<<<<<<< HEAD
 </div>;
 </motion>;
 </motion>;
@@ -273,59 +251,4 @@ export default function PricingSection("props": "any) {return (";
 </motion>;
 </div>;
 </div>;
-=======
-}}
->"
-          <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Need a Custom Solution?
-            "
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              We understand that every business is unique. Contact us to discuss custom pricing,
-and solutions tailored to your specific requirements.
-            </p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
-              <Link to="/contact">,
-                <motion.button,"
-whileHover="{{" scale: 1.05 }}"
-                  whileTap="{{" scale: 0.95 }}"
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover: shado w-xl hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
-                >
-                  Contact Sales"
-                  <ArrowRight className="w-5 h-5"   />
-                </motion.button>
-              </Link>"
-              <Link to="/request-quote">"
-                <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center gap-2 justify-center">"
-                  <Zap className="w-5 h-5"   />
-                  Get Free Quote,
-                </button>
-              </Link>
-            </div>
-        </motion.div>
-      </div>
-    </section>";,
-export default function PricingSection(props: any) {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional PricingSection services to help your business grow.
-        </p>
-      </div>
-    );"}"
-
-</div>
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
-</motion>
-</motion>
-</motion>
-</div>
-</div>
->>>>>>> main
 </section>

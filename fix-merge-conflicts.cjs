@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 function fixMergeConflicts(filePath) {
@@ -22,7 +21,6 @@ function findAndFixFiles(dir) {
     if (stat.isDirectory() && !file.includes("node_modules") && !file.includes(".git")) {
   findAndFixFiles(filePath)} else if (file.match(/\.(tsx?|jsx?)$/)) {
   const content = fs.readFileSync(filePath, "utf8");
-      if (content.includes("") || content.includes("") || content.includes(">>>>>>>")) {
   fixMergeConflicts(filePath)}
     }
   }
@@ -30,15 +28,3 @@ function findAndFixFiles(dir) {
 ;
 
 findAndFixFiles(".");
-=======
-<<<<<<< HEAD
-const fs = require("fs");"const path = require("path");function fixMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove merge conflict markers and keep the newer version (after =======)''"
-=======
-const fs = require('fs');
-const path = require('path');
-function fixMergeConflicts(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Remove merge conflict markers and keep the newer version (after );
->>>>>>> main
->>>>>>> main

@@ -1,3 +1,5 @@
+import { render, screen } from '@testing-library/react';
+import { AccessibilityProvider } from '../components/AccessibilityProvider';
 
 const TestComponent = () => (
   <div>
@@ -6,15 +8,15 @@ const TestComponent = () => (
   </div>
 );
 
-describe(\'Accessibility Tests\', () => {
-  test(\'renders with accessibility provider\', () => {
+describe('Accessibility Tests', () => {
+  test('renders with accessibility provider', () => {
     render(
       <AccessibilityProvider>
         <TestComponent />
       </AccessibilityProvider>
     );
     
-    expect(screen.getByRole(\'heading\')).toBeInTheDocument();
-    expect(screen.getByRole(\'button\')).toBeInTheDocument();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(screen.getByRole('button')).toBeInTheDocument();
   });
 });

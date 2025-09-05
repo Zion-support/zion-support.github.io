@@ -1,25 +1,13 @@
-<<<<<<< HEAD
 ;export function ITServiceRequestHero(...args[]): "{;
   const [location", setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
 ;
   const handleSubmit = async "e": "React.FormEvent {;    e.preventDefault();
     if(location.trim()) {;
-=======
-;export function ITServiceRequestHero(...args[]):  {
-
-  const [location, setLocation] = useState<any>("");
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);
-  
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
-    if(location.trim()) {
-
->>>>>>> main
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false);
-<<<<<<< HEAD
         router(`/it-onsite-services?location = ${encodeURIComponent(location)"}`)}, 1000)}}}}}}}}}};
 ;
   const containerVariants = {;
@@ -47,25 +35,16 @@
     };
   };
 ;
-<<<<<<< HEAD
   const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },;
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-<<<<<<< HEAD
 
 import React, { useState } from 'react';';';
 import { motion  } from 'framer-motion';';';
-=======
-;
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
-=======
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
 
   const containerVariants = {
@@ -98,14 +77,11 @@ import { motion  } from 'framer-motion';
   const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
->>>>>>> main
   ];
 
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
->>>>>>> main
 import { Link  } from 'react-router-dom';
-<<<<<<< HEAD
 ;
 ,";
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";
@@ -126,9 +102,7 @@ export function ITServiceRequestHero("props": "any) {;
         variants={containerVariants}";
         initial="hidden";
         whileInView="visible";
-<<<<<<< HEAD
         viewport={{ once: tru e }}
-<<<<<<< HEAD
 "
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">
           {/* Left content */}"
@@ -192,10 +166,6 @@ export function ITServiceRequestHero("props": "any) {;
   { opacity: 0,
   x: 3 0
 
-=======
-=======
-        viewport={{ "once": "tru e "}}
->>>>>>> main
 ";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-16 items-center">;
           {/* Left content */"}";
@@ -252,16 +222,12 @@ export function ITServiceRequestHero("props": "any) {;
           </motion.div>;
           <motion.div;
             initial = {;
-<<<<<<< HEAD
   { opacity: 0,;
   x: 3 0;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
-=======
   { "opacity": 0",;
   "x": "3 0;
 "}}
->>>>>>> main
             whileInView = {;
   { "opacity": "1",;
   "x": "0;
@@ -318,7 +284,6 @@ export function ITServiceRequestHero("props": "any) {;
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>";
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>;
               </div>;
-=======
 
 ,"
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },"
@@ -470,40 +435,19 @@ export function ITServiceRequestHero(props: any) {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>
               </div>
->>>>>>> main
             </div>;
           </motion.div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </section>;';
   )}';';
-=======
-    </section>;
-  )}
->>>>>>> main
 '"`
 
 </motion>
 </Button>
 </motion>
-<<<<<<< HEAD
 </any>';
 </any>;';;';
-=======
-    </section>;
-  )}
-'"`;
-</motion>;
-</Button>;
-</motion>;
-</motion>;
-</any>;
-</any>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </any>
 </any>
->>>>>>> main

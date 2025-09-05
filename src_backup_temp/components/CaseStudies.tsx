@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'';';
 import { motion   } from 'framer-motion';';';
 import { CheckCircle, TrendingUp, Users, DollarSign   } from 'lucide-react';
@@ -52,9 +50,6 @@ export default function CaseStudies(props: any) {
   return (
   return (<section className="py-24 sm: p y-32 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-=======
-=======
->>>>>>> main
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react';
@@ -106,18 +101,14 @@ const "caseStudies": "CaseStud y[] = [{ "id": '1'",;
 export default function CaseStudies("props": "any) {;
   return (;
   return (;
-<<<<<<< HEAD
   return (<section className="py-24 sm: p y-32 bg-gradient-to-br from-slate-50 to-blue-50">;
       <div className="mx-auto max-w-7xl px-6 lg: p x-8">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         {/* Header */}
         <div className="mx-auto max-w-2xl lg: tex t-center mb-16">;
-=======
   return (<section className="py-24 "sm": p y-32 bg-gradient-to-br from-slate-50 to-blue-50">;
       <div className="mx-auto max-w-7xl px-6 "lg": p x-8">;
         {/* Header */"}
         <div className="mx-auto max-w-2xl "lg": "tex t-center mb-16">;
->>>>>>> main
           <motion.h2;
             className="text-base font-semibold leading-7 text-blue-600";
             initial={{ "opacity": 0", "y": "2 0 "}}
@@ -157,7 +148,6 @@ export default function CaseStudies("props": "any) {;
               transition={{ "duration": "0.6", "delay": "inde x * 0.1 "}}
             >;
               <div className="p-8">;
-=======
 import React from 'react'
 import { motion  } from 'framer-motion'
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react'
@@ -253,7 +243,6 @@ export default function CaseStudies(props: any) {
               transition={{ duration: 0.6, delay: inde x * 0.1 }}
             >
               <div className="p-8">
->>>>>>> main
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -266,7 +255,6 @@ export default function CaseStudies(props: any) {
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
                         {study.industry}
-<<<<<<< HEAD
                       </span>;
                       <span>"Duration": "{study.duration"}</span>;
                     </div>;
@@ -278,20 +266,6 @@ export default function CaseStudies(props: any) {
                     <div key={idx} className="text-center">;
                       <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-3">;
                         <div className="text-blue-600">;
-=======
-                      </span>
-                      <span>Duration: {study.duration}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Results */}
-                <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-6">
-                  {study.results.map((result, idx) => (
-                    <div key={idx} className="text-center">
-                      <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-3">
-                        <div className="text-blue-600">
->>>>>>> main
                           {result.icon}
                         </div>
                       </div>
@@ -325,7 +299,6 @@ export default function CaseStudies(props: any) {
         </div>
 
         {/* CTA */}
-<<<<<<< HEAD
         <motion.div;
           className="text-center mt-12";
           initial={{ "opacity": "0", "y": "2 0 "}}
@@ -346,27 +319,17 @@ export default function CaseStudies(props: any) {
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 </motion>
 </motion>';
 </motion>;';;';
-=======
-=======
-"}
->>>>>>> main
 ;
 </motion>;
 </motion>;
 </motion>;
 </motion>;
 </motion>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
         <motion.div 
           className="text-center mt-12"
           initial={{ opacity: 0, y: 2 0 }}
@@ -394,5 +357,3 @@ export default function CaseStudies(props: any) {
 </motion>
 </motion>
 </motion>
->>>>>>> main
->>>>>>> main

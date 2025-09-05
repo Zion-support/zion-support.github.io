@@ -4,17 +4,10 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge & PR Resolver');
-console.log('====================================');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD/g, '')
-    .replace(/=======/g, '')
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
 
 // Function to fix common syntax errors
@@ -80,7 +73,6 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
       modified = true;

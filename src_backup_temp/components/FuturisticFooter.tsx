@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -213,101 +212,10 @@ export { FuturisticFooter };
 </motion>;
 </motion>;
 </motion>
-=======
-import React from 'react';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
-import {}
-  // TODO: Implement;
-};
-  Phone, 
-  Mail, 
-  MapPin, 
-  ArrowRight, 
-  CheckCircle, 
-  Shield, 
-  Award,
-  Zap;'
-} from 'lucide-react';'
-const FuturisticFooter: React.FC = () => {}
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = []
-    {'}
-      title: 'Services','
-      links: [']
-        { name: 'AI Services', href: '/ai-services' },''
-        { name: 'IT Services', href: '/it-services' },''
-        { name: 'Micro SaaS', href: '/micro-saas' },''
-        { name: 'All Services', href: '/services' }'];
-      ];
-    },
-    {'}
-      title: 'Solutions','
-      links: [']
-        { name: 'Enterprise Solutions', href: '/solutions' },''
-        { name: 'Industry Solutions', href: '/industries' },''
-        { name: 'Custom Development', href: '/custom-development' },''
-        { name: 'Consulting', href: '/consulting' }'];
-      ];
-    },
-    {'}
-      title: 'Company','
-      links: [']
-        { name: 'About Us', href: '/about' },''
-        { name: 'Our Team', href: '/team' },''
-        { name: 'Careers', href: '/careers' },''
-        { name: 'Partners', href: '/partners' }'];
-      ];
-    },
-    {'}
-      title: 'Resources','
-      links: [']
-        { name: 'Blog', href: '/blog' },''
-        { name: 'Case Studies', href: '/case-studies' },''
-        { name: 'White Papers', href: '/white-papers' },''
-        { name: 'Documentation', href: '/docs' }'];
-      ];
-    },
-    {'}
-      title: 'Support','
-      links: [']
-        { name: 'Help Center', href: '/help' },''
-        { name: 'Contact Us', href: '/contact' },''
-        { name: 'FAQ', href: '/faq' },''
-        { name: 'Support Center', href: '/support' }'];
-      ];
-    },
-    {'}
-      title: 'Legal','
-      links: [']
-        { name: 'Privacy Policy', href: '/privacy' },''
-        { name: 'Terms of Service', href: '/terms' },''
-        { name: 'Cookie Policy', href: '/cookies' },''
-        { name: 'Security', href: '/security' }'];
-      ];
-    };
-  ];
-
-  const socialLinks = [']
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },''
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },''
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
-  ];
-
-<<<<<<< HEAD
   const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' }
     );
   };
-=======
-  const stats = [']
-    { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
-    { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
-    { value: '24/7', label: 'Support Available', icon: Award },''
-    { value: '50+', label: 'Expert Team', icon: Zap }'];
-  ];
->>>>>>> main
 
   return (')
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
@@ -348,7 +256,6 @@ const FuturisticFooter: React.FC = () => {}
                     <stat.icon className="w-6 h-6 text-cyan-400" />"
 </stat>
                   </div>
-<<<<<<< HEAD
                   <div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
                       ZION TECH GROUP
@@ -361,14 +268,6 @@ const FuturisticFooter: React.FC = () => {}
                   Leading the future of technology with cutting-edge AI services, innovative solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
-=======
-                </div>"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""
-                <div className="text-slate-400 text-sm">{stat.label}</div>"
-              </motion.div>);
-            ))};
-          </motion.div>
->>>>>>> main
 
           {/* Main Footer Content */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">"
@@ -481,4 +380,3 @@ const FuturisticFooter: React.FC = () => {}
         </div>
       </div>
     </footer>"
->>>>>>> main

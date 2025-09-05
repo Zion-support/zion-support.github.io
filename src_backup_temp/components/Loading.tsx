@@ -24,7 +24,6 @@ export default function Loading("props": "any) {';';';
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
       );
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -35,23 +34,10 @@ export default function Loading("props": "any) {';';';
   if (fullScreen) {;
     return (;
     <div className="min-h-screen bg-white">;
-=======
-    </div>
-    );
-}
-    </div>
-    );
-}
-    );
-  if (fullScreen) {
-    return (
-        <div className="min-h-screen bg-white">
->>>>>>> main
         {content}
       </div>;
     );
   }
-<<<<<<< HEAD
   return (;
     <div className="min-h-screen bg-white">;
       {content}
@@ -73,29 +59,6 @@ export function SkeletonText("props": "any) {;
     <div className="min-h-screen bg-white">;
       {Array.from({ "length": line s';
   "}).map((_, i) => (';';
-=======
-  return (
-        <div className="min-h-screen bg-white">
-      {content}
-    </div>
-    );
-}
-// Skeleton loading components
-export function SkeletonCard(props: any) {
-  return (
-        <div className="min-h-screen bg-white">
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
-      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>
-      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>
-    </div>
-    );
-}
-export function SkeletonText(props: any) {
-  return (
-        <div className="min-h-screen bg-white">
-      {Array.from({ length: line s';
-  }).map((_, i) => (';';
->>>>>>> main
         <div key={i}';';';
           className={`h-3 bg-gray-200 rounded ${',';';
     ';';';
@@ -104,13 +67,8 @@ export function SkeletonText(props: any) {
         ></di></div>;
       ));
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
-    </div>
-    );
->>>>>>> main
 }';
     </div>';';
   );';';';

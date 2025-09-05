@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -18,7 +17,6 @@ class GitAutomation {
     fs.appendFileSync(this.logFile, logMessage);
   }
 
-<<<<<<< HEAD
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] [${level}] ${message};`;
@@ -29,9 +27,6 @@ class GitAutomation {
 
   async runCommand(command, description, timeout = 300000) {
     this.log(`🔧 ${description}`);
-=======
-  async runCommand(command, options = {}) {
->>>>>>> main
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
@@ -218,7 +213,6 @@ if (require.main === module) {
 }
 
 module.exports = GitAutomation;
-=======
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
@@ -248,4 +242,3 @@ const path = require('path')
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
       this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> main

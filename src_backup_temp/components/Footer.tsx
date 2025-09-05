@@ -1,295 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD';
-<<<<<<< HEAD';';
-=======
-import {;
-  Mail;
-  Phone;
-  MapPin;
-  Linkedin;
-  Twitter;
-  Github;
-  ArrowUp;
-  Shield;
-  Zap;
-  Brain;
-  Cloud;
-  Building;
-  Users;
-  FileText;
-  TrendingUp;
-  Briefcase;
-  Newspaper;
-  Target;
-  Heart;
-  DollarSign;
-  ExternalLink;
-} from 'lucide-react';
-;
-export function Footer() {;
-  const currentYear = new Date().getFullYear();
-;
-  const scrollToTop = () => {;
-    window.scrollTo({ "top": "0", "behavior": 'smooth' });
-  };
-;
-  return (;
-    <footer className="bg-gray-900 text-white relative overflow-hidden">;
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">;
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>;
-      </div>;
-      ;
-      <div className="relative z-10">;
-        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-16">;
-          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-5 gap-8 "lg":gap-12">;
-            ;
-            {/* Company Info */"}
-            <div className=""lg": "col-span-2">;
-              <Link to="/" className="flex items-center space-x-3 mb-6 group">;
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300">;
-                  <Zap className="w-7 h-7 text-white" />;
-                </div>;
-                <h2 className="text-2xl font-bold text-white group-"hover":text-blue-400 transition-colors">;
-                  Zion Tech Group;
-                </h2>;
-              </Link>;
-              ;
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">;
-                Pioneering the future of technology with innovative AI", IT infrastructure, and cutting-edge Micro SaaS solutions that transform businesses worldwide.;
-              </p>;
-              ;
-              {/* Contact Information */}
-              <div className="space-y-4">;
-                <div className="flex items-center space-x-3 text-gray-300">;
-                  <Phone className="w-5 h-5 text-cyan-400" />;
-                  <a href=""tel": "+13024640950" className=""hover":text-cyan-400 transition-colors">;
-                    +1 302 464 0950;
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-gray-300">;
-                  <Mail className="w-5 h-5 text-cyan-400" />;
-                  <a href=""mailto":kleber@ziontechgroup.com" className=""hover":text-cyan-400 transition-colors">;
-                    kleber@ziontechgroup.com;
-                  </a>;
-                </div>;
-                <div className="flex items-start space-x-3 text-gray-300">;
-                  <MapPin className="w-5 h-5 text-cyan-400 mt-1" />;
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>;
-                </div>;
-              </div>;
-            </div>;
-
-            {/* Services */"}
-            <div>;
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
-                <Cloud className="w-5 h-5 mr-2 text-cyan-400" />;
-                Services;
-              </h3>;
-              <ul className="space-y-3">;
-                <li>;
-                  <Link to="/services" className="text-gray-300 "hover": "text-cyan-400 transition-colors flex items-center group">;
-                    <span>All Services</span>;
-                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-"hover":opacity-100 transition-opacity" />;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/new-services-2025" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <span>New Services 2025</span>;
-                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-"hover":opacity-100 transition-opacity" />;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/ai-services" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Brain className="w-4 h-4 mr-2" />;
-                    <span>AI Services</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/it-services" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Building className="w-4 h-4 mr-2" />;
-                    <span>IT Services</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/micro-saas" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Zap className="w-4 h-4 mr-2" />;
-                    <span>Micro SaaS</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/solutions" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Target className="w-4 h-4 mr-2" />;
-                    <span>Solutions</span>;
-                  </Link>;
-                </li>;
-              </ul>;
-            </div>;
-
-            {/* Company */"}
-            <div>;
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
-                <Users className="w-5 h-5 mr-2 text-cyan-400" />;
-                Company;
-              </h3>;
-              <ul className="space-y-3">;
-                <li>;
-                  <Link to="/about" className="text-gray-300 "hover": "text-cyan-400 transition-colors">;
-                    About Us;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/careers" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Briefcase className="w-4 h-4 mr-2" />;
-                    <span>Careers</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/news" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <Newspaper className="w-4 h-4 mr-2" />;
-                    <span>News</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/contact" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
-                    Contact;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/help" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
-                    Help Center;
-                  </Link>;
-                </li>;
-              </ul>;
-            </div>;
-
-            {/* Resources */"}
-            <div>;
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
-                <FileText className="w-5 h-5 mr-2 text-cyan-400" />;
-                Resources;
-              </h3>;
-              <ul className="space-y-3">;
-                <li>;
-                  <Link to="/pricing" className="text-gray-300 "hover": "text-cyan-400 transition-colors flex items-center group">;
-                    <DollarSign className="w-4 h-4 mr-2" />;
-                    <span>Pricing</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/comprehensive-pricing-guide-2025" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
-                    <TrendingUp className="w-4 h-4 mr-2" />;
-                    <span>Pricing Guide 2025</span>;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/white-papers" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
-                    White Papers;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/faq" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
-                    FAQ;
-                  </Link>;
-                </li>;
-                <li>;
-                  <Link to="/request-quote" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
-                    Request Quote;
-                  </Link>;
-                </li>;
-              </ul>;
-            </div>;
-          </div>;
-
-          {/* Social Media & Additional Links */"}
-          <div className="border-t border-gray-800 mt-12 pt-8">;
-            <div className="flex flex-col "lg": "flex-row justify-between items-center space-y-6 "lg":space-y-0">;
-              ;
-              {/* Social Media */"}
-              <div className="flex items-center space-x-6">;
-                <span className="text-gray-400 text-sm">Follow "us": "</span>;
-                <div className="flex space-x-4">;
-                  <a;
-                    href="#";
-                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
-                    aria-label="LinkedIn";
-                  >;
-                    <Linkedin className="w-5 h-5" />;
-                  </a>;
-                  <a;
-                    href="#";
-                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
-                    aria-label="Twitter";
-                  >;
-                    <Twitter className="w-5 h-5" />;
-                  </a>;
-                  <a;
-                    href="#";
-                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
-                    aria-label="GitHub";
-                  >;
-                    <Github className="w-5 h-5" />;
-                  </a>;
-                </div>;
-              </div>;
-
-              {/* Legal Links */"}
-              <div className="flex flex-wrap items-center justify-center space-x-6 text-sm">;
-                <Link to="/privacy" className="text-gray-400 "hover": "text-cyan-400 transition-colors flex items-center">;
-                  <Shield className="w-4 h-4 mr-1" />;
-                  Privacy Policy;
-                </Link>;
-                <Link to="/terms" className="text-gray-400 "hover":text-cyan-400 transition-colors">;
-                  Terms of Service;
-                </Link>;
-                <Link to="/cookies" className="text-gray-400 "hover":text-cyan-400 transition-colors">;
-                  Cookie Policy;
-                </Link>;
-              </div>;
-
-              {/* Back to Top */"}
-              <button;
-                onClick={scrollToTop}
-                className="flex items-center space-x-2 text-gray-400 "hover": "text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
-                aria-label="Back to top";
-              >;
-                <ArrowUp className="w-4 h-4" />;
-                <span className="text-sm">Back to Top</span>;
-              </button>;
-            </div>;
-          </div>;
-
-          {/* Copyright */"}
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">;
-            <div className="flex flex-col "md": "flex-row justify-between items-center space-y-4 "md":space-y-0">;
-              <p className="text-gray-400 text-sm flex items-center">;
-                © {currentYear"} Zion Tech Group. All rights reserved.;
-                <Heart className="w-4 h-4 mx-2 text-red-500" />;
-                Made with passion for innovation.;
-              </p>;
-              <div className="flex items-center space-x-4 text-sm text-gray-400">;
-                <span>Powered by cutting-edge technology</span>;
-                <div className="flex space-x-2">;
-                  <Brain className="w-4 h-4 text-cyan-400" />;
-                  <Cloud className="w-4 h-4 text-blue-400" />;
-                  <Shield className="w-4 h-4 text-green-400" />;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-=======
-import Link from 'next/link';
->>>>>>> main
 import { motion } from 'framer-motion';
 import { 
   Phone, 
@@ -299,20 +9,12 @@ import {
   Twitter, 
   Linkedin, 
   Instagram, 
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
   Github, 
   Mail, 
   Phone, 
   MapPin, 
   ArrowUp,
   Globe,
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
->>>>>>> main:src_backup_temp/components/Footer.tsx
 import { 
   Mail, 
   Phone, 
@@ -321,10 +23,6 @@ import {
   Twitter, 
   Github, 
   ArrowUp,
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
->>>>>>> main:src_backup_temp/components/Footer.tsx
   Shield,
   Zap,
   Brain,
@@ -332,9 +30,6 @@ import {
   Building,
   Users,
   FileText,
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
   Video,
   TestTube,
   TrendingUp,
@@ -345,22 +40,12 @@ import {
   Rocket,
   Heart,
   DollarSign,
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-=======
->>>>>>> main:src_backup_temp/components/Footer.tsx
   TrendingUp,
   Briefcase,
   Newspaper,
   Target,
   Heart,
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
->>>>>>> main:src_backup_temp/components/Footer.tsx
   DollarSign
-=======
 import { Zap, Phone, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
@@ -447,13 +132,11 @@ export function Footer() {
     </footer>
   );
 }
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 import {
   Twitter,
   Linkedin,
   Facebook,
   Instagram,
->>>>>>> merge-all-prs-20250904-105408
   Github,
   Mail,
   Phone,
@@ -462,30 +145,18 @@ import {
   Zap,
   Brain,
   Shield,
-<<<<<<< HEAD
   Code,
   Building2,
   FileText,
-=======
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
->>>>>>> merge-all-prs-20250904-105408
   HelpCircle,
   Activity,
   Cpu,
   GraduationCap,
   BarChart3,
-<<<<<<< HEAD
   ArrowUp,
   ExternalLink,
   Clock,
   Award,
-=======
-<<<<<<< HEAD
   Sparkles,
   Award,
   ArrowRight,
@@ -494,10 +165,6 @@ import {
   Eye,
   Atom,
   Network,
-=======
-  ArrowUp,
-  Heart,
->>>>>>> merge-all-prs-20250904-105408
   Star,
   CheckCircle,
   Award,
@@ -519,40 +186,24 @@ import {
   Eye,
   Sparkles,
   Atom,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
->>>>>>> merge-all-prs-20250904-105408
   Leaf,
   Gamepad2,
   Coins,
   Satellite,
   MessageCircle,
-<<<<<<< HEAD
   Search,
   BarChart,
   Users2,
   Settings,
-<<<<<<< HEAD
-<<<<<<< HEAD
   Palette,';
   ChevronDown';';
-=======
-  Palette,
-  ChevronDown
-<<<<<<< HEAD:src/components/Footer.tsx
->>>>>>> origin/main
 } from 'lucide-react';
 
 export function Footer() {
-=======
->>>>>>> main
 } from 'lucide-react';
 
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-=======
-<<<<<<< HEAD
   Server,
   ShoppingCart,
   Smartphone,
@@ -698,26 +349,12 @@ const socialLinks = [
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
   const [showScrollTop, setShowScrollTop] = React.useState<any>(false);
-=======
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  ChevronDown,
-} from 'lucide-react';
-
-export default function Footer(props: any) {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
->>>>>>> merge-all-prs-20250904-105408
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     const handleScroll = (props: any) => {
-<<<<<<< HEAD
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
@@ -726,10 +363,7 @@ export default function Footer(props: any) {
           scrollToTopButton.classList.add('hidden');
         }
       }
-=======
-<<<<<<< HEAD
       setShowScrollTop(window.scrollY > 400);
->>>>>>> merge-all-prs-20250904-105408
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -750,7 +384,6 @@ export default function Footer(props: any) {
     );
   };
 
-<<<<<<< HEAD
   // Scroll to top function
   const scrollToTop = (props: any) => {
     window.scrollTo({
@@ -823,17 +456,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
   Instagram,
   Twitter,
   Facebook,
-=======
-  Facebook, 
-  Instagram,
->>>>>>> origin/merge-pr-11190
-=======
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx
   Youtube,
   ArrowRight,
   Shield,
-<<<<<<< HEAD
   Cloud,
   Zap,
   Users,
@@ -841,44 +466,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
   Settings,
   FileText,
   HelpCircle,
-=======
->>>>>>> main
   Award,
   Users,
-<<<<<<< HEAD
   Briefcase,
   Network,';
   Newspaper';';
 } from 'lucide-react';';
-=======';';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
->>>>>>> origin/merge-pr-11195
-=======
   Palette,
   ChevronDown
->>>>>>> origin/main
-=======
   DollarSign,
   ExternalLink
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 } from 'lucide-react';
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
   Clock
 } from 'lucide-react';
->>>>>>> main
 
 const Footer = () => {
->>>>>>> main:src_backup_temp/components/Footer.tsx
   const currentYear = new Date().getFullYear();
 
   };
 
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const footerSections = [';
     {';';
       title: 'Company',
@@ -965,14 +571,6 @@ const Footer = () => {
         { name: 'Research', href: '/research-development' }
       ]
     }
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'YouTube', href: '#', icon: Youtube },
->>>>>>> main
   ];
 
   const stats = [
@@ -1031,9 +629,6 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company
             <ul className="space-y-2">
@@ -1055,7 +650,6 @@ const Footer = () => {
                 <a href="tel:+13024640950" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   +1 302 464 0950
                 </a>
->>>>>>> origin/merge-pr-11141
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -1070,7 +664,6 @@ const Footer = () => {
               <div>
                 <p className="text-white font-medium">Location</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA</p>
-=======
         {/* Contact & Social Section */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1115,7 +708,6 @@ const Footer = () => {
                     </a>
                   );
                 })}
->>>>>>> origin/merge-pr-11190
               </div>
             </div>
           </div>
@@ -1131,9 +723,7 @@ const Footer = () => {
               <li><Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Support</Link></li>
               <li><Link href="/help" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Help Center</Link></li>
             </ul>
-=======
   // Scroll to top
-=======
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
@@ -1163,7 +753,6 @@ const Footer = () => {
   };
 
   // Scroll to top function
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
   const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
@@ -1172,7 +761,6 @@ const Footer = () => {
     );
   };
 
-<<<<<<< HEAD
   // Handle link click
   const handleLinkClick = (props: any) => {
     if (link.external) {
@@ -1265,13 +853,8 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
-<<<<<<< HEAD
       <div className="absolute inset-0 opacity-5">';
         <div className="absolute inset-0" style="{{{';';
-=======
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style="{{{
->>>>>>> main
           backgroundImage: `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}"} />
       </div>
 
@@ -1294,11 +877,7 @@ const Footer = () => {
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
-<<<<<<< HEAD
                   </h3>
-=======
-                  
->>>>>>> main
                 </div>
                 
                 <p className="text-slate-300 text-lg leading-relaxed mb-6">
@@ -1421,16 +1000,11 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col space-y-4"
             >
-<<<<<<< HEAD
               <h3 className="text-lg font-semibold text-white">Follow Us</h3>
-=======
-              <h3 className="text-lg font-semibold text-white">Follow Us
->>>>>>> main
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
-<<<<<<< HEAD
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1438,65 +1012,25 @@ const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
                   >
-=======
-=======
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
->>>>>>> main:src_backup_temp/components/Footer.tsx
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
               ))}
             </ul>
           </div>
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
->>>>>>> main
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
-<<<<<<< HEAD
->>>>>>> main
                     <link .icon className="w-5 h-5"  />
                   </motion.a>
                 ))}
               </div>
             </motion.div>
->>>>>>> merge-all-prs-20250904-105408
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Newsletter Signup */}
-<<<<<<< HEAD
-=======
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-slate-700"
-        >
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Zion Tech Group
-<<<<<<< HEAD
             </h3>
-=======
-            
->>>>>>> main
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and technology trends delivered to your inbox.
             </p>
@@ -1509,7 +1043,6 @@ const Footer = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Subscribe
               </button>
-=======
         {/* Additional Links */}
         <div className="mt-8 pt-6 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
@@ -1521,7 +1054,6 @@ const Footer = () => {
                 <li><Link href="/white-papers" className="hover:text-blue-400 transition-colors">White Papers</Link></li>
                 <li><Link href="/webinars" className="hover:text-blue-400 transition-colors">Webinars</Link></li>
               </ul>
->>>>>>> origin/merge-pr-11190
             </div>
             
             <p className="text-xs text-slate-400 mt-3">
@@ -1574,7 +1106,6 @@ const Footer = () => {
     </footer>
   );
 }
-=======
   const footerSections = [
     {
       title: 'Company',
@@ -1646,7 +1177,6 @@ const Footer = () => {
     { icon: <Facebook className="w-5 h-5" />, url: "https://facebook.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Instagram className="w-5 h-5" />, url: "https://instagram.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Github className="w-5 h-5" />, url: "https://github.com/ziontechgroup", color: "hover:text-gray-400" }
-=======
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 export function Footer(props: any) {
@@ -1655,8 +1185,6 @@ export function Footer(props: any) {
     );
   };
 
-=======
->>>>>>> origin/merge-pr-11195
   const footerSections = [
     {
       title: "Services",
@@ -1720,14 +1248,9 @@ export function Footer(props: any) {
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
     { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
   ];
 
-=======
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
->>>>>>> main:src_backup_temp/components/Footer.tsx
   return (
-<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1745,10 +1268,6 @@ export function Footer(props: any) {
               quantum computing, and cutting-edge digital transformation services.
             </p>
             <div className="flex space-x-4">
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
->>>>>>> main:src_backup_temp/components/Footer.tsx
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -1759,33 +1278,10 @@ export function Footer(props: any) {
                 <Github className="w-5 h-5" />
               </a>
             </div>
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-=======
-              {socialLinks.map((social, index) => (
-                <a 
-                  key={index}
-                  href={social.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`text-gray-400 transition-colors ${social.color}`}
-                >
-                  {social.icon}
-                </a>
-=======
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    {link.name}
-                  </Link>
-                </li>
->>>>>>> main
               ))}
             </ul>
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx
           </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/Footer.tsx
           {/* Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
@@ -1892,44 +1388,22 @@ export function Footer(props: any) {
           </div>
         </div>
 
-=======
-<<<<<<< HEAD
           {/* Footer Sections */}
           {footerSections.map((section) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div key={section.title} className="space-y-4">
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
                 {section.title}
-<<<<<<< HEAD
               </h3>
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-=======
-            <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
->>>>>>> origin/merge-pr-11195
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-<<<<<<< HEAD
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
-=======
-                      to={link.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-=======
->>>>>>> origin/merge-pr-11195
                     </Link>
                   </li>
                 ))}
@@ -1938,116 +1412,6 @@ export function Footer(props: any) {
           ))}
         </div>
 
-<<<<<<< HEAD
-=======
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/services/ai-solutions" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Brain className="w-4 h-4 mr-2" />
-                  AI Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/quantum-computing" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Quantum Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/cybersecurity" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/cloud-devops" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Cloud className="w-4 h-4 mr-2" />
-                  Cloud DevOps
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/data-analytics" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Data Analytics
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Solutions</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/solutions/enterprise" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Building className="w-4 h-4 mr-2" />
-                  Enterprise Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/healthcare" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Heart className="w-4 h-4 mr-2" />
-                  Healthcare Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/finance" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <DollarSign className="w-4 h-4 mr-2" />
-                  Financial Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/retail" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Target className="w-4 h-4 mr-2" />
-                  Retail Solutions
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company & Resources */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Users className="w-4 h-4 mr-2" />
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Briefcase className="w-4 h-4 mr-2" />
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/news" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Newspaper className="w-4 h-4 mr-2" />
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/resources" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Resources
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
->>>>>>> main:src_backup_temp/components/Footer.tsx
         {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -2091,28 +1455,15 @@ export function Footer(props: any) {
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 Cookie Policy
               </Link>
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
-=======
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
-              <Link href="/status" className="text-gray-400 hover:text-blue-400 transition-colors">System Status</Link>
->>>>>>> origin/merge-pr-11190
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 </footer>
   );
 };
-=======
->>>>>>> origin/merge-pr-11190
 
 export default Footer;
-=======
 
       {/* Scroll to Top Button */}
       <button
@@ -2125,11 +1476,7 @@ export default Footer;
       </button>
     </footer>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
-=======
->>>>>>> origin/merge-pr-11195
         {/* Social Links */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -2175,9 +1522,6 @@ export default Footer;
               <span>© 2024 Zion Tech Group. Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
               <span>for innovation.</span>
-=======
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
     <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -2376,46 +1720,26 @@ export default Footer;
                   </a>
                 </div>
               </div>
-=======
               
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-=======
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
->>>>>>> origin/merge-pr-11195
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-<<<<<<< HEAD
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
-=======
-                      to={link.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-=======
->>>>>>> origin/merge-pr-11195
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-=======
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx
         </div>
->>>>>>> main
 
         {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-12">
@@ -2438,12 +1762,8 @@ export default Footer;
             ))}
           </div>
         </div>
-<<<<<<< HEAD:src/components/Footer.tsx
-=======
-<<<<<<< HEAD
 
         {/* Newsletter Signup */}
->>>>>>> merge-all-prs-20250904-105408
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="max-w-md">
             <h3 className="text-white font-semibold mb-3">Stay Updated
@@ -2451,27 +1771,17 @@ export default Footer;
               Get the latest insights on AI, technology trends, and business innovation.
             </p>
             <div className="flex space-x-2">
-<<<<<<< HEAD
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                 />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300">
 Subscribe
-=======
-              <input type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-               />
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                Subscribe
->>>>>>> merge-all-prs-20250904-105408
               </button>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
           {/* Copyright */}
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -2488,22 +1798,13 @@ Subscribe
                   <Shield className="w-4 h-4 text-green-400" />
                 </div>
               </div>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-<<<<<<< HEAD
 {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md: fle x-row justify-between items-center space-y-4 md: spac e-y-0">
-=======
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
->>>>>>> merge-all-prs-20250904-105408
             <div className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-<<<<<<< HEAD
               <Link to="/privacy" className="text-gray-400 hover: tex t-white transition-colors">
                 Privacy Policy
               </Link>
@@ -2512,29 +1813,14 @@ Subscribe
               </Link>
               <Link to="/cookies" className="text-gray-400 hover: tex t-white transition-colors">
 Cookie Policy
-=======
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
->>>>>>> merge-all-prs-20250904-105408
-              </Link>
-=======
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
               <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
               <Link href="/status" className="text-gray-400 hover:text-blue-400 transition-colors">System Status</Link>
->>>>>>> origin/merge-pr-11190
             </div>
           </div>
         </div>
-=======
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx
       </div>
 
       {/* Bottom Bar */}
@@ -2555,8 +1841,6 @@ Cookie Policy
                   {link.name}
                 </Link>
               ))}
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx
             </div>
           </div>
           
@@ -2570,17 +1854,9 @@ Cookie Policy
         </div>
       </div>
     </footer>
->>>>>>> main
   );
-<<<<<<< HEAD:src/components/Footer.tsx
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
 
 </button>
 </div>
@@ -2598,19 +1874,10 @@ Cookie Policy
 </Set>
 </string>
 </Set>
-=======
 }
->>>>>>> origin/merge-pr-11190
-=======
 }
->>>>>>> origin/merge-pr-11195';
 ;';;';
-=======
 }
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
 };
 
 export default Footer;
->>>>>>> main
->>>>>>> main:src_backup_temp/components/Footer.tsx

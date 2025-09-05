@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react',;',';';';';
     ';';';';';';
 import { motion } from 'framer-motion';';
@@ -24,9 +22,6 @@ export const ContactForm: Reac t.FC = () => {';';';';';
     timeline: ''});';';';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';';';
     ';';';';';
-=======
-=======
->>>>>>> main
 import React, { useState } from 'react',;',';';
     ;
 import { motion } from 'framer-motion';
@@ -48,14 +43,9 @@ export const "ContactForm": "React.FC = () => {';';';
     ';';';
     "message": '', "budget": '',',';';
     ';';';
-<<<<<<< HEAD
     "timeline": ''});';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
     ';';';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = ("props": "any) => {;
     const { name", value } = e.target;
@@ -63,7 +53,6 @@ export const "ContactForm": "React.FC = () => {';';';
       ...prev, [name]: "value"}));
   };
   const handleSubmit = async ("e": "React.FormEvent) => {;
-=======
     timeline: ''}
     );';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
@@ -74,8 +63,6 @@ export const "ContactForm": "React.FC = () => {';';';
     setFormData(prev => ({
       ...prev, [name]: value}));
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleSubmit = async (e: Reac t.FormEvent) => {';
     e.preventDefault();';';
     setIsSubmitting(true);';';';
@@ -136,12 +123,6 @@ export const "ContactForm": "React.FC = () => {';';';
         <button',';';';';
     ';';';';';
           onClick={() => setSubmitStatus('idle')
-=======
-  const handleSubmit = async (e: React.FormEvent) => {;
-=======
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> main
->>>>>>> main
     e.preventDefault();
     setIsSubmitting(true);';
     // Simulate form submission';';
@@ -159,12 +140,7 @@ export const "ContactForm": "React.FC = () => {';';';
     ';';';
         "message": '', "budget": '',',';';
     ';';';
-<<<<<<< HEAD
         "timeline": ''});';';';
-=======
-        timeline: ''}
-    );';';';
->>>>>>> main
     } catch (error) {',';';
     ';';';
       setSubmitStatus('error');
@@ -188,7 +164,6 @@ export const "ContactForm": "React.FC = () => {';';';
     'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'';';';
   ]',';';
     ';';';
-<<<<<<< HEAD
   if (submitStatus === 'success') {;
     return (;
       <motion.div;
@@ -197,16 +172,6 @@ export const "ContactForm": "React.FC = () => {';';';
         className="text-center py-12";
       >;
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">;
-=======
-  if (submitStatus === 'success') {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-12"
-      >
-        <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
->>>>>>> main
           <CheckCircle className="w-10 h-10 text-white"  />';
         </div>';';
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!';';';
@@ -216,14 +181,9 @@ export const "ContactForm": "React.FC = () => {';';';
         </p>';';';
         <button',';';
     ';';';
-<<<<<<< HEAD
           onClick={() => setSubmitStatus('idle');
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
           onClick={() => setSubmitStatus('idle')
->>>>>>> main
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -236,8 +196,6 @@ export const "ContactForm": "React.FC = () => {';';';
       )"}
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }';
   return (';';
     <div className="min-h-screen bg-white">';';';
@@ -249,13 +207,6 @@ export const "ContactForm": "React.FC = () => {';';';
         </p>
       </div>
       <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">
-=======
-=======
-=======
-    </div>
-    );
->>>>>>> main
->>>>>>> main
 }
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/90 transition-colors"
         >
@@ -273,18 +224,13 @@ export const "ContactForm": "React.FC = () => {';';';
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';
         <p className="text-zion-slate-light">',';';
     ';';';
-<<<<<<< HEAD
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'';
         </p>;
       </div>;
-<<<<<<< HEAD
       <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         {/* Contact Information */}
-=======
       <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-8">;
         {/* Contact Information */"}
->>>>>>> main
         <div className="space-y-6">;
           <div className="flex items-center gap-4">;
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">;
@@ -411,7 +357,6 @@ export const "ContactForm": "React.FC = () => {';';';
                 { services.map((service) => (;
                   <option key={service"} value={service}>{service}</option>;
                 ));
-=======
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
         </p>
       </div>
@@ -543,7 +488,6 @@ export const "ContactForm": "React.FC = () => {';';';
                 { services.map((service) => (
                   <option key={service} value={service}>{service}</option>
                 ))
->>>>>>> main
       )}
     </div>
     );
@@ -559,21 +503,12 @@ export const "ContactForm": "React.FC = () => {';';';
                 name="budget"
                 value={formData.budget}
                 onChange={handleInputChange}
-<<<<<<< HEAD
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors";
               >;
                 <option value="">Select budget range</option>;
                 { budgets.map((budget) => (;
                   <option key={budget"} value={budget}>{budget}</option>;
                 ));
-=======
-                className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
-              >
-                <option value="">Select budget range</option>
-                { budgets.map((budget) => (
-                  <option key={budget} value={budget}>{budget}</option>
-                ))
->>>>>>> main
       )}
     </div>
     );
@@ -590,21 +525,12 @@ export const "ContactForm": "React.FC = () => {';';';
               name="timeline"
               value={formData.timeline}
               onChange={handleInputChange}
-<<<<<<< HEAD
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors";
             >;
               <option value="">Select timeline</option>;
               { timelines.map((timeline) => (;
                 <option key={timeline"} value={timeline}>{timeline}</option>;
               ));
-=======
-              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
-            >
-              <option value="">Select timeline</option>
-              { timelines.map((timeline) => (
-                <option key={timeline} value={timeline}>{timeline}</option>
-              ))
->>>>>>> main
       )}
     </div>
     );
@@ -619,8 +545,6 @@ export const "ContactForm": "React.FC = () => {';';';
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-<<<<<<< HEAD
-<<<<<<< HEAD
               required';
               rows={4}';';
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors resize-none"';';';
@@ -633,16 +557,10 @@ export const "ContactForm": "React.FC = () => {';';';
               <span>There was an error sending your message. Please try again.</span>
             </div>
           )
-=======
-              required;
-=======
-              required
->>>>>>> main
               rows={4}
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';
               placeholder="Tell us about your project and how we can help..."';';
              />';';';
-<<<<<<< HEAD
           </div>'",';';
     ';';' {submitStatus === 'error' && (;
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">;
@@ -650,10 +568,6 @@ export const "ContactForm": "React.FC = () => {';';';
               <span>There was an error sending your message. Please try again.</span>;
             </div>;
           );
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
           </div>',';';
     ';';' {submitStatus === 'error' && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
@@ -661,8 +575,6 @@ export const "ContactForm": "React.FC = () => {';';';
               <span>There was an error sending your message. Please try again.</span>
             </div>
           )
->>>>>>> main
->>>>>>> main
       )}
     </div>
     );
@@ -670,7 +582,6 @@ export const "ContactForm": "React.FC = () => {';';';
           <motion.button
             type="submit"
             disabled={isSubmitting}
-<<<<<<< HEAD
             whileHover={{ "scale": "1.02 "}}
             whileTap={{ "scale": "0.98 "}}
             className="w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "fro m-zion-cyan/90 "hover": t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 "disabled": opacit y-50 "disabled": curso r-not-allowed";
@@ -689,29 +600,7 @@ export const "ContactForm": "React.FC = () => {';';';
       )"}
     </div>;
   );
-=======
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 disabled: opacit y-50 disabled: curso r-not-allowed"
-          >
-            {isSubmitting ? (
-              <>
-                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                Sending Message...
-</>
-            ) : (
-              <>
-                <Send className="w-5 h-5"  />
-                Send Message
-</>
-            )
-      )}
-    </div>
-    );
->>>>>>> main
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
           </motion.button>';
         </form>';';
       </div>';';';
@@ -723,32 +612,18 @@ export const "ContactForm": "React.FC = () => {';';';
 </motion>
 </any>';
 </any>;';;';
-=======
-          </motion.button>;
-        </form>;
-=======
-          </motion.button>
-        </form>
->>>>>>> main
       </div>';
     </div>';';
   );';';';
-<<<<<<< HEAD
 };";
 </motion>;
 </textarea>;
 </motion>;
 </any>;
 </any>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 };"';';';';
 </motion>
 </textarea>
 </motion>
 </any>
 </any>
->>>>>>> main
->>>>>>> main

@@ -4,16 +4,9 @@ export default function Page("props": "any) {;
 
   const [imageSrc", setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
   const [hasError, setHasError] = useState<any>(false);
-<<<<<<< HEAD
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 ;
-=======
-
-  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
-    );
-
->>>>>>> main
     observerRef.current.observe(imgRef.current) ;
 ;
     return () => {;
@@ -66,7 +59,6 @@ export default function Page("props": "any) {;
 
       return src}
   };
-<<<<<<< HEAD
 ;
   // Base classes;
   ;
@@ -92,36 +84,6 @@ export default function Page("props": "any) {;
       </div>) ;
   "}}) => {;
     </div>;
-=======
-
-  // Base classes
-  
-  // Loading skeleton
-  if(!isIntersecting) {
-    return (
-        <div
-        className={`${baseClasses} bg-gray - 200 dark: b g-gray - 700 animate - pulse`}        style={{ width, height }}
-      >
-        <div className="w-full h-full flex items-center justify-center">"
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin"  />
-        </div>
-      </div>) }
-  // Error state
-  if(hasError) {
-    return (
-        <div
-        className={`${baseClasses} bg-gray - 100 dark: b g-gray - 800 flex items - center justify - center`}
-        style={{ width, height }}
-      >
-        <div className="text-center">
-          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2"  />
-          <p className="text-sm text-gray - 500 dark: tex t-gray -400">Image failed to load</p>
-        </div>
-      </div>
-    );
-  }}) => {
-    </div>
->>>>>>> main
   )}
 export default OptimizedImage;";
 ;";

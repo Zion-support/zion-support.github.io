@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';';';
 import { Routes, Route } from 'react-router-dom';';';
 import { Header } from './src/components/Header.tsx';';';
@@ -16,28 +12,14 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';';'
 import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';';';
 import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';';';
 import { ChatAssistant } from './components/ChatAssistant';
-=======
-import React, { Suspense, lazy, useState } from 'react';
-=======
-import React, { Suspense, lazy, useState, useEffect, memo, useCallback } from 'react';
-=======
-import React, { Suspense, lazy } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
-<<<<<<< HEAD
 import { AccessibilityControls } from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 // import { preloadCriticalResources, enableLazyLoading } from './utils/performance';
-=======
-import { preloadCriticalResources, enableLazyLoading } from './utils/performance.ts';
->>>>>>> main
 import './styles/accessibility.css';
 ;
 // Enhanced Components - temporarily disabled due to build issues;
@@ -45,16 +27,12 @@ import './styles/accessibility.css';
 // import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 // import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 // import { ChatAssistant } from './components/ChatAssistant';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-=======
 ;
 // Enhanced lazy loading with preloading hints;
 const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React.ReactNode) => {;
->>>>>>> main
   const LazyComponent = lazy(importFn);
   return ("props": any) => (;
     <Suspense fallback={fallback || <LoadingSpinner />"}>;
@@ -62,7 +40,6 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
     </Suspense>;
   );
 };
-<<<<<<< HEAD
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -81,22 +58,9 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
-<<<<<<< HEAD
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
-<<<<<<< HEAD
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
-=======
-const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
-=======
-const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.default })));
-const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
-const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
->>>>>>> main
->>>>>>> main
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
 // Lazy load pages for better performance';';
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));';';
@@ -121,60 +85,9 @@ const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveSe
 // Service Pages';';
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));';';
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));';';
-=======
-;
-// Lazy load pages for better performance;
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": "module.HomePage "})));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ "default": "module.default "})));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ "default": "module.SolutionsPage "})));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ "default": "module.AboutPage "})));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ "default": "module.ContactPage "})));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ "default": "module.BlogPage "})));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ "default": "module.NotFoundPage "})));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ "default": "module.ComprehensiveServicesPage "})));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ "default": "module.default "})));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ "default": "module.ComprehensiveSitemap "})));
-const Training = lazy(() => import('./pages/Training').then(module => ({ "default": "module.default "})));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ "default": "module.default "})));
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ "default": "module.RevolutionaryServicesPage "})));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ "default": "module.NewServicesShowcase2025 "})));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ "default": "module.EnhancedNewServices2025 "})));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ "default": "module.PricingPage "})));
-const ComprehensiveServicesShowcase = createLazyComponent(() => import('./pages/ComprehensiveServicesPage'));
-const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ "default": "module.default "})));
-const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ "default": "module.EnhancedServicesShowcase2025 "})));
-;
-// Service Pages;
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ "default": "module.AISolutions "})));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ "default": "module.QuantumComputing "})));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ "default": "module.Cybersecurity "})));
-const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ "default": "module.default "})));
-;
-// Loading component;
-const PageLoader = () => (;
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">;
-    <div className="text-center">;
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>;
-      <p className="text-gray-400">Loading...</p>;
-    </div>;
-  </div>;
-);
-;
-// Lazy load pages - only import existing ones;
-=======
-// Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ChatAssistant } from './components/ChatAssistant';
-// Lazy load pages for better performance - only import existing pages
-const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
->>>>>>> main
 // Service Pages
-<<<<<<< HEAD
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
->>>>>>> main
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
 
 // Loading component
@@ -188,7 +101,6 @@ const PageLoader = () => (
     );
 
 // Lazy load pages - only import existing ones
->>>>>>> main
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
@@ -208,7 +120,6 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
-<<<<<<< HEAD
 
 // Additional service components
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
@@ -234,13 +145,9 @@ const App: React.FC = memo(() => {
       </div>
     </div>
   ), []);
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 export default function App(props: any) {
   return (
-<<<<<<< HEAD
     <EnhancedErrorBoundary 
       fallback={errorFallback}
       showDetails={process.env.NODE_ENV === 'development'}
@@ -384,9 +291,6 @@ export default function App(props: any) {
         </div>
       </Router>
     </EnhancedErrorBoundary>
-=======
-    <ErrorBoundary>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Sidebar />
@@ -407,11 +311,7 @@ export default function App(props: any) {
               <Route path="/search" element={<Services />} />
               <Route path="/services" element={<Services />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
-<<<<<<< HEAD
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
-=======
-              <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
->>>>>>> main
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/resources" element={<Services />} />
               <Route path="/case-studies" element={<Services />} />
@@ -521,8 +421,6 @@ export default function App(props: any) {
         <MobileExperienceEnhancer />
         <ChatAssistant />
       </div>
-=======
-=======
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
@@ -549,11 +447,8 @@ const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServices
 // New innovative services pages
 
 // Additional service components
-=======
-<<<<<<< HEAD
 ;
 // Additional service components;
->>>>>>> main
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
@@ -585,10 +480,7 @@ const "App": "React.FC = memo(() => {;
       fallback={errorFallback}
       showDetails={process.env.NODE_ENV === 'development'}
       enableReporting={true}
-<<<<<<< HEAD
     >
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     >;
       <Router>;
         <div className="min-h-screen bg-gray-50 flex">;
@@ -728,64 +620,14 @@ const "App": "React.FC = memo(() => {;
         </div>;
       </Router>;
     </EnhancedErrorBoundary>;
->>>>>>> main
   );
 });
 ;
 export default App;
-=======
 
-<<<<<<< HEAD
 export default App;
-=======
-export default function App(props: any) {
-=======
-const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
-const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
-// Create placeholder components for missing pages
-const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
-const ServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
-const AboutPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
-const ContactPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
-const BlogPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Blog</h1></div>;
-const NotFoundPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">404 - Page Not Found</h1></div>;
-const ComprehensiveServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Services</h1></div>;
-const Sitemap = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Sitemap</h1></div>;
-const ComprehensiveSitemap = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Sitemap</h1></div>;
-const Support = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Support</h1></div>;
-const Training = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Training</h1></div>;
-const Helpdesk = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Helpdesk</h1></div>;
-const RevolutionaryServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Revolutionary Services</h1></div>;
-const NewServicesShowcase2025 = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">New Services 2025</h1></div>;
-const EnhancedNewServices2025 = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Enhanced Services 2025</h1></div>;
-const PricingPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Pricing</h1></div>;
-const ComprehensiveServicesShowcase = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Services Showcase</h1></div>;
-const QuantumComputing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Quantum Computing</h1></div>;
-const Cybersecurity = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cybersecurity</h1></div>;
-const AIContentCreation = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">AI Content Creation</h1></div>;
-// Placeholder components for missing pages
-const Home = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
-const About = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
-const Contact = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
-const Services = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
-const RequestQuote = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Request Quote</h1></div>;
-const Dashboard = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Dashboard</h1></div>;
-const Login = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Login</h1></div>;
-const FAQ = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">FAQ</h1></div>;
-const Privacy = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Privacy Policy</h1></div>;
-const Terms = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Terms of Service</h1></div>;
-const Cookies = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cookie Policy</h1></div>;
-const Pricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Pricing</h1></div>;
-const Help = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Help</h1></div>;
-const News = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">News</h1></div>;
-const Careers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Careers</h1></div>;
-const WhitePapers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">White Papers</h1></div>;
-const ComprehensivePricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Pricing</h1></div>;
-export default function App() {
->>>>>>> main
   return (
     <ErrorBoundary>
->>>>>>> main
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
@@ -899,21 +741,12 @@ export default function App() {
           <ChatAssistant />
         </div>
       </Router>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
     </ErrorBoundary>
   );';
 };';;';
-=======
     </EnhancedErrorBoundary>
   );
 }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     </ErrorBoundary>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

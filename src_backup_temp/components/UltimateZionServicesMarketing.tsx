@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-<<<<<<< HEAD
 ';
   const categories = [{';';
       id: 'quantum - computing',';';
@@ -66,12 +64,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '150% annually'};
   ];';
 ';';
-=======
-=======
-<<<<<<< HEAD
 const "UltimateZionServicesMarketing": "React.FC = () : JSX.Element => {;
   const [selectedCategory", setSelectedCategory] = useState<any>('all');
->>>>>>> main
 ;
   const categories = [{;
       "id": 'quantum - computing',;
@@ -134,7 +128,6 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.Element => {;
       "description": 'Advanced infrastructure and DevOps solutions',;
       "marketSize": '$25.2 billion by 2027',;
       "growthRate": '150% annually'};
-=======
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
@@ -199,34 +192,20 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       description: 'Advanced infrastructure and DevOps solutions',;
       marketSize: '$25.2 billion by 2027',;
       growthRate: '150% annually'};
->>>>>>> main
   ];
-<<<<<<< HEAD
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
->>>>>>> main
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
 
   const selectedServices = getServicesByCategory(selectedCategory) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-white">
-=======
-;
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
   return (
         <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
->>>>>>> main
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
         <div  className="max - w-7xl mx - auto text-center">;
           <motion.h1;
@@ -364,34 +343,19 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             transition={{ "duration": "any 0.6 "}}
           >;
             {categories.map((category) => (<button     key={category.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onClick={ () => setSelectedCategory(category.id) }';
                 className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id';';
                     ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg'';';
-=======
-                onClick={ () => setSelectedCategory(category.id) }
-                className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id;
-                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                }`}
               >";
                 <span className="mr-2 text-lg">{category.icon}</span>;
                 {category.name}
               </button>) ) }
-<<<<<<< HEAD
           </motion.div>
         </div>';
       </section>;';';
  {/* Category Overview */} {selectedCategory !== 'all' && (;"
         <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
-=======
-          </motion.div>;
-        </div>;
-      </section>;
- {/* Category Overview */} {selectedCategory !== 'all' && (;";
-        <section className="py-12 px-4 sm: p x-6 lg: p x-8">;";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
           <div className="max-w-7xl mx-auto"> {(() => {;
 ;
               if(!category) return null;
@@ -437,45 +401,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   { opacity: 0,;
   y: 2 0;
 }}
-<<<<<<< HEAD
-=======
-                onClick={ () => setSelectedCategory(category.id) }
-                className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id;
-                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg';
-                    : 'bg-white / 10 border-white / 20 text-gray - 300 "hover": "b g-white / 20 "hover": borde r-white / 40'                "}`}
-              >";
-                <span className="mr-2 text-lg">{category.icon}</span>;
-=======
-      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
-        <div  className="max - w-7xl mx - auto text-center">
-          <motion.h1
-            className="text-4xl md: tex t-6xl font - bold mb-6"      {/* Hero Section */}"
-      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 "
-            className="text-4xl md: tex t-6xl font-bold mb-6" 
-            initial = {
-
-  { opacity: 0,
-  y: 2 0
-
-}}
->>>>>>> main
             whileInView = {
 
   { opacity: 1,
   y: 0
 
-<<<<<<< HEAD
 }}';
             transition={{ duration: 0.6 }}';';
           >'`';';
-=======
-            whileInView = {;
-  { opacity: 1,;
-  y: 0;
-=======
->>>>>>> main
 }}
             transition={{ duration: 0.6 }}
           >
@@ -631,23 +564,16 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                }`}
               >"
                 <span className="mr-2 text-lg">{category.icon}</span>
->>>>>>> main
                 {category.name}
               </button>) ) }
           </motion.div>
         </div>
       </section>;
-<<<<<<< HEAD
  {/* Category Overview */} {selectedCategory !== 'all' && (;";
         <section className="py-12 px-4 "sm": "p x-6 "lg": p x-8">;";
-=======
- {/* Category Overview */} {selectedCategory !== 'all' && (;"
-        <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
->>>>>>> main
           <div className="max-w-7xl mx-auto"> {(() => {;
               
               if(!category) return null;
-<<<<<<< HEAD
 ;
               return (<motion.div;
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {;
@@ -675,39 +601,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </div>";
                       <div className="bg-white/10 rounded-lg p-4">;";
                         <div className="text-purple-400 font-semibold">Growth Rate</div>;";
-=======
-
-              return (<motion.div
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
-
-  { opacity: 0,
-  y: 2 0
-
-}}
-                  whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-                  transition={{ duration: 0.6 }}
-                >"
-                  <div className="text-center mb-8">"
-                    <div className="text-6xl mb-4">{category.icon}</div>"
-                    <h2 className="text-3xl md: tex t-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                      {category.name}
-                    </h2>"
-                    <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-                      {category.description}
-                    </p>"
-                    <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 max-w-2xl mx-auto">"
-                      <div className="bg-white/10 rounded-lg p-4">"
-                        <div className="text-purple-400 font-semibold">Market Size</div>"
-                        <div className="text-white text-lg">{category.marketSize}</div>
-                      </div>"
-                      <div className="bg-white/10 rounded-lg p-4">;"
-                        <div className="text-purple-400 font-semibold">Growth Rate</div>;"
->>>>>>> main
                         <div className="text-white text-lg">{category.growthRate}</div>;
                       </div>;
                     </div>;
@@ -716,7 +609,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
         </section>) }
 
       {/* Services Grid */}
-<<<<<<< HEAD
       <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
         <div  className="max - w-7xl mx -auto">;
           <motion.h2;
@@ -730,12 +622,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 "}}
             transition={{ "duration": "0.6 "}}
           >'`;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
-=======
             {selectedCategory === 'all' ? 'All Revolutionary Services' : "`${categories.find(c => c.id === selectedCategory)?.name"} Services`}
->>>>>>> main
           </motion.h2>;
           <motion.div;
             className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-8"            variants={{;
@@ -769,7 +657,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Service Header */"}";
                 <div className="text-center mb-6">`;
                   <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;
-=======
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
           <motion.h2
@@ -829,24 +716,15 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Service Header */}"
                 <div className="text-center mb-6">`
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
->>>>>>> main
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">
                     {service.innovationLevel}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </div>"';
                   <p className="text-sm text-purple-400 font-medium">';';
-=======
-                  </div>";
-                  <p className="text-sm text-purple-400 font-medium">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
->>>>>>> main
                     {service.category.replace('-',).toUpperCase()}
                   </p>
                 </div>
@@ -859,7 +737,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Description */}"
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
-<<<<<<< HEAD
                 </p>;
                 {/* Pricing */}";
                 <div className="bg-white/5 rounded-lg p-4 mb-6">";
@@ -893,43 +770,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.benefits.slice(0, 3).map((benefit, idx) => (";
                       <div key={idx} className="flex items-center text-sm text-gray-300">";
                         <span className="text-green-400 mr-2">✓</span>;
-=======
-                </p>
-
-                {/* Pricing */}"
-                <div className="bg-white/5 rounded-lg p-4 mb-6">"
-                  <h4 className="text-purple-400 font-semibold mb-2">💰 Investment & Value</h4>"
-                  <div className="space-y-1 text-sm">"
-                    <div className="flex justify-between">"
-                      <span className="text-gray-400">Monthly:</span>"
-                      <span className="text-green-400 font-semibold">{service.pricing.monthly}</span>
-                    </div>"
-                    <div className="flex justify-between">"
-                      <span className="text-gray-400">Yearly:</span>"
-                      <span className="text-green-400 font-semibold">{service.pricing.yearly}</span>
-                    </div>"
-                    <div className="flex justify-between">"
-                      <span className="text-gray-400">Market Price:</span>"
-                      <span className="text-blue-400 font-semibold">{service.pricing.marketPrice}</span>
-                    </div>"
-                    <div className="flex justify-between">"
-                      <span className="text-gray-400">Setup:</span>"
-                      <span className="text-yellow-400 font-semibold">{service.pricing.setup}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ROI and Benefits */}"
-                <div className="mb-6">"
-                  <h4 className="text-purple-400 font-semibold mb-2">📈 ROI & Benefits</h4>"
-                  <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg p-3 mb-3">"
-                    <p className="text-green-400 text-sm font-semibold">{service.roi}</p>
-                  </div>"
-                  <div className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => ("
-                      <div key={idx} className="flex items-center text-sm text-gray-300">"
-                        <span className="text-green-400 mr-2">✓</span>
->>>>>>> main
                         {benefit}
                       </div>) ) }
                   </div>
@@ -947,7 +787,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 </div>
 
                 {/* Market Information */}
-<<<<<<< HEAD
                 {service.marketSize && (";
                   <div className="mb-6">";
                     <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>";
@@ -1020,17 +859,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>";
             <div className="mt-6 text-sm text-gray-400">;
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
-=======
-                {service.marketSize && ("
-                  <div className="mb-6">"
-                    <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>"
-                    <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">"
-                      <p className="text-blue-400 text-sm font-semibold">
-                        Market Size: {service.marketSize}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                       </p>
                     </div>
                   </div>) }
@@ -1067,45 +895,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </a>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-                      </p>;
-                    </div>;
-                  </div>) }
-;
-                {/* Trial and Setup */}";
-                <div className="flex justify-between items-center mb-6 text-sm">";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";
-                    <div className="text-gray-300">{service.trialDays} days</div>;
-                  </div>";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";
-                    <div className="text-gray-300">{service.setupTime}</div>;
-                  </div>;
-                </div>;
-                {/* Call to Action */}";
-                <div className="text-center">";
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">;
-                    🚀 Get Started Today;
-                  </button>";
-                  <p className="text-xs text-gray-400 mt-2">;
-                    Contact us for a personalized demo;
-                  </p>;
-                </div>;
-                {/* Contact Quick Access */}";
-                <div className="mt-4 text-center">";
-                  <div className="text-xs text-gray-400">";
-                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">;
-                      +1 302 464 0950;
-                    </a> |;
-                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com;
-                    </a>;
-                  </div>;
-                </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               </motion.div>) ) }
           </motion.div>
         </div>
@@ -1143,14 +932,11 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>"
             <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>
->>>>>>> main
               <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
               <p>🌍 Global support • 24 / 7 availability • Enterprise - grade security</p>;
             </div>;
           </motion.div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>;';
     </div>;) };';';
 export default UltimateZionServicesMarketing;'"`
@@ -1161,11 +947,7 @@ export default UltimateZionServicesMarketing;'"`
 </section>
 </div>';
 </any>';';
-=======
-=======
->>>>>>> main
       </section>;
-<<<<<<< HEAD
     </div>;) "};
 export default UltimateZionServicesMarketing;'"`;
 </motion>;
@@ -1182,10 +964,6 @@ export default UltimateZionServicesMarketing;'"`;
 </section>;
 </div>;
 </any>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
     </div>;) };
 export default UltimateZionServicesMarketing;'"`
 
@@ -1203,5 +981,3 @@ export default UltimateZionServicesMarketing;'"`
 </section>
 </div>
 </any>
->>>>>>> main
->>>>>>> main

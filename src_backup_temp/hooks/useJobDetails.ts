@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -24,9 +22,4 @@ export default function Page() {
 
 export default useJobDetails;';
 ;';;';
-=======
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { finally { setIsLoading(false)} },[jobId]); useEffect(() => { },[]); loadJobDetails()},[loadJobDetails]); return { job,isLoading,error,loadJobDetails,refetch: 'loadJobDetail s }} export default useJobDetails;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { finally { setIsLoading(false)} },[jobId]); useEffect(() => { },[]); loadJobDetails()},[loadJobDetails]); return { job,isLoading,error,loadJobDetails,"refetch": 'loadJobDetail s }} export default useJobDetails;
->>>>>>> main

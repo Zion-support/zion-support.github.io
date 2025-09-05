@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { cn  } from "../../utils/cn";
@@ -22,15 +21,6 @@ const Separator = React.forwardRef<;
   className;
       );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-
-;
-
-;
->>>>>>> main
 }
       {...props};
     />;
@@ -39,30 +29,11 @@ const Separator = React.forwardRef<;
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 ;
 export { Separator };
-<<<<<<< HEAD
 </SeparatorPrimitive>
 </typeof>';
 </typeof>;';;';
-=======
-export { Separator }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </SeparatorPrimitive>;
 </typeof>;
 </typeof>
-=======
-<<<<<<< HEAD
 export { Separator }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
 
-=======
-export { Separator }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

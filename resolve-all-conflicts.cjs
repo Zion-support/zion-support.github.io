@@ -30,16 +30,12 @@ function resolveConflicts(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Remove merge conflict markers and keep HEAD version (our changes)
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======.*?\n?/g, '');
-  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   // Remove any remaining conflict markers
-  content = content.replace(/<<<<<<< HEAD|=======|>>>>>>> [a-f0-9]+/g, '');
   
   fs.writeFileSync(filePath, content);
   console.log(`Resolved conflicts in ${filePath}`);

@@ -1,7 +1,28 @@
-console.log(data.response);`
+import Head from 'next/head';
+import Layout from '../../components/Layout';
+
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    title: 'Authentication',
+    code: `// Get API token
+const response = await fetch('https://api.ziontechgroup.com/auth/login', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    email: 'your-email@example.com',
+    password: 'your-password'
+  })
+});
+
+const data = await response.json();
+console.log(data.token);`
   },
   {
     language: 'Python',
+    title: 'Predictive Analytics',
     code: `# Predictive Analytics
 import requests
 
@@ -13,104 +34,77 @@ response = requests.post(
     },
     json={
         'data': historical_data,
-        'period': '30_days'
+        'model': 'time_series',
+        'forecast_period': 30
     }
 )
 
-predictions = response.json()
-print(predictions['predictions'])`
+result = response.json()
+print(result.predictions)`
   },
   {
     language: 'cURL',
-    code: `# Content Generation
-curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
+    title: 'Cloud Migration',
+    code: `# Start cloud migration
+curl -X POST https://api.ziontechgroup.com/cloud/migrate \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "prompt": "Write a blog post about AI trends",
-    "type": "blog_post"
+    "source": "on-premises",
+    "target": "aws",
+    "resources": ["database", "storage", "compute"]
   }'`
   }
 ];
 
-export default function APIDocumentationPage() {
+export default function ApiDocs() {
   return (
-    <Layout
-      title="API Documentation - Zion Tech Group"
-      description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
-      keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-                API <span className="text-blue-600">Documentation</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Integrate our AI services into your applications with our comprehensive REST API. 
-                Get started with our easy-to-use endpoints and code examples.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get API Key
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/micro-saas"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View Micro SaaS
-                </Link>
-              </div>
-        {/* API Endpoints Section */}
-        <section className="py-16 bg-white">
+    <Layout>
+      <Head>
+        <title>API Documentation - Zion Tech Group</title>
+        <meta name="description" content="Complete API documentation with code examples and integration guides." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                    </div>
-        {/* Code Examples */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Code Examples</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Get started quickly with our code examples in multiple programming languages.
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API Documentation
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Integrate with our services using our comprehensive REST API
               </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {codeExamples.map((example, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900 rounded-xl p-6"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-white">{example.language}</h3>
-                    <Code className="w-5 h-5 text-blue-400" />
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                Code Examples
+              </h2>
+              
+              <div className="space-y-8">
+                {codeExamples.map((example, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div className="bg-gray-50 px-6 py-4 border-b">
+                      <h3 className="text-xl font-semibold text-gray-900">{example.title}</h3>
+                      <span className="text-sm text-gray-600">{example.language}</span>
+                    </div>
+                    <div className="p-6">
+                      <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+                        <code>{example.code}</code>
+                      </pre>
+                    </div>
                   </div>
-                  <pre className="text-sm text-gray-300 overflow-x-auto">
-                    <code>{example.code}</code>
-                  </pre>
-                </motion.div>
-              ))}
-    <Layout title="API Docs">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
-        <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
-      </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </Layout>
+  );
+}

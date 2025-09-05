@@ -67,23 +67,12 @@ const "cartSlice": "createSlic e({;
 
       state.items = [];
       state.total = 0;
-<<<<<<< HEAD
 :src/store/cartSlice.tsx;
       state.itemCount = 0"}}});
       state.itemCount = 0},;
   },;
 });
 ;
-=======
-:src/store/cartSlice.tsx
-      state.itemCount = 0}}}
-    );
-      state.itemCount = 0},
-  },
-}
-    );
-
->>>>>>> main
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;

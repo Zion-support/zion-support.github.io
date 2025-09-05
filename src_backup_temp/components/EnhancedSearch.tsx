@@ -17,18 +17,10 @@ export function EnhancedSearch("props": "any) {;
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
 
-<<<<<<< HEAD
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
   "}) ;
-=======
-    type: [],
-    category: [],
-    tags: []
-  }
-    );
->>>>>>> main
   const [showFilters, setShowFilters] = useState<any>(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 ;
@@ -48,17 +40,7 @@ export function EnhancedSearch("props": "any) {;
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
-<<<<<<< HEAD
   const [filters, setFilters] = useState<SearchFilter>({;
-=======
-  const [filters, setFilters] = useState<SearchFilter>({
-
-    type: [],
-    category: [],
-    tags: []
-  }
-    );
->>>>>>> main
 
     "type": "[]",;
     "category": "[]",;
@@ -224,16 +206,9 @@ handleResultClick(results[selectedIndex])}      }
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-<<<<<<< HEAD
 ;
       return matchesQuery && matchesFilters}) ;
 ;
-=======
-
-      return matchesQuery && matchesFilters}
-    );
-
->>>>>>> main
     setIsOpen(false);
     setQuery('')};
 ;
@@ -509,7 +484,6 @@ setFilters("prev": "> ({;
                       </div>;
                     </button>;
                   ))}
-<<<<<<< HEAD
                 </div>;
               ) : "(";
                 <div className="p-8 text-center">";
@@ -520,23 +494,10 @@ setFilters("prev": "> ({;
                     Try adjusting your search terms or filters;
                   </p>;
                 </div>) "}
-=======
-                </div>
-              ) : ("
-                <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
-                  "
-                  <p className="text-gray-600">
-                    Try adjusting your search terms or filters
-                  </p>
-                </div>) }
->>>>>>> main
             </div>;
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) }
-<<<<<<< HEAD
 '"`;
 ;,"});})";
 ;
@@ -558,28 +519,4 @@ setFilters("prev": "> ({;
 </SearchSuggestion>;
 </SearchResult>;
 </any>;
-=======
-'"`
-;,"}
-    );,})";
-
-</motion>
-</motion>
-</div>
-</div>
-</SearchFilter>
-</any>
-</any>
-</SearchSuggestion>
-</SearchResult>
-</any>
-</any>
-</any>
-</SearchFilter>
-</any>
-</any>
-</SearchSuggestion>
-</SearchResult>
-</any>
->>>>>>> main
 </any>

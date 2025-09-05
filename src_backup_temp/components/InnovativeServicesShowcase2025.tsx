@@ -6,20 +6,10 @@ export default function Page("props": "any) {;
 
       return aValue > bValue ? 1 : -1"} else {;
 
-<<<<<<< HEAD
       return aValue < bValue ? 1 : "-1"}
   }) ;
 ;
   const getCategoryIcon = ("props": "any) => {;
-=======
-      return aValue > bValue ? 1 : -1} else {
-
-      return aValue < bValue ? 1 : -1}
-  }
-    );
-
-  const getCategoryIcon = (props: any) => {
->>>>>>> main
     if(category === 'all') return < Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?;
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon"}</span> : ";
@@ -32,16 +22,9 @@ export default function Page("props": "any) {;
   const closeModal = ("props": "any) => {;
     setShowModal(false) ;
     setSelectedService(null) ;
-<<<<<<< HEAD
   "};
 ;
   return (<div  className="min - h-screen futuristic -bg">;
-=======
-  };
-
-  return (
-        <div  className="min - h-screen futuristic -bg">
->>>>>>> main
       {/* Matrix Rain Background Effect */}
       <div  className="matrix -rain"></div>;
 
@@ -205,7 +188,6 @@ export default function Page("props": "any) {;
                       <div className="flex items-center gap-3">`;
                         <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>;
                           {getCategoryIcon(service.category)}
-<<<<<<< HEAD
                         </div>;
                         <div>";
                           <span className="text-sm text-gray-400 capitalize">{service.category}</span>";
@@ -234,36 +216,6 @@ export default function Page("props": "any) {;
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>;
                         </div>;
                       </div>;
-=======
-                        </div>
-                        <div>"
-                          <span className="text-sm text-gray-400 capitalize">{service.category}</span>"
-                          <p className="text-xs text-gray-500 capitalize">{service.subcategory}</p>
-                        </div>
-                      </div>"
-                      <div className="flex items-center gap-2">"
-                        <Star className="w-4 h-4 text-yellow-400 fill-current"   />"
-                        <span className="text-sm text-gray-300">{service.rating}</span>"                        <span className="text-xs text-gray-500">({service.reviewCount})</span>
-                      </div>
-                    </div>
-"
-                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{service.title}"
-                    <p className="text-gray-300 mb-4 flex-grow line-clamp-3">{service.description}</p>
-"
-                    <div className="space-y-3 mb-4">"
-                      <div className="flex items-center justify-between">"
-                        <span className="text-sm text-gray-400">AI Score:</span>"
-                        <div className="flex items-center gap-2">"
-                          <div className="w-16 bg-gray-700 rounded-full h-2">
-                            <div "
-                              className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"`
-                              style="{{{ width: `${service.aiScore}}"%` }}
-                            ></div>
-                          </div>"
-                          <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
-                        </div>
-                      </div>
->>>>>>> main
 
                       <div  className="flex items - center justify -between">;
                         <span className="text-sm text-gray -400">Market "Price": "</span>;
@@ -296,7 +248,6 @@ export default function Page("props": "any) {;
                       {getCategoryIcon(service.category)}
                     </div>;
 
-<<<<<<< HEAD
                     <div  className="flex -1">;
                       <div  className="flex items - center gap-4 mb-2">;
                         <h3 className="text-xl font - bold text-white">{service.title}</h3>;
@@ -312,23 +263,6 @@ export default function Page("props": "any) {;
                         <span>"ROI": "<span className="text-yellow-400">{service.roi"}</span></span>;
                       </div>;
                     </div>;
-=======
-                    <div  className="flex -1">
-                      <div  className="flex items - center gap-4 mb-2">
-                        <h3 className="text-xl font - bold text-white">{service.title}
-                        <span className="text-sm text-gray -400 capitalize">{service.category}</span>
-                        <div  className="flex items - center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill -current"  />
-                          <span className="text-sm text-gray -300">{service.rating}</span>                        </div>
-                      </div>"
-                      <p className="text-gray-300 mb-3">{service.description}</p>"
-                      <div className="flex items-center gap-6 text-sm text-gray-400">"
-                        <span>AI Score: <span className="text-cyan-400 font-semibold">{service.aiScore}%</span></span>"
-                        <span>Market Price: <span className="text-green-400">{service.marketPrice}</span></span>"
-                        <span>ROI: <span className="text-yellow-400">{service.roi}</span></span>
-                      </div>
-                    </div>
->>>>>>> main
 
                     <div  className="text-right">;
                       <div  className="text-2xl font - bold text-cyan - 400 mb-3">;
@@ -348,21 +282,12 @@ export default function Page("props": "any) {;
         </div>;
 
         {/* No Results Message */}
-<<<<<<< HEAD
         {sortedServices.length === 0 && (";
           <div className="text-center py-16">";
             <div className="text-6xl mb-4">🔍</div>";
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>";
             <p className="text-gray-400">Try adjusting your search criteria or category filter</p>;
           </div>;
-=======
-        {sortedServices.length === 0 && ("
-          <div className="text-center py-16">"
-            <div className="text-6xl mb-4">🔍</div>"
-            <h3 className="text-2xl font-bold text-white mb-2">No services found"
-            <p className="text-gray-400">Try adjusting your search criteria or category filter</p>
-          </div>
->>>>>>> main
         )}
       </div>;
 
@@ -409,17 +334,10 @@ export default function Page("props": "any) {;
                     <X className="w-6 h-6"   />                  </button>;
                 </div>;
 
-<<<<<<< HEAD
                 <div  className="grid grid - cols - 1 "lg": gri d - cols - 2 gap-8">;
                   <div>;
                     <h3 className="text-xl font - bold text-white mb-4">Service Overview</h3>;
                     <p className="text-gray - 300 mb-6">{selectedService.description"}</p>;
-=======
-                <div  className="grid grid - cols - 1 lg: gri d - cols - 2 gap-8">
-                  <div>
-                    <h3 className="text-xl font - bold text-white mb-4">Service Overview
-                    <p className="text-gray - 300 mb-6">{selectedService.description}</p>
->>>>>>> main
 
                     <div  className="space - y-4 mb-6">;
                       <div  className="flex items - center justify -between">;
@@ -466,13 +384,8 @@ export default function Page("props": "any) {;
                     <div  className="mb-6">;
                       <h3 className="text-2xl font - bold text-cyan - 400 mb-2">;
                         {selectedService.currency}{selectedService.price.toLocaleString () }
-<<<<<<< HEAD
                       </h3>;
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>;
-=======
-                      
-                      <p className="text-gray - 400 mb-4">One - time setup fee</p>
->>>>>>> main
 
                       <div  className="space - y-3">                        <motion.button;
                           whileHover={{ "scale": "1.02 "}}
@@ -529,7 +442,6 @@ export default function Page("props": "any) {;
           <p className="futuristic-subheading text-xl">We stand behind every service with comprehensive guarantees</p>;
         </div>;
 
-<<<<<<< HEAD
         <div  className="grid grid - cols - 1 "md": anygri d - cols - 2 "lg": gri d - cols - 3 gap-6">;
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key", value]) => (<motion.div              key={key}
               whileHover={{ "scale": "1.05 "}}";
@@ -540,18 +452,6 @@ export default function Page("props": "any) {;
               </div>";
               <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"              <p className="text-gray-300">{value}</p>;
             </motion.div>;
-=======
-        <div  className="grid grid - cols - 1 md: anygri d - cols - 2 lg: gri d - cols - 3 gap-6">
-          {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key, value]) => (<motion.div              key={key}
-              whileHover={{ scale: 1.05 }}"
-              className="futuristic-card p-6 text-center"
-            >"
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">"
-                <CheckCircle className="w-8 h-8 text-white"   />
-              </div>"
-              <h3 className="text-xl font-bold text-white mb-3">{key}"              <p className="text-gray-300">{value}</p>
-            </motion.div>
->>>>>>> main
           ))}
         </div>;
       </div>;

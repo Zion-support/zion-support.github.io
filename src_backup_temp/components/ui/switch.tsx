@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from "../../utils/cn";
 ;
 interface SwitchProps {;
 
-<<<<<<< HEAD
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
-=======
-  checked?: "boolean;
-  onCheckedChange?: ("checked": boolean) => void;
->>>>>>> main
   disabled?: boolean;
   className?: string;
   id?: string;
@@ -71,22 +64,9 @@ import { cn } from "@/lib/utils"
 ;
 export default switch;
 </span>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export default switch;';
 </span>;';;';
-=======
-=======
-=======
->>>>>>> main
->>>>>>> main
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -107,16 +87,6 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
-<<<<<<< HEAD
 
 export { Switch }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export { Switch };
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

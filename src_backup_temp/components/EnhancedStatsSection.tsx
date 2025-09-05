@@ -1,6 +1,5 @@
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
-<<<<<<< HEAD
 ;
 interface Stat {;
   "id": "string;
@@ -79,20 +78,6 @@ export default function EnhancedStatsSection(...args[]): "{;
   // "TODO": "Add dependencies if needed;
 "}, []);
     if(inView) {;
-=======
-
-interface Stat {
-  id: string;
-  icon: React.ComponentType < any>;
-  value: string;
-  label: string;
-  description: string;
-  color: string;
-  gradient: string
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const stats: Sta t[] = [{';
 ';';
     id: 'clients',';
@@ -101,16 +86,6 @@ const stats: Sta t[] = [{';
     label: 'Global Clients',';';
     description: 'Serving businesses across 50+ countries',';';
     color: 'zion-cyan',';';
-=======
-const stats: Sta t[] = [{
-
-    id: 'clients',
-    icon: User s,
-    value: '500+',
-    label: 'Global Clients',
-    description: 'Serving businesses across 50+ countries',
-    color: 'zion-cyan',
->>>>>>> main
     gradient: 'from-zion-cyan to-zion-blue'
   },
   {
@@ -163,64 +138,6 @@ const stats: Sta t[] = [{
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
 
-<<<<<<< HEAD
-=======
-const stats: Sta t[] = [{;
-    id: 'clients',;
-    icon: User s,;
-    value: '500+',;
-    label: 'Global Clients',;
-    description: 'Serving businesses across 50+ countries',;
-    color: 'zion-cyan',;
-    gradient: 'from-zion-cyan to-zion-blue';
-  },;
-  {;
-    id: 'uptime',;
-    icon: Shiel d,;
-    value: '99.99%',;
-    label: 'Uptime Guarantee',;
-    description: 'Enterprise-grade reliability and performance',;
-    color: 'zion-purple',;
-    gradient: 'from-zion-purple to-zion-cyan';
-  },;
-  {;
-    id: 'roi',;
-    icon: TrendingU p,;
-    value: '600%',;
-    label: 'Average ROI',;
-    description: 'Proven business impact and cost savings',;
-    color: 'zion-blue',;
-    gradient: 'from-zion-blue to-zion-purple';
-  },;
-  {;
-    id: 'satisfaction',;
-    icon: Sta r,;
-    value: '4.9/5',;
-    label: 'Client Satisfaction',;
-    description: 'Consistently exceeding expectations',;
-    color: 'zion-cyan',;
-    gradient: 'from-zion-cyan to-zion-purple';
-  },;
-  {;
-    id: 'innovation',;
-    icon: Za p,;
-    value: '50+',;
-    label: 'Patents & Innovations',;
-    description: 'Leading edge technology development',;
-    color: 'zion-purple',;
-    gradient: 'from-zion-purple to-zion-blue';
-  },;
-  {;
-    id: 'growth',;
-    icon: Rocke t,;
-    value: '300%',;
-    label: 'Annual Growth',;
-    description: 'Rapidly expanding global presence',;
-    color: 'zion-blue',;
-    gradient: 'from-zion-blue to-zion-cyan';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 ];
 
 export default function EnhancedStatsSection(...args[]):  {
@@ -238,18 +155,10 @@ export default function EnhancedStatsSection(...args[]):  {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
     if(inView) {';
 ';';
-=======
-    if(inView) {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     if(inView) {
 
->>>>>>> main
->>>>>>> main
       controls.start('visible')}
   }, [controls, inView]);
 
@@ -262,7 +171,6 @@ export default function EnhancedStatsSection(...args[]):  {
 
         current = numericValue;
         clearInterval(timer) }
-<<<<<<< HEAD
 setCountedValues("prev": "> ({;
         ...prev",;
         [target]: "Math.floor (current) "}) ) }, 16) ;
@@ -365,24 +273,15 @@ setCountedValues("prev": "> ({;
                   initial={{ "scale": "0.8 "}}
                   animate={{ "scale": "1 "}}
                   transition = {;
-<<<<<<< HEAD
   { duration: 0.5,;
   delay: inde x * 0.1;
 }}
-<<<<<<< HEAD
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">';
                     {countedValues[stat.value] || 0}';';
                     {stat.value.includes('%') && '%'}';';
-=======
-=======
-  { "duration": "0.5",;
-  "delay": "inde x * 0.1;
-"}}
->>>>>>> main
                 >";
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-=======
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
@@ -516,13 +415,8 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 }}
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
->>>>>>> main
                     {countedValues[stat.value] || 0}
                     {stat.value.includes('%') && '%'}
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                     {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
                 </motion.div>
@@ -538,24 +432,15 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 </p>
 
                 {/* Hover effect overlay */}
-<<<<<<< HEAD
                 <motion.div";
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-"hover": "opacit y-100 transition-opacity duration-300";
                   initial={false"}
                 />;
               </motion.div>;
-=======
-                <motion.div"
-                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacit y-100 transition-opacity duration-300"
-                  initial={false}
-                />
-              </motion.div>
->>>>>>> main
             </motion.div>;) ) }
         </div>
 
         {/* Bottom Achievement Section */}
-<<<<<<< HEAD
         <motion.div;
           initial = {;
   { "opacity": "0",;
@@ -598,60 +483,9 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>";
                 <div className="text-gray-300">Client Retention</div>;
               </div>;
-=======
-        <motion.div
-          initial = {
-
-  { opacity: 0,
-  y: 3 0 }}          animate={controls}
-          variants = {
-
-  {
-
-            visible: {
-
-              opacity: 1,
-              y: 0,;
-              transition: {
-
-                duration: 0.6,
-  delay: 0.6}            }
-          }}"
-          className="mt-16"
-"
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
-            <motion.div"
-              className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
-              whileHover={{ rotate: 36 0 }}
-              transition={{ duration: 0.6 }}
-"
-              <Award className="w-10 h-10 text-white"   />            </motion.div>
-"
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Industry Recognition & Awards
-            "
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
-"
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 max-w-4xl mx-auto">"
-              <div className="text-center">"
-                <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>"
-                <div className="text-gray-300">Industry Awards</div>
-              </div>"
-              <div className="text-center">"
-                <div className="text-3xl font-bold text-zion-purple mb-2">Top 10</div>"
-                <div className="text-gray-300">Global Tech Companies</div>
-              </div>"
-              <div className="text-center">"
-                <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>"
-                <div className="text-gray-300">Client Retention</div>
-              </div>
->>>>>>> main
             </div>;
           </div>;
         </motion.div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>;';
     </section>;) }';';
 '"`
@@ -660,11 +494,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 </motion>
 </motion>';
 </any>;';;';
-=======
-=======
->>>>>>> main
       </div>;
-<<<<<<< HEAD
     </section>;) "}
 '"`;
 </motion>;
@@ -676,10 +506,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 </motion>;
 </motion>;
 </any>;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
     </section>;) }
 '"`
 
@@ -692,5 +518,3 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 </motion>
 </motion>
 </any>
->>>>>>> main
->>>>>>> main

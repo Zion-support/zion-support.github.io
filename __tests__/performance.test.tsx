@@ -1,6 +1,8 @@
+import { render } from '@testing-library/react';
+import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
 // Mock web-vitals
-jest.mock(\'web-vitals\', () => ({
+jest.mock('web-vitals', () => ({
   getCLS: jest.fn(),
   getFID: jest.fn(),
   getFCP: jest.fn(),
@@ -13,8 +15,8 @@ const TestComponent = () => {
   return <div>Test Component</div>;
 };
 
-describe(\'Performance Tests\', () => {
-  test(\'performance monitor hook renders without errors\', () => {
+describe('Performance Tests', () => {
+  test('performance monitor hook renders without errors', () => {
     expect(() => render(<TestComponent />)).not.toThrow();
   });
 });

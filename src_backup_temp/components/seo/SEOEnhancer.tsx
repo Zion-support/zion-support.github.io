@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';""',';';';';
     ';';';';';
 import React, {useEffect } from 'react';"',';';';';
@@ -17,52 +15,28 @@ import React, { useEffect } from 'react';""',';';';';
     ';';';';';
 import React, { useEffect } from 'react',;',';';';';
     ';';';';';';
-=======
-=======
->>>>>>> main
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, {useEffect } from 'react';"',';';
     ';';';
-<<<<<<< HEAD
 import Head from 'next/head;
 interface SEOEnhancerProps {;
 title?: "string;'",';';
   ';';';: "any;
   import React", { "useEffect": "any;
 "} from &apos;react',';';';
-=======
-import Head from 'next/head';';';';
-interface SEOEnhancerProps {
-title?: string;',';';
-  ';';';: any;
-  import React, { useEffect: any;
-} from &apos;react',';';';
->>>>>>> main
     ',';';
     ';';';
 import Head from &apos;next/head;';
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, { useEffect } from 'react',;',';';
-<<<<<<< HEAD
     ';';';';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     ;
->>>>>>> main
 import Head from 'next/head';
-<<<<<<< HEAD
 interface SEOEnhancerProps {;
   title?: "string;
-=======
-interface SEOEnhancerProps {
-
-  title?: string;
->>>>>>> main
   description?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   keywords?: string;';
   canonical?: string;';';
   ogImage?: string;';';';
@@ -191,21 +165,13 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
     "address": {"
       "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","
       "addressLocality": "Middletown", "addressRegion": "DE","
-=======
-=======
->>>>>>> main
   keywords?: string;
   canonical?: string;
   ogImage?: string;';
   ogType?: string;';';
   twitterCard?: string;';';';
-<<<<<<< HEAD
   structuredData?: any;
 "}&apos;&apos;',';';
-=======
-  structuredData?: any
-}&apos;&apos;',';';
->>>>>>> main
     ';';';
 export const "SEOEnhancer": "React.FC<SEOEnhancerProps> = ({';
   title = 'Zion Tech Group - Leading Technology Solutions Provider'", description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',',';';
@@ -266,7 +232,6 @@ export const "SEOEnhancer": "React.FC<SEOEnhancerProps> = ({""'",';';
     );}
     );""',';';
     ';';';
-<<<<<<< HEAD
       observer.observe({ "entryTypes": "['navigation'] "});}
   }, [title]);
   const defaultStructuredData = {"";
@@ -288,30 +253,6 @@ export const "SEOEnhancer": React.FC<SEOEnhancerProps> = ({;
   keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,;
   canonical,;
   ogImage = &apos;"https": "//ziontechgroup.com/og-image.jpg&apos",';
-=======
-      observer.observe({ entryTypes: ['navigation'] }
-    );}
-  }, [title]);
-  const defaultStructuredData = {""
-    "@context": "https://schema.org", "@type": "Organization",""
-    "name": "Zion Tech Group", "url": "https://ziontechgroup.com",""
-    "logo": "https://ziontechgroup.com/logo.png", "description": description,""
-    "address": {""
-      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",""
-      "addressLocality": "Middletown", "addressRegion": "DE",""
-      "postalCode": "19709", "addressCountry": "US"}, ""
-    "contactPoint": {""
-      "@type": "ContactPoint", "telephone": "+1-302-464-0950", ""
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com"},""
-    "sameAs": [""
-      "https: //ziontechgroup.com"]
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = &apos;Zion Tech Group - Leading Technology Solutions Provider&apos,
-  description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos,
-  keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,
-  canonical,
-  ogImage = &apos;https: //ziontechgroup.com/og-image.jpg&apos,';
->>>>>>> main
   ogType = &apos;website&apos,';';
   twitterCard = &apos;summary_large_image&apos,';';';
   structuredData',';';
@@ -343,7 +284,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       }
     );',';';
     ';';';
-<<<<<<< HEAD
       observer.observe({ "entryTypes": "['navigation']   "});',';';
     ';';';
       observer.observe({"entryTypes": "['navigation'] "});';';
@@ -357,10 +297,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "address": "{";
       "@type": "PostalAddress"", "streetAddress": "364 E Main St STE 1008",";
       "addressLocality": "Middletown", "addressRegion": "DE",";
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       "postalCode": "19709", "addressCountry": "US";
 },";
     "contactPoint": "{";
@@ -409,7 +345,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     &quot;sameAs&quot;: [;
       &quot;"https"://ziontechgroup.com&quot];
 "}
-=======
       observer.observe({ entryTypes: ['navigation']   }
     );',';';
     ';';';
@@ -474,13 +409,8 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     &quot;sameAs&quot;: [
       &quot;https://ziontechgroup.com&quot]
 }
->>>>>>> main
   };
   return (&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
   return (
     <Head>"
       <title>{title}</title>""
@@ -492,7 +422,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property=""og": "descriptio n" content={description"}   />"';';';
       <meta property=""og": "typ e" content={ogType"}   />"',';';
     ';';';
-<<<<<<< HEAD
       <meta property=""og": "ur l" content={canonical || 'http",;
     "s": "//ziontechgroup.com'"}   />;
       <meta property=""og": "imag e" content={ogImage"}   />";
@@ -524,47 +453,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" /" >"";
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >;
     </Head>;
-=======
-      <meta property="og: ur l" content={canonical || 'http,';';';';
-    s://ziontechgroup.com'}   />
-      <meta property="og: imag e" content={ogImage}   />"
-      <meta property="og: site_nam e" content="Zion Tech Group"   />
-      "
-      {/* Twitter */}""
-      <meta name="twitter: car d" content={twitterCard} /" >""
-      <meta name="twitter: titl e" content={title} /" >""
-      <meta name="twitter: descriptio n" content={description} /" >""
-      <meta name="twitter: imag e" content={ogImage} /" >
-      "
-      {/* Canonical URL */}""
-<<<<<<< HEAD
-=======
-  return (;
-    <Head>";
-      <title>{title}</title>"";
-      <meta name="description" content={description} /" >"";
-      <meta name="keywords" content={keywords} /" >"";
-      <meta name="viewport" content="width=device-width, initial-scale=1" /" >;
-      {/* Open Graph */}"';
-      <meta property="og: titl e" content={title}   />"';';
-      <meta property="og: descriptio n" content={description}   />"';';';
-      <meta property="og: typ e" content={ogType}   />"',';';
-    ';';';
-      <meta property="og: ur l" content={canonical || 'http,';';';';
-    s://ziontechgroup.com'}   />;
-      <meta property="og: imag e" content={ogImage}   />";
-      <meta property="og: site_nam e" content="Zion Tech Group"   />;
-      ";
-      {/* Twitter */}"";
-      <meta name="twitter: car d" content={twitterCard} /" >"";
-      <meta name="twitter: titl e" content={title} /" >"";
-      <meta name="twitter: descriptio n" content={description} /" >"";
-      <meta name="twitter: imag e" content={ogImage} /" >;
-      ";
-      {/* Canonical URL */}"";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       {canonical && <link rel="canonical" href={canonical} /" >}
       {/* Structured Data */}"
       <script ""
@@ -584,13 +472,8 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" /" >""
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >
     </Head>
->>>>>>> main
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 export default SEOEnhancer;"
     <Head>""
       <title>{title}</title>""
@@ -602,7 +485,6 @@ export default SEOEnhancer;"
       <meta property=""og": "descriptio n" content={description"} /" >"';';';
       <meta property=""og": "typ e" content={ogType"} /" >"',';';
     ';';';
-<<<<<<< HEAD
       <meta property=""og": "ur l" content={canonical || '"https"://ziontechgroup.com'"} /" >";
       <meta property=""og": "imag e" content={ogImage"} /" >";
       <meta property=""og": "site_nam e" content="Zion Tech Group" /" >";
@@ -631,45 +513,6 @@ export default SEOEnhancer;"
       <meta httpEquiv="X-Frame-Options" content="DENY" /"" >"";
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /"" >;
     </Head>;
-=======
-      <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'} /" >"
-      <meta property="og: imag e" content={ogImage} /" >"
-      <meta property="og: site_nam e" content="Zion Tech Group" /" >"
-      ""
-      {/* Twitter */}""
-      <meta name="twitter: car d" content={twitterCard} /"" >""
-      <meta name="twitter: titl e" content={title} /"" >""
-      <meta name="twitter: descriptio n" content={description} /"" >""
-      <meta name="twitter: imag e" content={ogImage} /"" >
-      ""
-      {/* Canonical URL */}""
-<<<<<<< HEAD
-=======
-export default SEOEnhancer;";
-    <Head>"";
-      <title>{title}</title>"";
-      <meta name="description" content={description} /"" >"";
-      <meta name="keywords" content={keywords} /"" >"";
-      <meta name="viewport" content="width=device-width, initial-scale=1" /"" >;
-      {/* Open Graph */}""';
-      <meta property="og: titl e" content={title} /" >"';';
-      <meta property="og: descriptio n" content={description} /" >"';';';
-      <meta property="og: typ e" content={ogType} /" >"',';';
-    ';';';
-      <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'} /" >";
-      <meta property="og: imag e" content={ogImage} /" >";
-      <meta property="og: site_nam e" content="Zion Tech Group" /" >";
-      "";
-      {/* Twitter */}"";
-      <meta name="twitter: car d" content={twitterCard} /"" >"";
-      <meta name="twitter: titl e" content={title} /"" >"";
-      <meta name="twitter: descriptio n" content={description} /"" >"";
-      <meta name="twitter: imag e" content={ogImage} /"" >;
-      "";
-      {/* Canonical URL */}"";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       {canonical && <link rel="canonical" href={canonical} /"" >}
       {/* Structured Data */}""
       <script ""
@@ -687,7 +530,6 @@ export default SEOEnhancer;";
       <meta httpEquiv="X-Frame-Options" content="DENY" /"" >""
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /"" >
     </Head>
->>>>>>> main
   );};
 export default SEOEnhancer;""
     <Head>
@@ -696,7 +538,6 @@ export default SEOEnhancer;""
       <meta name=&quot;keywords&quot; content={keywords}   />&quot;
       <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;   />
       {/* Open Graph */}&quot;
-<<<<<<< HEAD
       <meta property=&quot;"og": "titl e&quot; content={title"}   />&quot;
       <meta property=&quot;"og": "descriptio n&quot; content={description"}   />&quot;
       <meta property=&quot;"og": "typ e&quot; content={ogType"}   />&quot;
@@ -717,13 +558,6 @@ export default SEOEnhancer;""
       <meta name=""twitter": "descriptio n" content={description"} /" >";
       <meta name=""twitter": "imag e" content={ogImage"} /" >;
       {/* Canonical URL */}";
-=======
-      <meta property=&quot;og: titl e&quot; content={title}   />&quot;
-      <meta property=&quot;og: descriptio n&quot; content={description}   />&quot;
-      <meta property=&quot;og: typ e&quot; content={ogType}   />&quot;
-      <meta property=&quot;og: ur l&quot; content={canonical || &apos;http,s: //ziontechgroup.com&apos}   />&apos;
-<<<<<<< HEAD
-<<<<<<< HEAD
       <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;';
       <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />';';
       {/* Open Graph */}';';';
@@ -731,15 +565,6 @@ export default SEOEnhancer;""
       <meta property="og: descriptio n" content={description}   />';';';';';
       <meta property="og: typ e" content={ogType}   />',';';';';
     ';';';';';
-=======
-      <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;
-      <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />
-      {/* Open Graph */}';
-      <meta property="og: titl e" content={title}   />';';
-      <meta property="og: descriptio n" content={description}   />';';';
-      <meta property="og: typ e" content={ogType}   />',';';
-    ';';';
->>>>>>> main
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
@@ -747,7 +572,6 @@ export default SEOEnhancer;""
       <meta name="twitter: car d" content={twitterCard} /" >"
       <meta name="twitter: titl e" content={title} /" >"
       <meta name="twitter: descriptio n" content={description} /" >"
-<<<<<<< HEAD
       <meta name="twitter: imag e" content={ogImage} /" >';
       {/* Canonical URL */}"';';
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';';';
@@ -758,45 +582,19 @@ export default SEOEnhancer;""
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
-=======
-      <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;
-      <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />;
-      {/* Open Graph */}';
-      <meta property="og: titl e" content={title}   />';';
-      <meta property="og: descriptio n" content={description}   />';';';
-      <meta property="og: typ e" content={ogType}   />',';';
-    ';';';
-      <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />;
-      <meta property="og: imag e" content={ogImage}   />;
-      <meta property="og: site_nam e" content="Zion Tech Group"   />;
-      {/* Twitter */}";
-      <meta name="twitter: car d" content={twitterCard} /" >";
-      <meta name="twitter: titl e" content={title} /" >";
-      <meta name="twitter: descriptio n" content={description} /" >";
-      <meta name="twitter: imag e" content={ogImage} /" >;
-      {/* Canonical URL */}";
-=======
-      <meta name="twitter: imag e" content={ogImage} /" >
-      {/* Canonical URL */}"
->>>>>>> main
->>>>>>> main
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';
       <script " type="application/ld+json" dangerouslySetInnerHTML={{ "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}} /" >';';
       <meta property=""og": "descriptio n" content={description"}   />';';';
       <meta property=""og": "typ e" content={ogType"}   />',';';
     ';';';
-<<<<<<< HEAD
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />;
       <meta property="og: imag e" content={ogImage}   />;
       <meta property="og: site_nam e" content="Zion Tech Group"   />;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       {/* Twitter */}&quot;
       <meta name=&quot;twitter: car d&quot; content={twitterCard}   />&quot;
       <meta name=&quot;twitter: titl e&quot; content={title}   />&quot;
       <meta name=&quot;twitter: descriptio n&quot; content={description}   />&quot;
       <meta name=&quot;twitter: imag e&quot; content={ogImage}   />;
-=======
-<<<<<<< HEAD
       <meta property=""og": "ur l" content={canonical || '"https"://ziontechgroup.com'"}   />;
       <meta property=""og": "imag e" content={ogImage"}   />;
       <meta property=""og": "site_nam e" content="Zion Tech Group"   />;
@@ -805,7 +603,6 @@ export default SEOEnhancer;""
       <meta name=&quot;"twitter": "titl e&quot; content={title"}   />&quot;
       <meta name=&quot;"twitter": "descriptio n&quot; content={description"}   />&quot;
       <meta name=&quot;"twitter": "imag e&quot; content={ogImage"}   />;
->>>>>>> main
       {/* Canonical URL */}
       {canonical &&"}&quot; <link rel=&quot;canonical&quot; href={canonical}   />}
       {/* Structured Data */}&quot;
@@ -824,7 +621,6 @@ export default SEOEnhancer;""
       <link rel="preconnect" href=""https"://fonts.gstatic.com" crossOrigin="anonymous"   />;
       <link rel="dns-prefetch" href=""https"://ziontechgroup.com"   />;
       {/* Security headers */"}&quot;
-=======
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
@@ -851,12 +647,9 @@ export default SEOEnhancer;""
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"   />
       <link rel="dns-prefetch" href="https://ziontechgroup.com"   />
       {/* Security headers */}&quot;
->>>>>>> main
       <meta httpEquiv=&quot;X-Content-Type-Options&quot; content=&quot;nosniff&quot;   />&quot;
       <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
       <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Head>';
   );';';
 };';';';
@@ -867,16 +660,10 @@ export default SEOEnhancer;';';';';';
 </SEOEnhancerProps>
 </SEOEnhancerProps>';
 </SEOEnhancerProps>;';;';
-=======
-    </Head>;
-=======
-    </Head>
->>>>>>> main
   );
 };';
 export default SEOEnhancer';';
 export default SEOEnhancer;';';';
-<<<<<<< HEAD
 ";
 </script>;
 </script>;
@@ -886,9 +673,6 @@ export default SEOEnhancer;';';';
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
-=======
-"';';';';
-<<<<<<< HEAD
 </script>;
 </script>;
 </script>;
@@ -897,8 +681,6 @@ export default SEOEnhancer;';';';
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </script>
 </script>
 </script>
@@ -907,5 +689,3 @@ export default SEOEnhancer;';';';
 </SEOEnhancerProps>
 </SEOEnhancerProps>
 </SEOEnhancerProps>
->>>>>>> main
->>>>>>> main

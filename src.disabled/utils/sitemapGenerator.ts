@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface: SitemapUrl {
-=======
-=======
-"interface": SitemapUrl {
->>>>>>> main
   url: string;
    lastmod?: string;
    changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';
@@ -15,14 +7,6 @@ interface: SitemapUrl {
    urls: SitemapUrl[];
    outputPath?: strin,g} } "export": class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): "string": { const { baseUrl, urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split(
   'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join(
-<<<<<<< HEAD
   '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,
-=======
-interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   '\n') return "<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='"http": '''",
->>>>>>> main
->>>>>>> main
 interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,
->>>>>>> main

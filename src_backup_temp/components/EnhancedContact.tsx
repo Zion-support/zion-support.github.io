@@ -18,7 +18,6 @@ export function EnhancedContact(...args[]): "{;
 
   const [formData", setFormData] = useState<any>({;
 
-<<<<<<< HEAD
     "name": '',;
     "email": '',;
     "phone": '',;
@@ -28,26 +27,6 @@ export function EnhancedContact(...args[]): "{;
   }) ;
 ;
   const [errors, setErrors] = useState<any> ({}) ;
-=======
-interface ContactFormErrors {
-  [key: string]: string}
-
-export function EnhancedContact(...args[]):  {
-
-  const [formData, setFormData] = useState<any>({
-
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
-    message: ''
-  }
-    );
-
-  const [errors, setErrors] = useState<any> ({}
-    );
->>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
   const [isSubmitted, setIsSubmitted] = useState<any>(false) { "value": 'cloud-infrastructure', "label": 'Cloud Infrastructure' }, { "value": 'cybersecurity', "label": 'Cybersecurity' }, { "value": 'digital-transformation', "label": 'Digital Transformation' }, { "value": 'consulting', "label": 'IT Consulting' }, { "value": 'quantum-computing', "label": 'Quantum Computing' }, { "value": 'green-it', "label": 'Green IT Solutions' };
   ];
@@ -210,7 +189,6 @@ export function EnhancedContact(...args[]):  {
   { "opacity": "1",;
   "x": "0;
 
-<<<<<<< HEAD
 "}}
                   transition={{ "delay": "0.3 + index * 0.1 "}}";
                   className="flex items-start space-x-4";
@@ -223,20 +201,6 @@ export function EnhancedContact(...args[]):  {
                     <p className="text-zion-cyan font-medium mb-1">{info.value}</p>";
                     <p className="text-zion-slate-light text-sm">{info.description}</p>;
                   </div>;
-=======
-}}
-                  transition={{ delay: 0.3 + index * 0.1 }}"
-                  className="flex items-start space-x-4"
-                >"
-                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <info.icon className="w-6 h-6 text-zion-cyan" />
-                  </div>
-                  <div>"
-                    <h3 className="text-lg font-semibold text-white mb-1">{info.title}"
-                    <p className="text-zion-cyan font-medium mb-1">{info.value}</p>"
-                    <p className="text-zion-slate-light text-sm">{info.description}</p>
-                  </div>
->>>>>>> main
                 </motion.div>) ) }
             </div>;
 
@@ -253,7 +217,6 @@ export function EnhancedContact(...args[]):  {
   { "opacity": "1",;
   "y": "0;
 
-<<<<<<< HEAD
 "}}
               transition={{ "delay": "0.6 "}}";
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20";
@@ -279,33 +242,6 @@ export function EnhancedContact(...args[]):  {
               </div>;
             </motion.div>;
           </motion.div>;
-=======
-}}
-              transition={{ delay: 0.6 }}"
-              className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
-            >"
-              <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?"
-              <div className="grid grid-cols-2 gap-4">"
-                <div className="text-center">"
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">500+</div>"
-                  <div className="text-sm text-zion-slate-light">Happy Clients</div>
-                </div>"
-                <div className="text-center">"
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">95%</div>"
-                  <div className="text-sm text-zion-slate-light">Success Rate</div>
-                </div>"
-                <div className="text-center">"
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">10+</div>"
-                  <div className="text-sm text-zion-slate-light">Years Experience</div>
-                </div>"
-                <div className="text-center">"
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">24/7</div>"
-                  <div className="text-sm text-zion-slate-light">Support</div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
->>>>>>> main
 
           {/* Contact Form */}
           <motion.div;

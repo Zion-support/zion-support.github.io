@@ -114,20 +114,11 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-<<<<<<< HEAD
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
-=======
-
-    // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: tru e }
-    );
-
-    // Page unload tracking'
->>>>>>> main
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
 ;
     // Track button clicks';
@@ -170,48 +161,27 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
-<<<<<<< HEAD
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
-=======
-      }
-    );
-      fcpObserver.observe({ entryTypes: ['paint'] }
-    );
->>>>>>> main
 
         if(lcp) {;
 
           trackPerformance('lcp', lcp.startTime)}
-<<<<<<< HEAD
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
-=======
-      }
-    );
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
->>>>>>> main
 
         if(fid) {;
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-<<<<<<< HEAD
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
-=======
-      }
-    );
-      fidObserver.observe({ entryTypes: ['first-input'] }
-    );
->>>>>>> main
 
         let clsValue = 0;        for (const entry of list.getEntries()) {;
 
@@ -219,19 +189,12 @@ export function AnalyticsManager("props": "any) {;
 
             clsValue += (entry as any).value}
         }
-<<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
-=======
-        trackPerformance('cls', clsValue)}
-    );
-      clsObserver.observe({ entryTypes: ['layout-shift'] })}
->>>>>>> main
   }, []) }
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-<<<<<<< HEAD
 ;
         trackEvent('page_view', { path });
 ;
@@ -239,16 +202,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
-=======
-
-        trackEvent('page_view', { path }
-    );
-
-        // Send to analytics endpoint'
-        sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
-    },
-    [currentSession]
->>>>>>> main
   );
 ;
         setCurrentSession(prev =>;

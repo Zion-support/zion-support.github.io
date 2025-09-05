@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
-import { Sidebar } from './Sidebar';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';';
 import Head from 'next/head';';
 
@@ -101,13 +100,9 @@ export default function ContactPage() {;
       </div>;
     </div>;
   );,
-=======
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -410,13 +405,7 @@ const Contact: NextPage = () => {
     </>
   );
 };
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
->>>>>>> main
 
 export default function ContactPage() {
   return (
@@ -424,24 +413,11 @@ export default function ContactPage() {
       title="Contact Us - Zion Tech Group"
       description="Get in touch with our expert team for technology solutions and consulting."
     >
-=======
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 export default function ContactPage() {
   return (
     <Layout>
-=======
-export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
-        <meta name="keywords" content="contact, support, consultation, technology services" />
-      </Head>
-import Layout from '../components/Layout';
->>>>>>> main
 
 export default function ContactPage() {
   return (
@@ -450,8 +426,6 @@ export default function ContactPage() {
       description="Get in touch with our expert team for technology solutions and consulting."
       keywords="contact, support, technology consulting, AI services, IT services, micro SaaS"
     >
->>>>>>> main
->>>>>>> main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
       {/* Hero Section */}
@@ -482,23 +456,14 @@ export default function ContactPage() {
       </section>
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
           {/* Contact Information */}
-=======
-<<<<<<< HEAD
           {/* Contact Info Cards */}
-=======
-{/* Contact Information Cards */}
->>>>>>> main
->>>>>>> main
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
             <motion.div,
     className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               viewport={{ once: true }}
             >
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -507,10 +472,6 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
               <p className="text-gray-600">+1 302 464 0950</p>
             </motion.div>
-=======
-              viewport={{ once:true }}
-=======
->>>>>>> main
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
@@ -587,7 +548,6 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> main
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Send Us a Message
@@ -596,14 +556,9 @@ export default function ContactPage() {
                 Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.
               </p>
             </motion.div>
-<<<<<<< HEAD
 
             <motion.div,
     className="bg-white rounded-lg shadow-lg p-6 text-center"
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
->>>>>>> main
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -615,15 +570,9 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">kleber@ziontechgroup.com</p>
             </motion.div>
-<<<<<<< HEAD
 
             <motion.div,
     className="bg-white rounded-lg shadow-lg p-6 text-center"
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
-              className="bg-white rounded-lg shadow-xl p-8"
->>>>>>> main
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -640,46 +589,26 @@ export default function ContactPage() {
             </motion.div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
             <motion.div,
     className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, x:-30 }}
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x: -30 }}
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 Send us a Message
               </h2>
-=======
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
->>>>>>> main
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *
                     </label>
-<<<<<<< HEAD
                     <input,
     type="text"
                       id="name"
                       name="name"
-=======
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
->>>>>>> main
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="John"
                       required
@@ -690,17 +619,10 @@ export default function ContactPage() {
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name *
                     </label>
-<<<<<<< HEAD
                     <input,
     type="email"
                       id="email"
                       name="email"
-=======
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
->>>>>>> main
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Doe"
                       required
@@ -767,7 +689,6 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
                 
-<<<<<<< HEAD
                 <button,
     type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -778,42 +699,9 @@ export default function ContactPage() {
                 </button>
               </form>
             </motion.div>
-<<<<<<< HEAD
 
-=======
-          </div>
-
-          <motion.div,
-    className="bg-white rounded-lg shadow-lg p-8"
-=======
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="newsletter"
-                    name="newsletter"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
-                    Subscribe to our newsletter for the latest technology insights
-                  </label>
-                </div>
-                
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Send Message
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </div>
-              </form>
-            </motion.div>
->>>>>>> main
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
->>>>>>> main
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -858,48 +746,8 @@ export default function ContactPage() {
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       </div>
     </MainLayout>
-=======
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve your technology goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Call Now: +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
-                Email Us
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      </div>
-    </Layout>
->>>>>>> main
   );
->>>>>>> main
 }

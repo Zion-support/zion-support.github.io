@@ -89,7 +89,8 @@
     "pm2:resurrect": "pm2 resurrect",
     "pm2:startup": "pm2 startup",
     "pm2:unstartup": "pm2 unstartup",
-    "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'"
+    "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'",
+    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

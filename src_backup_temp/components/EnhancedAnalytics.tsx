@@ -1,6 +1,5 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
 export default function Page("props": "any) {;
 ;
   "performance": {;
@@ -17,27 +16,17 @@ interface EnhancedAnalyticsProps {;
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
 
   enabled = true,: any;';
   showDashboard = false,: any;';';
-=======
-export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
-  enabled = true,: any;
-  showDashboard = false,: any;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true",: "any;
   showDashboard = false",: "any;
->>>>>>> main
   trackingId = 'G-XXXXXXXXXX': any;
 "}) => {;
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
     null;
-=======
 export default function Page(props: any) {
 ;
   performance: {
@@ -66,7 +55,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
->>>>>>> main
   );
   const [isVisible, setIsVisible] = useState<any>(false);
   const [currentPage, setCurrentPage] = useState<any>(window.location.pathname);
@@ -74,7 +62,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [userInteractions, setUserInteractions] = useState<any>(0);
   const [scrollDepth, setScrollDepth] = useState<any>(0);
   const [timeOnPage, setTimeOnPage] = useState<any>(0);
-<<<<<<< HEAD
 ;
   // Initialize analytics;
   useEffect(() => {;
@@ -82,56 +69,28 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {;
     // Cleanup function;
   "};
-=======
-
-  // Initialize analytics
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
->>>>>>> main
 }, []);, []);
     if(!enabled) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
     // Initialize Google Analytics(if tracking ID provided)';';
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {';
 ';';
       // Google Analytics 4 initialization'';';
-=======
-;
-    // Initialize Google Analytics(if tracking ID provided);
-    if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
-      // Google Analytics 4 initialization';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
     // Initialize Google Analytics(if tracking ID provided)
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
 
       // Google Analytics 4 initialization'
->>>>>>> main
       const script = document.createElement('script');      script.async = true;
       script.src = `"https": "//www.googletagmanager.com / gtag / js?id=${trackingId"}`;
       document.head.appendChild(script) ;
 
       window.dataLayer = window.dataLayer || [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      function gtag("props": "any) {;
-=======
->>>>>>> main
       function gtag(props: any) {
 
->>>>>>> main
         window.dataLayer.push(args);
       "}
       gtag('js', new Date());
-<<<<<<< HEAD
       gtag('config', trackingId, {;
         "page_title": "documen t.title",;
         "page_location": "windo w.location.href",;
@@ -176,70 +135,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           "previous_page": "currentPag e",;
           "time_on_previous_page": "timeOnPag e"});
 ;
-=======
-      gtag('config', trackingId, {
-        page_title: documen t.title,
-        page_location: windo w.location.href,
-        custom_map: {
-
-          custom_parameter_1: 'user_type',
-          custom_parameter_2: 'page_category'}}
-    );
-
-      // Track page view'
-      gtag('event',page_view', {
-
-        page_title: documen t.title,
-        page_location: windo w.location.href,
-        page_referrer: documen t.referrer})}
-    // Initialize session tracking
-    setSessionStart(Date.now());
-
-    // Track session start'
-    trackEvent('session_start', {
-
-      timestamp: Dat e.now(),
-      user_agent: navigato r.userAgent,
-      language: navigato r.language,
-<<<<<<< HEAD
-=======
-      function gtag(props: any) {;
-        window.dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', trackingId, {;
-        page_title: documen t.title,;
-        page_location: windo w.location.href,;
-        custom_map: {;
-          custom_parameter_1: 'user_type',;
-          custom_parameter_2: 'page_category'}});
-;
-      // Track page view';
-      gtag('event',page_view', {;
-        page_title: documen t.title,;
-        page_location: windo w.location.href,;
-        page_referrer: documen t.referrer})}
-    // Initialize session tracking;
-    setSessionStart(Date.now());
-;
-    // Track session start';
-    trackEvent('session_start', {;
-      timestamp: Dat e.now(),;
-      user_agent: navigato r.userAgent,;
-      language: navigato r.language,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       timezone: Int l.DateTimeFormat().resolvedOptions().timeZone});
 ;
     return : unknown {;
       if(script) {;
-=======
       timezone: Int l.DateTimeFormat().resolvedOptions().timeZone}
     );
 
     return : unknown {
       if(script) {
 
->>>>>>> main
         document.head.removeChild(script)}
     }}, [enabled, trackingId]) ;
   // Track page changes
@@ -251,10 +156,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
     const handleRouteChange = (...args: unknow n[]): unknown => {
       const newPage = window.location.pathname;      if(newPage !== currentPage) {
@@ -265,31 +166,15 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           page_path: newPag e,
           page_title: documen t.title,
           previous_page: currentPag e,
-<<<<<<< HEAD
-=======
-;
-    const handleRouteChange = (...args: unknow n[]): unknown => {;
-      const newPage = window.location.pathname;      if(newPage !== currentPage) {;
-        // Track page view';
-        trackEvent('page_view', {;
-          page_path: newPag e,;
-          page_title: documen t.title,;
-          previous_page: currentPag e,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
           time_on_previous_page: timeOnPag e});
 ;
-=======
           time_on_previous_page: timeOnPag e}
     );
 
->>>>>>> main
->>>>>>> main
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
         setUserInteractions(0) }    };
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
     // Listen for route changes(for SPA)';';
     window.addEventListener('popstate', handleRouteChange);';
@@ -303,15 +188,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     return () => {';
 ';';
-=======
-;
-    // Listen for route changes(for SPA);
-=======
-
-    // Listen for route changes(for SPA)
->>>>>>> main
     window.addEventListener('popstate', handleRouteChange);
-<<<<<<< HEAD
 ;
     // Track initial page';
     trackEvent('page_view', {;
@@ -320,10 +197,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       "is_initial_page": "tru e"});
 ;
     return () => {;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions;
   useEffect(() => {;
@@ -332,8 +205,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
     if(!enabled) return;';
 ';';
       trackEvent('user_interaction', {';
@@ -342,23 +213,17 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 '';';
         interaction_type: 'click',
         page_path: currentPag e,
-=======
-=======
->>>>>>> main
     if(!enabled) return;
 ;
       trackEvent('user_interaction', {;
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
 ';
-<<<<<<< HEAD
         interaction_type: 'click',;
         page_path: currentPag e,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         timestamp: Dat e.now()})};
 ;
       if(scrollPercent > scrollDepth) {;
         setScrollDepth(scrollPercent);
-<<<<<<< HEAD
 
         // Track scroll milestones
         if(scrollPercent >= 25 && scrollDepth < 25) {';
@@ -386,15 +251,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     }};';';
     // Set up event listeners'';';
     document.addEventListener('click', trackInteraction);';';
-=======
-=======
-        "interaction_type": 'click',;
-        "page_path": "currentPag e",;
-        "timestamp": "Dat e.now()"})};
-;
-      if(scrollPercent > scrollDepth) {;
-        setScrollDepth(scrollPercent);
->>>>>>> main
 ;
         // Track scroll milestones;
         if(scrollPercent >= 25 && scrollDepth < 25) {;
@@ -408,28 +264,20 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "milestone": "7 5",;
             "page_path": "currentPag e"})} else if(scrollPercent >= 90 && scrollDepth < 90) {;
           trackEvent('scroll_milestone', {;
-<<<<<<< HEAD
             milestone: 9 0,;
             page_path: currentPag e})}
       }
     }};
     // Set up event listeners';
     document.addEventListener('click', trackInteraction);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     window.addEventListener('scroll', trackScroll);
 ;
     // Update time on page every second;
     sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
-<<<<<<< HEAD
 
     return () => {';
 ';';
       document.removeEventListener('click', trackInteraction);';';
-=======
-;
-    return () => {;
-      document.removeEventListener('click', trackInteraction);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       window.removeEventListener('scroll', trackScroll);
       if(sessionRef.current) {;
         clearInterval(sessionRef.current)}
@@ -441,7 +289,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   };
 }, []);, []);
-<<<<<<< HEAD
     if(!enabled) return;';
 ';';
         trackEvent('performance_metrics', {
@@ -456,68 +303,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       trackPerformance()} else {';
 ';';
       window.addEventListener('load', trackPerformance);';';
-=======
-=======
-            "milestone": "9 0",;
-            "page_path": "currentPag e"})}
-=======
-
-    // Track initial page'
-    trackEvent('page_view', {
-
-      page_path: currentPag e,
-      page_title: documen t.title,
-      is_initial_page: tru e}
-    );
-
-    return () => {
-
-      window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
-  // Track user interactions
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!enabled) return;
-
-      trackEvent('user_interaction', {
-
-      setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
-'
-        interaction_type: 'click',
-        page_path: currentPag e,
-        timestamp: Dat e.now()})};
-
-      if(scrollPercent > scrollDepth) {
-
-        setScrollDepth(scrollPercent);
-
-        // Track scroll milestones
-        if(scrollPercent >= 25 && scrollDepth < 25) {
-
-          trackEvent('scroll_milestone', {
-
-            milestone: 2 5,
-            page_path: currentPag e})} else if(scrollPercent >= 50 && scrollDepth < 50) {
-
-          trackEvent('scroll_milestone', {
-
-            milestone: 5 0,
-            page_path: currentPag e})} else if(scrollPercent >= 75 && scrollDepth < 75) {
-
-          trackEvent('scroll_milestone', {
-
-            milestone: 7 5,
-            page_path: currentPag e})} else if(scrollPercent >= 90 && scrollDepth < 90) {
-
-          trackEvent('scroll_milestone', {
-
-            milestone: 9 0,
-            page_path: currentPag e})}
->>>>>>> main
       }
     }};
     // Set up event listeners'
@@ -535,7 +320,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
         clearInterval(sessionRef.current)}
     }}, [enabled, currentPage, scrollDepth]) ;
-<<<<<<< HEAD
   // Track performance metrics;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -543,7 +327,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
->>>>>>> main
     if(!enabled) return;
 ;
         trackEvent('performance_metrics', {;
@@ -556,10 +339,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(document.readyState === 'complete') {;
       trackPerformance()} else {;
       window.addEventListener('load', trackPerformance);
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end;
@@ -577,7 +356,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         "total_interactions": "userInteraction s",;
         "average_time_on_page": "timeOnPag e"})};
 ;
-=======
   // Track performance metrics
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -586,45 +364,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
     if(!enabled) return;';
 ';';
-=======
-    if(!enabled) return;
-
-        trackEvent('performance_metrics', {
-          load_time: loadTim e,
-          fcp: fc p,
-          lcp: lc p,
-          page_path: currentPag e})}    };
-
-    // Track performance after page load'
-    if(document.readyState === 'complete') {
-
-      trackPerformance()} else {
-
-      window.addEventListener('load', trackPerformance);
-      return () => window.removeEventListener('load', trackPerformance)}
-  }, [enabled, currentPage]) ;
-  // Track session end
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!enabled) return;
-
->>>>>>> main
       trackEvent('session_end', {
         session_duration: sessionDuratio n,
         pages_viewed: 1, // Simplified
         total_interactions: userInteraction s,
         average_time_on_page: timeOnPag e})};
 
->>>>>>> main
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
 
@@ -633,7 +380,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Google Analytics 4
       if(window.gtag) {
 
-<<<<<<< HEAD
       // Custom analytics tracking
       
       // Send to analytics endpoint(if configured)
@@ -643,46 +389,22 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ';';
           method: 'POST',';';
           headers: { 'Content-Type': 'application/json' },
-=======
-    if(!enabled) return;
-;
-      trackEvent('session_end', {;
-        session_duration: sessionDuratio n,;
-        pages_viewed: 1, // Simplified;
-        total_interactions: userInteraction s,;
-        average_time_on_page: timeOnPag e})};
-;
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
-;
-  // Track event function;
-      // Google Analytics 4;
-      if(window.gtag) {;
-=======
->>>>>>> main
         window.gtag('event', eventName, parameters)}
-<<<<<<< HEAD
 ;
       // Custom analytics tracking;
       // Send to analytics endpoint(if configured);
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {;
         fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {;
-<<<<<<< HEAD
           method: 'POST',;
           headers: { 'Content-Type': 'application/json' },;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
           body: JSO N.stringify(eventData)}).catch(console.error)}
-=======
           "method": 'POST',;
           "headers": "{ 'Content-Type': 'application/json' "},;
           "body": "JSO N.stringify(eventData)"}).catch(console.error)}
->>>>>>> main
 ;
       // Store locally for dashboard;
       setAnalyticsData(prev => {;
         if (!prev) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         return {
 ';
@@ -693,18 +415,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             ...prev.userEngagement,
             scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
             timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
-=======
-;
-        return {;
-          ...prev,;
-          pageViews: pre v.pageViews + (eventName === 'page_view' ? 1 : 0),;
-          userEngagement: {;
-            ...prev.userEngagement,;
-            scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),;
-            timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             interactions: userInteraction s}}});
-=======
 ;
         return {;
           ...prev,;
@@ -714,7 +425,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "scrollDepth": "Mat h.max(prev.userEngagement.scrollDepth", scrollDepth),;
             "timeOnPage": "Mat h.max(prev.userEngagement.timeOnPage", timeOnPage),;
             "interactions": "userInteraction s"}}});
->>>>>>> main
 ;
       // },;
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions];
@@ -753,7 +463,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "lcp": "150 0",;
             "fid": "5 0",;
             "cls": "0.05"}}})}
-=======
 
       // Custom analytics tracking
       
@@ -794,10 +503,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
     if(showDashboard) {
 
       setAnalyticsData({
@@ -830,46 +535,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             fcp: 80 0,
             lcp: 150 0,
             fid: 5 0,
-<<<<<<< HEAD
-=======
-    if(showDashboard) {;
-      setAnalyticsData({;
-        pageViews: 124 7,;
-        uniqueVisitors: 89 2,;
-        sessionDuration: 18 0,;
-        bounceRate: 2 3.4,;
-        deviceTypes: {;
-          desktop: 6 5,;
-          mobile: 2 8,;
-          tablet: 7},;
-        topPages: [';
-          { path: '/', views: 45 6, title: 'Home' },;
-          { path: '/services', views: 23 4, title: 'Services' },;
-          { path: '/about', views: 18 9, title: 'About' },;
-          { path: '/contact', views: 15 6, title: 'Contact' },;
-        ],;
-        userEngagement: {;
-          scrollDepth: scrollDept h,;
-          timeOnPage: timeOnPag e,;
-          interactions: userInteraction s},;
-        performance: {;
-          loadTime: 120 0,;
-          coreWebVitals: {;
-            fcp: 80 0,;
-            lcp: 150 0,;
-            fid: 5 0,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
             cls: 0.05}}})}
->>>>>>> main
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
 
   return ()
     <>
       {/* Analytics Toggle Button */}
-<<<<<<< HEAD
       {showDashboard && (<motion.button;
           initial={{ "opacity": "0", "scale": "0.8 "}}
           animate={{ "opacity": "1", "scale": "1 "}}
@@ -1061,138 +733,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                         {page.views"}
                       </span>;
                     </div>;
-=======
-      {showDashboard && (<motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsVisible(!isVisible)}
-          className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover: b g-green-700 transition-all duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-green-400 focus: rin g-offset-2"
-          
-          title="Analytics Dashboard"
-        >"
-          <BarChart3 className="w-5 h-5"  />
-        </motion.button>
-      )}
-
-      {/* Analytics Dashboard */}
-      <AnimatePresence>
-        {isVisible && showDashboard && analyticsData && (<motion.div
-            initial={{ opacity: 0, x: 30 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 30 0 }}"
-            className="fixed top-4 right-48 z-50 w-96 bg-white dark: b g-slate-800 rounded-lg shadow-xl border border-slate-200 dark: borde r-slate-700 overflow-hidden max-h-[80vh]"
-          >
-            {/* Header */}"
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
-              <div className="flex items-center space-x-2">"
-                <BarChart3 className="w-5 h-5"  />"
-                <h3 className="font-semibold">Analytics
-              </div>
-              <button
-                onClick={() => setIsVisible(false)}"
-                className="p-1 hover: b g-white/20 rounded transition-colors"
-                
-              >"
-                <Eye className="w-4 h-4"   />              </button>
-            </div>
-
-            {/* Content */}"
-            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
-              {/* Overview Metrics */}"
-              <div className="grid grid-cols-2 gap-4">"
-                <div className="text-center p-3 bg-slate-50 dark: b g-slate-700 rounded-lg">"
-                  <div className="text-2xl font-bold text-green-600">
-                    {analyticsData.pageViews}
-                  </div>"
-                  <div className="text-xs text-slate-600 dark: tex t-slate-400">
-                    Page Views
-                  </div>
-                </div>"
-                <div className="text-center p-3 bg-slate-50 dark: b g-slate-700 rounded-lg">"
-                  <div className="text-2xl font-bold text-blue-600">
-                    {analyticsData.uniqueVisitors}
-                  </div>"
-                  <div className="text-xs text-slate-600 dark: tex t-slate-400">
-                    Unique Visitors                  </div>
-                </div>
-              </div>
-
-              {/* Device Types */}"
-              <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
-                  Device Types
-                </h4>"
-                <div className="space-y-2">"
-                  <div className="flex items-center justify-between">"
-                    <div className="flex items-center space-x-2">"
-                      <Monitor className="w-4 h-4 text-blue-500"   />"
-                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                        Desktop
-                      </span>
-                    </div>"
-                    <span className="text-sm font-medium">
-                      {analyticsData.deviceTypes.desktop}%
-                    </span>
-                  </div>"
-                  <div className="flex items-center justify-between">"
-                    <div className="flex items-center space-x-2">"
-                      <Smartphone className="w-4 h-4 text-green-500"   />"
-                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                        Mobile
-                      </span>
-                    </div>"
-                    <span className="text-sm font-medium">
-                      {analyticsData.deviceTypes.mobile}%
-                    </span>
-                  </div>"
-                  <div className="flex items-center justify-between">"
-                    <div className="flex items-center space-x-2">"
-                      <Tablet className="w-4 h-4 text-purple-500"   />"
-                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                        Tablet
-                      </span>
-                    </div>"
-                    <span className="text-sm font-medium">
-                      {analyticsData.deviceTypes.tablet}%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* User Engagement */}"
-              <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
-                  User Engagement
-                </h4>"
-                <div className="space-y-2">"
-                  <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                      Scroll Depth
-                    </span>"
-                    <span className="text-sm font-medium">
-                      {analyticsData.userEngagement.scrollDepth}%
-                    </span>
-                  </div>"
-                  <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                      Time on Page
-                    </span>"
-                    <span className="text-sm font-medium">
-                      {Math.round(analyticsData.userEngagement.timeOnPage)}s
-                    </span>
-                  </div>"
-                  <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
-                      Interactions
-                    </span>"
-                    <span className="text-sm font-medium">
-                      {analyticsData.userEngagement.interactions}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                     </span>
                   </div>
                 </div>
@@ -1233,48 +773,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                       className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.lcp <= 2500'
                           ? 'text-green-600''
                           : 'text-yellow-600'`
-<<<<<<< HEAD
-=======
-                    </span>;
-                  </div>;
-                </div>;
-              </div>;
-              {/* Performance */}";
-              <div className="space-y-3">";
-                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">;
-                  Performance;
-                </h4>";
-                <div className="space-y-2">";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">;
-                      Load Time;
-                    </span>";
-                    <span className="text-sm font-medium">;
-                      {analyticsData.performance.loadTime}ms;
-                    </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">;
-                      FCP;
-                    </span>;
-                    <span`;
-                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.fcp <= 1800';
-                          ? 'text-green-600'';
-                          : 'text-yellow-600'`;
-                      }`}
-                    >;
-                      {analyticsData.performance.coreWebVitals.fcp}ms;
-                    </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-slate-600 dark: tex t-slate-400">;
-                      LCP;
-                    </span>;
-                    <span`;
-                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.lcp <= 2500';
-                          ? 'text-green-600'';
-                          : 'text-yellow-600'`;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                       }`}
                     >;
                       {analyticsData.performance.coreWebVitals.lcp}ms;
@@ -1295,7 +793,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     >";
                       <div className="flex items-center space-x-2">";
                         <span className="text-xs font-medium text-slate-500">;
-=======
                       }`}
                     >
                       {analyticsData.performance.coreWebVitals.lcp}ms
@@ -1317,7 +814,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     >"
                       <div className="flex items-center space-x-2">"
                         <span className="text-xs font-medium text-slate-500">
->>>>>>> main
                           {index + 1}
                         </span>"
                         <span className="text-sm text-slate-700 dark: tex t-slate-300">
@@ -1328,16 +824,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                         {page.views}
                       </span>
                     </div>
->>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
           </motion.div>) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
       </AnimatePresence>
     </>) };
 export default EnhancedAnalytics;
@@ -1347,30 +838,11 @@ export default EnhancedAnalytics;
 </motion>
 </any>
 </any>
-<<<<<<< HEAD
 </AnalyticsData>';
 </EnhancedAnalyticsProps>;';;';
-=======
-      </AnimatePresence>;
-    </>) };
-export default EnhancedAnalytics;
-'"`;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
-</AnalyticsData>;
-</EnhancedAnalyticsProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </any>
 </any>
 </any>
 </any>
 </AnalyticsData>
 </EnhancedAnalyticsProps>
->>>>>>> main

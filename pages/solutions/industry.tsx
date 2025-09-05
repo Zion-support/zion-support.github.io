@@ -1,9 +1,9 @@
-  CheckCircle,
-  ArrowRight,
-  Building,
-  Heart,
-  GraduationCap,
-  ShoppingCart,
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Building2, 
+  Heart, 
+  GraduationCap, 
   Landmark,
   Factory,
   Globe
@@ -12,353 +12,131 @@ import Layout from '../components/Layout';
 
 const industries = [
   {
-    name: "Healthcare",
+    title: 'Healthcare',
+    description: 'Specialized solutions for healthcare organizations.',
     icon: Heart,
-    description: "HIPAA-compliant solutions for healthcare providers",
-    features: [
-      "Patient data management",
-      "Telemedicine platforms",
-      "Medical imaging AI",
-      "Compliance automation"
-    ],
-    color: "from-red-600 to-red-800"
+    features: ['HIPAA compliance', 'Patient data security', 'Telemedicine platforms', 'Electronic health records']
   },
   {
-    name: "Finance",
-    icon: Building,
-    description: "Secure financial technology solutions",
-    features: [
-      "Payment processing",
-      "Risk management",
-      "Fraud detection",
-      "Regulatory compliance"
-    ],
-    color: "from-green-600 to-green-800"
-  },
-  {
-    name: "Manufacturing",
-    icon: Factory,
-    description: "IoT and automation for manufacturing",
-    features: [
-      "Predictive maintenance",
-      "Quality control AI",
-      "Supply chain optimization",
-      "Smart factory solutions"
-    ],
-    color: "from-blue-600 to-blue-800"
-  },
-  {
-    name: "Retail",
-    icon: ShoppingCart,
-    description: "E-commerce and retail technology",
-    features: [
-      "Omnichannel platforms",
-      "Inventory management",
-      "Customer analytics",
-      "Personalization engines"
-    ],
-    color: "from-purple-600 to-purple-800"
-  },
-  {
-    name: "Education",
+    title: 'Education',
+    description: 'Technology solutions for educational institutions.',
     icon: GraduationCap,
-    description: "EdTech solutions for learning institutions",
-    features: [
-      "Learning management systems",
-      "Student analytics",
-      "Virtual classrooms",
-      "Assessment tools"
-    ],
-    color: "from-indigo-600 to-indigo-800"
+    features: ['Learning management systems', 'Student information systems', 'Online assessment tools', 'Campus management']
   },
   {
-    name: "Government",
+    title: 'Government',
+    description: 'Secure solutions for government agencies.',
     icon: Landmark,
-    description: "Secure government technology solutions",
-    features: [
-      "Citizen services",
-      "Data security",
-      "Compliance frameworks",
-      "Digital transformation"
-    ],
-    color: "from-gray-600 to-gray-800"
+    features: ['Security clearance', 'Compliance requirements', 'Citizen services', 'Data governance']
+  },
+  {
+    title: 'Manufacturing',
+    description: 'Industrial solutions for manufacturing companies.',
+    icon: Factory,
+    features: ['IoT integration', 'Supply chain management', 'Quality control systems', 'Predictive maintenance']
+  },
+  {
+    title: 'Finance',
+    description: 'Financial technology solutions.',
+    icon: Building2,
+    features: ['Regulatory compliance', 'Risk management', 'Payment processing', 'Fraud detection']
+  },
+  {
+    title: 'Global',
+    description: 'Solutions for international organizations.',
+    icon: Globe,
+    features: ['Multi-language support', 'Global deployment', 'Compliance across regions', '24/7 support']
   }
 ];
 
-const solutions = [
-  {
-    title: "Compliance & Security",
-    description: "Industry-specific compliance and security frameworks",
-    icon: Shield,
-    benefits: [
-      "Regulatory compliance",
-      "Data protection",
-      "Security audits",
-      "Risk assessment"
-    ]
-  },
-  {
-    title: "Custom Integration",
-    description: "Seamless integration with existing industry systems",
-    icon: BarChart3,
-    benefits: [
-      "Legacy system integration",
-      "API development",
-      "Data migration",
-      "System optimization"
-    ]
-  },
-  {
-    title: "Industry Expertise",
-    description: "Deep understanding of industry challenges and requirements",
-    icon: Users,
-    benefits: [
-      "Domain knowledge",
-      "Best practices",
-      "Industry standards",
-      "Proven methodologies"
-    ]
-  }
-];
-
-const caseStudies = [
-  {
-    industry: "Healthcare",
-    company: "Regional Medical Center",
-    challenge: "Patient data management and HIPAA compliance",
-    solution: "Custom patient portal with secure data handling",
-    result: "40% reduction in administrative overhead"
-  },
-  {
-    industry: "Finance",
-    company: "Community Credit Union",
-    challenge: "Digital transformation and fraud prevention",
-    solution: "AI-powered fraud detection and mobile banking platform",
-    result: "60% reduction in fraudulent transactions"
-  },
-  {
-    industry: "Manufacturing",
-    company: "Auto Parts Manufacturer",
-    challenge: "Quality control and predictive maintenance",
-    solution: "IoT sensors and AI-powered quality monitoring",
-    result: "25% improvement in product quality"
-  }
-];
-
-export default function IndustrySolutionsPage() {
+export default function Industry() {
   return (
-    <Layout 
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, edtech, government solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
+    <Layout>
+      <Head>
+        <title>Industry Solutions - Zion Tech Group</title>
+        <meta name="description" content="Specialized technology solutions for various industries including healthcare, education, government, and more." />
+      </Head>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              <div className="flex items-center justify-center mb-6">
-                <BarChart3 className="w-16 h-16 text-purple-400 mr-4" />
-                <h1 className="text-4xl md:text-6xl font-bold">
-                  Industry Solutions
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Specialized technology solutions designed for specific industries. 
-                We understand the unique challenges and requirements of your sector.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Industry Quote
-                </Link>
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View All Solutions
-                </Link>
-              </div>
-        {/* Industries Section */}
-        <section className="py-20 bg-gray-50">
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Industry Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Specialized technology solutions for various industries with deep domain expertise.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
                 Industries We Serve
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our deep industry expertise allows us to deliver solutions that address 
-                the specific challenges and requirements of each sector.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => {
-                const IconComponent = industry.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {industry.name}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {industry.description}
-                    </p>
-
-                    <ul className="space-y-2">
-                      {industry.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                );
-              })}
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {industries.map((industry, index) => {
+                  const IconComponent = industry.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="text-center mb-6">
+                        <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                          <IconComponent className="w-8 h-8 text-blue-600" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{industry.title}</h3>
+                        <p className="text-gray-600">{industry.description}</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {industry.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="text-sm text-gray-600">
+                              • {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Solutions Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Industry Approach
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Need Industry-Specific Solutions?
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We combine deep industry knowledge with cutting-edge technology to deliver 
-                solutions that drive real business value.
+              <p className="text-lg text-gray-600 mb-8">
+                Our team has deep expertise across multiple industries. Let us help you with specialized solutions.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <IconComponent className="w-10 h-10 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {solution.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {solution.description}
-                    </p>
-
-                    <ul className="space-y-2 text-left">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                );
-              })}
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
+                Discuss Your Industry Needs
+              </button>
             </div>
           </div>
         </section>
-
-        {/* Case Studies Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                Industry Success Stories
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                See how we've helped organizations across different industries achieve their goals.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="text-sm text-purple-400 font-medium mb-2">
-                    {study.industry}
-                  </div>
-                  <div className="text-lg font-bold text-white mb-3">
-                    {study.company}
-                  </div>
-                  <div className="text-sm text-gray-300 mb-2">
-                    <strong>Challenge:</strong> {study.challenge}
-                  </div>
-                  <div className="text-sm text-gray-300 mb-2">
-                    <strong>Solution:</strong> {study.solution}
-                  </div>
-                  <div className="text-sm text-green-400 font-medium">
-                    <strong>Result:</strong> {study.result}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Ready for Industry-Specific Solutions?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss your industry requirements and create a custom solution that addresses your specific challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Industry Consultation
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise
+      </main>
     </Layout>
+  );
+}
