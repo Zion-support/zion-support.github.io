@@ -165,6 +165,16 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  System Status
+                </Link>
+              </li>
             </ul>
           </div>
 

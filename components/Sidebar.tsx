@@ -105,6 +105,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Documentation', href: '/docs' },
         { label: 'Tutorials', href: '/tutorials' },
         { label: 'Guides', href: '/guides' },
+        { label: 'Pricing', href: '/pricing' },
+        { label: 'System Status', href: '/status' },
       ]
     },
     {

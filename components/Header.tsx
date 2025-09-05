@@ -60,7 +60,9 @@ const navigation = [
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
       { name: 'White Papers', href: '/white-papers', description: 'Technical papers' },
       { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { name: 'Help Center', href: '/help', description: 'Support resources' }
+      { name: 'Help Center', href: '/help', description: 'Support resources' },
+      { name: 'Pricing', href: '/pricing', description: 'Service pricing' },
+      { name: 'System Status', href: '/status', description: 'Service status' }
     ]
   },
   { name: 'About', href: '/about' },

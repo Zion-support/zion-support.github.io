@@ -27,7 +27,6 @@ const features = [
     benefits: ["API Integration", "Legacy System Support", "Data Migration", "Custom Workflows"]
   }
 ];
-];
 export default function EnterpriseSolutionsPage() {
   return (
     <MainLayout 
