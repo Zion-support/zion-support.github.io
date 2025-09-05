@@ -1,11 +1,13 @@
-import React from 'react';'
+import _React from 'react';,
+
 interface LayoutProps {}
-  // TODO: Implement;
-};
-  children: React.ReactNode;
-};
+  children: _React.ReactNode;
+}
+
 export default function Layout({ children }: LayoutProps) {}
-  return (')
-    <div className="min-h-screen bg-gray-50">"
-</div>
-    </div>)"
+  return (;,
+    <div className="min-h-screen bg-gray-50">";
+      {children}
+    </div>,
+  );
+}

@@ -1,1 +1,1 @@
-"HEAD"""
+<<<<<<< "HEAD": src.pages.disabled/TalentsPage.jsx import _React from 'react'; "export default function TalentsPage () {" import _React from 'react'; "export default function TalentsPage () {"";

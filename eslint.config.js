@@ -1,176 +1,23 @@
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
-export default []
+export default [
   js.configs.recommended,
-  {}
-    ignores: []
-      '**/__tests__/**',
-      '**/tests/**',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/*.dynamic.*',
-      '**/src/data/**',
-      '**/src/components/unused/**',
-      '**/zion_academy/**',
-      '**/*.cjs',
-      '**/tools/**',
-      '**/automation/**',
-      '**/test_build/**'
-    ];
-  },
-  {}
-    files: ['**/*.js'],
-    languageOptions: {}
-      globals: {}
-        process: 'readonly',
-        console: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        setImmediate: 'readonly',
-        clearImmediate: 'readonly',
-        URL: 'readonly',
-        fetch: 'readonly'
-      };
-    };
-  },
-  {}
-    files: ['src/**/*.{js,jsx}'],
-    ignores: []
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'coverage/**',
-      '**/*.disabled',
-      '**/*.backup',
-      '**/*.bak',
-      '**/*.old',
-      '**/*.corrupted',
-      '**/*.quarantine',
-      '**/temp-backup/**',
-      '**/temp_broken_files/**',
-      '**/temp_working/**',
-      '**/tests.disabled/**',
-      '**/pages._quarantine/**',
-      '**/pages.disabled/**',
-      '**/components.disabled/**',
-      '**/components.disabled_full/**',
-      '**/src.disabled/**',
-      '**/zion-os.disabled/**',
-      '**/__tests__/**',
-      '**/tests/**',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/*.dynamic.*',
-      '**/src/data/**',
-      '**/src/components/unused/**',
-      '**/zion_academy/**',
-      '**/*.cjs',
-      '**/tools/**',
-      '**/automation/**',
-      '**/test_build/**'
-    ],
-    languageOptions: {}
-      ecmaVersion: 2022,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: {}
-        ecmaFeatures: {}
-          jsx: true;
-        };
-      },
-      globals: {}
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        MutationObserver: 'readonly',
-        React: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        expect: 'readonly',
-        jest: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      };
-    },
-    rules: {}
-      'no-unused-vars': 'warn',
-      'no-console': 'off',
-      'no-undef': 'warn'
-    };
-  },
-  {}
-    files: ['src/**/*.{ts,tsx}'],
-    ignores: []
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'coverage/**',
-      '**/*.disabled',
-      '**/*.backup',
-      '**/*.bak',
-      '**/*.old',
-      '**/*.corrupted',
-      '**/*.quarantine',
-      '**/temp-backup/**',
-      '**/temp_broken_files/**',
-      '**/temp_working/**',
-      '**/tests.disabled/**',
-      '**/pages._quarantine/**',
-      '**/pages.disabled/**',
-      '**/components.disabled/**',
-      '**/components.disabled_full/**',
-      '**/src.disabled/**',
-      '**/zion-os.disabled/**',
-      '**/__tests__/**',
-      '**/tests/**',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/*.dynamic.*',
-      '**/src/data/**',
-      '**/src/components/unused/**',
-      '**/zion_academy/**',
-      '**/*.cjs',
-      '**/tools/**',
-      '**/automation/**',
-      '**/test_build/**'
-    ],
-    languageOptions: {}
       parser: typescriptParser,
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {}
-        ecmaFeatures: {}
-          jsx: true;
-        };
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
-      globals: {}
-        window: 'readonly',
-        document: 'readonly',
+      globals: {
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
@@ -180,30 +27,69 @@ export default []
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        MutationObserver: 'readonly',
-        React: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
         describe: 'readonly',
         it: 'readonly',
+        test: 'readonly',
         expect: 'readonly',
-        jest: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly'
-      };
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+      },
     },
-    plugins: {}
-      '@typescript-eslint': typescript;
-    },
-    rules: {}
-      ...typescript.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+    rules: {
       'no-console': 'off',
-      'no-undef': 'off'
-    };
-  };
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      '*.min.js',
+      'build/',
+      'coverage/',
+    ],
+  },
 ];
