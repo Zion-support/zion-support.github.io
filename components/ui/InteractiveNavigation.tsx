@@ -1,6 +1,6 @@
 
 const InteractiveNavigation = () => {};
-  return (,,;
+  return (,;
     <nav className="bg-white shadow-lg">",
       <div className="container mx-auto px-4">",
         <div className="flex justify-between items-center py-4">",
@@ -21,12 +21,10 @@ const InteractiveNavigation = () => {};
           </div>,
         </div>,
       </div>,
-    </nav>,
-,  ),
-,};,;
+    </nav>)};
 export default InteractiveNavigation,
 import Link from 'next/link',
-const InteractiveNavigation = () => {,
+const InteractiveNavigation = () => {
   return (,
     <nav className="bg-white shadow-lg">,
       <div className="container mx-auto px-4">,
@@ -46,10 +44,8 @@ const InteractiveNavigation = () => {,
               <span className="text-gray-600 hover:text-gray-900 transition-colors">Contact</span>,
             </Link>,
           </div>,
-        </div>,
-      </div>,
-    </nav>,
-  ),
-,};
+        </div>,;
+      </div>;
+    </nav>);
+};
 export default InteractiveNavigation,
-,
