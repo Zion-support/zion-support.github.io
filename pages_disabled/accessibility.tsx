@@ -173,7 +173,13 @@ export default function AccessibilityPage() {
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+<<<<<<< HEAD:pages_disabled/accessibility.tsx
           <div className="container mx-auto px-4">
+=======
+        </section>
+          <div className="container mx-auto px-4">
+          </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3:pages/accessibility.tsx
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -182,11 +188,19 @@ export default function AccessibilityPage() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages_disabled/accessibility.tsx
                   Accessibility First
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Building inclusive digital experiences that work for everyone
+=======
+                  Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Making technology accessible to everyone
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3:pages/accessibility.tsx
               </p>
             </motion.div>
           </div>
