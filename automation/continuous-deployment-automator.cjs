@@ -1,0 +1,245 @@
+#!/usr/bin/env node
+
+/**
+ * Continuous Deployment Automator
+ * Automated deployment pipeline with quality gates
+ */
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class ContinuousDeploymentAutomator {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logsDir = path.join(this.projectRoot, 'automation', 'logs');
+    this.reportsDir = path.join(this.projectRoot, 'automation', 'reports');
+    this.deploymentStages = [];
+    
+    // Ensure directories exist
+    [this.logsDir, this.reportsDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+      const result = execSync(command, { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log(`✅ ${description} - Success`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async preDeploymentChecks() {
+    this.log('🔍 Running pre-deployment checks...');
+    
+    const checks = {
+      linting: await this.runCommand('npm run lint', 'Code linting'),
+      typeChecking: await this.runCommand('npm run type-check', 'TypeScript type checking'),
+      testing: await this.runCommand('npm run test:smoke', 'Smoke tests'),
+      build: await this.runCommand('npm run build', 'Production build'),
+      security: await this.runCommand('npm run security:audit', 'Security audit')
+    };
+
+    const allPassed = Object.values(checks).every(check => check.success);
+    
+    this.deploymentStages.push({
+      stage: 'pre-deployment',
+      checks: checks,
+      passed: allPassed,
+      timestamp: new Date().toISOString()
+    });
+
+    return { checks, allPassed };
+  }
+
+  async buildOptimization() {
+    this.log('🏗️ Optimizing build...');
+    
+    const optimizations = {
+      bundleAnalysis: await this.runCommand('npm run build:analyze', 'Bundle analysis'),
+      performanceOptimization: await this.runCommand('npm run performance:optimize', 'Performance optimization'),
+      imageOptimization: await this.runCommand('npm run optimize:images', 'Image optimization'),
+      codeSplitting: await this.runCommand('npm run build', 'Code splitting verification')
+    };
+
+    const allOptimized = Object.values(optimizations).every(opt => opt.success);
+    
+    this.deploymentStages.push({
+      stage: 'build-optimization',
+      optimizations: optimizations,
+      passed: allOptimized,
+      timestamp: new Date().toISOString()
+    });
+
+    return { optimizations, allOptimized };
+  }
+
+  async qualityGates() {
+    this.log('🚪 Running quality gates...');
+    
+    const gates = {
+      accessibility: await this.runCommand('npm run automation:accessibility', 'Accessibility check'),
+      seo: await this.runCommand('npm run automation:seo', 'SEO optimization'),
+      performance: await this.runCommand('npm run performance:analyze', 'Performance check'),
+      security: await this.runCommand('npm run automation:security', 'Security scan')
+    };
+
+    const allGatesPassed = Object.values(gates).every(gate => gate.success);
+    
+    this.deploymentStages.push({
+      stage: 'quality-gates',
+      gates: gates,
+      passed: allGatesPassed,
+      timestamp: new Date().toISOString()
+    });
+
+    return { gates, allGatesPassed };
+  }
+
+  async deployment() {
+    this.log('🚀 Starting deployment...');
+    
+    const deploymentSteps = {
+      gitStatus: await this.runCommand('git status', 'Git status check'),
+      gitAdd: await this.runCommand('git add .', 'Stage changes'),
+      gitCommit: await this.runCommand('git commit -m "feat: Automated deployment with quality improvements"', 'Commit changes'),
+      gitPush: await this.runCommand('git push origin main', 'Push to main branch')
+    };
+
+    const deploymentSuccessful = Object.values(deploymentSteps).every(step => step.success);
+    
+    this.deploymentStages.push({
+      stage: 'deployment',
+      steps: deploymentSteps,
+      passed: deploymentSuccessful,
+      timestamp: new Date().toISOString()
+    });
+
+    return { deploymentSteps, deploymentSuccessful };
+  }
+
+  async postDeploymentVerification() {
+    this.log('✅ Running post-deployment verification...');
+    
+    const verifications = {
+      healthCheck: await this.runCommand('npm run health:check', 'Health check'),
+      smokeTests: await this.runCommand('npm run test:smoke', 'Smoke tests'),
+      performanceCheck: await this.runCommand('npm run performance:analyze', 'Performance verification'),
+      monitoring: await this.runCommand('npm run automation:health', 'Monitoring setup')
+    };
+
+    const allVerified = Object.values(verifications).every(verification => verification.success);
+    
+    this.deploymentStages.push({
+      stage: 'post-deployment',
+      verifications: verifications,
+      passed: allVerified,
+      timestamp: new Date().toISOString()
+    });
+
+    return { verifications, allVerified };
+  }
+
+  async generateDeploymentReport() {
+    this.log('📊 Generating deployment report...');
+    
+    const totalStages = this.deploymentStages.length;
+    const passedStages = this.deploymentStages.filter(stage => stage.passed).length;
+    const successRate = Math.round((passedStages / totalStages) * 100);
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      project: 'Zion Tech Group App',
+      deployment: {
+        stages: this.deploymentStages,
+        summary: {
+          totalStages: totalStages,
+          passedStages: passedStages,
+          successRate: successRate,
+          deploymentStatus: successRate >= 80 ? 'successful' : 'failed'
+        }
+      }
+    };
+
+    const reportPath = path.join(this.reportsDir, `continuous-deployment-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Deployment report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Continuous Deployment Automator...');
+    
+    try {
+      // Pre-deployment checks
+      const preChecks = await this.preDeploymentChecks();
+      if (!preChecks.allPassed) {
+        this.log('❌ Pre-deployment checks failed. Aborting deployment.');
+        return { success: false, reason: 'Pre-deployment checks failed' };
+      }
+
+      // Build optimization
+      const buildOpt = await this.buildOptimization();
+      if (!buildOpt.allOptimized) {
+        this.log('⚠️ Build optimization had issues, but continuing...');
+      }
+
+      // Quality gates
+      const qualityGates = await this.qualityGates();
+      if (!qualityGates.allGatesPassed) {
+        this.log('❌ Quality gates failed. Aborting deployment.');
+        return { success: false, reason: 'Quality gates failed' };
+      }
+
+      // Deployment
+      const deployment = await this.deployment();
+      if (!deployment.deploymentSuccessful) {
+        this.log('❌ Deployment failed.');
+        return { success: false, reason: 'Deployment failed' };
+      }
+
+      // Post-deployment verification
+      const postVerification = await this.postDeploymentVerification();
+      if (!postVerification.allVerified) {
+        this.log('⚠️ Post-deployment verification had issues.');
+      }
+
+      // Generate report
+      const report = await this.generateDeploymentReport();
+
+      this.log('🎉 Continuous Deployment Automator completed successfully!');
+      this.log(`📊 Success Rate: ${report.deployment.summary.successRate}%`);
+      this.log(`🚀 Deployment Status: ${report.deployment.summary.deploymentStatus}`);
+
+      return { success: true, report };
+    } catch (error) {
+      this.log(`❌ Error in Continuous Deployment Automator: ${error.message}`);
+      throw error;
+    }
+  }
+}
+
+// Run the automator if called directly
+if (require.main === module) {
+  const automator = new ContinuousDeploymentAutomator();
+  automator.run().catch(console.error);
+}
+
+module.exports = ContinuousDeploymentAutomator;

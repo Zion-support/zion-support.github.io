@@ -38,4 +38,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
   }, [onPerformanceData]);
   return null
 };
+
+export { PerformanceMonitor };
 export default PerformanceMonitor;
