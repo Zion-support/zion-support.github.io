@@ -15,7 +15,16 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  FileText,
+  Video,
+  GraduationCap,
+  Wifi,
+  Bot,
+  Home,
+  Heart,
+  Truck,
+  Utensils
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -32,7 +41,9 @@ const microSaasSolutions = [
       "API Integrations",
       "Real-time Notifications"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-4,000/month",
+    benefits: ["Reduce manual work by 80%", "Improve efficiency by 60%", "Save 20+ hours/week"]
   },
   {
     title: "Data Processing Tools",
@@ -46,7 +57,9 @@ const microSaasSolutions = [
       "Report Generation",
       "Data Export/Import"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Process 10x more data", "Real-time insights", "50% faster reporting"]
   },
   {
     title: "API Integration Services",
@@ -60,7 +73,9 @@ const microSaasSolutions = [
       "Rate Limiting",
       "Authentication & Security"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,200-4,500/month",
+    benefits: ["Connect 100+ services", "99.9% uptime", "Reduce integration time by 70%"]
   },
   {
     title: "Custom Dashboard Solutions",
@@ -74,7 +89,9 @@ const microSaasSolutions = [
       "Mobile Responsive",
       "Export Capabilities"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Centralized data view", "Mobile access", "Custom KPIs"]
   },
   {
     title: "SaaS Platform Development",
@@ -88,7 +105,9 @@ const microSaasSolutions = [
       "Analytics & Reporting",
       "Scalable Infrastructure"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Full-stack solution", "Scalable architecture", "Revenue-ready platform"]
   },
   {
     title: "Business Intelligence Tools",
@@ -102,7 +121,387 @@ const microSaasSolutions = [
       "Machine Learning Integration",
       "Real-time Insights"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Data-driven decisions", "Predictive insights", "30% better performance"]
+  },
+  {
+    title: "Customer Relationship Management (CRM)",
+    description: "Comprehensive CRM solution for managing customer relationships and sales pipeline",
+    icon: Users,
+    features: [
+      "Lead Management",
+      "Contact Database",
+      "Sales Pipeline Tracking",
+      "Email Marketing Integration",
+      "Customer Communication History",
+      "Automated Follow-ups",
+      "Reporting & Analytics",
+      "Mobile App Access"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Increase sales by 25%", "Improve customer retention", "Streamline sales process"]
+  },
+  {
+    title: "Project Management Suite",
+    description: "Complete project management solution with team collaboration and resource planning",
+    icon: Settings,
+    features: [
+      "Task & Project Tracking",
+      "Team Collaboration Tools",
+      "Resource Planning",
+      "Time Tracking",
+      "Gantt Charts",
+      "File Sharing",
+      "Progress Reporting",
+      "Integration with 50+ tools"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Improve project delivery by 40%", "Better team coordination", "Real-time visibility"]
+  },
+  {
+    title: "E-commerce Management Platform",
+    description: "All-in-one e-commerce solution for online stores and marketplaces",
+    icon: Cloud,
+    features: [
+      "Multi-channel Selling",
+      "Inventory Management",
+      "Order Processing",
+      "Payment Gateway Integration",
+      "Shipping Management",
+      "Customer Reviews",
+      "Analytics Dashboard",
+      "Mobile Commerce"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Increase online sales by 35%", "Streamline operations", "Multi-platform presence"]
+  },
+  {
+    title: "HR Management System",
+    description: "Comprehensive human resources management with payroll and employee tracking",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Payroll Processing",
+      "Time & Attendance",
+      "Performance Reviews",
+      "Benefits Management",
+      "Recruitment Tools",
+      "Compliance Tracking",
+      "Self-service Portal"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$2,800-6,000/month",
+    benefits: ["Reduce HR workload by 50%", "Improve employee satisfaction", "Ensure compliance"]
+  },
+  {
+    title: "Financial Management Suite",
+    description: "Complete financial management with accounting, invoicing, and expense tracking",
+    icon: BarChart3,
+    features: [
+      "Accounting & Bookkeeping",
+      "Invoice Generation",
+      "Expense Tracking",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Bank Reconciliation",
+      "Budget Planning",
+      "Multi-currency Support"
+    ],
+    price: "Starting at $1,900/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Save 15+ hours/week", "Improve cash flow", "Better financial visibility"]
+  },
+  {
+    title: "Marketing Automation Platform",
+    description: "Advanced marketing automation with email campaigns, lead nurturing, and analytics",
+    icon: Zap,
+    features: [
+      "Email Marketing Campaigns",
+      "Lead Scoring & Nurturing",
+      "Social Media Management",
+      "Content Management",
+      "A/B Testing",
+      "Customer Segmentation",
+      "Analytics & ROI Tracking",
+      "Integration with 100+ tools"
+    ],
+    price: "Starting at $2,300/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Increase lead conversion by 45%", "Automate marketing tasks", "Better ROI tracking"]
+  },
+  {
+    title: "Inventory Management System",
+    description: "Real-time inventory tracking with automated reordering and supplier management",
+    icon: Settings,
+    features: [
+      "Real-time Stock Tracking",
+      "Automated Reordering",
+      "Supplier Management",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Demand Forecasting",
+      "Cost Analysis",
+      "Mobile App Access"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,200-4,500/month",
+    benefits: ["Reduce stockouts by 60%", "Lower inventory costs", "Improve accuracy"]
+  },
+  {
+    title: "Document Management System",
+    description: "Secure document storage, sharing, and collaboration with version control",
+    icon: FileText,
+    features: [
+      "Secure Document Storage",
+      "Version Control",
+      "Collaborative Editing",
+      "Document Search",
+      "Access Permissions",
+      "Digital Signatures",
+      "Backup & Recovery",
+      "Mobile Access"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$1,800-3,500/month",
+    benefits: ["Improve document security", "Reduce paper usage", "Better collaboration"]
+  },
+  {
+    title: "Customer Support Ticketing System",
+    description: "Comprehensive customer support with ticket management and knowledge base",
+    icon: Users,
+    features: [
+      "Ticket Management",
+      "Knowledge Base",
+      "Live Chat Integration",
+      "Customer Portal",
+      "SLA Management",
+      "Performance Analytics",
+      "Multi-channel Support",
+      "Automated Responses"
+    ],
+    price: "Starting at $1,700/month",
+    marketPrice: "$2,300-4,800/month",
+    benefits: ["Improve response time by 50%", "Increase customer satisfaction", "Better support analytics"]
+  },
+  {
+    title: "Analytics & Reporting Platform",
+    description: "Advanced analytics with custom reports and data visualization",
+    icon: BarChart3,
+    features: [
+      "Custom Dashboards",
+      "Real-time Analytics",
+      "Data Visualization",
+      "Scheduled Reports",
+      "Data Export",
+      "API Integration",
+      "Mobile Analytics",
+      "Predictive Insights"
+    ],
+    price: "Starting at $2,100/month",
+    marketPrice: "$2,800-6,000/month",
+    benefits: ["Data-driven decisions", "Real-time insights", "Custom reporting"]
+  },
+  {
+    title: "Social Media Management",
+    description: "Complete social media management with scheduling, monitoring, and analytics",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Scheduling",
+      "Social Listening",
+      "Engagement Tracking",
+      "Analytics & Reporting",
+      "Team Collaboration",
+      "Content Calendar",
+      "Hashtag Research"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-4,000/month",
+    benefits: ["Increase engagement by 40%", "Save 10+ hours/week", "Better brand presence"]
+  },
+  {
+    title: "Email Marketing Platform",
+    description: "Advanced email marketing with automation, segmentation, and analytics",
+    icon: Mail,
+    features: [
+      "Email Campaign Builder",
+      "Automation Workflows",
+      "List Segmentation",
+      "A/B Testing",
+      "Template Library",
+      "Analytics & Tracking",
+      "Integration with CRM",
+      "Compliance Tools"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$1,600-3,200/month",
+    benefits: ["Increase open rates by 25%", "Automate email sequences", "Better targeting"]
+  },
+  {
+    title: "Video Conferencing & Webinar Platform",
+    description: "Professional video conferencing with webinar capabilities and recording",
+    icon: Video,
+    features: [
+      "HD Video Conferencing",
+      "Webinar Hosting",
+      "Screen Sharing",
+      "Recording & Playback",
+      "Chat & Polls",
+      "Breakout Rooms",
+      "Mobile Access",
+      "Integration with Calendars"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Improve remote collaboration", "Professional presentations", "Better engagement"]
+  },
+  {
+    title: "Learning Management System (LMS)",
+    description: "Complete e-learning platform with course creation and student management",
+    icon: GraduationCap,
+    features: [
+      "Course Creation Tools",
+      "Student Management",
+      "Progress Tracking",
+      "Certification System",
+      "Mobile Learning",
+      "Assessment Tools",
+      "Discussion Forums",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,400/month",
+    marketPrice: "$3,200-6,500/month",
+    benefits: ["Improve learning outcomes", "Scalable training", "Better engagement"]
+  },
+  {
+    title: "IoT Device Management",
+    description: "Comprehensive IoT platform for device monitoring and management",
+    icon: Wifi,
+    features: [
+      "Device Registration",
+      "Real-time Monitoring",
+      "Remote Control",
+      "Data Collection",
+      "Alert Management",
+      "Firmware Updates",
+      "Security Management",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,600/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Centralized device control", "Predictive maintenance", "Better efficiency"]
+  },
+  {
+    title: "Blockchain Integration Platform",
+    description: "Blockchain solutions for secure transactions and smart contracts",
+    icon: Shield,
+    features: [
+      "Smart Contract Development",
+      "Cryptocurrency Integration",
+      "NFT Marketplace",
+      "DeFi Solutions",
+      "Security Audits",
+      "Wallet Integration",
+      "Transaction Tracking",
+      "Compliance Tools"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$4,500-10,000/month",
+    benefits: ["Enhanced security", "Transparent transactions", "Future-proof technology"]
+  },
+  {
+    title: "AI-Powered Chatbot Platform",
+    description: "Intelligent chatbot solution with natural language processing and automation",
+    icon: Bot,
+    features: [
+      "Natural Language Processing",
+      "Multi-language Support",
+      "Integration with CRM",
+      "Analytics & Insights",
+      "Custom Training",
+      "Voice Integration",
+      "Mobile App",
+      "API Access"
+    ],
+    price: "Starting at $1,900/month",
+    marketPrice: "$2,600-5,500/month",
+    benefits: ["24/7 customer support", "Reduce support costs by 60%", "Improve response time"]
+  },
+  {
+    title: "Real Estate Management Platform",
+    description: "Complete real estate solution with property management and client tracking",
+    icon: Home,
+    features: [
+      "Property Listings",
+      "Client Management",
+      "Lead Tracking",
+      "Document Management",
+      "Commission Tracking",
+      "Market Analysis",
+      "Mobile App",
+      "Integration with MLS"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Increase sales by 30%", "Better client management", "Streamline operations"]
+  },
+  {
+    title: "Healthcare Management System",
+    description: "Comprehensive healthcare solution with patient management and scheduling",
+    icon: Heart,
+    features: [
+      "Patient Records",
+      "Appointment Scheduling",
+      "Billing & Insurance",
+      "Prescription Management",
+      "Telemedicine",
+      "Compliance Tracking",
+      "Mobile Access",
+      "Integration with Labs"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Improve patient care", "Reduce administrative work", "Better compliance"]
+  },
+  {
+    title: "Fleet Management System",
+    description: "Complete fleet management with GPS tracking and maintenance scheduling",
+    icon: Truck,
+    features: [
+      "GPS Tracking",
+      "Route Optimization",
+      "Maintenance Scheduling",
+      "Driver Management",
+      "Fuel Monitoring",
+      "Performance Analytics",
+      "Mobile App",
+      "Integration with ERP"
+    ],
+    price: "Starting at $2,100/month",
+    marketPrice: "$2,800-5,500/month",
+    benefits: ["Reduce fuel costs by 20%", "Improve efficiency", "Better maintenance"]
+  },
+  {
+    title: "Restaurant Management System",
+    description: "Complete restaurant solution with POS, inventory, and customer management",
+    icon: Utensils,
+    features: [
+      "POS System",
+      "Menu Management",
+      "Inventory Tracking",
+      "Staff Scheduling",
+      "Customer Loyalty",
+      "Online Ordering",
+      "Analytics Dashboard",
+      "Mobile App"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Increase revenue by 25%", "Reduce waste", "Better customer experience"]
   }
 ];
 
