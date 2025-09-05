@@ -32,26 +32,41 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
-<<<<<<< HEAD
     description: 'We work closely with our clients as partners, ensuring their success is our success.'
   },
   {
     icon: Award,
     title: 'Excellence',
     description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
-=======
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
+  }
+];
+
+const AboutPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
-</h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
-                  </motion.div>
-                  </div>
-                  </section>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -382,9 +397,6 @@ const timeline = [{
     "year": '2024',
     "title": 'Micro SaaS Platform',
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
-    icon: Award,
-    title: 'Excellence',
-    description: 'We strive for excellence in everything we do, delivering quality results every time.'
   }
 ];
 

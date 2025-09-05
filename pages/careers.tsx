@@ -55,10 +55,7 @@ const positions = [
       'Experience with infrastructure as code',
       'Strong automation and scripting skills'
     ],
-<<<<<<< HEAD
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
-=======
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
   },
   {
     title: 'Product Manager',

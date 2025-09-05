@@ -207,7 +207,6 @@ export default function APIDocs() {
         {/* Code Examples */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

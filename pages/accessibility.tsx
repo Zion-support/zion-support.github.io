@@ -57,9 +57,6 @@ const accessibilityFeatures = [
     ]
   },
   {
-    title: "Motor Accessibility",
-    description: "Features to support users with motor impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Hand,
     title: "Motor Accessibility",
     description: "Keyboard navigation and customizable interaction methods",
@@ -67,11 +64,7 @@ const accessibilityFeatures = [
       "Full keyboard navigation support",
       "Customizable click targets",
       "Drag and drop alternatives",
-      "Timeout extensions and controls"
-    ]
-  },
-  {
-=======
+      "Timeout extensions and controls",
       "Keyboard-only navigation",
       "Voice control",
       "Large click targets",
@@ -81,9 +74,6 @@ const accessibilityFeatures = [
     ]
   },
   {
-    title: "Cognitive Accessibility",
-    description: "Features to support users with cognitive impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Brain,
     title: "Cognitive Accessibility",
     description: "Clear navigation, consistent layouts, and simplified interfaces",
@@ -91,15 +81,13 @@ const accessibilityFeatures = [
       "Consistent navigation patterns",
       "Clear and simple language",
       "Error prevention and recovery",
-      "Customizable interface complexity"
-=======
+      "Customizable interface complexity",
       "Clear navigation",
       "Consistent layout",
       "Error prevention",
       "Progress indicators",
       "Help and support",
       "Customizable interface"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     ]
   }
 ];
