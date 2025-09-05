@@ -1,23 +1,142 @@
- const implementationSteps = [ {
-  step: '01', title: 'Discovery & Assessment', description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.', icon: LightBulbIcon 
-};
-{
-  step: '02', title: 'Solution Design', description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.', icon: CpuChipIcon 
-};
-{
-  step: '03', title: 'Development & Testing', description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.', icon: CogIcon 
-};
-{
-  step: '04', title: 'Deployment & Training', description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.', icon: RocketLaunchIcon 
-};
-{
-  step: '05', title: 'Ongoing Support', description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.', icon: ShieldCheckIcon 
-}] Every Industry </span> </h1> <p className="mt-6 text-lg leading-8 text-gray-300" > Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation. </p> </div> </div> </div> Flagship AI Platforms </p> <p className="mt-6 text-lg leading-8 text-gray-300" > Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence. </p> </div> </div>) ) 
-}</div> <a > Learn more <span aria-hidden="true" >→</span> </Link> </div>) ) 
-}</div> </div> </div> Transforming Every Sector </p> <p className="mt-6 text-lg leading-8 text-gray-300" > Our AI solutions are designed to adapt and excel across diverse industries;
-delivering measurable results and competitive advantages. </p> </div> </div>) ) 
-}</div> </dd> </div>) ) 
-}</dl> </div> </div> Our Proven Process </p> <p className="mt-6 text-lg leading-8 text-gray-300" > From initial assessment to ongoing optimization, we guide you through every step of your AI transformation journey. </p> </div>) 
-}<div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105" > <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4" > <step.icon className="h-8 w-8 text-blue-400" /> </div> </div> </div>) ) 
-}</div> </div> </div> Ready to transform your business? </h2> <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300" > Let's discuss how our AI solutions can accelerate your growth and give you a competitive edge in your industry. </p> <div className="mt-10 flex items-center justify-center gap-x-6" > <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105" > Get Started </Link> <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200" > View Services <span aria-hidden="true" >→</span> </Link> </div> </div> </div> </div>) 
+import { 
+  LightBulbIcon,
+  CpuChipIcon, 
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  CogIcon
+} from '@heroicons/react/24/outline'
+
+const flagshipSolutions = [
+  {
+    name: 'AI Research Assistant',
+    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
+    icon: LightBulbIcon,
+    features: [
+      'Natural Language Processing',
+      'Multi-modal Learning',
+      'Real-time Collaboration',
+      'Advanced Analytics'
+    ],
+    href: '/solutions/ai-autonomous-research'
+  },
+  {
+    name: 'Quantum Neural Networks',
+    description: 'Breakthrough quantum computing technology for next-generation AI applications.',
+    icon: CpuChipIcon,
+    features: [
+      'Quantum Supremacy',
+      'Neural Architecture Search',
+      'Hybrid Classical-Quantum',
+      'Scalable Architecture'
+    ],
+    href: '/solutions/quantum-neural-networks'
+  },
+  {
+    name: 'Autonomous Business Manager',
+    description: 'AI-powered business automation that manages operations, decisions, and growth autonomously.',
+    icon: RocketLaunchIcon,
+    features: [
+      'Process Automation',
+      'Decision Intelligence',
+      'Performance Optimization',
+      'Strategic Planning'
+    ],
+    href: '/solutions/autonomous-business-manager'
+  },
+  {
+    name: 'Enterprise Security Suite',
+    description: 'Comprehensive cybersecurity solution with AI-powered threat detection and response.',
+    icon: ShieldCheckIcon,
+    features: [
+      'Threat Intelligence',
+      'Automated Response',
+      'Compliance Management',
+      'Risk Assessment'
+    ],
+    href: '/solutions/enterprise-security'
+  },
+  {
+    name: 'Data Analytics Platform',
+    description: 'Advanced analytics and business intelligence powered by machine learning and AI.',
+    icon: ChartBarIcon,
+    features: [
+      'Predictive Analytics',
+      'Real-time Insights',
+      'Data Visualization',
+      'Custom Dashboards'
+    ],
+    href: '/solutions/data-analytics'
+  },
+  {
+    name: 'Global AI Infrastructure',
+    description: 'Scalable cloud infrastructure designed for AI workloads and global deployment.',
+    icon: GlobeAltIcon,
+    features: [
+      'Edge Computing',
+      'Global Distribution',
+      'Auto-scaling',
+      'High Availability'
+    ],
+    href: '/solutions/global-ai-infrastructure'
+  }
+]
+
+export default function SolutionsPage() {
+  return (
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Our{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Cutting-edge AI and technology solutions that transform businesses 
+              and drive innovation across industries.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Solutions section */}
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Flagship Solutions
+            </h2>
+            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {flagshipSolutions.map((solution) => (
+                <div key={solution.name} className="flex flex-col">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
+                    <solution.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-6 text-lg font-semibold text-white">{solution.name}</h3>
+                  <p className="mt-2 text-base text-gray-300">{solution.description}</p>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {solution.features.map((feature) => (
+                        <li key={feature}>• {feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <a href={solution.href} className="mt-4 text-sm text-blue-400 hover:text-blue-300">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
