@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import MainLayout from './components/layout/MainLayout';
 
 const Home = () => {
   return (
-    <Layout 
+    <MainLayout 
       title="Zion Tech Group - Leading Technology Solutions Provider"
       description="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."
     >
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
         </main>
       </div>
-    </Layout>
+    </MainLayout>
   );
 };
 

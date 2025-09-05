@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Layout from '../components/Layout';
+import MainLayout from './components/layout/MainLayout';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout 
+    <MainLayout 
       title="Contact Us - Zion Tech Group"
       description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. Contact us via phone, email, or our contact form."
     >
@@ -234,7 +234,7 @@ const Contact = () => {
           </div>
         </main>
       </div>
-    </Layout>
+    </MainLayout>
   );
 };
 

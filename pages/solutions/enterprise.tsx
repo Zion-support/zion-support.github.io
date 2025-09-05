@@ -7,49 +7,101 @@ import {
   Shield, 
   Users, 
   BarChart3, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Globe, 
-  Database, 
-  Lock 
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Globe,
+  Clock,
+  DollarSign
 } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 
-const features = [
+const enterpriseSolutions = [
   {
     title: 'Scalable Architecture',
-    description: 'Enterprise-grade infrastructure that grows with your business',
+    description: 'Enterprise-grade infrastructure that grows with your business.',
     icon: Building,
-    benefits: ['Auto-scaling', 'High availability', 'Load balancing', 'Disaster recovery']
+    features: [
+      'Microservices architecture',
+      'Auto-scaling capabilities',
+      'Load balancing',
+      'High availability design'
+    ]
   },
   {
     title: 'Security & Compliance',
-    description: 'Bank-level security with comprehensive compliance features',
+    description: 'Comprehensive security framework meeting enterprise standards.',
     icon: Shield,
-    benefits: ['Data encryption', 'Access control', 'Audit trails', 'Compliance reporting']
+    features: [
+      'End-to-end encryption',
+      'Access control management',
+      'Audit logging',
+      'Compliance monitoring'
+    ]
   },
   {
     title: 'User Management',
-    description: 'Advanced user management and role-based access control',
+    description: 'Advanced user management and authentication systems.',
     icon: Users,
-    benefits: ['User provisioning', 'Role management', 'Single sign-on', 'Multi-factor auth']
+    features: [
+      'Single sign-on (SSO)',
+      'Role-based access control',
+      'Multi-factor authentication',
+      'User provisioning'
+    ]
   },
   {
     title: 'Analytics & Reporting',
-    description: 'Comprehensive analytics and reporting for enterprise insights',
+    description: 'Comprehensive analytics and reporting capabilities.',
     icon: BarChart3,
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Export capabilities']
+    features: [
+      'Real-time dashboards',
+      'Custom reports',
+      'Data visualization',
+      'Export capabilities'
+    ]
   }
+];
+
+const enterpriseBenefits = [
+  {
+    icon: Zap,
+    title: 'High Performance',
+    description: 'Optimized for speed and reliability at enterprise scale'
+  },
+  {
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Bank-level security with comprehensive compliance'
+  },
+  {
+    icon: Globe,
+    title: 'Global Scalability',
+    description: 'Deploy and scale across multiple regions and time zones'
+  },
+  {
+    icon: Clock,
+    title: '24/7 Support',
+    description: 'Round-the-clock support with dedicated account management'
+  }
+];
+
+const industries = [
+  'Financial Services',
+  'Healthcare',
+  'Manufacturing',
+  'Retail',
+  'Government',
+  'Education'
 ];
 
 export default function EnterpriseSolutionsPage() {
   return (
-    <>
-      <Head>
-        <title>Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade technology solutions including scalable architecture, security, user management, and analytics." />
-      </Head>
-
+    <MainLayout
+      title="Enterprise Solutions - Zion Tech Group"
+      description="Enterprise-grade technology solutions including scalable architecture, security, user management, and analytics."
+      keywords="enterprise solutions, scalable architecture, enterprise security, user management, analytics, compliance"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -58,119 +110,138 @@ export default function EnterpriseSolutionsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Enterprise Solutions</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Enterprise-grade technology solutions designed for large organizations. 
-                Scalable, secure, and reliable infrastructure for your business.
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Enterprise <span className="text-yellow-400">Solutions</span>
+              </h1>
+              <p className="text-xl mb-8">
+                Comprehensive technology solutions designed for large-scale enterprises with complex requirements.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Free Consultation
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
-:pages/solutions/enterprise.tsx.backup
-        {/* Stats Section */}
-        <section className="py-16 bg-white">"
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-              {stats.map((stat, index) => (,
-                <motion.div}),
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>"
-                  <div className="text-gray-600 font-medium">{stat.label}</div>"
-                </motion.div>;
-              ))}
 
-        {/* Features Section */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8""
-                >;
-                  <div className="flex items-center mb-6">";
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mr-4">";
-                      <feature.icon className="w-8 h-8 text-white" />";
-                    </div>;
-                    <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
-                      <p className="text-gray-600">{feature.description}</p>"
-                    </div>;
-                  </div>;
-
-                  <ul className="space-y-3">";
-                    {feature.benefits.map((benefit, benefitIndex) => (,
-                      <li key={benefitIndex} className="flex items-center text-gray-600">"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
-                        {benefit}
-                      </li>,
-                    ))}
-                  </ul>,
-                </motion.div>;
-              ))}
-            </div>,
-          </div>;
-        </section>;
-
-        {/* Capabilities Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-                  key={capability.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Solutions Grid */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Features</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our enterprise solutions are built to meet the demanding requirements of large organizations.
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Enterprise Solutions</h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive solutions designed for enterprise-scale requirements
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {enterpriseSolutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gray-50 p-8 rounded-lg"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <solution.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-gray-900">{solution.title}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
+                  <p className="text-gray-600 mb-6">{solution.description}</p>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
                     ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our Enterprise Solutions?</h2>
+              <p className="text-xl text-gray-600">
+                Proven expertise in delivering enterprise-grade solutions
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {enterpriseBenefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-lg shadow-md text-center"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-6 h-6 text-blue-600" />
                   </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Industries We Serve</h2>
+              <p className="text-xl text-gray-600">
+                Proven experience across diverse enterprise sectors
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gray-50 p-6 rounded-lg text-center hover:bg-blue-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-gray-900">{industry}</h3>
                 </motion.div>
               ))}
             </div>
@@ -179,37 +250,35 @@ export default function EnterpriseSolutionsPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready for Enterprise Solutions?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our enterprise solutions can support your organization.
+              <h2 className="text-4xl font-bold text-white mb-6">Ready for Enterprise Solutions?</h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Let's discuss your enterprise requirements and create a solution that scales with your business.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                  Contact Sales
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  Contact Our Experts
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
-                  href="/solutions"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  View Solutions
+                  Schedule Demo
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </MainLayout>
   );
 }

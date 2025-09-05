@@ -1,8 +1,8 @@
-import Layout from './components/Layout';
+import MainLayout from './components/layout/MainLayout';
 
 const About = () => {
   return (
-    <Layout 
+    <MainLayout 
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
     >
@@ -159,7 +159,7 @@ const About = () => {
           </div>
         </main>
       </div>
-    </Layout>
+    </MainLayout>
   );
 };
 
