@@ -29,7 +29,7 @@ const services = [
     href: "/it-services",
     features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
     pricing: "Starting at $1,500/month",
-    count: "30+ IT Solutions",
+    count: "18+ IT Solutions",
     popular: true
   },
   {
@@ -37,9 +37,9 @@ const services = [
     description: "Innovative software as a service solutions for specialized business needs",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
-    pricing: "Starting at $29/month",
-    count: "45+ Products",
+    features: ["AI Content Marketing", "Smart Lead Management", "Analytics Dashboard", "Workflow Automation", "Customer Support Bot", "Inventory Management", "Email Marketing", "Project Management"],
+    pricing: "Starting at $19/month",
+    count: "20+ Products",
     popular: true
   }
 ];
