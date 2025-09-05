@@ -6,7 +6,7 @@ const { execSync, spawn } = require('child_process');
 const os = require('os');
 
 console.log('🚀 Enhanced Master Automation Orchestrator v2.0');
-console.log('================================================');
+console.log('======');
 
 // Enhanced configuration
 const config = {
@@ -410,7 +410,7 @@ async function main() {
     
     // Final Summary
     log('info', 'Enhanced Master Automation Orchestrator Summary');
-    log('info', '===============================================');
+    log('info', '=====');
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);

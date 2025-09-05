@@ -4,7 +4,7 @@
 # This script helps integrate our enhanced PM2 automation into a clean branch
 
 echo "🚀 PM2 Automation Integration Helper"
-echo "====================================="
+echo "=="
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then

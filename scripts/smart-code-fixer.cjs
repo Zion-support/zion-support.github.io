@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔧 Smart Code Fixer');
-console.log('===================');
+console.log('=====');
 
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {

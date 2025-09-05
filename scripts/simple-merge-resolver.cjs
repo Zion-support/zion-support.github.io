@@ -32,3 +32,54 @@ class SimpleMergeResolver {
       let resolvedContent = content;
       
       // Remove merge conflict markers and keep HEAD version
+      resolvedContent = resolvedContent.replace(/\n([\s\S]*?)\n([\s\S]*?)      
+      // Remove any remaining conflict markers
+      resolvedContent = resolvedContent.replace(/\n/g, '');
+      resolvedContent = resolvedContent.replace(/\n/g, '');
+      resolvedContent = resolvedContent.replace(/      
+      if (resolvedContent !== content) {
+        await fs.writeFile(filePath, resolvedContent, 'utf8');
+        this.fixedFiles.push(filePath);
+        await this.log(`Resolved conflicts "in": ${filePath}`);
+        return true}
+      
+      return false} catch (error) {
+      this.errors.push({ "file": filePath, "error": error.message });
+      await this.log(`Error resolving ${filePath}: ${error.message}`, 'ERROR');
+      return false}
+  }
+
+  async resolveAllConflicts() {
+    await this.log('Starting merge conflict resolution...');
+    
+    const conflictedFiles = await this.findConflictedFiles();
+    await this.log(`Found ${conflictedFiles.length} files with conflicts`);
+    
+    for (const file of conflictedFiles) {
+      await this.resolveFileConflicts(file)}
+    
+    await this.log(`Resolved conflicts in ${this.fixedFiles.length} files`);
+    
+    if (this.errors.length > 0) {
+      await this.log(`Encountered ${this.errors.length} "errors": `, 'WARN');
+      this.errors.forEach(error => {
+        console.log(`  - ${error.file}: ${error.error}`)})}
+    
+    return this.fixedFiles.length}
+}
+
+// Run the resolver
+async function main() {
+  const resolver = new SimpleMergeResolver();
+  const fixedCount = await resolver.resolveAllConflicts();
+  
+  if (fixedCount > 0) {
+    console.log(`\n✅ Successfully resolved conflicts in ${fixedCount} files`);
+    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts"')} else {
+    console.log('\n✅ No conflicts found or all conflicts already resolved')}
+}
+
+if (require.main === module) {
+  main().catch(console.error)}
+
+module.exports = SimpleMergeResolver;

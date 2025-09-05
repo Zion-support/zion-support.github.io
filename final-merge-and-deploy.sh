@@ -4,7 +4,7 @@
 set -e
 
 echo "🚀 Final Merge and Deploy Script"
-echo "================================"
+echo "===="
 
 # Colors
 GREEN='\033[0;32m'
@@ -185,7 +185,7 @@ fi
 
 echo ""
 echo "🎉 Final Merge and Deploy Complete!"
-echo "=================================="
+echo "======"
 echo
 echo "📊 Summary:"
 echo "- ✅ All changes committed and pushed"

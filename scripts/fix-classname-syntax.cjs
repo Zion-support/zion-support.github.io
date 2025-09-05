@@ -87,7 +87,7 @@ class ClassNameSyntaxFixer {
     }
 
     this.log('\n📊 ClassName Syntax Fixing Report');
-    this.log('================================');
+    this.log('====');
     this.log(`Fixes Applied: ${this.fixes.length}`);
     this.log(`Errors Found: ${this.errors.length}`);
 

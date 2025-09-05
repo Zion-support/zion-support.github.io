@@ -196,7 +196,7 @@ display_comprehensive_status() {
 # Main test execution
 main() {
     echo -e "${PURPLE}🧪 Testing PM2 Automation System${NC}"
-    echo "====================================="
+    echo "=="
     echo
     
     local test_results=()
@@ -243,7 +243,7 @@ main() {
     # Display test results
     echo
     log "Test Results Summary:"
-    echo "===================="
+    echo "======"
     for result in "${test_results[@]}"; do
         echo "  $result"
     done

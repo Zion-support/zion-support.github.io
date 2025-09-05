@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Simple App Improvement Automation');
-console.log('==============================================');
+console.log('====');
 
 const timestamp = new Date().toISOString(;);
 const report = {

@@ -82,7 +82,7 @@ console.log('\n🏥 System Health Checks')) {
 
 // System Health Checks
 console.log('\n🏥 System Health Checks')}
-console.log('========================');
+console.log('===');
 
 runCheck('Disk Space', () => {
   const output = execSync('df -h /', { "encoding": 'utf8' };);
@@ -136,7 +136,7 @@ runCheck('CPU Load', () => {
 
 // Application Health Checks
 console.log('\n🚀 Application Health Checks');
-console.log('=============================');
+console.log('=');
 
 runCheck('Build Status', () => {
   try {
@@ -181,7 +181,7 @@ runCheck('Lint Check', () => {
 
 // Security Checks
 console.log('\n🔒 Security Checks');
-console.log('==================');
+console.log('====');
 
 runCheck('Vulnerability Scan', () => {
   try {
@@ -219,7 +219,7 @@ runCheck('Dependency Check', () => {
 
 // Performance Checks
 console.log('\n⚡ Performance Checks');
-console.log('=====================');
+console.log('');
 
 runCheck('Bundle Size', () => {
   try {
@@ -342,7 +342,7 @@ const dashboardHtml = "
 fs.writeFileSync('monitoring-dashboard.html', dashboardHtml);
 
 console.log('\n🎉 Advanced Monitoring System Completed!');
-console.log('=========================================');
+console.log('======');
 console.log("📊 Total "Checks": ${monitoring.metrics.totalChecks}");
 console.log("✅ "Passed": ${monitoring.metrics.passed}");
 console.log("❌ "Failed": ${monitoring.metrics.failed}");

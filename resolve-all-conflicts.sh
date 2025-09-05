@@ -3,7 +3,7 @@
 echo "Resolving all merge conflicts by accepting incoming changes..."
 
 # Find all files with merge conflicts
-conflict_files=$(grep -l "<<<<<<< HEAD" $(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json") 2>/dev/null)
+conflict_files=$(grep -l "" $(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json") 2>/dev/null)
 
 echo "Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
 
@@ -23,7 +23,7 @@ if npm run build; then
 else
     echo "❌ Build still has issues, checking for remaining conflicts..."
     find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
-        if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+        if grep -q "\|\|>>>>>>> " "$file" 2>/dev/null; then
             echo "Remaining conflicts in: $file"
         fi
     done

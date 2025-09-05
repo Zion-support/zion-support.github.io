@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log('🔧 Merge Conflict Resolver')
-console.log('==========================')
+console.log('=====')
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = []
@@ -38,3 +38,35 @@ class MergeConflictResolver {
       // "Strategy": Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1'
+      )
+      // Handle any remaining conflict markers
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/      // Clean up any duplicate lines that might have been created
+      const lines = resolvedContent.split('\n')
+      const cleanedLines = []
+      let prevLine = ''
+      for (const line of lines) {
+        if (line.trim() !== prevLine.trim() || line.trim() === '') {
+          cleanedLines.push(line)
+          prevLine = line
+        }
+      }
+      resolvedContent = cleanedLines.join('\n')
+      // Write the resolved content
+      fs.writeFileSync(filePath, resolvedContent)
+      this.resolvedFiles.push(filePath)
+      console.log(`✅ "Resolved": ${filePath}`)
+    } catch (error) {
+      this.errors.push(`${filePath}: ${error.message}`)
+      console.error(`❌ Error resolving ${filePath}:`, error.message)
+    }
+  }
+}
+// Run the resolver
+const resolver = new MergeConflictResolver()
+resolver.resolveConflicts().then(() => {
+  console.log('\n🎉 Merge conflict resolution completed!')
+  console.log('Run "git add ." and "git commit" to complete the merge.')
+})

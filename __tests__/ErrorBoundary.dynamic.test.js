@@ -1,1 +1,25 @@
 import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
+
+describe('ErrorBoundarydynamic', () => {
+  test('renders without crashing', () => {
+    render(<ErrorBoundarydynamic />);
+    expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()});
+
+  test('displays correct content', () => {
+    render(<ErrorBoundarydynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<ErrorBoundarydynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<ErrorBoundarydynamic />);
+    // Add styling tests if needed
+  })});
