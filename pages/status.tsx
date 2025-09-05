@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Shield } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -88,7 +88,7 @@ const getStatusColor = (status: string) => {
 
 export default function StatusPage() {
   return (
-    <MainLayout
+    <Layout
       title="System Status - Zion Tech Group"
       description="Real-time status of all Zion Tech Group services and systems. Check uptime, performance, and incident reports."
       keywords="status, uptime, incidents, system health, Zion Tech Group"
@@ -247,6 +247,6 @@ export default function StatusPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

@@ -1,436 +1,420 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, Database, Cloud, Shield } from 'lucide-react';
-
-=======
 import React from 'react';
-import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { 
-  BookOpen, 
+  Play, 
+  Clock, 
+  User, 
+  Tag, 
   ArrowRight,
-  Play,
-  Clock,
-  User,
-  Star,
-  CheckCircle,
-  Video,
-  FileText,
+  BookOpen,
   Code,
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Target,
+  CheckCircle,
+  Star,
+  MessageSquare,
+  FileText,
+  Building,
+  Heart,
+  DollarSign,
   Settings,
+  Network,
+  Lock,
+  Eye,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Award,
+  Users,
   Globe,
-  Zap
+  TrendingUp,
+  Calendar,
+  Download,
+  ExternalLink
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const tutorialCategories = [
-import { BookOpen, Clock, Users, ArrowRight, Play, Code, Database, Cloud, Shield } from 'lucide-react';
-import Layout from "../components/Layout";";
->>>>>>> main
+  { name: 'AI & Machine Learning', count: 15, color: 'bg-blue-100 text-blue-800' },
+  { name: 'Web Development', count: 12, color: 'bg-green-100 text-green-800' },
+  { name: 'Cloud Computing', count: 8, color: 'bg-purple-100 text-purple-800' },
+  { name: 'Cybersecurity', count: 10, color: 'bg-red-100 text-red-800' },
+  { name: 'Data Analytics', count: 7, color: 'bg-yellow-100 text-yellow-800' },
+  { name: 'Mobile Development', count: 6, color: 'bg-indigo-100 text-indigo-800' }
+];
 
-const tutorials = [;
-  {}
-    title: 'Building a Full-Stack Web Application with Next.js,',
-    description: 'Learn how to build a complete web application using Next.js, _React, and Node.js',',
-    duration: '2 hours,',
-    difficulty: 'Intermediate,',
-    category: 'Web Development,',
-    icon: Code,
-    color: 'from-blue-500 to-cyan-500,',
-    lessons: 12,
+const featuredTutorials = [
+  {
+    id: 1,
+    title: 'Getting Started with AI: A Complete Beginner\'s Guide',
+    excerpt: 'Learn the fundamentals of artificial intelligence, from basic concepts to practical implementation.',
+    category: 'AI & Machine Learning',
+    author: 'Dr. Sarah Chen',
+    duration: '2 hours',
+    difficulty: 'Beginner',
+    rating: 4.8,
     students: 1250,
+    featured: true,
+    tags: ['AI', 'Machine Learning', 'Beginner', 'Fundamentals'],
+    videoUrl: '/tutorials/ai-beginners-guide'
   },
-  {}
-    title: 'AI Integration with Python and Machine Learning,',
-    description: 'Master AI integration techniques using Python, TensorFlow, and scikit-learn',',
-    duration: '3 hours,',
-    difficulty: 'Advanced,',
-    category: 'AI/ML,',
-    icon: Database,
-    color: 'from-purple-500 to-pink-500,',
-    lessons: 18,
-    students: 890,
+  {
+    id: 2,
+    title: 'Building Secure Web Applications: Best Practices',
+    excerpt: 'Comprehensive guide to implementing security best practices in modern web applications.',
+    category: 'Web Development',
+    author: 'Michael Rodriguez',
+    duration: '3 hours',
+    difficulty: 'Intermediate',
+    rating: 4.9,
+    students: 980,
+    featured: true,
+    tags: ['Security', 'Web Development', 'Best Practices'],
+    videoUrl: '/tutorials/secure-web-apps'
   },
-  {}
-    title: 'Cloud Infrastructure Setup with AWS,',
-    description: 'Complete guide to setting up scalable cloud infrastructure on AWS,',
-    duration: '1.5 hours,',
-    difficulty: 'Beginner,',
-    category: 'Cloud Computing,',
-    icon: Cloud,
-    color: 'from-green-500 to-emerald-500,',
-    lessons: 8,
+  {
+    id: 3,
+    title: 'Cloud Migration Strategies: AWS, Azure, and GCP',
+    excerpt: 'Step-by-step guide to migrating your applications to the cloud using major cloud providers.',
+    category: 'Cloud Computing',
+    author: 'Lisa Wang',
+    duration: '4 hours',
+    difficulty: 'Advanced',
+    rating: 4.7,
     students: 2100,
-  },
-  {}
-    title: 'Cybersecurity Best Practices for Developers,',
-    description: 'Essential security practices every developer should know,',
-    duration: '1 hour,',
-    difficulty: 'Intermediate,',
-    category: 'Security,',
-    icon: Shield,
-    color: 'from-red-500 to-orange-500,',
-    lessons: 6,
-    students: 1680,
-  },
-  {}
-    title: 'Database Design and Optimization,',
-    description: 'Learn database design principles and performance optimization techniques,',
-    duration: '2.5 hours,',
-    difficulty: 'Intermediate,',
-    category: 'Database,',
-    icon: Database,
-    color: 'from-indigo-500 to-purple-500,',
-    lessons: 15,
-    students: 950,
-  },
-  {}
-    title: 'Mobile App Development with _React Native,',
-    description: 'Build cross-platform mobile applications using _React Native,',
-    duration: '4 hours,',
-    difficulty: 'Advanced,',
-    category: 'Mobile Development,',
-    icon: Code,
-    color: 'from-teal-500 to-blue-500,',
-    lessons: 24,
-    students: 720,
+    featured: true,
+    tags: ['Cloud Migration', 'AWS', 'Azure', 'GCP'],
+    videoUrl: '/tutorials/cloud-migration'
   }
-;];
+];
 
-const categories = [;
-  { name: 'All, count: 24, active: true },',
-  { name: 'Web Development, count: 8, active: false },',
-  { name: 'AI/ML, count: 6, active: false },',
-  { name: 'Cloud Computing, count: 4, active: false },',
-  { name: 'Security, count: 3, active: false },',
-  { name: 'Database, count: 2, active: false },',
-  { name: 'Mobile Development, count: 1, active: false }',
-;];
+const recentTutorials = [
+  {
+    id: 4,
+    title: 'Introduction to React: Building Your First App',
+    excerpt: 'Learn React fundamentals by building a complete web application from scratch.',
+    category: 'Web Development',
+    author: 'David Kim',
+    duration: '2.5 hours',
+    difficulty: 'Beginner',
+    rating: 4.6,
+    students: 750,
+    tags: ['React', 'JavaScript', 'Web Development']
+  },
+  {
+    id: 5,
+    title: 'Data Visualization with Python and Matplotlib',
+    excerpt: 'Create stunning data visualizations using Python and popular visualization libraries.',
+    category: 'Data Analytics',
+    author: 'Maria Garcia',
+    duration: '1.5 hours',
+    difficulty: 'Intermediate',
+    rating: 4.5,
+    students: 890,
+    tags: ['Python', 'Data Visualization', 'Matplotlib']
+  },
+  {
+    id: 6,
+    title: 'Mobile App Development with React Native',
+    excerpt: 'Build cross-platform mobile applications using React Native framework.',
+    category: 'Mobile Development',
+    author: 'James Wilson',
+    duration: '3.5 hours',
+    difficulty: 'Intermediate',
+    rating: 4.8,
+    students: 1100,
+    tags: ['React Native', 'Mobile Development', 'Cross-platform']
+  },
+  {
+    id: 7,
+    title: 'Cybersecurity Fundamentals: Protecting Your Data',
+    excerpt: 'Essential cybersecurity concepts and practices to protect your digital assets.',
+    category: 'Cybersecurity',
+    author: 'Emily Johnson',
+    duration: '2 hours',
+    difficulty: 'Beginner',
+    rating: 4.7,
+    students: 650,
+    tags: ['Cybersecurity', 'Data Protection', 'Security']
+  }
+];
 
-const difficultyLevels = [;
-  { name: 'Beginner, color: 'bg-green-500, description: 'No prior experience required' },',
-  { name: 'Intermediate, color: 'bg-yellow-500, description: 'Some programming experience needed' },',
-  { name: 'Advanced, color: 'bg-red-500, description: 'Strong technical background required' }',
-;];
+const stats = [
+  { number: '50+', label: 'Tutorials' },
+  { number: '10K+', label: 'Students' },
+  { number: '100+', label: 'Hours of Content' },
+  { number: '4.8', label: 'Average Rating' }
+];
 
 export default function TutorialsPage() {
-  return (;
-    <Layout);
-      title="Tutorials - Zion Tech Group"";
-      description="Learn from our comprehensive tutorials covering web development, AI/ML, cloud computing, security, and more. Step-by-step guides for all skill levels.""
-      keywords="tutorials, learning, web development, AI, machine learning, cloud computing, programming, coding""
-    >;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+  return (
+    <Layout
+      title="Tutorials - Zion Tech Group"
+      description="Learn from our comprehensive collection of tutorials covering AI, web development, cloud computing, cybersecurity, and more."
+      keywords="tutorials, learning, AI, web development, cloud computing, cybersecurity, programming, technology education"
+      canonical="https://ziontechgroup.com/tutorials"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-          <div className="absolute inset-0">";
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-          </div>;
-
-          <div className="container mx-auto px-4 relative z-10">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto""
-            >;
-              <div className="flex items-center justify-center mb-6">";
-                <BookOpen className="w-16 h-16 text-blue-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Tutorials & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Learning</span>";
-                </h1>;
-              </div>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Master new skills with our comprehensive tutorials and step-by-step guides;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="#tutorials"";
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Browse Tutorials;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
-                  Request Tutorial;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-
-        {/* Categories Filter */}
-        <section className="py-8 bg-white border-b border-gray-200">"
-          <div className="container mx-auto px-4">";
-            <div className="flex flex-wrap gap-4 justify-center">";
-              {categories.map((category, index) => (,
-                <button}),
-                  key={category.name}
-                  className={`px-6 py-3 rounded-full font-medium transition-colors ${}
-                    category.active,
-                      ? 'bg-blue-600 text-white'';
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'';
-                  }`}
-                >,
-                  {category.name} ({category.count}),
-                </button>;
-              ))}
-            </div>,
-          </div>;
-        </section>;
-
-        {/* Difficulty Levels */}
-        <section className="py-16 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12""
-            >;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">";
-                Choose Your Level;
-              </h2>;
-              <p className="text-xl text-gray-600">";
-                Tutorials designed for every skill level;
-              </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-              {difficultyLevels.map((level, index) => (,
-                <motion.div}),
-                  key={level.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300""
-                >;
-                  <div className={`w-16 h-16 ${level.color} rounded-full flex items-center justify-center mx-auto mb-4`}>,
-                    <span className="text-white font-bold text-xl">{level.name[0]}</span>"
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{level.name}</h3>"
-                  <p className="text-gray-600">{level.description}</p>"
-                </motion.div>;
-              ))}
-            </div>,
-          </div>;
-        </section>;
-
-        {/* Tutorials Grid */}
-        <section id="tutorials" className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Tutorials</span>";
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Learn from our most popular tutorials covering the latest technologies and best practices;
-              </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {tutorials.map((tutorial, index) => (,
-                <motion.div}),
-                  key={tutorial.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300""
-                >;
-                  <div className={`h-48 bg-gradient-to-br ${tutorial.color} flex items-center justify-center`}>,
-                    <div className="text-center text-white">";
-                      <tutorial.icon className="w-16 h-16 mx-auto mb-4" />";
-                      <div className="text-lg font-bold">{tutorial.category}</div>"
-                    </div>;
-                  </div>;
-
-                  <div className="p-6">";
-                    <div className="flex items-center justify-between mb-4">";
-                      <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">";
-                        {tutorial.category}
-                      </span>,
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
-                        tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :',
-                        tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :';
-                        'bg-red-100 text-red-600'';
-                      }`}>,
-                        {tutorial.difficulty}
-                      </span>,
-                    </div>;
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{tutorial.title}</h3>"
-                    <p className="text-gray-600 mb-4">{tutorial.description}</p>"
-
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">";
-                      <div className="flex items-center">";
-                        <Clock className="w-4 h-4 mr-1" />";
-                        {tutorial.duration}
-                      </div>,
-                      <div className="flex items-center">";
-                        <Play className="w-4 h-4 mr-1" />";
-                        {tutorial.lessons} lessons,
-                      </div>;
-                      <div className="flex items-center">";
-                        <Users className="w-4 h-4 mr-1" />";
-                        {tutorial.students} students,
-                      </div>;
-                    </div>;
-
-                    <Link;
-                      href="#"";
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                    >;
-                      Start Tutorial;
-                      <ArrowRight className="ml-2 w-4 h-4" />";
-                    </Link>;
-                  </div>;
-                </motion.div>;
-              ))}
-            </div>,
-          </div>;
-        </section>;
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Start Learning?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
-                Join thousands of developers who are already learning with our comprehensive tutorials;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Get Started;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/docs"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"";
-                >;
-                  View Documentation;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-=======
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Start Learning?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Join thousands of developers who are already learning with our comprehensive tutorials
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Tutorials
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Learn from industry experts with our comprehensive collection of tutorials and guides
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/docs"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
-                >
-                  View Documentation
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
-      </div>
-    </MainLayout>
 
-export default function Tutorials() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
-        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
-      </Head>
-      
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Tutorials
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              This page is currently under development. Please check back soon for updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Started Today
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
-              >
-                Explore Services
-              </Link>
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16" 
-            initial={{ opacity: 0, y: 30 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Coming Soon
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              This page is currently under development. Please check back soon for updates.
+          </div>
+        </section>
+
+        {/* Categories */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Tutorial Categories</h2>
+              <p className="text-lg text-gray-600">Browse tutorials by topic</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {tutorialCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${category.color}`}>
+                    {category.name}
+                  </div>
+                  <div className="text-2xl font-bold text-gray-900">{category.count}</div>
+                  <div className="text-sm text-gray-500">tutorials</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Tutorials */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Tutorials</h2>
+              <p className="text-xl text-gray-600">Our most popular and comprehensive tutorials</p>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredTutorials.map((tutorial, index) => (
+                <motion.article
+                  key={tutorial.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                        {tutorial.category}
+                      </span>
+                      <span className="text-sm text-gray-500">{tutorial.duration}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                      {tutorial.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {tutorial.excerpt}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.map((tag, idx) => (
+                        <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {tutorial.author}
+                      </div>
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        {tutorial.rating}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {tutorial.students.toLocaleString()} students
+                      </div>
+                      <div className="flex items-center">
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
+                          tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                          tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {tutorial.difficulty}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={tutorial.videoUrl}
+                      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Start Tutorial
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Recent Tutorials */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Recent Tutorials</h2>
+              <p className="text-xl text-gray-600">Latest tutorials and guides</p>
+            </div>
+            
+            <div className="space-y-6">
+              {recentTutorials.map((tutorial, index) => (
+                <motion.article
+                  key={tutorial.id}
+                  className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-2">
+                        <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full mr-3">
+                          {tutorial.category}
+                        </span>
+                        <span className="text-sm text-gray-500">{tutorial.duration}</span>
+                      </div>
+                      
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {tutorial.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-3">
+                        {tutorial.excerpt}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {tutorial.tags.map((tag, idx) => (
+                          <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center text-sm text-gray-500">
+                        <User className="w-4 h-4 mr-1" />
+                        <span className="mr-4">{tutorial.author}</span>
+                        <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        <span className="mr-4">{tutorial.rating}</span>
+                        <Users className="w-4 h-4 mr-1" />
+                        <span className="mr-4">{tutorial.students.toLocaleString()} students</span>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
+                          tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                          tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {tutorial.difficulty}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={tutorial.videoUrl}
+                      className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Start
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <a
+                href="/tutorials/archive"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                View All Tutorials <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">Stay Learning</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Get notified when we publish new tutorials and learning content
             </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-ursor/expand-services-advertise-and-build-project-cac2
+            
+            <div className="max-w-md mx-auto">
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </Layout>
->>>>>>> main
   );
 }
