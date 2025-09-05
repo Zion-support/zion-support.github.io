@@ -1,16 +1,6 @@
-import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
-
-const apiServices = [
-  {
-    title: 'RESTful API',
-    description: 'Clean, intuitive REST API design',
-    icon: Globe,
-    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
-  },
-  {
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function APIPage() {
   const apiFeatures = [

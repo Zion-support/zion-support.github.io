@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -10,13 +9,10 @@ import {
   TrendingUp,
   Users,
   Clock,
-=======
   CheckCircle,
-  Users,
   Building,
   Globe,
   Award,
-  Clock,
   BarChart3,
   Cloud,
   Shield
@@ -30,12 +26,6 @@ const caseStudies = [
     industry: "E-commerce",
     challenge: "High customer service costs and inconsistent response quality",
     solution: "Implemented AI-powered chatbot and intelligent routing system",
-    title: "Healthcare AI Platform Transformation",
-    client: "MedTech Solutions",
-    industry: "Healthcare",
-    challenge: "Manual patient data processing and diagnosis delays",
-    solution: "AI-powered diagnostic platform with real-time analysis",
-=======
     results: [
       "60% reduction in support costs",
       "40% faster response times",
@@ -48,26 +38,6 @@ const caseStudies = [
     image: "/images/case-studies/ecommerce-ai.jpg"
   },
   {
-    id: 6,
-    title: 'Healthcare AI Transformation',
-    client: 'Regional Medical Center',
-    industry: 'Healthcare',
-    challenge: 'Improve patient diagnosis accuracy and reduce wait times',
-    solution: 'Implemented AI-powered diagnostic tools and automated patient triage system',
-    results: [
-      '40% reduction in diagnosis time',
-      '25% improvement in accuracy',
-      '60% decrease in patient wait times',
-      '95% patient satisfaction rate'
-    ],
-    technologies: ['Machine Learning', 'Computer Vision', 'Natural Language Processing'],
-    duration: '6 months',
-    teamSize: '8 developers',
-    image: '/case-studies/healthcare-ai.jpg',
-    icon: Brain
-  },
-  {
-=======
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
@@ -98,11 +68,10 @@ const caseStudies = [
       "24/7 threat monitoring",
       "50% faster incident response"
     ],
-=======
-    technologies: ["IoT", "Data Analytics", "Machine Learning"],
-    duration: "10 months",
-    team: "20 experts",
-    image: "/api/placeholder/600/400"
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
+    duration: "4 months",
+    team: "6 experts",
+    image: "/images/case-studies/healthcare-security.jpg"
   },
   {
     id: 5,
@@ -162,12 +131,6 @@ const technologies = [
   "PropTech",
   "SaaS Development",
   "Data Analytics"
-=======
-    duration: "4 months",
-    team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    image: "/images/case-studies/healthcare-security.jpg"
-  }
 ];
 
 const stats = [
@@ -179,8 +142,6 @@ const stats = [
 
 export default function CaseStudiesPage() {
   return (
-    <Layout
-=======
     <MainLayout
       title="Case Studies - Zion Tech Group"
       description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
@@ -238,49 +199,21 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-            </div>
-
-            {filteredCaseStudies.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <Building className="w-16 h-16 mx-auto" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No case studies found</h3>
-                <p className="text-gray-600">Try selecting a different industry.</p>
-=======
         {/* Featured Case Studies */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-=======
-              Success 
-              <span className="text-emerald-400"> Stories</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-emerald-100"
-=======
-        {/* Case Studies */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Featured Case Studies
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Success Stories
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Real projects, real results. See how we've helped businesses across 
-                different industries achieve their technology goals.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform and achieve their goals
               </p>
             </motion.div>
 
@@ -374,8 +307,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-=======
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
