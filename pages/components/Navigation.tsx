@@ -200,16 +200,16 @@ const navigationItems = [
         description: 'In-depth research reports'
       },
       {
-        title: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational sessions'
-      },
-      {
         title: 'Tutorials',
         href: '/tutorials',
         icon: BookOpen,
         description: 'Step-by-step guides'
+      },
+      {
+        title: 'Documentation',
+        href: '/docs',
+        icon: FileText,
+        description: 'Technical documentation'
       }
     ]
   },
@@ -247,6 +247,12 @@ const navigationItems = [
         href: '/news',
         icon: FileText,
         description: 'Company updates'
+      },
+      {
+        title: 'Press',
+        href: '/press',
+        icon: FileText,
+        description: 'Press releases and media'
       }
     ]
   }

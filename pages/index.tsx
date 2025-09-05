@@ -2,7 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
+import Layout from './components/Layout';
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -39,15 +44,88 @@ const services = [
     description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
+<<<<<<< HEAD
     count: "120+ Platforms",
     pricing: "Starting at $29/month",
     marketPrice: "$50-500/month",
     benefits: ["10x productivity", "Instant setup", "White-label options"]
+=======
+    price: "Starting at $1,500/month"
+  }
+];
+
+const featuredServices = [
+  {
+    title: "AI Development",
+    description: "Custom AI solutions, machine learning models, and intelligent automation systems.",
+    icon: "🧠",
+    features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "Chatbots & Virtual Assistants"],
+    price: "Starting at $2,500/month"
+  },
+  {
+    title: "Cloud Solutions",
+    description: "Scalable cloud infrastructure, migration services, and DevOps automation.",
+    icon: "☁️",
+    features: ["AWS, Azure, GCP Migration", "Container Orchestration", "Serverless Architecture", "Cloud Security & Compliance"],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Blockchain Solutions",
+    description: "Secure blockchain development, smart contracts, and DeFi applications.",
+    icon: "🔗",
+    features: ["Smart Contract Development", "DeFi Applications", "NFT Marketplaces", "Cryptocurrency Integration"],
+    price: "Starting at $3,500/month"
+  },
+  {
+    title: "IoT Platforms",
+    description: "Connected device solutions, sensor networks, and real-time data processing.",
+    icon: "🌐",
+    features: ["Device Management", "Real-time Analytics", "Edge Computing", "Industrial IoT Solutions"],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "Micro SAAS Solutions",
+    description: "Custom micro SAAS platforms and automation tools for business efficiency.",
+    icon: "⚡",
+    features: ["Workflow Automation", "Data Processing Tools", "API Integration Services", "Custom Dashboard Solutions"],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Cybersecurity",
+    description: "Comprehensive security solutions and compliance services for your digital assets.",
+    icon: "🔒",
+    features: ["Security Audits", "Penetration Testing", "Compliance Management", "Incident Response"],
+    price: "Starting at $2,000/month"
+  }
+];
+
+const whyChooseUs = [
+  {
+    title: "Fast Delivery",
+    description: "Rapid development and deployment with agile methodologies",
+    icon: "⚡"
+  },
+  {
+    title: "Proven Results",
+    description: "Track record of successful projects and satisfied clients",
+    icon: "🎯"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock technical support and maintenance",
+    icon: "🔧"
+  },
+  {
+    title: "Competitive Pricing",
+    description: "Transparent pricing with no hidden costs",
+    icon: "💰"
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
   }
 ];
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider</title>
@@ -58,6 +136,14 @@ export default function HomePage() {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
       </Head>
+=======
+    <Layout
+      title="Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider"
+      description="Zion Tech Group provides cutting-edge AI services, IT solutions, and innovative micro SAAS platforms. Transform your business with our comprehensive technology services and solutions."
+      keywords="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions"
+      canonical="https://ziontechgroup.com"
+    >
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -176,7 +262,36 @@ export default function HomePage() {
               })}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
+=======
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="text-3xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx}>• {feature}</li>
+                  ))}
+                </ul>
+                <div className="mt-4">
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
@@ -219,7 +334,39 @@ export default function HomePage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
+<<<<<<< HEAD
                 className="bg-white p-6 rounded-lg shadow-lg"
+=======
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div 
+                key={index}
+                className="text-center"
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -235,6 +382,7 @@ export default function HomePage() {
                   <li>• Transparent, no hidden fees</li>
                 </ul>
               </motion.div>
+<<<<<<< HEAD
               <motion.div
                 className="bg-white p-6 rounded-lg shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
@@ -287,9 +435,13 @@ export default function HomePage() {
                 <Link href="/contact" className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">Get Free Quote</Link>
               </div>
             </motion.div>
+=======
+            ))}
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -329,5 +481,39 @@ export default function HomePage() {
         </section>
       </div>
     </>
+=======
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            Join hundreds of companies that trust Zion Tech Group for their technology needs. 
+            Let's discuss how we can help accelerate your digital transformation.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Get Free Consultation
+            </Link>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="flex items-center justify-center">
+              <Phone className="w-6 h-6 mr-2" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <Mail className="w-6 h-6 mr-2" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <MapPin className="w-6 h-6 mr-2" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+>>>>>>> cursor/website-audit-and-update-with-deployment-560a
   );
 }
