@@ -15,9 +15,7 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true}},
       globals: {
         // Browser globals
         window: 'readonly',
@@ -42,15 +40,12 @@ export default [
         Node: 'readonly',
         PerformanceObserver: 'readonly',
         // React
-        React: 'readonly',
-      },
-    },
+        React: 'readonly'}},
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
-    },
+      '@next/next': next},
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -63,20 +58,14 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
+      '@typescript-eslint/no-explicit-any': 'warn'},
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
-  },
+        version: 'detect'}}},
   {
     files: ['**/*.cjs'],
     languageOptions: {
-      sourceType: 'commonjs',
-    },
-  },
+      sourceType: 'commonjs'}},
   {
     ignores: [
       // Node/build outputs
@@ -179,7 +168,4 @@ export default [
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
-  },
-];
+      'pages.disabled_auto/**']}];

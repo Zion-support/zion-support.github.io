@@ -49,10 +49,10 @@ export const useStableCallback = <T extends (...args: any[]) => any>(
 
 // Performance monitoring hook
 export const usePerformanceMonitor = (componentName: string) => {
-  const startTime = useMemo(() => performance.now(), []);
+  const startTime = useMemo(() => window.window.performance.now(), []);
   
   React.useEffect(() => {
-    const endTime = performance.now();
+    const endTime = window.window.performance.now();
     const renderTime = endTime - startTime;
     
     if (renderTime > 16) { // More than one frame (16ms at 60fps)
@@ -150,7 +150,7 @@ export const OptimizedImage: React.FC<{
 // Virtual scrolling hook for large lists
 export const useVirtualScroll = <T>(
   items: T[];
-  itemHeight: number,
+  itemHeight: number;
   containerHeight: number
 ) => {
   const [scrollTop, setScrollTop] = React.useState(0);

@@ -18,8 +18,7 @@ import {
   Shield,
   Zap,
   Globe,
-  BarChart3,
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,8 +33,7 @@ export default function Navigation() {
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions', icon: Zap },
     { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs', icon: Building },
     { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing', icon: Globe },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance', icon: Shield },
-  ];
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance', icon: Shield }];
 
   const solutions = [
     { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions', icon: Building },
@@ -43,8 +41,7 @@ export default function Navigation() {
     { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions', icon: ShoppingCart },
     { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions', icon: Users },
     { name: 'Finance', href: '/industries/finance', description: 'Fintech and banking solutions', icon: BarChart3 },
-    { name: 'Education', href: '/industries/education', description: 'EdTech platforms', icon: Users },
-  ];
+    { name: 'Education', href: '/industries/education', description: 'EdTech platforms', icon: Users }];
 
   const industries = [
     { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions' },
@@ -53,8 +50,7 @@ export default function Navigation() {
     { name: 'Government', href: '/industries/government', description: 'Public sector solutions' },
     { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Industrial automation' },
     { name: 'Retail', href: '/industries/retail', description: 'E-commerce and retail tech' },
-    { name: 'Real Estate', href: '/industries/real-estate', description: 'Property technology' },
-  ];
+    { name: 'Real Estate', href: '/industries/real-estate', description: 'Property technology' }];
 
   const resources = [
     { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
@@ -63,8 +59,7 @@ export default function Navigation() {
     { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
     { name: 'Training', href: '/training', description: 'Professional development' },
     { name: 'Events', href: '/events', description: 'Webinars and conferences' },
-    { name: 'News', href: '/news', description: 'Industry news and updates' },
-  ];
+    { name: 'News', href: '/news', description: 'Industry news and updates' }];
 
   // const quickLinks = [
   //   { name: 'About Us', href: '/about' },

@@ -17,7 +17,7 @@ class SecurityScanner {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    console.log(logMessage.trim());
+    // // console.log(logMessage.trim());
     
     // Ensure log directory exists
     const logDir = path.dirname(this.logFile);
@@ -75,8 +75,7 @@ class SecurityScanner {
         { pattern: /secret\s*=\s*['"][^'"]*['"]/gi, message: 'Hardcoded secret detected' },
         { pattern: /eval\s*\(/gi, message: 'eval() usage detected' },
         { pattern: /innerHTML\s*=/gi, message: 'innerHTML usage detected (potential XSS)' },
-        { pattern: /document\.write/gi, message: 'document.write usage detected' },
-      ];
+        { pattern: /document\.write/gi, message: 'document.write usage detected' }];
 
       const filesToScan = this.getFilesToScan(['.js', '.jsx', '.ts', '.tsx']);
       let issuesFound = 0;
@@ -133,8 +132,7 @@ class SecurityScanner {
               { pattern: /password\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Password in config' },
               { pattern: /secret\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Secret in config' },
               { pattern: /key\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Key in config' },
-              { pattern: /token\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Token in config' },
-            ];
+              { pattern: /token\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Token in config' }];
 
             for (const { pattern, message } of sensitivePatterns) {
               const matches = content.match(pattern);

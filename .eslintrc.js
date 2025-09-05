@@ -55,6 +55,5 @@ export default {
     'utils/supabase/client.ts',
     'utils/next-link-shim.tsx',
     'utils/messageChannelHandler.ts',
-    'utils/api.ts',
-  ]
+    'utils/api.ts']
 };

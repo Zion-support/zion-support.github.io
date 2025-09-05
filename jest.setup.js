@@ -18,11 +18,8 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
-    };
-  },
-}));
+        emit: jest.fn()}};
+  }}));
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
@@ -30,16 +27,14 @@ jest.mock('next/image', () => ({
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
-  },
-}));
+  }}));
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>;
-  },
-}));
+  }}));
 
 // Global test setup
 beforeEach(() => {

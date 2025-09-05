@@ -29,7 +29,7 @@ ${pages.map(page => `  <url>
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
+  // // console.log('Sitemap generated successfully!');
 };
 
 generateSitemap();

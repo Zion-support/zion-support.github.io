@@ -14,8 +14,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.window.performance.getEntriesByType('paint');
       
       const performanceData = {
         // Navigation timing
@@ -28,7 +28,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
+        resourceCount: window.window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
         memory: (performance as any).memory ? {
@@ -44,7 +44,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
+        // // console.log('Performance Metrics:', performanceData);
       }
     };
 

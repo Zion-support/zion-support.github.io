@@ -3,8 +3,8 @@ import Link from 'next/link';
 import {
   Phone;
   Mail;
-  MapPin,
-  Brain,
+  MapPin;
+  Brain;
   Cloud,
   Shield,
   Code,

@@ -10,8 +10,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
-  },
+    minimumCacheTTL: 31536000},
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from file watching in dev mode
@@ -49,14 +48,11 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt',
-        ],
+          '**/performance-*.txt'],
         poll: 1000,
-        aggregateTimeout: 300,
-      };
+        aggregateTimeout: 300};
     }
     return config;
-  },
-};
+  }};
 
 export default nextConfig;
