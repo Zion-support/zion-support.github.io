@@ -48,14 +48,22 @@ const navigation = [{
     "icon": FileText,
     "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
       { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
-      { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
+      { "name": 'Tutorials', "href": '/tutorials', "icon": MessageSquare },
+      { "name": 'Guides', "href": '/guides', "icon": FileText },
+      { "name": 'FAQ', "href": '/faq', "icon": MessageSquare },
       { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
     ]
   },
   {
-    "name": 'About',
+    "name": 'Company',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'About Us', "href": '/about', "icon": Users },
+      { "name": 'Careers', "href": '/careers', "icon": Users },
+      { "name": 'News', "href": '/news', "icon": MessageSquare },
+      { "name": 'Support', "href": '/support', "icon": Phone }
+    ]
   },
   {
     "name": 'Contact',

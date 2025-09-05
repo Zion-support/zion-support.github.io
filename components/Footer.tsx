@@ -55,7 +55,8 @@ const company = [{ "name": 'About Us', "href": '/about' },
   { "name": 'Careers', "href": '/careers' },
   { "name": 'Case Studies', "href": '/case-studies' },
   { "name": 'Blog', "href": '/blog' },
-  { "name": 'News', "href": '/news' }
+  { "name": 'News', "href": '/news' },
+  { "name": 'Support', "href": '/support' }
 ];
 
 const resources = [{ "name": 'Documentation', "href": '/docs' },
@@ -63,7 +64,8 @@ const resources = [{ "name": 'Documentation', "href": '/docs' },
   { "name": 'Tutorials', "href": '/tutorials' },
   { "name": 'Guides', "href": '/guides' },
   { "name": 'FAQ', "href": '/faq' },
-  { "name": 'Support', "href": '/support' }
+  { "name": 'Support', "href": '/support' },
+  { "name": 'Resources', "href": '/resources' }
 ];
 
 const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
@@ -71,6 +73,7 @@ const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
   { "name": 'Cookie Policy', "href": '/cookies' },
   { "name": 'Security', "href": '/security' },
   { "name": 'Compliance', "href": '/compliance' },
+  { "name": 'Accessibility', "href": '/accessibility' },
   { "name": 'Sitemap', "href": '/sitemap' }
 ];
 
