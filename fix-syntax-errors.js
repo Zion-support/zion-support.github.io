@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -49,8 +48,7 @@ function fixSyntaxErrors(content) {
   content = content.replace(/,\s*};/g, ';');
   content = content.replace(/,\s*}/g, '}');
   
-  return content;
-}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -61,13 +59,10 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -82,16 +77,13 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution
 const projectRoot = process.cwd();
@@ -102,21 +94,7 @@ console.log(`Found ${files.length} files to process...`);
 let fixedCount = 0;
 for (const file of files) {
   if (processFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
 console.log(`Fixed ${fixedCount} files`);
-=======
-  };
-};
-,
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-,
-console.log('🎉 Syntax error fixes completed'),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
