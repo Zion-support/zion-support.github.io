@@ -8,7 +8,7 @@ const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '2,500+', label: 'Projects Completed' },
-  { number: '65+', label: 'Services & Solutions' },
+  { number: '95+', label: 'Services & Solutions' },
   { number: '150+', label: 'Expert Team Members' },
   { number: '18+', label: 'Years Experience' }
 ];
@@ -19,7 +19,7 @@ const services = [
     description: "20+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, chatbots, fraud detection, and autonomous systems with real-world applications",
     icon: Brain,
     href: "/ai-services",
-    count: "20+ Solutions",
+    count: "30+ Solutions",
     pricing: "Starting at $1,800/month",
     marketPrice: "$2,500-50,000/month",
     benefits: ["40-95% accuracy improvement", "60-90% automation", "15-90% ROI increase"],
@@ -30,7 +30,7 @@ const services = [
     description: "20+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, managed services, compliance, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
-    count: "20+ Services",
+    count: "25+ Services",
     pricing: "Starting at $800/month",
     marketPrice: "$1,500-20,000/month",
     benefits: ["99.9% uptime", "30-50% cost reduction", "24/7 support"],
@@ -41,7 +41,7 @@ const services = [
     description: "25+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-    count: "25+ Solutions",
+    count: "40+ Solutions",
     pricing: "Starting at $1,000/month",
     marketPrice: "$1,800-20,000/month",
     benefits: ["80% efficiency improvement", "60-90% cost savings", "10x faster deployment"],
@@ -182,7 +182,7 @@ export default function HomePage() {
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -210,7 +210,7 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               <motion.div 
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}

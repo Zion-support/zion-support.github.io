@@ -26,9 +26,17 @@ import {
   Wifi,
   Brain,
   Video,
-  Smartphone
+  Smartphone,
+  MessageSquare,
+  TrendingUp,
+  Cpu,
+  Camera,
+  Truck,
+  Heart,
+  TreePine,
+  Building
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
@@ -472,6 +480,244 @@ const microSaasSolutions = [
     marketPrice: "$4,000-10,000/month",
     benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
     setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Chatbot Platform",
+    description: "Intelligent conversational AI platform for customer service and support",
+    icon: MessageSquare,
+    features: [
+      "Natural Language Processing",
+      "Multi-channel Integration",
+      "Sentiment Analysis",
+      "Custom Training",
+      "Analytics Dashboard",
+      "Human Handoff"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-8,000/month",
+    benefits: ["24/7 customer support", "Reduce response time by 90%", "Handle 1000+ conversations simultaneously"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Predictive Analytics Engine",
+    description: "Advanced predictive modeling and forecasting platform for business intelligence",
+    icon: TrendingUp,
+    features: [
+      "Machine Learning Models",
+      "Time Series Forecasting",
+      "Anomaly Detection",
+      "Custom Algorithms",
+      "Real-time Predictions",
+      "Visualization Tools"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Improve accuracy by 85%", "Reduce forecasting errors by 70%", "Enable data-driven decisions"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Smart Contract Automation",
+    description: "Blockchain-based smart contract development and automation platform",
+    icon: Shield,
+    features: [
+      "Smart Contract Templates",
+      "Automated Execution",
+      "Multi-blockchain Support",
+      "Security Auditing",
+      "Gas Optimization",
+      "Integration APIs"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Automate complex processes", "Reduce transaction costs by 60%", "Enhanced security and transparency"],
+    setupTime: "6-8 weeks"
+  },
+  {
+    title: "Quantum Computing Interface",
+    description: "Quantum computing platform for complex optimization and simulation problems",
+    icon: Cpu,
+    features: [
+      "Quantum Algorithm Development",
+      "Hybrid Classical-Quantum Computing",
+      "Optimization Solvers",
+      "Simulation Tools",
+      "API Integration",
+      "Performance Monitoring"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Solve complex problems 1000x faster", "Revolutionary optimization", "Future-proof technology"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Edge Computing Platform",
+    description: "Distributed edge computing solution for IoT and real-time applications",
+    icon: Globe,
+    features: [
+      "Edge Node Management",
+      "Real-time Processing",
+      "Data Synchronization",
+      "Load Balancing",
+      "Security Protocols",
+      "Monitoring Dashboard"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Reduce latency by 80%", "Process data locally", "Improved reliability"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AR/VR Development Platform",
+    description: "Complete augmented and virtual reality development and deployment platform",
+    icon: Camera,
+    features: [
+      "3D Content Creation",
+      "Cross-platform Deployment",
+      "Spatial Computing",
+      "Gesture Recognition",
+      "Multi-user Support",
+      "Analytics & Tracking"
+    ],
+    price: "Starting at $5,500/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Immersive user experiences", "Cross-platform compatibility", "Advanced 3D capabilities"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "Digital Twin Platform",
+    description: "Digital twin technology for real-time monitoring and simulation of physical assets",
+    icon: Network,
+    features: [
+      "Real-time Data Integration",
+      "3D Visualization",
+      "Predictive Maintenance",
+      "Simulation Engine",
+      "IoT Connectivity",
+      "Performance Analytics"
+    ],
+    price: "Starting at $4,200/month",
+    marketPrice: "$6,500-18,000/month",
+    benefits: ["Optimize asset performance", "Predict maintenance needs", "Reduce downtime by 50%"],
+    setupTime: "5-8 weeks"
+  },
+  {
+    title: "Autonomous Systems Platform",
+    description: "AI-powered autonomous systems for robotics, drones, and automated vehicles",
+    icon: Truck,
+    features: [
+      "Computer Vision",
+      "Path Planning",
+      "Obstacle Avoidance",
+      "Sensor Fusion",
+      "Real-time Control",
+      "Safety Protocols"
+    ],
+    price: "Starting at $6,500/month",
+    marketPrice: "$10,000-30,000/month",
+    benefits: ["Fully autonomous operations", "Enhanced safety", "24/7 operation capability"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Neural Interface Platform",
+    description: "Brain-computer interface technology for medical and assistive applications",
+    icon: Brain,
+    features: [
+      "EEG Signal Processing",
+      "Machine Learning Models",
+      "Real-time Analysis",
+      "Medical Device Integration",
+      "Data Visualization",
+      "Clinical Validation"
+    ],
+    price: "Starting at $12,000/month",
+    marketPrice: "$20,000-60,000/month",
+    benefits: ["Revolutionary medical applications", "Assistive technology", "Research capabilities"],
+    setupTime: "12-16 weeks"
+  },
+  {
+    title: "Space Technology Platform",
+    description: "Satellite data processing and space technology applications platform",
+    icon: Globe,
+    features: [
+      "Satellite Data Processing",
+      "Earth Observation Analytics",
+      "Orbital Mechanics",
+      "Weather Prediction",
+      "Navigation Systems",
+      "Space Mission Planning"
+    ],
+    price: "Starting at $15,000/month",
+    marketPrice: "$25,000-80,000/month",
+    benefits: ["Access to space data", "Advanced analytics", "Cutting-edge technology"],
+    setupTime: "10-16 weeks"
+  },
+  {
+    title: "Biotech Data Platform",
+    description: "Advanced biotechnology data analysis and genomic research platform",
+    icon: Heart,
+    features: [
+      "Genomic Data Analysis",
+      "Drug Discovery Tools",
+      "Clinical Trial Management",
+      "Biomarker Detection",
+      "Molecular Modeling",
+      "Regulatory Compliance"
+    ],
+    price: "Starting at $8,500/month",
+    marketPrice: "$12,000-40,000/month",
+    benefits: ["Accelerate drug discovery", "Precision medicine", "Regulatory compliance"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Green Tech Platform",
+    description: "Sustainability and environmental monitoring platform for carbon footprint tracking",
+    icon: TreePine,
+    features: [
+      "Carbon Footprint Tracking",
+      "Environmental Monitoring",
+      "Sustainability Reporting",
+      "Energy Optimization",
+      "Waste Management",
+      "Compliance Tracking"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-10,000/month",
+    benefits: ["Reduce carbon footprint by 40%", "Compliance reporting", "Cost savings"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Fintech Innovation Platform",
+    description: "Next-generation financial technology platform with blockchain and AI integration",
+    icon: DollarSign,
+    features: [
+      "Digital Banking APIs",
+      "Cryptocurrency Integration",
+      "Fraud Detection",
+      "Risk Assessment",
+      "Payment Processing",
+      "Regulatory Compliance"
+    ],
+    price: "Starting at $5,800/month",
+    marketPrice: "$9,000-25,000/month",
+    benefits: ["Enhanced security", "Faster transactions", "Regulatory compliance"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "Smart City Platform",
+    description: "Comprehensive smart city infrastructure management and optimization platform",
+    icon: Building,
+    features: [
+      "Traffic Management",
+      "Energy Grid Optimization",
+      "Public Safety Systems",
+      "Environmental Monitoring",
+      "Citizen Services",
+      "Data Analytics"
+    ],
+    price: "Starting at $12,500/month",
+    marketPrice: "$20,000-60,000/month",
+    benefits: ["Improve city efficiency", "Reduce costs by 30%", "Better citizen services"],
+    setupTime: "10-16 weeks"
   }
 ];
 
@@ -589,7 +835,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {microSaasSolutions.map((solution, index) => (
               <motion.div 
                 key={index}
@@ -666,7 +912,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {industries.map((industry, index) => (
               <motion.div 
                 key={index}
@@ -694,7 +940,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div 
                 key={index}

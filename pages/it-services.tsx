@@ -19,9 +19,16 @@ import {
   Users,
   Package,
   GraduationCap,
-  DollarSign
+  DollarSign,
+  Cpu,
+  Globe,
+  Wifi,
+  Lock,
+  TreePine,
+  Brain,
+  Building
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from './components/Layout';
 
 const services = [
   {
@@ -363,6 +370,244 @@ const services = [
     marketPrice: "$3,500-8,000/month",
     benefits: ["30% cost reduction", "Better ROI", "Optimized spending"],
     setupTime: "2-3 weeks"
+  },
+  {
+    title: "Quantum Computing Infrastructure",
+    description: "Quantum computing setup, integration, and optimization services",
+    icon: Cpu,
+    features: [
+      "Quantum Hardware Setup",
+      "Quantum Software Integration",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Algorithm Development",
+      "Performance Optimization",
+      "Security Implementation"
+    ],
+    price: "Starting at $15,000/month",
+    marketPrice: "$25,000-100,000/month",
+    benefits: ["Exponential computing power", "Future-proof technology", "Breakthrough capabilities"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed edge computing infrastructure and management",
+    icon: Globe,
+    features: [
+      "Edge Node Deployment",
+      "Real-time Data Processing",
+      "Latency Optimization",
+      "Edge Security",
+      "Bandwidth Management",
+      "Distributed Analytics"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,500-15,000/month",
+    benefits: ["80% latency reduction", "Improved reliability", "Local data processing"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "5G Network Infrastructure",
+    description: "5G network design, deployment, and optimization services",
+    icon: Wifi,
+    features: [
+      "5G Network Planning",
+      "Small Cell Deployment",
+      "Network Slicing",
+      "IoT Connectivity",
+      "Performance Optimization",
+      "Security Implementation"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$12,000-40,000/month",
+    benefits: ["10x faster speeds", "Ultra-low latency", "Massive IoT connectivity"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Blockchain network setup, management, and integration services",
+    icon: Shield,
+    features: [
+      "Blockchain Network Design",
+      "Smart Contract Development",
+      "Node Management",
+      "Security Auditing",
+      "Integration Services",
+      "Performance Monitoring"
+    ],
+    price: "Starting at $5,500/month",
+    marketPrice: "$8,500-25,000/month",
+    benefits: ["Enhanced security", "Transparent transactions", "Decentralized systems"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "IoT Platform Management",
+    description: "Comprehensive IoT infrastructure and device management",
+    icon: Network,
+    features: [
+      "IoT Device Management",
+      "Data Collection & Processing",
+      "Real-time Analytics",
+      "Device Security",
+      "Firmware Updates",
+      "Performance Monitoring"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Centralized device control", "Real-time insights", "Automated management"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "AI Infrastructure Services",
+    description: "AI/ML infrastructure setup, management, and optimization",
+    icon: Brain,
+    features: [
+      "GPU Cluster Setup",
+      "ML Pipeline Development",
+      "Model Deployment",
+      "Data Pipeline Management",
+      "Performance Optimization",
+      "Auto-scaling Configuration"
+    ],
+    price: "Starting at $4,200/month",
+    marketPrice: "$6,500-20,000/month",
+    benefits: ["Faster AI processing", "Scalable ML operations", "Cost optimization"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Green IT Solutions",
+    description: "Sustainable and energy-efficient IT infrastructure services",
+    icon: TreePine,
+    features: [
+      "Energy-efficient Hardware",
+      "Carbon Footprint Tracking",
+      "Renewable Energy Integration",
+      "Waste Reduction",
+      "Sustainability Reporting",
+      "Green Certification"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-10,000/month",
+    benefits: ["40% energy reduction", "Carbon neutral operations", "Cost savings"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Zero Trust Security Architecture",
+    description: "Zero trust security model implementation and management",
+    icon: Lock,
+    features: [
+      "Identity Verification",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Access Control",
+      "Threat Detection",
+      "Incident Response"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Enhanced security posture", "Reduced attack surface", "Compliance ready"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "Hyperconverged Infrastructure",
+    description: "HCI deployment, management, and optimization services",
+    icon: Server,
+    features: [
+      "HCI Design & Planning",
+      "Hardware Integration",
+      "Software Configuration",
+      "Performance Tuning",
+      "Backup & Recovery",
+      "Monitoring & Management"
+    ],
+    price: "Starting at $3,800/month",
+    marketPrice: "$6,000-18,000/month",
+    benefits: ["Simplified management", "Better performance", "Reduced costs"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Container Orchestration",
+    description: "Kubernetes and container platform management services",
+    icon: Package,
+    features: [
+      "Kubernetes Deployment",
+      "Container Management",
+      "Service Mesh Implementation",
+      "Auto-scaling Configuration",
+      "Security Hardening",
+      "Monitoring & Logging"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["Improved scalability", "Faster deployments", "Better resource utilization"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Data Center Modernization",
+    description: "Legacy data center transformation and modernization services",
+    icon: Building,
+    features: [
+      "Infrastructure Assessment",
+      "Modernization Planning",
+      "Hardware Refresh",
+      "Software Updates",
+      "Migration Services",
+      "Performance Optimization"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$8,000-30,000/month",
+    benefits: ["Improved performance", "Reduced costs", "Future-ready infrastructure"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "Multi-Cloud Management",
+    description: "Multi-cloud strategy, deployment, and management services",
+    icon: Cloud,
+    features: [
+      "Cloud Strategy Development",
+      "Multi-cloud Architecture",
+      "Cost Optimization",
+      "Security Management",
+      "Disaster Recovery",
+      "Performance Monitoring"
+    ],
+    price: "Starting at $4,800/month",
+    marketPrice: "$7,500-25,000/month",
+    benefits: ["Vendor independence", "Cost optimization", "Enhanced reliability"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "IT Automation Services",
+    description: "Comprehensive IT process automation and orchestration",
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Workflow Orchestration",
+      "Self-healing Systems",
+      "Automated Provisioning",
+      "Incident Response",
+      "Performance Optimization"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["90% process automation", "Reduced human error", "Faster operations"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IT Compliance Automation",
+    description: "Automated compliance monitoring and reporting services",
+    icon: CheckCircle,
+    features: [
+      "Compliance Monitoring",
+      "Automated Reporting",
+      "Policy Enforcement",
+      "Audit Preparation",
+      "Risk Assessment",
+      "Regulatory Updates"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Automated compliance", "Reduced audit time", "Continuous monitoring"],
+    setupTime: "3-6 weeks"
   }
 ];
 
@@ -447,7 +692,7 @@ export default function ITServicesPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <motion.div 
                 key={index}
