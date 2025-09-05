@@ -81,7 +81,7 @@ export default function APIPage() {
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
   }]
-  const apiFeatures = [{
+      const additionalApiFeatures = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,

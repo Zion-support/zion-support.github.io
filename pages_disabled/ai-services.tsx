@@ -249,7 +249,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </Link>
                   </div>
                   </motion.div>
-                  </div>
-                  </section>
-                  </div>
-}
+                </div>
+              </section>
+            </div>
+          </Layout>
+        );

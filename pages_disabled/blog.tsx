@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Layout from '../components/Layout'
+import { motion } from 'framer-motion'
 
 const blogPosts = [
   { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read' },
