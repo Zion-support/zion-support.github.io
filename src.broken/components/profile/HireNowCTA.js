@@ -11,14 +11,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-<<<<<<< HEAD:src/components/profile/HireNowCTA.jsx
-    }
-    );
-    const handleSubmit = (props: any) => {
-=======
-    });
-    const handleSubmit = (e) => {
->>>>>>> main:src.broken/components/profile/HireNowCTA.js
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -28,16 +20,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-<<<<<<< HEAD:src/components/profile/HireNowCTA.jsx
-            message: ''}
-    );
-        setIsFormOpen(false)};
-=======
-            message: ''
-        });
-        setIsFormOpen(false);
-    };
->>>>>>> main:src.broken/components/profile/HireNowCTA.js
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,

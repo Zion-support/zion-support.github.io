@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-interface Proposal {;
-  "id": string;
-  title: string;';
-  description: string;';';
-  status: 'active' | 'passed' | 'rejected' | 'expired';
-  votesFor: number;
-  votesAgainst: number;
-  totalVotes: number;
-  endDate: string;
-  proposer: string;
-  category: string;
-}
-interface ProposalCardProps {
-  "proposal": Proposa l;';';
-  onVote?: (proposalId: string, "vote": 'for' | 'against') => void;
-  canVote?: boolean;
-}
-<<<<<<< HEAD
-
-const ProposalCard: React.FC<ProposalCardProps> = ({ 
-  proposal, 
-  onVote, 
-  canVote = false 
-}) => {
-  const getStatusColor = (props: any) => {
-=======
-const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
-  proposal,
-  onVote,
-  canVote = false
-};) => {
-  const getStatusColor = (props) => {
->>>>>>> main
     switch (status) {
       case 'active':';
         return 'bg-green-100 text-green-800';
@@ -61,13 +25,6 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             {proposal.title}
-<<<<<<< HEAD
-          
-          <p className="text-sm text-gray-600 mb-3">
-=======
-;
-          <p className="text-sm text-gray-600 mb-3">;
->>>>>>> main
             {proposal.description}
           </p>;
         </div>;

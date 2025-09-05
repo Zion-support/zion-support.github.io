@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import { useEffect, useRef, useState } from 'react';
-interface PerformanceMetrics {
-  "fcp": number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
-  fid: number | null; // First Input Delay
-  cls: number | null; // Cumulative Layout Shift
-  ttfb: number | null; // Time to First Byte
-  domLoad: number | null; // DOM Content Loaded
-  windowLoad: number | null; // Window Load
-}
-interface PerformanceOptions {
-  enableRealUserMonitoring?: boolean;
-  enableWebVitals?: boolean;
-  enableResourceTiming?: boolean;
-  enableNavigationTiming?: boolean;
-  logToConsole?: boolean;
-  sendToAnalytics?: boolean}
-export function usePerformance("options": PerformanceOptions = {}) {
-  const {
-    enableRealUserMonitoring = true,
-    enableWebVitals = true,
-    enableResourceTiming = true,
-    enableNavigationTiming = true,
-    logToConsole = false,
-    sendToAnalytics = false
-  }; = options;
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-<<<<<<< HEAD
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    domLoad: null,
-    windowLoad: null,
-    navigationStart: null,
-  }
-    );
-
-=======
-    "fcp": null,
-    "lcp": null,
-    "fid": null,
-    "cls": null,
-    "ttfb": null,
-    "domLoad": null,
-    "windowLoad": null,
-    "navigationStart": null};);
->>>>>>> main
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // //
@@ -59,40 +7,16 @@ export function usePerformance("options": PerformanceOptions = {}) {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-<<<<<<< HEAD
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-
-    }
-    );
-=======
-        setMetrics(prev => ({ ...prev, "fcp": fcpEntry.startTime }))});
->>>>>>> main
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
-<<<<<<< HEAD
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-
-    }
-    );
-=======
-        setMetrics(prev => ({ ...prev, "lcp": lcpEntry.startTime }))});
->>>>>>> main
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
-<<<<<<< HEAD
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-
-    }
-    );
-=======
-        setMetrics(prev => ({ ...prev, "fid": fidEntry.processingStart - fidEntry.startTime }))});
->>>>>>> main
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
       const clsValue = 0;
@@ -100,34 +24,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
-<<<<<<< HEAD
-
-
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
-    }
-    );
-    // Start observing
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] }
-    );
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
-      fidObserver.observe({ entryTypes: ['first-input'] }
-    );
-      clsObserver.observe({ entryTypes: ['layout-shift'] }
-    );
-    } catch (error) {
-      // // // // // // // 
-=======
-      setMetrics(prev => ({ ...prev, "cls": clsValue }))});
-    // Start observing
-    try {
-      fcpObserver.observe({ "entryTypes": ['paint'] });';';
-      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] });';';
-      fidObserver.observe({ "entryTypes": ['first-input'] });';';
-      clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
-      // // // // // // //
->>>>>>> main
     }
     // Navigation timing metrics
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
@@ -146,26 +42,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
         domLoad,
         windowLoad
       }));
-<<<<<<< HEAD
-
-          // // // // // // // 
-
-      }
-    );
-    }
-    );
-    try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] }
-    );
-    } catch (error) {
-      // // // // // // // 
-=======
-          // // // // // // //
-      })});';
-    try {
-      longTaskObserver.observe({ "entryTypes": ['longtask'] })} catch (error) {
-      // // // // // // //
->>>>>>> main
     }
     return () => longTaskObserver.disconnect();
       if (logToConsole) {
@@ -193,19 +69,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole)
           }
-<<<<<<< HEAD
-        }
-    );
-      }
-    );
-      observerRef.current.observe({ entryTypes: ['paint'] }
-    );
-    } catch (e) {
-      
-=======
-        })});';';
-      observerRef.current.observe({ "entryTypes": ['paint'] })} catch (e) {
->>>>>>> main
     }
     // Largest Contentful Paint
     try {
@@ -217,17 +80,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole)
         }
-<<<<<<< HEAD
-      }
-    );
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
-    } catch (e) {
-      
-=======
-      });';';
-      lcpObserverRef.current.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
->>>>>>> main
     }
     // Cumulative Layout Shift
     try {
@@ -237,21 +89,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value}
         }
-<<<<<<< HEAD
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-        if (logToConsole) 
-      }
-    );
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] }
-    );
-    } catch (e) {
-      
-=======
-        setMetrics(prev => ({ ...prev, "cls": clsValue };));
-        if (logToConsole) ';
-      });';';
-      clsObserverRef.current.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
->>>>>>> main
     }
   }, [enableWebVitals, logToConsole]);
   // Monitor First Input Delay
@@ -289,15 +126,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       getResourceTiming()} else {
       window.addEventListener('load', () => {
         getNavigationTiming();
-<<<<<<< HEAD
-        getResourceTiming();
-      }
-    );
-    }
-
-=======
-        getResourceTiming()})}
->>>>>>> main
     // Monitor DOM content loaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {
@@ -391,18 +219,6 @@ export function useRenderTime() {
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
-<<<<<<< HEAD
-    renderStart.current = renderEnd;
-  }
-    );
-  return renderTime;
-
-}
-
-=======
-    renderStart.current = renderEnd});
-  return renderTime}
->>>>>>> main
 // Hook for monitoring specific component performance
 export function useComponentPerformance("componentName": string) {
   const [renderTime, setRenderTime] = useState<number>(0);
@@ -428,17 +244,6 @@ export function useAPIPerformance() {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
-<<<<<<< HEAD
-      return newMap;
-    }
-    );
-  }, []);
-
-  const getAPIAverage = useCallback((endpoint: string) => {
-=======
-      return newMap})}, []);
-  const getAPIAverage = useCallback(("endpoint": string) => {
->>>>>>> main
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
@@ -447,20 +252,6 @@ export function useAPIPerformance() {
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
-<<<<<<< HEAD
-        slowAPIs.push({ endpoint, average }
-    );
-      }
-    }
-    );
-    return slowAPIs.sort((a, b) => b.average - a.average);
-  }, [apiMetrics]);
-
-=======
-        slowAPIs.push({ endpoint, average })}
-    });
-    return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
->>>>>>> main
   return {
     apiMetrics,
     trackAPICall,

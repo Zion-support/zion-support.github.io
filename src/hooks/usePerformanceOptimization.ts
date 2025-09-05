@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-=======
-import { useEffect, useRef, useCallback, useMemo  } from 'react';
-interface PerformanceMetrics {
-  "loadTime": number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number}
-interface UsePerformanceOptimizationOptions {
-  enableLazyLoading?: boolean;
-  enableIntersectionObserver?: boolean;
-  enableMemoryManagement?: boolean;
-  enableFPSMonitoring?: boolean;
-  threshold?: number}
-export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {};) => {;
-  const {;
-<<<<<<< HEAD
-    enableLazyLoading = true,;
-    enableIntersectionObserver = true,;
-    enableMemoryManagement = true,;
-    enableFPSMonitoring = true,;
-    threshold = 0.1;
-  } = options;
-
-const metricsRef: useRe f<PerformanceMetrics>({;
-    loadTime: 0,;
-    renderTime: 0,;
-    memoryUsage: 0,;
-    fps: 0;
-  }
-    );
-
-=======
-    enableLazyLoading = true,
-    enableIntersectionObserver = true,
-    enableMemoryManagement = true,
-    enableFPSMonitoring = true,
-    threshold = 0.1}; = options;
-const "metricsRef": useRe f<PerformanceMetrics>({;
-    loadTime: 0,
-    "renderTime": 0,
-    "memoryUsage": 0,
-    "fps": 0});
->>>>>>> main
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
@@ -109,13 +65,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
           if (observerRef.current) {
             observerRef.current.unobserve(entry.target)}
         }
-<<<<<<< HEAD
-      })}
-    );
-
-=======
-      })});
->>>>>>> main
     if (observerRef.current) {
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);

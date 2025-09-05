@@ -1,32 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "zion-tech-group",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.0",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
-  }
-}
-=======
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
@@ -264,17 +236,11 @@
     "optimize:performance": "node scripts/performance-optimizer.cjs",
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
-<<<<<<< HEAD
     "improve:all": "node automation/comprehensive-app-improvement.cjs",
-=======
-<<<<<<< HEAD
     "improve:all": "node scripts/quick-app-improvements.cjs run",
-=======
     "improve:all": "bash scripts/comprehensive-app-improvements.sh",
     "sanitize:data": "node tools/sanitize-data-files.cjs",
     "automation:safe": "node tools/run-safe-automations.cjs",
->>>>>>> main
->>>>>>> main
     "automation:safe": "bash scripts/run-safe-automations.sh",
     "ci:smoke": "npm run build && npm run test:smoke",
     "ci:consolidated": "bash scripts/ci-consolidated.sh",
@@ -283,30 +249,24 @@
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
     "health:check": "bash scripts/health-check.sh",
-<<<<<<< HEAD
     "error:fix": "node scripts/comprehensive-error-fix.cjs",
     "error:prevention:start": "pm2 start ecosystem.error-prevention.cjs",
     "error:prevention:stop": "pm2 stop ecosystem.error-prevention.cjs",
     "error:prevention:restart": "pm2 restart ecosystem.error-prevention.cjs",
     "error:prevention:status": "pm2 status",
-    "error:prevention:logs": "pm2 logs --lines 100"
-=======
+    "error:prevention:logs": "pm2 logs --lines 100",
     "build:production": "NODE_ENV=production npm run build",
-<<<<<<< HEAD
     "error:detect": "node automation/intelligent-error-detector.cjs",
     "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
     "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPattern=accessibility",
-    "test:performance": "npx jest --testPathPattern=performance"
-=======
+    "test:performance": "npx jest --testPathPattern=performance",
     "improve:performance": "node scripts/performance-improver.cjs",
     "improve:security": "node scripts/security-improver.cjs",
     "improve:seo": "node scripts/seo-improver.cjs",
     "improve:accessibility": "node scripts/accessibility-improver.cjs",
     "improve:monitoring": "node scripts/monitoring-improver.cjs"
->>>>>>> main
->>>>>>> main
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -314,18 +274,13 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-<<<<<<< HEAD
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
-=======
     "@hookform/resolvers": "^5.2.1",
-<<<<<<< HEAD
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-=======
->>>>>>> main
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -356,7 +311,6 @@
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
->>>>>>> main
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -366,7 +320,6 @@
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "framer-motion": "^12.23.12",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -379,8 +332,7 @@
     "react": "^18.0.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.0.0",
-    "uuid": "^11.1.0"
-=======
+    "uuid": "^11.1.0",
     "d3-color": "^3.1.0",
     "d3-format": "^3.1.0",
     "d3-path": "^3.1.0",
@@ -424,7 +376,6 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
->>>>>>> main
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.0",
@@ -444,7 +395,6 @@
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
-<<<<<<< HEAD
     "@types/node": "^20.0.0",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^18.0.0",
@@ -454,7 +404,6 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.0.0",
-=======
     "@types/jest": "^29.5.8",
     "@types/next": "^8.0.7",
     "@types/node": "^18.0.0",
@@ -478,48 +427,14 @@
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
->>>>>>> main
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
-<<<<<<< HEAD
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
-  }
-}
-=======
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^30.1.3",
-    "jest-environment-jsdom": "^30.1.2",
-    "jsdom": "^24.0.0",
-    "lighthouse": "^12.0.0",
-    "pm2": "^6.0.8",
-    "postcss": "^8.5.6",
-    "rollup": "^4.50.0",
-    "tailwindcss": "^3.4.17",
-    "terser": "^5.43.1",
-    "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "web-vitals": "^5.1.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=10.0.0"
-  },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
   "keywords": [
     "nextjs",
@@ -532,10 +447,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
->>>>>>> main
->>>>>>> main

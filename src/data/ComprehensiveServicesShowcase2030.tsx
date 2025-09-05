@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-=======
-const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
->>>>>>> main
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>(");
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -247,24 +239,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-      )} else {
-
-      return ("
-        <div key = {service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
-          <div className="p-6">"
-            <div className="flex items-start justify-between mb-4">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"
-              <div className="flex flex-col items-end">"                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">
-=======
-      )} else {;
-      return (";
-        <div key = {service.id} className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
-          <div className="p-6">";
-            <div className="flex items-start justify-between mb-4">";
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}";
-              <div className="flex flex-col items-end">"                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">;
->>>>>>> main
                   {service.category}
                 </span>";
                 <div className="text-sm text-gray-600">";

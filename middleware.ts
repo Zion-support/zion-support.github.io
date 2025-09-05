@@ -26,30 +26,6 @@ const publicRoutes = [;
   "/auth/verify",",
 ;];,
 
-<<<<<<< HEAD
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-=======
-export function middleware(request: NextRequest) {}
-  const { pathname } = request.nextUrl;,
-
-  if (publicRoutes.includes(pathname)) {}
-    return NextResponse.next();,
-  }
-
-  const authCookie = request.cookies.get("auth-token");";
-  
-  if (!authCookie) {}
-    return NextResponse.redirect(new URL("/auth/login", request.url));",
->>>>>>> main
   }
   
   return NextResponse.next();

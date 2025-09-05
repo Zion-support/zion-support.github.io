@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
->>>>>>> main
 
 const plans = [;
   {}
@@ -342,7 +328,6 @@ export default function PricingPage() {
       </section>;
     </div>;
   );
-=======
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -545,5 +530,4 @@ export default function Pricing() {
       </div>
     </>
   )
->>>>>>> main
 }

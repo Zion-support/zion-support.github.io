@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-<<<<<<< HEAD
-  children: React.ReactNode;
-  variant?: 'default' | 'outline' | 'ghost' | 'link';
-  size?: 'sm' | 'md' | 'lg' | 'icon';
-  asChild?: boolean;
-  className?: string;
-}
-=======
-  &quot;children&quot;: React.ReactNode;
-  variant?: &apos;default&apos; | &apos;outline&apos; | &apos;ghost&apos; | &apos;link
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 =======
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

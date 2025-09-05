@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 =======
 import { toast } from 'react-hot-toast'
@@ -18,8 +11,5 @@ export function useToast() {
   };
   return { showToast };
 };
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main

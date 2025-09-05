@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 export interface ProductListing {
   &quot;id&quot;: string;
   title: string;
@@ -25,32 +16,6 @@ export interface ProductListing {
   features: string[];
   image?: string;
 }
-<<<<<<< HEAD
-
-export const &quot;ENHANCED_SERVICES&quot;: ProductListing[] = [{
-    id: &quot;ai-automation-suite
-    &quot;title&quot;: &quot;AI Process Automation Suite
-    &quot;description&quot;: &quot;Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.
-    &quot;category&quot;: &quot;AI Automation
-    &quot;price&quot;: 2999,
-    &quot;currency&quot;: &quot;$
-    &quot;tags&quot;: [&quot;Process Automation &quot;RPA &quot;Workflow Optimization &quot;AI&quot;],
-    &quot;author&quot;: {
-      name: &quot;Zion Tech Group
-      &quot;id&quot;: &quot;zion-tech-group&quot;
-=======
-export const "ENHANCED_SERVICES": ProductListing[] = [{
-    id: "ai-automation-suite
-    "title": "AI Process Automation Suite
-    "description": "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.
-    "category": "AI Automation
-    "price": 2999,
-    "currency": "$
-    "tags": ["Process Automation "RPA "Workflow Optimization "AI"],
-    "author": {
-      name: "Zion Tech Group
-      "id": "zion-tech-group"
->>>>>>> main
     },
     &quot;rating&quot;: 4.8,
     &quot;reviews&quot;: 156,
@@ -85,67 +50,6 @@ export const "ENHANCED_SERVICES": ProductListing[] = [{
     ]
   };
 ];
-<<<<<<< HEAD
-
-export const SERVICE_CATEGORIES = [&quot;AI Automation
-  &quot;Micro SaaS
-  &quot;Web Development
-  &quot;Mobile Apps
-  &quot;Cloud Solutions
-  &quot;Cybersecurity&quot;
-];
-=======
-export const SERVICE_CATEGORIES = ["AI Automation
-  "Micro SaaS
-  "Web Development
-  "Mobile Apps
-  "Cloud Solutions
-  "Cybersecurity"
-];
-<<<<<<< HEAD
-
-// Pricing tiers for different service levels
-export const SERVICE_PRICING_TIERS = {
-  basic: { range: "$500 - $2,000",
-  description: "Essential services for small businesses and startups"
-
-;
-;
-},;"
-  professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
-  enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
-  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
-
-// Contact information;
-export const CONTACT_INFO: unknow n = {}
-"""
-""""
-  mobile: "+1 302 464 0950",""""
-  email: "kleber@ziontechgroup.com",""""
-  address: "364 E Main St STE 1008 Middletown DE 19709",""""
-website: "https://ziontechgroup.com",;  ;
-  ;
-  ;
-  ;
-  ;
-  domain: "ziontechgroup.com";
-;
-
-};
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function enhancedServices() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="enhancedServices - Zion Tech Group" description="Professional enhancedServices services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">enhancedServices</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional enhancedServices services to help your business grow.
-        </p>
-      </div>
-    );"}"
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

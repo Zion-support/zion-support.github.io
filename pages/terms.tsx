@@ -1,211 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { FileText, Scale, AlertTriangle, Shield, Users, DollarSign } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
-export default function TermsOfService() {
-  return (
-    <MainLayout
-      title="Terms of Service - Zion Tech Group"
-      description="Read our terms of service and understand the conditions for using our technology solutions."
-      keywords="terms of service, legal terms, service agreement, conditions"
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FileText, Shield, Users, AlertCircle, Mail, Phone } from 'lucide-react';
-import Layout from '../components/Layout';
-
-const termsSections = [
-  {
-    title: 'Acceptance of Terms',
-    icon: FileText,
-    content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'
-  },
-  {
-    title: 'Use License',
-    icon: Shield,
-    content: 'Permission is granted to temporarily download one copy of our materials for personal, non-commercial transitory viewing only.'
-  },
-  {
-    title: 'User Accounts',
-    icon: Users,
-    content: 'You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer.'
-  },
-  {
-    title: 'Limitation of Liability',
-    icon: AlertCircle,
-    content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
-  }
-];
-
-export default function TermsOfService() {
-  return (
-    <Layout
-      title="Terms of Service - Zion Tech Group"
-      description="Read our terms of service and user agreement"
-      keywords="terms of service, user agreement, legal terms, service conditions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Terms of Service
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Read our terms of service and user agreement
-              </p>
-              <p className="text-sm text-gray-300">
-                Last updated: January 15, 2024
-              </p>
-            </motion.div>
-=======
-<<<<<<< HEAD
-import { Cloud } from 'lucide-react';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-=======
-import React from 'react';
-import Head from 'next/head';';
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
-import Layout from '../components/Layout';
->>>>>>> main
 
 export default function TermsPage() {
-<<<<<<< HEAD
-  return (;
-    <div className="min-h-screen bg-gray-50">";
-      <Head>;
-        <title>Terms of Service - Zion Tech Group</title>;
-        <meta name="description" content="Read Zion Tech Group's terms of service and user agreement." />";
-      </Head>;
-
-      {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <FileText className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-5xl font-bold mb-6">
-              Terms of Service
-            </h1>
-            <p className="text-xl text-blue-100">
-              Please read these terms carefully before using our services.
-            </p>
-            <p className="text-sm text-blue-200 mt-4">
-              Last updated: January 15, 2024
-            </p>
->>>>>>> main
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Terms Sections */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-12">
-                {termsSections.map((section, index) => {
-                  const IconComponent = section.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      className="bg-white rounded-lg shadow-lg p-8"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                    >
-                      <div className="flex items-center mb-4">
-                        <IconComponent className="w-8 h-8 text-blue-600 mr-4" />
-                        <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
-                      </div>
-                      <p className="text-gray-600 leading-relaxed">{section.content}</p>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                className="bg-blue-50 rounded-lg p-8"
-=======
-      {/* Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <motion.div
->>>>>>> main
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-                <p className="text-gray-600 mb-6">
-                  If you have any questions about these Terms of Service, please contact us:
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center">
-                    <FileText className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-=======
-                <div className="mb-8 p-4 bg-blue-50 border-l-4 border-blue-400">
-                  <p className="text-blue-800">
-                    <strong>Important:</strong> By accessing or using our services, you agree to be bound by these Terms of Service.
-                  </p>
-                </div>
-=======
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
-        <div className="container mx-auto px-4">";
-          <div className="max-w-4xl mx-auto text-center">";
-            <FileText className="w-16 h-16 mx-auto mb-6" />";
-            <h1 className="text-5xl font-bold mb-6">");
-              Terms of Service;
-            </h1>;
-            <p className="text-xl text-blue-100">";
-              Please read these terms carefully before using our services.;
-            </p>;
-            <p className="text-sm text-blue-200 mt-4">";
-              Last updated: January 15, 2024,
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-=======
-  return (
-    <Layout
-      title="Terms of Service - Zion Tech Group"
-      description="Read our terms of service to understand the rules and guidelines for using Zion Tech Group's services."
-      keywords="terms of service, terms and conditions, user agreement, service terms"
->>>>>>> main
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -213,10 +14,6 @@ export default function TermsPage() {
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-<<<<<<< HEAD
-=======
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
->>>>>>> main
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -226,178 +23,11 @@ export default function TermsPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                Terms of{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Service
-                </span>
-=======
-                Terms of Service
->>>>>>> main
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Please read these terms carefully before using our services.
               </p>
-<<<<<<< HEAD
-              <div className="flex items-center justify-center space-x-4 text-sm text-blue-200">
-                <span>Last updated: {new Date().toLocaleDateString()}</span>
-                <span>•</span>
-                <span>Effective immediately</span>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-8"
-            >
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <FileText className="w-6 h-6 mr-3 text-blue-600" />
-                  Acceptance of Terms
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-                  </p>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Scale className="w-6 h-6 mr-3 text-blue-600" />
-                  Service Description
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    Zion Tech Group provides technology consulting, software development, AI solutions, and related services. Our services include but are not limited to:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-                    <li>AI and machine learning solutions</li>
-                    <li>Cloud infrastructure management</li>
-                    <li>Custom software development</li>
-                    <li>IT consulting and support</li>
-                    <li>Micro SaaS applications</li>
-                    <li>Digital transformation services</li>
-                  </ul>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Users className="w-6 h-6 mr-3 text-blue-600" />
-                  User Responsibilities
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    As a user of our services, you agree to:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-                    <li>Provide accurate and complete information</li>
-                    <li>Use our services only for lawful purposes</li>
-                    <li>Not interfere with or disrupt our services</li>
-                    <li>Respect intellectual property rights</li>
-                    <li>Maintain the confidentiality of your account</li>
-                    <li>Notify us of any security breaches</li>
-                  </ul>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <DollarSign className="w-6 h-6 mr-3 text-blue-600" />
-                  Payment Terms
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    Payment terms vary by service and are specified in individual service agreements. General terms include:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-                    <li>Payment is due according to the agreed schedule</li>
-                    <li>Late payments may incur additional charges</li>
-                    <li>Refunds are subject to our refund policy</li>
-                    <li>Prices may change with 30 days notice</li>
-                    <li>All fees are non-refundable unless otherwise specified</li>
-                  </ul>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Shield className="w-6 h-6 mr-3 text-blue-600" />
-                  Limitation of Liability
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of our services.
-                  </p>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <AlertTriangle className="w-6 h-6 mr-3 text-blue-600" />
-                  Termination
-                </h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
-                  </p>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Changes to Terms</h2>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
-                  </p>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <p className="text-gray-600 mb-4">
-                    If you have any questions about these Terms of Service, please contact us:
-                  </p>
-                  <div className="space-y-2 text-gray-600">
-                    <p><strong>Email:</strong> legal@ziontechgroup.com</p>
-                    <p><strong>Phone:</strong> +1 302 464 0950</p>
-                    <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </MainLayout>
-  );
-}
-=======
-            </motion.div>
-          </div>
-        </section>
->>>>>>> main
-
-<<<<<<< HEAD
-      {/* Content */}
-<<<<<<< HEAD
-      <section className="py-16">"
-        <div className="container mx-auto px-4">";
-          <div className="max-w-4xl mx-auto">";
-            <div className="bg-white rounded-lg shadow-lg p-8">";
-
-              <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >,
-                <div className="mb-8 p-4 bg-blue-50 border-l-4 border-blue-400">";
-                  <p className="text-blue-800">";
-                    <strong>Important:</strong> By accessing or using our services, you agree to be bound by these Terms of Service.,
->>>>>>> main
 
                   </p>;
                 </div>;
@@ -588,7 +218,6 @@ export default function TermsPage() {
         </div>;
       </section>;
     </div>;
-=======
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -660,7 +289,6 @@ export default function TermsPage() {
                 </p>
               </div>
             </motion.div>
-=======
         {/* Content Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -762,22 +390,12 @@ export default function TermsPage() {
                     <strong>Note:</strong> These Terms of Service are effective as of the date listed above and will 
                     remain in effect until modified or terminated in accordance with the provisions herein.
                   </p>
->>>>>>> main
                 </div>
               </motion.div>
             </div>
->>>>>>> main
           </div>
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   );
 }
->>>>>>> main

@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-=======
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-// Test wrapper with providers
-export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <BrowserRouter>
-      {children}
-    </BrowserRouter>
-  )};
-// Custom render function
-<<<<<<< HEAD
-export const renderWithProviders = (props: any) => {
-  return render(ui, { wrapper: TestWrapper }
-    );
-};
-
-=======
-export const renderWithProviders = ("ui": React.ReactElement) => {
-  return render(ui, { "wrapper": TestWrapper })};
->>>>>>> main
 // Mock data generators
 export const mockUser = {
   "id": '1',

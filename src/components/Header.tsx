@@ -162,103 +162,6 @@ const Header = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400"
-              >
-                <Search className="w-5 h-5"  />
-              </button>
-            </form>
-          </div>
-        )
-      )}
-    </div>
-    );
-}
-      </div>
-
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation  />
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
-const router = useRouter()
-}
-  const [mobileMenuOpen, setMobileMenuOpen] = useState()"
-  const [searchQuery, setSearchQuery] = useState<any>("")
-}
-  const [searchQuery, setSearchQuery] = useState()
-}
-  const [scrolled, setScrolled] = useState<any>(false)
-}
-  useEffect(() => {
-    const handleScroll = (props: any) => {
-      setScrolled(window.scrollY > 50)
-}
-    },
-    window.addEventListener()
-}
-    return () => window.removeEventListener("scroll", handleScroll)
-}
-  }, [])
-}
-  const handleSearch = async (e: React.FormEvent) => {,
-    e.preventDefault(),
-    if (searchQuery.trim()) {"
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
-  }
-
-  const navigation = []
-  ]
-
-  return ("
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
-}"}>""
-      <div className = ""max-w-7xl" mx-auto px-4 sm: p x-6 l,"
-    g: p x-8">"
-  return (",
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-  return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
-        <div className="flex justify-between items-center py-4">",
-          {/* comment */}""
-          <div className="flex items-center">""
-            <Link href="/" className="flex items-center space-x-2">""
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">""
-                <span className="text-white font-bold text-sm">Z</span>"
-              </div>""
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-=======
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Get Started
->>>>>>> main
             </Link>
           </div>
 
@@ -333,15 +236,5 @@ const router = useRouter()
         </AnimatePresence>
       </nav>
     </header>
-<<<<<<< HEAD
-  )
-}
-    );"
-}"
-"
-=======
-  );
-};
->>>>>>> main
 
 export default Header;

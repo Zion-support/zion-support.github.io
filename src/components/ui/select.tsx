@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  children: React.ReactNode;
-=======
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
 }
 export function Select($1) {
@@ -22,51 +11,18 @@ export function Select($1) {
     </select>;
   );
 }
-<<<<<<< HEAD
-
-interface SelectTriggerProps {
-
-  children: React.ReactNode;
-=======
-;
-interface SelectTriggerProps {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
 }
 export function SelectTrigger($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-}
-
-interface SelectContentProps {
-
-  children: React.ReactNode;
-=======
-    </div>;
-  );
-}
-;
-interface SelectContentProps {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
 }
 export function SelectContent($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-=======
-    </div>;
-  );
->>>>>>> main
 }
 ;
 interface SelectValueProps {;
@@ -81,16 +37,6 @@ export function SelectValue($1) {;
     </span>;
   );
 }
-<<<<<<< HEAD
-
-interface SelectItemProps {
-
-  children: React.ReactNode;
-=======
-;
-interface SelectItemProps {;
-  "children": React.ReactNode;
->>>>>>> main
   value: string;
   className?: string;
 }

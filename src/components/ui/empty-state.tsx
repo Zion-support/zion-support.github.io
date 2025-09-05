@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-interface EmptyStateProps {;
-  title?: string;
-  description?: string;
-  icon?: React.ReactNode;
-  action?: React.ReactNode;
-  className?: string;
-}
-<<<<<<< HEAD
-
-const EmptyState: React.FC<EmptyStateProps> = ({
-=======
-const "EmptyState": Reac t.FC<EmptyStateProps> = ({
->>>>>>> main
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,
@@ -30,16 +14,6 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
-<<<<<<< HEAD
-      
-      
-      {description && (
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
-=======
-;
-      {description && (;
-        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;
->>>>>>> main
           {description}
         </p>;
       )}
@@ -54,11 +28,6 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
     );
 };
 // Default empty state icon component
-<<<<<<< HEAD
-export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
-=======
-export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className = " }) => (
->>>>>>> main
   <svg
     className={`h-full w-full ${className}`};
     fill="none";

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
-=======
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
-  "children": React.ReactNode;
->>>>>>> main
 }
 ;
 export function Form($1) {;
@@ -18,38 +7,12 @@ export function Form($1) {;
     </form>;
   );
 }
-<<<<<<< HEAD
-
-interface FormItemProps {
-
-  children: React.ReactNode;
-=======
-;
-interface FormItemProps {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
 }
 export function FormItem($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-}
-
-interface FormLabelProps {
-
-  children: React.ReactNode;
-=======
-    </div>;
-  );
-}
-;
-interface FormLabelProps {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
   htmlFor?: string;
 }
@@ -64,29 +27,12 @@ export function FormLabel($1) {;
     </label>;
   );
 }
-<<<<<<< HEAD
-
-interface FormFieldProps {
-
-  children: React.ReactNode;
-=======
-;
-interface FormFieldProps {;
-  "children": React.ReactNode;
->>>>>>> main
   className?: string;
 }
 export function FormField($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
-<<<<<<< HEAD
-    </div>
-    );
-=======
-    </div>;
-  );
->>>>>>> main
 }
 ;
 interface FormMessageProps {;

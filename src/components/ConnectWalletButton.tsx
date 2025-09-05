@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-interface ConnectWalletButtonProps {;
-  onConnect?: ("walletType": string) => void;
-  onDisconnect?: () => void;
-  isConnected?: boolean;
-  walletAddress?: string;
-  className?: string;
-}
-<<<<<<< HEAD
-
-const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
-=======
-const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
->>>>>>> main
   onConnect,
   onDisconnect,
   isConnected = false,

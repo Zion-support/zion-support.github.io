@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-interface Slide {;
-  "id": string;
-  title: string;
-  content: string;';
-  type: string;';';
-  chartType?: 'bar' | 'funnel' | 'timeline';
-}
-;
-interface SlideEditorProps {;
-  "generatedSlides": Slid e[];
-  setGeneratedSlides: (slides: Slid e[]) => void;
-  onBack: () => void;
-  onExport: () => void;
-  isGenerating: boolean;
-  setIsGenerating: (generating: boolean) => void;
-}
-<<<<<<< HEAD
-
-const SlideEditor: React.FC<SlideEditorProps> = ({
-  generatedSlides,
-  setGeneratedSlides,
-  onBack,
-  onExport,
-  isGenerating,
-  setIsGenerating
-}) => {
-  const generateSlides = async () => {
-=======
-;
-const "SlideEditor": React.FC<SlideEditorProps> = ({;
-  generatedSlides,;
-  setGeneratedSlides,;
-  onBack,;
-  onExport,;
-  isGenerating,;
-  setIsGenerating;
-}) => {;
-  const generateSlides = async () => {;
->>>>>>> main
     setIsGenerating(true);
     // Simulate slide generation;
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -139,23 +97,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
       ) : (;
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">;
           {/* Slide List */}
-<<<<<<< HEAD
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Slides
-            {generatedSlides.map((slide, index) => (
-              <div key={slide.id} className="bg-white p-4 rounded-lg border border-gray-200">
-                <div className="flex justify-between items-start mb-3">
-                  <span className="text-sm text-gray-500">Slide {index + 1}</span>
-                  <button
-=======
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Slides;
-            {generatedSlides.map((slide, index) => (;
-              <div key={slide.id} className="bg-white p-4 rounded-lg border border-gray-200">;
-                <div className="flex justify-between items-start mb-3">;
-                  <span className="text-sm text-gray-500">Slide {index + 1}</span>;
-                  <button;
->>>>>>> main
                     onClick={() => removeSlide(slide.id)}
                     className="text-red-600 "hover": tex t-red-800 text-sm"
                   >
@@ -192,38 +133,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
             ))}
           </div>;
           {/* Preview */}
-<<<<<<< HEAD
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Preview
-            <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">
-              {generatedSlides.map((slide, index) => (
-                <div key={slide.id} className="mb-6 last: m b-0">
-                  <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>
-                  <div className="bg-gray-50 p-4 rounded">
-                    <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>
-                    <p className="text-gray-700">{slide.content}</p>
-                    {slide.chartType && (
-                      <div className="mt-3 text-sm text-blue-600">
-                        Chart type: {slide.chartType}
-                      </div>
-                    )}
-=======
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Preview;
-            <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">;
-              {generatedSlides.map((slide, index) => (;
-                <div key={slide.id} className="mb-6 "last": m b-0">;
-                  <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>;
-                  <div className="bg-gray-50 p-4 rounded">;
-                    <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>;
-                    <p className="text-gray-700">{slide.content}</p>;
-                    {slide.chartType && (;
-                      <div className="mt-3 text-sm text-blue-600">;
-                        Chart "type": {slide.chartType}
-                          </div>
-  );
-}
->>>>>>> main
                   </div>
                 </div>
               ))}

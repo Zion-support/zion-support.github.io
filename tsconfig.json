@@ -1,21 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
-<<<<<<< HEAD
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-=======
     "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
->>>>>>> main
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -32,10 +21,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -64,11 +50,4 @@
     "tests.disabled",
     "lib_backup"
   ]
-=======
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "automation/**/*", "automation_backup/**/*", "pages.disabled/**/*", "pages.broken/**/*", "pages.bak/**/*", "pages._quarantine/**/*", "pages._archive_corrupted/**/*", "pages-disabled/**/*", "pages-quarantine/**/*", "pages.__backup/**/*", "src.disabled/**/*", "temp_broken_files/**/*", "temp-backup/**/*", "corrupted-files-backup/**/*", "**/*.disabled", "**/*.backup", "**/*.broken", "**/*.bak"]
->>>>>>> main
 }

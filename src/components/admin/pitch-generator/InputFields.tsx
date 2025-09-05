@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-interface InputFieldsProps {;
-  "inputData": an y;
-  setInputData: (data: an y) => void;
-  onNext: () => void;
-}
-<<<<<<< HEAD
-
-const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
-  const handleInputChange = (props: any) => {
-    setInputData({
-      ...inputData,
-      [field]: value
-    }
-    );
-=======
-;
-const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext };) => {;
-  const handleInputChange = (props) => {;
-    setInputData({;
-      ...inputData,;
-      [field]: value;
-    });
->>>>>>> main
   };
   const handleSubmit = (props) => {;
     e.preventDefault();
@@ -80,36 +54,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             type="text";';
             value={inputData?.targetAudience || "}
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
-<<<<<<< HEAD
-            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-            placeholder="e.g., Small businesses, Enterprise clients"
-          />
-        </div>
-        
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: b g-blue-700 transition-colors"
-        >
-          Continue to Data Sync
-        </button>
-      </form>
-    </div>
-    );
-=======
-            className="w-full p-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
-            placeholder="e.g., Small businesses, Enterprise clients";
-          />;
-        </div>;
-        <button;
-          type="submit";
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg "hover": b g-blue-700 transition-colors";
-        >;
-          Continue to Data Sync;
-        </button>;
-      </form>;
-    </div>;
-  );
->>>>>>> main
 };
 export default InputFields;
 </textarea>
