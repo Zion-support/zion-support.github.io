@@ -18,7 +18,6 @@ import {
   Clock,
   Globe
 } from 'lucide-react';
-
 const serviceCategories = [
   {
     title: 'AI Services',
@@ -141,7 +140,6 @@ export default function ServicesOverviewPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -156,7 +154,7 @@ export default function ServicesOverviewPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                From AI and cybersecurity to cloud solutions and micro SaaS development, 
+                From AI and cybersecurity to cloud solutions and micro SaaS development,
                 we provide end-to-end technology services that drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +168,6 @@ export default function ServicesOverviewPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Service Categories */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -188,7 +185,6 @@ export default function ServicesOverviewPage() {
                 We offer a comprehensive range of technology services designed to meet every aspect of your digital transformation needs.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {serviceCategories.map((category, index) => {
                 const IconComponent = category.icon;
@@ -202,7 +198,6 @@ export default function ServicesOverviewPage() {
                     viewport={{ once: true }}
                   >
                     <div className={`h-2 bg-gradient-to-r ${category.color}`}></div>
-                    
                     <div className="p-8">
                       <div className="flex items-center mb-6">
                         <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
@@ -217,9 +212,7 @@ export default function ServicesOverviewPage() {
                           </div>
                         </div>
                       </div>
-
                       <p className="text-gray-600 mb-6">{category.description}</p>
-
                       <div className="grid grid-cols-2 gap-2 mb-6">
                         {category.services.map((service, serviceIndex) => (
                           <div key={serviceIndex} className="flex items-center text-sm text-gray-700">
@@ -228,7 +221,6 @@ export default function ServicesOverviewPage() {
                           </div>
                         ))}
                       </div>
-
                       <Link
                         href={category.href}
                         className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-1 transition-transform duration-300"
@@ -243,7 +235,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -261,7 +252,6 @@ export default function ServicesOverviewPage() {
                 We combine technical expertise with business acumen to deliver solutions that drive real results.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => {
                 const IconComponent = item.icon;
@@ -285,7 +275,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -303,7 +292,6 @@ export default function ServicesOverviewPage() {
                 Don't just take our word for it. Here's what our clients have to say about working with us.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -329,7 +317,6 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">

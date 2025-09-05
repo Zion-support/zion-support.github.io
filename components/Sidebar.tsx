@@ -21,16 +21,13 @@ import {
   Globe,
   Mail
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -38,18 +35,153 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, section]
     );
   };
+<<<<<<< HEAD
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Target },
     { name: 'Services', href: '/services', icon: Briefcase },
     { name: 'Contact', href: '/contact', icon: Heart }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+  const navigationItems = [
+    {
+      label: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      label: 'Services',
+      href: '/services',
+      icon: Briefcase,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'All Services', href: '/services' },
+        { label: 'AI Services', href: '/ai-services', icon: Brain },
+        { label: 'IT Services', href: '/it-services', icon: Shield },
+        { label: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+        { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+      ]
+    },
+    {
+      label: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'All Solutions', href: '/solutions' },
+        { label: 'Enterprise', href: '/solutions/enterprise', icon: Building2 },
+        { label: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
+        { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
+        { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
+        { label: 'Education', href: '/solutions/education', icon: GraduationCap },
+        { label: 'Government', href: '/solutions/government', icon: Globe },
+      ]
+    },
+    {
+      label: 'Industries',
+      href: '/industries',
+      icon: Building2,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+        { label: 'Finance', href: '/industries/finance', icon: DollarSign },
+        { label: 'Education', href: '/industries/education', icon: GraduationCap },
+        { label: 'Government', href: '/industries/government', icon: Globe },
+        { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
+        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+      ]
+    },
+    {
+      label: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'Blog', href: '/blog' },
+<<<<<<< HEAD
+        { label: 'White Papers', href: '/white-papers' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+=======
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/whitepapers' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Tutorials', href: '/tutorials' },
+        { label: 'Guides', href: '/guides' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+      ]
+    },
+    {
+      label: 'Company',
+      href: '/about',
+      icon: Building2,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'About Us', href: '/about' },
+        { label: 'Our Team', href: '/team' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'News', href: '/news' },
+        { label: 'Contact', href: '/contact' },
+      ]
+<<<<<<< HEAD
+    }
+  ];
+=======
+    },
+    {
+      label: 'Support',
+      href: '/support',
+      icon: HelpCircle,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'Support Center', href: '/support' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Contact Support', href: '/contact' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'API Docs', href: '/api-docs' },
+      ]
+    }
+  ];
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+  const quickLinks = [
+    { label: 'Get Started', href: '/contact', icon: ChevronRight },
+    { label: 'Pricing', href: '/pricing', icon: DollarSign },
+    { label: 'Support', href: '/support', icon: HelpCircle },
+    { label: 'Documentation', href: '/docs', icon: FileText },
+<<<<<<< HEAD
+  ];
+  const isActive = (href: string) => {
+    return router.pathname === href;
+  };
+=======
+    { label: 'Search', href: '/search', icon: Search },
+    { label: 'Sitemap', href: '/sitemap', icon: Search },
+    { label: 'Newsletter', href: '/newsletter', icon: Mail },
+>>>>>>> db49e3d85ef86349882b1133a9775950c233879f
   ];
 
   const isActive = (href: string) => {
     return router.pathname === href;
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> db49e3d85ef86349882b1133a9775950c233879f
   return (
     <>
       {/* Overlay */}
@@ -59,47 +191,163 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0`}
-      >
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-bold text-gray-900">Menu</h2>
+      <div className={`
+        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0 lg:static lg:block
+      `}>
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-gray-700">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
           <button
             onClick={onClose}
-            className="p-2 text-gray-500 hover:text-gray-700 transition-colors lg:hidden"
+            className="lg:hidden p-2 hover:bg-gray-800 rounded-lg"
           >
-            <X className="w-5 h-5" />
+            <X className="w-6 h-6" />
           </button>
         </div>
-
-        <nav className="p-4">
-          <ul className="space-y-2">
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <li key={item.name}>
+<<<<<<< HEAD
+        {/* Search */}
+        <div className="p-6 border-b border-gray-700">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+        {/* Navigation */}
+        <nav className="flex-1 overflow-y-auto">
+          <div className="p-6">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="mb-2">
+                <div className="flex items-center justify-between">
                   <Link
                     href={item.href}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      router.pathname === item.href
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-700 hover:bg-gray-100'
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-blue-600 text-white'
+                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
                     }`}
-                    onClick={onClose}
+                    onClick={() => !item.hasSubmenu && onClose()}
                   >
-                    <Icon className="w-5 h-5" />
-                    <span>{item.name}</span>
+                    <item.icon className="w-5 h-5" />
+                    <span className="font-medium">{item.label}</span>
                   </Link>
+<<<<<<< HEAD
                 </li>
               );
             })}
           </ul>
         </nav>
+=======
+                  {item.hasSubmenu && (
+                    <button
+                      onClick={() => toggleSection(item.label)}
+                      className="p-2 hover:bg-gray-800 rounded-lg"
+                    >
+                      <ChevronRight
+                        className={`w-4 h-4 transition-transform ${
+                          expandedSections.includes(item.label) ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
+                {item.hasSubmenu && expandedSections.includes(item.label) && (
+                  <div className="ml-8 mt-2 space-y-1">
+                    {item.submenu?.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={subItem.href}
+                        className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                          isActive(subItem.href)
+                            ? 'bg-blue-600 text-white'
+                            : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                        }`}
+                        onClick={onClose}
+                      >
+                        {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                        <span>{subItem.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </nav>
+=======
+>>>>>>> db49e3d85ef86349882b1133a9775950c233879f
 
+        <nav className="p-4">
+          <div className="space-y-2">
+            {navigationItems.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div key={index}>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                      }`}
+                      onClick={onClose}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {item.hasSubmenu && (
+                      <button
+                        onClick={() => toggleSection(item.label)}
+                        className="p-2 hover:bg-gray-800 rounded-lg"
+                      >
+                        <ChevronRight 
+                          className={`w-4 h-4 transition-transform ${
+                            expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+
+                  {item.hasSubmenu && expandedSections.includes(item.label) && (
+                    <div className="ml-8 mt-2 space-y-1">
+                      {item.submenu?.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href}
+                          className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                            isActive(subItem.href)
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                          <span>{subItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </nav>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -119,13 +367,26 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
+<<<<<<< HEAD
             <p className="text-blue-400">kleber@ziontechgroup.com</p>
             <p className="text-blue-400">+1 302 464 0950</p>
+=======
+<<<<<<< HEAD
+            <p className="text-blue-400">contact@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 (555) 123-4567</p>
+=======
+            <p className="text-blue-400">kleber@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 302 464 0950</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> db49e3d85ef86349882b1133a9775950c233879f
           </div>
         </div>
       </div>

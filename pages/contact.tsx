@@ -1,6 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+export default function ContactPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
+        <meta name="keywords" content="contact, support, consultation, technology services" />
+      </Head>
+=======
 import Layout from '../components/Layout';
 
 export default function ContactPage() {
@@ -12,6 +22,7 @@ export default function ContactPage() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -39,6 +50,12 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+{/* Contact Information Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+=======
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
@@ -109,6 +126,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -123,14 +141,52 @@ export default function ContactPage() {
                 Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.
               </p>
             </motion.div>
-
             <motion.div
+<<<<<<< HEAD
+              className="bg-white rounded-lg shadow-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>
+            </motion.div>
+            <motion.div
+              className="bg-white rounded-lg shadow-lg p-6 text-center"
+=======
               className="bg-white rounded-lg shadow-xl p-8"
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+              <p className="text-gray-600">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              className="bg-white rounded-lg shadow-lg p-8"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -245,6 +301,53 @@ export default function ContactPage() {
                 </div>
               </form>
             </motion.div>
+<<<<<<< HEAD
+            <motion.div
+              className="bg-white rounded-lg shadow-lg p-8"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">24/7 Support</h3>
+                    <p className="text-gray-600 text-sm">Round-the-clock technical support and assistance</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-5 h-5 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Expert Consultation</h3>
+                    <p className="text-gray-600 text-sm">Free consultation with our technology experts</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <ArrowRight className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Rapid Response</h3>
+                    <p className="text-gray-600 text-sm">Quick response time and fast project delivery</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+                <h3 className="font-semibold text-gray-900 mb-2">Business Hours</h3>
+                <p className="text-gray-600 text-sm mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
+                <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
+              </div>
+            </motion.div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           </div>
         </div>
       </section>

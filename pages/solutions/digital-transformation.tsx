@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function DigitalTransformationPage() {
   const transformationServices = [
     {
@@ -30,9 +29,8 @@ export default function DigitalTransformationPage() {
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="Digital Transformation - Zion Tech Group"
       description="Complete digital transformation solutions to modernize your business and drive innovation."
     >
@@ -50,13 +48,12 @@ export default function DigitalTransformationPage() {
                 Digital Transformation
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business for the digital age with our comprehensive transformation solutions. 
+                Transform your business for the digital age with our comprehensive transformation solutions.
                 Modernize processes, enhance efficiency, and drive innovation.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">
           <div className="container mx-auto px-4 text-center">
