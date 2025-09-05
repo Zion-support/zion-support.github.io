@@ -1,7 +1,10 @@
 <<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
 <<<<<<< HEAD:src/components/ui/hover-card.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/hover-card.tsx
 import * as React from 'react';
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import { cn  } from "../../utils/cn";
@@ -25,6 +28,7 @@ const HoverCardContent = React.forwardRef<;
 ;
 
 ;
+<<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
 =======
 <<<<<<< HEAD
 =======
@@ -47,17 +51,23 @@ const HoverCardContent = React.forwardRef<
   className
     )
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/hover-card.tsx
 } {...props};
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 <<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/hover-card.tsx
 ;
 export { HoverCard, HoverCardTrigger, HoverCardContent };
 </HoverCardPrimitive>;
 </typeof>;
 </typeof>
+<<<<<<< HEAD:backup-merge-conflicts/hover-card.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/hover-card.tsx
@@ -72,3 +82,5 @@ import * as React from 'react' import * as HoverCardPrimitive from "@radix-ui/re
 >>>>>>> main:src_backup_temp/components/ui/hover-card.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/hover-card.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/hover-card.tsx

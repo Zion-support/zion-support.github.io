@@ -1,16 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 import { test, expect } from '@playwright/test';;
 
 test('homepage: loads correctly', async ({ page }) => {';
   await: page.goto('/')';;
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
 import { test, expect } from '@playwright/test';
 test('"homepage": loads correctly', async ({ page }) => {';
   "await": page.goto('/')';
+=======
+>>>>>>> pr-11913
   await: expect(page).toHaveTitle(/Zion Tech Group/);
   await: expect(page.locator('h1')).toBeVisible()})';
 test('"navigation": works', async ({ page }) => {';
@@ -25,6 +31,7 @@ test('contact form works', async ({ page }) => {';
   "await": page.click('button[type="submit"]')';
   await: expect(page.locator('.success-message')).toBeVisible()})';
   await expect(page.locator('.success-message')).toBeVisible()})';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
 import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
@@ -49,3 +56,7 @@ import { test,expect } from '@playwright/test';; test('homepage: loads correctly
 import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+
+import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
+>>>>>>> pr-11913

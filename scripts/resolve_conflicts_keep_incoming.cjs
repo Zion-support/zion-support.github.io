@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -33,6 +34,15 @@ function resolveConflictsKeepIncoming(filePath) {}
       if (i < lines.length && lines[i].startsWith('')) i++;
       continue};
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");function getAllFiles(dir) { const entries = fs.readdirSync(dir, { withFileTypes: true }); const files = entries.flatMap((entry) => { const fullPath = path.join(dir, entry.name); if (entry.isDirectory()) return getAllFiles(fullPath); return [fullPath]}); return files}function resolveConflictsKeepIncoming(filePath) {" const text = fs.readFileSync(filePath, "utf8");'"'"
+      i++;
+      // skip the separator
+        out.push(lines[i]);
+        i++}
+      // skip the end marker
+      continue}
+>>>>>>> pr-11913
     out.push(lines[i]);
     i++};
   fs.writeFileSync(filePath, out.join('\n'));
@@ -46,11 +56,20 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
+<<<<<<< HEAD
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
   };
   console.log(`Done. Files "updated": ${count}`)};
+=======
+        }
+    } catch (e) {
+      console.error(`Failed to process ${f}: ${e.message}`)}
+  }
+  }
+
+>>>>>>> pr-11913
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;

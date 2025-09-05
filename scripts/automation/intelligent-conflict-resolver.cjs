@@ -23,8 +23,14 @@ class $1 {}
 ;
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
     console.log("logMessage);
+=======
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+
+    
+>>>>>>> pr-11913
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
     // Write errors to error file;
@@ -112,7 +118,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
-  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();

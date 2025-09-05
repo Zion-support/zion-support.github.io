@@ -71,6 +71,7 @@
     "pm2:resurrect": "pm2 resurrect",
     "pm2:startup": "pm2 startup",
     "pm2:unstartup": "pm2 unstartup",
+<<<<<<< HEAD
     "ai:quality": "node scripts/automation/ai-code-quality-analyzer.cjs",
     "ai:security": "node scripts/automation/ai-security-intelligence.cjs",
     "ai:performance": "node scripts/automation/ai-performance-predictor.cjs",
@@ -256,6 +257,10 @@
     "improve:seo": "node scripts/seo-improver.cjs",
     "improve:accessibility": "node scripts/accessibility-improver.cjs",
     "improve:monitoring": "node scripts/monitoring-improver.cjs"
+=======
+    "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'",
+    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs"
+>>>>>>> pr-11913
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

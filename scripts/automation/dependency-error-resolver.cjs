@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -261,6 +262,9 @@ this.log(`📄 Report "generated": ${reportFile}`);
       this.log( `💥 Dependency Error Resolver "failed": ${error.message  }",ERROR";
       );
 throw error}
+=======
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
+>>>>>>> pr-11913
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
@@ -275,7 +279,12 @@ throw error}
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)}
+=======
+    }
+
+>>>>>>> pr-11913
   async runDependencyCheck() {
     try {
       this.log('Running dependency audit...');
@@ -484,10 +493,14 @@ throw error}
       "autoUpdateEnabled": this.autoUpdateEnabled
     }}
 }
+<<<<<<< HEAD
 ;
 // Run the automation if called directly;
 if (require.main === module) {
   // Run the automation if called directly;
+=======
+
+>>>>>>> pr-11913
 // Main execution
 if (require.main === module) {
   const resolver = new DependencyErrorResolver();

@@ -1,6 +1,51 @@
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+=======
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class RunAllAutomations {
+  constructor() {
+    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'run-all-automations.log');
+    this.results = {
+      success: [],
+      failed: [],
+      warnings: []
+    };
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    }
+
+  async runAutomation(scriptName, scriptPath) {
+    this.log(`🚀 Running ${scriptName}...`);
+    try {
+      const result = execSync(`node ${scriptPath}`, {
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000 // 5 minutes
+      });
+      
+      this.log(`✅ ${scriptName} completed successfully`);
+      return {
+        "name": scriptName,
+        "success": true,
+        "output": result
+      }} catch (error) {
+      this.log(`❌ ${scriptName} "failed": ${error.message}`);
+      return {
+        "name": scriptName,
+        "success": false,
+        "error": error.message
+      }}
+>>>>>>> pr-11913
   }
 
   async runCommand(command, options = {}) {
@@ -126,7 +171,6 @@ if (require.main === module) {
 }
 
 module.exports = RunAllAutomations;
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

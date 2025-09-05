@@ -100,11 +100,17 @@ class EnhancedErrorMonitor {
     
     // Check for syntax errors
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       errors.push({
         type: 'merge_conflict',
         message: 'Merge conflict markers detected',
         line: this.findLineNumber(content, '')
+=======
+      errors.push({
+        type: 'merge_conflict',
+        message: 'Merge conflict markers detected',
+>>>>>>> pr-11913
       });
     }
 
@@ -213,6 +219,7 @@ class EnhancedErrorMonitor {
 
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep the latest version
+<<<<<<< HEAD
     return content
       .replace(/[\s\S]*?[\s\S]*?      .replace(/[\s\S]*?      .replace(/[\s\S]*?  }
 =======
@@ -348,3 +355,6 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorMonitor;
+=======
+    return content
+>>>>>>> pr-11913

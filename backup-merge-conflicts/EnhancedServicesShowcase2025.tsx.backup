@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD:src/components/EnhancedServicesShowcase2025.tsx
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
 import {;
   Star;
   Users;
@@ -96,6 +99,7 @@ export function EnhancedServicesShowcase2025() {;
                   : 'bg-white text-gray-700 "hover": "bg-blue-50 "hover":text-blue-600 shadow-md';
               "}`}
             >;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -181,12 +185,15 @@ export function EnhancedServicesShowcase2025() {
               }`}
             >
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
               {category.name}
               <span className="ml-2 bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">;
                 {category.count}
               </span>;
             </button>;
           ))}
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
         </div>;
@@ -196,13 +203,20 @@ export function EnhancedServicesShowcase2025() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
         </div>
 >>>>>>> main
+=======
+        </div>;
+
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
         {/* Services Grid */}
         <div className="space-y-8">;
           {filteredServices.map((service) => (;
             <div;
               key={service.id}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
               className="bg-white rounded-2xl shadow-lg "hover": "shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden";
             >;
               {/* Service Header */"}
@@ -228,6 +242,7 @@ export function EnhancedServicesShowcase2025() {
                       {service.description}
                     </p>;
 
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -253,6 +268,8 @@ export function EnhancedServicesShowcase2025() {
                       {service.description}
                     </p>
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                     {/* Key Benefits */}
                     <div className="flex flex-wrap gap-3 mb-6">;
                       {service.benefits.business.slice(0, 3).map((benefit, index) => (;
@@ -262,7 +279,10 @@ export function EnhancedServicesShowcase2025() {
                         </div>;
                       ))}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                     </div>;
                   </div>;
 
@@ -281,6 +301,7 @@ export function EnhancedServicesShowcase2025() {
                         {service.pricing.professional.features.slice(0, 4).map((feature, index) => (;
                           <div key={index} className="flex items-center text-sm text-gray-700">;
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -306,6 +327,11 @@ export function EnhancedServicesShowcase2025() {
                         ))}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+                            {feature}
+                          </div>;
+                        ))}
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                       </div>;
 
                       <div className="space-y-3">;
@@ -352,6 +378,7 @@ export function EnhancedServicesShowcase2025() {
                               </div>;
                               <p className="text-gray-600 text-sm mb-2">{useCase.description}</p>;
                               <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -397,12 +424,17 @@ export function EnhancedServicesShowcase2025() {
                               <p className="text-gray-600 text-sm mb-2">{useCase.description}</p>
                               <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                                 {useCase.industry}
                               </span>;
                             </div>;
                           ))}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                         </div>;
                       </div>;
 
@@ -440,6 +472,7 @@ export function EnhancedServicesShowcase2025() {
                         </div>;
                       </div>;
 
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -479,6 +512,8 @@ export function EnhancedServicesShowcase2025() {
                         </div>
                       </div>
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                       {/* Testimonials */}
                       <div>;
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Client Success Stories</h4>;
@@ -505,7 +540,10 @@ export function EnhancedServicesShowcase2025() {
                             </div>;
                           ))}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                         </div>;
                       </div>;
                     </div>;
@@ -515,6 +553,7 @@ export function EnhancedServicesShowcase2025() {
                       <div>;
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing Plans</h4>;
                         ;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -526,6 +565,8 @@ export function EnhancedServicesShowcase2025() {
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing Plans</h4>
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                         {/* Pricing Tier Selector */}
                         <div className="flex bg-gray-200 rounded-lg p-1 mb-6">;
                           {(['starter', 'professional', 'enterprise'] as const).map((tier) => (;
@@ -533,13 +574,17 @@ export function EnhancedServicesShowcase2025() {
                               key={tier}
                               onClick={() => setSelectedPricingTier(tier)}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                               className={`flex-1 py-2 px-3 rounded-md text-sm font-medium capitalize transition-colors ${;
                                 selectedPricingTier === tier;
                                   ? 'bg-white text-gray-900 shadow-sm';
                                   : 'text-gray-600 "hover": "text-gray-900';
                               "}`}
                             >;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -562,6 +607,13 @@ export function EnhancedServicesShowcase2025() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                         </div>
 >>>>>>> main
+=======
+                              {tier}
+                            </button>;
+                          ))}
+                        </div>;
+
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                         {/* Selected Plan Details */}
                         <div className="bg-white p-6 rounded-lg border border-gray-200">;
                           <div className="text-center mb-6">;
@@ -575,7 +627,10 @@ export function EnhancedServicesShowcase2025() {
                             <p className="text-sm text-gray-600 mt-2">;
                               {service.pricing[selectedPricingTier].description}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                             </p>;
                           </div>;
 
@@ -583,6 +638,7 @@ export function EnhancedServicesShowcase2025() {
                             {service.pricing[selectedPricingTier].features.map((feature, index) => (;
                               <div key={index} className="flex items-center text-sm text-gray-700">;
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -598,6 +654,11 @@ export function EnhancedServicesShowcase2025() {
                             ))}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+                                {feature}
+                              </div>;
+                            ))}
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                           </div>;
 
                           <div className="space-y-3">;
@@ -622,6 +683,7 @@ export function EnhancedServicesShowcase2025() {
                         </div>;
                       </div>;
 
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -647,6 +709,8 @@ export function EnhancedServicesShowcase2025() {
                         </div>
                       </div>
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                       {/* Technical Info */}
                       <div className="bg-white p-6 rounded-lg border border-gray-200">;
                         <h5 className="font-medium text-gray-900 mb-4 flex items-center">;
@@ -663,7 +727,10 @@ export function EnhancedServicesShowcase2025() {
                             <div className="font-medium text-gray-900">;
                               {service.technical.security.slice(0, 2).join(', ')}
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
                             </div>;
                           </div>;
                           <div>;
@@ -729,6 +796,7 @@ export function EnhancedServicesShowcase2025() {
     </div>;
   );
 "}
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
@@ -802,3 +870,5 @@ import React,{ useState } from 'react'; import { Link } from 'react-router-dom';
 >>>>>>> main:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 <<<<<<< HEAD:src/components/ui/alert.tsx
 =======
 <<<<<<< HEAD
@@ -5,6 +6,8 @@
 import React from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/alert.tsx
 ;
 interface AlertProps {;
 
@@ -29,6 +32,7 @@ interface AlertDescriptionProps {;
 "}
 ;
 export function Alert("props": "any) {;
+<<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/alert.tsx
@@ -47,12 +51,17 @@ interface AlertDescriptionProps {
 }
 export function Alert($1) {
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/alert.tsx
   const baseClasses = 'relative w-full rounded-lg border p-4';
   const variantClasses = variant === 'destructive';
     ? 'border-red-200 bg-red-50 text-red-800';
     : 'border-gray-200 bg-gray-50 text-gray-800';
 <<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/alert.tsx
 ;
   return <div className={`${baseClasses"} ${variantClasses} ${className}`}>{children}</div>;
 }
@@ -67,6 +76,7 @@ export function AlertDescription("props": "any) {;
 ;
 
 export default Alert;
+<<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/alert.tsx
@@ -86,3 +96,5 @@ import React from 'react'; interface AlertProps { children: React.ReactNode;'; c
 >>>>>>> main:src_backup_temp/components/ui/alert.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/alert.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/ui/alert.tsx

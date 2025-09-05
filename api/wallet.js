@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> pr-11914
@@ -36,6 +37,9 @@ const { withErrorLogging } = require(
     // Authentication would normally be checked here;
 =======
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+=======
+const { withErrorLogging } = require('./withErrorLogging.cjs');
+>>>>>>> pr-11913
 
 async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -47,12 +51,19 @@ async function handler(req, res) {
 
   try {
     // Authentication would normally be checked here
+<<<<<<< HEAD
     // This is a placeholder implementation
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     res.statusCode = 200;
     res.json({ "points": 0, "history": [] })} catch (err) {
     console.error(',
       'Wallet API "error": err);
+=======
+    res.statusCode = 200;
+    res.json({ points: 0, history: [] });
+  } catch (err) {
+    console.error('Wallet API error:', err);
+>>>>>>> pr-11913
     res.statusCode = 500;
 <<<<<<< HEAD
 >>>>>>> pr-11914

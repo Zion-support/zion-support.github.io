@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -139,6 +140,10 @@ class $1 {
           line.includes("ERROR");
         ) {
   this.processLogLine(line, path.basename(logPath))}
+=======
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+
+>>>>>>> pr-11913
 const fs = require('fs');
 const path = require('path');
 class ErrorAnalyticsDashboard {
@@ -163,7 +168,12 @@ class ErrorAnalyticsDashboard {
     }}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log("[${timestamp}] [${level}] ${message}")}
+=======
+    }
+
+>>>>>>> pr-11913
   async collectErrorReports() {
     try {
       const reports = [];
@@ -176,6 +186,7 @@ class ErrorAnalyticsDashboard {
           reports.push(report)}
       }
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
+<<<<<<< HEAD
   this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}
   }
 ;
@@ -618,6 +629,8 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
       );
       throw error}
+=======
+>>>>>>> pr-11913
       this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
       return []}
   }
@@ -964,8 +977,12 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       "lastUpdate": this.analyticsData.lastUpdated
     }}
 }
+<<<<<<< HEAD
 ;
 // Run the automation if called directly;
+=======
+
+>>>>>>> pr-11913
 // Main execution
 if (require.main === module) {
   const dashboard = new ErrorAnalyticsDashboard();

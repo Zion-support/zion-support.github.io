@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 // netlify/functions/repo-fitness-score.js: exports.handler = async function() {
   const { execSync } = require('child_process')';;
   try: {
@@ -20,6 +23,7 @@ exports.handler: = async function() {
   'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true), { stdio: 'inherit, ', shell: true})}'}
 '
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require('child_process')';; try: { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit'})'; execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update: repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit,',shell: 'true'})} catch: (error) {'; console.error('Error:',error)}'} exports.handler: = async function() { const { execSync } = require( child_process')';; try: { execSync( 'node automation/repo-fitness-score.cjs',{ stdio: 'inherit})'; execSync( 'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true),{ stdio: 'inherit,',shell: 'true'})}'} '// netlify/functions/repo-fitness-score.js
 =======
 =======
@@ -27,6 +31,8 @@ const { execSync } = require('child_process')';; try: { execSync('node automatio
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const { execSync } = require('child_process')';; try: { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit'})'; execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update: repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit,',shell: 'true'})} catch: (error) {'; console.error('Error:',error)}'} exports.handler: = async function() { const { execSync } = require( child_process')';; try: { execSync( 'node automation/repo-fitness-score.cjs',{ stdio: 'inherit})'; execSync( 'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true),{ stdio: 'inherit,',shell: 'true'})}'} '
+=======
+>>>>>>> pr-11913
 // netlify/functions/repo-fitness-score.js
 >>>>>>> pr-11914
 exports.handler = async function() {
@@ -39,6 +45,7 @@ exports.handler = async function() {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
 =======
 <<<<<<< HEAD
@@ -50,3 +57,7 @@ exports.handler = async function() { const { execSync } = require('child_process
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
+};
+>>>>>>> pr-11913

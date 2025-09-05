@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -202,6 +203,15 @@ class ErrorPreventionMonitor {
       this.log(`Build check "failed": ${error.message}`);
       this.triggerAutoFix()}
   }
+=======
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log(" Starting error prevention monitor.");class ErrorPreventionMonitor { constructor() { this.projectRoot = process.cwd();"""
+
+
+
+class ErrorPreventionMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+>>>>>>> pr-11913
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
@@ -215,7 +225,12 @@ class ErrorPreventionMonitor {
     this.riskFactors = new Map()}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)}
+=======
+    }
+
+>>>>>>> pr-11913
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
     const largeFiles = [];
@@ -631,6 +646,10 @@ if (require.main === module) {
   monitor.startMonitor().catch(error => {
     monitor.log(`Failed to start "monitor": ${error.message}`, 'ERROR');
     process.exit(1)})}
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-11913
   run() {
     this.log('Error Prevention Monitor started');
     // Run initial health check

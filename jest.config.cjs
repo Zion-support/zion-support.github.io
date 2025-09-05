@@ -1,24 +1,33 @@
+<<<<<<< HEAD
 module.exports = {}
   "preset": 'ts-jest',
   "testEnvironment": 'jsdom',
   "globals": {}
     'ts-jest': {}
+=======
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  globals: {
+    "ts-jest": {
+>>>>>>> pr-11913
       diagnostics: false,
-      "isolatedModules": true}},
-  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
-  "moduleNameMapper": {}
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
-  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
+      isolatedModules: true
+    }
+  },
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  testMatch: [
+    "**/__tests__/**/*.(js|jsx|ts|tsx)",
+    "**/*.{test,spec}.{js,jsx,ts,tsx}"
   ],
-  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-  ],
-  "coverageThreshold": {}
-    global: {}
+  coverageThreshold: {
+    global: {
       branches: 50,
+<<<<<<< HEAD
       "functions": 50,
       "lines": 50,
       "statements": 50}},
@@ -39,3 +48,30 @@ module.exports = {}
     '/src/disabled/',
     '/tests/integration/',
   ]};
+=======
+      functions: 50,
+      lines: 50,
+      statements: 50
+    }
+  },
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/dist/",
+    "/pages.disabled/",
+    "/pages-disabled/",
+    "/pages.broken/",
+    "/pages.bak/",
+    "/pages-backup/",
+    "/pages.__backup/",
+    "/src.pages.disabled/",
+    "/src.disabled/",
+    "/src/disabled/",
+    "/tests/integration/"
+  ]
+};
+>>>>>>> pr-11913

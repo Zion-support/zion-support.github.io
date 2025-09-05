@@ -37,6 +37,7 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,6 +49,9 @@ class ErrorMonitor {
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+    
+>>>>>>> pr-11913
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -75,11 +79,16 @@ class ErrorMonitor {
       if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {
         await this.triggerErrorFixer();
       }
+<<<<<<< HEAD
+=======
+      
+>>>>>>> pr-11913
     } catch (error) {
       console.error('❌ Health check failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
         timestamp: new Date().toISOString()            timestamp: new Date().toISOString(),
 =======
@@ -91,6 +100,9 @@ class ErrorMonitor {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> pr-11913
       });
     }
   }
@@ -105,6 +117,10 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> pr-11913
     } catch (error) {
       if (error.stdout) {
         const errors = this.parseTypeScriptErrors(error.stdout);
@@ -126,6 +142,10 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.lintSuccess = true;
       console.log('✅ ESLint check passed');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> pr-11913
     } catch (error) {
       if (error.stdout) {
         const errors = this.parseESLintErrors(error.stdout);
@@ -149,6 +169,10 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.buildSuccess = true;
       console.log('✅ Build check passed');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> pr-11913
     } catch (error) {
       this.monitoringReport.metrics.buildSuccess = false;
       this.monitoringReport.errorsDetected.push({
@@ -202,6 +226,7 @@ class ErrorMonitor {
             message: match[4].trim(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             timestamp: new Date().toISOString()
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -209,10 +234,14 @@ class ErrorMonitor {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             timestamp: new Date().toISOString(),
 >>>>>>> pr-11914
+=======
+            timestamp: new Date().toISOString()
+>>>>>>> pr-11913
           });
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -225,6 +254,9 @@ class ErrorMonitor {
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+    
+>>>>>>> pr-11913
     return errors;
   }
   parseESLintErrors(output) {
@@ -239,10 +271,10 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD
           timestamp: new Date().toISOString()
         });
       }
+<<<<<<< HEAD
     }    return errors;
 =======
 <<<<<<< HEAD
@@ -267,6 +299,10 @@ class ErrorMonitor {
 =======
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+    }
+    
+>>>>>>> pr-11913
     return errors;
 >>>>>>> pr-11914
   }
@@ -288,7 +324,6 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');
@@ -298,6 +333,7 @@ class ErrorMonitor {
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -311,6 +347,8 @@ class ErrorMonitor {
     console.log(
       `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
     );
+=======
+>>>>>>> pr-11913
   }
 
   async triggerErrorFixer() {
@@ -322,6 +360,7 @@ class ErrorMonitor {
       await automation.run();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log('✅ Error fixer completed');
 =======
 
@@ -331,11 +370,17 @@ class ErrorMonitor {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       console.log('✅ Error fixer completed');
 >>>>>>> pr-11914
+=======
+      
+      console.log('✅ Error fixer completed');
+      
+>>>>>>> pr-11913
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
         timestamp: new Date().toISOString()    // Add duration to report
 =======
@@ -347,6 +392,9 @@ class ErrorMonitor {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> pr-11913
       });
     }
   }
@@ -377,10 +425,16 @@ class ErrorMonitor {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
+=======
+    
+    // Add duration to report
+    this.monitoringReport.duration = Date.now() - this.startTime;
+>>>>>>> pr-11913
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Add duration to report

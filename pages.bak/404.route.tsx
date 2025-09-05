@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,3 +33,5 @@ export default function 404.route({ }: 404.routeProps) {
 }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

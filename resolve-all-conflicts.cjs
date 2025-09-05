@@ -132,11 +132,32 @@ module.exports = ConflictResolver;
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Remove merge conflict markers and keep HEAD version (our changes)
+<<<<<<< HEAD
   content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+=======
+>>>>>>> pr-11913
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   // Remove any remaining conflict markers
+<<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Resolved conflicts in ${filePath}`);
+}
+
+// Resolve conflicts in all files
+conflictedFiles.forEach(resolveConflicts);
+
+// Remove the clean-conflicts.js file that was causing issues
+if (fs.existsSync('clean-conflicts.js')) {
+  fs.unlinkSync('clean-conflicts.js');
+  console.log('Removed clean-conflicts.js');
+}
+
+console.log('All conflicts resolved!');
+>>>>>>> pr-11913

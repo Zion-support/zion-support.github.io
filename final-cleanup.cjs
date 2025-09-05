@@ -14,7 +14,11 @@ function findConflictedFiles(dir, conflictedFiles = []) {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (content.includes('') || content.includes('') || content.includes('        conflictedFiles.push(filePath);
+=======
+        conflictedFiles.push(filePath);
+>>>>>>> pr-11913
       }
     }
   }
@@ -27,6 +31,7 @@ function cleanConflicts(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
   content = content.replace(/\n?/g, '');
   content = content.replace(/.*?\n?/g, '');
   content = content.replace(/  content = content.replace(/  content = content.replace(/  
@@ -34,6 +39,8 @@ function cleanConflicts(filePath) {
   content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
   content = content.replace(/>>>>>>> cursor\/[^\n]+\n?/g, '');
+=======
+>>>>>>> pr-11913
   
 >>>>>>> pr-11914
   // Clean up any remaining artifacts
@@ -42,7 +49,11 @@ function cleanConflicts(filePath) {
   
   // Remove any remaining conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
   content = content.replace(/||  
+=======
+  
+>>>>>>> pr-11913
   // Clean up specific artifacts
   content = content.replace(/ursor\/[^\n]+\n?/g, '');
   content = content.replace(/origin\/[^\n]+\n?/g, '');

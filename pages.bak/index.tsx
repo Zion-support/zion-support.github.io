@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,3 +33,5 @@ export default function Index({ }: IndexProps) {
 }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

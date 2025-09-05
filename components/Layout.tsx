@@ -51,7 +51,7 @@ interface LayoutProps {
 <<<<<<< HEAD
 =======
 import Header from './Header';
-import { Sidebar } from './Sidebar';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {

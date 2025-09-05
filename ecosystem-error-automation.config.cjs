@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-11913
 module.exports = {
   "apps": [// 🚨 Comprehensive Error Fixer - Main error fixing automation
     {

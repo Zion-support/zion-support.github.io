@@ -1,6 +1,28 @@
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+=======
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
+    this.fixedFiles = [];
+    this.corruptedFiles = [];
+    this.mergeConflictFiles = [];
+    this.syntaxErrorFiles = [];
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    
+>>>>>>> pr-11913
   }
 
   async runCommand(command, options = {}) {
@@ -23,7 +45,6 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
   }
 
   // Check if file has syntax errors
@@ -50,7 +71,11 @@
     
     // Fix merge conflicts by keeping the HEAD version
 <<<<<<< HEAD
+<<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+=======
+    
+>>>>>>> pr-11913
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -296,6 +321,7 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> pr-11914
 #!/usr/bin/env node;
@@ -477,4 +503,6 @@ if (require.main === module) {}
   }
 });
 };
+=======
+>>>>>>> pr-11913
 module.exports = ComprehensiveSyntaxFixer;

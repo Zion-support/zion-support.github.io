@@ -4,17 +4,23 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🔧 Resolving New Merge Conflicts');
+<<<<<<< HEAD
 console.log('=====');
+=======
+>>>>>>> pr-11913
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
+<<<<<<< HEAD
 <<<<<<< HEAD
     .replace(/[\s\S]*?([\s\S]*?)    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 =======
     .replace(/>>>>>>> [a-f0-9]+/g, '');
+=======
+>>>>>>> pr-11913
 }
 >>>>>>> pr-11914
 
@@ -96,7 +102,10 @@ for (const file of conflictFiles) {
 
     // Check for merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11913
       console.log(`🔧 Resolving merge conflicts in ${file}`);
       content = resolveMergeConflicts(content);
       modified = true;

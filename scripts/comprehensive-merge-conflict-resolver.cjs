@@ -12,8 +12,14 @@ class ComprehensiveMergeConflictResolver {}
     this.totalFiles = 0};
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async findFilesWithConflicts() {}
+=======
+    }
+
+  async findFilesWithConflicts() {
+>>>>>>> pr-11913
     const filesWithConflicts = [];
     try {}
       // Use git to find files with merge conflicts;
@@ -31,7 +37,6 @@ class ComprehensiveMergeConflictResolver {}
     for (const file of allFiles) {}
       try {}
         const content = await fs.readFile(file, 'utf8');
-        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {}
           if (!filesWithConflicts.includes(file)) {}
             filesWithConflicts.push(file)};
         };

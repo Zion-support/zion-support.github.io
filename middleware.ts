@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+=======
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+>>>>>>> pr-11913
 
 const publicRoutes = [
   "/",
   "/about",
   "/contact",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   "/services",
@@ -32,24 +38,33 @@ const publicRoutes = [
   "/support",
   "/help",
   "/faq",
+=======
+  "/services",
+  "/products",
+  "/solutions",
+  "/industries",
+  "/news",
+  "/blog",
+  "/careers",
+  "/support",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+  "/api-docs",
+>>>>>>> pr-11913
   "/guides",
   "/tutorials",
   "/webinars",
   "/white-papers",
   "/case-studies",
-  "/press",
-  "/events",
-  "/newsletter",
-  "/sitemap",
-  "/api-docs",
-  "/docs",
-  "/api",
-  "/login",
-  "/register",
-  "/forgot-password",
+  "/partners",
   "/pricing",
-  "/company",
+  "/security",
+  "/compliance",
+  "/accessibility",
   "/community",
+<<<<<<< HEAD
   "/status",
   "/search",
   "/micro-saas",
@@ -92,6 +107,13 @@ const publicRoutes = [
   "/guides",
   "/api"
 >>>>>>> pr-11914
+=======
+  "/newsletter",
+  "/help",
+  "/faq",
+  "/talent",
+  "/404"
+>>>>>>> pr-11913
 ];
 
 export function middleware(request: NextRequest) {
@@ -100,6 +122,7 @@ export function middleware(request: NextRequest) {
 <<<<<<< HEAD
 <<<<<<< HEAD
   // Check if the route is public
+<<<<<<< HEAD
 =======
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
   if (publicRoutes.includes(pathname)) {
@@ -121,6 +144,18 @@ export function middleware(request: NextRequest) {
   
 <<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+  const isPublicRoute = publicRoutes.some(route => 
+    pathname === route || pathname.startsWith(route + "/")
+  );
+  
+  if (isPublicRoute) {
+    return NextResponse.next();
+  }
+  
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow access
+>>>>>>> pr-11913
   return NextResponse.next();
 =======
   // Security headers
@@ -147,6 +182,7 @@ export const config = {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
 =======
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
@@ -154,5 +190,8 @@ export const config = {
 =======
     '/((?!_next/static|_next/image|favicon.ico).*)',
 >>>>>>> pr-11914
+=======
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+>>>>>>> pr-11913
   ],
 };

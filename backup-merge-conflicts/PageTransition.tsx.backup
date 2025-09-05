@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD:src/components/PageTransition.tsx
 =======
 <<<<<<< HEAD
@@ -5,33 +6,39 @@
 import React from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 ;
 interface PageTransitionProps {;
   "children": "React.ReactNode;
 ;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-white">
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 =======
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/PageTransition.tsx
 "}
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 ;
 const "PageTransition": "React.FC<PageTransitionProps> = ({ children "}) => {;
   return (;
     <div className="min-h-screen">;
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 
 interface PageTransitionProps {
 
@@ -42,14 +49,15 @@ interface PageTransitionProps {
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return (
         <div className="min-h-screen">
->>>>>>> main
->>>>>>> main
       {children}
     </div>
     );
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/PageTransition.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 interface PageTransitionProps {;
   "children": React.ReactNode;
 }
@@ -59,9 +67,8 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
       {children};
     </div>;
   );
->>>>>>> main
->>>>>>> main:src_backup_temp/components/PageTransition.tsx
 };
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,3 +89,10 @@ import React from 'react'; ; interface PageTransitionProps {; children: React.Re
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/PageTransition.tsx
+=======
+"export default PageTransition;';
+</PageTransitionProps>;';;';
+"export default PageTransition;';
+</PageTransitionProps>;';';
+import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx

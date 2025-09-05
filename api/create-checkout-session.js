@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 =======
@@ -9,6 +12,7 @@ export default function handler(req, res) {
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
@@ -71,3 +75,5 @@ async function handler(req, res) {
 export default withErrorLogging(handler);
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

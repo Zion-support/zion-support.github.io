@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
+=======
+>>>>>>> pr-11913
 import { Heart, 
   Brain, 
   Shield, 
@@ -18,6 +24,7 @@ import { Heart,
   BarChart3, import {
 =======
   BarChart3, 
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Link from 'next/link';';
@@ -35,6 +42,8 @@ import {
   Shield,
   Users,
   BarChart3,
+=======
+>>>>>>> pr-11913
   CheckCircle,
   ArrowRight,
   Phone,
@@ -47,11 +56,16 @@ import {
   FileText;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
 import Layout from '../../components/Layout';';
+=======
+import Layout from '../../components/Layout';';
+
+>>>>>>> pr-11913
 const services = [;
   {}
     title: 'AI-Powered Medical Diagnostics,',
@@ -59,10 +73,13 @@ const services = [;
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',];
 =======
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -133,12 +150,16 @@ const services = [
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 ;];
 const benefits = [;
   {}
     title: 'Improved Patient Outcomes,',
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
     icon: Heart;
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -150,6 +171,8 @@ const benefits = [
     title: 'Improved Patient Outcomes',
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',
     icon: Heart
+=======
+>>>>>>> pr-11913
   },
   {}
     title: 'Enhanced Efficiency,',
@@ -167,10 +190,13 @@ const benefits = [
     icon: Shield;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 ;];
 const caseStudies = [;
   {}
@@ -180,6 +206,7 @@ const caseStudies = [;
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',];
 =======
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -190,6 +217,8 @@ const caseStudies = [
     title: 'AI Diagnostic System Implementation',
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',
     results: ['60% faster diagnosis', '25% accuracy improvement', '40% cost reduction']
+=======
+>>>>>>> pr-11913
   },
   {}
     title: 'Telemedicine Platform Deployment,',
@@ -203,6 +232,9 @@ const caseStudies = [
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 ;];
 export default function HealthcarePage() {
   return (;
@@ -250,6 +282,7 @@ export default function HealthcarePage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -302,6 +335,9 @@ export default function HealthcarePage() {
             </motion.div>
           </div>
         </section>
+=======
+
+>>>>>>> pr-11913
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -310,10 +346,13 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -330,6 +369,7 @@ export default function HealthcarePage() {
                 <motion.div}),                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
 =======
                 <motion.div}),
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -347,12 +387,17 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
+=======
+>>>>>>> pr-11913
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
@@ -364,6 +409,7 @@ export default function HealthcarePage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -380,15 +426,17 @@ export default function HealthcarePage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+=======
+>>>>>>> pr-11913
                         {feature}
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,
           </div>;
+<<<<<<< HEAD
         </section>;              className="text-center mb-16"
 =======
 <<<<<<< HEAD
@@ -403,6 +451,10 @@ export default function HealthcarePage() {
             </div>
           </div>
         </section>
+=======
+        </section>;
+
+>>>>>>> pr-11913
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -412,6 +464,9 @@ export default function HealthcarePage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -425,6 +480,7 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -443,6 +499,8 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+=======
+>>>>>>> pr-11913
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -456,9 +514,9 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,
           </div>;
+<<<<<<< HEAD
         </section>;              className="text-center mb-16"
 =======
 <<<<<<< HEAD
@@ -473,6 +531,10 @@ export default function HealthcarePage() {
             </div>
           </div>
         </section>
+=======
+        </section>;
+
+>>>>>>> pr-11913
         {/* Case Studies Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -482,6 +544,9 @@ export default function HealthcarePage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -495,6 +560,7 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
               {caseStudies.map((study, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -513,15 +579,20 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
+=======
+>>>>>>> pr-11913
                   key={study.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -533,6 +604,7 @@ export default function HealthcarePage() {
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";            </div>
 =======
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -545,12 +617,15 @@ export default function HealthcarePage() {
                     {study.results.map((result, resultIndex) => (
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+=======
+>>>>>>> pr-11913
                         {result}
                       </div>,
                     ))}
                   </div>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </div>,
@@ -564,6 +639,12 @@ export default function HealthcarePage() {
 >>>>>>> pr-11914
           </div>
         </section>
+=======
+            </div>,
+          </div>;
+        </section>;
+
+>>>>>>> pr-11913
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-pink-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -572,10 +653,13 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Healthcare?;
@@ -597,6 +681,7 @@ export default function HealthcarePage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -625,5 +710,7 @@ export default function HealthcarePage() {
         </section>
       </div>
     </Layout>
+=======
+>>>>>>> pr-11913
   );
 }

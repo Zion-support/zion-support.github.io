@@ -163,6 +163,7 @@ class GitWorkflowAutomator {
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Simple conflict resolution - keep the latest version
+<<<<<<< HEAD
       const resolvedContent = content
 <<<<<<< HEAD
         .replace(/[\s\S]*?[\s\S]*?        .replace(/[\s\S]*?        .replace(/[\s\S]*?
@@ -343,3 +344,6 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
+=======
+      const resolvedContent = content
+>>>>>>> pr-11913

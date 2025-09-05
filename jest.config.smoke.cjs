@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -22,3 +23,20 @@ module.exports = {
 =======
 }
 >>>>>>> pr-11914
+=======
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testMatch: ["<rootDir>/tests/smoke*.test.(ts|tsx|js|jsx)"],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"]
+};
+>>>>>>> pr-11913

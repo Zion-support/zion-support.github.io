@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/hooks.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/hooks.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';
@@ -17,3 +18,9 @@ import { useDispatch,useSelector } from 'react-redux'; export const useAppDispat
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/hooks.tsx
+=======
+import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';
+;';;';
+import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';';';
+import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; '; ;';';
+>>>>>>> pr-11913:src_backup_temp/store/hooks.tsx

@@ -25,7 +25,10 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11913
       console.log(`✅ No conflicts in: ${filePath}`);
       return false;
     }
@@ -33,11 +36,14 @@ function resolveMergeConflicts(filePath) {
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
     
     // Remove all merge conflict markers and keep the first version (HEAD)
+<<<<<<< HEAD
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
 =======
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+=======
+>>>>>>> pr-11913
     
 >>>>>>> pr-11914
     // Clean up any double newlines
@@ -71,7 +77,10 @@ for (const file of conflictedFiles) {
   if (fs.existsSync(file)) {
     const content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11913
       remainingConflicts.push(file);
     }
   }

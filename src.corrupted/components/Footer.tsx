@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React from \'react\';
+<<<<<<< HEAD
 const React from "react";''"
 import _React from 'react';
 =======
@@ -15,3 +15,6 @@ import _React from 'react';
 import _React from 'react';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+const React from "react";''"
+>>>>>>> pr-11913

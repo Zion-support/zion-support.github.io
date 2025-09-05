@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 export default {
   apps: [
     {
@@ -181,6 +184,7 @@ export default {
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -209,4 +213,6 @@ module.exports = {
     log_file: "./logs/combined.log",
     time: true
   }]
+=======
+>>>>>>> pr-11913
 };

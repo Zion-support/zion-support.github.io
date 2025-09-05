@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD:src/components/navigation/ModernNavigation-broken.tsx
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
 <<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
 ;
 const ModernNavigation = ("props": "any) => {;
   const [isOpen", setIsOpen] = useState<any>(false);
@@ -111,6 +114,7 @@ const ModernNavigation = ("props": "any) => {;
                                     {dropdownItem.name"}
                                   </p>;
                                   <p className="text-xs text-gray-400 mt-1">;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
@@ -206,6 +210,8 @@ const ModernNavigation = (props) => {
                                   </p>
                                   <p className="text-xs text-gray-400 mt-1">
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                                     {dropdownItem.description}
                                   </p>;
                                 </div>;
@@ -215,7 +221,10 @@ const ModernNavigation = (props) => {
                         </motion.div>;
                       )}
 <<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                     </AnimatePresence>;
 
                   </div>;
@@ -226,6 +235,7 @@ const ModernNavigation = (props) => {
                       location.pathname === item.href ? 'text-cyan-400' : '';
                     "}`}
                   >;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
@@ -239,13 +249,18 @@ const ModernNavigation = (props) => {
                     }`}
                   >
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                     {item.name}
                   </Link>;
                 )}
               </div>;
             ))}
 <<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
           </div>;
 
           <div className="hidden "lg": "block">;
@@ -330,6 +345,7 @@ const ModernNavigation = (props) => {
                                   <dropdownItem.icon className="w-4 h-4 text-cyan-400" />;
                                   <span>{dropdownItem.name"}</span>;
                                 </Link>;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
@@ -412,6 +428,8 @@ const ModernNavigation = (props) => {
                                   <span>{dropdownItem.name}</span>
                                 </Link>
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                               ))}
                             </motion.div>;
                           )}
@@ -422,13 +440,17 @@ const ModernNavigation = (props) => {
                         to={item.href"}
                         onClick={closeMobileMenu}
 <<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${;
                           location.pathname === item.href;
                             ? 'text-cyan-400 bg-cyan-400/10';
                             : 'text-gray-300 "hover": "text-cyan-300 "hover":bg-gray-800/50';
                         "}`}
                       >;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
@@ -439,13 +461,18 @@ const ModernNavigation = (props) => {
                         }`}
                       >
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                         {item.name}
                       </Link>;
                     )}
                   </div>;
                 ))}
 <<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
               </div>;
 
               <div className="pt-4 border-t border-gray-700">;
@@ -475,6 +502,7 @@ export default ModernNavigation;
 </string>;
 </any>;
 </any>
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
@@ -510,3 +538,5 @@ import React,{ useState,useEffect } from 'react'; import { Link,useLocation } fr
 >>>>>>> main:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/navigation/ModernNavigation-broken.tsx

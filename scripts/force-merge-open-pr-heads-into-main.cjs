@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -44,6 +45,8 @@ function autoResolveConflicts() {}
     const resolved = src;
       .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
       .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
+=======
+>>>>>>> pr-11913
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   const staged = sh('git diff --cached --name-only || true');
@@ -63,6 +66,7 @@ async function main() {}
     attempted++;
     const head = pr.head && pr.head.ref;
     if (!head) continue;
+<<<<<<< HEAD
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);
     try {}
       sh(`git fetch origin ${head}:${head} || true`);
@@ -77,6 +81,22 @@ async function main() {}
     };
   };
   console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
+=======
+    `);
+    try {
+      sh(`git fetch origin ${head}:${head} || true`);
+      try {
+        sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {
+        
+        autoResolveConflicts()}
+      mergedCount++} catch (e) {
+      : ${e.message}`);
+      // Abort merge if in progress
+      try { sh('git merge --abort')} catch {}
+    }
+  }
+  
+>>>>>>> pr-11913
   sh('git push origin main');
   // return to original branch;
   try { sh(`git checkout ${startBranch}`)} catch {};

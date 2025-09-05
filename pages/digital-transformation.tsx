@@ -1,11 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { RefreshCw, Zap, Users, Shield, CheckCircle, ArrowRight, Phone, Mail, BarChart3, Lock, Globe, Server, Database, Target } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, 
+  Cloud, 
+  Users, 
+  Zap, 
+  Shield, 
+  BarChart3, 
+  DollarSign,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> pr-11913
 
 const transformationAreas = [
   {
+<<<<<<< HEAD
     icon: RefreshCw,
     title: 'Process Automation',
     description: 'Automate repetitive tasks and streamline business processes',
@@ -165,6 +183,65 @@ export default function DigitalTransformationPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
+=======
+    title: 'Cloud Migration',
+    description: 'Move your infrastructure to the cloud for better scalability and cost efficiency',
+    icon: Cloud,
+    features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', 'Cost Optimization'],
+    pricing: 'Starting at $2,500/month',
+    timeline: '3-12 weeks'
+  },
+  {
+    title: 'Process Automation',
+    description: 'Automate repetitive tasks and workflows to increase efficiency',
+    icon: Zap,
+    features: ['RPA Implementation', 'Workflow Automation', 'API Integration', 'Custom Solutions'],
+    pricing: 'Starting at $1,800/month',
+    timeline: '2-8 weeks'
+  },
+  {
+    title: 'Digital Culture & Training',
+    description: 'Build digital-first culture and train your team for the future',
+    icon: Users,
+    features: ['Change Management', 'Digital Training', 'Adoption Strategies'],
+    pricing: 'Starting at $1,500/month',
+    timeline: '2-8 weeks'
+  }
+];
+
+const benefits = [
+  {
+    title: 'Increased Efficiency',
+    description: 'Streamline operations and reduce manual work by up to 60%',
+    icon: TrendingUp,
+    percentage: '60%'
+  },
+  {
+    title: 'Cost Reduction',
+    description: 'Lower operational costs through automation and optimization',
+    icon: DollarSign,
+    percentage: '40%'
+  },
+  {
+    title: 'Better Security',
+    description: 'Enhanced security posture with modern digital practices',
+    icon: Shield,
+    percentage: '95%'
+  }
+];
+
+export default function DigitalTransformation() {
+  return (
+    <Layout>
+      <Head>
+        <title>Digital Transformation - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive digital transformation services and solutions." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> pr-11913
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -172,6 +249,7 @@ export default function DigitalTransformationPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 Digital Transformation That{' '}
                 <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
                   Drives Growth
@@ -189,10 +267,18 @@ export default function DigitalTransformationPage() {
                   View Areas
                 </Link>
               </div>
+=======
+                Digital Transformation
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transform your business with cutting-edge technology and digital solutions.
+              </p>
+>>>>>>> pr-11913
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Transformation Areas Section */}
         <section id="areas" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -209,9 +295,78 @@ export default function DigitalTransformationPage() {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 We help organizations transform across all key areas of their business 
                 to achieve digital excellence.
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our Digital Transformation Services
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We provide end-to-end digital transformation services to modernize your business operations.
               </p>
-            </motion.div>
+            </div>
 
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {transformationServices.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                      <IconComponent className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <h4 className="font-semibold text-gray-900">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="border-t pt-4">
+                      <div className="flex justify-between text-sm text-gray-500 mb-2">
+                        <span>Pricing:</span>
+                        <span className="font-medium">{service.pricing}</span>
+                      </div>
+                      <div className="flex justify-between text-sm text-gray-500">
+                        <span>Timeline:</span>
+                        <span className="font-medium">{service.timeline}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Transformation Benefits
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                See the measurable impact of digital transformation on your business.
+>>>>>>> pr-11913
+              </p>
+            </div>
+
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {transformationAreas.map((area, index) => {
                 const IconComponent = area.icon;
@@ -219,10 +374,20 @@ export default function DigitalTransformationPage() {
                   <motion.div
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow duration-300"
+>>>>>>> pr-11913
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+<<<<<<< HEAD
                     whileHover={{ y: -5 }}
                   >
                     <div className="text-teal-600 mb-4">
@@ -242,12 +407,22 @@ export default function DigitalTransformationPage() {
                         </li>
                       ))}
                     </ul>
+=======
+                  >
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-green-600" />
+                    </div>
+                    <div className="text-4xl font-bold text-green-600 mb-2">{benefit.percentage}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+>>>>>>> pr-11913
                   </motion.div>
                 );
               })}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Industries Section */}
         <section className="py-20 bg-white">
@@ -479,5 +654,9 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
     </MainLayout>
+=======
+      </main>
+    </Layout>
+>>>>>>> pr-11913
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/addedServices2025.ts.backup
 <<<<<<< HEAD:src.disabled/data/addedServices2025.ts
 =======
 <<<<<<< HEAD
@@ -24,3 +25,8 @@ export: type AddedService = { id: string: title: string: description: string: ca
 export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/data/addedServices2025.ts
 >>>>>>> pr-11914:backup-merge-conflicts/addedServices2025.ts.backup
+=======
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+"export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+>>>>>>> pr-11913:src.disabled/data/addedServices2025.ts

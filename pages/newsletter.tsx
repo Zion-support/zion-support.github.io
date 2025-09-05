@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -20,21 +21,33 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 >>>>>>> pr-11914
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Mail, CheckCircle, Star, Zap } from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> pr-11913
 
 const benefits = [
   {
     title: 'Exclusive Content',
     description: 'Get access to exclusive white papers, case studies, and industry insights.',
-    icon: FileText
+    icon: Star
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Early Access',
     description: 'Be the first to know about new features, products, and services.',
+=======
+    title: 'Early Access',
+    description: 'Be the first to know about new features, products, and updates.',
+>>>>>>> pr-11913
     icon: Zap
   },
   {
     title: 'Expert Insights',
+<<<<<<< HEAD
     description: 'Learn from our team of experts through detailed technical articles.',
     icon: Users
   },
@@ -97,11 +110,41 @@ export default function NewsletterPage() {
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Stay ahead of the curve with exclusive content, industry insights, and the latest technology updates
+=======
+    description: 'Receive expert analysis and recommendations from our technology team.',
+    icon: CheckCircle
+  }
+];
+
+export default function Newsletter() {
+  return (
+    <Layout>
+      <Head>
+        <title>Newsletter - Zion Tech Group</title>
+        <meta name="description" content="Subscribe to our newsletter for the latest insights, updates, and exclusive content." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Stay Updated
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Subscribe to our newsletter for the latest insights, updates, and exclusive content.
+>>>>>>> pr-11913
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -232,10 +275,85 @@ export default function NewsletterPage() {
                     </div>
                   </motion.article>
                 ))}
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    Why Subscribe?
+                  </h2>
+                  <div className="space-y-6">
+                    {benefits.map((benefit, index) => {
+                      const IconComponent = benefit.icon;
+                      return (
+                        <motion.div
+                          key={index}
+                          className="flex items-start"
+                          initial={{ opacity: 0, x: -30 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.8, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                        >
+                          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <IconComponent className="w-6 h-6 text-blue-600" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                            <p className="text-gray-600">{benefit.description}</p>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Subscribe Now</h3>
+                  <form className="space-y-6">
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
+                    >
+                      <Mail className="w-5 h-5 mr-2" />
+                      Subscribe
+                    </button>
+                  </form>
+                  <p className="text-sm text-gray-500 mt-4">
+                    We respect your privacy. Unsubscribe at any time.
+                  </p>
+                </div>
+>>>>>>> pr-11913
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -272,6 +390,9 @@ export default function NewsletterPage() {
           </div>
         </section>
       </div>
+=======
+      </main>
+>>>>>>> pr-11913
     </Layout>
   );
 }

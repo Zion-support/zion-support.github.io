@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -10,6 +11,10 @@ const { execSync } = require('child_process');
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
+=======
+
+
+>>>>>>> pr-11913
 
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
@@ -49,6 +54,7 @@ function fixSpecificIssues(content, filePath) {
     modified = true;
   }
 
+<<<<<<< HEAD
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -141,6 +147,91 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   
   traverse(dir);
   return files;
+=======
+  // Fix unused variables in catch blocks
+  content = content.replace(/} catch \(error\) {/, '} catch (error) {');
+  content = content.replace(/} catch \(e\) {/, '} catch (e) {');
+  
+  // Add proper type annotations
+  if () {
+    content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor": React.FC = (): JSX.Element => {')}
+
+  return { content, modified ) {
+    ) {
+    content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor": React.FC = (): JSX.Element => {')}
+
+  return { content, modified }}}
+
+// Function to fix files
+function fixFiles() {
+  
+  
+  const filesToFix = ['components/ContactForm.tsx',
+    'components/ErrorBoundary.tsx', 
+    'components/PerformanceMonitor.tsx',
+    'components/SearchBar.tsx',
+    'components/ThemeToggle.tsx',
+    'pages/404.tsx',
+    'pages/_app.tsx',
+    'pages/about.tsx',
+    'pages/ai-services.tsx',
+    'pages/contact.tsx',
+    'pages/cybersecurity.tsx',
+    'pages/faq.tsx',
+    'pages/index.tsx',
+    'pages/micro-saas.tsx',
+    'pages/pricing.tsx',
+    'pages/services.tsx',
+    'pages/terms.tsx'
+  ];
+
+  const fixes = [];
+
+  filesToFix.forEach(filePath => {
+    if () {
+      try {
+        let content = fs.readFileSync(filePath, 'utf8') {
+    ) {
+      try {
+        let content = fs.readFileSync(filePath, 'utf8'});
+        
+        // Fix specific issues
+        const { "content": fixedContent, modified } = fixSpecificIssues(content, filePath);
+        
+        if ( {
+          fs.writeFileSync(filePath, fixedContent)) {
+     {
+          fs.writeFileSync(filePath, fixedContent)}
+          fixes.push("Fixed ${filePath}")}
+      } catch (error) {
+        console.error("Error fixing ${filePath}:", error.message)}
+    }
+  }
+
+  
+  return fixes}
+
+// Function to run ESLint with auto-fix
+function runESLintFix() {
+  
+  try {
+    execSync('npm run "lint": fix', { "stdio": 'inherit' });
+    
+    return true} catch (error) {
+    
+    return false}
+}
+
+// Function to run build test
+function runBuildTest() {
+  
+  try {
+    execSync('npm run build', { "stdio": 'inherit' });
+    
+    return true} catch (error) {
+    
+    return false}
+>>>>>>> pr-11913
 }
 
 // Main execution
@@ -148,6 +239,7 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
   
+<<<<<<< HEAD
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   
@@ -175,6 +267,55 @@ function main() {
   }
   
   console.log('\n🎉 Smart code fixing completed!');
+=======
+  try {
+    // Step "1": Fix specific issues
+    const fixes = fixFiles;(;);
+    
+    // Step 2: Run ESLint auto-fix
+    const eslintSuccess = runESLintFix;(;);
+    
+    // Step 3: Run build test
+    const buildSuccess = runBuildTest;(;);
+    
+    const duration = Date.now() - startTi;m;e;
+    
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      "duration": "${duration}ms",
+      "results": {
+        filesFixed: fixes.length,
+        eslintSuccess,
+        buildSuccess,
+        fixes
+      },
+      "summary": {
+        totalSteps: 3,
+        "successfulSteps": [eslintSuccess, buildSuccess].filter(Boolean).length
+      }
+   };
+    
+    // Save report
+    const reportPath = 'smart-code-fixer-report.json;';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    
+    );
+    
+    
+    if ( {
+      ) {
+     {
+      }
+      process.exit(0)} else {
+      
+      process.exit(1)}
+    
+  } catch (error) {
+    console.error('❌ Smart Code Fixer "failed": ', error.message);
+    process.exit(1)}
+>>>>>>> pr-11913
 }
 
 // Run if called directly

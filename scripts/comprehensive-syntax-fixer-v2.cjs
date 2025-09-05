@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@ const { execSync } = require('child_process')
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.fixedFiles = []
@@ -245,6 +248,7 @@ class ComprehensiveSyntaxFixer {
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer()
 fixer.run().catch(console.error)
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
 // console.log(' Comprehensive Syntax Fixer v2.0')
@@ -280,3 +284,5 @@ console.log('==')
     console.log('\n� Report saved "to")
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

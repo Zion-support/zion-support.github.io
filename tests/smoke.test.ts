@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 const { describe, it, expect } = require("@jest/globals");
 describe("smoke", () => {
   it("runs", () => {
     expect(1 + 1).toBe(2);
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
@@ -21,3 +25,5 @@ import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('
 import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

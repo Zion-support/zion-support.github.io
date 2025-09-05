@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 module.exports = default function APIPage() { return null}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,3 +31,5 @@ export default function Api({ }: ApiProps) {
 }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

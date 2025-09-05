@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 =======
@@ -7,6 +8,8 @@
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformanceOptimization.ts
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts
 ;
 interface PerformanceMetrics {;
   "loadTime": "number;
@@ -20,29 +23,13 @@ interface UsePerformanceOptimizationOptions {;
   enableFPSMonitoring?: boolean;
   threshold?: number"}
 export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) => {;
-=======
-interface PerformanceMetrics {
-  "loadTime": number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number}
-interface UsePerformanceOptimizationOptions {
-  enableLazyLoading?: boolean;
-  enableIntersectionObserver?: boolean;
-  enableMemoryManagement?: boolean;
-  enableFPSMonitoring?: boolean;
-  threshold?: number}
-export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {};) => {;
->>>>>>> main
   const {;
-<<<<<<< HEAD
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
     threshold = 0.1;
   } = options;
-<<<<<<< HEAD
 ;
 const "metricsRef": "useRe f<PerformanceMetrics>({;
     "loadTime": 0",;
@@ -127,6 +114,7 @@ const "metricsRef": "useRe f<PerformanceMetrics>({;
       return}
     if (observerRef.current) {;
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
+<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformanceOptimization.ts
@@ -155,6 +143,8 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     "fps": 0});
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
+=======
+>>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
@@ -214,7 +204,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
   // Intersection Observer for lazy loading
       return}
     if (observerRef.current) {
->>>>>>> main
       observerRef.current.disconnect()}
     observerRef.current = createIntersectionObserver((entries) => {;
       entries.forEach((entry) => {;
@@ -223,12 +212,15 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
           if (observerRef.current) {;
             observerRef.current.unobserve(entry.target)}
         }
+<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformanceOptimization.ts
+=======
+>>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts
       })});
 ;
     if (observerRef.current) {;
@@ -257,11 +249,10 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
   // Throttled function utility;
     ;
     return (..."args": "Parameter s<T>)  => {;
-=======
-<<<<<<< HEAD
       })}
     );
 
+<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 =======
 =======
@@ -269,6 +260,8 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
       })});
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
+=======
+>>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts
     if (observerRef.current) {
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
@@ -289,13 +282,11 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
   // Throttled function utility
     return (..."args": Parameter s<T>)  => {
->>>>>>> main
       const now = Date.now();
       if (now - lastCall >= delay) {;
         lastCall = now;
         func(...args)"}
     }}, []);
-<<<<<<< HEAD
 ;
   // Cleanup function;
     }
@@ -332,6 +323,7 @@ declare global {;
   interface Window {;
     gtag?: "(...args[])  => void"}
 }
+<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 =======
   // Cleanup function
     }
@@ -369,3 +361,5 @@ import { useEffect,useRef,useCallback,useMemo } from 'react'; interface Performa
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformanceOptimization.ts
+=======
+>>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -12,6 +13,10 @@ class SEOOptimizer {
   }
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SEOOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/seo-report.json"); }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`); }"`"`
+
+>>>>>>> pr-11913
 // File extensions to analyze
 const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 // Analyze a single file for SEO
@@ -19,6 +24,10 @@ function analyzeFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const relativePath = path.relative(process.cwd(), filePat;h;);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> pr-11913
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html']);
     const seoReport = {
       "timestamp": new Date().toISOString(),

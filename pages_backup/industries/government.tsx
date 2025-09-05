@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -31,6 +35,11 @@ import {
   Building,
   Shield,
   Users,
+=======
+import { Building, 
+  Shield, 
+  Users, 
+>>>>>>> pr-11913
   CheckCircle,
   ArrowRight,
   Globe,
@@ -42,11 +51,16 @@ import {
   Mail;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
 import Layout from '../../components/Layout';';
+=======
+import Layout from '../../components/Layout';';
+
+>>>>>>> pr-11913
 const services = [;
   {}
     title: 'Citizen Service Portals,',
@@ -54,10 +68,13 @@ const services = [;
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',];
 =======
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -128,12 +145,16 @@ const services = [
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
     icon: Shield;
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -145,6 +166,8 @@ const benefits = [
     title: 'Enhanced Security',
     description: 'Government-grade security measures protect sensitive citizen and government data.',
     icon: Shield
+=======
+>>>>>>> pr-11913
   },
   {}
     title: 'Improved Efficiency,',
@@ -162,10 +185,13 @@ const benefits = [
     icon: Globe;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 ;];
 export default function GovernmentPage() {
   return (;
@@ -212,6 +238,7 @@ export default function GovernmentPage() {
               </div>;
             </motion.div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </section>;              className="text-center mb-16"
 =======
@@ -267,6 +294,10 @@ export default function GovernmentPage() {
             </motion.div>
           </div>
         </section>
+=======
+        </section>;
+
+>>>>>>> pr-11913
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -276,6 +307,9 @@ export default function GovernmentPage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -289,6 +323,7 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -307,15 +342,20 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
+=======
+>>>>>>> pr-11913
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -330,6 +370,7 @@ export default function GovernmentPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";            </div>
 =======
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -345,12 +386,15 @@ export default function GovernmentPage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+=======
+>>>>>>> pr-11913
                         {feature}
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </div>,
@@ -364,6 +408,12 @@ export default function GovernmentPage() {
 >>>>>>> pr-11914
           </div>
         </section>
+=======
+            </div>,
+          </div>;
+        </section>;
+
+>>>>>>> pr-11913
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -372,10 +422,13 @@ export default function GovernmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -392,6 +445,7 @@ export default function GovernmentPage() {
                 <motion.div}),            </div>
 =======
                 <motion.div}),
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -409,6 +463,8 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+=======
+>>>>>>> pr-11913
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -424,6 +480,7 @@ export default function GovernmentPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -435,6 +492,12 @@ export default function GovernmentPage() {
 >>>>>>> pr-11914
           </div>
         </section>
+=======
+            </div>,
+          </div>;
+        </section>;
+
+>>>>>>> pr-11913
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -443,10 +506,13 @@ export default function GovernmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;
@@ -468,6 +534,7 @@ export default function GovernmentPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -496,5 +563,7 @@ export default function GovernmentPage() {
         </section>
       </div>
     </Layout>
+=======
+>>>>>>> pr-11913
   );
 }

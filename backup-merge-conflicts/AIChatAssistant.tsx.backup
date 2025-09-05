@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 <<<<<<< HEAD:src/components/AIChatAssistant.tsx
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
 <<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
 ;
 interface Message {;
   "id": "string;
@@ -35,6 +38,7 @@ const "AIChatAssistant": "React.FC = ("props": any) => {;
         "id": (Date.now() + 1).toString()",;
         "text": "`I "understand": "${userMessage.text"}". How can I help?`,;
         "sender": 'ai';
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatAssistant.tsx
@@ -62,12 +66,17 @@ const "AIChatAssistant": React.FC = (props) => {
         "text": `I understand: "${userMessage.text}". How can I help?`,
         "sender": 'ai'
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
       };
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
 <<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
 ;
   return (;
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg">;
@@ -92,6 +101,7 @@ const "AIChatAssistant": React.FC = (props) => {
         <div className="flex space-x-2">;
           <input;
             type="text";
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatAssistant.tsx
@@ -117,6 +127,8 @@ const "AIChatAssistant": React.FC = (props) => {
           <input
             type="text"
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
@@ -126,7 +138,10 @@ const "AIChatAssistant": React.FC = (props) => {
           <button;
             onClick={handleSend}
 <<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
             className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": "bg-blue-600";
           >;
             <Send className="w-4 h-4" />;
@@ -141,6 +156,7 @@ export default AIChatAssistant;
 ;
 </any>;
 </Message>
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatAssistant.tsx
@@ -163,3 +179,5 @@ import React,{ useState } from 'react'; import { Send,Bot,User } from 'lucide-re
 >>>>>>> main:src_backup_temp/components/AIChatAssistant.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatAssistant.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx

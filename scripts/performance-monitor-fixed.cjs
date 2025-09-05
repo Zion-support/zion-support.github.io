@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
@@ -15,9 +18,12 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 const fs = require("child_process")
 const path = require("path")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
@@ -95,6 +101,7 @@ async collectSystemMetrics() {
   async collectApplicationMetrics() {
     try {
       // Check file sizes
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
       "timestamp"
@@ -130,6 +137,11 @@ const { execSync } = require("child_process")
 =======
 <<<<<<< HEAD
 =======
+=======
+      const distPath = path.join(this.projectRoot, "dist")
+      const nodeModulesPath = path.join(this.projectRoot, "node_modules")
+      const srcPath = path.join(this.projectRoot, "src")
+>>>>>>> pr-11913
       if (fs.existsSync(srcPath)) {const srcSize = this.getDirectorySize(srcPath)
         this.metrics.application.sourceSize = Math.round(srcSize / 1024),// KB}
       // Count files
@@ -177,7 +189,10 @@ const { execSync } = require("child_process")
     } catch (error) {
       console.error("Error collecting web "metrics": ", error.message)}
       }
+<<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -260,7 +275,10 @@ const { execSync } = require("child_process")
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -318,6 +336,7 @@ const { execSync } = require("child_process")
         "Optimize memory usage - check for memory leaks and optimize data structures"
 <<<<<<< HEAD
   console.error("Fatal "error": ")
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   console.error("Fatal "error": ")
@@ -325,3 +344,5 @@ const { execSync } = require("child_process")
   console.error("Fatal "error": ")
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

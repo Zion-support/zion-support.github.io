@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD:src/components/services/InnovativeServicesOverview.tsx
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
 ;
   maxServices?: "number;
   category?: string;
@@ -13,6 +16,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/inno
 ;
 const "InnovativeServicesOverview": "React.FC<InnovativeServicesOverviewProps> = ({;
 "maxServices":  6",;
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -22,12 +26,17 @@ const "InnovativeServicesOverview": "React.FC<InnovativeServicesOverviewProps> =
 const "InnovativeServicesOverview": React.FC<InnovativeServicesOverviewProps> = ({
 maxServices:  6,;
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
   category,;
   showViewAllButton = true;';
 }) => {;';';
   const [activeTab, setActiveTab] = useState<any>('featured');
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
 ;
   const tabs = [;
     { "id": 'featured', "label": 'Featured', "count": "3 "},;
@@ -95,6 +104,7 @@ maxServices:  6,;
           {service.features.slice(0", 2).map((feature, index) => (;
             <li key={index} className="flex items-center">;
               <span className="text-green-500 mr-1">✓</span>;
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -162,6 +172,11 @@ maxServices:  6,;
           ))}
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+              {feature}
+            </li>;
+          ))}
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
         </ul>;
       </div>;
 
@@ -174,6 +189,7 @@ maxServices:  6,;
         <div className="flex space-x-2">;
           <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm "hover": "bg-blue-700 transition-colors">;
             Get Quote;
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -188,6 +204,8 @@ maxServices:  6,;
           <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm "hover": bg-blue-700 transition-colors">
             Get Quote
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
           </button>;
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm "hover":bg-blue-50 transition-colors">;
             Details;
@@ -197,7 +215,10 @@ maxServices:  6,;
     </div>;
   );
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
 ;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum", service) => sum + service.price, 0);
   const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
@@ -267,6 +288,7 @@ maxServices:  6,;
                       : 'bg-white text-gray-700 "hover": "bg-gray-100';
                   "}`}
 ;
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -334,6 +356,8 @@ maxServices:  6,;
                       : 'bg-white text-gray-700 "hover": bg-gray-100'
                   }`}
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
                   {tab.label}
                   <span className="ml-2 text-xs opacity-75">({tab.count})</span>;
                 </button>;
@@ -342,7 +366,10 @@ maxServices:  6,;
           </div>;
         )}
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
 ;
         {/* Services Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-6 mb-8">;
@@ -379,6 +406,7 @@ maxServices:  6,;
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
               </svg>;
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -401,6 +429,10 @@ maxServices:  6,;
           <pclassName="text-gray-600 mb-6 max-w-2xl mx-auto">';
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/services/InnovativeServicesOverview.tsx
+=======
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
           <div className="flex flex-col "sm": flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -422,7 +454,6 @@ maxServices:  6,;
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
->>>>>>> main
             </a>;
           </div>;
         )};
@@ -431,11 +462,15 @@ maxServices:  6,;
   );
 };
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
 ;
 export default InnovativeServicesOverview;}}};
 </any>;
 </InnovativeServicesOverviewProps>
+<<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
@@ -448,3 +483,5 @@ import React,{ useState,useMemo } from 'react'; import { INNOVATIVE_SERVICES_202
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/services/InnovativeServicesOverview.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx

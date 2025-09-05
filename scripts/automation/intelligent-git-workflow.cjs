@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -57,13 +58,143 @@ const path = require('path')
 
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
+=======
+    };
+    
+    this.workflowHistory = [];
+    this.currentWorkflow = null;
+    this.ensureLogsDirectory();
+  }
+
+  async ensureLogsDirectory() {
+    try {
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await this.loadConfiguration();
+      await this.loadWorkflowHistory();
+    } catch (error) {
+      
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    
+    
+    fs.appendFile(this.logFile, logMessage + '\n').catch(console.error);
+  }
+
+  async loadConfiguration() {
+    try {
+      const config = await fs.readFile(this.configFile, 'utf8');
+      this.config = { ...this.config, ...JSON.parse(config) };
+      this.log('✅ Git workflow configuration loaded');
+    } catch (error) {
+      this.log('📝 Using default Git workflow configuration');
+      await this.saveConfiguration();
+    }
+  }
+
+  async saveConfiguration() {
+    try {
+      await fs.writeFile(this.configFile, JSON.stringify(this.config, null, 2));
+    } catch (error) {
+      this.log(`❌ Failed to save configuration: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async loadWorkflowHistory() {
+    try {
+      const history = await fs.readFile(this.workflowHistoryFile, 'utf8');
+      this.workflowHistory = JSON.parse(history);
+      this.log(`📚 Loaded ${this.workflowHistory.length} workflow records`);
+    } catch (error) {
+      this.log('📚 No workflow history found, starting fresh');
+      this.workflowHistory = [];
+    }
+  }
+
+  async saveWorkflowHistory() {
+    try {
+      await fs.writeFile(this.workflowHistoryFile, JSON.stringify(this.workflowHistory, null, 2));
+    } catch (error) {
+      this.log(`❌ Failed to save workflow history: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async initialize() {
+    this.log('🚀 Initializing Intelligent Git Workflow...');
+    
+    try {
+      // Check if we're in a git repository
+      await this.runGitCommand('git rev-parse --git-dir');
+      this.log('✅ Git repository detected');
+      
+      // Set up git configuration if needed
+      await this.setupGitConfiguration();
+      
+      this.log('🎯 Intelligent Git Workflow is ready');
+      
+    } catch (error) {
+      this.log(`❌ Git workflow initialization failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
+  }
+
+  async setupGitConfiguration() {
+    try {
+      // Set up git user if not configured
+      const userName = await this.runGitCommand('git config user.name').catch(() => '');
+      const userEmail = await this.runGitCommand('git config user.email').catch(() => '');
+      
+      if (!userName) {
+        await this.runGitCommand('git config user.name "AI Git Workflow"');
+        this.log('📝 Set git user name');
+      }
+      
+      if (!userEmail) {
+        await this.runGitCommand('git config user.email "ai-workflow@example.com"');
+        this.log('📝 Set git user email');
+      }
+      
+      // Set up merge strategy
+      await this.runGitCommand(`git config merge.tool "vscode"`);
+      await this.runGitCommand(`git config merge.conflictstyle "diff3"`);
+      
+    } catch (error) {
+      this.log(`⚠️ Git configuration setup warning: ${error.message}`, 'WARN');
+    }
+  }
+
+  async runGitCommand(command, options = {}) {
+    try {
+      const result = execSync(command, { 
+        encoding: 'utf8', 
+        cwd: this.projectRoot,
+        ...options 
+      });
+      return result.trim();
+    } catch (error) {
+      throw new Error(`Git command failed: ${command} - ${error.message}`);
+    }
+  }
+
+  async createBranch(branchName, baseBranch = 'main') {
+    this.log(`🌿 Creating branch: ${branchName} from ${baseBranch}`);
+>>>>>>> pr-11913
     
     try {
       const workflow = {
         id: this.generateWorkflowId(),
+<<<<<<< HEAD
         type: 'create_pull_request',
         sourceBranch,
         targetBranch,
+=======
+        type: 'create_branch',
+        branchName,
+        baseBranch,
+>>>>>>> pr-11913
         startTime: new Date().toISOString(),
         status: 'in_progress',
         steps: []
@@ -71,6 +202,7 @@ const path = require('path')
       
       this.currentWorkflow = workflow;
       
+<<<<<<< HEAD
       // Generate PR title if not provided
       if (!title) {
         title = await this.generatePRTitle(sourceBranch);
@@ -89,6 +221,43 @@ const path = require('path')
         status: 'completed',
         title,
         url: prUrl,
+=======
+      // Check if branch already exists
+      const existingBranches = await this.runGitCommand('git branch -a');
+      if (existingBranches.includes(branchName)) {
+        throw new Error(`Branch ${branchName} already exists`);
+      }
+      
+      // Switch to base branch
+      await this.runGitCommand(`git checkout ${baseBranch}`);
+      workflow.steps.push({
+        step: 'Checkout base branch',
+        status: 'completed',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Pull latest changes
+      await this.runGitCommand('git pull origin ' + baseBranch);
+      workflow.steps.push({
+        step: 'Pull latest changes',
+        status: 'completed',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Create new branch
+      await this.runGitCommand(`git checkout -b ${branchName}`);
+      workflow.steps.push({
+        step: 'Create new branch',
+        status: 'completed',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Push new branch to remote
+      await this.runGitCommand(`git push -u origin ${branchName}`);
+      workflow.steps.push({
+        step: 'Push branch to remote',
+        status: 'completed',
+>>>>>>> pr-11913
         timestamp: new Date().toISOString()
       });
       
@@ -98,10 +267,17 @@ const path = require('path')
       this.workflowHistory.push(workflow);
       await this.saveWorkflowHistory();
       
+<<<<<<< HEAD
       this.log(`✅ Pull request created: ${prUrl}`);
       
     } catch (error) {
       this.log(`❌ Pull request creation failed: ${error.message}`, 'ERROR');
+=======
+      this.log(`✅ Branch ${branchName} created successfully`);
+      
+    } catch (error) {
+      this.log(`❌ Branch creation failed: ${error.message}`, 'ERROR');
+>>>>>>> pr-11913
       
       if (this.currentWorkflow) {
         this.currentWorkflow.status = 'failed';
@@ -116,6 +292,7 @@ const path = require('path')
     }
   }
 
+<<<<<<< HEAD
   async generatePRTitle(sourceBranch) {
     try {
       // Get recent commits
@@ -180,11 +357,21 @@ const path = require('path')
 
   async cleanupBranches() {
     this.log(`🧹 Cleaning up branches...`);
+=======
+  async commitChanges(files = [], message = null, type = 'feat') {
+    this.log(`💾 Committing changes...`);
+>>>>>>> pr-11913
     
     try {
       const workflow = {
         id: this.generateWorkflowId(),
+<<<<<<< HEAD
         type: 'cleanup_branches',
+=======
+        type: 'commit_changes',
+        files,
+        message,
+>>>>>>> pr-11913
         startTime: new Date().toISOString(),
         status: 'in_progress',
         steps: []
@@ -192,6 +379,7 @@ const path = require('path')
       
       this.currentWorkflow = workflow;
       
+<<<<<<< HEAD
       // Get all branches
       const allBranches = await this.runGitCommand('git branch -a');
       const branchList = allBranches.split('\n').filter(b => b.trim());
@@ -406,3 +594,325 @@ module.exports = IntelligentGitWorkflow;
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
+=======
+      // Check git status
+      const status = await this.runGitCommand('git status --porcelain');
+      if (!status.trim()) {
+        this.log('ℹ️ No changes to commit');
+        return;
+      }
+      
+      // Add files
+      if (files.length > 0) {
+        for (const file of files) {
+          await this.runGitCommand(`git add ${file}`);
+        }
+      } else {
+        await this.runGitCommand('git add .');
+      }
+      
+      workflow.steps.push({
+        step: 'Add files to staging',
+        status: 'completed',
+        files: files.length > 0 ? files : 'all',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Generate commit message if not provided
+      if (!message) {
+        message = await this.generateCommitMessage(files, type);
+      }
+      
+      // Commit changes
+      await this.runGitCommand(`git commit -m "${message}"`);
+      workflow.steps.push({
+        step: 'Commit changes',
+        status: 'completed',
+        message,
+        timestamp: new Date().toISOString()
+      });
+      
+      workflow.status = 'completed';
+      workflow.endTime = new Date().toISOString();
+      
+      this.workflowHistory.push(workflow);
+      await this.saveWorkflowHistory();
+      
+      this.log(`✅ Changes committed: ${message}`);
+      
+    } catch (error) {
+      this.log(`❌ Commit failed: ${error.message}`, 'ERROR');
+      
+      if (this.currentWorkflow) {
+        this.currentWorkflow.status = 'failed';
+        this.currentWorkflow.error = error.message;
+        this.currentWorkflow.endTime = new Date().toISOString();
+        
+        this.workflowHistory.push(this.currentWorkflow);
+        await this.saveWorkflowHistory();
+      }
+      
+      throw error;
+    }
+  }
+
+  async generateCommitMessage(files, type) {
+    try {
+      // Analyze changed files to generate meaningful commit message
+      const status = await this.runGitCommand('git status --porcelain');
+      const lines = status.split('\n').filter(line => line.trim());
+      
+      const addedFiles = lines.filter(line => line.startsWith('A')).length;
+      const modifiedFiles = lines.filter(line => line.startsWith('M')).length;
+      const deletedFiles = lines.filter(line => line.startsWith('D')).length;
+      
+      let description = '';
+      if (addedFiles > 0) description += `add ${addedFiles} file(s)`;
+      if (modifiedFiles > 0) description += `${description ? ', ' : ''}modify ${modifiedFiles} file(s)`;
+      if (deletedFiles > 0) description += `${description ? ', ' : ''}delete ${deletedFiles} file(s)`;
+      
+      // Generate commit message based on template
+      const message = this.config.commitMessageTemplate
+        .replace('{type}', type)
+        .replace('{description}', description);
+      
+      return message;
+      
+    } catch (error) {
+      return `${type}: Automated commit`;
+    }
+  }
+
+  async pushChanges(branchName = null) {
+    this.log(`📤 Pushing changes...`);
+    
+    try {
+      const workflow = {
+        id: this.generateWorkflowId(),
+        type: 'push_changes',
+        branchName: branchName || await this.getCurrentBranch(),
+        startTime: new Date().toISOString(),
+        status: 'in_progress',
+        steps: []
+      };
+      
+      this.currentWorkflow = workflow;
+      
+      // Get current branch if not specified
+      const currentBranch = branchName || await this.getCurrentBranch();
+      
+      // Push changes
+      await this.runGitCommand(`git push origin ${currentBranch}`);
+      workflow.steps.push({
+        step: 'Push to remote',
+        status: 'completed',
+        branch: currentBranch,
+        timestamp: new Date().toISOString()
+      });
+      
+      workflow.status = 'completed';
+      workflow.endTime = new Date().toISOString();
+      
+      this.workflowHistory.push(workflow);
+      await this.saveWorkflowHistory();
+      
+      this.log(`✅ Changes pushed to ${currentBranch}`);
+      
+    } catch (error) {
+      this.log(`❌ Push failed: ${error.message}`, 'ERROR');
+      
+      if (this.currentWorkflow) {
+        this.currentWorkflow.status = 'failed';
+        this.currentWorkflow.error = error.message;
+        this.currentWorkflow.endTime = new Date().toISOString();
+        
+        this.workflowHistory.push(this.currentWorkflow);
+        await this.saveWorkflowHistory();
+      }
+      
+      throw error;
+    }
+  }
+
+  async getCurrentBranch() {
+    try {
+      return await this.runGitCommand('git branch --show-current');
+    } catch (error) {
+      return 'main';
+    }
+  }
+
+  async mergeBranch(sourceBranch, targetBranch = 'main', options = {}) {
+    this.log(`🔄 Merging ${sourceBranch} into ${targetBranch}...`);
+    
+    try {
+      const workflow = {
+        id: this.generateWorkflowId(),
+        type: 'merge_branch',
+        sourceBranch,
+        targetBranch,
+        startTime: new Date().toISOString(),
+        status: 'in_progress',
+        steps: []
+      };
+      
+      this.currentWorkflow = workflow;
+      
+      // Switch to target branch
+      await this.runGitCommand(`git checkout ${targetBranch}`);
+      workflow.steps.push({
+        step: 'Checkout target branch',
+        status: 'completed',
+        branch: targetBranch,
+        timestamp: new Date().toISOString()
+      });
+      
+      // Pull latest changes
+      await this.runGitCommand(`git pull origin ${targetBranch}`);
+      workflow.steps.push({
+        step: 'Pull latest changes',
+        status: 'completed',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Check for conflicts before merge
+      const conflicts = await this.checkForConflicts(sourceBranch, targetBranch);
+      if (conflicts.length > 0) {
+        this.log(`⚠️ Potential conflicts detected: ${conflicts.join(', ')}`);
+        
+        if (this.config.conflictResolution === 'intelligent') {
+          await this.resolveConflictsIntelligently(conflicts, workflow);
+        } else {
+          throw new Error(`Conflicts detected: ${conflicts.join(', ')}`);
+        }
+      }
+      
+      // Perform merge
+      await this.runGitCommand(`git merge ${sourceBranch} --no-ff`);
+      workflow.steps.push({
+        step: 'Merge branches',
+        status: 'completed',
+        source: sourceBranch,
+        target: targetBranch,
+        timestamp: new Date().toISOString()
+      });
+      
+      // Push merged changes
+      await this.runGitCommand(`git push origin ${targetBranch}`);
+      workflow.steps.push({
+        step: 'Push merged changes',
+        status: 'completed',
+        timestamp: new Date().toISOString()
+      });
+      
+      workflow.status = 'completed';
+      workflow.endTime = new Date().toISOString();
+      
+      this.workflowHistory.push(workflow);
+      await this.saveWorkflowHistory();
+      
+      this.log(`✅ Successfully merged ${sourceBranch} into ${targetBranch}`);
+      
+    } catch (error) {
+      this.log(`❌ Merge failed: ${error.message}`, 'ERROR');
+      
+      if (this.currentWorkflow) {
+        this.currentWorkflow.status = 'failed';
+        this.currentWorkflow.error = error.message;
+        this.currentWorkflow.endTime = new Date().toISOString();
+        
+        this.workflowHistory.push(this.currentWorkflow);
+        await this.saveWorkflowHistory();
+      }
+      
+      throw error;
+    }
+  }
+
+  async checkForConflicts(sourceBranch, targetBranch) {
+    try {
+      // Get the merge base
+      const mergeBase = await this.runGitCommand(`git merge-base ${sourceBranch} ${targetBranch}`);
+      
+      // Get changed files in both branches
+      const sourceFiles = await this.runGitCommand(`git diff --name-only ${mergeBase} ${sourceBranch}`);
+      const targetFiles = await this.runGitCommand(`git diff --name-only ${mergeBase} ${targetBranch}`);
+      
+      const sourceFileList = sourceFiles.split('\n').filter(f => f.trim());
+      const targetFileList = targetFiles.split('\n').filter(f => f.trim());
+      
+      // Find common files that have been modified
+      const commonFiles = sourceFileList.filter(file => targetFileList.includes(file));
+      
+      return commonFiles;
+      
+    } catch (error) {
+      this.log(`⚠️ Conflict check failed: ${error.message}`, 'WARN');
+      return [];
+    }
+  }
+
+  async resolveConflictsIntelligently(conflicts, workflow) {
+    this.log(`🧠 Resolving conflicts intelligently...`);
+    
+    try {
+      for (const file of conflicts) {
+        this.log(`🔧 Resolving conflicts in ${file}...`);
+        
+        // Try to resolve conflicts automatically
+        const resolution = await this.autoResolveConflicts(file);
+        
+        if (resolution.resolved) {
+          workflow.steps.push({
+            step: 'Resolve conflicts',
+            status: 'completed',
+            file,
+            method: resolution.method,
+            timestamp: new Date().toISOString()
+          });
+          
+          this.log(`✅ Conflicts in ${file} resolved using ${resolution.method}`);
+        } else {
+          workflow.steps.push({
+            step: 'Resolve conflicts',
+            status: 'failed',
+            file,
+            error: resolution.error,
+            timestamp: new Date().toISOString()
+          });
+          
+          this.log(`❌ Failed to resolve conflicts in ${file}: ${resolution.error}`, 'ERROR');
+          throw new Error(`Conflict resolution failed for ${file}`);
+        }
+      }
+      
+    } catch (error) {
+      this.log(`❌ Intelligent conflict resolution failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
+  }
+
+  async autoResolveConflicts(file) {
+    try {
+      // Read the conflicted file
+      const content = await fs.readFile(file, 'utf8');
+      
+      // Check if file has conflict markers
+      if (!content.includes('<<<<<<<') || !content.includes('>>>>>>')) {
+        return { resolved: true, method: 'no_conflicts' };
+      }
+      
+      // Simple conflict resolution strategies
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.startsWith('<<<<<<<')) {
+          inConflict = true;
+          conflictType = 'start';
+          continue;
+>>>>>>> pr-11913

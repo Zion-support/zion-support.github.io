@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
 <<<<<<< HEAD:src/components/header/ModernHeader-backup.tsx
 =======
 <<<<<<< HEAD
@@ -19,6 +20,14 @@ export function ModernHeader($1) {;
 }
 <<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
 <<<<<<< HEAD
+=======
+import React, { useState } from "react";
+export function ModernHeader("props": "any) {;
+  const [isMobileMenuOpen", setIsMobileMenuOpen] = useState<any>(false);
+}
+  const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
+}
+>>>>>>> pr-11913:src_backup_temp/components/header/ModernHeader-backup.tsx
   const toggleMobileMenu = ("props": "any) => {;
     setIsMobileMenuOpen(!isMobileMenuOpen);
 "}
@@ -254,6 +263,7 @@ export default Component;
 </div>;
 </any>;
 </any>
+<<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/header/ModernHeader-backup.tsx
@@ -481,3 +491,5 @@ import React,{ useState } from "react" export function ModernHeader($1) {; const
 >>>>>>> main:src_backup_temp/components/header/ModernHeader-backup.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/header/ModernHeader-backup.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/components/header/ModernHeader-backup.tsx

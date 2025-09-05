@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 export default function LeadEnrichment() {; return (; <Article; title=\"Lead Enrichment API\"; subtitle=\"Company,technographic,and intent signals from an email or domain\"; price=\"from $149/mo\"; bullets={[; \'"Firmographics\": \'size\',industry,location,funding stage\',; \'"Technographics\": \'CMS\',analytics,ads,cloud stack\',; \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',; \'REST API + Zapier + native HubSpot/Salesforce connectors\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
 module.exports = default function LeadEnrichment() {; return (; <Article; title="Lead Enrichment API"; subtitle="Company,technographic,and intent signals from an email or domain"; price="from $149/mo"; bullets={[; "Firmographics: "size",industry,location,funding stage",; "Technographics: "CMS",analytics,ads,cloud stack",; "Buying signals: "hiring",product launches,traffic spikes",; "REST API + Zapier + native HubSpot/Salesforce connectors"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,3 +33,5 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
 }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

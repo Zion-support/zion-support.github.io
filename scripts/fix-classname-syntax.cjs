@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -73,6 +76,7 @@ class ClassNameSyntaxFixer {
       }
     }
     this.log('\n📊 ClassName Syntax Fixing Report');
+<<<<<<< HEAD
     this.log('====');
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     this.log(`Fixes Applied: ${this.fixes.length}`);
@@ -116,3 +120,5 @@ const glob = require('glob')
       const fixedQuoted = quoted.replace(/"([a-z]+)"
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

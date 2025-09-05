@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8');
+=======
+>>>>>>> pr-11913
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -63,6 +66,7 @@ function fixMergeConflicts(filePath) {
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +75,9 @@ function fixMergeConflicts(filePath) {
 }
 =======
 >>>>>>> pr-11914
+=======
+  
+>>>>>>> pr-11913
   traverse(dir);
   return files}
 // Find and fix files with merge conflicts
@@ -79,11 +86,14 @@ console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
 console.log('Merge conflict resolution complete!');
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
 <<<<<<< HEAD
 =======
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
+=======
+>>>>>>> pr-11913
 }
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -112,6 +122,7 @@ try {
 }
 <<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,3 +134,5 @@ console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

@@ -5,7 +5,10 @@ import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import Layout from '../components/Layout';
 
+<<<<<<< HEAD
 export default function Login() {
+=======
+>>>>>>> pr-11913
   const [formData, setFormData] = useState({
     email: '',
     password: ''

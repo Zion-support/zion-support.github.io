@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -76,3 +77,5 @@ describe('AccessibilityEnhancer', () => {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/AccessibilityEnhancer.test.tsx
 >>>>>>> pr-11914:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+=======
+>>>>>>> pr-11913:__tests__/AccessibilityEnhancer.test.tsx

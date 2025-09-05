@@ -23,12 +23,15 @@ function resolveSecondPRConflicts() {
       
       // Remove merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
       content = content.replace(/\n?/g, '');
       content = content.replace(/.*?\n?/g, '');
       content = content.replace(/      content = content.replace(/      
 =======
       content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
       content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
+=======
+>>>>>>> pr-11913
       
 >>>>>>> pr-11914
       // Clean up any remaining artifacts

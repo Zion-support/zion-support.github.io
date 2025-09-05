@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> pr-11914
@@ -34,6 +35,21 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 //     return false;
 //   }
 // }
+=======
+import Stripe from 'stripe';
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+const PROD_DOMAIN = 'app.ziontechgroup.com';
+
+function isProdDomain() {
+  const url = process.env.URL || '';
+  try {
+    return new URL(url).hostname === PROD_DOMAIN;
+  } catch {
+    return false;
+  }
+}
+>>>>>>> pr-11913
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 async function handler(req, res) {
@@ -86,6 +102,7 @@ async function handler(req, res) {'
     return;
   }
 
+<<<<<<< HEAD
   try {
     const { amount, currency = 'usd' } = req.body || {};
     
@@ -133,6 +150,43 @@ import Stripe from stripe'';; import { withErrorLogging } from';./withErrorLoggi
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
     res.json({ error: err.message || 'Payment intent creation failed' });
+=======
+  const { amount } = req.body || {};
+  if (typeof amount !== 'number') {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid amount' });
+    return;
+  }
+
+  try {
+    const liveKey = process.env.STRIPE_SECRET_KEY || '';
+    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
+
+    if (
+      !isProdDomain() &&
+      liveKey.startsWith('sk_live') &&
+      !process.env.STRIPE_TEST_SECRET_KEY
+    ) {
+      throw new Error('Refusing to use live Stripe key on non-production domain');
+    }
+
+    const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
+      apiVersion: '2023-10-16',
+    });
+
+    const intent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100),
+      currency: 'usd',
+      automatic_payment_methods: { enabled: true },
+    });
+
+    res.statusCode = 200;
+    res.json({ clientSecret: intent.client_secret, id: intent.id });
+  } catch (err) {
+    console.error('Create payment intent error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message });
+>>>>>>> pr-11913
   }
 }
 

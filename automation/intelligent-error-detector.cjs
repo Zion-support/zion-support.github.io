@@ -11,7 +11,10 @@ class IntelligentErrorDetector {
     this.fixes = [];
     this.patterns = {
 <<<<<<< HEAD
+<<<<<<< HEAD
       mergeConflicts: /[\s\S]*?>>>>>>>/g,
+=======
+>>>>>>> pr-11913
       syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
       typeErrors: /TypeError|Cannot read property|is not defined/g,
       importErrors: /Cannot resolve module|Module not found/g,
@@ -38,7 +41,10 @@ class IntelligentErrorDetector {
           type: 'merge_conflict',
           severity: 'error',
           message: 'Merge conflict markers found',
+<<<<<<< HEAD
           line: this.getLineNumber(content, '')
+=======
+>>>>>>> pr-11913
         });
       }
       
@@ -145,6 +151,7 @@ class IntelligentErrorDetector {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         
+<<<<<<< HEAD
         if (line.includes('')) {
           inConflict = true;
           conflictType = 'head';
@@ -155,6 +162,11 @@ class IntelligentErrorDetector {
           conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {
+=======
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+>>>>>>> pr-11913
           // End of conflict - choose the newer version (branch content)
           if (branchContent.length > 0) {
             fixedLines.push(...branchContent);
@@ -306,7 +318,10 @@ class IntelligentErrorDetector {
     
     // Generate report
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
+<<<<<<< HEAD
     this.log('==');
+=======
+>>>>>>> pr-11913
     this.log(`Files scanned: ${allFiles.length}`);
     this.log(`Files with issues: ${this.errors.length}`);
     this.log(`Fixes applied: ${this.fixes.length}`);

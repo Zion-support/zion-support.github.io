@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+
+>>>>>>> pr-11913
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -45,8 +49,11 @@ class IntelligentErrorFixer {
         }
       },
       mergeConflicts: {
+<<<<<<< HEAD
         pattern: /||        fix: (content) => {
 =======
+=======
+>>>>>>> pr-11913
         fix: (content) => {
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           // Remove merge conflict markers
@@ -242,8 +249,11 @@ class IntelligentErrorFixer {
       }          pattern: /||
 =======
       }
+<<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
 const fs = require('fs');
 const path = require('path');
 const {
@@ -289,6 +299,7 @@ const {
         "mergeConflicts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           "fix": content => {
             // Remove merge conflict markers
             return content
@@ -304,6 +315,11 @@ const {
               .replace(/\n?/g, '')
               .replace(/\n?/g, '')
               .replace(/
+=======
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+>>>>>>> pr-11913
           }},
         "invalidJSX": {
           pattern: /return\(\)\s*</gm,
@@ -320,7 +336,6 @@ const {
     }
     async runBuildCheck() {
       try {
-<<<<<<< HEAD
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
@@ -332,6 +347,7 @@ const {
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -346,6 +362,8 @@ const {
       } catch (error) {
         this.log('Build "failed": ' + error.message, 'ERROR');
         return { "success": false, "output": error.stdout || error.message };
+=======
+>>>>>>> pr-11913
       }
     }
     async runLintCheck() {
@@ -363,6 +381,9 @@ const {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -418,6 +439,7 @@ const {
     }
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -629,11 +651,15 @@ const {
       }
     }
   };
+=======
+
+>>>>>>> pr-11913
 // Main execution
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
 }
+<<<<<<< HEAD
 module.exports = IntelligentErrorFixer;
 <<<<<<< HEAD
 module.exports = IntelligentErrorFixer;
@@ -650,3 +676,7 @@ module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+
+module.exports = IntelligentErrorFixer;
+>>>>>>> pr-11913

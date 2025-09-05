@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
     
@@ -6,6 +7,21 @@
     content = content.replace(/^<<<<<<< .*$/gm, "");
     content = content.replace(/^=======.*$/gm, "");
     content = content.replace(/^>>>>>>> .*$/gm, "");
+=======
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    
+    // Remove merge conflict markers
+>>>>>>> pr-11913
     
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
@@ -87,7 +103,6 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("=======") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read
@@ -129,6 +144,7 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
+<<<<<<< HEAD
 =======
 >>>>>>> pr-11914
 #!/usr/bin/env node;
@@ -148,3 +164,6 @@ console.log(" Starting lint error fixes...")
       if (line.includes('from "lucide-react"') || line.includes(')
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting lint error fixes.");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove merge conflict markers""
+>>>>>>> pr-11913

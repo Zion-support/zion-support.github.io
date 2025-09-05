@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe('sanity', () => {
   it('runs a basic assertion', () => {
     expect(1 + 1).toBe(2)
@@ -15,3 +16,6 @@ describe('sanity', () => {
 =======
 })
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+describe("sanity",() => { it("runs a basic assertion",() => { expect(1 + 1).toBe(2) }) })''"
+>>>>>>> pr-11913

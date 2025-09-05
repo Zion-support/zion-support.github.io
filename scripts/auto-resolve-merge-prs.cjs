@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -50,6 +51,8 @@ function resolveConflictsFiles() {}
     const resolved = content;
       .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming);
       .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
+=======
+>>>>>>> pr-11913
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   // If there are staged changes, commit;
@@ -65,17 +68,27 @@ async function main() {}
   // Stash local changes to avoid checkout conflicts;
   const dirty = sh('git status --porcelain || true');
   let stashed = false;
+<<<<<<< HEAD
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
   };
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) { console.log('No open PRs'); return};
+=======
+  if (dirty && dirty.split('\n').filter(Boolean).length) {
+    
+    try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {}
+  }
+  const prs = await listOpenPRs(owner, repo);
+  if (!prs.length) {  return}
+>>>>>>> pr-11913
   let merged = 0, processed = 0;
   for (const pr of prs) {}
     processed++;
     const head = pr.head.ref;
     const base = pr.base.ref;
+<<<<<<< HEAD
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
       // Checkout PR branch;
@@ -87,6 +100,19 @@ async function main() {}
         console.log('Conflicts detected, attempting auto-resolution...');
         resolveConflictsFiles()};
       // Push updated PR branch;
+=======
+    
+    try {
+      // Checkout PR branch
+      try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)}
+      sh('git fetch origin');
+      // Merge latest base into head
+      try {
+        sh(`git merge --no-edit origin/${base}`, { "stdio": 'inherit' })} catch {
+        
+        resolveConflictsFiles()}
+      // Push updated PR branch
+>>>>>>> pr-11913
       sh(`git push origin ${head}`);
       // Attempt PR merge via API;
       const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`})
@@ -97,6 +123,7 @@ async function main() {}
 });
       if (result && result.merged) {}
         merged++;
+<<<<<<< HEAD
         console.log(`Merged PR #${pr.number}`)} else {`}
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
     } catch (e) {}
@@ -114,3 +141,23 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
+=======
+        } else {
+        }
+    } catch (e) {
+      } finally {
+      // Return to start branch to avoid staying detached on failures
+      try { sh(`git checkout ${startBranch}`)} catch {}
+    }
+  }
+  
+  // Restore stashed changes if any
+  if (stashed) {
+    
+    try { sh('git stash pop || true')} catch {}
+  }
+}
+
+main().catch(err => { console.error('"Error": ', err.message); process.exit(1)});
+
+>>>>>>> pr-11913

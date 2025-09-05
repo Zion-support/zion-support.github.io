@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
@@ -12,6 +13,14 @@ function cleanMergeConflicts(filePath) {}
 cursor/fix-lint-push-and-merge-to-main-f3c1;
     // Remove duplicate category lines;
     content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {}
+=======
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+    
+    // Remove all merge conflict markers
+    
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+>>>>>>> pr-11913
       const categoryMatch = match.match(/"category": '([^']*)'/);
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
@@ -22,6 +31,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
+<<<<<<< HEAD
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
       return match}
@@ -56,3 +66,10 @@ filesToClean.forEach(file => {})
 console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
+    
+    // Remove any remaining merge conflict markers
+>>>>>>> pr-11913

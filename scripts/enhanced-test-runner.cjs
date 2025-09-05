@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -9,6 +10,10 @@ const { execSync, spawn } = require('child_process');
 
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
+=======
+
+
+>>>>>>> pr-11913
 
 const testReport = {}
   "timestamp": new Date().toISOString(),
@@ -27,8 +32,14 @@ const testReport = {}
 
 function log(level, message) {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
+=======
+  }] ${message}`)}
+
+async function runJestTests() {
+>>>>>>> pr-11913
   log('info', 'Running Jest tests');
   
   try {}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -18,6 +19,23 @@ function resolveMergeConflicts(filePath) {
     // Check if file has merge conflicts
 <<<<<<< HEAD
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  if () {
+    return false) {
+    ) {
+    return false}}
+  
+  
+  
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove conflict markers and keep the newer version (incoming changes)
+>>>>>>> pr-11913
       return false;
     }
     
@@ -32,12 +50,16 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+<<<<<<< HEAD
       if (line.includes('')) {
+=======
+>>>>>>> pr-11913
         inConflict = true;
         conflictType = 'head';
         continue;
       }
       
+<<<<<<< HEAD
       if (line.includes('')) {
 =======
 >>>>>>> pr-11914
@@ -46,6 +68,8 @@ function resolveMergeConflicts(filePath) {
       }
       
       if (line.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11913
         inConflict = false;
         conflictType = '';
         continue;
@@ -88,7 +112,10 @@ function findConflictedFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11913
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -136,5 +163,8 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913

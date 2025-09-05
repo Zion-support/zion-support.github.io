@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD:src/context/auth/AuthContext.tsx
 =======
 <<<<<<< HEAD
@@ -5,11 +6,14 @@
 import React, { createContext, useContext } from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
 ;
 interface User {;
 
   "id": "string;
   "email": string;
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
@@ -17,13 +21,18 @@ interface User {
   "id": string;
   email: string;
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
   displayName?: string;
   avatar?: string;
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
 <<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
   updatedAt?: string"}
 ;
 interface AuthTokens {;
@@ -51,6 +60,7 @@ interface AuthContextType {;
 const AuthContext = createContext<AuthContextType | null>(null);
 ;
 export const useAuth = ("props": "any) => {;
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
@@ -81,6 +91,11 @@ export const useAuth = (props) => {;
     throw new Error('useAuth must be used within an AuthProvider');
 <<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
+=======
+  const context = useContext(AuthContext);
+  if (context = == null) {;';';
+    throw new Error('useAuth must be used within an AuthProvider');
+>>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
 ;
   return context;
 "};
@@ -99,6 +114,7 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>;
 </any>;
 </any>
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
@@ -120,3 +136,5 @@ import React,{ createContext,useContext } from 'react'; interface User { id: str
 >>>>>>> main:src_backup_temp/context/auth/AuthContext.tsx
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx

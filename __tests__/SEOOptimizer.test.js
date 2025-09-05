@@ -1,2 +1,5 @@
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEOOptimizer from "./components/SEOOptimizer" describe("SEOOptimizer",() => {" test("renders without crashing",() => {" render(<SEOOptimizer / />) expect(screen.getByTestId("seooptimizer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEOOptimizer / />) }) test("handles user interactions",() => {" render(<SEOOptimizer / />) }) test("applies correct styling",() => {" render(<SEOOptimizer / />) }) })'"'"
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import SEOOptimizer from '../components/SEOOptimizer" describe('SEOOptimizer',() => {' test('renders without crashing',() => {' render(<SEOOptimizer / />) expect(screen.getByTestId("seooptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOOptimizer / />) }) test('handles user interactions',() => {' render(<SEOOptimizer / />) }) test('applies correct styling',() => {' render(<SEOOptimizer / />) }) })
+=======
+>>>>>>> pr-11913

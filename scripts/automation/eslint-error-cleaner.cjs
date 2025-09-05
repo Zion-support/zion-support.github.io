@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -16,6 +17,10 @@ class $1 {
   ["this.logsPath", "this.reportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
+=======
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+
+>>>>>>> pr-11913
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -38,6 +43,7 @@ class ESLintErrorCleaner {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
+<<<<<<< HEAD
     console.log("logMessage);
     const logFile = path.join(this.logsPath, "eslint-error-cleaner.log");
     fs.appendFileSync(logFile, logMessage + "\n");
@@ -84,6 +90,10 @@ class ESLintErrorCleaner {
             "severity": match[4],
             "message": match[5].trim()})}
     console.log(logMessage);
+=======
+    
+    
+>>>>>>> pr-11913
     // Write to log file
     const logFile = path.join(this.logsDir, 'eslint-error-cleaner.log');
     fs.appendFileSync(logFile, logMessage + '\n')}
@@ -135,6 +145,7 @@ class ESLintErrorCleaner {
       return errors} catch (error) {
       this.log(`Failed to parse ESLint "errors": ${error.message}`, 'ERROR');
       return []}
+<<<<<<< HEAD
 ;
     return errors}
 ;
@@ -418,6 +429,8 @@ return false}
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log("📄 Report "generated": ${reportFile}");
+=======
+>>>>>>> pr-11913
   }
   async autoFixESLintErrors() {
     this.log('Running ESLint auto-fix...');
@@ -589,6 +602,7 @@ this.log("📄 Report "generated": ${reportFile}");
       const report = await this.generateReport(fixResults);
       this.log("🎉 ESLint Error Cleaner completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
+<<<<<<< HEAD
   async run() {
   this.log("🚀 Starting ESLint Error Cleaner...");
     try {
@@ -619,6 +633,9 @@ this.log("📄 Report "generated": ${reportFile}");
 }
 ;
 // Run the automation if called directly;
+=======
+
+>>>>>>> pr-11913
   async startWatching() {
     this.log('Starting ESLint error monitoring...');
     // Initial check and fix

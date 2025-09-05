@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 export const cn = {}; return twMerge(clsx (inputs) ) ;,}
+=======
+// comment;
+export const cn = {};
+
+  return twMerge(clsx (inputs) ) ,
+}
+>>>>>>> pr-11913
 // comment;
 export const cn = {};
   return twMerge(clsx (inputs) ) }

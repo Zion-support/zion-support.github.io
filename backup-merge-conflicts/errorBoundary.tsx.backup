@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 <<<<<<< HEAD:src/utils/errorBoundary.tsx
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
 ;
 interface Props extends React.PropsWithChildren<{}> {;
   "children": "ReactNode;
@@ -84,6 +87,7 @@ class ErrorBoundary extends Component<Props, State> {;
               animate={{ "scale": "1 "}}
               className="text-center";
             >;
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/errorBoundary.tsx
@@ -128,6 +132,11 @@ class ErrorBoundary extends Component<Props, State> {
     });
 >>>>>>> main
 >>>>>>> main:src_backup_temp/utils/errorBoundary.tsx
+=======
+    }
+    );
+
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
     // Log error to external service
     this.logError(error, errorInfo);
   }
@@ -170,7 +179,6 @@ class ErrorBoundary extends Component<Props, State> {
               animate={{ "scale": 1 }}
               className="text-center"
             >
->>>>>>> main
               {/* Error Icon */}
               <div className="mx-auto w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6">;
                 <svg;
@@ -183,7 +191,10 @@ class ErrorBoundary extends Component<Props, State> {
                     strokeLinejoin="round";
                     strokeWidth={2}
 <<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z";
                    />;
                 </svg>;
@@ -255,6 +266,7 @@ class ErrorBoundary extends Component<Props, State> {
         </motion.div>;
       );
     "}
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/errorBoundary.tsx
@@ -325,18 +337,24 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 >>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
     return this.props.children;
   }
 }
 export default ErrorBoundary;
 <<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
 </motion>;
 </motion>;
 </path>;
 </motion>;
 </motion>;
 </Props>
+<<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/errorBoundary.tsx
@@ -350,3 +368,5 @@ import React,{ Component,ErrorInfo,ReactNode } from 'react'; import { motion } f
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/errorBoundary.tsx
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx

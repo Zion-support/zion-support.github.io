@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Automation Suite Runner
@@ -16,6 +17,9 @@ class AutomationSuiteRunner {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true });
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+>>>>>>> pr-11913
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }

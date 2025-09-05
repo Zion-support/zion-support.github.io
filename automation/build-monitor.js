@@ -7,10 +7,13 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -151,6 +154,7 @@ class BuildMonitor {
       }  async checkBuildStatus() {
 =======
       }
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -177,6 +181,11 @@ class BuildMonitor {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    }
+  }
+
+>>>>>>> pr-11913
     const report = {
       ...results,
       trends: {
@@ -229,6 +238,7 @@ class BuildMonitor {
   }
   async run() {
     this.log('Starting build health check...');
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -237,6 +247,9 @@ class BuildMonitor {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   async checkBuildStatus() {
 >>>>>>> pr-11914
+=======
+    
+>>>>>>> pr-11913
     try {
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent
@@ -256,10 +269,14 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+      
+>>>>>>> pr-11913
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
@@ -269,6 +286,7 @@ class BuildMonitor {
     }      return true;
 =======
     }
+<<<<<<< HEAD
 =======
       
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -470,14 +488,16 @@ class BuildMonitor {
       clearInterval(this.monitorIntervalId);
     }
     this.log('info', 'Build monitor stopped');
+=======
+>>>>>>> pr-11913
   }
 }
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
-<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -513,5 +533,7 @@ if (require.main === module) {
     default:
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
+=======
+>>>>>>> pr-11913
 }
 module.exports = BuildMonitor;

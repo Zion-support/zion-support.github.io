@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11914
@@ -37,6 +38,11 @@ module.exports = {
   }
 };
 ";
+=======
+
+
+
+>>>>>>> pr-11913
 class AdvancedAutomationSuite {
   constructor() {
     this.results = {
@@ -49,15 +55,23 @@ class AdvancedAutomationSuite {
       seo: {}
     };
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-11913
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     
   }
+<<<<<<< HEAD
 // Function to create deployment automation
 function createDeploymentAutomation() {
   console.log('\n🚀 Creating Deployment Automation...');
   const deploymentScript = "#!/bin/bash
+=======
+
+>>>>>>> pr-11913
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
@@ -74,6 +88,10 @@ function createDeploymentAutomation() {
       return null;
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-11913
   async createAdvancedMonitoring() {
     this.log('Creating advanced monitoring system...');
     const monitoringScript = `#!/usr/bin/env node
@@ -119,7 +137,12 @@ class AutomatedTestFramework {
     this.tests.push({ name, testFn });
   }
   async runTests() {
+<<<<<<< HEAD
     console.log('🧪 Running automated tests...');
+=======
+    
+    
+>>>>>>> pr-11913
     for (const test of this.tests) {
       try {
         await test.testFn();
@@ -144,7 +167,12 @@ class AutomatedTestFramework {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     }
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
     console.log(\`\\n📊 Test Results: \${this.results.passed}/\${this.results.total} passed\`);
+=======
+    
+    
+>>>>>>> pr-11913
   }
 }
 module.exports = AutomatedTestFramework;`;
@@ -275,6 +303,7 @@ npm run test:smoke || true
 echo "🌐 Deploying to production..."
 # Add your deployment commands here
 echo "✅ Deployment completed successfully!"`;
+<<<<<<< HEAD
 echo "✅ Deployment completed successfully!";";
   fs.writeFileSync('deploy.sh', deploymentScript);
   fs.chmodSync('deploy.sh', '755');
@@ -501,6 +530,9 @@ module.exports = nextConfig;
       'lighthouse': 'lighthouse "http": //localhost:3000 --output=html --output-path=./lighthouse-report.html',
       '"perf": audit': 'npm run build && npm run lighthouse'
     }
+=======
+
+>>>>>>> pr-11913
     const deployPath = path.join(process.cwd(), 'scripts', 'deploy.sh');
     fs.writeFileSync(deployPath, deploymentScript);
     fs.chmodSync(deployPath, '755');
@@ -516,7 +548,10 @@ module.exports = nextConfig;
     await this.createDeploymentAutomation();
     this.results.scriptsRun = this.results.improvements.length;
     this.log('\\n📊 ADVANCED AUTOMATION SUITE SUMMARY');
+<<<<<<< HEAD
     this.log('==');
+=======
+>>>>>>> pr-11913
     this.log(`Scripts created: ${this.results.scriptsRun}`);
     this.log(`Improvements: ${this.results.improvements.length}`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -532,14 +567,19 @@ module.exports = nextConfig;
         this.log(`  ${index + 1}. ${error}`);
       });
     }
+<<<<<<< HEAD
 console.log('⚡ Performance optimization completed!');
 ";
+=======
+
+>>>>>>> pr-11913
     // Save results
     const resultsPath = path.join(process.cwd(), 'automation-reports', 'advanced-automation-results.json');
     if (!fs.existsSync(path.dirname(resultsPath))) {
       fs.mkdirSync(path.dirname(resultsPath), { recursive: true });
     }
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
+<<<<<<< HEAD
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
@@ -582,6 +622,13 @@ async function main() {
   console.log("   - Report saved "to": advanced-automation-report.json");
   console.log('\n🎉 Advanced automation suite completed!')}
 main().catch(console.error);
+=======
+
+    this.log('\\n🎉 Advanced automation suite completed!');
+  }
+}
+
+>>>>>>> pr-11913
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);

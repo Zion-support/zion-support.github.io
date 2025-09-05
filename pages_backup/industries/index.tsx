@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -24,10 +27,13 @@ import { Heart,
   Building,    href: '/industries/healthcare,',
 =======
   Building,
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -46,12 +52,20 @@ import {
   Cloud,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Brain
 } from 'lucide-react';
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
+=======
+  Brain
+} from 'lucide-react';
+import SimpleLayout from '../../components/SimpleLayout';
+import Layout from '../../components/Layout';';
+
+>>>>>>> pr-11913
 const industries = [
   {
     name: 'Healthcare',
@@ -60,6 +74,7 @@ const industries = [
     href: '/industries/healthcare',
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],
     color: 'from-red-500 to-pink-500'
+<<<<<<< HEAD
 =======
   Brain;
 } from 'lucide-react';
@@ -72,12 +87,13 @@ const industries = [
 >>>>>>> pr-11914
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
     color: 'from-red-500 to-pink-500'';
+=======
+>>>>>>> pr-11913
   },
   {
     name: 'Finance',
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
     icon: DollarSign,
-<<<<<<< HEAD
     href: '/industries/finance',
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
     color: 'from-green-500 to-emerald-500'    href: '/industries/manufacturing,',
@@ -87,6 +103,7 @@ const industries = [
     href: '/industries/finance',
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
     color: 'from-green-500 to-emerald-500'
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -94,11 +111,14 @@ const industries = [
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
+=======
+>>>>>>> pr-11913
   },
   {
     name: 'Manufacturing',
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',
     icon: Settings,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     href: '/industries/manufacturing',
@@ -112,12 +132,16 @@ const industries = [
 >>>>>>> pr-11914
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
+=======
+    href: '/industries/manufacturing',
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
+    color: 'from-blue-500 to-cyan-500'
+>>>>>>> pr-11913
   },
   {
     name: 'Retail',
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
     icon: ShoppingCart,
-<<<<<<< HEAD
     href: '/industries/retail',
     features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
     color: 'from-purple-500 to-violet-500'    href: '/industries/education,',
@@ -127,6 +151,7 @@ const industries = [
     href: '/industries/retail',
     features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
     color: 'from-purple-500 to-violet-500'
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -134,11 +159,14 @@ const industries = [
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
     color: 'from-purple-500 to-violet-500'';
+=======
+>>>>>>> pr-11913
   },
   {
     name: 'Education',
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',
     icon: BookOpen,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     href: '/industries/education',
@@ -152,16 +180,24 @@ const industries = [
 >>>>>>> pr-11914
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
     color: 'from-orange-500 to-yellow-500'';
+=======
+    href: '/industries/education',
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
+    color: 'from-orange-500 to-yellow-500'
+>>>>>>> pr-11913
   },
   {
     name: 'Government',
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
     icon: Building,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -176,6 +212,7 @@ const stats = [
 ];export default function IndustriesPage() {
 =======
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -195,6 +232,8 @@ const stats = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -263,10 +302,13 @@ export default function Industries() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -277,10 +319,13 @@ export default function Industries() {
           </div>          <div className="container mx-auto px-4 relative z-10">
 =======
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -290,7 +335,10 @@ export default function Industries() {
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -303,10 +351,13 @@ export default function Industries() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -366,6 +417,7 @@ export default function Industries() {
               className="text-center mb-16"";            >
 =======
               className="text-center mb-16"";
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -387,12 +439,17 @@ export default function Industries() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
+=======
+>>>>>>> pr-11913
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -418,6 +475,7 @@ export default function Industries() {
                 and drive measurable business outcomes.;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -432,6 +490,8 @@ export default function Industries() {
               </p>
             </motion.div>
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 
 =======
 <<<<<<< HEAD
@@ -450,6 +510,7 @@ export default function Industries() {
                   <motion.div);
                     key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""                    <p className="text-gray-600 mb-6 leading-relaxed">";
 =======
 <<<<<<< HEAD
@@ -460,6 +521,9 @@ export default function Industries() {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
+=======
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+>>>>>>> pr-11913
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -467,6 +531,9 @@ export default function Industries() {
                     whileHover={{ y: -5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
@@ -475,6 +542,7 @@ export default function Industries() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>,
                       <IconComponent className="w-8 h-8 text-white" />";
                     </div>;
+<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {industry.name}
                     </h3>
@@ -500,6 +568,17 @@ export default function Industries() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {industry.name}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {industry.description}
+                    </p>
+                    
+>>>>>>> pr-11913
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -521,8 +600,12 @@ export default function Industries() {
                         ))}
                       </div>
                     </div>
+<<<<<<< HEAD
                       </div>,
                     </div>;
+=======
+                    
+>>>>>>> pr-11913
                     <Link
                       href={industry.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
@@ -539,6 +622,7 @@ export default function Industries() {
         </section>                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
 =======
         </section>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -574,16 +658,22 @@ export default function Industries() {
                       </a>
                     </Link>
                   </motion.div>
+=======
+>>>>>>> pr-11913
                 );
               })}
             </div>,
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+
+>>>>>>> pr-11913
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -592,6 +682,7 @@ export default function Industries() {
               className="text-center mb-16"        <section className="py-20 bg-white">"
 =======
               className="text-center mb-16"
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -603,15 +694,20 @@ export default function Industries() {
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
+=======
+>>>>>>> pr-11913
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Why Choose Our Industry Solutions?
@@ -623,6 +719,7 @@ export default function Industries() {
             </motion.div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
             </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -638,6 +735,8 @@ export default function Industries() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -652,10 +751,13 @@ export default function Industries() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
@@ -665,6 +767,7 @@ export default function Industries() {
                 <p className="text-gray-600">              >,
 =======
                 <p className="text-gray-600">
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -675,6 +778,8 @@ export default function Industries() {
                 </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>";
                 <p className="text-gray-600">";
+=======
+>>>>>>> pr-11913
                   Our team includes specialists with deep experience in each industry we serve, 
                   ensuring solutions that address real-world challenges.
                 </p>
@@ -688,6 +793,9 @@ export default function Industries() {
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
               >
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-green-600" />
@@ -698,6 +806,7 @@ export default function Industries() {
                   maintain the highest security standards.
                 </p>
               </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -714,6 +823,8 @@ export default function Industries() {
                 </p>;
               </motion.div>;
 <<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 
 =======
 <<<<<<< HEAD
@@ -732,10 +843,13 @@ export default function Industries() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
@@ -745,6 +859,7 @@ export default function Industries() {
                 <p className="text-gray-600">        <section className="py-20 bg-gray-50">"
 =======
                 <p className="text-gray-600">
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -755,6 +870,8 @@ export default function Industries() {
                 </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>";
                 <p className="text-gray-600">";
+=======
+>>>>>>> pr-11913
                   Our solutions are designed to grow with your business, from startup to enterprise scale, 
                   with flexible deployment options.
                 </p>
@@ -766,6 +883,9 @@ export default function Industries() {
         {/* Stats Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -773,6 +893,7 @@ export default function Industries() {
                 <motion.div
                   key={index}
                   className="text-center"
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -785,15 +906,20 @@ export default function Industries() {
                 <motion.div}),
                   key={index}
                   className="text-center""
+=======
+>>>>>>> pr-11913
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -811,6 +937,7 @@ export default function Industries() {
             <motion.div            >
 =======
             <motion.div
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -834,12 +961,17 @@ export default function Industries() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
             <motion.div
+=======
+>>>>>>> pr-11913
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Industry?
@@ -875,6 +1007,7 @@ export default function Industries() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -893,12 +1026,14 @@ export default function Industries() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Link>
+=======
+>>>>>>> pr-11913
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </SimpleLayout>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -909,5 +1044,7 @@ export default function Industries() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
     </Layout>
+=======
+>>>>>>> pr-11913
   );
 }

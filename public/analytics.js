@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> pr-11913
 // Analytics enhancements for Zion Tech Group;
 const analyticsEnhancements = {
   // Track page views;
@@ -34,6 +38,7 @@ const analyticsEnhancements = {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", analyticsEnhancements.init)} else {
   analyticsEnhancements.init()}
+<<<<<<< HEAD
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: 'document.title',; page_location: 'window.location.href',; page_path: 'page;',})} },; trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: 'category',; event_label: 'label;',})} },; trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},; init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,3 +54,6 @@ const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
+>>>>>>> pr-11913

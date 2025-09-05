@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -70,9 +71,59 @@ const transformationPhases = [
 ];
 
 export default function DigitalTransformationPage() {
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Zap, 
+  Cloud, 
+  Users, 
+  BarChart3,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
+import Layout from '../components/Layout';
+
+const transformationAreas = [
+  {
+    title: 'Process Automation',
+    description: 'Automate repetitive tasks and streamline workflows for maximum efficiency.',
+    icon: Zap,
+    benefits: ['50% time savings', 'Reduced errors', 'Improved consistency', 'Cost reduction']
+  },
+  {
+    title: 'Cloud Migration',
+    description: 'Move your infrastructure to the cloud for better scalability and performance.',
+    icon: Cloud,
+    benefits: ['40% cost reduction', 'Better scalability', 'Enhanced security', 'Improved reliability']
+  },
+  {
+    title: 'Data Analytics',
+    description: 'Transform your data into actionable insights for better decision making.',
+    icon: BarChart3,
+    benefits: ['Data-driven decisions', 'Predictive insights', 'Real-time analytics', 'Better ROI']
+  },
+  {
+    title: 'Team Training',
+    description: 'Equip your team with the skills needed for the digital future.',
+    icon: Users,
+    benefits: ['Skill development', 'Increased productivity', 'Better adoption', 'Future readiness']
+  }
+];
+
+const successMetrics = [
+  { metric: '60%', label: 'Efficiency Improvement' },
+  { metric: '40%', label: 'Cost Reduction' },
+  { metric: '85%', label: 'Employee Satisfaction' },
+  { metric: '99.9%', label: 'System Uptime' }
+];
+
+export default function DigitalTransformation() {
+>>>>>>> pr-11913
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Digital Transformation Solutions - Zion Tech Group</title>
         <meta name="description" content="Complete digital transformation solutions including process automation, digital strategy, data modernization, and cloud transformation." />
       </Head>
@@ -81,10 +132,21 @@ export default function DigitalTransformationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
+=======
+        <title>Digital Transformation - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive digital transformation services and solutions." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> pr-11913
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Digital Transformation</h1>
@@ -100,10 +162,20 @@ export default function DigitalTransformationPage() {
                   Download Guide
                 </button>
               </div>
+=======
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Digital Transformation
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transform your business with our comprehensive digital transformation services and solutions.
+              </p>
+>>>>>>> pr-11913
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -150,10 +222,83 @@ export default function DigitalTransformationPage() {
                   </Link>
                 </motion.div>
               ))}
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                Transformation Areas
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {transformationAreas.map((area, index) => {
+                  const IconComponent = area.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="flex items-start mb-6">
+                        <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                          <IconComponent className="w-8 h-8 text-blue-600" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{area.title}</h3>
+                          <p className="text-gray-600">{area.description}</p>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                        <ul className="space-y-2">
+                          {area.benefits.map((benefit, benefitIndex) => (
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
 
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                Success Metrics
+              </h2>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {successMetrics.map((metric, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-4xl font-bold text-blue-600 mb-2">{metric.metric}</div>
+                    <div className="text-gray-600 font-medium">{metric.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+>>>>>>> pr-11913
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
         {/* Transformation Process */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -222,5 +367,25 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
     </>
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Let us help you navigate your digital transformation journey with proven strategies and cutting-edge technology.
+              </p>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center mx-auto">
+                Start Your Transformation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+>>>>>>> pr-11913
   );
 }

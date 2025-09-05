@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -10,6 +9,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -35,6 +35,8 @@ import Layout from "../../components/Layout";";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-11913
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -338,10 +340,13 @@ export default function CloudMigrationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -363,6 +368,7 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -391,5 +397,7 @@ export default function CloudMigrationPage() {
         </section>
       </div>
     </Layout>
+=======
+>>>>>>> pr-11913
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,13 @@ import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
 import React from 'react';
 :pages/solutions/digital-transformation.tsx
+=======
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
+
+
+>>>>>>> pr-11913
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -105,6 +113,7 @@ const industries = [
 export default function DigitalTransformation() {import Layout from "../../components/Layout";";
 =======
 export default function DigitalTransformation() {
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -115,6 +124,8 @@ import Layout from "../../components/Layout";";
 >>>>>>> pr-11914
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> pr-11913
 export default function DigitalTransformationPage() {
   const transformationServices = [;
     {}
@@ -142,10 +153,13 @@ export default function DigitalTransformationPage() {
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 ;  ];
   return (;
     <Layout );
@@ -156,11 +170,14 @@ export default function DigitalTransformationPage() {
       <div className="min-h-screen bg-gray-50">";      <div className="min-h-screen bg-gray-50">
 =======
       <div className="min-h-screen bg-gray-50">";
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ];
+=======
+>>>>>>> pr-11913
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
@@ -169,7 +186,10 @@ export default function DigitalTransformationPage() {
     >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :pages/solutions/digital-transformation.tsx
+=======
+>>>>>>> pr-11913
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -179,12 +199,15 @@ export default function DigitalTransformationPage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       <div className="min-h-screen bg-gray-50">
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -193,10 +216,13 @@ export default function DigitalTransformationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -208,6 +234,7 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion.div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </section>;        {/* Services Section */}
 =======
@@ -241,6 +268,11 @@ export default function DigitalTransformationPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 :pages/solutions/digital-transformation.tsx
+=======
+        </section>;
+
+
+>>>>>>> pr-11913
         {/* Transformation Process */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -265,10 +297,13 @@ export default function DigitalTransformationPage() {
                   <motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
         {/* Services Section */}
 >>>>>>> pr-11914
         <section className="py-20">"
@@ -285,11 +320,14 @@ export default function DigitalTransformationPage() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
 :pages/solutions/digital-transformation.tsx
+=======
+>>>>>>> pr-11913
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
                       {step.step}
@@ -309,6 +347,7 @@ export default function DigitalTransformationPage() {
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />        {/* CTA Section */}
 =======
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+<<<<<<< HEAD
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
@@ -327,6 +366,8 @@ export default function DigitalTransformationPage() {
                       {service.features.map((feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+=======
+>>>>>>> pr-11913
                           {feature}
                         </li>,
                       ))}
@@ -336,6 +377,7 @@ export default function DigitalTransformationPage() {
               })}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -343,6 +385,13 @@ export default function DigitalTransformationPage() {
           </div>
         </section>
 :pages/solutions/digital-transformation.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+
+
+>>>>>>> pr-11913
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -452,6 +501,7 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
 =======
             </div>
           </div>
@@ -462,6 +512,8 @@ export default function DigitalTransformationPage() {
           </div>
         </section>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> pr-11913
         {/* CTA Section */}
 >>>>>>> pr-11914
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"

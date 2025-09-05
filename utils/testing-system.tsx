@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
 import "@testing-library/jest-dom";
 export class TestingSystem {
   static async testUserInteraction(
@@ -24,6 +27,7 @@ export class TestingSystem {
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
 =======
@@ -67,3 +71,6 @@ import "@testing-library/jest-dom"; interface HTMLElement { click(): void} expor
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> pr-11914
+=======
+import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
+>>>>>>> pr-11913

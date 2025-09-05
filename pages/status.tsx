@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Shield } from 'lucide-react';
@@ -137,10 +138,34 @@ export default function StatusPage() {
                   </div>
                 </motion.div>
               ))}
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function Status() {
+  return (
+    <Layout>
+      <Head>
+        <title>System Status - Zion Tech Group</title>
+        <meta name="description" content="Check the current status of our systems and services." />
+      </Head>
+
+      <main>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                System Status
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Check the current status of our systems and services.
+              </p>
+>>>>>>> pr-11913
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* System Health */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -181,11 +206,36 @@ export default function StatusPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Security</h3>
                   <p className="text-2xl font-bold text-green-600">100%</p>
                   <p className="text-sm text-gray-600">Uptime</p>
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">All Systems Operational</h2>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">API Services</span>
+                    <span className="text-green-600 font-semibold">Operational</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">Database</span>
+                    <span className="text-green-600 font-semibold">Operational</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">CDN</span>
+                    <span className="text-green-600 font-semibold">Operational</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">Email Services</span>
+                    <span className="text-green-600 font-semibold">Operational</span>
+                  </div>
+>>>>>>> pr-11913
                 </div>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Recent Incidents */}
         <section className="py-12 bg-white">
@@ -244,3 +294,9 @@ export default function StatusPage() {
     </Layout>
   );
 }
+=======
+      </main>
+    </Layout>
+  );
+}
+>>>>>>> pr-11913
