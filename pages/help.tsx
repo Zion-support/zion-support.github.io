@@ -1,375 +1,213 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video,
-  Download,
-  ExternalLink,
+  HelpCircle,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Clock,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
-const helpCategories = [
+
+const faqCategories = [
   {
-    title: "Getting Started",
-    icon: BookOpen,
-    articles: [
-      {
-        title: "Welcome to Zion Tech Group",
-        description: "Learn the basics of our platform and services",
-        type: "Guide",
-        readTime: "5 min"
-      },
-      {
-        title: "Setting Up Your Account",
-        description: "Step-by-step guide to create and configure your account",
-        type: "Tutorial",
-        readTime: "10 min"
-      },
-      {
-        title: "First Steps with AI Services",
-        description: "How to get started with our AI solutions",
-        type: "Tutorial",
-        readTime: "15 min"
-      }
-    ]
-  },
-  {
-    title: "AI Services",
+    title: 'General Questions',
     icon: HelpCircle,
-    articles: [
+    questions: [
       {
-        title: "Understanding AI Models",
-        description: "Learn about different AI models and their applications",
-        type: "Guide",
-        readTime: "8 min"
+        question: 'What services does Zion Tech Group offer?',
+        answer: 'We offer comprehensive AI services, IT solutions, and micro SAAS products including machine learning, cloud migration, cybersecurity, and custom software development.'
       },
       {
-        title: "Integrating AI APIs",
-        description: "How to integrate our AI services into your applications",
-        type: "Tutorial",
-        readTime: "20 min"
+        question: 'How can I get started with your services?',
+        answer: 'Contact us through our website, call us at +1 302 464 0950, or email kleber@ziontechgroup.com to discuss your needs and get a personalized quote.'
       },
       {
-        title: "AI Best Practices",
-        description: "Tips and best practices for using AI effectively",
-        type: "Guide",
-        readTime: "12 min"
+        question: 'Do you offer 24/7 support?',
+        answer: 'Yes, we provide 24/7 technical support for all our services to ensure your systems run smoothly around the clock.'
       }
     ]
   },
   {
-    title: "Cloud Services",
-    icon: MessageCircle,
-    articles: [
+    title: 'AI Services',
+    icon: MessageSquare,
+    questions: [
       {
-        title: "Cloud Migration Guide",
-        description: "Complete guide to migrating to our cloud platform",
-        type: "Guide",
-        readTime: "25 min"
+        question: 'What AI technologies do you specialize in?',
+        answer: 'We specialize in machine learning, natural language processing, computer vision, predictive analytics, and custom AI model development.'
       },
       {
-        title: "Managing Cloud Resources",
-        description: "How to efficiently manage your cloud infrastructure",
-        type: "Tutorial",
-        readTime: "18 min"
-      },
-      {
-        title: "Security Best Practices",
-        description: "Keep your cloud environment secure",
-        type: "Guide",
-        readTime: "15 min"
+        question: 'How long does AI implementation take?',
+        answer: 'Implementation timelines vary based on complexity, typically ranging from 2-12 weeks for most AI solutions.'
       }
     ]
   },
   {
-    title: "Billing & Account",
-    icon: FileText,
-    articles: [
+    title: 'IT Services',
+    icon: Clock,
+    questions: [
       {
-        title: "Understanding Your Bill",
-        description: "Learn how to read and understand your billing statement",
-        type: "Guide",
-        readTime: "5 min"
+        question: 'Do you provide cloud migration services?',
+        answer: 'Yes, we offer comprehensive cloud migration services for AWS, Azure, and Google Cloud platforms with minimal downtime.'
       },
       {
-        title: "Payment Methods",
-        description: "How to add and manage payment methods",
-        type: "Tutorial",
-        readTime: "8 min"
-      },
-      {
-        title: "Account Settings",
-        description: "Manage your account preferences and settings",
-        type: "Tutorial",
-        readTime: "10 min"
+        question: 'What cybersecurity services do you offer?',
+        answer: 'Our cybersecurity services include threat detection, vulnerability assessments, security audits, incident response, and compliance management.'
       }
     ]
   }
-]
-
-const quickLinks = [
-  { title: "API Documentation", href: "/docs/api", icon: FileText },
-  { title: "Video Tutorials", href: "/tutorials", icon: Video },
-  { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-]
-
-const faqs = [
-  {
-    question: "How do I get started with your AI services?",
-    answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
-  },
-  {
-    question: "What programming languages do you support?",
-    answer: "We support all major programming languages including Python, JavaScript, Java, C#, Go, and more. Our APIs are language-agnostic and can be integrated with any technology stack."
-  },
-  {
-    question: "How secure is my data?",
-    answer: "Security is our top priority. We use enterprise-grade encryption, comply with industry standards like SOC 2 and GDPR, and implement strict access controls to protect your data."
-  },
-  {
-    question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
-  }
-]
+];
 
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [openCategory, setOpenCategory] = useState<string | null>(null);
+
+  const toggleCategory = (categoryTitle: string) => {
+    setOpenCategory(openCategory === categoryTitle ? null : categoryTitle);
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Find guides, tutorials, and support resources." />
+        <title>Help & Support - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to frequently asked questions and contact our support team." />
+        <meta name="keywords" content="help, support, FAQ, contact, Zion Tech Group, AI services, IT services" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
       </Head>
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <HelpCircle className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-5xl font-bold mb-6">
-              Help Center
-            </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Find answers, guides, and support for all your questions
-            </p>
-            <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help articles, guides, and tutorials..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h1 
+                className="text-5xl md:text-6xl font-bold mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                Help & Support
+              </motion.h1>
+              <motion.p 
+                className="text-xl md:text-2xl mb-8 text-blue-100"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Find answers to your questions and get the support you need
+              </motion.p>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Quick Links
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {quickLinks.map((link, index) => (
-                <motion.a
-                  key={index}
-                  href={link.href}
-                  className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group"
-                  whileHover={{ y: -2 }}
-                >
-                  <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:text-blue-700" />
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    {link.title}
-                  </h3>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>"
-      <section className="py-16">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-6xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
-</h2>
-            </h2>
-            "
-            <div className="space-y-6">"
-</div>
-                <motion.div;
-                  key={categoryIndex};
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: categoryIndex * 0.1 }};
-                >
-</motion>
-                  <button;
-                    onClick={() => toggleCategory(category.title)};
-</button>"
-                    <div className="flex items-center gap-4">"
-</div>"
-                      <category.icon className="w-6 h-6 text-blue-600" />"
-</category>"
-                      <h3 className="text-xl font-semibold text-gray-900">"
-</h3>
-                      </h3>
-                    </div>"
-                      <ChevronDown className="w-5 h-5 text-gray-500" />"
-</ChevronDown>"
-                      <ChevronRight className="w-5 h-5 text-gray-500" />"
-</ChevronRight>
-                  </button>
-                  
-                  <AnimatePresence>
-</AnimatePresence>
-                      <motion.div;
-                        initial={{ height: 0, opacity: 0 }};
-                        animate={{ height: 'auto', opacity: 1 }}'
-                        exit={{ height: 0, opacity: 0 }};
-                        transition={{ duration: 0.3 }}'
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {faqCategories.map((category, categoryIndex) => (
+                  <motion.div
+                    key={categoryIndex}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: categoryIndex * 0.1 }}
+                  >
+                    <button
+                      onClick={() => toggleCategory(category.title)}
+                      className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-4">
+                        <category.icon className="w-6 h-6 text-blue-600" />
+                        <h3 className="text-xl font-semibold text-gray-900">
+                          {category.title}
+                        </h3>
+                        {openCategory === category.title ? (
+                          <ChevronDown className="w-5 h-5 text-gray-500 ml-auto" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5 text-gray-500 ml-auto" />
+                        )}
+                      </div>
+                    </button>
+                    
+                    {openCategory === category.title && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-</motion>"
-                        <div className="px-6 pb-6">"
-</div>"
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
-</div>
-                              <motion.div;
-                                key={articleIndex};
-                                className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-                                whileHover={{ y: -2 }};
-                              >
-</motion>"
-                                <div className="flex items-start justify-between mb-2">"
-</div>"
-                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">"
-</span>
-                                  </span>"
-                                  <span className="text-xs text-gray-500">"
-</span>
-                                  </span>
-                                </div>"
-                                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">"
-</h4>
-                                </h4>"
-                                <p className="text-sm text-gray-600">"
-</p>
-                                </p>
-                              </motion.div>
-                            ))};
-                          </div>
+                        <div className="px-6 pb-6 space-y-4">
+                          {category.questions.map((faq, faqIndex) => (
+                            <div key={faqIndex} className="border-l-4 border-blue-500 pl-4">
+                              <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
+                              <p className="text-gray-600">{faq.answer}</p>
+                            </div>
+                          ))}
                         </div>
                       </motion.div>
-                    )};
-                  </AnimatePresence>
-                </motion.div>
-              ))};
-            </div>
-          </div>
-        </div>
-      </section>"
-      <section className="py-16 bg-white">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
-</h2>
-            </h2>
-            "
-            <div className="space-y-6">"
-</div>
-                <motion.div;
-                  key={index};
-                  className="bg-gray-50 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: index * 0.1 }};
-                >
-</motion>"
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">"
-</h3>
-                  </h3>"
-                  <p className="text-gray-600">"
-</p>
-                  </p>
-                </motion.div>
-              ))};
-            </div>
-          </div>
-        </div>
-      </section>"
-      <section className="py-16 bg-blue-600">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto text-center">"
-</div>"
-            <h2 className="text-3xl font-bold text-white mb-6">"
-</h2>
-            </h2>"
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
-            </p>
-            "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
-</div>"
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <Mail className="w-8 h-8 text-white mx-auto mb-4" />"
-</Mail>"
-                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>"
-                <p className="text-blue-100 mb-4">Get help via email</p>"
-                <a;"
-                  href="mailto:support@ziontechgroup.com"
-                  className="text-white hover:text-blue-200 font-medium"
-                >
-</a>
-                </a>
-              </div>
-              "
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <Phone className="w-8 h-8 text-white mx-auto mb-4" />"
-</Phone>"
-                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>"
-                <p className="text-blue-100 mb-4">Call us directly</p>"
-                <a;"
-                  href="tel:+15551234567"
-                  className="text-white hover:text-blue-200 font-medium"
-                >
-</a>
-                </a>
-              </div>
-              "
-              <div className="bg-white/10 rounded-lg p-6">"
-</div>"
-                <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />"
-</MessageCircle>"
-                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>"
-                <p className="text-blue-100 mb-4">Chat with our team</p>"
-                <button className="text-white hover:text-blue-200 font-medium">"
-</button>
-                </button>
+                    )}
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>"
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-20 bg-blue-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">Still Need Help?</h2>
+              <p className="text-xl mb-8 text-blue-100">
+                Contact our support team for personalized assistance
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="flex items-center justify-center">
+                  <Phone className="h-6 w-6 mr-3" />
+                  <div>
+                    <div className="font-semibold">Phone</div>
+                    <div className="text-blue-100">+1 302 464 0950</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Mail className="h-6 w-6 mr-3" />
+                  <div>
+                    <div className="font-semibold">Email</div>
+                    <div className="text-blue-100">kleber@ziontechgroup.com</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="h-6 w-6 mr-3" />
+                  <div>
+                    <div className="font-semibold">Address</div>
+                    <div className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+                  Contact Us
+                </Link>
+                <Link href="/ai-services" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                  View Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
