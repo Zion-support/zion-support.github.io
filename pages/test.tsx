@@ -1,12 +1,15 @@
 import React from 'react';
-import Layout from './components/Layout';
+import Head from 'next/head';
 
 export default function TestPage() {
   return (
-    <Layout title="Test Page">
+    <>
+      <Head>
+        <title>Test Page</title>
+      </Head>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
-    </Layout>
+    </>
   );
 }
