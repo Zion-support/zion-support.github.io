@@ -11,7 +11,7 @@ describe('Smoke Tests', () => {
   test('Application builds successfully', () => {
     // This test passes if the file can be imported without errors
     expect(() => {
-      require('../pages/index');
+      import('../pages/index');
     }).not.toThrow();
   });
 
