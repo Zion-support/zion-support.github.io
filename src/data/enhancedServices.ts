@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
 export interface ProductListing {
   "id": string;
   title: string;
@@ -17,7 +22,6 @@ export interface ProductListing {
   features: string[];
   image?: string;
 }
-
 export const "ENHANCED_SERVICES": ProductListing[] = [{
     id: "ai-automation-suite
     "title": "AI Process Automation Suite
@@ -63,14 +67,12 @@ export const "ENHANCED_SERVICES": ProductListing[] = [{
     ]
   };
 ];
-
 export const SERVICE_CATEGORIES = ["AI Automation
   "Micro SaaS
   "Web Development
   "Mobile Apps
   "Cloud Solutions
   "Cybersecurity"
-];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+];
+>>>>>>> main
+>>>>>>> main

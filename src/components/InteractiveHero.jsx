@@ -1,1 +1,7 @@
+<<<<<<< HEAD
+module.exports = const InteractiveHero = (props) => { const [mousePosition,setMousePosition] = useState ({ x: 0,y: 0 }) const [isHovered,setIsHovered] = useState (false) const [activeStat,setActiveStat] = useState (0) useEffect ( () => { const handleMouseMove = (props) => { setMousePosition ({ x: e.clientX,y: e.clientY })}; window.addEventListener ("mousemove",handleMouseMove) """
+=======
+import { useEffect } from 'react';,
+import { useState } from 'react';,
 export const InteractiveHero = (props) => { const [mousePosition,setMousePosition] = useState ({ x: 0,y: 0 }) const [isHovered,setIsHovered] = useState (false) const [activeStat,setActiveStat] = useState (0) useEffect ( () => { const handleMouseMove = (props) => { setMousePosition ({ x: e.clientX,y: e.clientY })}; window.addEventListener ('mousemove',handleMouseMove) '
+>>>>>>> main

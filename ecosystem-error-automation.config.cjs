@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
->>>>>>> origin/merge-pr-10635
 module.exports = {
   "apps": [// 🚨 Comprehensive Error Fixer - Main error fixing automation
     {
@@ -21,7 +18,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🔧 TypeScript Error Monitor - Real-time TypeScript error detection and fixing
     {
       "name": 'typescript-error-monitor',
@@ -41,7 +37,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🧹 ESLint Error Cleaner - Continuous ESLint error fixing
     {
       "name": 'eslint-error-cleaner',
@@ -61,7 +56,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🔍 Build Error Detector - Prevents build failures
     {
       "name": 'build-error-detector',
@@ -81,7 +75,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🚨 Dependency Error Resolver - Fixes dependency conflicts
     {
       "name": 'dependency-error-resolver',
@@ -101,7 +94,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🔧 Configuration Error Fixer - Fixes config file issues
     {
       "name": 'config-error-fixer',
@@ -121,7 +113,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🚨 Error Prevention Monitor - Proactive error prevention
     {
       "name": 'error-prevention-monitor',
@@ -141,7 +132,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 📊 Error Analytics Dashboard - Error reporting and analytics
     {
       "name": 'error-analytics-dashboard',
@@ -162,7 +152,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🔄 Auto-Recovery Manager - Automatically recovers from errors
     {
       "name": 'auto-recovery-manager',
@@ -182,7 +171,6 @@ module.exports = {
       "merge_logs": true,
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // 🚨 Critical Error Alert System - Notifies about critical errors
     {
       "name": 'critical-error-alert-system',
@@ -203,7 +191,6 @@ module.exports = {
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     }
   ],
-
   "deploy": {
     production: {
       user: 'node',
@@ -215,8 +202,4 @@ module.exports = {
     }
   }
 };
->>>>>>> origin/merge-pr-10629
 };
->>>>>>> origin/merge-pr-10635
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
