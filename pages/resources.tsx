@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -24,6 +25,14 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 >>>>>>> pr-11914
+=======
+  return (
+    <>
+      <Head>
+        <title>Resources - Zion Tech Group</title>
+    </>
+=======
+>>>>>>> pr-11935
 
 const resources = [
   {,
@@ -180,6 +189,9 @@ export default function ResourcesPage() {
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11935
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -481,6 +493,7 @@ export default function ResourcesPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 =======
                   >
                     <div className="flex items-start justify-between mb-4">
@@ -710,5 +723,8 @@ export default function ResourcesPage() {
       </div>
     </Layout>
 >>>>>>> pr-11914
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
   );
 }

@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:components.disabled/AccessibilityEnhancer.dynamic.jsx
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.dynamic.jsx.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD
 const AccessibilityEnhancer = dynamic(() => import(\"./AccessibilityEnhancer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityEnhancer\' ,
 =======
 <<<<<<< HEAD
 const AccessibilityEnhancer = dynamic(() => import("./AccessibilityEnhancer"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityEnhancer" ,"""
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/AccessibilityEnhancer.dynamic.jsx.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/AccessibilityEnhancer.dynamic.jsx
+>>>>>>> pr-11935
 const AccessibilityEnhancer = dynamic(() => import("./AccessibilityEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityEnhancer' ,'
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.dynamic.jsx.backup
 </p>'

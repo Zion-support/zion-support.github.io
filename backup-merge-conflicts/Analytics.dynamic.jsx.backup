@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:components.disabled_full/Analytics.dynamic.jsx
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.jsx.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD
 const Analytics = dynamic(() => import(\"./Analytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Analytics\' ,
 =======
 <<<<<<< HEAD
 const Analytics = dynamic(() => import("./Analytics"),{"; loading: () => <p>Loading.</p,>}) export: "default Analytics" ,"""
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/Analytics.dynamic.jsx.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled_full/Analytics.dynamic.jsx
+>>>>>>> pr-11935
 const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,'
 <<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.jsx.backup
 </p>'

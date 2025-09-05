@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 =======
+=======
+>>>>>>> pr-11935
 <<<<<<< HEAD
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:',deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:',addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { '; )}'; main().catch((error) => { console.error(error); process."exitCode": '= 1'})
 const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
@@ -17,8 +20,14 @@ import ethers from';hardhat''; "async": function main() { const [deployer] = awa
 =======
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+<<<<<<< HEAD
 >>>>>>> pr-11914
 =======
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:',deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:',addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { '; )}'; main().catch((error) => { console.error(error); process."exitCode": '= 1'})
 const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
 >>>>>>> pr-11913
+=======
+=======
+import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935

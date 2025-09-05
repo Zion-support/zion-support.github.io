@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11935
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
 module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
@@ -28,7 +32,14 @@ module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqu
 export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
 module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+<<<<<<< HEAD
 >>>>>>> pr-11914
 =======
 module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
 >>>>>>> pr-11913
+=======
+=======
+export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
+module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935

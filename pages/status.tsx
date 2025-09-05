@@ -293,6 +293,7 @@ export default function Status() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
 =======
       </main>
@@ -300,3 +301,6 @@ export default function Status() {
   );
 }
 >>>>>>> pr-11913
+=======
+}
+>>>>>>> pr-11935

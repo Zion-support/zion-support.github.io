@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:.eslintrc.js
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 <<<<<<< HEAD
 =======
@@ -87,7 +91,12 @@ export default {
 <<<<<<< HEAD
 module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.js.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.js
+>>>>>>> pr-11935
 module.exports = {
 <<<<<<< HEAD
   extends: [
@@ -98,15 +107,26 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
 <<<<<<< HEAD:.eslintrc.js
+=======
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
+    'no-useless-escape': 'warn'
+>>>>>>> main
+=======
+>>>>>>> pr-11935
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-console': 'off',
     'react/no-unescaped-entities': 'warn',
     'no-undef': 'off'
+<<<<<<< HEAD
 =======
     'no-useless-escape': 'warn'
 >>>>>>> main
 >>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.js.backup
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.js
+>>>>>>> pr-11935
   },
   overrides: [
     {
@@ -118,8 +138,12 @@ module.exports = {
   ],
   env: {
     browser: true,
+<<<<<<< HEAD
 <<<<<<< HEAD:.eslintrc.js
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD
     es2021: true,
   },
@@ -127,11 +151,17 @@ module.exports = {
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.js.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.js
+>>>>>>> pr-11935
     node: true,
     es6: true,
     dom: true
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:.eslintrc.js
   globals: {
     KeyboardEvent: 'readonly',
@@ -153,6 +183,9 @@ module.exports = {
   ]
 };
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
+>>>>>>> pr-11935
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -175,4 +208,28 @@ module.exports = {
 =======
 };
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.js.backup
+=======
+=======
+  globals: {
+    KeyboardEvent: 'readonly',
+    HTMLElement: 'readonly',
+    HTMLButtonElement: 'readonly',
+    HTMLAnchorElement: 'readonly',
+    MutationObserver: 'readonly',
+    RequestInit: 'readonly',
+    AbortController: 'readonly',
+    fs: 'readonly',
+    CodeQualityChecker: 'readonly'
+  },
+  ignorePatterns: [
+    "node_modules/",
+    ".next/",
+    "out/**",
+    "dist/**",
+    "build/**"
+  ]
+};
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.js
+>>>>>>> pr-11935

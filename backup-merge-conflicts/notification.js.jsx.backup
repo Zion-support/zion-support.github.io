@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 import React, {useState, createContext, useContext, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell} from 'lucide-react';
@@ -47,6 +51,12 @@ import React,{useState,createContext,useContext,useCallback} from &apos;react&ap
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
 >>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/notification.js.jsx
+>>>>>>> pr-11935
                 removeNotification(newNotification.id)}, newNotification.duration)}
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {setNotifications([])}, []);
@@ -80,8 +90,17 @@ function NotificationContainer("props": "any) {;
     if (notifications.length === 0);
         return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>;
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
+<<<<<<< HEAD
+    return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>;
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/notification.js.jsx
+>>>>>>> pr-11935
     return (
         <div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>
 >>>>>>> main
@@ -209,6 +228,10 @@ function NotificationItem("props": "any) {;
       </div>;
     </motion.div>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 // Convenience functions for quick notifications;
 export function showInfo("props": "any) {;
     return { "type": 'info'", title, message, ...options }}
@@ -217,12 +240,21 @@ export function showInfo("props": "any) {;
 </motion>;
 </NotificationContext>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/notification.js.jsx
+>>>>>>> pr-11935
 // Convenience functions for quick notifications
 export function showInfo(props: any) {
     return { type: 'info', title, message, ...options }}
 
 </motion>
 </motion>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
 </NotificationContext>
 =======
@@ -232,3 +264,9 @@ export function showInfo(props: any) {
 =======
 </NotificationContext>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/notification.js.jsx
+<<<<<<< HEAD
+=======
+=======
+</NotificationContext>
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/notification.js.jsx
+>>>>>>> pr-11935

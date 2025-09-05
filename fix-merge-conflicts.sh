@@ -1,6 +1,7 @@
 #!/bin/bash
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Script to fix merge conflicts by keeping HEAD version
 echo "Fixing merge conflicts in pages/ directory..."
 
@@ -22,6 +23,8 @@ done
 
 echo "Merge conflicts fixed!"
 =======
+=======
+>>>>>>> pr-11935
 echo "Fixing merge conflicts in the codebase..."
 
 # Find all files with merge conflicts
@@ -43,10 +46,41 @@ for file in $files_with_conflicts; do
     # Remove merge conflict markers and keep the main branch content
     sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
     sed -i '/>>>>>>> main/d' "$file"
+<<<<<<< HEAD
+=======
+=======
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in pages/ directory..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Use sed to remove merge conflict markers and keep HEAD version
+    # Remove lines from <<<<<<< HEAD to ======= (inclusive)
+    # Remove lines from ======= to >>>>>>> (inclusive)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/=======/,/>>>>>>> /d' "$file"
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
     
     echo "Fixed: $file"
 done
 
+<<<<<<< HEAD
 echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
 echo "Please review the changes and test the build."
 >>>>>>> pr-11914
+=======
+<<<<<<< HEAD
+echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
+echo "Please review the changes and test the build."
+=======
+echo "Merge conflicts fixed!"
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935

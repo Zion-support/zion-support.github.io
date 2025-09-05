@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 import React, {useState} from 'react';
 const AlertDialog({children, open, onOpenChange}) {;
     const [internalOpen, setInternalOpen] = useState(false);
@@ -26,6 +30,12 @@ import React,{useState} from &apos;react&apos;; const AlertDialog({children,open
 }}>
       <div className="relative">
 >>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/alert-dialog.js.jsx
+>>>>>>> pr-11935
         {children}
       </div>;
     </AlertDialogContext.Provider>)}
@@ -34,8 +44,17 @@ export function AlertDialogTrigger("props": "any) {;
     if (!context);
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (<div onClick={() => context.setIsOpen(true)"}>;
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
+<<<<<<< HEAD
+    return (<div onClick={() => context.setIsOpen(true)"}>;
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/alert-dialog.js.jsx
+>>>>>>> pr-11935
     return (
         <div onClick={() => context.setIsOpen(true)}>
 >>>>>>> main
@@ -48,10 +67,19 @@ export function AlertDialogContent("props": "any) {;
     if (!context.isOpen);
         return null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
     return (<div className="fixed inset-0 z-50 flex items-center justify-center">;
       <div className="fixed inset-0 bg-black bg-opacity-50" />;
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className"}`}>;
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/alert-dialog.js.jsx
+>>>>>>> pr-11935
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-50" />
@@ -79,6 +107,10 @@ export function AlertDialogCancel("props": "any) {;
       {children}
     </button>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 ;
 </AlertDialogContext>
 <<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
@@ -92,3 +124,10 @@ export function AlertDialogCancel("props": "any) {;
 =======
 </AlertDialogContext>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/alert-dialog.js.jsx
+<<<<<<< HEAD
+=======
+=======
+
+</AlertDialogContext>
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/alert-dialog.js.jsx
+>>>>>>> pr-11935

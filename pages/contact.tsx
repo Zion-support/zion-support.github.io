@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -129,6 +130,12 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> pr-11935
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -162,6 +169,7 @@ export default function Contact() {
   };
 
   return (
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -280,12 +288,70 @@ export default function Contact() {
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address
+=======
+    <MainLayout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with our team of experts. We're here to help you transform your business with cutting-edge technology solutions."
+      keywords="contact, get in touch, support, consultation, technology solutions"
+    >
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Touch</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Ready to transform your business? Let's discuss how our technology solutions can help you achieve your goals.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address *
+>>>>>>> pr-11935
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 >>>>>>> pr-11914
                     />
@@ -295,6 +361,17 @@ export default function Contact() {
 <<<<<<< HEAD
 
 =======
+=======
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+>>>>>>> pr-11935
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                       Company
                     </label>
@@ -302,6 +379,7 @@ export default function Contact() {
                       type="text"
                       id="company"
                       name="company"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 >>>>>>> pr-11914
                     />
@@ -401,6 +479,28 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Contact Information */}
+=======
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+>>>>>>> pr-11935
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
                   <div className="space-y-6">
@@ -538,10 +638,17 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </section>
       </main>
     </Layout>
 >>>>>>> pr-11913
+=======
+          </motion.div>
+        </div>
+      </section>
+    </MainLayout>
+>>>>>>> pr-11935
   );
 }

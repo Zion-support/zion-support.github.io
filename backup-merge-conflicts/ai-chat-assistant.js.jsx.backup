@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile} from 'lucide-react';
@@ -73,6 +77,12 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
 }
 >>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+>>>>>>> pr-11935
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -112,8 +122,17 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
     if (!enabled);
         return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
+<<<<<<< HEAD
+    return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+>>>>>>> pr-11935
     return (
         <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
 >>>>>>> main
@@ -148,6 +167,10 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 }}>;
               {/* Header */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">;
                 <div className="flex items-center gap-3">;
                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
@@ -159,6 +182,11 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
                       <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`} />;
                       <span className="text-zinc-400 text-xs">;
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+>>>>>>> pr-11935
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -335,6 +363,10 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
       </AnimatePresence>;
     </div>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
+>>>>>>> pr-11935
+<<<<<<< HEAD
 ;
 </motion>;
 </motion>;
@@ -363,3 +395,16 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 =======
 </div>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+<<<<<<< HEAD
+=======
+=======
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+>>>>>>> pr-11935

@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/talent/TalentResults.jsx
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/TalentResults.jsx.backup
+>>>>>>> pr-11935
 <<<<<<< HEAD
 "export function TalentResults({\" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className=\"flex-1\">\" {}\" <ActiveFilters {...activeFiltersProps} /> {} \";\"
 =======
 <<<<<<< HEAD
 "export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {.activeFiltersProps} /> {} ";"""
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/TalentResults.jsx.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/components/talent/TalentResults.jsx
+>>>>>>> pr-11935
 "export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
 <<<<<<< HEAD:backup-merge-conflicts/TalentResults.jsx.backup
 </div>"

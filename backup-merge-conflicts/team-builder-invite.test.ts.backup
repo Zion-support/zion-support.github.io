@@ -1,6 +1,9 @@
 <<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
+<<<<<<< HEAD
 <<<<<<< HEAD:__tests__/api/team-builder-invite.test.ts
 =======
+=======
+>>>>>>> pr-11935
 <<<<<<< HEAD
 =======
 >>>>>>> pr-11913:__tests__/api/team-builder-invite.test.ts
@@ -13,7 +16,12 @@ describe('Team Builder Invite API', () => {
 const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 <<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914:backup-merge-conflicts/team-builder-invite.test.ts.backup
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/team-builder-invite.test.ts
+>>>>>>> pr-11935
 import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
 <<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
 });''

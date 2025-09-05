@@ -1,10 +1,18 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.backup
 <<<<<<< HEAD
 =======
       },
 =======
 >>>>>>> pr-11914
+=======
+<<<<<<< HEAD
+      },
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
 import react from 'eslint-plugin-react';
 =======
 import globals from 'globals';
@@ -12,16 +20,24 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.backup
 <<<<<<< HEAD
 =======
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> pr-11913:eslint.config.js
+=======
+<<<<<<< HEAD
+export default [{
+    "ignores": [
+=======
+>>>>>>> pr-11935
 
 export default [
   {
     ignores: [
+<<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.backup
 =======
 export default [{
@@ -29,6 +45,9 @@ export default [{
 >>>>>>> pr-11914
 =======
 >>>>>>> pr-11913:eslint.config.js
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
       'node_modules/',
       '.next/',
       'out/',
@@ -38,7 +57,10 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.backup
+=======
+>>>>>>> pr-11935
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -70,6 +92,57 @@ export default [{
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "files": ['**/*.{js,jsx}'],
+    "languageOptions": {
+      ecmaVersion: 2021,
+      "sourceType": 'module',
+      "globals": {
+        window: 'readonly',
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "require": 'readonly',
+        "module": 'readonly',
+        "__dirname": 'readonly',
+        "__filename": 'readonly',
+        "exports": 'readonly'
+      },
+      "parserOptions": {
+=======
+>>>>>>> pr-11935
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2021,
@@ -117,6 +190,7 @@ export default [{
         exports: 'readonly'
       },
       parserOptions: {
+<<<<<<< HEAD
 =======
     "files": ['**/*.{js,jsx}'],
     "languageOptions": {
@@ -166,17 +240,30 @@ export default [{
       },
       "parserOptions": {
 >>>>>>> pr-11914
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
         ecmaFeatures: {
           jsx: true
         }
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "plugins": {
+      react,
+      'react-hooks': reactHooks
+    },
+    "rules": {
+=======
+>>>>>>> pr-11935
     plugins: {
       react,
       'react-hooks': reactHooks
     },
     rules: {
+<<<<<<< HEAD
 =======
     "plugins": {
       react,
@@ -184,6 +271,9 @@ export default [{
     },
     "rules": {
 >>>>>>> pr-11914
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -195,6 +285,66 @@ export default [{
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "files": ['**/*.{ts,tsx}'],
+    "languageOptions": {
+      parser: tsparser,
+      "ecmaVersion": 2021,
+      "sourceType": 'module',
+      "globals": {
+        window: 'readonly',
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "KeyboardEvent": 'readonly',
+        "HTMLElement": 'readonly',
+        "HTMLButtonElement": 'readonly',
+        "HTMLAnchorElement": 'readonly',
+        "MutationObserver": 'readonly',
+        "RequestInit": 'readonly',
+        "AbortController": 'readonly',
+        "fs": 'readonly',
+        "CodeQualityChecker": 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'jsx-a11y': jsxA11y,
+=======
+>>>>>>> pr-11935
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
@@ -251,6 +401,7 @@ export default [{
       '@typescript-eslint': tseslint,
       react: react,
       'react-hooks': reactHooks
+<<<<<<< HEAD
 =======
     "files": ['**/*.{ts,tsx}'],
     "languageOptions": {
@@ -309,11 +460,15 @@ export default [{
       react: react,
       'jsx-a11y': jsxA11y,
 >>>>>>> pr-11914
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
 <<<<<<< HEAD
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
@@ -322,6 +477,8 @@ export default [{
   },
   {
 =======
+=======
+>>>>>>> pr-11935
   },
   {
       'src/**',
@@ -459,6 +616,7 @@ export default [{
   }
 ];
 =======
+<<<<<<< HEAD
 >>>>>>> pr-11914
 =======
       'fix-critical-files.js',
@@ -582,6 +740,16 @@ export default [{
   },
   {
 >>>>>>> pr-11913:eslint.config.js
+=======
+=======
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
+    }
+  },
+  {
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
@@ -597,16 +765,26 @@ export default [{
         fireEvent: 'readonly',
         render: 'readonly',
 <<<<<<< HEAD
+<<<<<<< HEAD
         screen: 'readonly'
       }
 =======
         screen: 'readonly',
       },
 >>>>>>> pr-11914
+=======
+        screen: 'readonly',
+      },
+=======
+        screen: 'readonly'
+      }
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
+<<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.backup
 <<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn'
@@ -614,6 +792,9 @@ export default [{
   }
 ];
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11935
       '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
@@ -629,9 +810,18 @@ export default [{
     ],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> pr-11914
 =======
     },
   }
 ];
 >>>>>>> pr-11913:eslint.config.js
+=======
+=======
+      '@typescript-eslint/no-unused-vars': 'warn'
+    }
+  }
+];
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11935
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 <<<<<<< HEAD

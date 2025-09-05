@@ -313,6 +313,7 @@ export default function Training() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
 =======
         <section className="py-20">
@@ -398,3 +399,6 @@ export default function Training() {
   );
 }
 >>>>>>> pr-11913
+=======
+}
+>>>>>>> pr-11935
