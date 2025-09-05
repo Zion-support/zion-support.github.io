@@ -13,7 +13,7 @@ import {
   Shield,
   Zap,
   FileText,
-  Settings;
+  Settings
 } from 'lucide-react';
 const accessibilityFeatures = []
   {}

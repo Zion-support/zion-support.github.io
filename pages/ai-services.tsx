@@ -44,7 +44,7 @@ import {
   BookOpen,
   Home,
   Gamepad2,
-  Package;
+  Package
 } from 'lucide-react';
 
 const aiServices = []

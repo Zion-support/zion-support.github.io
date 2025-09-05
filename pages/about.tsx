@@ -18,7 +18,7 @@ import {
   Building,
   Rocket,
   Lightbulb,
-  Handshake;
+  Handshake
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
