@@ -24,7 +24,7 @@ export const trackPerformance = () => {
       // Send to analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', 'page_load_time', {
-          value: Math.round(loadTime),
+          value: Math.round(loadTime)
           event_category: 'Performance'
         });
       }
@@ -36,8 +36,8 @@ export const trackErrors = () => {
   window.addEventListener('error', (event) => {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'javascript_error', {
-        event_category: 'Error',
-        event_label: event.message,
+        event_category: 'Error'
+        event_label: event.message;
         value: 1
       });
     }

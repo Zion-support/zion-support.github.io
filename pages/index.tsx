@@ -5,7 +5,7 @@ import { ContactInfo, AnimationState } from '../types';
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
-    isLoaded: false,
+    isLoaded: false;
     hasError: false
   });
   
@@ -34,9 +34,9 @@ export default function Home() {
   }
 
   const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   };
   return (
@@ -67,26 +67,26 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+              "@context": "https://schema.org"
+              "@type": "Organization"
+              "name": "Zion Tech Group"
+              "url": contact.site
+              "logo": `${contact.site}/favicon.svg`
+              "description": "Leading provider of micro SaaS products, AI services, and IT solutions"
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "@type": "PostalAddress"
+                "streetAddress": "364 E Main St STE 1008"
+                "addressLocality": "Middletown"
+                "addressRegion": "DE"
+                "postalCode": "19709"
                 "addressCountry": "US"
-              },
+              }
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
+                "@type": "ContactPoint"
+                "telephone": contact.phone
+                "contactType": "customer service"
                 "email": contact.email
-              },
+              }
               "sameAs": [contact.site]
             })
           }}
@@ -107,7 +107,7 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              We deliver cutting-edge technology solutions with 150+ micro SaaS products
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.
@@ -168,7 +168,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
                 <p className="text-slate-300 mb-6">
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
+                  Innovative, focused software solutions including AI-Powered Video Clip Maker
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -186,7 +186,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
+                  Advanced artificial intelligence solutions including autonomous AI agents
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -204,7 +204,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
+                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
