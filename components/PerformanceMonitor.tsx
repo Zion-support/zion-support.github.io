@@ -1,23 +1,35 @@
 import React, { useEffect } from 'react';
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (performanceData: PerformanceData) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || !window.performance) {
+      return;
+    }
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const navigation = window.performance.getEntriesByType('navigation')[0] as unknown as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
       
-      const performanceData = {
+      const performanceData: PerformanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -28,13 +40,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
+        resourceCount: window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
         } : null
       };
 
@@ -44,6 +56,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
         console.log('Performance Metrics:', performanceData);
       }
     };
