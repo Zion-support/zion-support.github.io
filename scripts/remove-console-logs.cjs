@@ -39,10 +39,17 @@ function removeConsoleLogs(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     const modifiedContent = removeConsoleLogs(content);
     
     if (content !== modifiedContent) {
       fs.writeFileSync(filePath, modifiedContent, 'utf8');
+=======
+    const newContent = removeConsoleLogs(content);
+    
+    if (content !== newContent) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
+>>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
       console.log(`Processed: ${filePath}`);
     }
   } catch (error) {
@@ -64,12 +71,19 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
+<<<<<<< HEAD
       if (!shouldExcludeFile(fullPath)) {
         files.push(...getAllFiles(fullPath, extensions));
       }
     } else if (stat.isFile()) {
       const ext = path.extname(item);
       if (extensions.includes(ext) && !shouldExcludeFile(fullPath)) {
+=======
+      files.push(...getAllFiles(fullPath, extensions));
+    } else if (stat.isFile()) {
+      const ext = path.extname(item);
+      if (extensions.includes(ext)) {
+>>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
         files.push(fullPath);
       }
     }
@@ -83,6 +97,7 @@ function main() {
   
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
+<<<<<<< HEAD
   
   const allFiles = [
     ...getAllFiles(srcDir),
@@ -97,3 +112,31 @@ function main() {
 }
 
 main();
+=======
+  const componentsDir = path.join(process.cwd(), 'components');
+  
+  const allFiles = [
+    ...getAllFiles(srcDir),
+    ...getAllFiles(pagesDir),
+    ...getAllFiles(componentsDir)
+  ];
+  
+  let processedCount = 0;
+  
+  for (const file of allFiles) {
+    if (!shouldExcludeFile(file)) {
+      processFile(file);
+      processedCount++;
+    }
+  }
+  
+  console.log(`Processed ${processedCount} files`);
+  console.log('Console.log removal completed!');
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { removeConsoleLogs, processFile, getAllFiles };
+>>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
