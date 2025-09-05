@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface IndexProps {
@@ -12,3 +14,4 @@ export default function Index({ }: IndexProps) {
     </div>
   );
 }
+>>>>>>> main

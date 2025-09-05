@@ -1,14 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
-
-interface EnhancedPerformanceMonitor.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function EnhancedPerformanceMonitor.dynamic.test({ }: EnhancedPerformanceMonitor.dynamic.testProps) {
-  return (
-    <div>
-      <h1>EnhancedPerformanceMonitor.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic';
+describe('EnhancedPerformanceMonitordynamic', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedPerformanceMonitordynamic />);
+    expect(
+      screen.getByTestId('enhancedperformancemonitor.dynamic')
+    ).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<EnhancedPerformanceMonitordynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<EnhancedPerformanceMonitordynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<EnhancedPerformanceMonitordynamic />);
+  });
+});
+=======
+<<<<<<< HEAD
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedPerformanceMonitordynamic from "./components/EnhancedPerformanceMonitor.dynamic"; describe("EnhancedPerformanceMonitordynamic",() => { test("renders without crashing",() => { render(<EnhancedPerformanceMonitordynamic />); expect( screen.getByTestId("enhancedperformancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedPerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<EnhancedPerformanceMonitordynamic />)}); test("applies correct styling",() => { render(<EnhancedPerformanceMonitordynamic />)})});''"
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic'; describe('EnhancedPerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<EnhancedPerformanceMonitordynamic />); expect( screen.getByTestId('enhancedperformancemonitor.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedPerformanceMonitordynamic />)}); test('handles user interactions',() => { render(<EnhancedPerformanceMonitordynamic />)}); test('applies correct styling',() => { render(<EnhancedPerformanceMonitordynamic />)})});
+>>>>>>> main
+>>>>>>> main

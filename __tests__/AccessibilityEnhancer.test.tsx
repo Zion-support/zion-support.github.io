@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -71,3 +73,4 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+>>>>>>> main

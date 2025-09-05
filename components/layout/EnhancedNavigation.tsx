@@ -1,24 +1,11 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
-const "EnhancedNavigation": React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const services = [{ name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-  ];
+
+const EnhancedNavigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-<div className="text-xl font-bold text-gray-800">Logo</div>
-          <div className="hidden md:flex space-x-8>
-            <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
-            <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
-            <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
-            <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
           </div>
           <div className="hidden lg:block">
             <Link href="/contact">

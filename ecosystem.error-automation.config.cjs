@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+module.exports = {
+<<<<<<< HEAD
+=======
+=======
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
       name: 'error-detection-service',
       "script": 'scripts/pm2/error-detection-service.js',
+>>>>>>> main
     // Main application
     {
       "name": 'zion-app',
@@ -14,6 +20,8 @@ module.exports = {
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
+<<<<<<< HEAD
+=======
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes
@@ -30,6 +38,7 @@ module.exports = {
     {
       "name": 'syntax-error-fixer',
       "script": 'scripts/pm2/syntax-error-fixer.js',
+>>>>>>> main
         "NODE_ENV": 'production',
         "PORT": 3000
       },
@@ -127,6 +136,8 @@ module.exports = {
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
+<<<<<<< HEAD
+=======
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
@@ -143,6 +154,7 @@ module.exports = {
     {
       "name": 'typescript-error-fixer',
       "script": 'scripts/pm2/typescript-error-fixer.js',
+>>>>>>> main
         "NODE_ENV": 'production',
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
@@ -163,6 +175,8 @@ module.exports = {
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
+<<<<<<< HEAD
+=======
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes
@@ -176,6 +190,7 @@ module.exports = {
       "error_file": 'logs/pm2/typescript-error-fixer-error.log',
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'},
     // ESLint Error Fixer
+>>>>>>> main
         "NODE_ENV": 'production',
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
@@ -216,6 +231,8 @@ module.exports = {
       "watch": false,
       "max_memory_restart": '512M',
       "env": {
+<<<<<<< HEAD
+=======
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
@@ -232,6 +249,7 @@ module.exports = {
     {
       "name": 'file-extension-normalizer',
       "script": 'scripts/pm2/file-extension-normalizer.js',
+>>>>>>> main
         "NODE_ENV": 'production',
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
@@ -252,6 +270,8 @@ module.exports = {
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
+<<<<<<< HEAD
+=======
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes
@@ -370,6 +390,7 @@ module.exports = {
       "error_file": 'logs/pm2/intelligent-error-prevention-error.log',
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
+>>>>>>> main
         "NODE_ENV": 'production',
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
@@ -394,4 +415,9 @@ module.exports = {
       'pre-setup': ''
     }
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> main
+>>>>>>> main
