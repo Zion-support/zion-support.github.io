@@ -63,11 +63,6 @@ module.exports = {
     "pages.disabled_auto/"
   ]
 };
-  "extends": ['next/core-web-vitals',
-    '"eslint": recommended',
-    '@typescript-eslint/recommended',
-  ],
-:.eslintrc.cjs
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
